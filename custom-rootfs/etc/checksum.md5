@@ -9,7 +9,7 @@ dfd694647fdb057e8dcba4043dff5324  etc/udev/rules.d/00-init.rules
 76c5f666daa7668d3175e5bf73f84daa  etc/udev/rules.d/05-options.rules
 da1babf69e50f048ed29a548ac9a6a98  etc/udev/rules.d/50-firmware.rules
 fed7289b8c469066e8f8ff5591e32253  etc/udev/udev.conf
-12877336bf18781e82b9418f06c897ef  etc/init.d/rcS
+c785e47e78ed24530d3136e27c0ab94d  etc/init.d/rcS
 448df333d5c22293da216303d89ca9de  etc/fstab
 33946f99bcf2de9f27f245f8dda97330  etc/Wireless/RT2870STA/RT2870STA.dat
 f444c259e53fc3ac483efa3b226ce37f  etc/hostapd_event.sh
@@ -238,7 +238,7 @@ b8131dba029d51a61bf3d4637fd4d376  snom/html/common4.htm
 75f50ee156cb9c0267cf7fe4a24afca6  snom/html/line_rtp.htm
 0dbdb697a94942d687d36ce0c6a538e5  snom/html/tab_line.htm
 25ca2670d55aa169a293b012a57d6fa8  snom/html/action.htm
-73b3968340566d291489fb9c2064373f  snom/html/leftnav.htm
+f71ca18bb62d759740a7bdb6acb00290  snom/html/leftnav.htm
 6d29039ec1007d30b6994ce89aea70bf  snom/html/logged_out.htm
 13641911402e124c81981d8f2c5ec026  snom/html/dummy.htm
 5e500d0f2ae59f82e4ad3d4ab8d68400  snom/html/speed.htm

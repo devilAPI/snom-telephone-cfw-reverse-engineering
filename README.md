@@ -53,7 +53,9 @@ overlay applied on top of stock (see [docs/roadmap.md](docs/roadmap.md)).
 4. [docs/building.md](docs/building.md): building and flashing a custom image
 5. [docs/recover-from-device.md](docs/recover-from-device.md): rebuilding this project from a phone that already runs custom firmware
 6. [docs/device-notes.md](docs/device-notes.md): hardware/partition/boot facts (fill these in as they are confirmed)
-7. [docs/roadmap.md](docs/roadmap.md): planned features and project workflow
+7. [docs/cfw-settings.md](docs/cfw-settings.md): the CFW Settings web panel (port 8080) and how it's wired in
+8. [docs/building-nano.md](docs/building-nano.md): cross-building a static musl `nano` for the phone
+9. [docs/roadmap.md](docs/roadmap.md): planned features and project workflow
 
 ## Quick start (phone already runs custom firmware with SSH)
 

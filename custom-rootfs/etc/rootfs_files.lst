@@ -579,3 +579,4 @@ bin/xargs
 bin/find
 bin/renice
 sbin/openvpn
+usr/bin/nano

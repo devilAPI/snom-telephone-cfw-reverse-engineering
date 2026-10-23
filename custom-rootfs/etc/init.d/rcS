@@ -2355,6 +2355,8 @@ function startUp () {
             mkdir -p /dev/pts
             mount devpts /dev/pts -t devpts
             /usr/sbin/sshd
+            # CFW Settings web panel (busybox httpd + CGI) on port 8080
+            busybox httpd -p 8080 -h /snom/cfw
             ;;
         "snomD385")
             ;;
