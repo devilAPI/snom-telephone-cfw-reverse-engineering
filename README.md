@@ -55,7 +55,8 @@ overlay applied on top of stock (see [docs/roadmap.md](docs/roadmap.md)).
 6. [docs/device-notes.md](docs/device-notes.md): hardware/partition/boot facts (fill these in as they are confirmed)
 7. [docs/cfw-settings.md](docs/cfw-settings.md): the CFW Settings web panel (port 8080) and how it's wired in
 8. [docs/building-nano.md](docs/building-nano.md): cross-building a static musl `nano` for the phone
-9. [docs/roadmap.md](docs/roadmap.md): planned features and project workflow
+9. [docs/doom.md](docs/doom.md): running DOOM on the phone screen (Boot Doom button)
+10. [docs/roadmap.md](docs/roadmap.md): planned features and project workflow
 
 ## Quick start (phone already runs custom firmware with SSH)
 
