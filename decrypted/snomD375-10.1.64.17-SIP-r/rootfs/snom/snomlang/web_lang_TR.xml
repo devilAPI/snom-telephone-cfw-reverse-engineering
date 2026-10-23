@@ -1,0 +1,1342 @@
+<?xml version="1.0" encoding="utf-8"?>
+<w_phrases>
+	<language t="Türkçe"/>
+	<w_phrase n="wlang_iso_code" t="TR"/>
+	<w_phrase n="wlang_web_language_name" t="Türkçe"/>
+	<w_phrase n="wlang_index_infotext" t="Bu web arayüzü telefonunuzu doğru bir şekilde ayarlamanızı ve gelişmiş özelliklere erişmenizi kolaylaştırır. Numara çevirmek için aşağıdaki alana numarayı girin. Sadece telefon numarası (örneğin, 0114930398330) veya info@example.com gibi URI girebilirsiniz."/>
+	<w_phrase n="wlang_index_dialnumber" t="Numara Çevir"/>
+	<w_phrase n="wlang_index_dialnumberbutton" t="Çevir"/>
+	<w_phrase n="wlang_index_hangupbutton" t="Telefonu Kapat"/>
+	<w_phrase n="wlang_index_outgoingident" t="Giden Kimlik"/>
+	<w_phrase n="wlang_index_setbutton" t="Kur"/>
+	<w_phrase n="wlang_index_dialednumbers" t="Aranan Numaralar"/>
+	<w_phrase n="wlang_index_dialed" t="Aranan"/>
+	<w_phrase n="wlang_index_missedcalls" t="Cevapsız Aramalar"/>
+	<w_phrase n="wlang_index_missed" t="Cevapsız"/>
+	<w_phrase n="wlang_index_rejectedcalls" t="Reddedilen Çağrılar"/>
+	<w_phrase n="wlang_index_rejected" t="Reddedilen"/>
+	<w_phrase n="wlang_index_receivedcalls" t="Gelen Çağrılar"/>
+	<w_phrase n="wlang_index_received" t="Gelen"/>
+	<w_phrase n="wlang_index_date" t="Tarih"/>
+	<w_phrase n="wlang_index_number" t="Numara"/>
+	<w_phrase n="wlang_leftnav_operation" t="Işlem"/>
+	<w_phrase n="wlang_leftnav_home" t="Ev"/>
+	<w_phrase n="wlang_leftnav_addressbook" t="Dizin"/>
+	<w_phrase n="wlang_leftnav_setup" t="Kurulum"/>
+	<w_phrase n="wlang_leftnav_preferences" t="Tercihler"/>
+	<w_phrase n="wlang_leftnav_speeddial" t="Hızlı Arama"/>
+	<w_phrase n="wlang_leftnav_functionkeys" t="İşlev Tuşları"/>
+	<w_phrase n="wlang_leftnav_lineone" t="Kimlik 1"/>
+	<w_phrase n="wlang_leftnav_linetwo" t="Kimlik 2"/>
+	<w_phrase n="wlang_leftnav_linethree" t="Kimlik 3"/>
+	<w_phrase n="wlang_leftnav_linefour" t="Kimlik 4"/>
+	<w_phrase n="wlang_leftnav_linefive" t="Kimlik 5"/>
+	<w_phrase n="wlang_leftnav_linesix" t="Kimlik 6"/>
+	<w_phrase n="wlang_leftnav_lineseven" t="Kimlik 7"/>
+	<w_phrase n="wlang_leftnav_lineeight" t="Kimlik 8"/>
+	<w_phrase n="wlang_leftnav_linenine" t="Kimlik 9"/>
+	<w_phrase n="wlang_leftnav_lineten" t="Kimlik 10"/>
+	<w_phrase n="wlang_leftnav_lineeleven" t="Kimlik 11"/>
+	<w_phrase n="wlang_leftnav_linetwelve" t="Kimlik 12"/>
+	<w_phrase n="wlang_leftnav_advanced" t="Gelişmiş ayarlar"/>
+	<w_phrase n="wlang_leftnav_softupdate" t="Yazılım Güncelleme"/>
+	<w_phrase n="wlang_leftnav_status" t="Durum"/>
+	<w_phrase n="wlang_leftnav_sysinfo" t="Sistem Bilgisi"/>
+	<w_phrase n="wlang_leftnav_siptrace" t="SIP İzleme"/>
+	<w_phrase n="wlang_leftnav_httptrace" t="HTTP İzleme"/>
+	<w_phrase n="wlang_leftnav_upnptrace" t="UPnP İzleme"/>
+	<w_phrase n="wlang_leftnav_dnscache" t="DNS Önbelleği"/>
+	<w_phrase n="wlang_leftnav_pcaptrace" t="PCAP İzleme"/>
+	<w_phrase n="wlang_leftnav_log" t="Günlük"/>
+	<w_phrase n="wlang_leftnav_memory" t="Belllek"/>
+	<w_phrase n="wlang_leftnav_settings" t="Ayarlar"/>
+	<w_phrase n="wlang_leftnav_manual" t="El ile"/>
+	<w_phrase n="wlang_adr_name" t="Ad"/>
+	<w_phrase n="wlang_adr_number" t="Numara"/>
+	<w_phrase n="wlang_adr_contacttype" t="Kişi Türü"/>
+	<w_phrase n="wlang_adr_edit" t="Düzenle"/>
+	<w_phrase n="wlang_adr_delete" t="Sil"/>
+	<w_phrase n="wlang_adr_addeditentry" t="Ekle veya Düzenle"/>
+	<w_phrase n="wlang_adr_ctnone" t="Hiçbiri"/>
+	<w_phrase n="wlang_adr_ctfriends" t="Arkadaşlar"/>
+	<w_phrase n="wlang_adr_ctfamily" t="Aile"/>
+	<w_phrase n="wlang_adr_ctcolleagues" t="İs Arkadaşları"/>
+	<w_phrase n="wlang_adr_ctvip" t="VIP"/>
+	<w_phrase n="wlang_adr_ctdeny" t="Reddedilenler Listesi"/>
+	<w_phrase n="wlang_adr_ctserver" t="Sunucu"/>
+	<w_phrase n="wlang_adr_addeditbutton" t="Ekle"/>
+	<w_phrase n="wlang_adr_importadrbook" t="Dizini İçe Aktar (CSV)"/>
+	<w_phrase n="wlang_adr_filename" t="Dosya Adı"/>
+	<w_phrase n="wlang_adr_loadbutton" t="Yükle"/>
+	<w_phrase n="wlang_prefs_generalinfo" t="Genel Bilgi"/>
+	<w_phrase n="wlang_prefs_language" t="Dil"/>
+	<w_phrase n="wlang_prefs_web_language" t="Web Arayüz Dili"/>
+	<w_phrase n="wlang_prefs_displaystyle" t="Numara Gösterme Stili"/>
+	<w_phrase n="wlang_prefs_dsfullcontact" t="Tam İletişim Bilgileri"/>
+	<w_phrase n="wlang_prefs_dsname" t="Ad"/>
+	<w_phrase n="wlang_prefs_dsnumber" t="Numara"/>
+	<w_phrase n="wlang_prefs_dsnamenumber" t="Ad + Numara"/>
+	<w_phrase n="wlang_prefs_tonescheme" t="Ton Şeması"/>
+	<w_phrase n="wlang_prefs_tsaustralia" t="Avustralya"/>
+	<w_phrase n="wlang_prefs_tschina" t="Çin"/>
+	<w_phrase n="wlang_prefs_tsdenmark" t="Danimarka"/>
+	<w_phrase n="wlang_prefs_tsgermany" t="Almanya"/>
+	<w_phrase n="wlang_prefs_tsindia" t="Hindistan"/>
+	<w_phrase n="wlang_prefs_tsjapan" t="Japonya"/>
+	<w_phrase n="wlang_prefs_tsmexico" t="Meksika"/>
+	<w_phrase n="wlang_prefs_tsuk" t="Birleşik Krallık"/>
+	<w_phrase n="wlang_prefs_tsus" t="Amerika Birleşik Devletleri"/>
+	<w_phrase n="wlang_prefs_tsgreece" t="Yunanistan"/>
+	<w_phrase n="wlang_prefs_mwinotifi" t="MWI Bildirimi"/>
+	<w_phrase n="wlang_prefs_mwisilent" t="Sessiz"/>
+	<w_phrase n="wlang_prefs_mwibeep" t="Bip"/>
+	<w_phrase n="wlang_prefs_mwireminder" t="Hatırlatıcı"/>
+	<w_phrase n="wlang_prefs_mwidialtone" t="MWI Çevir Sesi"/>
+	<w_phrase n="wlang_prefs_mwidialnormal" t="Normal"/>
+	<w_phrase n="wlang_prefs_mwidialstutter" t="Stutter"/>
+	<w_phrase n="wlang_prefs_on" t="açık"/>
+	<w_phrase n="wlang_prefs_off" t="kapalı"/>
+	<w_phrase n="wlang_prefs_redirection" t="Çağrı Yönlendirme"/>
+	<w_phrase n="wlang_prefs_timeout" t="Zaman aşımı (sn)"/>
+	<w_phrase n="wlang_prefs_ringtones" t="Zil sesleri"/>
+	<w_phrase n="wlang_prefs_friends" t="Arkadaşlar"/>
+	<w_phrase n="wlang_prefs_ringer1" t="Zil 1"/>
+	<w_phrase n="wlang_prefs_ringer2" t="Zil 2"/>
+	<w_phrase n="wlang_prefs_ringer3" t="Zil 3"/>
+	<w_phrase n="wlang_prefs_ringer4" t="Zil 4"/>
+	<w_phrase n="wlang_prefs_ringer5" t="Zil 5"/>
+	<w_phrase n="wlang_prefs_ringer6" t="Zil 6"/>
+	<w_phrase n="wlang_prefs_ringer7" t="Zil 7"/>
+	<w_phrase n="wlang_prefs_ringer8" t="Zil 8"/>
+	<w_phrase n="wlang_prefs_ringersilent" t="Sessiz"/>
+	<w_phrase n="wlang_prefs_family" t="Aile"/>
+	<w_phrase n="wlang_prefs_colleagues" t="İs Arkadaşları"/>
+	<w_phrase n="wlang_prefs_ringdeviceheadset" t="Kulaklık için Zil Cihazı"/>
+	<w_phrase n="wlang_prefs_ringvolume_amplification" t="Daha yüksek Zil Sesi"/>
+	<w_phrase n="wlang_prefs_ringspeaker" t="Hoparlörü Kullan"/>
+	<w_phrase n="wlang_prefs_ringheadset" t="Kulaklığı Kullan"/>
+	<w_phrase n="wlang_prefs_ringheadsetloud" t="Kulaklık ve Hoparlör Kullan"/>
+	<w_phrase n="wlang_prefs_ssi_custommelody" t="Özel Melodi URL"/>
+	<w_phrase n="wlang_prefs_autoanswer" t="Otomatik Cevap"/>
+	<w_phrase n="wlang_prefs_ssi_aaautoanswer" t="Otomatik Cevap"/>
+	<w_phrase n="wlang_prefs_ssi_aaindication" t="Otomatik Cevap Göstergesi"/>
+	<w_phrase n="wlang_prefs_ssi_aaindicationtone" t="Otomatik Cevap Göstergesi Tonu"/>
+	<w_phrase n="wlang_prefs_privacysetting" t="Gizlilik Ayarları"/>
+	<w_phrase n="wlang_prefs_ssi_privclip" t="Kendi Numaranı Gizle (CLIP/CLIR)"/>
+	<w_phrase n="wlang_prefs_ssi_privclir" t="Gelen Anonim Çağrıları Reddet"/>
+	<w_phrase n="wlang_prefs_original" t="Orijinal"/>
+	<w_phrase n="wlang_prefs_new" t="Yeni"/>
+	<w_phrase n="wlang_prefs_dimension" t="Boyut"/>
+	<w_phrase n="wlang_prefs_hide" t="Gizle"/>
+	<w_phrase n="wlang_prefs_show" t="Göster"/>
+	<w_phrase n="wlang_prefs_reject" t="Reddet"/>
+	<w_phrase n="wlang_prefs_accept" t="Kabul et"/>
+	<w_phrase n="wlang_prefs_savebutton" t="Kaydet"/>
+	<w_phrase n="wlang_speed_speeddialtable" t="Hızlı Arama Tablosu"/>
+	<w_phrase n="wlang_fkeys_keysettings" t="Tuş Ayarları"/>
+	<w_phrase n="wlang_fkeys_ssi_number" t="Numara"/>
+	<w_phrase n="wlang_fkeys_ssi_line" t="Hat"/>
+	<w_phrase n="wlang_fkeys_ssi_dest" t="Dahili Numara"/>
+	<w_phrase n="wlang_fkeys_ssi_intercom" t="İnterkom"/>
+	<w_phrase n="wlang_fkeys_ssi_parkorbit" t="Park et"/>
+	<w_phrase n="wlang_fkeys_ssi_voicerecorder" t="Kayıt"/>
+	<w_phrase n="wlang_fkeys_ssi_dtmf" t="DTMF"/>
+	<w_phrase n="wlang_line_logininfo" t="Giriş Bilgileri"/>
+	<w_phrase n="wlang_line_ssi_name" t="Görüntü birimi adı"/>
+	<w_phrase n="wlang_line_ssi_account" t="Hesap"/>
+	<w_phrase n="wlang_line_ssi_password" t="Şifre"/>
+	<w_phrase n="wlang_line_ssi_registrar" t="Alan Adı Yazmanı"/>
+	<w_phrase n="wlang_line_status" t="Durum"/>
+	<w_phrase n="wlang_line_ssi_mailbox" t="Posta Kutusu"/>
+	<w_phrase n="wlang_line_ssi_mailbox_retrieve" t="Posta Kutusu Çevirme (Posta Kutusundan farklıysa)"/>
+	<w_phrase n="wlang_line_ringtone" t="Zil"/>
+	<w_phrase n="wlang_line_ringer1" t="Zil 1"/>
+	<w_phrase n="wlang_line_ringer2" t="Zil 2"/>
+	<w_phrase n="wlang_line_ringer3" t="Zil 3"/>
+	<w_phrase n="wlang_line_ringer4" t="Zil 4"/>
+	<w_phrase n="wlang_line_ringer5" t="Zil 5"/>
+	<w_phrase n="wlang_line_ringer6" t="Zil 6"/>
+	<w_phrase n="wlang_line_ringer7" t="Zil 7"/>
+	<w_phrase n="wlang_line_ringer8" t="Zil 8"/>
+	<w_phrase n="wlang_line_ringer9" t="Zil 9"/>
+	<w_phrase n="wlang_line_ringer10" t="Zil 10"/>
+	<w_phrase n="wlang_line_silent" t="Sessiz"/>
+	<w_phrase n="wlang_line_ssi_outboundproxy" t="Giden Proxy"/>
+	<w_phrase n="wlang_line_ssi_dialplan" t="Arama Planı Dizesi"/>
+	<w_phrase n="wlang_line_qvalue" t="Q-Değeri"/>
+	<w_phrase n="wlang_line_expire" t="Önerilen Süre Sonu"/>
+	<w_phrase n="wlang_line_codec" t="Kodek"/>
+	<w_phrase n="wlang_current_codeclist" t="Filtreli Codec Listesi"/>
+	<w_phrase n="wlang_line_packetsize" t="Paket Boyutu"/>
+	<w_phrase n="wlang_line_ssi_rtpencryption" t="RTP Şifreleme"/>
+	<w_phrase n="wlang_update_info" t="Bu telefonda hangi yazılım sürümünü çalıştırmak istediğinizi açıkça belirleyebilirsiniz. Kullanmak istediğiniz yazılım sürümüne işaret eden http URL'i girin. Lütfen yalnızca eksiksiz bir http URL kullanın (http://www.example.com/firmware.bin gibi). Yükle düğmesine bastıktan sonra telefon yeniden başlatılacaktır."/>
+	<w_phrase n="wlang_update_manualsoftup" t="El ile Yazılım Güncelleme"/>
+	<w_phrase n="wlang_update_manualsoftup_uxm" t="El ile Genişletme Modülü Yazılım Güncellemesi"/>
+	<w_phrase n="wlang_update_info_uxm" t="Güncelleme işlemini başlatmak için lütfen bir defada telefona yalnızca 1 genişletme modülü bağlayın"/>
+	<w_phrase n="wlang_update_ssi_firmware" t="Yazılım"/>
+	<w_phrase n="wlang_update_loadbutton" t="Yükle"/>
+	<w_phrase n="wlang_info_phonetype" t="Telefon Türü"/>
+	<w_phrase n="wlang_info_macaddress" t="MAC Adresi"/>
+	<w_phrase n="wlang_info_ipaddress" t="IP Adresi"/>
+	<w_phrase n="wlang_info_firmware_url" t="Yazılım URL'i"/>
+	<w_phrase n="wlang_trace_clearbutton" t="Sil"/>
+	<w_phrase n="wlang_trace_reloadbutton" t="Tekrar Yükle"/>
+	<w_phrase n="wlang_trace_downloadbutton" t="İndir"/>
+	<w_phrase n="wlang_log_level" t="Günlük Seviyesi"/>
+	<w_phrase n="wlang_log_level_type" t="Günlük Seviyesi Türü"/>
+	<w_phrase n="wlang_log_ssi_overall" t="Toplam"/>
+	<w_phrase n="wlang_module_log_level" t="Modül Seviyeleri"/>
+	<w_phrase n="wlang_log_ssi_module" t="Modüller"/>
+	<w_phrase n="wlang_log_clearbutton" t="Sil"/>
+	<w_phrase n="wlang_advanced_network" t="Ağ"/>
+	<w_phrase n="wlang_advanced_ssi_dhcp" t="DHCP"/>
+	<w_phrase n="wlang_advanced_ssi_on" t="açık"/>
+	<w_phrase n="wlang_advanced_ssi_off" t="kapalı"/>
+	<w_phrase n="wlang_advanced_ssi_ipaddress" t="IP Adresi"/>
+	<w_phrase n="wlang_advanced_ssi_netmask" t="Ağ Maskesi"/>
+	<w_phrase n="wlang_advanced_ssi_phonename" t="İnternet Sunucu Adı"/>
+	<w_phrase n="wlang_advanced_ssi_ipgateway" t="IP Ağ Geçidi"/>
+	<w_phrase n="wlang_advanced_dns" t="DNS"/>
+	<w_phrase n="wlang_advanced_ssi_domain" t="Alan"/>
+	<w_phrase n="wlang_advanced_ssi_dnsserver1" t="DNS Sunucu 1"/>
+	<w_phrase n="wlang_advanced_ssi_dnsserver2" t="DNS Sunucu 2"/>
+	<w_phrase n="wlang_advanced_time" t="Zaman"/>
+	<w_phrase n="wlang_advanced_ssi_ntptimeserver" t="NTP Sunucu"/>
+	<w_phrase n="wlang_advanced_timezone" t="Zaman Dilimi"/>
+	<w_phrase n="wlang_advanced_http" t="HTTP"/>
+	<w_phrase n="wlang_advanced_ssi_user" t="Kullanıcı"/>
+	<w_phrase n="wlang_advanced_ssi_password" t="Şifre"/>
+	<w_phrase n="wlang_advanced_ssi_httpproxy" t="HTTP Proxy"/>
+	<w_phrase n="wlang_advanced_ssi_httpport" t="HTTP Port"/>
+	<w_phrase n="wlang_advanced_ssi_httpsport" t="HTTPS Port"/>
+	<w_phrase n="wlang_advanced_webservercon" t="Web Sunucu Bağlantı Türü"/>
+	<w_phrase n="wlang_advanced_httponly" t="Sadece HTTP"/>
+	<w_phrase n="wlang_advanced_httpsonly" t="Sadece HTTPS"/>
+	<w_phrase n="wlang_advanced_httphttps" t="HTTP veya HTTPS"/>
+	<w_phrase n="wlang_advanced_off" t="Kapalı"/>
+	<w_phrase n="wlang_advanced_phonebehavior" t="Telefon Davranışı"/>
+	<w_phrase n="wlang_advanced_ssi_callcompletion" t="Çağrı Sonlandırma"/>
+	<w_phrase n="wlang_advanced_ssi_lldp" t="LLDP"/>
+	<w_phrase n="wlang_advanced_ssi_lldp_network_policy_timeout" t="LLDP Ağ Politikası Zaman Aşımı"/>
+	<w_phrase n="wlang_advanced_ssi_idnasupport" t="IDNA (RFC 3490) Desteği"/>
+	<w_phrase n="wlang_advanced_actionethernet" t="Ethernet Kablosu Yeniden Takma İşlemi"/>
+	<w_phrase n="wlang_advanced_reboot" t="Yeniden Başlat"/>
+	<w_phrase n="wlang_advanced_donothing" t="Yoksay"/>
+	<w_phrase n="wlang_advanced_ssi_numberguessing" t="Hızlı Arama"/>
+	<w_phrase n="wlang_advanced_ssi_blockurldialing" t="URL Çevirmeyi Engelle"/>
+	<w_phrase n="wlang_advanced_ssi_challengeresponse" t="Telefonda Yanıt Kimliğini Doğrula"/>
+	<w_phrase n="wlang_advanced_ssi_callwaitingindi" t="Çağrı Bekletme Göstergesi"/>
+	<w_phrase n="wlang_advanced_ssi_dialtonehold" t="Bekletme Sırasında Çevir Sesi"/>
+	<w_phrase n="wlang_advanced_ssi_disconnectonhook" t="Ahize Kapatılinca Bağlantıyı Kes"/>
+	<w_phrase n="wlang_advanced_keys" t="Tuşlar"/>
+	<w_phrase n="wlang_advanced_ssi_transferonhook" t="Ahize Kapatılınca Aktar"/>
+	<w_phrase n="wlang_advanced_ssi_blockdnd" t="DND Blokla"/>
+	<w_phrase n="wlang_advanced_ssi_logonwizard" t="Giriş Sihirbazı"/>
+	<w_phrase n="wlang_advanced_preselection" t="Önseçim"/>
+	<w_phrase n="wlang_advanced_ssi_prefix" t="Önek"/>
+	<w_phrase n="wlang_advanced_audio" t="Ses"/>
+	<w_phrase n="wlang_advanced_ssi_disablecasingspeaker" t="Gövde Hoparlörünü Devre Dışı Bırak"/>
+	<w_phrase n="wlang_advanced_ssi_dtmfechospeaker" t="Hoparlörde DTMF Yankı"/>
+	<w_phrase n="wlang_advanced_ssi_callreleasednotify" t="Çağrı Serbest Bırakma Uyarısı"/>
+	<w_phrase n="wlang_line_ssi_stunserver" t="STUN Sunucu (IP Adresi:Port)"/>
+	<w_phrase n="wlang_line_ssi_keepaliveint" t="Canlı Tutma Aralığı (sn)"/>
+	<w_phrase n="wlang_advanced_ssi_dynamicrtpstart" t="Dinamik RTP Başlangıç Portu"/>
+	<w_phrase n="wlang_advanced_ssi_dynamicrtpstop" t="Dinamik RTP Uç Portu"/>
+	<w_phrase n="wlang_advanced_ssi_typeofservice" t="RTP Servis Tipi (TOS/Diffserv)"/>
+	<w_phrase n="wlang_advanced_ssi_payloadtype" t="DTMF Yararlı Yük Türü"/>
+	<w_phrase n="wlang_advanced_ssi_networkidentport" t="Ağ Kimliği (Port)"/>
+	<w_phrase n="wlang_advanced_ssi_sipt1" t="SIP T1 (msn)"/>
+	<w_phrase n="wlang_advanced_ssi_sipsessiontimer" t="SIP Oturum Zamanlayıcısı (s)"/>
+	<w_phrase n="wlang_advanced_ssi_sipdirtyhostttl" t="SIP Kirli Ana Bilgisayar TTL (s)"/>
+	<w_phrase n="wlang_advanced_ssi_sipmaxforward" t="SIP En Çok Yönlendirme"/>
+	<w_phrase n="wlang_advanced_ssi_enumsuffix" t="ENUM Sonek"/>
+	<w_phrase n="wlang_advanced_ssi_musiconholdserver" t="Beklemede Müzik Sunucusu"/>
+	<w_phrase n="wlang_advanced_ssi_useuserphone" t="kullanıcı=telefon Kullan"/>
+	<w_phrase n="wlang_advanced_ssi_publishpresence" t="Varlığını Yayınla"/>
+	<w_phrase n="wlang_advanced_ssi_refertobrackets" t="Refer-To Köşeli Ayraçlar"/>
+	<w_phrase n="wlang_advanced_ssi_requireprack" t="PRACK Gerekli"/>
+	<w_phrase n="wlang_advanced_ssi_symmetricrtp" t="Simetrik RTP"/>
+	<w_phrase n="wlang_advanced_update" t="Güncelleme"/>
+	<w_phrase n="wlang_advanced_updatepolicy" t="Güncelleme Politikası"/>
+	<w_phrase n="wlang_advanced_upautomatically" t="Otomatik Güncelle"/>
+	<w_phrase n="wlang_advanced_upaskupdate" t="Güncelleme iste"/>
+	<w_phrase n="wlang_advanced_upneverupdatesetting" t="Asla güncelleme, yalnızca ayarları yükle"/>
+	<w_phrase n="wlang_advanced_upneverupdatenosetting" t="Asla güncelleme, ayarları yükleme"/>
+	<w_phrase n="wlang_advanced_ssi_settingurl" t="URL Ayarlama"/>
+	<w_phrase n="wlang_advanced_debug" t="Hata ayıklama"/>
+	<w_phrase n="wlang_advanced_ssi_lcserver" t="LCSunucu"/>
+	<w_phrase n="wlang_advanced_resetbutton" t="Ayarları sıfırla"/>
+	<w_phrase n="wlang_advanced_rebootbutton" t="Yeniden Başlat"/>
+	<w_phrase n="wlang_advanced_security" t="Güvenlik"/>
+	<w_phrase n="wlang_advanced_ssi_adminmode" t="Yönetici Modu"/>
+	<w_phrase n="wlang_advanced_ssi_adminpassword" t="Yönetici Şifresi"/>
+	<w_phrase n="wlang_advanced_ssi_adminpassconf" t="Yönetici Şifresi (Onay)"/>
+	<w_phrase n="wlang_advanced_ssi_adminlogin" t="Yönetici Girişi"/>
+	<w_phrase n="wlang_advanced_savebutton" t="Kaydet"/>
+	<w_phrase n="wlang_advanced_tmz_USAm10" t="-10 ABD - Hawaii-Aleut"/>
+	<w_phrase n="wlang_advanced_tmz_USAm9" t="-9 ABD - Alaska"/>
+	<w_phrase n="wlang_advanced_tmz_CANm8" t="-8 Kanada (Vancouver, Whitehorse)"/>
+	<w_phrase n="wlang_advanced_tmz_MEXm8" t="-8 Meksika (Tijuana, Meksika)"/>
+	<w_phrase n="wlang_advanced_tmz_USAm8" t="-8 ABD - Pasifik"/>
+	<w_phrase n="wlang_advanced_tmz_CANm7" t="-7 Kanada (Edmonton, Calgary)"/>
+	<w_phrase n="wlang_advanced_tmz_MEXm7" t="-7 Meksika (Mazatlán, Chihuahua)"/>
+	<w_phrase n="wlang_advanced_tmz_USAm7" t="-7 ABD - Sıradağlar Saati"/>
+	<w_phrase n="wlang_advanced_tmz_CANm6" t="-6 Kanada - Manitoba (Winnipeg)"/>
+	<w_phrase n="wlang_advanced_tmz_CHLm6" t="-6 Şili (Paskalya Adalari)"/>
+	<w_phrase n="wlang_advanced_tmz_MEXm6" t="-6 Meksika (Mexico City, Acapulco)"/>
+	<w_phrase n="wlang_advanced_tmz_USAm6" t="-6 ABD - Merkez Saati"/>
+	<w_phrase n="wlang_advanced_tmz_BHSm5" t="-5 Bahamalar (Nassau)"/>
+	<w_phrase n="wlang_advanced_tmz_CANm5" t="-5 Kanada (Montreal, Ottawa, Québec)"/>
+	<w_phrase n="wlang_advanced_tmz_COLm5" t="-5 Kolombiya (Bogotá)"/>
+	<w_phrase n="wlang_advanced_tmz_CUBm5" t="-5 Kuba (Havana)"/>
+	<w_phrase n="wlang_advanced_tmz_ECUm5" t="-5 Ekvador (Quito)"/>
+	<w_phrase n="wlang_advanced_tmz_USAm5" t="-5 ABD - Doğu Saati"/>
+	<w_phrase n="wlang_advanced_tmz_CANm4" t="-4 Kanada (Halifax, Saint John)"/>
+	<w_phrase n="wlang_advanced_tmz_CHLm4" t="-4 Şili (Santiago)"/>
+	<w_phrase n="wlang_advanced_tmz_PRYm4" t="-4 Paraguay (Asunción)"/>
+	<w_phrase n="wlang_advanced_tmz_BMUm4" t="-4 Birleşik Krallık - Bermuda (Bermuda)"/>
+	<w_phrase n="wlang_advanced_tmz_FLKm4" t="-4 Birleşik Krallık (Falkland Adaları)"/>
+	<w_phrase n="wlang_advanced_tmz_CANm35" t="-3.5 Kanada - New Foundland (St. Johns)"/>
+	<w_phrase n="wlang_advanced_tmz_GRLm3" t="-3 Danimarka - Gronland (Nuuk)"/>
+	<w_phrase n="wlang_advanced_tmz_PRTm1" t="-1 Portekiz (Azorlar)"/>
+	<w_phrase n="wlang_advanced_tmz_FROm0" t="0 Danimarka - Faroe Adaları (Tórshavn)"/>
+	<w_phrase n="wlang_advanced_tmz_IRLm0" t="0 İrlanda (Dublin)"/>
+	<w_phrase n="wlang_advanced_tmz_PRTm0" t="0 Portekiz (Lisbon, Porto, Funchal)"/>
+	<w_phrase n="wlang_advanced_tmz_ESPm0" t="0 İspanya - Kanarya Adaları (Las Palmas)"/>
+	<w_phrase n="wlang_advanced_tmz_GBRm0" t="0 Birleşik Krallık (Londra)"/>
+	<w_phrase n="wlang_advanced_tmz_ALBp1" t="+1 Arnavutluk (Tiran)"/>
+	<w_phrase n="wlang_advanced_tmz_AUTp1" t="+1 Avusturya (Viyana)"/>
+	<w_phrase n="wlang_advanced_tmz_BELp1" t="+1 Belçika (Brüksel)"/>
+	<w_phrase n="wlang_advanced_tmz_CAIm4" t="-4 Caicos"/>
+	<w_phrase n="wlang_advanced_tmz_HRVp1" t="+1 Hırvatistan (Zagreb)"/>
+	<w_phrase n="wlang_advanced_tmz_CZEp1" t="+1 Çek Cumhuriyeti (Prag)"/>
+	<w_phrase n="wlang_advanced_tmz_DNKp1" t="+1 Danimarka (Kopenhag)"/>
+	<w_phrase n="wlang_advanced_tmz_FRAp1" t="+1 Fransa (Nice)"/>
+	<w_phrase n="wlang_advanced_tmz_GERp1" t="+1 Almanya (Berlin)"/>
+	<w_phrase n="wlang_advanced_tmz_HUNp1" t="+1 Macaristan (Budapeşte)"/>
+	<w_phrase n="wlang_advanced_tmz_ITAp1" t="+1 İtalya (Roma)"/>
+	<w_phrase n="wlang_advanced_tmz_LUXp1" t="+1 Lüksemburg (Lüksemburg)"/>
+	<w_phrase n="wlang_advanced_tmz_MAKp1" t="+1 Makedonya (Üsküp)"/>
+	<w_phrase n="wlang_advanced_tmz_NLDp1" t="+1 Hollanda (Amsterdam)"/>
+	<w_phrase n="wlang_advanced_tmz_NAMp1" t="+1 Namibya (Windhoek)"/>
+	<w_phrase n="wlang_advanced_tmz_NORp1" t="+1 Norveç (Oslo)"/>
+	<w_phrase n="wlang_advanced_tmz_POLp1" t="+1 Polonya (Varşova)"/>
+	<w_phrase n="wlang_advanced_tmz_SVKp1" t="+1 Slovakya (Bratislava)"/>
+	<w_phrase n="wlang_advanced_tmz_ESPp1" t="+1 İspanya (Madrid, Palma)"/>
+	<w_phrase n="wlang_advanced_tmz_SWEp1" t="+1 İsveç (Stockholm)"/>
+	<w_phrase n="wlang_advanced_tmz_CHEp1" t="+1 İsviçre (Bern)"/>
+	<w_phrase n="wlang_advanced_tmz_GIBp1" t="+1 Birleşik Krallık (Cebelitarık)"/>
+	<w_phrase n="wlang_advanced_tmz_YUGp1" t="+1 Sırbistan (Belgrad)"/>
+	<w_phrase n="wlang_advanced_tmz_BLRp2" t="+2 Belarus (Minsk)"/>
+	<w_phrase n="wlang_advanced_tmz_BGRp2" t="+2 Bulgaristan (Sofya)"/>
+	<w_phrase n="wlang_advanced_tmz_CYPp2" t="+2 Kıbrıs (Lefkoşa)"/>
+	<w_phrase n="wlang_advanced_tmz_EGYp2" t="+2 Mısır (Kahire)"/>
+	<w_phrase n="wlang_advanced_tmz_ESTp2" t="+2 Estonya (Tallinn)"/>
+	<w_phrase n="wlang_advanced_tmz_FINp2" t="+2 Finlandiya (Helsinki)"/>
+	<w_phrase n="wlang_advanced_tmz_GAZp2" t="+2 Gazze Şeridi (Gazze)"/>
+	<w_phrase n="wlang_advanced_tmz_GRCp2" t="+2 Yunanistan (Atina)"/>
+	<w_phrase n="wlang_advanced_tmz_ISRp2" t="+2 İsrail (Tel Aviv)"/>
+	<w_phrase n="wlang_advanced_tmz_JORp2" t="+2 Ürdün (Amman)"/>
+	<w_phrase n="wlang_advanced_tmz_LVAp2" t="+2 Letonya (Riga)"/>
+	<w_phrase n="wlang_advanced_tmz_LTUp2" t="+2 Litvanya (Vilnius)"/>
+	<w_phrase n="wlang_advanced_tmz_LBNp2" t="+2 Lübnan (Beyrut)"/>
+	<w_phrase n="wlang_advanced_tmz_MDAp2" t="+2 Moldova (Chisinau)"/>
+	<w_phrase n="wlang_advanced_tmz_RUSp2" t="+2 Rusya (Kaliningrad)"/>
+	<w_phrase n="wlang_advanced_tmz_ROUp2" t="+2 Romanya (Bükreş)"/>
+	<w_phrase n="wlang_advanced_tmz_SYRp2" t="+2 Suriye (Şam)"/>
+	<w_phrase n="wlang_advanced_tmz_TURp3" t="+3 Türkiye (Ankara)"/>
+	<w_phrase n="wlang_advanced_tmz_UKRp2" t="+2 Ukrayna (Kiev, Odessa)"/>
+	<w_phrase n="wlang_advanced_tmz_IRQp3" t="+3 Irak (Bağdat)"/>
+	<w_phrase n="wlang_advanced_tmz_RUSp3" t="+3 Rusya (Moskova)"/>
+	<w_phrase n="wlang_advanced_tmz_IRNp35" t="+3.5 İran (Tahran)"/>
+	<w_phrase n="wlang_advanced_tmz_ARMp4" t="+4 Ermenistan (Erivan)"/>
+	<w_phrase n="wlang_advanced_tmz_AZEp4" t="+4 Azerbaycan (Bakü)"/>
+	<w_phrase n="wlang_advanced_tmz_GEOp4" t="+4 Gürcistan (Tiflis)"/>
+	<w_phrase n="wlang_advanced_tmz_KAZp4" t="+4 Kazakistan (Aktau)"/>
+	<w_phrase n="wlang_advanced_tmz_RUSp4" t="+4 Rusya (Samara)"/>
+	<w_phrase n="wlang_advanced_tmz_KAZp5" t="+5 Kazakistan (Aktobe)"/>
+	<w_phrase n="wlang_advanced_tmz_KGZp5" t="+5 Kırgızistan (Bişkek)"/>
+	<w_phrase n="wlang_advanced_tmz_PAKp5" t="+5 Pakistan (İslamabad)"/>
+	<w_phrase n="wlang_advanced_tmz_RUSp5" t="+5 Rusya (Çelyabinsk)"/>
+	<w_phrase n="wlang_advanced_tmz_INDp55" t="+5.5 Hindistan (Kalküta)"/>
+	<w_phrase n="wlang_advanced_tmz_KAZp6" t="+6 Kazakistan (Astana, Almatı)"/>
+	<w_phrase n="wlang_advanced_tmz_RUSp6" t="+6 Rusya (Novosibirsk, Omsk)"/>
+	<w_phrase n="wlang_advanced_tmz_CHNp7" t="+8 Çin (Pekin)"/>
+	<w_phrase n="wlang_advanced_tmz_RUSp7" t="+7 Rusya (Krasnoyarsk)"/>
+	<w_phrase n="wlang_advanced_tmz_THAp7" t="+7 Tayland (Bangkok)"/>
+	<w_phrase n="wlang_advanced_tmz_SGPp8" t="+8 Singapur (Singapur)"/>
+	<w_phrase n="wlang_advanced_tmz_KORp8" t="+9 Kore (Seul)"/>
+	<w_phrase n="wlang_advanced_tmz_JPNp9" t="+9 Japonya (Tokyo)"/>
+	<w_phrase n="wlang_advanced_tmz_AUSp95" t="+9.5 Avustralya (Adelaide)"/>
+	<w_phrase n="wlang_advanced_tmz_AUSp10" t="+10 Avustralya (Sidney, Melbourne, Canberra)"/>
+	<w_phrase n="wlang_advanced_tmz_AUS2p10" t="+10 Avustralya (Brisbane)"/>
+	<w_phrase n="wlang_advanced_tmz_RUSp10" t="+10 Rusya (Vladivostok)"/>
+	<w_phrase n="wlang_advanced_tmz_AUSp105" t="+10.5 Avustralya (Lord Howe Adası)"/>
+	<w_phrase n="wlang_advanced_tmz_NZLp12" t="+12 Yeni Zelanda (Wellington, Auckland)"/>
+	<w_phrase n="wlang_advanced_tmz_RUSp12" t="+12 Rusya (Anadyr, Kamçatka)"/>
+	<w_phrase n="wlang_advanced_tmz_NZLp1275" t="+12.75 Yeni Zelanda (Chatham Adaları)"/>
+	<w_phrase n="wlang_advanced_tmz_TONp13" t="+13 Tonga (Nukuʻalofa)"/>
+	<w_phrase n="wlang_adr_ssi_title" t="Dizin"/>
+	<w_phrase n="wlang_advanced_ssi_title" t="Gelişmiş Ayarlar"/>
+	<w_phrase n="wlang_fkeys_ssi_title" t="İşlev Tuşları"/>
+	<w_phrase n="wlang_index_ssi_title" t="Telefonunuza Hoş Geldiniz!"/>
+	<w_phrase n="wlang_info_ssi_title" t="Sistem Bilgisi"/>
+	<w_phrase n="wlang_line1_ssi_title" t="Konfigürasyon Kimliği 1"/>
+	<w_phrase n="wlang_line2_ssi_title" t="Konfigürasyon Kimliği 2"/>
+	<w_phrase n="wlang_line3_ssi_title" t="Konfigürasyon Kimliği 3"/>
+	<w_phrase n="wlang_line4_ssi_title" t="Konfigürasyon Kimliği 4"/>
+	<w_phrase n="wlang_line5_ssi_title" t="Konfigürasyon Kimliği 5"/>
+	<w_phrase n="wlang_line6_ssi_title" t="Konfigürasyon Kimliği 6"/>
+	<w_phrase n="wlang_line7_ssi_title" t="Konfigürasyon Kimliği 7"/>
+	<w_phrase n="wlang_line8_ssi_title" t="Konfigürasyon Kimliği 8"/>
+	<w_phrase n="wlang_line9_ssi_title" t="Konfigürasyon Kimliği 9"/>
+	<w_phrase n="wlang_line10_ssi_title" t="Konfigürasyon Kimliği 10"/>
+	<w_phrase n="wlang_line11_ssi_title" t="Konfigürasyon Kimliği 11"/>
+	<w_phrase n="wlang_line12_ssi_title" t="Konfigürasyon Kimliği 12"/>
+	<w_phrase n="wlang_log_ssi_title" t="Sistem Günlüğü"/>
+	<w_phrase n="wlang_memstat_ssi_title" t="Bellek Bilgisi"/>
+	<w_phrase n="wlang_prefs_ssi_title" t="Tercihler"/>
+	<w_phrase n="wlang_settings_ssi_title" t="Ayarlar"/>
+	<w_phrase n="wlang_speed_ssi_title" t="Hızlı Arama"/>
+	<w_phrase n="wlang_sip_trace_ssi_title" t="SIP İzleme"/>
+	<w_phrase n="wlang_http_trace_ssi_title" t="HTTP İzleme"/>
+	<w_phrase n="wlang_update_ssi_title" t="El ile Yazılım Güncelleme"/>
+	<w_phrase n="wlang_adr_preview_name" t="Ad"/>
+	<w_phrase n="wlang_adr_preview_number" t="Numara"/>
+	<w_phrase n="wlang_adr_preview_reading" t="Okunuyor"/>
+	<w_phrase n="wlang_adr_preview_contact_type" t="Kişi Türü"/>
+	<w_phrase n="wlang_adr_preview_ignore" t="Yoksay"/>
+	<w_phrase n="wlang_adr_file_type" t="Dosya Türü"/>
+	<w_phrase n="wlang_adr_file_csv" t="CSV Dosyası"/>
+	<w_phrase n="wlang_adr_file_unicode" t="Sekmeyle ayrılmış Unicode"/>
+	<w_phrase n="wlang_adr_prev_ssi_title" t="Önizlemeyi İçe Aktar"/>
+	<w_phrase n="wlang_adr_prev_description" t="Lütfen sütunların telefon defteri alanlarına atanmalarını kontrol edin ve tamamladığınızda, kaydet düğmesine basın."/>
+	<w_phrase n="wlang_adr_prev_apply" t="Kaydet"/>
+	<w_phrase n="wlang_advanced_ssi_http_register" t="HTTP Bağlantıyı Kaydet"/>
+	<w_phrase n="wlang_advanced_ssi_auth_scheme" t="Kimlik Doğrulama Şeması"/>
+	<w_phrase n="wlang_advanced_ssi_digest" t="Özet"/>
+	<w_phrase n="wlang_advanced_ssi_basic" t="Temel"/>
+	<w_phrase n="wlang_advanced_ssi_offer_gruu" t="GRUU Teklif et"/>
+	<w_phrase n="wlang_line_none" t="Hiçbiri"/>
+	<w_phrase n="wlang_advanced_ssi_offer_mpo" t="MPO Teklif et"/>
+	<w_phrase n="wlang_h323_trace_ssi_title" t="H323 İzleme"/>
+	<w_phrase n="wlang_advanced_ssi_challenge_reboot" t="SIP Yeniden Başlatma Kimlik Doğrulama"/>
+	<w_phrase n="wlang_advanced_ssi_challenge_checksync" t="SIP Check-Sync Kimlik Doğrulama"/>
+	<w_phrase n="wlang_dns_ssi_title" t="DNS Önbellek"/>
+	<w_phrase n="wlang_pcap_trace_ssi_title" t="PCAP İzleme"/>
+	<w_phrase n="wlang_pcap_text" t="Ağ düzeyinde neler olup bittiğini görmek için, bu sayfada PCAP dosyaları oluşturabilirsiniz. Bu dosyalar çeşitli ağ araçlarıyla, örneğin wireshark ile okunabilir. Kaydı başlatmak için başlat düğmesine, durdurmak için durdur düğmesine tıklayın. Taşmayı önlemek için verilerin dairesel bir tamponda saklandığını (yani, tampon dolduğunda, en eski verilerin üzerine yazıldığını) ve telefonun performansını olumsuz yönde etkileyebileceğini unutmayın."/>
+	<w_phrase n="wlang_leftnav_action" t="Eylem URL Ayarları"/>
+	<w_phrase n="wlang_action_ssi_title" t="Eylem URL"/>
+	<w_phrase n="wlang_action_settings" t="Eylem URL"/>
+	<w_phrase n="wlang_action_ssi_dnd_on" t="DND Açık"/>
+	<w_phrase n="wlang_action_ssi_dnd_off" t="DND Kapalı"/>
+	<w_phrase n="wlang_action_ssi_redirection_on" t="Çağrı Yönlendirme Açık"/>
+	<w_phrase n="wlang_action_ssi_redirection_off" t="Çağrı Yönlendirme Kapalı"/>
+	<w_phrase n="wlang_action_ssi_incoming" t="Gelen Cağrı"/>
+	<w_phrase n="wlang_action_ssi_blacklist" t="Kara Liste Olup Olmadığını Kontrol Et"/>
+	<w_phrase n="wlang_action_ssi_outgoing" t="Giden Cağrı"/>
+	<w_phrase n="wlang_action_ssi_setup" t="Kurulum tamalandı"/>
+	<w_phrase n="wlang_action_ssi_offhook" t="Ahize Açık"/>
+	<w_phrase n="wlang_action_ssi_onhook" t="Ahize Kapalı"/>
+	<w_phrase n="wlang_radcom_ssi_title" t="Otomatik Oynatma/Zamanlama"/>
+	<w_phrase n="wlang_playback_ssi_settings" t="Otomatik Oynatma Ayarları"/>
+	<w_phrase n="wlang_playback_ssi_feature" t="Otomatik Oynatma"/>
+	<w_phrase n="wlang_playback_ssi_url" t="WAV dosyası URL'i"/>
+	<w_phrase n="wlang_scheduling_ssi_settings" t="Kurulum Planlama"/>
+	<w_phrase n="wlang_scheduling_ssi_feature" t="Zamanlama"/>
+	<w_phrase n="wlang_scheduling_ssi_frequency" t="Arama sıklığı"/>
+	<w_phrase n="wlang_scheduling_ssi_day" t="gün"/>
+	<w_phrase n="wlang_scheduling_ssi_hour" t="saat"/>
+	<w_phrase n="wlang_scheduling_ssi_minute" t="dakika"/>
+	<w_phrase n="wlang_scheduling_ssi_number" t="Aranacak numara"/>
+	<w_phrase n="wlang_scheduling_ssi_start" t="Başlat (gg.aa.yyyy ssdd)"/>
+	<w_phrase n="wlang_scheduling_ssi_end" t="Durdur (gg.aa.yyyy ssdd)"/>
+	<w_phrase n="wlang_scheduling_ssi_call_duration" t="Çağrıyı otomatik olarak (sn) sonra sonlandır"/>
+	<w_phrase n="wlang_index_time" t="Zaman"/>
+	<w_phrase n="wlang_index_duration" t="Süre"/>
+	<w_phrase n="wlang_advanced_ssi_user_pic" t="Kullanıcı Resmi URL’i"/>
+	<w_phrase n="wlang_line_custom" t="Özel Melodi"/>
+	<w_phrase n="wlang_prefs_vip" t="VIP"/>
+	<w_phrase n="wlang_prefs_ssi_date_us_format" t="ABD Tarih Biçimi (aa/gg)"/>
+	<w_phrase n="wlang_prefs_ssi_time_24_format" t="24 Saatlik Zaman Biçimi  "/>
+	<w_phrase n="wlang_advanced_ssi_call_join_xfer" t="Aktarımada Çağrıları Birleştir"/>
+	<w_phrase n="wlang_prefs_tssweden" t="İsveç"/>
+	<w_phrase n="wlang_prefs_tsswitzerland" t="İsviçre"/>
+	<w_phrase n="wlang_advanced_ssi_client" t="İstemci"/>
+	<w_phrase n="wlang_advanced_ssi_server" t="Sunucu"/>
+	<w_phrase n="wlang_line_ssi_idle_text" t="Boş Ekran için Görüntülenecek Metin"/>
+	<w_phrase n="wlang_line_ssi_idle_cfwd" t="Çağrı Yönlendirme Hedefi için Görüntülenecek Metin"/>
+	<w_phrase n="wlang_line_ssi_idle_number" t="Bekleme Ekranı için Görüntülenecek Numara"/>
+	<w_phrase n="wlang_line_ssi_alert_info" t="Uyarı Bilgisi URL'i"/>
+	<w_phrase n="wlang_advanced_ssi_alert_info_playback" t="Uyarı Bilgisi Oynatma"/>
+	<w_phrase n="wlang_advanced_ssi_syslog_server" t="Syslog Sunucu"/>
+	<w_phrase n="wlang_advanced_ssi_aoc_pulse_currency" t="AOC Darbe Para Birimi"/>
+	<w_phrase n="wlang_advanced_ssi_aoc_cost_pulse" t="AOC Fiyat/Darbe"/>
+	<w_phrase n="wlang_advanced_aoc_amount_display" t="AOC Tutar Gösterimi"/>
+	<w_phrase n="wlang_advanced_aoc_amount_charged" t="Ücret"/>
+	<w_phrase n="wlang_advanced_aoc_amount_balance" t="Bakiye"/>
+	<w_phrase n="wlang_advanced_audio_device_indicator" t="Ses Aygıtı Göstergesi"/>
+	<w_phrase n="wlang_prefs_ringtone_defaults" t="Zil Varsayılanları"/>
+	<w_phrase n="wlang_prefs_ringtone_addressbook" t="Dizin Zil Sesleri"/>
+	<w_phrase n="wlang_leftnav_trusted_cert" t="Sertifikalar"/>
+	<w_phrase n="wlang_advanced_on" t="açık"/>
+	<w_phrase n="wlang_advanced_call_waiting_visual" t="sadece görsel"/>
+	<w_phrase n="wlang_line_ssi_pname" t="Kullanıcı Adı Kimlik Doğrulama"/>
+	<w_phrase n="wlang_adr_deletebutton" t="Sil"/>
+	<w_phrase n="wlang_adr_prev_del_before" t="önce Dizini sil"/>
+	<w_phrase n="wlang_advanced_ssi_filter_registrar" t="Alan Adı Yazmanından Paketleri Filtrele"/>
+	<w_phrase n="wlang_line_sipsettings" t="SIP Kimlik Ayarları"/>
+	<w_phrase n="wlang_line_rtpsettings" t="RTP Kimlik Ayarları"/>
+	<w_phrase n="wlang_line_natsettings" t="NAT Kimlik Ayarları"/>
+	<w_phrase n="wlang_line_ssi_descr_contact" t="Uzun SIP-İletişim (RFC3840)"/>
+	<w_phrase n="wlang_line_ssi_sipusername_as_line" t="Hatalı Alan Adı Yazmanı Desteği"/>
+	<w_phrase n="wlang_advanced_snmp" t="SNMP"/>
+	<w_phrase n="wlang_advanced_ssi_snmp_port" t="Port"/>
+	<w_phrase n="wlang_advanced_ssi_snmp_trusted" t="Güvenilir Adres"/>
+	<w_phrase n="wlang_advanced_ssi_sip_short_form" t="SIP Kısa Başlıkları Kullan"/>
+	<w_phrase n="wlang_sysinfo_siplinestatus" t="SIP Kimlik Durumu"/>
+	<w_phrase n="wlang_sysinfo_sysinfo" t="Sistem Bilgisi"/>
+	<w_phrase n="wlang_adr_outgoingid" t="Giden Kimlik"/>
+	<w_phrase n="wlang_adr_lineid_active" t="Etkin"/>
+	<w_phrase n="wlang_adr_lineid1" t="Kimlik 1"/>
+	<w_phrase n="wlang_adr_lineid2" t="Kimlik 2"/>
+	<w_phrase n="wlang_adr_lineid3" t="Kimlik 3"/>
+	<w_phrase n="wlang_adr_lineid4" t="Kimlik 4"/>
+	<w_phrase n="wlang_adr_lineid5" t="Kimlik 5"/>
+	<w_phrase n="wlang_adr_lineid6" t="Kimlik 6"/>
+	<w_phrase n="wlang_adr_lineid7" t="Kimlik 7"/>
+	<w_phrase n="wlang_adr_lineid8" t="Kimlik 8"/>
+	<w_phrase n="wlang_adr_lineid9" t="Kimlik 9"/>
+	<w_phrase n="wlang_adr_lineid10" t="Kimlik 10"/>
+	<w_phrase n="wlang_adr_lineid11" t="Kimlik 11"/>
+	<w_phrase n="wlang_adr_lineid12" t="Kimlik 12"/>
+	<w_phrase n="wlang_adr_preview_outgoing_id" t="Giden Kimlik"/>
+	<w_phrase n="wlang_line_ssi_record_missed_calls" t="Cevapsız Çağrıları Kaydet"/>
+	<w_phrase n="wlang_line_ssi_user_send_diversion_header" t="Saptırmayı Göster"/>
+	<w_phrase n="wlang_index_local_identity" t="Yerel Kimlik"/>
+	<w_phrase n="wlang_advanced_ssi_holding_reminder" t="Tutma Hatırlatıcısı"/>
+	<w_phrase n="wlang_info_production_info" t="Üretim Bilgisi"/>
+	<w_phrase n="wlang_line_reregister" t="Yeniden Kaydet"/>
+	<w_phrase n="wlang_confirm_head" t="Dikkat!"/>
+	<w_phrase n="wlang_confirm_button_yes" t="Evet"/>
+	<w_phrase n="wlang_confirm_button_no" t="Hayır"/>
+	<w_phrase n="wlang_confirm_ssi_title" t="Onay"/>
+	<w_phrase n="wlang_conf_text_del_adrbook" t="Dizininizin tamamen kaybolacağını unutmayın! Dizininizin tüm girişlerini gerçekten silmek istiyor musunuz?"/>
+	<w_phrase n="wlang_conf_text_reset" t="Evet ile onayladığınızda çağrı listeleri, dizin vb. ayarların kaybolacağını lütfen unutmayın. Telefonu fabrika ayarlarına sıfırlamak istediğinizden emin misiniz ?"/>
+	<w_phrase n="wlang_conf_text_reboot" t="Telefonu yeniden başlatmak istediğinize emin misiniz?"/>
+	<w_phrase n="wlang_line_ssi_active" t="Etkin kimlik"/>
+	<w_phrase n="wlang_line_play" t="Zil Çal"/>
+	<w_phrase n="wlang_line_ssi_proxyrequire" t="Proxy İste"/>
+	<w_phrase n="wlang_advanced_detectethernet" t="Eternet Kablosu Çıkarıldığını Algıla"/>
+	<w_phrase n="wlang_advanced_ssi_rtcp_support" t="RTCP Desteği"/>
+	<w_phrase n="wlang_update_manuallicense" t="El ile Lisans Yükleme"/>
+	<w_phrase n="wlang_update_licensefile" t="Lisans dosyası"/>
+	<w_phrase n="wlang_advanced_ssi_high_mic_gain" t="Daha Yüksek Mikrofon Kazancı (TIA normunun üstünde)"/>
+	<w_phrase n="wlang_advanced_handset_agc" t="Ahize AGC"/>
+	<w_phrase n="wlang_advanced_headset_agc" t="Kulaklık AGC"/>
+	<w_phrase n="wlang_advanced_ssi_partial_lookup" t="Kısmi Numara Arama"/>
+	<w_phrase n="wlang_ssi_number_lookup" t="Kişi Arama"/>
+	<w_phrase n="wlang_fkeys_ssi_url" t="Eylem URL"/>
+	<w_phrase n="wlang_advanced_ssi_sig_tos" t="SIP Servis Türü (TOS/Diffserv)"/>
+	<w_phrase n="wlang_advanced_ssi_guess_start_length" t="Hızlı Arama Başlatma Uzunluğu"/>
+	<w_phrase n="wlang_advanced_ethernet" t="Ethernet Portları"/>
+	<w_phrase n="wlang_advanced_ssi_eth_net_port" t="Ağ Portu"/>
+	<w_phrase n="wlang_advanced_ssi_eth_pc_port" t="PC Portu"/>
+	<w_phrase n="wlang_advanced_autoneg" t="Otomatik Anlaşma"/>
+	<w_phrase n="wlang_advanced_10full" t="10 Mbit Tam Dupleks"/>
+	<w_phrase n="wlang_advanced_10half" t="10 Mbit Yarım Dupleks"/>
+	<w_phrase n="wlang_advanced_100full" t="100 Mbit Tam Dupleks"/>
+	<w_phrase n="wlang_advanced_100half" t="100 Mbit Yarım Dupleks"/>
+	<w_phrase n="wlang_sysinfo_ethernet_status" t="Ethernet Durumu"/>
+	<w_phrase n="wlang_sysinfo_ethernet_status2" t="Durum"/>
+	<w_phrase n="wlang_connected" t="bağlı"/>
+	<w_phrase n="wlang_disconnected" t="bağlı değil"/>
+	<w_phrase n="wlang_sysinfo_ethernet_connection_type" t="Bağlantı Türü"/>
+	<w_phrase n="wlang_index_costs" t="Maliyetler"/>
+	<w_phrase n="wlang_action_ssi_missed" t="Cevapsız Arama"/>
+	<w_phrase n="wlang_line_ssi_stunbindint" t="STUN Aralığı (sn)"/>
+	<w_phrase n="wlang_action_info" t="Eylem URL’leri, telefonda belirli bir olay gerçekleştiğinde verilen HTTP GET istekleridir."/>
+	<w_phrase n="wlang_fkeys_ssi_p2t" t="Bas Konuş"/>
+	<w_phrase n="wlang_advanced_load_certs" t="Sunucu Sertifikasi Yükle"/>
+	<w_phrase n="wlang_advanced_load_sets_manually" t="Ayar Dosyasını El ile Yükle"/>
+	<w_phrase n="wlang_advanced_load_warning" t="Telefonun altındaki Yükle düğmesine tıkladığınızda ayarları SIFIRLAYABİLİR, yeni ayarları belirtilen dosyadan yükleyin ve yeniden başlatın. Tüm mevcut ayarlar kaybolacak!"/>
+	<w_phrase n="wlang_advanced_answer_after_policy" t="İnterkom Politikası"/>
+	<w_phrase n="wlang_advanced_answer_after_idle" t="sadece boşta"/>
+	<w_phrase n="wlang_advanced_answer_after_always" t="daima"/>
+	<w_phrase n="wlang_ldap_server" t="Sunucu Adresi"/>
+	<w_phrase n="wlang_ldap_port" t="Port"/>
+	<w_phrase n="wlang_ldap_base" t="Baz"/>
+	<w_phrase n="wlang_ldap_username" t="Kullanıcı Adı"/>
+	<w_phrase n="wlang_ldap_password" t="Şifre"/>
+	<w_phrase n="wlang_guess_max_hits" t="Maks. Hit"/>
+	<w_phrase n="wlang_ldap_prefs" t="LDAP"/>
+	<w_phrase n="wlang_prefs_ssi_keyboard_lock" t="Klavye Kilidi"/>
+	<w_phrase n="wlang_prefs_ssi_keyboard_lock_pw" t="Kilidi Açmak için PIN"/>
+	<w_phrase n="wlang_line_ssi_country" t="Ülke Kodu"/>
+	<w_phrase n="wlang_line_ssi_area" t="Alan Kodu"/>
+	<w_phrase n="wlang_advanced_ssi_enum" t="ENUM Desteği"/>
+	<w_phrase n="wlang_advanced_ssi_tcp_listen" t="SIP TCP Portunda Dinleme"/>
+	<w_phrase n="wlang_advanced_tmz_AUSp8" t="+8 Avustralya (Perth)"/>
+	<w_phrase n="wlang_advanced_tmz_AUS2p95" t="+9.5 Avustralya (Darwin)"/>
+	<w_phrase n="wlang_advanced_tmz_AUS3p10" t="+10 Avustralya (Hobart)"/>
+	<w_phrase n="wlang_advanced_tmz_BRA1m3" t="-3 Brezilya (Yaz Saati)"/>
+	<w_phrase n="wlang_advanced_tmz_BRA2m3" t="-3 Brezilya (Yaz Saati yok)"/>
+	<w_phrase n="wlang_advanced_tmz_BRAm2" t="-2 Brezilya (Yaz Saati yok)"/>
+	<w_phrase n="wlang_advanced_tmz_ARGm3" t="-3 Arjantin (Buenos Aires)"/>
+	<w_phrase n="wlang_advanced_tmz_EATp3" t="+3 Doğu Afrika Saati"/>
+	<w_phrase n="wlang_advanced_tmz_CATp2" t="+2 Orta Afrika Saati"/>
+	<w_phrase n="wlang_advanced_tmz_WATp1" t="+1 Batı Afrika Saati"/>
+	<w_phrase n="wlang_fkeys_ssi_context" t="İçerik"/>
+	<w_phrase n="wlang_fkeys_ssi_type" t="Türü"/>
+	<w_phrase n="wlang_fkeys_ssi_keyevent" t="Kilit Olay"/>
+	<w_phrase n="wlang_advanced_ssi_peer_to_peer_cc" t="Denkler Arası Çağrı Tamamlama"/>
+	<w_phrase n="wlang_advanced_logon_logoff" t="Oturum Açma/Kapatma"/>
+	<w_phrase n="wlang_advanced_ssi_auto_logoff_time" t="Hareketsizlikten Sonra Tüm Hatları Kapat (dk)"/>
+	<w_phrase n="wlang_advanced_logoffall" t="Tüm Kimlikleri Sil"/>
+	<w_phrase n="wlang_advanced_logoffline" t="Kimliği Sil"/>
+	<w_phrase n="wlang_conf_text_logoff_all" t="Tüm SIP kimlik ayarlarının kaybolacağını unutmayın. Tüm kimlikleri gerçekten silmek istiyor musunuz ?"/>
+	<w_phrase n="wlang_fkey_info" t="Bu sayfada, telefonunuzdaki programlanabilir tuşların ayarlarını belirleyebilirsiniz. Kimlik içeriğini belirlemek için İÇERİK kullanın; bu kimlik belirli bir dahili hatta abone olmak için kullanılacaktır. Tür, belirli bir tuşun gerçek işlevselliğini seçer. Son bağımsız değişken Numara alanında, gerçek telefon numarası, sip url, dtmf dizgesi, işlem url'i veya tuş tipi kaydedilebilir. Lütfen daha fazla bilgi için telefon kılavuzuna bakın."/>
+	<w_phrase n="wlang_advanced_tmz_TTBm4" t="-4 Trinidad ve Tobago (Port of Spain)"/>
+	<w_phrase n="wlang_line_ssi_shared_line" t="Paylaşılan Hat"/>
+	<w_phrase n="wlang_advanced_ssi_text_softkey" t="Yazılım Tuşlarında Yalnızca Metin Gösterimi"/>
+	<w_phrase n="wlang_advanced_ssi_softkey_and_text" t="Yazılım Tuş Simgelerine ek olarak Metin Görüntüleme"/>
+	<w_phrase n="wlang_line_ssi_dtmf_info" t="SIP INFO üzerinden DTMF"/>
+	<w_phrase n="wlang_line_ssi_xml_screen_url" t="XML Boş Ekran URL'i"/>
+	<w_phrase n="wlang_prefs_ssi_ringer_animation" t="Zil Animasyonu"/>
+	<w_phrase n="wlang_advanced_ssi_speaker_dialer" t="Aramak için Hoparlör Tuşunu Kullan"/>
+	<w_phrase n="wlang_action_ssi_connected" t="Bağlandığında"/>
+	<w_phrase n="wlang_action_ssi_disconnected" t="Bağlantısız Olduğunda"/>
+	<w_phrase n="wlang_advanced_ssi_overlap_dialing" t="Örtüşen Arama"/>
+	<w_phrase n="wlang_fkeys_ssi_speed" t="Hızlı Arama"/>
+	<w_phrase n="wlang_fkeys_ssi_none" t="Hiçbiri"/>
+	<w_phrase n="wlang_prefs_ssi_redundant_softkeys" t="Yedek Yazılım Tuşları"/>
+	<w_phrase n="wlang_advanced_ssi_web_logout" t="Otomatik Çıkış (dk)"/>
+	<w_phrase n="wlang_prefs_ringer9" t="Zil 9"/>
+	<w_phrase n="wlang_prefs_ringer10" t="Zil 10"/>
+	<w_phrase n="wlang_advanced_ssi_cancel_on_hold" t="Bekletilen Çağrı İptal Tuşu"/>
+	<w_phrase n="wlang_advanced_call_waiting_ringer" t="Zil"/>
+	<w_phrase n="wlang_advanced_ssi_ntp_refresh" t="NTP Yenileme Zamanı (sn)"/>
+	<w_phrase n="wlang_line_ssi_ring_after_delay" t="Gecikme Sonrası Çaı (sn)"/>
+	<w_phrase n="wlang_prefs_ssi_redirect_on_code" t="Açık Kodu"/>
+	<w_phrase n="wlang_prefs_ssi_redirect_off_code" t="Kapalı Kodu"/>
+	<w_phrase n="wlang_prefs_redirection_always" t="Her zaman"/>
+	<w_phrase n="wlang_prefs_redirection_busy" t="Meşgul"/>
+	<w_phrase n="wlang_prefs_redirection_time" t="Zaman Aşımı"/>
+	<w_phrase n="wlang_prefs_dnd" t="DND"/>
+	<w_phrase n="wlang_prefs_redirect_number" t="Hedef"/>
+	<w_phrase n="wlang_advanced_ssi_pnp_config" t="PnP Yapılandırması"/>
+	<w_phrase n="wlang_advanced_ssi_flood_tracing" t="KAYIT/ABONELİK/BİLDİRİM için SIP İzi"/>
+	<w_phrase n="wlang_reboot_ssi_title" t="Yeniden başlatılıyor…"/>
+	<w_phrase n="wlang_text_reboot_info" t="Telefonunuz biraz sonra yeniden başlatılacaktır. Lütfen tamamen yeniden başlayana kadar sabırlı olun. Ekranda tanıdık boş ekran tekrar gösterildiğinde, web arayüzü de dahil olmak üzere telefonu kullanabilirsiniz."/>
+	<w_phrase n="wlang_advanced_ssi_xml_notify" t="XML NOTIFY Desteği"/>
+	<w_phrase n="wlang_minibrowser_pref" t="Mini Tarayıcı"/>
+	<w_phrase n="wlang_advanced_ssi_enable_timer_support" t="Zamanlayıcı Desteği (RFC4028)"/>
+	<w_phrase n="wlang_prefs_dsnumbername" t="Numara + Ad"/>
+	<w_phrase n="wlang_prefs_ssi_keyboard_lock_dp" t="Acil Durum Numaraları"/>
+	<w_phrase n="wlang_prefs_alert_internal_text" t="Dahili Metin Uyarısı"/>
+	<w_phrase n="wlang_prefs_ssi_alert_internal_sound" t="Dahili Zil Uyarısı"/>
+	<w_phrase n="wlang_prefs_alert_external_text" t="Dış Metin Uyarısı"/>
+	<w_phrase n="wlang_prefs_ssi_alert_external_sound" t="Dış Zil Uyarısı"/>
+	<w_phrase n="wlang_prefs_alert_group_text" t="Grup Uyarı Metini"/>
+	<w_phrase n="wlang_prefs_ssi_alert_group_sound" t="Grup Uyarı Zili"/>
+	<w_phrase n="wlang_prefs_alert_info_ringer" t="Uyarı-Bilgi Zili"/>
+	<w_phrase n="wlang_prefs_ssi_scroll_outgoing" t="Etkin Kimlik Kaydırma"/>
+	<w_phrase n="wlang_advanced_tmz_USA2m7" t="-7 Amerika Birleşik Devletleri - MST DST yok "/>
+	<w_phrase n="wlang_prefs_ssi_show_local_line" t="Kimlik İndeksini Göster"/>
+	<w_phrase n="wlang_advanced_ssi_pickup_indication" t="Çağrı Yakalama Bilgisi için Ses Gösterimi"/>
+	<w_phrase n="wlang_advanced_multicast" t="Çoğa gönderim"/>
+	<w_phrase n="wlang_advanced_ssi_multicast_listen" t="Çoğa Gönderim Desteği"/>
+	<w_phrase n="wlang_advanced_ssi_multicast_address" t="IP Adresi"/>
+	<w_phrase n="wlang_advanced_ssi_multicast_port" t="Port"/>
+	<w_phrase n="wlang_language_name" t="Türkçe"/>
+	<w_phrase n="wlang_advanced_qos" t="Hizmet Kalitesi"/>
+	<w_phrase n="wlang_advanced_rtp" t="RTP/RTCP"/>
+	<w_phrase n="wlang_advanced_sip" t="SIP"/>
+	<w_phrase n="wlang_advtab_network" t="Ağ"/>
+	<w_phrase n="wlang_advtab_behavior" t="Davranış"/>
+	<w_phrase n="wlang_advtab_audio" t="Ses"/>
+	<w_phrase n="wlang_advtab_sip" t="SIP/RTP"/>
+	<w_phrase n="wlang_advtab_update" t="Güncelleme"/>
+	<w_phrase n="wlang_advtab_security" t="QoS/Güvenlik"/>
+	<w_phrase n="wlang_linetab_login" t="Oturum Aç"/>
+	<w_phrase n="wlang_linetab_feat" t="Özellikler"/>
+	<w_phrase n="wlang_linetab_sip" t="SIP"/>
+	<w_phrase n="wlang_linetab_nat" t="NAT"/>
+	<w_phrase n="wlang_linetab_rtp" t="RTP"/>
+	<w_phrase n="wlang_line_ssi_server_type" t="Sunucu Türü Desteği"/>
+	<w_phrase n="wlang_line_broadsoft" t="Broadsoft"/>
+	<w_phrase n="wlang_line_sylantro" t="Sylantro"/>
+	<w_phrase n="wlang_line_pbxnsip" t="PBXnSIP"/>
+	<w_phrase n="wlang_line_default" t="Varsayılan"/>
+	<w_phrase n="wlang_line_ssi_event_list_uri" t="Dahili Numara İzleme ve Çağrı Alma Listesi URI"/>
+	<w_phrase n="wlang_web_confirm_apply_set_change" t="Ayar değişikliklerini uygula?"/>
+	<w_phrase n="wlang_line_ssi_presence_subscription" t="Kişi Listesi"/>
+	<w_phrase n="wlang_line_ssi_presence_buddy_list_uri" t="Kişi Listesi URI"/>
+	<w_phrase n="wlang_line_ssi_full_sdp_answer" t="Tam SDP Cevap"/>
+	<w_phrase n="wlang_info_firmware_version" t="Yazılım Sürümü"/>
+	<w_phrase n="wlang_advanced_ssi_redirect_ringing" t="Gelen Aramaların Programlanabilir Tuşlarla Yönlendirilmesine İzin Ver"/>
+	<w_phrase n="wlang_advanced_ssi_auto_redial" t="Meşgulse Otomatik Yeniden Arama"/>
+	<w_phrase n="wlang_advanced_ssi_auto_redial_value" t="Tekrar ara (sn)"/>
+	<w_phrase n="wlang_advanced_ssi_disable_blind_transfer" t="Kör Aktarmanı Devre Dışı Bırak (REFER)"/>
+	<w_phrase n="wlang_advanced_ssi_disable_deflection" t="Saptırmayı Devre Dışı Bırak (Kod 302)"/>
+	<w_phrase n="wlang_action_ssi_log_on" t="Oturum Aç"/>
+	<w_phrase n="wlang_action_ssi_log_off" t="Oturumu Kapat"/>
+	<w_phrase n="wlang_prefs_ssi_show_call_status" t="Arama Durumu Bilgisini Göster"/>
+	<w_phrase n="wlang_action_ssi_reg_failed" t="Başarısız kayıt"/>
+	<w_phrase n="wlang_subscriptions_ssi_title" t="Abonelik durumu"/>
+	<w_phrase n="wlang_leftnav_subscriptions" t="Abonelikler"/>
+	<w_phrase n="wlang_advanced_ssi_max_boot_delay" t="Maks. Önyükleme Gecikmesi (sn)"/>
+	<w_phrase n="wlang_advanced_http_server" t="HTTP Sunucu"/>
+	<w_phrase n="wlang_advanced_http_client" t="HTTP İstemci"/>
+	<w_phrase n="wlang_advanced_ssi_mailbox_active" t="Yalnızca Etkin Kimlik Posta Kutusunu Kullan"/>
+	<w_phrase n="wlang_line_ssi_remove_all_bindings" t="Kaydı Silme İşlemindeki Tüm Bağlantıları Kaldır"/>
+	<w_phrase n="wlang_line_ssi_include_listeners" t="Dinleyicileri REGISTER'a dahil et"/>
+	<w_phrase n="wlang_vpn_ssi_vpn_on" t="VPN"/>
+	<w_phrase n="wlang_vpn_ssi_tarball_url" t="Açılmış VPN yapılandırma tarball"/>
+	<w_phrase n="wlang_advanced_ssi_idle_offhook" t="Ahize Açıkta Bekleme Ekranına Geri Dön"/>
+	<w_phrase n="wlang_prefs_ssi_enable_keyboard_lock" t="Klavye Kilitlemesine İzin Ver"/>
+	<w_phrase n="wlang_advanced_ssi_vlan_port_tagging" t="Belirli Anahtar Bağlantı Noktalarında Un-/Tag VLAN Trafiği"/>
+	<w_phrase n="wlang_advanced_ssi_vlan_id" t="VLAN Kimliği (1-4094)"/>
+	<w_phrase n="wlang_advanced_ssi_vlan_priority" t="VLAN Önceliği (0-7)"/>
+	<w_phrase n="wlang_advanced_vlan" t="VLAN"/>
+	<w_phrase n="wlang_line_failover_identity" t="Üstlenme Kimliği"/>
+	<w_phrase n="wlang_fkeys_sidecar" t="Genişletme Modülü"/>
+	<w_phrase n="wlang_usb_expansion_module" t="USB Genişletme Modülü"/>
+	<w_phrase n="wlang_sidecar_layout_lines" t="Satır Düzeni"/>
+	<w_phrase n="wlang_sidecar_layout_tiles" t="Döşeme Düzeni"/>
+	<w_phrase n="wlang_line_ssi_record_dialed_calls" t="Giden Çağrıları Kaydet"/>
+	<w_phrase n="wlang_line_ssi_record_received_calls" t="Gelen Çağrıları Kaydet"/>
+	<w_phrase n="wlang_prefs_ssi_emergency_proxy" t="Acil Durum Numaraları için Giden Proxy"/>
+	<w_phrase n="wlang_line_telepo" t="Telepo"/>
+	<w_phrase n="wlang_fkeys_ssi_button" t="Tuş"/>
+	<w_phrase n="wlang_advanced_ssi_retryafterfailedregister" t="Başarısız Kayıttan Sonra Tekrar Deneme Aralığı (sn)"/>
+	<w_phrase n="wlang_line_ssi_subscription_expiry" t="Abonelik Süresi (sn)"/>
+	<w_phrase n="wlang_line_metaswitch" t="MetaSwitch"/>
+	<w_phrase n="wlang_advanced_ssi_sendprack" t="PRACK gönder"/>
+	<w_phrase n="wlang_watchdog" t="Gözcü"/>
+	<w_phrase n="wlang_advanced_ssi_rtp_keepalive" t="RTP Canlı Tutma"/>
+	<w_phrase n="wlang_ldap_search_filter" t="LDAP Ad Filtresi"/>
+	<w_phrase n="wlang_ldap_number_filter" t="LDAP Numara Filtresi"/>
+	<w_phrase n="wlang_ldap_name_attributes" t="LDAP Ad Nitelikleri"/>
+	<w_phrase n="wlang_ldap_number_attributes" t="LDAP Numara Nitelikleri"/>
+	<w_phrase n="wlang_ldap_display_name" t="LDAP Görüntü Adı"/>
+	<w_phrase n="wlang_advanced_ssi_ldap_over_tls" t="TLS üzerinden LDAP"/>
+	<w_phrase n="wlang_prefs_tsaustria" t="Avusturya"/>
+	<w_phrase n="wlang_prefs_tsfrance" t="Fransa"/>
+	<w_phrase n="wlang_prefs_tsitaly" t="İtalya"/>
+	<w_phrase n="wlang_prefs_tsnetherlands" t="Hollanda"/>
+	<w_phrase n="wlang_prefs_tsnorway" t="Norveç"/>
+	<w_phrase n="wlang_prefs_tsnewzealand" t="Yeni Zelanda"/>
+	<w_phrase n="wlang_prefs_tsspain" t="İspanya"/>
+	<w_phrase n="wlang_prefs_tsgreatbritain" t="Büyük Britanya"/>
+	<w_phrase n="wlang_advanced_tmz_VENm4" t="-4 Venezuela (Karakas)"/>
+	<w_phrase n="wlang_advanced_tmz_NCLp11" t="+11 Yeni Kaledonya (Nouméa)"/>
+	<w_phrase n="wlang_line_ssi_enable_hookflash" t="Çağrı Sonlandırma Tuşu"/>
+	<w_phrase n="wlang_vpn_netcat_server" t="Netcat Sunucusu (örneğin, 192.168.0.188 5000)"/>
+	<w_phrase n="wlang_fkeys_ssi_presence" t="Durumu"/>
+	<w_phrase n="wlang_fkeys_ssi_disp_code" t="Yer Değiştirme Kodu"/>
+	<w_phrase n="wlang_prefs_custom_internal_alert_info" t="Dahili melodiler kullanarak özell uyarı bilgisi"/>
+	<w_phrase n="wlang_prefs_ca_ringer_text" t="Dahili Zil Metni"/>
+	<w_phrase n="wlang_prefs_ssi_ca_ringer_file" t="Dahili Zil Dosyası"/>
+	<w_phrase n="wlang_line_nortel" t="Nortel"/>
+	<w_phrase n="wlang_action_ssi_hold" t="Çağrı beklet"/>
+	<w_phrase n="wlang_action_ssi_unhold" t="Çağrıyı Bekletmeden Al"/>
+	<w_phrase n="wlang_action_ssi_transfer" t="Çağrı Aktar"/>
+	<w_phrase n="wlang_action_ssi_blind_transfer" t="Kör Aktarım"/>
+	<w_phrase n="wlang_action_ssi_attended_transfer" t="Katılımlı Aktarım"/>
+	<w_phrase n="wlang_action_ssi_longpress_url" t="Uzun Basma Satır Tuşu"/>
+	<w_phrase n="wlang_advanced_ssi_csta_control" t="CSTA Kontrolüne İzin Ver"/>
+	<w_phrase n="wlang_line_ssi_dtmf_info_sip_info_only" t="Sadece SIP BİLGİSİ"/>
+	<w_phrase n="wlang_advanced_ssi_speaker_receive_call" t="Çağrıları Almak için Hoparlör/Kulaklık Tuşunu Kullan"/>
+	<w_phrase n="wlang_prefs_ssi_global_missed_counter" t="Cevapsız Aramalar için Global Sayaç"/>
+	<w_phrase n="wlang_advanced_ssi_http_password_not_set" t="HTTP Şifresi ayarlanmadı!"/>
+	<w_phrase n="wlang_text_login_failed_info1" t="IP adresinden birkaç başarısız giriş denemesinden sonra"/>
+	<w_phrase n="wlang_text_login_failed_info2" t="Yine mevcut olacak"/>
+	<w_phrase n="wlang_text_login_failed_info3" t="dakika. Diğer başarısız oturum açma girişimleri, web arayüzünün engeli kaldırılması için beklemeniz gereken süreyi iki katına çıkaracaktır."/>
+	<w_phrase n="wlang_text_login_failed_info4" t=", web arayüzü engellendi!"/>
+	<w_phrase n="wlang_login_failed_ssi_title" t="Giriş başarısız!"/>
+	<w_phrase n="wlang_advanced_ssi_admin_password_not_set" t="Yönetici Şifresi ayarlanmadı!"/>
+	<w_phrase n="wlang_web_confirm_logout" t="Kullanıcıyı web sayfasından çıkar?"/>
+	<w_phrase n="wlang_advanced_logoutbutton" t="Çıkış"/>
+	<w_phrase n="wlang_line_ssi_savp" t="RTP/SAVP"/>
+	<w_phrase n="wlang_advanced_ssi_use_hidden_tags" t="Gizli Etiketleri Kullan"/>
+	<w_phrase n="wlang_fkeys_ssi_blf" t="BLF"/>
+	<w_phrase n="wlang_advanced_ssi_show_history_info" t="Geçmiş Bilgilerini Göster"/>
+	<w_phrase n="wlang_security_warning_ssi_title" t="Güvenlik Uyarısı!"/>
+	<w_phrase n="wlang_text_security_warning_info1" t="Siz veya başka bir uzak kullanıcı bu telefona yetkisiz bir HTTP POST isteği gönderdi."/>
+	<w_phrase n="wlang_text_security_warning_info2" t="Bu istek atlandı ve kimliği doğrulanmış oturum kapatıldı."/>
+	<w_phrase n="wlang_text_security_warning_info3" t="Web arayüzünü tekrar kullanmak için kimliğinizi yeniden doğrulamanız gerekir."/>
+	<w_phrase n="wlang_security_advice" t="Güvenlik Tavsiyesi"/>
+	<w_phrase n="wlang_security_text_advice1" t="Telefonunuzu uzak saldırılara karşı korumak için web arayüzünü korumanızı şiddetle öneririz. Bu nedenle, HTTP Kullanıcı ve Parola ile Yönetici Parolası varsayılan değerden değiştirilmelidir."/>
+	<w_phrase n="wlang_security_text_advice2" t="Ek olarak, web arayüzünü gizli güvenlik etiketleri ile, sahte HTTP POST istekleriyle telefon ayarlarını değiştirmeye çalışan saldırganlara karşı korumanız gerekir."/>
+	<w_phrase n="wlang_security_button_save" t="Ayarları yukarıda gösterildiği şekilde kaydetmek için basın."/>
+	<w_phrase n="wlang_security_button_ignore" t="Yeniden başlatılıncaya kadar uyarıyı yoksaymak için basın."/>
+	<w_phrase n="wlang_security_button_ignore_forever" t="Uyarıyı sonsuza dek yok saymak için basın."/>
+	<w_phrase n="wlang_security_ssi_title" t="Güvenlik"/>
+	<w_phrase n="wlang_advanced_ssi_ignore_warning" t="Güvenlik Tavsiyelerini Yoksay"/>
+	<w_phrase n="wlang_advanced_ssi_naptr_sip_uri" t="SIP URI'lerinde NAPTR kullan"/>
+	<w_phrase n="wlang_line_ssi_optional" t="isteğe bağlı"/>
+	<w_phrase n="wlang_line_ssi_mandatory" t="zorunlu"/>
+	<w_phrase n="wlang_prefs_backlight_dim" t="karartma"/>
+	<w_phrase n="wlang_advanced_ssi_show_diversion" t="Saptırmayı Göster"/>
+	<w_phrase n="wlang_advanced_ssi_offhook_dial_prompt" t="Ahizeyi Kaldırırken Arama İstemi"/>
+	<w_phrase n="wlang_fkeys_ssi_ivr" t="IVR"/>
+	<w_phrase n="wlang_info_uptime_info" t="Çalışma Zamanı"/>
+	<w_phrase n="wlang_info_memfree_info" t="Boş Bellek"/>
+	<w_phrase n="wlang_info_uboot_version_info" t="Önyükleyici Sürümü"/>
+	<w_phrase n="wlang_line_ssi_authtag" t="SRTP Yetkilendirme Etiketi"/>
+	<w_phrase n="wlang_line_ssi_aes32" t="AES-32"/>
+	<w_phrase n="wlang_line_ssi_aes80" t="AES-80"/>
+	<w_phrase n="wlang_prefs_ssi_show_ivr_digits" t="Bağlı Çağrıda IVR Basamağını Göster"/>
+	<w_phrase n="wlang_line_ssi_dynamic_payload" t="Dynamic G.726 Yükü"/>
+	<w_phrase n="wlang_advanced_ssi_show" t="göster"/>
+	<w_phrase n="wlang_fkeyname_retrieve" t="Sesli Mesaj"/>
+	<w_phrase n="wlang_fkeyname_dnd" t="DND"/>
+	<w_phrase n="wlang_fkeyname_menu" t="Ayarlar"/>
+	<w_phrase n="wlang_fkeyname_exec_assist_config" t="Yönetici-Asistan Yapıland"/>
+	<w_phrase n="wlang_fkeyname_exec_assist_callon_behalfof" t="Yönetici-Asistan Tarafından"/>
+	<w_phrase n="wlang_fkeyname_transfer" t="Aktar"/>
+	<w_phrase n="wlang_fkeyname_hold" t="Beklet"/>
+	<w_phrase n="wlang_fkeyname_missed" t="Cevapsız Aramalar"/>
+	<w_phrase n="wlang_fkeyname_accepted" t="Kabul Edilen Çağrılar"/>
+	<w_phrase n="wlang_advanced_tmz_USA2m10" t="-10 Amerika Birleşik Devletleri - Alaska-Aleutian"/>
+	<w_phrase n="wlang_fkeyname_call_lists" t="Çağrı Geçmişi"/>
+	<w_phrase n="wlang_fkeyname_support" t="Yardım"/>
+	<w_phrase n="wlang_fkeyname_headset" t="Kulaklık"/>
+	<w_phrase n="wlang_fkeyname_presence" t="Durumu"/>
+	<w_phrase n="wlang_fkeyname_buddies" t="Kişiler"/>
+	<w_phrase n="wlang_fkeyname_redial" t="Tekrar Ara"/>
+	<w_phrase n="wlang_fkeyname_instant_redial" t="Anında Tekrar Arama"/>
+	<w_phrase n="wlang_fkeyname_denyall" t="Arayanı Engelle"/>
+	<w_phrase n="wlang_fkeyname_contactpool" t="Havuz"/>
+	<w_phrase n="wlang_fkeyname_addr" t="Dizin"/>
+	<w_phrase n="wlang_ocip_prefs" t="OCI-P (Broadsoft)"/>
+	<w_phrase n="wlang_advanced_dfks" t="Cihaz Özelliği Anahtar Senkronizasyonu"/>
+	<w_phrase n="wlang_line_ssi_publish_presence_bootup" t="Açılışta Varlığı Yayımla"/>
+	<w_phrase n="wlang_fkeyname_record" t="Kayıt"/>
+	<w_phrase n="wlang_fkeyname_conference" t="Konferans"/>
+	<w_phrase n="wlang_fkeyname_id_next" t="Sonraki Kimlik"/>
+	<w_phrase n="wlang_fkeyname_id_prev" t="Önceki Kimlik"/>
+	<w_phrase n="wlang_fkeyname_mobility" t="Kayıt/Hareketlilik"/>
+	<w_phrase n="wlang_ocs_outbound_proxy" t="Giden Proxy"/>
+	<w_phrase n="wlang_prefs_ssi_advertisement" t="Reklam"/>
+	<w_phrase n="wlang_fkeyname_monitored_calls" t="Çağrıları İzle"/>
+	<w_phrase n="wlang_fkeys_ssi_transfer" t="Aktar"/>
+	<w_phrase n="wlang_fkeys_ssi_redirect" t="Çağrıyı Yönlendir"/>
+	<w_phrase n="wlang_fkeys_ssi_auto_answer" t="Otomatik Cevap"/>
+	<w_phrase n="wlang_wifi_auth_mode" t="Yetkilendirme Modu"/>
+	<w_phrase n="wlang_wifi_wpapsk" t="WPAPSK"/>
+	<w_phrase n="wlang_wifi_wpa_encryptype" t="Şifreleme Tipi"/>
+	<w_phrase n="wlang_wifi_essid" t="Essid"/>
+	<w_phrase n="wlang_advanced_wifi" t="WLAN"/>
+	<w_phrase n="wlang_advanced_tr069" t="TR-069"/>
+	<w_phrase n="wlang_advanced_xcap" t="XCAP"/>
+	<w_phrase n="wlang_wifi_wep_key1" t="Tuş1"/>
+	<w_phrase n="wlang_line_asterisk" t="Yıldız işareti"/>
+	<w_phrase n="wlang_line_ccm" t="CCM"/>
+	<w_phrase n="wlang_advanced_ssi_typeanswering" t="İnterkom Cevap Türü"/>
+	<w_phrase n="wlang_advanced_ssi_tahandsfree" t="Eller serbest"/>
+	<w_phrase n="wlang_advanced_ssi_tahandset" t="Ahize"/>
+	<w_phrase n="wlang_advanced_ssi_taheadset" t="Kulaklık"/>
+	<w_phrase n="wlang_advanced_ssi_taactivedevice" t="Etkin Cihaz"/>
+	<w_phrase n="wlang_line_ssi_additional_supported_headers" t="Ek Desteklenen Başlıklar"/>
+	<w_phrase n="wlang_prefs_ssi_dim_timer" t="Sonra karart (sn)"/>
+	<w_phrase n="wlang_prefs_character_settings" t="Karakter Ayarları"/>
+	<w_phrase n="wlang_fkeyname_mute" t="Sessiz"/>
+	<w_phrase n="wlang_advanced_ssi_empty_tls_client_cert" t="İstemci Sertifikasını Boşalt"/>
+	<w_phrase n="wlang_advanced_vq_report_collector" t="Ses Kalitesi Rapor Toplayıcısı"/>
+	<w_phrase n="wlang_fkeyname_reboot" t="Yeniden Başlat"/>
+	<w_phrase n="wlang_fkeyname_logoff_all" t="Tüm Oturumları Kapat"/>
+	<w_phrase n="wlang_fkeyname_auto_answer" t="Otomatik Cevap"/>
+	<w_phrase n="wlang_fkeyname_reset" t="Ayarları sıfırla"/>
+	<w_phrase n="wlang_prefs_keyboard_lock_timeout" t="Klavyeyi kilitle (sn)"/>
+	<w_phrase n="wlang_logged_out_info" t="Artık telefonunuzdan çıkış yaptınız. Tekrar giriş yapmak için giriş düğmesine tıklayın."/>
+	<w_phrase n="wlang_logged_out_title" t="Çıkış"/>
+	<w_phrase n="wlang_advanced_loginbutton" t="Oturum Aç"/>
+	<w_phrase n="wlang_advanced_ssi_sip_tracing" t="SIP İzleme"/>
+	<w_phrase n="wlang_advanced_ssi_http_tracing" t="HTTP İzleme"/>
+	<w_phrase n="wlang_line_ssi_g726_packing_order" t="G.726 Bayt Sırası"/>
+	<w_phrase n="wlang_line_ssi_rfc3551" t="RFC3551"/>
+	<w_phrase n="wlang_line_ssi_aal2" t="AAL2"/>
+	<w_phrase n="wlang_adr_first_name" t="Ad"/>
+	<w_phrase n="wlang_adr_last_name" t="Soyadı"/>
+	<w_phrase n="wlang_adr_group" t="Grup"/>
+	<w_phrase n="wlang_adr_title" t="Ünvan"/>
+	<w_phrase n="wlang_adr_organization" t="Şirket"/>
+	<w_phrase n="wlang_adr_email" t="E-posta"/>
+	<w_phrase n="wlang_adr_note" t="Not"/>
+	<w_phrase n="wlang_adr_favorite" t="Favori"/>
+	<w_phrase n="wlang_adr_work" t="İş"/>
+	<w_phrase n="wlang_adr_addsub_button" t="Ekle"/>
+	<w_phrase n="wlang_adr_change_button" t="Değiştir"/>
+	<w_phrase n="wlang_advanced_goto_monitor_state_on_line_activity" t="Etkinlikte Çağrı İzlemeye Git"/>
+	<w_phrase n="wlang_adr_skip_first_line" t="İlk Satırı Atla"/>
+	<w_phrase n="wlang_advanced_prefer_saved_over_received_photo" t="Yerel Fotoğrafları Tercih Et"/>
+	<w_phrase n="wlang_adr_photo" t="Fotoğraf"/>
+	<w_phrase n="wlang_line_use_photo_from_tbook" t="Telefon Adres Defterinden Al"/>
+	<w_phrase n="wlang_line_teles" t="Teles"/>
+	<w_phrase n="wlang_fkeys_ssi_replacement_label_header" t="Etiket"/>
+	<w_phrase n="wlang_fkeys_ssi_short_label" t="Kısa Etiket"/>
+	<w_phrase n="wlang_fkeys_ssi_full_label" t="Tam Etiket"/>
+	<w_phrase n="wlang_fkeys_ssi_short_label_mode" t="Kısa Etiket Modu"/>
+	<w_phrase n="wlang_fkeyname_favorites" t="Favoriler"/>
+	<w_phrase n="wlang_advanced_load_param_map" t="TR-069 Parametre Haritasını Elle Yükle"/>
+	<w_phrase n="wlang_line_default_contact_uri" t="Varsayılan İletişim Numarası"/>
+	<w_phrase n="wlang_contact_none" t="Hiçbiri"/>
+	<w_phrase n="wlang_contact_mobile" t="Mobil"/>
+	<w_phrase n="wlang_contact_home" t="Ev"/>
+	<w_phrase n="wlang_contact_main" t="Ana"/>
+	<w_phrase n="wlang_advanced_ssi_suppress_ringing_during_hold" t="Beklemede Zil Sesini Önle"/>
+	<w_phrase n="wlang_advanced_ssi_play_music_during_hold" t="Beklemede Müzik Çal"/>
+	<w_phrase n="wlang_advanced_ssi_offer_outbound" t="Giden Kullan"/>
+	<w_phrase n="wlang_advanced_tmz_UAEp4" t="+4 Birleşik Arap Emirlikleri (Dubai)"/>
+	<w_phrase n="wlang_prefs_ssi_dialnumber_us_format" t="ABD Arama Numarası Biçimi"/>
+	<w_phrase n="wlang_advanced_ssi_transferonhookstarcode" t="Starcode Alınan Çağrıları Aktar"/>
+	<w_phrase n="wlang_advanced_load_dialplan" t="Dialplan XML'i Elle Yükle"/>
+	<w_phrase n="wlang_jb" t="Gelişmiş JB"/>
+	<w_phrase n="wlang_jb_adaptive" t="Uyarlanabilir Oynatma"/>
+	<w_phrase n="wlang_jb_adjust_silence" t="Sessizlik sırasında ayarla"/>
+	<w_phrase n="wlang_jb_adjust_immediately" t="Hemen ayarla"/>
+	<w_phrase n="wlang_jb_max" t="JB_Max"/>
+	<w_phrase n="wlang_jb_min" t="JB_Min"/>
+	<w_phrase n="wlang_jb_average" t="JB_Ortalama"/>
+	<w_phrase n="wlang_adr_nrtype_sip" t="sip"/>
+	<w_phrase n="wlang_adr_nrtype_business" t="iş"/>
+	<w_phrase n="wlang_adr_nrtype_landline" t="Sabit hat"/>
+	<w_phrase n="wlang_adr_nrtype_extension" t="dahili numara"/>
+	<w_phrase n="wlang_adr_number_type" t="Numara Türü"/>
+	<w_phrase n="wlang_adr_nickname" t="Takma Ad"/>
+	<w_phrase n="wlang_fkeys_ssi_multicast" t="Çoğa gönderim"/>
+	<w_phrase n="wlang_fkeys_ssi_xml" t="XML Tanımı"/>
+	<w_phrase n="wlang_fkeys_ssi_conference_server" t="Konferans"/>
+	<w_phrase n="wlang_action_ssi_received_attended_transfer" t="Alınan SIP INVITE"/>
+	<w_phrase n="wlang_line_ssi_mediatransportoffer" t="Medya Taşımacılığı Teklifi"/>
+	<w_phrase n="wlang_line_ssi_mediatransportoffersetup" t="Medya Taşımacılığı Teklifi Kurulumu"/>
+	<w_phrase n="wlang_line_ssi_mto_active" t="etkin"/>
+	<w_phrase n="wlang_line_ssi_mto_passive" t="pasif"/>
+	<w_phrase n="wlang_line_ssi_mto_any" t="herhangi"/>
+	<w_phrase n="wlang_line_ssi_hold_inactive" t="Bekletmeyi Etkin Değil olarak gönder"/>
+	<w_phrase n="wlang_prefs_ssi_upper_chars_0" t="Büyük Harf Karakter Dizisi Tuşu 0"/>
+	<w_phrase n="wlang_prefs_ssi_upper_chars_1" t="Büyük Harf Karakter Dizisi Tuşu 1"/>
+	<w_phrase n="wlang_prefs_ssi_upper_chars_2" t="Büyük Harf Karakter Dizisi Tuşu 2"/>
+	<w_phrase n="wlang_prefs_ssi_upper_chars_3" t="Büyük Harf Karakter Dizisi Tuşu 3"/>
+	<w_phrase n="wlang_prefs_ssi_upper_chars_4" t="Büyük Harf Karakter Dizisi Tuşu 4"/>
+	<w_phrase n="wlang_prefs_ssi_upper_chars_5" t="Büyük Harf Karakter Dizisi Tuşu 5"/>
+	<w_phrase n="wlang_prefs_ssi_upper_chars_6" t="Büyük Harf Karakter Dizisi Tuşu 6"/>
+	<w_phrase n="wlang_prefs_ssi_upper_chars_7" t="Büyük Harf Karakter Dizisi Tuşu 7"/>
+	<w_phrase n="wlang_prefs_ssi_upper_chars_8" t="Büyük Harf Karakter Dizisi Tuşu 8"/>
+	<w_phrase n="wlang_prefs_ssi_upper_chars_9" t="Büyük Harf Karakter Dizisi Tuşu 9"/>
+	<w_phrase n="wlang_prefs_ssi_lower_chars_0" t="Küçük Harf Karakter Dizisi Tuşu 0"/>
+	<w_phrase n="wlang_prefs_ssi_lower_chars_1" t="Küçük Harf Karakter Dizisi Tuşu 1"/>
+	<w_phrase n="wlang_prefs_ssi_lower_chars_2" t="Küçük Harf Karakter Dizisi Tuşu 2"/>
+	<w_phrase n="wlang_prefs_ssi_lower_chars_3" t="Küçük Harf Karakter Dizisi Tuşu 3"/>
+	<w_phrase n="wlang_prefs_ssi_lower_chars_4" t="Küçük Harf Karakter Dizisi Tuşu 4"/>
+	<w_phrase n="wlang_prefs_ssi_lower_chars_5" t="Küçük Harf Karakter Dizisi Tuşu 5"/>
+	<w_phrase n="wlang_prefs_ssi_lower_chars_6" t="Küçük Harf Karakter Dizisi Tuşu 6"/>
+	<w_phrase n="wlang_prefs_ssi_lower_chars_7" t="Küçük Harf Karakter Dizisi Tuşu 7"/>
+	<w_phrase n="wlang_prefs_ssi_lower_chars_8" t="Küçük Harf Karakter Dizisi Tuşu 8"/>
+	<w_phrase n="wlang_prefs_ssi_lower_chars_9" t="Küçük Harf Karakter Dizisi Tuşu 9"/>
+	<w_phrase n="wlang_line_ssi_subscription_expiry_after_failed" t="Başarısız Abonelik Yeniden Dene Süresi (sn)"/>
+	<w_phrase n="wlang_advanced_ssi_transferonhooknonpots" t="Ahize Kapalıyken Bağımsız Aktarma"/>
+	<w_phrase n="wlang_advanced_ssi_check_sdp_version" t="SDP Sürümünü Kontrol Et"/>
+	<w_phrase n="wlang_prefs_ssi_show_clock" t="Saati Göster"/>
+	<w_phrase n="wlang_ldap_perform_initial_query" t="İlk Sorgulama"/>
+	<w_phrase n="wlang_cert_tab_unknown_certs" t="Bilinmeyen Sertifikalar"/>
+	<w_phrase n="wlang_cert_tab_tlsdsk_certs" t="TLS DSK"/>
+	<w_phrase n="wlang_cert_add_trusted_cert" t="Özel Sertifika Ekle (DER Formatı)"/>
+	<w_phrase n="wlang_tls_server_authentication_notification" t="Varsayılan olarak, telefonlar güvenli bağlantılarda (TLS) sunucu kimliklerini doğrulamaz. Bu bağlantılar izinsiz izleme saldırılarına açıktır. Özelliği etkinleştirebilirsiniz, ancak güvenlik endişelerinden dolayı özelliği yalnızca fabrika ayarlarına sıfırlama ile devre dışı bırakabileceğinizi unutmayın. Lütfen daha fazla bilgi için WIKI'ye bakın."/>
+	<w_phrase n="wlang_tls_server_authentication_title" t="TLS Sunucu Kimlik Doğrulama"/>
+	<w_phrase n="wlang_tls_server_authentication_activate" t="Etkinleştir"/>
+	<w_phrase n="wlang_read_more" t="Devamını oku"/>
+	<w_phrase n="wlang_advanced_1000full" t="1000 Mbit Tam Dupleks"/>
+	<w_phrase n="wlang_advanced_1000half" t="1000 Mbit Yarım Dubleks"/>
+	<w_phrase n="wlang_advanced_rtcp_xr" t="RTCP-XR Rapor Formatı"/>
+	<w_phrase n="wlang_dialplan_count_failed_match_groups" t="Arama Planındaki Tüm Grupları Say"/>
+	<w_phrase n="wlang_advanced_ssi_allow_rtp_on_mute" t="Sessizde Sessiz RTP Paketleri Gönder"/>
+	<w_phrase n="wlang_line_ssi_is_voice_identity" t="Kimlik Çağrıları Alabilir"/>
+	<w_phrase n="wlang_line_ssi_hide_identity" t="Gizli Kimlik"/>
+	<w_phrase n="wlang_fkeyname_status_messages" t="Bilgi"/>
+	<w_phrase n="wlang_advanced_ssi_min_pin_length" t="Minimum PIN Uzunluğu"/>
+	<w_phrase n="wlang_advanced_ssi_max_pin_retry" t="Maksimum PIN Denemesi"/>
+	<w_phrase n="wlang_line_ssi_allow_inc_dialog_subscribe" t="Gelen Dahili Numara İzlemeye İzin Ver"/>
+	<w_phrase n="wlang_prefs_scroll_text_interval" t="Kaydırma Adım Aralığı"/>
+	<w_phrase n="wlang_prefs_scroll_text_step_count" t="Kaydırma Adım Sayısı"/>
+	<w_phrase n="wlang_prefs_scroll_text_wait_multiplier" t="Kaydırma Adımı Duraklat"/>
+	<w_phrase n="wlang_apply_button" t="Uygula"/>
+	<w_phrase n="wlang_unsaved_settings" t="Bazı ayarlar henüz kalıcı olarak kaydedilmemiş."/>
+	<w_phrase n="wlang_view_changes_button" t="Değişiklikleri Görüntüle"/>
+	<w_phrase n="wlang_changed_dialplan_msg" t="Xml arama planı değişti."/>
+	<w_phrase n="wlang_changed_settings_header" t="Aşağıdaki ayarlar değişti"/>
+	<w_phrase n="wlang_no_changed_settings_msg" t="Tüm ayarlar saklandı."/>
+	<w_phrase n="wlang_line_ssi_extension_monitoring_group" t="Dahili Numara İzleme Grubu Kimliği"/>
+	<w_phrase n="wlang_soundcard_event_map" t="Ses Parametreleri"/>
+	<w_phrase n="wlang_license_info" t="Telefonunuz önceden yüklenmiş geçerli bir lisansla gönderilir. Ek yazılım özelliklerini etkinleştirmek için el ile lisans yükleme yoluyla yeni bir lisans dosyası yüklemek veya eksik veya hasar görmesi durumunda önceden yüklenmiş lisansı yeniden yüklemek mümkündür. Yüklenen lisans dosyası geçersizse (örneğin, telefonun MAC adresiyle eşleşmiyor) dikkate alınmaz ve mevcut lisans korunur."/>
+	<w_phrase n="wlang_advanced_ssi_restrict_uri_queries" t="URI Sorgularını Sınırla"/>
+	<w_phrase n="wlang_advanced_ssi_release_xfer_on" t="Aktarılan Tarafı Bırak Açık"/>
+	<w_phrase n="wlang_advanced_ssi_retrieve_xfer_on" t="Aktarılan Tarafı Al Açık"/>
+	<w_phrase n="wlang_fkeyname_hold_private" t="Çağrıyı Özel Tut"/>
+	<w_phrase n="wlang_fkey_contact_list_buddy" t="BLF (Sunucu)"/>
+	<w_phrase n="wlang_advanced_ssi_allow_sip_settings" t="SIP Ayarlarına İzin Ver"/>
+	<w_phrase n="wlang_prefs_tsczech" t="Çek"/>
+	<w_phrase n="wlang_advanced_ssi_dhcp_options_on_ip_aquire" t="DHCP'deki seçenekler=açık"/>
+	<w_phrase n="wlang_advanced_ssi_dhcp_options_on_inform" t="DHCP'deki seçenekler=kapalı"/>
+	<w_phrase n="wlang_advanced_ssi_headset_rings_once" t="Kulaklık sadece bir kez çalar"/>
+	<w_phrase n="wlang_F_ACD" t="ACD"/>
+	<w_phrase n="wlang_disabled" t="devre dışı"/>
+	<w_phrase n="wlang_unknown" t="bilinmeyen"/>
+	<w_phrase n="wlang_sysinfo_ssi_status" t="Durum"/>
+	<w_phrase n="wlang_sysinfo_ssi_paired_with" t="Eşleştirilmiş"/>
+	<w_phrase n="wlang_sysinfo_ssi_vision_status" t="Bağlantı Durumu"/>
+	<w_phrase n="wlang_line_snomone" t="snomONE"/>
+	<w_phrase n="wlang_line_sutus" t="SUTUS BC"/>
+	<w_phrase n="wlang_prefs_redirection_fwd_always" t="Çağrı Yönlendirme Her Zaman"/>
+	<w_phrase n="wlang_prefs_redirection_fwd_busy" t="Çağrı Yönlendirme Meşgul"/>
+	<w_phrase n="wlang_prefs_redirection_fwd_time" t="Çağrı Yönlendirme Zaman Aşımı"/>
+	<w_phrase n="wlang_line_server_managed" t="Sunucu Yönetilen"/>
+	<w_phrase n="wlang_fkeys_ssi_starcode" t="Yıldız Kodu"/>
+	<w_phrase n="wlang_prio_asserted" t="Öncelik Ver"/>
+	<w_phrase n="wlang_replacement_dialp" t="Xml şablonları değişti"/>
+	<w_phrase n="wlang_adr_action_url" t="Eylem-URL"/>
+	<w_phrase n="wlang_sip_force_sendrecv_no_sdp" t="Gönderme işlemini INPITE ile SDP'siz olarak zorla"/>
+	<w_phrase n="wlang_advanced_ssi_dnsserver1_v6" t="DNS Sunucu 1(v6)"/>
+	<w_phrase n="wlang_advanced_ssi_dnsserver2_v6" t="DNS Sunucu 2(v6)"/>
+	<w_phrase n="wlang_advanced_ssi_dnsserver3_v6" t="DNS Sunucu 3(v6)"/>
+	<w_phrase n="wlang_advanced_ssi_dnsserver4_v6" t="DNS Sunucu 4(v6)"/>
+	<w_phrase n="wlang_advanced_ssi_ntptimeserver_v6" t="NTP Zaman Sunucusu (v6)"/>
+	<w_phrase n="wlang_info_ipaddress_v6" t="IPv6 Adresi"/>
+	<w_phrase n="wlang_advanced_ssi_domain_v6" t="Alan(v6)"/>
+	<w_phrase n="wlang_advanced_ssi_ipaddress_v6" t="IP adresi(v6)"/>
+	<w_phrase n="wlang_advanced_ssi_ipv6_over_ipv4" t="IPv6'yı tercih et"/>
+	<w_phrase n="wlang_advanced_ssi_dhcp_v6" t="DHCP(v6)"/>
+	<w_phrase n="wlang_advanced_ssi_dhcp_v6_autoconf" t="Otomatik yapılandırma"/>
+	<w_phrase n="wlang_advanced_ssi_ipv6" t="IPv6"/>
+	<w_phrase n="wlang_advanced_ssi_more_control" t="Daha Fazla Kontrol"/>
+	<w_phrase n="wlang_cert_tab_8021x_certs" t="802.1X Sertifikaları"/>
+	<w_phrase n="wlang_cert_add_8021x_cert" t="802.1X Sertifikası ekle (TAR arşivi)"/>
+	<w_phrase n="wlang_cert_8021x_config" t="802.1X Yapılandırması"/>
+	<w_phrase n="wlang_usb_storage_text" t="USB Depolama Aygıtı"/>
+	<w_phrase n="wlang_usb_storage_allow_swupdate_text" t="Yazılım Güncellemesine İzin Ver"/>
+	<w_phrase n="wlang_usb_storage_allow_syslog_text" t="Syslog İzlemesine İzin Ver"/>
+	<w_phrase n="wlang_usb_storage_allow_siptrace_text" t="SIP İzlemeye İzin Ver"/>
+	<w_phrase n="wlang_usb_storage_allow_httptrace_text" t="HTTP İzlemeye İzin Ver"/>
+	<w_phrase n="wlang_usb_storage_allow_pcap_text" t="PCAP İzlemeye İzin Ver"/>
+	<w_phrase n="wlang_usb_storage_passphrase_text" t="AES Parolası"/>
+	<w_phrase n="wlang_check_cseq_dlginfo_notify" t="Arama Bilgilendirme Bildiriminde Arama Sırasını Kontrol Et"/>
+	<w_phrase n="wlang_line_xsi_server" t="XSI Sunucusu"/>
+	<w_phrase n="wlang_line_xsi_user" t="XSI Kullanıcısı"/>
+	<w_phrase n="wlang_line_xsi_password" t="XSI Sifresi"/>
+	<w_phrase n="wlang_line_xsi_retry_timer" t="XSI Yeniden Deneme Zamanlayıcısı (sn)"/>
+	<w_phrase n="wlang_line_xsi_events" t="XSI Olayları"/>
+	<w_phrase n="wlang_line_xsi_polling" t="XSI Eylem Yoklama Aralığı (sn)"/>
+	<w_phrase n="wlang_line_tbook_download_interval" t="Telefon Rehberi İndirme Aralığı (sn)"/>
+	<w_phrase n="wlang_line_xsi_conf_updating" t="XSI Konferansı Eylem Güncelleme Aralığı (sn)"/>
+	<w_phrase n="wlang_line_xsi_anywhere" t="Her Yerde"/>
+	<w_phrase n="wlang_line_server_directories_search" t="Sunucu Dizinleri (Arama)"/>
+	<w_phrase n="wlang_line_server_directories_download" t="Sunucu Dizinleri (İndir)"/>
+	<w_phrase n="wlang_line_blf_park_pick_up_code" t="BLF Park Çağrı Alma Kodu"/>
+	<w_phrase n="wlang_line_blf_directed_call_pickup_code" t="BLF Yönlendirilmiş Çağrı Alma Kodu"/>
+	<w_phrase n="wlang_line_xsi_visual_voicemail" t="Görsel Sesli Posta"/>
+	<w_phrase n="wlang_line_xsi_callcenter_list" t="Çağrı Merkezi Listesi"/>
+	<w_phrase n="wlang_line_xmpp_jid" t="XMPP ID"/>
+	<w_phrase n="wlang_line_xmpp_password" t="XMPP Şifresi"/>
+	<w_phrase n="wlang_fkey_xmpp_presence" t="İletişim (XMPP)"/>
+	<w_phrase n="wlang_F_STARCODE" t="Yıldız Kodu"/>
+	<w_phrase n="wlang_line_conference_server" t="Konferans Sunucusu"/>
+	<w_phrase n="wlang_line_call_logs" t="Çağrı Günlüğü"/>
+	<w_phrase n="wlang_line_ssi_local" t="yerel"/>
+	<w_phrase n="wlang_line_tbook_download" t="Dizin İndirme"/>
+	<w_phrase n="wlang_line_broadsoft_features" t="Broadsoft Özellikleri"/>
+	<w_phrase n="wlang_number_sign_encoding" t="Numara İşareti Kodlaması"/>
+	<w_phrase n="wlang_fkeyname_label_page_prev" t="Etiketler Geri"/>
+	<w_phrase n="wlang_fkeyname_label_page_next" t="Etiketler İleri"/>
+	<w_phrase n="wlang_fkeyname_smartlabel_page_prev" t="Önceki Sayfa"/>
+	<w_phrase n="wlang_fkeyname_smartlabel_page_next" t="Sonraki Sayfa"/>
+	<w_phrase n="wlang_first_page" t="İlk Sayfa"/>
+	<w_phrase n="wlang_last_page" t="Son Sayfa"/>
+	<w_phrase n="wlang_fkeyname_alternate_mode" t="Alternatif"/>
+	<w_phrase n="wlang_monitor_notify_for_subscription_refresh" t="Abonelik Bildirimi İzle"/>
+	<w_phrase n="wlang_fkey_page_text" t="Sayfa"/>
+	<w_phrase n="wlang_prefs_label_font_size" t="Etiket Yazı Tipi Boyutu"/>
+	<w_phrase n="wlang_prefs_context_key_font_size" t="İçerik Tuşu Etiketi Yazı Tipi Boyutu"/>
+	<w_phrase n="wlang_prefs_label_scroll_timeout" t="Etiket sayfası 1’e dön (sn)"/>
+	<w_phrase n="wlang_prefs_ssi_large_edit_font" t="Büyük Düzenleme Yazı Tipi"/>
+	<w_phrase n="wlang_prefs_custom_bg_image_url" t="Özel Arkaplan Resmi URL'si"/>
+	<w_phrase n="wlang_prefs_custom_images" t="Özel Görüntüler"/>
+	<w_phrase n="wlang_prefs_upload" t="Yükle"/>
+	<w_phrase n="wlang_accept_event_talk_without_sdp" t="SDP'siz Etkinlik Konuşmasını Kabul Et"/>
+	<w_phrase n="wlang_fkeyname_snom" t="snom/Bulut"/>
+	<w_phrase n="wlang_prefs_ssi_sort_server_dir_result_by_last_name" t="Sunucu Dizini Sonucu Soyadına Göre Sırala"/>
+	<w_phrase n="wlang_directory_display_order" t="Dizin Görüntüleme Sırası"/>
+	<w_phrase n="wlang_display_order_first_name_last_name" t="İsim, Soyad"/>
+	<w_phrase n="wlang_display_order_last_name_first_name" t="Soyad, İsim"/>
+	<w_phrase n="wlang_prefs_uxm_line_font_size" t="UXM Yazı Tipi Boyutu (Satır Düzeni)"/>
+	<w_phrase n="wlang_prefs_label_text_alignment" t="Metin Hizalama İkinci Ekran"/>
+	<w_phrase n="wlang_prefs_left" t="Sol"/>
+	<w_phrase n="wlang_prefs_right" t="Sağ"/>
+	<w_phrase n="wlang_prefs_center" t="Merkez"/>
+	<w_phrase n="wlang_prefs_alternate" t="Alternatif"/>
+	<w_phrase n="wlang_prefs_uxm_tile_font_size" t="UXM Yazı Tipi Boyutu (Döşeme Düzeni)"/>
+	<w_phrase n="wlang_line_ssi_initial_rtp_keep_alives" t="RTP Bağlantı Noktasındaki İlk Canlı Tutma Sayısı"/>
+	<w_phrase n="wlang_line_msw_directory_number" t="Dizin Numarası"/>
+	<w_phrase n="wlang_line_msw_password" t="Şifre"/>
+	<w_phrase n="wlang_line_msw_web_url" t="Web URL'i"/>
+	<w_phrase n="wlang_line_msw_services" t="Metaswitch Hizmetleri"/>
+	<w_phrase n="wlang_line_ssi_server" t="Sunucu"/>
+	<w_phrase n="wlang_cert_tab_custom_certs" t="Özel Sertifikalar"/>
+	<w_phrase n="wlang_cert_tab_preinstalled_certs" t="Önceden Yüklenmiş Sertifikalar"/>
+	<w_phrase n="wlang_advanced_ssi_http_trace_size" t="HTTP İzleme Boyutu (Mesaj Sayısı)"/>
+	<w_phrase n="wlang_advanced_ssi_http_body_trace_size" t="HTTP Gövdesini bu Boyuta Kes (Bayt)"/>
+	<w_phrase n="wlang_advanced_ssi_sip_trace_size" t="SIP İzleme Boyutu (Mesaj Sayısı)"/>
+	<w_phrase n="wlang_advanced_ssi_sip_body_trace_size" t="SIP Gövdesini bu Boyuta Kes (Bayt)"/>
+	<w_phrase n="wlang_user_default_blf_direction" t="Varsayılan BLF Yönü"/>
+	<w_phrase n="wlang_user_direction_none" t="yok"/>
+	<w_phrase n="wlang_xsi_anywhere" t="Her Yerde"/>
+	<w_phrase n="wlang_ssi_status" t="Durum"/>
+	<w_phrase n="wlang_adr_del_photo" t="Fotoğrafı Sil"/>
+	<w_phrase n="wlang_caller_id_blocking" t="Arayan Kimliği Engelleme"/>
+	<w_phrase n="wlang_line_xsi_remote_office" t="Uzak Ofis"/>
+	<w_phrase n="wlang_line_xsi_simultaneous_ring" t="Eşzamanlı Zil"/>
+	<w_phrase n="wlang_line_xsi_directoryfullsearch" t="Tam Ad Arama"/>
+	<w_phrase n="wlang_advanced_ssi_xfer_dest_order_lifo" t="Varsayılan Aktarma Hedefi Son Bekletilen Çağrı"/>
+	<w_phrase n="wlang_silent_alerting" t="Sessiz Uyarı"/>
+	<w_phrase n="wlang_advanced_ssi_call_join_1_held" t="sadece 1 arama bekletildiğinde"/>
+	<w_phrase n="wlang_advanced_ssi_call_join_always" t="daima"/>
+	<w_phrase n="wlang_fkeyname_ringer_silent" t="Sessiz Mod"/>
+	<w_phrase n="wlang_fkeyname_delete_msg" t="Mesajı Sil"/>
+	<w_phrase n="wlang_line_xmpp_display_profile_image" t="Profil Resmini Göster"/>
+	<w_phrase n="wlang_advanced_ssi_prov_polling_enabled" t="Prov Yoklama"/>
+	<w_phrase n="wlang_advanced_ssi_prov_polling_mode" t="Yoklama Modu"/>
+	<w_phrase n="wlang_advanced_ssi_prov_polling_mode_rel" t="Göreceli"/>
+	<w_phrase n="wlang_advanced_ssi_prov_polling_mode_abs" t="Mutlak"/>
+	<w_phrase n="wlang_advanced_ssi_prov_polling_mode_random" t="Rasgele"/>
+	<w_phrase n="wlang_advanced_ssi_prov_polling_period" t="Yoklama Dönemi"/>
+	<w_phrase n="wlang_advanced_ssi_prov_polling_time" t="Yoklama Zamanı"/>
+	<w_phrase n="wlang_advanced_ssi_prov_polling_time_random_end" t="Yoklama Zamanı Rastgele Sonu"/>
+	<w_phrase n="wlang_advanced_ssi_show_desktop_msg_in_call_screens" t="Masaüstü Mesajlarını Çağrı Ekranlarında Göster"/>
+	<w_phrase n="wlang_str_zone" t="Bölge"/>
+	<w_phrase n="wlang_F_REMOTE_OFFICE" t="Uzak Ofis"/>
+	<w_phrase n="wlang_fkeyname_zones" t="Çoklu Yayın Bölgeleri"/>
+	<w_phrase n="wlang_fkeys_xml_label" t="XML Etiketi"/>
+	<w_phrase n="wlang_advanced_ssi_type_quick_xfer_spd_dial_and_ext" t="Hızlı Aramaya/Dahili Numaraya Hızlı Aktarma"/>
+	<w_phrase n="wlang_advanced_ssi_new_call" t="Yeni Çağrı"/>
+	<w_phrase n="wlang_advanced_ssi_blind_transfer" t="Kör Aktarım"/>
+	<w_phrase n="wlang_advanced_ssi_attended_transfer" t="Katılımlı Aktarım"/>
+	<w_phrase n="wlang_fkeyname_pgm" t="Programlanabilir"/>
+	<w_phrase n="wlang_ssi_text" t="Metin"/>
+	<w_phrase n="wlang_ssi_icon" t="Simge"/>
+	<w_phrase n="wlang_ssi_icon_text" t="Simge ve Metin"/>
+	<w_phrase n="wlang_fkeys_ssi_header_smartlabel" t="AkıllıEtiket Tuşları"/>
+	<w_phrase n="wlang_fkeys_ssi_header_soft" t="İçeriğe Duyarlı Tuşlar"/>
+	<w_phrase n="wlang_fkeys_ssi_header_nav" t="Gezinme Tuşları"/>
+	<w_phrase n="wlang_fkeys_ssi_header_hard" t="Adanmış Tuşlar"/>
+	<w_phrase n="wlang_fkeys_ssi_header_line" t="Hat Tuşları"/>
+	<w_phrase n="wlang_fkeys_ssi_header_uxm" t="Genişletme Tuşları"/>
+	<w_phrase n="wlang_fkeys_key_assignment" t="Tuş Atama"/>
+	<w_phrase n="wlang_fkeys_smartlabel" t="AkıllıEtiket"/>
+	<w_phrase n="wlang_line_idle_screen" t="Boş Ekran"/>
+	<w_phrase n="wlang_line_default_smartlabel_display_mode" t="Varsayılan Görüntüleme Modu"/>
+	<w_phrase n="wlang_line_expanded_smartlable_display_mode" t="Alternatif Görüntüleme Modu"/>
+	<w_phrase n="wlang_line_short" t="Kısa"/>
+	<w_phrase n="wlang_line_half" t="Yarım"/>
+	<w_phrase n="wlang_line_full" t="Dolu"/>
+	<w_phrase n="wlang_line_call_screens" t="Çağrı Ekranları"/>
+	<w_phrase n="wlang_line_other_screens" t="Diğer Ekranlar"/>
+	<w_phrase n="wlang_line_smartlabel_options" t="Seçenekler"/>
+	<w_phrase n="wlang_line_smartlabel_dismissal_time" t="Varsayılan görüntüleme moduna sıfırla (sn)"/>
+	<w_phrase n="wlang_fkeyname_cancel" t="İptal"/>
+	<w_phrase n="wlang_fkeyname_ok" t="Tamam"/>
+	<w_phrase n="wlang_fkeyname_left" t="Sol"/>
+	<w_phrase n="wlang_fkeyname_right" t="Sağ"/>
+	<w_phrase n="wlang_fkeyname_up" t="Yukarı"/>
+	<w_phrase n="wlang_fkeyname_down" t="Aşağı"/>
+	<w_phrase n="wlang_hoteling" t="Hoteling"/>
+	<w_phrase n="wlang_fkeyname_hoteling" t="Hoteling"/>
+	<w_phrase n="wlang_advanced_listen_in_on_handset" t="Ahizede Dinle"/>
+	<w_phrase n="wlang_prefs_auto_dial_target" t="Otomatik Çevir Hedefi"/>
+	<w_phrase n="wlang_prefs_auto_dial_timeout" t="Otomatik Çevir Zaman Aşımı"/>
+	<w_phrase n="wlang_smartlabel_trigger_proximity" t="Yakınlık Sensörü"/>
+	<w_phrase n="wlang_smartlabel_trigger_shortpress" t="Kısa Basma Sayfa Tuşu"/>
+	<w_phrase n="wlang_smartlabel_trigger_longpress" t="Uzun Basma Sayfa Tuşu"/>
+	<w_phrase n="wlang_smartlabel_trigger_smartlabel_key_4_short_press" t="Kısa Basma P4"/>
+	<w_phrase n="wlang_smartlabel_trigger_smartlabel_key_4_long_press" t="Uzun Basma P4"/>
+	<w_phrase n="wlang_smartlabel_trigger_smartlabel_key_3_short_press" t="Kısa Basma P3"/>
+	<w_phrase n="wlang_smartlabel_trigger_smartlabel_key_3_long_press" t="Uzun Basma P3"/>
+	<w_phrase n="wlang_smartlabel_trigger_smartlabel_key_2_long_press" t="Uzun Basma P2"/>
+	<w_phrase n="wlang_smartlabel_trigger_smartlabel_key_8_short_press" t="Kısa Basma P8"/>
+	<w_phrase n="wlang_smartlabel_trigger_smartlabel_key_8_long_press" t="Uzun Basma P8"/>
+	<w_phrase n="wlang_smartlabel_trigger" t="Alternatif Görüntüleme Tetikleyicisi"/>
+	<w_phrase n="wlang_smart_transfer" t="AkıllıAktarma"/>
+	<w_phrase n="wlang_preferences_appearance" t="Görünüm"/>
+	<w_phrase n="wlang_preferences_general" t="Genel"/>
+	<w_phrase n="wlang_preferences_ui_elements" t="Arayüz Elemanları"/>
+	<w_phrase n="wlang_preferences_expansion_module_ui_elements" t="Genişletme Modülü Arayüz Elemanları"/>
+	<w_phrase n="wlang_preferences_font" t="Yazı Tipi Seçenekleri"/>
+	<w_phrase n="wlang_preferences_expansion_module_font" t="Genişletme Modülü Yazı Tipi Seçenekleri"/>
+	<w_phrase n="wlang_preferences_ui_colors" t="Arayüz Renkleri"/>
+	<w_phrase n="wlang_preferences_ui_smartlabel_colors" t="AkıllıEtiket Renkleri"/>
+	<w_phrase n="wlang_ui_theme" t="UI Renk Teması"/>
+	<w_phrase n="wlang_theme_Light" t="Açık Tema"/>
+	<w_phrase n="wlang_theme_Dark" t="Koyu Tema"/>
+	<w_phrase n="wlang_theme_Colorful" t="Renkli Tema"/>
+	<w_phrase n="wlang_theme_Industrial" t="Endüstriyel Tema"/>
+	<w_phrase n="wlang_text_color" t="Metin Rengi"/>
+	<w_phrase n="wlang_titlebar_text_color" t="Başlık Çubuğu Metin Rengi"/>
+	<w_phrase n="wlang_titlebar_background_color" t="Başlık Çubuğu Arka Plan Rengi"/>
+	<w_phrase n="wlang_subtext_color" t="Alt Metin Rengi"/>
+	<w_phrase n="wlang_extratext_color" t="Ekstrametin Rengi"/>
+	<w_phrase n="wlang_extratext2_color" t="Ekstrametin2 Rengi"/>
+	<w_phrase n="wlang_background_color" t="Arka plan Rengi"/>
+	<w_phrase n="wlang_fkey_background_color" t="F Tuşu Arka Planı Rengi"/>
+	<w_phrase n="wlang_fkey_pressed_background_color" t="F Tuşuna Basıldığında Arkaplan Rengi"/>
+	<w_phrase n="wlang_fkey_separator_color" t="F Tuşu Ayırıcı Rengi"/>
+	<w_phrase n="wlang_fkey_label_color" t="F Tuşu Etiketi Rengi"/>
+	<w_phrase n="wlang_fkey_pressed_label_color" t="F Tuşuna Basıldığında Etiket Rengi"/>
+	<w_phrase n="wlang_line_background_color" t="Hat Arkaplan Rengi"/>
+	<w_phrase n="wlang_selected_line_background_color" t="Seçilen Hat Arkaplanı Rengi"/>
+	<w_phrase n="wlang_selected_line_indicator_color" t="Seçilen Hat Göstergesi Rengi"/>
+	<w_phrase n="wlang_selected_line_text_color" t="Seçilen Hat Metin Rengi"/>
+	<w_phrase n="wlang_line_separator_color" t="Satır Ayırıcı Rengi"/>
+	<w_phrase n="wlang_scrollbar_color" t="Kaydırma Çubuğu Rengi"/>
+	<w_phrase n="wlang_cursor_color" t="Kürsör Rengi"/>
+	<w_phrase n="wlang_status_msgs_background_color" t="Durum Mesajları Arkaplan Rengi"/>
+	<w_phrase n="wlang_status_msgs_border_color" t="Durum Mesajları Kenarlığı Rengi"/>
+	<w_phrase n="wlang_regular_font_min_font_size" t="Minimum Normal Yazı Tipi Boyutu"/>
+	<w_phrase n="wlang_fkeys_ssi_full_label_mode" t="Tam Etiket Modu"/>
+	<w_phrase n="wlang_fkeys_ssi_label_mode" t="Etiket Modu"/>
+	<w_phrase n="wlang_fkeys_ssi_unknown" t="Bilinmeyen"/>
+	<w_phrase n="wlang_advanced_ssi_settings_refresh" t="Ayarları Yenileme Zamanlayıcı"/>
+	<w_phrase n="wlang_advanced_tmz_unused" t="Kullanılmayan"/>
+	<w_phrase n="wlang_ldap_search_filter_during_call" t="Arama Sırasında LDAP Ad Filtresi"/>
+	<w_phrase n="wlang_ldap_number_filter_during_call" t="Arama Sırasında LDAP Numara Filtresi"/>
+	<w_phrase n="wlang_fkeyname_lock" t="Kilitle"/>
+	<w_phrase n="wlang_fkeyname_voicemail_info" t="Sesli Mesaj Bilgisi"/>
+	<w_phrase n="wlang_advanced_ssi_xmpp_refresh_timer" t="XMPP Yenileme Zaman Aşımı"/>
+	<w_phrase n="wlang_advanced_xmpp" t="XMPP"/>
+	<w_phrase n="wlang_advanced_ssi_xsi_heartbeat_interval" t="XSI Kalp Atışı Aralığı"/>
+	<w_phrase n="wlang_advanced_xsi" t="XSI"/>
+	<w_phrase n="wlang_fkeyname_caller_id_blocking" t="Arayan Kimliği Engelleme"/>
+	<w_phrase n="wlang_fkeyname_hide_outgoing_id" t="Giden Kimliği Gizle"/>
+	<w_phrase n="wlang_skip_welcome" t="Hoşgeldin atla"/>
+	<w_phrase n="wlang_general_file" t="Dosya"/>
+	<w_phrase n="wlang_lcs" t="LCS"/>
+	<w_phrase n="wlang_cpu" t="CPU"/>
+	<w_phrase n="wlang_advanced_ssi_als" t="Ortam Işığı"/>
+	<w_phrase n="wlang_advanced_ssi_active" t="Etkin"/>
+	<w_phrase n="wlang_fkeyname_consultconf" t="Danışmanlık Konferansı"/>
+	<w_phrase n="wlang_use_outbound_proxy_for_callback" t="Geri Arama için Giden Proxy Kullan"/>
+	<w_phrase n="wlang_advanced_ssi_optimize_infobox" t="Optimize edilmiş Bilgi Kutusu"/>
+	<w_phrase n="wlang_action_ssi_poll_settings" t="Eylem URL Yoklama Ayarları"/>
+	<w_phrase n="wlang_action_ssi_poll" t="Yoklama URL’i"/>
+	<w_phrase n="wlang_advanced_ssi_sip_header_warning" t="SIP Başlığı Uyarısı"/>
+	<w_phrase n="wlang_advanced_ssi_sip_header_warning_codes" t="SIP Başlığı Uyarı Kodları"/>
+	<w_phrase n="wlang_prefs_tscanada" t="Kanada"/>
+	<w_phrase n="wlang_prefs_tsrussia" t="Russia"/>
+	<w_phrase n="wlang_advanced_contact_src_prio" t="İletişim Kaynağı Önceliği"/>
+	<w_phrase n="wlang_user_contact_src_sip_prio" t="İletişim Kaynağı Önceliği (SIP)"/>
+	<w_phrase n="wlang_adr_ssi_tbook_is_full" t="Adres defteri dolu"/>
+	<w_phrase n="wlang_phoneui_short" t="PUI"/>
+	<w_phrase n="wlang_advanced_ssi_ldap_sort_parameters" t="LDAP Sıralama Parametreleri"/>
+	<w_phrase n="wlang_advanced_ssi_ldap_sort_mode" t="LDAP Sıralama Modu"/>
+	<w_phrase n="wlang_advanced_ssi_none" t="Hiçbiri"/>
+	<w_phrase n="wlang_adr_file_xml" t="XML Dosyası"/>
+	<w_phrase n="wlang_choose_file" t="Dosya Seç"/>
+	<w_phrase n="wlang_all_settings_cfg" t="Tüm Ayarlar (.cfg)"/>
+	<w_phrase n="wlang_all_settings_xml" t="Tüm Ayarlar (.xml)"/>
+	<w_phrase n="wlang_changed_settings_xml" t="Değiştirilmiş Ayarlar (.xml)"/>
+	<w_phrase n="wlang_param_map" t="TR-069 Parametre Haritası"/>
+	<w_phrase n="wlang_call_screen_photo_size" t="Çağrı Ekranlarında Fotoğraf Boyutu"/>
+	<w_phrase n="wlang_size_S" t="S"/>
+	<w_phrase n="wlang_size_M" t="M"/>
+	<w_phrase n="wlang_size_L" t="L"/>
+	<w_phrase n="wlang_size_XL" t="XL"/>
+	<w_phrase n="wlang_size_XXL" t="XXL"/>
+	<w_phrase n="wlang_size_XXXL" t="XXXL"/>
+	<w_phrase n="wlang_prompt_new_value" t="Lütfen yeni değeri girin"/>
+	<w_phrase n="wlang_fkey_ssi_call_center_status" t="Çağrı Merkezi Durumu"/>
+	<w_phrase n="wlang_line_ssi_enable_mediasec" t="Mediasec'i Etkinleştir"/>
+	<w_phrase n="wlang_callpark_notify" t="Çağrı Park Etme Bildirimi"/>
+	<w_phrase n="wlang_call_park" t="Çağrı Park Etme"/>
+	<w_phrase n="wlang_callpark_park_fac" t="Çağrı Park Etme Kodu"/>
+	<w_phrase n="wlang_smartlabel_trigger_any_smartlabel_key_short_press" t="Kısa Basma AkıllıEtiket"/>
+	<w_phrase n="wlang_fkeyname_ocip" t="OCI-P Dizin"/>
+	<w_phrase n="wlang_fkeyname_ldap" t="LDAP Dizin"/>
+	<w_phrase n="wlang_fkeyname_serverdirectory" t="Sunucu Dizini"/>
+	<w_phrase n="wlang_handset_volume" t="Ahize Ses Ayarı"/>
+	<w_phrase n="wlang_headset_volume" t="Kulaklık Ses Ayarı"/>
+	<w_phrase n="wlang_ringer_volume" t="Zil Sesi Ayarı"/>
+	<w_phrase n="wlang_speaker_volume" t="Hoparlör Ses Ayarı"/>
+	<w_phrase n="wlang_max_speaker_volume" t="Maksimum Hoparlör Sesi"/>
+	<w_phrase n="wlang_dtmf_volume" t="DTMF Ses Ayarı"/>
+	<w_phrase n="wlang_disconnect_on_onhook" t="Ahize Kapatılinca Bağlantıyı Kes"/>
+	<w_phrase n="wlang_long_cancel_is_blocking_caller" t="İptal Tuşuna Uzun Basarak Arayanı Blok Listeye Ekle"/>
+	<w_phrase n="wlang_cancel_conference" t="İptal Tuşuna Basarak Konferansı Sonlandır"/>
+	<w_phrase n="wlang_short_cancel_denies_call" t="Bağlıyken Gelen Aramayı Reddetmeyi İptal Et"/>
+	<w_phrase n="wlang_offhook_accept_calls" t="Ahize Kaldırıldığında Gelen Aramayı Kabul Et"/>
+	<w_phrase n="wlang_keyboard_lock_accepted_keys" t="Telefon Kilitliyken Kabul Edilen Tuşlar"/>
+	<w_phrase n="wlang_emergency_accepted_callkeys" t="Telefon Acil Aramadayken Kabul Edilen Tuşlar"/>
+	<w_phrase n="wlang_pui_icon_override_xml_icon" t="İçeriğe Duyarlı Tuşlarda XML Simgesini Gizle"/>
+	<w_phrase n="wlang_idle_status_btn_index" t="İçeriğe Duyarlı Tuşlarda Bilgi Düğmesinin Konumu"/>
+	<w_phrase n="wlang_ringing_time" t="Reddetmeden Önce Çalma Süresi (sn)"/>
+	<w_phrase n="wlang_always_show_active_call" t="Her Zaman Etkin Aramayı Göster"/>
+	<w_phrase n="wlang_mute_is_dnd_in_idle" t="Sessiz, Boş Ekranda DND Görevi Görür"/>
+	<w_phrase n="wlang_transfer_dialing_on_transfer" t="Transfer Anahtarının Transferde Davranışı"/>
+	<w_phrase n="wlang_transfer_dialing_on_other" t="Transferde Diğer Anahtarların Davranışı"/>
+	<w_phrase n="wlang_advtab_display" t="Ekran"/>
+	<w_phrase n="wlang_backlight_on_activity" t="Etkinlikte Arka Aydınlatma"/>
+	<w_phrase n="wlang_backlight_when_idle" t="Etkin Olmadıkta Arka Aydınlatma"/>
+	<w_phrase n="wlang_contrast" t="Kontrast"/>
+	<w_phrase n="wlang_primary_display" t="Birincil Ekran"/>
+	<w_phrase n="wlang_label_display" t="İkincil Ekran"/>
+	<w_phrase n="wlang_fkeys_ssi_usb_call_record" t="USB Çağrı Kaydı"/>
+	<w_phrase n="wlang_fkeys_ssi_usb_call_record_pause" t="USB Çağrı Kaydı Duraklatma"/>
+	<w_phrase n="wlang_subtext_pressed_color" t="Basılı Alt Metin Rengi"/>
+	<w_phrase n="wlang_page_indicator_color" t="Sayfa Göstergesi Rengi"/>
+	<w_phrase n="wlang_preferences_ui_expansion_module_colors" t="Genişletme Modülü Renkleri"/>
+	<w_phrase n="wlang_prefs_expansion_module_text_alignment" t="Genişletme Modülü Metin Hizalaması"/>
+	<w_phrase n="wlang_expansion_module_maintext_size" t="Genişletme Modülü Ana Metin Boyutu"/>
+	<w_phrase n="wlang_expansion_module_subtext_size" t="Genişletme Modülü Alt Metin Boyutu"/>
+	<w_phrase n="wlang_size_XS" t="XS"/>
+	<w_phrase n="wlang_prefs_expansion_module_background_image" t="Genişletme Modülü Arka Plan Resmi"/>
+	<w_phrase n="wlang_fkeyname_context_in_idle_page_left" t="Sol Sayfa"/>
+	<w_phrase n="wlang_fkeyname_context_in_idle_page_right" t="Sağ Sayfa"/>
+	<w_phrase n="wlang_reciprocal_hold" t="Karşılıklı Bekletme"/>
+	<w_phrase n="wlang_provisioning_order" t="Provisyon Siparişi"/>
+	<w_phrase n="wlang_remote_3264_hold" t="RFC 3264 Bekletme"/>
+	<w_phrase n="wlang_use_contact_in_refer_to_hdr" t="Referansta Kişi Başlıkları Kullan"/>
+	<w_phrase n="wlang_ack_before_reinvite_when_holding" t="Bekletme sırasında Reinvite öncesi ACK"/>
+	<w_phrase n="wlang_F_CALL_PARK_DIAL" t="Çağrı Park Etme Çevirme"/>
+	<w_phrase n="wlang_F_CALL_PARK_DIAL_RETRIEVE" t="Çağrı Park Etme Çevirmeyi Geri Al"/>
+	<w_phrase n="wlang_tr69_use_acs" t="TR-069"/>
+	<w_phrase n="wlang_tr69_bootstrap" t="ACS'ye BOOTSTRAP gönder"/>
+	<w_phrase n="wlang_tr69_acs_url" t="ACS URL"/>
+	<w_phrase n="wlang_tr69_acs_user" t="ACS Kullanıcı Adı"/>
+	<w_phrase n="wlang_tr69_acs_passwd" t="ACS Sifre"/>
+	<w_phrase n="wlang_tr69_cnr_user" t="CNR Kullanıcı Adı"/>
+	<w_phrase n="wlang_tr69_cnr_pass" t="CNR Şifre"/>
+	<w_phrase n="wlang_tr69_p_inform_supervision_timeout" t="Periyodik Denetim Bilgilendirme Zaman Aşımı"/>
+	<w_phrase n="wlang_tr69_log" t="TR-069 Log"/>
+	<w_phrase n="wlang_xcap_via_tls" t="TLS üzerinden XCAP"/>
+	<w_phrase n="wlang_xcap_server_name" t="Sunucu Adresi"/>
+	<w_phrase n="wlang_xcap_server_port" t="Port"/>
+	<w_phrase n="wlang_xcap_directory_auid" t="AUID Dizini"/>
+	<w_phrase n="wlang_xcap_dir_doc_name" t="Dizin Doküman Adı"/>
+	<w_phrase n="wlang_xcap_tbook_sync_interval" t="Senkronizasyon Aralığı XCAP ve Yerel Dizin"/>
+	<w_phrase n="wlang_extend_context_key_in_idle" t="İçeriğe Duyarlı Tuşları Boşta 12'ye Genişlet"/>
+	<w_phrase n="wlang_edit_mode_for_directory_search" t="Varsayılan Düzenleme Modu Dizinleri"/>
+	<w_phrase n="wlang_edit_mode_for_passwords" t="Varsayılan Düzenleme Modu Şifre Ekranları"/>
+	<w_phrase n="wlang_edit_mode_numbers" t="123"/>
+	<w_phrase n="wlang_edit_mode_lower_case" t="abcç"/>
+	<w_phrase n="wlang_edit_mode_upper_case" t="ABCÇ"/>
+	<w_phrase n="wlang_call_states_with_local_party" t="Yerel Kimlik Gösteren Çağrı Durumları"/>
+	<w_phrase n="wlang_redirected_call_states_with_local_party" t="Yerel Kimlik gösteren Yeniden Yönlendirilmiş Çağrı Durumları"/>
+	<w_phrase n="wlang_call_states_when_knocking" t="Vurma Tonu çalan Çağrı Durumları"/>
+	<w_phrase n="wlang_advanced_ssi_sip_tls_listen_port" t="TLS Dinleyici Bağlantı Noktası"/>
+	<w_phrase n="wlang_advanced_ssi_tls_listen" t="SIP TLS Bağlantı Noktasında Dinle"/>
+	<w_phrase n="wlang_ocip_max_hits" t="Maksimum İsabet Sayısı"/>
+	<w_phrase n="wlang_suppress_sip_messages" t="Masaüstü Mesajlarını Gizle"/>
+	<w_phrase n="wlang_reject_calls_with_603" t="603 Reddedilen Çağrıları Geri Çevir"/>
+	<w_phrase n="wlang_action_received_subscr_notify_url" t="Alınan NOTIFY Aboneliği"/>
+	<w_phrase n="wlang_action_firewall_test" t="Alınan CSTA Mesajı Güvenlik Duvarı Testi"/>
+	<w_phrase n="wlang_adr_entry_id" t="Entry ID"/>
+	<w_phrase n="wlang_line_ssi_unsaf_via_received_rport" t="Determine Public Address from REGISTER Response Via Header"/>
+</w_phrases>

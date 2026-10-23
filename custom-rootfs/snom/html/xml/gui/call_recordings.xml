@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<IPPhoneBatch xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../schemas/minibrowser.xsd">
+  <IPPhoneMenu track="off" id="usb_playback_display_files" state="others_except_mb" dtmf="off">
+    <Title>$(lang:usb_playback_browse_recordings_title)</Title>
+    <Repeat values="$(usb_playback_get_wav_files)" token="|__TITLE__|__ITEMNAME__|__FULLFILENAME__|">
+      <MenuItem name="__TITLE__">
+        <If condition="$(is_set:__ITEMNAME__)">
+          <SubText>__ITEMNAME__</SubText>
+          <ExtraIconType>$(icon_type_enum:kIconTypeMenuArrowRight)</ExtraIconType>
+          <Url track="no">file:///xml/gui/call_recordings.xml#sub=*[@id="usb_playback_play_recording"]&amp;var:current_file_to_play=%24[usb_playback_play_recording:__FULLFILENAME__]</Url>
+          <SoftKeyItem>
+            <Name>F1</Name>
+            <SoftKey>F_PLAY</SoftKey>
+            <Url track="no">file:///xml/gui/call_recordings.xml#sub=*[@id="usb_playback_play_recording"]&amp;var:current_file_to_play=%24[usb_playback_play_recording:__FULLFILENAME__]</Url>
+          </SoftKeyItem>
+          <SoftKeyItem>
+            <Name>F2</Name>
+            <SoftKey>F_DELETE</SoftKey>
+            <Url>file:///xml/gui/call_recordings.xml#sub=*[@id="delete_file"]&amp;var:file_to_delete=__FULLFILENAME__</Url>
+          </SoftKeyItem>
+          <SoftKeyItem>
+            <Name>F3</Name>
+            <SoftKey>F_STATUS</SoftKey>
+            <Url track="yes">file:///xml/gui/templates.xml#sub=*[@id="text_template"]&amp;var:text_translate=yes&amp;var:text_content=%24[usb_playback_get_recording_info:__FULLFILENAME__]&amp;var:text_title=$(lang:usb_playback_recording_information_title)&amp;var:text_softkeys="|CANCEL|label|file:///xml/gui/call_recordings.xml|F_CANCEL|"</Url>
+          </SoftKeyItem>
+        </If>
+        <Else>
+          <SelectedTextHighlight>off</SelectedTextHighlight>
+        </Else>
+      </MenuItem>
+    </Repeat>
+  </IPPhoneMenu>
+  <IPPhoneMenu  track="off" id="usb_playback_play_recording" state="others_except_mb" dtmf="off" center_text="true">
+    <Title>$(lang:usb_playback_play_recording_title)</Title>
+    <HighlightSelectedLine>off</HighlightSelectedLine>
+    <SelectedTextHighlight>off</SelectedTextHighlight>
+    <Repeat values="$(usb_playback_get_playing_info:$(var:current_file_to_play))" token="|__IS_FILE_ACCESSIBLE__|__DURATION__|__CALLED_NAME__|__IMAGE__|__DATE_TIME__|__FILENAME__|__FULLFILENAME__|__IS_PLAYING__|__IS_ENCRYPTED__|__IMAGE_X_LOC__|">
+      <If condition="__IS_FILE_ACCESSIBLE__==false">
+        <MenuItem>
+          <name>$(lang:usb_playback_invalid_header_or_encrypted_file)</name>
+          <SubText>__FILENAME__</SubText>
+        </MenuItem>
+      </If>
+      <Else>
+        <If condition="$(show_feature:FEATURE_PUI_STYLE_SIO)">
+          <If condition="$(show_feature:HAS_LARGER_PIXEL_SIZE)">
+            <FontSize>M</FontSize>
+            <FontSize2>L</FontSize2>
+          </If>
+          <Else>
+            <FontSize>XL</FontSize>
+            <FontSize2>M</FontSize2>
+          </Else>
+        </If>
+        <If condition="__IS_PLAYING__==true">
+          <Fetch mil="1000">phone://mb_nop</Fetch>
+        </If>
+        <If condition="$(show_feature:FEATURE_PUI_STYLE_SIO)">
+          <!-- Insert blank line then overwrite it with an image -->
+          <MenuItem custom_line_height="$(math_eval:$(gui_display_ysize)/4)">
+            <Name></Name>
+          </MenuItem>
+          <MenuImage location_y="10" location_x="__IMAGE_X_LOC__">
+            <Url>__IMAGE__</Url>
+          </MenuImage>
+        </If>
+        <MenuItem>
+          <name>__DURATION__</name>
+        </MenuItem>
+        <If condition="$(show_feature:FEATURE_PUI_STYLE_SIO)">
+          <MenuItem>
+            <name>__CALLED_NAME__</name>
+            <SubText>__DATE_TIME__</SubText>
+          </MenuItem>
+        </If>
+        <Else>
+          <MenuItem>
+            <name>__CALLED_NAME__</name>
+          </MenuItem>
+          <MenuItem>
+            <name>__DATE_TIME__</name>
+          </MenuItem>
+        </Else>
+        <SoftKeyItem>
+          <Name>F1</Name>
+          <If condition="__IS_PLAYING__==true">
+            <SoftKey>F_USBPAUSE</SoftKey>
+            <Url track="no">file:///xml/gui/call_recordings.xml#sub=*[@id="usb_playback_play_recording"]&amp;var:not_used=%24[usb_playback_pause_recording]&amp;var:current_file_to_play=__FULLFILENAME__</Url>
+          </If>
+          <Else>
+            <SoftKey>F_PLAY</SoftKey>
+            <Url track="no">file:///xml/gui/call_recordings.xml#sub=*[@id="usb_playback_play_recording"]&amp;var:not_used=%24[usb_playback_resume_recording:__FULLFILENAME__]&amp;var:current_file_to_play=__FULLFILENAME__</Url>
+          </Else>
+        </SoftKeyItem>
+        <SoftKeyItem>
+          <Name>F2</Name>
+          <SoftKey>F_DELETE</SoftKey>
+          <Url>file:///xml/gui/call_recordings.xml#sub=*[@id="delete_file"]&amp;var:file_to_delete=__FULLFILENAME__</Url>
+        </SoftKeyItem>
+        <If condition="__IS_ENCRYPTED__==false">
+          <SoftKeyItem>
+            <Name>F3</Name>
+            <SoftKey>F_USB_REWIND</SoftKey>
+            <Url track="no">file:///xml/gui/call_recordings.xml#sub=*[@id="usb_playback_play_recording"]&amp;var:not_used=%24[usb_playback_rewind_recording]&amp;var:current_file_to_play=__FULLFILENAME__</Url>
+          </SoftKeyItem>
+          <SoftKeyItem>
+            <Name>F4</Name>
+            <SoftKey>F_USB_FAST_FORWARD</SoftKey>
+            <Url track="no">file:///xml/gui/call_recordings.xml#sub=*[@id="usb_playback_play_recording"]&amp;var:not_used=%24[usb_playback_fast_forward_recording]&amp;var:current_file_to_play=__FULLFILENAME__</Url>
+          </SoftKeyItem>
+        </If>
+      </Else>
+      <!-- Arrow keys, not softkeys -->
+      <SoftKeyItem>
+        <Name>RIGHT</Name>
+        <Url track="no">file:///xml/gui/call_recordings.xml#sub=*[@id="usb_playback_play_recording"]&amp;var:current_file_to_play=%24[usb_playback_play_recording:$(usb_playback_get_next_prev:$(var:current_file_to_play);true)]</Url>
+      </SoftKeyItem>
+      <SoftKeyItem>
+        <Name>LEFT</Name>
+        <Url track="no">file:///xml/gui/call_recordings.xml#sub=*[@id="usb_playback_play_recording"]&amp;var:current_file_to_play=%24[usb_playback_play_recording:$(usb_playback_get_next_prev:$(var:current_file_to_play);false)]</Url>
+      </SoftKeyItem>
+      <SoftKeyItem>
+        <Name>CANCEL</Name>
+        <Url consume_key_event="1" track="no">file:///xml/gui/call_recordings.xml#sub=*[@id="usb_playback_display_files"]&amp;var:not_used=%24[usb_playback_stop_recording]</Url>
+      </SoftKeyItem>
+      <SoftKeyItem>
+        <Name>OK</Name>
+        <Url consume_key_event="1" track="no">phone://mb_nop</Url>
+      </SoftKeyItem>
+      <SoftKeyItem>
+        <Name>ENTER</Name>
+        <Url consume_key_event="1" track="no">phone://mb_nop</Url>
+      </SoftKeyItem>
+    </Repeat>
+  </IPPhoneMenu>
+  <IPPhoneText track="no" id="delete_file">
+    <Title>$(lang:usb_playback_delete_recording_title)</Title>
+    <Text translate_callbacks="yes">Are you sure you want to delete this recording?</Text>
+      <SoftKeyItem>
+        <Name>F1</Name>
+        <Label>F_OK</Label>
+        <Url consume_key_event="1" track="no">file:///xml/gui/call_recordings.xml#sub=*[@id="usb_playback_display_files"]&amp;var:not_used=%24[usb_playback_delete_recording:$(var:file_to_delete)]</Url>
+      </SoftKeyItem>
+      <SoftKeyItem>
+        <Name>F4</Name>
+        <Label>F_CANCEL</Label>
+        <Url consume_key_event="1" track="no">file:///xml/gui/call_recordings.xml#sub=*[@id="usb_playback_display_files"]</Url>
+      </SoftKeyItem>
+  </IPPhoneText>
+</IPPhoneBatch>

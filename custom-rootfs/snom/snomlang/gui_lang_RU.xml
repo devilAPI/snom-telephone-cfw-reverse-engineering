@@ -1,0 +1,1703 @@
+<?xml version="1.0" encoding="utf-8"?>
+<phrases>
+	<language t="Русский"/>
+	<phrase n="lang_none" t=""/>
+	<phrase n="lang_language_name" t="Русский"/>
+	<phrase n="lang_cntry_CHN" t="Китай"/>
+	<phrase n="lang_cntry_FIN" t="Финляндия"/>
+	<phrase n="lang_cntry_GER" t="Германия"/>
+	<phrase n="lang_cntry_IND" t="Индия"/>
+	<phrase n="lang_cntry_IDN" t="Индонезия"/>
+	<phrase n="lang_cntry_MYS" t="Малайзия"/>
+	<phrase n="lang_cntry_MEX" t="Мексика"/>
+	<phrase n="lang_cntry_NLD" t="Нидерланды"/>
+	<phrase n="lang_cntry_PRT" t="Португалия"/>
+	<phrase n="lang_cntry_ZAF" t="ЮАР"/>
+	<phrase n="lang_cntry_GBR" t="Великобритания"/>
+	<phrase n="lang_cntry_USA" t="США"/>
+	<phrase n="lang_cntry_CAN" t="Канада"/>
+	<phrase n="lang_cntry_CHL" t="Чили"/>
+	<phrase n="lang_cntry_BHS" t="Багамские острова"/>
+	<phrase n="lang_cntry_CUB" t="Куба"/>
+	<phrase n="lang_cntry_PRY" t="Парагвай"/>
+	<phrase n="lang_cntry_BMU" t="Бермудские острова"/>
+	<phrase n="lang_cntry_FLK" t="Фолклендские острова"/>
+	<phrase n="lang_cntry_GRL" t="Гренландия"/>
+	<phrase n="lang_cntry_FRO" t="Фарерские острова"/>
+	<phrase n="lang_cntry_IRL" t="Ирландия"/>
+	<phrase n="lang_cntry_ESP" t="Испания"/>
+	<phrase n="lang_cntry_ALB" t="Албания"/>
+	<phrase n="lang_cntry_AUT" t="Австрия"/>
+	<phrase n="lang_cntry_BEL" t="Бельгия"/>
+	<phrase n="lang_cntry_BRA" t="Бразилия"/>
+	<phrase n="lang_cntry_CAI" t="Кайкос"/>
+	<phrase n="lang_cntry_CHA" t="Чатам"/>
+	<phrase n="lang_cntry_HRV" t="Хорватия"/>
+	<phrase n="lang_cntry_CZE" t="Чешская республика"/>
+	<phrase n="lang_cntry_DNK" t="Дания"/>
+	<phrase n="lang_cntry_FRA" t="Франция"/>
+	<phrase n="lang_cntry_HUN" t="Венгрия"/>
+	<phrase n="lang_cntry_ITA" t="Италия"/>
+	<phrase n="lang_cntry_LUX" t="Люксембург"/>
+	<phrase n="lang_cntry_MAK" t="Македония"/>
+	<phrase n="lang_cntry_NAM" t="Намибия"/>
+	<phrase n="lang_cntry_NOR" t="Норвегия"/>
+	<phrase n="lang_cntry_POL" t="Польша"/>
+	<phrase n="lang_cntry_SVK" t="Словацкая республика"/>
+	<phrase n="lang_cntry_SWD" t="Швеция"/>
+	<phrase n="lang_cntry_CHE" t="Швейцария"/>
+	<phrase n="lang_cntry_GIB" t="Гибралтар"/>
+	<phrase n="lang_cntry_YUG" t="Сербия"/>
+	<phrase n="lang_cntry_BLR" t="Беларусь"/>
+	<phrase n="lang_cntry_BGR" t="Болгария"/>
+	<phrase n="lang_cntry_CYP" t="Кипр"/>
+	<phrase n="lang_cntry_EGY" t="Египет"/>
+	<phrase n="lang_cntry_EST" t="Эстония"/>
+	<phrase n="lang_cntry_GAZ" t="Cектор Газа"/>
+	<phrase n="lang_cntry_GRC" t="Греция"/>
+	<phrase n="lang_cntry_ISR" t="Израиль"/>
+	<phrase n="lang_cntry_JOR" t="Иордания"/>
+	<phrase n="lang_cntry_LVA" t="Латвия"/>
+	<phrase n="lang_cntry_LTU" t="Литва"/>
+	<phrase n="lang_cntry_LBN" t="Ливан"/>
+	<phrase n="lang_cntry_MDA" t="Молдова"/>
+	<phrase n="lang_cntry_RUS" t="Россия"/>
+	<phrase n="lang_cntry_ROU" t="Румыния"/>
+	<phrase n="lang_cntry_SYR" t="Сирия"/>
+	<phrase n="lang_cntry_TUR" t="Турция"/>
+	<phrase n="lang_cntry_UKR" t="Украина"/>
+	<phrase n="lang_cntry_IRQ" t="Ирак"/>
+	<phrase n="lang_cntry_IRN" t="Иран"/>
+	<phrase n="lang_cntry_ARM" t="Армения"/>
+	<phrase n="lang_cntry_AZE" t="Азербайджан"/>
+	<phrase n="lang_cntry_GEO" t="Грузия"/>
+	<phrase n="lang_cntry_KAZ" t="Казахстан"/>
+	<phrase n="lang_cntry_KGZ" t="Кыргызстан"/>
+	<phrase n="lang_cntry_PAK" t="Пакистан"/>
+	<phrase n="lang_cntry_SGP" t="Сингапур"/>
+	<phrase n="lang_cntry_KOR" t="Корея"/>
+	<phrase n="lang_cntry_JPN" t="Япония"/>
+	<phrase n="lang_cntry_AUS" t="Австралия"/>
+	<phrase n="lang_cntry_NZL" t="Новая Зеландия"/>
+	<phrase n="lang_cntry_TON" t="Королевство Тонга"/>
+	<phrase n="lang_cntry_COL" t="Колумбия"/>
+	<phrase n="lang_cntry_ECU" t="Эквадор"/>
+	<phrase n="lang_cntry_TTB" t="Тринидад-и-Тобаго"/>
+	<phrase n="lang_cntry_ARG" t="Аргентина"/>
+	<phrase n="lang_cntry_WAT" t="Западная Африка"/>
+	<phrase n="lang_cntry_CAT" t="Центральная Африка"/>
+	<phrase n="lang_cntry_EAT" t="Восточная Африка"/>
+	<phrase n="lang_cntry_VEN" t="Венесуэла"/>
+	<phrase n="lang_cntry_NCL" t="Новая Каледония"/>
+	<phrase n="lang_cntry_UAE" t="Объединенные Арабские Эмираты"/>
+	<phrase n="lang_cntry_THA" t="Таиланд"/>
+	<phrase n="lang_F_SEARCH" t="Поиск"/>
+	<phrase n="lang_F_SEARCH_typeSio" t="Поиск"/>
+	<phrase n="lang_F_REBOOT" t="Перезагрузить"/>
+	<phrase n="lang_F_REBOOT_typeSio" t="Перезагрузить"/>
+	<phrase n="lang_F_REBOOT_smartlabel" t="Перезагрузить"/>
+	<phrase n="lang_F_PAIR" t="Подключить"/>
+	<phrase n="lang_F_UNPAIR" t="Разъединить"/>
+	<phrase n="lang_F_JOIN" t="Присоединиться"/>
+	<phrase n="lang_F_JOIN_typeSio" t="Присоединиться"/>
+	<phrase n="lang_F_JOIN_WITH" t="Присоединиться к"/>
+	<phrase n="lang_F_LEAVE" t="Уйти"/>
+	<phrase n="lang_F_LEAVE_typeSio" t="Уйти"/>
+	<phrase n="lang_F_OK" t="ОК"/>
+	<phrase n="lang_F_ACCEPT_CALL" t="Принять"/>
+	<phrase n="lang_F_ACCEPT_CALL_typeSio" t="Принять"/>
+	<phrase n="lang_F_CANCEL" t="Отмена"/>
+	<phrase n="lang_F_CANCEL_typeSio" t="Отмена"/>
+	<phrase n="lang_F_YES" t="Да"/>
+	<phrase n="lang_F_NO" t="Нет"/>
+	<phrase n="lang_F_ADD_SPEAKER" t="+Спикер"/>
+	<phrase n="lang_F_ADD_SPEAKER_typeSio" t="+Спикер"/>
+	<phrase n="lang_F_REMOVE_SPEAKER" t="-Спикер"/>
+	<phrase n="lang_F_REMOVE_SPEAKER_typeSio" t="-Спикер"/>
+	<phrase n="lang_F_ADD_HANDSET" t="+Трбка"/>
+	<phrase n="lang_F_ADD_HANDSET_typeSio" t="+Трубка"/>
+	<phrase n="lang_F_REMOVE_HANDSET" t="-Трбка"/>
+	<phrase n="lang_F_REMOVE_HANDSET_typeSio" t="-Трубка"/>
+	<phrase n="lang_F_DELETE" t="Удал"/>
+	<phrase n="lang_F_DELETE_typeSio" t="Удалить"/>
+	<phrase n="lang_F_ADR_BOOK" t="ТлКнга"/>
+	<phrase n="lang_F_ADR_BOOK_typeSio" t="Контакты"/>
+	<phrase n="lang_F_ADR_BOOK_smartlabel" t="Контакты"/>
+	<phrase n="lang_F_DENYALL" t="Блок"/>
+	<phrase n="lang_F_DENYALL_typeSio" t="Блокировка номера"/>
+	<phrase n="lang_F_DENYALL_smartlabel" t="Блок"/>
+	<phrase n="lang_F_CALL_LIST" t="История"/>
+	<phrase n="lang_F_CALL_LIST_typeSio" t="История"/>
+	<phrase n="lang_F_CALL_LIST_smartlabel" t="История"/>
+	<phrase n="lang_F_PLAY" t="Воспроизвести"/>
+	<phrase n="lang_F_STOP" t="Остановить"/>
+	<phrase n="lang_F_RESCAN" t="Повторный поиск"/>
+	<phrase n="lang_F_INCREASE" t="Увеличить"/>
+	<phrase n="lang_F_DECREASE" t="Уменьшить"/>
+	<phrase n="lang_F_BACK" t="⌫"/>
+	<phrase n="lang_F_BACK_typeSio" t="Назад"/>
+	<phrase n="lang_F_REDIAL" t="Повтор"/>
+	<phrase n="lang_F_REDIAL_typeSio" t="Повторный вызов"/>
+	<phrase n="lang_F_REDIAL_smartlabel" t="Повтор"/>
+	<phrase n="lang_F_INSTANT_REDIAL" t="Повтор"/>
+	<phrase n="lang_F_INSTANT_REDIAL_typeSio" t="Повторный вызов"/>
+	<phrase n="lang_F_INSTANT_REDIAL_smartlabel" t="Повтор"/>
+	<phrase n="lang_F_ADD_NUMBER" t="Доб"/>
+	<phrase n="lang_F_ADD_NUMBER_typeSio" t="Добавить номер"/>
+	<phrase n="lang_F_CONTACTS" t="Контакты"/>
+	<phrase n="lang_F_PRESENCE" t="Статус"/>
+	<phrase n="lang_F_PRESENCE_typeSio" t="Изменить статус"/>
+	<phrase n="lang_F_PRESENCE_smartlabel" t="Изменить"/>
+	<phrase n="lang_F_SPEED_DIAL" t="+Набор"/>
+	<phrase n="lang_F_SPEED_DIAL_typeSio" t="Быстрый набор"/>
+	<phrase n="lang_F_SPEED_DIAL_smartlabel" t="+Набор"/>
+	<phrase n="lang_F_SAFE_TRANSFER" t="+Трнф"/>
+	<phrase n="lang_F_SAFE_TRANSFER_typeSio" t="Безопасный Трнф"/>
+	<phrase n="lang_F_MENUS_USERINPUT_SENDSIPINFO" t="UserInputAndSendSipInfo"/>
+	<phrase n="lang_F_MENUS_SENDSIPINFO" t="SendSipInfo"/>
+	<phrase n="lang_F_USERINPUT_SENDSIPINFO" t="SIP"/>
+	<phrase n="lang_F_SENDSIPINFO" t="SIP"/>
+	<phrase n="lang_F_SENDSIPINFO_typeSio" t="SIP INFO"/>
+	<phrase n="lang_F_SENDSIPINFO_smartlabel" t="SIP&lt;br&gt;INFO"/>
+	<phrase n="lang_F_REC_START" t="Зап"/>
+	<phrase n="lang_F_REC_STOP" t="Стоп"/>
+	<phrase n="lang_F_RECORDER_START" t="Запись"/>
+	<phrase n="lang_F_RECORDER_STOP" t="Стоп"/>
+	<phrase n="lang_F_RECORD_ON" t="Запись"/>
+	<phrase n="lang_F_RECORD_OFF" t="Остановить запись"/>
+	<phrase n="lang_F_RECORDING" t="запись"/>
+	<phrase n="lang_F_LOGOFF_ALL" t="Выйти"/>
+	<phrase n="lang_F_LOGOFF_ALL_typeSio" t="Выйти из всех"/>
+	<phrase n="lang_F_LOGOFF_ALL_smartlabel" t="Выйти"/>
+	<phrase n="lang_F_STARCODE_short" t="СтрКод"/>
+	<phrase n="lang_F_STARCODE" t="Старкод"/>
+	<phrase n="lang_F_RELOAD_SERVER_AB" t="Перезагрузить"/>
+	<phrase n="lang_F_ANONYMOUS" t="СкрID"/>
+	<phrase n="lang_F_ANONYMOUS_long" t="Скрыть SIP-ID"/>
+	<phrase n="lang_F_ANONYMOUS_smartlabel" t="СкрID"/>
+	<phrase n="lang_F_VOICEMAIL_INFO_NEW_MSG" t="Голосовая почта (инфо)"/>
+	<phrase n="lang_F_VOICEMAIL_INFO_short" t="Голосовая почта"/>
+	<phrase n="lang_F_VOICEMAIL_INFO" t="Голосовой почта (инфо)"/>
+	<phrase n="lang_F_NO_NEW_MESSAGE" t="Нет новых сообщений"/>
+	<phrase n="lang_F_NEW_MESSAGE" t="Новые сообщения"/>
+	<phrase n="lang_F_GUEST_LOCK" t="Заблокировать"/>
+	<phrase n="lang_F_GUEST_UNLOCK" t="Разблокировать"/>
+	<phrase n="lang_F_IVR" t="IVR"/>
+	<phrase n="lang_F_DTMF" t="DTMF"/>
+	<phrase n="lang_F_ACTION_URL" t="URL"/>
+	<phrase n="lang_F_ACTION_URL_typeSio" t="Action URL"/>
+	<phrase n="lang_F_ACTION_URL_smartlabel" t="A.URL"/>
+	<phrase n="lang_F_AUTO_ANSWER" t="АвтОтв"/>
+	<phrase n="lang_F_AUTO_ANSWER_typeSio" t="Автоответ"/>
+	<phrase n="lang_F_AUTO_ANSWER_smartlabel" t="АвтоОтв"/>
+	<phrase n="lang_F_AUTO_ANSWER_ON" t="Автоответ"/>
+	<phrase n="lang_F_BLF_short" t="BLF"/>
+	<phrase n="lang_F_BLF" t="BLF"/>
+	<phrase n="lang_F_LINE" t="Линия"/>
+	<phrase n="lang_F_LINE_short" t="Линия"/>
+	<phrase n="lang_F_LINE_RINGING" t="входящий вызов"/>
+	<phrase n="lang_F_LINE_OUTGOING" t="Вызов"/>
+	<phrase n="lang_F_LINE_OFFHOOK" t="снять трубку"/>
+	<phrase n="lang_F_LINE_IDLE" t="В ожидании"/>
+	<phrase n="lang_F_LINE_HOLD" t="на удержании"/>
+	<phrase n="lang_F_LINE_FAILED" t="Не в сети"/>
+	<phrase n="lang_F_LINE_DISCONNECTED" t="разъединен"/>
+	<phrase n="lang_F_LINE_DISCONNECTED_typeSio" t="разъединен"/>
+	<phrase n="lang_F_LINE_CONNECTED" t="подключен"/>
+	<phrase n="lang_F_LINE_BUSY" t="Занято"/>
+	<phrase n="lang_F_LINE_HELD" t="На удержании"/>
+	<phrase n="lang_F_LINE_CALLING" t="вызов"/>
+	<phrase n="lang_F_LINE_RINGBACK" t="перезвонить"/>
+	<phrase n="lang_F_LINE_HOLDING" t="удержание"/>
+	<phrase n="lang_F_LINE_UNREGISTERED" t="Не зарегистрирован"/>
+	<phrase n="lang_F_LINE_IN_USE" t="Используется"/>
+	<phrase n="lang_F_LINE_FREE" t="свободно"/>
+	<phrase n="lang_F_LINE_UNKNOWN" t="неизвестный"/>
+	<phrase n="lang_F_LINE_TALKING" t="разговаривает"/>
+	<phrase n="lang_F_LINE_SEIZED" t="перехвачено"/>
+	<phrase n="lang_F_LINE_UNVAILABLE" t="недоступна"/>
+	<phrase n="lang_F_LINE_ACTIVE" t="Активно"/>
+	<phrase n="lang_F_LINE_AVAILABLE" t="доступна"/>
+	<phrase n="lang_F_LINE_CLOSED" t="закрыта"/>
+	<phrase n="lang_F_LINE_AUTO_REDIAL" t="автонабор"/>
+	<phrase n="lang_F_LINE_AUTO_REDIAL_typeSio" t="автонабор"/>
+	<phrase n="lang_F_LINE_CONFERENCING" t="в конференции"/>
+	<phrase n="lang_F_LINE_PARKED" t="на парковке"/>
+	<phrase n="lang_F_LINE_NO_BUDDY" t="не назначено"/>
+	<phrase n="lang_F_LINE_DISABLED" t="отключено"/>
+	<phrase n="lang_F_LINE_MSG_WAITING" t="новое сообщение"/>
+	<phrase n="lang_F_SHARED_LINE" t="Об.Лин"/>
+	<phrase n="lang_F_SHARED_LINE_typeSio" t="Общая линия"/>
+	<phrase n="lang_F_SHARED_LINE_smartlabel" t="Об.лин"/>
+	<phrase n="lang_F_SHARED_LINE_REMOTE_SEIZED" t="Общая линия"/>
+	<phrase n="lang_F_SHARED_LINE_REMOTE_HOLD" t="Общая линия"/>
+	<phrase n="lang_F_SHARED_LINE_REMOTE_ALERT" t="Общая линия"/>
+	<phrase n="lang_F_SHARED_LINE_REMOTE_ACTIVE" t="Общая линия"/>
+	<phrase n="lang_F_SHARED_LINE_LOCAL_SEIZED" t="Общая линия"/>
+	<phrase n="lang_F_SHARED_LINE_LOCAL_HOLD" t="Общая линия"/>
+	<phrase n="lang_F_SHARED_LINE_LOCAL_ALERT" t="Общая линия"/>
+	<phrase n="lang_F_SHARED_LINE_LOCAL_ACTIVE" t="Общая линия"/>
+	<phrase n="lang_F_MULTICAST" t="МКаст"/>
+	<phrase n="lang_F_MULTICAST_typeSio" t="Мультикаст"/>
+	<phrase n="lang_F_MULTICAST_smartlabel" t="Мультикаст"/>
+	<phrase n="lang_F_MULTICAST_ON" t="Мультикаст"/>
+	<phrase n="lang_F_MULTICAST_ZONE" t="MК Зона"/>
+	<phrase n="lang_F_MULTICAST_ZONE_typeSio" t="Мультикаст Зона"/>
+	<phrase n="lang_F_MULTICAST_ZONE_smartlabel" t="МК Зона"/>
+	<phrase n="lang_F_BUTTON_typeSio" t="Клавиша АТС"/>
+	<phrase n="lang_F_BUTTON" t="Клав"/>
+	<phrase n="lang_F_BUTTON_smartlabel" t="Клав"/>
+	<phrase n="lang_F_PUSH_TO_TALK" t="Танг"/>
+	<phrase n="lang_F_PUSH_TO_TALK_typeSio" t="Тангента"/>
+	<phrase n="lang_F_PUSH_TO_TALK_smartlabel" t="Танг"/>
+	<phrase n="lang_F_INTERCOM_ON" t="Интерком"/>
+	<phrase n="lang_F_INTERCOM" t="ИнКом"/>
+	<phrase n="lang_F_INTERCOM_typeSio" t="Интерком"/>
+	<phrase n="lang_F_INTERCOM_smartlabel" t="ИнКом"/>
+	<phrase n="lang_F_PICKUP" t="Поднять"/>
+	<phrase n="lang_F_CALL_CENTER_LIST" t="Список контакт-центров"/>
+	<phrase n="lang_F_REMOTE_OFFICE" t="Офис"/>
+	<phrase n="lang_F_REMOTE_OFFICE_typeSio" t="Удаленный Офис"/>
+	<phrase n="lang_F_REMOTE_OFFICE_smartlabel" t="Уд.Офис"/>
+	<phrase n="lang_F_REMOTE_OFFICE_ON" t="Вкл"/>
+	<phrase n="lang_F_REMOTE_OFFICE_OFF" t="Выкл"/>
+	<phrase n="lang_F_ACD" t="ACD"/>
+	<phrase n="lang_F_ACD_WRAPUP" t="Завершение"/>
+	<phrase n="lang_F_ACD_UNAVAILABLE" t="Недоступен"/>
+	<phrase n="lang_F_ACD_AVAILABLE" t="Доступен"/>
+	<phrase n="lang_F_ACD_SIGN_OUT" t="Выйти из ACD"/>
+	<phrase n="lang_F_ACD_SIGN_IN" t="Войти в ACD"/>
+	<phrase n="lang_F_ACD_LOGOUT" t="Выйти из ACD"/>
+	<phrase n="lang_F_ACD_LOGIN" t="Войти в ACD"/>
+	<phrase n="lang_F_ZONES" t="Мультикаст"/>
+	<phrase n="lang_F_SMART_TRANSFER" t="Умный трансфер"/>
+	<phrase n="lang_F_SMART_TRANSFER_short" t="УмнТрнф"/>
+	<phrase n="lang_F_ALTERNATE_MODE" t="Чередовать"/>
+	<phrase n="lang_F_LABEL_PAGE_NEXT_typeSio" t="След"/>
+	<phrase n="lang_F_LABEL_PAGE_NEXT" t="След"/>
+	<phrase n="lang_F_LABEL_PAGE_NEXT_SMART_long" t="Следующая страница"/>
+	<phrase n="lang_F_LABEL_PAGE_NEXT_SMART_short" t="Стрн&gt;&gt;"/>
+	<phrase n="lang_F_LABEL_PAGE_PREV_typeSio" t="Пред"/>
+	<phrase n="lang_F_LABEL_PAGE_PREV" t="Пред"/>
+	<phrase n="lang_F_LABEL_PAGE_PREV_SMART_long" t="Предыдущая страница"/>
+	<phrase n="lang_F_LABEL_PAGE_PREV_SMART_short" t="&lt;&lt;Стрн"/>
+	<phrase n="lang_F_ADD_REJECTED_CONTACT" t="Добавить"/>
+	<phrase n="lang_F_SAVE_XSI_CONTACT" t="Сохранить"/>
+	<phrase n="lang_F_REFRESH" t="Обновить"/>
+	<phrase n="lang_F_ADD_CONTACT" t="Доб"/>
+	<phrase n="lang_F_ADD_CONTACT_typeSio" t="Добавить"/>
+	<phrase n="lang_F_SAVE_DIRECTORY_EDIT" t="Сохранить"/>
+	<phrase n="lang_F_GO_NEXT" t="Следующий"/>
+	<phrase n="lang_F_GO_BACK" t="Предыдущий"/>
+	<phrase n="lang_F_SAVE" t="Сохранить"/>
+	<phrase n="lang_F_SAVE_CONTACT" t="Сохранить"/>
+	<phrase n="lang_F_SAFE_TRANSFER_OFF" t="ЗпТрн"/>
+	<phrase n="lang_F_SAFE_TRANSFER_OFF_typeSio" t="Трансфер"/>
+	<phrase n="lang_F_PARK" t="Парк"/>
+	<phrase n="lang_F_PARK_typeSio" t="Парковка"/>
+	<phrase n="lang_F_PARK_smartlabel" t="Парковка"/>
+	<phrase n="lang_F_CALLRECORD_PAUSE" t="Пауза записи"/>
+	<phrase n="lang_F_CALLRECORD_RESUME" t="Продолжить запись"/>
+	<phrase n="lang_F_CALLRECORD_CONTROL_ON" t="Запись"/>
+	<phrase n="lang_F_CALLRECORD_CONTROL_OFF" t="Запись"/>
+	<phrase n="lang_F_STATUS_UNREAD" t="Инфо"/>
+	<phrase n="lang_F_STATUS" t="Инфо"/>
+	<phrase n="lang_F_STATUS_long" t="Сообщение (инфо)"/>
+	<phrase n="lang_F_FAVORITES" t="Избр"/>
+	<phrase n="lang_F_FAVORITES_typeSio" t="Избранное"/>
+	<phrase n="lang_F_FAVORITES_smartlabel" t="Избран"/>
+	<phrase n="lang_F_SORT" t="Сорт"/>
+	<phrase n="lang_F_SORT_typeSio" t="Сортировать"/>
+	<phrase n="lang_F_CONTACTPOOL" t="Пул"/>
+	<phrase n="lang_F_CONTACTPOOL_typeSio" t="Контакты"/>
+	<phrase n="lang_F_CONTACTPOOL_smartlabel" t="Пул"/>
+	<phrase n="lang_F_NEXT" t="Следующий"/>
+	<phrase n="lang_F_DIRECTORY_SEARCH" t="LDAP"/>
+	<phrase n="lang_F_MISSED_LIST" t="Проп.В"/>
+	<phrase n="lang_F_MISSED_LIST_typeSio" t="Пропущенные"/>
+	<phrase n="lang_F_MISSED_LIST_smartlabel" t="Пропущ"/>
+	<phrase n="lang_F_ACCEPTED_LIST" t="Прин.В"/>
+	<phrase n="lang_F_ACCEPTED_LIST_typeSio" t="Принятые вызовы"/>
+	<phrase n="lang_F_ACCEPTED_LIST_smartlabel" t="Принятые"/>
+	<phrase n="lang_F_DIALED" t="Набранные номера"/>
+	<phrase n="lang_F_RETRIEVE" t="Голосовая почта"/>
+	<phrase n="lang_F_RETRIEVE_smartlabel" t="ГлПочта"/>
+	<phrase n="lang_F_RETRIEVE_typeSio" t="Голосовая почта"/>
+	<phrase n="lang_F_RETRIEVE_ON" t="Голосовая почта"/>
+	<phrase n="lang_F_REDIRECT_OFF" t="ВыкПр"/>
+	<phrase n="lang_F_REDIRECT_OFF_smartlabel" t="ВыкПр"/>
+	<phrase n="lang_F_REDIRECT_OFF_typeSio" t="Выкл переадресацию"/>
+	<phrase n="lang_F_REDIRECT_ON" t="Переадресация"/>
+	<phrase n="lang_F_REDIRECT_ON_typeSio" t="Переаресация вызова"/>
+	<phrase n="lang_F_REDIRECT_smartlabel" t="Переадр"/>
+	<phrase n="lang_F_RINGER_SILENT" t="Тихо"/>
+	<phrase n="lang_F_RINGER_SILENT_typeSio" t="Режим без звука"/>
+	<phrase n="lang_F_RINGER_SILENT_smartlabel" t="Тихо"/>
+	<phrase n="lang_F_ABORT" t="Отмена"/>
+	<phrase n="lang_F_ABORT_typeSio" t="Отмена"/>
+	<phrase n="lang_F_SUPPORT" t="Справка"/>
+	<phrase n="lang_F_JUMP_BACK" t="Перейти"/>
+	<phrase n="lang_F_JUMP" t="Перейти"/>
+	<phrase n="lang_F_REDUCED" t="Сократить"/>
+	<phrase n="lang_F_ALL" t="Еще"/>
+	<phrase n="lang_F_DIALOG" t="Вызовы"/>
+	<phrase n="lang_F_DIALOG_typeSio" t="Монитор номеров"/>
+	<phrase n="lang_F_DIALOG_smartlabel" t="М.Вызовы"/>
+	<phrase n="lang_F_HEADSET" t="Грнтра"/>
+	<phrase n="lang_F_HEADSET_typeSio" t="Гарнитура"/>
+	<phrase n="lang_F_HEADSET_smartlabel" t="Грнтра"/>
+	<phrase n="lang_F_HEADSET_ON" t="Грнтра"/>
+	<phrase n="lang_F_HEADSET_ON_typeSio" t="Гарнитура"/>
+	<phrase n="lang_F_HEADSET_ON_smartlabel" t="Гарнитура"/>
+	<phrase n="lang_F_SOFTWARE_UPDATE" t="ПО"/>
+	<phrase n="lang_F_UPDATE" t="Обн"/>
+	<phrase n="lang_F_SMS" t="SMS"/>
+	<phrase n="lang_F_CMC" t="CMC"/>
+	<phrase n="lang_F_CALL_COMPLETION" t="CC"/>
+	<phrase n="lang_F_UNMUTE" t="ВклЗвк"/>
+	<phrase n="lang_F_UNMUTE_typeSio" t="Включить звук"/>
+	<phrase n="lang_F_UNMUTE_smartlabel" t="ВклЗвк"/>
+	<phrase n="lang_F_MUTE" t="ВыкЗвк"/>
+	<phrase n="lang_F_MUTE_typeSio" t="Выключить звук"/>
+	<phrase n="lang_F_MUTE_smartlabel" t="ВыкЗвк"/>
+	<phrase n="lang_F_REG_ACTIVATE" t="Включить"/>
+	<phrase n="lang_F_ADD_PHONEBOOK" t="Доб"/>
+	<phrase n="lang_F_ADD_PHONEBOOK_typeSio" t="Добавить"/>
+	<phrase n="lang_F_LIST_MISSED" t="Пропущенные"/>
+	<phrase n="lang_F_LIST_TAKEN" t="Принятые"/>
+	<phrase n="lang_F_DETAILS" t="Подробнее"/>
+	<phrase n="lang_F_DND_OFF" t="DND"/>
+	<phrase n="lang_F_DND_OFF_typeSio" t="Не беспокоить"/>
+	<phrase n="lang_F_DND_OFF_smartlabel" t="DND"/>
+	<phrase n="lang_F_DND" t="DND"/>
+	<phrase n="lang_F_DND_typeSio" t="Не беспокоить"/>
+	<phrase n="lang_F_DND_smartlabel" t="DND"/>
+	<phrase n="lang_F_DEF_ON" t="*Вкл"/>
+	<phrase n="lang_F_DEF_OFF" t="*Выкл"/>
+	<phrase n="lang_F_ON" t="Вкл"/>
+	<phrase n="lang_F_OFF" t="Выкл"/>
+	<phrase n="lang_F_START" t="Старт"/>
+	<phrase n="lang_F_END" t="Закончить"/>
+	<phrase n="lang_F_IDENTITY" t="SIP-аккаунт"/>
+	<phrase n="lang_F_SETTINGS_typeSio" t="Настройки"/>
+	<phrase n="lang_F_SETTINGS" t="Настройки"/>
+	<phrase n="lang_F_EXECUTIVE_ASSISTANT_CONFIG" t="Исполнительный-Помощник Конфиг"/>
+	<phrase n="lang_F_EXECUTIVE_CONFIG" t="Exec.&lt;br&gt;Config"/>
+	<phrase n="lang_F_EXECUTIVE_CONFIG_typeSio" t="Exececutive Config"/>
+	<phrase n="lang_F_ASSISTANT_CONFIG" t="Assist.&lt;br&gt;Config"/>
+	<phrase n="lang_F_ASSISTANT_CONFIG_typeSio" t="Assistant Config"/>
+	<phrase n="lang_F_EXEC_ASSIST_BEHALF_PUI_LISTING" t="Исполнительный-Помощник от Имени"/>
+	<phrase n="lang_F_EXEC_ASSIST_BEHALF" t="От имени"/>
+	<phrase n="lang_F_NEW" t="Новый"/>
+	<phrase n="lang_F_URLU" t="a»A"/>
+	<phrase n="lang_F_URLU_typeSio" t="Изменить"/>
+	<phrase n="lang_F_URLL" t="1»a"/>
+	<phrase n="lang_F_URLL_typeSio" t="Изменить"/>
+	<phrase n="lang_F_123" t="A»1"/>
+	<phrase n="lang_F_123_typeSio" t="Изменить"/>
+	<phrase n="lang_F_REDIRECT" t="Переадресация"/>
+	<phrase n="lang_F_REDIRECT_typeSio" t="Переадресация вызова"/>
+	<phrase n="lang_F_HOLD_typeSio" t="Удержание"/>
+	<phrase n="lang_F_HOLD" t="Удержание"/>
+	<phrase n="lang_F_CONSULTCONF_ADD" t="Доб"/>
+	<phrase n="lang_F_CONSULTCONF_ADD_typeSio" t="Доб в конф-цию"/>
+	<phrase n="lang_F_CONSULTCONF_ADD_smartlabel" t="Добавить"/>
+	<phrase n="lang_F_CONSULTCONF_JOIN" t="Войти"/>
+	<phrase n="lang_F_CONSULTCONF_JOIN_typeSio" t="Войти в конф"/>
+	<phrase n="lang_F_CONSULTCONF_JOIN_smartlabel" t="Войти"/>
+	<phrase n="lang_F_CONSULTCONF" t="Конференция"/>
+	<phrase n="lang_F_CONFERENCE" t="Конф"/>
+	<phrase n="lang_F_CONFERENCE_smartlabel" t="Конф"/>
+	<phrase n="lang_F_CONFERENCE_typeSio" t="Конференция"/>
+	<phrase n="lang_F_CONFERENCE_ON" t="Конференция на удержании"/>
+	<phrase n="lang_F_NO_CONFERENCE" t="нет конф."/>
+	<phrase n="lang_F_DEFLECT" t="Отклонить"/>
+	<phrase n="lang_F_BLIND_TRANSFER" t="Слепой"/>
+	<phrase n="lang_F_BLIND_TRANSFER_typeSio" t="Слепой трансфер"/>
+	<phrase n="lang_F_TRANSFER" t="Трнф"/>
+	<phrase n="lang_F_TRANSFER_typeSio" t="Трансфер"/>
+	<phrase n="lang_F_TRANSFER_smartlabel" t="Трнф"/>
+	<phrase n="lang_F_TRANSFER_CALL" t="Трансфер вызова"/>
+	<phrase n="lang_F_TRANSFER_SELECTED" t="Трансфер выбранных"/>
+	<phrase n="lang_F_DENY" t="Отклонить"/>
+	<phrase n="lang_F_DIAL" t="Вызов"/>
+	<phrase n="lang_F_EDIT" t="Редактировать"/>
+	<phrase n="lang_F_CLEAR" t="Очистить"/>
+	<phrase n="lang_F_DOWN" t="Вниз"/>
+	<phrase n="lang_F_UP" t="Вверх"/>
+	<phrase n="lang_F_LEFT" t="Лево"/>
+	<phrase n="lang_F_RIGHT" t="Право"/>
+	<phrase n="lang_F_EXTENSION" t="Доб.Ном"/>
+	<phrase n="lang_F_EXTENSION_typeSio" t="Добавочный номер"/>
+	<phrase n="lang_F_EXTENSION_smartlabel" t="Доб.Ном"/>
+	<phrase n="lang_F_MESSAGE" t="Сообщение"/>
+	<phrase n="lang_F_CONTACT_STATE_UNKNOWN" t="Неизвестно"/>
+	<phrase n="lang_F_CONTACT_STATE_AVAILABLE" t="Доступен"/>
+	<phrase n="lang_F_CONTACT_STATE_AVAILABLE_ON_MOBILE" t="Доступен (на мобильном)"/>
+	<phrase n="lang_F_CONTACT_STATE_AVAILABLE_AT_DESK" t="Доступен (на рабочем месте)"/>
+	<phrase n="lang_F_CONTACT_STATE_INACTIVE" t="Не активный"/>
+	<phrase n="lang_F_CONTACT_STATE_BUSY" t="Занят"/>
+	<phrase n="lang_F_CONTACT_STATE_URGENT_INTERRUPTIONS_ONLY" t="Доступен только для срочных дел"/>
+	<phrase n="lang_F_CONTACT_STATE_IN_A_CALL" t="В разговоре"/>
+	<phrase n="lang_F_CONTACT_STATE_IN_A_MEETING" t="На совещании"/>
+	<phrase n="lang_F_CONTACT_STATE_MEETING" t="Совещание"/>
+	<phrase n="lang_F_CONTACT_STATE_HOLDING" t="На удержании"/>
+	<phrase n="lang_F_CONTACT_STATE_DND" t="Не беспокоить"/>
+	<phrase n="lang_F_CONTACT_STATE_DND_ALL" t="DND (всем)"/>
+	<phrase n="lang_F_CONTACT_STATE_DND_SELF" t="Не беспокоить (сам)"/>
+	<phrase n="lang_F_CONTACT_STATE_BE_RIGHT_BACK" t="Скоро вернусь"/>
+	<phrase n="lang_F_CONTACT_STATE_AWAY" t="Отсутствую"/>
+	<phrase n="lang_F_CONTACT_STATE_OFFLINE" t="Не в сети"/>
+	<phrase n="lang_F_KEYEVENT" t="Клав"/>
+	<phrase n="lang_F_KEYEVENT_typeSio" t="Назначение клавиш"/>
+	<phrase n="lang_F_KEYEVENT_short" t="Клав"/>
+	<phrase n="lang_F_XML" t="XML"/>
+	<phrase n="lang_continuous_text_speed_dial" t="Быстрый набор"/>
+	<phrase n="lang_continuous_text_reboot" t="Перезагрузка"/>
+	<phrase n="lang_continuous_text_search" t="Поиск"/>
+	<phrase n="lang_continuous_text_cancel" t="Отмена"/>
+	<phrase n="lang_continuous_text_yes" t="Да"/>
+	<phrase n="lang_continuous_text_no" t="Нет"/>
+	<phrase n="lang_confirm_reboot" t="Перезагрузить?"/>
+	<phrase n="lang_on" t="Вкл"/>
+	<phrase n="lang_off" t="Выкл"/>
+	<phrase n="lang_busy" t="Занят"/>
+	<phrase n="lang_short" t="Короткий"/>
+	<phrase n="lang_full" t="Полный"/>
+	<phrase n="lang_half" t="Половина"/>
+	<phrase n="lang_F_HOLD_PRIVATE" t="Удерж"/>
+	<phrase n="lang_F_HOLD_PRIVATE_typeSio" t="Частное удержание"/>
+	<phrase n="lang_F_HOLD_PRIVATE_smartlabel" t="Удерж"/>
+	<phrase n="lang_conference_off" t="Выкл конф"/>
+	<phrase n="lang_conference_off_typeSio" t="Выключить конференцию"/>
+	<phrase n="lang_edit_cmc" t="Код клиента:"/>
+	<phrase n="lang_dnd" t="DND"/>
+	<phrase n="lang_red" t="Перевод Вз"/>
+	<phrase n="lang_red_typeSio" t="Переадресация"/>
+	<phrase n="lang_missed" t="Пропущенные: "/>
+	<phrase n="lang_missed_typeSio" t="Пропущенные: "/>
+	<phrase n="lang_edit" t="Редактировать"/>
+	<phrase n="lang_F_EDIT_AND_DIAL" t="Редак"/>
+	<phrase n="lang_F_EDIT_AND_DIAL_typeSio" t="Изменить"/>
+	<phrase n="lang_edit_dial" t="Изменить и набрать"/>
+	<phrase n="lang_dhcp" t="DHCP"/>
+	<phrase n="lang_enum" t="ENUM"/>
+	<phrase n="lang_mwi_mailbox1" t="Почтовый ящик:"/>
+	<phrase n="lang_mwi_mailbox2" t="У вас"/>
+	<phrase n="lang_mwi_mailbox3" t="У вас есть сообщения."/>
+	<phrase n="lang_mwi_urgent" t="срочный"/>
+	<phrase n="lang_mwi_goto_mailbox" t="Перейти в почтовый ящик?"/>
+	<phrase n="lang_challenge_user" t="Пользователь"/>
+	<phrase n="lang_challenge_pw" t="Пароль"/>
+	<phrase n="lang_use_enum" t="Использовать ENUM?"/>
+	<phrase n="lang_wiz_dhcp" t="Использовать DHCP?"/>
+	<phrase n="lang_wiz_ip_adr" t="IP-адрес:"/>
+	<phrase n="lang_wiz_mac" t="MAC:"/>
+	<phrase n="lang_wiz_version" t="Версия:"/>
+	<phrase n="lang_wiz_netmask" t="Маска:"/>
+	<phrase n="lang_wiz_gateway" t="Основной шлюз:"/>
+	<phrase n="lang_wiz_dns_server" t="DNS-сервер:"/>
+	<phrase n="lang_wiz_welcome" t="Здравствуйте! Нажмите клавишу для входа."/>
+	<phrase n="lang_terminated_finished" t="Завершен"/>
+	<phrase n="lang_try_parking" t="Парковка вызова"/>
+	<phrase n="lang_try_parking_typeSio" t="Парковка вызова"/>
+	<phrase n="lang_holding" t="Вызовы на удержании: "/>
+	<phrase n="lang_select_list" t="История"/>
+	<phrase n="lang_list_all" t="Все"/>
+	<phrase n="lang_list_new" t="Новые"/>
+	<phrase n="lang_list_old" t="Старые"/>
+	<phrase n="lang_list_missed" t="Пропущенные"/>
+	<phrase n="lang_list_taken" t="Принятые"/>
+	<phrase n="lang_list_dialed" t="Набранные"/>
+	<phrase n="lang_list_no_data" t="(Нет данных)"/>
+	<phrase n="lang_list_details" t="Подробнее"/>
+	<phrase n="lang_list_details_time" t="Время:"/>
+	<phrase n="lang_list_details_duration" t="Продолжительность:"/>
+	<phrase n="lang_list_details_costs" t="Стоимость:"/>
+	<phrase n="lang_list_details_missed" t="Пропущенные:"/>
+	<phrase n="lang_list_details_to" t="Кому:"/>
+	<phrase n="lang_list_details_from" t="От кого:"/>
+	<phrase n="lang_reg_activate" t="Активировать"/>
+	<phrase n="lang_reg_account" t="Учетная запись:"/>
+	<phrase n="lang_reg_registrar" t="Сервер регистрации:"/>
+	<phrase n="lang_reg_explanation_failed" t="Ошибка регистрации"/>
+	<phrase n="lang_reg_explanation_registering" t="Идет регистрация"/>
+	<phrase n="lang_reg_explanation_registered" t="Зарегистрировано"/>
+	<phrase n="lang_menu_info_320" t="Информация"/>
+	<phrase n="lang_menu_conf_reset" t="Сброс"/>
+	<phrase n="lang_menu_gen_contrast" t="Контраст"/>
+	<phrase n="lang_menu_gen_ringtone" t="Мелодия"/>
+	<phrase n="lang_menu_web_webserver_type" t="Сервер"/>
+	<phrase n="lang_menu_function_key" t="Функциональные клавиши"/>
+	<phrase n="lang_menu_tser_timer" t="Таймер"/>
+	<phrase n="lang_menu_red_target" t="Номер"/>
+	<phrase n="lang_menu_ringer1" t="Мелодия 1"/>
+	<phrase n="lang_menu_ringer2" t="Мелодия 2"/>
+	<phrase n="lang_menu_ringer3" t="Мелодия 3"/>
+	<phrase n="lang_menu_ringer4" t="Мелодия 4"/>
+	<phrase n="lang_menu_ringer5" t="Мелодия 5"/>
+	<phrase n="lang_menu_ringer6" t="Мелодия 6"/>
+	<phrase n="lang_menu_ringer7" t="Мелодия 7"/>
+	<phrase n="lang_menu_ringer8" t="Мелодия 8"/>
+	<phrase n="lang_menu_ringer9" t="Мелодия 9"/>
+	<phrase n="lang_menu_ringer10" t="Мелодия 10"/>
+	<phrase n="lang_vol_headset" t="Громкость гарнитуры"/>
+	<phrase n="lang_vol_handset" t="Громкость трубки"/>
+	<phrase n="lang_vol_speaker" t="Громкость динамика"/>
+	<phrase n="lang_audio_speaker" t="Спикер"/>
+	<phrase n="lang_audio_handset" t="Трубка"/>
+	<phrase n="lang_audio_headset" t="Гарнитура"/>
+	<phrase n="lang_vol_contrast" t="Контраст дисплея"/>
+	<phrase n="lang_confirm_factory" t="Вернуться к заводским настройкам?"/>
+	<phrase n="lang_confirm_logoff_all" t="Отключить всех пользователей?"/>
+	<phrase n="lang_calling" t="Вызов"/>
+	<phrase n="lang_connected" t="Соединено"/>
+	<phrase n="lang_connected_typeSio" t="Соединено"/>
+	<phrase n="lang_ringing" t="Входящий вызов"/>
+	<phrase n="lang_enter_number" t="Введите номер"/>
+	<phrase n="lang_held_by" t="Удерживается: "/>
+	<phrase n="lang_ok" t="[Ok?]"/>
+	<phrase n="lang_menu100_phone_book" t="Контакты"/>
+	<phrase n="lang_menu100_ldap_book" t="LDAP доступ"/>
+	<phrase n="lang_menu100_call_lists" t="История"/>
+	<phrase n="lang_menu100_settings" t="Настройки"/>
+	<phrase n="lang_sel100_logoff_all" t="Отключить всех пользователей"/>
+	<phrase n="lang_sel100_logoff_one" t="Отключить пользователя"/>
+	<phrase n="lang_sel100_activeline" t="Аккаунт по умолчанию"/>
+	<phrase n="lang_sel100_admin_mode" t="Режим администратора"/>
+	<phrase n="lang_sel100_user_mode" t="Режим пользователя"/>
+	<phrase n="lang_sel100_net_info" t="Информация о состоянии сети"/>
+	<phrase n="lang_sel100_mem_info" t="Информация о состоянии памяти"/>
+	<phrase n="lang_menu_ringtone" t="Мелодия вызова"/>
+	<phrase n="lang_dnd_active" t="DND активен"/>
+	<phrase n="lang_update" t="ПО"/>
+	<phrase n="lang_update_a" t="Выполнить?"/>
+	<phrase n="lang_update_reboot" t="Перезагрузка для обновления ПО"/>
+	<phrase n="lang_unplugged" t="Не подключен"/>
+	<phrase n="lang_ethernet_cable" t="Сетевой кабель не подключен"/>
+	<phrase n="lang_hid_plug" t="Подключение устройства HID"/>
+	<phrase n="lang_hid_connected" t="HID устройство подключено"/>
+	<phrase n="lang_hid_disconnected" t="HID устройство отключено"/>
+	<phrase n="lang_language" t="Язык"/>
+	<phrase n="lang_current_date" t="Дата"/>
+	<phrase n="lang_current_time" t="Время"/>
+	<phrase n="lang_network_settings" t="Сеть"/>
+	<phrase n="lang_dns_domain" t="DNS-домен"/>
+	<phrase n="lang_dns_server1" t="DNS-сервер1"/>
+	<phrase n="lang_dns_server2" t="DNS-сервер2"/>
+	<phrase n="lang_ntp_server" t="NTP-сервер"/>
+	<phrase n="lang_no_ip_adr" t="Неверный IP-адрес"/>
+	<phrase n="lang_password" t="Пароль"/>
+	<phrase n="lang_username" t="Имя пользователя"/>
+	<phrase n="lang_reset_settings" t="Сбросить значения"/>
+	<phrase n="lang_networkadvanced_settings" t="Расширенные настройки"/>
+	<phrase n="lang_admin_mode_password" t="Пароль для администратора"/>
+	<phrase n="lang_guess_number" t="Быстрый поиск"/>
+	<phrase n="lang_guess_number_len" t="Минимальное кол-во символов для поиска"/>
+	<phrase n="lang_admin_mode_pwd" t="Админ пароль"/>
+	<phrase n="lang_call_waiting" t="Ожидание вызова"/>
+	<phrase n="lang_menu100_red_time" t="Время переадресации"/>
+	<phrase n="lang_menu100_red_time_typeSio" t="Время переадресации"/>
+	<phrase n="lang_menu100_timezone" t="Часовой пояс"/>
+	<phrase n="lang_menu100_dialtone" t="Схема тонов"/>
+	<phrase n="lang_menu100_call_completion" t="Завершение вызова"/>
+	<phrase n="lang_menu100_cc_waiting" t="Ожидание: "/>
+	<phrase n="lang_menu100_cc_dial" t="Вызов: "/>
+	<phrase n="lang_menu100_netmask" t="Маска подсети"/>
+	<phrase n="lang_menu100_gateway" t="IP шлюза"/>
+	<phrase n="lang_menu100_webserver_type" t="Тип вебсервера"/>
+	<phrase n="lang_enum100_disp_always" t="Всегда"/>
+	<phrase n="lang_enum100_disp_on" t="Вкл"/>
+	<phrase n="lang_enum100_disp_off" t="Выкл"/>
+	<phrase n="lang_enum_disp_webserver_off" t="Выкл"/>
+	<phrase n="lang_enum_disp_webserver_http" t="Только HTTP"/>
+	<phrase n="lang_enum_disp_webserver_https" t="Только HTTPS"/>
+	<phrase n="lang_enum_disp_webserver_http_https" t="HTTP и HTTPS"/>
+	<phrase n="lang_enum_disp_func_key_destination" t="Номер"/>
+	<phrase n="lang_enum_disp_func_key" t="Клавиша"/>
+	<phrase n="lang_xsi_silent_alert" t="Бесшумное оповещение"/>
+	<phrase n="lang_privacy_out" t="Скрыть исходящий ID"/>
+	<phrase n="lang_privacy_in" t="Отклонить анонимные вызовы"/>
+	<phrase n="lang_privacy_in_typeSio" t="Отклонить анонимные вызовы"/>
+	<phrase n="lang_auto_dial" t="Автоматический набор"/>
+	<phrase n="lang_call_completion" t="Завершение вызова"/>
+	<phrase n="lang_vlan_id" t="VLAN ID (1-4094)"/>
+	<phrase n="lang_vlan_qos" t="Приоритет VLAN (0-7)"/>
+	<phrase n="lang_vlan_reset" t="Сброс VLAN"/>
+	<phrase n="lang_identity_settings" t="SIP-аккаунт"/>
+	<phrase n="lang_preferences_settings" t="Свойства"/>
+	<phrase n="lang_maintenance_settings" t="Обслуживание"/>
+	<phrase n="lang_auto_connect_indication" t="Индикация автоматического ответа"/>
+	<phrase n="lang_sel100_reregister_line" t="Повторная регистрация SIP-аккаунта"/>
+	<phrase n="lang_sel100_edit_line" t="Редактирование SIP-аккаунта"/>
+	<phrase n="lang_enum_disp_cw_visual" t="Только видимый"/>
+	<phrase n="lang_enum_disp_cw_visual_short" t="Видимый"/>
+	<phrase n="lang_enum_disp_cw_ringer" t="Звонок"/>
+	<phrase n="lang_confirm_del_adr_item" t="Вы уверены?"/>
+	<phrase n="lang_confirm_del_adr_item_title" t="Удалить элемент каталога"/>
+	<phrase n="lang_confirm_del_adr_item_title_typeSio" t="Удалить элемент каталога"/>
+	<phrase n="lang_confirm_del_adr_title" t="Удалить каталог"/>
+	<phrase n="lang_confirm_del_adr_item_title_short" t="Удалить элемент каталога"/>
+	<phrase n="lang_vol_ringer" t="Громкость звонка"/>
+	<phrase n="lang_keybd_unlock_PIN" t="Код разблокировки клавиатуры"/>
+	<phrase n="lang_enum_disp_func_key_mult" t="Общая линия"/>
+	<phrase n="lang_enum_disp_func_key_keyevent" t="Назначение клавиши"/>
+	<phrase n="lang_menu_ringer_silent" t="Без звука"/>
+	<phrase n="lang_menu_ringer_custom" t="Пользовательский"/>
+	<phrase n="lang_enum_disp_func_key_none" t="Нет"/>
+	<phrase n="lang_presence_online" t="Онлайн"/>
+	<phrase n="lang_presence_busy" t="Занято"/>
+	<phrase n="lang_presence_invisible" t="Невидимый"/>
+	<phrase n="lang_presence_title" t="Состояние присутствия"/>
+	<phrase n="lang_dialog_title" t="Вызовы"/>
+	<phrase n="lang_buddies_title" t="Контакты"/>
+	<phrase n="lang_use_backlight" t="Подсветка"/>
+	<phrase n="lang_backlight_on_activity" t="Подсветка во время активности"/>
+	<phrase n="lang_backlight_when_idle" t="Подсветка в режиме ожидания"/>
+	<phrase n="lang_activity" t="Активность"/>
+	<phrase n="lang_display_settings" t="Экран"/>
+	<phrase n="lang_audio_settings" t="Звук"/>
+	<phrase n="lang_redirect_settings" t="Переадресация вызова"/>
+	<phrase n="lang_redirect_settings_typeSio" t="Переадресация вызова"/>
+	<phrase n="lang_reboot_required" t="Требуется перезагрузка"/>
+	<phrase n="lang_auto_redialing" t="Повторный набор"/>
+	<phrase n="lang_conference" t="Конференция"/>
+	<phrase n="lang_directory_search" t="Поиск в телефонной книге"/>
+	<phrase n="lang_wrong_pw" t="Неверный пароль"/>
+	<phrase n="lang_admin_password_not_set" t="Пароль администратора не задан"/>
+	<phrase n="lang_http_password_not_set" t="Пароль доступа для HTTP не задан"/>
+	<phrase n="lang_start_auto_redial" t="Автоматический повторный набор?"/>
+	<phrase n="lang_call_features_settings" t="Функции вызова"/>
+	<phrase n="lang_outgoing_calls_settings" t="Исходящие вызовы"/>
+	<phrase n="lang_incoming_calls_settings" t="Входящие вызовы"/>
+	<phrase n="lang_ip_settings_wizzard" t="IP-настройки"/>
+	<phrase n="lang_webserver_settings" t="Веб-сервер"/>
+	<phrase n="lang_vlan_settings" t="VLAN"/>
+	<phrase n="lang_wlan_settings" t="WLAN"/>
+	<phrase n="lang_system_information_menu" t="Информация о системе"/>
+	<phrase n="lang_its_a_caller_info" t="Вызывающая сторона"/>
+	<phrase n="lang_its_a_callee_info" t="Вызываемая сторона"/>
+	<phrase n="lang_redirect_all" t="Переадресация всегда"/>
+	<phrase n="lang_redirect_all_typeSio" t="Переадресация всегда"/>
+	<phrase n="lang_redirect_busy" t="Переадресация когда занято"/>
+	<phrase n="lang_redirect_busy_typeSio" t="Переадресация когда занято"/>
+	<phrase n="lang_redirect_time" t="Переадресация по таймауту"/>
+	<phrase n="lang_redirect_time_typeSio" t="Переадресация по таймауту"/>
+	<phrase n="lang_do_redirect" t="Включить переадресацию"/>
+	<phrase n="lang_do_redirect_typeSio" t="Включить переадресацию"/>
+	<phrase n="lang_redirect_target" t="Переадресация на номер"/>
+	<phrase n="lang_redirect_target_typeSio" t="Переадресация на номер"/>
+	<phrase n="lang_help_label" t="Справка"/>
+	<phrase n="lang_sysinfo_mem1" t="ОЗУ:"/>
+	<phrase n="lang_sysinfo_mem2" t="из"/>
+	<phrase n="lang_sysinfo_mem3" t="свободно"/>
+	<phrase n="lang_goto_phonepage_msg" t="Для того чтобы настроить телефон, откройте в браузере:"/>
+	<phrase n="lang_goto_phonepage_msg_typeSio" t="Для того чтобы настроить телефон, откройте в браузере:"/>
+	<phrase n="lang_goto_help_msg" t="Дополнительная справочная информация:"/>
+	<phrase n="lang_snom_help_page" t="https://service.snom.com"/>
+	<phrase n="lang_linestate_connected" t="подключено"/>
+	<phrase n="lang_linestate_on_hold" t="на удержании"/>
+	<phrase n="lang_linestate_ringing" t="вызывает"/>
+	<phrase n="lang_linename_message" t="Сообщение"/>
+	<phrase n="lang_linename_redial" t="Повторный набор"/>
+	<phrase n="lang_linename_transfer" t="Трансфер"/>
+	<phrase n="lang_linename_rec_on" t="Начать запись"/>
+	<phrase n="lang_linename_rec_off" t="Остановить запись"/>
+	<phrase n="lang_linetype_auto_answer" t="Автоответ"/>
+	<phrase n="lang_linetype_blf" t="BLF"/>
+	<phrase n="lang_connecting" t="Соединение"/>
+	<phrase n="lang_fkey_add_contact_typeSio" t="Добавить"/>
+	<phrase n="lang_cancelconference" t="Отменить конференцию"/>
+	<phrase n="lang_confirm_cancelconference" t="Выйти из конференции?"/>
+	<phrase n="lang_xmlgui_dialnumber" t="Набрать номер"/>
+	<phrase n="lang_xmlgui_contactlist" t="Контакты"/>
+	<phrase n="lang_xmlgui_dial" t="Вызов"/>
+	<phrase n="lang_menu_equalizer" t="Эквалайзер"/>
+	<phrase n="lang_equalizer_soft" t="Тихий звук"/>
+	<phrase n="lang_equalizer_normal" t="Средний звук"/>
+	<phrase n="lang_equalizer_bright" t="Громкий звук"/>
+	<phrase n="lang_contactpool" t="Пул"/>
+	<phrase n="lang_tb_nickname" t="Прозвище"/>
+	<phrase n="lang_tb_number" t="Телефонный номер"/>
+	<phrase n="lang_tb_contact" t="Тип контакта"/>
+	<phrase n="lang_tb_outgoing_id" t="Исходящий SIP-аккаунт"/>
+	<phrase n="lang_tb_firstname" t="Имя"/>
+	<phrase n="lang_tb_lastname" t="Фамилия"/>
+	<phrase n="lang_tb_group" t="Группа"/>
+	<phrase n="lang_day" t="День"/>
+	<phrase n="lang_month" t="Месяц"/>
+	<phrase n="lang_year" t="Год"/>
+	<phrase n="lang_tb_title" t="Должность"/>
+	<phrase n="lang_tb_organization" t="Организация"/>
+	<phrase n="lang_tb_email" t="Электронная почта"/>
+	<phrase n="lang_tb_note" t="Примечание"/>
+	<phrase n="lang_tb_photo" t="Изображение"/>
+	<phrase n="lang_tb_favorite" t="Избранные"/>
+	<phrase n="lang_linename_transfer_short" t="Трнф"/>
+	<phrase n="lang_linetype_key_event_short" t="Клав"/>
+	<phrase n="lang_linetype_url_short" t="URL"/>
+	<phrase n="lang_grouptype_family" t="Семья"/>
+	<phrase n="lang_grouptype_friend" t="Друзья"/>
+	<phrase n="lang_grouptype_collegue" t="Коллеги"/>
+	<phrase n="lang_grouptype_work" t="Работа"/>
+	<phrase n="lang_title_sort" t="Сортировать по"/>
+	<phrase n="lang_title_select_entry" t="Выберите запись"/>
+	<phrase n="lang_entry_general" t="Общие сведения"/>
+	<phrase n="lang_title_entry_general" t="Общие сведения о"/>
+	<phrase n="lang_fav_add_from_tbook" t="Добавить из телефонной книги"/>
+	<phrase n="lang_redirect_on_timeout" t="перенаправить после:"/>
+	<phrase n="lang_redirect_on_timeout_typeSio" t="перенаправить после:"/>
+	<phrase n="lang_redirect_when_busy" t="перенаправить если занято:"/>
+	<phrase n="lang_redirect_when_busy_typeSio" t="перенаправить если занято:"/>
+	<phrase n="lang_sip_disabled" t="SIP отключен"/>
+	<phrase n="lang_low_memory" t="Низкий уровень памяти"/>
+	<phrase n="lang_title_error" t="Ошибка"/>
+	<phrase n="lang_error_code" t="код ошибки:"/>
+	<phrase n="lang_bad_server_response" t="неверный ответ сервера"/>
+	<phrase n="lang_bad_xml_response" t="неверный ответ XML..."/>
+	<phrase n="lang_title_loading" t="Загрузка"/>
+	<phrase n="lang_active_id" t="Текущий SIP-аккаунт"/>
+	<phrase n="lang_1st_id" t="1 SIP-аккаунт"/>
+	<phrase n="lang_2nd_id" t="2 SIP-аккаунт"/>
+	<phrase n="lang_3rd_id" t="3 SIP-аккаунт"/>
+	<phrase n="lang_4th_id" t="4 SIP-аккаунт"/>
+	<phrase n="lang_5th_id" t="5 SIP-аккаунт"/>
+	<phrase n="lang_6th_id" t="6 SIP-аккаунт"/>
+	<phrase n="lang_7th_id" t="7 SIP-аккаунт"/>
+	<phrase n="lang_8th_id" t="8 SIP-аккаунт"/>
+	<phrase n="lang_9th_id" t="9 SIP-аккаунт"/>
+	<phrase n="lang_10th_id" t="10 SIP-аккаунт"/>
+	<phrase n="lang_11th_id" t="11 SIP-аккаунт"/>
+	<phrase n="lang_12th_id" t="12 SIP-аккаунт"/>
+	<phrase n="lang_contacttype_vip" t="VIP"/>
+	<phrase n="lang_contacttype_deny" t="блокировка"/>
+	<phrase n="lang_unknown" t="Неизвестный"/>
+	<phrase n="lang_month_01" t="Январь"/>
+	<phrase n="lang_month_02" t="Февраль"/>
+	<phrase n="lang_month_03" t="Март"/>
+	<phrase n="lang_month_04" t="Апрель"/>
+	<phrase n="lang_month_05" t="Май"/>
+	<phrase n="lang_month_06" t="Июнь"/>
+	<phrase n="lang_month_07" t="Июль"/>
+	<phrase n="lang_month_08" t="Август"/>
+	<phrase n="lang_month_09" t="Сентябрь"/>
+	<phrase n="lang_month_10" t="Октябрь"/>
+	<phrase n="lang_month_11" t="Ноябрь"/>
+	<phrase n="lang_month_12" t="Декабрь"/>
+	<phrase n="lang_tb_name_label" t="Имя"/>
+	<phrase n="lang_tb_number_label" t="Номер"/>
+	<phrase n="lang_title_transfer" t="Сторона трансфера"/>
+	<phrase n="lang_linestate_label" t="Состояние"/>
+	<phrase n="lang_reboot_uploads" t="Перезагрузка для применения обновлений."/>
+	<phrase n="lang_cc_dial_now" t="Набрать номер?"/>
+	<phrase n="lang_cc_complete_now" t="Вы можете завершить вызов"/>
+	<phrase n="lang_cc_waiting_for" t="Ожидание завершения вызова"/>
+	<phrase n="lang_cc_set_warning" t="в настоящее время завершение вызова уже установлено, однако можно установить его заново."/>
+	<phrase n="lang_cc_change_title" t="Изменить настройку завершения вызова?"/>
+	<phrase n="lang_cc_change_message" t="Замена текущей настройки завершения вызова на"/>
+	<phrase n="lang_cc_status_waiting_on" t="Ожидание доступности %dst."/>
+	<phrase n="lang_cc_activate" t="будет ожидать завершения вызова."/>
+	<phrase n="lang_cc_activated" t="по прежнему ожидает завершения вызова."/>
+	<phrase n="lang_call_contact" t="Позвонить контакту"/>
+	<phrase n="lang_call_work" t="Позвонить на рабочий"/>
+	<phrase n="lang_call_work_typeSio" t="Позвонить на рабочий"/>
+	<phrase n="lang_call_mobile" t="Позвонить на мобильный"/>
+	<phrase n="lang_call_home" t="Позвонить на домашний"/>
+	<phrase n="lang_call_home_typeSio" t="Позвонить на домашний"/>
+	<phrase n="lang_call_other" t="Позвонить на другой"/>
+	<phrase n="lang_call_voicemail" t="Вызов голосовой почты"/>
+	<phrase n="lang_xfer_to_contact" t="Трансфер на номер"/>
+	<phrase n="lang_xfer_to_work" t="Трансфер на рабочий"/>
+	<phrase n="lang_xfer_to_work_typeSio" t="Трансфер на рабочий"/>
+	<phrase n="lang_xfer_to_mobile" t="Трансфер на мобильный"/>
+	<phrase n="lang_xfer_to_home" t="Трансфер на домашний"/>
+	<phrase n="lang_xfer_to_home_typeSio" t="Трансфер на домашний"/>
+	<phrase n="lang_xfer_to_other" t="Трансфер на номер"/>
+	<phrase n="lang_xfer_to_voicemail" t="Трансфер на голосовую почту"/>
+	<phrase n="lang_cfw_to_contact" t="Переадресация на контакт"/>
+	<phrase n="lang_cfw_to_contact_typeSio" t="Переадресация на контакт"/>
+	<phrase n="lang_cfw_to_voicemail_typeSio" t="Переадресация на голосовую почту"/>
+	<phrase n="lang_cfw_to_work" t="Переадресация на рабочий"/>
+	<phrase n="lang_cfw_to_work_typeSio" t="Переадресация на рабочий"/>
+	<phrase n="lang_cfw_to_mobile" t="Переадресация на мобильный"/>
+	<phrase n="lang_cfw_to_mobile_typeSio" t="Переадресация на мобильный"/>
+	<phrase n="lang_cfw_to_home" t="Переадресация на домашний"/>
+	<phrase n="lang_cfw_to_home_typeSio" t="Переадресация на домашний"/>
+	<phrase n="lang_cfw_to_other" t="Переадресация на номер"/>
+	<phrase n="lang_cfw_to_other_typeSio" t="Переадресация на номер"/>
+	<phrase n="lang_cfw_to_voicemail" t="Переадресация на голосовую почту"/>
+	<phrase n="lang_assign_to_key" t="Назначить клавишу"/>
+	<phrase n="lang_contact_state_unknown" t="Неизвестно"/>
+	<phrase n="lang_contact_state_available" t="Доступен"/>
+	<phrase n="lang_contact_state_available_on_mobile" t="Доступен (мобильный)"/>
+	<phrase n="lang_contact_state_available_at_desk" t="Доступен (рабочий)"/>
+	<phrase n="lang_contact_state_inactive" t="Не активный"/>
+	<phrase n="lang_contact_state_busy" t="Занят"/>
+	<phrase n="lang_contact_state_urgent_interruptions_only" t="Доступен только для срочных дел"/>
+	<phrase n="lang_contact_state_in_a_call" t="Разговаривает"/>
+	<phrase n="lang_contact_state_in_a_meeting" t="На совещании"/>
+	<phrase n="lang_contact_state_meeting" t="Совещание"/>
+	<phrase n="lang_contact_state_holding" t="На удержании"/>
+	<phrase n="lang_contact_state_dnd" t="Не беспокоить"/>
+	<phrase n="lang_contact_state_dnd_all" t="Не беспокоить (всем)"/>
+	<phrase n="lang_contact_state_dnd_self" t="Не беспокоить (сам)"/>
+	<phrase n="lang_contact_state_be_right_back" t="Скоро вернусь"/>
+	<phrase n="lang_contact_state_away" t="Отсутствую"/>
+	<phrase n="lang_contact_state_offline" t="Не в сети"/>
+	<phrase n="lang_contact_state_reset" t="Сбросить статус"/>
+	<phrase n="lang_remote_book_name_ldap" t="LDAP каталог"/>
+	<phrase n="lang_remote_book_choose_title" t="Выбрать адресную книгу"/>
+	<phrase n="lang_title_add_to_favorites" t="Добавить в избранное"/>
+	<phrase n="lang_title_add_to_favorites_typeSio" t="Добавить в избранное"/>
+	<phrase n="lang_title_favorites" t="Избранное"/>
+	<phrase n="lang_unknown_partner" t="Неизвестный"/>
+	<phrase n="lang_nrtype_sip" t="SIP"/>
+	<phrase n="lang_nrtype_business" t="Бизнес"/>
+	<phrase n="lang_nrtype_fixed" t="Городской"/>
+	<phrase n="lang_nrtype_extension" t="Добавочный номер"/>
+	<phrase n="lang_tb_number_type" t="Тип номера"/>
+	<phrase n="lang_tb_number_type_label" t="Тип"/>
+	<phrase n="lang_title_no_permission" t="Запрещено"/>
+	<phrase n="lang_target_office" t="Офис"/>
+	<phrase n="lang_target_replyto" t="Ответить"/>
+	<phrase n="lang_target_unqualified" t="Без категории"/>
+	<phrase n="lang_target_work" t="Рабочий"/>
+	<phrase n="lang_target_work_typeSio" t="Рабочий"/>
+	<phrase n="lang_target_mobile" t="Мобильный"/>
+	<phrase n="lang_target_home" t="Домашний"/>
+	<phrase n="lang_target_home_typeSio" t="Домашний"/>
+	<phrase n="lang_target_other" t="Другой"/>
+	<phrase n="lang_target_voicemail" t="Голосовая почта"/>
+	<phrase n="lang_target_new_number" t="Новый номер"/>
+	<phrase n="lang_target_contact" t="Контакт"/>
+	<phrase n="lang_directory_too_big_to_import__long" t="Удаленный каталог слишком большой"/>
+	<phrase n="lang_target_cancel" t="Не переадресовывать вызовы"/>
+	<phrase n="lang_target_cancel_typeSio" t="Не переадресовывать вызовы"/>
+	<phrase n="lang_target_forward" t="Переадресовать вызов на"/>
+	<phrase n="lang_target_forward_typeSio" t="Переадресовать вызов на"/>
+	<phrase n="lang_tls_unknown_certificate_alert" t="Отказано в защищенном соединение, предоставлен неизвестный сертификат. Если вы доверяете этому соединению, то  можете разрешить это соединение через веб-интерфейс в разделе «Сертификаты»."/>
+	<phrase n="lang_tls_unknown_certificate_alert_title" t="Не удалось установить безопасное соединение"/>
+	<phrase n="lang_tls_properties_changed" t="Пожалуйста перезагрузите. Измененные свойства безопасности не могут применяться к текущим сеансам."/>
+	<phrase n="lang_call_completed_by_part1" t="Вызов завершен"/>
+	<phrase n="lang_call_completed_by_part2" t="на другом терминале."/>
+	<phrase n="lang_call_completed_by_part2_typeSio" t="на другом терминале."/>
+	<phrase n="lang_challenge_sip_pw" t="SIP-пароль"/>
+	<phrase n="lang_line_ocs_wz_user" t="Домен\Пользователь"/>
+	<phrase n="lang_line_ocs_wz_pwd" t="Пароль"/>
+	<phrase n="lang_unregistered_ids_title" t="не зарегистрирован:"/>
+	<phrase n="lang_message_label" t="Инфо"/>
+	<phrase n="lang_status_messages" t="Оповещения"/>
+	<phrase n="lang_information_settings" t="Информация"/>
+	<phrase n="lang_user_realname" t="Отображаемое имя"/>
+	<phrase n="lang_user_idle_number" t="Отображаемый номер"/>
+	<phrase n="lang_user_name" t="Учетная запись"/>
+	<phrase n="lang_user_pass" t="Пароль"/>
+	<phrase n="lang_user_host" t="Сервер регистрации"/>
+	<phrase n="lang_user_outbound" t="Исходящий Proxy-сервер"/>
+	<phrase n="lang_user_pname" t="Аутентификационное имя"/>
+	<phrase n="lang_user_mailbox" t="Почтовый ящик"/>
+	<phrase n="lang_user_mailbox_retrieve" t="Номер почтового ящика"/>
+	<phrase n="lang_hotdesking" t="Общее рабочее место (Hotdesking)"/>
+	<phrase n="lang_keyb_enter_current_pin" t="Введите PIN"/>
+	<phrase n="lang_keyb_enter_new_pin" t="Введите новый PIN"/>
+	<phrase n="lang_keyb_reenter_new_pin" t="Введите новый PIN повторно"/>
+	<phrase n="lang_keyb_enter_password" t="Введите пароль для сброса PIN"/>
+	<phrase n="lang_keyb_locked" t="Нажмите и удерживайте * чтобы разблокировать."/>
+	<phrase n="lang_keyb_permanently_locked" t="Нажмите и удерживайте * для сброса PIN."/>
+	<phrase n="lang_title_unlock" t="Клавиатура заблокирована"/>
+	<phrase n="lang_confirm_unlock" t="Разблокировать? Нажмите OK."/>
+	<phrase n="lang_transfer_failed_msg" t="Ошибка трансфера"/>
+	<phrase n="lang_action_failed_msg" t="Действие не выполнено"/>
+	<phrase n="lang_vpn_fetch" t="Скачивание VPN настроек с:"/>
+	<phrase n="lang_vpn_fetch_failed" t="Не удалось получить tar-архив VPN"/>
+	<phrase n="lang_vpn_flash" t="Извлечение VPN файлов..."/>
+	<phrase n="lang_vpn_reboot" t="Перезагрузка системы для активации VPN..."/>
+	<phrase n="lang_keyb_min_digits" t="(мин. # цифры)"/>
+	<phrase n="lang_empty_dir_search_list" t="Введите имя! Используйте * для пробела."/>
+	<phrase n="lang_key_unassigned" t="Клавиша не назначена"/>
+	<phrase n="lang_key_unassigned_typeSio" t="Клавиша не назначена"/>
+	<phrase n="lang_label_conference_partner" t="Партнер"/>
+	<phrase n="lang_incoming_call_title_while_connected" t="Режим ожидания"/>
+	<phrase n="lang_active" t="Активный"/>
+	<phrase n="lang_emergency_call" t="экстренный вызов"/>
+	<phrase n="lang_ntp_pending" t="Обращение к NTP-серверу"/>
+	<phrase n="lang_ntp_unreachable" t="NTP-сервер недоступен"/>
+	<phrase n="lang_network_busy" t="Сеть занята"/>
+	<phrase n="lang_pstn_reroute_attempt" t="Этот вызов может занять больше времени для соединения. Сеть может быть занята."/>
+	<phrase n="lang_menu_location" t="Место нахождения"/>
+	<phrase n="lang_linestate_holding_upper_case" t="Удержание"/>
+	<phrase n="lang_linestate_on_hold_upper_case" t="На Удержании"/>
+	<phrase n="lang_location_retrieval_failed" t="Невозможно получить местоположение"/>
+	<phrase n="lang_route_private_line" t="Частная линия"/>
+	<phrase n="lang_route_forwarded" t="Переадресован"/>
+	<phrase n="lang_route_forwarded_typeSio" t="Переадресован"/>
+	<phrase n="lang_route_delegated" t="Делегирован"/>
+	<phrase n="lang_route_team_call" t="Командный вызов"/>
+	<phrase n="lang_route_acd" t="Групповой вызов"/>
+	<phrase n="lang_route_cccp_conference" t="Конференц вызов"/>
+	<phrase n="lang_route_cccp_conference_typeSio" t="Конференц вызов"/>
+	<phrase n="lang_dfks_failed" t="Ошибка синхронизации функции"/>
+	<phrase n="lang_no_shared_key" t="Нет доступной клавиши для общей линии"/>
+	<phrase n="lang_shared_seize_active" t="Захват линии все еще активна"/>
+	<phrase n="lang_not_a_shared_key" t="Выбранная клавиша не является клавишей общей линии"/>
+	<phrase n="lang_active_key_not_a_shared_key" t='Кнопка Общая линия не работает при "Активном" назначении контекста.'/>
+	<phrase n="lang_ipv4_conflict" t="IPv4: конфликт"/>
+	<phrase n="lang_contact_saved" t="Контакт сохранен"/>
+	<phrase n="lang_query_pending" t="Поиск..."/>
+	<phrase n="lang_no_conference" t="Конференция невозможна по причине загрузки процессора на %A"/>
+	<phrase n="lang_no_conference_with_codec" t="Конференция запрещена по причине загрузки процессора на %A если одна из сторон использует кодек %B"/>
+	<phrase n="lang_no_conference_with_encrypted_codec" t="Конференция запрещена по причине загрузки процессора на %A если одна из сторон использует кодек %B с шифрованием"/>
+	<phrase n="lang_no_conference_without_unencrypted_codec" t="Конференция запрещена по причине загрузки процессора на %A если одна из сторон не использует кодек %B с шифрованием"/>
+	<phrase n="lang_setup_language" t="Настройка языка"/>
+	<phrase n="lang_please_wait" t="Пожалуйста подождите..."/>
+	<phrase n="lang_download_failed" t="Загрузка не удалась"/>
+	<phrase n="lang_function_blocked" t="Заблокировано"/>
+	<phrase n="lang_activating_uploads" t="Активация загрузки"/>
+	<phrase n="lang_provisioning" t="Автонастройка"/>
+	<phrase n="lang_provisioning_failed" t="Автонастройка не удалось"/>
+	<phrase n="lang_tr69_provisioning" t="Идет автонастройка по протоколу TR-069"/>
+	<phrase n="lang_start_provisioning" t="Идет процесс автонастройки"/>
+	<phrase n="lang_waitTime" t="Время ожидания"/>
+	<phrase n="lang_ccUserId" t="ID пользователя"/>
+	<phrase n="lang_callCenterName" t="Имя"/>
+	<phrase n="lang_numCallsInQueue" t="Вызов в очереди"/>
+	<phrase n="lang_acd_ready" t="Доступен"/>
+	<phrase n="lang_acd_not_ready" t="Не доступен"/>
+	<phrase n="lang_acd_working_after_call" t="Завершение"/>
+	<phrase n="lang_acd_log_on" t="Войти в систему"/>
+	<phrase n="lang_acd_log_off" t="Выйти из системы"/>
+	<phrase n="lang_acd_unkown_state" t="Неизвестное состояние"/>
+	<phrase n="lang_change_state_to" t="Изменить состояние"/>
+	<phrase n="lang_call_parked" t="Парковка вызова"/>
+	<phrase n="lang_call_unparked" t="Вызов возвращен с парковки"/>
+	<phrase n="lang_firmware_update_failed" t="Ошибка обновления ПО"/>
+	<phrase n="lang_firmware_update_restart" t="Повторный запуск обновления ПО?"/>
+	<phrase n="lang_temp_unavail" t="Временно недоступен"/>
+	<phrase n="lang_limited_func" t="Ограниченная функциональность из-за перебоя в работе"/>
+	<phrase n="lang_limited_func_exp" t="Проблема с сетью временно ограничивает такие функции, как присутствие или переадресация"/>
+	<phrase n="lang_limited_func_exp_typeSio" t="Сетевая проблема временно ограничивает возможности, такие как присутствие или переадресация"/>
+	<phrase n="lang_call_park_failed" t="Ошибка парковки вызова"/>
+	<phrase n="lang_park_failed_reason" t="Нет доступных паковочных мест"/>
+	<phrase n="lang_list_parked" t="На парковке"/>
+	<phrase n="lang_vision" t="Vision"/>
+	<phrase n="lang_unpair_vision" t="Отменить сопряжение с Vision"/>
+	<phrase n="lang_scan_for_visions" t="Сканирование Vision"/>
+	<phrase n="lang_paired_with_vision" t="Сопряжено с Vision:"/>
+	<phrase n="lang_vision_connection_lost" t="Соединение с Vision потеряно"/>
+	<phrase n="lang_unpair_vision_question" t="Отменить сопряжение с Vision?"/>
+	<phrase n="lang_isconnected" t="соединен"/>
+	<phrase n="lang_isdisconnected" t="разъединен"/>
+	<phrase n="lang_isdisconnected_typeSio" t="разъединен"/>
+	<phrase n="lang_hotdesking_ntlm" t="Данные учетной записи"/>
+	<phrase n="lang_hotdesking_pin" t="PIN"/>
+	<phrase n="lang_prompt_phone_num" t="Ваш добавочный номер"/>
+	<phrase n="lang_prompt_pin" t="Ваш PIN"/>
+	<phrase n="lang_pin_signin_active" t="вход в систему..."/>
+	<phrase n="lang_pin_signin_failure" t="Вход с номером телефона и PIN невозможен"/>
+	<phrase n="lang_firmware_update_in" t="Поступило обновление ПО"/>
+	<phrase n="lang_firmware_update_available" t="Доступно обновление ПО"/>
+	<phrase n="lang_call_for" t="Вызов для"/>
+	<phrase n="lang_linetype_bossadmin" t="Директор/Админ"/>
+	<phrase n="lang_linetype_bossadmin_short" t="Д/А"/>
+	<phrase n="lang_success_msg_transferred_to" t="%A трансфер на %B"/>
+	<phrase n="lang_pickup_call" t="Захват вызова"/>
+	<phrase n="lang_call_on_behalf_of" t="Вызов от имени"/>
+	<phrase n="lang_boss_group" t="Управление вызовами сотрудников"/>
+	<phrase n="lang_delegate_group" t="Уполномоченные"/>
+	<phrase n="lang_all_delegates" t="Назначить список уполномоченных на клавишу"/>
+	<phrase n="lang_call_failed_network_issue" t="Ошибка вызова из-за сетевых проблем"/>
+	<phrase n="lang_call_failed_network_issue_typeSio" t="Ошибка вызова из-за сетевых проблем"/>
+	<phrase n="lang_ethernet_detection" t="Обнаружение сети"/>
+	<phrase n="lang_firmware_update_not_available" t="Нет доступных обновлений ПО"/>
+	<phrase n="lang_check_sw_update" t="Проверка обновления ПО"/>
+	<phrase n="lang_continuous_text_label" t="Лейбл"/>
+	<phrase n="lang_short_text" t="Короткий текст"/>
+	<phrase n="lang_headline_admins" t="Администраторы"/>
+	<phrase n="lang_always_delegate_forward" t="Всегда делегировать переадресацию"/>
+	<phrase n="lang_always_deleg_sim" t="Всегда вызывать одновременно"/>
+	<phrase n="lang_always_deleg_forw" t="Переадресация всегда"/>
+	<phrase n="lang_always_deleg_forw_typeSio" t="Переадресация всегда"/>
+	<phrase n="lang_tb_action_url" t="action url"/>
+	<phrase n="lang_clear_call_history" t="Очистить историю вызовов"/>
+	<phrase n="lang_headset_volume_only" t="Изменение громкости USB-гарнитуры возможно только на гарнитуре."/>
+	<phrase n="lang_hold_error" t="Сбой удержания, доступен только режим без звука. Повторно нажмите кнопку удержания для отключения режима без звука."/>
+	<phrase n="lang_retr_by" t="Вызов принят"/>
+	<phrase n="lang_ipv4" t="IPv4"/>
+	<phrase n="lang_ipv6" t="IPv6"/>
+	<phrase n="lang_ipv6_autoconf" t="SLAAC"/>
+	<phrase n="lang_refresh" t="Обновить"/>
+	<phrase n="lang_may_take_some_time" t="Обновление может занять некоторое время. Продолжить?"/>
+	<phrase n="lang_menu_unlock" t="Разблокировать"/>
+	<phrase n="lang_menu_security" t="Безопасность"/>
+	<phrase n="lang_route_team_call_for" t="Командный вызов для"/>
+	<phrase n="lang_route_acd_for" t="Групповой вызов для"/>
+	<phrase n="lang_route_anonymous_acd" t="Анонимный групповой вызов"/>
+	<phrase n="lang_route_anonymous_acd_for" t="Анонимный групповой вызов для"/>
+	<phrase n="lang_anonymous" t="Неизвестный"/>
+	<phrase n="lang_wish_barge_in" t="Вы хотите вторгнуться?"/>
+	<phrase n="lang_location" t="Месторасположение:"/>
+	<phrase n="lang_subject" t="Тема"/>
+	<phrase n="lang_dates" t="Встречи"/>
+	<phrase n="lang_menu_dates_today" t="Сегодняшние встречи"/>
+	<phrase n="lang_label_conference_organizer" t="Организатор:"/>
+	<phrase n="lang_date_ongoing" t="Сейчас:"/>
+	<phrase n="lang_date_remind_me_later" t="Напомнить позже"/>
+	<phrase n="lang_date_remind_later" t="Позже"/>
+	<phrase n="lang_date_set_reminder_to" t="На"/>
+	<phrase n="lang_minutes" t="Минут"/>
+	<phrase n="lang_date_reset_reminder" t="Сбросить напоминание"/>
+	<phrase n="lang_cannot_access_exchange" t="Не удается получить доступ к Exchange-серверу."/>
+	<phrase n="lang_no_dates_today" t="Сегодня ничего не запланировано"/>
+	<phrase n="lang_participants" t="Участники:"/>
+	<phrase n="lang_expansion_modules" t="Модули расширения"/>
+	<phrase n="lang_wiz_vlan" t="Вы используете VLAN?"/>
+	<phrase n="lang_wiz_ip4" t="Вы хотите настроить IPv4?"/>
+	<phrase n="lang_wiz_ip6" t="Настройка IPv6"/>
+	<phrase n="lang_sxm_connected" t="Модуль расширения подключен"/>
+	<phrase n="lang_uxm_connected" t="Модуль расширения подключен (USB)"/>
+	<phrase n="lang_uxm_cabeling_broken" t="Неверное подключения кабеля модуля расширения"/>
+	<phrase n="lang_uxm_limit_exceeded" t="Слишком много подключенных модулей расширения (USB)"/>
+	<phrase n="lang_vpn_active" t="VPN активен"/>
+	<phrase n="lang_wlan_active" t="WLAN активен"/>
+	<phrase n="lang_list_no_devices" t="(Нет доступного устройства)"/>
+	<phrase n="lang_bluetooth" t="Bluetooth"/>
+	<phrase n="lang_bluetooth_connected_title" t="Подключенное устройство"/>
+	<phrase n="lang_bluetooth_paired_list_title" t="Список сопряженных устройств"/>
+	<phrase n="lang_bluetooth_active_connection" t="Bluetooth соединение активно"/>
+	<phrase n="lang_bluetooth_discovered_list_title" t="Список обнаруженных устройств"/>
+	<phrase n="lang_bluetooth_discovering" t="Обнаружение"/>
+	<phrase n="lang_bluetooth_unpairing" t="Отмена сопряжения"/>
+	<phrase n="lang_bluetooth_pairing" t="Сопряжение"/>
+	<phrase n="lang_bluetooth_connecting" t="Подключение"/>
+	<phrase n="lang_bluetooth_disconnecting" t="Отключение"/>
+	<phrase n="lang_callback_on_busy" t="Перезвонить если занято"/>
+	<phrase n="lang_auto_busy_redial" t="Автоматически перезвонить если занято"/>
+	<phrase n="lang_decision_cob" t="в настоящее время занят. Для получения уведомления нажмите «Подтвердить». Чтобы оставить сообщение, нажмите «X»."/>
+	<phrase n="lang_decision_cob_withoutvm" t="в настоящее время занят. Для получения уведомления нажмите «Подтвердить»."/>
+	<phrase n="lang_callback" t="Обратный вызов"/>
+	<phrase n="lang_callback_available" t="Обратный вызов доступен"/>
+	<phrase n="lang_linetype_callback" t="Обратный вызов"/>
+	<phrase n="lang_linetype_callback_short" t="ОбрВз"/>
+	<phrase n="lang_ringback_callpark_service" t="Провести через сервис Парковки вызова"/>
+	<phrase n="lang_callpark_service" t="Сервис парковки вызова"/>
+	<phrase n="lang_storage_mounted" t="Подключен USB-диск"/>
+	<phrase n="lang_storage_mounted_typeSio" t="Подключен USB-диск"/>
+	<phrase n="lang_storage_tomany" t="Вы можете подключить только один USB-диск"/>
+	<phrase n="lang_storage_umount" t="Отключить USB-диск"/>
+	<phrase n="lang_no_participants_detected" t="участников не обнаружено"/>
+	<phrase n="lang_ieee8021_method" t="Режим"/>
+	<phrase n="lang_menu_fkey_functions" t="Функция"/>
+	<phrase n="lang_uxm_appearance" t="Внешность"/>
+	<phrase n="lang_put_through_by" t="Проведено посредством"/>
+	<phrase n="lang_contact_not_in_list" t="не найдено в списке контактов"/>
+	<phrase n="lang_msg_speaker_active" t="Громкая связь активирована"/>
+	<phrase n="lang_msg_headset_active" t="Режим гарнитуры активирован"/>
+	<phrase n="lang_msg_handset_active" t="Режим трубки активирован"/>
+	<phrase n="lang_msg_ringing_disabled" t="Вызов отключен"/>
+	<phrase n="lang_msg_mute_active" t="Телефон в режиме без звука"/>
+	<phrase n="lang_wiz_aborted" t="Мастер настройки прерван."/>
+	<phrase n="lang_menu_set_kbd_lock_pin" t="Изменить PIN блокировки клавиатуры"/>
+	<phrase n="lang_menu_change_kbd_lock_pin" t="Изменить PIN блокировки клавиатуры"/>
+	<phrase n="lang_no_valid_dsearch_config" t="Недействительная конфигурация поиска каталога"/>
+	<phrase n="lang_title_conferences" t="Конференции"/>
+	<phrase n="lang_no_conferences_found" t="Конференции не найдены"/>
+	<phrase n="lang_conference_type" t="Тип"/>
+	<phrase n="lang_conference_status" t="Статус"/>
+	<phrase n="lang_join_conference_long" t="присоединиться к конференции"/>
+	<phrase n="lang_join_conference_as_moderator" t="присоединиться как модератор"/>
+	<phrase n="lang_choose_menu" t="Выбрать меню"/>
+	<phrase n="lang_menu_shortcut" t="Ярлык Меню"/>
+	<phrase n="lang_using_time" t="время использования"/>
+	<phrase n="lang_waiting_for_pnp" t="Ожидание PnP"/>
+	<phrase n="lang_fkey_contact_list_buddy" t="BLF (Сервер)"/>
+	<phrase n="lang_fkey_xmpp_presence" t="Статус контактов (XMPP)"/>
+	<phrase n="lang_csta_prompt_title" t="Набрать сейчас?"/>
+	<phrase n="lang_contact_is_favorite" t="Является ли этот контакт одним из ваших избранных?"/>
+	<phrase n="lang_currently_set_to" t="В настоящее время установлено:"/>
+	<phrase n="lang_vol_label_contrast" t="Контрастность второго экрана"/>
+	<phrase n="lang_menu_fkeys_phone" t="Клавиши линий"/>
+	<phrase n="lang_menu_dkeys_phone" t="Выделенные клавиши"/>
+	<phrase n="lang_menu_context_sensitive_keys_phone" t="Контекстно-зависимые клавиши"/>
+	<phrase n="lang_menu_smartlabel_fkeys" t="Клавиши SmartLabel"/>
+	<phrase n="lang_menu_smartlabel_page" t="Страница"/>
+	<phrase n="lang_menu_fkeys_page" t="Страница клавиш линий"/>
+	<phrase n="lang_menu_fkeys_sxm" t="Клавиши SXM"/>
+	<phrase n="lang_menu_fkeys_uxm" t="Клавиши модуля расширения"/>
+	<phrase n="lang_server_directory_search" t="Поиск каталога на сервере"/>
+	<phrase n="lang_menu_fontsize" t="Размер шрифта"/>
+	<phrase n="lang_uxm_fontsize_lines" t="Размер шрифта (размещение строки)"/>
+	<phrase n="lang_uxm_fontsize_tiles" t="Размер шрифта (размещение плитки)"/>
+	<phrase n="lang_menu_text_alignment" t="Выравнивание текста"/>
+	<phrase n="lang_left" t="Левый"/>
+	<phrase n="lang_right" t="Правый"/>
+	<phrase n="lang_center" t="Центр"/>
+	<phrase n="lang_alternate" t="Чередовать"/>
+	<phrase n="lang_menu_return_to_first_page" t="Вернуться к первой странице"/>
+	<phrase n="lang_automatic_return" t="Автоматический возврат"/>
+	<phrase n="lang_warning" t="Предупреждение"/>
+	<phrase n="lang_public_address" t="Публичный адрес"/>
+	<phrase n="lang_menu_volume" t="Настройка громкости   "/>
+	<phrase n="lang_vol_ringer_text" t="Громкость звонка"/>
+	<phrase n="lang_vol_headset_text" t="Громкость гарнитуры"/>
+	<phrase n="lang_vol_handset_text" t="Громкость трубки"/>
+	<phrase n="lang_vol_speaker_text" t="Громкость спикера"/>
+	<phrase n="lang_list_rejected" t="Отклонено"/>
+	<phrase n="lang_enum_disp_func_key_conference" t="Конференция"/>
+	<phrase n="lang_enum_disp_func_key_ivr" t="IVR"/>
+	<phrase n="lang_enum_disp_func_key_callback_on_busy" t="Обратный вызов"/>
+	<phrase n="lang_fkeys_ssi_context" t="Контекст"/>
+	<phrase n="lang_fkeys_ssi_type" t="Тип"/>
+	<phrase n="lang_fkeys_ssi_active" t="Активный"/>
+	<phrase n="lang_fkeys_ssi_icon" t="Изображение"/>
+	<phrase n="lang_default_icon" t="Изображение по умолчанию"/>
+	<phrase n="lang_custom_icon" t="Пользовательское изображение"/>
+	<phrase n="lang_FirstName" t="Имя"/>
+	<phrase n="lang_LastName" t="Фамилия"/>
+	<phrase n="lang_Home" t="Домашний номер"/>
+	<phrase n="lang_Office" t="Рабочий номер"/>
+	<phrase n="lang_Mobile" t="Мобильный номер"/>
+	<phrase n="lang_Unqualified" t="Неквалифицированный номер"/>
+	<phrase n="lang_edit_contact" t="Редактировать контакт"/>
+	<phrase n="lang_msw_query" t="Отправка контактных данных на сервер не удалась:"/>
+	<phrase n="lang_indicator" t="Индикатор"/>
+	<phrase n="lang_protocol" t="Протокол"/>
+	<phrase n="lang_target_forward_busy" t="Переадресация вызовов, если занято, на"/>
+	<phrase n="lang_target_forward_timeout" t="Переадресация вызовов после"/>
+	<phrase n="lang_target_forward_timeout_typeSio" t="Переадресация вызовов после"/>
+	<phrase n="lang_WIFI_SSID" t="Название Сети"/>
+	<phrase n="lang_WIFI_auth_mode" t="Шифрование"/>
+	<phrase n="lang_WIFI_WPA_Encryption" t="WPA шифрование"/>
+	<phrase n="lang_WIFI_WPA" t="WPA"/>
+	<phrase n="lang_WIFI_WPA2PSK" t="WPA2"/>
+	<phrase n="lang_WIFI_WEP" t="WEP"/>
+	<phrase n="lang_WIFI_OPEN" t="Открытый"/>
+	<phrase n="lang_WIFI_AES" t="AES"/>
+	<phrase n="lang_WIFI_TKIP" t="TKIP"/>
+	<phrase n="lang_WIFI_SCAN_NETWORKS" t="Сканировать WLAN"/>
+	<phrase n="lang_WIFI_MANUAL_SETUP" t="Ручная настройка"/>
+	<phrase n="lang_contact_details" t="Детали контакта"/>
+	<phrase n="lang_WIFI_CONNECTED_TO" t="Подключен к"/>
+	<phrase n="lang_unhold" t="Возврат"/>
+	<phrase n="lang_empty" t="пусто"/>
+	<phrase n="lang_F_SNOM" t="snom/Облако"/>
+	<phrase n="lang_prefs_ssi_date_us_format" t="Формат даты"/>
+	<phrase n="lang_prefs_ssi_time_24_format" t="24 часовой"/>
+	<phrase n="lang_time_symbol_second" t="c"/>
+	<phrase n="lang_all_accounts" t="Все SIP-аккаунты"/>
+	<phrase n="lang_reboot_to_apply_new_settings" t="Перезагрузить сейчас, чтобы новые настройки вступили в силу?"/>
+	<phrase n="lang_TLS" t="TLS"/>
+	<phrase n="lang_MD5" t="MD5"/>
+	<phrase n="lang_WIFI_SWITCH_OFF_WLAN" t="Выключить WLAN"/>
+	<phrase n="lang_ErrorNotSupportedByManager" t="Не поддерживается"/>
+	<phrase n="lang_ErrorContactNotFound" t="Контакт не найден"/>
+	<phrase n="lang_ErrorInvalidCredentials" t="Недопустимые учетные данные"/>
+	<phrase n="lang_ErrorInvalidArgument" t="Недействительный аргумент"/>
+	<phrase n="lang_ErrorRequestPending" t="Запрос ожидает выполнения"/>
+	<phrase n="lang_ErrorNotInitialized" t="Не инициализирован"/>
+	<phrase n="lang_ErrorInComplete" t="Незавершенный"/>
+	<phrase n="lang_ErrorOutOfMemory" t="Недостаточно памяти"/>
+	<phrase n="lang_Contact_pool" t="Пул контактов"/>
+	<phrase n="lang_advanced_autoneg" t="Автосогласование"/>
+	<phrase n="lang_advanced_10full" t="10 Мбит полный дуплекс"/>
+	<phrase n="lang_advanced_10half" t="10 Мбит полудуплекс"/>
+	<phrase n="lang_advanced_100full" t="100 Мбит полный дуплекс"/>
+	<phrase n="lang_advanced_100half" t="100 Мбит полудуплекс"/>
+	<phrase n="lang_advanced_1000full" t="1000 Мбит полный дуплекс"/>
+	<phrase n="lang_Hardware" t="Аппаратные средства"/>
+	<phrase n="lang_NET_port_speed" t="Скорость NET-порта/Дуплекс"/>
+	<phrase n="lang_PC_port_speed" t="Скорость PC-порта/Дуплекс"/>
+	<phrase n="lang_Action_on_eth_replug" t="Действие по подключению Ethernet-кабеля"/>
+	<phrase n="lang_advanced_donothing" t="Игнорировать"/>
+	<phrase n="lang_line_reregister" t="Повторная регистрация"/>
+	<phrase n="lang_NTP" t="NTP"/>
+	<phrase n="lang_DNS" t="DNS"/>
+	<phrase n="lang_LLDP" t="LLDP"/>
+	<phrase n="lang_NTP_refresh_timer" t="NTP-таймер обновления"/>
+	<phrase n="lang_8021x" t="802.1X"/>
+	<phrase n="lang_Expansion" t="Модуль расширения"/>
+	<phrase n="lang_expansion_layout" t="Макет модуля расширения"/>
+	<phrase n="lang_Expansion_module" t="Модуль расширения"/>
+	<phrase n="lang_Please_reboot" t="Пожалуйста, перезагрузите!"/>
+	<phrase n="lang_All_settings_saved" t="Все настройки сохранены"/>
+	<phrase n="lang_WIFI_NETWORKS_SCAN" t="Сканирование WLAN"/>
+	<phrase n="lang_WIFI_SCAN_RUNNING" t="Сканирует"/>
+	<phrase n="lang_is_a_favorite" t="является избранным"/>
+	<phrase n="lang_Lines" t="Расположение линии"/>
+	<phrase n="lang_Tiles" t="Расположение плитки"/>
+	<phrase n="lang_tbook_emtpy" t="&lt;Пусто&gt;"/>
+	<phrase n="lang_enter_starting_uppercase" t="Ввести"/>
+	<phrase n="lang_characters_starting_lowercase" t="символы"/>
+	<phrase n="lang_user_server_type" t="Поддержка типа сервера"/>
+	<phrase n="lang_broadsoft_features" t="Возможности Broadsoft"/>
+	<phrase n="lang_xsi_server" t="XSI-сервер"/>
+	<phrase n="lang_xsi_user" t="Пользователь XSI"/>
+	<phrase n="lang_xsi_password" t="Пароль XSI"/>
+	<phrase n="lang_xsi_retry_timer" t="XSI таймер повтора"/>
+	<phrase n="lang_xsi_events" t="Событие XSI"/>
+	<phrase n="lang_xmpp_jid" t="XMPP ID"/>
+	<phrase n="lang_xmpp_password" t="Пароль XMPP"/>
+	<phrase n="lang_no_headset_present" t="Гарнитура отсутствует"/>
+	<phrase n="lang_headset_detection" t="Обнаружение гарнитуры"/>
+	<phrase n="lang_msw_services" t="Службы Metaswitch"/>
+	<phrase n="lang_msw_directory_number" t="Номер каталога Metaswitch"/>
+	<phrase n="lang_msw_password" t="Пароль Metaswitch"/>
+	<phrase n="lang_msw_web_url" t="URL сервера Metaswitch"/>
+	<phrase n="lang_xsi_dir_enterprise" t="Корпоративный каталог"/>
+	<phrase n="lang_xsi_dir_enterprise_common" t="Корпоративный список контактов"/>
+	<phrase n="lang_xsi_dir_group" t="Каталог группы"/>
+	<phrase n="lang_xsi_dir_group_common" t="Групповой список контактов"/>
+	<phrase n="lang_xsi_dir_personal" t="Персональный список контактов"/>
+	<phrase n="lang_xsi_anywhere" t="В любом месте"/>
+	<phrase n="lang_xsi_location_new_entry" t="&lt;Новая запись&gt;"/>
+	<phrase n="lang_xsi_location_edit_description" t="Изменить описание местоположения"/>
+	<phrase n="lang_xsi_location_description" t="Описание"/>
+	<phrase n="lang_xsi_location_edit_number" t="Изменить номер местоположения"/>
+	<phrase n="lang_number_str" t="Номер "/>
+	<phrase n="lang_xsi_location_status_creating" t="создание"/>
+	<phrase n="lang_xsi_location_status_modifying" t="изменение"/>
+	<phrase n="lang_xsi_location_status_deleting" t="удаление"/>
+	<phrase n="lang_xsi_location_error_empty_number" t="Укажите номер телефона"/>
+	<phrase n="lang_xsi_location_error_number_exists" t="Номер телефона уже существует"/>
+	<phrase n="lang_xsi_location_error_empty_description" t="Укажите описание"/>
+	<phrase n="lang_visual_voicemail" t="Визуальная голосовая почта"/>
+	<phrase n="lang_feature_works" t="Функциональные работы"/>
+	<phrase n="lang_voicemail_name" t="Имя"/>
+	<phrase n="lang_voicemail_call_number" t="Набор номера"/>
+	<phrase n="lang_voicemail_date_time" t="Дата и время"/>
+	<phrase n="lang_voicemail_duration" t="Продолжительность"/>
+	<phrase n="lang_xsi_anywhere_clicktodial" t="Нажмите, чтобы позвонить"/>
+	<phrase n="lang_xsi_anywhere_grouppaging" t="Пейджинг группа"/>
+	<phrase n="lang_xsi_anywhere_settings" t="Настройки"/>
+	<phrase n="lang_remote_office" t="Удаленный офис"/>
+	<phrase n="lang_xsi_anywhereportal" t="Портал с любым месторасположением"/>
+	<phrase n="lang_xsi_anywhereportal_number" t="Номер телефона"/>
+	<phrase n="lang_menu_primary_display" t="Главный экран"/>
+	<phrase n="lang_menu_secondary_display" t="Второстепенный экран"/>
+	<phrase n="lang_enable_remote_office" t="Включить удаленный офис"/>
+	<phrase n="lang_call_center_list" t="Список контакт-центра"/>
+	<phrase n="lang_call_center_status" t="Call Center Status"/>
+	<phrase n="lang_call_center_joined" t="Присоединился"/>
+	<phrase n="lang_call_center_unable_to_join" t="Не удалось присоединиться к контакт-центру"/>
+	<phrase n="lang_call_center_join_not_allowed" t="Не разрешено присоединиться"/>
+	<phrase n="lang_call_center_unjoin_not_allowed" t="Выход запрещен"/>
+	<phrase n="lang_call_center_joining" t="Присоединяется"/>
+	<phrase n="lang_call_recording_control" t="Контроль записи разговоров"/>
+	<phrase n="lang_pause_recording" t="Пауза записи"/>
+	<phrase n="lang_resume_recording" t="Возобновить запись"/>
+	<phrase n="lang_xsi_simul_ring" t="Одновременный вызов"/>
+	<phrase n="lang_xsi_simul_ring_on_call" t="Не звонить при активном разговоре"/>
+	<phrase n="lang_xsi_simul_ring_edit_phone_number" t="Номер телефона"/>
+	<phrase n="lang_xsi_simul_ring_enter_phone_number" t="Введите номер телефона"/>
+	<phrase n="lang_xsi_simul_ring_edit" t="Изменить"/>
+	<phrase n="lang_xsi_simul_ring_number" t="Номер телефона"/>
+	<phrase n="lang_xsi_simul_ring_add_entry" t="Добавить новую запись"/>
+	<phrase n="lang_xsi_simul_ring_ans_confirm" t="Подтверждение ответа"/>
+	<phrase n="lang_xsi_simul_ring_number_exists_error" t="Номер телефона уже существует"/>
+	<phrase n="lang_xsi_simul_ring_number_empty_error" t="Номер телефона не указан."/>
+	<phrase n="lang_xsi_executive" t="Исполнитель"/>
+	<phrase n="lang_xsi_executive_assistant" t='Локализованное имя для функции "Broadworks Executive Assistant"'/>
+	<phrase n="lang_xsi_call_filtering" t="Фильтрация вызова"/>
+	<phrase n="lang_xsi_call_filtering_enable" t="Фильтрация вызова"/>
+	<phrase n="lang_xsi_call_filtering_mode" t="Режим фильтрации"/>
+	<phrase n="lang_xsi_call_filtering_type" t="Тип фильтрации"/>
+	<phrase n="lang_xsi_call_filtering_simple" t="Простой"/>
+	<phrase n="lang_xsi_call_filtering_advanced" t="Расширенные"/>
+	<phrase n="lang_xsi_call_filtering_all" t="Все вызовы"/>
+	<phrase n="lang_xsi_call_filtering_internal" t="Все внутренние вызовы"/>
+	<phrase n="lang_xsi_call_filtering_external" t="Все внешние вызовы"/>
+	<phrase n="lang_xsi_call_screening" t="Просмотр вызовов"/>
+	<phrase n="lang_xsi_call_screening_type" t="Тип оповещения"/>
+	<phrase n="lang_xsi_call_screening_alert_mobile" t="Оповещения мобильных локаций"/>
+	<phrase n="lang_xsi_call_screening_alert_anywhere" t="Оповещения в любом месте"/>
+	<phrase n="lang_xsi_call_screening_alert_sca" t="Оповещения SCA"/>
+	<phrase n="lang_xsi_call_screening_silent" t="Тихо"/>
+	<phrase n="lang_xsi_call_screening_ringsplash" t="Активный вызов"/>
+	<phrase n="lang_xsi_executive_view_assistants" t="Посмотреть помощников"/>
+	<phrase n="lang_xsi_executive_allow_optin" t="Разрешить помощникам отказаться от участия"/>
+	<phrase n="lang_xsi_opt_in_out_to_executive" t="Opt-In/Out Executive"/>
+	<phrase n="lang_xsi_opt_in_to_executive" t="Opt-In"/>
+	<phrase n="lang_xsi_opt_out_to_executive" t="Opt-Out"/>
+	<phrase n="lang_xsi_assistant_call_divert" t="Отклонить"/>
+	<phrase n="lang_xsi_assistant_call_divert_number" t="Номер переадресации"/>
+	<phrase n="lang_xsi_call_alerting" t="Уведомление о Вызове"/>
+	<phrase n="lang_xsi_call_alerting_mode" t="Режим Уведомления"/>
+	<phrase n="lang_xsi_call_alerting_mode_simu" t="Одновременный"/>
+	<phrase n="lang_xsi_call_alerting_mode_seq" t="Последовательный"/>
+	<phrase n="lang_xsi_call_alerting_id_name" t="ID Имя Линии Вызова"/>
+	<phrase n="lang_xsi_call_alerting_id_exec_name" t="Имя руководителя"/>
+	<phrase n="lang_xsi_call_alerting_id_origin_name" t="Имя отправителя"/>
+	<phrase n="lang_xsi_call_alerting_id_exec_origin_name" t="Имена Руководителя-Отправителя"/>
+	<phrase n="lang_xsi_call_alerting_id_origin_exec_name" t="Имена Руководителя-Отправителя"/>
+	<phrase n="lang_xsi_call_custom_name" t="Пользовательский"/>
+	<phrase n="lang_xsi_call_alerting_custom_id_name" t="ID Имя Линии Вызова"/>
+	<phrase n="lang_xsi_call_alerting_id_number" t="ID Имя Линии Вызова"/>
+	<phrase n="lang_xsi_call_alerting_id_exec_number" t="Номер Руководителя"/>
+	<phrase n="lang_xsi_call_alerting_id_origin_number" t="Имя отправителя"/>
+	<phrase n="lang_xsi_call_alerting_custom_id_number" t="Пользовательский ID Номер Вызывающей Линии"/>
+	<phrase n="lang_xsi_call_alerting_recall_after" t="Возврат Push Вызова"/>
+	<phrase n="lang_xsi_call_alerting_recall_after_range" t="Введите К-л Звонков (2-20)"/>
+	<phrase n="lang_xsi_call_alerting_next_assistant" t="Переход к следующему помощнику после"/>
+	<phrase n="lang_xsi_call_alerting_next_assistant_range" t="Введите К-л Звонков (2-20)"/>
+	<phrase n="lang_xsi_call_alerting_rollover_after" t="Ролловер после ожидания"/>
+	<phrase n="lang_xsi_call_alerting_rollover_after_time" t="Время ожидания Ролловер"/>
+	<phrase n="lang_xsi_call_alerting_rollover_after_time_range" t="Введите время в секундах (0-60)"/>
+	<phrase n="lang_xsi_call_alerting_rollover_action" t="Выберите действие Ролловер"/>
+	<phrase n="lang_xsi_call_alerting_rollover_action_vm" t="Голосовые Сообщения"/>
+	<phrase n="lang_xsi_call_alerting_rollover_action_fwd" t="Переадресация"/>
+	<phrase n="lang_xsi_call_alerting_rollover_action_na" t="Обработка Без Ответа"/>
+	<phrase n="lang_xsi_call_alerting_rollover_fwd_number" t="Ролловер Номер Переадресации"/>
+	<phrase n="lang_value_out_of_range" t="Значение введено вне диапазона"/>
+	<phrase n="lang_xsi_callon_behalfof_select_executive" t="Выберите Руководителя"/>
+	<phrase n="lang_collaborate_room_details" t="Детали комнаты для совместной работы"/>
+	<phrase n="lang_collaborate_room_name" t="Номер комнаты"/>
+	<phrase n="lang_collaborate_room_type" t="Тип комнаты"/>
+	<phrase n="lang_collaborate_join_room" t="Присоединиться к комнате"/>
+	<phrase n="lang_unavailable_state" t="Введите недоступный код"/>
+	<phrase n="lang_enter_unavailable_code" t="Введите недоступный код"/>
+	<phrase n="lang_ringer_is_off" t="Режим без звука"/>
+	<phrase n="lang_uxm_update" t="Обновление модуля расширения"/>
+	<phrase n="lang_uxm_update_infotext_progress" t="Производится обновление. Не отсоединяйте телефон или модуль расширения во время обновления."/>
+	<phrase n="lang_uxm_update_infotext_prepare" t="Подготовка к обновлению. Не отсоединяйте телефон или модуль расширения во время обновления."/>
+	<phrase n="lang_F_DELETE_MSG" t="Удалить сообщение"/>
+	<phrase n="lang_F_DELETE_MSG_typeSio" t="Удалить сообщение"/>
+	<phrase n="lang_F_DELETE_MSG_smartlabel" t="Удалить сообщение"/>
+	<phrase n="lang_F_DELETE_MSG_full" t="Delete Message"/>
+	<phrase n="lang_F_NEXT_ID" t="ID↓"/>
+	<phrase n="lang_F_NEXT_ID_typeSio" t="Следующий SIP-аккаунт"/>
+	<phrase n="lang_F_NEXT_ID_smartlabel" t="Следующий ID"/>
+	<phrase n="lang_F_PREV_ID" t="ID↑"/>
+	<phrase n="lang_F_PREV_ID_typeSio" t="Предыдущий SIP-аккаунт"/>
+	<phrase n="lang_F_PREV_ID_smartlabel" t="Предыдущий ID"/>
+	<phrase n="lang_F_OCIP" t="OCI-P"/>
+	<phrase n="lang_F_SAB" t="S Dir"/>
+	<phrase n="lang_F_SAB_typeSio" t="Серверные контакты"/>
+	<phrase n="lang_F_SAB_smartlabel" t="Контакты"/>
+	<phrase n="lang_F_ABS" t="ABS"/>
+	<phrase n="lang_F_ABS_typeSio" t="Поиск AB"/>
+	<phrase n="lang_addressbook_menu" t="Выбор телефонной книги"/>
+	<phrase n="lang_addressbook_menu_local" t="Локальный"/>
+	<phrase n="lang_multicast_zones_title" t="Зоны мультикаста"/>
+	<phrase n="lang_no_multicast_zones" t="Нет доступных зон мультикаста"/>
+	<phrase n="lang_acd_state" t="Состояние ACD"/>
+	<phrase n="lang_please_sign_into_set_acd_state" t="Пожалуйста войдите в систему, чтобы установить состояние ACD"/>
+	<phrase n="lang_fkey_longpress_support" t="Функция долгого нажатия"/>
+	<phrase n="lang_important" t="Важно"/>
+	<phrase n="lang_SmartTransferEditDescription" t="Укажите цель умного трансфера"/>
+	<phrase n="lang_SmartTransfer" t="Умный трансфер"/>
+	<phrase n="lang_SmartTransfer_ready" t="Программная клавиша для трансфера вызовов."/>
+	<phrase n="lang_department" t="Департамент"/>
+	<phrase n="lang_extensions" t="Добавочные номера"/>
+	<phrase n="lang_menu_title_text_options" t="Опции текста"/>
+	<phrase n="lang_F_ADD_LOCATION" t="Добавить местоположение"/>
+	<phrase n="lang_gk_mode_none" t="Нет"/>
+	<phrase n="lang_demo_mode" t="Демонстрационный режим"/>
+	<phrase n="lang_transfer_or" t="Трансфер или"/>
+	<phrase n="lang_call_pickup" t="Принять вызов?"/>
+	<phrase n="lang_choose_an_action" t="Выберите действие"/>
+	<phrase n="lang_Conference_Setup" t="Настройка конференции"/>
+	<phrase n="lang_Conference_First_Participant" t="Один участник в конференции"/>
+	<phrase n="lang_Conference_Second_Participant" t="Два участника в конференции"/>
+	<phrase n="lang_menu_smart_label" t="Опции SmartLabel"/>
+	<phrase n="lang_menu_idle_screen" t="Поведение экрана в режиме ожидания"/>
+	<phrase n="lang_menu_call_screen" t="Поведение экрана в режиме вызова"/>
+	<phrase n="lang_menu_other_screen" t="Другие поведения экрана"/>
+	<phrase n="lang_menu_label_default_mode" t="Режим экрана по умолчанию"/>
+	<phrase n="lang_menu_label_expanded_mode" t="Альтернативный режим экрана"/>
+	<phrase n="lang_menu_label_expansion_triggers" t="Альтернативный триггер экрана"/>
+	<phrase n="lang_menu_short_label" t="Короткое имя"/>
+	<phrase n="lang_menu_full_label" t="Полный имя"/>
+	<phrase n="lang_menu_short_label_mode" t="Свернутый режим"/>
+	<phrase n="lang_menu_short_press" t="Короткое нажатие клавиши страницы"/>
+	<phrase n="lang_menu_long_press" t="Долгое нажатие клавиши страницы"/>
+	<phrase n="lang_menu_proximity_sensor" t="Датчик приближения"/>
+	<phrase n="lang_menu_P3_short_press" t="Короткое нажатие P3"/>
+	<phrase n="lang_menu_P3_long_press" t="Долгое нажатие P3"/>
+	<phrase n="lang_menu_P4_short_press" t="Короткое нажатие P4"/>
+	<phrase n="lang_menu_P4_long_press" t="Долгое нажатие P4"/>
+	<phrase n="lang_menu_P2_long_press" t="Долгое нажатие P2"/>
+	<phrase n="lang_menu_P8_short_press" t="Короткое нажатие P8"/>
+	<phrase n="lang_menu_P8_long_press" t="Долгое нажатие P8"/>
+	<phrase n="lang_short_press" t="Короткое нажатие"/>
+	<phrase n="lang_fkey_press" t="Нажмите F клавишу"/>
+	<phrase n="lang_long_press" t="Долгое нажатие"/>
+	<phrase n="lang_short_label_mode_icon" t="Только изображение"/>
+	<phrase n="lang_smartlabel_mode_text" t="Только текст"/>
+	<phrase n="lang_smartlabel_mode_icon_text" t="Изображение и текст"/>
+	<phrase n="lang_status_msg_uxm_update_required" t=" нуждается в обновлении"/>
+	<phrase n="lang_status_detail_uxm_update_required" t="Обновите модуль расширения до последней версии, чтобы включить его."/>
+	<phrase n="lang_status_detail_uxm_update_required2" t="Убедитесь, что к телефону подключен только один модуль расширения и он не подключен к отдельному источнику питания."/>
+	<phrase n="lang_unhandled_item" t="Необработанный:"/>
+	<phrase n="lang_preferences_general" t="Общие"/>
+	<phrase n="lang_quick_dial_contacts" t="Контакты быстрого набора"/>
+	<phrase n="lang_start_tbook_download" t="Запустить загрузку каталога?"/>
+	<phrase n="lang_tbook_download" t="Загрузка каталога"/>
+	<phrase n="lang_tbook_download_started" t="Загрузка каталога началась для SIP-аккаунта"/>
+	<phrase n="lang_tbook_download_finished" t="Загрузка каталога завершена для SIP-аккаунта"/>
+	<phrase n="lang_tbook_download_failed" t="Не удалось загрузить каталог для SIP-аккаунта"/>
+	<phrase n="lang_tbook_download_not_possible" t="Загрузка каталога невозможна для SIP-аккаунта"/>
+	<phrase n="lang_tbook_download_overflowed" t="Загрузка каталога не завершена (превышен внутренний предел)."/>
+	<phrase n="lang_tbook_is_full" t="Адресная книга полная"/>
+	<phrase n="lang_F_HOTELING" t="Гостиница"/>
+	<phrase n="lang_F_HOTELING_typeSio" t="Гостиница"/>
+	<phrase n="lang_F_HOTELING_smartlabel" t="Гостиниц"/>
+	<phrase n="lang_F_GUEST_LOGIN" t="Гостевой вход"/>
+	<phrase n="lang_F_GUEST_LOGOUT" t="Выход гостя"/>
+	<phrase n="lang_F_GUEST_LOGIN_smartlabel" t="Гостевой вход"/>
+	<phrase n="lang_F_GUEST_LOGOUT_smartlabel" t="Выход гостя"/>
+	<phrase n="lang_F_LOGIN" t="Войти"/>
+	<phrase n="lang_F_LOGOUT" t="Выйти"/>
+	<phrase n="lang_smartlabel_id" t="ID"/>
+	<phrase n="lang_title_guest_logout" t="Выход гостя"/>
+	<phrase n="lang_confirm_guest_logout" t="Вы действительно хотите выйти из системы?"/>
+	<phrase n="lang_no_contacts" t="Нет контактов"/>
+	<phrase n="lang_hoteling_guest" t="Гость гостиницы"/>
+	<phrase n="lang_logging_out" t="Выход..."/>
+	<phrase n="lang_logging_in" t="Вход..."/>
+	<phrase n="lang_login_failed" t="Вход в систему не удался"/>
+	<phrase n="lang_acd_signout_message" t="Вы выйдете из ACD. Продолжить под гостевым логином?"/>
+	<phrase n="lang_title_guest_login" t="Гостевой вход"/>
+	<phrase n="lang_F_MARK_READ" t="Отметить как прочитанное"/>
+	<phrase n="lang_F_MARK_UNREAD" t="Отметить как непрочитанное"/>
+	<phrase n="lang_call_recording_mode_never" t="Никогда"/>
+	<phrase n="lang_call_recording_mode_always" t="Всегда"/>
+	<phrase n="lang_call_recording_mode_always_pause_resume" t="Всегда с Паузой/Возобновлением"/>
+	<phrase n="lang_call_recording_mode_on_demand" t="По требованию"/>
+	<phrase n="lang_call_recording_mode_on_demand_user_start" t="Старт по требованию пользователя"/>
+	<phrase n="lang_smartlabel_dismiss_timeout" t="Вернуться в режим по умолчанию"/>
+	<phrase n="lang_call_recording_mode" t="Режим записи разговоров"/>
+	<phrase n="lang_menu_full_label_mode" t="Развернутый режим"/>
+	<phrase n="lang_menu_label_mode" t="Режим лейбл"/>
+	<phrase n="lang_guest_pin" t="Гостевой PIN"/>
+	<phrase n="lang_incorrect_pin" t="Не верный PIN"/>
+	<phrase n="lang_voicemail_info" t="Информация голосовой почты"/>
+	<phrase n="lang_confirm_del_deny_list_item_title" t="Удалить элемент списка блокировки"/>
+	<phrase n="lang_confirm_del_number_from_deny_list" t="Удалить из списка заблокированных?"/>
+	<phrase n="lang_confirm_del_menu_configuration" t="Удалить настройки конфигурации клавиш"/>
+	<phrase n="lang_confirm_message" t="Вы действительно хотите это сделать?"/>
+	<phrase n="lang_caller_id_blocking" t="Блокировка номера вызывающего абонента"/>
+	<phrase n="lang_screen_items_color_and_opacity_title" t="Цвет и Прозрачность"/>
+	<phrase n="lang_ui_themes" t="Темы"/>
+	<phrase n="lang_theme_light" t="Светлая"/>
+	<phrase n="lang_theme_dark" t="Тёмная"/>
+	<phrase n="lang_theme_colorful" t="Цветная"/>
+	<phrase n="lang_theme_industrial" t="Промышленная"/>
+	<phrase n="lang_screen_items_color_title" t="Цвет"/>
+	<phrase n="lang_screen_items_opacity_title" t="Прозрачность"/>
+	<phrase n="lang_screen_items_enter_custom_color_title" t="Введите пользовательское значения"/>
+	<phrase n="lang_screen_item_titlebar_text" t="Текст заголовка"/>
+	<phrase n="lang_screen_item_text" t="Текст"/>
+	<phrase n="lang_screen_item_subtext" t="Подтекст"/>
+	<phrase n="lang_screen_item_extratext" t="Дополнительный текст"/>
+	<phrase n="lang_screen_item_extratext2" t="Дополнительный текст 2"/>
+	<phrase n="lang_screen_item_titlebar_background" t="Фон строки заголовка"/>
+	<phrase n="lang_screen_item_background" t="Фон"/>
+	<phrase n="lang_screen_item_fkey_background" t="Фон Fклавиш"/>
+	<phrase n="lang_screen_item_fkey_pressed_background" t="Фон при нажатии Fклавиш"/>
+	<phrase n="lang_screen_item_fkey_separator" t="Разделитель Fклавиш"/>
+	<phrase n="lang_screen_item_fkey_label" t="Лейбл Fклавиш"/>
+	<phrase n="lang_screen_item_fkey_pressed_label" t="Лейбл при нажатии Fклавиш"/>
+	<phrase n="lang_screen_item_line_background" t="Фон линии"/>
+	<phrase n="lang_screen_item_selected_line_background" t="Фон выбранной линии"/>
+	<phrase n="lang_screen_item_selected_line_indicator" t="Индикатор выбранной линии"/>
+	<phrase n="lang_screen_item_selected_line_text" t="Текст выбранной линии"/>
+	<phrase n="lang_screen_item_line_separator" t="Разделитель линии"/>
+	<phrase n="lang_screen_item_scrollbar" t="Полоса прокрутки"/>
+	<phrase n="lang_screen_item_cursor" t="Курсор"/>
+	<phrase n="lang_screen_item_status_msgs_background" t="Фон сообщений о состоянии"/>
+	<phrase n="lang_screen_item_status_msgs_border" t="Граница сообщений о состоянии"/>
+	<phrase n="lang_screen_item_smartlabel_background" t="Фон SmartLabel"/>
+	<phrase n="lang_screen_item_smartlabel_pressed_background" t="Фон SmartLabel при нажатии"/>
+	<phrase n="lang_screen_item_smartlabel_separator" t="Разделитель SmartLabel"/>
+	<phrase n="lang_screen_item_smartlabel_label" t="Лейбл SmartLabel"/>
+	<phrase n="lang_screen_item_smartlabel_pressed_label" t="Лейбл SmartLabel при нажатии"/>
+	<phrase n="lang_screen_item_expansion_module_background" t="Фон модуля расширения"/>
+	<phrase n="lang_screen_item_expansion_module_pressed_background" t="Фон для модуля расширения при нажатии Fклавиш"/>
+	<phrase n="lang_screen_item_expansion_module_separator" t="Разделитель для модуля расширения"/>
+	<phrase n="lang_screen_item_expansion_module_maintext" t="Главный текст модуля расширения"/>
+	<phrase n="lang_screen_item_expansion_module_pressed_maintext" t="Модуль расширения текст в сжатом виде"/>
+	<phrase n="lang_screen_item_expansion_module_subtext" t="Дополнительный текст модуля расширения"/>
+	<phrase n="lang_screen_item_expansion_module_pressed_subtext" t="Модуль расширения текст в сжатом виде"/>
+	<phrase n="lang_screen_item_expansion_module_page_indicator" t="Индикатор страниц модуля расширения"/>
+	<phrase n="lang_screen_items_color_name_onyx_black" t="Черный оникс"/>
+	<phrase n="lang_screen_items_color_name_midnight_black" t="Темная ночь"/>
+	<phrase n="lang_screen_items_color_name_obsidian_black" t="Черный обсидиан"/>
+	<phrase n="lang_screen_items_color_name_dark_grey" t="Темно-серый"/>
+	<phrase n="lang_screen_items_color_name_grey" t="Серый"/>
+	<phrase n="lang_screen_items_color_name_light_grey" t="Светло-серый"/>
+	<phrase n="lang_screen_items_color_name_grey_white" t="Серо-белый"/>
+	<phrase n="lang_screen_items_color_name_white" t="Белый"/>
+	<phrase n="lang_screen_items_color_name_light_yellow" t="Светло-желтый"/>
+	<phrase n="lang_screen_items_color_name_yellow" t="Желтый"/>
+	<phrase n="lang_screen_items_color_name_light_red" t="Светло-красный"/>
+	<phrase n="lang_screen_items_color_name_red" t="Красный"/>
+	<phrase n="lang_screen_items_color_name_light_blue" t="Светло-синий"/>
+	<phrase n="lang_screen_items_color_name_blue" t="Синий"/>
+	<phrase n="lang_screen_items_color_name_light_green" t="Светло-зеленый"/>
+	<phrase n="lang_screen_items_color_name_green" t="Зеленый"/>
+	<phrase n="lang_screen_items_color_name_custom" t="Пользовательский цвет"/>
+	<phrase n="lang_monitored_extensions" t="Отслеживание внутренних номеров"/>
+	<phrase n="lang_ALS" t="Датчик освещенности"/>
+	<phrase n="lang_all_available_calls" t="Все доступные вызовы"/>
+	<phrase n="lang_new_call" t="Новый вызов"/>
+	<phrase n="lang_select_conf_participant" t="Выберите участника конференции"/>
+	<phrase n="lang_consult_conference" t="Консультативная конференция"/>
+	<phrase n="lang_guess_max_hits" t="Максимальное кол-во отображаемых результатов"/>
+	<phrase n="lang_guess_results" t="Результаты"/>
+	<phrase n="lang_new_network_policy" t="Новая сетевая политика"/>
+	<phrase n="lang_wrong_lldp_policy" t="Неправильная политика LLDP"/>
+	<phrase n="lang_F_MODERATE" t="Модерировать"/>
+	<phrase n="lang_sip_warning" t="SIP-предупреждение"/>
+	<phrase n="lang_sync_settings" t="Синхронизировать настройки"/>
+	<phrase n="lang_confirm_sync_settings" t="Синхронизировать настройки с конфигурацией сервера?"/>
+	<phrase n="lang_no_configured_extensions" t="Нет настроенных добавочных номеров"/>
+	<phrase n="lang_no_active_calls_on_extensions" t="Нет активных вызовов на добавочных номерах"/>
+	<phrase n="lang_sip_response_code_400" t="Неудачный запрос"/>
+	<phrase n="lang_sip_response_code_402" t="Требуется оплата"/>
+	<phrase n="lang_sip_response_code_403" t="Запрещено"/>
+	<phrase n="lang_sip_response_code_404" t="Не найдено"/>
+	<phrase n="lang_sip_response_code_405" t="Метод не разрешен"/>
+	<phrase n="lang_sip_response_code_406" t="Недопустимо"/>
+	<phrase n="lang_sip_response_code_407" t="Требуется аутентификация proxy-сервера"/>
+	<phrase n="lang_sip_response_code_408" t="Тайм-аут запроса"/>
+	<phrase n="lang_sip_response_code_410" t="Отправлен"/>
+	<phrase n="lang_sip_response_code_413" t="Слишком большой запрос"/>
+	<phrase n="lang_sip_response_code_414" t="Запрашиваемый URI слишком длинный"/>
+	<phrase n="lang_sip_response_code_415" t="Неподдерживаемый тип медиа"/>
+	<phrase n="lang_sip_response_code_416" t="Не поддерживаемая схема URI"/>
+	<phrase n="lang_sip_response_code_420" t="Не верный добавочный номер"/>
+	<phrase n="lang_sip_response_code_421" t="Необходим добавочный номер"/>
+	<phrase n="lang_sip_response_code_422" t="Интервал сессии слишком мал"/>
+	<phrase n="lang_sip_response_code_423" t="Интервал слишком короткий"/>
+	<phrase n="lang_sip_response_code_480" t="Временно недоступен"/>
+	<phrase n="lang_sip_response_code_481" t="Вызов/Транзакция не существует"/>
+	<phrase n="lang_sip_response_code_482" t="Обнаружен зацикленный контур"/>
+	<phrase n="lang_sip_response_code_483" t="Слишком много хопов"/>
+	<phrase n="lang_sip_response_code_484" t="Не полный адрес"/>
+	<phrase n="lang_sip_response_code_485" t="Неясный"/>
+	<phrase n="lang_sip_response_code_486" t="Занято"/>
+	<phrase n="lang_sip_response_code_487" t="Запрос прекращен"/>
+	<phrase n="lang_sip_response_code_488" t="Здесь не приемлемо"/>
+	<phrase n="lang_sip_response_code_491" t="Запрос ожидает выполнения"/>
+	<phrase n="lang_sip_response_code_493" t="Неразборчивый"/>
+	<phrase n="lang_sip_response_code_500" t="Внутренняя ошибка сервера"/>
+	<phrase n="lang_sip_response_code_501" t="Не реализовано"/>
+	<phrase n="lang_sip_response_code_502" t="Не правильный шлюз"/>
+	<phrase n="lang_sip_response_code_503" t="Служба не доступна"/>
+	<phrase n="lang_sip_response_code_504" t="Тайм-аут сервера"/>
+	<phrase n="lang_sip_response_code_505" t="Версия не поддерживается"/>
+	<phrase n="lang_sip_response_code_513" t="Сообщение слишком длинное"/>
+	<phrase n="lang_sip_response_code_599" t="Ошибка тайм-аута сетевого подключения"/>
+	<phrase n="lang_sip_response_code_600" t="Занято везде"/>
+	<phrase n="lang_sip_response_code_603" t="Отказ"/>
+	<phrase n="lang_sip_response_code_604" t="Не существует"/>
+	<phrase n="lang_sip_response_code_606" t="Неприемлемо"/>
+	<phrase n="lang_sort_order" t="Порядок сортировки"/>
+	<phrase n="lang_directory_display_order" t="Экран"/>
+	<phrase n="lang_display_order_first_name_last_name" t="Имя, Фамилия"/>
+	<phrase n="lang_display_order_last_name_first_name" t="Фамилия, Имя"/>
+	<phrase n="lang_visual_options" t="Визуальные опции"/>
+	<phrase n="lang_call_screen_photo_size" t="Размер фото на экране"/>
+	<phrase n="lang_size_XS" t="XS"/>
+	<phrase n="lang_size_S" t="S"/>
+	<phrase n="lang_size_M" t="M"/>
+	<phrase n="lang_size_L" t="L"/>
+	<phrase n="lang_size_XL" t="XL"/>
+	<phrase n="lang_size_XXL" t="XXL"/>
+	<phrase n="lang_size_XXXL" t="XXXL"/>
+	<phrase n="lang_prefer_saved_over_received_photo" t="Предпочесть локальные фотографии"/>
+	<phrase n="lang_display_method" t="Стиль отображения номеров"/>
+	<phrase n="lang_display_method_full_contact" t="Полный контакт"/>
+	<phrase n="lang_display_method_display_name" t="Имя"/>
+	<phrase n="lang_display_method_display_number" t="Номер"/>
+	<phrase n="lang_display_method_display_name_number" t="Имя + Номер"/>
+	<phrase n="lang_display_method_display_number_name" t="Номер + Имя"/>
+	<phrase n="lang_no_calls_for_transfer" t="Нет доступных вызовов для трансфера"/>
+	<phrase n="lang_brand_variant_select_title" t="Выберите вариант бренда"/>
+	<phrase n="lang_brand_variant_default" t="По умолчанию"/>
+	<phrase n="lang_brand_variant_updated_title" t="Вариант обновлен"/>
+	<phrase n="lang_brand_variant_selected" t="Вариант выбран"/>
+	<phrase n="lang_system_reboot_now" t="Система сейчас будет перезагружена"/>
+	<phrase n="lang_select_identity" t="Выбор SIP-аккаунта"/>
+	<phrase n="lang_F_CALL_CENTER_STATUS" t="Статус контакт-центра"/>
+	<phrase n="lang_F_ATTENDED_TRANSFER" t="Сопроводительный"/>
+	<phrase n="lang_disposition_code_sent" t="отправлено"/>
+	<phrase n="lang_disposition_code_selection" t="Выбор кода позиции"/>
+	<phrase n="lang_disposition_code_entry" t="Введите код позиции"/>
+	<phrase n="lang_F_DISP_CODE" t="Код П."/>
+	<phrase n="lang_F_DISP_CODE_typeSio" t="Код позиции"/>
+	<phrase n="lang_F_DISP_CODE_smartlabel" t="Код П."/>
+	<phrase n="lang_disposition_code_display_text_list" t="Список"/>
+	<phrase n="lang_parked_calls_settings" t="Вызов на парковке"/>
+	<phrase n="lang_call_parked_on" t="На парковке"/>
+	<phrase n="lang_no_parked_call" t="Нет паркованных доступных вызовов."/>
+	<phrase n="lang_F_CALL_PARK_IDLE" t="Парковка в ожидании"/>
+	<phrase n="lang_F_CALL_PARK_typeSio" t="Парковка"/>
+	<phrase n="lang_menu_any_smartlabel_key_short_press" t="Короткое нажатие на SmartLabel"/>
+	<phrase n="lang_monitored_extension_is_ringing" t="Вызов на отслеживаемом номере"/>
+	<phrase n="lang_disposition_code_not_sent" t="Код не отправлен"/>
+	<phrase n="lang_disposition_code_identity_mismatch" t="SIP-аккаунт не соответствует"/>
+	<phrase n="lang_F_EXEC_ASSIST_CALL_PUSH" t="Пуш Вызов"/>
+	<phrase n="lang_usb_mass_storage_plug" t="Подключен USB-диск"/>
+	<phrase n="lang_usb_mass_storage_unplug" t="USB-диск удален"/>
+	<phrase n="lang_information_menu_usb_info" t="USB Инфо"/>
+	<phrase n="lang_usb_mass_storage_title" t="USB массовое хранилище"/>
+	<phrase n="lang_F_USB_EJECT" t="Извлечь USB"/>
+	<phrase n="lang_usb_mass_storage_safe_to_remove" t="Теперь можно безопасно удалить USB-накопитель"/>
+	<phrase n="lang_F_USBREC_START" t="Начать зап. на USB"/>
+	<phrase n="lang_F_USBREC_START_typeSio" t="Начать запись USB"/>
+	<phrase n="lang_F_USBREC_START_smartlabel" t="Стар&lt;br&gt;USB зап."/>
+	<phrase n="lang_F_USBREC_STOP" t="Остановить запись USB"/>
+	<phrase n="lang_F_USBREC_STOP_typeSio" t="Остановить запись USB"/>
+	<phrase n="lang_F_USBREC_STOP_smartlabel" t="Остановить&lt;br&gt;USB зап."/>
+	<phrase n="lang_F_USBREC_PAUSE" t="Пауза USB зап."/>
+	<phrase n="lang_F_USBREC_PAUSE_typeSio" t="Пауза USB записи"/>
+	<phrase n="lang_F_USBREC_PAUSE_smartlabel" t="Пауза&lt;br&gt;USB зап."/>
+	<phrase n="lang_F_USBREC_RESUME" t="Продолжить USB зап."/>
+	<phrase n="lang_F_USBREC_RESUME_typeSio" t="Возобновить USB запись"/>
+	<phrase n="lang_F_USBREC_RESUME_smartlabel" t="Продолжить&lt;br&gt;USB зап."/>
+	<phrase n="lang_F_PAUSE" t="Пауза"/>
+	<phrase n="lang_F_RESUME" t="Продолжить"/>
+	<phrase n="lang_usb_recording_processing_wait" t="Пожалуйста, дождитесь завершения записи!"/>
+	<phrase n="lang_usb_recording_processing_completed" t="Процесс записи завершен!"/>
+	<phrase n="lang_usb_recording_call_terminated" t="Запись разговора прекращена"/>
+	<phrase n="lang_usb_recording_terminated_drive_full" t="Запись прекращена, USB-накопитель заполнен"/>
+	<phrase n="lang_usb_recording_terminated_max_file_size" t="Запись прекращена, макс. длина записи"/>
+	<phrase n="lang_usb_recording_no_usb_drive_detected" t="USB-накопитель не обнаружен"/>
+	<phrase n="lang_usb_recording_terminated_errno" t="Запись прекращена, ошибка: "/>
+	<phrase n="lang_usb_playback_browse_recordings" t="Просмотр записей"/>
+	<phrase n="lang_usb_playback_browse_recordings_title" t="Запись звонков"/>
+	<phrase n="lang_usb_playback_play_recording_title" t="Воспроизвести запись"/>
+	<phrase n="lang_usb_playback_invalid_header_or_encrypted_file" t="Неверный WAV-заголовок или шифрование файл:"/>
+	<phrase n="lang_usb_playback_recording_information_title" t="Информация"/>
+	<phrase n="lang_usb_playback_delete_recording_title" t="Удалить запись"/>
+	<phrase n="lang_label_rewind" t="Перемотка"/>
+	<phrase n="lang_label_fast_forward" t="Перемотка вперед"/>
+	<phrase n="lang_text_size" t="Размер шрифта"/>
+	<phrase n="lang_usb_playback_no_recordings" t="Нет записей"/>
+	<phrase n="lang_usb_recording_aborted_by_conference" t="USB-запись прервана конференцией"/>
+	<phrase n="lang_usb_recording_cannot_record_conference" t="Невозможно записать конференцию на USB"/>
+	<phrase n="lang_date_and_time" t="Дата и Время"/>
+	<phrase n="lang_label_context_key_page_left" t="Страница на лево"/>
+	<phrase n="lang_label_context_key_page_right" t="Страница на право"/>
+	<phrase n="lang_expansion_module_text_alignment" t="Выравнивание текста"/>
+	<phrase n="lang_expansion_module_color_font_sizes_XXL_XS" t="Основной Текст XXL &amp; Суб Текст XS"/>
+	<phrase n="lang_expansion_module_color_font_sizes_XL_XS" t="Основной Текст XL &amp; Суб Текст XS"/>
+	<phrase n="lang_expansion_module_color_font_sizes_XL_S" t="Основной Текст XL &amp; Суб Текст S"/>
+	<phrase n="lang_expansion_module_color_font_sizes_L_XS" t="Основной Текст L &amp; Суб Текст XS"/>
+	<phrase n="lang_expansion_module_color_font_sizes_L_S" t="Основной Текст L &amp; Суб Текст S"/>
+	<phrase n="lang_expansion_module_color_font_sizes_L_M" t="Основной Текст L &amp; Суб Текст М"/>
+	<phrase n="lang_expansion_module_color_font_sizes_M_XS" t="Основной Текст М &amp; Суб Текст XS"/>
+	<phrase n="lang_expansion_module_color_font_sizes_M_S" t="Основной Текст М &amp; Суб Текст S"/>
+	<phrase n="lang_expansion_module_color_font_sizes_M_M" t="Основной Текст М &amp; Суб Текст М"/>
+	<phrase n="lang_expansion_module_color_font_sizes_S_XS" t="Основной Текст S &amp; Суб Текст XS"/>
+	<phrase n="lang_expansion_module_color_font_sizes_S_S" t="Основной Текст S &amp; Суб Текст S"/>
+	<phrase n="lang_expansion_module_color_font_sizes_XS_XS" t="Основной Текст XS &amp; Суб Текст XS"/>
+	<phrase n="lang_edit_mode_upper_case" t="ABC"/>
+	<phrase n="lang_edit_mode_lower_case" t="abc"/>
+	<phrase n="lang_edit_mode_numbers" t="123"/>
+	<phrase n="lang_F_IDLE_CONTEXT_PAGE_LEFT" t="Лево"/>
+	<phrase n="lang_F_IDLE_CONTEXT_PAGE_LEFT_typeSio" t="Страница на лево"/>
+	<phrase n="lang_F_IDLE_CONTEXT_PAGE_RIGHT" t="Право"/>
+	<phrase n="lang_F_IDLE_CONTEXT_PAGE_RIGHT_typeSio" t="Страница на право"/>
+	<phrase n="lang_F_NONE" t=""/>
+</phrases>

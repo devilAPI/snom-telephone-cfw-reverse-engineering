@@ -1,0 +1,307 @@
+<?ssi title advanced_ssi_title?>
+<?ssi file common1.htm?>
+<TR><TD valign="top" height="16"><IMG height="16" src="img/clr.gif" width="16"></TD></TR>
+<TR>
+  <TD valign="top">
+  <FORM method="post">
+    <?ssi skipon VTECH?>
+    <TABLE class="bubbleTable" cellSpacing="0" cellPadding="0" width="100%" border="0">
+    <?ssi skipoff VTECH?>
+    <?ssi skipon SNOM?>
+    <TABLE cellSpacing="4" cellPadding="0" width="100%" border="0">
+    <?ssi skipoff SNOM?>
+  <?ssi file tab_advanced.htm?>
+  <TR>
+    <TD colspan="5"/>
+    <TD class="background" width="12" height="5">
+      <?ssi skipon VTECH?>
+      <IMG height="12" src=<?ssi img-corner-gif ur?> width="12">
+      <?ssi skipoff VTECH?>
+    </TD>
+  </TR>
+  <?ssi hidden_tag?>
+  <TR><TD/><TD width="50%"/><TD width="50%"/></TR>
+  <?ssi skipon NOT_IN_ADMIN_MODE?>
+  <TR><TD/>
+    <?ssi skipon VTECH?>
+    <TD width="50%"><B>
+    <?ssi skipoff VTECH?>
+    <?ssi skipon SNOM?>
+    <TD class="titleText" width="50%">
+    <?ssi skipoff SNOM?>
+    <?lng advanced_update?></B>
+    </TD>
+    <TD width="50%"></TD>
+  </TR>
+  <TR><TD/><TD><?lng advanced_updatepolicy?></TD><TD>
+    <select name="update_policy" <?ssi disabled update_policy?>size="1" <?ssi tabindex?> class="select5">
+    <option value="auto_update"<?ssi selected update_policy auto_update?>><?lng advanced_upautomatically?></option>
+    <option value="ask_for_update"<?ssi selected update_policy ask_for_update?>><?lng advanced_upaskupdate?></option>
+    <option value="settings_only"<?ssi selected update_policy settings_only?>><?lng advanced_upneverupdatesetting?></option>
+    <option value="never_update"<?ssi selected update_policy never_update?>><?lng advanced_upneverupdatenosetting?></option>
+    </select><?ssi help update_policy?>
+  </TD></TR>
+  <TR><TD/><TD><?ssi input advanced_ssi_settingurl setting_server?></TD></TR>
+  <TR><TD/><TD><?ssi input advanced_ssi_settings_refresh settings_refresh_timer?></TD></TR>
+  <TR><TD/><TD><?ssi input provisioning_order provisioning_order?></TD></TR>
+  <TR><TD/><?ssi radio advanced_ssi_prov_polling_enabled prov_polling_enabled advanced_ssi_on advanced_ssi_off?></TR>
+  <TR><TD/><TD><?lng advanced_ssi_prov_polling_mode?></TD><TD>
+    <select name="prov_polling_mode" <?ssi disabled update_policy?>size="1" <?ssi tabindex?> class="select5">
+    <option value="rel"<?ssi selected prov_polling_mode rel?>><?lng advanced_ssi_prov_polling_mode_rel?></option>
+    <option value="abs"<?ssi selected prov_polling_mode abs?>><?lng advanced_ssi_prov_polling_mode_abs?></option>
+    <option value="random"<?ssi selected prov_polling_mode random?>><?lng advanced_ssi_prov_polling_mode_random?></option>
+    </select><?ssi help prov_polling_mode?>
+  </TD></TR>
+  <TR><TD/><TD><?ssi input advanced_ssi_prov_polling_period prov_polling_period?></TD></TR>
+  <TR><TD/><TD><?ssi input advanced_ssi_prov_polling_time prov_polling_time?></TD></TR>
+  <TR><TD/><TD><?ssi input advanced_ssi_prov_polling_time_random_end prov_polling_time_rand_end?></TD></TR>
+
+  <TR><TD/><?ssi radio advanced_ssi_pnp_config pnp_config advanced_ssi_on advanced_ssi_off?></TR>
+  <?ssi skipoff NOT_IN_ADMIN_MODE?>
+
+  <?ssi skipon IN_ADMIN_MODE?>
+  <TR><TD/>
+    <?ssi skipon VTECH?>
+    <TD><B>
+    <?ssi skipoff VTECH?>
+    <?ssi skipon SNOM?>
+    <TD class="titleText">
+    <?ssi skipoff SNOM?>
+    <?ssi inpass advanced_ssi_adminlogin admin_mode_login?></B>
+    </TD>
+  </TR>
+  <?ssi skipoff IN_ADMIN_MODE?>
+  <TR><TD/><TD>&nbsp;</TD></TR>
+  <TR><TD/><TD><input type="submit" value="<?lng apply_button?>" name="Settings" <?ssi tabindex?> >
+  <TD>
+  <?ssi skipon NOT_IN_ADMIN_MODE?>
+  <input type="submit" value="<?lng advanced_resetbutton?>" name="CONFIRM_RESET" <?ssi tabindex?> >
+  <?ssi skipoff NOT_IN_ADMIN_MODE?>
+  <input type="hidden" value="<?lng apply_button?>" name="Settings">
+  <!--Hidden input is used to allow onchange event to apply settings automatically-->
+  <input type="submit" value="<?lng advanced_rebootbutton?>" name="CONFIRM_REBOOT" <?ssi tabindex?> ></TR>
+  <TR>
+    <TD class="background" valign="bottom" align="left" width="12" height="5">
+      <?ssi skipon VTECH?>
+      <IMG src=<?ssi img-corner-gif ll?> width="12" height="12">
+      <?ssi skipoff VTECH?>
+    </TD>
+    <TD colspan="4" />
+    <TD class="background" valign="bottom" align="right" width="12" height="5">
+      <?ssi skipon VTECH?>
+      <IMG src=<?ssi img-corner-gif lr?> width="12" height="12">
+      <?ssi skipoff VTECH?>
+    </TD>
+  </TR>
+  </TABLE>
+  </FORM>
+  </TD>
+</TR>
+
+<?ssi skipon NOT_IN_ADMIN_MODE?>
+<TR><TD valign="top" height="16"><IMG src="img/clr.gif" width="16" height="16"></TD></TR>
+<TR>
+  <TD>
+  <TABLE cellspacing=0 cellpadding=0 width="100%" border=0 ID="Table1">
+  <TR>
+    <TD><SPAN class=pageInfoText><?lng advanced_load_warning?><br><br></SPAN>
+    </TD>
+  </TR>
+  </TABLE>
+  </TD>
+</TR>
+<TR>
+  <TD valign="top">
+  <FORM enctype="multipart/form-data" method="post">
+    <?ssi skipon VTECH?>
+    <TABLE class="bubbleTable" cellSpacing="0" cellPadding="0" width="100%" border="0" ID="Table1">
+    <?ssi skipoff VTECH?>
+    <?ssi skipon SNOM?>
+    <TABLE cellSpacing="4" cellPadding="0" width="100%" border="0" ID="Table1">
+    <?ssi skipoff SNOM?>
+  <TR>
+    <TD class="background" width="12" height="5">
+      <?ssi skipon VTECH?>
+      <IMG height="12" src=<?ssi img-corner-gif ul?> width="12">
+      <?ssi skipoff VTECH?>
+      <?ssi skipon SNOM?>
+      <IMG src="img/clr.gif" width="12" height="12">
+      <?ssi skipoff SNOM?>
+    </TD>
+    <TD colspan="3" />
+    <TD class="background" width="12" height="5">
+      <?ssi skipon VTECH?>
+      <IMG height="12" src=<?ssi img-corner-gif ur?> width="12">
+      <?ssi skipoff VTECH?>
+    </TD>
+  </TR>
+  <?ssi hidden_tag?>
+  <TR><TD/><TD width="50%"/><TD width="50%"/></TR>
+  <TR>
+    <TD/>
+    <TD class="normaltextbold"><?lng advanced_load_sets_manually?></TD>
+    <TD></TD>
+  </TR>
+  <TR>
+    <TD></TD>
+    <TD><?lng general_file?></TD>
+    <TD>
+      <noscript><div class="linespace"><input type="file" id="man_set_file" name="man_set_file" <?ssi tabindex?>></div></noscript>
+      <input type="file" class="inputfile" id="man_set_file" name="man_set_file" <?ssi tabindex?>>
+      <label for="man_set_file"><span><?lng choose_file?></span></label>
+    </TD>
+  </TR>
+  <TR>
+    <TD/>
+    <TD>
+      <input type="submit" value="<?lng adr_loadbutton?>" name="load_man_set" <?ssi tabindex?> >
+    </TD>
+  </TR>
+  <TR>
+    <TD class="background" valign="bottom" align="left" width="12" height="5">
+      <?ssi skipon VTECH?>
+      <IMG src=<?ssi img-corner-gif ll?> width="12" height="12">
+      <?ssi skipoff VTECH?>
+    </TD>
+    <TD colspan="3" />
+    <TD class="background" valign="bottom" align="right" width="12" height="5">
+      <?ssi skipon VTECH?>
+      <IMG src=<?ssi img-corner-gif lr?> width="12" height="12">
+      <?ssi skipoff VTECH?>
+    </TD>
+  </TR>
+  </TABLE>
+  </FORM>
+  </TD>
+</TR>
+<TR>
+  <TD valign="top">
+  <FORM enctype="multipart/form-data" method="post">
+    <?ssi skipon VTECH?>
+    <TABLE class="bubbleTable" cellSpacing="0" cellPadding="0" width="100%" border="0" ID="Table1">
+    <?ssi skipoff VTECH?>
+    <?ssi skipon SNOM?>
+    <TABLE cellSpacing="4" cellPadding="0" width="100%" border="0" ID="Table1">
+    <?ssi skipoff SNOM?>
+  <TR>
+    <TD class="background" width="12" height="5">
+      <?ssi skipon VTECH?>
+      <IMG src=<?ssi img-corner-gif ul?> width="12" height="12">
+      <?ssi skipoff VTECH?>
+      <?ssi skipon SNOM?>
+      <IMG src="img/clr.gif" width="12" height="12">
+      <?ssi skipoff SNOM?>
+    </TD>
+    <TD colspan="3" />
+    <TD class="background" width="12" height="5">
+      <?ssi skipon VTECH?>
+      <IMG src=<?ssi img-corner-gif ur?> width="12" height="12">
+      <?ssi skipoff VTECH?>
+    </TD>
+  </TR>
+  <?ssi hidden_tag?>
+  <TR><TD/><TD width="50%"/><TD width="50%"/></TR>
+  <TR>
+    <TD/>
+    <TD class="normaltextbold"><?lng advanced_load_param_map?></TD>
+    <TD></TD>
+  </TR>
+  <TR>
+    <TD></TD>
+    <TD><?lng general_file?></TD>
+    <TD>
+      <noscript><div class="linespace"><input type="file" id="load_param_map" name="load_param_map" <?ssi tabindex?>></div></noscript>
+      <input type="file" class="inputfile" id="load_param_map" name="load_param_map" <?ssi tabindex?>>
+      <label for="load_param_map"><span><?lng choose_file?></span></label>
+    </TD>
+  </TR>
+  <TR>
+    <TD/>
+    <TD>
+      <input type="submit" value="<?lng adr_loadbutton?>" name="param_map_file" <?ssi tabindex?> >
+    </TD>
+  </TR>
+  <TR>
+    <TD class="background" valign="bottom" align="left" width="12" height="12">
+      <?ssi skipon VTECH?>
+      <IMG src=<?ssi img-corner-gif ll?> width="12" height="12">
+      <?ssi skipoff VTECH?>
+    </TD>
+    <TD colspan="3" />
+    <TD class="background" valign="bottom" align="right" width="12" height="12">
+      <?ssi skipon VTECH?>
+      <IMG src=<?ssi img-corner-gif lr?> width="12" height="12">
+      <?ssi skipoff VTECH?>
+    </TD>
+  </TR>
+  </TABLE>
+  </FORM>
+  </TD>
+</TR>
+<TR>
+  <TD valign="top">
+  <FORM enctype="multipart/form-data" method="post">
+    <?ssi skipon VTECH?>
+    <TABLE class="bubbleTable" cellSpacing="0" cellPadding="0" width="100%" border="0" ID="Table1">
+    <?ssi skipoff VTECH?>
+    <?ssi skipon SNOM?>
+    <TABLE cellSpacing="4" cellPadding="0" width="100%" border="0" ID="Table1">
+    <?ssi skipoff SNOM?>
+  <TR>
+    <TD class="background" width="12" height="12">
+      <?ssi skipon VTECH?>
+      <IMG src=<?ssi img-corner-gif ul?> width="12" height="12">
+      <?ssi skipoff VTECH?>
+      <?ssi skipon SNOM?>
+      <IMG src="img/clr.gif" width="12" height="12">
+      <?ssi skipoff SNOM?>
+    </TD>
+    <TD colspan="3" />
+    <TD class="background" width="12" height="12">
+      <?ssi skipon VTECH?>
+      <IMG src=<?ssi img-corner-gif ur?> width="12" height="12">
+      <?ssi skipoff VTECH?>
+    </TD>
+  </TR>
+  <?ssi hidden_tag?>
+  <TR><TD/><TD width="50%"/><TD width="50%"/></TR>
+  <TR>
+    <TD/>
+    <TD class="normaltextbold"><?lng advanced_load_dialplan?></TD>
+    <TD></TD>
+  </TR>
+  <TR>
+    <TD></TD>
+    <TD><?lng general_file?></TD>
+    <TD>
+      <noscript><div class="linespace"><input type="file" id="load_dialplan" name="load_dialplan" <?ssi tabindex?>></div></noscript>
+      <input type="file" class="inputfile" id="load_dialplan" name="load_dialplan" <?ssi tabindex?>>
+      <label for="load_dialplan"><span><?lng choose_file?></span></label>
+    </TD>
+  </TR>
+  <TR>
+    <TD/>
+    <TD>
+      <input type="submit" value="<?lng adr_loadbutton?>" name="dialplan_file" <?ssi tabindex?> >
+    </TD>
+  </TR>
+  <TR>
+    <TD class="background" valign="bottom" align="left" width="12" height="12">
+      <?ssi skipon VTECH?>
+      <IMG src=<?ssi img-corner-gif ll?> width="12" height="12">
+      <?ssi skipoff VTECH?>
+    </TD>
+    <TD colspan="3" />
+    <TD class="background" valign="bottom" align="right" width="12" height="12">
+      <?ssi skipon VTECH?>
+      <IMG src=<?ssi img-corner-gif lr?> width="12" height="12">
+      <?ssi skipoff VTECH?>
+    </TD>
+  </TR>
+  </TABLE>
+  </FORM>
+  </TD>
+</TR>
+<?ssi skipoff NOT_IN_ADMIN_MODE?>
+<script type="text/javascript" src="fox.js" charset="utf-8"></script>
+<?ssi file common9.htm?></HTML>

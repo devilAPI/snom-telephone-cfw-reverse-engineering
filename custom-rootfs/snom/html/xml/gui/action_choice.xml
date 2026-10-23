@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<IPPhoneBatch xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../schemas/minibrowser.xsd">
+  <IPPhoneText id="action_choice_transfer" dtmf="off" name="$(lang:choose_an_action)">
+    <If condition="$(show_feature:FEATURE_PUI_STYLE_SIO)">
+      <LocationX>$(math_eval:$(gui_display_xsize)/10+74)</LocationX>
+      <LocationY>90</LocationY>
+    </If>
+    <Text> $(lang:transfer_or) $(lang:call_pickup)</Text>
+    <SoftKeyItem>
+      <Name>F1</Name>
+      <Label>F_TRANSFER</Label>
+      <Url>phone://mb_exit#action_choice_transfer</Url>
+    </SoftKeyItem>
+    <SoftKeyItem>
+      <Name>F2</Name>
+      <Label>F_PICKUP</Label>
+      <Url>phone://mb_exit#action_choice_pickup</Url>
+    </SoftKeyItem>
+  </IPPhoneText>
+</IPPhoneBatch>

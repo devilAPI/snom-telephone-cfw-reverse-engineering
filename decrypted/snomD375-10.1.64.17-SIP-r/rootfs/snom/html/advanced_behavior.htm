@@ -1,0 +1,218 @@
+<?ssi title advanced_ssi_title?>
+<?ssi file common1.htm?>
+  <TR><TD valign="top" height="16"><IMG height="16" src="img/clr.gif" width="16"></TD></TR>
+  <TR>
+    <TD valign="top">
+    <FORM method="post">
+      <?ssi skipon VTECH?>
+      <TABLE class="bubbleTable" cellSpacing="0" cellPadding="0" width="100%" border="0">
+      <?ssi skipoff VTECH?>
+      <?ssi skipon SNOM?>
+      <TABLE cellSpacing="4" cellPadding="0" width="100%" border="0">
+      <?ssi skipoff SNOM?>
+      <?ssi file tab_advanced.htm?>
+        <TR>
+          <TD width="12" height="5"><IMG src="img/clr.gif" width="12" height="12"></TD>
+          <TD width="12" height="5"><IMG src="img/clr.gif" width="12" height="5"></TD>
+          <TD width="12" height="5"><IMG src="img/clr.gif" width="12" height="5"></TD>
+          <TD class="background" width="12" height="5">
+            <?ssi skipon VTECH?>
+            <IMG src=<?ssi img-corner-gif ur?> width="12" height="12">
+            <?ssi skipoff VTECH?>
+          </TD>
+        </TR>
+        <?ssi hidden_tag?>
+        <TR><TD/><TD width="50%"/><TD width="50%"/></TR>
+        <?ssi skipon NOT_IN_ADMIN_MODE?>
+        <TR><TD/>
+          <?ssi skipon VTECH?>
+          <TD width="50%"><B>
+          <?ssi skipoff VTECH?>
+          <?ssi skipon SNOM?>
+          <TD class="titleText" width="50%">
+          <?ssi skipoff SNOM?>
+          <?lng advanced_phonebehavior?></B>
+          </TD>
+          <TD width="50%"></TD>
+        </TR>
+        <TR><TD/></TR>
+        <TR><TD/><?ssi radio advanced_ssi_callcompletion call_completion advanced_ssi_on advanced_ssi_off?></TR>
+        <TR><TD/><?ssi radio advanced_ssi_peer_to_peer_cc peer_to_peer_cc advanced_ssi_on advanced_ssi_off?></TR>
+        <TR><TD/><?ssi radio always_show_active_call always_show_active_call advanced_ssi_on advanced_ssi_off?></TR>
+        <TR><TD/><?ssi radio advanced_ssi_idnasupport support_idna advanced_ssi_on advanced_ssi_off?></TR>
+        <TR><TD/><?ssi radio advanced_ssi_overlap_dialing overlap_dialing advanced_ssi_on advanced_ssi_off?></TR>
+        <TR><TD/><TD><?lng advanced_ssi_blockurldialing?></TD><TD>
+          <select name="block_url_dialing" ID="SelectBlock" <?ssi disabled block_url_dialing?>size="1" <?ssi tabindex?>>
+          <option value="on"<?ssi selected block_url_dialing on?>><?lng advanced_ssi_on?></option>
+          <option value="off"<?ssi selected block_url_dialing off?>><?lng advanced_ssi_off?></option>
+          <option value="pui"<?ssi selected block_url_dialing pui?>><?lng phoneui_short?></option>
+          </select><?ssi help block_url_dialing?>
+        </TD></TR>
+        <TR><TD/><?ssi radio advanced_ssi_challengeresponse challenge_response advanced_ssi_on advanced_ssi_off?></TR>
+        <TR><TD/><TD><?lng advanced_ssi_typeanswering?></TD><TD>
+          <select size="1" <?ssi disabled intercom_connect_type?>name="intercom_connect_type" <?ssi tabindex?>>
+          <option value="intercom_connect_type_handsfree"<?ssi selected intercom_connect_type intercom_connect_type_handsfree?>><?lng advanced_ssi_tahandsfree?></option>
+          <option value="intercom_connect_type_handset"<?ssi selected intercom_connect_type intercom_connect_type_handset?>><?lng advanced_ssi_tahandset?></option>
+          <option value="intercom_connect_type_headset"<?ssi selected intercom_connect_type intercom_connect_type_headset?>><?lng advanced_ssi_taheadset?></option>
+          <option value="intercom_connect_type_active_device"<?ssi selected intercom_connect_type intercom_connect_type_active_device?>><?lng advanced_ssi_taactivedevice?></option>
+          </select><?ssi help intercom_connect_type?></TD></TR>
+        </TD></TR>
+        <TR><TD/><TD><?lng advanced_answer_after_policy?></TD><TD>
+          <select name="answer_after_policy" ID="Select2" <?ssi disabled answer_after_policy?>size="1" <?ssi tabindex?>>
+          <option value="off"<?ssi selected answer_after_policy off?>><?lng advanced_off?></option>
+          <option value="idle"<?ssi selected answer_after_policy idle?>><?lng advanced_answer_after_idle?></option>
+          <option value="not_busy"<?ssi selected answer_after_policy not_busy?>>not busy</option>
+          <option value="always"<?ssi selected answer_after_policy always?>><?lng advanced_answer_after_always?></option>
+          </select><?ssi help answer_after_policy?>
+        </TD></TR>
+        <TR><TD/><TD><?lng advanced_ssi_call_join_xfer?></TD><TD>
+          <select size="1" <?ssi disabled call_join_xfer?>name="call_join_xfer" <?ssi tabindex?>>
+          <option value="off"<?ssi selected call_join_xfer off?>><?lng advanced_ssi_off?></option>
+          <option value="on"<?ssi selected call_join_xfer on?>><?lng advanced_ssi_call_join_1_held?></option>
+          <option value="always"<?ssi selected call_join_xfer always?>><?lng advanced_ssi_call_join_always?></option>
+          </select><?ssi help call_join_xfer?>
+        <TR><TD/><?ssi radio advanced_ssi_xfer_dest_order_lifo xfer_dest_order_lifo advanced_ssi_on advanced_ssi_off?></TR>
+        <TR><TD/><TD><?ssi input ringing_time ringing_time?></TD></TR>
+        <TR><TD/><TD><?lng advanced_aoc_amount_display?></TD><TD>
+          <select name="aoc_amount_display" ID="Select1" <?ssi disabled aoc_amount_display?>size="1" <?ssi tabindex?>>
+          <option value="off"<?ssi selected aoc_amount_display off?>><?lng advanced_off?></option>
+          <option value="charged"<?ssi selected aoc_amount_display charged?>><?lng advanced_aoc_amount_charged?></option>
+          <option value="balance"<?ssi selected aoc_amount_display balance?>><?lng advanced_aoc_amount_balance?></option>
+          </select><?ssi help aoc_amount_display?>
+        </TD></TR>
+        <TR><TD/><TD><?ssi input advanced_ssi_aoc_pulse_currency aoc_pulse_currency?></TD></TR>
+        <TR><TD/><TD><?ssi input advanced_ssi_aoc_cost_pulse aoc_cost_pulse?></TD></TR>
+        <TR><TD/><?ssi radio advanced_ssi_redirect_ringing redirect_ringing advanced_ssi_on advanced_ssi_off?></TR>
+        <TR><TD/><?ssi radio advanced_ssi_auto_redial auto_redial advanced_ssi_on advanced_ssi_off?></TR>
+        <TR><TD/><TD><?ssi input advanced_ssi_auto_redial_value auto_redial_value?></TD></TR>
+        <TR><TD/><TD><?ssi input advanced_ssi_max_boot_delay max_boot_delay?></TD></TR>
+        <TR><TD/><?ssi radio advanced_ssi_mailbox_active mailbox_active advanced_ssi_on advanced_ssi_off?></TR>
+        <TR><TD/><?ssi radio watchdog watchdog advanced_ssi_on advanced_ssi_off?></TR>
+        <TR><TD/><?ssi radio prio_asserted prioritise_asserted advanced_ssi_on advanced_ssi_off?></TR>
+        <TR><TD></TD><TD><?ssi input advanced_contact_src_prio contact_source_priority?></td></TR>
+        <TR><TD/><?ssi radio advanced_goto_monitor_state_on_line_activity goto_monitor_state_on_line_activity advanced_ssi_on advanced_ssi_off?></TR>
+        <TR><TD/><?ssi radio suppress_sip_messages suppress_sip_messages advanced_ssi_on advanced_ssi_off?></TR>
+        <TR><TD/><?ssi radio advanced_ssi_show_desktop_msg_in_call_screens show_desktop_msg_in_call_screens advanced_ssi_on advanced_ssi_off?></TR>
+        <TR><TD></TD><TD><?ssi input prefs_auto_dial_timeout auto_dial?></td></TR>
+        <TR><TD></TD><TD><?ssi input prefs_auto_dial_target auto_dial_target?></td></TR>
+        <TR><TD/><TD>&nbsp;</TD></TR>
+        <TR><TD/>
+          <?ssi skipon VTECH?>
+          <TD><B>
+          <?ssi skipoff VTECH?>
+          <?ssi skipon SNOM?>
+          <TD class="titleText">
+          <?ssi skipoff SNOM?>
+          <?lng advanced_keys?></B>
+          </TD>
+        </TR>
+        <TR><TD/><?ssi radio advanced_ssi_transferonhook transfer_on_hangup advanced_ssi_on advanced_ssi_off?></TR>
+        <TR><TD/><?ssi radio disconnect_on_onhook disconnect_on_onhook advanced_ssi_on advanced_ssi_off?></TR>
+        <TR><TD/><?ssi radio advanced_ssi_offhook_dial_prompt offhook_dial_prompt advanced_ssi_on advanced_ssi_off?></TR>
+        <TR><TD/><?ssi radio advanced_ssi_idle_offhook idle_offhook advanced_ssi_on advanced_ssi_off?></TR>
+        <TR><TD/><?ssi radio offhook_accept_calls offhook_accept_calls advanced_ssi_on advanced_ssi_off?></TR>
+        <TR><TD/><?ssi radio advanced_ssi_transferonhooknonpots transfer_on_hangup_non_pots advanced_ssi_on advanced_ssi_off?></TR>
+        <TR><TD/><?ssi radio advanced_ssi_transferonhookstarcode transfer_on_hangup_with_starcode advanced_ssi_on advanced_ssi_off?></TR>
+        <TR><TD/><TD><?lng advanced_ssi_type_quick_xfer_spd_dial_and_ext?></TD><TD>
+          <select name="quick_transfer" ID="Select3" size="1" <?ssi tabindex?>>
+          <option value="new_call"<?ssi selected quick_transfer new_call?>><?lng advanced_ssi_new_call?></option>
+          <option value="blind"<?ssi selected quick_transfer blind?>><?lng advanced_ssi_blind_transfer?></option>
+          <option value="attended"<?ssi selected quick_transfer attended?>><?lng advanced_ssi_attended_transfer?></option>
+          </select><?ssi help quick_transfer?>
+        </TD></TR>
+        <TR><TD/><TD><?lng transfer_dialing_on_transfer?></TD><TD>
+          <select name="transfer_dialing_on_transfer" ID="Select4" size="1" <?ssi tabindex?>>
+          <option value="blind"<?ssi selected transfer_dialing_on_transfer blind?>><?lng advanced_ssi_blind_transfer?></option>
+          <option value="attended"<?ssi selected transfer_dialing_on_transfer attended?>><?lng advanced_ssi_attended_transfer?></option>
+          </select><?ssi help transfer_dialing_on_transfer?>
+        </TD></TR>
+        <TR><TD/><TD><?lng transfer_dialing_on_other?></TD><TD>
+          <select name="transfer_dialing_on_other" ID="Select5" size="1" <?ssi tabindex?>>
+          <option value="blind"<?ssi selected transfer_dialing_on_other blind?>><?lng advanced_ssi_blind_transfer?></option>
+          <option value="attended"<?ssi selected transfer_dialing_on_other attended?>><?lng advanced_ssi_attended_transfer?></option>
+          </select><?ssi help transfer_dialing_on_other?>
+        </TD></TR>
+        <TR><TD/><?ssi radio advanced_ssi_blockdnd no_dnd advanced_ssi_on advanced_ssi_off?></TR>
+        <TR><TD/><?ssi radio mute_is_dnd_in_idle mute_is_dnd_in_idle advanced_ssi_on advanced_ssi_off?></TR>
+        <TR><TD/><?ssi radio advanced_ssi_speaker_dialer speaker_dialer advanced_ssi_on advanced_ssi_off?></TR>
+        <TR><TD/><?ssi radio advanced_ssi_speaker_receive_call speaker_receive_call advanced_ssi_on advanced_ssi_off?></TR>
+        <TR><TD/><?ssi radio advanced_ssi_cancel_on_hold cancel_on_hold advanced_ssi_on advanced_ssi_off?></TR>
+        <TR><TD/><?ssi radio cancel_conference cancel_conference advanced_ssi_on advanced_ssi_off?></TR>
+        <TR><TD/><?ssi radio short_cancel_denies_call short_cancel_denies_call advanced_ssi_on advanced_ssi_off?></TR>
+        <TR><TD/><?ssi radio long_cancel_is_blocking_caller long_cancel_is_blocking_caller advanced_ssi_on advanced_ssi_off?></TR>
+        <TR><TD></TD><TD><?ssi input keyboard_lock_accepted_keys keyboard_lock_accepted_keys?></TD></TR>
+        <TR><TD></TD><TD><?ssi input emergency_accepted_callkeys emergency_accepted_callkeys?></TD></TR>
+        <TR><TD/><TD>&nbsp;</TD></TR>
+        <TR><TD/>
+          <?ssi skipon VTECH?>
+          <TD><B>
+          <?ssi skipoff VTECH?>
+          <?ssi skipon SNOM?>
+          <TD class="titleText">
+          <?ssi skipoff SNOM?>
+          <?lng advanced_logon_logoff?></B>
+          </TD>
+        </TR>
+        <TR><TD/><TD><?lng advanced_ssi_logonwizard?></TD><TD width="150">
+          <select <?ssi disabled logon_wizard?> name="logon_wizard" size="1" <?ssi tabindex?>>
+          <option value="on"<?ssi selected logon_wizard on?>><?lng advanced_on?></option>
+          <option value="off"<?ssi selected logon_wizard off?>><?lng advanced_off?></option>
+          <option value="skip welcome"<?ssi selected logon_wizard "skip welcome"?>><?lng skip_welcome?></option>
+          </select><?ssi help logon_wizard?>
+        </TD></TR>
+        <TR><TD/><TD><?ssi input advanced_ssi_auto_logoff_time auto_logoff_time?></TD></TR>
+        <TR><TD/><TD>&nbsp;</TD></TR>
+        <TR><TD/>
+          <?ssi skipon VTECH?>
+          <TD><B>
+          <?ssi skipoff VTECH?>
+          <?ssi skipon SNOM?>
+          <TD class="titleText">
+          <?ssi skipoff SNOM?>
+          <?lng advanced_preselection?></B>
+          </TD>
+        </TR>
+        <TR><TD/><TD><?ssi input advanced_ssi_prefix preselection_nr?></TD></TR>
+        <?ssi skipoff NOT_IN_ADMIN_MODE?>
+        <?ssi skipon IN_ADMIN_MODE?>
+        <TR><TD/>
+          <?ssi skipon VTECH?>
+          <TD><B>
+          <?ssi skipoff VTECH?>
+          <?ssi skipon SNOM?>
+          <TD class="titleText">
+          <?ssi skipoff SNOM?>
+          <?ssi inpass advanced_ssi_adminlogin admin_mode_login?></B>
+          </TD>
+        </TR>
+        <?ssi skipoff IN_ADMIN_MODE?>
+        <TR><TD/><TD>&nbsp;</TD></TR>
+        <TR>
+          <TD/>
+          <TD>
+            <input type="hidden" value="<?lng apply_button?>" name="Settings">
+            <!--Hidden input is used to allow onchange event to apply settings automatically-->
+            <input type="submit" value="<?lng apply_button?>" name="Settings" <?ssi tabindex?> >
+          </TD>
+        </TR>
+        <TR>
+          <TD class="background" valign="bottom" align="left" width="12" height="5">
+            <?ssi skipon VTECH?>
+            <IMG src=<?ssi img-corner-gif ll?> width="12" height="12">
+            <?ssi skipoff VTECH?>
+          </TD>
+          <TD width="12" height="5"><IMG src="img/clr.gif" width="12" height="5"></TD>
+          <TD width="12" height="5"><IMG src="img/clr.gif" width="12" height="5"></TD>
+          <TD class="background" valign="bottom" align="right" width="12" height="5">
+            <?ssi skipon VTECH?>
+            <IMG src=<?ssi img-corner-gif lr?> width="12" height="12">
+            <?ssi skipoff VTECH?>
+          </TD>
+        </TR>
+        </TABLE>
+        </FORM>
+        </TD>
+      </TR>
+      <script type="text/javascript" src="fox.js" charset="utf-8"></script>
+<?ssi file common9.htm?>
+</HTML>

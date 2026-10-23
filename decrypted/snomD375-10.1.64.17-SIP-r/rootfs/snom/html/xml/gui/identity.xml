@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<IPPhoneMenu state="others_except_mb" dtmf="off" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../schemas/minibrowser.xsd" document_id="identity">
+  <Title>$(lang:identity_settings)</Title>
+  <Menu name="$(lang:sel100_activeline)" id="active_line">
+    <If condition="$(show_feature:FEATURE_PUI_STYLE_SIO)">
+      <If condition="$(var_ifc:Hoteling::guest_logged_in.$(current_line))">
+        <SubText>$(var_ifc:Hoteling::guest_address.$(current_line))</SubText>
+      </If>
+      <Else>
+        <SubText>$(set:user_name[$(current_line)])</SubText>
+      </Else>
+    </If>
+    <Title>$(lang:sel100_activeline)</Title>
+    <Repeat values="$(enum:$(max_registrations))" token="|__REG__|">
+      <If condition="$(bool_eval:$(set:user_active[__REG__]) &amp; $(is_set:$(set:user_name[__REG__])) &amp; $(is_set:$(set:user_host[__REG__])) &amp; $(identity_currently_registered:__REG__) &amp; $(bool_eval:$(set:admin_mode) | !$(set:hide_identity[__REG__])))">
+        <MenuItem name="$(user_displayname:__REG__)" sel="$(condition:$(set:outgoing_identity)==__REG__)">
+          <Url track="no">file:///xml/gui/identity.xml#set:active_line=$(math_eval:__REG__)&amp;set:outgoing_identity=$(math_eval:__REG__)&amp;go_back</Url>
+          <If condition="$(bool_eval:$(bool_eval:$(show_feature:FEATURE_PUI_STYLE_SIO) | $(show_feature:BW_BDF_DISP)) &amp; $(condition:$(set:outgoing_identity)==__REG__))">
+            <ExtraIconType>$(icon_type_enum:kIconTypeMenuOutgoingIdentity)</ExtraIconType>
+          </If>
+        </MenuItem>
+      </If>
+    </Repeat>
+  </Menu>
+  <Menu name="$(lang:sel100_reregister_line)" id="reregister">
+    <Title>$(lang:sel100_reregister_line)</Title>
+    <MenuItem name="$(lang:all_accounts)">
+      <Url track="no">file:///xml/gui/identity.xml#reregister=-1&amp;go_back</Url>
+      <ExtraIconType>$(icon_type_enum:kIconTypeMenuReload)</ExtraIconType>
+    </MenuItem>
+    <Repeat values="$(enum:$(max_registrations))" token="|__REG__|">
+      <If condition="$(bool_eval:$(set:user_active[__REG__]) &amp; $(is_set:$(set:user_name[__REG__])) &amp; $(is_set:$(set:user_host[__REG__])) &amp; $(bool_eval:$(set:admin_mode) | !$(set:hide_identity[__REG__])))">
+        <MenuItem name="$(user_displayname:__REG__)">
+          <Url track="no">file:///xml/gui/identity.xml#reregister=$(math_eval:__REG__-1)&amp;go_back</Url>
+          <If condition="$(bool_eval:$(identity_currently_registered:__REG__))">
+            <ExtraIconType>$(icon_type_enum:kIconTypeMenuReload)</ExtraIconType>
+            <ExtraIconType2>$(icon_type_enum:kIconTypeMenuSuccess)</ExtraIconType2>
+          </If>
+          <Else>
+            <ExtraIconType>$(icon_type_enum:kIconTypeMenuReload)</ExtraIconType>
+            <ExtraIconType2>$(icon_type_enum:kIconTypeMenuFailed)</ExtraIconType2>
+          </Else>
+        </MenuItem>
+      </If>
+    </Repeat>
+  </Menu>
+  <If condition="$(set:admin_mode)">
+    <Menu name="$(lang:sel100_edit_line)" id="edit_line">
+      <Menu name="$(lang:hotdesking)">
+        <Repeat values="$(enum:$(max_registrations))" token="|__REG__|">
+          <If condition="$(bool_eval:$(is_set:$(user_displayname:__REG__)) &amp; $(bool_eval:$(set:admin_mode) | !$(set:hide_identity[__REG__])))">
+            <MenuItem name="$(user_displayname:__REG__)" id="hotdesk__REG__">
+              <ExtraIconType>$(icon_type_enum:kIconTypeMenuArrowRight)</ExtraIconType>
+              <If condition="$(is_set:$(set:user_host[__REG__]))">
+                <Url>file:///xml/gui/templates.xml#sub=*[@id="input_template"]&amp;var:input_pool_key=0&amp;var:input_displayname=$(lang:user_name)&amp;var:input_token=__Z__&amp;var:input_flags=an&amp;var:input_default=$(set:user_name[__REG__])&amp;var:input_mask=&amp;var:input_url=$(urlencode:"file:///xml/gui/templates.xml#sub=*[@id="input_template"]&amp;var:input_pool_key=0&amp;var:input_displayname=$(lang:user_host)&amp;var:input_token=__Y__&amp;var:input_flags=an&amp;var:input_default=$(set:user_host[__REG__])&amp;var:input_mask=&amp;var:input_url=$(urlencode:"phone://mb_nop%23go_back%26set:user_host[__REG__]=__Y__%26reregister=$(math_eval:__REG__-1)")%26set:user_name[__REG__]=__Z__")</Url>
+              </If>
+              <ElIf condition="$(is_set:$(set:sip_proxy))">
+                <Url>file:///xml/gui/templates.xml#sub=*[@id="input_template"]&amp;var:input_pool_key=0&amp;var:input_displayname=$(lang:user_name)&amp;var:input_token=__Z__&amp;var:input_flags=an&amp;var:input_default=$(set:user_name[__REG__])&amp;var:input_mask=&amp;var:input_url=$(urlencode:"file:///xml/gui/templates.xml#sub=*[@id="input_template"]&amp;var:input_pool_key=0&amp;var:input_displayname=$(lang:user_host)&amp;var:input_token=__Y__&amp;var:input_flags=an&amp;var:input_default=$(set:sip_proxy)&amp;var:input_mask=&amp;var:input_url=$(urlencode:"phone://mb_nop%23go_back%26set:user_host[__REG__]=__Y__%26reregister=$(math_eval:__REG__-1)")%26set:user_name[__REG__]=__Z__")</Url>
+              </ElIf>
+              <Else>
+                <Url>file:///xml/gui/templates.xml#sub=*[@id="input_template"]&amp;var:input_pool_key=0&amp;var:input_displayname=$(lang:user_name)&amp;var:input_token=__Z__&amp;var:input_flags=an&amp;var:input_default=$(set:user_name[__REG__])&amp;var:input_mask=&amp;var:input_url=$(urlencode:"file:///xml/gui/templates.xml#sub=*[@id="input_template"]&amp;var:input_pool_key=0&amp;var:input_displayname=$(lang:user_host)&amp;var:input_token=__Y__&amp;var:input_flags=an&amp;var:input_default=$(set:dns_domain)&amp;var:input_mask=&amp;var:input_url=$(urlencode:"phone://mb_nop%23go_back%26set:user_host[__REG__]=__Y__%26reregister=$(math_eval:__REG__-1)")%26set:user_name[__REG__]=__Z__")</Url>
+              </Else>
+              <If condition="$(bool_eval:$(show_feature:FEATURE_PUI_STYLE_SIO) &amp; $(is_set:$(set:user_realname[__REG__])))">
+                <SubText>$(set:user_name[__REG__])@$(set:user_host[__REG__])</SubText>
+              </If>
+            </MenuItem>
+          </If>
+          <ElIf condition="$(bool_eval:$(set:admin_mode) | !$(set:hide_identity[__REG__]))">
+            <MenuItem name="$(lang:identity_settings) __REG__" id="hotdesk__REG__">
+              <ExtraIconType>$(icon_type_enum:kIconTypeMenuArrowRight)</ExtraIconType>
+              <If condition="$(is_set:$(set:user_host[__REG__]))">
+                <Url>file:///xml/gui/templates.xml#sub=*[@id="input_template"]&amp;var:input_pool_key=0&amp;var:input_displayname=$(lang:user_name)&amp;var:input_token=__Z__&amp;var:input_flags=an&amp;var:input_default=$(set:user_name[__REG__])&amp;var:input_mask=&amp;var:input_url=$(urlencode:"file:///xml/gui/templates.xml#sub=*[@id="input_template"]&amp;var:input_pool_key=0&amp;var:input_displayname=$(lang:user_host)&amp;var:input_token=__Y__&amp;var:input_flags=an&amp;var:input_default=$(set:user_host[__REG__])&amp;var:input_mask=&amp;var:input_url=$(urlencode:"phone://mb_nop%23go_back%26set:user_host[__REG__]=__Y__%26reregister=$(math_eval:__REG__-1)")%26set:user_name[__REG__]=__Z__")</Url>
+              </If>
+              <ElIf condition="$(is_set:$(set:sip_proxy))">
+                <Url>file:///xml/gui/templates.xml#sub=*[@id="input_template"]&amp;var:input_pool_key=0&amp;var:input_displayname=$(lang:user_name)&amp;var:input_token=__Z__&amp;var:input_flags=an&amp;var:input_default=$(set:user_name[__REG__])&amp;var:input_mask=&amp;var:input_url=$(urlencode:"file:///xml/gui/templates.xml#sub=*[@id="input_template"]&amp;var:input_pool_key=0&amp;var:input_displayname=$(lang:user_host)&amp;var:input_token=__Y__&amp;var:input_flags=an&amp;var:input_default=$(set:sip_proxy)&amp;var:input_mask=&amp;var:input_url=$(urlencode:"phone://mb_nop%23go_back%26set:user_host[__REG__]=__Y__%26reregister=$(math_eval:__REG__-1)")%26set:user_name[__REG__]=__Z__")</Url>
+              </ElIf>
+              <Else>
+                <Url>file:///xml/gui/templates.xml#sub=*[@id="input_template"]&amp;var:input_pool_key=0&amp;var:input_displayname=$(lang:user_name)&amp;var:input_token=__Z__&amp;var:input_flags=an&amp;var:input_default=$(set:user_name[__REG__])&amp;var:input_mask=&amp;var:input_url=$(urlencode:"file:///xml/gui/templates.xml#sub=*[@id="input_template"]&amp;var:input_pool_key=0&amp;var:input_displayname=$(lang:user_host)&amp;var:input_token=__Y__&amp;var:input_flags=an&amp;var:input_default=$(set:dns_domain)&amp;var:input_mask=&amp;var:input_url=$(urlencode:"phone://mb_nop%23go_back%26set:user_host[__REG__]=__Y__%26reregister=$(math_eval:__REG__-1)")%26set:user_name[__REG__]=__Z__")</Url>
+              </Else>
+            </MenuItem>
+          </ElIf>
+        </Repeat>
+      </Menu>
+      <Menu name="$(lang:sel100_edit_line)" state="relevant" dtmf="off" id="identities">
+        <Title>$(lang:sel100_edit_line)</Title>
+        <Repeat values="$(enum:$(max_registrations))" token="|__REG__|">
+          <If condition="$(bool_eval:$(is_set:$(user_displayname:__REG__)) &amp; $(bool_eval:$(set:admin_mode) | !$(set:hide_identity[__REG__])))">
+            <MenuItem name="$(user_displayname:__REG__)">
+              <Url>file:///xml/gui/edit_user.xml#sub=*[@id="properties"]&amp;var:identity=__REG__</Url>
+              <If condition="$(bool_eval:$(show_feature:FEATURE_PUI_STYLE_SIO) &amp; $(is_set:$(set:user_realname[__REG__])))">
+                <SubText>$(set:user_name[__REG__])@$(set:user_host[__REG__])</SubText>
+                <ExtraIconType>$(icon_type_enum:kIconTypeMenuArrowRight)</ExtraIconType>
+              </If>
+              <ElIf condition="$(bool_eval:$(show_feature:FEATURE_PUI_STYLE_SIO) | $(show_feature:BW_BDF_DISP))">
+                <ExtraIconType>$(icon_type_enum:kIconTypeMenuArrowRight)</ExtraIconType>
+              </ElIf>
+            </MenuItem>
+          </If>
+          <ElIf condition="$(bool_eval:$(set:admin_mode) | !$(set:hide_identity[__REG__]))">
+            <MenuItem name="$(lang:identity_settings) __REG__">
+              <Url>file:///xml/gui/edit_user.xml#sub=*[@id="properties"]&amp;var:identity=__REG__</Url>
+              <ExtraIconType>$(icon_type_enum:kIconTypeMenuArrowRight)</ExtraIconType>
+            </MenuItem>
+          </ElIf>
+        </Repeat>
+      </Menu>
+    </Menu>
+    <Menu name="$(lang:sel100_logoff_one)" id="logoff_one">
+      <Title>$(lang:sel100_logoff_one)</Title>
+      <MenuItem name="$(lang:sel100_logoff_all)">
+        <If condition="$(arch_series)==snomD3X5">
+          <Url>file:///xml/gui/decision.xml#sub=*[@id="dsc_url"]&amp;var:dsc_title=$(lang:sel100_logoff_all)&amp;var:dsc_text=$(lang:confirm_logoff_all)&amp;var:dsc_yes=1&amp;var:dsc_no=1&amp;var:dsc_yes_url=phone://mb_nop%23unregister%3D-1&amp;var:dsc_no_url=phone://mb_nop%23go_back&amp;var:xml_yes_fkey=F2&amp;var:xml_no_fkey=F1&amp;var:xml_abort_fkey=F3</Url>
+        </If>
+        <Else>
+          <Url>file:///xml/gui/decision.xml#sub=*[@id="dsc_url"]&amp;var:dsc_title=$(lang:sel100_logoff_all)&amp;var:dsc_text=$(lang:confirm_logoff_all)&amp;var:dsc_yes=1&amp;var:dsc_no=1&amp;var:dsc_yes_url=phone://mb_nop%23unregister%3D-1&amp;var:dsc_no_url=phone://mb_nop%23go_back&amp;var:xml_yes_fkey=F1&amp;var:xml_no_fkey=F2&amp;var:xml_abort_fkey=F3</Url>
+        </Else>
+      </MenuItem>
+      <Repeat values="$(enum:$(max_registrations))" token="|__REG__|">
+        <If condition="$(bool_eval:$(set:user_active[__REG__]) &amp; $(is_set:$(set:user_name[__REG__])) &amp; $(is_set:$(set:user_host[__REG__])) &amp; $(bool_eval:$(set:admin_mode) | !$(set:hide_identity[__REG__])))">
+          <MenuItem name="$(user_displayname:__REG__)">
+            <Url track="no">file:///xml/gui/identity.xml#unregister=$(math_eval:__REG__-1)&amp;go_back</Url>
+          </MenuItem>
+        </If>
+      </Repeat>
+    </Menu>
+  </If>
+  <If condition="!$(show_feature:FEATURE_PUI_STYLE_SIO)">
+    <If condition="$(set:xsi_anywhere[$(current_line)])==on">
+      <MenuItem name="$(lang:xsi_anywhere)">
+        <Url>file:///xml/gui/locations.xml#action_ifc:identity.$(set:active_line).locations=retrieve_locations</Url>
+      </MenuItem>
+    </If>
+  </If>
+  <If condition="$(phone_state)!=Settings">
+    <SoftKeyItem>
+      <Name>CANCEL</Name>
+      <Url track="no">phone://mb_nop#go_back</Url>
+    </SoftKeyItem>
+  </If>
+</IPPhoneMenu>

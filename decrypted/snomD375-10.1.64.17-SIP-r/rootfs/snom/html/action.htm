@@ -1,0 +1,112 @@
+<?ssi title action_ssi_title?>
+<?ssi file common1.htm?>
+<TR><TD vAlign="top" height="16"><IMG height="16" src="img/clr.gif" width="16"></TD></TR>
+<TR><TD>
+<?ssi skipon VTECH?>
+<TABLE cellSpacing="0" cellPadding="0" width="100%" border="0">
+<?ssi skipoff VTECH?>
+<?ssi skipon SNOM?>
+<TABLE cellSpacing="4" cellPadding="0" width="100%" border="0">
+<?ssi skipoff SNOM?>
+<TBODY>
+<TR><TD><SPAN class=pageInfoText><?lng action_info?>
+  <?ssi skipon NO_WUI_HELP_LINKS?>
+  <a href="https://service.snom.com/display/wiki/HowTo+-+Action+URL"><div class="help"></div></a><br><br>
+  <?ssi skipoff NO_WUI_HELP_LINKS?>
+</SPAN></TD></TR></TBODY></TABLE></TD></TR>
+<TR><TD vAlign=top height=5><IMG height=5 src="img/clr.gif" width=12></TD></TR>
+<TR>
+  <TD vAlign="top">
+    <FORM method="post">
+      <?ssi skipon VTECH?>
+      <TABLE class="bubbleTable" cellSpacing="0" cellPadding="0" width="100%" border="0">
+      <?ssi skipoff VTECH?>
+      <?ssi skipon SNOM?>
+      <TABLE cellSpacing="4" cellPadding="0" width="100%" border="0">
+      <?ssi skipoff SNOM?>
+      <TBODY>
+        <TR>
+          <TD class="background" width="12" height="5">
+            <?ssi skipon VTECH?>
+            <IMG height="12" src=<?ssi img-corner-gif ul?> width="12">
+            <?ssi skipoff VTECH?>
+          </TD>
+          <TD></TD>
+          <TD></TD>
+          <TD class="background" width="12" height="5">
+            <?ssi skipon VTECH?>
+            <IMG height="12" src=<?ssi img-corner-gif ur?> width="12">
+            <?ssi skipoff VTECH?>
+          </TD>
+        </TR>
+        <?ssi hidden_tag?>
+        <TR><TD></TD>
+          <?ssi skipon VTECH?>
+          <TD><B>
+          <?ssi skipoff VTECH?>
+          <?ssi skipon SNOM?>
+          <TD class="titleText">
+          <?ssi skipoff SNOM?>
+          <?lng action_settings?></B>
+          </TD>
+        </TR>
+        <TR><TD></TD><TD><?ssi input action_ssi_dnd_on action_dnd_on_url?></TD></TR>
+        <TR><TD></TD><TD><?ssi input action_ssi_dnd_off action_dnd_off_url?></TD></TR>
+        <TR><TD></TD><TD><?ssi input action_ssi_redirection_on action_redirection_on_url?></TD></TR>
+        <TR><TD></TD><TD><?ssi input action_ssi_redirection_off action_redirection_off_url?></TD></TR>
+        <TR><TD></TD><TD><?ssi input action_ssi_incoming action_incoming_url?></TD></TR>
+        <TR><TD></TD><TD><?ssi input action_ssi_outgoing action_outgoing_url?></TD></TR>
+        <TR><TD></TD><TD><?ssi input action_ssi_setup action_setup_url?></TD></TR>
+        <TR><TD></TD><TD><?ssi input action_ssi_offhook action_offhook_url?></TD></TR>
+        <TR><TD></TD><TD><?ssi input action_ssi_onhook action_onhook_url?></TD></TR>
+        <TR><TD></TD><TD><?ssi input action_ssi_missed action_missed_url?></TD></TR>
+        <TR><TD></TD><TD><?ssi input action_ssi_reg_failed action_reg_failed?></TD></TR>
+        <TR><TD></TD><TD><?ssi input action_ssi_connected action_connected_url?></TD></TR>
+        <TR><TD></TD><TD><?ssi input action_ssi_disconnected action_disconnected_url?></TD></TR>
+        <TR><TD></TD><TD><?ssi input action_ssi_log_on action_log_on_url?></TD></TR>
+        <TR><TD></TD><TD><?ssi input action_ssi_log_off action_log_off_url?></TD></TR>
+        <TR><TD></TD><TD><?ssi input action_ssi_hold action_hold?></TD></TR>
+        <TR><TD></TD><TD><?ssi input action_ssi_unhold action_unhold?></TD></TR>
+        <TR><TD></TD><TD><?ssi input action_ssi_transfer action_transfer?></TD></TR>
+        <TR><TD></TD><TD><?ssi input action_ssi_blind_transfer action_blind_transfer?></TD></TR>
+        <TR><TD></TD><TD><?ssi input action_ssi_attended_transfer action_attended_transfer?></TD></TR>
+        <TR><TD></TD><TD><?ssi input action_ssi_received_attended_transfer action_received_attended_transfer?></TD></TR>
+        <TR><TD></TD><TD><?ssi input action_ssi_longpress_url action_longpress_url?></TD></TR>
+        <TR><TD></TD><TD><?ssi input action_ssi_blacklist action_blacklist_url?></TD></TR>
+        <TR><TD></TD><TD><?ssi input action_received_subscr_notify_url action_received_subscr_notify_url?></TD></TR>
+        <TR><TD></TD><TD><?ssi input action_firewall_test action_firewall_test?></TD></TR>
+        <TR><TD></TD><TD>&nbsp;</TD></TR>
+        <TR><TD></TD><TD><B><?lng action_ssi_poll_settings?></B></TD></TR>
+        <TR><TD></TD><TD><?ssi input action_ssi_poll action_poll_url?></TD></TR>
+        <TR><TD/><TD><?lng advanced_ssi_prov_polling_mode?></TD><TD>
+          <select name="action_poll_mode" <?ssi disabled action_poll_mode?>size="1" <?ssi tabindex?> class="select5">
+          <option value="rel"<?ssi selected action_poll_mode rel?>><?lng advanced_ssi_prov_polling_mode_rel?></option>
+          <option value="abs"<?ssi selected action_poll_mode abs?>><?lng advanced_ssi_prov_polling_mode_abs?></option>
+          <option value="random"<?ssi selected action_poll_mode random?>><?lng advanced_ssi_prov_polling_mode_random?></option>
+          </select><?ssi help action_poll_mode?>
+        </TD></TR>
+        <TR><TD/><TD><?ssi input advanced_ssi_prov_polling_period action_poll_period?></TD></TR>
+        <TR><TD/><TD><?ssi input advanced_ssi_prov_polling_time action_poll_time?></TD></TR>
+        <TR><TD/><TD><?ssi input advanced_ssi_prov_polling_time_random_end action_poll_time_rand_end?></TD></TR>
+        <TR><TD></TD><TD>&nbsp;</TD></TR>
+        <TD></TD><TD></TD>
+        <TR><TD></TD><TD><input type="submit" value="<?lng apply_button?>" name="Settings" <?ssi tabindex?>>
+        <TR>
+          <TD class="background" vAlign="bottom" align="left" width="12" height="5">
+            <?ssi skipon VTECH?>
+            <IMG height="12" src=<?ssi img-corner-gif ll?> width="12">
+            <?ssi skipoff VTECH?>
+          </TD>
+          <TD></TD>
+          <TD></TD>
+          <TD class="background" vAlign="bottom" align="right" width="12" height="5">
+            <?ssi skipon VTECH?>
+            <IMG height="12" src=<?ssi img-corner-gif lr?> width="12">
+            <?ssi skipoff VTECH?>
+          </TD>
+        </TR>
+      </TBODY></TABLE>
+    </FORM>
+  </TD>
+</TR>
+<?ssi file common9.htm?></HTML>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<IPPhoneBatch xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../schemas/minibrowser.xsd">
+  <IPPhoneMenu id="starter" document_id="anywhere_starter">
+    <Fetch mil="1">file:///xml/gui/locations.xml#action_ifc:identity.$(set:active_line).locations=retrieve_locations</Fetch>
+  </IPPhoneMenu>
+</IPPhoneBatch>
