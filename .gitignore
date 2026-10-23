@@ -1,0 +1,17 @@
+# Large firmware binaries
+orig_firm/
+custom-firmware/
+
+# Extracted rootfs (too large, reproducible from firmware)
+decrypted/
+custom-rootfs/
+custom-rootfs.broken/
+
+# VPN server (sensitive keys + config)
+vpn-server/
+
+# Signing keypair (sensitive)
+custom-key/
+
+# GPL source tarball (large, downloadable from snom)
+gpl_src/
