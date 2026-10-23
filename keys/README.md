@@ -10,4 +10,4 @@ To decrypt the D375/D385 `.bin` files here you still need the **D3xx**
 `firmware1.pub`, which lives at `/firmware1.pub` on a D375/D385 device.
 
 Usage once you have the right key:
-    tools/fw-unpack.sh orig_firm/snomD385-10.1.226.16-SIP-r.bin keys/snomD3xx-firmware1.pub out_d385
+    tools/fw-unpack.sh original_firmware/snomD385-10.1.226.16-SIP-r.bin keys/snomD3xx-firmware1.pub out_d385

@@ -17,6 +17,37 @@ else
     echo "  Using existing keypair in $KEYDIR/"
 fi
 
+echo "=== Step 1b: Embed our public key as the rootfs /firmware1.pub ==="
+# The phone verifies the NEXT update with the /firmware1.pub of the image it is
+# running. If the image we build carried any other key, we could never flash a
+# follow-up image signed with $KEYDIR. Write in place (cat >) so fakeroot keeps
+# the recorded ownership of the existing inode.
+[ -d "$ROOTFS" ] || { echo "FAIL: $ROOTFS/ missing (see docs/recover-from-device.md)"; exit 1; }
+if ! cmp -s "$KEYDIR/firmware.pub" "$ROOTFS/firmware1.pub"; then
+    cat "$KEYDIR/firmware.pub" > "$ROOTFS/firmware1.pub"
+    echo "  updated $ROOTFS/firmware1.pub"
+fi
+if [ -f "$ROOTFS/etc/checksum.md5" ]; then
+    NEWHASH=$(md5sum "$ROOTFS/firmware1.pub" | cut -d' ' -f1)
+    awk -v h="$NEWHASH" '{ if ($2=="firmware1.pub") print h"  firmware1.pub"; else print }' \
+        "$ROOTFS/etc/checksum.md5" > "$KEYDIR/checksum.md5.tmp"
+    cat "$KEYDIR/checksum.md5.tmp" > "$ROOTFS/etc/checksum.md5"
+    rm -f "$KEYDIR/checksum.md5.tmp"
+    echo "  /etc/checksum.md5 firmware1.pub entry: $NEWHASH"
+fi
+
+echo "=== Step 1c: Sanity checks ==="
+# Without this flag the phone unpacks the image into /snom instead of / (rcS doSoftwareUpdate).
+[ -f "$ROOTFS/update/systemUpdate" ] || {
+    echo "FAIL: $ROOTFS/update/systemUpdate missing. The phone deletes /update at boot;"
+    echo "      run ./tools/prepare-pulled-rootfs.sh on a pulled rootfs."; exit 1; }
+# rcS md5Check (factory filesystem-test mode) halts on any mismatch.
+if [ -f "$ROOTFS/etc/checksum.md5" ]; then
+    (cd "$ROOTFS" && md5sum -c --quiet etc/checksum.md5) \
+        || { echo "FAIL: etc/checksum.md5 mismatch"; exit 1; }
+    echo "  checksum.md5 OK"
+fi
+
 echo "=== Step 2: Create rootfs tarball ==="
 tmp=$(mktemp -d); trap 'rm -rf "$tmp"' EXIT
 
@@ -33,6 +64,15 @@ else
     echo "  (warning: no fakeroot — dev nodes and ownership may not be exact)"
 fi
 echo "  rootfs.tar.gz: $(stat -c%s "$tmp/rootfs.tar.gz") bytes"
+# The phone extracts with `tar ... update/` to decide system vs application
+# update. A "./" or "/" prefix makes that filter miss, and the image would be
+# unpacked into /snom (application update), breaking the phone.
+tar -tzf "$tmp/rootfs.tar.gz" > "$tmp/names"
+if grep -qE '^(\./|/)' "$tmp/names"; then
+    echo "FAIL: tarball paths start with ./ or /"; exit 1; fi
+grep -qx 'update/systemUpdate' "$tmp/names" \
+    || { echo "FAIL: update/systemUpdate not in tarball (would be an application update)"; exit 1; }
+echo "  paths OK (no ./ prefix), update/systemUpdate present -> system update"
 
 echo "=== Step 3: Encrypt (AES-128-CBC, MD5 KDF, salted) ==="
 # Random passphrase — no trailing newline
@@ -75,7 +115,8 @@ echo "========================================="
 echo " DONE. Custom firmware: $OUT"
 echo ""
 echo " Before flashing, install the custom public key on the phone:"
-echo "   scp $KEYDIR/firmware.pub root@<phone-ip>:/tmp/firmware1.pub.new"
+echo " (skip if the phone already runs an image built with this key)"
+echo "   ssh root@<phone-ip> 'cat > /tmp/firmware1.pub.new' < $KEYDIR/firmware.pub"
 echo "   ssh root@<phone-ip>"
 echo "   mount -o remount,rw /"
 echo "   cp /tmp/firmware1.pub.new /firmware1.pub"
