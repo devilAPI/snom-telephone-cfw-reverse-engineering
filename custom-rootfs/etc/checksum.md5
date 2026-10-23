@@ -15,7 +15,7 @@ fed7289b8c469066e8f8ff5591e32253  etc/udev/udev.conf
 f444c259e53fc3ac483efa3b226ce37f  etc/hostapd_event.sh
 f436d2e0ed02b7b73bd10c6693e95ac3  etc/services
 827d0a5a9cc8114eca0dd93f43d41fce  etc/group
-79225b2f2cdadebabbd290a9b843a0e8  etc/shadow
+60266f58b54666d6a48c069501f42aa4  etc/shadow
 cefc20c4b07d612a873c2223c0b6225d  etc/inittab
 3a31ba08d355e776743be403c7bca052  etc/profile
 81b5a8ee7bc59f274838dbf7dabe0403  etc/ssh/sshd_config

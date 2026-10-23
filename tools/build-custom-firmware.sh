@@ -5,7 +5,8 @@ set -euo pipefail
 
 ROOTFS="custom-rootfs"
 KEYDIR="custom-key"
-OUT="custom-firmware/snomD375-custom-SIP-r.bin"
+# Same basename as the stock image so the phone's update URL looks normal.
+OUT="custom-firmware/snomD375-10.1.64.17-SIP-r.bin"
 
 echo "=== Step 1: Generate signing keypair (if not already done) ==="
 mkdir -p "$KEYDIR"
