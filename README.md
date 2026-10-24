@@ -8,6 +8,12 @@ starting with a root SSH shell that comes up on every boot.
 > backup ([docs/recover-from-device.md](docs/recover-from-device.md)) before
 > flashing anything.
 
+# CFW Features
+### This is not production ready at all, not secure.
+- persistent SSH Access (default root pw is snom375)
+- CFW Web UI (currently NO PASSWORD)
+- DOOM (no sound)
+
 ## How it works
 
 The phone accepts a firmware image if it is signed with the private half of
