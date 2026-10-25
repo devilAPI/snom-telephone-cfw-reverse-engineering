@@ -163,14 +163,23 @@ only reachable through the **`pxcon` console on the serial UART** (media_daemon
 `fd4 = /dev/ttyAMA0`; it listens on **no** TCP port) or through the EPT ioctl ABI
 in a lib we haven't pulled (`/dev/ept0`). Next avenues to try:
 
+- **`amxr` reroute — TRIED, did not help.** Disconnected both
+  `ept.bind1 → halaudio.apm1` and `halaudio.apm1 → ept.bind1` (both ioctls
+  returned 0). A test tone **stayed audible** afterwards — so `halAudioWrite`
+  feeds the apm1 DAC directly, *not* via the EPT amxr path — but broadband audio
+  was **still noise**. Conclusion: the mangling is the EPT/APM hardware DSP
+  still running media_daemon's last hands-free-call config, bound at the codec
+  level, independent of the amxr graph. amxr can't reach it. (ABI recovered:
+  `amxrQueryPortByName` = `_IOR('M',48,36)` `{char name[32]; PORT* out}` — the
+  "port id" is a kernel pointer; `amxrDisconnect` = `_IO('M',54)` `{src,dst}`;
+  `amxrConnect` = `_IOWR('M',53,12)`; client = `open("/dev/amxr")`.)
 - Reproduce a no-AEC / ringer EPT bring-up against `/dev/ept0` (needs the EPT
-  ioctl ABI — RE `libept`/endpoint code or `media_daemon`).
-- `amxr` reroute: disconnect `ept.bind1 → halaudio.apm1` and feed the codec
-  directly (amxr ABI recovered: `amxrDisconnect` = `_IO('M',54)` `{src,dst}`,
-  `amxrQueryPortByName` = `_IOR('M',48,36)` `{char name[32]; int*}`,
-  `amxrConnect` = `_IOWR('M',53,12)`). Uncertain: `halAudioWrite` may feed the
-  DAC only via the EPT return path, in which case disconnecting silences it.
-- Serial-console access to the UART to drive `pxcon` directly.
+  ioctl ABI — RE the endpoint code in `media_daemon`; no separate libept ships).
+  This is the most likely real fix but a substantial RE effort, and the amp
+  route may collapse when a non-owner reconfigures the EPT.
+- **Serial-console access** to the UART to drive `pxcon` directly
+  (`eptSetDevice`, audio-mode, `ecsetreg` to disable AEC/CNG). Cleanest route,
+  but needs a physical UART adapter on the phone's serial header.
 
 Also note: the injected-SPEAKER bring-up (step 2) is **racy** — it sometimes
 fails to bring the amp up (total silence). A manual speaker press is reliable.
