@@ -191,11 +191,26 @@ in a lib we haven't pulled (`/dev/ept0`). Next avenues to try:
   reject commands from a non-owner. Not attempted to completion.
 - Running `media_daemon` as a second `pxcon` instance does **not** work as a
   shortcut: with the real daemon alive a second instance exits immediately
-  (resource conflict); with it dead the instance re-inits its own EPT and loops
-  rather than cleanly accepting piped stdin commands (pxcon I/O is the serial
-  console, not stdin). Config-file override also unavailable — no
-  `/nvdata/voip/phone.cfg` / `/etc/pxcon*.cfg` present; the EC defaults
-  (the `ecsetreg …` tables) are baked into the `media_daemon` binary.
+  (resource conflict); with it dead the instance re-inits its own EPT but does
+  **not** read piped stdin as commands. `TIOCSTI` into `/dev/ttyAMA0` /
+  `/dev/console` (media_daemon's fd4/fd0) injects fine as root but the running
+  app-mode daemon doesn't run the interactive pxcon command reader, so nothing
+  processes it. **Confirmed: pxcon command I/O is the serial UART console only**
+  — every network-reachable runtime path was tried and fails.
+- **Startup EC-register override file (best non-serial lead, untested).** At EPT
+  startup media_daemon tries to load per-device tuned EC registers from
+  `/etc/handset_ecregs`, `/etc/headset_ecregs`, **`/etc/spkrphone_ecregs`**
+  ("Opened file %s containing tuned EC registers for devId=%d"). These files do
+  **not** exist (built-in defaults are used). Creating `/etc/spkrphone_ecregs`
+  (devId 2) with the residual/noise suppressor + AGC registers set to pass-
+  through should give clean speakerphone audio, persistent across reboot, no
+  serial. Blocker: the file format (parsed by `ecRegLineToIdxValPairs`, name/
+  value pairs set via `EPTPARM_EC_REGS`) and the exact sbAEC register
+  values/indices can only be obtained by dumping them with pxcon
+  (`ecgetregsdef 2 <file>` / `ecgetregsdiff`) — which needs the serial console.
+  Writing the file blind risks breaking EC init. So this too currently needs one
+  serial session (to capture a known-good dump as a template), after which the
+  override file alone would suffice on every boot.
 
 Also note: the injected-SPEAKER bring-up (step 2) is **racy** — it sometimes
 fails to bring the amp up (total silence). A manual speaker press is reliable.
