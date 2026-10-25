@@ -34,9 +34,10 @@ case "$(dd if="$WAD" bs=4 count=1 2>/dev/null)" in
     *) echo "not a WAD file" >> "$LOG"; rm -f "$WAD"; exit 1 ;;
 esac
 
+# Hold rcS's fast-update guard so killing the phone app doesn't reboot us. The
+# engine itself kills lid+media_daemon (after arming hands-free audio while the
+# daemon is still alive -- see snd/snd_hal.c).
 touch /tmp/ssh_fast_update
-kill -9 $(pidof lid) $(pidof media_daemon) 2>/dev/null
-sleep 1
 
 "$ENGINE" -iwad "$WAD" >> "$LOG" 2>&1 < /dev/null
 

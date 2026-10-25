@@ -20,6 +20,8 @@
 #include <sys/ioctl.h>
 #include <linux/fb.h>
 
+#include "snd_hal.h"   /* copied next to this file at build time */
+
 /* NES 5-5-5 palette (from the InfoNES Linux port) */
 WORD NesPalette[ 64 ] =
 {
@@ -196,14 +198,50 @@ void *InfoNES_MemorySet( void *dest, int c, int count ) { return memset(dest, c,
 void InfoNES_DebugPrint( char *pszMsg ) { fprintf(stderr, "%s\n", pszMsg); }
 void InfoNES_MessageBox( char *pszMsg, ... ) { fprintf(stderr, "%s\n", pszMsg); }
 
+/* ---- sound ----
+ * InfoNES hands us 5 unsigned-8-bit channel buffers per video frame at the APU
+ * sample rate (44100 Hz with pAPU_QUALITY=3). We mix them like the reference
+ * ports ((c1+..+c5)/5), run a one-pole DC blocker to recentre the unsigned
+ * levels, apply gain, and hand the result to snd_hal which resamples to the
+ * codec's 16 kHz and streams it to the loudspeaker. */
+#define NES_SND_GAIN 400
+
+static int g_apu_rate = 44100;
+
 void InfoNES_SoundInit( void ) {}
-int  InfoNES_SoundOpen( int samples_per_sync, int sample_rate ) { (void)samples_per_sync; (void)sample_rate; return 0; }
+
+int InfoNES_SoundOpen( int samples_per_sync, int sample_rate ) {
+    (void)samples_per_sync;
+    if (sample_rate > 0) g_apu_rate = sample_rate;
+    return 0;
+}
+
 void InfoNES_SoundClose( void ) {}
-void InfoNES_SoundOutput(int s, BYTE *w1, BYTE *w2, BYTE *w3, BYTE *w4, BYTE *w5) { (void)s;(void)w1;(void)w2;(void)w3;(void)w4;(void)w5; }
+
+void InfoNES_SoundOutput(int s, BYTE *w1, BYTE *w2, BYTE *w3, BYTE *w4, BYTE *w5) {
+    if (!snd_hal_ok() || s <= 0) return;
+    static double dcx = 0.0, dcy = 0.0;   /* DC blocker state */
+    static short buf[1024];
+    int n = s > 1024 ? 1024 : s;
+    for (int i = 0; i < n; i++) {
+        double x = (double)(w1[i] + w2[i] + w3[i] + w4[i] + w5[i]) / 5.0;
+        double y = x - dcx + 0.995 * dcy;   /* high-pass to kill the DC offset */
+        dcx = x; dcy = y;
+        int v = (int)(y * NES_SND_GAIN);
+        if (v > 32767) v = 32767; else if (v < -32768) v = -32768;
+        buf[i] = (short)v;
+    }
+    snd_hal_push_rate(buf, n, g_apu_rate);
+}
 
 int main(int argc, char **argv) {
     if (argc < 2) { fprintf(stderr, "usage: %s game.nes\n", argv[0]); return 1; }
     g_rompath = argv[1];
+    /* Arm audio + hands-free, then take over (kill lid+media_daemon) while the
+     * daemon is still alive. Must precede fbInit()/event0. The boot script no
+     * longer kills the daemon itself. */
+    snd_hal_init();
+    atexit(snd_hal_shutdown);
     fbInit();
     InfoNES_Main();   /* InfoNES_Menu() loads the ROM; InfoNES_Cycle() plays it */
     return 0;

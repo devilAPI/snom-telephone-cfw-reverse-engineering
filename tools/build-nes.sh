@@ -9,6 +9,7 @@ OUT="$HERE/out"; mkdir -p "$OUT"
 
 docker run --rm \
   -v "$ROOT/nes-src":/port \
+  -v "$ROOT/snd":/snd \
   -v "$OUT":/out \
   debian:bookworm-slim bash -euo pipefail -c '
 export DEBIAN_FRONTEND=noninteractive
@@ -21,10 +22,14 @@ export PATH=/opt/arm-linux-musleabi-cross/bin:$PATH
 
 git clone --depth 1 https://github.com/jay-kumogata/InfoNES.git /src >/dev/null 2>&1
 cp /port/InfoNES_System_snom.cpp /src/src/
+cp /snd/snd_hal.h /snd/snd_hal.c /src/src/
 cd /src/src
 FLAGS="-O2 -march=armv4t -fomit-frame-pointer -fsigned-char -Wno-write-strings -I."
+# snd_hal.c is C; compile it with the C compiler, link everything with g++.
+arm-linux-musleabi-gcc -O2 -march=armv4t -fomit-frame-pointer -I. -c snd_hal.c -o snd_hal.o
 arm-linux-musleabi-g++ $FLAGS -static -o /out/infones \
-    K6502.cpp InfoNES.cpp InfoNES_Mapper.cpp InfoNES_pAPU.cpp InfoNES_System_snom.cpp -lm
+    K6502.cpp InfoNES.cpp InfoNES_Mapper.cpp InfoNES_pAPU.cpp InfoNES_System_snom.cpp \
+    snd_hal.o -lm -lpthread
 arm-linux-musleabi-strip /out/infones
 file /out/infones
 '

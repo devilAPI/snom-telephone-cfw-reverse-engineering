@@ -19,6 +19,8 @@
 #include <sys/ioctl.h>
 #include <linux/fb.h>
 
+#include "snd_hal.h"   /* copied next to this file at build time */
+
 // snom D375 keypad scancodes (from /dev/input/event0), reverse-engineered live.
 // The physical keys only reach evdev once lid + media_daemon release the device.
 #define PK_UP      84
@@ -161,6 +163,12 @@ int DG_GetKey(int *pressed, unsigned char *doomKey) {
 void DG_SetWindowTitle(const char *title) { (void)title; }
 
 int main(int argc, char **argv) {
+    // Arm audio + hands-free, then take over (kill lid+media_daemon). Must run
+    // while media_daemon is still alive, so it happens here before any fb/input
+    // setup -- the boot script no longer kills the daemon itself.
+    snd_hal_init();
+    atexit(snd_hal_shutdown);
+
     doomgeneric_Create(argc, argv);
     for (;;) doomgeneric_Tick();
     return 0;

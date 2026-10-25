@@ -22,9 +22,10 @@ case "$(dd if="$ROM" bs=3 count=1 2>/dev/null)" in
     *) echo "not an iNES ROM" >> "$LOG"; rm -f "$ROM"; exit 1 ;;
 esac
 
+# Hold rcS's fast-update guard so killing the phone app doesn't reboot us. The
+# engine itself kills lid+media_daemon (after arming hands-free audio while the
+# daemon is still alive -- see snd/snd_hal.c).
 touch /tmp/ssh_fast_update
-kill -9 $(pidof lid) $(pidof media_daemon) 2>/dev/null
-sleep 1
 
 "$ENGINE" "$ROM" >> "$LOG" 2>&1 < /dev/null
 
