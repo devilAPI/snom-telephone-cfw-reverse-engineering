@@ -56,7 +56,8 @@ overlay applied on top of stock (see [docs/roadmap.md](docs/roadmap.md)).
 7. [docs/cfw-settings.md](docs/cfw-settings.md): the CFW Settings web panel (port 8080) and how it's wired in
 8. [docs/building-nano.md](docs/building-nano.md): cross-building a static musl `nano` for the phone
 9. [docs/doom.md](docs/doom.md): running DOOM on the phone screen (Boot Doom button)
-10. [docs/roadmap.md](docs/roadmap.md): planned features and project workflow
+10. [docs/nes.md](docs/nes.md): running a NES emulator on the phone screen (Boot NES button)
+11. [docs/roadmap.md](docs/roadmap.md): planned features and project workflow
 
 ## Quick start (phone already runs custom firmware with SSH)
 
