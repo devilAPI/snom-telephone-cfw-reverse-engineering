@@ -173,13 +173,29 @@ in a lib we haven't pulled (`/dev/ept0`). Next avenues to try:
   `amxrQueryPortByName` = `_IOR('M',48,36)` `{char name[32]; PORT* out}` — the
   "port id" is a kernel pointer; `amxrDisconnect` = `_IO('M',54)` `{src,dst}`;
   `amxrConnect` = `_IOWR('M',53,12)`; client = `open("/dev/amxr")`.)
-- Reproduce a no-AEC / ringer EPT bring-up against `/dev/ept0` (needs the EPT
-  ioctl ABI — RE the endpoint code in `media_daemon`; no separate libept ships).
-  This is the most likely real fix but a substantial RE effort, and the amp
-  route may collapse when a non-owner reconfigures the EPT.
-- **Serial-console access** to the UART to drive `pxcon` directly
-  (`eptSetDevice`, audio-mode, `ecsetreg` to disable AEC/CNG). Cleanest route,
-  but needs a physical UART adapter on the phone's serial header.
+- **Serial-console access is the clean unlock.** `media_daemon` embeds the
+  `pxcon` console on the UART (`console=ttyAMA0,115200n8`, kernel cmdline). Over
+  that console these commands fix it directly (device alias `hf` = handsfree):
+  `ecenable hf disable`, `ecnlp hf disable`, `eccng hf off` (kill the AEC / non-
+  linear residual suppressor / comfort-noise), or select `audio_mode_handsfree_noaec`.
+  The EC device map, confirmed live: **devId 0 = handset (hec, 17 regs), devId 1
+  = headset (hec), devId 2 = speakerphone (sbaec, 932 regs)** — the speakerphone
+  AEC (devId 2 / `hf`) is what mangles our audio. Needs a USB-UART adapter on the
+  phone's serial header. **This is the recommended fix.**
+- Raw `/dev/ept0` VRG messages: the EPT driver (`ept_driver.ko`/`ept_core.ko`,
+  major 221) is a message-queue API (`endpoint_ioctl` + `DoSetDevice` etc.)
+  running Broadcom's PhoneXChange VRG stack, statically linked into the
+  **stripped** 1.9 MB `media_daemon` (no separate libept, no symbols). Replicating
+  the EC-disable / audio-mode provisioning message would mean reconstructing the
+  VRG message protocol from the stripped binary — days of RE, and the EPT may
+  reject commands from a non-owner. Not attempted to completion.
+- Running `media_daemon` as a second `pxcon` instance does **not** work as a
+  shortcut: with the real daemon alive a second instance exits immediately
+  (resource conflict); with it dead the instance re-inits its own EPT and loops
+  rather than cleanly accepting piped stdin commands (pxcon I/O is the serial
+  console, not stdin). Config-file override also unavailable — no
+  `/nvdata/voip/phone.cfg` / `/etc/pxcon*.cfg` present; the EC defaults
+  (the `ecsetreg …` tables) are baked into the `media_daemon` binary.
 
 Also note: the injected-SPEAKER bring-up (step 2) is **racy** — it sometimes
 fails to bring the amp up (total silence). A manual speaker press is reliable.
