@@ -1,0 +1,31 @@
+#!/usr/bin/env bash
+# Cross-build the InfoNES NES emulator (snom D375 fb/evdev port) as a static
+# musl armv6 binary. Needs docker. Output: tools/out/infones.
+# See docs/nes.md.
+set -euo pipefail
+HERE=$(cd "$(dirname "$0")" && pwd)
+ROOT=$(cd "$HERE/.." && pwd)
+OUT="$HERE/out"; mkdir -p "$OUT"
+
+docker run --rm \
+  -v "$ROOT/nes-src":/port \
+  -v "$OUT":/out \
+  debian:bookworm-slim bash -euo pipefail -c '
+export DEBIAN_FRONTEND=noninteractive
+apt-get update -qq
+apt-get install -y -qq git wget xz-utils ca-certificates file >/dev/null
+cd /opt
+wget -q https://musl.cc/arm-linux-musleabi-cross.tgz
+tar xf arm-linux-musleabi-cross.tgz
+export PATH=/opt/arm-linux-musleabi-cross/bin:$PATH
+
+git clone --depth 1 https://github.com/jay-kumogata/InfoNES.git /src >/dev/null 2>&1
+cp /port/InfoNES_System_snom.cpp /src/src/
+cd /src/src
+FLAGS="-O2 -march=armv4t -fomit-frame-pointer -fsigned-char -Wno-write-strings -I."
+arm-linux-musleabi-g++ $FLAGS -static -o /out/infones \
+    K6502.cpp InfoNES.cpp InfoNES_Mapper.cpp InfoNES_pAPU.cpp InfoNES_System_snom.cpp -lm
+arm-linux-musleabi-strip /out/infones
+file /out/infones
+'
+echo "built: $OUT/infones"

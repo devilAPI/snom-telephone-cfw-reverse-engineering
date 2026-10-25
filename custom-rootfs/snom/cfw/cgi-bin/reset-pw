@@ -1,0 +1,32 @@
+#!/bin/sh
+# CFW: reset the root password to the firmware default.
+echo "Content-type: text/html"
+echo ""
+
+DEFAULT_PW="snom375"
+H=$(openssl passwd -5 "$DEFAULT_PW" 2>/dev/null)
+
+status="error"
+msg="openssl not available; password unchanged."
+if [ -n "$H" ]; then
+  if awk -v h="$H" -F: 'BEGIN{OFS=":"} /^root:/{$2=h} {print}' /etc/shadow > /tmp/shadow.cfw \
+     && cat /tmp/shadow.cfw > /etc/shadow; then
+    # keep etc/checksum.md5 consistent (used only in factory filesystem-test mode)
+    NEW=$(md5sum /etc/shadow | cut -d' ' -f1)
+    awk -v h="$NEW" '{ if ($2=="etc/shadow") print h"  etc/shadow"; else print }' \
+        /etc/checksum.md5 > /tmp/ck.cfw && cat /tmp/ck.cfw > /etc/checksum.md5
+    rm -f /tmp/shadow.cfw /tmp/ck.cfw
+    sync
+    status="ok"
+    msg="Root password has been reset to the firmware default."
+  fi
+fi
+
+cat <<EOF
+<!DOCTYPE html><html><head><meta charset="utf-8"><title>CFW Settings</title>
+<style>body{font-family:sans-serif;background:#f0f0f0;padding:24px}
+.box{background:#fff;border:1px solid #ccc;border-radius:6px;padding:16px 18px;max-width:460px}
+.ok{color:#176}.err{color:#a40}a{color:#2a6}</style></head><body>
+<div class="box"><p class="$([ "$status" = ok ] && echo ok || echo err)">$msg</p>
+<p><a href="/">&larr; Back to CFW Settings</a></p></div></body></html>
+EOF

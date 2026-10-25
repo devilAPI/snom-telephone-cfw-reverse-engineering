@@ -1,0 +1,210 @@
+/* InfoNES system port for the snom D375:
+ *   video : /dev/fb0 (480x272, 32bpp), NES 256x240 centered, no scaling
+ *   input : /dev/input/event0 keypad (freed by the launcher killing lid+media_daemon)
+ *   sound : none (stubbed)
+ * ROM path is argv[1]; red hangup key quits.
+ */
+#include "InfoNES.h"
+#include "InfoNES_System.h"
+#include "InfoNES_pAPU.h"
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <stdint.h>
+#include <unistd.h>
+#include <fcntl.h>
+#include <poll.h>
+#include <sys/mman.h>
+#include <sys/time.h>
+#include <sys/ioctl.h>
+#include <linux/fb.h>
+
+/* NES 5-5-5 palette (from the InfoNES Linux port) */
+WORD NesPalette[ 64 ] =
+{
+  0x39ce, 0x1071, 0x0015, 0x2013, 0x440e, 0x5402, 0x5000, 0x3c20,
+  0x20a0, 0x0100, 0x0140, 0x00e2, 0x0ceb, 0x0000, 0x0000, 0x0000,
+  0x5ef7, 0x01dd, 0x10fd, 0x401e, 0x5c17, 0x700b, 0x6ca0, 0x6521,
+  0x45c0, 0x0240, 0x02a0, 0x0247, 0x0211, 0x0000, 0x0000, 0x0000,
+  0x7fff, 0x1eff, 0x2e5f, 0x223f, 0x79ff, 0x7dd6, 0x7dcc, 0x7e67,
+  0x7ae7, 0x4342, 0x2769, 0x2ff3, 0x03bb, 0x0000, 0x0000, 0x0000,
+  0x7fff, 0x579f, 0x635f, 0x6b3f, 0x7f1f, 0x7f1b, 0x7ef6, 0x7f75,
+  0x7f94, 0x73f4, 0x57d7, 0x5bf9, 0x4ffe, 0x0000, 0x0000, 0x0000
+};
+
+/* snom D375 keypad scancodes (reverse-engineered on the device) */
+#define PK_UP     84
+#define PK_DOWN   67
+#define PK_LEFT   101
+#define PK_RIGHT  50
+#define PK_OK     97    /* Start  */
+#define PK_FIRE   120   /* A      */
+#define PK_USE    116   /* B      */
+#define PK_CANCEL 115   /* Select */
+#define PK_HANGUP 114   /* quit   */
+
+/* InfoNES pad bits: 0=A 1=B 2=Select 3=Start 4=Up 5=Down 6=Left 7=Right */
+#define PAD_A      (1<<0)
+#define PAD_B      (1<<1)
+#define PAD_SELECT (1<<2)
+#define PAD_START  (1<<3)
+#define PAD_UP     (1<<4)
+#define PAD_DOWN   (1<<5)
+#define PAD_LEFT   (1<<6)
+#define PAD_RIGHT  (1<<7)
+
+static DWORD dwKeyPad1;
+static const char *g_rompath;
+static int g_loaded;   /* load the ROM once; quit when the game resets out */
+
+/* ---- framebuffer ---- */
+static uint8_t *fbPtr;
+static int      fbFd = -1;
+static unsigned fbStride, fbBpp, fbYres, offX, offY;
+static int      swapRB;
+
+/* ---- input ---- */
+static int inFd = -1;
+struct ev16 { uint32_t sec, usec; uint16_t type, code; int32_t value; };
+
+static void mapKey(int code, int down) {
+    unsigned bit = 0;
+    switch (code) {
+        case PK_UP:    bit = PAD_UP;    break;
+        case PK_DOWN:  bit = PAD_DOWN;  break;
+        case PK_LEFT:  bit = PAD_LEFT;  break;
+        case PK_RIGHT: bit = PAD_RIGHT; break;
+        case PK_FIRE:  bit = PAD_A;     break;
+        case PK_USE:   bit = PAD_B;     break;
+        case PK_OK:    bit = PAD_START; break;
+        case PK_CANCEL:bit = PAD_SELECT;break;
+        case PK_HANGUP:
+            if (down) { if (fbPtr) memset(fbPtr, 0, (long)fbStride * fbYres); exit(0); }
+            return;
+        default: return;
+    }
+    if (down) dwKeyPad1 |= bit; else dwKeyPad1 &= ~bit;
+}
+
+static void pumpInput(void) {
+    struct ev16 ev;
+    struct pollfd pfd; pfd.fd = inFd; pfd.events = POLLIN; pfd.revents = 0;
+    while (inFd >= 0 && poll(&pfd, 1, 0) > 0 && (pfd.revents & POLLIN)) {
+        if (read(inFd, &ev, sizeof(ev)) != (int)sizeof(ev)) break;
+        if (ev.type == 1 && ev.value != 2) mapKey(ev.code, ev.value);
+    }
+}
+
+static void fbInit(void) {
+    struct fb_var_screeninfo v; struct fb_fix_screeninfo f;
+    fbFd = open("/dev/fb0", O_RDWR);
+    if (fbFd < 0) { perror("open fb0"); exit(1); }
+    ioctl(fbFd, FBIOGET_VSCREENINFO, &v);
+    ioctl(fbFd, FBIOGET_FSCREENINFO, &f);
+    fbBpp = v.bits_per_pixel / 8;
+    fbYres = v.yres;
+    fbStride = f.line_length ? f.line_length : v.xres * fbBpp;
+    if (v.red.offset == 0 && v.blue.offset == 16) swapRB = 1;
+    offX = ((v.xres - NES_DISP_WIDTH)  / 2) * fbBpp;
+    offY = ((v.yres - NES_DISP_HEIGHT) / 2) * fbStride;
+    fbPtr = (uint8_t *)mmap(NULL, (long)fbStride * v.yres, PROT_READ|PROT_WRITE, MAP_SHARED, fbFd, 0);
+    if (fbPtr == MAP_FAILED) { perror("mmap fb"); exit(1); }
+    memset(fbPtr, 0, (long)fbStride * v.yres);
+    inFd = open("/dev/input/event0", O_RDONLY | O_NONBLOCK);
+    if (inFd >= 0) ioctl(inFd, _IOW('E', 0x90, int), 1); /* EVIOCGRAB */
+}
+
+/* ---- InfoNES system interface ---- */
+
+void InfoNES_LoadFrame() {
+    /* Frame pacing lives here (once per displayed frame). InfoNES_Wait() is
+       called per-scanline, so pacing there would multiply by ~262. */
+    static struct timeval last;
+    struct timeval now; gettimeofday(&now, NULL);
+    long us = (now.tv_sec - last.tv_sec) * 1000000L + (now.tv_usec - last.tv_usec);
+    long target = 1000000L / 60;
+    if (us > 0 && us < target) usleep(target - us);
+    gettimeofday(&last, NULL);
+
+    for (int y = 0; y < NES_DISP_HEIGHT; y++) {
+        const WORD *s = &WorkFrame[y * NES_DISP_WIDTH];
+        uint8_t *d = fbPtr + offY + (long)y * fbStride + offX;
+        if (fbBpp == 4) {
+            uint32_t *dp = (uint32_t *)d;
+            for (int x = 0; x < NES_DISP_WIDTH; x++) {
+                WORD w = s[x];
+                unsigned r = ((w >> 10) & 0x1f) << 3;
+                unsigned g = ((w >> 5)  & 0x1f) << 3;
+                unsigned b = ( w        & 0x1f) << 3;
+                dp[x] = swapRB ? ((b<<16)|(g<<8)|r) : ((r<<16)|(g<<8)|b);
+            }
+        } else { /* 16bpp RGB565 fallback */
+            uint16_t *dp = (uint16_t *)d;
+            for (int x = 0; x < NES_DISP_WIDTH; x++) {
+                WORD w = s[x];
+                unsigned r = (w >> 10) & 0x1f, g = (w >> 5) & 0x1f, b = w & 0x1f;
+                dp[x] = (r << 11) | (g << 6) | b;
+            }
+        }
+    }
+}
+
+void InfoNES_PadState( DWORD *pdwPad1, DWORD *pdwPad2, DWORD *pdwSystem ) {
+    pumpInput();
+    *pdwPad1 = dwKeyPad1;
+    *pdwPad2 = 0;
+    *pdwSystem = 0;
+}
+
+void InfoNES_Wait() {
+    /* Called once per scanline; pacing is done per-frame in InfoNES_LoadFrame. */
+}
+
+int InfoNES_Menu() {
+    /* Load the ROM the first time; if the game ever resets back to the menu,
+       quit (-1) so the launcher reboots the phone. */
+    if (g_loaded) return -1;
+    g_loaded = 1;
+    return (InfoNES_Load(g_rompath) == 0) ? 0 : -1;
+}
+
+int InfoNES_ReadRom( const char *pszFileName ) {
+    FILE *fp = fopen( pszFileName, "rb" );
+    if ( !fp ) return -1;
+    fread( &NesHeader, sizeof NesHeader, 1, fp );
+    if ( memcmp( NesHeader.byID, "NES\x1a", 4 ) != 0 ) { fclose(fp); return -1; }
+    memset( SRAM, 0, SRAM_SIZE );
+    if ( NesHeader.byInfo1 & 4 ) fread( &SRAM[ 0x1000 ], 512, 1, fp );
+    ROM = (BYTE *)malloc( NesHeader.byRomSize * 0x4000 );
+    fread( ROM, 0x4000, NesHeader.byRomSize, fp );
+    if ( NesHeader.byVRomSize > 0 ) {
+        VROM = (BYTE *)malloc( NesHeader.byVRomSize * 0x2000 );
+        fread( VROM, 0x2000, NesHeader.byVRomSize, fp );
+    }
+    fclose( fp );
+    return 0;
+}
+
+void InfoNES_ReleaseRom() {
+    if (ROM)  { free(ROM);  ROM  = NULL; }
+    if (VROM) { free(VROM); VROM = NULL; }
+}
+
+void *InfoNES_MemoryCopy( void *dest, const void *src, int count ) { return memcpy(dest, src, count); }
+void *InfoNES_MemorySet( void *dest, int c, int count ) { return memset(dest, c, count); }
+void InfoNES_DebugPrint( char *pszMsg ) { fprintf(stderr, "%s\n", pszMsg); }
+void InfoNES_MessageBox( char *pszMsg, ... ) { fprintf(stderr, "%s\n", pszMsg); }
+
+void InfoNES_SoundInit( void ) {}
+int  InfoNES_SoundOpen( int samples_per_sync, int sample_rate ) { (void)samples_per_sync; (void)sample_rate; return 0; }
+void InfoNES_SoundClose( void ) {}
+void InfoNES_SoundOutput(int s, BYTE *w1, BYTE *w2, BYTE *w3, BYTE *w4, BYTE *w5) { (void)s;(void)w1;(void)w2;(void)w3;(void)w4;(void)w5; }
+
+int main(int argc, char **argv) {
+    if (argc < 2) { fprintf(stderr, "usage: %s game.nes\n", argv[0]); return 1; }
+    g_rompath = argv[1];
+    fbInit();
+    InfoNES_Main();   /* InfoNES_Menu() loads the ROM; InfoNES_Cycle() plays it */
+    return 0;
+}
