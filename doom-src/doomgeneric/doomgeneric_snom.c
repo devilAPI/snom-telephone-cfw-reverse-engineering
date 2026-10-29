@@ -1,8 +1,10 @@
 // doomgeneric port for the snom D375:
-//   video : /dev/fb0  (480x272, 32bpp) -- Doom's 320x200 is centered, no scaling
+//   video : /dev/fb0  (480x272, 32bpp) -- Doom's 320x200 is scaled up as far as
+//           it fits without changing its aspect ratio (435x272), centered
 //   input : /dev/input/event0  ("keypad" evdev device)
-// The phone UI (lid/lcsD375) is SIGSTOP'd by the launcher while this runs, so we
-// own the framebuffer and keypad; no VT/console handling is needed.
+// snd_hal_init() kills lid + media_daemon; the orphaned UI (lcsD375) is
+// SIGSTOP'd in DG_Init so it stops drawing over us. The phone reboots when Doom
+// quits, so nothing needs to be resumed. No VT/console handling is needed.
 #include "doomkeys.h"
 #include "doomgeneric.h"
 
@@ -37,7 +39,10 @@
 static uint8_t *fbPtr;
 static int      fbFd = -1;
 static unsigned fbW, fbH, fbStride, fbBpp;
-static unsigned offX, offY;          // byte offsets to center 320x200
+static unsigned outW, outH;          // scaled picture size on the fb
+static uint8_t *outOrigin;           // top-left of the scaled picture
+static uint16_t *srcCol;             // fb column -> Doom column
+static uint16_t *srcRow;             // fb row    -> Doom row
 static int      swapRB = 0;          // set if fb is BGR instead of RGB
 
 // --- input ---------------------------------------------------------------
@@ -105,13 +110,28 @@ void DG_Init(void) {
     if (v.red.offset == 0 && v.blue.offset == 16) swapRB = 1;
     if (getenv("DOOM_BGR")) swapRB = 1;   // manual override for testing
 
-    offX = ((fbW - DOOMGENERIC_RESX) / 2) * fbBpp;
-    offY = ((fbH - DOOMGENERIC_RESY) / 2) * fbStride;
+    // Largest uniform scale that fits: limited by whichever axis runs out first.
+    if ((unsigned long)fbW * DOOMGENERIC_RESY <= (unsigned long)fbH * DOOMGENERIC_RESX) {
+        outW = fbW; outH = fbW * DOOMGENERIC_RESY / DOOMGENERIC_RESX;
+    } else {
+        outH = fbH; outW = fbH * DOOMGENERIC_RESX / DOOMGENERIC_RESY;
+    }
+    srcCol = malloc(outW * sizeof *srcCol);
+    srcRow = malloc(outH * sizeof *srcRow);
+    if (!srcCol || !srcRow) { perror("malloc scale tables"); exit(1); }
+    for (unsigned x = 0; x < outW; x++) srcCol[x] = x * DOOMGENERIC_RESX / outW;
+    for (unsigned y = 0; y < outH; y++) srcRow[y] = y * DOOMGENERIC_RESY / outH;
 
     long mapLen = (long)fbStride * fbH;
     fbPtr = mmap(NULL, mapLen, PROT_READ | PROT_WRITE, MAP_SHARED, fbFd, 0);
     if (fbPtr == MAP_FAILED) { perror("mmap fb"); exit(1); }
     memset(fbPtr, 0, mapLen);
+    outOrigin = fbPtr + (long)((fbH - outH) / 2) * fbStride + ((fbW - outW) / 2) * fbBpp;
+
+    // The phone UI survives the takeover (only its parent lid is killed) and
+    // would keep painting status bars over the game: freeze it.
+    if (system("kill -STOP $(pidof lcsD375) 2>/dev/null") == -1)
+        perror("stop lcsD375");
 
     inFd = open("/dev/input/event0", O_RDONLY | O_NONBLOCK);
     if (inFd < 0) perror("open /dev/input/event0 (input disabled)");
@@ -121,22 +141,33 @@ void DG_Init(void) {
 void DG_DrawFrame(void) {
     pumpInput();
     if (!fbPtr) return;
-    const uint32_t *src = DG_ScreenBuffer;
-    for (unsigned y = 0; y < DOOMGENERIC_RESY; y++) {
-        uint8_t *dst = fbPtr + offY + (long)y * fbStride + offX;
+    // Nearest-neighbour upscale. Consecutive fb rows that map to the same Doom
+    // row are copied from the previous fb row instead of being rescaled.
+    int lastRow = -1;
+    uint8_t *prev = NULL;
+    for (unsigned y = 0; y < outH; y++) {
+        uint8_t *dst = outOrigin + (long)y * fbStride;
+        if (srcRow[y] == lastRow) {
+            memcpy(dst, prev, outW * fbBpp);
+            prev = dst;
+            continue;
+        }
+        lastRow = srcRow[y];
+        prev = dst;
+        const uint32_t *src = DG_ScreenBuffer + (long)lastRow * DOOMGENERIC_RESX;
         if (fbBpp == 4 && !swapRB) {
-            memcpy(dst, src, DOOMGENERIC_RESX * 4);
-            src += DOOMGENERIC_RESX;
+            uint32_t *d = (uint32_t *)dst;
+            for (unsigned x = 0; x < outW; x++) d[x] = src[srcCol[x]];
         } else if (fbBpp == 4) {               // swap R/B
             uint32_t *d = (uint32_t *)dst;
-            for (unsigned x = 0; x < DOOMGENERIC_RESX; x++) {
-                uint32_t p = *src++;
-                *d++ = (p & 0xff00ff00) | ((p & 0xff) << 16) | ((p >> 16) & 0xff);
+            for (unsigned x = 0; x < outW; x++) {
+                uint32_t p = src[srcCol[x]];
+                d[x] = (p & 0xff00ff00) | ((p & 0xff) << 16) | ((p >> 16) & 0xff);
             }
         } else {                               // 16bpp RGB565 fallback
             uint16_t *d = (uint16_t *)dst;
-            for (unsigned x = 0; x < DOOMGENERIC_RESX; x++) {
-                uint32_t p = *src++;
+            for (unsigned x = 0; x < outW; x++) {
+                uint32_t p = src[srcCol[x]];
                 d[x] = ((p >> 8) & 0xf800) | ((p >> 5) & 0x07e0) | ((p >> 3) & 0x001f);
             }
         }
