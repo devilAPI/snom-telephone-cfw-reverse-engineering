@@ -12,6 +12,6 @@ for f in /snom/cfw/panel.d/*.html; do
     [ -f "$f" ] && cat "$f" && echo
 done
 cat <<'EOT'
-<p class="warn">This page is not password protected. Anyone on the network who can reach this phone can use these buttons, including making it download from a URL.</p>
+<p class="warn">Logged in as root. The login uses the phone's system (SSH) password and is sent over plain HTTP, so use it only on a trusted network.</p>
 EOT
 cfw_html_foot
