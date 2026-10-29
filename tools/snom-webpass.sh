@@ -9,6 +9,8 @@
 
 set -e
 
+CONFIG="/snom/snomconfig/config.xml"
+
 usage() {
     echo "Usage: $0 <new-password> [current-password]"
     echo ""
@@ -22,25 +24,28 @@ usage() {
 NEW_PASS="$1"
 CUR_PASS="${2:-}"
 
-CONFIG="/snom/snomconfig/config.xml"
+# Read the current http_user from config.xml (default: admin)
+HTTP_USER="admin"
+if [ -f "$CONFIG" ]; then
+    u=$(sed -n 's|.*<http_user[^>]*>\([^<]*\)</http_user>.*|\1|p' "$CONFIG")
+    [ -n "$u" ] && HTTP_USER="$u"
+fi
 
 try_http_api() {
     local port="$1"
     local auth=""
     if [ -n "$CUR_PASS" ]; then
-        auth="-u admin:${CUR_PASS}"
+        auth="-u ${HTTP_USER}:${CUR_PASS}"
     else
-        auth="-u admin:"
+        auth="-u ${HTTP_USER}:"
     fi
 
-    # Try to set password via snom HTTP settings API
     result=$(curl -s -o /dev/null -w "%{http_code}" --connect-timeout 3 \
         $auth \
         "http://127.0.0.1:${port}/dummy.htm?settings=save&http_pass=${NEW_PASS}&admin_mode_password=${NEW_PASS}" 2>/dev/null)
 
     [ "$result" = "200" ] && return 0
 
-    # Try POST form submission
     result=$(curl -s -o /dev/null -w "%{http_code}" --connect-timeout 3 \
         $auth \
         -d "http_pass=${NEW_PASS}&admin_mode_password=${NEW_PASS}" \
@@ -54,7 +59,7 @@ try_http_api() {
 # Try HTTP API on phone app port (8080) then lighttpd port (80)
 for port in 8080 80; do
     if try_http_api "$port"; then
-        echo "Password changed via HTTP API (port $port)."
+        echo "Password changed via HTTP API (port $port) for user '${HTTP_USER}'."
         exit 0
     fi
 done
@@ -67,14 +72,10 @@ if [ ! -f "$CONFIG" ]; then
     exit 1
 fi
 
-# Backup
 cp "$CONFIG" "${CONFIG}.bak-$(date +%Y%m%d%H%M%S)"
 
-# Replace http_pass value
 sed -i "s|<http_pass[^>]*>[^<]*</http_pass>|<http_pass perm=\"\" c=\"1\" trusted=\"true\">${NEW_PASS}</http_pass>|" "$CONFIG"
-
-# Replace admin_mode_password value
 sed -i "s|<admin_mode_password[^>]*>[^<]*</admin_mode_password>|<admin_mode_password perm=\"\" c=\"1\" trusted=\"true\">${NEW_PASS}</admin_mode_password>|" "$CONFIG"
 
-echo "Password set in config.xml (plaintext)."
+echo "Password set in config.xml (plaintext) for user '${HTTP_USER}'."
 echo "Reboot the phone to apply: reboot"
