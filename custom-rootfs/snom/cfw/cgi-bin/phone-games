@@ -1,11 +1,11 @@
 #!/bin/sh
 # CFW: the "Games" menu shown on the phone's own screen (Settings -> Games).
-# lcsD375's minibrowser fetches this from 127.0.0.1:8080 and renders the
+# lcsD375's minibrowser fetches this from 127.0.0.1:8081 and renders the
 # IPPhoneMenu XML. ?game=doom|nes shows that game's sources: recently used
 # URLs (saved by the launchers), presets, and "Enter URL...".
 echo "Content-type: text/xml"
 echo ""
-B=http://127.0.0.1:8080/cgi-bin
+B=http://127.0.0.1:8081/cgi-bin
 GAME=$(echo "$QUERY_STRING" | sed -n 's/.*game=\([a-z]*\).*/\1/p')
 
 xmlesc() { sed 's/&/\&amp;/g; s/</\&lt;/g; s/>/\&gt;/g; s/"/\&quot;/g'; }

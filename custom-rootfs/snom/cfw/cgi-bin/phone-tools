@@ -1,0 +1,24 @@
+#!/bin/sh
+# CFW: "CFW Tools" menu on the phone (Settings -> CFW Tools). Renders every
+# phone-menu.d/NN-name file (one line "Label|/cgi-bin/<cgi>?<args>") as a MenuItem
+# pointing at the loopback httpd 127.0.0.1:8081.
+. /snom/cfw/lib/cfw.sh
+printf 'Content-type: text/xml\r\n\r\n'
+echo '<?xml version="1.0" encoding="UTF-8"?>'
+echo '<IPPhoneMenu state="others_except_mb" dtmf="off">'
+echo '  <Title>CFW Tools</Title>'
+for f in /snom/cfw/phone-menu.d/*; do
+    [ -f "$f" ] || continue
+    IFS='|' read -r label path < "$f" || [ -n "$label" ] || continue
+    case "$path" in /cgi-bin/*) ;; *) continue ;; esac
+    printf '  <MenuItem name="%s">\n    <Url>%s</Url>\n  </MenuItem>\n' \
+        "$(printf '%s' "$label" | cfw_xml_escape)" \
+        "$(printf '%s' "http://127.0.0.1:8081$path" | cfw_xml_escape)"
+done
+cat <<'EOT'
+  <SoftKeyItem>
+    <Name>CANCEL</Name>
+    <Url track="no">phone://mb_nop#go_back</Url>
+  </SoftKeyItem>
+</IPPhoneMenu>
+EOT

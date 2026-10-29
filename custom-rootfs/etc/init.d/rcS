@@ -2357,6 +2357,8 @@ function startUp () {
             /usr/sbin/sshd
             # CFW Settings web panel (busybox httpd + CGI) on port 8080
             busybox httpd -p 8080 -h /snom/cfw
+            # CFW: loopback-only twin for the on-phone menus (no auth once the panel gets a login)
+            busybox httpd -p 127.0.0.1:8081 -h /snom/cfw
             ;;
         "snomD385")
             ;;

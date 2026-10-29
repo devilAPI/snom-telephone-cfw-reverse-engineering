@@ -1,0 +1,53 @@
+#!/bin/sh
+# CFW: system info page (CPU, memory, flash, /tmp, uptime, processes, logs).
+# Log text is untrusted (it can contain anything a process printed): it only
+# ever reaches the page through cfw_html_escape.
+. /snom/cfw/lib/cfw.sh
+cfw_html_head "System info"
+
+sect() { printf '<h2>%s</h2>\n<pre>' "$1"; }
+endsect() { printf '</pre>\n'; }
+
+echo "<style>.card{max-width:900px} pre{overflow:auto;font-size:11px;margin:0 0 10px} h2{font-size:13px;margin:10px 0 2px}</style>"
+echo '<div class="card"><p><a href="/cgi-bin/sysinfo.json">JSON</a> &middot; <a href="/cgi-bin/sysinfo">refresh</a></p></div>'
+
+echo '<div class="card">'
+sect "Uptime and load"
+{ uptime; } | cfw_html_escape
+endsect
+sect "CPU"
+{ sed -n -e 's/^Processor.*/&/p' -e '/^BogoMIPS/p' -e '/^Features/p' -e '/^CPU part/p' /proc/cpuinfo; } | cfw_html_escape
+endsect
+sect "Memory (/proc/meminfo)"
+head -n 8 /proc/meminfo | cfw_html_escape
+endsect
+sect "Flash and /tmp usage"
+df -k / /tmp /protected 2>&1 | cfw_html_escape
+endsect
+sect "MTD partitions"
+cat /proc/mtd | cfw_html_escape
+endsect
+sect "Top 10 processes by RSS"
+echo "RSS_kB   PID NAME"
+for d in /proc/[0-9]*; do
+    rss=$(sed -n 's/^VmRSS:[ 	]*\([0-9]*\) kB.*/\1/p' $d/status 2>/dev/null)
+    [ -n "$rss" ] || continue
+    printf '%d %s %s\n' "$rss" "${d#/proc/}" "$(sed -n 's/^Name:[ 	]*//p' $d/status 2>/dev/null)"
+done | sort -rn | head -n 10 | while read rss p nm; do
+    printf '%6d %5d %s\n' "$rss" "$p" "$nm"
+done | cfw_html_escape
+endsect
+echo '</div>'
+
+echo '<div class="card">'
+sect "dmesg (last 100 lines)"
+dmesg 2>&1 | tail -n 100 | cfw_html_escape
+endsect
+for f in /tmp/*.log /snom/cfw/*/last.log; do
+    [ -f "$f" ] || continue
+    sect "$(printf '%s' "$f" | cfw_html_escape | tr -d '\n') (last 100 lines)"
+    tail -n 100 "$f" 2>&1 | cfw_html_escape
+    endsect
+done
+echo '</div>'
+cfw_html_foot
