@@ -134,7 +134,31 @@ The overlay approach is simpler and sufficient for SSH persistence. A full
 custom firmware flash would be needed for changes outside `/etc` and `/snom`
 (e.g., adding binaries to `/usr/bin`).
 
-### 3. Firmware key dump (for future custom firmware builds)
+### 3. Changing the web interface password (after Webex provisioning)
+
+When provisioned by Webex (or another cloud platform), the phone's web
+interface password is set to an unknown encrypted value and there is no way
+to log in through the browser. With SSH access you can reset it:
+
+```sh
+# Deploy the script once (persistent on the overlay)
+scp tools/snom-webpass.sh root@<phone-ip>:/snom/snom-webpass.sh
+
+# Change the password
+ssh root@<phone-ip> /snom/snom-webpass.sh <new-password>
+```
+
+The script:
+1. Writes the new password into `config.xml` (`http_pass` + `admin_mode_password`)
+2. Clears `setting_server` and sets `update_policy=never` so the provisioning
+   server cannot overwrite the password on the next boot
+3. Restarts `lcsD815` so the change takes effect immediately (no full reboot)
+4. Verifies the new password works via HTTP Digest auth
+
+After this, the web UI at `http://<phone-ip>` is accessible with user `admin`
+and the password you chose.
+
+### 4. Firmware key dump (for future custom firmware builds)
 
 Three key files were dumped from the D815W:
 

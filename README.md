@@ -56,6 +56,7 @@ verification uses RSA-2048 (`/firmware1.pub`). See
 | `tools/fw-pull-from-device.sh` | yes | Back up a running phone over SSH (rootfs, key, raw flash) |
 | `tools/prepare-pulled-rootfs.sh` | yes | Make a pulled rootfs buildable again |
 | `tools/rootfs-diff.sh` | yes | Show what a custom rootfs changes compared with stock |
+| `tools/snom-webpass.sh` | yes | Change the web UI password via SSH (works after Webex provisioning) |
 | `tools/setup-ovpn.sh` | yes | Generate OpenVPN PKI + client tarball for initial root |
 | `keys/` | yes | **Public** firmware keys and AES key files (see [keys/README.md](keys/README.md)) |
 | `docs/` | yes | Documentation (start here) |
