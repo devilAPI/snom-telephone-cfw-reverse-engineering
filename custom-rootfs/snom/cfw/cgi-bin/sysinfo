@@ -8,6 +8,7 @@ cfw_html_head "System info"
 sect() { printf '<h2>%s</h2>\n<pre>' "$1"; }
 endsect() { printf '</pre>\n'; }
 
+echo "<style>.card{max-width:900px} pre{overflow:auto;font-size:11px;margin:0 0 10px} h2{font-size:13px;margin:10px 0 2px}</style>"
 echo '<div class="card"><p><a href="/cgi-bin/sysinfo.json">JSON</a> &middot; <a href="/cgi-bin/sysinfo">refresh</a></p></div>'
 
 echo '<div class="card">'
