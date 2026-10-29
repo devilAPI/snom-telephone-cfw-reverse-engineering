@@ -36,8 +36,10 @@ cat <<EOF
 h1{color:#c33}a{color:#f66}code{background:#222;padding:1px 4px}</style></head><body>
 <div class="box"><h1>Downloading &amp; starting DOOM&hellip;</h1>
 <p>Fetching the WAD to RAM, then it runs on the phone screen. If the screen
-   doesn't change within a minute, the download failed — check the URL
-   (it must be reachable from the phone and fit in the ~40&nbsp;MB RAM disk).</p>
+   doesn't change within a minute or two, the download failed — see the
+   <a href="/cgi-bin/doom-log">launcher log</a> for the reason. Direct .wad links,
+   archive.org <code>/details/</code> or <code>/download/</code> links and archive.org
+   .zip files all work; the WAD must fit in the ~40&nbsp;MB RAM disk.</p>
 <p>Controls: nav pad = move/turn, Fire = shoot, Use = open doors, OK = menu,
    <b>red hangup = quit</b> (the phone then reboots back to normal).</p>
 <p><a href="/">&larr; Back to CFW Settings</a></p></div></body></html>

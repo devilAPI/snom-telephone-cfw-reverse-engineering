@@ -1,0 +1,17 @@
+#!/bin/sh
+# CFW: show the Boot Doom launcher log (/tmp/doom.log), auto-refreshing.
+echo "Content-type: text/html"
+echo ""
+cat <<HDR
+<!DOCTYPE html><html><head><meta charset="utf-8"><title>Doom log</title>
+<meta http-equiv="refresh" content="3">
+<style>body{font-family:sans-serif;background:#111;color:#eee;padding:24px}
+pre{background:#1b1b1b;border:1px solid #600;border-radius:6px;padding:12px;white-space:pre-wrap;max-width:760px}
+a{color:#f66}</style></head><body><h1>Boot Doom log</h1><pre>
+HDR
+if [ -s /tmp/doom.log ]; then
+    tail -n 40 /tmp/doom.log | sed 's/&/\&amp;/g; s/</\&lt;/g'
+else
+    echo "(no log yet)"
+fi
+echo '</pre><p><a href="/">&larr; Back to CFW Settings</a></p></body></html>'

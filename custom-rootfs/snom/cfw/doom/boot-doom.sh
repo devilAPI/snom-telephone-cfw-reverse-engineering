@@ -1,38 +1,94 @@
 #!/bin/sh
 # Boot Doom from a URL: download the WAD to RAM, take over the screen, run Doom,
 # then reboot to restore the phone. Nothing is stored (the WAD is in /tmp and
-# vanishes on the reboot). $1 = WAD URL.
+# vanishes on the reboot). $1 = WAD URL. Progress/errors go to /tmp/doom.log
+# (shown by /cgi-bin/doom-log on the CFW page).
 ENGINE=/snom/cfw/doom/doom
 LOG=/tmp/doom.log
 URL="$1"
+CURL="curl -fksSL --connect-timeout 15"
 
 : > "$LOG"
-[ -x "$ENGINE" ] || { echo "doom engine missing" >> "$LOG"; exit 1; }
-[ -n "$URL" ]    || { echo "no URL" >> "$LOG"; exit 1; }
+log() { echo "$*" >> "$LOG"; }
+fail() { log "ERROR: $*"; rm -f /tmp/doom-dl.wad; exit 1; }
+urldecode() { printf '%b' "$(echo "$1" | sed 's/%\(..\)/\\x\1/g')"; }
 
-# Keep the WAD's real filename: Doom picks the game (Doom 1 vs Doom 2, Freedoom
-# Phase 1 vs 2) from the IWAD *filename*. A generic name like doom.wad makes it
-# assume Doom 1 and reject a Doom 2 IWAD ("d_introa not found").
-NAME=$(basename "${URL%%\?*}")
-case "$NAME" in
-    *.wad|*.WAD) ;;
-    *) NAME="freedoom2.wad" ;;   # best-effort default = Doom 2 mode
+[ -x "$ENGINE" ] || fail "doom engine missing"
+[ -n "$URL" ]    || fail "no URL"
+log "URL: $URL"
+
+# archive.org: a /details/ link is the HTML viewer page; the file itself is
+# served under /download/ with the same path.
+case "$URL" in
+    *archive.org/details/*) URL=$(echo "$URL" | sed 's|archive\.org/details/|archive.org/download/|')
+                            log "archive.org details link -> $URL" ;;
 esac
-WAD="/tmp/$NAME"
+
+# archive.org item link without a file (.../download/<item>): pick the file
+# from the item's metadata -- a known IWAD name, else any .wad, else a .zip.
+ITEM=$(echo "${URL%%\?*}" | sed -n 's|^.*archive\.org/download/\([^/]*\)/*$|\1|p')
+if [ -n "$ITEM" ]; then
+    META=$($CURL --max-time 60 "https://archive.org/metadata/$ITEM/files" 2>>"$LOG") || fail "could not read archive.org item $ITEM"
+    FILES=$(echo "$META" | grep -oE '"name": *"[^"]*\.([wW][aA][dD]|[zZ][iI][pP])"' | sed 's/^"name": *"//; s/"$//')
+    PICK=$(echo "$FILES" | grep -iE '(^|/)(doom|doom1|doom2|plutonia|tnt|freedoom1|freedoom2|freedm|chex|hacx)\.wad$' | head -n 1)
+    [ -n "$PICK" ] || PICK=$(echo "$FILES" | grep -iE '\.wad$' | head -n 1)
+    [ -n "$PICK" ] || PICK=$(echo "$FILES" | grep -iE '\.zip$' | head -n 1)
+    [ -n "$PICK" ] || fail "no .wad or .zip file in archive.org item $ITEM"
+    URL="https://archive.org/download/$ITEM/$(echo "$PICK" | sed 's/ /%20/g')"
+    log "archive.org item -> $URL"
+fi
+
+# The phone has no unzip, but archive.org extracts members of a .zip
+# server-side (<zip>/<member>). Pick the IWAD from the zip's listing page,
+# preferring a known IWAD name, else the first .wad.
+case "$(echo "${URL%%\?*}" | tr A-Z a-z)" in
+    *archive.org/download/*.zip|*archive.org/download/*.zip/)
+        LIST=$($CURL --max-time 60 "${URL%/}/" 2>>"$LOG") || fail "could not list zip contents"
+        MEMBERS=$(echo "$LIST" | grep -oiE 'href="[^"]*\.wad"' | sed 's/^href="//; s/"$//')
+        PICK=""
+        for m in $MEMBERS; do
+            case "$(basename "$(urldecode "$m")" | tr A-Z a-z)" in
+                doom.wad|doom1.wad|doom2.wad|plutonia.wad|tnt.wad|freedoom1.wad|freedoom2.wad|freedm.wad|chex.wad|hacx.wad)
+                    PICK="$m"; break ;;
+            esac
+        done
+        [ -n "$PICK" ] || PICK=$(echo "$MEMBERS" | head -n 1)
+        [ -n "$PICK" ] || fail "no .wad file inside the zip"
+        case "$PICK" in //*) PICK="https:$PICK" ;; /*) PICK="https://archive.org$PICK" ;; esac
+        URL="$PICK"
+        log "zip member -> $URL" ;;
+    *.zip) fail "zip files are only supported from archive.org (no unzip on the phone); link the .wad directly" ;;
+esac
 
 # Download FIRST, while the phone app is still up (so a bad URL leaves the phone
 # usable and never blanks the screen).
-rm -f "$WAD"
-if ! curl -fkL --connect-timeout 15 --max-time 180 -o "$WAD" "$URL" >>"$LOG" 2>&1; then
-    echo "download failed: $URL" >> "$LOG"
-    rm -f "$WAD"
-    exit 1
-fi
-# Basic sanity: a IWAD/PWAD starts with "IWAD" or "PWAD".
-case "$(dd if="$WAD" bs=4 count=1 2>/dev/null)" in
-    IWAD|PWAD) ;;
-    *) echo "not a WAD file" >> "$LOG"; rm -f "$WAD"; exit 1 ;;
+DL=/tmp/doom-dl.wad
+rm -f "$DL"
+log "downloading..."
+$CURL --max-time 300 -o "$DL" "$URL" >>"$LOG" 2>&1 || fail "download failed (check the URL is a direct file link)"
+log "downloaded $(wc -c < "$DL") bytes"
+
+case "$(dd if="$DL" bs=4 count=1 2>/dev/null)" in
+    IWAD) ;;
+    PWAD) fail "this is a PWAD (add-on map pack); Doom needs an IWAD such as doom2.wad or freedoom2.wad" ;;
+    "<!DO"|"<htm"|"<HTM") fail "got an HTML page, not a WAD (use the direct download link)" ;;
+    *) fail "not a WAD file" ;;
 esac
+
+# Doom picks the game (Doom 1 vs Doom 2, Freedoom Phase 1 vs 2) from the IWAD
+# *filename*: a wrong name makes it reject the WAD ("d_introa not found").
+# Keep a known IWAD name (lowercased); otherwise detect from the map lumps.
+NAME=$(basename "$(urldecode "${URL%%\?*}")" | tr A-Z a-z)
+case "$NAME" in
+    doom.wad|doom1.wad|doom2.wad|plutonia.wad|tnt.wad|freedoom1.wad|freedoom2.wad|freedm.wad|chex.wad|hacx.wad) ;;
+    *) if grep -q MAP01 "$DL"; then NAME=doom2.wad
+       elif grep -q E1M1 "$DL"; then NAME=doom.wad
+       else fail "unrecognised IWAD (no MAP01 or E1M1 lump)"; fi
+       log "unknown IWAD name, detected as $NAME" ;;
+esac
+WAD="/tmp/$NAME"
+mv "$DL" "$WAD"
+log "starting Doom with $WAD"
 
 # Hold rcS's fast-update guard so killing the phone app doesn't reboot us. The
 # engine itself kills lid+media_daemon (after arming hands-free audio while the

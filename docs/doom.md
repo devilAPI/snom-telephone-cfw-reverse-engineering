@@ -52,9 +52,25 @@ a bad URL just reports an error and leaves the phone usable.
 **The WAD's filename matters.** Doom (chocolate-doom lineage) picks the game —
 Doom 1 vs Doom 2, Freedoom Phase 1 vs 2 — from the IWAD *filename*. Saved under a
 generic name like `doom.wad` it assumes Doom 1 and rejects a Doom 2 IWAD
-(`W_GetNumForName: d_introa not found`, exit 255). So the launcher keeps the
-URL's basename (e.g. `.../freedoom2.wad` → `/tmp/freedoom2.wad`). Link to a WAD
-whose name reflects its contents (`freedoom2.wad`, `doom.wad`, …).
+(`W_GetNumForName: d_introa not found`, exit 255). So the launcher
+(`/snom/cfw/doom/boot-doom.sh`) URL-decodes and lowercases the URL's basename
+and keeps it if it is a known IWAD name (`doom2.wad`, `freedoom2.wad`,
+`plutonia.wad`, …). Otherwise it detects the game from the lumps (`MAP01` →
+`doom2.wad`, `E1M1` → `doom.wad`).
+
+**Accepted links** (all tested on-device 2026-10-29):
+
+| Link | What the launcher does |
+|------|------------------------|
+| direct `.../DOOM2.WAD` (any host) | downloads it |
+| `archive.org/details/<item>/<file>` | rewrites to `/download/` (a `/details/` link is an HTML viewer page; this was why archive.org links "didn't load") |
+| `archive.org/details/<item>` or `/download/<item>` | reads `archive.org/metadata/<item>/files` and picks a known IWAD name, else any `.wad`, else a `.zip` |
+| `archive.org/download/<item>/<file>.zip` | the phone has no `unzip`, so it uses archive.org's server-side zip view (`<zip>/<member>`) and picks the IWAD inside |
+| `.zip` from other hosts | rejected (no unzip) |
+
+PWADs (add-on map packs) and HTML pages are rejected with a clear message.
+Every step and error goes to `/tmp/doom.log`, which the CFW page shows at
+**`/cgi-bin/doom-log`** (linked from the "Downloading…" page, auto-refreshes).
 
 ## Building the engine
 
