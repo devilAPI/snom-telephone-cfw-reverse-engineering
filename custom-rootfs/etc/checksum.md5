@@ -9,7 +9,7 @@ dfd694647fdb057e8dcba4043dff5324  etc/udev/rules.d/00-init.rules
 76c5f666daa7668d3175e5bf73f84daa  etc/udev/rules.d/05-options.rules
 da1babf69e50f048ed29a548ac9a6a98  etc/udev/rules.d/50-firmware.rules
 fed7289b8c469066e8f8ff5591e32253  etc/udev/udev.conf
-c785e47e78ed24530d3136e27c0ab94d  etc/init.d/rcS
+b517fbb9c3ce93345f6b59b768606b5b  etc/init.d/rcS
 448df333d5c22293da216303d89ca9de  etc/fstab
 33946f99bcf2de9f27f245f8dda97330  etc/Wireless/RT2870STA/RT2870STA.dat
 f444c259e53fc3ac483efa3b226ce37f  etc/hostapd_event.sh
@@ -300,7 +300,7 @@ aeb9bebca395fbaefcd9f78f1a67182a  snom/html/xml/gui/multicast_zones.xml
 36c52bf2e2a0649c03ee058ddf827dc5  snom/html/xml/gui/pkeys_debug.xml
 5e2b01cafd8d2b80902cd046ac7008f6  snom/html/xml/gui/voicemail_info.xml
 b8d25be1ca316cbe78249b4d40889368  snom/html/xml/gui/conference.xml
-c29ce3453364099431ec32d37fa0c16e  snom/html/xml/gui/state_settings.xml
+d26f9c4ebada43da5ae9c10d278bc5ed  snom/html/xml/gui/state_settings.xml
 3c27acf602b4c1c9717993d29a0333ab  snom/html/xml/gui/call_lists.xml
 d4370909dfe52e2a60005beb8f2da49c  snom/html/xml/gui/contact_pool.xml
 fe0fbce39d641988ad1497ba23b99d32  snom/html/xml/gui/contact_details_edit.xml
@@ -602,9 +602,9 @@ c1d4e5ddfc934f78c20ff80021bb62ba  snom/bmp/colored/icontype_icons/24x24/quicknav
 4bdec4d8c26950a1234771b5f830be9d  snom/bmp/colored/icontype_icons/24x24/preferences.png
 e355bd98680d97e86fdfb97301d8500f  snom/bmp/colored/icontype_icons/24x24/network_active.png
 7a3a620443bf78f7da477d129fe520ec  snom/bmp/colored/icontype_icons/24x24/identity.png
-ce86597a28861e0fb0c1aa9b4b62e96c  snom/bmp/colored/icontype_icons/24x24/dect_active.png
+75bfedde9532b06eaec386b72860f26a  snom/bmp/colored/icontype_icons/24x24/dect_active.png
 bf0b66c880cc8a4740c63d7f330dc88d  snom/bmp/colored/icontype_icons/24x24/messages_active.png
-a92ef5e3ebee32026507d14d6b0a4b93  snom/bmp/colored/icontype_icons/24x24/dect.png
+4fc0bf0234db4b00dca4f0683504a1da  snom/bmp/colored/icontype_icons/24x24/dect.png
 9f81e4f3692c24df68410ea7b91874a5  snom/bmp/colored/icontype_icons/24x24/dial.png
 e045b34b7fce7a0657f12baaef3b48e2  snom/bmp/colored/icontype_icons/24x24/call_rejected.png
 1c8356df75f9538444df18c99c4b9e2d  snom/bmp/colored/icontype_icons/24x24/call_transferred_active.png
@@ -691,9 +691,9 @@ c1d4e5ddfc934f78c20ff80021bb62ba  snom/bmp/colored/theme_dark/icontype_icons/24x
 1a8225e3cd789d14ffeae8bf8c73807a  snom/bmp/colored/theme_dark/icontype_icons/24x24/preferences.png
 e355bd98680d97e86fdfb97301d8500f  snom/bmp/colored/theme_dark/icontype_icons/24x24/network_active.png
 38ff9b43f9f3c38be0708fcb72902290  snom/bmp/colored/theme_dark/icontype_icons/24x24/identity.png
-ce86597a28861e0fb0c1aa9b4b62e96c  snom/bmp/colored/theme_dark/icontype_icons/24x24/dect_active.png
+75bfedde9532b06eaec386b72860f26a  snom/bmp/colored/theme_dark/icontype_icons/24x24/dect_active.png
 bf0b66c880cc8a4740c63d7f330dc88d  snom/bmp/colored/theme_dark/icontype_icons/24x24/messages_active.png
-6a12ce740b4b3c40adeb162deec1ef1f  snom/bmp/colored/theme_dark/icontype_icons/24x24/dect.png
+302914df4028437e4c26dea7a1c2dcf5  snom/bmp/colored/theme_dark/icontype_icons/24x24/dect.png
 9f81e4f3692c24df68410ea7b91874a5  snom/bmp/colored/theme_dark/icontype_icons/24x24/dial.png
 40f522eff9ddad15a627ceeeea70376b  snom/bmp/colored/theme_dark/icontype_icons/24x24/call_rejected.png
 1c8356df75f9538444df18c99c4b9e2d  snom/bmp/colored/theme_dark/icontype_icons/24x24/call_transferred_active.png
@@ -2821,9 +2821,9 @@ c1d4e5ddfc934f78c20ff80021bb62ba  snom/bmp/colored/theme_colorful/icontype_icons
 1a8225e3cd789d14ffeae8bf8c73807a  snom/bmp/colored/theme_colorful/icontype_icons/24x24/preferences.png
 e355bd98680d97e86fdfb97301d8500f  snom/bmp/colored/theme_colorful/icontype_icons/24x24/network_active.png
 38ff9b43f9f3c38be0708fcb72902290  snom/bmp/colored/theme_colorful/icontype_icons/24x24/identity.png
-ce86597a28861e0fb0c1aa9b4b62e96c  snom/bmp/colored/theme_colorful/icontype_icons/24x24/dect_active.png
+75bfedde9532b06eaec386b72860f26a  snom/bmp/colored/theme_colorful/icontype_icons/24x24/dect_active.png
 bf0b66c880cc8a4740c63d7f330dc88d  snom/bmp/colored/theme_colorful/icontype_icons/24x24/messages_active.png
-6a12ce740b4b3c40adeb162deec1ef1f  snom/bmp/colored/theme_colorful/icontype_icons/24x24/dect.png
+302914df4028437e4c26dea7a1c2dcf5  snom/bmp/colored/theme_colorful/icontype_icons/24x24/dect.png
 9f81e4f3692c24df68410ea7b91874a5  snom/bmp/colored/theme_colorful/icontype_icons/24x24/dial.png
 40f522eff9ddad15a627ceeeea70376b  snom/bmp/colored/theme_colorful/icontype_icons/24x24/call_rejected.png
 1c8356df75f9538444df18c99c4b9e2d  snom/bmp/colored/theme_colorful/icontype_icons/24x24/call_transferred_active.png
@@ -6621,9 +6621,9 @@ c1d4e5ddfc934f78c20ff80021bb62ba  snom/bmp/colored/theme_industrial/icontype_ico
 1a8225e3cd789d14ffeae8bf8c73807a  snom/bmp/colored/theme_industrial/icontype_icons/24x24/preferences.png
 e355bd98680d97e86fdfb97301d8500f  snom/bmp/colored/theme_industrial/icontype_icons/24x24/network_active.png
 38ff9b43f9f3c38be0708fcb72902290  snom/bmp/colored/theme_industrial/icontype_icons/24x24/identity.png
-ce86597a28861e0fb0c1aa9b4b62e96c  snom/bmp/colored/theme_industrial/icontype_icons/24x24/dect_active.png
+75bfedde9532b06eaec386b72860f26a  snom/bmp/colored/theme_industrial/icontype_icons/24x24/dect_active.png
 bf0b66c880cc8a4740c63d7f330dc88d  snom/bmp/colored/theme_industrial/icontype_icons/24x24/messages_active.png
-6a12ce740b4b3c40adeb162deec1ef1f  snom/bmp/colored/theme_industrial/icontype_icons/24x24/dect.png
+302914df4028437e4c26dea7a1c2dcf5  snom/bmp/colored/theme_industrial/icontype_icons/24x24/dect.png
 9f81e4f3692c24df68410ea7b91874a5  snom/bmp/colored/theme_industrial/icontype_icons/24x24/dial.png
 40f522eff9ddad15a627ceeeea70376b  snom/bmp/colored/theme_industrial/icontype_icons/24x24/call_rejected.png
 1c8356df75f9538444df18c99c4b9e2d  snom/bmp/colored/theme_industrial/icontype_icons/24x24/call_transferred_active.png
