@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<IPPhoneBatch xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="../schemas/minibrowser.xsd">
+  <IPPhoneInput id="account">
+    <URL>file:///xml/login_wizard/login_wizard.xml#sub=*[@id="registrar"]&amp;setcache:user_name$(var:index)=__ACCOUNT__</URL>
+    <InputItem>
+      <DisplayName>$(lang:reg_account)</DisplayName>
+      <InputToken>__ACCOUNT__</InputToken>
+      <InputFlags>an</InputFlags>
+      <DefaultValue>$(set:user_name$(var:index))</DefaultValue>
+    </InputItem>
+  </IPPhoneInput>
+  <IPPhoneInput id="registrar">
+    <URL>phone://mb_exit#set:user_host$(var:index)=__REGISTRAR__&amp;set:user_active$(var:index)=true&amp;flush&amp;applyline</URL>
+    <InputItem>
+      <DisplayName>$(lang:reg_registrar)</DisplayName>
+      <InputToken>__REGISTRAR__</InputToken>
+      <InputFlags>a</InputFlags>
+      <DefaultValue>$(var:registrar_default)</DefaultValue>
+    </InputItem>
+  </IPPhoneInput>
+</IPPhoneBatch>

@@ -1,0 +1,185 @@
+<?ssi title prefs_ssi_title?>
+<?ssi file common1.htm?>
+<TR>
+  <TD vAlign="top" height="16"><IMG height="16" src="img/clr.gif" width="16"></TD></TR>
+<TR>
+  <TD vAlign="top">
+    <FORM method="post">
+      <?ssi hidden_tag?>
+      <?ssi skipon VTECH?>
+      <TABLE class="bubbleTable" cellSpacing="0" cellPadding="0" width="100%" border="0">
+      <?ssi skipoff VTECH?>
+      <?ssi skipon SNOM?>
+      <TABLE cellSpacing="4" cellPadding="0" width="100%" border="0">
+      <?ssi skipoff SNOM?>
+        <TBODY>
+          <?ssi file tab_preferences.htm?>
+          <TR>
+            <TD width="12" height="5"><IMG src="img/clr.gif" width="12" height="12"></TD>
+            <TD width="12" height="5"><IMG src="img/clr.gif" width="12" height="5"></TD>
+            <TD width="12" height="5"><IMG src="img/clr.gif" width="12" height="5"></TD>
+            <TD class="background" width="12" height="5">
+              <?ssi skipon VTECH?>
+              <IMG height="12" src=<?ssi img-corner-gif ur?> width="12">
+              <?ssi skipoff VTECH?>
+            </TD>
+          </TR>
+          <?ssi hidden_tag?>
+          <TR>
+            <TD></TD>
+            <TD width="50%"></TD>
+            <TD width="50%"></TD>
+          </TR>
+          <TR>
+            <TD></TD>
+            <?ssi skipon VTECH?>
+            <TD width="50%"><B>
+            <?ssi skipoff VTECH?>
+            <?ssi skipon SNOM?>
+            <TD class="titleText" width="50%">
+            <?ssi skipoff SNOM?>
+              <?lng primary_display?></B>
+            </TD>
+            <TD width="50%"></TD>
+          </TR>
+          <TR>
+            <TD></TD><TD><?ssi input backlight_on_activity backlight?></TD>
+          </TR>
+          <TR>
+            <TD></TD><TD><?ssi input backlight_when_idle backlight_idle?></TD>
+          </TR>
+          <TR>
+            <TD></TD><TD><?ssi input contrast contrast?></TD>
+          </TR>
+          <?ssi skipon NO_SECOND_DISPLAY?>
+          <?ssi skipon NO_ADJUSTABLE_LABEL_BACKLIGHT?>
+          <TR>
+            <TD></TD><TD>&nbsp;</TD>
+          </TR>
+          <TR>
+            <TD></TD>
+            <?ssi skipon VTECH?>
+            <TD width="50%"><B>
+            <?ssi skipoff VTECH?>
+            <?ssi skipon SNOM?>
+            <TD class="titleText" width="50%">
+            <?ssi skipoff SNOM?>
+              <?lng label_display?></B>
+            </TD>
+            <TD width="50%"></TD>
+          </TR>
+          <TR>
+            <TD></TD><TD><?ssi input backlight_on_activity label_backlight?></TD>
+          </TR>
+          <TR>
+            <TD></TD><TD><?ssi input backlight_when_idle label_backlight_idle?></TD>
+          </TR>
+          <TR>
+            <TD></TD><TD><?ssi input contrast label_contrast?></TD>
+          </TR>
+          <?ssi skipoff NO_ADJUSTABLE_LABEL_BACKLIGHT?>
+          <?ssi skipoff NO_SECOND_DISPLAY?>
+          <?ssi skipon NOT_UXM?>
+          <TR>
+            <TD></TD><TD>&nbsp;</TD>
+          </TR>
+          <TR>
+            <TD></TD>
+            <?ssi skipon VTECH?>
+            <TD width="50%"><B>
+            <?ssi skipoff VTECH?>
+            <?ssi skipon SNOM?>
+            <TD class="titleText" width="50%">
+            <?ssi skipoff SNOM?>
+              <?lng usb_expansion_module?></B>
+            </TD>
+            <TD width="50%"></TD>
+          </TR>
+          <TR>
+            <TD></TD><TD><?ssi input backlight_on_activity uxm_backlight?></TD>
+          </TR>
+          <TR>
+            <TD></TD><TD><?ssi input backlight_when_idle uxm_backlight_idle?></TD>
+          </TR>
+          <TR>
+            <TD></TD><TD><?ssi input contrast uxm_contrast?></TD>
+          </TR>
+          <?ssi skipoff NOT_UXM?>
+          <?ssi skipon NOT_UXMC ?>
+          <TR>
+            <TD></TD><TD>&nbsp;</TD>
+          </TR>
+          <TR>
+            <TD></TD>
+            <?ssi skipon VTECH?>
+            <TD width="50%"><B>
+            <?ssi skipoff VTECH?>
+            <?ssi skipon SNOM?>
+            <TD class="titleText" width="50%">
+            <?ssi skipoff SNOM?>
+              <?lng usb_expansion_module?></B>
+            </TD>
+            <TD width="50%"></TD>
+          </TR>
+          <TR>
+            <TD></TD><TD><?ssi input backlight_on_activity expansion_module_backlight?></TD>
+          </TR>
+          <TR>
+            <TD></TD><TD><?ssi input backlight_when_idle expansion_module_backlight_idle?></TD>
+          </TR>
+          <?ssi skipoff NOT_UXMC ?>
+          <?ssi skipon NO_ALS_SENSOR?>
+          <TR>
+            <TD></TD><TD>&nbsp;</TD>
+          </TR>
+          <TR>
+            <TD></TD><TD> <?lng advanced_ssi_als?></TD>
+            <TD>
+              <select <?ssi disabled enable_ambient_light?>name="enable_ambient_light" <?ssi tabindex?> size="1">
+                <option value="on"<?ssi selected enable_ambient_light on?>><?lng advanced_ssi_on?></option>
+                <option value="off"<?ssi selected enable_ambient_light off?>><?lng advanced_ssi_off?></option>
+                <option value="active"<?ssi selected enable_ambient_light active?>><?lng advanced_ssi_active?></option>
+              </select>
+              <?ssi help enable_ambient_light?>
+            </TD>
+          </TR>
+          <?ssi skipoff NO_ALS_SENSOR?>
+          <TR>
+            <TD></TD><TD>&nbsp;</TD>
+          </TR>
+          <TR>
+            <TD></TD><TD><?ssi input prefs_ssi_dim_timer dim_timer?></TD>
+          </TR>
+          <TR>
+            <TD></TD><TD>&nbsp;</TD>
+          </TR>
+          <TR>
+            <TD></TD>
+            <TD>
+              <input type="hidden" value="<?lng apply_button?>" name="Settings">
+              <!--Hidden input is used to allow onchange event to apply settings automatically-->
+              <input type="submit" value="<?lng apply_button?>" name="Settings" <?ssi tabindex?> >
+            </TD>
+          </TR>
+          <TR>
+            <TD class="background" vAlign="bottom" align="left" width="12" height="5">
+            <?ssi skipon VTECH?>
+              <IMG height="12" src=<?ssi img-corner-gif ll?> width="12">
+            <?ssi skipoff VTECH?>
+            </TD>
+            <TD></TD>
+            <TD></TD>
+            <TD class="background" vAlign="bottom" align="right" width="12" height="5">
+            <?ssi skipon VTECH?>
+              <IMG height="12" src=<?ssi img-corner-gif lr?> width="12">
+            <?ssi skipoff VTECH?>
+            </TD>
+          </TR>
+        </TBODY>
+      </TABLE>
+    </FORM>
+  </TD>
+</TR>
+<script type="text/javascript" src="fox.js" charset="utf-8"></script>
+<?ssi file common9.htm?>
+</HTML>

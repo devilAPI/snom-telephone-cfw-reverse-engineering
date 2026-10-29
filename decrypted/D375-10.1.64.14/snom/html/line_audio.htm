@@ -1,0 +1,89 @@
+<?ssi title line$l_ssi_title?>
+<?ssi file common1.htm?>
+<TR><TD vAlign="top" height="16"><IMG height="16" src="img/clr.gif" width="16"></TD></TR>
+<TR>
+  <TD vAlign="top">
+    <FORM method="post">
+    <?ssi hidden_tag?>
+    <?ssi skipon VTECH?>
+    <TABLE class="bubbleTable" cellSpacing="0" cellPadding="0" width="100%" border="0">
+    <?ssi skipoff VTECH?>
+    <?ssi skipon SNOM?>
+    <TABLE cellSpacing="4" cellPadding="0" width="100%" border="0">
+    <?ssi skipoff SNOM?>
+    <TBODY>
+    <?ssi file tab_line.htm?>
+    <TR>
+      <TD width="12" height="5"><IMG height="12" src="img/clr.gif" width="12"></TD>
+      <TD width="12" height="5"><IMG height="5" src="img/clr.gif" width="12"></TD>
+      <TD width="12" height="5"><IMG height="5" src="img/clr.gif" width="12"></TD>
+      <TD class="background" width="12" height="5">
+        <?ssi skipon VTECH?>
+        <IMG height="12" src=<?ssi img-corner-gif ur?> width="12">
+        <?ssi skipoff VTECH?>
+      </TD>
+    </TR>
+    <TR><TD></TD>
+      <?ssi skipon VTECH?>
+      <TD width="50%"><B>
+      <?ssi skipoff VTECH?>
+      <?ssi skipon SNOM?>
+      <TD class="titleText" width="50%">
+      <?ssi skipoff SNOM?>
+      <?lng prefs_ringtones?></B></TD>
+      <TD width="50%"></TD>
+    </TR>
+    <TR>
+      <TD></TD><TD><?lng line_ringtone?></TD>
+      <TD>
+        <select name="user_ringer<?ssi line?>" <?ssi disabled user_ringer$l?>size="1" <?ssi tabindex?>>
+          <option value="Ringer1"<?ssi selected user_ringer$l Ringer1?>><?lng line_ringer1?></option>
+          <option value="Ringer2"<?ssi selected user_ringer$l Ringer2?>><?lng line_ringer2?></option>
+          <option value="Ringer3"<?ssi selected user_ringer$l Ringer3?>><?lng line_ringer3?></option>
+          <option value="Ringer4"<?ssi selected user_ringer$l Ringer4?>><?lng line_ringer4?></option>
+          <option value="Ringer5"<?ssi selected user_ringer$l Ringer5?>><?lng line_ringer5?></option>
+          <option value="Ringer6"<?ssi selected user_ringer$l Ringer6?>><?lng line_ringer6?></option>
+          <option value="Ringer7"<?ssi selected user_ringer$l Ringer7?>><?lng line_ringer7?></option>
+          <option value="Ringer8"<?ssi selected user_ringer$l Ringer8?>><?lng line_ringer8?></option>
+          <option value="Ringer9"<?ssi selected user_ringer$l Ringer9?>><?lng line_ringer9?></option>
+          <option value="Ringer10"<?ssi selected user_ringer$l Ringer10?>><?lng line_ringer10?></option>
+          <option value="Silent"<?ssi selected user_ringer$l Silent?>><?lng line_silent?></option>
+          <option value="Custom"<?ssi selected user_ringer$l Custom?>><?lng line_custom?></option>
+        </select><?ssi help user_ringer?>
+      </TD>
+      <TD></TD>
+    </TR>
+    <TR><TD></TD><TD><?ssi input prefs_ssi_custommelody user_custom$l?></TD></TR>
+    <TR><TD></TD><TD><?ssi input line_ssi_ring_after_delay ring_after_delay$l?></TD></TR>
+    <TR><TD></TD><?ssi radio advanced_ssi_suppress_ringing_during_hold suppress_ringing_during_hold$l advanced_ssi_on advanced_ssi_off?></TR>
+    <TR><TD></TD><TD>&nbsp;</TD></TR>
+    <TR>
+      <TD></TD>
+      <TD>
+        <input type="hidden" value="<?lng apply_button?>" name="Settings">
+        <!--Hidden input is used to allow onchange event to apply settings automatically-->
+        <input type="submit" value="<?lng apply_button?>" name="Settings" <?ssi tabindex?> >
+        <input type="submit" value="<?lng line_play?>" name="PLAY_RINGER:<?ssi line?>" <?ssi tabindex?>  ID="Submit2">
+      </TD>
+    </TR>
+    <TR>
+      <TD class="background" vAlign="bottom" align="left" width="12" height="5">
+        <?ssi skipon VTECH?>
+        <IMG height="12" src=<?ssi img-corner-gif ll?> width="12">
+        <?ssi skipoff VTECH?>
+      </TD>
+      <TD width="12" height="5"><IMG height="5" src="img/clr.gif" width="12"></TD>
+      <TD width="12" height="5"><IMG height="5" src="img/clr.gif" width="12"></TD>
+      <TD class="background" vAlign="bottom" align="right" width="12" height="5">
+        <?ssi skipon VTECH?>
+        <IMG height="12" src=<?ssi img-corner-gif lr?> width="12">
+        <?ssi skipoff VTECH?>
+      </TD>
+    </TR>
+    </TBODY>
+    </TABLE>
+    </FORM>
+  </TD>
+</TR>
+<script type="text/javascript" src="fox.js" charset="utf-8"></script>
+<?ssi file common9.htm?></HTML>

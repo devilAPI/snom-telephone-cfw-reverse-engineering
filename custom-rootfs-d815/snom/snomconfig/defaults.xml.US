@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='utf8'?>
+<settings>
+<phone-settings>
+<webserver_user_name>user</webserver_user_name>
+<webserver_user_password>user</webserver_user_password>
+<webserver_admin_name>admin</webserver_admin_name>
+<webserver_admin_password>admin</webserver_admin_password>
+<locale>en_US</locale>
+<cw_dialtone>off</cw_dialtone>
+<always_show_active_call>off</always_show_active_call>
+<transfer_dialing_on_other>attended</transfer_dialing_on_other>
+<shared_call_without_line_keys>on</shared_call_without_line_keys>
+<auto_dial>3</auto_dial>
+<referred_by_brackets idx="*">on</referred_by_brackets>
+<acd_unavailable_req idx="*">off</acd_unavailable_req>
+<keep_provisioning_url_after_reboot>off</keep_provisioning_url_after_reboot>
+<call_screen_fkeys_on_connected>F_CONSULTCONF F_HOLD transfer F_NEXT_CALL_SCREEN</call_screen_fkeys_on_connected>
+<call_screen_fkeys_on_holding>F_CONSULTCONF F_HOLD transfer F_NEXT_CALL_SCREEN</call_screen_fkeys_on_holding>
+<led_message_usage>CurrentIdentityHasVoiceMessages</led_message_usage>
+<fkey_next_page_dynamic>on</fkey_next_page_dynamic>
+</phone-settings>
+</settings>

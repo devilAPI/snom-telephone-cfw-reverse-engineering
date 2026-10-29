@@ -1,0 +1,37 @@
+<IPPhoneBatch xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../schemas/minibrowser.xsd">
+  <IPPhoneMenu track="no" dtmf="off" id="brand_variant_listing" speedselect="off" state="others_except_mb">
+    <Fetch mil="120000">phone://mb_exit</Fetch>
+    <Title>$(lang:brand_variant_select_title)</Title>
+    <MenuItem name="$(lang:brand_variant_default)">
+      <If condition="default==$(set:brand_variant)">
+        <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOn)</ExtraIconType>
+      </If>
+      <Else>
+        <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOff)</ExtraIconType>
+      </Else>
+      <Url>file:///xml/gui/brand_variant.xml#sub=*[@id="brand_variant_reboot"]&amp;set:brand_variant=default&amp;var:variant=$(lang:brand_variant_default)</Url>
+    </MenuItem>
+    <Repeat values="$(brand_variant_list)" token="|__VARIANT__|">
+      <If condition="!$(empty:__VARIANT__)">
+        <MenuItem name="__VARIANT__">
+          <If condition="__VARIANT__==$(set:brand_variant)">
+            <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOn)</ExtraIconType>
+          </If>
+          <Else>
+            <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOff)</ExtraIconType>
+          </Else>
+          <Url>file:///xml/gui/brand_variant.xml#sub=*[@id="brand_variant_reboot"]&amp;set:brand_variant=__VARIANT__&amp;var:variant=__VARIANT__</Url>
+        </MenuItem>
+      </If>
+    </Repeat>
+  </IPPhoneMenu>
+  <SnomIPPhoneText id="brand_variant_reboot">
+  <Fetch mil="5000">phone://mb_nop#reboot</Fetch>
+    <Title>$(lang:brand_variant_updated_title)</Title>
+    <Text>
+      $(var:variant) $(lang:brand_variant_selected)
+      <br/> <br/>
+      $(lang:system_reboot_now)
+    </Text>
+  </SnomIPPhoneText>
+</IPPhoneBatch>

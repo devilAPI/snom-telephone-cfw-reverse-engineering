@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<IPPhoneBatch xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../schemas/minibrowser.xsd">
+  <IPPhoneMenu dtmf="off" id="ringtones" state="relevant">
+    <Title>$(lang:menu_gen_ringtone)</Title>
+    <MenuItem name="$(lang:menu_ringer_once)" id="user_ringer_once">
+      <If condition="$(bool_eval:$(set:user_ringer_once[$(var:identity)]))">
+        <ExtraIconType>$(icon_type_enum:kIconTypeMenuSliderOn)</ExtraIconType>
+      </If>
+      <Else>
+        <ExtraIconType>$(icon_type_enum:kIconTypeMenuSliderOff)</ExtraIconType>
+      </Else>
+      <SubText>$(on_off:$(set:user_ringer_once[$(var:identity)]))</SubText>
+      <Url>phone://mb_nop#toggleset:user_ringer_once[$(var:identity)]</Url>
+      <SoftKeyItem>
+        <Name>F1</Name>
+        <SoftKey>F_JUMP</SoftKey>
+      </SoftKeyItem>
+      <SoftKeyItem>
+        <Name>F4</Name>
+        <SoftKey>F_JUMP_BACK</SoftKey>
+      </SoftKeyItem>
+    </MenuItem>
+    <Repeat values="$(enum:$(ringmelody_count))" token="|__EXP__|">
+      <MenuItem name="$(lang:menu_ringer__EXP__)" id="Ringer__EXP__" sel="$(condition:$(bool_eval:$(condition:$(set:user_ringer[$(var:identity)])==Ringer__EXP__)&amp;$(condition:!$(is_set:$(var:ringtonereload)))))">
+        <Url>phone://mb_nop#go_back&amp;set:user_ringer[$(var:identity)]=Ringer__EXP__</Url>
+        <If condition="$(ringmelody_to_play)==$(math_eval:__EXP__)">
+          <ExtraIconType>$(icon_type_enum:kIconTypeMenuPlay)</ExtraIconType>
+        </If>
+        <Else>
+          <If condition="$(set:user_ringer[$(var:identity)])==Ringer__EXP__">
+            <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOn)</ExtraIconType>
+          </If>
+          <Else>
+            <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOff)</ExtraIconType>
+          </Else>
+        </Else>
+        <SoftKeyItem>
+          <Name>F1</Name>
+          <SoftKey>F_JUMP</SoftKey>
+        </SoftKeyItem>
+        <If condition="0==$(lines:connected)">
+          <SoftKeyItem>
+            <Name>F2</Name>
+            <SoftKey>F_PLAY</SoftKey>
+          </SoftKeyItem>
+          <SoftKeyItem>
+            <Name>F3</Name>
+            <SoftKey>F_STOP</SoftKey>
+          </SoftKeyItem>
+        </If>
+        <SoftKeyItem>
+          <Name>F4</Name>
+          <SoftKey>F_JUMP_BACK</SoftKey>
+        </SoftKeyItem>
+      </MenuItem>
+    </Repeat>
+    <MenuItem name="$(lang:menu_ringer_silent)" id="Silent" sel="$(condition:$(bool_eval:$(condition:$(set:user_ringer[$(var:identity)])==Silent)&amp;$(condition:!$(is_set:$(var:ringtonereload)))))">
+      <Url>phone://mb_nop#go_back&amp;set:user_ringer[$(var:identity)]=Silent</Url>
+      <If condition="$(set:user_ringer[$(var:identity)])==Silent">
+          <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOn)</ExtraIconType>
+        </If>
+        <Else>
+          <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOff)</ExtraIconType>
+        </Else>
+      <SoftKeyItem>
+        <Name>F1</Name>
+        <SoftKey>F_JUMP</SoftKey>
+      </SoftKeyItem>
+      <SoftKeyItem>
+        <Name>F4</Name>
+        <SoftKey>F_JUMP_BACK</SoftKey>
+      </SoftKeyItem>
+    </MenuItem>
+    <If condition="$(is_set:$(set:user_custom[$(var:identity)]))">
+      <MenuItem name="$(lang:menu_ringer_custom)" id="Custom" sel="$(condition:$(bool_eval:$(condition:$(set:user_ringer[$(var:identity)])==Custom)&amp;$(condition:!$(is_set:$(var:ringtonereload)))))">
+        <Url>phone://mb_nop#go_back&amp;set:user_ringer[$(var:identity)]=Custom</Url>
+        <If condition="$(ringmelody_to_play)==$(math_eval:$(ringmelody_count)+1)">
+          <ExtraIconType>$(icon_type_enum:kIconTypeMenuPlay)</ExtraIconType>
+        </If>
+        <Else>
+          <If condition="$(set:user_ringer[$(var:identity)])==Custom">
+            <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOn)</ExtraIconType>
+          </If>
+          <Else>
+            <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOff)</ExtraIconType>
+          </Else>
+        </Else>
+        <SoftKeyItem>
+          <Name>F1</Name>
+          <SoftKey>F_JUMP</SoftKey>
+        </SoftKeyItem>
+        <If condition="0==$(lines:connected)">
+          <SoftKeyItem>
+            <Name>F2</Name>
+            <SoftKey>F_PLAY</SoftKey>
+          </SoftKeyItem>
+          <SoftKeyItem>
+            <Name>F3</Name>
+            <SoftKey>F_STOP</SoftKey>
+          </SoftKeyItem>
+        </If>
+        <SoftKeyItem>
+          <Name>F4</Name>
+          <SoftKey>F_JUMP_BACK</SoftKey>
+        </SoftKeyItem>
+      </MenuItem>
+    </If>
+  </IPPhoneMenu>
+</IPPhoneBatch>

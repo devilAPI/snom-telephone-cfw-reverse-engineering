@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<IPPhoneBatch xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../schemas/minibrowser.xsd">
+  <IPPhoneMenu id="on_enter" has_phone_state="on" state="relevant">
+    <Fetch mil="1">file:///xml/gui/multicast_zones.xml#var:zones=$(var_ifc:MulticastZones::available_zones)&amp;sub=*[@id="zones"]</Fetch>
+  </IPPhoneMenu>
+  <IPPhoneMenu id="zones" has_phone_state="on" speedselect="off" state="relevant">
+    <Title>$(lang:multicast_zones_title)</Title>
+    <If condition="$(empty:$(var:zones))">
+      <MenuItem name="$(lang:no_multicast_zones)">
+        <Url>phone://mb_nop</Url>
+      </MenuItem>
+    </If>
+    <Else>
+      <Repeat values="$(var:zones)" token="|__ZONE_INDEX__|__ZONE_NAME__|__ZONE_ADDRESS__|">
+        <MenuItem id="__ZONE_INDEX__" name="__ZONE_INDEX__  __ZONE_NAME__">
+          <Url>phone://mb_nop#multicast_zone=__ZONE_INDEX__,__ZONE_ADDRESS__</Url>
+        </MenuItem>
+      </Repeat>
+    </Else>
+  </IPPhoneMenu>
+</IPPhoneBatch>

@@ -1,0 +1,27 @@
+#!/bin/sh
+#
+# Change the routing for a new pppd connection
+#
+# Given parameter (see pppd manual page description of /etc/ppp/ip-up in the script section):
+#
+# $1 - interface name that is used for pppd connection
+# $2 - tty device name
+# $3 - tty device speed
+# $4 - local IP address
+# $5 - remote IP address
+# $6 - value of 'ipparam' pppd option
+
+# Read the current default gatway and network interface from the routing table
+DEFGW=`/sbin/route -n|awk '{if($1=="0.0.0.0") print $2;}'`
+DEFNT=`/sbin/route -n|awk '{if($1=="0.0.0.0") print $8;}'`
+
+# Save the current values to restore the routing on ip-down
+echo "${DEFNT}:${DEFGW}" > /tmp/net
+
+# Parse the LNS (L2TP network server) from the config file
+PPP=$(grep ^lns /l2tp/xl2tpd.conf | cut -d= -f 2)
+
+# Change the routing for the new connection
+ip route add ${PPP}/32 via ${DEFGW} dev ${DEFNT}
+ip route delete default
+ip route add default via $5 dev $1

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<IPPhoneMenu track="no" state="others_except_mb" dtmf="off" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="../schemas/minibrowser.xsd" document_id="locations_settings">
+  <Title>$(lang:xsi_anywhere_settings)</Title>
+  <MenuItem name="$(lang:xsi_anywhereportal)">
+    <ExtraIconType>$(icon_type_enum:kIconTypeMenuArrowRight)</ExtraIconType>
+    <Url>file:///xml/gui/anywhereportals.xml#action_ifc:identity.$(set:active_line).anywhereportals_xsi=retrieve_records</Url>
+  </MenuItem>
+  <MenuItem name="$(lang:xsi_anywhere_clicktodial)" id="click_to_dial_calls">
+    <If condition="$(show_feature:FEATURE_PUI_STYLE_SIO)">
+      <SubText>$(yes_no:$(condition:$(var_ifc:identity.$(set:active_line).server_settings_xsi::click_to_dial_calls)==enabled))</SubText>
+    </If>
+    <If condition="$(bool_eval:$(condition:$(var_ifc:identity.$(set:active_line).server_settings_xsi::click_to_dial_calls)==enabled))">
+      <ExtraIconType>$(icon_type_enum:kIconTypeMenuSliderOn)</ExtraIconType>
+    </If>
+    <Else>
+      <ExtraIconType>$(icon_type_enum:kIconTypeMenuSliderOff)</ExtraIconType>
+    </Else>
+    <Url>file:///xml/gui/locations_settings.xml#action_ifc:identity.$(set:active_line).server_settings_xsi=click_to_dial_calls</Url>
+  </MenuItem>
+  <MenuItem name="$(lang:xsi_anywhere_grouppaging)" id="group_paging_calls">
+    <If condition="$(show_feature:FEATURE_PUI_STYLE_SIO)">
+      <SubText>$(yes_no:$(condition:$(var_ifc:identity.$(set:active_line).server_settings_xsi::group_paging_calls)==enabled))</SubText>
+    </If>
+    <If condition="$(bool_eval:$(condition:$(var_ifc:identity.$(set:active_line).server_settings_xsi::group_paging_calls)==enabled))">
+      <ExtraIconType>$(icon_type_enum:kIconTypeMenuSliderOn)</ExtraIconType>
+    </If>
+    <Else>
+      <ExtraIconType>$(icon_type_enum:kIconTypeMenuSliderOff)</ExtraIconType>
+    </Else>
+    <Url>file:///xml/gui/locations_settings.xml#action_ifc:identity.$(set:active_line).server_settings_xsi=group_paging_calls</Url>
+  </MenuItem>
+</IPPhoneMenu>

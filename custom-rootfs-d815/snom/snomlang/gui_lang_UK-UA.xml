@@ -1,0 +1,1882 @@
+<?xml version="1.0" encoding="utf-8"?>
+<phrases>
+	<language t="Українська"/>
+	<phrase n="lang_none" t=""/>
+	<phrase n="lang_language_name" t="Українська"/>
+	<phrase n="lang_cntry_CHN" t="Китай"/>
+	<phrase n="lang_cntry_FIN" t="Фінляндія"/>
+	<phrase n="lang_cntry_GER" t="Німеччина"/>
+	<phrase n="lang_cntry_IND" t="Індія"/>
+	<phrase n="lang_cntry_IDN" t="Індонезія"/>
+	<phrase n="lang_cntry_MYS" t="Малазія"/>
+	<phrase n="lang_cntry_MEX" t="Мексика"/>
+	<phrase n="lang_cntry_NLD" t="Нідерланди"/>
+	<phrase n="lang_cntry_PRT" t="Португалія"/>
+	<phrase n="lang_cntry_ZAF" t="Південна Африка"/>
+	<phrase n="lang_cntry_GBR" t="Великобританія"/>
+	<phrase n="lang_cntry_USA" t="США"/>
+	<phrase n="lang_cntry_CAM" t="Central America"/>
+	<phrase n="lang_cntry_CAN" t="Канада"/>
+	<phrase n="lang_cntry_CHL" t="Чилі"/>
+	<phrase n="lang_cntry_BHS" t="Багамськи острови"/>
+	<phrase n="lang_cntry_CUB" t="Куба"/>
+	<phrase n="lang_cntry_PRY" t="Парагвай"/>
+	<phrase n="lang_cntry_BMU" t="Бермуди"/>
+	<phrase n="lang_cntry_FLK" t="Фолклендські острови"/>
+	<phrase n="lang_cntry_GRL" t="Гренландія"/>
+	<phrase n="lang_cntry_FRO" t="Фарерські острови"/>
+	<phrase n="lang_cntry_IRL" t="Ісландія"/>
+	<phrase n="lang_cntry_ESP" t="Іспанія"/>
+	<phrase n="lang_cntry_ALB" t="Албанія"/>
+	<phrase n="lang_cntry_AUT" t="Австрія"/>
+	<phrase n="lang_cntry_BEL" t="Бельгія"/>
+	<phrase n="lang_cntry_BRA" t="Бразилія"/>
+	<phrase n="lang_cntry_CAI" t="Острови Теркс і Кайкос"/>
+	<phrase n="lang_cntry_CHA" t="Чатем"/>
+	<phrase n="lang_cntry_HRV" t="Хорватія"/>
+	<phrase n="lang_cntry_CZE" t="Чеська Республіка"/>
+	<phrase n="lang_cntry_DNK" t="Данія"/>
+	<phrase n="lang_cntry_FRA" t="Франція"/>
+	<phrase n="lang_cntry_HUN" t="Угорщина"/>
+	<phrase n="lang_cntry_ITA" t="Італія"/>
+	<phrase n="lang_cntry_LUX" t="Люксембург"/>
+	<phrase n="lang_cntry_MAK" t="Македонія"/>
+	<phrase n="lang_cntry_NAM" t="Намібія"/>
+	<phrase n="lang_cntry_NOR" t="Норвегія"/>
+	<phrase n="lang_cntry_POL" t="Польща"/>
+	<phrase n="lang_cntry_SVK" t="Словацька республіка"/>
+	<phrase n="lang_cntry_SWD" t="Швеція"/>
+	<phrase n="lang_cntry_CHE" t="Швейцарія"/>
+	<phrase n="lang_cntry_GIB" t="Гібралтар"/>
+	<phrase n="lang_cntry_YUG" t="Сербія"/>
+	<phrase n="lang_cntry_BLR" t="Білорусь"/>
+	<phrase n="lang_cntry_BGR" t="Болгарія"/>
+	<phrase n="lang_cntry_CYP" t="Кіпр"/>
+	<phrase n="lang_cntry_EGY" t="Єгипет"/>
+	<phrase n="lang_cntry_EST" t="Естонія"/>
+	<phrase n="lang_cntry_GAZ" t="Сектор Газа"/>
+	<phrase n="lang_cntry_GRC" t="Греція"/>
+	<phrase n="lang_cntry_ISR" t="Ізраїль"/>
+	<phrase n="lang_cntry_JOR" t="Йорданія"/>
+	<phrase n="lang_cntry_LVA" t="Латвія"/>
+	<phrase n="lang_cntry_LTU" t="Литва"/>
+	<phrase n="lang_cntry_LBN" t="Ліван"/>
+	<phrase n="lang_cntry_MDA" t="Молдова"/>
+	<phrase n="lang_cntry_RUS" t="Росія"/>
+	<phrase n="lang_cntry_ROU" t="Румунія"/>
+	<phrase n="lang_cntry_SYR" t="Сирія"/>
+	<phrase n="lang_cntry_TUR" t="Туреччина"/>
+	<phrase n="lang_cntry_UKR" t="Україна"/>
+	<phrase n="lang_cntry_IRQ" t="Ірак"/>
+	<phrase n="lang_cntry_IRN" t="Іран"/>
+	<phrase n="lang_cntry_ARM" t="Арменія"/>
+	<phrase n="lang_cntry_AZE" t="Азербайджан"/>
+	<phrase n="lang_cntry_GEO" t="Грузія"/>
+	<phrase n="lang_cntry_KAZ" t="Казахстан"/>
+	<phrase n="lang_cntry_KGZ" t="Киргизія"/>
+	<phrase n="lang_cntry_PAK" t="Пакістан"/>
+	<phrase n="lang_cntry_SGP" t="Сінгапур"/>
+	<phrase n="lang_cntry_KOR" t="Корея"/>
+	<phrase n="lang_cntry_JPN" t="Японія"/>
+	<phrase n="lang_cntry_AUS" t="Австралія"/>
+	<phrase n="lang_cntry_NZL" t="Нова Зеландія"/>
+	<phrase n="lang_cntry_TON" t="Тонга"/>
+	<phrase n="lang_cntry_COL" t="Колумбія"/>
+	<phrase n="lang_cntry_ECU" t="Еквадор"/>
+	<phrase n="lang_cntry_TTB" t="Тринідад і Тобаго"/>
+	<phrase n="lang_cntry_ARG" t="Аргентина"/>
+	<phrase n="lang_cntry_WAT" t="Західна Африка"/>
+	<phrase n="lang_cntry_CAT" t="Центральна Африка"/>
+	<phrase n="lang_cntry_EAT" t="Східна Африка"/>
+	<phrase n="lang_cntry_VEN" t="Венесуела"/>
+	<phrase n="lang_cntry_NCL" t="Нова Каледонія"/>
+	<phrase n="lang_cntry_UAE" t="Об'єднані Арабські Емірати"/>
+	<phrase n="lang_cntry_THA" t="Таїланд"/>
+	<phrase n="lang_F_SEARCH" t="Пошук"/>
+	<phrase n="lang_F_SEARCH_typeSio" t="Пошук"/>
+	<phrase n="lang_F_REBOOT" t="ПерЗав"/>
+	<phrase n="lang_F_REBOOT_typeSio" t="Перезавантаж"/>
+	<phrase n="lang_F_REBOOT_smartlabel" t="ПереЗав"/>
+	<phrase n="lang_F_PAIR" t="Сполучення"/>
+	<phrase n="lang_F_UNPAIR" t="Роз'єднати"/>
+	<phrase n="lang_F_JOIN" t="Приєдн"/>
+	<phrase n="lang_F_JOIN_typeSio" t="Приєднатися"/>
+	<phrase n="lang_F_JOIN_WITH" t="Приєднатися з"/>
+	<phrase n="lang_F_LEAVE" t="Залиш"/>
+	<phrase n="lang_F_LEAVE_typeSio" t="Залишити"/>
+	<phrase n="lang_F_OK" t="ОК"/>
+	<phrase n="lang_F_ACCEPT_CALL" t="Прийн"/>
+	<phrase n="lang_F_ACCEPT_CALL_typeSio" t="Прийняти"/>
+	<phrase n="lang_F_CANCEL" t="Відмін"/>
+	<phrase n="lang_F_CANCEL_typeSio" t="Відміна"/>
+	<phrase n="lang_F_YES" t="Так"/>
+	<phrase n="lang_F_NO" t="Ні"/>
+	<phrase n="lang_F_ADD_SPEAKER" t="+Спкр"/>
+	<phrase n="lang_F_ADD_SPEAKER_typeSio" t="+Спікерфон"/>
+	<phrase n="lang_F_REMOVE_SPEAKER" t="-Спкр"/>
+	<phrase n="lang_F_REMOVE_SPEAKER_typeSio" t="-Спікерфон"/>
+	<phrase n="lang_F_ADD_HANDSET" t="+Трбк"/>
+	<phrase n="lang_F_ADD_HANDSET_typeSio" t="+Трубка"/>
+	<phrase n="lang_F_REMOVE_HANDSET" t="-Трбк"/>
+	<phrase n="lang_F_REMOVE_HANDSET_typeSio" t="-Трубка"/>
+	<phrase n="lang_F_DELETE" t="Видал"/>
+	<phrase n="lang_F_DELETE_typeSio" t="Видалити"/>
+	<phrase n="lang_F_ADR_BOOK" t="ТелКн"/>
+	<phrase n="lang_F_ADR_BOOK_typeSio" t="Телеф книга"/>
+	<phrase n="lang_F_ADR_BOOK_smartlabel" t="ТелКнига"/>
+	<phrase n="lang_F_DENYALL" t="Блок"/>
+	<phrase n="lang_F_DENYALL_typeSio" t="Блок абонента"/>
+	<phrase n="lang_F_DENYALL_smartlabel" t="Блок"/>
+	<phrase n="lang_F_CALL_LIST" t="Журнал"/>
+	<phrase n="lang_F_CALL_LIST_typeSio" t="Журнал Викликів"/>
+	<phrase n="lang_F_CALL_LIST_smartlabel" t="ЖурнВикл"/>
+	<phrase n="lang_F_PLAY" t="Програвання"/>
+	<phrase n="lang_F_STOP" t="Стоп"/>
+	<phrase n="lang_F_RESCAN" t="Пересканувати"/>
+	<phrase n="lang_F_INCREASE" t="Збільшити"/>
+	<phrase n="lang_F_DECREASE" t="Зменшити"/>
+	<phrase n="lang_F_BACK" t="⌫"/>
+	<phrase n="lang_F_BACK_typeSio" t="Бекспейс"/>
+	<phrase n="lang_F_REDIAL" t="Пердзв"/>
+	<phrase n="lang_F_REDIAL_typeSio" t="Передзвонити"/>
+	<phrase n="lang_F_REDIAL_smartlabel" t="Передзв"/>
+	<phrase n="lang_F_INSTANT_REDIAL" t="ПерДзв"/>
+	<phrase n="lang_F_INSTANT_REDIAL_typeSio" t="Передзв зараз"/>
+	<phrase n="lang_F_INSTANT_REDIAL_smartlabel" t="ПереДзв"/>
+	<phrase n="lang_F_ADD_NUMBER" t="Додати"/>
+	<phrase n="lang_F_ADD_NUMBER_typeSio" t="Додати номер"/>
+	<phrase n="lang_F_CONTACTS" t="Контакти"/>
+	<phrase n="lang_F_PRESENCE" t="Статус"/>
+	<phrase n="lang_F_PRESENCE_typeSio" t="Присутність"/>
+	<phrase n="lang_F_PRESENCE_smartlabel" t="Присутн"/>
+	<phrase n="lang_F_SPEED_DIAL" t="ШвидкН"/>
+	<phrase n="lang_F_SPEED_DIAL_typeSio" t="Швидкий набір"/>
+	<phrase n="lang_F_SPEED_DIAL_smartlabel" t="ШвидкН"/>
+	<phrase n="lang_F_SAFE_TRANSFER" t="Бзпчн"/>
+	<phrase n="lang_F_SAFE_TRANSFER_typeSio" t="Безпечн Првд"/>
+	<phrase n="lang_F_MENUS_USERINPUT_SENDSIPINFO" t="ДаніКорSipІнфо"/>
+	<phrase n="lang_F_MENUS_SENDSIPINFO" t="ВідпрSipІнфо"/>
+	<phrase n="lang_F_USERINPUT_SENDSIPINFO" t="SIP"/>
+	<phrase n="lang_F_SENDSIPINFO" t="SIP"/>
+	<phrase n="lang_F_SENDSIPINFO_typeSio" t="SIP Інфо"/>
+	<phrase n="lang_F_SENDSIPINFO_smartlabel" t="SIP&lt;br&gt;Інфо"/>
+	<phrase n="lang_F_REC_START" t="Зап"/>
+	<phrase n="lang_F_REC_STOP" t="Стоп Зап"/>
+	<phrase n="lang_F_RECORDER_START" t="Запис"/>
+	<phrase n="lang_F_RECORDER_STOP" t="Стоп зап"/>
+	<phrase n="lang_F_RECORD_ON" t="Запис"/>
+	<phrase n="lang_F_RECORD_OFF" t="Стоп запис"/>
+	<phrase n="lang_F_RECORDING" t="запис"/>
+	<phrase n="lang_F_LOGOFF_ALL" t="Вийти з усіх"/>
+	<phrase n="lang_F_LOGOFF_ALL_typeSio" t="Вийти з усіх"/>
+	<phrase n="lang_F_LOGOFF_ALL_smartlabel" t="Вийти з усіх"/>
+	<phrase n="lang_F_STARCODE_short" t="Код П"/>
+	<phrase n="lang_F_STARCODE" t="Старкод"/>
+	<phrase n="lang_F_RELOAD_SERVER_AB" t="Перезавантаження"/>
+	<phrase n="lang_F_SERVER_AB" t="Server Dir"/>
+	<phrase n="lang_F_ANONYMOUS" t="Анон ID"/>
+	<phrase n="lang_F_ANONYMOUS_long" t="Анонімний ID"/>
+	<phrase n="lang_F_ANONYMOUS_smartlabel" t="Анон ID"/>
+	<phrase n="lang_F_VOICEMAIL_INFO_NEW_MSG" t="Інформація голосової пошти"/>
+	<phrase n="lang_F_VOICEMAIL_INFO_short" t="Голосова пошта"/>
+	<phrase n="lang_F_VOICEMAIL_INFO" t="Інформація голосової пошти"/>
+	<phrase n="lang_F_NO_NEW_MESSAGE" t="Нема нових повідомлень"/>
+	<phrase n="lang_F_NEW_MESSAGE" t="Нове повідомлення"/>
+	<phrase n="lang_F_GUEST_LOCK" t="Заблокувати"/>
+	<phrase n="lang_F_GUEST_UNLOCK" t="Розблокувати"/>
+	<phrase n="lang_F_IVR" t="IVR"/>
+	<phrase n="lang_F_DTMF" t="DTMF"/>
+	<phrase n="lang_F_ACTION_URL" t="URL"/>
+	<phrase n="lang_F_ACTION_URL_typeSio" t="Action URL"/>
+	<phrase n="lang_F_ACTION_URL_smartlabel" t="URL"/>
+	<phrase n="lang_F_AUTO_ANSWER" t="АвтВід"/>
+	<phrase n="lang_F_AUTO_ANSWER_typeSio" t="Автовідповідь"/>
+	<phrase n="lang_F_AUTO_ANSWER_smartlabel" t="Автовідповідь"/>
+	<phrase n="lang_F_AUTO_ANSWER_ON" t="Автовідповідь"/>
+	<phrase n="lang_F_BLF_short" t="BLF"/>
+	<phrase n="lang_F_BLF" t="Індикатор Зайнятості"/>
+	<phrase n="lang_F_LINE" t="Лінія"/>
+	<phrase n="lang_F_LINE_short" t="Лінія"/>
+	<phrase n="lang_F_LINE_RINGING" t="викликає"/>
+	<phrase n="lang_F_LINE_OUTGOING" t="Виклик"/>
+	<phrase n="lang_F_LINE_OFFHOOK" t="на лінії"/>
+	<phrase n="lang_F_LINE_IDLE" t="простоює"/>
+	<phrase n="lang_F_LINE_HOLD" t="утримується"/>
+	<phrase n="lang_F_LINE_FAILED" t="Не в мережі"/>
+	<phrase n="lang_F_LINE_DISCONNECTED" t="роз'єднано"/>
+	<phrase n="lang_F_LINE_DISCONNECTED_typeSio" t="роз'єднаний"/>
+	<phrase n="lang_F_LINE_CONNECTED" t="підключено"/>
+	<phrase n="lang_F_LINE_BUSY" t="Зайнято"/>
+	<phrase n="lang_F_LINE_HELD" t="Утримується"/>
+	<phrase n="lang_F_LINE_CALLING" t="виклик"/>
+	<phrase n="lang_F_LINE_RINGBACK" t="зв дзвінок"/>
+	<phrase n="lang_F_LINE_HOLDING" t="утримання"/>
+	<phrase n="lang_F_LINE_UNREGISTERED" t="Незареєстрований"/>
+	<phrase n="lang_F_LINE_IN_USE" t="Використовується"/>
+	<phrase n="lang_F_LINE_FREE" t="вільно"/>
+	<phrase n="lang_F_LINE_UNKNOWN" t="невідомий"/>
+	<phrase n="lang_F_LINE_TALKING" t="розмовляє"/>
+	<phrase n="lang_F_LINE_SEIZED" t="перехоплено"/>
+	<phrase n="lang_F_LINE_UNVAILABLE" t="недоступно"/>
+	<phrase n="lang_F_LINE_ACTIVE" t="Активно"/>
+	<phrase n="lang_F_LINE_AVAILABLE" t="доступно"/>
+	<phrase n="lang_F_LINE_CLOSED" t="замкнено"/>
+	<phrase n="lang_F_LINE_AUTO_REDIAL" t="автонабір"/>
+	<phrase n="lang_F_LINE_AUTO_REDIAL_typeSio" t="автонабір"/>
+	<phrase n="lang_F_LINE_CONFERENCING" t="у конференції"/>
+	<phrase n="lang_F_LINE_PARKED" t="на утриманні"/>
+	<phrase n="lang_F_LINE_NO_BUDDY" t="не призначено"/>
+	<phrase n="lang_F_LINE_DISABLED" t="вимкнено"/>
+	<phrase n="lang_F_LINE_MSG_WAITING" t="повідомлення чекає"/>
+	<phrase n="lang_F_SHARED_LINE" t="З Лін"/>
+	<phrase n="lang_F_SHARED_LINE_typeSio" t="Загальна лінія"/>
+	<phrase n="lang_F_SHARED_LINE_smartlabel" t="З Лін"/>
+	<phrase n="lang_F_SHARED_LINE_REMOTE_SEIZED" t="Загальна Лінія"/>
+	<phrase n="lang_F_SHARED_LINE_REMOTE_HOLD" t="Загальна Лінія"/>
+	<phrase n="lang_F_SHARED_LINE_REMOTE_ALERT" t="Загальна Лінія"/>
+	<phrase n="lang_F_SHARED_LINE_REMOTE_ACTIVE" t="Загальна Лінія"/>
+	<phrase n="lang_F_SHARED_LINE_BRIDGE_ACTIVE" t="Shared Line"/>
+	<phrase n="lang_F_SHARED_LINE_BRIDGE_HOLD" t="Shared Line"/>
+	<phrase n="lang_F_SHARED_LINE_LOCAL_SEIZED" t="Загальна Лінія"/>
+	<phrase n="lang_F_SHARED_LINE_LOCAL_HOLD" t="Загальна Лінія"/>
+	<phrase n="lang_F_SHARED_LINE_LOCAL_ALERT" t="Загальна Лінія"/>
+	<phrase n="lang_F_SHARED_LINE_LOCAL_ACTIVE" t="Загальна Лінія"/>
+	<phrase n="lang_F_MULTICAST" t="Мкаст"/>
+	<phrase n="lang_F_MULTICAST_typeSio" t="Мультікаст"/>
+	<phrase n="lang_F_MULTICAST_smartlabel" t="MC Стор"/>
+	<phrase n="lang_F_MULTICAST_ON" t="Мультікаст"/>
+	<phrase n="lang_F_MULTICAST_ZONE" t="Зон МК"/>
+	<phrase n="lang_F_MULTICAST_ZONE_typeSio" t="Мультікаст Зона"/>
+	<phrase n="lang_F_MULTICAST_ZONE_smartlabel" t="МК Зона"/>
+	<phrase n="lang_F_BUTTON_typeSio" t="Клавіша АТС"/>
+	<phrase n="lang_F_BUTTON" t="Клав"/>
+	<phrase n="lang_F_BUTTON_smartlabel" t="Клав"/>
+	<phrase n="lang_F_PUSH_TO_TALK" t="PTT"/>
+	<phrase n="lang_F_PUSH_TO_TALK_typeSio" t="Push2Talk"/>
+	<phrase n="lang_F_PUSH_TO_TALK_smartlabel" t="PTT"/>
+	<phrase n="lang_F_INTERCOM_ON" t="Селекторний зв'язок"/>
+	<phrase n="lang_F_INTERCOM" t="Іком"/>
+	<phrase n="lang_F_INTERCOM_typeSio" t="Селекторний зв'язок"/>
+	<phrase n="lang_F_INTERCOM_smartlabel" t="СелЗв"/>
+	<phrase n="lang_F_PICKUP" t="Підняти"/>
+	<phrase n="lang_F_CALL_CENTER_LIST" t="Список Колцентрів"/>
+	<phrase n="lang_F_REMOTE_OFFICE" t="Офіс"/>
+	<phrase n="lang_F_REMOTE_OFFICE_typeSio" t="Віддалений офіс"/>
+	<phrase n="lang_F_REMOTE_OFFICE_smartlabel" t="Відд Оф"/>
+	<phrase n="lang_F_REMOTE_OFFICE_ON" t="Увімк"/>
+	<phrase n="lang_F_REMOTE_OFFICE_OFF" t="Вимкн"/>
+	<phrase n="lang_F_ACD" t="ACD"/>
+	<phrase n="lang_F_ACD_WRAPUP" t="Завершення"/>
+	<phrase n="lang_F_ACD_UNAVAILABLE" t="Недоступний"/>
+	<phrase n="lang_F_ACD_AVAILABLE" t="Доступний"/>
+	<phrase n="lang_F_ACD_SIGN_OUT" t="Вийти з ACD"/>
+	<phrase n="lang_F_ACD_SIGN_IN" t="Увійти в ACD"/>
+	<phrase n="lang_F_ACD_LOGOUT" t="Вийти з ACD"/>
+	<phrase n="lang_F_ACD_LOGIN" t="Увійти у ACD"/>
+	<phrase n="lang_F_ZONES" t="M-Сторінка"/>
+	<phrase n="lang_F_SMART_TRANSFER" t="Розумне Переведення"/>
+	<phrase n="lang_F_SMART_TRANSFER_short" t="РозПерев"/>
+	<phrase n="lang_F_ALTERNATE_MODE" t="Чередувати"/>
+	<phrase n="lang_F_LABEL_PAGE_NEXT_typeSio" t="Далі"/>
+	<phrase n="lang_F_LABEL_PAGE_NEXT" t="Наст"/>
+	<phrase n="lang_F_LABEL_PAGE_NEXT_SMART_long" t="Наступна сторінка"/>
+	<phrase n="lang_F_LABEL_PAGE_NEXT_SMART_short" t="Сторінка&gt;&gt;"/>
+	<phrase n="lang_F_LABEL_PAGE_PREV_typeSio" t="Ппрдн"/>
+	<phrase n="lang_F_LABEL_PAGE_PREV" t="Ппрдн"/>
+	<phrase n="lang_F_LABEL_PAGE_PREV_SMART_long" t="Попередня стор"/>
+	<phrase n="lang_F_LABEL_PAGE_PREV_SMART_short" t="&lt;&lt;Сторінка"/>
+	<phrase n="lang_F_ADD_REJECTED_CONTACT" t="Додати"/>
+	<phrase n="lang_F_SAVE_XSI_CONTACT" t="Зберегти"/>
+	<phrase n="lang_F_REFRESH" t="Поновити"/>
+	<phrase n="lang_F_ADD_CONTACT" t="Додати"/>
+	<phrase n="lang_F_ADD_CONTACT_typeSio" t="Додати контакт"/>
+	<phrase n="lang_F_SAVE_DIRECTORY_EDIT" t="Зберегти"/>
+	<phrase n="lang_F_GO_NEXT" t="Наступний"/>
+	<phrase n="lang_F_GO_BACK" t="Попередній"/>
+	<phrase n="lang_F_MENU_BACK" t="Back"/>
+	<phrase n="lang_F_SAVE" t="Зберегти"/>
+	<phrase n="lang_F_SAVE_CONTACT" t="Зберегти"/>
+	<phrase n="lang_F_SAFE_TRANSFER_OFF" t="ЗпПер"/>
+	<phrase n="lang_F_SAFE_TRANSFER_OFF_typeSio" t="Перевести"/>
+	<phrase n="lang_F_PARK" t="Утрим"/>
+	<phrase n="lang_F_CALL_PARK_GROUP_DIAL" t="Group Park"/>
+	<phrase n="lang_F_PARK_typeSio" t="Утрим"/>
+	<phrase n="lang_F_PARK_smartlabel" t="Утриман"/>
+	<phrase n="lang_F_CALLRECORD_PAUSE" t="Пауза Запису"/>
+	<phrase n="lang_F_CALLRECORD_RESUME" t="Продовжити Запис"/>
+	<phrase n="lang_F_CALLRECORD_CONTROL_ON" t="Запис"/>
+	<phrase n="lang_F_CALLRECORD_CONTROL_OFF" t="Запис"/>
+	<phrase n="lang_F_STATUS_UNREAD" t="Інфо"/>
+	<phrase n="lang_F_STATUS" t="Інфо"/>
+	<phrase n="lang_F_STATUS_long" t="Інформаційне повідомлення"/>
+	<phrase n="lang_F_STATUS_NOTIFICATIONS" t="Notifications"/>
+	<phrase n="lang_F_FAVORITES" t="Обр"/>
+	<phrase n="lang_F_FAVORITES_typeSio" t="Обрані"/>
+	<phrase n="lang_F_FAVORITES_smartlabel" t="Обрані"/>
+	<phrase n="lang_F_SORT" t="Сорт"/>
+	<phrase n="lang_F_SORT_typeSio" t="Сортувати"/>
+	<phrase n="lang_F_CONTACTPOOL" t="Пул"/>
+	<phrase n="lang_F_CONTACTPOOL_typeSio" t="Контакт Пул"/>
+	<phrase n="lang_F_CONTACTPOOL_smartlabel" t="Пул"/>
+	<phrase n="lang_F_NEXT" t="Наступний"/>
+	<phrase n="lang_F_DIRECTORY_SEARCH" t="LDAP"/>
+	<phrase n="lang_F_MISSED_LIST" t="ПрДзв"/>
+	<phrase n="lang_F_MISSED_LIST_typeSio" t="Пропущені Дзвінки"/>
+	<phrase n="lang_F_MISSED_LIST_smartlabel" t="Пропущені"/>
+	<phrase n="lang_F_DIALED_LIST" t="Dialed"/>
+	<phrase n="lang_F_DIALED_LIST_typeSio" t="Dialed Calls"/>
+	<phrase n="lang_F_DIALED_LIST_smartlabel" t="Dialed"/>
+	<phrase n="lang_F_ACCEPTED_LIST" t="Прийн"/>
+	<phrase n="lang_F_ACCEPTED_LIST_typeSio" t="Прийняті Дзвінки"/>
+	<phrase n="lang_F_ACCEPTED_LIST_smartlabel" t="Прийняті"/>
+	<phrase n="lang_F_DIALED" t="Набрані номери"/>
+	<phrase n="lang_F_RETRIEVE" t="Голосова пошта"/>
+	<phrase n="lang_F_RETRIEVE_smartlabel" t="ГолП"/>
+	<phrase n="lang_F_RETRIEVE_typeSio" t="Голосова пошта"/>
+	<phrase n="lang_F_RETRIEVE_ON" t="ГолПошт"/>
+	<phrase n="lang_F_REDIRECT_OFF" t="БзПер"/>
+	<phrase n="lang_F_REDIRECT_OFF_smartlabel" t="БзПер"/>
+	<phrase n="lang_F_REDIRECT_OFF_typeSio" t="Переадрес викликів вимкн"/>
+	<phrase n="lang_F_REDIRECT_ON" t="ПерДз"/>
+	<phrase n="lang_F_REDIRECT_ON_typeSio" t="Переадресація викликів"/>
+	<phrase n="lang_F_REDIRECT_smartlabel" t="ПерДз"/>
+	<phrase n="lang_F_RINGER_SILENT" t="БезЗв"/>
+	<phrase n="lang_F_RINGER_SILENT_typeSio" t="Беззв режим"/>
+	<phrase n="lang_F_RINGER_SILENT_smartlabel" t="Без звуку"/>
+	<phrase n="lang_F_ABORT" t="ESC"/>
+	<phrase n="lang_F_ABORT_typeSio" t="Вихід"/>
+	<phrase n="lang_F_SUPPORT" t="Довідка"/>
+	<phrase n="lang_F_JUMP_BACK" t="Перейти"/>
+	<phrase n="lang_F_JUMP" t="Перейти"/>
+	<phrase n="lang_F_REDUCED" t="Скоротити"/>
+	<phrase n="lang_F_ALL" t="Ще"/>
+	<phrase n="lang_F_DIALOG" t="Виклики"/>
+	<phrase n="lang_F_DIALOG_typeSio" t="Відстеж ном"/>
+	<phrase n="lang_F_DIALOG_smartlabel" t="Виклики"/>
+	<phrase n="lang_F_HEADSET" t="Г-ра"/>
+	<phrase n="lang_F_HEADSET_typeSio" t="Гарнітура"/>
+	<phrase n="lang_F_HEADSET_smartlabel" t="Гарн-ра"/>
+	<phrase n="lang_F_HEADSET_ON" t="Г-ра"/>
+	<phrase n="lang_F_HEADSET_ON_typeSio" t="Гарнітура"/>
+	<phrase n="lang_F_HEADSET_ON_smartlabel" t="Гарн-ра"/>
+	<phrase n="lang_F_SOFTWARE_UPDATE" t="ПЗ"/>
+	<phrase n="lang_F_UPDATE" t="Онов"/>
+	<phrase n="lang_F_SMS" t="SMS"/>
+	<phrase n="lang_F_CMC" t="СМС"/>
+	<phrase n="lang_F_CALL_COMPLETION" t="СС"/>
+	<phrase n="lang_F_UNMUTE" t="Ув Зв"/>
+	<phrase n="lang_F_UNMUTE_typeSio" t="Увімкнути звук"/>
+	<phrase n="lang_F_UNMUTE_smartlabel" t="Ув Зв"/>
+	<phrase n="lang_F_MUTE" t="ВимкЗв"/>
+	<phrase n="lang_F_MUTE_typeSio" t="Вимкнути звук"/>
+	<phrase n="lang_F_MUTE_smartlabel" t="ВимкЗв"/>
+	<phrase n="lang_F_REG_ACTIVATE" t="Увімкнути"/>
+	<phrase n="lang_F_ADD_PHONEBOOK" t="Додати"/>
+	<phrase n="lang_F_ADD_PHONEBOOK_typeSio" t="Додати контакт"/>
+	<phrase n="lang_F_LIST_MISSED" t="Пропущені"/>
+	<phrase n="lang_F_LIST_TAKEN" t="Прийняті"/>
+	<phrase n="lang_F_LIST_TAKEN_typeSio" t="Received Calls"/>
+	<phrase n="lang_F_LIST_TAKEN_smartlabel" t="Received"/>
+	<phrase n="lang_F_DETAILS" t="Подробиці"/>
+	<phrase n="lang_F_DND_OFF" t="НТБ"/>
+	<phrase n="lang_F_DND_OFF_typeSio" t="Не турбувати"/>
+	<phrase n="lang_F_DND_OFF_smartlabel" t="НТБ"/>
+	<phrase n="lang_F_DND" t="НТБ"/>
+	<phrase n="lang_F_DND_typeSio" t="Не турбувати"/>
+	<phrase n="lang_F_DND_smartlabel" t="НТБ"/>
+	<phrase n="lang_F_DEF_ON" t="*Ув"/>
+	<phrase n="lang_F_DEF_OFF" t="*Вимк"/>
+	<phrase n="lang_F_ON" t="Увімкнути"/>
+	<phrase n="lang_F_OFF" t="Вимкнути"/>
+	<phrase n="lang_F_START" t="Почати"/>
+	<phrase n="lang_F_END" t="Закінчити"/>
+	<phrase n="lang_F_IDENTITY" t="Ідентифікація"/>
+	<phrase n="lang_F_SETTINGS_typeSio" t="Налаштування"/>
+	<phrase n="lang_F_SETTINGS" t="Налаштування"/>
+	<phrase n="lang_F_EXECUTIVE_ASSISTANT_CONFIG" t="Помічник-референт конфіг"/>
+	<phrase n="lang_F_EXECUTIVE_CONFIG" t="Exec.&lt;br&gt;Config"/>
+	<phrase n="lang_F_EXECUTIVE_CONFIG_typeSio" t="Виконавчий конфігурація"/>
+	<phrase n="lang_F_ASSISTANT_CONFIG" t="Assist.&lt;br&gt;Config"/>
+	<phrase n="lang_F_ASSISTANT_CONFIG_typeSio" t="Помічник конфіг"/>
+	<phrase n="lang_F_EXEC_ASSIST_BEHALF_PUI_LISTING" t="Помічник-референт від імені"/>
+	<phrase n="lang_F_EXEC_ASSIST_BEHALF" t="Від Імені"/>
+	<phrase n="lang_F_NEW" t="Новий"/>
+	<phrase n="lang_F_URLU" t="a»A"/>
+	<phrase n="lang_F_URLU_typeSio" t="Режим редагування"/>
+	<phrase n="lang_F_URLL" t="1»a"/>
+	<phrase n="lang_F_URLL_typeSio" t="Режим редагування"/>
+	<phrase n="lang_F_123" t="A»1"/>
+	<phrase n="lang_F_123_typeSio" t="Режим редагування"/>
+	<phrase n="lang_F_REDIRECT" t="Перев Дзв"/>
+	<phrase n="lang_F_REDIRECT_typeSio" t="Перевод Викл"/>
+	<phrase n="lang_F_HOLD_typeSio" t="Утримувати"/>
+	<phrase n="lang_F_HOLD" t="Утримувати"/>
+	<phrase n="lang_F_CONSULTCONF_ADD" t="Додати"/>
+	<phrase n="lang_F_CONSULTCONF_ADD_typeSio" t="Додати у конф"/>
+	<phrase n="lang_F_CONSULTCONF_ADD_smartlabel" t="Додати"/>
+	<phrase n="lang_F_CONSULTCONF_JOIN" t="Приєдн"/>
+	<phrase n="lang_F_CONSULTCONF_JOIN_typeSio" t="Приєдн до конф"/>
+	<phrase n="lang_F_CONSULTCONF_JOIN_smartlabel" t="Приєдн"/>
+	<phrase n="lang_F_CONSULTCONF" t="Конференція"/>
+	<phrase n="lang_F_CONFERENCE" t="Конф"/>
+	<phrase n="lang_F_CONFERENCE_smartlabel" t="Конф"/>
+	<phrase n="lang_F_CONFERENCE_typeSio" t="Конференція"/>
+	<phrase n="lang_F_CONFERENCE_ON" t="Конференція на утриманні"/>
+	<phrase n="lang_F_NO_CONFERENCE" t="нема конф."/>
+	<phrase n="lang_F_DEFLECT" t="Відхилити"/>
+	<phrase n="lang_F_BLIND_TRANSFER" t="Сліпий"/>
+	<phrase n="lang_F_BLIND_TRANSFER_typeSio" t="Сліпий перевод"/>
+	<phrase n="lang_F_TRANSFER" t="Перев"/>
+	<phrase n="lang_F_TRANSFER_typeSio" t="Перевести"/>
+	<phrase n="lang_F_TRANSFER_smartlabel" t="Перевести"/>
+	<phrase n="lang_F_TRANSFER_CALL" t="Перевести цей виклик"/>
+	<phrase n="lang_F_TRANSFER_SELECTED" t="Перевести обрані"/>
+	<phrase n="lang_F_DENY" t="Відхилити"/>
+	<phrase n="lang_F_DIAL" t="Набір"/>
+	<phrase n="lang_F_EDIT" t="Редагувати"/>
+	<phrase n="lang_F_CLEAR" t="Очистити"/>
+	<phrase n="lang_F_DOWN" t="Вниз"/>
+	<phrase n="lang_F_UP" t="Вгору"/>
+	<phrase n="lang_F_LEFT" t="Лівий"/>
+	<phrase n="lang_F_RIGHT" t="Правий"/>
+	<phrase n="lang_F_EXTENSION" t="ВнНом"/>
+	<phrase n="lang_F_EXTENSION_typeSio" t="Внутр Номер"/>
+	<phrase n="lang_F_EXTENSION_smartlabel" t="ВнутрНом"/>
+	<phrase n="lang_F_MESSAGE" t="Повідомлення"/>
+	<phrase n="lang_F_CONTACT_STATE_UNKNOWN" t="Невідомий"/>
+	<phrase n="lang_F_CONTACT_STATE_AVAILABLE" t="Доступний"/>
+	<phrase n="lang_F_CONTACT_STATE_AVAILABLE_ON_MOBILE" t="Доступний на моб"/>
+	<phrase n="lang_F_CONTACT_STATE_AVAILABLE_AT_DESK" t="Доступний на роб"/>
+	<phrase n="lang_F_CONTACT_STATE_INACTIVE" t="Неактивний"/>
+	<phrase n="lang_F_CONTACT_STATE_BUSY" t="Зайнятий"/>
+	<phrase n="lang_F_CONTACT_STATE_URGENT_INTERRUPTIONS_ONLY" t="Доступний тільки для термінових подій"/>
+	<phrase n="lang_F_CONTACT_STATE_IN_A_CALL" t="Розмовляє"/>
+	<phrase n="lang_F_CONTACT_STATE_IN_A_CONFERENCE" t="In a Conference"/>
+	<phrase n="lang_F_CONTACT_STATE_IN_A_MEETING" t="На нараді"/>
+	<phrase n="lang_F_CONTACT_STATE_MEETING" t="Нарада"/>
+	<phrase n="lang_F_CONTACT_STATE_HOLDING" t="На утриманні"/>
+	<phrase n="lang_F_CONTACT_STATE_DND" t="Не турбувати"/>
+	<phrase n="lang_F_CONTACT_STATE_DND_ALL" t="Не турбувати всім"/>
+	<phrase n="lang_F_CONTACT_STATE_DND_SELF" t="Не турбувати сам"/>
+	<phrase n="lang_F_CONTACT_STATE_BE_RIGHT_BACK" t="Скоро буду"/>
+	<phrase n="lang_F_CONTACT_STATE_AWAY" t="Відсутній"/>
+	<phrase n="lang_F_CONTACT_STATE_OFFLINE" t="Не в мережі"/>
+	<phrase n="lang_F_CONTACT_STATE_INVISIBLE" t="Invisible"/>
+	<phrase n="lang_F_CONTACT_STATE_GROUP" t="Group"/>
+	<phrase n="lang_F_KEYEVENT" t="Клав"/>
+	<phrase n="lang_F_KEYEVENT_typeSio" t="Признач Клав"/>
+	<phrase n="lang_F_KEYEVENT_short" t="Клав"/>
+	<phrase n="lang_F_XML" t="XML"/>
+	<phrase n="lang_continuous_text_speed_dial" t="Швидкий набір"/>
+	<phrase n="lang_continuous_text_reboot" t="Перезавантаження"/>
+	<phrase n="lang_continuous_text_network_restart" t="Network restart"/>
+	<phrase n="lang_continuous_text_search" t="Пошук"/>
+	<phrase n="lang_continuous_text_cancel" t="Відміна"/>
+	<phrase n="lang_continuous_text_yes" t="Так"/>
+	<phrase n="lang_continuous_text_no" t="Ні"/>
+	<phrase n="lang_confirm_reboot" t="Перезавантажити?"/>
+	<phrase n="lang_on" t="Ув"/>
+	<phrase n="lang_off" t="Вимк"/>
+	<phrase n="lang_busy" t="Зайнято"/>
+	<phrase n="lang_short" t="Короткий"/>
+	<phrase n="lang_full" t="Повністю"/>
+	<phrase n="lang_half" t="Половина"/>
+	<phrase n="lang_F_HOLD_PRIVATE" t="Утрим"/>
+	<phrase n="lang_F_HOLD_PRIVATE_typeSio" t="Прив Утримання"/>
+	<phrase n="lang_F_HOLD_PRIVATE_smartlabel" t="Пр Утрим"/>
+	<phrase n="lang_conference_off" t="Конф Вимкн"/>
+	<phrase n="lang_conference_off_typeSio" t="Конф Вимкн"/>
+	<phrase n="lang_edit_cmc" t="Редаг СМС:"/>
+	<phrase n="lang_dnd" t="НТБ"/>
+	<phrase n="lang_red" t="ПеревДзв"/>
+	<phrase n="lang_red_typeSio" t="Перев Викликів"/>
+	<phrase n="lang_missed" t="Пропущені: "/>
+	<phrase n="lang_missed_typeSio" t="Пропущені: "/>
+	<phrase n="lang_edit" t="Редагувати"/>
+	<phrase n="lang_F_EDIT_AND_DIAL" t="Редаг Ном"/>
+	<phrase n="lang_F_EDIT_AND_DIAL_typeSio" t="Редагувати та набрати"/>
+	<phrase n="lang_edit_dial" t="Змінити на набрати"/>
+	<phrase n="lang_dhcp" t="DHCP"/>
+	<phrase n="lang_enum" t="ENUM"/>
+	<phrase n="lang_mwi_mailbox1" t="Пошт Скр:"/>
+	<phrase n="lang_mwi_mailbox2" t="У Вас"/>
+	<phrase n="lang_mwi_mailbox3" t="Є нові повідомлення."/>
+	<phrase n="lang_mwi_urgent" t="терміновий"/>
+	<phrase n="lang_mwi_goto_mailbox" t="Перейти у поштову скр.?"/>
+	<phrase n="lang_challenge_user" t="Користувач"/>
+	<phrase n="lang_challenge_pw" t="Пароль"/>
+	<phrase n="lang_use_enum" t="Застосувати ENUM?"/>
+	<phrase n="lang_wiz_dhcp" t="Використ DHCP?"/>
+	<phrase n="lang_wiz_l2tp_ip_adr" t="IP-адреса L2TP:"/>
+	<phrase n="lang_wiz_ip_adr" t="IP-адреса:"/>
+	<phrase n="lang_wiz_mac" t="MAC:"/>
+	<phrase n="lang_wiz_wifi_mac" t="Wi-Fi MAC:"/>
+	<phrase n="lang_wiz_version" t="Версія:"/>
+	<phrase n="lang_wiz_netmask" t="Маска:"/>
+	<phrase n="lang_wiz_gateway" t="Шлюз:"/>
+	<phrase n="lang_wiz_dns_server" t="DNS-сервер:"/>
+	<phrase n="lang_wiz_welcome" t="Вітаємо! Натисніть клавішу для входу."/>
+	<phrase n="lang_wiz_http_user" t="Enter new HTTP username"/>
+	<phrase n="lang_wiz_http_pass" t="Enter new HTTP password"/>
+	<phrase n="lang_wiz_short_pass" t="Password too short"/>
+	<phrase n="lang_terminated_finished" t="Завершено"/>
+	<phrase n="lang_try_parking" t="Утримання виклику"/>
+	<phrase n="lang_try_parking_typeSio" t="Утримання виклику"/>
+	<phrase n="lang_holding" t="Виклик на утриманні: "/>
+	<phrase n="lang_select_list" t="Журнал викликів"/>
+	<phrase n="lang_list_all" t="Всі"/>
+	<phrase n="lang_list_new" t="Нові"/>
+	<phrase n="lang_list_old" t="Старі"/>
+	<phrase n="lang_list_missed" t="Пропущені"/>
+	<phrase n="lang_list_taken" t="Прийняті"/>
+	<phrase n="lang_list_dialed" t="Набрані"/>
+	<phrase n="lang_list_no_data" t="(нема даних)"/>
+	<phrase n="lang_list_details" t="Подробиці"/>
+	<phrase n="lang_list_details_time" t="Час:"/>
+	<phrase n="lang_list_details_duration" t="Тривалість:"/>
+	<phrase n="lang_list_details_costs" t="Вартість:"/>
+	<phrase n="lang_list_details_missed" t="Пропущені:"/>
+	<phrase n="lang_list_details_to" t="Кому:"/>
+	<phrase n="lang_list_details_from" t="Від кого:"/>
+	<phrase n="lang_reg_activate" t="Активувати"/>
+	<phrase n="lang_reg_account" t="Обліковий запис:"/>
+	<phrase n="lang_reg_registrar" t="Сервер реєстрації:"/>
+	<phrase n="lang_reg_explanation_failed" t="Реєстрацію не виконано"/>
+	<phrase n="lang_reg_explanation_registering" t="Йде реєстрація"/>
+	<phrase n="lang_reg_explanation_registered" t="Зареєстровано"/>
+	<phrase n="lang_menu_info_320" t="Інформація"/>
+	<phrase n="lang_menu_conf_reset" t="Скидання"/>
+	<phrase n="lang_menu_gen_contrast" t="Контраст"/>
+	<phrase n="lang_menu_gen_ringtone" t="Дзвінок"/>
+	<phrase n="lang_menu_web_webserver_type" t="Сервер"/>
+	<phrase n="lang_menu_function_key" t="Функціональні клавіші"/>
+	<phrase n="lang_menu_tser_timer" t="Таймер"/>
+	<phrase n="lang_menu_red_target" t="Об'єкт"/>
+	<phrase n="lang_menu_ringer1" t="Мелодія 1"/>
+	<phrase n="lang_menu_ringer2" t="Мелодія 2"/>
+	<phrase n="lang_menu_ringer3" t="Мелодія 3"/>
+	<phrase n="lang_menu_ringer4" t="Мелодія 4"/>
+	<phrase n="lang_menu_ringer5" t="Мелодія 5"/>
+	<phrase n="lang_menu_ringer6" t="Мелодія 6"/>
+	<phrase n="lang_menu_ringer7" t="Мелодія 7"/>
+	<phrase n="lang_menu_ringer8" t="Мелодія 8"/>
+	<phrase n="lang_menu_ringer9" t="Мелодія 9"/>
+	<phrase n="lang_menu_ringer10" t="Мелодія 10"/>
+	<phrase n="lang_vol_headset" t="Гучність Гарнітури"/>
+	<phrase n="lang_vol_handset" t="Гучність Трубки"/>
+	<phrase n="lang_vol_speaker" t="Гучність Спікерфона"/>
+	<phrase n="lang_audio_speaker" t="Спікерфон"/>
+	<phrase n="lang_audio_handset" t="Трубка"/>
+	<phrase n="lang_audio_headset" t="Гарнітура"/>
+	<phrase n="lang_vol_contrast" t="Контраст Дисплея"/>
+	<phrase n="lang_confirm_factory" t="Скинути на заводські налаштування?"/>
+	<phrase n="lang_confirm_logoff_all" t="Відключити всіх користувачів?"/>
+	<phrase n="lang_calling" t="Виклик"/>
+	<phrase n="lang_connected" t="З'єднано"/>
+	<phrase n="lang_connected_typeSio" t="З'єднано"/>
+	<phrase n="lang_ringing" t="Вхідний Дзвінок"/>
+	<phrase n="lang_enter_number" t="Введіть номер"/>
+	<phrase n="lang_held_by" t="Утримується: "/>
+	<phrase n="lang_ok" t="[Ok?]"/>
+	<phrase n="lang_menu100_phone_book" t="Телефонна книга"/>
+	<phrase n="lang_menu100_ldap_book" t="Доступ LDAP"/>
+	<phrase n="lang_menu100_call_lists" t="Журнал Викликів"/>
+	<phrase n="lang_menu100_settings" t="Налаштування"/>
+	<phrase n="lang_sel100_logoff_all" t="Відключити всіх користувачів"/>
+	<phrase n="lang_sel100_logoff_one" t="Відключити користувача"/>
+	<phrase n="lang_sel100_activeline" t="Оберіть обліковий запис для вихідних з'єднань"/>
+	<phrase n="lang_sel100_admin_mode" t="Режим Адміністратора"/>
+	<phrase n="lang_sel100_user_mode" t="Режим користувача"/>
+	<phrase n="lang_sel100_net_info" t="Інформація про мережу"/>
+	<phrase n="lang_sel100_mem_info" t="Інформація про пам'ять"/>
+	<phrase n="lang_menu_ringtone" t="Рінгтон"/>
+	<phrase n="lang_dnd_active" t="Не Турбувати Активовано"/>
+	<phrase n="lang_update" t="ПЗ"/>
+	<phrase n="lang_update_a" t="Виконати?"/>
+	<phrase n="lang_update_reboot" t="Перезавантаження для оновлення ПЗ"/>
+	<phrase n="lang_unplugged" t="Не підключено"/>
+	<phrase n="lang_ethernet_cable" t="Мережевий кабель не підключено"/>
+	<phrase n="lang_hid_plug" t="Підключення пристрою HID"/>
+	<phrase n="lang_hid_connected" t="HID пристрій підключено"/>
+	<phrase n="lang_hid_disconnected" t="HID пристрій відключено"/>
+	<phrase n="lang_temperature" t="Temperature"/>
+	<phrase n="lang_temperature_connected" t="Temperature sensor connected"/>
+	<phrase n="lang_language" t="Мова"/>
+	<phrase n="lang_current_date" t="Дата"/>
+	<phrase n="lang_current_time" t="Час"/>
+	<phrase n="lang_network_settings" t="Мережа"/>
+	<phrase n="lang_dns_domain" t="Домен DNS"/>
+	<phrase n="lang_dns_server1" t="DNS-сервер1"/>
+	<phrase n="lang_dns_server2" t="DNS-сервер2"/>
+	<phrase n="lang_ntp_server" t="NTP-сервер"/>
+	<phrase n="lang_no_ip_adr" t="Невірна IP-адреса"/>
+	<phrase n="lang_password" t="Пароль"/>
+	<phrase n="lang_username" t="Ім'я Користувача"/>
+	<phrase n="lang_reset_settings" t="Скинути Налаштування"/>
+	<phrase n="lang_networkadvanced_settings" t="Розширені налаштування"/>
+	<phrase n="lang_admin_mode_password" t="Пароль Режиму Адміністратора"/>
+	<phrase n="lang_guess_number" t="Швидкий Пошук"/>
+	<phrase n="lang_guess_number_len" t="Довжина запуску швидкого пошуку"/>
+	<phrase n="lang_admin_mode_pwd" t="Пароль Адміністратора"/>
+	<phrase n="lang_call_waiting" t="Очікування Виклику"/>
+	<phrase n="lang_menu100_red_time" t="Час переадресації"/>
+	<phrase n="lang_menu100_red_time_typeSio" t="Час переадресації"/>
+	<phrase n="lang_menu100_timezone" t="Часовий пояс"/>
+	<phrase n="lang_menu100_dialtone" t="Схема Тонів"/>
+	<phrase n="lang_menu100_call_completion" t="Кінець виклику"/>
+	<phrase n="lang_menu100_cc_waiting" t="Очікування: "/>
+	<phrase n="lang_menu100_cc_dial" t="Набір: "/>
+	<phrase n="lang_menu100_netmask" t="Маска"/>
+	<phrase n="lang_menu100_gateway" t="Шлюз"/>
+	<phrase n="lang_menu100_webserver_type" t="Тип Вебсервера"/>
+	<phrase n="lang_enum100_disp_always" t="Завжди"/>
+	<phrase n="lang_enum100_disp_on" t="Вкл"/>
+	<phrase n="lang_enum100_disp_off" t="Відкл"/>
+	<phrase n="lang_enum_disp_webserver_off" t="Відкл"/>
+	<phrase n="lang_enum_disp_webserver_http" t="Тільки HTTP"/>
+	<phrase n="lang_enum_disp_webserver_https" t="Тільки HTTPS"/>
+	<phrase n="lang_enum_disp_webserver_http_https" t="HTTP &amp; HTTPS"/>
+	<phrase n="lang_enum_disp_func_key_destination" t="Внутрішній номер"/>
+	<phrase n="lang_enum_disp_func_key" t="Клавіша"/>
+	<phrase n="lang_xsi_silent_alert" t="Тихе Оповіщення"/>
+	<phrase n="lang_privacy_out" t="Приховати віхіднйи ID"/>
+	<phrase n="lang_quick_transfer" t="Quick transfer"/>
+	<phrase n="lang_quick_transfer_newcall" t="Make new call"/>
+	<phrase n="lang_quick_transfer_blind" t="Blind xfer"/>
+	<phrase n="lang_quick_transfer_attended" t="Attended xfer"/>
+	<phrase n="lang_privacy_in" t="Відхиляти Анонімні Виклики"/>
+	<phrase n="lang_privacy_in_typeSio" t="Відхиляти Анонімні Виклики"/>
+	<phrase n="lang_auto_dial" t="Автоматичний Набір"/>
+	<phrase n="lang_call_completion" t="Завершення виклику"/>
+	<phrase n="lang_vlan_id" t="VLAN ID (1-4094)"/>
+	<phrase n="lang_vlan_qos" t="Пріоритет VLAN (0-7)"/>
+	<phrase n="lang_vlan_reset" t="Скидання VLAN"/>
+	<phrase n="lang_vlan_port_tagging" t="VLAN tagging on LAN"/>
+	<phrase n="lang_vlan_pc_id" t="VLAN ID on LAN port"/>
+	<phrase n="lang_identity_settings" t="Ідентифікатор"/>
+	<phrase n="lang_preferences_settings" t="Властивості"/>
+	<phrase n="lang_maintenance_settings" t="Обслуговування"/>
+	<phrase n="lang_auto_connect_indication" t="Індикація автоматичної відповіді"/>
+	<phrase n="lang_sel100_reregister_line" t="Реєстрація Ідентифікатора"/>
+	<phrase n="lang_sel100_edit_line" t="Редагування ідентифікатора"/>
+	<phrase n="lang_enum_disp_cw_visual" t="Тільки Видимий"/>
+	<phrase n="lang_enum_disp_cw_visual_short" t="Видимий"/>
+	<phrase n="lang_enum_disp_cw_ringer" t="Дзвінок"/>
+	<phrase n="lang_confirm_del_adr_item" t="Ви впевнені?"/>
+	<phrase n="lang_confirm_del_adr_item_title" t="Видалити елемент каталогу"/>
+	<phrase n="lang_confirm_del_adr_item_title_typeSio" t="Видалити елемент каталогу"/>
+	<phrase n="lang_confirm_del_adr_title" t="Видалити каталог"/>
+	<phrase n="lang_confirm_del_adr_item_title_short" t="Видалити елемент каталогу"/>
+	<phrase n="lang_vol_ringer" t="Гучність дзвінка"/>
+	<phrase n="lang_keybd_unlock_PIN" t="Код розблокування клавіатури"/>
+	<phrase n="lang_enum_disp_func_key_mult" t="Загальна Лінія"/>
+	<phrase n="lang_enum_disp_func_key_keyevent" t="Призначення Клавіші"/>
+	<phrase n="lang_menu_ringer_silent" t="Без звуку"/>
+	<phrase n="lang_menu_ringer_custom" t="Користувача"/>
+	<phrase n="lang_enum_disp_func_key_none" t="Ні"/>
+	<phrase n="lang_presence_online" t="Онлайн"/>
+	<phrase n="lang_presence_busy" t="Зайнято"/>
+	<phrase n="lang_presence_invisible" t="Невидимий"/>
+	<phrase n="lang_presence_title" t="Стан Присутності"/>
+	<phrase n="lang_dialog_title" t="Виклики"/>
+	<phrase n="lang_buddies_title" t="Контакти"/>
+	<phrase n="lang_use_backlight" t="Підсвічування"/>
+	<phrase n="lang_backlight_on_activity" t="Підсвічування Активно"/>
+	<phrase n="lang_backlight_when_idle" t="Підсвічування у Очікуванні"/>
+	<phrase n="lang_activity" t="Активність"/>
+	<phrase n="lang_display_settings" t="Екран"/>
+	<phrase n="lang_audio_settings" t="Звук"/>
+	<phrase n="lang_redirect_settings" t="Переведення Виклику"/>
+	<phrase n="lang_redirect_settings_typeSio" t="Переведення Виклику"/>
+	<phrase n="lang_reboot_required" t="Необхідно Перезавантажити"/>
+	<phrase n="lang_network_restart_required" t="Network restart required"/>
+	<phrase n="lang_auto_redialing" t="Повторний Набір"/>
+	<phrase n="lang_conference" t="Конференція"/>
+	<phrase n="lang_directory_search" t="Пошук у телефонній кн"/>
+	<phrase n="lang_wrong_pw" t="Невірний пароль"/>
+	<phrase n="lang_http_password_not_set" t="Пароль доступу по HTTP не задано"/>
+	<phrase n="lang_start_auto_redial" t="Автоматичний Повторний Набір?"/>
+	<phrase n="lang_call_features_settings" t="Функції Виклику"/>
+	<phrase n="lang_all" t="All"/>
+	<phrase n="lang_outgoing_calls_settings" t="Вихідні дзвінки"/>
+	<phrase n="lang_incoming_calls_settings" t="Вхідні Дзвінки"/>
+	<phrase n="lang_ip_settings_wizzard" t="Налаштування IP"/>
+	<phrase n="lang_webserver_settings" t="Веб сервер"/>
+	<phrase n="lang_vlan_settings" t="VLAN"/>
+	<phrase n="lang_wlan_settings" t="WLAN"/>
+	<phrase n="lang_wifi_reboot_to_connect_to" t="Перезавантажте для підключення"/>
+	<phrase n="lang_system_information_menu" t="Інформація про систему"/>
+	<phrase n="lang_its_a_caller_info" t="Телефонуючий"/>
+	<phrase n="lang_its_a_callee_info" t="Абонент що викликає"/>
+	<phrase n="lang_redirect_all" t="Перевести всі"/>
+	<phrase n="lang_redirect_all_typeSio" t="Переадресація для всіх"/>
+	<phrase n="lang_redirect_busy" t="Переадресація коли зайнято"/>
+	<phrase n="lang_redirect_busy_typeSio" t="Переадресація коли зайнято"/>
+	<phrase n="lang_redirect_time" t="Переадресація після таймауту"/>
+	<phrase n="lang_redirect_time_typeSio" t="Переадресація після таймауту"/>
+	<phrase n="lang_do_redirect" t="Увімкн Переадресацію"/>
+	<phrase n="lang_do_redirect_typeSio" t="Увімкн Переадресацію"/>
+	<phrase n="lang_redirect_target" t="Переадресація на номер"/>
+	<phrase n="lang_redirect_target_typeSio" t="Переадресація на номер"/>
+	<phrase n="lang_help_label" t="Довідка"/>
+	<phrase n="lang_sysinfo_mem1" t="RAM:"/>
+	<phrase n="lang_sysinfo_mem2" t="з"/>
+	<phrase n="lang_sysinfo_mem3" t="доступно"/>
+	<phrase n="lang_goto_phonepage_msg" t="Для налаштування телефону, відкрийте у браузері:"/>
+	<phrase n="lang_goto_phonepage_msg_typeSio" t="Для налаштування телефону, відкрийте у браузері:"/>
+	<phrase n="lang_goto_help_msg" t="Для додаткової інформації перейдіть:"/>
+	<phrase n="lang_linestate_connected" t="розмовляє"/>
+	<phrase n="lang_linestate_on_hold" t="на утриманні"/>
+	<phrase n="lang_linestate_ringing" t="викликає"/>
+	<phrase n="lang_linename_message" t="Повідомлення"/>
+	<phrase n="lang_linename_redial" t="Повторний набір"/>
+	<phrase n="lang_linename_transfer" t="Переведення"/>
+	<phrase n="lang_linename_rec_on" t="Почати Запис"/>
+	<phrase n="lang_linename_rec_off" t="Припинити Запис"/>
+	<phrase n="lang_linetype_auto_answer" t="Автовідповідь"/>
+	<phrase n="lang_linetype_blf" t="BLF"/>
+	<phrase n="lang_connecting" t="З'єднання"/>
+	<phrase n="lang_fkey_add_contact_typeSio" t="Додати Контакт"/>
+	<phrase n="lang_cancelconference" t="Відмінити Конференцію"/>
+	<phrase n="lang_confirm_cancelconference" t="Вийти з конференції?"/>
+	<phrase n="lang_xmlgui_dialnumber" t="Набрати номер"/>
+	<phrase n="lang_xmlgui_contactlist" t="Список контактів"/>
+	<phrase n="lang_xmlgui_dial" t="Набір"/>
+	<phrase n="lang_menu_equalizer" t="Еквалайзер"/>
+	<phrase n="lang_equalizer_soft" t="М'який звук"/>
+	<phrase n="lang_equalizer_normal" t="Нормальний звук"/>
+	<phrase n="lang_equalizer_bright" t="Чіткий звук"/>
+	<phrase n="lang_contactpool" t="Пул"/>
+	<phrase n="lang_tb_nickname" t="Псевдонім"/>
+	<phrase n="lang_tb_number" t="Телефонний номер"/>
+	<phrase n="lang_tb_contact" t="Тип Контакта"/>
+	<phrase n="lang_tb_outgoing_id" t="Вихідний Ідентифікатор"/>
+	<phrase n="lang_tb_firstname" t="Ім'я"/>
+	<phrase n="lang_tb_lastname" t="Прізвище"/>
+	<phrase n="lang_tb_group" t="Група"/>
+	<phrase n="lang_day" t="День"/>
+	<phrase n="lang_month" t="Місяць"/>
+	<phrase n="lang_year" t="Рік"/>
+	<phrase n="lang_tb_title" t="Звернення"/>
+	<phrase n="lang_tb_organization" t="Організація"/>
+	<phrase n="lang_tb_email" t="Електронна пошта"/>
+	<phrase n="lang_tb_note" t="Примітка"/>
+	<phrase n="lang_tb_photo" t="Фото"/>
+	<phrase n="lang_tb_favorite" t="Обрані"/>
+	<phrase n="lang_linename_transfer_short" t="Перев"/>
+	<phrase n="lang_linetype_key_event_short" t="Клав"/>
+	<phrase n="lang_linetype_url_short" t="URL"/>
+	<phrase n="lang_grouptype_family" t="Сім'я"/>
+	<phrase n="lang_grouptype_friend" t="Друзі"/>
+	<phrase n="lang_grouptype_collegue" t="Колеги"/>
+	<phrase n="lang_grouptype_work" t="Робота"/>
+	<phrase n="lang_title_sort" t="Сортувати по"/>
+	<phrase n="lang_title_select_entry" t="Оберіть запис"/>
+	<phrase n="lang_entry_general" t="Загальні відомості"/>
+	<phrase n="lang_title_entry_general" t="Загальні відомості про"/>
+	<phrase n="lang_fav_add_from_tbook" t="Додати з телефонної книги"/>
+	<phrase n="lang_redirect_on_timeout" t="перенаправити по таймауту:"/>
+	<phrase n="lang_redirect_on_timeout_typeSio" t="перенаправити по таймауту:"/>
+	<phrase n="lang_redirect_when_busy" t="перенаправити коли зайнято:"/>
+	<phrase n="lang_redirect_when_busy_typeSio" t="перенаправити коли зайнято:"/>
+	<phrase n="lang_sip_disabled" t="SIP відключено"/>
+	<phrase n="lang_low_memory" t="Мало Пам'яті"/>
+	<phrase n="lang_title_error" t="Помилка"/>
+	<phrase n="lang_error_code" t="код помилки:"/>
+	<phrase n="lang_bad_server_response" t="невірна відповідь сервера"/>
+	<phrase n="lang_bad_xml_response" t="невірна відповідь XML..."/>
+	<phrase n="lang_title_loading" t="Завантаження"/>
+	<phrase n="lang_active_id" t="Активний Ідентифікатор"/>
+	<phrase n="lang_1st_id" t="1 ідентифікатор"/>
+	<phrase n="lang_2nd_id" t="2 ідентифікатор"/>
+	<phrase n="lang_3rd_id" t="3 ідентифікатор"/>
+	<phrase n="lang_4th_id" t="4 ідентифікатор"/>
+	<phrase n="lang_5th_id" t="5 ідентифікатор"/>
+	<phrase n="lang_6th_id" t="6 ідентифікатор"/>
+	<phrase n="lang_7th_id" t="7 ідентифікатор"/>
+	<phrase n="lang_8th_id" t="8 ідентифікатор"/>
+	<phrase n="lang_9th_id" t="9 ідентифікатор"/>
+	<phrase n="lang_10th_id" t="10 ідентифікатор"/>
+	<phrase n="lang_11th_id" t="11 ідентифікатор"/>
+	<phrase n="lang_12th_id" t="12 ідентифікатор"/>
+	<phrase n="lang_contacttype_vip" t="VIP"/>
+	<phrase n="lang_contacttype_deny" t="блокування"/>
+	<phrase n="lang_unknown" t="Невідомий"/>
+	<phrase n="lang_month_01" t="Січень"/>
+	<phrase n="lang_month_02" t="Лютий"/>
+	<phrase n="lang_month_03" t="Березень"/>
+	<phrase n="lang_month_04" t="Квітень"/>
+	<phrase n="lang_month_05" t="Травень"/>
+	<phrase n="lang_month_06" t="Червень"/>
+	<phrase n="lang_month_07" t="Липень"/>
+	<phrase n="lang_month_08" t="Серпень"/>
+	<phrase n="lang_month_09" t="Вересень"/>
+	<phrase n="lang_month_10" t="Жовтень"/>
+	<phrase n="lang_month_11" t="Листопад"/>
+	<phrase n="lang_month_12" t="Грудень"/>
+	<phrase n="lang_tb_name_label" t="Ім'я"/>
+	<phrase n="lang_tb_number_label" t="Телефон"/>
+	<phrase n="lang_title_transfer" t="Сторона передачі викл"/>
+	<phrase n="lang_linestate_label" t="Стан"/>
+	<phrase n="lang_reboot_uploads" t="Перезавантаження для застосування змін."/>
+	<phrase n="lang_cc_dial_now" t="Набрати номер?"/>
+	<phrase n="lang_cc_complete_now" t="Ви можете завершити виклик"/>
+	<phrase n="lang_cc_waiting_for" t="Очікування завершення виклику"/>
+	<phrase n="lang_cc_set_warning" t="виклик завершено, але ви можете встановити його знову."/>
+	<phrase n="lang_cc_change_title" t="Змінити налаштування завершення виклику?"/>
+	<phrase n="lang_cc_change_message" t="Заміна поточного CC-Target на"/>
+	<phrase n="lang_cc_status_waiting_on" t="Очікування доступності %dst."/>
+	<phrase n="lang_cc_activate" t="буде очікувати завершення виклику."/>
+	<phrase n="lang_cc_activated" t="все ще очікує завершення виклику."/>
+	<phrase n="lang_call_contact" t="Подзвонити Контакту"/>
+	<phrase n="lang_call_work" t="Подзвонити на Робочій"/>
+	<phrase n="lang_call_work_typeSio" t="Подзвонити на Робочій"/>
+	<phrase n="lang_call_mobile" t="Подзвонити на Мобільний"/>
+	<phrase n="lang_call_home" t="Подзвонити на Домашній"/>
+	<phrase n="lang_call_home_typeSio" t="Подзвонити на Домашній"/>
+	<phrase n="lang_call_other" t="Подзвонити на Інший"/>
+	<phrase n="lang_call_voicemail" t="Виклик Голосової Пошти"/>
+	<phrase n="lang_xfer_to_contact" t="Перевести на Контакт"/>
+	<phrase n="lang_xfer_to_work" t="Перевести на робочій"/>
+	<phrase n="lang_xfer_to_work_typeSio" t="Перевести на Робочій"/>
+	<phrase n="lang_xfer_to_mobile" t="Перевести на Мобільний"/>
+	<phrase n="lang_xfer_to_home" t="Перевести на Домашній"/>
+	<phrase n="lang_xfer_to_home_typeSio" t="Перевести на Домашній"/>
+	<phrase n="lang_xfer_to_other" t="Перевести на Інший"/>
+	<phrase n="lang_xfer_to_voicemail" t="Перевести на Голосову Пошту"/>
+	<phrase n="lang_cfw_to_contact" t="Переадресація на Контакт"/>
+	<phrase n="lang_cfw_to_contact_typeSio" t="Переадресація на Контакт"/>
+	<phrase n="lang_cfw_to_voicemail_typeSio" t="Переадресація на Голосову Пошту"/>
+	<phrase n="lang_cfw_to_work" t="Переадресація на Робочій"/>
+	<phrase n="lang_cfw_to_work_typeSio" t="Переадресація на Робочій"/>
+	<phrase n="lang_cfw_to_mobile" t="Переадресація на Мобільний"/>
+	<phrase n="lang_cfw_to_mobile_typeSio" t="Переадресація на Мобільний"/>
+	<phrase n="lang_cfw_to_home" t="Переадресація на Домашній"/>
+	<phrase n="lang_cfw_to_home_typeSio" t="Переадресація на Домашній"/>
+	<phrase n="lang_cfw_to_other" t="Переадресація на Інший"/>
+	<phrase n="lang_cfw_to_other_typeSio" t="Переадресація на Інший"/>
+	<phrase n="lang_cfw_to_voicemail" t="Переадресація на Голосову Пошту"/>
+	<phrase n="lang_assign_to_key" t="Назначити на Клавішу"/>
+	<phrase n="lang_contact_state_unknown" t="Невідомий"/>
+	<phrase n="lang_contact_state_available" t="Доступний"/>
+	<phrase n="lang_contact_state_available_on_mobile" t="Доступний на Мобіному"/>
+	<phrase n="lang_contact_state_available_at_desk" t="Доступний на Робочому"/>
+	<phrase n="lang_contact_state_inactive" t="Не активний"/>
+	<phrase n="lang_contact_state_busy" t="Зайнятий"/>
+	<phrase n="lang_contact_state_urgent_interruptions_only" t="Доступний тільки для термінових справ"/>
+	<phrase n="lang_contact_state_in_a_call" t="Розмовляє"/>
+	<phrase n="lang_contact_state_in_a_meeting" t="На Нараді"/>
+	<phrase n="lang_contact_state_meeting" t="Нарада"/>
+	<phrase n="lang_contact_state_holding" t="На Утриманні"/>
+	<phrase n="lang_contact_state_dnd" t="Не Турбувати"/>
+	<phrase n="lang_contact_state_dnd_all" t="Не Турбувати (для всіх)"/>
+	<phrase n="lang_contact_state_dnd_self" t="Не Турбувати (сам)"/>
+	<phrase n="lang_contact_state_be_right_back" t="Скоро буду"/>
+	<phrase n="lang_contact_state_away" t="Відсутній"/>
+	<phrase n="lang_contact_state_offline" t="Не в мережі"/>
+	<phrase n="lang_contact_state_reset" t="Скинути Статус"/>
+	<phrase n="lang_remote_book_name_ldap" t="LDAP Каталог"/>
+	<phrase n="lang_remote_book_choose_title" t="Обрати адресну книгу"/>
+	<phrase n="lang_title_add_to_favorites" t="Додати в Обране"/>
+	<phrase n="lang_title_add_to_favorites_typeSio" t="Додати в Обране"/>
+	<phrase n="lang_title_favorites" t="Обране"/>
+	<phrase n="lang_unknown_partner" t="Невідомий"/>
+	<phrase n="lang_nrtype_sip" t="SIP"/>
+	<phrase n="lang_nrtype_business" t="Бізнес"/>
+	<phrase n="lang_nrtype_fixed" t="Міська Лінія"/>
+	<phrase n="lang_nrtype_extension" t="Внутрішній Номер"/>
+	<phrase n="lang_tb_number_type" t="Тип Номеру"/>
+	<phrase n="lang_tb_number_type_label" t="Тип"/>
+	<phrase n="lang_title_no_permission" t="Заборонено"/>
+	<phrase n="lang_target_office" t="Офіс"/>
+	<phrase n="lang_target_replyto" t="Відповісти"/>
+	<phrase n="lang_target_unqualified" t="Некваліфікований"/>
+	<phrase n="lang_target_work" t="Робочий"/>
+	<phrase n="lang_target_work_typeSio" t="Робочий"/>
+	<phrase n="lang_target_mobile" t="Мобільний"/>
+	<phrase n="lang_target_home" t="Домашній"/>
+	<phrase n="lang_target_home_typeSio" t="Домашній"/>
+	<phrase n="lang_target_other" t="Другий"/>
+	<phrase n="lang_target_voicemail" t="Голосова Пошта"/>
+	<phrase n="lang_target_new_number" t="Новий Номер"/>
+	<phrase n="lang_target_contact" t="Контакт"/>
+	<phrase n="lang_directory_too_big_to_import__long" t="Віддалений Каталог завеликий"/>
+	<phrase n="lang_target_cancel" t="Не Переадресовувати"/>
+	<phrase n="lang_target_cancel_typeSio" t="Не Переадресовувати"/>
+	<phrase n="lang_target_forward" t="Переадресувати Дзвінки до"/>
+	<phrase n="lang_target_forward_typeSio" t="Переадресувати Дзвінки до"/>
+	<phrase n="lang_tls_unknown_certificate_alert" t="Відмовлено в захищеному з'єднанні, через невідомий сертифікат. Якщо ви довіряєте цьому з'єднанню, то можете дозволити це з'єднання через веб-інтерфейс в розділі «Сертифікати»."/>
+	<phrase n="lang_tls_unknown_certificate_alert_title" t="Безпечне З'єднання не встановлено"/>
+	<phrase n="lang_tls_properties_changed" t="Будь ласка перезавантажте. Змінені властивості безпеки не можуть застосовуватися до поточних сеансів."/>
+	<phrase n="lang_call_completed_by_part1" t="Виклик завершено"/>
+	<phrase n="lang_call_completed_by_part2" t="на другому терміналі."/>
+	<phrase n="lang_call_completed_by_part2_typeSio" t="на другому терміналі."/>
+	<phrase n="lang_challenge_sip_pw" t="SIP Пароль"/>
+	<phrase n="lang_line_ocs_wz_user" t="Домен\Користувач"/>
+	<phrase n="lang_line_ocs_wz_pwd" t="Пароль"/>
+	<phrase n="lang_unregistered_ids_title" t="Не Зареєстровано:"/>
+	<phrase n="lang_message_label" t="Інфо"/>
+	<phrase n="lang_status_messages" t="Статус Інфо"/>
+	<phrase n="lang_information_settings" t="Інформація"/>
+	<phrase n="lang_user_realname" t="Ім'я що відображується"/>
+	<phrase n="lang_user_idle_number" t="Показати Номер"/>
+	<phrase n="lang_user_name" t="Обліковий Запис"/>
+	<phrase n="lang_user_pass" t="Пароль"/>
+	<phrase n="lang_user_host" t="Сервер Реєстрації"/>
+	<phrase n="lang_user_outbound" t="Вихідний Проксі-сервер"/>
+	<phrase n="lang_user_pname" t="Автентифікація Користувача"/>
+	<phrase n="lang_user_mailbox" t="Поштова Скриня"/>
+	<phrase n="lang_user_mailbox_retrieve" t="Набрати Поштову Скриню"/>
+	<phrase n="lang_hotdesking" t="Хотдескінг"/>
+	<phrase n="lang_keyb_enter_current_pin" t="Введіть поточний PIN"/>
+	<phrase n="lang_keyb_enter_new_pin" t="Введіть новий PIN"/>
+	<phrase n="lang_keyb_reenter_new_pin" t="Повторіть новий PIN"/>
+	<phrase n="lang_keyb_enter_password" t="Введіть пароль для скидання PIN"/>
+	<phrase n="lang_keyb_locked" t="Натисніть та утримуйте * для розблокування."/>
+	<phrase n="lang_keyb_permanently_locked" t="Натисніть та утримуйте * для скидання PIN."/>
+	<phrase n="lang_title_unlock" t="Клавіатуру заблоковано"/>
+	<phrase n="lang_confirm_unlock" t="Розблокувати? Натисніть ОК."/>
+	<phrase n="lang_transfer_failed_msg" t="Переведення дзвінка невдале"/>
+	<phrase n="lang_action_failed_msg" t="Дію не виконано"/>
+	<phrase n="lang_vpn_fetch" t="Скачування VPN налаштуваннь з:"/>
+	<phrase n="lang_vpn_fetch_failed" t="Не вдалося отримати tar-архів VPN"/>
+	<phrase n="lang_vpn_flash" t="Вилучення VPN файлів..."/>
+	<phrase n="lang_vpn_reboot" t="Перезавантаження Системи для активації VPN..."/>
+	<phrase n="lang_l2tp_fetch" t="Скачування L2TP налаштуваннь з:"/>
+	<phrase n="lang_l2tp_fetch_failed" t="Не вдалося отримати tar-архів L2TP"/>
+	<phrase n="lang_l2tp_flash" t="Вилучення L2TP файлів..."/>
+	<phrase n="lang_l2tp_reboot" t="Перезавантаження системи для активації L2TP..."/>
+	<phrase n="lang_sbc_fetch" t="Fetching sbc config file from:"/>
+	<phrase n="lang_sbc_fetch_failed" t="Fetching sbc config file failed"/>
+	<phrase n="lang_sbc_flash" t="Copy sbc config file..."/>
+	<phrase n="lang_sbc_reboot" t="Rebooting System to activate sbc..."/>
+	<phrase n="lang_sbc_active" t="SBC is active"/>
+	<phrase n="lang_keyb_min_digits" t="(мін. # цифр)"/>
+	<phrase n="lang_empty_dir_search_list" t="Введіть Ім'я! Використайте * для пропуску."/>
+	<phrase n="lang_key_unassigned" t="Клавіша не призначена"/>
+	<phrase n="lang_key_unassigned_typeSio" t="Клавіша не призначена"/>
+	<phrase n="lang_label_conference_partner" t="Партнер"/>
+	<phrase n="lang_incoming_call_title_while_connected" t="Виклик на очікування"/>
+	<phrase n="lang_active" t="Активний"/>
+	<phrase n="lang_emergency_call" t="екстрений виклик"/>
+	<phrase n="lang_ntp_pending" t="Звернення до сервера NTP"/>
+	<phrase n="lang_ntp_unreachable" t="NTP сервер не доступний"/>
+	<phrase n="lang_download_server_unreachable" t="Server unreachable"/>
+	<phrase n="lang_network_busy" t="Мережа зайнята"/>
+	<phrase n="lang_pstn_reroute_attempt" t="Цей виклик може зайняти більше часу для з'єднання. Мережа може бути зайнята."/>
+	<phrase n="lang_menu_location" t="Місце знаходження"/>
+	<phrase n="lang_linestate_holding_upper_case" t="Утримання"/>
+	<phrase n="lang_linestate_on_hold_upper_case" t="На Утриманні"/>
+	<phrase n="lang_location_retrieval_failed" t="Неможливо отримати місцезнаходження"/>
+	<phrase n="lang_route_private_line" t="Приватна Лінія"/>
+	<phrase n="lang_route_forwarded" t="Переадресований"/>
+	<phrase n="lang_route_forwarded_typeSio" t="Переадресований"/>
+	<phrase n="lang_route_delegated" t="Делегований"/>
+	<phrase n="lang_route_team_call" t="Командний Виклик"/>
+	<phrase n="lang_route_acd" t="Груповий Виклик"/>
+	<phrase n="lang_route_cccp_conference" t="Конференц Виклик"/>
+	<phrase n="lang_route_cccp_conference_typeSio" t="Конференц Виклик"/>
+	<phrase n="lang_dfks_failed" t="Помилка синхронізації функції"/>
+	<phrase n="lang_no_shared_key" t="Немає доступної клавіші загальної лінії"/>
+	<phrase n="lang_shared_seize_active" t="Лінія захоплення все ще активна"/>
+	<phrase n="lang_not_a_shared_key" t="Обрана клавіша не є клавішею загальної лінії"/>
+	<phrase n="lang_active_key_not_a_shared_key" t='Кнопка Загальна Лінія не працює при "Активному" призначенні контексту.'/>
+	<phrase n="lang_ipv4_conflict" t="IPv4: конфлікт"/>
+	<phrase n="lang_contact_saved" t="Контакт збережено"/>
+	<phrase n="lang_query_pending" t="Пошук..."/>
+	<phrase n="lang_no_conference" t="Конференція неможлива унаслідок завантаження процесора на %А"/>
+	<phrase n="lang_no_conference_with_codec" t="Конференція заборонена через завантаження процесора на %A якщо одна із сторін використовує кодек %B"/>
+	<phrase n="lang_no_conference_with_encrypted_codec" t="Конференція заборонена через завантаження процесора на %A якщо одна із сторін використовує кодек %B з шифруванням"/>
+	<phrase n="lang_no_conference_without_unencrypted_codec" t="Конференція заборонена через завантаження процесора на %A якщо одна із сторін не використовує кодек %B з шифруванням"/>
+	<phrase n="lang_setup_language" t="Налаштування Мови"/>
+	<phrase n="lang_please_wait" t="Будь ласка почекайте..."/>
+	<phrase n="lang_download_failed" t="Завантаження не вдалося"/>
+	<phrase n="lang_function_blocked" t="Заблоковано"/>
+	<phrase n="lang_activating_uploads" t="Активація завантаження"/>
+	<phrase n="lang_provisioning" t="Автоналаштування"/>
+	<phrase n="lang_provisioning_failed" t="Невдале Автоналаштування"/>
+	<phrase n="lang_tr69_provisioning" t="Йде автоналаштування по протоколу TR-069"/>
+	<phrase n="lang_start_provisioning" t="Йде процес автоналаштування"/>
+	<phrase n="lang_waitTime" t="Час Очікування"/>
+	<phrase n="lang_ccUserId" t="ID Користувача"/>
+	<phrase n="lang_callCenterName" t="Ім'я"/>
+	<phrase n="lang_numCallsInQueue" t="Виклик у черзі"/>
+	<phrase n="lang_acd_ready" t="Доступний"/>
+	<phrase n="lang_acd_not_ready" t="Недоступний"/>
+	<phrase n="lang_acd_working_after_call" t="Завершення"/>
+	<phrase n="lang_acd_log_on" t="Увійти в систему"/>
+	<phrase n="lang_acd_log_off" t="Вийти з системи"/>
+	<phrase n="lang_acd_unkown_state" t="Невідомий Стан"/>
+	<phrase n="lang_change_state_to" t="Змінити Стан"/>
+	<phrase n="lang_call_parked" t="Виклик на утриманні"/>
+	<phrase n="lang_call_unparked" t="Виклик повернуто з утримання"/>
+	<phrase n="lang_firmware_update_failed" t="Помилка оновлення ПЗ"/>
+	<phrase n="lang_firmware_update_restart" t="Повторний запуск оновлення ПЗ?"/>
+	<phrase n="lang_temp_unavail" t="Тимчасово недоступний"/>
+	<phrase n="lang_limited_func" t="Обмежена функціональність через перебій у роботі"/>
+	<phrase n="lang_limited_func_exp" t="Проблема з мережею тимчасово обмежує такі функції, як Присутність або CF"/>
+	<phrase n="lang_limited_func_exp_typeSio" t="Мережева проблема тимчасово обмежує можливості, такі як Присутність або CF"/>
+	<phrase n="lang_call_park_failed" t="Утримання Заборонено"/>
+	<phrase n="lang_park_failed_reason" t="Паркування неможливе"/>
+	<phrase n="lang_list_parked" t="На утриманні"/>
+	<phrase n="lang_vision" t="Модуль Vision"/>
+	<phrase n="lang_unpair_vision" t="Відмінити Сполучення Vision"/>
+	<phrase n="lang_scan_for_visions" t="Сканування Vision"/>
+	<phrase n="lang_paired_with_vision" t="Сполучено з Vision:"/>
+	<phrase n="lang_vision_connection_lost" t="Сполучення з Vision втрачено"/>
+	<phrase n="lang_unpair_vision_question" t="Відмінити сполучення з Vision?"/>
+	<phrase n="lang_isconnected" t="сполучений"/>
+	<phrase n="lang_isdisconnected" t="роз'єднаний"/>
+	<phrase n="lang_isdisconnected_typeSio" t="роз'єднаний"/>
+	<phrase n="lang_hotdesking_ntlm" t="Дані Облікового Запису"/>
+	<phrase n="lang_hotdesking_pin" t="PIN"/>
+	<phrase n="lang_prompt_phone_num" t="Ваш Внутрішній Номер"/>
+	<phrase n="lang_prompt_pin" t="Ваш PIN"/>
+	<phrase n="lang_pin_signin_active" t="вхід в систему..."/>
+	<phrase n="lang_pin_signin_failure" t="Вхід з номером телефону та PIN неможливий"/>
+	<phrase n="lang_firmware_update_in" t="Надійшло оновлення ПЗ"/>
+	<phrase n="lang_firmware_update_available" t="Доступне оновлення ПЗ"/>
+	<phrase n="lang_call_for" t="Виклик для"/>
+	<phrase n="lang_linetype_bossadmin" t="Директор/Адмін"/>
+	<phrase n="lang_linetype_bossadmin_short" t="Д/А"/>
+	<phrase n="lang_success_msg_transferred_to" t="%A переведений на %B"/>
+	<phrase n="lang_pickup_call" t="Перехоплення Виклику"/>
+	<phrase n="lang_call_on_behalf_of" t="Виклик від Імені"/>
+	<phrase n="lang_boss_group" t="Співробітники викликами яких я керую"/>
+	<phrase n="lang_delegate_group" t="Делегати"/>
+	<phrase n="lang_all_delegates" t="Призначити всіх делегатів на клавішу"/>
+	<phrase n="lang_call_failed_network_issue" t="Помилка виклику через проблеми з мережею"/>
+	<phrase n="lang_call_failed_network_issue_typeSio" t="Помилка виклику через проблеми з мережею"/>
+	<phrase n="lang_ethernet_detection" t="Виявлення Мережевого З'єднання"/>
+	<phrase n="lang_firmware_update_not_available" t="Немає доступних оновлень ПЗ"/>
+	<phrase n="lang_check_sw_update" t="Перевірка оновлення ПЗ"/>
+	<phrase n="lang_continuous_text_label" t="Етикетка"/>
+	<phrase n="lang_short_text" t="Короткий текст"/>
+	<phrase n="lang_headline_admins" t="Адміністратори"/>
+	<phrase n="lang_always_delegate_forward" t="Завжди Делегувати Переадресацію"/>
+	<phrase n="lang_always_deleg_sim" t="Завжди викликати одночасно"/>
+	<phrase n="lang_always_deleg_forw" t="Завжди Переадресувати"/>
+	<phrase n="lang_always_deleg_forw_typeSio" t="Завжди Переадресувати"/>
+	<phrase n="lang_tb_action_url" t="action url"/>
+	<phrase n="lang_clear_call_history" t="Очистити історію викликів"/>
+	<phrase n="lang_headset_volume_only" t="Зміна гучності USB-гарнітури можлива тільки на гарнітурі."/>
+	<phrase n="lang_hold_error" t="Hold failure, call has been muted. Press hold again to retry."/>
+	<phrase n="lang_retr_by" t="Виклик прийнятий"/>
+	<phrase n="lang_ipv4" t="Адреса IPv4"/>
+	<phrase n="lang_ipv6" t="Адреса IPv6"/>
+	<phrase n="lang_ipv6_autoconf" t="SLAAC"/>
+	<phrase n="lang_refresh" t="Оновити"/>
+	<phrase n="lang_may_take_some_time" t="Оновлення може зайняти деякий час. Продовжити у будь-якому разі?"/>
+	<phrase n="lang_ip_address_not_available" t="Недоступний"/>
+	<phrase n="lang_menu_unlock" t="Розблокувати"/>
+	<phrase n="lang_menu_security" t="Безпека"/>
+	<phrase n="lang_route_team_call_for" t="Командний виклик для"/>
+	<phrase n="lang_route_acd_for" t="Груповий Виклик для"/>
+	<phrase n="lang_route_anonymous_acd" t="Анонімний Груповий Виклик"/>
+	<phrase n="lang_route_anonymous_acd_for" t="Анонімний Груповий Виклик для"/>
+	<phrase n="lang_anonymous" t="Невідомий"/>
+	<phrase n="lang_wish_barge_in" t="Ви хочете вторгнутися?"/>
+	<phrase n="lang_location" t="Місцерозташування:"/>
+	<phrase n="lang_subject" t="Предмет"/>
+	<phrase n="lang_dates" t="Зустрічі"/>
+	<phrase n="lang_menu_dates_today" t="Сьогоднішні Зустрічі"/>
+	<phrase n="lang_label_conference_organizer" t="Організатор:"/>
+	<phrase n="lang_date_ongoing" t="Зараз:"/>
+	<phrase n="lang_date_remind_me_later" t="Нагадати пізніше"/>
+	<phrase n="lang_date_remind_later" t="Пізніше"/>
+	<phrase n="lang_date_set_reminder_to" t="На"/>
+	<phrase n="lang_minutes" t="Хвилин"/>
+	<phrase n="lang_date_reset_reminder" t="Скинути нагадування"/>
+	<phrase n="lang_cannot_access_exchange" t="Не вдається отримати доступ до Exchange-серверу."/>
+	<phrase n="lang_no_dates_today" t="Сьогодні нічого не заплановано"/>
+	<phrase n="lang_participants" t="Учасники:"/>
+	<phrase n="lang_expansion_modules" t="Модулі розширення"/>
+	<phrase n="lang_wiz_vlan" t="Ви використовуєте VLAN?"/>
+	<phrase n="lang_wiz_ip4" t="Ви хочете налаштувати IPv4?"/>
+	<phrase n="lang_wiz_ip6" t="Налаштування IPv6"/>
+	<phrase n="lang_sxm_connected" t="Модуль послідовного розширення підключений"/>
+	<phrase n="lang_uxm_connected" t="Модуль USB розширення підключений"/>
+	<phrase n="lang_uxm_cabeling_broken" t="Невірне підключення кабелю модуля розширення"/>
+	<phrase n="lang_uxm_limit_exceeded" t="Надто багато підключених модулів розширення USB"/>
+	<phrase n="lang_vpn_active" t="VPN активний"/>
+	<phrase n="lang_wlan_active" t="Wlan активний"/>
+	<phrase n="lang_list_no_devices" t="(Немає доступного пристрою)"/>
+	<phrase n="lang_bluetooth" t="Bluetooth"/>
+	<phrase n="lang_bluetooth_connected_title" t="Підключений пристрій"/>
+	<phrase n="lang_bluetooth_paired_list_title" t="Список сполучених пристроїв"/>
+	<phrase n="lang_bluetooth_active_connection" t="Bluetooth-сполучення Активне"/>
+	<phrase n="lang_bluetooth_discovered_list_title" t="Список виявлених пристроїв"/>
+	<phrase n="lang_bluetooth_discovering" t="Виявлення"/>
+	<phrase n="lang_bluetooth_unpairing" t="Відміна Сполучення"/>
+	<phrase n="lang_bluetooth_pairing" t="Сполучення"/>
+	<phrase n="lang_bluetooth_connecting" t="Підключення"/>
+	<phrase n="lang_bluetooth_disconnecting" t="Відключення"/>
+	<phrase n="lang_callback_on_busy" t="Передзвонити якщо Зайнято"/>
+	<phrase n="lang_auto_busy_redial" t="Автоматично Передзвонити якщо Зайнято"/>
+	<phrase n="lang_decision_cob" t='нині зайнятий. Для отримання повідомлення натисніть "Підтвердити". Щоб залишити повідомлення, натисніть "X".'/>
+	<phrase n="lang_decision_cob_withoutvm" t='нині зайнятий. Для отримання повідомлення натисніть "Підтвердити".'/>
+	<phrase n="lang_callback" t="Зворотний Виклик"/>
+	<phrase n="lang_callback_available" t="Зворотний виклик доступний"/>
+	<phrase n="lang_linetype_callback" t="Зворотний Виклик"/>
+	<phrase n="lang_linetype_callback_short" t="ЗвВ"/>
+	<phrase n="lang_ringback_callpark_service" t="Провести через службу Утримання Дзвінка"/>
+	<phrase n="lang_callpark_service" t="Служба Утримання Дзвінка"/>
+	<phrase n="lang_storage_mounted" t="Підключений диск USB"/>
+	<phrase n="lang_storage_mounted_typeSio" t="Підключений диск USB"/>
+	<phrase n="lang_storage_tomany" t="Ви можете підключити тільки один USB диск"/>
+	<phrase n="lang_storage_umount" t="Відключити USB диск"/>
+	<phrase n="lang_no_participants_detected" t="учасників не виявлено"/>
+	<phrase n="lang_ieee8021_method" t="Режим"/>
+	<phrase n="lang_menu_fkey_functions" t="Функція"/>
+	<phrase n="lang_uxm_appearance" t="Зовнішність"/>
+	<phrase n="lang_put_through_by" t="Проведено за допомогою"/>
+	<phrase n="lang_contact_not_in_list" t="не знайдено в списку контактів"/>
+	<phrase n="lang_msg_speaker_active" t="Гучний зв'язок активований"/>
+	<phrase n="lang_msg_headset_active" t="Режим гарнітури активований"/>
+	<phrase n="lang_msg_handset_active" t="Режим Трубки Активований"/>
+	<phrase n="lang_msg_ringing_disabled" t="Виклик відключений"/>
+	<phrase n="lang_msg_mute_active" t="Телефон у беззвучному режимі"/>
+	<phrase n="lang_wiz_aborted" t="Майстер перерваний."/>
+	<phrase n="lang_menu_set_kbd_lock_pin" t="Змінити PIN клавіатури"/>
+	<phrase n="lang_menu_change_kbd_lock_pin" t="Змінити PIN клавіатури"/>
+	<phrase n="lang_no_valid_dsearch_config" t="Недійсна конфігурація пошуку каталогу"/>
+	<phrase n="lang_title_conferences" t="Конференції"/>
+	<phrase n="lang_no_conferences_found" t="Конференції не знайдені"/>
+	<phrase n="lang_conference_type" t="Тип"/>
+	<phrase n="lang_conference_status" t="Статус"/>
+	<phrase n="lang_join_conference_long" t="приєднатися до Конференції"/>
+	<phrase n="lang_join_conference_as_moderator" t="приєднатися як Модератор"/>
+	<phrase n="lang_choose_menu" t="Обрати Меню"/>
+	<phrase n="lang_menu_shortcut" t="Ярлик Меню"/>
+	<phrase n="lang_using_time" t="час використання"/>
+	<phrase n="lang_waiting_for_pnp" t="Очікування PnP"/>
+	<phrase n="lang_fkey_contact_list_buddy" t="BLF (Сервер)"/>
+	<phrase n="lang_fkey_xmpp_presence" t="Присутність Контактів (XMPP)"/>
+	<phrase n="lang_csta_prompt_title" t="Набрати зараз?"/>
+	<phrase n="lang_contact_is_favorite" t="Чи є цей контакт одним з ваших обраних?"/>
+	<phrase n="lang_currently_set_to" t="Нині встановлено:"/>
+	<phrase n="lang_vol_label_contrast" t="Контраст другого екрану"/>
+	<phrase n="lang_menu_fkeys_phone" t="Клавіші ліній"/>
+	<phrase n="lang_menu_dkeys_phone" t="Виділені клавіші"/>
+	<phrase n="lang_menu_context_sensitive_keys_phone" t="Контекстно-залежні клавіші"/>
+	<phrase n="lang_menu_smartlabel_fkeys" t="Клавіші SmartLabel"/>
+	<phrase n="lang_menu_smartlabel_page" t="Сторінка"/>
+	<phrase n="lang_menu_fkeys_page" t="Сторінка Клавіш Ліній"/>
+	<phrase n="lang_menu_fkeys_sxm" t="Клавіші SXM"/>
+	<phrase n="lang_menu_fkeys_uxm" t="Клавіші Модуля Розширення"/>
+	<phrase n="lang_server_directory_search" t="Пошук Каталогу на Сервері"/>
+	<phrase n="lang_menu_fontsize" t="Розмір Шрифту"/>
+	<phrase n="lang_uxm_fontsize_lines" t="Розмір Шрифту (Розміщення Рядка)"/>
+	<phrase n="lang_uxm_fontsize_tiles" t="Розмір Шрифту (Розміщення Плитки)"/>
+	<phrase n="lang_menu_text_alignment" t="Вирівнювання тексту"/>
+	<phrase n="lang_left" t="Лівий"/>
+	<phrase n="lang_right" t="Правий"/>
+	<phrase n="lang_center" t="Центр"/>
+	<phrase n="lang_alternate" t="Чередувати"/>
+	<phrase n="lang_menu_return_to_first_page" t="Повернутися до Першої Сторінки"/>
+	<phrase n="lang_automatic_return" t="Автоматичне повернення"/>
+	<phrase n="lang_warning" t="Попередження"/>
+	<phrase n="lang_public_address" t="Публічна Адреса"/>
+	<phrase n="lang_menu_volume" t="Налаштування Гучності   "/>
+	<phrase n="lang_vol_ringer_text" t="Гучність Дзвінка"/>
+	<phrase n="lang_vol_headset_text" t="Гучність Гарнітури"/>
+	<phrase n="lang_vol_handset_text" t="Гучність Трубки"/>
+	<phrase n="lang_vol_speaker_text" t="Гучність Спікерфона"/>
+	<phrase n="lang_list_rejected" t="Відхилено"/>
+	<phrase n="lang_enum_disp_func_key_conference" t="Конференція"/>
+	<phrase n="lang_enum_disp_func_key_ivr" t="IVR"/>
+	<phrase n="lang_enum_disp_func_key_callback_on_busy" t="Зворотний Виклик"/>
+	<phrase n="lang_fkeys_ssi_context" t="Контекст"/>
+	<phrase n="lang_fkeys_ssi_type" t="Тип"/>
+	<phrase n="lang_fkeys_ssi_active" t="Активний"/>
+	<phrase n="lang_fkeys_ssi_icon" t="Піктограма"/>
+	<phrase n="lang_default_icon" t="Піктограма за умовчанням"/>
+	<phrase n="lang_custom_icon" t="Піктограма Користувача"/>
+	<phrase n="lang_FirstName" t="Ім'я"/>
+	<phrase n="lang_LastName" t="Прізвище"/>
+	<phrase n="lang_Home" t="Домашній номер"/>
+	<phrase n="lang_Office" t="Робочій номер"/>
+	<phrase n="lang_Mobile" t="Мобільний номер"/>
+	<phrase n="lang_Unqualified" t="Некваліфікований номер"/>
+	<phrase n="lang_edit_contact" t="Змінити Контакт"/>
+	<phrase n="lang_msw_query" t="Відправка контактних даних на сервер не вдалася:"/>
+	<phrase n="lang_indicator" t="Індикатор"/>
+	<phrase n="lang_protocol" t="Протокол"/>
+	<phrase n="lang_target_forward_busy" t="Переадресація Коли Зайнято на"/>
+	<phrase n="lang_target_forward_timeout" t="Переадресація Викликів Після"/>
+	<phrase n="lang_target_forward_timeout_typeSio" t="Переадресація Викликів Після"/>
+	<phrase n="lang_WIFI_SSID" t="Назва Мережі"/>
+	<phrase n="lang_WIFI_auth_mode" t="Шифрування"/>
+	<phrase n="lang_WIFI_WPA_Encryption" t="WPA Шифрування"/>
+	<phrase n="lang_WIFI_WPA" t="WPA"/>
+	<phrase n="lang_WIFI_WPA2PSK" t="WPA2"/>
+	<phrase n="lang_WIFI_WEP" t="WEP"/>
+	<phrase n="lang_WIFI_OPEN" t="Відкритий"/>
+	<phrase n="lang_WIFI_AES" t="AES"/>
+	<phrase n="lang_WIFI_TKIP" t="TKIP"/>
+	<phrase n="lang_WIFI_SCAN_NETWORKS" t="Сканувати WLAN"/>
+	<phrase n="lang_WIFI_MANUAL_SETUP" t="Ручне Налаштування"/>
+	<phrase n="lang_contact_details" t="Деталі Контакту"/>
+	<phrase n="lang_WIFI_CONNECTED_TO" t="Підключено до"/>
+	<phrase n="lang_WIFI_NOT_CONNECTED" t="Не з'єднано"/>
+	<phrase n="lang_unhold" t="Відновити"/>
+	<phrase n="lang_empty" t="порожньо"/>
+	<phrase n="lang_F_SNOM" t="snom/Хмара"/>
+	<phrase n="lang_prefs_ssi_date_us_format" t="Формат Дати"/>
+	<phrase n="lang_prefs_ssi_time_24_format" t="24 годинний"/>
+	<phrase n="lang_time_symbol_second" t="с"/>
+	<phrase n="lang_all_accounts" t="Усі Ідентифікатори"/>
+	<phrase n="lang_reboot_to_apply_new_settings" t="Перезавантажити зараз, щоб нові налаштування могли набути чинності?"/>
+	<phrase n="lang_TLS" t="TLS"/>
+	<phrase n="lang_MD5" t="MD5"/>
+	<phrase n="lang_WIFI_SWITCH_OFF_WLAN" t="Вимкнути WLAN"/>
+	<phrase n="lang_ErrorNotSupportedByManager" t="Не підтримується"/>
+	<phrase n="lang_ErrorContactNotFound" t="Контакт не знайдено"/>
+	<phrase n="lang_ErrorInvalidCredentials" t="Неприпустимі облікові дані"/>
+	<phrase n="lang_ErrorInvalidArgument" t="Недійсний аргумент"/>
+	<phrase n="lang_ErrorRequestPending" t="Запит Очікує Виконання"/>
+	<phrase n="lang_ErrorNotInitialized" t="Не ініціалізовано"/>
+	<phrase n="lang_ErrorInComplete" t="Незавершений"/>
+	<phrase n="lang_ErrorOutOfMemory" t="Недостатньо пам'яті"/>
+	<phrase n="lang_Contact_pool" t="Контактний Пул"/>
+	<phrase n="lang_advanced_autoneg" t="Автоузгодження"/>
+	<phrase n="lang_advanced_10full" t="10 Мбіт Повний Дуплекс"/>
+	<phrase n="lang_advanced_10half" t="10 Мбіт Напівдуплекс"/>
+	<phrase n="lang_advanced_100full" t="100 Мбіт Повний Дуплекс"/>
+	<phrase n="lang_advanced_100half" t="100 Мбіт Напівдуплекс"/>
+	<phrase n="lang_advanced_1000full" t="1000 Мбіт Повний Дуплекс"/>
+	<phrase n="lang_Hardware" t="Апаратні засоби"/>
+	<phrase n="lang_NET_port_speed" t="Швидкість Мережевого Порту/Дуплекс"/>
+	<phrase n="lang_PC_port_speed" t="Швидкість Порту ПК/Дуплекс"/>
+	<phrase n="lang_Action_on_eth_replug" t="Дії на мережевому кабелі - Підключіть Знову"/>
+	<phrase n="lang_advanced_donothing" t="Ігнорувати"/>
+	<phrase n="lang_line_reregister" t="Повторна Реєстрація"/>
+	<phrase n="lang_NTP" t="NTP"/>
+	<phrase n="lang_DNS" t="DNS"/>
+	<phrase n="lang_LLDP" t="LLDP"/>
+	<phrase n="lang_NTP_refresh_timer" t="NTP Таймер Оновлення"/>
+	<phrase n="lang_8021x" t="802.1X"/>
+	<phrase n="lang_Expansion" t="Розширювальний Модуль"/>
+	<phrase n="lang_expansion_layout" t="Макет Модуля Розширення"/>
+	<phrase n="lang_Expansion_module" t="Модуль Розширення"/>
+	<phrase n="lang_Please_reboot" t="Будь ласка перезавантажте!"/>
+	<phrase n="lang_All_settings_saved" t="Усі налаштування збережені"/>
+	<phrase n="lang_WIFI_SCAN_RUNNING" t="Сканування..."/>
+	<phrase n="lang_WIFI_CONNECTING" t="Підключення..."/>
+	<phrase n="lang_wifi_connect_success_reboot_to_continue_msg1" t="Перезавантажте, щоб продовжити"/>
+	<phrase n="lang_wifi_connect_success_password_ok_msg2" t="Пароль ОК"/>
+	<phrase n="lang_wifi_connect_fail_invalid_settings_msg1" t="Недійсні налаштування"/>
+	<phrase n="lang_wifi_connect_fail_please_retry_msg2" t="Повторіть спробу"/>
+	<phrase n="lang_usb_wifi_unavailable" t="USB WiF недоступний"/>
+	<phrase n="lang_usb_wifi_connected" t="Підключений USB WiFi"/>
+	<phrase n="lang_usb_wifi_disconnected" t="USB WiFi відключено"/>
+	<phrase n="lang_is_a_favorite" t="є обраним"/>
+	<phrase n="lang_Lines" t="Розташування Лінії"/>
+	<phrase n="lang_Tiles" t="Розташування Плитки"/>
+	<phrase n="lang_tbook_emtpy" t="&lt;Порожньо&gt;"/>
+	<phrase n="lang_enter_starting_uppercase" t="Введіть"/>
+	<phrase n="lang_characters_starting_lowercase" t="символів"/>
+	<phrase n="lang_user_server_type" t="Підтримуваний тип сервера"/>
+	<phrase n="lang_broadsoft_features" t="Функції Broadsoft"/>
+	<phrase n="lang_xsi_server" t="XSI Сервер"/>
+	<phrase n="lang_xsi_user" t="Користувач XSI"/>
+	<phrase n="lang_xsi_password" t="Пароль XSI"/>
+	<phrase n="lang_xsi_retry_timer" t="XSI Таймер Повтору"/>
+	<phrase n="lang_xsi_events" t="Подія XSI"/>
+	<phrase n="lang_xmpp_jid" t="XMPP ID"/>
+	<phrase n="lang_xmpp_password" t="Пароль XMPP"/>
+	<phrase n="lang_no_headset_present" t="Гарнітура Відсутня"/>
+	<phrase n="lang_headset_detection" t="Виявлення Гарнітури"/>
+	<phrase n="lang_msw_services" t="Служби Metaswitch"/>
+	<phrase n="lang_msw_directory_number" t="Номер Каталогу Metaswitch"/>
+	<phrase n="lang_msw_password" t="Пароль Metaswitch"/>
+	<phrase n="lang_msw_web_url" t="URL Сервера Metaswitch"/>
+	<phrase n="lang_xsi_dir_enterprise" t="Корпоративний Каталог"/>
+	<phrase n="lang_xsi_dir_enterprise_common" t="Загальний телефонний список підприємств"/>
+	<phrase n="lang_xsi_dir_group" t="Каталог Групи"/>
+	<phrase n="lang_xsi_dir_group_common" t="Груповий загальний список телефонних номерів"/>
+	<phrase n="lang_xsi_dir_personal" t="Персональна Телефонна Книга"/>
+	<phrase n="lang_xsi_anywhere" t="У будь-якому місці"/>
+	<phrase n="lang_xsi_location_new_entry" t="&lt;Новий Запис&gt;"/>
+	<phrase n="lang_xsi_location_edit_description" t="Змінити опис місця розташування"/>
+	<phrase n="lang_xsi_location_description" t="Опис"/>
+	<phrase n="lang_xsi_location_edit_number" t="Змінити номер місця розташування"/>
+	<phrase n="lang_number_str" t="Номер "/>
+	<phrase n="lang_xsi_location_status_creating" t="створення"/>
+	<phrase n="lang_xsi_location_status_modifying" t="зміна"/>
+	<phrase n="lang_xsi_location_status_deleting" t="видалення"/>
+	<phrase n="lang_xsi_location_error_empty_number" t="Номер телефону не має бути порожнім"/>
+	<phrase n="lang_xsi_location_error_number_exists" t="Номер телефону вже існує"/>
+	<phrase n="lang_xsi_location_error_empty_description" t="Опис не має бути порожнім"/>
+	<phrase n="lang_visual_voicemail" t="Візуальна Голосова Пошта"/>
+	<phrase n="lang_feature_works" t="Функціональні Роботи"/>
+	<phrase n="lang_voicemail_name" t="Ім'я"/>
+	<phrase n="lang_voicemail_call_number" t="Набір номера"/>
+	<phrase n="lang_voicemail_date_time" t="Дата та Час"/>
+	<phrase n="lang_voicemail_duration" t="Тривалість"/>
+	<phrase n="lang_xsi_anywhere_clicktodial" t="Натисніть щоб подзвонити"/>
+	<phrase n="lang_xsi_anywhere_grouppaging" t="Група Пейджинга"/>
+	<phrase n="lang_xsi_anywhere_settings" t="Налаштування"/>
+	<phrase n="lang_remote_office" t="Віддалений Офіс"/>
+	<phrase n="lang_xsi_anywhereportal" t="Портал Anywhere"/>
+	<phrase n="lang_xsi_anywhereportal_number" t="Номер телефону"/>
+	<phrase n="lang_menu_primary_display" t="Головний Екран"/>
+	<phrase n="lang_menu_secondary_display" t="Другорядний Екран"/>
+	<phrase n="lang_enable_remote_office" t="Увімкнути Віддалений Офіс"/>
+	<phrase n="lang_call_center_list" t="Список Колцентрів"/>
+	<phrase n="lang_call_center_status" t="Статус колцентру"/>
+	<phrase n="lang_call_center_joined" t="Приєднався"/>
+	<phrase n="lang_call_center_unable_to_join" t="Не вдалося приєднатися до Колцентру"/>
+	<phrase n="lang_call_center_join_not_allowed" t="Приєднання не дозволено"/>
+	<phrase n="lang_call_center_unjoin_not_allowed" t="Вихід не дозволено"/>
+	<phrase n="lang_call_center_joining" t="Приєднується"/>
+	<phrase n="lang_call_recording_control" t="Контроль Запису Розмов"/>
+	<phrase n="lang_pause_recording" t="Пауза Запису"/>
+	<phrase n="lang_resume_recording" t="Поновити Запис"/>
+	<phrase n="lang_xsi_simul_ring" t="Одночасний Виклик"/>
+	<phrase n="lang_xsi_simul_ring_on_call" t="Не дзвонити при активній розмові"/>
+	<phrase n="lang_xsi_simul_ring_edit_phone_number" t="Номер Телефону"/>
+	<phrase n="lang_xsi_simul_ring_enter_phone_number" t="Введіть Номер Телефону"/>
+	<phrase n="lang_xsi_simul_ring_edit" t="Редагувати"/>
+	<phrase n="lang_xsi_simul_ring_number" t="Номер телефону"/>
+	<phrase n="lang_xsi_simul_ring_add_entry" t="Додати Новий Запис"/>
+	<phrase n="lang_xsi_simul_ring_ans_confirm" t="Підтвердження Відповіді"/>
+	<phrase n="lang_xsi_simul_ring_number_exists_error" t="Номер телефону вже існує"/>
+	<phrase n="lang_xsi_simul_ring_number_empty_error" t="Номер телефона порожній."/>
+	<phrase n="lang_xsi_executive" t="Виконавець"/>
+	<phrase n="lang_xsi_executive_assistant" t="Помічник-референт"/>
+	<phrase n="lang_xsi_call_filtering" t="Фільтрація Виклику"/>
+	<phrase n="lang_xsi_call_filtering_enable" t="Фільтрація Виклику"/>
+	<phrase n="lang_xsi_call_filtering_mode" t="Режим Фільтрації"/>
+	<phrase n="lang_xsi_call_filtering_type" t="Тип фільтрації"/>
+	<phrase n="lang_xsi_call_filtering_simple" t="Простий"/>
+	<phrase n="lang_xsi_call_filtering_advanced" t="Розширені"/>
+	<phrase n="lang_xsi_call_filtering_all" t="Усі Виклики"/>
+	<phrase n="lang_xsi_call_filtering_internal" t="Всі Внутрішні Виклики"/>
+	<phrase n="lang_xsi_call_filtering_external" t="Всі Зовнішні Виклики"/>
+	<phrase n="lang_xsi_call_screening" t="Перегляд Викликів"/>
+	<phrase n="lang_xsi_call_screening_type" t="Тип Сповіщення"/>
+	<phrase n="lang_xsi_call_screening_alert_mobile" t="Сповіщення Мобільних Локацій"/>
+	<phrase n="lang_xsi_call_screening_alert_anywhere" t="Сповіщення в Будь-якому Місці"/>
+	<phrase n="lang_xsi_call_screening_alert_sca" t="Сповіщення SCA"/>
+	<phrase n="lang_xsi_call_screening_silent" t="Без Звуку"/>
+	<phrase n="lang_xsi_call_screening_ringsplash" t="Кільцевий Сплеск"/>
+	<phrase n="lang_xsi_executive_view_assistants" t="Переглянути помічників"/>
+	<phrase n="lang_xsi_executive_allow_optin" t="Дозволити відключення / вимкнення помічників"/>
+	<phrase n="lang_xsi_opt_in_out_to_executive" t="Вх/Вих Виконавець"/>
+	<phrase n="lang_xsi_opt_in_to_executive" t="Opt-Вхід"/>
+	<phrase n="lang_xsi_opt_out_to_executive" t="Opt-Вихід"/>
+	<phrase n="lang_xsi_assistant_call_divert" t="Переадресація"/>
+	<phrase n="lang_xsi_assistant_call_divert_number" t="Номер Переадресації"/>
+	<phrase n="lang_xsi_call_alerting" t="Повідомлення про виклик"/>
+	<phrase n="lang_xsi_call_alerting_mode" t="Режим Повідомлення"/>
+	<phrase n="lang_xsi_call_alerting_mode_simu" t="Одночасний"/>
+	<phrase n="lang_xsi_call_alerting_mode_seq" t="Послідовний"/>
+	<phrase n="lang_xsi_call_alerting_id_name" t="ID Ім'я Лінії Виклику"/>
+	<phrase n="lang_xsi_call_alerting_id_exec_name" t="Ім'я Виконавця"/>
+	<phrase n="lang_xsi_call_alerting_id_origin_name" t="Ім'я Відправника"/>
+	<phrase n="lang_xsi_call_alerting_id_exec_origin_name" t="Ім'я Виконавчого Відправника"/>
+	<phrase n="lang_xsi_call_alerting_id_origin_exec_name" t="Імена Виконавчого Відправника"/>
+	<phrase n="lang_xsi_call_custom_name" t="Користувача"/>
+	<phrase n="lang_xsi_call_alerting_custom_id_name" t="ID Ім'я Лінії Виклику"/>
+	<phrase n="lang_xsi_call_alerting_id_number" t="ID Номер Лінії Виклику"/>
+	<phrase n="lang_xsi_call_alerting_id_exec_number" t="Номер Виконавця"/>
+	<phrase n="lang_xsi_call_alerting_id_origin_number" t="Ім'я відправника"/>
+	<phrase n="lang_xsi_call_alerting_custom_id_number" t="ID Номер Користувача Лінії для Виклику"/>
+	<phrase n="lang_xsi_call_alerting_recall_after" t="Виклик Push Recall After"/>
+	<phrase n="lang_xsi_call_alerting_recall_after_range" t="Введіть К-ть Викликів (2-20)"/>
+	<phrase n="lang_xsi_call_alerting_next_assistant" t="Перехід до наступного помічника після"/>
+	<phrase n="lang_xsi_call_alerting_next_assistant_range" t="Введіть К-ть Викликів"/>
+	<phrase n="lang_xsi_call_alerting_rollover_after" t="Перекидання після очікування"/>
+	<phrase n="lang_xsi_call_alerting_rollover_after_time" t="Час Очікування Перекидання"/>
+	<phrase n="lang_xsi_call_alerting_rollover_after_time_range" t="Введіть час у сек (0-60)"/>
+	<phrase n="lang_xsi_call_alerting_rollover_action" t="Дія на перекидання"/>
+	<phrase n="lang_xsi_call_alerting_rollover_action_vm" t="Голосові Повідомлення"/>
+	<phrase n="lang_xsi_call_alerting_rollover_action_fwd" t="Переадресація"/>
+	<phrase n="lang_xsi_call_alerting_rollover_action_na" t="Обробка без Відповіді"/>
+	<phrase n="lang_xsi_call_alerting_rollover_fwd_number" t="Номер Перекидання Переадресації"/>
+	<phrase n="lang_value_out_of_range" t="Введене значення поза діапазоном"/>
+	<phrase n="lang_xsi_callon_behalfof_select_executive" t="Оберіть Виконавця"/>
+	<phrase n="lang_collaborate_room_details" t="Дані кімнати для спільної роботи"/>
+	<phrase n="lang_collaborate_room_name" t="Номер кімнати"/>
+	<phrase n="lang_collaborate_room_type" t="Тип кімнати"/>
+	<phrase n="lang_collaborate_join_room" t="Приєднатися до кімнати"/>
+	<phrase n="lang_unavailable_state" t="Введіть код недоступності"/>
+	<phrase n="lang_enter_unavailable_code" t="Введіть код недоступності"/>
+	<phrase n="lang_ringer_is_off" t="Дзвінок Вимкнений"/>
+	<phrase n="lang_uxm_update" t="Оновлення Модуля Розширення"/>
+	<phrase n="lang_uxm_update_infotext_progress" t="Йде оновлення. Не від'єднуйте телефон або модуль розширення під час оновлення."/>
+	<phrase n="lang_uxm_update_infotext_prepare" t="Готується оновлення. Не від'єднуйте телефон або модуль розширення під час оновлення."/>
+	<phrase n="lang_F_DELETE_MSG" t="Вид П"/>
+	<phrase n="lang_F_DELETE_MSG_typeSio" t="Видалити Повідомлення"/>
+	<phrase n="lang_F_DELETE_MSG_smartlabel" t="Вид Пов"/>
+	<phrase n="lang_F_DELETE_MSG_full" t="Видалити повідомлення"/>
+	<phrase n="lang_F_NEXT_ID" t="ID↓"/>
+	<phrase n="lang_F_NEXT_ID_typeSio" t="Наступна Ідентифікація"/>
+	<phrase n="lang_F_NEXT_ID_smartlabel" t="Наступний ID"/>
+	<phrase n="lang_F_PREV_ID" t="ID↑"/>
+	<phrase n="lang_F_PREV_ID_typeSio" t="Попередня Ідентифікація"/>
+	<phrase n="lang_F_PREV_ID_smartlabel" t="Попередній ID"/>
+	<phrase n="lang_F_OCIP" t="OCI-P"/>
+	<phrase n="lang_F_SAB" t="С Дир"/>
+	<phrase n="lang_F_SAB_typeSio" t="Тел Книга"/>
+	<phrase n="lang_F_SAB_smartlabel" t="ТелКнига"/>
+	<phrase n="lang_F_ABS" t="ABS"/>
+	<phrase n="lang_F_ABS_typeSio" t="Пошук AB"/>
+	<phrase n="lang_addressbook_menu" t="Вибір Адресної Книги"/>
+	<phrase n="lang_addressbook_menu_local" t="Локальний"/>
+	<phrase n="lang_multicast_zones_title" t="Зони Multicast"/>
+	<phrase n="lang_no_multicast_zones" t="Нема доступних зон multicast"/>
+	<phrase n="lang_acd_state" t="Стан ACD"/>
+	<phrase n="lang_please_sign_into_set_acd_state" t="Будь ласка увійдіть до системи, щоб встановити cтан ACD"/>
+	<phrase n="lang_fkey_longpress_support" t="Функція довгого натискання"/>
+	<phrase n="lang_important" t="Важливо"/>
+	<phrase n="lang_SmartTransferEditDescription" t="Введіть ціль Smart-переведення"/>
+	<phrase n="lang_SmartTransfer" t="Smart-переведення"/>
+	<phrase n="lang_SmartTransfer_ready" t="Програмна клавіша готова для переведення викликів."/>
+	<phrase n="lang_department" t="Департамент"/>
+	<phrase n="lang_extensions" t="Додаткові номери"/>
+	<phrase n="lang_menu_title_text_options" t="Опції Тексту"/>
+	<phrase n="lang_F_ADD_LOCATION" t="Додати Місцезнаходження"/>
+	<phrase n="lang_gk_mode_none" t="Ні"/>
+	<phrase n="lang_demo_mode" t="Демонстраційний Режим"/>
+	<phrase n="lang_transfer_or" t="Перевести чи"/>
+	<phrase n="lang_call_pickup" t="Прийняти Виклик?"/>
+	<phrase n="lang_choose_an_action" t="Оберіть Дію"/>
+	<phrase n="lang_Conference_Setup" t="Налаштування Конференції"/>
+	<phrase n="lang_Conference_First_Participant" t="Учасник конференції один"/>
+	<phrase n="lang_Conference_Second_Participant" t="Учасник конференції два"/>
+	<phrase n="lang_menu_smart_label" t="Опції SmartLabel"/>
+	<phrase n="lang_menu_idle_screen" t="Поведінка екрану у режимі очікування"/>
+	<phrase n="lang_menu_call_screen" t="Поведінка Екрану Викликів"/>
+	<phrase n="lang_menu_other_screen" t="Поведінка Інших Екранів"/>
+	<phrase n="lang_menu_label_default_mode" t="Типовий Режим Екрану"/>
+	<phrase n="lang_menu_label_expanded_mode" t="Альтернативний Режим Екрану"/>
+	<phrase n="lang_menu_label_expansion_triggers" t="Альтернативний Тригер Екрану"/>
+	<phrase n="lang_menu_short_label" t="Коротка Етикетка"/>
+	<phrase n="lang_menu_full_label" t="Повна Етикетка"/>
+	<phrase n="lang_menu_short_label_mode" t="Режим Короткої Етикетки"/>
+	<phrase n="lang_menu_short_press" t="Коротке Натискання на Клавішу Сторінок"/>
+	<phrase n="lang_menu_long_press" t="Довге Натискання на Клавішу Сторінок"/>
+	<phrase n="lang_menu_proximity_sensor" t="Датчик Наближення"/>
+	<phrase n="lang_menu_P2_short_press" t="Short Press P2"/>
+	<phrase n="lang_menu_P2_long_press" t="Довге Натискання Р2"/>
+	<phrase n="lang_menu_P3_short_press" t="Коротке Натискання Р3"/>
+	<phrase n="lang_menu_P3_long_press" t="Довге Натискання Р3"/>
+	<phrase n="lang_menu_P4_short_press" t="Коротке Натискання Р4"/>
+	<phrase n="lang_menu_P4_long_press" t="Довге Натискання Р4"/>
+	<phrase n="lang_menu_P8_short_press" t="Коротке Натискання Р8"/>
+	<phrase n="lang_menu_P8_long_press" t="Довге Натискання Р8"/>
+	<phrase n="lang_menu_P10_short_press" t="Short Press P10"/>
+	<phrase n="lang_menu_P10_long_press" t="Long Press P10"/>
+	<phrase n="lang_short_press" t="Коротке Натискання"/>
+	<phrase n="lang_fkey_press" t="Натисніть F-клавішу"/>
+	<phrase n="lang_long_press" t="Довге Натискання"/>
+	<phrase n="lang_short_label_mode_icon" t="Тільки Піктограма"/>
+	<phrase n="lang_smartlabel_mode_text" t="Тільки Текст"/>
+	<phrase n="lang_smartlabel_mode_icon_text" t="Піктограма та Текст"/>
+	<phrase n="lang_status_msg_uxm_update_required" t=" потребує Оновлення"/>
+	<phrase n="lang_status_detail_uxm_update_required" t="Оновіть ПЗ модуля розширення до останньої версії, щоб увімкнути його."/>
+	<phrase n="lang_status_detail_uxm_update_required2" t="Переконайтеся, що до телефону підключено лише один модуль розширення і що він не підключений до окремого джерела живлення."/>
+	<phrase n="lang_unhandled_item" t="Необроблений предмет:"/>
+	<phrase n="lang_preferences_general" t="Загальні"/>
+	<phrase n="lang_quick_dial_contacts" t="Контакти Швидкого Набору"/>
+	<phrase n="lang_start_tbook_download" t="Запустити завантаження каталогу?"/>
+	<phrase n="lang_tbook_download" t="Завантаження Каталогу"/>
+	<phrase n="lang_tbook_download_started" t="Завантаження Каталогу Почалася для ідентифікатора"/>
+	<phrase n="lang_tbook_download_finished" t="Завантаження Каталогу завершене для ідентифікатора"/>
+	<phrase n="lang_tbook_download_failed" t="Не вдалося завантажити Каталог для ідентифікатора"/>
+	<phrase n="lang_tbook_download_not_possible" t="Завантаження Каталогу неможливе для ідентифікатора"/>
+	<phrase n="lang_tbook_download_overflowed" t="Завантаження Каталогу не завершене (перевищено внутрішній ліміт)."/>
+	<phrase n="lang_tbook_is_full" t="Адресна Книга повна"/>
+	<phrase n="lang_F_HOTELING" t="Готель"/>
+	<phrase n="lang_F_HOTELING_typeSio" t="Готель"/>
+	<phrase n="lang_F_HOTELING_smartlabel" t="Готель"/>
+	<phrase n="lang_F_GUEST_LOGIN" t="Вхід Гостя"/>
+	<phrase n="lang_F_GUEST_LOGOUT" t="Вихід Гостя"/>
+	<phrase n="lang_F_GUEST_LOGIN_smartlabel" t="Гість Присутній"/>
+	<phrase n="lang_F_GUEST_LOGOUT_smartlabel" t="Гість Відсутній"/>
+	<phrase n="lang_F_LOGIN" t="Увійти"/>
+	<phrase n="lang_F_LOGOUT" t="Вийти"/>
+	<phrase n="lang_smartlabel_id" t="ID"/>
+	<phrase n="lang_title_guest_logout" t="Вихід Гостя"/>
+	<phrase n="lang_confirm_guest_logout" t="Ви дійсно хочете вийти з системи?"/>
+	<phrase n="lang_no_contacts" t="Нема Контактів"/>
+	<phrase n="lang_hoteling_guest" t="Гість Готелю"/>
+	<phrase n="lang_logging_out" t="Вихід..."/>
+	<phrase n="lang_logging_in" t="Вхід..."/>
+	<phrase n="lang_login_failed" t="Вхід в Систему Невдалий"/>
+	<phrase n="lang_acd_signout_message" t="Ви вийдете з ACD. Продовжити з обліковим записом Гостя?"/>
+	<phrase n="lang_title_guest_login" t="Вхід Гостя"/>
+	<phrase n="lang_F_MARK_READ" t="Відзначити як Прочитане"/>
+	<phrase n="lang_F_MARK_UNREAD" t="Відзначити як Непрочитане"/>
+	<phrase n="lang_call_recording_mode_never" t="Ніколи"/>
+	<phrase n="lang_call_recording_mode_always" t="Завжди"/>
+	<phrase n="lang_call_recording_mode_always_pause_resume" t="Завжди з Паузою/Відновленням"/>
+	<phrase n="lang_call_recording_mode_on_demand" t="За Вимогою"/>
+	<phrase n="lang_call_recording_mode_on_demand_user_start" t="Старт за Вимогою Користувача"/>
+	<phrase n="lang_smartlabel_dismiss_timeout" t="Повернутися у Режим за Замовчуванням"/>
+	<phrase n="lang_call_recording_mode" t="Режим Запису Розмов"/>
+	<phrase n="lang_menu_full_label_mode" t="Режим Повної Етикетки"/>
+	<phrase n="lang_menu_label_mode" t="Режим Етикетки"/>
+	<phrase n="lang_guest_pin" t="Гостьовий PIN"/>
+	<phrase n="lang_incorrect_pin" t="Невірний PIN"/>
+	<phrase n="lang_voicemail_info" t="Інформація Голосової Пошти"/>
+	<phrase n="lang_confirm_del_deny_list_item_title" t="Видалити Елемент Списку Заблокованих"/>
+	<phrase n="lang_confirm_del_number_from_deny_list" t="Видалити зі Списку Заблокованих?"/>
+	<phrase n="lang_confirm_del_menu_configuration" t="Видалити Налаштування Конфігурації Клавіш"/>
+	<phrase n="lang_confirm_message" t="Ви дійсно хочете це зробити?"/>
+	<phrase n="lang_caller_id_blocking" t="Блокування Caller ID"/>
+	<phrase n="lang_screen_items_color_and_opacity_title" t="Колір та Прозорість"/>
+	<phrase n="lang_ui_themes" t="Теми"/>
+	<phrase n="lang_theme_light" t="Легка"/>
+	<phrase n="lang_theme_dark" t="Темна"/>
+	<phrase n="lang_theme_colorful" t="Барвиста"/>
+	<phrase n="lang_theme_industrial" t="Індустріальна"/>
+	<phrase n="lang_theme_contrast" t="Contrast"/>
+	<phrase n="lang_screen_items_color_title" t="Колір"/>
+	<phrase n="lang_screen_items_opacity_title" t="Непрозорість"/>
+	<phrase n="lang_screen_items_enter_custom_color_title" t="Введіть Значення Користувача"/>
+	<phrase n="lang_screen_item_titlebar_text" t="Текст Заголовка"/>
+	<phrase n="lang_screen_item_text" t="Текст"/>
+	<phrase n="lang_screen_item_subtext" t="Підтекст"/>
+	<phrase n="lang_screen_item_extratext" t="Екстра Текст"/>
+	<phrase n="lang_screen_item_extratext2" t="Екстра Текст 2"/>
+	<phrase n="lang_screen_item_titlebar_background" t="Фон Рядка Заголовка"/>
+	<phrase n="lang_screen_item_background" t="Фон"/>
+	<phrase n="lang_screen_item_fkey_background" t="Фон Клавіш"/>
+	<phrase n="lang_screen_item_fkey_pressed_background" t="Фон при Натисканні F-клавіш"/>
+	<phrase n="lang_screen_item_fkey_separator" t="Роздільник F-клавіш"/>
+	<phrase n="lang_screen_item_fkey_label" t="Етикетка F-клавіш"/>
+	<phrase n="lang_screen_item_fkey_pressed_label" t="Етикетка при Натисканні F-клавіш"/>
+	<phrase n="lang_screen_item_line_background" t="Фон Лінії"/>
+	<phrase n="lang_screen_item_selected_line_background" t="Фон Обраної Лінії"/>
+	<phrase n="lang_screen_item_selected_line_indicator" t="Індикатор Обраної Лінії"/>
+	<phrase n="lang_screen_item_selected_line_text" t="Текст Обраної Лінії"/>
+	<phrase n="lang_screen_item_line_separator" t="Роздільник Лінії"/>
+	<phrase n="lang_screen_item_scrollbar" t="Смуга Прокрутки"/>
+	<phrase n="lang_screen_item_cursor" t="Курсор"/>
+	<phrase n="lang_screen_item_status_msgs_background" t="Фон Статусу Повідомлень"/>
+	<phrase n="lang_screen_item_status_msgs_border" t="Кордон Статусу Повідомлень"/>
+	<phrase n="lang_screen_item_smartlabel_background" t="Фон SmartLabel"/>
+	<phrase n="lang_screen_item_smartlabel_pressed_background" t="Фон SmartLabel при Натисканні"/>
+	<phrase n="lang_screen_item_smartlabel_separator" t="Роздільник SmartLabel"/>
+	<phrase n="lang_screen_item_smartlabel_label" t="Етикетка SmartLabel"/>
+	<phrase n="lang_screen_item_smartlabel_pressed_label" t="Етикетка SmartLabel при Натисканні"/>
+	<phrase n="lang_screen_item_expansion_module_background" t="Фон модуля розширення"/>
+	<phrase n="lang_screen_item_expansion_module_pressed_background" t="Фон Модуля Розширення при Натисканні"/>
+	<phrase n="lang_screen_item_expansion_module_separator" t="Розділювач Модуля Розширення"/>
+	<phrase n="lang_screen_item_expansion_module_maintext" t="Основний Текст Модуля Розширення"/>
+	<phrase n="lang_screen_item_expansion_module_pressed_maintext" t="Основний Текст Модуля Розширення при Натисканні"/>
+	<phrase n="lang_screen_item_expansion_module_subtext" t="Підтекст Модуля Розширення"/>
+	<phrase n="lang_screen_item_expansion_module_pressed_subtext" t="Підтекст Модуля Розширення при Натисканні"/>
+	<phrase n="lang_screen_item_expansion_module_page_indicator" t="Індикатор Сторінки Модуля Розширення"/>
+	<phrase n="lang_screen_items_color_name_onyx_black" t="Чорний Онікс"/>
+	<phrase n="lang_screen_items_color_name_midnight_black" t="Чорна Північ"/>
+	<phrase n="lang_screen_items_color_name_obsidian_black" t="Чорний Обсидіан"/>
+	<phrase n="lang_screen_items_color_name_dark_grey" t="Темно-сірий"/>
+	<phrase n="lang_screen_items_color_name_grey" t="Сірий"/>
+	<phrase n="lang_screen_items_color_name_light_grey" t="Світло-сірий"/>
+	<phrase n="lang_screen_items_color_name_grey_white" t="Сіро-білий"/>
+	<phrase n="lang_screen_items_color_name_white" t="Білий"/>
+	<phrase n="lang_screen_items_color_name_light_yellow" t="Світло-жовтий"/>
+	<phrase n="lang_screen_items_color_name_yellow" t="Жовтий"/>
+	<phrase n="lang_screen_items_color_name_light_red" t="Світло-червоний"/>
+	<phrase n="lang_screen_items_color_name_red" t="Червоний"/>
+	<phrase n="lang_screen_items_color_name_light_blue" t="Світло-синій"/>
+	<phrase n="lang_screen_items_color_name_blue" t="Синій"/>
+	<phrase n="lang_screen_items_color_name_light_green" t="Світло-зелений"/>
+	<phrase n="lang_screen_items_color_name_green" t="Зелений"/>
+	<phrase n="lang_screen_items_color_name_black" t="Black"/>
+	<phrase n="lang_screen_items_color_name_carbon" t="Carbon"/>
+	<phrase n="lang_screen_items_color_name_dim_grey" t="Dim Grey"/>
+	<phrase n="lang_screen_items_color_name_silver" t="Silver"/>
+	<phrase n="lang_screen_items_color_name_gainsboro" t="Gainsboro"/>
+	<phrase n="lang_screen_items_color_name_snowflake" t="Snowflake"/>
+	<phrase n="lang_screen_items_color_name_white_smoke" t="White Smoke"/>
+	<phrase n="lang_screen_items_color_name_custom" t="Колір Користувача"/>
+	<phrase n="lang_monitored_extensions" t="Відстежувані Внутрішні Номери"/>
+	<phrase n="lang_ALS" t="Датчик Освітленості"/>
+	<phrase n="lang_all_available_calls" t="Всі Доступні Виклики"/>
+	<phrase n="lang_new_call" t="Новий Виклик"/>
+	<phrase n="lang_select_conf_participant" t="Виберіть Учасника Конференції"/>
+	<phrase n="lang_consult_conference" t="Консультативна Конференція"/>
+	<phrase n="lang_guess_max_hits" t="Максимальні Результати"/>
+	<phrase n="lang_guess_results" t="Результати"/>
+	<phrase n="lang_new_network_policy" t="Нова Мережева Політика"/>
+	<phrase n="lang_wrong_lldp_policy" t="Неправильна Політика LLDP"/>
+	<phrase n="lang_F_MODERATE" t="Модерувати"/>
+	<phrase n="lang_sip_warning" t="SIP попередження"/>
+	<phrase n="lang_sync_settings" t="Синхронізувати Налаштування"/>
+	<phrase n="lang_confirm_sync_settings" t="Синхронізувати налаштування з конфігурацією сервера?"/>
+	<phrase n="lang_no_configured_extensions" t="Немає сконфігурованих додаткових номерів"/>
+	<phrase n="lang_no_active_calls_on_extensions" t="Немає активних викликів на додаткових номерах"/>
+	<phrase n="lang_sip_response_code_400" t="Невдалий запит"/>
+	<phrase n="lang_sip_response_code_402" t="Потрібна Оплата"/>
+	<phrase n="lang_sip_response_code_403" t="Заборонено"/>
+	<phrase n="lang_sip_response_code_404" t="Не знайдено"/>
+	<phrase n="lang_sip_response_code_405" t="Метод Не Дозволений"/>
+	<phrase n="lang_sip_response_code_406" t="Неприйнятно"/>
+	<phrase n="lang_sip_response_code_407" t="Потрібна аутентифікація проксі-сервера"/>
+	<phrase n="lang_sip_response_code_408" t="Таймаут Запиту"/>
+	<phrase n="lang_sip_response_code_410" t="Відправлений"/>
+	<phrase n="lang_sip_response_code_413" t="Дуже Великий Запит"/>
+	<phrase n="lang_sip_response_code_414" t="Запит URI Дуже Довгий"/>
+	<phrase n="lang_sip_response_code_415" t="Непідтримуваний Тип Медіа"/>
+	<phrase n="lang_sip_response_code_416" t="Непідтримувана Схема URI"/>
+	<phrase n="lang_sip_response_code_420" t="Невірний Номер"/>
+	<phrase n="lang_sip_response_code_421" t="Необхідний Внутрішній Номер"/>
+	<phrase n="lang_sip_response_code_422" t="Інтервал Сесії Дуже Малий"/>
+	<phrase n="lang_sip_response_code_423" t="Інтервал Дуже Короткий"/>
+	<phrase n="lang_sip_response_code_480" t="Тимчасово Недоступний"/>
+	<phrase n="lang_sip_response_code_481" t="Дзвінок/Транзакція Не Існує"/>
+	<phrase n="lang_sip_response_code_482" t="Виявлена Петля"/>
+	<phrase n="lang_sip_response_code_483" t="Надто Багато Переходів"/>
+	<phrase n="lang_sip_response_code_484" t="Неповна Адреса"/>
+	<phrase n="lang_sip_response_code_485" t="Неоднозначний"/>
+	<phrase n="lang_sip_response_code_486" t="Тут Зайнято"/>
+	<phrase n="lang_sip_response_code_487" t="Запит Припинено"/>
+	<phrase n="lang_sip_response_code_488" t="Тут Неприйнятно"/>
+	<phrase n="lang_sip_response_code_491" t="Запит Очікує Виконання"/>
+	<phrase n="lang_sip_response_code_493" t="Нерозбірливий"/>
+	<phrase n="lang_sip_response_code_500" t="Внутрішня Помилка Сервера"/>
+	<phrase n="lang_sip_response_code_501" t="Не реалізовано"/>
+	<phrase n="lang_sip_response_code_502" t="Невірний Шлюз"/>
+	<phrase n="lang_sip_response_code_503" t="Сервіс Недоступний"/>
+	<phrase n="lang_sip_response_code_504" t="Таймаут Сервера"/>
+	<phrase n="lang_sip_response_code_505" t="Версія Не Підтримується"/>
+	<phrase n="lang_sip_response_code_513" t="Повідомлення Дуже Довге"/>
+	<phrase n="lang_sip_response_code_599" t="Помилка Таймауту Мережевого Підключення"/>
+	<phrase n="lang_sip_response_code_600" t="Зайнято Скрізь"/>
+	<phrase n="lang_sip_response_code_603" t="Відмова"/>
+	<phrase n="lang_sip_response_code_604" t="Не Існує Ніде"/>
+	<phrase n="lang_sip_response_code_606" t="Неприйнятно"/>
+	<phrase n="lang_sort_order" t="Порядок Сортування"/>
+	<phrase n="lang_directory_display_order" t="Екран"/>
+	<phrase n="lang_display_order_first_name_last_name" t="Ім'я, Прізвище"/>
+	<phrase n="lang_display_order_last_name_first_name" t="Прізвище, Ім'я"/>
+	<phrase n="lang_visual_options" t="Візуальні опції"/>
+	<phrase n="lang_call_screen_photo_size" t="Розмір Фото на Екранах Викликів"/>
+	<phrase n="lang_size_XS" t="XS"/>
+	<phrase n="lang_size_S" t="S"/>
+	<phrase n="lang_size_M" t="М"/>
+	<phrase n="lang_size_L" t="L"/>
+	<phrase n="lang_size_XL" t="XL"/>
+	<phrase n="lang_size_XXL" t="XXL"/>
+	<phrase n="lang_size_XXXL" t="XXXL"/>
+	<phrase n="lang_prefer_saved_over_received_photo" t="Віддати перевагу Локальним Фото"/>
+	<phrase n="lang_display_method" t="Стиль відображення номерів"/>
+	<phrase n="lang_display_method_full_contact" t="Повний контакт"/>
+	<phrase n="lang_display_method_display_name" t="Ім'я"/>
+	<phrase n="lang_display_method_display_number" t="Номер"/>
+	<phrase n="lang_display_method_display_name_number" t="Ім'я + Номер"/>
+	<phrase n="lang_display_method_display_number_name" t="Номер + Ім'я"/>
+	<phrase n="lang_no_calls_for_transfer" t="Немає дзвінків для передачі"/>
+	<phrase n="lang_brand_variant_select_title" t="Оберіть варіант бренду"/>
+	<phrase n="lang_brand_variant_default" t="За замовчуванням"/>
+	<phrase n="lang_brand_variant_updated_title" t="Оновлений варіант"/>
+	<phrase n="lang_brand_variant_selected" t="Обраний варіант"/>
+	<phrase n="lang_system_reboot_now" t="Систему буде перезавантажено"/>
+	<phrase n="lang_select_identity" t="Вибір ідентифікації"/>
+	<phrase n="lang_F_CALL_CENTER_STATUS" t="Статус Колцентру"/>
+	<phrase n="lang_F_ATTENDED_TRANSFER" t="Супроводжуваний"/>
+	<phrase n="lang_disposition_code_sent" t="відправлено"/>
+	<phrase n="lang_disposition_code_selection" t="Вибір Коду Позиції"/>
+	<phrase n="lang_disposition_code_entry" t="Введіть Код Позиції"/>
+	<phrase n="lang_F_DISP_CODE" t="Код П"/>
+	<phrase n="lang_F_DISP_CODE_typeSio" t="Код Позиції"/>
+	<phrase n="lang_F_DISP_CODE_smartlabel" t="Код П"/>
+	<phrase n="lang_disposition_code_display_text_list" t="Список"/>
+	<phrase n="lang_parked_calls_settings" t="Виклики на утриманні"/>
+	<phrase n="lang_call_parked_on" t="На утриманні"/>
+	<phrase n="lang_no_parked_call" t="Немає Викликів на Утриманні."/>
+	<phrase n="lang_F_CALL_PARK_IDLE" t="На Утриманні"/>
+	<phrase n="lang_F_CALL_PARK_typeSio" t="Паркування Виклику"/>
+	<phrase n="lang_menu_any_smartlabel_key_short_press" t="Коротке Натиснення на Клавішу Сторінок"/>
+	<phrase n="lang_monitored_extension_is_ringing" t="Відстежуваний Внутрішній Номер Викликають"/>
+	<phrase n="lang_disposition_code_not_sent" t="Код не відправлений."/>
+	<phrase n="lang_disposition_code_identity_mismatch" t="Ідентифікатор невідповідний."/>
+	<phrase n="lang_F_EXEC_ASSIST_CALL_PUSH" t="Пуш Виклик"/>
+	<phrase n="lang_usb_mass_storage_plug" t="Підключений диск USB"/>
+	<phrase n="lang_usb_mass_storage_unplug" t="Привід USB вилучено"/>
+	<phrase n="lang_information_menu_usb_info" t="USB Інфо"/>
+	<phrase n="lang_usb_mass_storage_title" t="USB-накопичувач"/>
+	<phrase n="lang_F_USB_EJECT" t="Видалити USB"/>
+	<phrase n="lang_usb_mass_storage_safe_to_remove" t="Тепер можна безпечно видалити USB-накопичувач"/>
+	<phrase n="lang_F_USBREC_START" t="Почати Запис на USB-носій."/>
+	<phrase n="lang_F_USBREC_START_typeSio" t="Почати Запис на USB-носій"/>
+	<phrase n="lang_F_USBREC_START_smartlabel" t="Почати&lt;кл&gt;Запис на USB-носій."/>
+	<phrase n="lang_F_USBREC_STOP" t="Зупинити запис на USB-носій."/>
+	<phrase n="lang_F_USBREC_STOP_typeSio" t="Зупинити запис на USB-носій"/>
+	<phrase n="lang_F_USBREC_STOP_smartlabel" t="Зупинити&lt;кл&gt;Запис на USB-носій."/>
+	<phrase n="lang_F_USBREC_PAUSE" t="Пауза Запису на USB."/>
+	<phrase n="lang_F_USBREC_PAUSE_typeSio" t="Пауза Запису на USB"/>
+	<phrase n="lang_F_USBREC_PAUSE_smartlabel" t="Пауза&lt;кл&gt;Запису на USB."/>
+	<phrase n="lang_F_USBREC_RESUME" t="Продовжити Запис на USB."/>
+	<phrase n="lang_F_USBREC_RESUME_typeSio" t="Продовжити Запис на USB"/>
+	<phrase n="lang_F_USBREC_RESUME_smartlabel" t="Продовжити&lt;кл&gt;Запис на USB."/>
+	<phrase n="lang_F_PAUSE" t="Пауза"/>
+	<phrase n="lang_F_RESUME" t="Продовжити"/>
+	<phrase n="lang_usb_recording_processing_wait" t="Дочекайтеся завершення процессу запису!"/>
+	<phrase n="lang_usb_recording_processing_completed" t="Процес запису завершено!"/>
+	<phrase n="lang_usb_recording_call_terminated" t="Запис дзвінка припинено"/>
+	<phrase n="lang_usb_recording_terminated_drive_full" t="Запис припинено, USB-накопичувач заповнений"/>
+	<phrase n="lang_usb_recording_terminated_max_file_size" t="Запис припинено, Максимальна тривалість запису"/>
+	<phrase n="lang_usb_recording_no_usb_drive_detected" t="Не виявлено USB-накопичувач"/>
+	<phrase n="lang_usb_recording_terminated_errno" t="Запис припинено, помилка: "/>
+	<phrase n="lang_usb_playback_browse_recordings" t="Перегляд Записів"/>
+	<phrase n="lang_usb_playback_browse_recordings_title" t="Запис Розмов"/>
+	<phrase n="lang_usb_playback_play_recording_title" t="Програвати запис"/>
+	<phrase n="lang_usb_playback_invalid_header_or_encrypted_file" t="Недійсний заголовок wav або зашифрований файл:"/>
+	<phrase n="lang_usb_playback_recording_information_title" t="Інформація запису"/>
+	<phrase n="lang_usb_playback_delete_recording_title" t="Видалити Запис"/>
+	<phrase n="lang_label_rewind" t="Перемотка"/>
+	<phrase n="lang_label_fast_forward" t="Перемотка Вперед"/>
+	<phrase n="lang_text_size" t="Розмір"/>
+	<phrase n="lang_usb_playback_no_recordings" t="Немає записів"/>
+	<phrase n="lang_usb_recording_aborted_by_conference" t="USB-запис перервано конференцією"/>
+	<phrase n="lang_usb_recording_cannot_record_conference" t="Неможливо записати конференцію на USB"/>
+	<phrase n="lang_date_and_time" t="Дата та Час"/>
+	<phrase n="lang_label_context_key_page_left" t="Сторінка зліва"/>
+	<phrase n="lang_label_context_key_page_right" t="Сторінка праворуч"/>
+	<phrase n="lang_expansion_module_text_alignment" t="Вирівнювання тексту"/>
+	<phrase n="lang_expansion_module_color_font_sizes_XXL_XS" t="Основний Текст XXL &amp; Суб Текст XS"/>
+	<phrase n="lang_expansion_module_color_font_sizes_XL_XS" t="Основний Текст XL &amp; Суб Текст XS"/>
+	<phrase n="lang_expansion_module_color_font_sizes_XL_S" t="Основний Текст XL &amp; Суб Текст S"/>
+	<phrase n="lang_expansion_module_color_font_sizes_L_XS" t="Основний Текст L &amp; Суб Текст XS"/>
+	<phrase n="lang_expansion_module_color_font_sizes_L_S" t="Основний Текст L &amp; Суб Текст S"/>
+	<phrase n="lang_expansion_module_color_font_sizes_L_M" t="Основний Текст L &amp; Суб Текст М"/>
+	<phrase n="lang_expansion_module_color_font_sizes_M_XS" t="Основний Текст М &amp; Суб Текст XS"/>
+	<phrase n="lang_expansion_module_color_font_sizes_M_S" t="Основний Текст М &amp; Суб Текст S"/>
+	<phrase n="lang_expansion_module_color_font_sizes_M_M" t="Основний Текст М &amp; Суб Текст М"/>
+	<phrase n="lang_expansion_module_color_font_sizes_S_XS" t="Основний Текст S &amp; Суб Текст XS"/>
+	<phrase n="lang_expansion_module_color_font_sizes_S_S" t="Основний Текст S &amp; Суб Текст S"/>
+	<phrase n="lang_expansion_module_color_font_sizes_XS_XS" t="Основний Текст XS &amp; Суб Текст XS"/>
+	<phrase n="lang_edit_mode_upper_case" t="ABC"/>
+	<phrase n="lang_edit_mode_lower_case" t="abc"/>
+	<phrase n="lang_edit_mode_numbers" t="123"/>
+	<phrase n="lang_F_IDLE_CONTEXT_PAGE_LEFT" t="Лівий"/>
+	<phrase n="lang_F_IDLE_CONTEXT_PAGE_LEFT_typeSio" t="Сторінка зліва"/>
+	<phrase n="lang_F_IDLE_CONTEXT_PAGE_RIGHT" t="Правий"/>
+	<phrase n="lang_F_IDLE_CONTEXT_PAGE_RIGHT_typeSio" t="Сторінка праворуч"/>
+	<phrase n="lang_F_NONE" t=" "/>
+	<phrase n="lang_branding_name" t="Брендинг:"/>
+	<phrase n="lang_hardware_version" t="Hardware Version:"/>
+	<phrase n="lang_branding_version" t="Branding Version:"/>
+	<phrase n="lang_NickName" t="Nickname"/>
+	<phrase n="lang_FirstShortCode" t="First Code"/>
+	<phrase n="lang_LastShortCode" t="Last Code"/>
+	<phrase n="lang_FirstExternalDirectoryNumber" t="First Number"/>
+	<phrase n="lang_LastExternalDirectoryNumber" t="Last Number"/>
+	<phrase n="lang_DialingPlanCode" t="Plan"/>
+	<phrase n="lang_DialingPlanCodeDetail" t="Dialing Plan Code"/>
+	<phrase n="lang_FirstShortCodeDetail" t="First Short Code"/>
+	<phrase n="lang_FirstExternalDirectoryDetail" t="First External Directory"/>
+	<phrase n="lang_LastExternalDirectoryDetail" t="Last External Directory"/>
+	<phrase n="lang_Department" t="Department"/>
+	<phrase n="lang_shortcodes" t="Short Codes"/>
+	<phrase n="lang_emergency_call_number_is_misconfigured" t="Emergency numbers misconfigured"/>
+	<phrase n="lang_tb_alias" t="Alias"/>
+	<phrase n="lang_web_user_credentials_not_set" t="No credentials set for the web user"/>
+	<phrase n="lang_web_admin_credentials_not_set" t="No credentials set for the web admin"/>
+	<phrase n="lang_not_registered" t=" not registered"/>
+	<phrase n="lang_fake_number" t="Fake Number"/>
+	<phrase n="lang_BLF_DND_on" t="DND on"/>
+	<phrase n="lang_BLF_On_a_call" t="On a call"/>
+	<phrase n="lang_BLF_Idle" t="Idle"/>
+	<phrase n="lang_MediaStack_restarting_All_lines_will_be_closed" t="MediaStack restarting. All lines will be closed."/>
+	<phrase n="lang_Firmware_update_starting" t="Firmware update: starting"/>
+	<phrase n="lang_Firmware_update_sent_install_request" t="Firmware update: waiting for file server response"/>
+	<phrase n="lang_Firmware_update_download" t="Firmware update: downloading"/>
+	<phrase n="lang_Firmware_update_transfer_to_swupdate" t="Firmware update: processing"/>
+	<phrase n="lang_Firmware_update_verification_and_install" t="Firmware update: installing"/>
+	<phrase n="lang_File_server_response" t="Server response: "/>
+	<phrase n="lang_File_server_unreachable" t="File server unreachable."/>
+	<phrase n="lang_File_not_found" t="File not found."/>
+	<phrase n="lang_Firmware_invalid" t="Firmware invalid."/>
+	<phrase n="lang_firmware_update" t="Firmware Update"/>
+	<phrase n="lang_menu_ringer_once" t="Only once"/>
+	<phrase n="lang_voicemail_no_access_code" t="Number or feature access code is not programmed"/>
+	<phrase n="lang_F_WIFI" t="Wi-Fi"/>
+	<phrase n="lang_parties" t="parties"/>
+	<phrase n="lang_fwd_by" t="Fwd by:"/>
+	<phrase n="lang_firmware_update_completed_pending_reboot" t="Phone is about to reboot to complete the firmware update. Rebooting in %d seconds..."/>
+	<phrase n="lang_F_CLOSE" t="Close"/>
+	<phrase n="lang_ip_assigment" t="IP Assignment"/>
+	<phrase n="lang_disable" t="Disable"/>
+	<phrase n="lang_enable" t="Enable"/>
+	<phrase n="lang_reregister" t="Re-register"/>
+	<phrase n="lang_phonemanager" t="Phone Manager (Web UI)"/>
+	<phrase n="lang_locale" t="Date &amp; Time format"/>
+	<phrase n="lang_webserver_admin_name" t="Admin name"/>
+	<phrase n="lang_webserver_admin_password" t="Admin password"/>
+	<phrase n="lang_webserver_user_name" t="User name"/>
+	<phrase n="lang_webserver_user_password" t="User password"/>
+	<phrase n="lang_startup_wizard" t="Startup Wizard"/>
+	<phrase n="lang_no_voicemail" t="No voicemail"/>
+	<phrase n="lang_new_voicemail" t="New voicemail"/>
+	<phrase n="lang_old_voicemail" t="Old voicemail"/>
+	<phrase n="lang_phonemanager_credentials" t="Phone Manager (Web UI) login credentials"/>
+	<phrase n="lang_static_ip" t="Static IP"/>
+	<phrase n="lang_dhcp_or_static_ip" t="DHCP or Static IP"/>
+	<phrase n="lang_locale_ar_AE" t="Arabic (United Arab Emirates)"/>
+	<phrase n="lang_locale_az_AZ" t="Azərbaycanca (Azerbaijan)"/>
+	<phrase n="lang_locale_bs_BA" t="Bosanki (Bosnia)"/>
+	<phrase n="lang_locale_ca_ES" t="Català (Spain)"/>
+	<phrase n="lang_locale_cs_CZ" t="Čeština (Czech Republic)"/>
+	<phrase n="lang_locale_da_DK" t="Dansk (Denmark)"/>
+	<phrase n="lang_locale_de_DE" t="Deutsch (Germany)"/>
+	<phrase n="lang_locale_el_GR" t="Ελληνικά (Greece)"/>
+	<phrase n="lang_locale_en_DE" t="English (Germany)"/>
+	<phrase n="lang_locale_en_GB" t="English (UK)"/>
+	<phrase n="lang_locale_en_US" t="English (US)"/>
+	<phrase n="lang_locale_es_ES" t="Español (Spain)"/>
+	<phrase n="lang_locale_et_EE" t="Eesti (Estonia)"/>
+	<phrase n="lang_locale_eu_ES" t="Euskara (Spain)"/>
+	<phrase n="lang_locale_fi_FI" t="Suomi (Finland)"/>
+	<phrase n="lang_locale_fr_FR" t="Français (France)"/>
+	<phrase n="lang_locale_he_IL" t="Hebrew (Israel)"/>
+	<phrase n="lang_locale_hr_HR" t="Hrvatski (Croatia)"/>
+	<phrase n="lang_locale_hu_HU" t="Magyar (Hungary)"/>
+	<phrase n="lang_locale_it_IT" t="Italiano (Italy)"/>
+	<phrase n="lang_locale_ja_JP" t="Japanese (Japan)"/>
+	<phrase n="lang_locale_kk_KZ" t="қазақша (Kazakhstan)"/>
+	<phrase n="lang_locale_lt_LT" t="Lietuvių (Lithuania)"/>
+	<phrase n="lang_locale_lv_LV" t="Latviešu (Latvia)"/>
+	<phrase n="lang_locale_nl_NL" t="Nederlands (Netherlands)"/>
+	<phrase n="lang_locale_nb_NO" t="Norsk (Norway)"/>
+	<phrase n="lang_locale_pl_PL" t="Polski (Poland)"/>
+	<phrase n="lang_locale_pt_PT" t="Português (Portugal)"/>
+	<phrase n="lang_locale_ro_RO" t="Română (Romania)"/>
+	<phrase n="lang_locale_ru_RU" t="Русский (Russia)"/>
+	<phrase n="lang_locale_sl_SI" t="Slovenščina (Slovenia)"/>
+	<phrase n="lang_locale_sv_SE" t="Svenska (Sweden)"/>
+	<phrase n="lang_locale_tr_TR" t="Türkçe (Turkey)"/>
+	<phrase n="lang_locale_uk_UA" t="Українська (Ukraine)"/>
+	<phrase n="lang_locale_zh_CN" t="Simplified Chinese (China)"/>
+	<phrase n="lang_locale_zh_TW" t="Traditional Chinese (Taiwan)"/>
+	<phrase n="lang_no_error" t="no error"/>
+	<phrase n="lang_unknown_command" t="unknown command"/>
+	<phrase n="lang_invalid_missing_params" t="invalid or missing parameter(s)"/>
+	<phrase n="lang_not_implemented" t="not implemented"/>
+	<phrase n="lang_failed" t="failed"/>
+	<phrase n="lang_refer_to_logs" t="Refer to the system logs for details"/>
+	<phrase n="lang_software_update_confirmation" t="The software update takes a few minutes and will reboot your phone. If you are on call(s), the update will start when all calls are terminated. Do not turn off your phone during the update. Update now?"/>
+	<phrase n="lang_firmware_field_is_empty" t="Firmware field is empty."/>
+	<phrase n="lang_software_update_in_progress" t="Software update in progress. Please wait for your phone to reboot. Once it restarts, refresh your browser to regain access to the WUI."/>
+	<phrase n="lang_edit_mode" t="Edit Mode"/>
+	<phrase n="lang_vlan_pc_qos" t="VLAN Priority on LAN port (0-7)"/>
+	<phrase n="lang_bluetooth_devices" t="Devices"/>
+	<phrase n="lang_bluetooth_not_ready" t="Bluetooth is not ready"/>
+	<phrase n="lang_F_ACCEPT_CALL_ext_ui" t="Answer"/>
+	<phrase n="lang_F_DEFLECT_ext_ui" t="Forward"/>
+	<phrase n="lang_F_DENY_ext_ui" t="Reject"/>
+	<phrase n="lang_F_END_ext_ui" t="End call"/>
+	<phrase n="lang_F_CALL_PARK_DIAL" t="Call Park Dial"/>
+	<phrase n="lang_F_NEW_CALL" t="New Call"/>
+	<phrase n="lang_device_management_service" t="Device Management Service"/>
+	<phrase n="lang_manage_dms" t="Manage DMS"/>
+	<phrase n="lang_3_days" t="3 Days"/>
+	<phrase n="lang_dms_enabled" t="DMS is enabled until"/>
+	<phrase n="lang_dms" t="DMS"/>
+</phrases>

@@ -1,0 +1,57 @@
+<?ssi title settings_ssi_title?>
+<?ssi file common1.htm?>
+<TR><TD vAlign="top" height="16"><IMG height="16" src="img/clr.gif" width="16"></TD></TR>
+<TR>
+  <TD>
+    <div class="buttonline">
+      <a href="settings.cfg" download="settings.cfg"><div class="divbutton buttonmarginright"><?lng all_settings_cfg?></div></a>
+      <a href="settings.xml" download="settings.xml"><div class="divbutton buttonmarginright"><?lng all_settings_xml?></div></a>
+      <a href="settings_wo_default.xml" download="settings_wo_default.xml"><div class="divbutton buttonmarginright"><?lng changed_settings_xml?></div></a>
+      <?ssi skipon TR069_NOT_ENABLED?><a href="param_map" download="param_map"><div class="divbutton buttonmarginright"><?lng param_map?></div></a><?ssi skipoff TR069_NOT_ENABLED?>
+    </div>
+  </TD>
+</TR>
+<TR><TD>&nbsp;</TD></TR>
+<TR>
+  <TD><pre><?ssi settings?></pre></TD>
+</TR>
+<?ssi file common9.htm?>
+<script>
+  function updateSetting(name, value, tag) {
+    const new_value = prompt("<?lng prompt_new_value?>", value);
+    if (new_value != null) {
+      // We have to use a POST request to be able to change settings even if all security features including
+      // use_hidden_tags and restrict_uri_queries are enabled.
+      // We dynamically add a form to the settings.htm page with the required input fields and submit the form to
+      // change the setting value.
+      const form = document.createElement('form');
+      form.setAttribute('method', 'post');
+
+      const settingField = document.createElement('input');
+      settingField.setAttribute('name', name);
+      settingField.setAttribute('value', new_value);
+      form.appendChild(settingField);
+
+      const hiddenTagField = document.createElement('input');
+      hiddenTagField.setAttribute('name', 'hidden_tag');
+      hiddenTagField.setAttribute('value', tag);
+      form.appendChild(hiddenTagField);
+
+      const settingsApplyField = document.createElement('input');
+      settingsApplyField.setAttribute('name', 'SETTINGS');
+      settingsApplyField.setAttribute('value', 'apply');
+      form.appendChild(settingsApplyField);
+
+      const storeSettingsField = document.createElement('input');
+      storeSettingsField.setAttribute('name', 'STORE_SETTINGS');
+      storeSettingsField.setAttribute('value', 'save');
+      form.appendChild(storeSettingsField);
+
+      document.body.appendChild(form);
+      form.submit();
+    }
+    // Return 'false' to prevent that the default context menu is shown.
+    return false;
+  }
+</script>
+</HTML>

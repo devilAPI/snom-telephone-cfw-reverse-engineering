@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<IPPhoneBatch  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../schemas/minibrowser.xsd">
+  <IPPhoneText state="others_except_mb">
+    <Title>$(lang:acd_state)</Title>
+    <If condition="$(var:current_state)==$(lang:acd_log_off)">
+      <Text>$(lang:please_sign_into_set_acd_state)</Text>
+    </If>
+    <Else>
+      <Fetch mil="1">file:///xml/gui/broadsoft_acd_state_chooser.xml#sub=*[@id="presence"]</Fetch>
+    </Else>
+    <SoftKeyItem>
+      <Name>F1</Name>
+      <Label>KEY_F_ACD_LOGIN</Label>
+      <If condition="$(var:id_idx)==0">
+        <Url>phone://mb_exit#xsiacd=F_CALL_AGENT_HACK_SEND_LOG_ON,$(current_line)</Url>
+      </If>
+      <Else>
+        <Url>phone://mb_exit#xsiacd=F_CALL_AGENT_HACK_SEND_LOG_ON,$(var:id_idx)</Url>
+      </Else>
+    </SoftKeyItem>
+    <If condition="$(var:id_idx)==0">
+      <If condition="$(bool_eval:$(condition:$(set:user_server_type[$(current_line)])==broadsoft) &amp; $(condition:$(set:xsi_callcenter_list[$(current_line)])==on))">
+        <SoftKeyItem>
+          <Name>F4</Name>
+          <Label>KEY_F_CALL_CENTER_LIST</Label>
+          <Url>file:///xml/gui/call_center_list.xml#action_ifc:identity.$(current_line).call_centers=retrieve_call_centers</Url>
+        </SoftKeyItem>
+      </If>
+    </If>
+    <Elif condition="$(bool_eval:$(condition:$(set:user_server_type[$(var:id_idx)])==broadsoft) &amp; $(condition:$(set:xsi_callcenter_list[$(var:id_idx)])==on))">
+      <SoftKeyItem>
+        <Name>F4</Name>
+        <Label>KEY_F_CALL_CENTER_LIST</Label>
+        <Url>file:///xml/gui/call_center_list.xml#action_ifc:identity.$(var:id_idx).call_centers=retrieve_call_centers</Url>
+      </SoftKeyItem>
+    </Elif>
+  </IPPhoneText>
+  <IPPhoneMenu track="yes" dtmf="off" id="presence" speedselect="enter" state="others_except_mb" document_id="acd_presence">
+    <If condition="$(show_feature:BW_BDF_DISP)">
+      <Title>$(lang:acd_state) ($(var:current_state))</Title>
+    </If>
+    <Else>
+      <Title>$(lang:acd_state)</Title>
+    </Else>
+    <Repeat values="$(broadsoft_acd_states:$(var:id_idx))" token="|__NAME__|__STATE__|__SUBTEXT__|__URL__|">
+      <If condition="$(bool_eval:$(condition:__NAME__!=$(lang:acd_log_on)) &amp; $(condition:__NAME__!=$(lang:acd_log_off)))">
+        <MenuItem id="__STATE__">
+          <If condition="$(bool_eval:$(show_feature:BW_BDF_DISP) &amp; $(condition:__NAME__==$(lang:acd_not_ready)) &amp; $(condition:!$(empty:__SUBTEXT__)))">
+            <Name>__NAME__ (__SUBTEXT__)</Name>
+          </If>
+          <Else>
+            <Name>__NAME__</Name>
+            <SubText>__SUBTEXT__</SubText>
+          </Else>
+          <If condition="__NAME__==$(var:current_state)">
+            <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOn)</ExtraIconType>
+          </If>
+          <Else>
+            <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOff)</ExtraIconType>
+          </Else>
+          <Url>__URL__</Url>
+        </MenuItem>
+      </If>
+      <ElIf condition="$(bool_eval:$(condition:__NAME__==$(lang:acd_log_on)) | $(condition:__NAME__==$(lang:acd_log_off)))">
+        <SoftKeyItem>
+          <Name>F1</Name>
+          <Label>KEY_F_ACD_LOGOUT</Label>
+          <If condition="$(var:id_idx)==0">
+            <Url>phone://mb_exit#xsiacd=F_CALL_AGENT_HACK_SEND_LOG_OFF,$(current_line)</Url>
+          </If>
+          <Else>
+            <Url>phone://mb_exit#xsiacd=F_CALL_AGENT_HACK_SEND_LOG_OFF,$(var:id_idx)</Url>
+          </Else>
+        </SoftKeyItem>
+      </ElIf>
+    </Repeat>
+    <If condition="$(var:id_idx)==0">
+      <If condition="$(bool_eval:$(condition:$(set:user_server_type[$(current_line)])==broadsoft) &amp; $(condition:$(set:xsi_callcenter_list[$(current_line)])==on))">
+        <SoftKeyItem>
+          <Name>F4</Name>
+          <Label>KEY_F_CALL_CENTER_LIST</Label>
+          <Url>file:///xml/gui/call_center_list.xml#action_ifc:identity.$(current_line).call_centers=retrieve_call_centers</Url>
+        </SoftKeyItem>
+      </If>
+    </If>
+    <Elif condition="$(bool_eval:$(condition:$(set:user_server_type[$(var:id_idx)])==broadsoft) &amp; $(condition:$(set:xsi_callcenter_list[$(var:id_idx)])==on))">
+      <SoftKeyItem>
+        <Name>F4</Name>
+        <Label>KEY_F_CALL_CENTER_LIST</Label>
+        <Url>file:///xml/gui/call_center_list.xml#action_ifc:identity.$(var:id_idx).call_centers=retrieve_call_centers</Url>
+      </SoftKeyItem>
+    </Elif>
+  </IPPhoneMenu>
+  <IPPhoneMenu track="no" id="unavailable_codes" state="others_except_mb" document_id="acd_unavailable_codes">
+    <Title>$(lang:unavailable_state)</Title>
+    <!-- Waiting for response from server -->
+    <If condition="$(var_ifc:identity.$(var:id_idx).acd_agent::has_unavailable_codes)==pending">
+      <MenuItem name="$(lang:please_wait)">
+        <Url>phone://mb_nop</Url>
+      </MenuItem>
+    </If>
+    <!-- Nothing is returned from server, just send sip signalling without code. -->
+    <Elif condition="$(var_ifc:identity.$(var:id_idx).acd_agent::has_unavailable_codes)==false">
+      <Fetch mil="1">phone://mb_exit#xsiacd=F_CALL_AGENT_HACK_SEND_UNAVAILABLE,$(var:id_idx)</Fetch>
+    </Elif>
+    <!-- There are codes returned from server, display them. -->
+    <Else>
+      <Repeat values="$(var_ifc:identity.$(var:id_idx).acd_agent::unavailable_codes)" token="|__CODE__|__DESCRIPTION__|__CURRENT_CODE__|\r\n">
+        <MenuItem name="__DESCRIPTION__">
+          <If condition="$(show_feature:FEATURE_PUI_STYLE_SIO)">
+            <SubText>__CODE__</SubText>
+          </If>
+          <If condition="__CODE__==__CURRENT_CODE__">
+            <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOn)</ExtraIconType>
+          </If>
+          <Else>
+            <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOff)</ExtraIconType>
+          </Else>
+          <Url>phone://mb_exit#xsiacd=F_CALL_AGENT_HACK_SEND_UNAVAILABLE,$(var:id_idx),__CODE__</Url>
+        </MenuItem>
+      </Repeat>
+    </Else>
+  </IPPhoneMenu>
+  <IPPhoneMenu track="no" id="unavailable_codes_xml" state="others_except_mb" document_id="acd_unavailable_codes_xml">
+    <Title>$(lang:unavailable_state)</Title>
+    <Repeat values="$(broadsoft_acd_unavailable_code_xml:$(var:id_idx))" token="|__CODE__|__DESCRIPTION__|__CURRENT_CODE__|">
+      <MenuItem name="__DESCRIPTION__" sel="$(condition:__CODE__==__CURRENT_CODE__)">
+        <If condition="$(show_feature:FEATURE_PUI_STYLE_SIO)">
+          <SubText>__CODE__</SubText>
+        </If>
+        <If condition="__CODE__==__CURRENT_CODE__">
+          <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOn)</ExtraIconType>
+        </If>
+        <Else>
+          <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOff)</ExtraIconType>
+        </Else>
+        <Url>phone://mb_exit#xsiacd=F_CALL_AGENT_HACK_SEND_UNAVAILABLE,$(var:id_idx),__CODE__</Url>
+      </MenuItem>
+    </Repeat>
+  </IPPhoneMenu>
+  <SnomIPPhoneInput  track="no" id="unavailable_codes_manual" state="others_except_mb" document_id="acd_unavailable_codes_manual">
+    <Url input_required="yes">phone://mb_exit#xsiacd=F_CALL_AGENT_HACK_SEND_UNAVAILABLE,$(var:id_idx),__X__</Url>
+    <InputItem>
+      <DisplayName>$(lang:enter_unavailable_code)</DisplayName>
+      <InputToken>__X__</InputToken>
+      <InputFlags>N</InputFlags>
+    </InputItem>
+    <SoftKeyItem>
+        <Name>F1</Name>
+        <Label>F_BACK</Label>
+        <SoftKey>F_BACK</SoftKey>
+    </SoftKeyItem>
+    <SoftKeyItem>
+        <Name>F2</Name>
+        <Label></Label>
+        <SoftKey></SoftKey>
+    </SoftKeyItem>
+  </SnomIPPhoneInput>
+</IPPhoneBatch>

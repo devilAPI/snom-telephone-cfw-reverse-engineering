@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<IPPhoneBatch xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../schemas/minibrowser.xsd">
+
+  <SnomIPPhoneMenu track="yes" dtmf="off" id="setting_template">
+    <Title>$(lang:$(var:setting))</Title>
+
+    <SoftkeyItem>
+      <name>F1</name>
+      <label>$(lang:F_MENU_BACK)</label>
+      <Url>phone://mb_exit#clearcache</Url>
+    </SoftkeyItem>
+
+    <if condition="!$(empty:$(var:setting_changed))">
+      <SoftkeyItem>
+        <name>F4</name>
+        <label>$(lang:F_SAVE)</label>
+        <Url>phone://mb_exit#flush</Url>
+      </SoftkeyItem>
+    </if>
+
+    <if condition="$(empty:$(setcache:$(var:setting)))">
+      <fetch mil="1">phone://mb_nop_ignore_prev_frags#setcache:$(var:setting)=$(set:$(var:setting))</fetch>
+    </if>
+
+    <MenuItem name="$(lang:$(var:setting))">
+      <if condition="$(var:op1)==$(setcache:$(var:setting))">
+        <ExtraText>$(lang:$(var:op1name))</ExtraText>
+      </if>
+      <elif condition="$(var:op2)==$(setcache:$(var:setting))">
+        <ExtraText>$(lang:$(var:op2name))</ExtraText>
+      </elif>
+      <elif condition="$(var:op3)==$(setcache:$(var:setting))">
+        <ExtraText>$(lang:$(var:op3name))</ExtraText>
+      </elif>
+      <else>
+        <ExtraText>$(setcache:$(var:setting))</ExtraText>
+      </else>
+
+      <URL>phone://mb_nop</URL>
+      <ExtraIconType2>$(icon_type_enum:kIconTypeMenuChevrons)</ExtraIconType2>
+
+      <SoftkeyItem>
+        <name>LEFT</name>
+        <if condition="$(empty:$(var:op3))">
+          <If condition="$(var:op1)==$(setcache:$(var:setting))">
+            <url>phone://mb_nop_ignore_prev_frags#var:setting_changed=true&amp;setcache:$(var:setting)=$(var:op2)</url>
+          </If>
+          <Else condition="$(var:op2)==$(setcache:$(var:setting))">
+            <url>phone://mb_nop_ignore_prev_frags#var:setting_changed=true&amp;setcache:$(var:setting)=$(var:op1)</url>
+          </Else>
+        </if>
+        <else>
+          <If condition="$(var:op3)==$(setcache:$(var:setting))">
+            <url>phone://mb_nop_ignore_prev_frags#var:setting_changed=true&amp;setcache:$(var:setting)=$(var:op2)</url>
+          </If>
+          <Elif condition="$(var:op2)==$(setcache:$(var:setting))">
+            <url>phone://mb_nop_ignore_prev_frags#var:setting_changed=true&amp;setcache:$(var:setting)=$(var:op1)</url>
+          </Elif>
+          <Else>
+            <url>phone://mb_nop_ignore_prev_frags#var:setting_changed=true&amp;setcache:$(var:setting)=$(var:op3)</url>
+          </Else>
+        </else>
+      </SoftkeyItem>
+      <SoftkeyItem>
+        <name>RIGHT</name>
+        <if condition="$(empty:$(var:op3))">
+          <If condition="$(var:op1)==$(setcache:$(var:setting))">
+            <url>phone://mb_nop_ignore_prev_frags#var:setting_changed=true&amp;setcache:$(var:setting)=$(var:op2)</url>
+          </If>
+          <Else condition="$(var:op2)==$(setcache:$(var:setting))">
+            <url>phone://mb_nop_ignore_prev_frags#var:setting_changed=true&amp;setcache:$(var:setting)=$(var:op1)</url>
+          </Else>
+        </if>
+        <else>
+          <If condition="$(var:op1)==$(setcache:$(var:setting))">
+            <url>phone://mb_nop_ignore_prev_frags#var:setting_changed=true&amp;setcache:$(var:setting)=$(var:op2)</url>
+          </If>
+          <Elif condition="$(var:op2)==$(setcache:$(var:setting))">
+            <url>phone://mb_nop_ignore_prev_frags#var:setting_changed=true&amp;setcache:$(var:setting)=$(var:op3)</url>
+          </Elif>
+          <Else>
+            <url>phone://mb_nop_ignore_prev_frags#var:setting_changed=true&amp;setcache:$(var:setting)=$(var:op1)</url>
+          </Else>
+        </else>
+      </SoftkeyItem>
+    </MenuItem>
+  </SnomIPPhoneMenu>
+
+  <SnomIPPhoneMenu track="yes" dtmf="off" id="identity_template">
+    <Title>$(var:title_text)</Title>
+
+    <SoftkeyItem>
+      <name>F1</name>
+      <label>$(lang:F_MENU_BACK)</label>
+      <Url>phone://mb_exit#clearcache</Url>
+    </SoftkeyItem>
+
+    <if condition="!$(empty:$(var:support_all))">
+      <SoftkeyItem>
+        <name>F2</name>
+        <label>$(lang:all) $(lang:$(var:op1))</label>
+        <url>phone://mb_nop_ignore_prev_frags#var:setting_changed=true&amp;
+          setcache:$(var:setting)[1]=$(var:op1)&amp;setcache:$(var:setting)[2]=$(var:op1)&amp;
+          setcache:$(var:setting)[3]=$(var:op1)&amp;setcache:$(var:setting)[4]=$(var:op1)&amp;
+          setcache:$(var:setting)[5]=$(var:op1)&amp;setcache:$(var:setting)[6]=$(var:op1)&amp;
+          setcache:$(var:setting)[7]=$(var:op1)&amp;setcache:$(var:setting)[8]=$(var:op1)&amp;
+          setcache:$(var:setting)[9]=$(var:op1)&amp;setcache:$(var:setting)[10]=$(var:op1)&amp;
+          setcache:$(var:setting)[11]=$(var:op1)&amp;setcache:$(var:setting)[12]=$(var:op1)
+        </url>
+      </SoftkeyItem>
+
+      <SoftkeyItem>
+        <name>F3</name>
+        <label>$(lang:all) $(lang:$(var:op2))</label>
+        <url>phone://mb_nop_ignore_prev_frags#var:setting_changed=true&amp;
+          setcache:$(var:setting)[1]=$(var:op2)&amp;setcache:$(var:setting)[2]=$(var:op2)&amp;
+          setcache:$(var:setting)[3]=$(var:op2)&amp;setcache:$(var:setting)[4]=$(var:op2)&amp;
+          setcache:$(var:setting)[5]=$(var:op2)&amp;setcache:$(var:setting)[6]=$(var:op2)&amp;
+          setcache:$(var:setting)[7]=$(var:op2)&amp;setcache:$(var:setting)[8]=$(var:op2)&amp;
+          setcache:$(var:setting)[9]=$(var:op2)&amp;setcache:$(var:setting)[10]=$(var:op2)&amp;
+          setcache:$(var:setting)[11]=$(var:op2)&amp;setcache:$(var:setting)[12]=$(var:op2)
+        </url>
+      </SoftkeyItem>
+    </if>
+
+    <if condition="!$(empty:$(var:setting_changed))">
+      <SoftkeyItem>
+        <name>F4</name>
+        <label>$(lang:F_SAVE)</label>
+        <Url>phone://mb_exit#flush</Url>
+      </SoftkeyItem>
+    </if>
+
+    <Repeat values="$(enum:$(max_registrations))" token="|__REG__|">
+      <If condition="!$(empty:$(user_displayname:__REG__))">
+        <if condition="$(empty:$(setcache:$(var:setting)[__REG__]))">
+          <fetch mil="1">phone://mb_nop_ignore_prev_frags#setcache:$(var:setting)[__REG__]=$(set:$(var:setting)[__REG__])</fetch>
+        </if>
+        <MenuItem name="$(user_displayname:__REG__)" id="ST__REG__">
+          <if condition="$(var:op1)==$(setcache:$(var:setting)[__REG__])">
+            <ExtraText>$(lang:$(var:op1name))</ExtraText>
+          </if>
+          <elif condition="$(var:op2)==$(setcache:$(var:setting)[__REG__])">
+            <ExtraText>$(lang:$(var:op2name))</ExtraText>
+          </elif>
+          <elif condition="$(var:op3)==$(setcache:$(var:setting)[__REG__])">
+            <ExtraText>$(lang:$(var:op3name))</ExtraText>
+          </elif>
+          <else>
+            <ExtraText>$(setcache:$(var:setting))</ExtraText>
+          </else>
+
+          <URL>phone://mb_nop</URL>
+          <ExtraIconType2>$(icon_type_enum:kIconTypeMenuChevrons)</ExtraIconType2>
+
+          <SoftkeyItem>
+            <name>LEFT</name>
+            <if condition="$(empty:$(var:op3))">
+              <If condition="$(var:op1)==$(setcache:$(var:setting)[__REG__])">
+                <url>phone://mb_nop_ignore_prev_frags#var:setting_changed=true&amp;setcache:$(var:setting)[__REG__]=$(var:op2)</url>
+              </If>
+              <Else condition="$(var:op2)==$(setcache:$(var:setting)[__REG__])">
+                <url>phone://mb_nop_ignore_prev_frags#var:setting_changed=true&amp;setcache:$(var:setting)[__REG__]=$(var:op1)</url>
+              </Else>
+            </if>
+            <else>
+              <If condition="$(var:op1)==$(setcache:$(var:setting)[__REG__])">
+                <url>phone://mb_nop_ignore_prev_frags#var:setting_changed=true&amp;setcache:$(var:setting)[__REG__]=$(var:op3)</url>
+              </If>
+              <Elif condition="$(var:op3)==$(setcache:$(var:setting)[__REG__])">
+                <url>phone://mb_nop_ignore_prev_frags#var:setting_changed=true&amp;setcache:$(var:setting)[__REG__]=$(var:op2)</url>
+              </Elif>
+              <Else>
+                <url>phone://mb_nop_ignore_prev_frags#var:setting_changed=true&amp;setcache:$(var:setting)[__REG__]=$(var:op1)</url>
+              </Else>
+            </else>
+          </SoftkeyItem>
+          <SoftkeyItem>
+            <name>RIGHT</name>
+            <if condition="$(empty:$(var:op3))">
+              <If condition="$(var:op1)==$(setcache:$(var:setting)[__REG__])">
+                <url>phone://mb_nop_ignore_prev_frags#var:setting_changed=true&amp;setcache:$(var:setting)[__REG__]=$(var:op2)</url>
+              </If>
+              <Else condition="$(var:op2)==$(setcache:$(var:setting)[__REG__])">
+                <url>phone://mb_nop_ignore_prev_frags#var:setting_changed=true&amp;setcache:$(var:setting)[__REG__]=$(var:op1)</url>
+              </Else>
+            </if>
+            <else>
+              <If condition="$(var:op1)==$(setcache:$(var:setting)[__REG__])">
+                <url>phone://mb_nop_ignore_prev_frags#var:setting_changed=true&amp;setcache:$(var:setting)[__REG__]=$(var:op2)</url>
+              </If>
+              <Elif condition="$(var:op2)==$(setcache:$(var:setting)[__REG__])">
+                <url>phone://mb_nop_ignore_prev_frags#var:setting_changed=true&amp;setcache:$(var:setting)[__REG__]=$(var:op3)</url>
+              </Elif>
+              <Else>
+                <url>phone://mb_nop_ignore_prev_frags#var:setting_changed=true&amp;setcache:$(var:setting)[__REG__]=$(var:op1)</url>
+              </Else>
+            </else>
+          </SoftkeyItem>
+        </MenuItem>
+      </If>
+    </Repeat>
+  </SnomIPPhoneMenu>
+
+  <IPPhoneInput track="no" dtmf="off" id="input_template" document_id="user_input_template">
+    <Url input_required="$(var:input_required)">$(var:input_url)</Url>
+    <InputItem>
+      <DisplayName>$(var:input_displayname)</DisplayName>
+      <InputToken>$(var:input_token)</InputToken>
+      <InputFlags>$(var:input_flags)</InputFlags>
+      <InputMask>$(var:input_mask)</InputMask>
+      <DefaultValue>$(var:input_default)</DefaultValue>
+      <Range>$(var:input_range)</Range>
+      <ContactPoolInEdit>$(var:input_pool_key)</ContactPoolInEdit>
+    </InputItem>
+    <If condition="$(is_set:$(var:custom_f4))">
+      <SoftKeyItem>
+        <Name>F4</Name>
+        <SoftKey>$(var:custom_f4)</SoftKey>
+      </SoftKeyItem>
+    </If>
+  </IPPhoneInput>
+
+  <IPPhoneMenu track="no" id="selection_template" document_id="user_selection_template">
+    <Title>$(var:list_title)</Title>
+    <If condition="!$(empty:$(repeat_values:$(var:list_values)))">
+      <Repeat values="$(repeat_values:$(var:list_values))" token="|__NAME__|__ID__|__URL__|">
+        <MenuItem name="__NAME__" id="__ID__">
+          <Url>__URL__</Url>
+        </MenuItem>
+      </Repeat>
+    </If>
+    <Else>
+      <MenuItem sel="true" name="$(lang:list_no_data)"></MenuItem>
+    </Else>
+  </IPPhoneMenu>
+
+  <IPPhoneText track="no" id="text_template" document_id="user_text_template">
+    <Title>$(var:text_title)</Title>
+    <If condition="$(is_set:$(var:text_image_url))">
+      <Image>
+        <LocationX>$(var:text_image_locationx)</LocationX>
+        <LocationY>$(var:text_image_locationy)</LocationY>
+        <Url>$(var:text_image_url)</Url>
+      </Image>
+    </If>
+    <LocationX>$(var:text_locationx)</LocationX>
+    <LocationY>$(var:text_locationy)</LocationY>
+    <Text translate_callbacks="$(var:text_translate)">$(var:text_content)</Text>
+    <If condition="$(is_set:$(var:text_softkeys))">
+      <Repeat values="$(var:text_softkeys)" token="|__NAME__|__LABEL__|__URL__|__SOFTKEY__|">
+        <SoftKeyItem>
+          <Name>__NAME__</Name>
+          <Label>__LABEL__</Label>
+          <Url>__URL__</Url>
+          <SoftKey>__SOFTKEY__</SoftKey>
+        </SoftKeyItem>
+      </Repeat>
+    </If>
+  </IPPhoneText>
+
+</IPPhoneBatch>

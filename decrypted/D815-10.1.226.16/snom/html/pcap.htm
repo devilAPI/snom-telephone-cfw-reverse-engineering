@@ -1,0 +1,34 @@
+<?ssi title pcap_trace_ssi_title?> <?ssi file common1.htm?>
+<TR>
+  <TD vAlign="top" height="16">
+    <IMG height="16" src="img/clr.gif" width="16">
+  </TD>
+</TR>
+<TR>
+  <TD>
+    <?lng pcap_text?><br>
+  </TD>
+</TR>
+<FORM method="post">
+  <?ssi hidden_tag?>
+  <TR>
+    <TD>
+      <div class="regularline">(<?ssi pcap_number?> packets, <?ssi pcap_size?> octets)</div>
+    </TD>
+  </TR>
+  <TR>
+    <TD>
+      <div class="buttonline buttonlinegap">
+        <input type="submit" hidefocus value="Start" name="start_pcap">
+        <input type="submit" hidefocus value="Stop" name="stop_pcap">
+        <a href="trace.pcap" download="trace.pcap"><div class="divbutton"><?lng prefs_savebutton?></div></a>
+      </div>
+    </TD>
+    <TD>&nbsp;</TD>
+  </TR>
+</FORM>
+<TR>
+  <TD vAlign="top" height="5"><IMG height="5" src="img/clr.gif" width="12"></TD>
+</TR>
+<script type="text/javascript" src="fox.js" charset="utf-8"></script>
+<?ssi file common9.htm?></HTML>

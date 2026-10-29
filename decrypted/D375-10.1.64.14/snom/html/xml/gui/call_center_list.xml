@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<IPPhoneBatch xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../schemas/minibrowser.xsd">
+  <IPPhoneMenu id="starter">
+    <Fetch mil="1">file:///xml/gui/call_center_list.xml#sub=*[@id="call_center_list"]&amp;var:animationcounter=0</Fetch>
+  </IPPhoneMenu>
+  <IPPhoneMenu track="no" speedselect="off" id="call_center_list">
+    <If condition="$(show_feature:FEATURE_PUI_STYLE_SIO)">
+      <Title>$(lang:call_center_list)</Title>
+      <Repeat values="$(var_ifc:identity.$(set:active_line).call_centers::get_call_centers)" token="|__NAME__|__STATE__|\r\n">
+        <If condition="__STATE__==Joined">
+          <MenuItem name="__NAME__" id="__NAME__">
+            <Subtext>$(lang:call_center_joined)</Subtext>
+            <ExtraIconType>$(icon_type_enum:kIconTypeMenuSuccess)</ExtraIconType>
+            <Url>phone://mb_nop_ignore_prev_frags#action_ifc:identity.$(set:active_line).call_centers=toggle_join,call_center_name=__NAME__</Url>
+            <SoftKeyItem>
+              <Name>F1</Name>
+              <Label>F_LEAVE</Label>
+              <Url>phone://mb_nop_ignore_prev_frags#action_ifc:identity.$(set:active_line).call_centers=toggle_join,call_center_name=__NAME__</Url>
+            </SoftKeyItem>
+          </MenuItem>
+        </If>
+        <Elif condition="__STATE__==Unjoined">
+          <MenuItem name="__NAME__" id="__NAME__">
+            <Url>phone://mb_nop_ignore_prev_frags#action_ifc:identity.$(set:active_line).call_centers=toggle_join,call_center_name=__NAME__</Url>
+            <SoftKeyItem>
+              <Name>F1</Name>
+              <Label>F_JOIN</Label>
+              <Url>phone://mb_nop_ignore_prev_frags#action_ifc:identity.$(set:active_line).call_centers=toggle_join,call_center_name=__NAME__</Url>
+            </SoftKeyItem>
+          </MenuItem>
+        </Elif>
+        <Elif condition="__STATE__==Joining">
+          <MenuItem name="__NAME__" id="__NAME__">
+            <Subtext>$(lang:call_center_joining)</Subtext>
+            <ExtraIconType>$(math_eval:$(icon_type_enum:kIconTypeMenuConnectzero)+$(var:animationcounter))</ExtraIconType>
+            <Url>phone://mb_nop</Url>
+            <SoftKeyItem>
+              <Name>F1</Name>
+              <Label>F_JOIN</Label>
+              <Url>phone://mb_nop</Url>
+            </SoftKeyItem>
+          </MenuItem>
+          <If condition="$(var:animationcounter)==3">
+            <Fetch mil="200">phone://mb_nop#var:animationcounter=0</Fetch>
+          </If>
+          <Else>
+            <Fetch mil="200">phone://mb_nop#var:animationcounter=$(math_eval:$(var:animationcounter)+1)</Fetch>
+          </Else>
+        </Elif>
+        <Elif condition="__STATE__==Unjoining">
+          <MenuItem name="__NAME__" id="__NAME__">
+            <SoftKeyItem>
+              <Name>F1</Name>
+              <Label>F_LEAVE</Label>
+              <Url>phone://mb_nop</Url>
+            </SoftKeyItem>
+          </MenuItem>
+        </Elif>
+        <Elif condition="__STATE__==UnableToJoin">
+          <MenuItem name="__NAME__" id="__NAME__">
+            <Subtext>$(lang:call_center_unable_to_join)</Subtext>
+            <ExtraIconType>$(icon_type_enum:kIconTypeMenuFailed)</ExtraIconType>
+            <Url>phone://mb_nop_ignore_prev_frags#action_ifc:identity.$(set:active_line).call_centers=toggle_join,call_center_name=__NAME__</Url>
+            <SoftKeyItem>
+              <Name>F1</Name>
+              <Label>F_JOIN</Label>
+              <Url>phone://mb_nop_ignore_prev_frags#action_ifc:identity.$(set:active_line).call_centers=toggle_join,call_center_name=__NAME__</Url>
+            </SoftKeyItem>
+          </MenuItem>
+        </Elif>
+        <Elif condition="__STATE__==JoinDisallowed">
+          <MenuItem name="__NAME__" id="__NAME__">
+            <Subtext>$(lang:call_center_join_not_allowed)</Subtext>
+            <ExtraIconType>$(icon_type_enum:kIconTypeLock)</ExtraIconType>
+            <Url>phone://mb_nop</Url>
+          </MenuItem>
+        </Elif>
+        <Elif condition="__STATE__==UnjoinDisallowed">
+          <MenuItem name="__NAME__" id="__NAME__">
+            <Subtext>$(lang:call_center_unjoin_not_allowed)</Subtext>
+            <ExtraIconType>$(icon_type_enum:kIconTypeLock)</ExtraIconType>
+            <Url>phone://mb_nop</Url>
+          </MenuItem>
+        </Elif>
+      </Repeat>
+    </If>
+    <Else>
+      <Title>$(lang:call_center_list)</Title>
+      <Repeat values="$(var_ifc:identity.$(set:active_line).call_centers::get_call_centers)" token="|__NAME__|__STATE__|\r\n">
+        <If condition="__STATE__==Joined">
+          <MenuItem id="__NAME__">
+            <If condition="$(show_feature:BW_BDF_DISP)">
+              <Name>__NAME__</Name>
+              <ExtraIconType>$(icon_type_enum:kIconTypeMenuSliderOn)</ExtraIconType>
+            </If>
+            <Else>
+              <Name>$(x_o:true) __NAME__</Name>
+            </Else>
+            <Url>phone://mb_nop_ignore_prev_frags#action_ifc:identity.$(set:active_line).call_centers=toggle_join,call_center_name=__NAME__</Url>
+            <SoftKeyItem>
+              <Name>F1</Name>
+              <Label>F_LEAVE</Label>
+              <If condition="__LOG_OFF_ALLOWED__">
+                <Url>phone://mb_nop_ignore_prev_frags#action_ifc:identity.$(set:active_line).call_centers=toggle_join,call_center_name=__NAME__</Url>
+              </If>
+              <Else>
+                <Url>phone://mb_nop_ignore_prev_frags#action_ifc:identity.$(set:active_line).call_centers=show_message,message="Not allowed to leave"</Url>
+              </Else>
+            </SoftKeyItem>
+          </MenuItem>
+        </If>
+        <Elif condition="__STATE__==Unjoined">
+          <MenuItem id="__NAME__">
+            <If condition="$(show_feature:BW_BDF_DISP)">
+              <Name>__NAME__</Name>
+              <ExtraIconType>$(icon_type_enum:kIconTypeMenuSliderOff)</ExtraIconType>
+            </If>
+            <Else>
+              <Name>$(x_o:true) __NAME__</Name>
+            </Else>
+            <Url>phone://mb_nop_ignore_prev_frags#action_ifc:identity.$(set:active_line).call_centers=toggle_join,call_center_name=__NAME__</Url>
+            <SoftKeyItem>
+              <Name>F1</Name>
+              <Label>F_JOIN</Label>
+              <Url>phone://mb_nop_ignore_prev_frags#action_ifc:identity.$(set:active_line).call_centers=toggle_join,call_center_name=__NAME__</Url>
+            </SoftKeyItem>
+          </MenuItem>
+        </Elif>
+        <Elif condition="__STATE__==Joining">
+          <MenuItem id="__NAME__">
+            <If condition="$(show_feature:BW_BDF_DISP)">
+              <Name>__NAME__</Name>
+              <ExtraIconType>$(icon_type_enum:kIconTypeMenuSliderOff)</ExtraIconType>
+            </If>
+            <Else>
+              <Name>$(x_o:true) __NAME__</Name>
+            </Else>
+            <Url>phone://mb_nop</Url>
+            <SoftKeyItem>
+              <Name>F1</Name>
+              <Label>F_JOIN</Label>
+              <Url>phone://mb_nop</Url>
+            </SoftKeyItem>
+          </MenuItem>
+        </Elif>
+        <Elif condition="__STATE__==Unjoining">
+          <MenuItem id="__NAME__">
+            <If condition="$(show_feature:BW_BDF_DISP)">
+              <Name>__NAME__</Name>
+              <ExtraIconType>$(icon_type_enum:kIconTypeMenuSliderOn)</ExtraIconType>
+            </If>
+            <Else>
+              <Name>$(x_o:true) __NAME__</Name>
+            </Else>
+            <Url>phone://mb_nop</Url>
+            <SoftKeyItem>
+              <Name>F1</Name>
+              <Label>F_LEAVE</Label>
+              <Url>phone://mb_nop</Url>
+            </SoftKeyItem>
+          </MenuItem>
+        </Elif>
+        <Elif condition="__STATE__==UnableToJoin">
+          <MenuItem id="__NAME__">
+            <If condition="$(show_feature:BW_BDF_DISP)">
+              <Name>__NAME__</Name>
+              <ExtraIconType>$(icon_type_enum:kIconTypeMenuSliderOff)</ExtraIconType>
+            </If>
+            <Else>
+              <Name>$(x_o:true) __NAME__</Name>
+            </Else>
+            <Url>phone://mb_nop_ignore_prev_frags#action_ifc:identity.$(set:active_line).call_centers=toggle_join,call_center_name=__NAME__</Url>
+            <SoftKeyItem>
+              <Name>F1</Name>
+              <Label>F_JOIN</Label>
+              <Url>phone://mb_nop_ignore_prev_frags#action_ifc:identity.$(set:active_line).call_centers=toggle_join,call_center_name=__NAME__</Url>
+            </SoftKeyItem>
+          </MenuItem>
+        </Elif>
+        <Elif condition="__STATE__==JoinDisallowed">
+          <MenuItem name="$(char_lock) __NAME__" id="__NAME__">
+            <Url>phone://mb_nop</Url>
+          </MenuItem>
+        </Elif>
+        <Elif condition="__STATE__==UnjoinDisallowed">
+          <MenuItem name="$(char_lock) __NAME__" id="__NAME__">
+            <Url>phone://mb_nop</Url>
+          </MenuItem>
+        </Elif>
+      </Repeat>
+    </Else>
+  </IPPhoneMenu>
+</IPPhoneBatch>

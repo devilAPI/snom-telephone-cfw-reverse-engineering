@@ -1,0 +1,296 @@
+<?ssi title fkeys_ssi_title?>
+<?ssi file common1.htm?>
+<TR><TD vAlign="top" height="16"><IMG height="16" src="img/clr.gif" width="16"></TD></TR>
+<TR>
+  <TD vAlign="top">
+  <FORM method="post">
+    <?ssi hidden_tag?>
+    <?ssi skipon VTECH?>
+    <TABLE class="bubbleTable" cellSpacing="0" cellPadding="0" width="100%" border="0">
+    <?ssi skipoff VTECH?>
+    <?ssi skipon SNOM?>
+    <TABLE cellSpacing="4" cellPadding="0" width="100%" border="0">
+    <?ssi skipoff SNOM?>
+    <TBODY>
+    <?ssi file tab_fkeys.htm?>
+      <TR>
+        <TD width="12" height="5"><IMG height="12" src="img/clr.gif" width="12"></TD>
+        <TD width="12" height="5"><IMG height="5" src="img/clr.gif" width="12"></TD>
+        <TD width="12" height="5"><IMG height="5" src="img/clr.gif" width="12"></TD>
+        <TD class="background" width="12" height="5">
+          <?ssi skipon VTECH?>
+          <IMG height="12" src=<?ssi img-corner-gif ur?> width="12">
+          <?ssi skipoff VTECH?>
+        </TD>
+      </TR>
+      <TR><TD></TD>
+        <?ssi skipon VTECH?>
+        <TD width="50%"><B>
+        <?ssi skipoff VTECH?>
+        <?ssi skipon SNOM?>
+        <TD class="titleText" width="50%">
+        <?ssi skipoff SNOM?>
+        <?lng line_idle_screen?></B></TD>
+        <TD width="50%"></TD>
+      </TR>
+      <!-- smartlabel idle default -->
+      <TR><TD></TD>
+        <?ssi skipon NO_STANDARD_SMARTLABEL?>
+        <?ssi radio line_default_smartlabel_display_mode smartlabel_idle_default advanced_ssi_on advanced_ssi_off?>
+        <?ssi skipoff NO_STANDARD_SMARTLABEL?>
+        <?ssi skipon STANDARD_SMARTLABEL?>
+        <TD><?lng line_default_smartlabel_display_mode?></TD>
+        <TD><select class="select6" name="smartlabel_idle_default" <?ssi disabled smartlabel_idle_default?>size="1" <?ssi tabindex?> >
+          <option value="short"<?ssi selected smartlabel_idle_default short?>><?lng line_short?></option>
+          <?ssi skipon NO_LABEL_MODE_HALF?>
+          <option value="half"<?ssi selected smartlabel_idle_default half?>><?lng line_half?></option>
+          <?ssi skipoff NO_LABEL_MODE_HALF?>
+          <option value="full"<?ssi selected smartlabel_idle_default full?>><?lng line_full?></option>
+          <option value="off"<?ssi selected smartlabel_idle_default off?>><?lng prefs_off?></option>
+          </select><?ssi help smartlabel_idle_default?>
+        </TD>
+        <?ssi skipoff STANDARD_SMARTLABEL?>
+      </TR>
+      <?ssi skipon STANDARD_SMARTLABEL?>
+      <!-- smartlabel idle expanded -->
+      <TR><TD></TD>
+        <TD><?lng line_expanded_smartlable_display_mode?></TD>
+        <TD><select class="select6" name="smartlabel_idle_expanded" <?ssi disabled smartlabel_idle_expanded?>size="1" <?ssi tabindex?> >
+          <option value="full"<?ssi selected smartlabel_idle_expanded full?>><?lng line_full?></option>
+          <?ssi skipon NO_LABEL_MODE_HALF?>
+          <option value="half"<?ssi selected smartlabel_idle_expanded half?>><?lng line_half?></option>
+          <?ssi skipoff NO_LABEL_MODE_HALF?>
+          <option value="short"<?ssi selected smartlabel_idle_expanded short?>><?lng line_short?></option>
+          </select><?ssi help smartlabel_idle_expanded?>
+        </TD>
+      </TR>
+      <!-- smartlabel idle trigger source -->
+      <?ssi skipon SMARTLABEL_WITHOUT_KEYS?>
+      <TR><TD></TD>
+        <TD><?lng smartlabel_trigger?></TD>
+        <TD><select class="select6" name="smartlabel_idle_trigger" <?ssi disabled smartlabel_idle_trigger?>size="1" <?ssi tabindex?> >
+          <option value=""<?ssi selected smartlabel_idle_trigger ?>><?lng prefs_off?></option>
+          <?ssi skipon NOT_HAS_LABEL_PAGE_NEXT_KEY?>
+          <option value="page_short_press"<?ssi selected smartlabel_idle_trigger page_short_press?>><?lng smartlabel_trigger_shortpress?></option>
+          <option value="page_long_press"<?ssi selected smartlabel_idle_trigger page_long_press?>><?lng smartlabel_trigger_longpress?></option>
+          <?ssi skipon VTECH?>
+          <option value="P8_short_press"<?ssi selected smartlabel_idle_trigger P8_short_press?>><?lng smartlabel_trigger_smartlabel_key_8_short_press?></option>
+          <option value="P8_long_press"<?ssi selected smartlabel_idle_trigger P8_long_press?>><?lng smartlabel_trigger_smartlabel_key_8_long_press?></option>
+          <?ssi skipoff VTECH?>
+          <option value="proximity"<?ssi selected smartlabel_idle_trigger proximity?>><?lng smartlabel_trigger_proximity?></option>
+          <?ssi skipoff NOT_HAS_LABEL_PAGE_NEXT_KEY?>
+          <?ssi skipon NOT_P2_TRIGGER_SMART_LABEL?>
+          <option value="any_smartlabel_key_short_press"<?ssi selected smartlabel_idle_trigger any_smartlabel_key_short_press?>><?lng smartlabel_trigger_any_smartlabel_key_short_press?></option>
+          <option value="P2_short_press"<?ssi selected smartlabel_idle_trigger P2_short_press?>><?lng smartlabel_trigger_smartlabel_key_2_short_press?></option>
+          <option value="P2_long_press"<?ssi selected smartlabel_idle_trigger P2_long_press?>><?lng smartlabel_trigger_smartlabel_key_2_long_press?></option>
+          <?ssi skipoff NOT_P2_TRIGGER_SMART_LABEL?>
+          <?ssi skipon NOT_SNOMD717?>
+          <option value="any_smartlabel_key_short_press"<?ssi selected smartlabel_idle_trigger any_smartlabel_key_short_press?>><?lng smartlabel_trigger_any_smartlabel_key_short_press?></option>
+          <option value="P3_short_press"<?ssi selected smartlabel_idle_trigger P3_short_press?>><?lng smartlabel_trigger_smartlabel_key_3_short_press?></option>
+          <option value="P3_long_press"<?ssi selected smartlabel_idle_trigger P3_long_press?>><?lng smartlabel_trigger_smartlabel_key_3_long_press?></option>
+          <?ssi skipoff NOT_SNOMD717?>
+          <?ssi skipon NOT_P4_TRIGGER_SMART_LABEL?>
+          <option value="any_smartlabel_key_short_press"<?ssi selected smartlabel_idle_trigger any_smartlabel_key_short_press?>><?lng smartlabel_trigger_any_smartlabel_key_short_press?></option>
+          <option value="P4_short_press"<?ssi selected smartlabel_idle_trigger P4_short_press?>><?lng smartlabel_trigger_smartlabel_key_4_short_press?></option>
+          <option value="P4_long_press"<?ssi selected smartlabel_idle_trigger P4_long_press?>><?lng smartlabel_trigger_smartlabel_key_4_long_press?></option>
+          <?ssi skipoff NOT_P4_TRIGGER_SMART_LABEL?>
+          <?ssi skipon NOT_SNOMD812?>
+          <option value="any_smartlabel_key_short_press"<?ssi selected smartlabel_idle_trigger any_smartlabel_key_short_press?>><?lng smartlabel_trigger_any_smartlabel_key_short_press?></option>
+          <option value="P8_short_press"<?ssi selected smartlabel_idle_trigger P8_short_press?>><?lng smartlabel_trigger_smartlabel_key_8_short_press?></option>
+          <option value="P8_long_press"<?ssi selected smartlabel_idle_trigger P8_long_press?>><?lng smartlabel_trigger_smartlabel_key_8_long_press?></option>
+          <?ssi skipoff NOT_SNOMD812?>
+          <?ssi skipon NOT_SNOMD815?>
+          <option value="any_smartlabel_key_short_press"<?ssi selected smartlabel_idle_trigger any_smartlabel_key_short_press?>><?lng smartlabel_trigger_any_smartlabel_key_short_press?></option>
+          <option value="P10_short_press"<?ssi selected smartlabel_idle_trigger P10_short_press?>><?lng smartlabel_trigger_smartlabel_key_10_short_press?></option>
+          <option value="P10_long_press"<?ssi selected smartlabel_idle_trigger P10_long_press?>><?lng smartlabel_trigger_smartlabel_key_10_long_press?></option>
+          <?ssi skipoff NOT_SNOMD815?>
+        </select><?ssi help smartlabel_idle_trigger?>
+        </TD>
+      </TR>
+      <?ssi skipoff SMARTLABEL_WITHOUT_KEYS?>
+      <?ssi skipoff STANDARD_SMARTLABEL?>
+      <TR><TD></TD><TD>&nbsp;</TD></TR>
+      <TR><TD></TD>
+        <?ssi skipon VTECH?>
+        <TD width="50%"><B>
+        <?ssi skipoff VTECH?>
+        <?ssi skipon SNOM?>
+        <TD class="titleText" width="50%">
+        <?ssi skipoff SNOM?>
+        <?lng line_call_screens?></B></TD>
+        <TD width="50%"></TD>
+      </TR>
+      <!-- smartlabel call default -->
+      <TR><TD></TD>
+        <?ssi skipon NO_STANDARD_SMARTLABEL?>
+        <?ssi radio line_default_smartlabel_display_mode smartlabel_call_default advanced_ssi_on advanced_ssi_off?>
+        <?ssi skipoff NO_STANDARD_SMARTLABEL?>
+        <?ssi skipon STANDARD_SMARTLABEL?>
+        <TD><?lng line_default_smartlabel_display_mode?></TD>
+        <TD><select class="select6" name="smartlabel_call_default" <?ssi disabled smartlabel_call_default?>size="1" <?ssi tabindex?> >
+          <?ssi skipon NO_LABEL_MODE_HALF?>
+          <option value="half"<?ssi selected smartlabel_call_default half?>><?lng line_half?></option>
+          <?ssi skipoff NO_LABEL_MODE_HALF?>
+          <?ssi skipon NO_LABEL_MODE_FULL?>
+          <option value="full"<?ssi selected smartlabel_call_default full?>><?lng line_full?></option>
+          <?ssi skipoff NO_LABEL_MODE_FULL?>
+          <option value="short"<?ssi selected smartlabel_call_default short?>><?lng line_short?></option>
+          <option value="off"<?ssi selected smartlabel_call_default off?>><?lng prefs_off?></option>
+          </select><?ssi help smartlabel_call_default?>
+        </TD>
+        <?ssi skipoff STANDARD_SMARTLABEL?>
+      </TR>
+      <?ssi skipon STANDARD_SMARTLABEL?>
+      <!-- smartlabel call expanded -->
+      <TR><TD></TD>
+        <TD><?lng line_expanded_smartlable_display_mode?></TD>
+        <TD><select class="select6" name="smartlabel_call_expanded" <?ssi disabled smartlabel_call_expanded?>size="1" <?ssi tabindex?> >
+          <option value="full"<?ssi selected smartlabel_call_expanded full?>><?lng line_full?></option>
+          <?ssi skipon NO_LABEL_MODE_HALF?>
+          <option value="half"<?ssi selected smartlabel_call_expanded half?>><?lng line_half?></option>
+          <?ssi skipoff NO_LABEL_MODE_HALF?>
+          <option value="short"<?ssi selected smartlabel_call_expanded short?>><?lng line_short?></option>
+          </select><?ssi help smartlabel_call_expanded?>
+        </TD>
+      </TR>
+      <!-- smartlabel call trigger source -->
+      <?ssi skipon SMARTLABEL_WITHOUT_KEYS?>
+      <TR><TD></TD>
+        <TD><?lng smartlabel_trigger?></TD>
+        <TD><select class="select6" name="smartlabel_call_trigger" <?ssi disabled smartlabel_call_trigger?>size="1" <?ssi tabindex?> >
+          <option value=""<?ssi selected smartlabel_call_trigger ?>><?lng prefs_off?></option>
+          <?ssi skipon NOT_HAS_LABEL_PAGE_NEXT_KEY?>
+          <option value="page_short_press"<?ssi selected smartlabel_call_trigger page_short_press?>><?lng smartlabel_trigger_shortpress?></option>
+          <option value="page_long_press"<?ssi selected smartlabel_call_trigger page_long_press?>><?lng smartlabel_trigger_longpress?></option>
+          <?ssi skipon VTECH?>
+          <option value="P8_short_press"<?ssi selected smartlabel_call_trigger P8_short_press?>><?lng smartlabel_trigger_smartlabel_key_8_short_press?></option>
+          <option value="P8_long_press"<?ssi selected smartlabel_call_trigger P8_long_press?>><?lng smartlabel_trigger_smartlabel_key_8_long_press?></option>
+          <?ssi skipoff VTECH?>
+          <option value="proximity"<?ssi selected smartlabel_call_trigger proximity?>><?lng smartlabel_trigger_proximity?></option>
+          <?ssi skipoff NOT_HAS_LABEL_PAGE_NEXT_KEY?>
+          <?ssi skipon NOT_P2_TRIGGER_SMART_LABEL?>
+          <option value="any_smartlabel_key_short_press"<?ssi selected smartlabel_call_trigger any_smartlabel_key_short_press?>><?lng smartlabel_trigger_any_smartlabel_key_short_press?></option>
+          <option value="P2_short_press"<?ssi selected smartlabel_call_trigger P2_short_press?>><?lng smartlabel_trigger_smartlabel_key_2_short_press?></option>
+          <option value="P2_long_press"<?ssi selected smartlabel_call_trigger P2_long_press?>><?lng smartlabel_trigger_smartlabel_key_2_long_press?></option>
+          <?ssi skipoff NOT_P2_TRIGGER_SMART_LABEL?>
+          <?ssi skipon NOT_SNOMD717?>
+          <option value="any_smartlabel_key_short_press"<?ssi selected smartlabel_call_trigger any_smartlabel_key_short_press?>><?lng smartlabel_trigger_any_smartlabel_key_short_press?></option>
+          <option value="P3_short_press"<?ssi selected smartlabel_call_trigger P3_short_press?>><?lng smartlabel_trigger_smartlabel_key_3_short_press?></option>
+          <option value="P3_long_press"<?ssi selected smartlabel_call_trigger P3_long_press?>><?lng smartlabel_trigger_smartlabel_key_3_long_press?></option>
+          <?ssi skipoff NOT_SNOMD717?>
+          <?ssi skipon NOT_P4_TRIGGER_SMART_LABEL?>
+          <option value="any_smartlabel_key_short_press"<?ssi selected smartlabel_call_trigger any_smartlabel_key_short_press?>><?lng smartlabel_trigger_any_smartlabel_key_short_press?></option>
+          <option value="P4_short_press"<?ssi selected smartlabel_call_trigger P4_short_press?>><?lng smartlabel_trigger_smartlabel_key_4_short_press?></option>
+          <option value="P4_long_press"<?ssi selected smartlabel_call_trigger P4_long_press?>><?lng smartlabel_trigger_smartlabel_key_4_long_press?></option>
+          <?ssi skipoff NOT_P4_TRIGGER_SMART_LABEL?>
+          <?ssi skipon NOT_SNOMD812?>
+          <option value="any_smartlabel_key_short_press"<?ssi selected smartlabel_call_trigger any_smartlabel_key_short_press?>><?lng smartlabel_trigger_any_smartlabel_key_short_press?></option>
+          <option value="P8_short_press"<?ssi selected smartlabel_call_trigger P8_short_press?>><?lng smartlabel_trigger_smartlabel_key_8_short_press?></option>
+          <option value="P8_long_press"<?ssi selected smartlabel_call_trigger P8_long_press?>><?lng smartlabel_trigger_smartlabel_key_8_long_press?></option>
+          <?ssi skipoff NOT_SNOMD812?>
+          <?ssi skipon NOT_SNOMD815?>
+          <option value="any_smartlabel_key_short_press"<?ssi selected smartlabel_call_trigger any_smartlabel_key_short_press?>><?lng smartlabel_trigger_any_smartlabel_key_short_press?></option>
+          <option value="P10_short_press"<?ssi selected smartlabel_call_trigger P10_short_press?>><?lng smartlabel_trigger_smartlabel_key_10_short_press?></option>
+          <option value="P10_long_press"<?ssi selected smartlabel_call_trigger P10_long_press?>><?lng smartlabel_trigger_smartlabel_key_10_long_press?></option>
+          <?ssi skipoff NOT_SNOMD815?>
+        </select><?ssi help smartlabel_call_trigger?>
+        </TD>
+      </TR>
+      <TR><TD></TD><TD>&nbsp;</TD></TR>
+      <TR><TD></TD>
+        <?ssi skipon VTECH?>
+        <TD width="50%"><B>
+        <?ssi skipoff VTECH?>
+        <?ssi skipon SNOM?>
+        <TD class="titleText" width="50%">
+        <?ssi skipoff SNOM?>
+        <?lng line_other_screens?></B></TD>
+        <TD width="50%"></TD>
+      </TR>
+      <!-- smartlabel other trigger source -->
+      <TR><TD></TD>
+        <TD><?lng smartlabel_trigger?></TD>
+        <TD><select class="select6" name="smartlabel_other_trigger" <?ssi disabled smartlabel_other_trigger?>size="1" <?ssi tabindex?> >
+          <option value=""<?ssi selected smartlabel_other_trigger ?>><?lng prefs_off?></option>
+          <?ssi skipon NOT_HAS_LABEL_PAGE_NEXT_KEY?>
+          <option value="page_short_press"<?ssi selected smartlabel_other_trigger page_short_press?>><?lng smartlabel_trigger_shortpress?></option>
+          <option value="page_long_press"<?ssi selected smartlabel_other_trigger page_long_press?>><?lng smartlabel_trigger_longpress?></option>
+          <?ssi skipon VTECH?>
+          <option value="P8_short_press"<?ssi selected smartlabel_other_trigger P8_short_press?>><?lng smartlabel_trigger_smartlabel_key_8_short_press?></option>
+          <option value="P8_long_press"<?ssi selected smartlabel_other_trigger P8_long_press?>><?lng smartlabel_trigger_smartlabel_key_8_long_press?></option>
+          <?ssi skipoff VTECH?>
+          <?ssi skipoff NOT_HAS_LABEL_PAGE_NEXT_KEY?>
+          <?ssi skipon NOT_P2_TRIGGER_SMART_LABEL?>
+          <option value="any_smartlabel_key_short_press"<?ssi selected smartlabel_other_trigger any_smartlabel_key_short_press?>><?lng smartlabel_trigger_any_smartlabel_key_short_press?></option>
+          <option value="P2_short_press"<?ssi selected smartlabel_other_trigger P2_short_press?>><?lng smartlabel_trigger_smartlabel_key_2_short_press?></option>
+          <option value="P2_long_press"<?ssi selected smartlabel_other_trigger P2_long_press?>><?lng smartlabel_trigger_smartlabel_key_2_long_press?></option>
+          <?ssi skipoff NOT_P2_TRIGGER_SMART_LABEL?>
+          <?ssi skipon NOT_SNOMD717?>
+          <option value="any_smartlabel_key_short_press"<?ssi selected smartlabel_other_trigger any_smartlabel_key_short_press?>><?lng smartlabel_trigger_any_smartlabel_key_short_press?></option>
+          <option value="P3_short_press"<?ssi selected smartlabel_other_trigger P3_short_press?>><?lng smartlabel_trigger_smartlabel_key_3_short_press?></option>
+          <option value="P3_long_press"<?ssi selected smartlabel_other_trigger P3_long_press?>><?lng smartlabel_trigger_smartlabel_key_3_long_press?></option>
+          <?ssi skipoff NOT_SNOMD717?>
+          <?ssi skipon NOT_P4_TRIGGER_SMART_LABEL?>
+          <option value="any_smartlabel_key_short_press"<?ssi selected smartlabel_other_trigger any_smartlabel_key_short_press?>><?lng smartlabel_trigger_any_smartlabel_key_short_press?></option>
+          <option value="P4_short_press"<?ssi selected smartlabel_other_trigger P4_short_press?>><?lng smartlabel_trigger_smartlabel_key_4_short_press?></option>
+          <option value="P4_long_press"<?ssi selected smartlabel_other_trigger P4_long_press?>><?lng smartlabel_trigger_smartlabel_key_4_long_press?></option>
+          <?ssi skipoff NOT_P4_TRIGGER_SMART_LABEL?>
+          <?ssi skipon NOT_SNOMD812?>
+          <option value="any_smartlabel_key_short_press"<?ssi selected smartlabel_other_trigger any_smartlabel_key_short_press?>><?lng smartlabel_trigger_any_smartlabel_key_short_press?></option>
+          <option value="P8_short_press"<?ssi selected smartlabel_other_trigger P8_short_press?>><?lng smartlabel_trigger_smartlabel_key_8_short_press?></option>
+          <option value="P8_long_press"<?ssi selected smartlabel_other_trigger P8_long_press?>><?lng smartlabel_trigger_smartlabel_key_8_long_press?></option>
+          <?ssi skipoff NOT_SNOMD812?>
+          <?ssi skipon NOT_SNOMD815?>
+          <option value="any_smartlabel_key_short_press"<?ssi selected smartlabel_other_trigger any_smartlabel_key_short_press?>><?lng smartlabel_trigger_any_smartlabel_key_short_press?></option>
+          <option value="P10_short_press"<?ssi selected smartlabel_other_trigger P10_short_press?>><?lng smartlabel_trigger_smartlabel_key_10_short_press?></option>
+          <option value="P10_long_press"<?ssi selected smartlabel_other_trigger P10_long_press?>><?lng smartlabel_trigger_smartlabel_key_10_long_press?></option>
+          <?ssi skipoff NOT_SNOMD815?>
+        </select><?ssi help smartlabel_other_trigger?>
+        </TD>
+      </TR>
+      <?ssi skipoff STANDARD_SMARTLABEL?>
+      <TR><TD></TD><TD>&nbsp;</TD></TR>
+      <TR><TD></TD>
+        <?ssi skipon VTECH?>
+        <TD width="50%"><B>
+        <?ssi skipoff VTECH?>
+        <?ssi skipon SNOM?>
+        <TD class="titleText" width="50%">
+        <?ssi skipoff SNOM?>
+        <?lng line_smartlabel_options?></B></TD>
+        <TD width="50%"></TD>
+      </TR>
+      <TR><TD></TD><TD><?ssi input line_smartlabel_dismissal_time smartlabel_dismiss_timeout?></td></TR>
+      <?ssi skipon NO_MULTIPLE_SMARTLABEL_PAGES?>
+      <TR><TD></TD><TD><?ssi input prefs_label_scroll_timeout label_scroll_timeout?></td></TR>
+      <?ssi skipOff NO_MULTIPLE_SMARTLABEL_PAGES?>
+      <?ssi skipoff SMARTLABEL_WITHOUT_KEYS?>
+      <TR><TD></TD><TD>&nbsp;</TD></TR>
+      <TR>
+        <TD></TD>
+        <TD>
+          <input type="hidden" value="<?lng apply_button?>" name="Settings">
+          <!--Hidden input is used to allow onchange event to apply settings automatically-->
+          <input type="submit" value="<?lng apply_button?>" name="Settings" <?ssi tabindex?> >
+        </TD>
+      </TR>
+      <TR>
+        <TD class="background" vAlign="bottom" align="left" width="12" height="5">
+          <?ssi skipon VTECH?>
+          <IMG height="12" src=<?ssi img-corner-gif ll?> width="12">
+          <?ssi skipoff VTECH?>
+        </TD>
+        <TD></TD>
+        <TD></TD>
+        <TD class="background" vAlign="bottom" align="right" width="12" height="5">
+          <?ssi skipon VTECH?>
+          <IMG height="12" src=<?ssi img-corner-gif lr?> width="12">
+          <?ssi skipoff VTECH?>
+        </TD>
+      </TR>
+    </TBODY></TABLE></TABLE>
+  </FORM>
+  </TD>
+</TR>
+<script type="text/javascript" src="fox.js" charset="utf-8"></script>
+<?ssi file common9.htm?></HTML>

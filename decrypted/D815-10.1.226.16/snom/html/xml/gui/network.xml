@@ -1,0 +1,555 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<IPPhoneMenu state="others_except_mb" dtmf="off" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../schemas/minibrowser.xsd" document_id="network">
+  <If condition="$(set:admin_mode)">
+    <Title>$(lang:network_settings)</Title>
+    <Menu name="$(lang:ip_settings_wizzard)" id="ip_settings">
+      <Menu name="$(lang:ipv4)">
+        <MenuItem id="dhcp" name="$(lang:dhcp)">
+          <If condition="$(show_feature:FEATURE_PUI_STYLE_SIO)">
+            <SubText>$(lang:$(set:dhcp))</SubText>
+          </If>
+          <If condition="$(bool_eval:$(set:dhcp))">
+            <ExtraIconType>$(icon_type_enum:kIconTypeMenuSliderOn)</ExtraIconType>
+          </If>
+          <Else>
+            <ExtraIconType>$(icon_type_enum:kIconTypeMenuSliderOff)</ExtraIconType>
+          </Else>
+          <Url>phone://mb_nop#toggleset:dhcp</Url>
+        </MenuItem>
+        <If condition="$(set:dhcp)==off">
+          <MenuItem name="$(lang:ipv4)" id="ipv4">
+            <If condition="$(show_feature:FEATURE_PUI_STYLE_SIO)">
+              <SubText>$(set:ip_adr)</SubText>
+            </If>
+            <ExtraIconType>$(icon_type_enum:kIconTypeMenuArrowRight)</ExtraIconType>
+            <Url>file:///xml/gui/templates.xml#sub=*[@id="input_template"]&amp;var:input_pool_key=0&amp;var:input_displayname=$(lang:ipv4)&amp;var:input_token=__Y__&amp;var:input_flags=AN&amp;var:input_default=$(set:ip_adr)&amp;var:input_url=$(urlencode:"phone://mb_nop%23go_back%26set:ip_adr=__Y__")</Url>
+          </MenuItem>
+          <MenuItem name="$(lang:menu100_netmask)">
+            <If condition="$(show_feature:FEATURE_PUI_STYLE_SIO)">
+              <SubText>$(set:netmask)</SubText>
+            </If>
+            <ExtraIconType>$(icon_type_enum:kIconTypeMenuArrowRight)</ExtraIconType>
+            <Url>file:///xml/gui/templates.xml#sub=*[@id="input_template"]&amp;var:input_pool_key=0&amp;var:input_displayname=$(lang:menu100_netmask)&amp;var:input_token=__Y__&amp;var:input_flags=AN&amp;var:input_default=$(set:netmask)&amp;var:input_url=$(urlencode:"phone://mb_nop%23go_back%26set:netmask=__Y__")</Url>
+          </MenuItem>
+          <MenuItem name="$(lang:menu100_gateway)">
+            <If condition="$(show_feature:FEATURE_PUI_STYLE_SIO)">
+              <SubText>$(set:gateway)</SubText>
+            </If>
+            <ExtraIconType>$(icon_type_enum:kIconTypeMenuArrowRight)</ExtraIconType>
+            <Url>file:///xml/gui/templates.xml#sub=*[@id="input_template"]&amp;var:input_pool_key=0&amp;var:input_displayname=$(lang:menu100_gateway)&amp;var:input_token=__Y__&amp;var:input_flags=AN&amp;var:input_default=$(set:gateway)&amp;var:input_url=$(urlencode:"phone://mb_nop%23go_back%26set:gateway=__Y__")</Url>
+          </MenuItem>
+          <MenuItem name="$(lang:dns_server1)">
+            <If condition="$(show_feature:FEATURE_PUI_STYLE_SIO)">
+              <SubText>$(set:dns_server1)</SubText>
+            </If>
+            <ExtraIconType>$(icon_type_enum:kIconTypeMenuArrowRight)</ExtraIconType>
+            <Url>file:///xml/gui/templates.xml#sub=*[@id="input_template"]&amp;var:input_pool_key=0&amp;var:input_displayname=$(lang:dns_server1)&amp;var:input_token=__Y__&amp;var:input_flags=AN&amp;var:input_default=$(set:dns_server1)&amp;var:input_url=$(urlencode:"phone://mb_nop%23go_back%26set:dns_server1=__Y__")</Url>
+          </MenuItem>
+        </If>
+      </Menu>
+      <If condition="$(show_feature:IPV6_SUPPORT)">
+        <Menu name="$(lang:ipv6)" id="ipv6">
+          <MenuItem id="dhcpv6" name="$(lang:ipv6)">
+            <If condition="$(set:dhcp_v6)==off">
+              <If condition="$(show_feature:FEATURE_PUI_STYLE_SIO)">
+                <SubText>$(lang:off)</SubText>
+              </If>
+              <ExtraIconType>$(icon_type_enum:kIconTypeMenuSliderOff)</ExtraIconType>
+              <If condition="$(is_set:$(var:last_dhcp_v6))">
+                <Url>phone://mb_nop#set:dhcp_v6=$(var:last_dhcp_v6)</Url>
+              </If>
+              <Else>
+                <Url>phone://mb_nop#set:dhcp_v6=on</Url>
+              </Else>
+            </If>
+            <Else>
+              <If condition="$(show_feature:FEATURE_PUI_STYLE_SIO)">
+                <SubText>$(lang:on)</SubText>
+              </If>
+              <ExtraIconType>$(icon_type_enum:kIconTypeMenuSliderOn)</ExtraIconType>
+              <Url>phone://mb_nop#var:last_dhcp_v6=$(set:dhcp_v6)&amp;set:dhcp_v6=off</Url>
+            </Else>
+          </MenuItem>
+          <If condition="!$(set:dhcp_v6)==off">
+            <Menu name="$(lang:protocol)">
+              <If condition="$(set:dhcp_v6)==autoconf">
+                <If condition="$(show_feature:FEATURE_PUI_STYLE_SIO)">
+                  <SubText>$(lang:ipv6_autoconf)</SubText>
+                </If>
+              </If>
+              <Elif condition="$(set:dhcp_v6)==on">
+                <If condition="$(show_feature:FEATURE_PUI_STYLE_SIO)">
+                  <SubText>$(lang:dhcp) &amp; $(lang:ipv6_autoconf)</SubText>
+                </If>
+              </Elif>
+              <MenuItem name="$(lang:dhcp) &amp; $(lang:ipv6_autoconf)" sel="$(condition:$(set:dhcp_v6)==on)">
+                <If condition="$(set:dhcp_v6)==on">
+                  <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOn)</ExtraIconType>
+                </If>
+                <Else>
+                  <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOff)</ExtraIconType>
+                </Else>
+                <Url>phone://mb_nop#go_back&amp;set:dhcp_v6=on</Url>
+              </MenuItem>
+              <MenuItem name="$(lang:ipv6_autoconf)" sel="$(condition:$(set:dhcp_v6)==autoconf)">
+                <If condition="$(set:dhcp_v6)==autoconf">
+                  <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOn)</ExtraIconType>
+                </If>
+                <Else>
+                  <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOff)</ExtraIconType>
+                </Else>
+                <Url>phone://mb_nop#go_back&amp;set:dhcp_v6=autoconf</Url>
+              </MenuItem>
+            </Menu>
+          </If>
+        </Menu>
+      </If>
+    </Menu>
+    <Menu name="$(lang:webserver_settings)" id="webserver">
+      <MenuItem id="webserver_settings" name="$(lang:webserver_settings)">
+        <If condition="$(set:webserver_type)==off">
+          <If condition="$(show_feature:FEATURE_PUI_STYLE_SIO)">
+            <SubText>$(lang:off)</SubText>
+          </If>
+          <ExtraIconType>$(icon_type_enum:kIconTypeMenuSliderOff)</ExtraIconType>
+          <If condition="$(is_set:$(var:last_webserver_type))">
+            <Url>phone://mb_nop#set:webserver_type=$(var:last_webserver_type)</Url>
+          </If>
+          <Else>
+            <Url>phone://mb_nop#set:webserver_type=http_https</Url>
+          </Else>
+        </If>
+        <Else>
+          <If condition="$(show_feature:FEATURE_PUI_STYLE_SIO)">
+            <SubText>$(lang:on)</SubText>
+          </If>
+          <ExtraIconType>$(icon_type_enum:kIconTypeMenuSliderOn)</ExtraIconType>
+          <Url>phone://mb_nop#var:last_webserver_type=$(set:webserver_type)&amp;set:webserver_type=off</Url>
+        </Else>
+      </MenuItem>
+      <If condition="!$(set:webserver_type)==off">
+        <Menu name="$(lang:menu100_webserver_type)">
+          <If condition="$(show_feature:FEATURE_PUI_STYLE_SIO)">
+            <SubText>$(lang:enum_disp_webserver_$(set:webserver_type))</SubText>
+          </If>
+          <MenuItem name="$(lang:enum_disp_webserver_http_https)" sel="$(condition:$(set:webserver_type)==http_https)">
+            <If condition="$(set:webserver_type)==http_https">
+              <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOn)</ExtraIconType>
+            </If>
+            <Else>
+              <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOff)</ExtraIconType>
+            </Else>
+            <Url>phone://mb_nop#go_back&amp;set:webserver_type=http_https</Url>
+          </MenuItem>
+          <MenuItem name="$(lang:enum_disp_webserver_http)" sel="$(condition:$(set:webserver_type)==http)">
+            <If condition="$(set:webserver_type)==http">
+              <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOn)</ExtraIconType>
+            </If>
+            <Else>
+              <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOff)</ExtraIconType>
+            </Else>
+            <Url>phone://mb_nop#go_back&amp;set:webserver_type=http</Url>
+          </MenuItem>
+          <MenuItem name="$(lang:enum_disp_webserver_https)" sel="$(condition:$(set:webserver_type)==https)">
+            <If condition="$(set:webserver_type)==https">
+              <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOn)</ExtraIconType>
+            </If>
+            <Else>
+              <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOff)</ExtraIconType>
+            </Else>
+            <Url>phone://mb_nop#go_back&amp;set:webserver_type=https</Url>
+          </MenuItem>
+        </Menu>
+        <MenuItem name="$(lang:username)">
+          <Action>webserver_user</Action>
+          <SubText>$(set:http_user)</SubText>
+          <ExtraIconType>$(icon_type_enum:kIconTypeMenuArrowRight)</ExtraIconType>
+        </MenuItem>
+        <MenuItem name="$(lang:password)">
+          <Action>webserver_pass</Action>
+          <ExtraIconType>$(icon_type_enum:kIconTypeMenuArrowRight)</ExtraIconType>
+        </MenuItem>
+      </If>
+    </Menu>
+    <Menu name="$(lang:vlan_settings)" id="vlan">
+      <MenuItem name="$(lang:vlan_id)">
+        <If condition="$(show_feature:FEATURE_PUI_STYLE_SIO)">
+          <SubText>$(set:vlan_id)</SubText>
+        </If>
+        <ExtraIconType>$(icon_type_enum:kIconTypeMenuArrowRight)</ExtraIconType>
+        <Action>vlan_id</Action>
+      </MenuItem>
+      <MenuItem name="$(lang:vlan_qos)">
+        <If condition="$(show_feature:FEATURE_PUI_STYLE_SIO)">
+          <SubText>$(set:vlan_qos)</SubText>
+        </If>
+        <ExtraIconType>$(icon_type_enum:kIconTypeMenuArrowRight)</ExtraIconType>
+        <Action>vlan_qos</Action>
+      </MenuItem>
+      <If Condition="$(bool_eval:$(condition:$(is_set:$(set:vlan_id))) | $(condition:$(is_set:$(set:vlan_qos))) | $(condition:$(vlan_lldp_settings_file_has_content)))">
+        <MenuItem name="$(lang:vlan_reset)">
+          <Url>phone://mb_nop#reset_vlan</Url>
+        </MenuItem>
+      </If>
+    </Menu>
+    <If condition="$(show_feature:FEATURE_USB_SUPPORT)">
+      <MenuItem name="$(lang:wlan_settings)">
+        <Url>file:///xml/wifi/wifi.xml#sub=*[@id="SIOwlan"]</Url>
+        <ExtraIconType>$(icon_type_enum:kIconTypeMenuArrowRight)</ExtraIconType>
+      </MenuItem>
+    </If>
+    <Menu name="$(lang:networkadvanced_settings)" id="networkadvanced_settings">
+      <Menu name="$(lang:8021x)" id="8021x">
+        <MenuItem id="8021xitem" name="$(lang:8021x)">
+          <If condition="$(bool_eval:$(condition:$(set:ieee8021x_eap_auth_method)!=off))">
+            <ExtraIconType>$(icon_type_enum:kIconTypeMenuSliderOn)</ExtraIconType>
+          </If>
+          <Else>
+            <ExtraIconType>$(icon_type_enum:kIconTypeMenuSliderOff)</ExtraIconType>
+          </Else>
+          <If condition="$(set:ieee8021x_eap_auth_method)==off">
+            <If condition="$(show_feature:FEATURE_PUI_STYLE_SIO)">
+              <SubText>$(lang:off)</SubText>
+            </If>
+            <If condition="$(is_set:$(var:last_ieee8021x_eap_auth_method))">
+              <Url>phone://mb_nop#set:ieee8021x_eap_auth_method=$(var:last_ieee8021x_eap_auth_method)</Url>
+            </If>
+            <Else>
+              <Url>phone://mb_nop#set:ieee8021x_eap_auth_method=EAP-MD5</Url>
+            </Else>
+          </If>
+          <Else>
+            <If condition="$(show_feature:FEATURE_PUI_STYLE_SIO)">
+              <SubText>$(lang:on)</SubText>
+            </If>
+            <Url>phone://mb_nop#var:last_ieee8021x_eap_auth_method=$(set:ieee8021x_eap_auth_method)&amp;set:ieee8021x_eap_auth_method=off</Url>
+          </Else>
+        </MenuItem>
+        <If condition="!$(set:ieee8021x_eap_auth_method)==off">
+          <If condition="$(show_feature:FEATURE_EAP_TLS)">
+            <Menu name="$(lang:ieee8021_method)" id="method">
+              <If condition="$(show_feature:FEATURE_PUI_STYLE_SIO)">
+                <If condition="$(set:ieee8021x_eap_auth_method)==EAP-MD5">
+                  <SubText>$(lang:MD5)</SubText>
+                </If>
+                <Elif condition="$(set:ieee8021x_eap_auth_method)==EAP-TLS">
+                  <SubText>$(lang:TLS)</SubText>
+                </Elif>
+              </If>
+              <MenuItem name="$(lang:MD5)" sel="$(condition:$(set:ieee8021x_eap_auth_method)==EAP-MD5)">
+                <Url>phone://mb_nop#go_back&amp;set:ieee8021x_eap_auth_method=EAP-MD5</Url>
+                <If condition="$(set:ieee8021x_eap_auth_method)==EAP-MD5">
+                  <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOn)</ExtraIconType>
+                </If>
+                <Else>
+                  <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOff)</ExtraIconType>
+                </Else>
+              </MenuItem>
+              <MenuItem name="$(lang:TLS)" sel="$(condition:$(set:ieee8021x_eap_auth_method)==EAP-TLS)">
+                <Url>phone://mb_nop#go_back&amp;set:ieee8021x_eap_auth_method=EAP-TLS</Url>
+                <If condition="$(set:ieee8021x_eap_auth_method)==EAP-TLS">
+                  <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOn)</ExtraIconType>
+                </If>
+                <Else>
+                  <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOff)</ExtraIconType>
+                </Else>
+              </MenuItem>
+            </Menu>
+          </If>
+          <Else>
+            <MenuItem name="$(lang:ieee8021_method)" id="method">
+              <If condition="$(show_feature:FEATURE_PUI_STYLE_SIO)">
+                <SubText>$(lang:MD5)</SubText>
+              </If>
+              <Url>phone://mb_nop</Url>
+            </MenuItem>
+          </Else>
+        </If>
+        <If condition="$(set:ieee8021x_eap_auth_method)==EAP-MD5">
+          <MenuItem name="$(lang:username)">
+            <If condition="$(show_feature:FEATURE_PUI_STYLE_SIO)">
+              <SubText>$(set:ieee8021x_eap_md5_username)</SubText>
+            </If>
+            <ExtraIconType>$(icon_type_enum:kIconTypeMenuArrowRight)</ExtraIconType>
+            <Url>file:///xml/gui/templates.xml#sub=*[@id="input_template"]&amp;var:input_pool_key=0&amp;var:input_displayname=$(lang:username)&amp;var:input_token=__Y__&amp;var:input_flags=a&amp;var:input_default=$(set:ieee8021x_eap_md5_username)&amp;var:input_url=$(urlencode:"phone://mb_nop%23go_back%26set:ieee8021x_eap_md5_username=__Y__")</Url>
+          </MenuItem>
+          <MenuItem name="$(lang:user_pass)">
+            <ExtraIconType>$(icon_type_enum:kIconTypeMenuArrowRight)</ExtraIconType>
+            <Url>file:///xml/gui/templates.xml#sub=*[@id="input_template"]&amp;var:input_pool_key=0&amp;var:input_displayname=$(lang:user_pass)&amp;var:input_token=__Y__&amp;var:input_flags=p&amp;var:input_default=&amp;var:input_url=$(urlencode:"phone://mb_nop%23go_back%26set:ieee8021x_eap_md5_password=__Y__")</Url>
+          </MenuItem>
+        </If>
+      </Menu>
+      <If condition="$(show_feature:ETH_SWITCH_DEVICE)">
+        <Menu name="$(lang:Hardware)" id="hardware">
+          <Menu name="$(lang:NET_port_speed)" line_height="39">
+            <If condition="$(show_feature:FEATURE_PUI_STYLE_SIO)">
+              <If condition="$(set:eth_net)==auto">
+                <SubText>$(lang:advanced_$(set:eth_net)neg)</SubText>
+              </If>
+              <Else>
+                <SubText>$(lang:advanced_$(set:eth_net))</SubText>
+              </Else>
+            </If>
+            <Menuitem name="$(lang:advanced_autoneg)" sel="$(condition:$(set:eth_net)==auto)">
+              <Url>phone://mb_nop#go_back&amp;set:eth_net=auto</Url>
+              <If condition="$(set:eth_net)==auto">
+                <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOn)</ExtraIconType>
+              </If>
+              <Else>
+                <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOff)</ExtraIconType>
+              </Else>
+            </Menuitem>
+            <Menuitem name="$(lang:advanced_10half)" sel="$(condition:$(set:eth_net)==10half)">
+              <Url>phone://mb_nop#go_back&amp;set:eth_net=10half</Url>
+              <If condition="$(set:eth_net)==10half">
+                <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOn)</ExtraIconType>
+              </If>
+              <Else>
+                <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOff)</ExtraIconType>
+              </Else>
+            </Menuitem>
+            <Menuitem name="$(lang:advanced_10full)" sel="$(condition:$(set:eth_net)==10full)">
+              <Url>phone://mb_nop#go_back&amp;set:eth_net=10full</Url>
+              <If condition="$(set:eth_net)==10full">
+                <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOn)</ExtraIconType>
+              </If>
+              <Else>
+                <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOff)</ExtraIconType>
+              </Else>
+            </Menuitem>
+            <Menuitem name="$(lang:advanced_100half)" sel="$(condition:$(set:eth_net)==100half)">
+              <Url>phone://mb_nop#go_back&amp;set:eth_net=100half</Url>
+              <If condition="$(set:eth_net)==100half">
+                <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOn)</ExtraIconType>
+              </If>
+              <Else>
+                <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOff)</ExtraIconType>
+              </Else>
+            </Menuitem>
+            <Menuitem name="$(lang:advanced_100full)" sel="$(condition:$(set:eth_net)==100full)">
+              <Url>phone://mb_nop#go_back&amp;set:eth_net=100full</Url>
+              <If condition="$(set:eth_net)==100full">
+                <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOn)</ExtraIconType>
+              </If>
+              <Else>
+                <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOff)</ExtraIconType>
+              </Else>
+            </Menuitem>
+            <If condition="$(show_feature:HAS_GBIT_PHY)">
+              <Menuitem name="$(lang:advanced_1000full)" sel="$(condition:$(set:eth_net)==1000full)">
+                <Url>phone://mb_nop#go_back&amp;set:eth_net=1000full</Url>
+                <If condition="$(set:eth_net)==1000full">
+                  <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOn)</ExtraIconType>
+                </If>
+                <Else>
+                  <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOff)</ExtraIconType>
+                </Else>
+              </Menuitem>
+            </If>
+          </Menu>
+          <Menu name="$(lang:PC_port_speed)" line_height="39">
+            <If condition="$(show_feature:FEATURE_PUI_STYLE_SIO)">
+              <If condition="$(set:eth_pc)==auto">
+                <SubText>$(lang:advanced_$(set:eth_pc)neg)</SubText>
+              </If>
+              <Else>
+                <SubText>$(lang:advanced_$(set:eth_pc))</SubText>
+              </Else>
+            </If>
+            <Menuitem name="$(lang:advanced_autoneg)" sel="$(condition:$(set:eth_pc)==auto)">
+              <Url>phone://mb_nop#go_back&amp;set:eth_pc=auto</Url>
+              <If condition="$(set:eth_pc)==auto">
+                <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOn)</ExtraIconType>
+              </If>
+              <Else>
+                <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOff)</ExtraIconType>
+              </Else>
+            </Menuitem>
+            <Menuitem name="$(lang:advanced_10half)" sel="$(condition:$(set:eth_pc)==10half)">
+              <Url>phone://mb_nop#go_back&amp;set:eth_pc=10half</Url>
+              <If condition="$(set:eth_pc)==10half">
+                <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOn)</ExtraIconType>
+              </If>
+              <Else>
+                <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOff)</ExtraIconType>
+              </Else>
+            </Menuitem>
+            <Menuitem name="$(lang:advanced_10full)" sel="$(condition:$(set:eth_pc)==10full)">
+              <Url>phone://mb_nop#go_back&amp;set:eth_pc=10full</Url>
+              <If condition="$(set:eth_pc)==10full">
+                <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOn)</ExtraIconType>
+              </If>
+              <Else>
+                <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOff)</ExtraIconType>
+              </Else>
+            </Menuitem>
+            <Menuitem name="$(lang:advanced_100half)" sel="$(condition:$(set:eth_pc)==100half)">
+              <Url>phone://mb_nop#go_back&amp;set:eth_pc=100half</Url>
+              <If condition="$(set:eth_pc)==100half">
+                <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOn)</ExtraIconType>
+              </If>
+              <Else>
+                <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOff)</ExtraIconType>
+              </Else>
+            </Menuitem>
+            <Menuitem name="$(lang:advanced_100full)" sel="$(condition:$(set:eth_pc)==100full)">
+              <Url>phone://mb_nop#go_back&amp;set:eth_pc=100full</Url>
+              <If condition="$(set:eth_pc)==100full">
+                <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOn)</ExtraIconType>
+              </If>
+              <Else>
+                <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOff)</ExtraIconType>
+              </Else>
+            </Menuitem>
+            <If condition="$(show_feature:HAS_GBIT_PHY)">
+              <Menuitem name="$(lang:advanced_1000full)" sel="$(condition:$(set:eth_pc)==1000full)">
+                <Url>phone://mb_nop#go_back&amp;set:eth_pc=1000full</Url>
+                <If condition="$(set:eth_pc)==1000full">
+                  <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOn)</ExtraIconType>
+                </If>
+                <Else>
+                  <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOff)</ExtraIconType>
+                </Else>
+              </Menuitem>
+            </If>
+          </Menu>
+          <MenuItem id="ethernet_detection" name="$(lang:ethernet_detection)">
+            <If condition="$(show_feature:FEATURE_PUI_STYLE_SIO)">
+              <SubText>$(on_off:$(set:ethernet_detect))</SubText>
+            </If>
+            <If condition="$(bool_eval:$(set:ethernet_detect))">
+              <ExtraIconType>$(icon_type_enum:kIconTypeMenuSliderOn)</ExtraIconType>
+            </If>
+            <Else>
+              <ExtraIconType>$(icon_type_enum:kIconTypeMenuSliderOff)</ExtraIconType>
+            </Else>
+            <Url>phone://mb_nop#toggleset:ethernet_detect</Url>
+          </MenuItem>
+          <If condition="$(set:ethernet_detect)">
+            <Menu name="$(lang:Action_on_eth_replug)">
+              <If condition="$(show_feature:FEATURE_PUI_STYLE_SIO)">
+                <If condition="$(set:ethernet_replug)==nothing">
+                  <SubText>$(lang:advanced_donothing)</SubText>
+                </If>
+                <Elif condition="$(set:ethernet_replug)==reboot">
+                  <SubText>$(lang:continuous_text_reboot)</SubText>
+                </Elif>
+                <Elif condition="$(set:ethernet_replug)==reregister">
+                  <SubText>$(lang:line_reregister)</SubText>
+                </Elif>
+              </If>
+              <Menuitem name="$(lang:advanced_donothing)" sel="$(condition:$(set:ethernet_replug)==nothing)">
+                <Url>phone://mb_nop#go_back&amp;set:ethernet_replug=nothing</Url>
+                <If condition="$(set:ethernet_replug)==nothing">
+                  <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOn)</ExtraIconType>
+                </If>
+                <Else>
+                  <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOff)</ExtraIconType>
+                </Else>
+              </Menuitem>
+              <Menuitem name="$(lang:continuous_text_reboot)" sel="$(condition:$(set:ethernet_replug)==reboot)">
+                <Url>phone://mb_nop#go_back&amp;set:ethernet_replug=reboot</Url>
+                <If condition="$(set:ethernet_replug)==reboot">
+                  <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOn)</ExtraIconType>
+                </If>
+                <Else>
+                  <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOff)</ExtraIconType>
+                </Else>
+              </Menuitem>
+              <Menuitem name="$(lang:line_reregister)" sel="$(condition:$(set:ethernet_replug)==reregister)">
+                <Url>phone://mb_nop#go_back&amp;set:ethernet_replug=reregister</Url>
+                <If condition="$(set:ethernet_replug)==reregister">
+                  <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOn)</ExtraIconType>
+                </If>
+                <Else>
+                  <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOff)</ExtraIconType>
+                </Else>
+              </Menuitem>
+            </Menu>
+          </If>
+        </Menu>
+      </If>
+      <If condition="$(set:admin_mode)">
+        <Menu name="$(lang:NTP)" id="ntp">
+          <MenuItem name="$(lang:ntp_server)">
+            <If condition="$(show_feature:FEATURE_PUI_STYLE_SIO)">
+              <SubText>$(set:ntp_server)</SubText>
+            </If>
+            <ExtraIconType>$(icon_type_enum:kIconTypeMenuArrowRight)</ExtraIconType>
+            <If condition="$(bool_eval:$(assigned_by_dhcp:ntp_server))">
+              <Url>file:///xml/gui/templates.xml#sub=*[@id="text_template"]&amp;var:text_translate=no&amp;var:text_content=$(set:ntp_server)&amp;var:text_title=$(lang:ntp_server)</Url>
+            </If>
+            <Else>
+              <Url>file:///xml/gui/templates.xml#sub=*[@id="input_template"]&amp;var:input_pool_key=0&amp;var:input_displayname=$(lang:ntp_server)&amp;var:input_token=__Y__&amp;var:input_flags=a&amp;var:input_default=$(set:ntp_server)&amp;var:input_mask=&amp;var:input_url=$(urlencode:"phone://mb_nop%23go_back%26set:ntp_server=__Y__")</Url>
+            </Else>
+          </MenuItem>
+          <MenuItem name="$(lang:NTP_refresh_timer)">
+            <If condition="$(show_feature:FEATURE_PUI_STYLE_SIO)">
+              <SubText>$(set:ntp_refresh_timer)$(lang:time_symbol_second)</SubText>
+            </If>
+            <ExtraIconType>$(icon_type_enum:kIconTypeMenuArrowRight)</ExtraIconType>
+            <Url>file:///xml/gui/templates.xml#sub=*[@id="input_template"]&amp;var:input_pool_key=0&amp;var:input_displayname="NTP refresh timer"&amp;var:input_token=__Y__&amp;var:input_flags=n&amp;var:input_default=$(set:ntp_refresh_timer)&amp;var:input_url=$(urlencode:"phone://mb_nop%23go_back%26set:ntp_refresh_timer=__Y__")</Url>
+          </MenuItem>
+        </Menu>
+      </If>
+      <Menu name="$(lang:DNS)" id="dns">
+        <MenuItem name="$(lang:dns_domain)">
+          <If condition="$(show_feature:FEATURE_PUI_STYLE_SIO)">
+            <SubText>$(set:dns_domain)</SubText>
+          </If>
+          <ExtraIconType>$(icon_type_enum:kIconTypeMenuArrowRight)</ExtraIconType>
+          <If condition="$(bool_eval:$(assigned_by_dhcp:dns_domain))">
+            <Url>file:///xml/gui/templates.xml#sub=*[@id="text_template"]&amp;var:text_translate=no&amp;var:text_content=$(set:dns_domain)&amp;var:text_title=$(lang:dns_domain)</Url>
+          </If>
+          <Else>
+            <Url>file:///xml/gui/templates.xml#sub=*[@id="input_template"]&amp;var:input_pool_key=0&amp;var:input_displayname="$(lang:dns_domain)"&amp;var:input_token=__Y__&amp;var:input_flags=n&amp;var:input_default=$(set:dns_domain)&amp;var:input_url=$(urlencode:"phone://mb_nop%23go_back%26set:dns_domain=__Y__")</Url>
+          </Else>
+        </MenuItem>
+        <MenuItem name="$(lang:dns_server1)">
+          <If condition="$(show_feature:FEATURE_PUI_STYLE_SIO)">
+            <SubText>$(set:dns_server1)</SubText>
+          </If>
+          <ExtraIconType>$(icon_type_enum:kIconTypeMenuArrowRight)</ExtraIconType>
+          <If condition="$(bool_eval:$(assigned_by_dhcp:dns_server1))">
+            <Url>file:///xml/gui/templates.xml#sub=*[@id="text_template"]&amp;var:text_translate=no&amp;var:text_content=$(set:dns_server1)&amp;var:text_title=$(lang:dns_server1)</Url>
+          </If>
+          <Else>
+            <Url>file:///xml/gui/templates.xml#sub=*[@id="input_template"]&amp;var:input_pool_key=0&amp;var:input_displayname="$(lang:dns_server1)"&amp;var:input_token=__Y__&amp;var:input_flags=n&amp;var:input_default=$(set:dns_server1)&amp;var:input_url=$(urlencode:"phone://mb_nop%23go_back%26set:dns_server1=__Y__")</Url>
+          </Else>
+        </MenuItem>
+        <MenuItem name="$(lang:dns_server2)">
+          <If condition="$(show_feature:FEATURE_PUI_STYLE_SIO)">
+            <SubText>$(set:dns_server2)</SubText>
+          </If>
+          <ExtraIconType>$(icon_type_enum:kIconTypeMenuArrowRight)</ExtraIconType>
+          <If condition="$(bool_eval:$(assigned_by_dhcp:dns_server2))">
+            <Url>file:///xml/gui/templates.xml#sub=*[@id="text_template"]&amp;var:text_translate=no&amp;var:text_content=$(set:dns_server2)&amp;var:text_title=$(lang:dns_server2)</Url>
+          </If>
+          <Else>
+            <Url>file:///xml/gui/templates.xml#sub=*[@id="input_template"]&amp;var:input_pool_key=0&amp;var:input_displayname="$(lang:dns_server2)"&amp;var:input_token=__Y__&amp;var:input_flags=n&amp;var:input_default=$(set:dns_server2)&amp;var:input_url=$(urlencode:"phone://mb_nop%23go_back%26set:dns_server2=__Y__")</Url>
+          </Else>
+        </MenuItem>
+      </Menu>
+      <MenuItem name="$(lang:LLDP)">
+        <!-- LLDP setting is enabled -->
+        <If condition="$(bool_eval:$(set:lldp_enable))">
+            <ExtraIconType>$(icon_type_enum:kIconTypeMenuSliderOn)</ExtraIconType>
+        </If>
+        <Else>
+          <!-- LLDP setting is not enabled -->
+          <ExtraIconType>$(icon_type_enum:kIconTypeMenuSliderOff)</ExtraIconType>
+        </Else>
+        <Url>phone://mb_nop#toggleset:lldp_enable</Url>
+        <If condition="$(show_feature:FEATURE_PUI_STYLE_SIO)">
+          <SubText>$(lang:$(set:lldp_enable))</SubText>
+        </If>
+      </MenuItem>
+    </Menu>
+  </If>
+  <If condition="$(phone_state)!=Settings">
+    <SoftKeyItem>
+      <Name>CANCEL</Name>
+      <Url track="no">phone://mb_nop#go_back</Url>
+    </SoftKeyItem>
+  </If>
+</IPPhoneMenu>

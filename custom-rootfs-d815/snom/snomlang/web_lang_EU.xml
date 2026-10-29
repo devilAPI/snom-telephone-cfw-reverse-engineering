@@ -1,0 +1,1447 @@
+<?xml version="1.0" encoding="utf-8"?>
+<w_phrases>
+	<language t="Euskara"/>
+	<w_phrase n="wlang_iso_code" t="EU"/>
+	<w_phrase n="wlang_web_language_name" t="Euskara"/>
+	<w_phrase n="wlang_index_infotext" t="Webgune honek telefonoa konfiguratzen lagunduko dizu, eta ezaugarri aurreratuetara sarbidea emango dizu. Zenbaki bat markatzeko, zenbakia beheko esparruan sartu besterik ez duzu egin behar. Telefono zenbaki arrunt bat (adibidez 0114930398330) edo URI bat sar dezakezu, esaterako info@example.com"/>
+	<w_phrase n="wlang_index_dialnumber" t="Sartu zenbaki bat"/>
+	<w_phrase n="wlang_index_dialnumberbutton" t="Markatu"/>
+	<w_phrase n="wlang_index_hangupbutton" t="Eseki"/>
+	<w_phrase n="wlang_index_outgoingident" t="Irteera nortasuna"/>
+	<w_phrase n="wlang_index_setbutton" t="Konfiguratu"/>
+	<w_phrase n="wlang_index_dialednumbers" t="Deitutako zenbakiak"/>
+	<w_phrase n="wlang_index_dialed" t="Markatuta"/>
+	<w_phrase n="wlang_index_missedcalls" t="Dei galduak"/>
+	<w_phrase n="wlang_index_missed" t="Dei galduak"/>
+	<w_phrase n="wlang_index_rejectedcalls" t="Ukatutako deiak"/>
+	<w_phrase n="wlang_index_rejected" t="Ukatutakoak"/>
+	<w_phrase n="wlang_index_receivedcalls" t="Jasotako deiak"/>
+	<w_phrase n="wlang_index_received" t="Jasotako deiak"/>
+	<w_phrase n="wlang_index_date" t="Data"/>
+	<w_phrase n="wlang_index_number" t="Zenbakia"/>
+	<w_phrase n="wlang_leftnav_operation" t="Eragiketa"/>
+	<w_phrase n="wlang_leftnav_home" t="Nagusia"/>
+	<w_phrase n="wlang_leftnav_addressbook" t="Direktorioa"/>
+	<w_phrase n="wlang_leftnav_setup" t="Konfigurazioa"/>
+	<w_phrase n="wlang_leftnav_preferences" t="Lehentasunak"/>
+	<w_phrase n="wlang_leftnav_speeddial" t="Dei azkarra"/>
+	<w_phrase n="wlang_leftnav_functionkeys" t="Funtzioen teklak"/>
+	<w_phrase n="wlang_leftnav_lineone" t="1 Nortasuna"/>
+	<w_phrase n="wlang_leftnav_linetwo" t="2 Nortasuna"/>
+	<w_phrase n="wlang_leftnav_linethree" t="3 Nortasuna"/>
+	<w_phrase n="wlang_leftnav_linefour" t="4 Nortasuna"/>
+	<w_phrase n="wlang_leftnav_linefive" t="5 Nortasuna"/>
+	<w_phrase n="wlang_leftnav_linesix" t="6 Nortasuna"/>
+	<w_phrase n="wlang_leftnav_lineseven" t="7 Nortasuna"/>
+	<w_phrase n="wlang_leftnav_lineeight" t="8 Nortasuna"/>
+	<w_phrase n="wlang_leftnav_linenine" t="9 Nortasuna"/>
+	<w_phrase n="wlang_leftnav_lineten" t="10 Nortasuna"/>
+	<w_phrase n="wlang_leftnav_lineeleven" t="11 Nortasuna"/>
+	<w_phrase n="wlang_leftnav_linetwelve" t="12 Nortasuna"/>
+	<w_phrase n="wlang_leftnav_linethirteen" t="Identity 13"/>
+	<w_phrase n="wlang_leftnav_linefourteen" t="Identity 14"/>
+	<w_phrase n="wlang_leftnav_linefifteen" t="Identity 15"/>
+	<w_phrase n="wlang_leftnav_linesixteen" t="Identity 16"/>
+	<w_phrase n="wlang_leftnav_advanced" t="Aurreratua"/>
+	<w_phrase n="wlang_leftnav_softupdate" t="Firmware eguneraketa"/>
+	<w_phrase n="wlang_leftnav_status" t="Egoera"/>
+	<w_phrase n="wlang_leftnav_sysinfo" t="Sistemaren informazioa"/>
+	<w_phrase n="wlang_leftnav_siptrace" t="SIP arrastoa"/>
+	<w_phrase n="wlang_leftnav_httptrace" t="HTTP arrastoa"/>
+	<w_phrase n="wlang_leftnav_upnptrace" t="UPnP arrastoa"/>
+	<w_phrase n="wlang_leftnav_dnscache" t="DNS cachea"/>
+	<w_phrase n="wlang_leftnav_pcaptrace" t="PCAP arrastoa"/>
+	<w_phrase n="wlang_leftnav_log" t="Erregistroa"/>
+	<w_phrase n="wlang_leftnav_memory" t="Memoria"/>
+	<w_phrase n="wlang_leftnav_settings" t="Ezarpenak"/>
+	<w_phrase n="wlang_leftnav_manual" t="Eskuzkoa"/>
+	<w_phrase n="wlang_adr_name" t="Izena"/>
+	<w_phrase n="wlang_adr_number" t="Zenbakia"/>
+	<w_phrase n="wlang_adr_contacttype" t="Kontaktu mota"/>
+	<w_phrase n="wlang_adr_edit" t="Editatu"/>
+	<w_phrase n="wlang_adr_delete" t="Ezabatu"/>
+	<w_phrase n="wlang_adr_addeditentry" t="Erregistroa gehitu edo editatu"/>
+	<w_phrase n="wlang_adr_ctnone" t="Bat ere ez"/>
+	<w_phrase n="wlang_adr_ctfriends" t="Lagunak"/>
+	<w_phrase n="wlang_adr_ctfamily" t="Familia"/>
+	<w_phrase n="wlang_adr_ctcolleagues" t="Kideak"/>
+	<w_phrase n="wlang_adr_ctvip" t="VIP"/>
+	<w_phrase n="wlang_adr_ctdeny" t="Zerrenda beltza"/>
+	<w_phrase n="wlang_adr_ctserver" t="Zerbitzaria"/>
+	<w_phrase n="wlang_adr_searchbutton" t="Bilatu"/>
+	<w_phrase n="wlang_adr_addeditbutton" t="Gehitu"/>
+	<w_phrase n="wlang_adr_importadrbook" t="Agenda inportatu (CSV)"/>
+	<w_phrase n="wlang_adr_filename" t="Fitxategia"/>
+	<w_phrase n="wlang_adr_loadbutton" t="Kargatu"/>
+	<w_phrase n="wlang_prefs_generalinfo" t="Informazio orokorra"/>
+	<w_phrase n="wlang_prefs_language" t="Hizkuntza"/>
+	<w_phrase n="wlang_prefs_web_language" t="Web interfazearen hizkuntza"/>
+	<w_phrase n="wlang_prefs_displaystyle" t="Erakutsitako zenbakiaren estiloa"/>
+	<w_phrase n="wlang_prefs_dsfullcontact" t="Kontaktuaren datuak"/>
+	<w_phrase n="wlang_prefs_dsname" t="Izena"/>
+	<w_phrase n="wlang_prefs_dsnumber" t="Zenbakia"/>
+	<w_phrase n="wlang_prefs_dsnamenumber" t="Izena + zenbakia"/>
+	<w_phrase n="wlang_prefs_tonescheme" t="Linearen tonua"/>
+	<w_phrase n="wlang_prefs_tsaustralia" t="Australia"/>
+	<w_phrase n="wlang_prefs_tschina" t="Txina"/>
+	<w_phrase n="wlang_prefs_tsdenmark" t="Danimarka"/>
+	<w_phrase n="wlang_prefs_tsgermany" t="Alemania"/>
+	<w_phrase n="wlang_prefs_tsindia" t="India"/>
+	<w_phrase n="wlang_prefs_tsjapan" t="Japonia"/>
+	<w_phrase n="wlang_prefs_tsmexico" t="Mexiko"/>
+	<w_phrase n="wlang_prefs_tsuk" t="Erresuma Batua"/>
+	<w_phrase n="wlang_prefs_tsus" t="Ameriketako Estatu Batuak"/>
+	<w_phrase n="wlang_prefs_tsgreece" t="Grezia"/>
+	<w_phrase n="wlang_prefs_mwinotifi" t="MWI jakinarazpena"/>
+	<w_phrase n="wlang_prefs_mwisilent" t="Isildua"/>
+	<w_phrase n="wlang_prefs_mwibeep" t="Tonua"/>
+	<w_phrase n="wlang_prefs_mwireminder" t="Oroigarria"/>
+	<w_phrase n="wlang_prefs_mwidialtone" t="MWI abisuaren tonua"/>
+	<w_phrase n="wlang_prefs_mwidialnormal" t="Arrunta"/>
+	<w_phrase n="wlang_prefs_mwidialstutter" t="MWI abisua"/>
+	<w_phrase n="wlang_prefs_on" t="gaituta"/>
+	<w_phrase n="wlang_prefs_off" t="desgaituta"/>
+	<w_phrase n="wlang_prefs_redirection" t="Dei desbideratzea"/>
+	<w_phrase n="wlang_prefs_timeout" t="Denbora (k)"/>
+	<w_phrase n="wlang_prefs_ringtones" t="Deien tinbrea"/>
+	<w_phrase n="wlang_prefs_friends" t="Lagunak"/>
+	<w_phrase n="wlang_prefs_ringer1" t="1 Tonua"/>
+	<w_phrase n="wlang_prefs_ringer2" t="2 Tonua"/>
+	<w_phrase n="wlang_prefs_ringer3" t="3 Tonua"/>
+	<w_phrase n="wlang_prefs_ringer4" t="4 Tonua"/>
+	<w_phrase n="wlang_prefs_ringer5" t="5 Tonua"/>
+	<w_phrase n="wlang_prefs_ringer6" t="6 Tonua"/>
+	<w_phrase n="wlang_prefs_ringer7" t="7 Tonua"/>
+	<w_phrase n="wlang_prefs_ringer8" t="8 Tonua"/>
+	<w_phrase n="wlang_prefs_ringersilent" t="Isildua"/>
+	<w_phrase n="wlang_prefs_family" t="Familia"/>
+	<w_phrase n="wlang_prefs_colleagues" t="Kideak"/>
+	<w_phrase n="wlang_prefs_ringdeviceheadset" t="Tinbre gailua aurikularra konektatuta dagoenean"/>
+	<w_phrase n="wlang_prefs_ringvolume_amplification" t="Tinbre bolumena igo"/>
+	<w_phrase n="wlang_prefs_ringspeaker" t="Erabili bozgorailua"/>
+	<w_phrase n="wlang_prefs_ringheadset" t="Erabili aurikularrak"/>
+	<w_phrase n="wlang_prefs_ringspeaker_and_headset" t="Use Headset and Speaker"/>
+	<w_phrase n="wlang_prefs_ssi_custommelody" t="Tonu pertsonalizatuaren URLa"/>
+	<w_phrase n="wlang_prefs_autoanswer" t="Auto erantzuna"/>
+	<w_phrase n="wlang_prefs_ssi_aaautoanswer" t="Auto erantzuna"/>
+	<w_phrase n="wlang_prefs_ssi_aaindication" t="Automatikoki hartzeko abisua"/>
+	<w_phrase n="wlang_prefs_ssi_aaindicationtone" t="Auto Answer Indication Tone"/>
+	<w_phrase n="wlang_prefs_privacysetting" t="Pribatutasunaren konfigurazioa"/>
+	<w_phrase n="wlang_prefs_ssi_privclip" t="Show/hide outgoing caller ID (CLIP/CLIR)"/>
+	<w_phrase n="wlang_prefs_ssi_privclir" t="Ukatu dei anonimoak"/>
+	<w_phrase n="wlang_prefs_original" t="Jatorrizkoa"/>
+	<w_phrase n="wlang_prefs_new" t="Berria"/>
+	<w_phrase n="wlang_prefs_dimension" t="Dimentsioa"/>
+	<w_phrase n="wlang_prefs_hide" t="Ezkutatu"/>
+	<w_phrase n="wlang_prefs_show" t="Erakutsi"/>
+	<w_phrase n="wlang_prefs_reject" t="Baztertu"/>
+	<w_phrase n="wlang_prefs_accept" t="Onartu"/>
+	<w_phrase n="wlang_prefs_savebutton" t="Gorde"/>
+	<w_phrase n="wlang_hcilog_download" t="Save hcilog"/>
+	<w_phrase n="wlang_hcipcap_download" t="Save hcitrace.pcap"/>
+	<w_phrase n="wlang_connectivityd_log_download" t="Save connectivityd log"/>
+	<w_phrase n="wlang_speed_speeddialtable" t="Dei azkarreko zenbakiak"/>
+	<w_phrase n="wlang_fkeys_keysettings" t="Teklen konfigurazioa"/>
+	<w_phrase n="wlang_fkeys_ssi_number" t="Zenbakia"/>
+	<w_phrase n="wlang_fkeys_ssi_line" t="Linea"/>
+	<w_phrase n="wlang_fkeys_ssi_dest" t="Luzapena"/>
+	<w_phrase n="wlang_fkeys_ssi_intercom" t="Interfonoa"/>
+	<w_phrase n="wlang_fkeys_ssi_parkorbit" t="Aparkatu"/>
+	<w_phrase n="wlang_fkeys_ssi_voicerecorder" t="Grabatu"/>
+	<w_phrase n="wlang_fkeys_ssi_dtmf" t="DTMF"/>
+	<w_phrase n="wlang_line_logininfo" t="Sarbide informazioa"/>
+	<w_phrase n="wlang_line_ssi_name" t="Erakutsitako izena"/>
+	<w_phrase n="wlang_line_ssi_account" t="Kontua"/>
+	<w_phrase n="wlang_line_ssi_password" t="Pasahitza"/>
+	<w_phrase n="wlang_line_ssi_registrar" t="IP Erregistroa"/>
+	<w_phrase n="wlang_line_ssi_secondary_registrar" t="Secondary Registrar"/>
+	<w_phrase n="wlang_line_status" t="Egoera"/>
+	<w_phrase n="wlang_line_ssi_mailbox" t="Ahots postontzia"/>
+	<w_phrase n="wlang_line_ssi_mailbox_retrieve" t="Ahots postontziaren zenbakia"/>
+	<w_phrase n="wlang_line_ringtone" t="Ringtone"/>
+	<w_phrase n="wlang_line_ringer1" t="1 Tonua"/>
+	<w_phrase n="wlang_line_ringer2" t="2 Tonua"/>
+	<w_phrase n="wlang_line_ringer3" t="3 Tonua"/>
+	<w_phrase n="wlang_line_ringer4" t="4 Tonua"/>
+	<w_phrase n="wlang_line_ringer5" t="5 Tonua"/>
+	<w_phrase n="wlang_line_ringer6" t="6 Tonua"/>
+	<w_phrase n="wlang_line_ringer7" t="7 Tonua"/>
+	<w_phrase n="wlang_line_ringer8" t="8 Tonua"/>
+	<w_phrase n="wlang_line_ringer9" t="9 Tonua"/>
+	<w_phrase n="wlang_line_ringer10" t="10 Tonua"/>
+	<w_phrase n="wlang_line_silent" t="Isildua"/>
+	<w_phrase n="wlang_line_splash" t="Splash"/>
+	<w_phrase n="wlang_line_ssi_outboundproxy" t="Irteerako proxya"/>
+	<w_phrase n="wlang_line_ssi_secondary_outboundproxy" t="Secondary Outbound Proxy"/>
+	<w_phrase n="wlang_line_ssi_dialplan" t="Markatze plana"/>
+	<w_phrase n="wlang_line_qvalue" t="Q balioa"/>
+	<w_phrase n="wlang_line_expire" t="Proposatutako amaiera"/>
+	<w_phrase n="wlang_line_codec" t="Codec"/>
+	<w_phrase n="wlang_current_codeclist" t="Iragazitako codecs zerrenda"/>
+	<w_phrase n="wlang_line_packetsize" t="Paketearen tamaina"/>
+	<w_phrase n="wlang_line_ssi_rtpencryption" t="RTP enkriptazioa"/>
+	<w_phrase n="wlang_update_info" t="Zehaztu telefono honetan programaren zein bertsio deskargatu nahi duzun. Mesedez, osatu http helbidearen esparruan zein URL erabili nahi duzun firmwarean. Mesedez, erabili soilik http URL osatua (esaterako http://www.example.com/firmware.bin). Telefonoa automatikoki berrabiatuko da kargatzeko botoia sakatu ondoren."/>
+	<w_phrase n="wlang_update_manualsoftup" t="Firmwarearen eskuzko eguneraketa"/>
+	<w_phrase n="wlang_update_manualsoftup_uxm" t="Hedapenaren panelaren firmware eguneraketa"/>
+	<w_phrase n="wlang_update_info_uxm" t="Mesedez, konekta ezazu hedapen modulu BAKARRA firmwarea eguneratzeko prozesua hasteko"/>
+	<w_phrase n="wlang_update_ssi_firmware" t="Firmware"/>
+	<w_phrase n="wlang_update_loadbutton" t="Kargatu"/>
+	<w_phrase n="wlang_info_phonetype" t="Telefono mota"/>
+	<w_phrase n="wlang_info_macaddress" t="MAC helbidea"/>
+	<w_phrase n="wlang_info_wifi_mac_address" t="Wi-Fi MAC Address"/>
+	<w_phrase n="wlang_info_ipaddress" t="IP helbidea"/>
+	<w_phrase n="wlang_info_l2tp_ipaddress" t="L2TP IP helbidea"/>
+	<w_phrase n="wlang_info_firmware_url" t="Firmwarearen URLa"/>
+	<w_phrase n="wlang_trace_clearbutton" t="Ezabatu"/>
+	<w_phrase n="wlang_trace_reloadbutton" t="Birkargatu"/>
+	<w_phrase n="wlang_trace_downloadbutton" t="Deskargatu"/>
+	<w_phrase n="wlang_log_level" t="Erregistroaren maila"/>
+	<w_phrase n="wlang_log_level_type" t="Erregistroaren maila mota"/>
+	<w_phrase n="wlang_log_ssi_overall" t="Orokorra"/>
+	<w_phrase n="wlang_module_log_level" t="Moduluaren maila"/>
+	<w_phrase n="wlang_log_ssi_module" t="Moduluak"/>
+	<w_phrase n="wlang_log_clearbutton" t="Ezabatu"/>
+	<w_phrase n="wlang_advanced_network" t="Sarea"/>
+	<w_phrase n="wlang_advanced_ssi_dhcp" t="DHCP"/>
+	<w_phrase n="wlang_advanced_ssi_on" t="gaituta"/>
+	<w_phrase n="wlang_advanced_ssi_off" t="itzalita"/>
+	<w_phrase n="wlang_advanced_ssi_ipaddress" t="IP helbidea"/>
+	<w_phrase n="wlang_advanced_ssi_netmask" t="Sarearen maskara"/>
+	<w_phrase n="wlang_advanced_ssi_phonename" t="Hostaren izena"/>
+	<w_phrase n="wlang_advanced_ssi_ipgateway" t="IP Bideratzailea"/>
+	<w_phrase n="wlang_advanced_dns" t="DNS"/>
+	<w_phrase n="wlang_advanced_ssi_domain" t="Domeinua"/>
+	<w_phrase n="wlang_advanced_ssi_dnsserver1" t="DNS 1 zerbitzaria"/>
+	<w_phrase n="wlang_advanced_ssi_dnsserver2" t="DNS 2 zerbitzaria"/>
+	<w_phrase n="wlang_advanced_time" t="Denbora"/>
+	<w_phrase n="wlang_advanced_ssi_ntptimeserver" t="NTP zerbitzaria"/>
+	<w_phrase n="wlang_advanced_timezone" t="Ordu zona"/>
+	<w_phrase n="wlang_advanced_http" t="HTTP"/>
+	<w_phrase n="wlang_advanced_ssi_user" t="Erabiltzailea"/>
+	<w_phrase n="wlang_advanced_ssi_password" t="Pasahitza"/>
+	<w_phrase n="wlang_not_default" t="Not Default"/>
+	<w_phrase n="wlang_advanced_ssi_httpproxy" t="HTTP proxya"/>
+	<w_phrase n="wlang_advanced_ssi_httpport" t="HTTP portua"/>
+	<w_phrase n="wlang_advanced_ssi_httpsport" t="HTTPS portua"/>
+	<w_phrase n="wlang_advanced_webservercon" t="Web interfazea sarbide mota"/>
+	<w_phrase n="wlang_advanced_httponly" t="HTTP soilik"/>
+	<w_phrase n="wlang_advanced_httpsonly" t="HTTPS soilik"/>
+	<w_phrase n="wlang_advanced_httphttps" t="HTTP eta HTTPS"/>
+	<w_phrase n="wlang_advanced_off" t="Itzalita"/>
+	<w_phrase n="wlang_advanced_phonebehavior" t="Jokabidea Telefonoa"/>
+	<w_phrase n="wlang_advanced_ssi_callcompletion" t="Deia amaituta"/>
+	<w_phrase n="wlang_advanced_ssi_lldp" t="LLDP"/>
+	<w_phrase n="wlang_advanced_ssi_lldp_network_policy_timeout" t="LLDP Sarearen politika timeouta"/>
+	<w_phrase n="wlang_advanced_ssi_idnasupport" t="IDNA euskarria (RFC 3490)"/>
+	<w_phrase n="wlang_advanced_actionethernet" t="Ekintza sare kablea berriz konektatzean"/>
+	<w_phrase n="wlang_advanced_reboot" t="Berrabiarazi"/>
+	<w_phrase n="wlang_advanced_donothing" t="Ez hartu kontuan"/>
+	<w_phrase n="wlang_advanced_ssi_numberguessing" t="Ikuspegi azkarra"/>
+	<w_phrase n="wlang_advanced_ssi_blockurldialing" t="SIP domeinuaren URLa blokeatu"/>
+	<w_phrase n="wlang_advanced_ssi_challengeresponse" t="Egiaztatze sarbidea erronka dela medio"/>
+	<w_phrase n="wlang_advanced_ssi_callwaitingindi" t="Deia zain - adierazlea"/>
+	<w_phrase n="wlang_advanced_ssi_dialtonehold" t="Tonua atxikita dagoenean"/>
+	<w_phrase n="wlang_advanced_ssi_disconnectonhook" t="Disconnect On-hook"/>
+	<w_phrase n="wlang_advanced_keys" t="Teklak"/>
+	<w_phrase n="wlang_advanced_ssi_transferonhook" t="Transfer On-hook"/>
+	<w_phrase n="wlang_advanced_ssi_blockdnd" t="DND desgaitzea"/>
+	<w_phrase n="wlang_advanced_ssi_logonwizard" t="Sarbideko laguntzailea"/>
+	<w_phrase n="wlang_advanced_preselection" t="Aurreaukeraketa"/>
+	<w_phrase n="wlang_advanced_ssi_prefix" t="Aurrezenbakia"/>
+	<w_phrase n="wlang_advanced_audio" t="Audioa"/>
+	<w_phrase n="wlang_advanced_ssi_disablecasingspeaker" t="Desgaitu barne bozgorailua"/>
+	<w_phrase n="wlang_advanced_ssi_dtmfechospeaker" t="Echo DTMF bozgorailuan"/>
+	<w_phrase n="wlang_advanced_ssi_dtmf_payload_type" t="DTMF Payload Type"/>
+	<w_phrase n="wlang_advanced_ssi_callreleasednotify" t="Askatutako deiaren jakinarazpena"/>
+	<w_phrase n="wlang_line_ssi_stunserver" t="STUN zerbitzaria (IP:Portua)"/>
+	<w_phrase n="wlang_line_ssi_keepaliveint" t="Ping denbora"/>
+	<w_phrase n="wlang_advanced_ssi_dynamicrtpstart" t="RTP maila hasierako portua"/>
+	<w_phrase n="wlang_advanced_ssi_dynamicrtpstop" t="RTP maila amaierako portua"/>
+	<w_phrase n="wlang_advanced_ssi_typeofservice" t="Zerbitzu mota (TOS)"/>
+	<w_phrase n="wlang_advanced_ssi_payloadtype" t="ID DTMF (Payload)"/>
+	<w_phrase n="wlang_advanced_ssi_networkidentport" t="Sarearen nortasuna (Portua)"/>
+	<w_phrase n="wlang_advanced_ssi_sipt1" t="SIP T1 (ms)"/>
+	<w_phrase n="wlang_advanced_ssi_sipsessiontimer" t="SIP Session Timer (s)"/>
+	<w_phrase n="wlang_advanced_ssi_sipdirtyhostttl" t="SIP Dirty Host TTL (s)"/>
+	<w_phrase n="wlang_advanced_ssi_sipmaxforward" t="SIP Max Forwards"/>
+	<w_phrase n="wlang_advanced_ssi_enumsuffix" t="ENUM atzizkia"/>
+	<w_phrase n="wlang_advanced_ssi_musiconholdserver" t="Musika zerbitzaria itxaronaldian"/>
+	<w_phrase n="wlang_advanced_ssi_useuserphone" t="Erabili user=phone"/>
+	<w_phrase n="wlang_advanced_ssi_publishpresence" t="Argitaratu presentzia"/>
+	<w_phrase n="wlang_advanced_ssi_refertobrackets" t="Refer-To Brackets"/>
+	<w_phrase n="wlang_advanced_ssi_requireprack" t="Erabili PRACK"/>
+	<w_phrase n="wlang_advanced_ssi_symmetricrtp" t="RTP Simetrikoa"/>
+	<w_phrase n="wlang_advanced_update" t="Eguneratu"/>
+	<w_phrase n="wlang_advanced_updatepolicy" t="Eguneratu politika"/>
+	<w_phrase n="wlang_advanced_upautomatically" t="Eguneratze automatikoa"/>
+	<w_phrase n="wlang_advanced_upaskupdate" t="Baieztatu eguneratzea"/>
+	<w_phrase n="wlang_advanced_upneverupdatesetting" t="Ez eguneratu inoiz, kargatu soilik konfigurazioa"/>
+	<w_phrase n="wlang_advanced_upneverupdatenosetting" t="Ez eguneratu inoiz, ezta konfigurazioak ere ez"/>
+	<w_phrase n="wlang_advanced_ssi_settingurl" t="Horniduraren URLa"/>
+	<w_phrase n="wlang_advanced_debug" t="Garbiketa"/>
+	<w_phrase n="wlang_advanced_ssi_lcserver" t="LC zerbitzaria"/>
+	<w_phrase n="wlang_advanced_resetbutton" t="Reset egin"/>
+	<w_phrase n="wlang_advanced_rebootbutton" t="Berrabiarazi"/>
+	<w_phrase n="wlang_advanced_security" t="Segurtasuna"/>
+	<w_phrase n="wlang_advanced_ssi_adminmode" t="Administratzaile modua"/>
+	<w_phrase n="wlang_advanced_ssi_adminpassword" t="Pasahitza administratzailea"/>
+	<w_phrase n="wlang_advanced_ssi_adminpassconf" t="Pasahitza administratzailea (baieztatu)"/>
+	<w_phrase n="wlang_advanced_ssi_adminlogin" t="Sarbide administratzailea"/>
+	<w_phrase n="wlang_advanced_savebutton" t="Gorde"/>
+	<w_phrase n="wlang_advanced_tmz_USAm10" t="-10 Estatu Batuak - Hawaii-Aleutian"/>
+	<w_phrase n="wlang_advanced_tmz_USAm9" t="-9 Estatu Batuak - Alaskako ordua"/>
+	<w_phrase n="wlang_advanced_tmz_CANm8" t="-8 Kanada (Vancouver, Whitehorse)"/>
+	<w_phrase n="wlang_advanced_tmz_MEXm8" t="-8 Mexiko (Tijuana, Mexicali)"/>
+	<w_phrase n="wlang_advanced_tmz_USAm8" t="-8 Estatu Batuak - Ozeano Bakeko ordua"/>
+	<w_phrase n="wlang_advanced_tmz_CANm7" t="-7 Kanada (Edmonton, Calgary)"/>
+	<w_phrase n="wlang_advanced_tmz_MEXm7" t="-7 Mexiko (Mazatlán, Chihuahua)"/>
+	<w_phrase n="wlang_advanced_tmz_USAm7" t="-7 Estatu Batuak - Montañako ordua"/>
+	<w_phrase n="wlang_advanced_tmz_CANm6" t="-6 Kanada - Manitoba (Winnipeg)"/>
+	<w_phrase n="wlang_advanced_tmz_CAN2m6" t="-6 Kanada - Saskatchewan (Regina)"/>
+	<w_phrase n="wlang_advanced_tmz_CAMm6" t="-6 Central America (No DST)"/>
+	<w_phrase n="wlang_advanced_tmz_CHLm6" t="-6 Txile (Pazko Uhartea)"/>
+	<w_phrase n="wlang_advanced_tmz_MEXm6" t="-6 Mexiko (Mexiko Hiria, Acapulco)"/>
+	<w_phrase n="wlang_advanced_tmz_USAm6" t="-6 Estatu Batuak - Ordu zentrala"/>
+	<w_phrase n="wlang_advanced_tmz_BHSm5" t="-5 Bahamak (Nassau)"/>
+	<w_phrase n="wlang_advanced_tmz_CANm5" t="-5 Kanada (Montreal, Ottawa, Québec)"/>
+	<w_phrase n="wlang_advanced_tmz_COLm5" t="-5 Kolonbia (Bogota)"/>
+	<w_phrase n="wlang_advanced_tmz_CUBm5" t="-5 Kuba (Habana)"/>
+	<w_phrase n="wlang_advanced_tmz_ECUm5" t="-5 Ekuador (Quito)"/>
+	<w_phrase n="wlang_advanced_tmz_USAm5" t="-5 Estatu Batuak - Ekialdeko ordua"/>
+	<w_phrase n="wlang_advanced_tmz_CANm4" t="-4 Kanada (Halifax, Saint John)"/>
+	<w_phrase n="wlang_advanced_tmz_CHLm4" t="-4 Txile (Santiago)"/>
+	<w_phrase n="wlang_advanced_tmz_PRYm4" t="-4 Paraguai (Asunción)"/>
+	<w_phrase n="wlang_advanced_tmz_BMUm4" t="-4 Erresuma Batua - Bermudak (Bermudak)"/>
+	<w_phrase n="wlang_advanced_tmz_FLKm4" t="-4 Erresuma Batua  (Falkland Uharteak)"/>
+	<w_phrase n="wlang_advanced_tmz_CANm35" t="-3.5 Kanada - New Foundland (St. Johns)"/>
+	<w_phrase n="wlang_advanced_tmz_GRLm2" t="-2 Denmark - Greenland (Nuuk)"/>
+	<w_phrase n="wlang_advanced_tmz_PRTm1" t="-1 Portugal (Azoreak)"/>
+	<w_phrase n="wlang_advanced_tmz_FROm0" t="0 Danimarka - Faroe uharteak (Torshaven)"/>
+	<w_phrase n="wlang_advanced_tmz_IRLm0" t="0 Irlanda (Dublin)"/>
+	<w_phrase n="wlang_advanced_tmz_PRTm0" t="0 Portugal (Lisboa, Porto, Funchal)"/>
+	<w_phrase n="wlang_advanced_tmz_ESPm0" t="0 Espainia - Kanariar Uharteak (Palma)"/>
+	<w_phrase n="wlang_advanced_tmz_GBRm0" t="0 Erresuma Batua (Londres)"/>
+	<w_phrase n="wlang_advanced_tmz_ALBp1" t="+1 Albania (Tirana)"/>
+	<w_phrase n="wlang_advanced_tmz_AUTp1" t="+1 Austria (Viena)"/>
+	<w_phrase n="wlang_advanced_tmz_BELp1" t="+1 Belgika (Brusela)"/>
+	<w_phrase n="wlang_advanced_tmz_CAIm4" t="-4 Caico uharteak"/>
+	<w_phrase n="wlang_advanced_tmz_HRVp1" t="+1 Kroazia (Zagreb)"/>
+	<w_phrase n="wlang_advanced_tmz_CZEp1" t="+1 Txekiar Errepublika (Praga)"/>
+	<w_phrase n="wlang_advanced_tmz_DNKp1" t="+1 Danimarka (Kopenhage)"/>
+	<w_phrase n="wlang_advanced_tmz_FRAp1" t="+1 Frantzia (Niza)"/>
+	<w_phrase n="wlang_advanced_tmz_GERp1" t="+1 Alemania (Berlin)"/>
+	<w_phrase n="wlang_advanced_tmz_HUNp1" t="+1 Hungaria (Budapest)"/>
+	<w_phrase n="wlang_advanced_tmz_ITAp1" t="+1 Italia (Erroma)"/>
+	<w_phrase n="wlang_advanced_tmz_LUXp1" t="+1 Luxenburgo (Luxenburgo)"/>
+	<w_phrase n="wlang_advanced_tmz_MAKp1" t="+1 Mazedonia (Skopje)"/>
+	<w_phrase n="wlang_advanced_tmz_NLDp1" t="+1 Herbehereak (Amsterdam)"/>
+	<w_phrase n="wlang_advanced_tmz_NAMp1" t="+1 Namibia (Windhoek)"/>
+	<w_phrase n="wlang_advanced_tmz_NORp1" t="+1 Norvegia (Oslo)"/>
+	<w_phrase n="wlang_advanced_tmz_POLp1" t="+1 Polonia (Varsovia)"/>
+	<w_phrase n="wlang_advanced_tmz_SVKp1" t="+1 Eslovakiar Errepublika (Bratislava)"/>
+	<w_phrase n="wlang_advanced_tmz_ESPp1" t="+1 Espainia (Madril, Palma)"/>
+	<w_phrase n="wlang_advanced_tmz_SWEp1" t="+1 Suedia (Stockholm)"/>
+	<w_phrase n="wlang_advanced_tmz_CHEp1" t="+1 Suitza (Berna)"/>
+	<w_phrase n="wlang_advanced_tmz_GIBp1" t="+1 Erresuma Batua (Gibraltar)"/>
+	<w_phrase n="wlang_advanced_tmz_YUGp1" t="+1 Serbia (Belgrad)"/>
+	<w_phrase n="wlang_advanced_tmz_BLRp3" t="+3 Belarus (Minsk)"/>
+	<w_phrase n="wlang_advanced_tmz_BGRp2" t="+2 Bulgaria (Sofia)"/>
+	<w_phrase n="wlang_advanced_tmz_CYPp2" t="+2 Txipre (Nikosia)"/>
+	<w_phrase n="wlang_advanced_tmz_EGYp2" t="+2 Egipto (Kairo)"/>
+	<w_phrase n="wlang_advanced_tmz_ESTp2" t="+2 Estonia (Tallinn)"/>
+	<w_phrase n="wlang_advanced_tmz_FINp2" t="+2 Finlandia (Helsinki)"/>
+	<w_phrase n="wlang_advanced_tmz_GAZp2" t="+2 Gaza (Gaza)"/>
+	<w_phrase n="wlang_advanced_tmz_GRCp2" t="+2 Grezia (Atenas)"/>
+	<w_phrase n="wlang_advanced_tmz_ISRp2" t="+2 Israel (Tel Aviv)"/>
+	<w_phrase n="wlang_advanced_tmz_JORp2" t="+2 Jordania (Amman)"/>
+	<w_phrase n="wlang_advanced_tmz_LVAp2" t="+2 Letonia (Riga)"/>
+	<w_phrase n="wlang_advanced_tmz_LTUp2" t="+2 Lituania (Vilnius)"/>
+	<w_phrase n="wlang_advanced_tmz_LBNp2" t="+2 Libano (Beirut)"/>
+	<w_phrase n="wlang_advanced_tmz_MDAp2" t="+2 Moldavia (Chisinau)"/>
+	<w_phrase n="wlang_advanced_tmz_RUSp2" t="+2 Errusia (Kaliningrado)"/>
+	<w_phrase n="wlang_advanced_tmz_ROUp2" t="+2 Errumania (Bukarest)"/>
+	<w_phrase n="wlang_advanced_tmz_SYRp2" t="+2 Siria (Damasko)"/>
+	<w_phrase n="wlang_advanced_tmz_TURp3" t="+3 Turkia (Ankara)"/>
+	<w_phrase n="wlang_advanced_tmz_UKRp2" t="+2 Ukrainia (Kiev, Odessa)"/>
+	<w_phrase n="wlang_advanced_tmz_IRQp3" t="+3 Irak (Bagdad)"/>
+	<w_phrase n="wlang_advanced_tmz_RUSp3" t="+3 Errusia (Mosku)"/>
+	<w_phrase n="wlang_advanced_tmz_IRNp35" t="+3.5 Iran (Teheran)"/>
+	<w_phrase n="wlang_advanced_tmz_ARMp4" t="+4 Armenia (Erevan)"/>
+	<w_phrase n="wlang_advanced_tmz_AZEp4" t="+4 Azerbaijan (Baku)"/>
+	<w_phrase n="wlang_advanced_tmz_GEOp4" t="+4 Georgia (Tbilisi)"/>
+	<w_phrase n="wlang_advanced_tmz_KAZp4" t="+4 Kazakhstan (Aqtau)"/>
+	<w_phrase n="wlang_advanced_tmz_RUSp4" t="+4 Errusia (Samara)"/>
+	<w_phrase n="wlang_advanced_tmz_KAZp5" t="+5 Kazakhstan (Aqtobe)"/>
+	<w_phrase n="wlang_advanced_tmz_KGZp5" t="+5 Kirgizistan (Bishkek)"/>
+	<w_phrase n="wlang_advanced_tmz_PAKp5" t="+5 Pakistan (Islamabad)"/>
+	<w_phrase n="wlang_advanced_tmz_RUSp5" t="+5 Errusia (Chelyabinsk)"/>
+	<w_phrase n="wlang_advanced_tmz_INDp55" t="+5.5 India (Kolkata)"/>
+	<w_phrase n="wlang_advanced_tmz_KAZp6" t="+6 Kazakhstan (Astana, Almaty)"/>
+	<w_phrase n="wlang_advanced_tmz_RUSp6" t="+6 Errusia (Novosibirsk, Omsk)"/>
+	<w_phrase n="wlang_advanced_tmz_CHNp7" t="+8 Txina (Beijing)"/>
+	<w_phrase n="wlang_advanced_tmz_RUSp7" t="+7 Errusia (Krasnoyarsk)"/>
+	<w_phrase n="wlang_advanced_tmz_THAp7" t="+7 Tailandia (Bangkok)"/>
+	<w_phrase n="wlang_advanced_tmz_SGPp8" t="+8 Singapur (Singapur)"/>
+	<w_phrase n="wlang_advanced_tmz_KORp8" t="+9 Korea (Seul)"/>
+	<w_phrase n="wlang_advanced_tmz_JPNp9" t="+9 Japonia (Tokio)"/>
+	<w_phrase n="wlang_advanced_tmz_AUSp95" t="+9.5 Australia (Adelaide)"/>
+	<w_phrase n="wlang_advanced_tmz_AUSp10" t="+10 Australia (Sidney, Melbourne, Canberra)"/>
+	<w_phrase n="wlang_advanced_tmz_AUS2p10" t="+10 Australia (Brisbane)"/>
+	<w_phrase n="wlang_advanced_tmz_RUSp10" t="+10 Errusia (Vladivostok)"/>
+	<w_phrase n="wlang_advanced_tmz_AUSp105" t="+10.5 Australia (Lord Howe uharteak)"/>
+	<w_phrase n="wlang_advanced_tmz_NZLp12" t="+12 Zeelanda Berria (Wellington, Auckland)"/>
+	<w_phrase n="wlang_advanced_tmz_RUSp12" t="+12 Errusia (Anadyr, Kamchatka)"/>
+	<w_phrase n="wlang_advanced_tmz_NZLp1275" t="+12.75 Zeelanda Berria (Chatham uharteak)"/>
+	<w_phrase n="wlang_advanced_tmz_TONp13" t="+13 Tonga (Nukuʻalofa)"/>
+	<w_phrase n="wlang_adr_ssi_title" t="Direktorioa"/>
+	<w_phrase n="wlang_advanced_ssi_title" t="Konfigurazio aurreratua"/>
+	<w_phrase n="wlang_fkeys_ssi_title" t="Funtzio teklak"/>
+	<w_phrase n="wlang_index_ssi_title" t="Ongi etorri zure telefonora!"/>
+	<w_phrase n="wlang_info_ssi_title" t="Sistemaren informazioa"/>
+	<w_phrase n="wlang_line1_ssi_title" t="1 Nortasuna konfigurazioa"/>
+	<w_phrase n="wlang_line2_ssi_title" t="2 Nortasuna konfigurazioa"/>
+	<w_phrase n="wlang_line3_ssi_title" t="3 Nortasuna konfigurazioa"/>
+	<w_phrase n="wlang_line4_ssi_title" t="4 Nortasuna konfigurazioa"/>
+	<w_phrase n="wlang_line5_ssi_title" t="5 Nortasuna konfigurazioa"/>
+	<w_phrase n="wlang_line6_ssi_title" t="6 Nortasuna konfigurazioa"/>
+	<w_phrase n="wlang_line7_ssi_title" t="7 Nortasuna konfigurazioa"/>
+	<w_phrase n="wlang_line8_ssi_title" t="8 Nortasuna konfigurazioa"/>
+	<w_phrase n="wlang_line9_ssi_title" t="9 Nortasuna konfigurazioa"/>
+	<w_phrase n="wlang_line10_ssi_title" t="10 Nortasuna konfigurazioa"/>
+	<w_phrase n="wlang_line11_ssi_title" t="11 Nortasuna konfigurazioa"/>
+	<w_phrase n="wlang_line12_ssi_title" t="12 Nortasuna konfigurazioa"/>
+	<w_phrase n="wlang_log_ssi_title" t="Sistemaren erregistroa"/>
+	<w_phrase n="wlang_memstat_ssi_title" t="Memoria informazioa"/>
+	<w_phrase n="wlang_prefs_ssi_title" t="Lehentasunak"/>
+	<w_phrase n="wlang_settings_ssi_title" t="Ezarpenak"/>
+	<w_phrase n="wlang_speed_ssi_title" t="Markatze azkarra"/>
+	<w_phrase n="wlang_sip_trace_ssi_title" t="SIP arrastoa"/>
+	<w_phrase n="wlang_http_trace_ssi_title" t="HTTP arrastoa"/>
+	<w_phrase n="wlang_update_ssi_title" t="Firmwarearen eskuzko eguneraketa"/>
+	<w_phrase n="wlang_adr_preview_name" t="Izena"/>
+	<w_phrase n="wlang_adr_preview_number" t="Zenbakia"/>
+	<w_phrase n="wlang_adr_preview_reading" t="Irakurtzen"/>
+	<w_phrase n="wlang_adr_preview_contact_type" t="Kontaktu mota"/>
+	<w_phrase n="wlang_adr_preview_ignore" t="Ez hartu kontuan"/>
+	<w_phrase n="wlang_adr_file_type" t="Artxibo mota"/>
+	<w_phrase n="wlang_adr_file_csv" t="CSV formatua"/>
+	<w_phrase n="wlang_adr_file_unicode" t="Unicode Tab-separated"/>
+	<w_phrase n="wlang_adr_prev_ssi_title" t="Aurreikuspegia inportatu"/>
+	<w_phrase n="wlang_adr_prev_description" t="Mesedez, berrikus itzazu zutabeen esleipenak agendaren esparruetan eta, bukatutakoan, sakatu gordetzeko botoia."/>
+	<w_phrase n="wlang_adr_prev_apply" t="Gorde"/>
+	<w_phrase n="wlang_advanced_ssi_http_register" t="HTTP kontaktua erregistratu"/>
+	<w_phrase n="wlang_advanced_ssi_auth_scheme" t="Egiaztatze mota"/>
+	<w_phrase n="wlang_advanced_ssi_digest" t="Digest"/>
+	<w_phrase n="wlang_advanced_ssi_basic" t="Oinarrizkoa"/>
+	<w_phrase n="wlang_advanced_ssi_offer_gruu" t="GRUU eskaini"/>
+	<w_phrase n="wlang_line_none" t="Bat ere ez"/>
+	<w_phrase n="wlang_advanced_ssi_offer_mpo" t="MPO eskaini"/>
+	<w_phrase n="wlang_h323_trace_ssi_title" t="H323 arrastoa"/>
+	<w_phrase n="wlang_advanced_ssi_challenge_reboot" t="SIP berrabiatzeko egiaztatzea"/>
+	<w_phrase n="wlang_advanced_ssi_challenge_checksync" t="Egiaztatzea Check-Sync SIPi dagokionez"/>
+	<w_phrase n="wlang_dns_ssi_title" t="DNS cachea"/>
+	<w_phrase n="wlang_pcap_trace_ssi_title" t="PCAP arrastoa"/>
+	<w_phrase n="wlang_pcap_text" t="Sare mailan gertatzen dena ikusteko orri honetan PCAP fitxategiak sor daitezke. Fitxategi horiek sareko zenbait tresnarekin irakur daitezke, esaterako wireshark erabiliz. Grabatzen hasteko sakatu hasteko botoia eta eteteko sakatu gelditzeko botoia. Mesedez, gogoratu datua bufferrarekin tarteko barne memoria batean dagoela gordeta (informazio zaharra gainidatzi egiten da) eta grabazioak telefonoaren portaeran eragina izan dezakeela."/>
+	<w_phrase n="wlang_leftnav_action" t="Action URLren konfigurazioa"/>
+	<w_phrase n="wlang_action_ssi_title" t="Ekintza URL"/>
+	<w_phrase n="wlang_action_settings" t="Ekintza URL"/>
+	<w_phrase n="wlang_action_ssi_dnd_on" t="DND aktibatua"/>
+	<w_phrase n="wlang_action_ssi_dnd_off" t="DND desaktibatua"/>
+	<w_phrase n="wlang_action_ssi_redirection_on" t="Deiak desbideratzea aktibatuta"/>
+	<w_phrase n="wlang_action_ssi_redirection_off" t="Deiak desbideratzea desaktibatuta"/>
+	<w_phrase n="wlang_action_ssi_incoming" t="Sartzen den deia"/>
+	<w_phrase n="wlang_action_ssi_blacklist" t="Egiaztatu Zerrenda Beltzean"/>
+	<w_phrase n="wlang_action_ssi_outgoing" t="Irteten den deia"/>
+	<w_phrase n="wlang_action_ssi_setup" t="Konfigurazioa bukatuta"/>
+	<w_phrase n="wlang_action_ssi_offhook" t="Off-hook"/>
+	<w_phrase n="wlang_action_ssi_onhook" t="On-hook"/>
+	<w_phrase n="wlang_radcom_ssi_title" t="Autoerreprodukzioa/programatua"/>
+	<w_phrase n="wlang_playback_ssi_settings" t="Autoerreprodukzio konfigurazioa"/>
+	<w_phrase n="wlang_playback_ssi_feature" t="Erreprodukzio automatikoa"/>
+	<w_phrase n="wlang_playback_ssi_url" t="WAV artxiboaren URLa"/>
+	<w_phrase n="wlang_scheduling_ssi_settings" t="Plangintzaren konfigurazioa"/>
+	<w_phrase n="wlang_scheduling_ssi_feature" t="Plangintza"/>
+	<w_phrase n="wlang_scheduling_ssi_frequency" t="Deitu maiztasun honekin"/>
+	<w_phrase n="wlang_scheduling_ssi_day" t="eguna(k)"/>
+	<w_phrase n="wlang_scheduling_ssi_hour" t="ordua(k)"/>
+	<w_phrase n="wlang_scheduling_ssi_minute" t="minutua(k)"/>
+	<w_phrase n="wlang_scheduling_ssi_number" t="Deitzeko zenbakia"/>
+	<w_phrase n="wlang_scheduling_ssi_start" t="Hasiera (ee.hh.uu. oo.mm)"/>
+	<w_phrase n="wlang_scheduling_ssi_end" t="Amaiera (ee.hh.uu. oo.mm)"/>
+	<w_phrase n="wlang_scheduling_ssi_call_duration" t="Deia automatikoki amaitu (seg) igaro ondoren"/>
+	<w_phrase n="wlang_index_time" t="Denbora"/>
+	<w_phrase n="wlang_index_duration" t="Iraupena"/>
+	<w_phrase n="wlang_advanced_ssi_user_pic" t="Erabiltzailearen argazkiaren URLa"/>
+	<w_phrase n="wlang_line_custom" t="Melodia pertsonalizatua"/>
+	<w_phrase n="wlang_prefs_vip" t="VIP"/>
+	<w_phrase n="wlang_prefs_ssi_date_us_format" t="AEBetako dataren formatua (hh/ee)"/>
+	<w_phrase n="wlang_prefs_ssi_time_24_format" t="Erlojua 24 ordu  "/>
+	<w_phrase n="wlang_advanced_ssi_call_join_xfer" t="Batu deia transferitzean"/>
+	<w_phrase n="wlang_prefs_tssweden" t="Suedia"/>
+	<w_phrase n="wlang_prefs_tsswitzerland" t="Suitza"/>
+	<w_phrase n="wlang_advanced_ssi_client" t="Bezeroa"/>
+	<w_phrase n="wlang_advanced_ssi_server" t="Zerbitzaria"/>
+	<w_phrase n="wlang_line_ssi_idle_text" t="Pausaldi pantailan erakutsitako testua"/>
+	<w_phrase n="wlang_line_ssi_idle_cfwd" t="Transferitutako helmugarako erakutsitako testua"/>
+	<w_phrase n="wlang_line_ssi_idle_number" t="Pausaldi pantailan erakutsitako zenbakia"/>
+	<w_phrase n="wlang_line_ssi_alert_info" t="URL Alert Info"/>
+	<w_phrase n="wlang_advanced_ssi_alert_info_playback" t="Alert Info"/>
+	<w_phrase n="wlang_advanced_ssi_syslog_server" t="Syslogeko zerbitzaria"/>
+	<w_phrase n="wlang_advanced_ssi_aoc_pulse_currency" t="AOC Txanpon pultsua"/>
+	<w_phrase n="wlang_advanced_ssi_aoc_cost_pulse" t="AOC kostua/pultsua"/>
+	<w_phrase n="wlang_advanced_aoc_amount_display" t="AOC erakutsitako kopurua"/>
+	<w_phrase n="wlang_advanced_aoc_amount_charged" t="Fakturatuta"/>
+	<w_phrase n="wlang_advanced_aoc_amount_balance" t="Saldoa"/>
+	<w_phrase n="wlang_advanced_audio_device_indicator" t="Audio gailu lekukoa"/>
+	<w_phrase n="wlang_prefs_ringtone_defaults" t="Lehenetsitako dei tonua"/>
+	<w_phrase n="wlang_prefs_ringtone_addressbook" t="Agendaren tonua"/>
+	<w_phrase n="wlang_leftnav_trusted_cert" t="Ziurtagiriak"/>
+	<w_phrase n="wlang_advanced_on" t="hemen"/>
+	<w_phrase n="wlang_advanced_call_waiting_visual" t="soilik bisualki"/>
+	<w_phrase n="wlang_line_ssi_pname" t="Egiaztatze erabiltzailea"/>
+	<w_phrase n="wlang_adr_deletebutton" t="Ezabatu"/>
+	<w_phrase n="wlang_adr_prev_del_before" t="Ezabatu agenda lehenago"/>
+	<w_phrase n="wlang_advanced_ssi_filter_registrar" t="Onartu soilik erregistro paketeak"/>
+	<w_phrase n="wlang_line_sipsettings" t="SIP Nortasunen konfigurazioa"/>
+	<w_phrase n="wlang_line_rtpsettings" t="RTP Nortasunen konfigurazioa"/>
+	<w_phrase n="wlang_line_natsettings" t="NAT Nortasunen konfigurazioa"/>
+	<w_phrase n="wlang_line_ssi_descr_contact" t="SIP-Kontaktu luzea (RFC3840)"/>
+	<w_phrase n="wlang_line_ssi_sipusername_as_line" t="Broken euskarria erregistratu"/>
+	<w_phrase n="wlang_advanced_snmp" t="SNMP"/>
+	<w_phrase n="wlang_advanced_ssi_snmp_port" t="Portua"/>
+	<w_phrase n="wlang_advanced_ssi_snmp_trusted" t="Helbide fidagarria"/>
+	<w_phrase n="wlang_advanced_ssi_sip_short_form" t="Erabili SIP goiburu trinkoak"/>
+	<w_phrase n="wlang_sysinfo_siplinestatus" t="SIP nortasunaren egoera"/>
+	<w_phrase n="wlang_sysinfo_sysinfo" t="Sistemaren informazioa"/>
+	<w_phrase n="wlang_adr_outgoingid" t="Irteten den nortasuna"/>
+	<w_phrase n="wlang_adr_lineid_active" t="Aktiboa"/>
+	<w_phrase n="wlang_adr_lineid1" t="1 Nortasuna"/>
+	<w_phrase n="wlang_adr_lineid2" t="2 Nortasuna"/>
+	<w_phrase n="wlang_adr_lineid3" t="3 Nortasuna"/>
+	<w_phrase n="wlang_adr_lineid4" t="4 Nortasuna"/>
+	<w_phrase n="wlang_adr_lineid5" t="5 Nortasuna"/>
+	<w_phrase n="wlang_adr_lineid6" t="6 Nortasuna"/>
+	<w_phrase n="wlang_adr_lineid7" t="7 Nortasuna"/>
+	<w_phrase n="wlang_adr_lineid8" t="8 Nortasuna"/>
+	<w_phrase n="wlang_adr_lineid9" t="9 Nortasuna"/>
+	<w_phrase n="wlang_adr_lineid10" t="10 Nortasuna"/>
+	<w_phrase n="wlang_adr_lineid11" t="11 Nortasuna"/>
+	<w_phrase n="wlang_adr_lineid12" t="12 Nortasuna"/>
+	<w_phrase n="wlang_adr_lineid13" t="Identity 13"/>
+	<w_phrase n="wlang_adr_lineid14" t="Identity 14"/>
+	<w_phrase n="wlang_adr_lineid15" t="Identity 15"/>
+	<w_phrase n="wlang_adr_lineid16" t="Identity 16"/>
+	<w_phrase n="wlang_adr_preview_outgoing_id" t="Irteten den nortasuna"/>
+	<w_phrase n="wlang_line_ssi_record_missed_calls" t="Dei galduen zerrenda"/>
+	<w_phrase n="wlang_line_ssi_user_send_diversion_header" t="Bidali dibertsio goiburua"/>
+	<w_phrase n="wlang_index_local_identity" t="Tokiko nortasuna"/>
+	<w_phrase n="wlang_advanced_ssi_holding_reminder" t="Zain dagoen deiaren gogorarazpena"/>
+	<w_phrase n="wlang_info_production_info" t="Ekoizpenaren informazioa"/>
+	<w_phrase n="wlang_line_reregister" t="Berr-erregis."/>
+	<w_phrase n="wlang_confirm_head" t="Adi!"/>
+	<w_phrase n="wlang_confirm_button_yes" t="Bai"/>
+	<w_phrase n="wlang_confirm_button_no" t="Ez"/>
+	<w_phrase n="wlang_confirm_ssi_title" t="Baieztatu"/>
+	<w_phrase n="wlang_conf_text_del_adrbook" t="Kontuan hartu agenda erabat ezabatuko dela. Benetan hori egin nahi duzu?"/>
+	<w_phrase n="wlang_conf_text_reset" t="Mesedez kontuan hartu aukera guztiak, deien zerrendak, agendak etab. barne hartuz, galdu egingo direla baietzarekin berresten baduzu. Ziur zaude telefonoaren fabrikako balioetara itzuli nahi duzula?"/>
+	<w_phrase n="wlang_conf_text_reboot" t="Ziur zaude telefonoa berrabiatu nahi duzula?"/>
+	<w_phrase n="wlang_line_ssi_active" t="Nortasun aktiboa"/>
+	<w_phrase n="wlang_line_play" t="Tonua errepro"/>
+	<w_phrase n="wlang_line_ssi_proxyrequire" t="Proxya eskatu"/>
+	<w_phrase n="wlang_advanced_detectethernet" t="Sare kablearen deskonexioa antzeman"/>
+	<w_phrase n="wlang_advanced_ssi_rtcp_support" t="RTCP euskarria"/>
+	<w_phrase n="wlang_update_manuallicense" t="Lizentzia eskuz igo"/>
+	<w_phrase n="wlang_update_licensefile" t="Lizentziaren fitxategia"/>
+	<w_phrase n="wlang_advanced_ssi_high_mic_gain" t="Mikrofonoaren irabazi handiagoa (TIA arautik kanpo)"/>
+	<w_phrase n="wlang_advanced_handset_agc" t="AGC mangofonoa"/>
+	<w_phrase n="wlang_advanced_headset_agc" t="AGC Aurikularra"/>
+	<w_phrase n="wlang_advanced_ssi_partial_lookup" t="Zenbakiaren bilaketa partziala"/>
+	<w_phrase n="wlang_ssi_number_lookup" t="Kontaktuen bilaketa"/>
+	<w_phrase n="wlang_fkeys_ssi_url" t="Ekintza URL"/>
+	<w_phrase n="wlang_advanced_ssi_sig_tos" t="SIP zerbitzu mota (TOS/Diffserv)"/>
+	<w_phrase n="wlang_advanced_ssi_guess_start_length" t="QuickLookup hasiera luzera"/>
+	<w_phrase n="wlang_advanced_ethernet" t="Ethernet portuak"/>
+	<w_phrase n="wlang_advanced_ssi_eth_net_port" t="Sareko portua"/>
+	<w_phrase n="wlang_advanced_ssi_eth_pc_port" t="PCko portua"/>
+	<w_phrase n="wlang_advanced_autoneg" t="Autonegoziazioa"/>
+	<w_phrase n="wlang_advanced_10full" t="10 Mbit Full Duplex"/>
+	<w_phrase n="wlang_advanced_10half" t="10 Mbit Half Duplex"/>
+	<w_phrase n="wlang_advanced_100full" t="100 Mbit Full Duplex"/>
+	<w_phrase n="wlang_advanced_100half" t="100 Mbit Half Duplex"/>
+	<w_phrase n="wlang_sysinfo_ethernet_status" t="Etherneten egoera"/>
+	<w_phrase n="wlang_sysinfo_ethernet_status2" t="Egoera"/>
+	<w_phrase n="wlang_connected" t="konektatuta"/>
+	<w_phrase n="wlang_disconnected" t="deskonektatuta"/>
+	<w_phrase n="wlang_sysinfo_ethernet_connection_type" t="Konexio mota"/>
+	<w_phrase n="wlang_index_costs" t="Kostuak"/>
+	<w_phrase n="wlang_action_ssi_missed" t="Dei galdua"/>
+	<w_phrase n="wlang_line_ssi_stunbindint" t="STUNen tartea (s)"/>
+	<w_phrase n="wlang_action_info" t="Action URL delakoek HTTP GET eskaerak egiten dituzte telefonoan zerbait gertatzen denean."/>
+	<w_phrase n="wlang_fkeys_ssi_p2t" t="Push-to-Talk"/>
+	<w_phrase n="wlang_advanced_load_certs" t="Kargatu zerbitzariaren ziurtagiria"/>
+	<w_phrase n="wlang_advanced_load_sets_manually" t="Kargatu Konfigurazioaren fitxategia eskuz"/>
+	<w_phrase n="wlang_advanced_load_warning" t="Kargatu botoian sakatuz telefonoak aukera guztiak berrabiatuko ditu, aukera berriak fitxategi zehatzetik kargatuz, eta berrabiatu egingo da. Hala, une honetan aukerak gainidatzi egingo dira!"/>
+	<w_phrase n="wlang_advanced_answer_after_policy" t="Intercomen politika"/>
+	<w_phrase n="wlang_advanced_answer_after_idle" t="Soilik pausaldian"/>
+	<w_phrase n="wlang_advanced_answer_after_always" t="beti"/>
+	<w_phrase n="wlang_ldap_server_name" t="Server Name"/>
+	<w_phrase n="wlang_ldap_server" t="Zerbitzariaren helbidea"/>
+	<w_phrase n="wlang_ldap_port" t="Portua"/>
+	<w_phrase n="wlang_ldap_base" t="Oinarria"/>
+	<w_phrase n="wlang_ldap_username" t="Erabiltzailea"/>
+	<w_phrase n="wlang_ldap_password" t="Pasahitza"/>
+	<w_phrase n="wlang_guess_max_hits" t="Max Hits"/>
+	<w_phrase n="wlang_ldap_prefs" t="LDAP"/>
+	<w_phrase n="wlang_prefs_ssi_keyboard_lock" t="Teklatua blokeatuta"/>
+	<w_phrase n="wlang_prefs_ssi_keyboard_lock_pw" t="PIN to Unlock"/>
+	<w_phrase n="wlang_line_ssi_country" t="Herrialdeko kodea"/>
+	<w_phrase n="wlang_line_ssi_area" t="Eremuko kodea"/>
+	<w_phrase n="wlang_advanced_ssi_enum" t="ENUM euskarria"/>
+	<w_phrase n="wlang_advanced_ssi_tcp_listen" t="Entzuteko SIP TCP portua"/>
+	<w_phrase n="wlang_advanced_tmz_AUSp8" t="+8 Australia (Perth)"/>
+	<w_phrase n="wlang_advanced_tmz_AUS2p95" t="+9.5 Australia (Darwin)"/>
+	<w_phrase n="wlang_advanced_tmz_AUS3p10" t="+10 Australia (Hobart)"/>
+	<w_phrase n="wlang_advanced_tmz_BRA1m3" t="-3 Brasil (DST)"/>
+	<w_phrase n="wlang_advanced_tmz_BRA2m3" t="-3 Brasil (ez DST)"/>
+	<w_phrase n="wlang_advanced_tmz_BRAm2" t="-2 Brasil (ez DST)"/>
+	<w_phrase n="wlang_advanced_tmz_ARGm3" t="-3 Argentina (Buenos Aires)"/>
+	<w_phrase n="wlang_advanced_tmz_EATp3" t="+3 Ekialdeko Afrika denbora"/>
+	<w_phrase n="wlang_advanced_tmz_CATp2" t="+2 Erdialdeko Afrika denbora"/>
+	<w_phrase n="wlang_advanced_tmz_WATp1" t="+1 Mendebaldeko Afrika denbora"/>
+	<w_phrase n="wlang_fkeys_ssi_context" t="Testuingurua"/>
+	<w_phrase n="wlang_fkeys_ssi_type" t="MotaMota"/>
+	<w_phrase n="wlang_fkeys_ssi_keyevent" t="Teklaren ekitaldia"/>
+	<w_phrase n="wlang_advanced_ssi_peer_to_peer_cc" t="Call Completion Puntuz puntu"/>
+	<w_phrase n="wlang_advanced_logon_logoff" t="Saioa hasi /Saioa itxi"/>
+	<w_phrase n="wlang_advanced_ssi_auto_logoff_time" t="Saioa itxi linea guztietan, jarduerarik ezagatik (min)"/>
+	<w_phrase n="wlang_advanced_logoffall" t="Ezabatu nortasun guztiak"/>
+	<w_phrase n="wlang_advanced_logoffline" t="Ezabatu nortasun"/>
+	<w_phrase n="wlang_conf_text_logoff_all" t="Kontuan hartu SIP nortasuneko konfigurazio guztiak ezabatu egingo direla. Nortasun guztiak ezabatzearekin konforme zaude?"/>
+	<w_phrase n="wlang_fkey_info" t="Orrialde honetan zure telefonoko tekla programagarrien aukerak zehazteko aukera daukazu.  Erabili testuingurua nortasunaren testuingurua zehazteko, adibidez, nortasun hau zenbait luzapen monitorizatzeko erabiliko da. Motak kasuan kasuko teklaren oraingo funtzioa aukeratuko du. Azken argudioan, Zenbaki esparruan, sip url, dtmf sekuentzia, action url edo tekla mota biltegiratuko dira. Mesedez, zoaz eskuliburura informazio honetan sakontzeko."/>
+	<w_phrase n="wlang_advanced_tmz_TTBm4" t="-4 Trinidad eta Tobago"/>
+	<w_phrase n="wlang_line_ssi_shared_line" t="Linea partekatua"/>
+	<w_phrase n="wlang_advanced_ssi_text_softkey" t="Testua erakutsi soilik testuinguru tekletan"/>
+	<w_phrase n="wlang_advanced_ssi_softkey_and_text" t="Erakutsi testua eta ikonoak testuinguru tekletan"/>
+	<w_phrase n="wlang_line_ssi_dtmf_info" t="DTMF erabiliz SIP INFO"/>
+	<w_phrase n="wlang_line_ssi_xml_screen_url" t="Pausaldi pantailaren XMLren URL"/>
+	<w_phrase n="wlang_prefs_ssi_ringer_animation" t="Tinbrearen animazioa"/>
+	<w_phrase n="wlang_advanced_ssi_speaker_dialer" t="Bozgorailuaren tekla erabili markatzeko"/>
+	<w_phrase n="wlang_action_ssi_connected" t="Konektatuta dago"/>
+	<w_phrase n="wlang_action_ssi_disconnected" t="Deskonektatuta dago"/>
+	<w_phrase n="wlang_advanced_ssi_overlap_dialing" t="Overlap markatua"/>
+	<w_phrase n="wlang_fkeys_ssi_speed" t="Markatze azkarra"/>
+	<w_phrase n="wlang_fkeys_ssi_none" t="Bat ere ez"/>
+	<w_phrase n="wlang_prefs_ssi_redundant_softkeys" t="Testuinguru tekla errepikakorrak"/>
+	<w_phrase n="wlang_advanced_ssi_web_logout" t="Auto saioa itxi (min)"/>
+	<w_phrase n="wlang_prefs_ringer9" t="9 Tinbrea"/>
+	<w_phrase n="wlang_prefs_ringer10" t="10 Tinbrea"/>
+	<w_phrase n="wlang_advanced_ssi_cancel_on_hold" t="Atxikitako deian baliogabetu tekla"/>
+	<w_phrase n="wlang_advanced_call_waiting_ringer" t="Tinbrea"/>
+	<w_phrase n="wlang_advanced_ssi_ntp_refresh" t="Freskatzeko denbora NTP (s)"/>
+	<w_phrase n="wlang_line_ssi_ring_after_delay" t="Jo (s) eta gero"/>
+	<w_phrase n="wlang_prefs_ssi_redirect_on_code" t="On kodea"/>
+	<w_phrase n="wlang_prefs_ssi_redirect_off_code" t="Off kodea"/>
+	<w_phrase n="wlang_prefs_redirection_always" t="Unconditional"/>
+	<w_phrase n="wlang_prefs_redirection_busy" t="When busy"/>
+	<w_phrase n="wlang_prefs_redirection_time" t="When no reply"/>
+	<w_phrase n="wlang_prefs_dnd" t="DND"/>
+	<w_phrase n="wlang_prefs_redirect_number" t="Forward to"/>
+	<w_phrase n="wlang_advanced_ssi_pnp_config" t="PnP konfigurazioa"/>
+	<w_phrase n="wlang_advanced_ssi_flood_tracing" t="SIP arrastoa honetarako: REGISTER/SUBSCRIBE/NOTIFY"/>
+	<w_phrase n="wlang_reboot_ssi_title" t="Berrabiatzen…"/>
+	<w_phrase n="wlang_text_reboot_info" t="Zure telefonoa laster berrabiatuko da. Izan pazientzia erabat berrabiatu arte. Pausaldi pantaila berriz ere pantailan agertuko da, eta telefonoa berriz irisgarria izango da, webgunearen bitartez, bukatu ondoren."/>
+	<w_phrase n="wlang_advanced_ssi_xml_notify" t="XML NOTIFY euskarria."/>
+	<w_phrase n="wlang_minibrowser_pref" t="Minibrowser"/>
+	<w_phrase n="wlang_advanced_ssi_enable_timer_support" t="Timer euskarria (RFC4028)"/>
+	<w_phrase n="wlang_prefs_dsnumbername" t="Zenbakia + Izena"/>
+	<w_phrase n="wlang_prefs_ssi_keyboard_lock_dp" t="Larrialdi zenbakiak"/>
+	<w_phrase n="wlang_prefs_alert_internal_text" t="Barne alertako testua"/>
+	<w_phrase n="wlang_prefs_ssi_alert_internal_sound" t="Barne alertako tinbrea"/>
+	<w_phrase n="wlang_prefs_alert_external_text" t="Kanpo alertako testua"/>
+	<w_phrase n="wlang_prefs_ssi_alert_external_sound" t="Kanpo alertako tinbrea"/>
+	<w_phrase n="wlang_prefs_alert_group_text" t="Taldearen alertako testua"/>
+	<w_phrase n="wlang_prefs_ssi_alert_group_sound" t="Taldearen alertako tinbrea"/>
+	<w_phrase n="wlang_prefs_alert_info_ringer" t="Alert-Info tinbrea"/>
+	<w_phrase n="wlang_prefs_ssi_scroll_outgoing" t="Nortasun aktiboaren scrolla"/>
+	<w_phrase n="wlang_advanced_tmz_USA2m7" t="-7 Estatu Batuak - MST ez DST "/>
+	<w_phrase n="wlang_prefs_ssi_show_local_line" t="Erakutsi nortasunaren aurkibidea"/>
+	<w_phrase n="wlang_advanced_ssi_pickup_indication" t="Adierazpen entzungarria Elkarriz Info hartzeko"/>
+	<w_phrase n="wlang_advanced_multicast" t="Difusio anitza"/>
+	<w_phrase n="wlang_advanced_ssi_multicast_listen" t="Multicast euskarria"/>
+	<w_phrase n="wlang_advanced_ssi_multicast_address" t="IP helbidea"/>
+	<w_phrase n="wlang_advanced_ssi_multicast_port" t="Portua"/>
+	<w_phrase n="wlang_language_name" t="Gaztelania"/>
+	<w_phrase n="wlang_advanced_qos" t="Zerbitzuaren kalitatea"/>
+	<w_phrase n="wlang_advanced_rtp" t="RTP/RTCP"/>
+	<w_phrase n="wlang_advanced_sip" t="SIP"/>
+	<w_phrase n="wlang_advtab_network" t="Sarea"/>
+	<w_phrase n="wlang_advtab_behavior" t="Portaera"/>
+	<w_phrase n="wlang_advtab_audio" t="Audioa"/>
+	<w_phrase n="wlang_advtab_sip" t="SIP/RTP"/>
+	<w_phrase n="wlang_advtab_update" t="Eguneratu"/>
+	<w_phrase n="wlang_advtab_security" t="QoS/Segurtasuna"/>
+	<w_phrase n="wlang_linetab_login" t="Sarbidea"/>
+	<w_phrase n="wlang_linetab_feat" t="Funtzionalitateak"/>
+	<w_phrase n="wlang_linetab_sip" t="SIP"/>
+	<w_phrase n="wlang_linetab_nat" t="NAT"/>
+	<w_phrase n="wlang_linetab_rtp" t="RTP"/>
+	<w_phrase n="wlang_line_ssi_server_type" t="Euskarriko zerbitzari mota"/>
+	<w_phrase n="wlang_line_broadsoft" t="Broadsoft"/>
+	<w_phrase n="wlang_line_sylantro" t="Sylantro"/>
+	<w_phrase n="wlang_line_pbxnsip" t="PBXnSIP"/>
+	<w_phrase n="wlang_line_default" t="Lehenetsia"/>
+	<w_phrase n="wlang_line_ssi_event_list_uri" t="URL Luzapenen monitorizazioa eta deien irudien zerrenda"/>
+	<w_phrase n="wlang_web_confirm_apply_set_change" t="Aldaketak aplikatu?"/>
+	<w_phrase n="wlang_line_ssi_presence_subscription" t="Kontaktuen zerrenda"/>
+	<w_phrase n="wlang_line_ssi_presence_buddy_list_uri" t="URI Kontaktuen zerrenda"/>
+	<w_phrase n="wlang_line_ssi_full_sdp_answer" t="SDP Full Erantzuna"/>
+	<w_phrase n="wlang_info_firmware_version" t="Firmwarearen bertsioa"/>
+	<w_phrase n="wlang_advanced_ssi_redirect_ringing" t="Allow Incoming Call Redirection Through Programmable Keys"/>
+	<w_phrase n="wlang_advanced_ssi_auto_redial" t="Berriz deitzea automatikoki okupatuta dagoenean"/>
+	<w_phrase n="wlang_advanced_ssi_auto_redial_value" t="Berriz deitu, (s) eta gero"/>
+	<w_phrase n="wlang_advanced_ssi_disable_blind_transfer" t="Transferentzia itsu desgaitzea (REFER)"/>
+	<w_phrase n="wlang_advanced_ssi_disable_deflection" t="Deflection desgaitzea (302 kodea)"/>
+	<w_phrase n="wlang_action_ssi_log_on" t="Hasi zaioa"/>
+	<w_phrase n="wlang_action_ssi_log_off" t="Saioa utzi"/>
+	<w_phrase n="wlang_prefs_ssi_show_call_status" t="Erakutsi Deien egoera"/>
+	<w_phrase n="wlang_action_ssi_reg_failed" t="Huts egindako erregistroa"/>
+	<w_phrase n="wlang_subscriptions_ssi_title" t="Harpidetzen egoera"/>
+	<w_phrase n="wlang_leftnav_subscriptions" t="Harpidetzak"/>
+	<w_phrase n="wlang_advanced_ssi_max_boot_delay" t="Abiatzeko gehieneko denbora (s)"/>
+	<w_phrase n="wlang_advanced_http_server" t="HTTP zerbitzaria"/>
+	<w_phrase n="wlang_advanced_http_client" t="HTTP bezeroa"/>
+	<w_phrase n="wlang_advanced_ssi_mailbox_active" t="Erabili Ahots postontzia soilik Nortasun aktiboan"/>
+	<w_phrase n="wlang_line_ssi_remove_all_bindings" t="Binding guztiak desegitea deserregistratzean"/>
+	<w_phrase n="wlang_line_ssi_include_listeners" t="Include Listeners in REGISTER"/>
+	<w_phrase n="wlang_vpn_ssi_vpn_on" t="VPN"/>
+	<w_phrase n="wlang_vpn_ssi_tarball_url" t="VPN Konfigurazio fitxategia deskonprimatuta"/>
+	<w_phrase n="wlang_ssi_l2tp_on" t="L2TP"/>
+	<w_phrase n="wlang_ssi_l2tp_tarball_url" t="Unzipped L2TP config tarball"/>
+	<w_phrase n="wlang_ssi_sbc_on" t="SBC"/>
+	<w_phrase n="wlang_ssi_sbc_prov_url" t="SBC config file URL"/>
+	<w_phrase n="wlang_advanced_ssi_idle_offhook" t="Return to Idle Screen on Off-hook"/>
+	<w_phrase n="wlang_prefs_ssi_enable_keyboard_lock" t="Teklatua blokeatzea ahalbidetzea"/>
+	<w_phrase n="wlang_advanced_ssi_vlan_port_tagging" t="VLAN trafikoaren Taggeo/Ez Taggeo Ethernet portuetan"/>
+	<w_phrase n="wlang_advanced_ssi_vlan_id" t="ID VLAN (1-4094)"/>
+	<w_phrase n="wlang_advanced_ssi_vlan_priority" t="Lehentasuna VLAN (0-7)"/>
+	<w_phrase n="wlang_advanced_vlan" t="VLAN"/>
+	<w_phrase n="wlang_line_failover_identity" t="Backup nortasuna"/>
+	<w_phrase n="wlang_fkeys_sidecar" t="Hedapen modulua"/>
+	<w_phrase n="wlang_usb_expansion_module" t="USB hedapen modulua"/>
+	<w_phrase n="wlang_sidecar_layout_lines" t="Linea eskema"/>
+	<w_phrase n="wlang_sidecar_layout_tiles" t="Lineen eskema"/>
+	<w_phrase n="wlang_line_ssi_record_dialed_calls" t="Egindako deiak biltegiratu"/>
+	<w_phrase n="wlang_line_ssi_record_received_calls" t="Jasotako deiak biltegiratu"/>
+	<w_phrase n="wlang_prefs_ssi_emergency_proxy" t="Irteerako proxya larrialdi zenbakietarako"/>
+	<w_phrase n="wlang_line_telepo" t="Telepo"/>
+	<w_phrase n="wlang_fkeys_ssi_button" t="Tekla"/>
+	<w_phrase n="wlang_advanced_ssi_retryafterfailedregister" t="Berriz saiatzeko tartea huts egin duten erregistroetarako (s)"/>
+	<w_phrase n="wlang_line_ssi_subscription_expiry" t="Iraungitzeko denbora SUBSCRIBE (s)"/>
+	<w_phrase n="wlang_line_metaswitch" t="MetaSwitch"/>
+	<w_phrase n="wlang_advanced_ssi_sendprack" t="Bidali PRACK"/>
+	<w_phrase n="wlang_watchdog" t="Watchdog"/>
+	<w_phrase n="wlang_advanced_ssi_rtp_keepalive" t="Ping RTP"/>
+	<w_phrase n="wlang_ldap_search_filter" t="LDAP Izen Iragazkia"/>
+	<w_phrase n="wlang_ldap_number_filter" t="LDAP zenbakien iragazkia"/>
+	<w_phrase n="wlang_ldap_name_attributes" t="LDAP izenaren atributuak"/>
+	<w_phrase n="wlang_ldap_number_attributes" t="LDAP zenbakiaren atributuak"/>
+	<w_phrase n="wlang_ldap_display_name" t="LDAP erakutsitako izena"/>
+	<w_phrase n="wlang_advanced_ssi_ldap_over_tls" t="LDAP TLSi dagokionez"/>
+	<w_phrase n="wlang_prefs_tsaustria" t="Austria"/>
+	<w_phrase n="wlang_prefs_tsfrance" t="Frantzia"/>
+	<w_phrase n="wlang_prefs_tsitaly" t="Italia"/>
+	<w_phrase n="wlang_prefs_tsnetherlands" t="Herbehereak"/>
+	<w_phrase n="wlang_prefs_tsnorway" t="Norvegia"/>
+	<w_phrase n="wlang_prefs_tsnewzealand" t="Zeelanda Berria"/>
+	<w_phrase n="wlang_prefs_tsspain" t="Espainia"/>
+	<w_phrase n="wlang_prefs_tsgreatbritain" t="Britainia Handia"/>
+	<w_phrase n="wlang_advanced_tmz_VENm4" t="-4 Venezuela (Caracas)"/>
+	<w_phrase n="wlang_advanced_tmz_NCLp11" t="+11 Kaledonia Berria (Nouméa)"/>
+	<w_phrase n="wlang_line_ssi_enable_hookflash" t="Hook Flash"/>
+	<w_phrase n="wlang_vpn_netcat_server" t="Netcat zerbitzaria (adibidez 10.0.1.2 5000)"/>
+	<w_phrase n="wlang_fkeys_ssi_presence" t="Presentzia"/>
+	<w_phrase n="wlang_fkeys_ssi_disp_code" t="Xedapen kodea"/>
+	<w_phrase n="wlang_prefs_custom_internal_alert_info" t="Alert-Info pertsonalizatua melodia integratuak erabiliz"/>
+	<w_phrase n="wlang_prefs_ca_ringer_text" t="Barne tinbrearen testua"/>
+	<w_phrase n="wlang_prefs_ssi_ca_ringer_file" t="Barne tinbrearen fitxategia"/>
+	<w_phrase n="wlang_line_nortel" t="Nortel"/>
+	<w_phrase n="wlang_action_ssi_hold" t="Deia atxiki"/>
+	<w_phrase n="wlang_action_ssi_unhold" t="Deia berreskuratu"/>
+	<w_phrase n="wlang_action_ssi_transfer" t="Deia transferitu"/>
+	<w_phrase n="wlang_action_ssi_blind_transfer" t="Transferentzia itsua"/>
+	<w_phrase n="wlang_action_ssi_attended_transfer" t="Transferentzia hartua"/>
+	<w_phrase n="wlang_action_ssi_longpress_url" t="Linea tekla luze sakatzea"/>
+	<w_phrase n="wlang_advanced_ssi_csta_control" t="CSTA bidezko kudeaketa ahalbidetu"/>
+	<w_phrase n="wlang_line_ssi_dtmf_info_sip_info_only" t="Soilik SIP INFO"/>
+	<w_phrase n="wlang_advanced_ssi_speaker_receive_call" t="Erabili Bozgorailu/Aurikular tekla deiak onartzeko"/>
+	<w_phrase n="wlang_prefs_ssi_global_missed_counter" t="Kontagailu globala dei galduetarako"/>
+	<w_phrase n="wlang_advanced_ssi_http_password_not_set" t="HTTP pasahitza ez da ezarri!"/>
+	<w_phrase n="wlang_text_login_failed_info1" t="Zenbait aldiz huts egin eta gero web interfazea segurtasunagatik blokeatu da."/>
+	<w_phrase n="wlang_text_login_failed_info2" t="Berriz ere eskuragarri egongo da minutu barru."/>
+	<w_phrase n="wlang_text_login_failed_info3" t="Ondoren sarbide okerrak egonez gero, web interfazea desblokeatzeko itxaron beharreko denbora bikoiztu egingo da."/>
+	<w_phrase n="wlang_text_login_failed_info4" t="Web sarbidea blokeatu egin da!"/>
+	<w_phrase n="wlang_login_failed_ssi_title" t="Sarbide okerra!"/>
+	<w_phrase n="wlang_web_confirm_logout" t="Web saioa utzi?"/>
+	<w_phrase n="wlang_advanced_logoutbutton" t="Saioa utzi"/>
+	<w_phrase n="wlang_line_ssi_savp" t="RTP/SAVP"/>
+	<w_phrase n="wlang_advanced_ssi_use_hidden_tags" t="Erabili hidden tags"/>
+	<w_phrase n="wlang_fkeys_ssi_blf" t="BLF"/>
+	<w_phrase n="wlang_advanced_ssi_show_history_info" t="Erakutsi History-Info"/>
+	<w_phrase n="wlang_security_warning_ssi_title" t="Segurtasun abisua!"/>
+	<w_phrase n="wlang_text_security_warning_info1" t="Zeuk edo urrutiko beste erabiltzaile batek telefono honetara eskaera igorri du HTTP POST egiaztatu gabe"/>
+	<w_phrase n="wlang_text_security_warning_info2" t="Eskaera hori baztertu egin da eta saioa itxi egin da."/>
+	<w_phrase n="wlang_text_security_warning_info3" t="Intefazera berriz ere sartzeko zure nortasuna egiaztatu behar duzu berriz ere."/>
+	<w_phrase n="wlang_security_advice" t="Segurtasun abisua"/>
+	<w_phrase n="wlang_security_settings_state" t="Security Settings State"/>
+	<w_phrase n="wlang_Recommended" t="Recommended"/>
+	<w_phrase n="wlang_Mandatory" t="Mandatory"/>
+	<w_phrase n="wlang_security_text_advice1" t="We strongly recommend that you secure the web interface in order to protect your phone against remote attacks. Therefore the HTTP User as well as the   Administrator Password should be changed from the default value. Changing   the HTTP Password is mandatory."/>
+	<w_phrase n="wlang_security_text_advice2" t="Horrez gain, web interfazea babestu egin behar da, hidden tag delakoak erabiliz, HTTP POST eskaerekin telefonoan aldaketak babesteko."/>
+	<w_phrase n="wlang_security_apply_button_ignore" t="Apply and ignore the warning until reboot."/>
+	<w_phrase n="wlang_security_apply_button_ignore_forever" t="Apply and ignore the warning forever."/>
+	<w_phrase n="wlang_security_ssi_title" t="Segurtasuna"/>
+	<w_phrase n="wlang_advanced_ssi_ignore_warning" t="Segurtasun abisuak ez hartu kontuan."/>
+	<w_phrase n="wlang_advanced_ssi_naptr_sip_uri" t="Erabili NAPTR hemen: URIs SIP"/>
+	<w_phrase n="wlang_line_ssi_optional" t="aukerakoa"/>
+	<w_phrase n="wlang_line_ssi_mandatory" t="nahitaezkoa"/>
+	<w_phrase n="wlang_prefs_backlight_dim" t="arindu"/>
+	<w_phrase n="wlang_advanced_ssi_show_diversion" t="Desbideratzea erakutsi"/>
+	<w_phrase n="wlang_advanced_ssi_offhook_dial_prompt" t="Dial Prompt on Off-hook"/>
+	<w_phrase n="wlang_fkeys_ssi_ivr" t="IVR"/>
+	<w_phrase n="wlang_info_uptime_info" t="Jardueraren denbora"/>
+	<w_phrase n="wlang_info_memfree_info" t="Memoria librea"/>
+	<w_phrase n="wlang_info_uboot_version_info" t="Abiaraztearen bertsioa"/>
+	<w_phrase n="wlang_line_ssi_authtag" t="SRTP Egiaztatze Etiketak"/>
+	<w_phrase n="wlang_line_ssi_aes32" t="AES-32"/>
+	<w_phrase n="wlang_line_ssi_aes80" t="AES-80"/>
+	<w_phrase n="wlang_prefs_ssi_show_ivr_digits" t="Show IVR Digits in Connected Call"/>
+	<w_phrase n="wlang_line_ssi_dynamic_payload" t="Payload G.726 Dinamikoa."/>
+	<w_phrase n="wlang_advanced_ssi_show" t="erakutsi"/>
+	<w_phrase n="wlang_fkeyname_retrieve" t="Ahots-postontzia"/>
+	<w_phrase n="wlang_fkeyname_dnd" t="DND"/>
+	<w_phrase n="wlang_fkeyname_menu" t="Ezarpenak"/>
+	<w_phrase n="wlang_fkeyname_exec_assist_config" t="Executive-Assistant Config"/>
+	<w_phrase n="wlang_fkeyname_exec_assist_callon_behalfof" t="Executive-Assistant Behalf Of"/>
+	<w_phrase n="wlang_fkeyname_transfer" t="Transferentzia"/>
+	<w_phrase n="wlang_fkeyname_hold" t="Atxiki"/>
+	<w_phrase n="wlang_fkeyname_missed" t="Dei galduak"/>
+	<w_phrase n="wlang_fkeyname_accepted" t="Onartutako deiak"/>
+	<w_phrase n="wlang_fkeyname_dailed" t="Markatutako deiak"/>
+	<w_phrase n="wlang_advanced_tmz_USA2m10" t="-10 Estatu Batuak - Alaska-Aleutian"/>
+	<w_phrase n="wlang_fkeyname_call_lists" t="Deien historia"/>
+	<w_phrase n="wlang_fkeyname_support" t="Laguntza"/>
+	<w_phrase n="wlang_fkeyname_headset" t="Aurikularrak"/>
+	<w_phrase n="wlang_fkeyname_presence" t="Presentzia"/>
+	<w_phrase n="wlang_fkeyname_buddies" t="Kontaktuak"/>
+	<w_phrase n="wlang_fkeyname_redial" t="Berriro markatu"/>
+	<w_phrase n="wlang_fkeyname_instant_redial" t="Berriz deitu berehala"/>
+	<w_phrase n="wlang_fkeyname_denyall" t="Deitzailea blokeatu"/>
+	<w_phrase n="wlang_fkeyname_contactpool" t="Maila"/>
+	<w_phrase n="wlang_fkeyname_addr" t="Direktorioa"/>
+	<w_phrase n="wlang_ocip_prefs" t="OCI-P (Broadsoft)"/>
+	<w_phrase n="wlang_advanced_dfks" t="Sinkronizazioa Device Feature Key"/>
+	<w_phrase n="wlang_line_ssi_publish_presence_bootup" t="Presentzia argitaratu abiatzean"/>
+	<w_phrase n="wlang_fkeyname_record" t="Grabatu"/>
+	<w_phrase n="wlang_fkeyname_conference" t="Konferentzia"/>
+	<w_phrase n="wlang_fkeyname_id_next" t="Hurrengo nortasuna"/>
+	<w_phrase n="wlang_fkeyname_id_prev" t="Aurreko nortasuna"/>
+	<w_phrase n="wlang_fkeyname_mobility" t="Grabatu/Mugikortasuna"/>
+	<w_phrase n="wlang_ocs_outbound_proxy" t="Irteerako proxya"/>
+	<w_phrase n="wlang_prefs_ssi_advertisement" t="Iragarkiak"/>
+	<w_phrase n="wlang_fkeyname_monitored_calls" t="Deiak monitorizatu"/>
+	<w_phrase n="wlang_fkeys_ssi_transfer" t="Transferentzia"/>
+	<w_phrase n="wlang_fkeys_ssi_redirect" t="Dei desbideratzea"/>
+	<w_phrase n="wlang_fkeys_ssi_auto_answer" t="Auto erantzuna"/>
+	<w_phrase n="wlang_wifi_auth_mode" t="Security"/>
+	<w_phrase n="wlang_wifi_scanning" t="Scanning"/>
+	<w_phrase n="wlang_wifi_wpa2" t="WPA2"/>
+	<w_phrase n="wlang_wifi_wpa" t="WPA"/>
+	<w_phrase n="wlang_wifi_wep" t="WEP"/>
+	<w_phrase n="wlang_wifi_open" t="Ireki"/>
+	<w_phrase n="wlang_wifi_wpapsk" t="Password"/>
+	<w_phrase n="wlang_wifi_wpa_encryptype" t="Enkriptazio mota"/>
+	<w_phrase n="wlang_wifi_tkip" t="TKIP"/>
+	<w_phrase n="wlang_wifi_aes" t="AES"/>
+	<w_phrase n="wlang_wifi_essid" t="Network Name"/>
+	<w_phrase n="wlang_advanced_wifi" t="WLAN"/>
+	<w_phrase n="wlang_bt_enabled" t="Bluetooth Enabled"/>
+	<w_phrase n="wlang_advanced_tr069" t="TR-069"/>
+	<w_phrase n="wlang_wifi_wep_key1" t="Password"/>
+	<w_phrase n="wlang_line_asterisk" t="Asterisk"/>
+	<w_phrase n="wlang_line_ccm" t="CCM"/>
+	<w_phrase n="wlang_advanced_ssi_typeanswering" t="Intercom Answering for Alert Info"/>
+	<w_phrase n="wlang_advanced_ssi_call_info_audio_device" t="Intercom Answering for Call Info"/>
+	<w_phrase n="wlang_advanced_ssi_tahandsfree" t="Esku libreak"/>
+	<w_phrase n="wlang_advanced_ssi_tahandset" t="Eskukoa"/>
+	<w_phrase n="wlang_advanced_ssi_taheadset" t="Aurikularrak"/>
+	<w_phrase n="wlang_advanced_ssi_taactivedevice" t="Gailu aktiboa"/>
+	<w_phrase n="wlang_line_ssi_additional_supported_headers" t="Euskarriko goiburu gehigarriak"/>
+	<w_phrase n="wlang_prefs_ssi_dim_timer" t="Ilundu (s) eta gero"/>
+	<w_phrase n="wlang_prefs_character_settings" t="Karaktereen konfigurazioa"/>
+	<w_phrase n="wlang_fkeyname_mute" t="Isilarazi"/>
+	<w_phrase n="wlang_advanced_ssi_empty_tls_client_cert" t="Bezero hutsaren ziurtagiria"/>
+	<w_phrase n="wlang_advanced_vq_report_collector" t="Voice Quality Report Collector"/>
+	<w_phrase n="wlang_fkeyname_reboot" t="Berrabiarazi"/>
+	<w_phrase n="wlang_fkeyname_logoff_all" t="Denak utzi"/>
+	<w_phrase n="wlang_fkeyname_auto_answer" t="Auto erantzuna"/>
+	<w_phrase n="wlang_fkeyname_reset" t="Reset egin"/>
+	<w_phrase n="wlang_prefs_keyboard_lock_timeout" t="Teklatua blokeatu (s) igaro eta gero"/>
+	<w_phrase n="wlang_logged_out_info" t="Orain zure telefonoaren saioa utzi duzu.  Berriz ere saioa hasteko egin klik saioa hasteko botoian."/>
+	<w_phrase n="wlang_logged_out_title" t="Saioa utzi"/>
+	<w_phrase n="wlang_advanced_loginbutton" t="Saioa ireki"/>
+	<w_phrase n="wlang_advanced_ssi_sip_tracing" t="SIP arrastoa"/>
+	<w_phrase n="wlang_advanced_ssi_http_tracing" t="HTTP arrastoa"/>
+	<w_phrase n="wlang_line_ssi_g726_packing_order" t="Byte G.726 ordena"/>
+	<w_phrase n="wlang_line_ssi_rfc3551" t="RFC3551"/>
+	<w_phrase n="wlang_line_ssi_aal2" t="AAL2"/>
+	<w_phrase n="wlang_adr_first_name" t="Izena"/>
+	<w_phrase n="wlang_adr_last_name" t="Abizena"/>
+	<w_phrase n="wlang_adr_group" t="Taldea"/>
+	<w_phrase n="wlang_adr_title" t="Titulua"/>
+	<w_phrase n="wlang_adr_organization" t="Enpresa"/>
+	<w_phrase n="wlang_adr_email" t="Posta elektronikoa"/>
+	<w_phrase n="wlang_adr_note" t="Oharra"/>
+	<w_phrase n="wlang_adr_favorite" t="Gogokoena"/>
+	<w_phrase n="wlang_adr_work" t="Lana"/>
+	<w_phrase n="wlang_adr_addsub_button" t="Gehitu sub."/>
+	<w_phrase n="wlang_adr_change_button" t="Aldatu"/>
+	<w_phrase n="wlang_advanced_goto_monitor_state_on_line_activity" t="Call-Monitorrera joan jarduera dagoenean"/>
+	<w_phrase n="wlang_adr_skip_first_line" t="Lehen lerroa ez hartu kontuan"/>
+	<w_phrase n="wlang_advanced_prefer_saved_over_received_photo" t="Tokiko argazki gogokoenak"/>
+	<w_phrase n="wlang_adr_photo" t="Argazkia"/>
+	<w_phrase n="wlang_line_use_photo_from_tbook" t="Lortu agendatik"/>
+	<w_phrase n="wlang_line_teles" t="Teles"/>
+	<w_phrase n="wlang_fkeys_ssi_replacement_label_header" t="Etiketa"/>
+	<w_phrase n="wlang_fkeys_ssi_short_label" t="Etiketa laburra"/>
+	<w_phrase n="wlang_fkeys_ssi_full_label" t="Etiketa osatua"/>
+	<w_phrase n="wlang_fkeys_ssi_short_label_mode" t="Etiketa laburraren modua"/>
+	<w_phrase n="wlang_fkeyname_favorites" t="Gogokoenak"/>
+	<w_phrase n="wlang_advanced_load_param_map" t="TR-069 parametroak eskuz kargatu"/>
+	<w_phrase n="wlang_line_default_contact_uri" t="Harremanetarako zenbaki lehenetsia"/>
+	<w_phrase n="wlang_contact_none" t="Bat ere ez"/>
+	<w_phrase n="wlang_contact_mobile" t="Sakelakoa"/>
+	<w_phrase n="wlang_contact_home" t="Etxea"/>
+	<w_phrase n="wlang_contact_main" t="Nagusia"/>
+	<w_phrase n="wlang_advanced_ssi_suppress_ringing_during_hold" t="Suppress Ringtone During Hold"/>
+	<w_phrase n="wlang_advanced_ssi_play_music_during_hold" t="Musika jarri itxaronaldian"/>
+	<w_phrase n="wlang_advanced_ssi_offer_outbound" t="Irteera erabili"/>
+	<w_phrase n="wlang_advanced_tmz_UAEp4" t="+4 Arabiar Emirerri Batuak (Dubai)"/>
+	<w_phrase n="wlang_prefs_ssi_dialnumber_us_format" t="Zenbaki amerikarrek formatua"/>
+	<w_phrase n="wlang_advanced_ssi_transferonhookstarcode" t="* kodea deien irudiari dagokionez"/>
+	<w_phrase n="wlang_advanced_load_dialplan" t="XML Deien plana eskuz kargatu"/>
+	<w_phrase n="wlang_jb" t="JB Hobetua"/>
+	<w_phrase n="wlang_jb_adaptive" t="Playout Moldagarria"/>
+	<w_phrase n="wlang_jb_adjust_silence" t="Egokitu isilunean zehar"/>
+	<w_phrase n="wlang_jb_adjust_immediately" t="Egokitu berehala"/>
+	<w_phrase n="wlang_jb_max" t="JB_Geh."/>
+	<w_phrase n="wlang_jb_min" t="JB_Gut."/>
+	<w_phrase n="wlang_jb_average" t="JB_Average"/>
+	<w_phrase n="wlang_adr_nrtype_sip" t="sip"/>
+	<w_phrase n="wlang_adr_nrtype_business" t="negozioak"/>
+	<w_phrase n="wlang_adr_nrtype_landline" t="Lurreko linea"/>
+	<w_phrase n="wlang_adr_nrtype_extension" t="luzapena"/>
+	<w_phrase n="wlang_adr_number_type" t="Zenbaki mota"/>
+	<w_phrase n="wlang_adr_nickname" t="Ezizena"/>
+	<w_phrase n="wlang_fkeys_ssi_multicast" t="Difusio anitza"/>
+	<w_phrase n="wlang_fkeys_ssi_xml" t="XML definizioa"/>
+	<w_phrase n="wlang_fkeys_ssi_conference_server" t="Konferentzia"/>
+	<w_phrase n="wlang_action_ssi_received_attended_transfer" t="SIP INVITE Jasota"/>
+	<w_phrase n="wlang_line_ssi_mediatransportoffer" t="Baliabideen garraioaren ofrenda"/>
+	<w_phrase n="wlang_line_ssi_mediatransportoffersetup" t="Baliabideen garraioaren ofrenda konfigurazioa"/>
+	<w_phrase n="wlang_line_ssi_mto_active" t="aktiboa"/>
+	<w_phrase n="wlang_line_ssi_mto_passive" t="pasiboa"/>
+	<w_phrase n="wlang_line_ssi_mto_any" t="edozein"/>
+	<w_phrase n="wlang_line_ssi_hold_inactive" t="Hold bidali ez aktibo modura"/>
+	<w_phrase n="wlang_prefs_ssi_upper_chars_0" t="Uppercase Character Sequence Key 0"/>
+	<w_phrase n="wlang_prefs_ssi_upper_chars_1" t="Uppercase Character Sequence Key 1"/>
+	<w_phrase n="wlang_prefs_ssi_upper_chars_2" t="Uppercase Character Sequence Key 2"/>
+	<w_phrase n="wlang_prefs_ssi_upper_chars_3" t="Uppercase Character Sequence Key 3"/>
+	<w_phrase n="wlang_prefs_ssi_upper_chars_4" t="Uppercase Character Sequence Key 4"/>
+	<w_phrase n="wlang_prefs_ssi_upper_chars_5" t="Uppercase Character Sequence Key 5"/>
+	<w_phrase n="wlang_prefs_ssi_upper_chars_6" t="Uppercase Character Sequence Key 6"/>
+	<w_phrase n="wlang_prefs_ssi_upper_chars_7" t="Uppercase Character Sequence Key 7"/>
+	<w_phrase n="wlang_prefs_ssi_upper_chars_8" t="Uppercase Character Sequence Key 8"/>
+	<w_phrase n="wlang_prefs_ssi_upper_chars_9" t="Uppercase Character Sequence Key 9"/>
+	<w_phrase n="wlang_prefs_ssi_lower_chars_0" t="Lowercase Character Sequence Key 0"/>
+	<w_phrase n="wlang_prefs_ssi_lower_chars_1" t="Lowercase Character Sequence Key 1"/>
+	<w_phrase n="wlang_prefs_ssi_lower_chars_2" t="Lowercase Character Sequence Key 2"/>
+	<w_phrase n="wlang_prefs_ssi_lower_chars_3" t="Lowercase Character Sequence Key 3"/>
+	<w_phrase n="wlang_prefs_ssi_lower_chars_4" t="Lowercase Character Sequence Key 4"/>
+	<w_phrase n="wlang_prefs_ssi_lower_chars_5" t="Lowercase Character Sequence Key 5"/>
+	<w_phrase n="wlang_prefs_ssi_lower_chars_6" t="Lowercase Character Sequence Key 6"/>
+	<w_phrase n="wlang_prefs_ssi_lower_chars_7" t="Lowercase Character Sequence Key 7"/>
+	<w_phrase n="wlang_prefs_ssi_lower_chars_8" t="Lowercase Character Sequence Key 8"/>
+	<w_phrase n="wlang_prefs_ssi_lower_chars_9" t="Lowercase Character Sequence Key 9"/>
+	<w_phrase n="wlang_line_ssi_subscription_expiry_after_failed" t="Harpidetzak huts egin du berriz saiatzeko denbora (s)"/>
+	<w_phrase n="wlang_advanced_ssi_transferonhooknonpots" t="Independent Transfer on On-hook"/>
+	<w_phrase n="wlang_advanced_ssi_check_sdp_version" t="SDPren bertsioa egiaztatu"/>
+	<w_phrase n="wlang_prefs_ssi_show_clock" t="Erlojua erakutsi"/>
+	<w_phrase n="wlang_ldap_perform_initial_query" t="Hasierako kontsulta"/>
+	<w_phrase n="wlang_cert_tab_unknown_certs" t="Ziurtagiri ezezagunak"/>
+	<w_phrase n="wlang_cert_tab_tlsdsk_certs" t="TLS DSK"/>
+	<w_phrase n="wlang_cert_add_trusted_cert" t="Gaineratu ziurtagiri pertsonalizatua (DER formatua)"/>
+	<w_phrase n="wlang_tls_server_authentication_notification" t="Telefonoek ez dute lehentasunez zerbitzariaren konexio segururik baliozkotzen (TLS). Konexio horiek zaurgarriak izan daitezke “bitarteko gizakiaren” erasoen aurrean. Funtzionalitate hau gaitu egin beharko duzu; kontuan hartu segurtasunari lotutako emakideetatik factory reset batekin baino ezingo duzula desgaitu. Kontsultatu service.snom.com informazio gehiago izateko."/>
+	<w_phrase n="wlang_tls_server_authentication_title" t="Zerbitzariaren TLS egiaztatzea"/>
+	<w_phrase n="wlang_tls_server_authentication_activate" t="Aktibatu"/>
+	<w_phrase n="wlang_read_more" t="Gehiago irakurri"/>
+	<w_phrase n="wlang_advanced_1000full" t="Gigabit Full Duplex"/>
+	<w_phrase n="wlang_advanced_1000half" t="Gigabit Half Duplex"/>
+	<w_phrase n="wlang_advanced_rtcp_xr" t="RTCP-XR txostenen formatua"/>
+	<w_phrase n="wlang_dialplan_count_failed_match_groups" t="Talde guztiak zenbatu Deien Planean."/>
+	<w_phrase n="wlang_advanced_ssi_allow_rtp_on_mute" t="RTP isiltasun paketeak bidali mututzean"/>
+	<w_phrase n="wlang_line_ssi_is_voice_identity" t="Nortasunak deiak jaso ditzake"/>
+	<w_phrase n="wlang_line_ssi_hide_identity" t="Nortasun ezkutua"/>
+	<w_phrase n="wlang_fkeyname_status_messages" t="Informazioa"/>
+	<w_phrase n="wlang_advanced_ssi_min_pin_length" t="PINaren gutxieneko luzera"/>
+	<w_phrase n="wlang_advanced_ssi_max_pin_retry" t="PINaren gehieneko saiakerak"/>
+	<w_phrase n="wlang_line_ssi_allow_inc_dialog_subscribe" t="Luzapenen sarrera monitorizazioa baimendu"/>
+	<w_phrase n="wlang_prefs_scroll_text_interval" t="Scroll pausuen tartea"/>
+	<w_phrase n="wlang_prefs_scroll_text_step_count" t="Scroll pausuen tartea"/>
+	<w_phrase n="wlang_prefs_scroll_text_wait_multiplier" t="Scroll pausuen tartea"/>
+	<w_phrase n="wlang_apply_button" t="Aplikatu"/>
+	<w_phrase n="wlang_unsaved_settings" t="Aukera batzuk oraindik ez dira modu iraunkorrean biltegiratu."/>
+	<w_phrase n="wlang_view_changes_button" t="Aldaketak ikusi"/>
+	<w_phrase n="wlang_changed_dialplan_msg" t="XML Deien plana aldatu egin da."/>
+	<w_phrase n="wlang_changed_settings_header" t="Hurrengo aukerak aldatu egin dira."/>
+	<w_phrase n="wlang_no_changed_settings_msg" t="Aldaketa guztiak biltegiratuta."/>
+	<w_phrase n="wlang_line_ssi_extension_monitoring_group" t="Luzapenen taldearen monitorizazioaren IDa"/>
+	<w_phrase n="wlang_soundcard_event_map" t="Audio parametroak"/>
+	<w_phrase n="wlang_license_info" t="Zure telefonoa aurretiaz instalatutako lizentzia batekin bidaltzen da. Lizentzia berri bat instalatzea posible da, gehitutako funtzionalitateak gaitzeko lizentziak eskuz kargatzeko aukera baliatuz, edo jatorrizkoa ez bada kontuan hartu edo akatsen bat badauka. Lizentziak ez badu balio, ez badator bat telefonoaren MACarekin, ez da kontuan hartuko, eta gaur egungo lizentziari eutsiko zaio."/>
+	<w_phrase n="wlang_advanced_ssi_restrict_uri_queries" t="URI eskaerak murriztea"/>
+	<w_phrase n="wlang_advanced_ssi_release_xfer_on" t="Askatu transferitutako helmugan"/>
+	<w_phrase n="wlang_advanced_ssi_retrieve_xfer_on" t="Berreskuratu transferitutako helmugan"/>
+	<w_phrase n="wlang_fkeyname_hold_private" t="Atxiki pribatua"/>
+	<w_phrase n="wlang_fkey_contact_list_buddy" t="BLF (zerbitzaria)"/>
+	<w_phrase n="wlang_advanced_ssi_allow_sip_settings" t="Ahalbidetu SIP Konfigurazioa"/>
+	<w_phrase n="wlang_prefs_tsczech" t="Txekiera"/>
+	<w_phrase n="wlang_advanced_ssi_dhcp_options_on_ip_aquire" t="DHCPrekin aukerak=on"/>
+	<w_phrase n="wlang_advanced_ssi_dhcp_options_on_inform" t="DHCPrekin aukerak=off"/>
+	<w_phrase n="wlang_advanced_ssi_headset_rings_once" t="Aurikularrak soilik behin joko du"/>
+	<w_phrase n="wlang_F_ACD" t="ACD"/>
+	<w_phrase n="wlang_disabled" t="desaktibatuta"/>
+	<w_phrase n="wlang_unknown" t="ezezaguna"/>
+	<w_phrase n="wlang_sysinfo_ssi_status" t="Egoera"/>
+	<w_phrase n="wlang_sysinfo_ssi_paired_with" t="Honekin egin du bikotea"/>
+	<w_phrase n="wlang_sysinfo_ssi_vision_status" t="Konexioaren egoera"/>
+	<w_phrase n="wlang_line_snomone" t="snomONE"/>
+	<w_phrase n="wlang_line_sutus" t="SUTUS BC"/>
+	<w_phrase n="wlang_prefs_redirection_fwd_always" t="Call Forwarding Unconditional (CFU)"/>
+	<w_phrase n="wlang_prefs_redirection_fwd_busy" t="Call Forwarding Busy (CFB)"/>
+	<w_phrase n="wlang_prefs_redirection_fwd_time" t="Call Forwarding No Reply (CFNR)"/>
+	<w_phrase n="wlang_line_server_managed" t="Zerbitzariak kudeatua"/>
+	<w_phrase n="wlang_fkeys_ssi_starcode" t="Kodea *"/>
+	<w_phrase n="wlang_prio_asserted" t="Lehentasuna barne"/>
+	<w_phrase n="wlang_replacement_dialp" t="XML plantilak aldatu egin dira"/>
+	<w_phrase n="wlang_adr_action_url" t="Action URL"/>
+	<w_phrase n="wlang_sip_force_sendrecv_no_sdp" t="Behartu sendrecv hemen: INVITE, SDPrik gabe"/>
+	<w_phrase n="wlang_advanced_ssi_dnsserver1_v6" t="DNS 1 zerbitzaria (IPv6)"/>
+	<w_phrase n="wlang_advanced_ssi_dnsserver2_v6" t="DNS 2 zerbitzaria (IPv6)"/>
+	<w_phrase n="wlang_advanced_ssi_dnsserver3_v6" t="DNS 3 zerbitzaria (IPv6)"/>
+	<w_phrase n="wlang_advanced_ssi_dnsserver4_v6" t="DNS 4 zerbitzaria (IPv6)"/>
+	<w_phrase n="wlang_advanced_ssi_ntptimeserver_v6" t="NTP zerbitzaria (IPv6)"/>
+	<w_phrase n="wlang_info_ipaddress_v6" t="IPv6 helbidea"/>
+	<w_phrase n="wlang_advanced_ssi_domain_v6" t="(IPv6) domeinua"/>
+	<w_phrase n="wlang_advanced_ssi_ipaddress_v6" t="IPv6 helbidea"/>
+	<w_phrase n="wlang_advanced_ssi_ipv6_over_ipv4" t="IPv6 Gogokoena"/>
+	<w_phrase n="wlang_advanced_ssi_dhcp_v6" t="DHCP (IPv6)"/>
+	<w_phrase n="wlang_advanced_ssi_dhcp_v6_autoconf" t="Autokonfigurazioa"/>
+	<w_phrase n="wlang_advanced_ssi_ipv6" t="IPv6"/>
+	<w_phrase n="wlang_advanced_ssi_more_control" t="Kontrol gehiago"/>
+	<w_phrase n="wlang_cert_tab_8021x_certs" t="802.1X ziurtagiriak"/>
+	<w_phrase n="wlang_cert_add_8021x_cert" t="802.1X ziurtagiria gaineratu (TAR fitxategia)"/>
+	<w_phrase n="wlang_cert_8021x_config" t="802.1X konfigurazioa"/>
+	<w_phrase n="wlang_ieee8021x_eap_auth_method_choice" t="IEEE 802.1X Authentication"/>
+	<w_phrase n="wlang_ieee8021x_eap_auth_method_choice_eap_md5" t="EAP Credentials"/>
+	<w_phrase n="wlang_ieee8021x_eap_auth_method_choice_eap_tls" t="EAP Certificate"/>
+	<w_phrase n="wlang_usb_storage_text" t="USB biltegiratzea"/>
+	<w_phrase n="wlang_usb_storage_allow_swupdate_text" t="Firmware eguneratzea baimentzea"/>
+	<w_phrase n="wlang_usb_storage_allow_syslog_text" t="Syslog arrastoak baimentzea"/>
+	<w_phrase n="wlang_usb_storage_allow_siptrace_text" t="SIP arrastoa baimentzea"/>
+	<w_phrase n="wlang_usb_storage_allow_httptrace_text" t="HTTP arrastoa baimentzea"/>
+	<w_phrase n="wlang_usb_storage_allow_pcap_text" t="PCAP arrastoa baimentzea"/>
+	<w_phrase n="wlang_usb_storage_passphrase_text" t="AES Pasahitza"/>
+	<w_phrase n="wlang_check_cseq_dlginfo_notify" t="CSeq egiaztatu hemen: NOTIFY Dlg Info"/>
+	<w_phrase n="wlang_line_xsi_server" t="XSI zerbitzaria"/>
+	<w_phrase n="wlang_line_xsi_user" t="XSI erabiltzailea"/>
+	<w_phrase n="wlang_line_xsi_password" t="XSI Pasahitza"/>
+	<w_phrase n="wlang_line_xsi_retry_timer" t="Berriz saiatzea tenporizadorea XSI (s)"/>
+	<w_phrase n="wlang_line_xsi_events" t="Ekitaldiak XSI"/>
+	<w_phrase n="wlang_line_xsi_polling" t="Kontsulta tartea XSI (s)"/>
+	<w_phrase n="wlang_line_tbook_download_interval" t="Agendaren deskarga tartea (s)"/>
+	<w_phrase n="wlang_line_xsi_conf_updating" t="Konferentzia eguneratzeko tartea XSI (s)"/>
+	<w_phrase n="wlang_line_xsi_anywhere" t="Edozein leku"/>
+	<w_phrase n="wlang_line_server_directories_search" t="Direktorio zerbitzaria (Bilaketa)"/>
+	<w_phrase n="wlang_line_server_directories_download" t="Direktorio zerbitzaria (Deskarga)"/>
+	<w_phrase n="wlang_line_blf_park_pick_up_code" t="BLF Baztertutako deien irudiaren kodea"/>
+	<w_phrase n="wlang_line_blf_directed_call_pickup_code" t="BLF Zuzeneko deien irudiaren kodea"/>
+	<w_phrase n="wlang_line_xsi_visual_voicemail" t="Ahots postontzi bisuala"/>
+	<w_phrase n="wlang_line_xsi_callcenter_list" t="Call Center zerrenda"/>
+	<w_phrase n="wlang_line_xmpp_jid" t="ID XMPP"/>
+	<w_phrase n="wlang_line_xmpp_password" t="XMPP pasahitza"/>
+	<w_phrase n="wlang_fkey_xmpp_presence" t="Kontaktuak (XMPP)"/>
+	<w_phrase n="wlang_F_STARCODE" t="Kodea *"/>
+	<w_phrase n="wlang_line_conference_server" t="Konferentzien zerbitzaria"/>
+	<w_phrase n="wlang_line_call_logs" t="Deien erregistroak"/>
+	<w_phrase n="wlang_line_ssi_local" t="Tokikoa"/>
+	<w_phrase n="wlang_line_tbook_download" t="Agendaren deskarga"/>
+	<w_phrase n="wlang_line_broadsoft_features" t="Broadsoft funtzionalitateak"/>
+	<w_phrase n="wlang_number_sign_encoding" t="Zenbakien kodetzea"/>
+	<w_phrase n="wlang_fkeyname_label_page_prev" t="Etiketak atzera"/>
+	<w_phrase n="wlang_fkeyname_label_page_next" t="Etiketak aurrera"/>
+	<w_phrase n="wlang_fkeyname_smartlabel_page_prev" t="Aurreko orria"/>
+	<w_phrase n="wlang_fkeyname_smartlabel_page_next" t="Hurrengo orr."/>
+	<w_phrase n="wlang_first_page" t="First Page"/>
+	<w_phrase n="wlang_last_page" t="Last Page"/>
+	<w_phrase n="wlang_fkeyname_alternate_mode" t="Txandakatu"/>
+	<w_phrase n="wlang_monitor_notify_for_subscription_refresh" t="Monitorizazioa jakinarazi honetarako: Subscriptions"/>
+	<w_phrase n="wlang_fkey_page_text" t="Orria"/>
+	<w_phrase n="wlang_prefs_label_font_size" t="Etiketaren iturriaren tamaina"/>
+	<w_phrase n="wlang_prefs_context_key_font_size" t="Context Key Label Font Size"/>
+	<w_phrase n="wlang_prefs_label_scroll_timeout" t="1 etiketen orrira itzuli (s) eta gero"/>
+	<w_phrase n="wlang_prefs_ssi_large_edit_font" t="Iturri luzearen edizioa"/>
+	<w_phrase n="wlang_prefs_custom_bg_image_url" t="URL Mahai gainekoaren atzealde pertsonalizatua"/>
+	<w_phrase n="wlang_prefs_custom_images" t="Irudi pertsonalizatua"/>
+	<w_phrase n="wlang_prefs_custom_images_Light" t="Theme Light Images"/>
+	<w_phrase n="wlang_prefs_custom_images_Dark" t="Theme Dark Images"/>
+	<w_phrase n="wlang_prefs_custom_images_Colorful" t="Theme Colorful Images"/>
+	<w_phrase n="wlang_prefs_custom_images_Industrial" t="Theme Industrial Images"/>
+	<w_phrase n="wlang_prefs_custom_images_Contrast" t="Theme Contrast Images"/>
+	<w_phrase n="wlang_prefs_fkey_icons" t="Fkey"/>
+	<w_phrase n="wlang_prefs_call_icons" t="Call"/>
+	<w_phrase n="wlang_prefs_call_overlay_icons" t="Call Overlay"/>
+	<w_phrase n="wlang_prefs_circle_overlay_icons" t="Circle Overlay"/>
+	<w_phrase n="wlang_prefs_identity_state_icons" t="Identity State"/>
+	<w_phrase n="wlang_prefs_contact_state_icons" t="Contact State"/>
+	<w_phrase n="wlang_prefs_contact_state_overlay_icons" t="Contact State Overlay"/>
+	<w_phrase n="wlang_prefs_contact_type_icons" t="Contact Type"/>
+	<w_phrase n="wlang_prefs_icon_type_icons" t="Icon Type"/>
+	<w_phrase n="wlang_prefs_titlebar_icons" t="Titlebar"/>
+	<w_phrase n="wlang_prefs_error_icons" t="Error"/>
+	<w_phrase n="wlang_prefs_settings_window_icons" t="Settings Window"/>
+	<w_phrase n="wlang_prefs_system_icons" t="Sistema"/>
+	<w_phrase n="wlang_prefs_other_icons" t="Other"/>
+	<w_phrase n="wlang_prefs_background_icons" t="Background"/>
+	<w_phrase n="wlang_prefs_extra_icons" t="Extra"/>
+	<w_phrase n="wlang_prefs_upload" t="Kargatu"/>
+	<w_phrase n="wlang_accept_event_talk_without_sdp" t="Onartu Even Talk, SDP gabe"/>
+	<w_phrase n="wlang_fkeyname_snom" t="snom/Cloud"/>
+	<w_phrase n="wlang_prefs_ssi_sort_server_dir_result_by_last_name" t="Agendako emaitzak abizenen arabera ordenatu"/>
+	<w_phrase n="wlang_directory_display_order" t="Agenda erakustean ordenatu"/>
+	<w_phrase n="wlang_display_order_first_name_last_name" t="Izena, Abizenak"/>
+	<w_phrase n="wlang_display_order_last_name_first_name" t="Abizenak, Izena"/>
+	<w_phrase n="wlang_prefs_uxm_line_font_size" t="UXM iturriaren tamaina (linea txantiloia)"/>
+	<w_phrase n="wlang_prefs_label_text_alignment" t="Bigarren mailako pantailaren testuaren lerrokadura"/>
+	<w_phrase n="wlang_prefs_left" t="Ezkerra"/>
+	<w_phrase n="wlang_prefs_right" t="Eskuina"/>
+	<w_phrase n="wlang_prefs_center" t="Erdian"/>
+	<w_phrase n="wlang_prefs_alternate" t="Txandakatzen"/>
+	<w_phrase n="wlang_prefs_uxm_tile_font_size" t="UXM iturriaren tamaina (Plantilla Tile)"/>
+	<w_phrase n="wlang_line_ssi_initial_rtp_keep_alives" t="Hasierako pings kopurua RTP portuan"/>
+	<w_phrase n="wlang_line_msw_directory_number" t="Agenda zenbakia"/>
+	<w_phrase n="wlang_line_msw_password" t="Pasahitza"/>
+	<w_phrase n="wlang_line_msw_web_url" t="URL Web"/>
+	<w_phrase n="wlang_line_msw_services" t="Metaswitch zerbitzuak"/>
+	<w_phrase n="wlang_line_ssi_server" t="Zerbitzaria"/>
+	<w_phrase n="wlang_cert_tab_custom_certs" t="Ziurtagiri pertsonalizatuak"/>
+	<w_phrase n="wlang_cert_tab_preinstalled_certs" t="Ziurtagiri aurreinstalatuak"/>
+	<w_phrase n="wlang_advanced_ssi_http_trace_size" t="HTTP arrastoen tamaina (mezu kopurua)"/>
+	<w_phrase n="wlang_advanced_ssi_http_body_trace_size" t="HDDP gorputza tamaina honetara moztu (byte)"/>
+	<w_phrase n="wlang_advanced_ssi_sip_trace_size" t="SIP arrastoaren tamaina (mezu kopurua)"/>
+	<w_phrase n="wlang_advanced_ssi_sip_body_trace_size" t="SIP gorputza tamaina honetara moztu (byte)"/>
+	<w_phrase n="wlang_user_default_blf_direction" t="BLFren helbide lehenetsia"/>
+	<w_phrase n="wlang_user_direction_none" t="bat ere ez"/>
+	<w_phrase n="wlang_xsi_anywhere" t="Edozein leku"/>
+	<w_phrase n="wlang_ssi_status" t="Egoera"/>
+	<w_phrase n="wlang_adr_del_photo" t="Ezabatu argazkia"/>
+	<w_phrase n="wlang_caller_id_blocking" t="Blokeatu deitzen ari den ID"/>
+	<w_phrase n="wlang_line_xsi_remote_office" t="Urruneko bulegoa"/>
+	<w_phrase n="wlang_line_xsi_simultaneous_ring" t="Aldi bereko tinbrea"/>
+	<w_phrase n="wlang_line_xsi_directoryfullsearch" t="Bilaketa izen osoaren arabera"/>
+	<w_phrase n="wlang_advanced_ssi_xfer_dest_order_lifo" t="Transferentzian helmuga lehenetsia, atxikitako azken deiari dagokionez"/>
+	<w_phrase n="wlang_silent_alerting" t="Abisu isila"/>
+	<w_phrase n="wlang_advanced_ssi_call_join_1_held" t="dei atxiki bakarra dagoenean"/>
+	<w_phrase n="wlang_advanced_ssi_call_join_always" t="beti"/>
+	<w_phrase n="wlang_fkeyname_ringer_silent" t="Isiltasun modua"/>
+	<w_phrase n="wlang_fkeyname_delete_msg" t="Mezua ezabatu"/>
+	<w_phrase n="wlang_line_xmpp_display_profile_image" t="Erakutsi profileko irudia"/>
+	<w_phrase n="wlang_advanced_ssi_prov_polling_enabled" t="Hornidura tartea"/>
+	<w_phrase n="wlang_advanced_ssi_prov_polling_mode" t="Hornidura modua"/>
+	<w_phrase n="wlang_advanced_ssi_prov_polling_mode_rel" t="Erlatiboa"/>
+	<w_phrase n="wlang_advanced_ssi_prov_polling_mode_abs" t="Absolutua"/>
+	<w_phrase n="wlang_advanced_ssi_prov_polling_mode_random" t="Ausazkoa"/>
+	<w_phrase n="wlang_advanced_ssi_prov_polling_period" t="Kontsulta aldia"/>
+	<w_phrase n="wlang_advanced_ssi_prov_polling_time" t="Kontsulta denbora"/>
+	<w_phrase n="wlang_advanced_ssi_prov_polling_time_random_end" t="Kontsulta aldia denbora ausazkoa"/>
+	<w_phrase n="wlang_advanced_ssi_show_desktop_msg_in_call_screens" t="Mezuak pantailan erakutsi"/>
+	<w_phrase n="wlang_str_zone" t="Zona"/>
+	<w_phrase n="wlang_F_REMOTE_OFFICE" t="Urruneko bulegoa"/>
+	<w_phrase n="wlang_fkeyname_zones" t="Difusio anitzeko zonak"/>
+	<w_phrase n="wlang_fkeys_xml_label" t="XML etiketa"/>
+	<w_phrase n="wlang_advanced_ssi_type_quick_xfer_spd_dial_and_ext" t="Transferentzia azkarra Speed Dial/Luzapenera"/>
+	<w_phrase n="wlang_advanced_ssi_new_call" t="Dei berria"/>
+	<w_phrase n="wlang_advanced_ssi_blind_transfer" t="Transferentzia itsua"/>
+	<w_phrase n="wlang_advanced_ssi_attended_transfer" t="Transferentzia hartua"/>
+	<w_phrase n="wlang_fkeyname_pgm" t="Programagarria"/>
+	<w_phrase n="wlang_ssi_text" t="Testua"/>
+	<w_phrase n="wlang_ssi_icon" t="Ikonoa"/>
+	<w_phrase n="wlang_ssi_icon_text" t="Ikonoa eta testua"/>
+	<w_phrase n="wlang_fkeys_ssi_header_smartlabel" t="SmartLabel teklak"/>
+	<w_phrase n="wlang_fkeys_ssi_header_soft" t="Testuinguru teklak"/>
+	<w_phrase n="wlang_fkeys_ssi_header_nav" t="Nabigazio teklak"/>
+	<w_phrase n="wlang_fkeys_ssi_header_hard" t="Tekla dedikatuak"/>
+	<w_phrase n="wlang_fkeys_ssi_header_line" t="Linea teklak"/>
+	<w_phrase n="wlang_fkeys_ssi_header_uxm" t="Hedapen teklak"/>
+	<w_phrase n="wlang_fkeys_key_assignment" t="Teklak esleitzea"/>
+	<w_phrase n="wlang_fkeys_smartlabel" t="SmartLabel"/>
+	<w_phrase n="wlang_line_idle_screen" t="Pantaila pausaldian"/>
+	<w_phrase n="wlang_line_default_smartlabel_display_mode" t="Pantailaren modu lehenetsia"/>
+	<w_phrase n="wlang_line_expanded_smartlable_display_mode" t="Pantailaren modu alternatiboa"/>
+	<w_phrase n="wlang_line_short" t="Laburra"/>
+	<w_phrase n="wlang_line_half" t="Arrunta"/>
+	<w_phrase n="wlang_line_full" t="Osatua"/>
+	<w_phrase n="wlang_line_call_screens" t="Deien pantaila"/>
+	<w_phrase n="wlang_line_other_screens" t="Beste pantaila batzuk"/>
+	<w_phrase n="wlang_line_smartlabel_options" t="Aukerak"/>
+	<w_phrase n="wlang_line_smartlabel_dismissal_time" t="Displayaren reset egitea modu lehenetsira (s) ondoren"/>
+	<w_phrase n="wlang_fkeyname_cancel" t="Utzi"/>
+	<w_phrase n="wlang_fkeyname_ok" t="OK"/>
+	<w_phrase n="wlang_fkeyname_left" t="Ezkerra"/>
+	<w_phrase n="wlang_fkeyname_right" t="Eskuina"/>
+	<w_phrase n="wlang_fkeyname_up" t="Gora"/>
+	<w_phrase n="wlang_fkeyname_down" t="Behera"/>
+	<w_phrase n="wlang_hoteling" t="Hotel modua"/>
+	<w_phrase n="wlang_fkeyname_hoteling" t="Hotel modua"/>
+	<w_phrase n="wlang_advanced_listen_in_on_handset" t="Aurikularrean entzun"/>
+	<w_phrase n="wlang_prefs_auto_dial_target" t="Auto markatzearen helmuga"/>
+	<w_phrase n="wlang_prefs_auto_dial_timeout" t="Auto markatzearen timeouta"/>
+	<w_phrase n="wlang_smartlabel_trigger_proximity" t="Gertutasun sentsorea"/>
+	<w_phrase n="wlang_smartlabel_trigger_shortpress" t="Sakatu labur Orriko teklan"/>
+	<w_phrase n="wlang_smartlabel_trigger_longpress" t="Sakatu labur Orriko teklan"/>
+	<w_phrase n="wlang_smartlabel_trigger_smartlabel_key_2_short_press" t="Short Press P2"/>
+	<w_phrase n="wlang_smartlabel_trigger_smartlabel_key_2_long_press" t="Presio luzea P2"/>
+	<w_phrase n="wlang_smartlabel_trigger_smartlabel_key_3_short_press" t="Presio laburra P3"/>
+	<w_phrase n="wlang_smartlabel_trigger_smartlabel_key_3_long_press" t="Presio luzea P3"/>
+	<w_phrase n="wlang_smartlabel_trigger_smartlabel_key_4_short_press" t="Presio laburra P4"/>
+	<w_phrase n="wlang_smartlabel_trigger_smartlabel_key_4_long_press" t="Presio luzea P4"/>
+	<w_phrase n="wlang_smartlabel_trigger_smartlabel_key_8_short_press" t="Presio laburra P8"/>
+	<w_phrase n="wlang_smartlabel_trigger_smartlabel_key_8_long_press" t="Presio luzea P8"/>
+	<w_phrase n="wlang_smartlabel_trigger_smartlabel_key_10_short_press" t="Short Press P10"/>
+	<w_phrase n="wlang_smartlabel_trigger_smartlabel_key_10_long_press" t="Long Press P10"/>
+	<w_phrase n="wlang_smartlabel_trigger" t="Pantaila alternatiboaren tiroa"/>
+	<w_phrase n="wlang_smart_transfer" t="SmartTransfer"/>
+	<w_phrase n="wlang_preferences_appearance" t="Itxura"/>
+	<w_phrase n="wlang_preferences_general" t="Orokorra"/>
+	<w_phrase n="wlang_preferences_ui_elements" t="Interfazeko elementuak"/>
+	<w_phrase n="wlang_preferences_expansion_module_ui_elements" t="Interfaze osagaiak Hedapen modulua"/>
+	<w_phrase n="wlang_preferences_font" t="Iturriaren aukerak"/>
+	<w_phrase n="wlang_preferences_expansion_module_font" t="Letra aukerak Hedapen modulua"/>
+	<w_phrase n="wlang_preferences_ui_colors" t="Interfazearen koloreak"/>
+	<w_phrase n="wlang_preferences_ui_smartlabel_colors" t="Smartlabel koloreak"/>
+	<w_phrase n="wlang_ui_theme" t="UI Color Theme"/>
+	<w_phrase n="wlang_theme_Light" t="Light Theme"/>
+	<w_phrase n="wlang_theme_Dark" t="Dark Theme"/>
+	<w_phrase n="wlang_theme_Colorful" t="Colorful Theme"/>
+	<w_phrase n="wlang_theme_Industrial" t="Industrial Theme"/>
+	<w_phrase n="wlang_theme_Contrast" t="Contrast Theme"/>
+	<w_phrase n="wlang_text_color" t="Testu kolorea"/>
+	<w_phrase n="wlang_titlebar_text_color" t="Izenburuaren testuaren kolorea"/>
+	<w_phrase n="wlang_titlebar_background_color" t="Izenburuaren atzealdearen kolorea"/>
+	<w_phrase n="wlang_subtext_color" t="Azpitestuaren kolorea"/>
+	<w_phrase n="wlang_extratext_color" t="Extratestuaren kolorea"/>
+	<w_phrase n="wlang_extratext2_color" t="2 Extratestuaren kolorea"/>
+	<w_phrase n="wlang_background_color" t="Atzealdearen kolorea"/>
+	<w_phrase n="wlang_fkey_background_color" t="Fkey Atzealdearen kolorea"/>
+	<w_phrase n="wlang_fkey_pressed_background_color" t="Fkey presionatuaren kolorea"/>
+	<w_phrase n="wlang_fkey_separator_color" t="Fkey banatuen kolorea"/>
+	<w_phrase n="wlang_fkey_label_color" t="Fkey etiketaren kolorea"/>
+	<w_phrase n="wlang_fkey_pressed_label_color" t="Fkey etiketa sakatuaren kolorea"/>
+	<w_phrase n="wlang_line_background_color" t="Linearen atzealdearen kodea"/>
+	<w_phrase n="wlang_selected_line_background_color" t="Aukeratutako linearen atzealdearen kodea"/>
+	<w_phrase n="wlang_selected_line_indicator_color" t="Aukeratutako linearen adierazlearen kolorea"/>
+	<w_phrase n="wlang_selected_line_text_color" t="Aukeratutako linearen testuaren kolorea"/>
+	<w_phrase n="wlang_line_separator_color" t="Linearen bereizgailuaren kolorea"/>
+	<w_phrase n="wlang_scrollbar_color" t="Scroll barraren kolorea"/>
+	<w_phrase n="wlang_cursor_color" t="Kurtsorearen kolorea"/>
+	<w_phrase n="wlang_status_msgs_background_color" t="Egoeraren mezuen atzealdearen kolorea"/>
+	<w_phrase n="wlang_status_msgs_border_color" t="Egoeraren mezuen ertzaren kolorea"/>
+	<w_phrase n="wlang_regular_font_min_font_size" t="Gutxieneko iturri erregularraren tamaina"/>
+	<w_phrase n="wlang_fkeys_ssi_full_label_mode" t="Etiketa osatuen modua"/>
+	<w_phrase n="wlang_fkeys_ssi_label_mode" t="Etiketen modua"/>
+	<w_phrase n="wlang_fkeys_ssi_unknown" t="Ezezaguna"/>
+	<w_phrase n="wlang_advanced_ssi_settings_refresh" t="Konfigurazioaren eguneratzearen tenporizadorea"/>
+	<w_phrase n="wlang_advanced_tmz_unused" t="Erabilerarik gabe"/>
+	<w_phrase n="wlang_ldap_search_filter_during_call" t="LDAP izenaren iragazkia deian zehar"/>
+	<w_phrase n="wlang_ldap_number_filter_during_call" t="LDAP zenbakiaren iragazkia deian zehar"/>
+	<w_phrase n="wlang_fkeyname_lock" t="Blokeoa"/>
+	<w_phrase n="wlang_fkeyname_voicemail_info" t="Ahots postontzia"/>
+	<w_phrase n="wlang_advanced_ssi_xmpp_refresh_timer" t="XMPP freskatzeko denbora"/>
+	<w_phrase n="wlang_advanced_xmpp" t="XMPP"/>
+	<w_phrase n="wlang_advanced_ssi_xsi_heartbeat_interval" t="Ping XSIren tartea"/>
+	<w_phrase n="wlang_advanced_xsi" t="XSI"/>
+	<w_phrase n="wlang_fkeyname_caller_id_blocking" t="Deiaren identifikazioaren blokeoa"/>
+	<w_phrase n="wlang_fkeyname_hide_outgoing_id" t="Irteten den nortasuna ezkutatu"/>
+	<w_phrase n="wlang_outgoing" t="Outgoing"/>
+	<w_phrase n="wlang_skip_welcome" t="Ongi etorria kontuan ez hartu"/>
+	<w_phrase n="wlang_general_file" t="Fitxategia"/>
+	<w_phrase n="wlang_lcs" t="LCS"/>
+	<w_phrase n="wlang_cpu" t="CPU"/>
+	<w_phrase n="wlang_advanced_ssi_als" t="Giro argia"/>
+	<w_phrase n="wlang_advanced_ssi_active" t="Aktiboa"/>
+	<w_phrase n="wlang_fkeyname_consultconf" t="Kontsultatu konferentzia"/>
+	<w_phrase n="wlang_use_outbound_proxy_for_callback" t="Erabili irteeraren proxya retrodeirako"/>
+	<w_phrase n="wlang_advanced_ssi_optimize_infobox" t="Infobox hobetua"/>
+	<w_phrase n="wlang_action_ssi_poll_settings" t="Action URL kontsultaren konfigurazioa"/>
+	<w_phrase n="wlang_action_ssi_poll" t="URL kontsulta"/>
+	<w_phrase n="wlang_advanced_ssi_sip_header_warning" t="SIP goiburuen abisua"/>
+	<w_phrase n="wlang_advanced_ssi_sip_header_warning_codes" t="SIP goiburuen abisuaren kodeak"/>
+	<w_phrase n="wlang_prefs_tscanada" t="Kanada"/>
+	<w_phrase n="wlang_prefs_tsrussia" t="Russia"/>
+	<w_phrase n="wlang_advanced_contact_src_prio" t="Kontaktu iturriaren lehentasuna"/>
+	<w_phrase n="wlang_user_contact_src_sip_prio" t="Kontaktu iturriaren lehentasuna (SIP)"/>
+	<w_phrase n="wlang_adr_ssi_tbook_is_full" t="Agenda osatua"/>
+	<w_phrase n="wlang_phoneui_short" t="PUI"/>
+	<w_phrase n="wlang_advanced_ssi_ldap_sort_parameters" t="LDAP antolaketaren parametroak"/>
+	<w_phrase n="wlang_advanced_ssi_ldap_sort_mode" t="LDAP antolaketa modua"/>
+	<w_phrase n="wlang_advanced_ssi_none" t="Bat ere ez"/>
+	<w_phrase n="wlang_adr_file_xml" t="CSV fitxategia"/>
+	<w_phrase n="wlang_choose_file" t="Aukeratu fitxategia"/>
+	<w_phrase n="wlang_all_settings_cfg" t="Konfigurazio osoa (.cfg)"/>
+	<w_phrase n="wlang_all_settings_xml" t="Konfigurazio osoa  (.xml)"/>
+	<w_phrase n="wlang_changed_settings_xml" t="Konfigurazio aldatua (.xml)"/>
+	<w_phrase n="wlang_param_map" t="TR-069 parametroen mapa"/>
+	<w_phrase n="wlang_call_screen_photo_size" t="Argazkiaren tamaina deiaren pantailan"/>
+	<w_phrase n="wlang_size_S" t="S"/>
+	<w_phrase n="wlang_size_M" t="M"/>
+	<w_phrase n="wlang_size_L" t="L"/>
+	<w_phrase n="wlang_size_XL" t="XL"/>
+	<w_phrase n="wlang_size_XXL" t="XXL"/>
+	<w_phrase n="wlang_size_XXXL" t="XXXL"/>
+	<w_phrase n="wlang_prompt_new_value" t="Mesedez, idatz ezazu balio berria"/>
+	<w_phrase n="wlang_fkey_ssi_call_center_status" t="Call Centerraren egoera"/>
+	<w_phrase n="wlang_line_ssi_enable_mediasec" t="Gaitu audio segurua"/>
+	<w_phrase n="wlang_callpark_notify" t="Deiak aparkatzeko jakinarazpena"/>
+	<w_phrase n="wlang_call_park" t="Deiak aparkatzea"/>
+	<w_phrase n="wlang_callpark_park_fac" t="Deiak aparkatzeko kodea"/>
+	<w_phrase n="wlang_smartlabel_trigger_any_smartlabel_key_short_press" t="SmartLabel labur sakatzea"/>
+	<w_phrase n="wlang_fkeyname_ocip" t="OCI-P Agenda"/>
+	<w_phrase n="wlang_fkeyname_ldap" t="LDAP Agenda"/>
+	<w_phrase n="wlang_fkeyname_serverdirectory" t="Agenda zerbitzarian"/>
+	<w_phrase n="wlang_handset_volume" t="Eskukoaren bolumena"/>
+	<w_phrase n="wlang_headset_volume" t="Aurikularraren bolumena"/>
+	<w_phrase n="wlang_ringer_volume" t="Ringer Volume"/>
+	<w_phrase n="wlang_speaker_volume" t="Speaker Volume"/>
+	<w_phrase n="wlang_max_speaker_volume" t="Maximum Speaker Volume"/>
+	<w_phrase n="wlang_dtmf_volume" t="DTMF Volume"/>
+	<w_phrase n="wlang_disconnect_on_onhook" t="Disconnect Call on On-hook"/>
+	<w_phrase n="wlang_long_cancel_is_blocking_caller" t="Add Caller to Block List with Long Press Cancel"/>
+	<w_phrase n="wlang_cancel_conference" t="End Conference on Cancel Press"/>
+	<w_phrase n="wlang_short_cancel_denies_call" t="Cancel declines Incoming Call while Connected"/>
+	<w_phrase n="wlang_offhook_accept_calls" t="Accept Incoming Call on Off-hook"/>
+	<w_phrase n="wlang_keyboard_lock_accepted_keys" t="Accepted Keys when Phone is Locked"/>
+	<w_phrase n="wlang_emergency_accepted_callkeys" t="Accepted Keys when Phone is in Emergency Call"/>
+	<w_phrase n="wlang_pui_icon_override_xml_icon" t="Hide XML Icon on Context-Sensitive Keys"/>
+	<w_phrase n="wlang_idle_status_btn_index" t="Position of Info Button on Context-Senstive Keys"/>
+	<w_phrase n="wlang_ringing_time" t="Ring Time before Decline (s)"/>
+	<w_phrase n="wlang_always_show_active_call" t="Always Show Active Call"/>
+	<w_phrase n="wlang_mute_is_dnd_in_idle" t="Mute acts as DND in Idle Screen"/>
+	<w_phrase n="wlang_transfer_dialing_on_transfer" t="Behavior of Transfer Key in Transfer"/>
+	<w_phrase n="wlang_transfer_dialing_on_other" t="Behavior of Other Keys in Transfer"/>
+	<w_phrase n="wlang_advtab_display" t="Pantaila"/>
+	<w_phrase n="wlang_backlight_on_activity" t="Backlight on Activity"/>
+	<w_phrase n="wlang_backlight_when_idle" t="Backlight when Idle"/>
+	<w_phrase n="wlang_contrast" t="Kontrastea"/>
+	<w_phrase n="wlang_primary_display" t="Primary Display"/>
+	<w_phrase n="wlang_label_display" t="Secondary Display"/>
+	<w_phrase n="wlang_fkeys_ssi_usb_call_record" t="USB Call Recording"/>
+	<w_phrase n="wlang_fkeys_ssi_usb_call_record_pause" t="USB Call Recording Pause"/>
+	<w_phrase n="wlang_subtext_pressed_color" t="Subtext Pressed Color"/>
+	<w_phrase n="wlang_page_indicator_color" t="Page Indicator Color"/>
+	<w_phrase n="wlang_preferences_ui_expansion_module_colors" t="Koloreak Hedapen modulua"/>
+	<w_phrase n="wlang_prefs_expansion_module_text_alignment" t="Testuaren lerrokatzea Hedapen modulua"/>
+	<w_phrase n="wlang_expansion_module_maintext_size" t="Testu nagusiaren tamaina Hedapen modulua"/>
+	<w_phrase n="wlang_expansion_module_subtext_size" t="Azpimailuaren tamaina Hedapen modulua"/>
+	<w_phrase n="wlang_size_XS" t="XS"/>
+	<w_phrase n="wlang_prefs_expansion_module_background_image" t="Atzeko irudia Hedapen modulua"/>
+	<w_phrase n="wlang_fkeyname_context_in_idle_page_left" t="Page Left"/>
+	<w_phrase n="wlang_fkeyname_context_in_idle_page_right" t="Page Right"/>
+	<w_phrase n="wlang_reciprocal_hold" t="Reciprocal Hold"/>
+	<w_phrase n="wlang_provisioning_order" t="Provisioning Order"/>
+	<w_phrase n="wlang_remote_3264_hold" t="RFC 3264 Hold"/>
+	<w_phrase n="wlang_use_contact_in_refer_to_hdr" t="Use Contact Header in Refer-To"/>
+	<w_phrase n="wlang_ack_before_reinvite_when_holding" t="ACK before Reinvite when Holding"/>
+	<w_phrase n="wlang_F_CALL_PARK_DIAL" t="Call Park Dial"/>
+	<w_phrase n="wlang_F_CALL_PARK_DIAL_RETRIEVE" t="Call Park Dial Retrieve"/>
+	<w_phrase n="wlang_tr69_use_acs" t="TR-069"/>
+	<w_phrase n="wlang_tr69_bootstrap" t="Send BOOTSTRAP to ACS"/>
+	<w_phrase n="wlang_tr69_acs_url" t="ACS URL"/>
+	<w_phrase n="wlang_tr69_acs_user" t="ACS Username"/>
+	<w_phrase n="wlang_tr69_acs_passwd" t="ACS Password"/>
+	<w_phrase n="wlang_tr69_cnr_user" t="CNR Username"/>
+	<w_phrase n="wlang_tr69_cnr_pass" t="CNR Password"/>
+	<w_phrase n="wlang_tr69_p_inform_supervision_timeout" t="Periodic Inform Supervision Timeout"/>
+	<w_phrase n="wlang_tr69_log" t="TR-069 Log"/>
+	<w_phrase n="wlang_extend_context_key_in_idle" t="Extend Context-Sensitive Keys to 12 in Idle"/>
+	<w_phrase n="wlang_edit_mode_for_directory_search" t="Default Edit Mode Directories"/>
+	<w_phrase n="wlang_edit_mode_for_passwords" t="Default Edit Mode Password Screens"/>
+	<w_phrase n="wlang_edit_mode_numbers" t="123"/>
+	<w_phrase n="wlang_edit_mode_lower_case" t="abc"/>
+	<w_phrase n="wlang_edit_mode_upper_case" t="ABC"/>
+	<w_phrase n="wlang_call_states_with_local_party" t="Call States showing Local Identity"/>
+	<w_phrase n="wlang_redirected_call_states_with_local_party" t="Redirected Call States showing Local Identity"/>
+	<w_phrase n="wlang_call_states_when_knocking" t="Call States playing Knocking Tone"/>
+	<w_phrase n="wlang_advanced_ssi_sip_tls_listen_port" t="TLS Listener Port"/>
+	<w_phrase n="wlang_advanced_ssi_tls_listen" t="Listen on SIP TLS Port"/>
+	<w_phrase n="wlang_results" t="Results"/>
+	<w_phrase n="wlang_ocip_max_hits" t="Maximum Number of Hits"/>
+	<w_phrase n="wlang_suppress_sip_messages" t="Hide Desktop Messages"/>
+	<w_phrase n="wlang_reject_calls_with_603" t="Reject Calls with 603 Declined"/>
+	<w_phrase n="wlang_action_received_subscr_notify_url" t="Received NOTIFY Subscription"/>
+	<w_phrase n="wlang_action_firewall_test" t="Received CSTA Message Firetest"/>
+	<w_phrase n="wlang_adr_entry_id" t="Entry ID"/>
+	<w_phrase n="wlang_advanced_customized_ssi_mtu_size" t="MTU size"/>
+	<w_phrase n="wlang_line_ssi_unsaf_via_received_rport" t="Determine Public Address from REGISTER Response Via Header"/>
+	<w_phrase n="wlang_info_branding_name" t="Branding"/>
+	<w_phrase n="wlang_info_branding_version" t="Branding Version"/>
+	<w_phrase n="wlang_info_hardware_version" t="Hardware Version"/>
+	<w_phrase n="wlang_prefs_pa1p_controls" t="PA1+ Controls"/>
+	<w_phrase n="wlang_prefs_ssi_pa1p_reset_button_for_dialing" t="Use reset button for dialing:"/>
+	<w_phrase n="wlang_prefs_ssi_pa1p_nr_to_dial" t="Reset button dials number:"/>
+	<w_phrase n="wlang_prefs_ssi_pa1p_call_timeout" t="Phone ends call after set seconds:"/>
+	<w_phrase n="wlang_prefs_ssi_pa1p_speaker_volume" t="Speaker Volume (1-15):"/>
+	<w_phrase n="wlang_prefs_ssi_pa1p_amp_gain" t="Amplifier Gain (0-3):"/>
+	<w_phrase n="wlang_prefs_ssi_pa1p_spkr" t="Speaker :"/>
+	<w_phrase n="wlang_prefs_ssi_pa1p_pin1" t="Pin 1:"/>
+	<w_phrase n="wlang_prefs_ssi_pa1p_pin2" t="Pin 2:"/>
+	<w_phrase n="wlang_prefs_ssi_pa1p_pin3" t="Pin 3:"/>
+	<w_phrase n="wlang_prefs_ssi_pa1p_pin4" t="Pin 4:"/>
+	<w_phrase n="wlang_prefs_ssi_pa1p_pin1_time" t="Pin1 off timer (seconds):"/>
+	<w_phrase n="wlang_prefs_ssi_pa1p_pin2_time" t="Pin2 off timer (seconds):"/>
+	<w_phrase n="wlang_prefs_ssi_pa1p_pin3_time" t="Pin3 off timer (seconds):"/>
+	<w_phrase n="wlang_prefs_ssi_pa1p_pin4_time" t="Pin4 off timer (seconds):"/>
+	<w_phrase n="wlang_line_ssi_multicast_relay_address" t="Multicast relay address:"/>
+	<w_phrase n="wlang_advanced_ssi_eth_port_1" t="Port 1:"/>
+	<w_phrase n="wlang_advanced_ssi_eth_port_2" t="Port 2:"/>
+	<w_phrase n="wlang_line_ssi_rtcpencryption" t="RTCP Encryption"/>
+	<w_phrase n="wlang_advanced_ssi_headset_mic" t="Headset Mic Volume (1 - 8):"/>
+	<w_phrase n="wlang_advanced_ssi_blf_pickup_audio_indication" t="Audio Indication for BLF Pickup"/>
+	<w_phrase n="wlang_advanced_ssi_dkey_dnd_behavior" t="Behavior of Dedicated Keys in DND"/>
+	<w_phrase n="wlang_advanced_ssi_dkey_dnd_behavior_normal" t="normal"/>
+	<w_phrase n="wlang_advanced_ssi_dkey_dnd_behavior_reverse" t="reverse"/>
+	<w_phrase n="wlang_advanced_early_media" t="Early Media"/>
+	<w_phrase n="wlang_advanced_early_media_playback" t="Playback Mode"/>
+	<w_phrase n="wlang_advanced_early_media_playback_never" t="Never"/>
+	<w_phrase n="wlang_advanced_early_media_playback_preferred" t="Preferred"/>
+	<w_phrase n="wlang_advanced_early_media_playback_enforced" t="Betearazia"/>
+	<w_phrase n="wlang_advanced_early_media_ring_fallback" t="Ringback Tone Fallback"/>
+	<w_phrase n="wlang_advanced_ssi_user_ringer_once" t="Ringtone is played only once"/>
+	<w_phrase n="wlang_fkeyname_identities" t="Identitateak"/>
+	<w_phrase n="wlang_action_ssi_received_sip_update" t="Received SIP UPDATE"/>
+	<w_phrase n="wlang_fkeyname_answer" t="Answer"/>
+	<w_phrase n="wlang_fkeyname_forward" t="Forward"/>
+	<w_phrase n="wlang_fkeyname_reject" t="Reject"/>
+	<w_phrase n="wlang_fkeyname_end_call" t="End call"/>
+	<w_phrase n="wlang_fkeyname_group_park" t="Group Park"/>
+	<w_phrase n="wlang_fkeyname_new_call" t="New Call"/>
+	<w_phrase n="wlang_fkeyname_resume" t="Resume"/>
+	<w_phrase n="wlang_fkeyname_back_space" t="Backspace"/>
+</w_phrases>

@@ -1,0 +1,33 @@
+<?ssi title dns_ssi_title?>
+<?ssi file common1.htm?>
+<TR>
+ <TD vAlign="top" height="16"><IMG height="16" src="img/clr.gif" width="16"></TD>
+</TR>
+<TR>
+ <TABLE>
+  <TR>
+    <TD><B>DNS Cache</B></TD>
+  </TR>
+  <TR>
+    <TD><B>Id</B></TD>
+    <TD><B>Type</B></TD>
+    <TD><B>Address</B></TD>
+    <TD><B>Content</B></TD>
+    <TD><B>Expires</B></TD>
+  </TR>
+  <?ssi dnscache?>
+  <?ssi skipon DNS_STICKY_OUTBOUND?>
+  <TR/>
+  <TR>
+    <TD><B>TransportErrors</B></TD>
+  </TR>
+  <TR>
+    <TD><B>Address</B></TD>
+    <TD><B>Timestamp</B></TD>
+    <TD><B>IpAddresses</B></TD>
+  </TR>
+  <?ssi dns_transport_error?>
+  <?ssi skipoff DNS_STICKY_OUTBOUND?>
+  </TABLE>
+</TR>
+<?ssi file common9.htm?></HTML>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<IPPhoneMenu xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../schemas/minibrowser.xsd" track="no" state="others_except_mb" dtmf="off">
+  <Title>$(lang:target_voicemail)</Title>
+  <Repeat values="$(var_ifc:Mwi::voicemail_info)" token="|__IDENTITY__|__NEW__|__OLD__|\r\n">
+    <MenuItem name="$(user_displayname:__IDENTITY__)">
+      <If condition="$(show_feature:FEATURE_PUI_STYLE_SIO)">
+        <SubText>$(lang:list_new): __NEW__ $(lang:list_old): __OLD__</SubText>
+      </If>
+      <If condition="__NEW__!=0">
+        <ExtraIconType>$(icon_type_enum:kIconTypeMenuVoicemail)</ExtraIconType>
+      </If>
+      <Url>phone://mb_exit#action_ifc:pui=dial_voicemail,identity=__IDENTITY__</Url>
+    </MenuItem>
+  </Repeat>
+</IPPhoneMenu>

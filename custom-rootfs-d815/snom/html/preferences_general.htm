@@ -1,0 +1,325 @@
+<?ssi title prefs_ssi_title?>
+<?ssi file common1.htm?>
+<TR>
+  <TD vAlign="top" height="16"><IMG height="16" src="img/clr.gif" width="16"></TD>
+</TR>
+<TR>
+  <TD vAlign="top">
+    <FORM method="post">
+      <?ssi skipon VTECH?>
+      <TABLE class="bubbleTable" cellSpacing="0" cellPadding="0" width="100%" border="0">
+      <?ssi skipoff VTECH?>
+      <?ssi skipon SNOM?>
+      <TABLE cellSpacing="4" cellPadding="0" width="100%" border="0">
+      <?ssi skipoff SNOM?>
+        <TBODY>
+          <?ssi file tab_preferences.htm?>
+          <TR>
+            <TD width="12" height="5"><IMG src="img/clr.gif" width="12" height="12"></TD>
+            <TD width="12" height="5"><IMG src="img/clr.gif" width="12" height="5"></TD>
+            <TD width="12" height="5"><IMG src="img/clr.gif" width="12" height="5"></TD>
+            <TD class="background" width="12" height="5">
+            <?ssi skipon VTECH?>
+            <IMG height="12" src=<?ssi img-corner-gif ur?> width="12">
+            <?ssi skipoff VTECH?>
+            </TD>
+          </TR>
+          <?ssi hidden_tag?>
+          <TR>
+            <TD></TD>
+            <TD width="50%"></TD>
+            <TD width="50%"></TD>
+          </TR>
+          <TR>
+            <TD></TD>
+            <?ssi skipon VTECH?>
+            <TD><B>
+            <?ssi skipoff VTECH?>
+            <?ssi skipon SNOM?>
+            <TD class="titleText">
+            <?ssi skipoff SNOM?>
+            <?lng prefs_generalinfo?></B>
+            </TD>
+          </TR>
+          <TR>
+            <TD></TD><TD><?lng prefs_web_language?></TD>
+            <TD><?ssi language web?><?ssi help web_language?></TD>
+          </TR>
+          <TR>
+            <TD></TD><TD><?lng prefs_language?></TD>
+            <TD><?ssi language gui?><?ssi help language?></TD>
+          </TR>
+          <TR>
+            <TD></TD><?ssi radio prefs_ssi_global_missed_counter global_missed_counter advanced_ssi_on advanced_ssi_off?>
+          </TR>
+          <TR>
+            <TD></TD><?ssi radio prefs_ssi_scroll_outgoing scroll_outgoing advanced_ssi_on advanced_ssi_off?>
+          </TR>
+          <TR>
+            <TD></TD><?ssi radio prefs_ssi_show_local_line show_local_line advanced_ssi_on advanced_ssi_off?>
+          </TR>
+          <TR>
+            <TD></TD><?ssi radio prefs_ssi_show_call_status show_call_status advanced_ssi_on advanced_ssi_off?>
+          </TR>
+          <TR>
+            <TD></TD><?ssi radio prefs_ssi_advertisement advertisement advanced_ssi_on advanced_ssi_off?>
+          </TR>
+          <TR>
+            <TD></TD><?ssi radio prefs_ssi_sort_server_dir_result_by_last_name sort_server_dir_result_by_last_name advanced_ssi_on advanced_ssi_off?>
+          </TR>
+          <TR>
+            <TD></TD><TD><?lng directory_display_order?></TD>
+            <TD>
+              <select size="1" <?ssi disabled directory_display_order?>name="directory_display_order" <?ssi tabindex?> >
+              <option value="first_name_last_name"<?ssi selected directory_display_order first_name_last_name?>><?lng display_order_first_name_last_name?></option>
+              <option value="last_name_first_name"<?ssi selected directory_display_order last_name_first_name?>><?lng display_order_last_name_first_name?></option>
+              </select><?ssi help directory_display_order?>
+            </TD>
+          </TR>
+          <TR>
+            <TD></TD><TD><?lng edit_mode_for_directory_search?></TD>
+            <TD>
+              <select size="1" <?ssi disabled edit_mode_for_directory_search?>name="edit_mode_for_directory_search" <?ssi tabindex?> >
+              <option value="123"<?ssi selected edit_mode_for_directory_search 123?>><?lng edit_mode_numbers?></option>
+              <option value="abc"<?ssi selected edit_mode_for_directory_search abc?>><?lng edit_mode_lower_case?></option>
+              <option value="ABC"<?ssi selected edit_mode_for_directory_search ABC?>><?lng edit_mode_upper_case?></option>
+              </select><?ssi help edit_mode_for_directory_search?>
+            </TD>
+          </TR>
+          <TR>
+            <TD></TD><TD><?lng edit_mode_for_passwords?></TD>
+            <TD>
+              <select size="1" <?ssi disabled edit_mode_for_passwords?>name="edit_mode_for_passwords" <?ssi tabindex?> >
+              <option value="123"<?ssi selected edit_mode_for_passwords 123?>><?lng edit_mode_numbers?></option>
+              <option value="abc"<?ssi selected edit_mode_for_passwords abc?>><?lng edit_mode_lower_case?></option>
+              <option value="ABC"<?ssi selected edit_mode_for_passwords ABC?>><?lng edit_mode_upper_case?></option>
+              </select><?ssi help edit_mode_for_passwords?>
+            </TD>
+          </TR>
+          <TR>
+            <TD></TD><TD><?ssi input prefs_scroll_text_interval scroll_text_interval?></TD>
+          </TR>
+          <TR>
+            <TD></TD><TD><?ssi input prefs_scroll_text_wait_multiplier scroll_text_wait_multiplier?></TD>
+          </TR>
+          <?ssi skipon NO_IMLIB_SUPPORT?>
+          <TR>
+            <TD></TD><TD><?ssi input prefs_scroll_text_step_count scroll_text_step_count?></TD>
+          </TR>
+          <?ssi skipoff NO_IMLIB_SUPPORT?>
+          <TR>
+            <TD></TD><TD><?ssi input prefs_ssi_keyboard_lock_dp keyboard_lock_emergency?></TD>
+          </TR>
+          <TR>
+            <TD></TD><TD><?ssi input prefs_ssi_emergency_proxy emergency_proxy?></TD>
+          </TR>
+          <?ssi skipon SMARTLABEL?>
+          <?ssi skipon NO_FEATURE_LABEL_DISPLAY?>
+          <TR>
+            <TD></TD><TD><?ssi input prefs_label_scroll_timeout label_scroll_timeout?></TD>
+          </TR>
+          <?ssi skipoff SMARTLABEL?>
+          <?ssi skipoff NO_FEATURE_LABEL_DISPLAY?>
+          <TR>
+            <TD></TD><TD>&nbsp;</TD>
+          </TR>
+          <?ssi skipon NOT_SNOMPA1P?>
+          <TR>
+            <TD></TD><TD><B><?lng prefs_pa1p_controls?></B></TD>
+          </TR>
+          <TR>
+            <TD></TD><?ssi radio prefs_ssi_pa1p_reset_button_for_dialing pa1_reset_button_for_dialing advanced_ssi_on advanced_ssi_off?>
+          </TR>
+          <?ssi skipon NOT_SNOMPA1PDP?>
+          <TR>
+            <TD></TD><td class="normalText"><?ssi input prefs_ssi_pa1p_nr_to_dial pa1_nr_to_dial?></td>
+          </TR>
+          <?ssi skipoff NOT_SNOMPA1PDP?>
+          <TR>
+            <TD></TD><td class="normalText"><?ssi input prefs_ssi_pa1p_call_timeout pa1_call_timeout?></td>
+          </TR>
+          <TR>
+            <TD></TD><td class="normalText"><?ssi input prefs_ssi_pa1p_speaker_volume vol_headset?></td>
+          </TR>
+          <TR>
+            <TD></TD><td class="normalText"><?ssi input prefs_ssi_pa1p_amp_gain pa1_amp_gain?></td>
+          </TR>
+          <TR>
+            <TD></TD><?ssi radio prefs_ssi_pa1p_spkr pa1_spkr advanced_ssi_on advanced_ssi_off?>
+          </TR>
+          <?ssi skipon NOT_IN_ADMIN_MODE?>
+          <TR>
+            <TD></TD><?ssi radio prefs_ssi_pa1p_pin1 pa1_pin1 advanced_ssi_on advanced_ssi_off?>
+          </TR>
+          <TR>
+            <TD></TD><?ssi radio prefs_ssi_pa1p_pin2 pa1_pin2 advanced_ssi_on advanced_ssi_off?>
+          </TR>
+          <TR>
+            <TD></TD><?ssi radio prefs_ssi_pa1p_pin3 pa1_pin3 advanced_ssi_on advanced_ssi_off?>
+          </TR>
+          <TR>
+            <TD></TD><?ssi radio prefs_ssi_pa1p_pin4 pa1_pin4 advanced_ssi_on advanced_ssi_off?>
+          </TR>
+          <TR>
+            <TD></TD><td class="normalText"><?ssi input prefs_ssi_pa1p_pin1_time pin1_time?></td>
+          </TR>
+          <TR>
+            <TD></TD><td class="normalText"><?ssi input prefs_ssi_pa1p_pin2_time pin2_time?></td>
+          </TR>
+          <TR>
+            <TD></TD><td class="normalText"><?ssi input prefs_ssi_pa1p_pin3_time pin3_time?></td>
+          </TR>
+          <TR>
+            <TD></TD><td class="normalText"><?ssi input prefs_ssi_pa1p_pin4_time pin4_time?></td>
+          </TR>
+          <?ssi skipoff NOT_IN_ADMIN_MODE?>
+          <TR>
+            <TD></TD><TD>&nbsp;</TD>
+          </TR>
+          <?ssi skipoff NOT_SNOMPA1P?>
+          <TR>
+            <TD></TD>
+            <?ssi skipon VTECH?>
+            <TD><B>
+            <?ssi skipoff VTECH?>
+            <?ssi skipon SNOM?>
+            <TD class="titleText">
+            <?ssi skipoff SNOM?>
+              <?lng ssi_number_lookup?></B>
+            </TD>
+          </TR>
+          <TR><TD/><?ssi radio advanced_ssi_numberguessing guess_number advanced_ssi_on advanced_ssi_off?></TR>
+          <TR><TD/><TD class="normalText"><?ssi input advanced_ssi_guess_start_length guess_start_length?></TD></TR>
+          <TR><TD/><TD class="normalText"><?ssi input advanced_ssi_partial_lookup partial_lookup?></TD></TR>
+          <TR><TD/><TD class="normalText"><?ssi input guess_max_hits guess_max_hits?></TD></TR>
+          <TR>
+            <TD></TD><TD>&nbsp;</TD>
+          </TR>
+          <TR>
+            <TD></TD>
+            <?ssi skipon VTECH?>
+            <TD class="normalText"><B>
+            <?ssi skipoff VTECH?>
+            <?ssi skipon SNOM?>
+            <TD class="titleText">
+            <?ssi skipoff SNOM?>
+              <?lng prefs_privacysetting?></B>
+            </TD>
+          </TR>
+          <TR>
+            <TD></TD><?ssi radio prefs_ssi_enable_keyboard_lock enable_keyboard_lock advanced_ssi_on advanced_ssi_off?>
+          </TR>
+          <TR>
+            <TD></TD><?ssi radio prefs_ssi_keyboard_lock keyboard_lock advanced_ssi_on advanced_ssi_off?>
+          </TR>
+          <TR>
+            <TD></TD><TD><?ssi inpass prefs_ssi_keyboard_lock_pw keyboard_lock_pw?></TD>
+          </TR>
+          <TR>
+            <TD></TD><TD><?ssi input prefs_keyboard_lock_timeout keyboard_lock_timeout?></TD>
+          </TR>
+          <TR>
+            <TD></TD><TD>&nbsp;</TD></TR>
+          <TR>
+            <TD></TD>
+            <?ssi skipon VTECH?>
+            <TD><B>
+            <?ssi skipoff VTECH?>
+            <?ssi skipon SNOM?>
+            <TD class="titleText">
+            <?ssi skipoff SNOM?>
+              <?lng prefs_character_settings?></B>
+            </TD>
+          </TR>
+          <TR>
+            <TD></TD><TD><?ssi input prefs_ssi_upper_chars_0 chars_in_upper_case0?></td>
+          </TR>
+          <TR>
+            <TD></TD><TD><?ssi input prefs_ssi_upper_chars_1 chars_in_upper_case1?></td>
+          </TR>
+          <TR>
+            <TD></TD><TD><?ssi input prefs_ssi_upper_chars_2 chars_in_upper_case2?></td>
+          </TR>
+          <TR>
+            <TD></TD><TD><?ssi input prefs_ssi_upper_chars_3 chars_in_upper_case3?></td>
+          </TR>
+          <TR>
+            <TD></TD><TD><?ssi input prefs_ssi_upper_chars_4 chars_in_upper_case4?></td>
+          </TR>
+          <TR>
+            <TD></TD><TD><?ssi input prefs_ssi_upper_chars_5 chars_in_upper_case5?></td>
+          </TR>
+          <TR>
+            <TD></TD><TD><?ssi input prefs_ssi_upper_chars_6 chars_in_upper_case6?></td>
+          </TR>
+          <TR>
+            <TD></TD><TD><?ssi input prefs_ssi_upper_chars_7 chars_in_upper_case7?></td>
+          </TR>
+          <TR>
+            <TD></TD><TD><?ssi input prefs_ssi_upper_chars_8 chars_in_upper_case8?></td>
+          </TR>
+          <TR>
+            <TD></TD><TD><?ssi input prefs_ssi_upper_chars_9 chars_in_upper_case9?></td>
+          </TR>
+          <TR>
+            <TD></TD><TD><?ssi input prefs_ssi_lower_chars_0 chars_in_lower_case0?></td>
+          </TR>
+          <TR>
+            <TD></TD><TD><?ssi input prefs_ssi_lower_chars_1 chars_in_lower_case1?></td>
+          </TR>
+          <TR>
+            <TD></TD><TD><?ssi input prefs_ssi_lower_chars_2 chars_in_lower_case2?></td>
+          </TR>
+          <TR>
+            <TD></TD><TD><?ssi input prefs_ssi_lower_chars_3 chars_in_lower_case3?></td>
+          </TR>
+          <TR>
+            <TD></TD><TD><?ssi input prefs_ssi_lower_chars_4 chars_in_lower_case4?></td>
+          </TR>
+          <TR>
+            <TD></TD><TD><?ssi input prefs_ssi_lower_chars_5 chars_in_lower_case5?></td>
+          </TR>
+          <TR>
+            <TD></TD><TD><?ssi input prefs_ssi_lower_chars_6 chars_in_lower_case6?></td>
+          </TR>
+          <TR>
+            <TD></TD><TD><?ssi input prefs_ssi_lower_chars_7 chars_in_lower_case7?></td>
+          </TR>
+          <TR>
+            <TD></TD><TD><?ssi input prefs_ssi_lower_chars_8 chars_in_lower_case8?></td>
+          </TR>
+          <TR>
+            <TD></TD><TD><?ssi input prefs_ssi_lower_chars_9 chars_in_lower_case9?></td>
+          </TR>
+          <TR>
+            <TD></TD><TD>&nbsp;</TD>
+          </TR>
+          <TR>
+            <TD></TD>
+            <TD>
+              <input type="hidden" value="<?lng apply_button?>" name="Settings">
+              <!--Hidden input is used to allow onchange event to apply settings automatically-->
+              <input type="submit" value="<?lng apply_button?>" name="Settings" <?ssi tabindex?> >
+            </TD>
+          </TR>
+          <TR>
+            <TD class="background" vAlign="bottom" align="left" width="12" height="5">
+              <?ssi skipon VTECH?>
+              <IMG height="12" src=<?ssi img-corner-gif ll?> width="12"></TD>
+              <?ssi skipoff VTECH?>
+            <TD></TD>
+            <TD></TD>
+            <TD class="background" vAlign="bottom" align="right" width="12" height="5">
+              <?ssi skipon VTECH?>
+              <IMG height="12" src=<?ssi img-corner-gif lr?> width="12">
+              <?ssi skipoff VTECH?>
+            </TD>
+          </TR>
+        </TBODY>
+      </TABLE>
+    </FORM>
+  </TD>
+</TR>
+<script type="text/javascript" src="fox.js" charset="utf-8"></script>
+<?ssi file common9.htm?>
+</HTML>

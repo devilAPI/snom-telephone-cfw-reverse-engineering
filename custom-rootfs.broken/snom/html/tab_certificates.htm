@@ -1,0 +1,71 @@
+<?ssi skipon VTECH?>
+<TR>
+  <TD colspan="4">
+    <TABLE class="bubbleTable" cellSpacing="0" cellPadding="0" border="0" width="100%"><TR>
+
+    <!-- UNKNOWN CERTIFICATES -->
+    <TD class="background"><IMG height="16" src=<?ssi img-corner-gif ul2?> width="12"></TD>
+    <TD class="bubbletextnowrap">
+      <a href="certificates_unknown_certs.htm"><?ssi bif certificates_unknown_certs.htm cert_tab_unknown_certs?></a>
+    </TD>
+    <TD class="background"><IMG height="16" src=<?ssi img-corner-gif ur2?> width="13"></TD>
+
+    <!-- SERVER CERTIFICATES -->
+    <TD class="background"><IMG height="16" src=<?ssi img-corner-gif ul2?> width="12"></TD>
+    <TD class="bubbletextnowrap">
+      <a href="certificates_server_certs.htm"><?ssi bif certificates_server_certs.htm cert_tab_custom_certs?></a>
+    </TD>
+    <TD class="background"><IMG height="16" src=<?ssi img-corner-gif ur2?> width="13"></TD>
+
+    <!-- 802.1X CERTIFICATES -->
+    <?ssi skipon NOT_EAP_TLS?>
+    <TD class="background"><IMG height="16" src=<?ssi img-corner-gif ul2?> width="12"></TD>
+    <TD class="bubbletextnowrap">
+      <a href="certificates_8021x_certs.htm"><?ssi bif certificates_8021x_certs.htm cert_tab_8021x_certs?></a>
+    </TD>
+    <TD class="background"><IMG height="16" src=<?ssi img-corner-gif ur2?> width="13"></TD>
+    <?ssi skipoff NOT_EAP_TLS?>
+
+    <!-- CERTIFICATE AUTHORITIES -->
+    <TD class="background"><IMG height="16" src=<?ssi img-corner-gif ul2?> width="12"></TD>
+    <TD class="bubbletextnowrap">
+      <a href="certificates_authority_certs.htm"><?ssi bif certificates_authority_certs.htm cert_tab_preinstalled_certs?></a>
+    </TD>
+    <TD class="background"><IMG height="16" src=<?ssi img-corner-gif ur2?> width="13"></TD>
+
+    <TD class="background" width="90%"></TD>
+    </TABLE>
+  </TD>
+</TR>
+<?ssi skipoff VTECH?>
+<?ssi skipon SNOM?>
+<TR>
+  <TD colspan="4">
+    <TABLE cellSpacing="2" cellPadding="0" width="100%" border="0" class="tabbackground">
+      <TR>
+        <!-- UNKNOWN CERTIFICATES -->
+        <TD class="tablongtext" width="20%" height="20px">
+          <a href="certificates_unknown_certs.htm"><?ssi bif certificates_unknown_certs.htm cert_tab_unknown_certs?></a>
+        </TD>
+
+        <!-- SERVER CERTIFICATES -->
+        <TD class="tablongtext" width="20%" height="20px">
+          <a href="certificates_server_certs.htm"><?ssi bif certificates_server_certs.htm cert_tab_custom_certs?></a>
+        </TD>
+
+        <!-- 802.1X CERTIFICATES -->
+        <?ssi skipon NOT_EAP_TLS?>
+        <TD class="tablongtext" width="20%" height="20px">
+          <a href="certificates_8021x_certs.htm"><?ssi bif certificates_8021x_certs.htm cert_tab_8021x_certs?></a>
+        </TD>
+        <?ssi skipoff NOT_EAP_TLS?>
+
+        <!-- CERTIFICATE AUTHORITIES -->
+        <TD class="tablongtext" width="20%" height="20px">
+          <a href="certificates_authority_certs.htm"><?ssi bif certificates_authority_certs.htm cert_tab_preinstalled_certs?></a>
+        </TD>
+      </TR>
+    </TABLE>
+  </TD>
+</TR>
+<?ssi skipoff SNOM?>

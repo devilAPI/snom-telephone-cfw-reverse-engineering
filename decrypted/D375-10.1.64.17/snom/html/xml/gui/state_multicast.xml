@@ -1,0 +1,10 @@
+<IPPhoneText has_phone_state="on" state="relevant">
+  <Title>Multicast</Title>
+  <Text generate="mc"/>
+
+<SoftKeyItem>
+  <Name>F1</Name>
+  <Label>$(lang:F_CANCEL)</Label>
+  <Softkey>F_CANCEL</Softkey>
+</SoftKeyItem>
+</IPPhoneText>

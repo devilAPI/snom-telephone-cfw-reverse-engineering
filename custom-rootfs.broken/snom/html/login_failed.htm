@@ -1,0 +1,27 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+  <HEAD>
+    <TITLE><?ssi snom_type?></TITLE>
+    <META http-equiv=Content-Type content="text/html; charset=utf-8">
+    <META http-equiv=Pragma content=no-cache>
+  </HEAD>
+  <BODY>
+    <TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+      <TBODY>
+	<TR>
+	  <TD vAlign="top">
+	    <FORM method="post">
+<?ssi hidden_tag?>
+	      <TR><TD></TD><TD><B><?lng login_failed_ssi_title?></B></TD></TR>
+	      <TR><TD></TD><TD>
+		  <SPAN class=pageInfoText>
+		    <?lng text_login_failed_info1?>&nbsp;<?ssi snom_ip_blocked?>&nbsp;<?lng text_login_failed_info4?><br><br>
+		    <?lng text_login_failed_info2?>&nbsp;<?ssi snom_reauthentication_time?>&nbsp;<?lng text_login_failed_info3?>
+	      </SPAN></TD></TR>
+	    </FORM>
+	  </TD>
+	</TR>
+      </TBODY>
+    </TABLE>
+  </BODY>
+</HTML>

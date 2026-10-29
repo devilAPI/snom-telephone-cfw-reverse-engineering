@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<IPPhoneMenu state="others_except_mb" dtmf="off" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../schemas/minibrowser.xsd" document_id="information">
+  <Title>$(lang:information_settings)</Title>
+  <MenuItem name="$(lang:status_messages)">
+    <Action>show_status_messages</Action>
+    <ExtraIconType>$(icon_type_enum:kIconTypeMenuArrowRight)</ExtraIconType>
+  </MenuItem>
+  <MenuItem name="$(lang:system_information_menu)">
+    <Action>sysinfo</Action>
+    <ExtraIconType>$(icon_type_enum:kIconTypeMenuArrowRight)</ExtraIconType>
+  </MenuItem>
+  <If condition="$(bool_eval:$(set:admin_mode) &amp; $(show_feature:FEATURE_PUI_STYLE_SIO))">
+    <MenuItem name="$(lang:demo_mode)" id="demo_mode">
+      <ExtraIconType>$(icon_type_enum:kIconTypeMenuArrowRight)</ExtraIconType>
+      <Url>File:///xml/gui/demo_mode.xml</Url>
+    </MenuItem>
+  </If>
+  <MenuItem name="$(lang:help_label)">
+    <Action>support</Action>
+    <ExtraIconType>$(icon_type_enum:kIconTypeMenuArrowRight)</ExtraIconType>
+  </MenuItem>
+  <If condition="$(bool_eval:$(is_usb_mass_storage_connected) &amp; $(empty:$(var:usb_was_ejected)))">
+    <MenuItem name="$(lang:information_menu_usb_info)" id="usb_info">
+      <ExtraIconType>$(icon_type_enum:kIconTypeMenuArrowRight)</ExtraIconType>
+      <Url track="no">file:///xml/gui/templates.xml#sub=*[@id="text_template"]&amp;var:text_translate=yes&amp;var:text_content=%24[get_usb_mass_storage_sizes]&amp;var:text_title=$(lang:usb_mass_storage_title)&amp;var:text_softkeys=|F1|F_USB_EJECT|$(urlencode:file://xml/gui/information.xml#action_ifc:StorageManager=umount)||</Url>
+    </MenuItem>
+  </If>
+  <If condition="$(phone_state)!=Settings">
+    <SoftKeyItem>
+      <Name>CANCEL</Name>
+      <Url track="no">phone://mb_nop#go_back</Url>
+    </SoftKeyItem>
+  </If>
+</IPPhoneMenu>

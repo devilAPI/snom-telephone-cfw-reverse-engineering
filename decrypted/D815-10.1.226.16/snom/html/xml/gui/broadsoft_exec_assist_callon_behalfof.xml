@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<IPPhoneBatch xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../schemas/minibrowser.xsd">
+  <!-- Call On Behalf of: Select Executive Menu -->
+  <IPPhoneMenu track="yes" id="callon_behalfof_select_executive_menu" state="only_mb">
+    <Title>$(lang:xsi_callon_behalfof_select_executive)</Title>
+    <Repeat values="$(var_ifc:identity.$(set:exec_assistant_identity).exec_assist::callon_behalfof_executives_info)" token="|__EXEC_USER_ID__|__EXEC_FULL_NAME__|">
+      <MenuItem name="__EXEC_FULL_NAME__" id ="__EXEC_USER_ID__">
+        <Url>phone://mb_nop#action_ifc:identity.$(set:exec_assistant_identity).exec_assist=callon_behalfof_selected_exec,selected_executive_user_id=__EXEC_USER_ID__</Url>
+      </MenuItem>
+    </Repeat>
+  </IPPhoneMenu>
+  <!-- EO Call On Behalf of: Select Executive Menu -->
+</IPPhoneBatch>

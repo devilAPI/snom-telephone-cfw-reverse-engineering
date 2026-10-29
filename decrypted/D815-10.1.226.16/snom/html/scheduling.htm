@@ -1,0 +1,94 @@
+<?ssi skipon NOT_RADCOM?>
+<?ssi title radcom_ssi_title?>
+<?ssi file common1.htm?>
+	<TR><TD vAlign="top" height="16"><IMG height="16" src="img/clr.gif" width="16"></TD></TR>
+	<TR><TD vAlign=top height=5><IMG height=5 src="img/clr.gif" width=12></TD></TR>
+
+	<TR>
+		<TD vAlign="top">
+			<FORM method="post">
+				<?ssi skipon VTECH?>
+				<TABLE class="bubbleTable" cellSpacing="0" cellPadding="0" width="100%" border="0">
+				<?ssi skipoff VTECH?>
+				<?ssi skipon SNOM?>
+				<TABLE cellSpacing="4" cellPadding="0" width="100%" border="0">
+				<?ssi skipoff SNOM?>
+					<TBODY>
+<TR>
+	<TD class="background" width="12" height="5">
+		<?ssi skipon VTECH?>
+		<IMG height="12" src=<?ssi img-corner-gif ul?> width="12">
+		<?ssi skipoff VTECH?>
+	</TD>
+	<TD></TD>
+	<TD></TD>
+	<TD class="background" width="12" height="5">
+		<?ssi skipon VTECH?>
+		<IMG height="12" src=<?ssi img-corner-gif ur?> width="12">
+		<?ssi skipoff VTECH?>
+	</TD>
+</TR>
+<?ssi hidden_tag?>
+
+<TR><TD></TD>
+	<?ssi skipon VTECH?>
+	<TD><B>
+	<?ssi skipoff VTECH?>
+	<?ssi skipon SNOM?>
+	<TD class="titleText">
+	<?ssi skipoff SNOM?>
+	<?lng playback_ssi_settings?></B>
+	</TD>
+</TR>
+<TR><TD></TD><?ssi radio playback_ssi_feature playback_feature advanced_ssi_on advanced_ssi_off?></TR>
+<TR><TD></TD><TD><?ssi input playback_ssi_url playback_url?></td></TR>
+<TR><TD></TD><TD>&nbsp;</TD></TR>
+
+<TR><TD></TD>
+	<?ssi skipon VTECH?>
+	<TD><B>
+	<?ssi skipoff VTECH?>
+	<?ssi skipon SNOM?>
+	<TD class="titleText">
+	<?ssi skipoff SNOM?>
+	<?lng scheduling_ssi_settings?></B></TD></TR>
+<td>
+<TR><TD></TD><?ssi radio scheduling_ssi_feature scheduling_feature advanced_ssi_on advanced_ssi_off?></TR>
+<TR><TD></TD><TD><?ssi input scheduling_ssi_frequency scheduling_frequency_time?>
+<select <?ssi disabled scheduling_frequency_type?> name="scheduling_frequency_type" size="1">
+<option value="scheduling_day"<?ssi selected scheduling_frequency_type scheduling_day?>><?lng scheduling_ssi_day?></option>
+<option value="scheduling_hour"<?ssi selected scheduling_frequency_type scheduling_hour?>><?lng scheduling_ssi_hour?></option>
+<option value="scheduling_minute"<?ssi selected scheduling_frequency_type scheduling_minute?>><?lng scheduling_ssi_minute?></option>
+</select></td>
+<TR><TD></TD><TD><?ssi input scheduling_ssi_number scheduling_number?></td></TR>
+<TR><TD></TD><TD><?ssi input scheduling_ssi_start scheduling_start?></td></TR>
+<TR><TD></TD><TD><?ssi input scheduling_ssi_end scheduling_end?></td></TR>
+<TR><TD></TD><TD><?ssi input scheduling_ssi_call_duration scheduling_call_duration?></td></TR>
+<TD></TD><TD></TD>
+<TR>
+	<TD></TD>
+	<TD>
+		<input type="hidden" value="<?lng apply_button?>" name="Settings">
+		<!--Hidden input is used to allow onchange event to apply settings automatically-->
+		<input type="submit" value="<?lng apply_button?>" name="Settings">
+<TR>
+	<TD class="background" vAlign="bottom" align="left" width="12" height="5">
+		<?ssi skipon VTECH?>
+		<IMG height="12" src=<?ssi img-corner-gif ll?> width="12">
+		<?ssi skipoff VTECH?>
+	</TD>
+	<TD></TD>
+	<TD></TD>
+	<TD class="background" vAlign="bottom" align="right" width="12" height="5">
+		<?ssi skipon VTECH?>
+		<IMG height="12" src=<?ssi img-corner-gif lr?> width="12">
+		<?ssi skipoff VTECH?>
+	</TD>
+</TR>
+			</TBODY></TABLE>
+		</FORM>
+	</TD>
+</TR>
+<script type="text/javascript" src="fox.js" charset="utf-8"></script>
+<?ssi file common9.htm?></HTML>
+<?ssi skipoff NOT_RADCOM?>

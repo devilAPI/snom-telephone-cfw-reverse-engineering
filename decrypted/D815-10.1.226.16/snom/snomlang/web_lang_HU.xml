@@ -1,0 +1,1447 @@
+<?xml version="1.0" encoding="utf-8"?>
+<w_phrases>
+	<language t="Magyar"/>
+	<w_phrase n="wlang_iso_code" t="HU"/>
+	<w_phrase n="wlang_web_language_name" t="Magyar"/>
+	<w_phrase n="wlang_index_infotext" t="Ez a webes kezelőfelület könnyebbé teszi a telefon üzembehelyezését és itt érhetőek el a beállítások. Tárcsázáshoz üssön be egy telefonszámot a lenti mezőbe. Beírhat egyszerű telefonszámot (pl. 0114930398330) vagy egy URI-t (pl. info@example.com)."/>
+	<w_phrase n="wlang_index_dialnumber" t="Szám tárcsázása"/>
+	<w_phrase n="wlang_index_dialnumberbutton" t="Hívás"/>
+	<w_phrase n="wlang_index_hangupbutton" t="Letesz"/>
+	<w_phrase n="wlang_index_outgoingident" t="Kimenő azonosító"/>
+	<w_phrase n="wlang_index_setbutton" t="Beállít"/>
+	<w_phrase n="wlang_index_dialednumbers" t="Tárcsázott számok"/>
+	<w_phrase n="wlang_index_dialed" t="Tárcsázott"/>
+	<w_phrase n="wlang_index_missedcalls" t="Nem fogadott hívások"/>
+	<w_phrase n="wlang_index_missed" t="Nem fogadott"/>
+	<w_phrase n="wlang_index_rejectedcalls" t="Visszautasított hívások"/>
+	<w_phrase n="wlang_index_rejected" t="Visszautasított"/>
+	<w_phrase n="wlang_index_receivedcalls" t="Fogadott hívások"/>
+	<w_phrase n="wlang_index_received" t="Fogadott"/>
+	<w_phrase n="wlang_index_date" t="Dátum"/>
+	<w_phrase n="wlang_index_number" t="Telefonszám"/>
+	<w_phrase n="wlang_leftnav_operation" t="Működés"/>
+	<w_phrase n="wlang_leftnav_home" t="Otthoni"/>
+	<w_phrase n="wlang_leftnav_addressbook" t="Telefonkönyv"/>
+	<w_phrase n="wlang_leftnav_setup" t="Beállítások"/>
+	<w_phrase n="wlang_leftnav_preferences" t="Preferenciák"/>
+	<w_phrase n="wlang_leftnav_speeddial" t="Gyorshívó"/>
+	<w_phrase n="wlang_leftnav_functionkeys" t="Funkciógombok"/>
+	<w_phrase n="wlang_leftnav_lineone" t="Azonosító 1"/>
+	<w_phrase n="wlang_leftnav_linetwo" t="Azonosító 2"/>
+	<w_phrase n="wlang_leftnav_linethree" t="Azonosító 3"/>
+	<w_phrase n="wlang_leftnav_linefour" t="Azonosító 4"/>
+	<w_phrase n="wlang_leftnav_linefive" t="Azonosító 5"/>
+	<w_phrase n="wlang_leftnav_linesix" t="Azonosító 6"/>
+	<w_phrase n="wlang_leftnav_lineseven" t="Azonosító 7"/>
+	<w_phrase n="wlang_leftnav_lineeight" t="Azonosító 8"/>
+	<w_phrase n="wlang_leftnav_linenine" t="Azonosító 9"/>
+	<w_phrase n="wlang_leftnav_lineten" t="Azonosító 10"/>
+	<w_phrase n="wlang_leftnav_lineeleven" t="Azonosító 11"/>
+	<w_phrase n="wlang_leftnav_linetwelve" t="Azonosító 12"/>
+	<w_phrase n="wlang_leftnav_linethirteen" t="Azonosító 13"/>
+	<w_phrase n="wlang_leftnav_linefourteen" t="Azonosító 14"/>
+	<w_phrase n="wlang_leftnav_linefifteen" t="Azonosító 15"/>
+	<w_phrase n="wlang_leftnav_linesixteen" t="Azonosító 16"/>
+	<w_phrase n="wlang_leftnav_advanced" t="Haladó"/>
+	<w_phrase n="wlang_leftnav_softupdate" t="Szoftver frissítés"/>
+	<w_phrase n="wlang_leftnav_status" t="Státusz"/>
+	<w_phrase n="wlang_leftnav_sysinfo" t="Rendszer információ"/>
+	<w_phrase n="wlang_leftnav_siptrace" t="SIP trace"/>
+	<w_phrase n="wlang_leftnav_httptrace" t="HTTP trace"/>
+	<w_phrase n="wlang_leftnav_upnptrace" t="UPnP trace"/>
+	<w_phrase n="wlang_leftnav_dnscache" t="DNS gyorsítótár"/>
+	<w_phrase n="wlang_leftnav_pcaptrace" t="PCAP trace"/>
+	<w_phrase n="wlang_leftnav_log" t="Napló"/>
+	<w_phrase n="wlang_leftnav_memory" t="Memória"/>
+	<w_phrase n="wlang_leftnav_settings" t="Beállítások"/>
+	<w_phrase n="wlang_leftnav_manual" t="Felhasználói kézikönyv"/>
+	<w_phrase n="wlang_adr_name" t="Név"/>
+	<w_phrase n="wlang_adr_number" t="Telefonszám"/>
+	<w_phrase n="wlang_adr_contacttype" t="Kontakt típusa"/>
+	<w_phrase n="wlang_adr_edit" t="Szerkesztés"/>
+	<w_phrase n="wlang_adr_delete" t="Törlés"/>
+	<w_phrase n="wlang_adr_addeditentry" t="Hozzáadás vagy bejegyzés szerkesztése"/>
+	<w_phrase n="wlang_adr_ctnone" t="Nincs"/>
+	<w_phrase n="wlang_adr_ctfriends" t="Barátok"/>
+	<w_phrase n="wlang_adr_ctfamily" t="Család"/>
+	<w_phrase n="wlang_adr_ctcolleagues" t="Kollégák"/>
+	<w_phrase n="wlang_adr_ctvip" t="VIP"/>
+	<w_phrase n="wlang_adr_ctdeny" t="Tiltó lista"/>
+	<w_phrase n="wlang_adr_ctserver" t="Szerver"/>
+	<w_phrase n="wlang_adr_searchbutton" t="Keresés"/>
+	<w_phrase n="wlang_adr_addeditbutton" t="Hozzáadás"/>
+	<w_phrase n="wlang_adr_importadrbook" t="Telefonkönyv importálása (CSV)"/>
+	<w_phrase n="wlang_adr_filename" t="Fájlnév"/>
+	<w_phrase n="wlang_adr_loadbutton" t="Betöltés"/>
+	<w_phrase n="wlang_prefs_generalinfo" t="Általános információk"/>
+	<w_phrase n="wlang_prefs_language" t="Nyelv"/>
+	<w_phrase n="wlang_prefs_web_language" t="Webes kezelőfelület nyelve"/>
+	<w_phrase n="wlang_prefs_displaystyle" t="Szám kijelzési stílus"/>
+	<w_phrase n="wlang_prefs_dsfullcontact" t="Kapcsolatok"/>
+	<w_phrase n="wlang_prefs_dsname" t="Név"/>
+	<w_phrase n="wlang_prefs_dsnumber" t="Telefonszám"/>
+	<w_phrase n="wlang_prefs_dsnamenumber" t="Név + Telefonszám"/>
+	<w_phrase n="wlang_prefs_tonescheme" t="Hang séma"/>
+	<w_phrase n="wlang_prefs_tsaustralia" t="Ausztrália"/>
+	<w_phrase n="wlang_prefs_tschina" t="Kína"/>
+	<w_phrase n="wlang_prefs_tsdenmark" t="Dánia"/>
+	<w_phrase n="wlang_prefs_tsgermany" t="Németország"/>
+	<w_phrase n="wlang_prefs_tsindia" t="India"/>
+	<w_phrase n="wlang_prefs_tsjapan" t="Japán"/>
+	<w_phrase n="wlang_prefs_tsmexico" t="Mexikó"/>
+	<w_phrase n="wlang_prefs_tsuk" t="Egyesült Királyság"/>
+	<w_phrase n="wlang_prefs_tsus" t="Amerikai Egyesült Államok"/>
+	<w_phrase n="wlang_prefs_tsgreece" t="Görögország"/>
+	<w_phrase n="wlang_prefs_mwinotifi" t="MWI értesítés"/>
+	<w_phrase n="wlang_prefs_mwisilent" t="Néma"/>
+	<w_phrase n="wlang_prefs_mwibeep" t="Csippanás"/>
+	<w_phrase n="wlang_prefs_mwireminder" t="Emlékeztető"/>
+	<w_phrase n="wlang_prefs_mwidialtone" t="MWI tárcsahang"/>
+	<w_phrase n="wlang_prefs_mwidialnormal" t="Normál"/>
+	<w_phrase n="wlang_prefs_mwidialstutter" t="Szaggatott"/>
+	<w_phrase n="wlang_prefs_on" t="Be"/>
+	<w_phrase n="wlang_prefs_off" t="Ki"/>
+	<w_phrase n="wlang_prefs_redirection" t="Hívásátirányítás"/>
+	<w_phrase n="wlang_prefs_timeout" t="Időtartam (mp)"/>
+	<w_phrase n="wlang_prefs_ringtones" t="Csengőhangok"/>
+	<w_phrase n="wlang_prefs_friends" t="Barátok"/>
+	<w_phrase n="wlang_prefs_ringer1" t="Dallam 1"/>
+	<w_phrase n="wlang_prefs_ringer2" t="Dallam 2"/>
+	<w_phrase n="wlang_prefs_ringer3" t="Dallam 3"/>
+	<w_phrase n="wlang_prefs_ringer4" t="Dallam 4"/>
+	<w_phrase n="wlang_prefs_ringer5" t="Dallam 5"/>
+	<w_phrase n="wlang_prefs_ringer6" t="Dallam 6"/>
+	<w_phrase n="wlang_prefs_ringer7" t="Dallam 7"/>
+	<w_phrase n="wlang_prefs_ringer8" t="Dallam 8"/>
+	<w_phrase n="wlang_prefs_ringersilent" t="Néma"/>
+	<w_phrase n="wlang_prefs_family" t="Család"/>
+	<w_phrase n="wlang_prefs_colleagues" t="Kollégák"/>
+	<w_phrase n="wlang_prefs_ringdeviceheadset" t="Csengés fejbeszélő használatakor"/>
+	<w_phrase n="wlang_prefs_ringvolume_amplification" t="Hangosabb csengőhang"/>
+	<w_phrase n="wlang_prefs_ringspeaker" t="Kihangosító használata"/>
+	<w_phrase n="wlang_prefs_ringheadset" t="Fejbeszélő használata"/>
+	<w_phrase n="wlang_prefs_ringspeaker_and_headset" t="Fejbeszélő és kihangosító használata"/>
+	<w_phrase n="wlang_prefs_ssi_custommelody" t="Saját csengőhang URL"/>
+	<w_phrase n="wlang_prefs_autoanswer" t="Automatikus hívásfogadás"/>
+	<w_phrase n="wlang_prefs_ssi_aaautoanswer" t="Automatikus hívásfogadás"/>
+	<w_phrase n="wlang_prefs_ssi_aaindication" t="Automatikus hívásfogadás kijelzése"/>
+	<w_phrase n="wlang_prefs_ssi_aaindicationtone" t="Automatikus hívásfogadás hangjelzés"/>
+	<w_phrase n="wlang_prefs_privacysetting" t="Biztonsági beállítások"/>
+	<w_phrase n="wlang_prefs_ssi_privclip" t="A kimenő hívóazonosító megjelenítése/elrejtése (CLIP/CLIR)"/>
+	<w_phrase n="wlang_prefs_ssi_privclir" t="Rejtett számú hívások elutasítása"/>
+	<w_phrase n="wlang_prefs_original" t="Eredeti"/>
+	<w_phrase n="wlang_prefs_new" t="Új"/>
+	<w_phrase n="wlang_prefs_dimension" t="Dimenzió"/>
+	<w_phrase n="wlang_prefs_hide" t="Elrejt"/>
+	<w_phrase n="wlang_prefs_show" t="Megjelenít"/>
+	<w_phrase n="wlang_prefs_reject" t="Elutasít"/>
+	<w_phrase n="wlang_prefs_accept" t="Fogad"/>
+	<w_phrase n="wlang_prefs_savebutton" t="Mentés"/>
+	<w_phrase n="wlang_hcilog_download" t="Hcilog mentése"/>
+	<w_phrase n="wlang_hcipcap_download" t="Hcitrace.pcap mentése"/>
+	<w_phrase n="wlang_connectivityd_log_download" t="Connectivityd.log mentése"/>
+	<w_phrase n="wlang_speed_speeddialtable" t="Gyorstárcsázó tábla"/>
+	<w_phrase n="wlang_fkeys_keysettings" t="Billentyű beállítások"/>
+	<w_phrase n="wlang_fkeys_ssi_number" t="Telefonszám"/>
+	<w_phrase n="wlang_fkeys_ssi_line" t="Vonal"/>
+	<w_phrase n="wlang_fkeys_ssi_dest" t="Mellék"/>
+	<w_phrase n="wlang_fkeys_ssi_intercom" t="Hangosbemondó"/>
+	<w_phrase n="wlang_fkeys_ssi_parkorbit" t="Parkoltatás"/>
+	<w_phrase n="wlang_fkeys_ssi_voicerecorder" t="Hangrögzítés"/>
+	<w_phrase n="wlang_fkeys_ssi_dtmf" t="DTMF"/>
+	<w_phrase n="wlang_line_logininfo" t="Bejelentkezési információ"/>
+	<w_phrase n="wlang_line_ssi_name" t="Kijelzendő név"/>
+	<w_phrase n="wlang_line_ssi_account" t="Felhasználónév"/>
+	<w_phrase n="wlang_line_ssi_password" t="Jelszó"/>
+	<w_phrase n="wlang_line_ssi_registrar" t="Regisztrációs szerver"/>
+	<w_phrase n="wlang_line_ssi_secondary_registrar" t="Másodlagos regisztráció"/>
+	<w_phrase n="wlang_line_status" t="Státusz"/>
+	<w_phrase n="wlang_line_ssi_mailbox" t="Hangposta"/>
+	<w_phrase n="wlang_line_ssi_mailbox_retrieve" t="Hangposta"/>
+	<w_phrase n="wlang_line_ringtone" t="Csengőhang"/>
+	<w_phrase n="wlang_line_ringer1" t="Dallam 1"/>
+	<w_phrase n="wlang_line_ringer2" t="Dallam 2"/>
+	<w_phrase n="wlang_line_ringer3" t="Dallam 3"/>
+	<w_phrase n="wlang_line_ringer4" t="Dallam 4"/>
+	<w_phrase n="wlang_line_ringer5" t="Dallam 5"/>
+	<w_phrase n="wlang_line_ringer6" t="Dallam 6"/>
+	<w_phrase n="wlang_line_ringer7" t="Dallam 7"/>
+	<w_phrase n="wlang_line_ringer8" t="Dallam 8"/>
+	<w_phrase n="wlang_line_ringer9" t="Dallam 9"/>
+	<w_phrase n="wlang_line_ringer10" t="Dallam 10"/>
+	<w_phrase n="wlang_line_silent" t="Néma"/>
+	<w_phrase n="wlang_line_splash" t="Splash"/>
+	<w_phrase n="wlang_line_ssi_outboundproxy" t="Kimenő proxy szerver"/>
+	<w_phrase n="wlang_line_ssi_secondary_outboundproxy" t="Másodlagos kimenő proxy szerver"/>
+	<w_phrase n="wlang_line_ssi_dialplan" t="Dialplan beállítás"/>
+	<w_phrase n="wlang_line_qvalue" t="Q-érték"/>
+	<w_phrase n="wlang_line_expire" t="Tervezett lejárat"/>
+	<w_phrase n="wlang_line_codec" t="Kodek"/>
+	<w_phrase n="wlang_current_codeclist" t="Szűrt kodek lista"/>
+	<w_phrase n="wlang_line_packetsize" t="Csomagméret"/>
+	<w_phrase n="wlang_line_ssi_rtpencryption" t="RTP titkosítás"/>
+	<w_phrase n="wlang_update_info" t="Pontosan megadható, hogy melyik szoftver verziót szeretné használni ezen a telefonon. Töltse ki a mezőt egy HTTP URL címmel, amely arra a firmware-re mutat, amelyet használni szeretne. Csak teljes HTTP URL címet használjon (pl. http://www.example.com/firmware.bin). A telefon újra fog indulni, miután megnyomta a Betöltés gombot."/>
+	<w_phrase n="wlang_update_manualsoftup" t="Kézi szoftver frissítés"/>
+	<w_phrase n="wlang_update_manualsoftup_uxm" t="Kiegészítő modul szoftver frissítés"/>
+	<w_phrase n="wlang_update_info_uxm" t="Kérem csak egy kiegészítő modult csatlakoztasson a telefonhoz, hogy a frissítési folyamat elindulhasson"/>
+	<w_phrase n="wlang_update_ssi_firmware" t="Firmware"/>
+	<w_phrase n="wlang_update_loadbutton" t="Betöltés"/>
+	<w_phrase n="wlang_info_phonetype" t="Telefon típusa"/>
+	<w_phrase n="wlang_info_macaddress" t="MAC cím"/>
+	<w_phrase n="wlang_info_wifi_mac_address" t="Wi-Fi MAC cím"/>
+	<w_phrase n="wlang_info_ipaddress" t="IP cím"/>
+	<w_phrase n="wlang_info_l2tp_ipaddress" t="L2TP IP cím"/>
+	<w_phrase n="wlang_info_firmware_url" t="Firmware URL"/>
+	<w_phrase n="wlang_trace_clearbutton" t="Törlés"/>
+	<w_phrase n="wlang_trace_reloadbutton" t="Újratöltés"/>
+	<w_phrase n="wlang_trace_downloadbutton" t="Letöltés"/>
+	<w_phrase n="wlang_log_level" t="Log szint"/>
+	<w_phrase n="wlang_log_level_type" t="Log szint típus"/>
+	<w_phrase n="wlang_log_ssi_overall" t="Általános"/>
+	<w_phrase n="wlang_module_log_level" t="Modul szintek"/>
+	<w_phrase n="wlang_log_ssi_module" t="Modulok"/>
+	<w_phrase n="wlang_log_clearbutton" t="Törlés"/>
+	<w_phrase n="wlang_advanced_network" t="Hálózat"/>
+	<w_phrase n="wlang_advanced_ssi_dhcp" t="DHCP"/>
+	<w_phrase n="wlang_advanced_ssi_on" t="Be"/>
+	<w_phrase n="wlang_advanced_ssi_off" t="Ki"/>
+	<w_phrase n="wlang_advanced_ssi_ipaddress" t="IP cím"/>
+	<w_phrase n="wlang_advanced_ssi_netmask" t="Hálózati maszk"/>
+	<w_phrase n="wlang_advanced_ssi_phonename" t="Hosztnév"/>
+	<w_phrase n="wlang_advanced_ssi_ipgateway" t="IP gateway"/>
+	<w_phrase n="wlang_advanced_dns" t="DNS"/>
+	<w_phrase n="wlang_advanced_ssi_domain" t="Tartomány"/>
+	<w_phrase n="wlang_advanced_ssi_dnsserver1" t="DNS szerver 1"/>
+	<w_phrase n="wlang_advanced_ssi_dnsserver2" t="DNS szerver 2"/>
+	<w_phrase n="wlang_advanced_time" t="Idő"/>
+	<w_phrase n="wlang_advanced_ssi_ntptimeserver" t="NTP szerver"/>
+	<w_phrase n="wlang_advanced_timezone" t="Időzóna"/>
+	<w_phrase n="wlang_advanced_http" t="HTTP"/>
+	<w_phrase n="wlang_advanced_ssi_user" t="Felhasználó"/>
+	<w_phrase n="wlang_advanced_ssi_password" t="Jelszó"/>
+	<w_phrase n="wlang_not_default" t="Nem alapértelmezett"/>
+	<w_phrase n="wlang_advanced_ssi_httpproxy" t="HTTP proxy"/>
+	<w_phrase n="wlang_advanced_ssi_httpport" t="HTTP port"/>
+	<w_phrase n="wlang_advanced_ssi_httpsport" t="HTTPS port"/>
+	<w_phrase n="wlang_advanced_webservercon" t="Webszerver kapcsolat típusa"/>
+	<w_phrase n="wlang_advanced_httponly" t="Csak HTTP"/>
+	<w_phrase n="wlang_advanced_httpsonly" t="Csak HTTPS"/>
+	<w_phrase n="wlang_advanced_httphttps" t="HTTP vagy HTTPS"/>
+	<w_phrase n="wlang_advanced_off" t="Ki"/>
+	<w_phrase n="wlang_advanced_phonebehavior" t="Telefon beállítások"/>
+	<w_phrase n="wlang_advanced_ssi_callcompletion" t="Újrahívás"/>
+	<w_phrase n="wlang_advanced_ssi_lldp" t="LLDP"/>
+	<w_phrase n="wlang_advanced_ssi_lldp_network_policy_timeout" t="LLDP hálózati beállításokra várakozás"/>
+	<w_phrase n="wlang_advanced_ssi_idnasupport" t="IDNA (RFC 3490) támogatás"/>
+	<w_phrase n="wlang_advanced_actionethernet" t="Mi történjen a hálózati kábel újracsatlakoztatásakor"/>
+	<w_phrase n="wlang_advanced_reboot" t="Újraindítás"/>
+	<w_phrase n="wlang_advanced_donothing" t="Figyelmen kívül hagyás"/>
+	<w_phrase n="wlang_advanced_ssi_numberguessing" t="Gyorskereső"/>
+	<w_phrase n="wlang_advanced_ssi_blockurldialing" t="URL tárcsázás blokkolása"/>
+	<w_phrase n="wlang_advanced_ssi_challengeresponse" t="Challenge Response a telefonon"/>
+	<w_phrase n="wlang_advanced_ssi_callwaitingindi" t="Hívásvárakoztatás kijelzése"/>
+	<w_phrase n="wlang_advanced_ssi_dialtonehold" t="Tárcsahang a hívástartás alatt"/>
+	<w_phrase n="wlang_advanced_ssi_disconnectonhook" t="Hívásmegszakítás a kézibeszélő letételekor"/>
+	<w_phrase n="wlang_advanced_keys" t="Billentyűk"/>
+	<w_phrase n="wlang_advanced_ssi_transferonhook" t="Átkapcsolás a kézibeszélő letételekor"/>
+	<w_phrase n="wlang_advanced_ssi_blockdnd" t="DND blokkolása"/>
+	<w_phrase n="wlang_advanced_ssi_logonwizard" t="Bejelentkezési varázsló"/>
+	<w_phrase n="wlang_advanced_preselection" t="Előválasztás"/>
+	<w_phrase n="wlang_advanced_ssi_prefix" t="Körzetszám"/>
+	<w_phrase n="wlang_advanced_audio" t="Audió"/>
+	<w_phrase n="wlang_advanced_ssi_disablecasingspeaker" t="Kihangosítás kikapcsolása"/>
+	<w_phrase n="wlang_advanced_ssi_dtmfechospeaker" t="DTMF hangok bekapcsolása tárcsázáskor"/>
+	<w_phrase n="wlang_advanced_ssi_dtmf_payload_type" t="DTMF átvitel"/>
+	<w_phrase n="wlang_advanced_ssi_callreleasednotify" t="Hívásértesítés"/>
+	<w_phrase n="wlang_line_ssi_stunserver" t="STUN szerver (IP cím:port)"/>
+	<w_phrase n="wlang_line_ssi_keepaliveint" t="Keepalive időközök (mp)"/>
+	<w_phrase n="wlang_advanced_ssi_dynamicrtpstart" t="Dinamikus RTP kezdő port"/>
+	<w_phrase n="wlang_advanced_ssi_dynamicrtpstop" t="Dinamikus RTP utolsó port"/>
+	<w_phrase n="wlang_advanced_ssi_typeofservice" t="RTP szolgáltatás típus (TOS/Diffserv)"/>
+	<w_phrase n="wlang_advanced_ssi_payloadtype" t="DTMF átvitel"/>
+	<w_phrase n="wlang_advanced_ssi_networkidentport" t="Hálózati azonosító (port)"/>
+	<w_phrase n="wlang_advanced_ssi_sipt1" t="SIP T1 (ms)"/>
+	<w_phrase n="wlang_advanced_ssi_sipsessiontimer" t="SIP session időzítő (mp)"/>
+	<w_phrase n="wlang_advanced_ssi_sipdirtyhostttl" t="SIP dirty host TTL (mp)"/>
+	<w_phrase n="wlang_advanced_ssi_sipmaxforward" t="SIP maximum továbbítások"/>
+	<w_phrase n="wlang_advanced_ssi_enumsuffix" t="ENUM utótag"/>
+	<w_phrase n="wlang_advanced_ssi_musiconholdserver" t="Music on hold szerver"/>
+	<w_phrase n="wlang_advanced_ssi_useuserphone" t="User=phone használata"/>
+	<w_phrase n="wlang_advanced_ssi_publishpresence" t="Telefon állapot publikálása"/>
+	<w_phrase n="wlang_advanced_ssi_refertobrackets" t="Refer-To zárójelben"/>
+	<w_phrase n="wlang_advanced_ssi_requireprack" t="PRACK szükséges"/>
+	<w_phrase n="wlang_advanced_ssi_symmetricrtp" t="Szimmetrikus RTP"/>
+	<w_phrase n="wlang_advanced_update" t="Frissítés"/>
+	<w_phrase n="wlang_advanced_updatepolicy" t="Frissítési szabály"/>
+	<w_phrase n="wlang_advanced_upautomatically" t="Frissítés automatikusan"/>
+	<w_phrase n="wlang_advanced_upaskupdate" t="Kérdezzen rá a frissítésre"/>
+	<w_phrase n="wlang_advanced_upneverupdatesetting" t="Sose frissítsen, csak a beállításokat töltse be"/>
+	<w_phrase n="wlang_advanced_upneverupdatenosetting" t="Sose frissítsen, a beállításokat se töltse be"/>
+	<w_phrase n="wlang_advanced_ssi_settingurl" t="URL beállítása"/>
+	<w_phrase n="wlang_advanced_debug" t="Debug"/>
+	<w_phrase n="wlang_advanced_ssi_lcserver" t="LCSzerver"/>
+	<w_phrase n="wlang_advanced_resetbutton" t="Gyári konfiguráció visszaállítása"/>
+	<w_phrase n="wlang_advanced_rebootbutton" t="Újraindítás"/>
+	<w_phrase n="wlang_advanced_security" t="Biztonság"/>
+	<w_phrase n="wlang_advanced_ssi_adminmode" t="Adminisztrátor mód"/>
+	<w_phrase n="wlang_advanced_ssi_adminpassword" t="Adminisztrátor jelszó"/>
+	<w_phrase n="wlang_advanced_ssi_adminpassconf" t="Adminisztrátor jelszó (megerősítés)"/>
+	<w_phrase n="wlang_advanced_ssi_adminlogin" t="Adminisztrátor bejelentkezés"/>
+	<w_phrase n="wlang_advanced_savebutton" t="Mentés"/>
+	<w_phrase n="wlang_advanced_tmz_USAm10" t="-10 Amerikai Egyesült Államok - Hawaii-Aleutian"/>
+	<w_phrase n="wlang_advanced_tmz_USAm9" t="-9 Amerikai Egyesült Államok - Alaszkai idő"/>
+	<w_phrase n="wlang_advanced_tmz_CANm8" t="-8 Kanada (Vancouver, Whitehorse)"/>
+	<w_phrase n="wlang_advanced_tmz_MEXm8" t="-8 Mexikó (Tijuana, Mexicali)"/>
+	<w_phrase n="wlang_advanced_tmz_USAm8" t="-8 Amerikai Egyesült Államok - Pacific Time"/>
+	<w_phrase n="wlang_advanced_tmz_CANm7" t="-7 Kanada (Edmonton, Calgary)"/>
+	<w_phrase n="wlang_advanced_tmz_MEXm7" t="-7 Mexikó (Mazatlán, Chihuahua)"/>
+	<w_phrase n="wlang_advanced_tmz_USAm7" t="-7 Amerikai Egyesült Államok - Mountain Time"/>
+	<w_phrase n="wlang_advanced_tmz_CANm6" t="-6 Kanada - Manitoba (Winnipeg)"/>
+	<w_phrase n="wlang_advanced_tmz_CAN2m6" t="-6 Kanada - Saskatchewan (Regina)"/>
+	<w_phrase n="wlang_advanced_tmz_CAMm6" t="-6 Közép-Amerika (Nincs DST)"/>
+	<w_phrase n="wlang_advanced_tmz_CHLm6" t="-6 Chile (Húsvét-sziget)"/>
+	<w_phrase n="wlang_advanced_tmz_MEXm6" t="-6 Mexikó (Mexico City, Acapulco)"/>
+	<w_phrase n="wlang_advanced_tmz_USAm6" t="-6 Amerikai Egyesült Államok - Central Time"/>
+	<w_phrase n="wlang_advanced_tmz_BHSm5" t="-5 Bahamák (Nassau)"/>
+	<w_phrase n="wlang_advanced_tmz_CANm5" t="-5 Kanada (Montreal, Ottawa, Québec)"/>
+	<w_phrase n="wlang_advanced_tmz_COLm5" t="-5 Kolumbia (Bogota)"/>
+	<w_phrase n="wlang_advanced_tmz_CUBm5" t="-5 Kuba (Havana)"/>
+	<w_phrase n="wlang_advanced_tmz_ECUm5" t="-5 Ecuador (Quito)"/>
+	<w_phrase n="wlang_advanced_tmz_USAm5" t="-5 Amerikai Egyesült Államok - Eastern Time"/>
+	<w_phrase n="wlang_advanced_tmz_CANm4" t="-4 Kanada (Halifax, Saint John)"/>
+	<w_phrase n="wlang_advanced_tmz_CHLm4" t="-4 Chile (Santiago)"/>
+	<w_phrase n="wlang_advanced_tmz_PRYm4" t="-4 Paraguay (Asunción)"/>
+	<w_phrase n="wlang_advanced_tmz_BMUm4" t="-4 Egyesült Királyság - Bermuda (Bermuda)"/>
+	<w_phrase n="wlang_advanced_tmz_FLKm4" t="-4 Egyesült Királyság (Falkland-szigetek)"/>
+	<w_phrase n="wlang_advanced_tmz_CANm35" t="-3,5 Kanada - Új-Fudland (St. Johns)"/>
+	<w_phrase n="wlang_advanced_tmz_GRLm2" t="-2 Denmark - Greenland (Nuuk)"/>
+	<w_phrase n="wlang_advanced_tmz_PRTm1" t="-1 Portugália (Azori-szigetek)"/>
+	<w_phrase n="wlang_advanced_tmz_FROm0" t="0 Dánia - Feröer-szigetek (Torshaven)"/>
+	<w_phrase n="wlang_advanced_tmz_IRLm0" t="0 Írország (Dublin)"/>
+	<w_phrase n="wlang_advanced_tmz_PRTm0" t="0 Portugália (Lisszabon, Porto, Funchal)"/>
+	<w_phrase n="wlang_advanced_tmz_ESPm0" t="0 Spanyolország - Kanári-szigetek (Las Palmas)"/>
+	<w_phrase n="wlang_advanced_tmz_GBRm0" t="0 Egyesült Királyság (London)"/>
+	<w_phrase n="wlang_advanced_tmz_ALBp1" t="+1 Albánia (Tirane)"/>
+	<w_phrase n="wlang_advanced_tmz_AUTp1" t="+1 Ausztria (Bécs)"/>
+	<w_phrase n="wlang_advanced_tmz_BELp1" t="+1 Belgium (Brüsszel)"/>
+	<w_phrase n="wlang_advanced_tmz_CAIm4" t="-4 Caicos-szigetek"/>
+	<w_phrase n="wlang_advanced_tmz_HRVp1" t="+1 Horvátország (Zágráb)"/>
+	<w_phrase n="wlang_advanced_tmz_CZEp1" t="+1 Csehország (Prága)"/>
+	<w_phrase n="wlang_advanced_tmz_DNKp1" t="+1 Dánia (Koppenhága)"/>
+	<w_phrase n="wlang_advanced_tmz_FRAp1" t="+1 Franciaország (Nizza)"/>
+	<w_phrase n="wlang_advanced_tmz_GERp1" t="+1 Németország (Berlin)"/>
+	<w_phrase n="wlang_advanced_tmz_HUNp1" t="+1 Magyarország (Budapest)"/>
+	<w_phrase n="wlang_advanced_tmz_ITAp1" t="+1 Olaszország (Róma)"/>
+	<w_phrase n="wlang_advanced_tmz_LUXp1" t="+1 Luxemburg (Luxemburg)"/>
+	<w_phrase n="wlang_advanced_tmz_MAKp1" t="+1 Észak-Macedónia (Skopje)"/>
+	<w_phrase n="wlang_advanced_tmz_NLDp1" t="+1 Hollandia (Amszterdam)"/>
+	<w_phrase n="wlang_advanced_tmz_NAMp1" t="+1 Namíbia (Windhoek)"/>
+	<w_phrase n="wlang_advanced_tmz_NORp1" t="+1 Norvégia (Oslo)"/>
+	<w_phrase n="wlang_advanced_tmz_POLp1" t="+1 Lengyelország (Varsó)"/>
+	<w_phrase n="wlang_advanced_tmz_SVKp1" t="+1 Szlovákia (Pozsony)"/>
+	<w_phrase n="wlang_advanced_tmz_ESPp1" t="+1 Spanyolország (Madrid, Palma)"/>
+	<w_phrase n="wlang_advanced_tmz_SWEp1" t="+1 Svédország (Stockholm)"/>
+	<w_phrase n="wlang_advanced_tmz_CHEp1" t="+1 Svájc (Bern)"/>
+	<w_phrase n="wlang_advanced_tmz_GIBp1" t="+1 Egyesült Királyság (Gibraltár)"/>
+	<w_phrase n="wlang_advanced_tmz_YUGp1" t="+1 Szerbia (Belgrád)"/>
+	<w_phrase n="wlang_advanced_tmz_BLRp3" t="+3 Fehéroroszország (Minszk)"/>
+	<w_phrase n="wlang_advanced_tmz_BGRp2" t="+2 Bulgária (Szófia)"/>
+	<w_phrase n="wlang_advanced_tmz_CYPp2" t="+2 Ciprus (Nicosia)"/>
+	<w_phrase n="wlang_advanced_tmz_EGYp2" t="+2 Egyiptom (Kairó)"/>
+	<w_phrase n="wlang_advanced_tmz_ESTp2" t="+2 Észtország (Tallinn)"/>
+	<w_phrase n="wlang_advanced_tmz_FINp2" t="+2 Finnország (Helsinki)"/>
+	<w_phrase n="wlang_advanced_tmz_GAZp2" t="+2 Gázai övezet (Gaza)"/>
+	<w_phrase n="wlang_advanced_tmz_GRCp2" t="+2 Görögország (Athén)"/>
+	<w_phrase n="wlang_advanced_tmz_ISRp2" t="+2 Izrael (Tel-Aviv)"/>
+	<w_phrase n="wlang_advanced_tmz_JORp2" t="+2 Jordánia (Amman)"/>
+	<w_phrase n="wlang_advanced_tmz_LVAp2" t="+2 Lettország (Riga)"/>
+	<w_phrase n="wlang_advanced_tmz_LTUp2" t="+2 Litvánia (Vilnius)"/>
+	<w_phrase n="wlang_advanced_tmz_LBNp2" t="+2 Libanon (Beirut)"/>
+	<w_phrase n="wlang_advanced_tmz_MDAp2" t="+2 Moldova (Kisjenő)"/>
+	<w_phrase n="wlang_advanced_tmz_RUSp2" t="+2 Oroszország (Kalinyingrád)"/>
+	<w_phrase n="wlang_advanced_tmz_ROUp2" t="+2 Románia (Bukarest)"/>
+	<w_phrase n="wlang_advanced_tmz_SYRp2" t="+2 Szíria (Damaszkusz)"/>
+	<w_phrase n="wlang_advanced_tmz_TURp3" t="+3 Törökország (Ankara)"/>
+	<w_phrase n="wlang_advanced_tmz_UKRp2" t="+2 Ukrajna (Kijev, Odessza)"/>
+	<w_phrase n="wlang_advanced_tmz_IRQp3" t="+3 Irak (Bagdad)"/>
+	<w_phrase n="wlang_advanced_tmz_RUSp3" t="+3 Oroszország (Moszkva)"/>
+	<w_phrase n="wlang_advanced_tmz_IRNp35" t="+3,5 Irán (Teherán)"/>
+	<w_phrase n="wlang_advanced_tmz_ARMp4" t="+4 Örményország (Jereván)"/>
+	<w_phrase n="wlang_advanced_tmz_AZEp4" t="+4 Azerbajdzsán (Baku)"/>
+	<w_phrase n="wlang_advanced_tmz_GEOp4" t="+4 Grúzia (Tbiliszi)"/>
+	<w_phrase n="wlang_advanced_tmz_KAZp4" t="+4 Kazahsztán (Aqtau)"/>
+	<w_phrase n="wlang_advanced_tmz_RUSp4" t="+4 Oroszország (Szamara)"/>
+	<w_phrase n="wlang_advanced_tmz_KAZp5" t="+5 Kazahsztán (Aktobe)"/>
+	<w_phrase n="wlang_advanced_tmz_KGZp5" t="+5 Kirgizisztán (Biskek)"/>
+	<w_phrase n="wlang_advanced_tmz_PAKp5" t="+5 Pakisztán (Iszlámábád)"/>
+	<w_phrase n="wlang_advanced_tmz_RUSp5" t="+5 Oroszország (Cseljabinszk)"/>
+	<w_phrase n="wlang_advanced_tmz_INDp55" t="+5,5 India (Kalkutta)"/>
+	<w_phrase n="wlang_advanced_tmz_KAZp6" t="+6 Kazahsztán (Asztana, Almati)"/>
+	<w_phrase n="wlang_advanced_tmz_RUSp6" t="+6 Oroszország (Novoszibirszk, Omszk)"/>
+	<w_phrase n="wlang_advanced_tmz_CHNp7" t="+8 Kína (Peking)"/>
+	<w_phrase n="wlang_advanced_tmz_RUSp7" t="+7 Oroszország (Krasznojarszk)"/>
+	<w_phrase n="wlang_advanced_tmz_THAp7" t="+7 Thaiföld (Bangkok)"/>
+	<w_phrase n="wlang_advanced_tmz_SGPp8" t="+8 Szingapúr (Szingapúr)"/>
+	<w_phrase n="wlang_advanced_tmz_KORp8" t="+9 Dél-Korea (Szöul)"/>
+	<w_phrase n="wlang_advanced_tmz_JPNp9" t="+9 Japán (Tokió)"/>
+	<w_phrase n="wlang_advanced_tmz_AUSp95" t="+9,5 Ausztrália (Adelaide)"/>
+	<w_phrase n="wlang_advanced_tmz_AUSp10" t="+10 Ausztrália (Sydney, Melbourne, Canberra)"/>
+	<w_phrase n="wlang_advanced_tmz_AUS2p10" t="+10 Ausztrália (Brisbane)"/>
+	<w_phrase n="wlang_advanced_tmz_RUSp10" t="+10 Oroszország (Vlagyivosztok)"/>
+	<w_phrase n="wlang_advanced_tmz_AUSp105" t="+10,5 Ausztrália (Lord Howe-szigetcsoport)"/>
+	<w_phrase n="wlang_advanced_tmz_NZLp12" t="+12 Új-Zéland (Wellington, Auckland)"/>
+	<w_phrase n="wlang_advanced_tmz_RUSp12" t="+12 Oroszország (Anadir, Kamcsatka)"/>
+	<w_phrase n="wlang_advanced_tmz_NZLp1275" t="+12,75 Új-Zéland (Chatham-szigetek)"/>
+	<w_phrase n="wlang_advanced_tmz_TONp13" t="+13 Tonga (Nukuʻalofa)"/>
+	<w_phrase n="wlang_adr_ssi_title" t="Telefonkönyv"/>
+	<w_phrase n="wlang_advanced_ssi_title" t="Részletes beállítások"/>
+	<w_phrase n="wlang_fkeys_ssi_title" t="Funkciógombok"/>
+	<w_phrase n="wlang_index_ssi_title" t="Üdvözlöm!"/>
+	<w_phrase n="wlang_info_ssi_title" t="Rendszer információ"/>
+	<w_phrase n="wlang_line1_ssi_title" t="Azonosító 1 konfigurálása"/>
+	<w_phrase n="wlang_line2_ssi_title" t="Azonosító 2 konfigurálása"/>
+	<w_phrase n="wlang_line3_ssi_title" t="Azonosító 3 konfigurálása"/>
+	<w_phrase n="wlang_line4_ssi_title" t="Azonosító 4 konfigurálása"/>
+	<w_phrase n="wlang_line5_ssi_title" t="Azonosító 5 konfigurálása"/>
+	<w_phrase n="wlang_line6_ssi_title" t="Azonosító 6 konfigurálása"/>
+	<w_phrase n="wlang_line7_ssi_title" t="Azonosító 7 konfigurálása"/>
+	<w_phrase n="wlang_line8_ssi_title" t="Azonosító 8 konfigurálása"/>
+	<w_phrase n="wlang_line9_ssi_title" t="Azonosító 9 konfigurálása"/>
+	<w_phrase n="wlang_line10_ssi_title" t="Azonosító 10 konfigurálása"/>
+	<w_phrase n="wlang_line11_ssi_title" t="Azonosító 11 konfigurálása"/>
+	<w_phrase n="wlang_line12_ssi_title" t="Azonosító 12 konfigurálása"/>
+	<w_phrase n="wlang_log_ssi_title" t="Rendszer log"/>
+	<w_phrase n="wlang_memstat_ssi_title" t="Memória információ"/>
+	<w_phrase n="wlang_prefs_ssi_title" t="Preferenciák"/>
+	<w_phrase n="wlang_settings_ssi_title" t="Beállítások"/>
+	<w_phrase n="wlang_speed_ssi_title" t="Gyorshívó"/>
+	<w_phrase n="wlang_sip_trace_ssi_title" t="SIP trace"/>
+	<w_phrase n="wlang_http_trace_ssi_title" t="HTTP trace"/>
+	<w_phrase n="wlang_update_ssi_title" t="Kézi szoftver frissítés"/>
+	<w_phrase n="wlang_adr_preview_name" t="Név"/>
+	<w_phrase n="wlang_adr_preview_number" t="Telefonszám"/>
+	<w_phrase n="wlang_adr_preview_reading" t="Olvasás"/>
+	<w_phrase n="wlang_adr_preview_contact_type" t="Kontakt típusa"/>
+	<w_phrase n="wlang_adr_preview_ignore" t="Figyelmen kívül hagy"/>
+	<w_phrase n="wlang_adr_file_type" t="Fájltípus"/>
+	<w_phrase n="wlang_adr_file_csv" t="CSV fájl"/>
+	<w_phrase n="wlang_adr_file_unicode" t="Unicode (tabulátorral elválasztott)"/>
+	<w_phrase n="wlang_adr_prev_ssi_title" t="Importálás előnézete"/>
+	<w_phrase n="wlang_adr_prev_description" t="Kérem ellenőrizze le a telefonkönyv mezőinek az oszlopokhoz való illeszkedését, majd ha készen van, nyomja meg a Mentés gombot."/>
+	<w_phrase n="wlang_adr_prev_apply" t="Mentés"/>
+	<w_phrase n="wlang_advanced_ssi_http_register" t="HTTP kapcsolat regisztrálása"/>
+	<w_phrase n="wlang_advanced_ssi_auth_scheme" t="Azonosítási séma"/>
+	<w_phrase n="wlang_advanced_ssi_digest" t="Digest"/>
+	<w_phrase n="wlang_advanced_ssi_basic" t="Alap"/>
+	<w_phrase n="wlang_advanced_ssi_offer_gruu" t="GRUU felajánlása"/>
+	<w_phrase n="wlang_line_none" t="Nincs"/>
+	<w_phrase n="wlang_advanced_ssi_offer_mpo" t="MPO felajánlása"/>
+	<w_phrase n="wlang_h323_trace_ssi_title" t="H323 trace"/>
+	<w_phrase n="wlang_advanced_ssi_challenge_reboot" t="Azonosítás SIP újrainduláskor"/>
+	<w_phrase n="wlang_advanced_ssi_challenge_checksync" t="Azonosítás SIP Check-Sync esetén"/>
+	<w_phrase n="wlang_dns_ssi_title" t="DNS gyorsítótár"/>
+	<w_phrase n="wlang_pcap_trace_ssi_title" t="PCAP trace"/>
+	<w_phrase n="wlang_pcap_text" t="A hálózati forgalom figyeléséhez ezen az oldalon PCAP fájlokat tud generálni. Ezek a fájlok különböző hálózati eszközökkel olvashatók, mint például a Wireshark. A figyelés elkezdéséhez kattintson a Start gombra, befejezéséhez a Stop gombra. Kérem figyeljen arra, hogy az adatok egy körkörös pufferben vannak eltárolva (a túlcsordulás elkerülése érdekében) és a figyelés negatív hatással lehet a telefon teljesítményére."/>
+	<w_phrase n="wlang_leftnav_action" t="URL beállítások"/>
+	<w_phrase n="wlang_action_ssi_title" t="URL"/>
+	<w_phrase n="wlang_action_settings" t="URL"/>
+	<w_phrase n="wlang_action_ssi_dnd_on" t="DND be"/>
+	<w_phrase n="wlang_action_ssi_dnd_off" t="DND ki"/>
+	<w_phrase n="wlang_action_ssi_redirection_on" t="Hívásátirányítás be"/>
+	<w_phrase n="wlang_action_ssi_redirection_off" t="Hívásátirányítás ki"/>
+	<w_phrase n="wlang_action_ssi_incoming" t="Bejövő hívás"/>
+	<w_phrase n="wlang_action_ssi_blacklist" t="Feketelista ellenőrzés"/>
+	<w_phrase n="wlang_action_ssi_outgoing" t="Kimenő hívás"/>
+	<w_phrase n="wlang_action_ssi_setup" t="Beállítás befejeződött"/>
+	<w_phrase n="wlang_action_ssi_offhook" t="Kézibeszélő felemelve"/>
+	<w_phrase n="wlang_action_ssi_onhook" t="Kézibeszélő letéve"/>
+	<w_phrase n="wlang_radcom_ssi_title" t="Automatikus visszajátszás / Időzítés"/>
+	<w_phrase n="wlang_playback_ssi_settings" t="Automatikus visszajátszás beállítása"/>
+	<w_phrase n="wlang_playback_ssi_feature" t="Automatikus visszajátszás"/>
+	<w_phrase n="wlang_playback_ssi_url" t="WAV állomány URL"/>
+	<w_phrase n="wlang_scheduling_ssi_settings" t="Ütemezési beállítás"/>
+	<w_phrase n="wlang_scheduling_ssi_feature" t="Ütemezés"/>
+	<w_phrase n="wlang_scheduling_ssi_frequency" t="Mindegyik hívása"/>
+	<w_phrase n="wlang_scheduling_ssi_day" t="nap"/>
+	<w_phrase n="wlang_scheduling_ssi_hour" t="óra"/>
+	<w_phrase n="wlang_scheduling_ssi_minute" t="perc"/>
+	<w_phrase n="wlang_scheduling_ssi_number" t="Hívandó szám"/>
+	<w_phrase n="wlang_scheduling_ssi_start" t="Kezdés ideje (nn.hh.éééé óópp)"/>
+	<w_phrase n="wlang_scheduling_ssi_end" t="Befejezés ideje (nn.hh.éééé óópp)"/>
+	<w_phrase n="wlang_scheduling_ssi_call_duration" t="Hívás befejezése automatikusan a megadott idő után (mp)"/>
+	<w_phrase n="wlang_index_time" t="Idő"/>
+	<w_phrase n="wlang_index_duration" t="Időtartam"/>
+	<w_phrase n="wlang_advanced_ssi_user_pic" t="Felhasználói kép URL"/>
+	<w_phrase n="wlang_line_custom" t="Saját dallam"/>
+	<w_phrase n="wlang_prefs_vip" t="VIP"/>
+	<w_phrase n="wlang_prefs_ssi_date_us_format" t="U.S. dátum formátum (hh/nn)"/>
+	<w_phrase n="wlang_prefs_ssi_time_24_format" t="24 órás időformátum  "/>
+	<w_phrase n="wlang_advanced_ssi_call_join_xfer" t="Összekapcsolás átkapcsolásnál"/>
+	<w_phrase n="wlang_prefs_tssweden" t="Svédország"/>
+	<w_phrase n="wlang_prefs_tsswitzerland" t="Svájc"/>
+	<w_phrase n="wlang_advanced_ssi_client" t="Kliens"/>
+	<w_phrase n="wlang_advanced_ssi_server" t="Szerver"/>
+	<w_phrase n="wlang_line_ssi_idle_text" t="Szöveg megjelenítése tétlen esetben"/>
+	<w_phrase n="wlang_line_ssi_idle_cfwd" t="Szöveg megjelenítése hívásátirányítási célként"/>
+	<w_phrase n="wlang_line_ssi_idle_number" t="Telefonszám megjelenítése tétlen esetben"/>
+	<w_phrase n="wlang_line_ssi_alert_info" t="Alert Info URL"/>
+	<w_phrase n="wlang_advanced_ssi_alert_info_playback" t="Hangjelzések lejátszása"/>
+	<w_phrase n="wlang_advanced_ssi_syslog_server" t="Syslog szerver"/>
+	<w_phrase n="wlang_advanced_ssi_aoc_pulse_currency" t="Pénznem jele"/>
+	<w_phrase n="wlang_advanced_ssi_aoc_cost_pulse" t="Impulzusonkénti költség"/>
+	<w_phrase n="wlang_advanced_aoc_amount_display" t="Költség kijelzése"/>
+	<w_phrase n="wlang_advanced_aoc_amount_charged" t="Elszámolt"/>
+	<w_phrase n="wlang_advanced_aoc_amount_balance" t="Egyenleg"/>
+	<w_phrase n="wlang_advanced_audio_device_indicator" t="Audióeszköz felismerő"/>
+	<w_phrase n="wlang_prefs_ringtone_defaults" t="Alapértelmezett csengőhang"/>
+	<w_phrase n="wlang_prefs_ringtone_addressbook" t="Telefonkönyv csengőhang"/>
+	<w_phrase n="wlang_leftnav_trusted_cert" t="Tanúsítványok"/>
+	<w_phrase n="wlang_advanced_on" t="be"/>
+	<w_phrase n="wlang_advanced_call_waiting_visual" t="csak vizuális"/>
+	<w_phrase n="wlang_line_ssi_pname" t="Felhasználónév"/>
+	<w_phrase n="wlang_adr_deletebutton" t="Törlés"/>
+	<w_phrase n="wlang_adr_prev_del_before" t="Előtte a teljes telefonkönyv törlése"/>
+	<w_phrase n="wlang_advanced_ssi_filter_registrar" t="A regisztrációs szervertől érkező csomagok szűrése"/>
+	<w_phrase n="wlang_line_sipsettings" t="SIP azonosító beállításai"/>
+	<w_phrase n="wlang_line_rtpsettings" t="RTP azonosító beállításai"/>
+	<w_phrase n="wlang_line_natsettings" t="NAT azonosító beállításai"/>
+	<w_phrase n="wlang_line_ssi_descr_contact" t="Hosszú SIP-Contact (RFC3840)"/>
+	<w_phrase n="wlang_line_ssi_sipusername_as_line" t="Törött regisztráció támogatása"/>
+	<w_phrase n="wlang_advanced_snmp" t="SNMP"/>
+	<w_phrase n="wlang_advanced_ssi_snmp_port" t="Port"/>
+	<w_phrase n="wlang_advanced_ssi_snmp_trusted" t="Megbízható cím"/>
+	<w_phrase n="wlang_advanced_ssi_sip_short_form" t="SIP Compact Headers használata"/>
+	<w_phrase n="wlang_sysinfo_siplinestatus" t="SIP azonosító státusza"/>
+	<w_phrase n="wlang_sysinfo_sysinfo" t="Rendszer információ"/>
+	<w_phrase n="wlang_adr_outgoingid" t="Kimenő azonosító"/>
+	<w_phrase n="wlang_adr_lineid_active" t="Aktív"/>
+	<w_phrase n="wlang_adr_lineid1" t="Azonosító 1"/>
+	<w_phrase n="wlang_adr_lineid2" t="Azonosító 2"/>
+	<w_phrase n="wlang_adr_lineid3" t="Azonosító 3"/>
+	<w_phrase n="wlang_adr_lineid4" t="Azonosító 4"/>
+	<w_phrase n="wlang_adr_lineid5" t="Azonosító 5"/>
+	<w_phrase n="wlang_adr_lineid6" t="Azonosító 6"/>
+	<w_phrase n="wlang_adr_lineid7" t="Azonosító 7"/>
+	<w_phrase n="wlang_adr_lineid8" t="Azonosító 8"/>
+	<w_phrase n="wlang_adr_lineid9" t="Azonosító 9"/>
+	<w_phrase n="wlang_adr_lineid10" t="Azonosító 10"/>
+	<w_phrase n="wlang_adr_lineid11" t="Azonosító 11"/>
+	<w_phrase n="wlang_adr_lineid12" t="Azonosító 12"/>
+	<w_phrase n="wlang_adr_lineid13" t="Azonosító 13"/>
+	<w_phrase n="wlang_adr_lineid14" t="Azonosító 14"/>
+	<w_phrase n="wlang_adr_lineid15" t="Azonosító 15"/>
+	<w_phrase n="wlang_adr_lineid16" t="Azonosító 16"/>
+	<w_phrase n="wlang_adr_preview_outgoing_id" t="Kimenő azonosító"/>
+	<w_phrase n="wlang_line_ssi_record_missed_calls" t="Nem fogadott hívások rögzítése"/>
+	<w_phrase n="wlang_line_ssi_user_send_diversion_header" t="Átirányítási header küldése"/>
+	<w_phrase n="wlang_index_local_identity" t="Helyi azonosító"/>
+	<w_phrase n="wlang_advanced_ssi_holding_reminder" t="Hívástartás emlékeztető"/>
+	<w_phrase n="wlang_info_production_info" t="Termékinformáció"/>
+	<w_phrase n="wlang_line_reregister" t="Újra-regisztráció"/>
+	<w_phrase n="wlang_confirm_head" t="Figyelem!"/>
+	<w_phrase n="wlang_confirm_button_yes" t="Igen"/>
+	<w_phrase n="wlang_confirm_button_no" t="Nem"/>
+	<w_phrase n="wlang_confirm_ssi_title" t="Megerősítés"/>
+	<w_phrase n="wlang_conf_text_del_adrbook" t="Kérem vigyázzon, a telefonkönyve teljesen tartalma el fog veszni! Biztosan törölni akarja az összes bejegyzést a telefonkönyvből?"/>
+	<w_phrase n="wlang_conf_text_reset" t="Kérem vigyázzon, mert az összes beállítása, beleértve a híváslistát és telefonkönyvet el fog veszni, ha az IGEN-re kattint. Biztos, hogy visszaállítja a gyári beállításokat?"/>
+	<w_phrase n="wlang_conf_text_reboot" t="Biztos hogy újra akarja indítani a telefont?"/>
+	<w_phrase n="wlang_line_ssi_active" t="Azonosító aktív"/>
+	<w_phrase n="wlang_line_play" t="Csengőhang lejátszása"/>
+	<w_phrase n="wlang_line_ssi_proxyrequire" t="Proxy szükséges"/>
+	<w_phrase n="wlang_advanced_detectethernet" t="Ethernet kábel kihúzásának felismerése"/>
+	<w_phrase n="wlang_advanced_ssi_rtcp_support" t="RTCP támogatás"/>
+	<w_phrase n="wlang_update_manuallicense" t="Kézi licensz feltöltés"/>
+	<w_phrase n="wlang_update_licensefile" t="Licensz fájl"/>
+	<w_phrase n="wlang_advanced_ssi_high_mic_gain" t="Magasabb mikrofon erősítés (TIA norm felett)"/>
+	<w_phrase n="wlang_advanced_handset_agc" t="Kézibeszélő AGC"/>
+	<w_phrase n="wlang_advanced_headset_agc" t="Fejbeszélő AGC"/>
+	<w_phrase n="wlang_advanced_ssi_partial_lookup" t="Töredék szám keresés"/>
+	<w_phrase n="wlang_ssi_number_lookup" t="Kontakt keresés"/>
+	<w_phrase n="wlang_fkeys_ssi_url" t="Funkció URL"/>
+	<w_phrase n="wlang_advanced_ssi_sig_tos" t="SIP szolgáltatás típus (TOS/Diffserv)"/>
+	<w_phrase n="wlang_advanced_ssi_guess_start_length" t="Gyorskeresési hossz"/>
+	<w_phrase n="wlang_advanced_ethernet" t="Ethernet portok"/>
+	<w_phrase n="wlang_advanced_ssi_eth_net_port" t="Hálózati port"/>
+	<w_phrase n="wlang_advanced_ssi_eth_pc_port" t="PC port"/>
+	<w_phrase n="wlang_advanced_autoneg" t="Automatikus"/>
+	<w_phrase n="wlang_advanced_10full" t="10 Mbit full duplex"/>
+	<w_phrase n="wlang_advanced_10half" t="10 Mbit half duplex"/>
+	<w_phrase n="wlang_advanced_100full" t="100 Mbit full duplex"/>
+	<w_phrase n="wlang_advanced_100half" t="100 Mbit half duplex"/>
+	<w_phrase n="wlang_sysinfo_ethernet_status" t="Ethernet státusz"/>
+	<w_phrase n="wlang_sysinfo_ethernet_status2" t="Státusz"/>
+	<w_phrase n="wlang_connected" t="kapcsolódva"/>
+	<w_phrase n="wlang_disconnected" t="nincs kapcsolat"/>
+	<w_phrase n="wlang_sysinfo_ethernet_connection_type" t="Kapcsolat típusa"/>
+	<w_phrase n="wlang_index_costs" t="Költségek"/>
+	<w_phrase n="wlang_action_ssi_missed" t="Nem fogadott hívások"/>
+	<w_phrase n="wlang_line_ssi_stunbindint" t="STUN időközök (mp)"/>
+	<w_phrase n="wlang_action_info" t="A funkció URL egy egyszerű HTTP GET lekérés, ami akkor kerül végrehajtásra, ha egy adott esemény bekövetkezik a készüléken."/>
+	<w_phrase n="wlang_fkeys_ssi_p2t" t="Push-to-Talk"/>
+	<w_phrase n="wlang_advanced_load_certs" t="Szerver tanúsítvány feltöltése"/>
+	<w_phrase n="wlang_advanced_load_sets_manually" t="Beállítási fájl feltöltése"/>
+	<w_phrase n="wlang_advanced_load_warning" t="A Betöltés gombra kattintva a telefon a beállításait elveszti, és az új beállítások betöltődnek a megadott fájlból, majd a telefon újraindul. Az összes jelenlegi beállítása el fog veszni!"/>
+	<w_phrase n="wlang_advanced_answer_after_policy" t="Hangosbemondó prioritása"/>
+	<w_phrase n="wlang_advanced_answer_after_idle" t="csak tétlen állapotban"/>
+	<w_phrase n="wlang_advanced_answer_after_always" t="mindig"/>
+	<w_phrase n="wlang_ldap_server_name" t="Server Name"/>
+	<w_phrase n="wlang_ldap_server" t="Szerver cím"/>
+	<w_phrase n="wlang_ldap_port" t="Port"/>
+	<w_phrase n="wlang_ldap_base" t="Bázis"/>
+	<w_phrase n="wlang_ldap_username" t="Felhasználónév"/>
+	<w_phrase n="wlang_ldap_password" t="Jelszó"/>
+	<w_phrase n="wlang_guess_max_hits" t="Maximális találat"/>
+	<w_phrase n="wlang_ldap_prefs" t="LDAP"/>
+	<w_phrase n="wlang_prefs_ssi_keyboard_lock" t="Billentyűzár"/>
+	<w_phrase n="wlang_prefs_ssi_keyboard_lock_pw" t="PIN kód a billentyűzet feloldásához"/>
+	<w_phrase n="wlang_line_ssi_country" t="Ország kód"/>
+	<w_phrase n="wlang_line_ssi_area" t="Körzetszám"/>
+	<w_phrase n="wlang_advanced_ssi_enum" t="ENUM támogatás"/>
+	<w_phrase n="wlang_advanced_ssi_tcp_listen" t="SIP TCP port"/>
+	<w_phrase n="wlang_advanced_tmz_AUSp8" t="+8 Ausztrália (Perth)"/>
+	<w_phrase n="wlang_advanced_tmz_AUS2p95" t="+9,5 Ausztrália (Darwin)"/>
+	<w_phrase n="wlang_advanced_tmz_AUS3p10" t="+10 Ausztrália (Hobart)"/>
+	<w_phrase n="wlang_advanced_tmz_BRA1m3" t="-3 Brazília (DST)"/>
+	<w_phrase n="wlang_advanced_tmz_BRA2m3" t="-3 Brazília (no DST)"/>
+	<w_phrase n="wlang_advanced_tmz_BRAm2" t="-2 Brazília (no DST)"/>
+	<w_phrase n="wlang_advanced_tmz_ARGm3" t="-3 Argentína (Buenos Aires)"/>
+	<w_phrase n="wlang_advanced_tmz_EATp3" t="+3 Kelet-afrikai idő"/>
+	<w_phrase n="wlang_advanced_tmz_CATp2" t="+2 Közép-afrikai idő"/>
+	<w_phrase n="wlang_advanced_tmz_WATp1" t="+1 Nyugat-afrikai idő"/>
+	<w_phrase n="wlang_fkeys_ssi_context" t="Kontextus"/>
+	<w_phrase n="wlang_fkeys_ssi_type" t="Típus"/>
+	<w_phrase n="wlang_fkeys_ssi_keyevent" t="Gombnyomás"/>
+	<w_phrase n="wlang_advanced_ssi_peer_to_peer_cc" t="Ügyfelek közötti hívás"/>
+	<w_phrase n="wlang_advanced_logon_logoff" t="Bejelentkezés/Kijelentkezés"/>
+	<w_phrase n="wlang_advanced_ssi_auto_logoff_time" t="Minden vonal kijelentkeztetése megadott inaktivitási időtartam után (mp)"/>
+	<w_phrase n="wlang_advanced_logoffall" t="Minden azonosító eltávolítása"/>
+	<w_phrase n="wlang_advanced_logoffline" t="Azonosító eltávolítása"/>
+	<w_phrase n="wlang_conf_text_logoff_all" t="Az összes SIP beállítás el fog veszni. Biztos, hogy el akarja távolítani az összes azonosítót?"/>
+	<w_phrase n="wlang_fkey_info" t="Ezen az oldalon be tudja állítani a telefon programozható billentyűit. A 'Kontextus' beállításával meghatározhatja, hogy az adott gomb melyik SIP azonosítót használja. A 'Típus' a gomb funkcióját határozza meg. Az utolsó mezőben a választott funkciónak megfelelő paraméter kerül tárolásra, pl. telefonszám, SIP URL, DTMF szekvencia, URL vagy ami a funkcióhoz szükséges. Részletekért kérem nézze meg a telefon felhasználói kézikönyvét."/>
+	<w_phrase n="wlang_advanced_tmz_TTBm4" t="-4 Trinidad és Tobago (Port of Spain)"/>
+	<w_phrase n="wlang_line_ssi_shared_line" t="Közös vonal"/>
+	<w_phrase n="wlang_advanced_ssi_text_softkey" t="Csak szöveg a funkció gombokon"/>
+	<w_phrase n="wlang_advanced_ssi_softkey_and_text" t="Szöveg megjelenítése a funkciógombok ikonjai alatt"/>
+	<w_phrase n="wlang_line_ssi_dtmf_info" t="DTMF via SIP INFO"/>
+	<w_phrase n="wlang_line_ssi_xml_screen_url" t="XML tétlen képernyő URL"/>
+	<w_phrase n="wlang_prefs_ssi_ringer_animation" t="Csörgés animáció"/>
+	<w_phrase n="wlang_advanced_ssi_speaker_dialer" t="Kihangosító gomb használata tárcsázáshoz"/>
+	<w_phrase n="wlang_action_ssi_connected" t="Kapcsolódva"/>
+	<w_phrase n="wlang_action_ssi_disconnected" t="Nincs kapcsolódva"/>
+	<w_phrase n="wlang_advanced_ssi_overlap_dialing" t="Overlap tárcsázás"/>
+	<w_phrase n="wlang_fkeys_ssi_speed" t="Gyorshívó"/>
+	<w_phrase n="wlang_fkeys_ssi_none" t="Nincs"/>
+	<w_phrase n="wlang_prefs_ssi_redundant_softkeys" t="Redundáns billentyűk"/>
+	<w_phrase n="wlang_advanced_ssi_web_logout" t="Automatikus kijelentkezés (perc)"/>
+	<w_phrase n="wlang_prefs_ringer9" t="Dallam 9"/>
+	<w_phrase n="wlang_prefs_ringer10" t="Dallam 10"/>
+	<w_phrase n="wlang_advanced_ssi_cancel_on_hold" t="Mégse billentyű tartásban lévő hívásnál"/>
+	<w_phrase n="wlang_advanced_call_waiting_ringer" t="Csörgés"/>
+	<w_phrase n="wlang_advanced_ssi_ntp_refresh" t="NTP szerver frissítési ideje (mp)"/>
+	<w_phrase n="wlang_line_ssi_ring_after_delay" t="Csörgés késleltetés (mp)"/>
+	<w_phrase n="wlang_prefs_ssi_redirect_on_code" t="Bekapcsolási kód"/>
+	<w_phrase n="wlang_prefs_ssi_redirect_off_code" t="Kikapcsolási kód"/>
+	<w_phrase n="wlang_prefs_redirection_always" t="Feltétel nélküli"/>
+	<w_phrase n="wlang_prefs_redirection_busy" t="Foglaltság esetén"/>
+	<w_phrase n="wlang_prefs_redirection_time" t="Ha nincs válasz"/>
+	<w_phrase n="wlang_prefs_dnd" t="DND"/>
+	<w_phrase n="wlang_prefs_redirect_number" t="Hívásátirányítás"/>
+	<w_phrase n="wlang_advanced_ssi_pnp_config" t="PnP konfiguráció"/>
+	<w_phrase n="wlang_advanced_ssi_flood_tracing" t="SIP trace a REGISTER/SUBSCRIBE/NOTIFY üzenetekre"/>
+	<w_phrase n="wlang_reboot_ssi_title" t="Újraindítás…"/>
+	<w_phrase n="wlang_text_reboot_info" t="Telefonja újraindul. Kérem legyen türelemmel, amíg az újraindulás meg nem történik. Amennyiben a jól ismert képernyő megjelenik a kijelzőn, akkor a telefon használható, a webes felülettel együtt."/>
+	<w_phrase n="wlang_advanced_ssi_xml_notify" t="XML NOTIFY támogatás"/>
+	<w_phrase n="wlang_minibrowser_pref" t="Miniböngésző"/>
+	<w_phrase n="wlang_advanced_ssi_enable_timer_support" t="Timer támogatás (RFC4028)"/>
+	<w_phrase n="wlang_prefs_dsnumbername" t="Telefonszám + Név"/>
+	<w_phrase n="wlang_prefs_ssi_keyboard_lock_dp" t="Segélyhívó számok"/>
+	<w_phrase n="wlang_prefs_alert_internal_text" t="Belső figyelmeztető szöveg"/>
+	<w_phrase n="wlang_prefs_ssi_alert_internal_sound" t="Belső figyelmeztető csengőhang"/>
+	<w_phrase n="wlang_prefs_alert_external_text" t="Külső figyelmeztető szöveg"/>
+	<w_phrase n="wlang_prefs_ssi_alert_external_sound" t="Külső figyelmeztető csengőhang"/>
+	<w_phrase n="wlang_prefs_alert_group_text" t="Csoport figyelmeztető szöveg"/>
+	<w_phrase n="wlang_prefs_ssi_alert_group_sound" t="Csoport figyelmeztető csengőhang"/>
+	<w_phrase n="wlang_prefs_alert_info_ringer" t="Csörgés Alert-Info alapján"/>
+	<w_phrase n="wlang_prefs_ssi_scroll_outgoing" t="Görgetés engedélyezése"/>
+	<w_phrase n="wlang_advanced_tmz_USA2m7" t="-7 Amerikai Egyesült Államok - MST no DST "/>
+	<w_phrase n="wlang_prefs_ssi_show_local_line" t="Helyi azonosító kijelzése"/>
+	<w_phrase n="wlang_advanced_ssi_pickup_indication" t="Hangjelzés átvehető hívás esetén"/>
+	<w_phrase n="wlang_advanced_multicast" t="Multicast"/>
+	<w_phrase n="wlang_advanced_ssi_multicast_listen" t="Multicast támogatás"/>
+	<w_phrase n="wlang_advanced_ssi_multicast_address" t="IP cím"/>
+	<w_phrase n="wlang_advanced_ssi_multicast_port" t="Port"/>
+	<w_phrase n="wlang_language_name" t="Magyar"/>
+	<w_phrase n="wlang_advanced_qos" t="Quality of Service (QoS)"/>
+	<w_phrase n="wlang_advanced_rtp" t="RTP/RTCP"/>
+	<w_phrase n="wlang_advanced_sip" t="SIP"/>
+	<w_phrase n="wlang_advtab_network" t="Hálózat"/>
+	<w_phrase n="wlang_advtab_behavior" t="Viselkedés"/>
+	<w_phrase n="wlang_advtab_audio" t="Audió"/>
+	<w_phrase n="wlang_advtab_sip" t="SIP/RTP"/>
+	<w_phrase n="wlang_advtab_update" t="Frissítés"/>
+	<w_phrase n="wlang_advtab_security" t="QoS/Biztonság"/>
+	<w_phrase n="wlang_linetab_login" t="Bejelentkezés"/>
+	<w_phrase n="wlang_linetab_feat" t="Funkciók"/>
+	<w_phrase n="wlang_linetab_sip" t="SIP"/>
+	<w_phrase n="wlang_linetab_nat" t="NAT"/>
+	<w_phrase n="wlang_linetab_rtp" t="RTP"/>
+	<w_phrase n="wlang_line_ssi_server_type" t="Szerver típus támogatás"/>
+	<w_phrase n="wlang_line_broadsoft" t="Broadsoft"/>
+	<w_phrase n="wlang_line_sylantro" t="Sylantro"/>
+	<w_phrase n="wlang_line_pbxnsip" t="PBXnSIP"/>
+	<w_phrase n="wlang_line_default" t="Alapértelmezett"/>
+	<w_phrase n="wlang_line_ssi_event_list_uri" t="Mellék figyelés és hívásátvétel URI"/>
+	<w_phrase n="wlang_web_confirm_apply_set_change" t="Életbe lépteti a változtatásokat?"/>
+	<w_phrase n="wlang_line_ssi_presence_subscription" t="Névjegyzék"/>
+	<w_phrase n="wlang_line_ssi_presence_buddy_list_uri" t="Névjegyzék URI"/>
+	<w_phrase n="wlang_line_ssi_full_sdp_answer" t="Teljes SDP válasz"/>
+	<w_phrase n="wlang_info_firmware_version" t="Firmware verzió"/>
+	<w_phrase n="wlang_advanced_ssi_redirect_ringing" t="A bejövő hívások átirányításának engedélyezése a funkcióbillentyűk használatával"/>
+	<w_phrase n="wlang_advanced_ssi_auto_redial" t="Automatikus újrahívás foglaltság esetén"/>
+	<w_phrase n="wlang_advanced_ssi_auto_redial_value" t="Újrahívás a megadott idő után (mp)"/>
+	<w_phrase n="wlang_advanced_ssi_disable_blind_transfer" t="Vak átkapcsolás kikapcsolása (REFER)"/>
+	<w_phrase n="wlang_advanced_ssi_disable_deflection" t="Hívásátirányítás letiltása (302-es kód)"/>
+	<w_phrase n="wlang_action_ssi_log_on" t="Bejelentkezés"/>
+	<w_phrase n="wlang_action_ssi_log_off" t="Kijelentkezés"/>
+	<w_phrase n="wlang_prefs_ssi_show_call_status" t="Hívás státusz megjelenítése"/>
+	<w_phrase n="wlang_action_ssi_reg_failed" t="Regisztráció sikertelen"/>
+	<w_phrase n="wlang_subscriptions_ssi_title" t="Előfizetés státusz"/>
+	<w_phrase n="wlang_leftnav_subscriptions" t="Előfizetések"/>
+	<w_phrase n="wlang_advanced_ssi_max_boot_delay" t="Maximum indítási késleltetés (mp)"/>
+	<w_phrase n="wlang_advanced_http_server" t="HTTP szerver"/>
+	<w_phrase n="wlang_advanced_http_client" t="HTTP kliens"/>
+	<w_phrase n="wlang_advanced_ssi_mailbox_active" t="Csak az aktív hangposta bejegyzéseinek kezelése"/>
+	<w_phrase n="wlang_line_ssi_remove_all_bindings" t="Minden hozzárendelés eltávolítása UNREGISTER esetén"/>
+	<w_phrase n="wlang_line_ssi_include_listeners" t="Listener port a REGISTER üzenetben"/>
+	<w_phrase n="wlang_vpn_ssi_vpn_on" t="VPN"/>
+	<w_phrase n="wlang_vpn_ssi_tarball_url" t="Kitömörített VPN konfiguráció"/>
+	<w_phrase n="wlang_ssi_l2tp_on" t="L2TP"/>
+	<w_phrase n="wlang_ssi_l2tp_tarball_url" t="Kitömörített L2TP konfiguráció"/>
+	<w_phrase n="wlang_ssi_sbc_on" t="SBC"/>
+	<w_phrase n="wlang_ssi_sbc_prov_url" t="SBC konfigurációs file URL"/>
+	<w_phrase n="wlang_advanced_ssi_idle_offhook" t="Visszatérés a tétlen képernyőhöz a kézibeszélő felvétele esetén"/>
+	<w_phrase n="wlang_prefs_ssi_enable_keyboard_lock" t="Billentyűzár engedélyezése"/>
+	<w_phrase n="wlang_advanced_ssi_vlan_port_tagging" t="Un-/Tag VLAN forgalom meghatározott switch portokon"/>
+	<w_phrase n="wlang_advanced_ssi_vlan_id" t="VLAN ID (1-4094)"/>
+	<w_phrase n="wlang_advanced_ssi_vlan_priority" t="VLAN prioritás (0-7)"/>
+	<w_phrase n="wlang_advanced_vlan" t="VLAN"/>
+	<w_phrase n="wlang_line_failover_identity" t="Sikertelen regisztrálás esetén használt másik azonosító"/>
+	<w_phrase n="wlang_fkeys_sidecar" t="Kiegészítő modul"/>
+	<w_phrase n="wlang_usb_expansion_module" t="USB kiegészítő modul"/>
+	<w_phrase n="wlang_sidecar_layout_lines" t="Vonalas elrendezés"/>
+	<w_phrase n="wlang_sidecar_layout_tiles" t="Négyzetes elrendezés"/>
+	<w_phrase n="wlang_line_ssi_record_dialed_calls" t="Tárcsázott hívások rögzítése"/>
+	<w_phrase n="wlang_line_ssi_record_received_calls" t="Fogadott hívások rögzítése"/>
+	<w_phrase n="wlang_prefs_ssi_emergency_proxy" t="Kimenő proxy a segélyhívásoknak"/>
+	<w_phrase n="wlang_line_telepo" t="Telepo"/>
+	<w_phrase n="wlang_fkeys_ssi_button" t="Gomb"/>
+	<w_phrase n="wlang_advanced_ssi_retryafterfailedregister" t="Újrapróbálkozási idő sikertelen regisztráció után (mp)"/>
+	<w_phrase n="wlang_line_ssi_subscription_expiry" t="Feliratkozás lejárata (mp)"/>
+	<w_phrase n="wlang_line_metaswitch" t="MetaSwitch"/>
+	<w_phrase n="wlang_advanced_ssi_sendprack" t="PRACK küldése"/>
+	<w_phrase n="wlang_watchdog" t="Watchdog"/>
+	<w_phrase n="wlang_advanced_ssi_rtp_keepalive" t="RTP keepalive"/>
+	<w_phrase n="wlang_ldap_search_filter" t="LDAP név szűrő"/>
+	<w_phrase n="wlang_ldap_number_filter" t="LDAP telefonszám szűrő"/>
+	<w_phrase n="wlang_ldap_name_attributes" t="LDAP név attribútum"/>
+	<w_phrase n="wlang_ldap_number_attributes" t="LDAP telefonszám attribútum"/>
+	<w_phrase n="wlang_ldap_display_name" t="LDAP név kijelzés"/>
+	<w_phrase n="wlang_advanced_ssi_ldap_over_tls" t="LDAP TLS használatával"/>
+	<w_phrase n="wlang_prefs_tsaustria" t="Ausztria"/>
+	<w_phrase n="wlang_prefs_tsfrance" t="Franciaország"/>
+	<w_phrase n="wlang_prefs_tsitaly" t="Olaszország"/>
+	<w_phrase n="wlang_prefs_tsnetherlands" t="Hollandia"/>
+	<w_phrase n="wlang_prefs_tsnorway" t="Norvégia"/>
+	<w_phrase n="wlang_prefs_tsnewzealand" t="Új-Zéland"/>
+	<w_phrase n="wlang_prefs_tsspain" t="Spanyolország"/>
+	<w_phrase n="wlang_prefs_tsgreatbritain" t="Egyesült Királyság"/>
+	<w_phrase n="wlang_advanced_tmz_VENm4" t="-4 Venezuela (Caracas)"/>
+	<w_phrase n="wlang_advanced_tmz_NCLp11" t="+11 Új-Kaledónia (Nouméa)"/>
+	<w_phrase n="wlang_line_ssi_enable_hookflash" t="Hook flash engedélyezése"/>
+	<w_phrase n="wlang_vpn_netcat_server" t="Netcat szerver (pl. 192.168.0.188 5000)"/>
+	<w_phrase n="wlang_fkeys_ssi_presence" t="Állapot"/>
+	<w_phrase n="wlang_fkeys_ssi_disp_code" t="Bontási kód"/>
+	<w_phrase n="wlang_prefs_custom_internal_alert_info" t="Saját Alert-Info beépített csengőhang használatával"/>
+	<w_phrase n="wlang_prefs_ca_ringer_text" t="Belső csörgés szöveg"/>
+	<w_phrase n="wlang_prefs_ssi_ca_ringer_file" t="Belső csörgés fájl"/>
+	<w_phrase n="wlang_line_nortel" t="Nortel"/>
+	<w_phrase n="wlang_action_ssi_hold" t="Hívástartás"/>
+	<w_phrase n="wlang_action_ssi_unhold" t="Hívástartás feloldása"/>
+	<w_phrase n="wlang_action_ssi_transfer" t="Hívásátkapcsolás"/>
+	<w_phrase n="wlang_action_ssi_blind_transfer" t="Vak átkapcsolás"/>
+	<w_phrase n="wlang_action_ssi_attended_transfer" t="Bejelentett átkapcsolás"/>
+	<w_phrase n="wlang_action_ssi_longpress_url" t="Vonal gomb hosszú megnyomása"/>
+	<w_phrase n="wlang_advanced_ssi_csta_control" t="CSTA kontroll engedélyezése"/>
+	<w_phrase n="wlang_line_ssi_dtmf_info_sip_info_only" t="Csak SIP INFO"/>
+	<w_phrase n="wlang_advanced_ssi_speaker_receive_call" t="Hívások fogadása a kihangosító/fejbeszélő gomb használatával"/>
+	<w_phrase n="wlang_prefs_ssi_global_missed_counter" t="Globális számláló a nem fogadott hívások számára"/>
+	<w_phrase n="wlang_advanced_ssi_http_password_not_set" t="HTTP jelszó nincs beállítva!"/>
+	<w_phrase n="wlang_text_login_failed_info1" t="Számos sikertelen bejelentkezési kisérlet a következő IP címről"/>
+	<w_phrase n="wlang_text_login_failed_info2" t="A bejelentkezés újra lehetséges"/>
+	<w_phrase n="wlang_text_login_failed_info3" t="percen belül. További sikertelen próbálkozás megduplázza az időt, amit meg kell várni a webfelület feloldásához."/>
+	<w_phrase n="wlang_text_login_failed_info4" t=", a web felület blokkolva van!"/>
+	<w_phrase n="wlang_login_failed_ssi_title" t="Bejelentkezés sikertelen!"/>
+	<w_phrase n="wlang_web_confirm_logout" t="Kijelentkezik a webfelületről?"/>
+	<w_phrase n="wlang_advanced_logoutbutton" t="Kijelentkezés"/>
+	<w_phrase n="wlang_line_ssi_savp" t="RTP/SAVP"/>
+	<w_phrase n="wlang_advanced_ssi_use_hidden_tags" t="Rejtett tag használata"/>
+	<w_phrase n="wlang_fkeys_ssi_blf" t="BLF"/>
+	<w_phrase n="wlang_advanced_ssi_show_history_info" t="History-Info mutatása"/>
+	<w_phrase n="wlang_security_warning_ssi_title" t="Biztonsági figyelmeztetés!"/>
+	<w_phrase n="wlang_text_security_warning_info1" t="Ön vagy egy másik távoli felhasználó nem azonosított HTTP POST kérést küldött a telefonnak."/>
+	<w_phrase n="wlang_text_security_warning_info2" t="A kérések figyelmen kívül lettek hagyva, és a munkafolyamat be lett zárva."/>
+	<w_phrase n="wlang_text_security_warning_info3" t="Kérem azonosítsa újra magát a webfelület használatához."/>
+	<w_phrase n="wlang_security_advice" t="Biztonsági tanács"/>
+	<w_phrase n="wlang_security_settings_state" t="Biztonsági beállítások állapota"/>
+	<w_phrase n="wlang_Recommended" t="Javasolt"/>
+	<w_phrase n="wlang_Mandatory" t="Kötelező"/>
+	<w_phrase n="wlang_security_text_advice1" t="Nyomatékosan javasoljuk, hogy biztosítsa a webes felület védelmét, ezzel megóvva telefonját a távoli támadásoktól. Ennek érdekében az alapértelmezett értékek helyett módosítania kell a HTTP felhasználónevet és jelszót, valamint az adminisztrátori jelszót. A HTTP jelszó módosítása kötelező."/>
+	<w_phrase n="wlang_security_text_advice2" t="Továbbá a telefon megvédhető a rejtett biztonsági tagek segítségével a távoli támadókkal szemben, akik hamis HTTP POST kérésekkel próbálják meg megváltoztatni a telefon beállításait."/>
+	<w_phrase n="wlang_security_apply_button_ignore" t="A gomb megnyomásával kikapcsolhatja a figyelmeztetéseket a következő újraindításig."/>
+	<w_phrase n="wlang_security_apply_button_ignore_forever" t="A gomb megnyomásával kikapcsolhatja a figyelmeztetéseket."/>
+	<w_phrase n="wlang_security_ssi_title" t="Biztonság"/>
+	<w_phrase n="wlang_advanced_ssi_ignore_warning" t="A biztonsági tanácsok figyelmen kívül hagyása"/>
+	<w_phrase n="wlang_advanced_ssi_naptr_sip_uri" t="NAPTR használata a SIP URI-kon"/>
+	<w_phrase n="wlang_line_ssi_optional" t="opcionális"/>
+	<w_phrase n="wlang_line_ssi_mandatory" t="kötelező"/>
+	<w_phrase n="wlang_prefs_backlight_dim" t="halványít"/>
+	<w_phrase n="wlang_advanced_ssi_show_diversion" t="Átirányítási információ megjelenítése"/>
+	<w_phrase n="wlang_advanced_ssi_offhook_dial_prompt" t="Tárcsahang a kézibeszélő felemelésekor"/>
+	<w_phrase n="wlang_fkeys_ssi_ivr" t="Hangmenü"/>
+	<w_phrase n="wlang_info_uptime_info" t="Újraindítás óta eltelt idő"/>
+	<w_phrase n="wlang_info_memfree_info" t="Szabad memória"/>
+	<w_phrase n="wlang_info_uboot_version_info" t="Bootloader verzió"/>
+	<w_phrase n="wlang_line_ssi_authtag" t="SRTP Auth tag"/>
+	<w_phrase n="wlang_line_ssi_aes32" t="AES-32"/>
+	<w_phrase n="wlang_line_ssi_aes80" t="AES-80"/>
+	<w_phrase n="wlang_prefs_ssi_show_ivr_digits" t="IVR gombnyomások megjelenítése a hívás közben"/>
+	<w_phrase n="wlang_line_ssi_dynamic_payload" t="Dinamikus G.726 payload"/>
+	<w_phrase n="wlang_advanced_ssi_show" t="mutat"/>
+	<w_phrase n="wlang_fkeyname_retrieve" t="Hangposta"/>
+	<w_phrase n="wlang_fkeyname_dnd" t="DND"/>
+	<w_phrase n="wlang_fkeyname_menu" t="Beállítások"/>
+	<w_phrase n="wlang_fkeyname_exec_assist_config" t="Főnök-titkári funkció konfiguráció"/>
+	<w_phrase n="wlang_fkeyname_exec_assist_callon_behalfof" t="Executive-Assistens nevében"/>
+	<w_phrase n="wlang_fkeyname_transfer" t="Átkapcsolás"/>
+	<w_phrase n="wlang_fkeyname_hold" t="Tartás"/>
+	<w_phrase n="wlang_fkeyname_missed" t="Nem fogadott hívások"/>
+	<w_phrase n="wlang_fkeyname_accepted" t="Fogadott hívások"/>
+	<w_phrase n="wlang_fkeyname_dailed" t="Tárcsázott hívások"/>
+	<w_phrase n="wlang_advanced_tmz_USA2m10" t="-10 Amerikai Egyesült Államok - Alaska, Aleut szigetek"/>
+	<w_phrase n="wlang_fkeyname_call_lists" t="Híváslista"/>
+	<w_phrase n="wlang_fkeyname_support" t="Segítség"/>
+	<w_phrase n="wlang_fkeyname_headset" t="Fejbeszélő"/>
+	<w_phrase n="wlang_fkeyname_presence" t="Állapot"/>
+	<w_phrase n="wlang_fkeyname_buddies" t="Kontaktok"/>
+	<w_phrase n="wlang_fkeyname_redial" t="Újrahívás"/>
+	<w_phrase n="wlang_fkeyname_instant_redial" t="Azonnali újrahívás"/>
+	<w_phrase n="wlang_fkeyname_denyall" t="Hívó letiltása"/>
+	<w_phrase n="wlang_fkeyname_contactpool" t="Gyorstár"/>
+	<w_phrase n="wlang_fkeyname_addr" t="Telefonkönyv"/>
+	<w_phrase n="wlang_ocip_prefs" t="OCI-P (Broadsoft)"/>
+	<w_phrase n="wlang_advanced_dfks" t="Eszköz funkció gomb szinkronizációja"/>
+	<w_phrase n="wlang_line_ssi_publish_presence_bootup" t="Jelenlét publikálása induláskor"/>
+	<w_phrase n="wlang_fkeyname_record" t="Hangrögzítés"/>
+	<w_phrase n="wlang_fkeyname_conference" t="Konferencia"/>
+	<w_phrase n="wlang_fkeyname_id_next" t="Következő azonosító"/>
+	<w_phrase n="wlang_fkeyname_id_prev" t="Előző azonosító"/>
+	<w_phrase n="wlang_fkeyname_mobility" t="Rögzítés/Mobilitás"/>
+	<w_phrase n="wlang_ocs_outbound_proxy" t="Kimenő proxy"/>
+	<w_phrase n="wlang_prefs_ssi_advertisement" t="Hírdetés"/>
+	<w_phrase n="wlang_fkeyname_monitored_calls" t="Rögzített hívások"/>
+	<w_phrase n="wlang_fkeys_ssi_transfer" t="Hívás átkapcsolása"/>
+	<w_phrase n="wlang_fkeys_ssi_redirect" t="Hívásátirányítás"/>
+	<w_phrase n="wlang_fkeys_ssi_auto_answer" t="Automatikus hívásfogadás"/>
+	<w_phrase n="wlang_wifi_auth_mode" t="Security"/>
+	<w_phrase n="wlang_wifi_scanning" t="Scanning"/>
+	<w_phrase n="wlang_wifi_wpa2" t="WPA2"/>
+	<w_phrase n="wlang_wifi_wpa" t="WPA"/>
+	<w_phrase n="wlang_wifi_wep" t="WEP"/>
+	<w_phrase n="wlang_wifi_open" t="OPEN"/>
+	<w_phrase n="wlang_wifi_wpapsk" t="Password"/>
+	<w_phrase n="wlang_wifi_wpa_encryptype" t="Titkosítás típusa"/>
+	<w_phrase n="wlang_wifi_tkip" t="TKIP"/>
+	<w_phrase n="wlang_wifi_aes" t="AES"/>
+	<w_phrase n="wlang_wifi_essid" t="Network Name"/>
+	<w_phrase n="wlang_advanced_wifi" t="WLAN"/>
+	<w_phrase n="wlang_bt_enabled" t="Bluetooth Enabled"/>
+	<w_phrase n="wlang_advanced_tr069" t="TR-069"/>
+	<w_phrase n="wlang_wifi_wep_key1" t="Password"/>
+	<w_phrase n="wlang_line_asterisk" t="Asterisk"/>
+	<w_phrase n="wlang_line_ccm" t="CCM"/>
+	<w_phrase n="wlang_advanced_ssi_typeanswering" t="Intercom válasz Alert Info-ra"/>
+	<w_phrase n="wlang_advanced_ssi_call_info_audio_device" t="Intercom válasz Call Info-ra"/>
+	<w_phrase n="wlang_advanced_ssi_tahandsfree" t="Kéz nélkül"/>
+	<w_phrase n="wlang_advanced_ssi_tahandset" t="Kézibeszélő"/>
+	<w_phrase n="wlang_advanced_ssi_taheadset" t="Fejbeszélő"/>
+	<w_phrase n="wlang_advanced_ssi_taactivedevice" t="Aktív eszköz"/>
+	<w_phrase n="wlang_line_ssi_additional_supported_headers" t="További támogatott header-ek"/>
+	<w_phrase n="wlang_prefs_ssi_dim_timer" t="Elhalványítási idő (mp)"/>
+	<w_phrase n="wlang_prefs_character_settings" t="Karakter beállítások"/>
+	<w_phrase n="wlang_fkeyname_mute" t="Némítás"/>
+	<w_phrase n="wlang_advanced_ssi_empty_tls_client_cert" t="Üres kliens tanúsítvány"/>
+	<w_phrase n="wlang_advanced_vq_report_collector" t="Hangminőség ellenőrzés"/>
+	<w_phrase n="wlang_fkeyname_reboot" t="Újraindítás"/>
+	<w_phrase n="wlang_fkeyname_logoff_all" t="Kijelentkezés mindennel"/>
+	<w_phrase n="wlang_fkeyname_auto_answer" t="Automatikus hívásfogadás"/>
+	<w_phrase n="wlang_fkeyname_reset" t="Gyári konfiguráció visszaállítása"/>
+	<w_phrase n="wlang_prefs_keyboard_lock_timeout" t="Billentyűzet zárolási idő (mp)"/>
+	<w_phrase n="wlang_logged_out_info" t="Kijelentkezett. Az újbóli bejelentkezéshez kattintson a Bejelentkezés gombra."/>
+	<w_phrase n="wlang_logged_out_title" t="Kijelentkezés"/>
+	<w_phrase n="wlang_advanced_loginbutton" t="Bejelentkezés"/>
+	<w_phrase n="wlang_advanced_ssi_sip_tracing" t="SIP trace"/>
+	<w_phrase n="wlang_advanced_ssi_http_tracing" t="HTTP trace"/>
+	<w_phrase n="wlang_line_ssi_g726_packing_order" t="G.726 byte sorrend"/>
+	<w_phrase n="wlang_line_ssi_rfc3551" t="RFC3551"/>
+	<w_phrase n="wlang_line_ssi_aal2" t="AAL2"/>
+	<w_phrase n="wlang_adr_first_name" t="Keresztnév"/>
+	<w_phrase n="wlang_adr_last_name" t="Vezetéknév"/>
+	<w_phrase n="wlang_adr_group" t="Csoport"/>
+	<w_phrase n="wlang_adr_title" t="Beosztás"/>
+	<w_phrase n="wlang_adr_organization" t="Szervezet"/>
+	<w_phrase n="wlang_adr_email" t="E-mail"/>
+	<w_phrase n="wlang_adr_note" t="Jegyzet"/>
+	<w_phrase n="wlang_adr_favorite" t="Kedvenc"/>
+	<w_phrase n="wlang_adr_work" t="Munkahelyi"/>
+	<w_phrase n="wlang_adr_addsub_button" t="Hozzáfűzés"/>
+	<w_phrase n="wlang_adr_change_button" t="Változtatás"/>
+	<w_phrase n="wlang_advanced_goto_monitor_state_on_line_activity" t="Aktivitás esetén váltás a hívás képernyőre"/>
+	<w_phrase n="wlang_adr_skip_first_line" t="Első sor kihagyása"/>
+	<w_phrase n="wlang_advanced_prefer_saved_over_received_photo" t="Elsősorban helyi fényképek"/>
+	<w_phrase n="wlang_adr_photo" t="Fénykép"/>
+	<w_phrase n="wlang_line_use_photo_from_tbook" t="Fénykép a helyi telefonkönyvből"/>
+	<w_phrase n="wlang_line_teles" t="Teles"/>
+	<w_phrase n="wlang_fkeys_ssi_replacement_label_header" t="Címke"/>
+	<w_phrase n="wlang_fkeys_ssi_short_label" t="Rövid címke"/>
+	<w_phrase n="wlang_fkeys_ssi_full_label" t="Teljes címke"/>
+	<w_phrase n="wlang_fkeys_ssi_short_label_mode" t="Rövid címke mód"/>
+	<w_phrase n="wlang_fkeyname_favorites" t="Kedvencek"/>
+	<w_phrase n="wlang_advanced_load_param_map" t="A TR-069 paraméterek kézi betöltése"/>
+	<w_phrase n="wlang_line_default_contact_uri" t="Alapértelmezett telefonszám"/>
+	<w_phrase n="wlang_contact_none" t="Nincs"/>
+	<w_phrase n="wlang_contact_mobile" t="Mobil"/>
+	<w_phrase n="wlang_contact_home" t="Otthoni"/>
+	<w_phrase n="wlang_contact_main" t="Fő"/>
+	<w_phrase n="wlang_advanced_ssi_suppress_ringing_during_hold" t="Tartás esetén nincs csörgetési hang"/>
+	<w_phrase n="wlang_advanced_ssi_play_music_during_hold" t="Zene bejátszása tartás alatt"/>
+	<w_phrase n="wlang_advanced_ssi_offer_outbound" t="A kimenő használata"/>
+	<w_phrase n="wlang_advanced_tmz_UAEp4" t="+4 Egyesült Arab Emírségek (Dubaj)"/>
+	<w_phrase n="wlang_prefs_ssi_dialnumber_us_format" t="U.S. tárcsázási formátum"/>
+	<w_phrase n="wlang_advanced_ssi_transferonhookstarcode" t="* kóddal átvett hívások átkapcsolása"/>
+	<w_phrase n="wlang_advanced_load_dialplan" t="A dialplan XML kézi betöltése"/>
+	<w_phrase n="wlang_jb" t="Kiterjesztett JB"/>
+	<w_phrase n="wlang_jb_adaptive" t="Adaptív lejátszás"/>
+	<w_phrase n="wlang_jb_adjust_silence" t="Néma esetén állítható"/>
+	<w_phrase n="wlang_jb_adjust_immediately" t="Azonnal állítható"/>
+	<w_phrase n="wlang_jb_max" t="JB_Max"/>
+	<w_phrase n="wlang_jb_min" t="JB_Min"/>
+	<w_phrase n="wlang_jb_average" t="JB_Átlag"/>
+	<w_phrase n="wlang_adr_nrtype_sip" t="sip"/>
+	<w_phrase n="wlang_adr_nrtype_business" t="üzleti"/>
+	<w_phrase n="wlang_adr_nrtype_landline" t="Vezetékes"/>
+	<w_phrase n="wlang_adr_nrtype_extension" t="mellék"/>
+	<w_phrase n="wlang_adr_number_type" t="Szám típus"/>
+	<w_phrase n="wlang_adr_nickname" t="Becenév"/>
+	<w_phrase n="wlang_fkeys_ssi_multicast" t="Multicast"/>
+	<w_phrase n="wlang_fkeys_ssi_xml" t="XML definíciók"/>
+	<w_phrase n="wlang_fkeys_ssi_conference_server" t="Konferencia"/>
+	<w_phrase n="wlang_action_ssi_received_attended_transfer" t="SIP INVITE érkezett"/>
+	<w_phrase n="wlang_line_ssi_mediatransportoffer" t="Média továbbítás támogatása"/>
+	<w_phrase n="wlang_line_ssi_mediatransportoffersetup" t="A média továbbítás támogatásának beállítása"/>
+	<w_phrase n="wlang_line_ssi_mto_active" t="aktív"/>
+	<w_phrase n="wlang_line_ssi_mto_passive" t="passzív"/>
+	<w_phrase n="wlang_line_ssi_mto_any" t="bármely"/>
+	<w_phrase n="wlang_line_ssi_hold_inactive" t="Tartás esetén inaktív jelzés"/>
+	<w_phrase n="wlang_prefs_ssi_upper_chars_0" t="Nagybetűs 0-ás gomb"/>
+	<w_phrase n="wlang_prefs_ssi_upper_chars_1" t="Nagybetűs 1-es gomb"/>
+	<w_phrase n="wlang_prefs_ssi_upper_chars_2" t="Nagybetűs 2-es gomb"/>
+	<w_phrase n="wlang_prefs_ssi_upper_chars_3" t="Nagybetűs 3-as gomb"/>
+	<w_phrase n="wlang_prefs_ssi_upper_chars_4" t="Nagybetűs 4-es gomb"/>
+	<w_phrase n="wlang_prefs_ssi_upper_chars_5" t="Nagybetűs 5-ös gomb"/>
+	<w_phrase n="wlang_prefs_ssi_upper_chars_6" t="Nagybetűs 6-os gomb"/>
+	<w_phrase n="wlang_prefs_ssi_upper_chars_7" t="Nagybetűs 7-es gomb"/>
+	<w_phrase n="wlang_prefs_ssi_upper_chars_8" t="Nagybetűs 8-as gomb"/>
+	<w_phrase n="wlang_prefs_ssi_upper_chars_9" t="Nagybetűs 9-es gomb"/>
+	<w_phrase n="wlang_prefs_ssi_lower_chars_0" t="Kisbetűs 0-ás gomb"/>
+	<w_phrase n="wlang_prefs_ssi_lower_chars_1" t="Kisbetűs 1-es gomb"/>
+	<w_phrase n="wlang_prefs_ssi_lower_chars_2" t="Kisbetűs 2-es gomb"/>
+	<w_phrase n="wlang_prefs_ssi_lower_chars_3" t="Kisbetűs 3-as gomb"/>
+	<w_phrase n="wlang_prefs_ssi_lower_chars_4" t="Kisbetűs 4-es gomb"/>
+	<w_phrase n="wlang_prefs_ssi_lower_chars_5" t="Kisbetűs 5-ös gomb"/>
+	<w_phrase n="wlang_prefs_ssi_lower_chars_6" t="Kisbetűs 6-os gomb"/>
+	<w_phrase n="wlang_prefs_ssi_lower_chars_7" t="Kisbetűs 7-es gomb"/>
+	<w_phrase n="wlang_prefs_ssi_lower_chars_8" t="Kisbetűs 8-as gomb"/>
+	<w_phrase n="wlang_prefs_ssi_lower_chars_9" t="Kisbetűs 9-es gomb"/>
+	<w_phrase n="wlang_line_ssi_subscription_expiry_after_failed" t="Sikertelen feliratkozás újrapróbálkozási idő (mp)"/>
+	<w_phrase n="wlang_advanced_ssi_transferonhooknonpots" t="Független átkapcsolás letett kézibeszélő esetén"/>
+	<w_phrase n="wlang_advanced_ssi_check_sdp_version" t="SDP verzió ellenőrzése"/>
+	<w_phrase n="wlang_prefs_ssi_show_clock" t="Óra megjelenítése"/>
+	<w_phrase n="wlang_ldap_perform_initial_query" t="Kezdő lekérdezés"/>
+	<w_phrase n="wlang_cert_tab_unknown_certs" t="Ismeretlen tanúsítványok"/>
+	<w_phrase n="wlang_cert_tab_tlsdsk_certs" t="TLS DSK"/>
+	<w_phrase n="wlang_cert_add_trusted_cert" t="Saját tanúsítvány hozzáadása (DER formátum)"/>
+	<w_phrase n="wlang_tls_server_authentication_notification" t="Alapértelmezetten a telefon nem ellenőrzi a szerver hitelességét a biztonságos (TLS) kapcsolatok során Az ilyen kapcsolatok ki vannak téve a man-in-the-middle támadásoknak. Bekapcsolhatja a funkciót, de legyen tisztában azzal, hogy biztonsági okokból kikapcsolni csak a gyári beállítások visszaállításával lesz lehetősége. Kérem a további részletekért látogasson el a megfelelő Wiki oldalra."/>
+	<w_phrase n="wlang_tls_server_authentication_title" t="TLS szerver authentikáció"/>
+	<w_phrase n="wlang_tls_server_authentication_activate" t="Aktivál"/>
+	<w_phrase n="wlang_read_more" t="Bővebben"/>
+	<w_phrase n="wlang_advanced_1000full" t="1000 Mbit full duplex"/>
+	<w_phrase n="wlang_advanced_1000half" t="1000 Mbit half duplex"/>
+	<w_phrase n="wlang_advanced_rtcp_xr" t="RTCP-XR riport formátum"/>
+	<w_phrase n="wlang_dialplan_count_failed_match_groups" t="Az összes csoport megszámolása a dialplan-ban"/>
+	<w_phrase n="wlang_advanced_ssi_allow_rtp_on_mute" t="Üres RTP csomagok küldése némítás esetén"/>
+	<w_phrase n="wlang_line_ssi_is_voice_identity" t="Az azonosító fogadhat hívásokat"/>
+	<w_phrase n="wlang_line_ssi_hide_identity" t="Azonosító elrejtve"/>
+	<w_phrase n="wlang_fkeyname_status_messages" t="Info"/>
+	<w_phrase n="wlang_advanced_ssi_min_pin_length" t="Minimum PIN hosszúság"/>
+	<w_phrase n="wlang_advanced_ssi_max_pin_retry" t="Maximum PIN próbálkozások"/>
+	<w_phrase n="wlang_line_ssi_allow_inc_dialog_subscribe" t="Bejövő mellék figyelés engedélyezése"/>
+	<w_phrase n="wlang_prefs_scroll_text_interval" t="Görgetési lépések intervalluma"/>
+	<w_phrase n="wlang_prefs_scroll_text_step_count" t="Görgetési lépések számolása"/>
+	<w_phrase n="wlang_prefs_scroll_text_wait_multiplier" t="Görgetési lépések szüneteltetése"/>
+	<w_phrase n="wlang_apply_button" t="Alkalmaz"/>
+	<w_phrase n="wlang_unsaved_settings" t="Bizonyos beállítások nem kerültek végleges tárolásra."/>
+	<w_phrase n="wlang_view_changes_button" t="Változások megtekintése"/>
+	<w_phrase n="wlang_changed_dialplan_msg" t="Az XML dialplan megváltozott."/>
+	<w_phrase n="wlang_changed_settings_header" t="A következő beállítások megváltoztak"/>
+	<w_phrase n="wlang_no_changed_settings_msg" t="Minden beállítás mentve."/>
+	<w_phrase n="wlang_line_ssi_extension_monitoring_group" t="Mellék figyelési csoport azonosító"/>
+	<w_phrase n="wlang_soundcard_event_map" t="Audió paraméterek"/>
+	<w_phrase n="wlang_license_info" t="A leszállított eszközre előtelepítésre került egy érvényes licensz. Lehetőség van új licensz telepítésére, hogy további funkciók legyenek elérhetőek, vagy ha az eredeti licensz hiányzik vagy megsérült. Ha a feltöltött licensz állomány érvénytelen (pl. nem az eszköz MAC címe szerepel benne), akkor az eszköz figyelmen kívül hagyja és az eredeti licensz kerül megtartásra."/>
+	<w_phrase n="wlang_advanced_ssi_restrict_uri_queries" t="URI lekérdezések korlátozása"/>
+	<w_phrase n="wlang_advanced_ssi_release_xfer_on" t="Átkapcsolt hívás elengedése"/>
+	<w_phrase n="wlang_advanced_ssi_retrieve_xfer_on" t="Átkapcsolt hívás visszavétele"/>
+	<w_phrase n="wlang_fkeyname_hold_private" t="Tartás (saját)"/>
+	<w_phrase n="wlang_fkey_contact_list_buddy" t="BLF (szerver)"/>
+	<w_phrase n="wlang_advanced_ssi_allow_sip_settings" t="SIP beállítások engedélyezése"/>
+	<w_phrase n="wlang_prefs_tsczech" t="Cseh"/>
+	<w_phrase n="wlang_advanced_ssi_dhcp_options_on_ip_aquire" t="Lehetőségek DHCP=Be esetén"/>
+	<w_phrase n="wlang_advanced_ssi_dhcp_options_on_inform" t="Lehetőségek DHCP=Ki esetén"/>
+	<w_phrase n="wlang_advanced_ssi_headset_rings_once" t="A fejbeszélő csak egyszer csörögjön"/>
+	<w_phrase n="wlang_F_ACD" t="ACD"/>
+	<w_phrase n="wlang_disabled" t="letiltott"/>
+	<w_phrase n="wlang_unknown" t="ismeretlen"/>
+	<w_phrase n="wlang_sysinfo_ssi_status" t="Státusz"/>
+	<w_phrase n="wlang_sysinfo_ssi_paired_with" t="Párosítva"/>
+	<w_phrase n="wlang_sysinfo_ssi_vision_status" t="Kapcsolat állapot"/>
+	<w_phrase n="wlang_line_snomone" t="snomONE"/>
+	<w_phrase n="wlang_line_sutus" t="SUTUS BC"/>
+	<w_phrase n="wlang_prefs_redirection_fwd_always" t="Feltétel nélküli hívásátirányítás (CFU)"/>
+	<w_phrase n="wlang_prefs_redirection_fwd_busy" t="Hívásátírányítás, ha foglalt (CFB)"/>
+	<w_phrase n="wlang_prefs_redirection_fwd_time" t="Hívásátirányítás, ha nem válaszol (CFNR)"/>
+	<w_phrase n="wlang_line_server_managed" t="Szerver vezérelt"/>
+	<w_phrase n="wlang_fkeys_ssi_starcode" t="* kód"/>
+	<w_phrase n="wlang_prio_asserted" t="Asserted-nek legyen prioritása"/>
+	<w_phrase n="wlang_replacement_dialp" t="Az XML sablonok megváltoztak"/>
+	<w_phrase n="wlang_adr_action_url" t="URL"/>
+	<w_phrase n="wlang_sip_force_sendrecv_no_sdp" t="A sendrecv erőltetése SDP nélküli INVITE esetén"/>
+	<w_phrase n="wlang_advanced_ssi_dnsserver1_v6" t="DNS szerver 1(v6)"/>
+	<w_phrase n="wlang_advanced_ssi_dnsserver2_v6" t="DNS szerver 2(v6)"/>
+	<w_phrase n="wlang_advanced_ssi_dnsserver3_v6" t="DNS szerver 3(v6)"/>
+	<w_phrase n="wlang_advanced_ssi_dnsserver4_v6" t="DNS szerver 4(v6)"/>
+	<w_phrase n="wlang_advanced_ssi_ntptimeserver_v6" t="NTP idő szerver(v6)"/>
+	<w_phrase n="wlang_info_ipaddress_v6" t="IPv6 cím"/>
+	<w_phrase n="wlang_advanced_ssi_domain_v6" t="Tartomány(v6)"/>
+	<w_phrase n="wlang_advanced_ssi_ipaddress_v6" t="IP cím(v6)"/>
+	<w_phrase n="wlang_advanced_ssi_ipv6_over_ipv4" t="IPv6 támogatása"/>
+	<w_phrase n="wlang_advanced_ssi_dhcp_v6" t="DHCP(v6)"/>
+	<w_phrase n="wlang_advanced_ssi_dhcp_v6_autoconf" t="Automatikus konfiguráció"/>
+	<w_phrase n="wlang_advanced_ssi_ipv6" t="IPv6"/>
+	<w_phrase n="wlang_advanced_ssi_more_control" t="További beállítások"/>
+	<w_phrase n="wlang_cert_tab_8021x_certs" t="802.1x tanúsítványok"/>
+	<w_phrase n="wlang_cert_add_8021x_cert" t="802.1x tanúsítvány hozzáadása (TAR archív)"/>
+	<w_phrase n="wlang_cert_8021x_config" t="802.1x beállítása"/>
+	<w_phrase n="wlang_ieee8021x_eap_auth_method_choice" t="IEEE 802.1X Authentication"/>
+	<w_phrase n="wlang_ieee8021x_eap_auth_method_choice_eap_md5" t="EAP Credentials"/>
+	<w_phrase n="wlang_ieee8021x_eap_auth_method_choice_eap_tls" t="EAP Certificate"/>
+	<w_phrase n="wlang_usb_storage_text" t="USB tároló"/>
+	<w_phrase n="wlang_usb_storage_allow_swupdate_text" t="Szoftverfrissítés engedélyezése"/>
+	<w_phrase n="wlang_usb_storage_allow_syslog_text" t="Syslog trace engedélyezése"/>
+	<w_phrase n="wlang_usb_storage_allow_siptrace_text" t="SIP trace engedélyezése"/>
+	<w_phrase n="wlang_usb_storage_allow_httptrace_text" t="HTTP trace engedélyezése"/>
+	<w_phrase n="wlang_usb_storage_allow_pcap_text" t="PCAP trace engedélyezése"/>
+	<w_phrase n="wlang_usb_storage_passphrase_text" t="AES jelszó"/>
+	<w_phrase n="wlang_check_cseq_dlginfo_notify" t="CSeq ellenőrzése a Dlg Info Notify csomagokban"/>
+	<w_phrase n="wlang_line_xsi_server" t="XSI szerver"/>
+	<w_phrase n="wlang_line_xsi_user" t="XSI felhasználó"/>
+	<w_phrase n="wlang_line_xsi_password" t="XSI jelszó"/>
+	<w_phrase n="wlang_line_xsi_retry_timer" t="XSI újrapróbálkozási időtartam (mp)"/>
+	<w_phrase n="wlang_line_xsi_events" t="XSI események"/>
+	<w_phrase n="wlang_line_xsi_polling" t="XSI lekérési időközök (mp)"/>
+	<w_phrase n="wlang_line_tbook_download_interval" t="Telefonkönyv letöltési időközök (mp)"/>
+	<w_phrase n="wlang_line_xsi_conf_updating" t="XSI konferencia frissítési időközök (mp)"/>
+	<w_phrase n="wlang_line_xsi_anywhere" t="Bárhol"/>
+	<w_phrase n="wlang_line_server_directories_search" t="Szerver telefonkönyvek (keresés)"/>
+	<w_phrase n="wlang_line_server_directories_download" t="Szerver telefonkönyvek (letöltés)"/>
+	<w_phrase n="wlang_line_blf_park_pick_up_code" t="BLF parkolt hívás átvétel kód"/>
+	<w_phrase n="wlang_line_blf_directed_call_pickup_code" t="BLF közvetlen hívás átvétel kód"/>
+	<w_phrase n="wlang_line_xsi_visual_voicemail" t="Vizuális hangposta"/>
+	<w_phrase n="wlang_line_xsi_callcenter_list" t="Callcenter lista"/>
+	<w_phrase n="wlang_line_xmpp_jid" t="XMPP azonosító"/>
+	<w_phrase n="wlang_line_xmpp_password" t="XMPP jelszó"/>
+	<w_phrase n="wlang_fkey_xmpp_presence" t="Kontakt (XMPP)"/>
+	<w_phrase n="wlang_F_STARCODE" t="* kód"/>
+	<w_phrase n="wlang_line_conference_server" t="Konferencia szerver"/>
+	<w_phrase n="wlang_line_call_logs" t="Hívásnaplók"/>
+	<w_phrase n="wlang_line_ssi_local" t="Helyi"/>
+	<w_phrase n="wlang_line_tbook_download" t="Telefonkönyv letöltése"/>
+	<w_phrase n="wlang_line_broadsoft_features" t="Broadsoft funkciók"/>
+	<w_phrase n="wlang_number_sign_encoding" t="# jel kódolása"/>
+	<w_phrase n="wlang_fkeyname_label_page_prev" t="Címkék hátra"/>
+	<w_phrase n="wlang_fkeyname_label_page_next" t="Címkék előre"/>
+	<w_phrase n="wlang_fkeyname_smartlabel_page_prev" t="Előző oldal"/>
+	<w_phrase n="wlang_fkeyname_smartlabel_page_next" t="Következő oldal"/>
+	<w_phrase n="wlang_first_page" t="Első oldal"/>
+	<w_phrase n="wlang_last_page" t="Utolsó oldal"/>
+	<w_phrase n="wlang_fkeyname_alternate_mode" t="Alternatív"/>
+	<w_phrase n="wlang_monitor_notify_for_subscription_refresh" t="Feliratkozások értesítéseinek monitorozása"/>
+	<w_phrase n="wlang_fkey_page_text" t="Oldal"/>
+	<w_phrase n="wlang_prefs_label_font_size" t="Címke betűméret"/>
+	<w_phrase n="wlang_prefs_context_key_font_size" t="Környezetfüggő gomb címkéjének betűmérete"/>
+	<w_phrase n="wlang_prefs_label_scroll_timeout" t="Visszatérés az első oldalra a megadott idő után (mp)"/>
+	<w_phrase n="wlang_prefs_ssi_large_edit_font" t="Nagy betűméret használata a szerkesztőben"/>
+	<w_phrase n="wlang_prefs_custom_bg_image_url" t="Saját háttérkép URL"/>
+	<w_phrase n="wlang_prefs_custom_images" t="Saját képek"/>
+	<w_phrase n="wlang_prefs_custom_images_Light" t="Téma világos képek"/>
+	<w_phrase n="wlang_prefs_custom_images_Dark" t="Téma sötét képek"/>
+	<w_phrase n="wlang_prefs_custom_images_Colorful" t="Téma színes képek"/>
+	<w_phrase n="wlang_prefs_custom_images_Industrial" t="Téma ipari képek"/>
+	<w_phrase n="wlang_prefs_custom_images_Contrast" t="Téma kontrasztos képek"/>
+	<w_phrase n="wlang_prefs_fkey_icons" t="Fbill"/>
+	<w_phrase n="wlang_prefs_call_icons" t="Hívás"/>
+	<w_phrase n="wlang_prefs_call_overlay_icons" t="Hívás állapot gyűrű"/>
+	<w_phrase n="wlang_prefs_circle_overlay_icons" t="Állapot gyűrű"/>
+	<w_phrase n="wlang_prefs_identity_state_icons" t="Azonosító állapot"/>
+	<w_phrase n="wlang_prefs_contact_state_icons" t="Kapcsolat állapot"/>
+	<w_phrase n="wlang_prefs_contact_state_overlay_icons" t="Kapcsolat állapot gyűrű"/>
+	<w_phrase n="wlang_prefs_contact_type_icons" t="Kapcsolat típusa"/>
+	<w_phrase n="wlang_prefs_icon_type_icons" t="Ikon típusa"/>
+	<w_phrase n="wlang_prefs_titlebar_icons" t="Címsor"/>
+	<w_phrase n="wlang_prefs_error_icons" t="Hiba"/>
+	<w_phrase n="wlang_prefs_settings_window_icons" t="Beállítások ablak"/>
+	<w_phrase n="wlang_prefs_system_icons" t="Rendszer"/>
+	<w_phrase n="wlang_prefs_other_icons" t="Egyéb"/>
+	<w_phrase n="wlang_prefs_background_icons" t="Háttér"/>
+	<w_phrase n="wlang_prefs_extra_icons" t="Extra"/>
+	<w_phrase n="wlang_prefs_upload" t="Feltöltés"/>
+	<w_phrase n="wlang_accept_event_talk_without_sdp" t="SDP nélküli Talk csomag elfogadása"/>
+	<w_phrase n="wlang_fkeyname_snom" t="snom/Cloud"/>
+	<w_phrase n="wlang_prefs_ssi_sort_server_dir_result_by_last_name" t="A szerver telefonkönyv találatainak rendezése keresztnév szerint"/>
+	<w_phrase n="wlang_directory_display_order" t="Telefonkönyv megjelenítési sorrend"/>
+	<w_phrase n="wlang_display_order_first_name_last_name" t="Keresztnév, Vezetéknév"/>
+	<w_phrase n="wlang_display_order_last_name_first_name" t="Vezetéknév, Keresztnév"/>
+	<w_phrase n="wlang_prefs_uxm_line_font_size" t="UXM betűméret (vonalas elrendezés)"/>
+	<w_phrase n="wlang_prefs_label_text_alignment" t="Szöveg elhelyezkedése másodlagos képernyőn"/>
+	<w_phrase n="wlang_prefs_left" t="Bal"/>
+	<w_phrase n="wlang_prefs_right" t="Jobb"/>
+	<w_phrase n="wlang_prefs_center" t="Középre"/>
+	<w_phrase n="wlang_prefs_alternate" t="Alternatív"/>
+	<w_phrase n="wlang_prefs_uxm_tile_font_size" t="UXM betűméret (négyzetes elrendezés)"/>
+	<w_phrase n="wlang_line_ssi_initial_rtp_keep_alives" t="RTP kezdeti Keep-Alive csomag küldése (db)"/>
+	<w_phrase n="wlang_line_msw_directory_number" t="Telefonkönyv száma"/>
+	<w_phrase n="wlang_line_msw_password" t="Jelszó"/>
+	<w_phrase n="wlang_line_msw_web_url" t="Web URL"/>
+	<w_phrase n="wlang_line_msw_services" t="Metaswitch Services"/>
+	<w_phrase n="wlang_line_ssi_server" t="Szerver"/>
+	<w_phrase n="wlang_cert_tab_custom_certs" t="Saját tanúsítványok"/>
+	<w_phrase n="wlang_cert_tab_preinstalled_certs" t="Gyári tanúsítványok"/>
+	<w_phrase n="wlang_advanced_ssi_http_trace_size" t="HTTP trace mérete (üzenetek száma)"/>
+	<w_phrase n="wlang_advanced_ssi_http_body_trace_size" t="HTTP tartalom levágása erre a méretre (byte)"/>
+	<w_phrase n="wlang_advanced_ssi_sip_trace_size" t="SIP trace mérete (üzenetek száma)"/>
+	<w_phrase n="wlang_advanced_ssi_sip_body_trace_size" t="SIP tartalom levágása erre a méretre (byte)"/>
+	<w_phrase n="wlang_user_default_blf_direction" t="Alapértelmezett BLF irány"/>
+	<w_phrase n="wlang_user_direction_none" t="nincs"/>
+	<w_phrase n="wlang_xsi_anywhere" t="Anywhere"/>
+	<w_phrase n="wlang_ssi_status" t="Állapot"/>
+	<w_phrase n="wlang_adr_del_photo" t="Fénykép törlése"/>
+	<w_phrase n="wlang_caller_id_blocking" t="Hívószám letiltása"/>
+	<w_phrase n="wlang_line_xsi_remote_office" t="Távoli iroda"/>
+	<w_phrase n="wlang_line_xsi_simultaneous_ring" t="Egyidejű csörgetés"/>
+	<w_phrase n="wlang_line_xsi_directoryfullsearch" t="Keresés teljes névre"/>
+	<w_phrase n="wlang_advanced_ssi_xfer_dest_order_lifo" t="Átkapcsolási sorrend, utolsó hívás először"/>
+	<w_phrase n="wlang_silent_alerting" t="Néma jelzés"/>
+	<w_phrase n="wlang_advanced_ssi_call_join_1_held" t="ha egy hívás van tartásban"/>
+	<w_phrase n="wlang_advanced_ssi_call_join_always" t="mindig"/>
+	<w_phrase n="wlang_fkeyname_ringer_silent" t="Néma mód"/>
+	<w_phrase n="wlang_fkeyname_delete_msg" t="Üzenet törlése"/>
+	<w_phrase n="wlang_line_xmpp_display_profile_image" t="Profilkép megjelenítése"/>
+	<w_phrase n="wlang_advanced_ssi_prov_polling_enabled" t="Provisioning rendszeres lekérése"/>
+	<w_phrase n="wlang_advanced_ssi_prov_polling_mode" t="Lekérés módja"/>
+	<w_phrase n="wlang_advanced_ssi_prov_polling_mode_rel" t="Relatív"/>
+	<w_phrase n="wlang_advanced_ssi_prov_polling_mode_abs" t="Abszolút"/>
+	<w_phrase n="wlang_advanced_ssi_prov_polling_mode_random" t="Véletlenszerű"/>
+	<w_phrase n="wlang_advanced_ssi_prov_polling_period" t="Lekérési időközök (mp)"/>
+	<w_phrase n="wlang_advanced_ssi_prov_polling_time" t="Lekérési időpont (óó:pp)"/>
+	<w_phrase n="wlang_advanced_ssi_prov_polling_time_random_end" t="Lekérés befejezési időpont (óó:pp)"/>
+	<w_phrase n="wlang_advanced_ssi_show_desktop_msg_in_call_screens" t="Bejövő üzenetek megjelenítése hívás képernyőn"/>
+	<w_phrase n="wlang_str_zone" t="Zóna"/>
+	<w_phrase n="wlang_F_REMOTE_OFFICE" t="Távoli iroda"/>
+	<w_phrase n="wlang_fkeyname_zones" t="Multicast zónák"/>
+	<w_phrase n="wlang_fkeys_xml_label" t="XML címke"/>
+	<w_phrase n="wlang_advanced_ssi_type_quick_xfer_spd_dial_and_ext" t="Gyors átkapcsolás gyorshívó/mellék esetén"/>
+	<w_phrase n="wlang_advanced_ssi_new_call" t="Új hívás"/>
+	<w_phrase n="wlang_advanced_ssi_blind_transfer" t="Vak átkapcsolás"/>
+	<w_phrase n="wlang_advanced_ssi_attended_transfer" t="Bejelentett átkapcsolás"/>
+	<w_phrase n="wlang_fkeyname_pgm" t="Programozható"/>
+	<w_phrase n="wlang_ssi_text" t="Szöveg"/>
+	<w_phrase n="wlang_ssi_icon" t="Ikon"/>
+	<w_phrase n="wlang_ssi_icon_text" t="Ikon és szöveg"/>
+	<w_phrase n="wlang_fkeys_ssi_header_smartlabel" t="SmartLabel gombok"/>
+	<w_phrase n="wlang_fkeys_ssi_header_soft" t="Állapotfüggő gombok"/>
+	<w_phrase n="wlang_fkeys_ssi_header_nav" t="Navigációs gombok"/>
+	<w_phrase n="wlang_fkeys_ssi_header_hard" t="Dedikált gombok"/>
+	<w_phrase n="wlang_fkeys_ssi_header_line" t="Vonal gombok"/>
+	<w_phrase n="wlang_fkeys_ssi_header_uxm" t="Kiegészítő gombok"/>
+	<w_phrase n="wlang_fkeys_key_assignment" t="Gomb hozzárendelése"/>
+	<w_phrase n="wlang_fkeys_smartlabel" t="SmartLabel"/>
+	<w_phrase n="wlang_line_idle_screen" t="Tétlen kijelző"/>
+	<w_phrase n="wlang_line_default_smartlabel_display_mode" t="Alapértelmezett megjelenítési mód"/>
+	<w_phrase n="wlang_line_expanded_smartlable_display_mode" t="Alternatív megjelenítési mód"/>
+	<w_phrase n="wlang_line_short" t="Rövid"/>
+	<w_phrase n="wlang_line_half" t="Fél"/>
+	<w_phrase n="wlang_line_full" t="Teljes"/>
+	<w_phrase n="wlang_line_call_screens" t="Hívás képernyők"/>
+	<w_phrase n="wlang_line_other_screens" t="További képernyők"/>
+	<w_phrase n="wlang_line_smartlabel_options" t="Opciók"/>
+	<w_phrase n="wlang_line_smartlabel_dismissal_time" t="Visszaállítási idő az eredeti megjelenítési módra (mp)"/>
+	<w_phrase n="wlang_fkeyname_cancel" t="Mégse"/>
+	<w_phrase n="wlang_fkeyname_ok" t="OK"/>
+	<w_phrase n="wlang_fkeyname_left" t="Bal"/>
+	<w_phrase n="wlang_fkeyname_right" t="Jobb"/>
+	<w_phrase n="wlang_fkeyname_up" t="Fel"/>
+	<w_phrase n="wlang_fkeyname_down" t="Le"/>
+	<w_phrase n="wlang_hoteling" t="Hotel mód"/>
+	<w_phrase n="wlang_fkeyname_hoteling" t="Hotel mód"/>
+	<w_phrase n="wlang_advanced_listen_in_on_handset" t="Belehallgatás a kézibeszélőn"/>
+	<w_phrase n="wlang_prefs_auto_dial_target" t="Automatikus tárcsázási cél"/>
+	<w_phrase n="wlang_prefs_auto_dial_timeout" t="Automatikus tárcsázási késleltetés"/>
+	<w_phrase n="wlang_smartlabel_trigger_proximity" t="Közelítésérzékelő"/>
+	<w_phrase n="wlang_smartlabel_trigger_shortpress" t="Oldal gomb rövid megnyomása"/>
+	<w_phrase n="wlang_smartlabel_trigger_longpress" t="Oldal gomb hosszú megnyomása"/>
+	<w_phrase n="wlang_smartlabel_trigger_smartlabel_key_2_short_press" t="P2 rövid megnyomása"/>
+	<w_phrase n="wlang_smartlabel_trigger_smartlabel_key_2_long_press" t="P2 hosszú megnyomása"/>
+	<w_phrase n="wlang_smartlabel_trigger_smartlabel_key_3_short_press" t="P3 rövid megnyomása"/>
+	<w_phrase n="wlang_smartlabel_trigger_smartlabel_key_3_long_press" t="P3 hosszú megnyomása"/>
+	<w_phrase n="wlang_smartlabel_trigger_smartlabel_key_4_short_press" t="P4 rövid megnyomása"/>
+	<w_phrase n="wlang_smartlabel_trigger_smartlabel_key_4_long_press" t="P4 hosszú megnyomása"/>
+	<w_phrase n="wlang_smartlabel_trigger_smartlabel_key_8_short_press" t="P8 rövid megnyomása"/>
+	<w_phrase n="wlang_smartlabel_trigger_smartlabel_key_8_long_press" t="P8 hosszú megnyomása"/>
+	<w_phrase n="wlang_smartlabel_trigger_smartlabel_key_10_short_press" t="P10 rövid megnyomása"/>
+	<w_phrase n="wlang_smartlabel_trigger_smartlabel_key_10_long_press" t="P10 hosszú megnyomása"/>
+	<w_phrase n="wlang_smartlabel_trigger" t="Alternatív kijelző"/>
+	<w_phrase n="wlang_smart_transfer" t="SmartTransfer"/>
+	<w_phrase n="wlang_preferences_appearance" t="Megjelenítés"/>
+	<w_phrase n="wlang_preferences_general" t="Általános"/>
+	<w_phrase n="wlang_preferences_ui_elements" t="Interfész elemek"/>
+	<w_phrase n="wlang_preferences_expansion_module_ui_elements" t="Kiegészítő modul interfész elemei"/>
+	<w_phrase n="wlang_preferences_font" t="Betű beállítások"/>
+	<w_phrase n="wlang_preferences_expansion_module_font" t="Kiegészítő modul szöveg típusa"/>
+	<w_phrase n="wlang_preferences_ui_colors" t="Interfész színek"/>
+	<w_phrase n="wlang_preferences_ui_smartlabel_colors" t="Smartlabel színek"/>
+	<w_phrase n="wlang_ui_theme" t="UI színes téma"/>
+	<w_phrase n="wlang_theme_Light" t="Világos téma"/>
+	<w_phrase n="wlang_theme_Dark" t="Sötét téma"/>
+	<w_phrase n="wlang_theme_Colorful" t="Színes téma"/>
+	<w_phrase n="wlang_theme_Industrial" t="Ipari téma"/>
+	<w_phrase n="wlang_theme_Contrast" t="Kontrasztos téma"/>
+	<w_phrase n="wlang_text_color" t="Szöveg szín"/>
+	<w_phrase n="wlang_titlebar_text_color" t="Címsor szöveg szín"/>
+	<w_phrase n="wlang_titlebar_background_color" t="Címsor háttér szín"/>
+	<w_phrase n="wlang_subtext_color" t="Alszöveg szín"/>
+	<w_phrase n="wlang_extratext_color" t="További szöveg 1 szín"/>
+	<w_phrase n="wlang_extratext2_color" t="További szöveg 2 szín"/>
+	<w_phrase n="wlang_background_color" t="Háttérszín"/>
+	<w_phrase n="wlang_fkey_background_color" t="Funkciógomb háttérszín"/>
+	<w_phrase n="wlang_fkey_pressed_background_color" t="Funkciógomb megnyomva háttér szín"/>
+	<w_phrase n="wlang_fkey_separator_color" t="Funkciógomb elválasztó szín"/>
+	<w_phrase n="wlang_fkey_label_color" t="Funkciógomb címke szín"/>
+	<w_phrase n="wlang_fkey_pressed_label_color" t="Funkciógomb megnyomva címke szín"/>
+	<w_phrase n="wlang_line_background_color" t="Vonal háttérszín"/>
+	<w_phrase n="wlang_selected_line_background_color" t="Kiválasztott vonal háttérszín"/>
+	<w_phrase n="wlang_selected_line_indicator_color" t="Kiválasztott vonal indikátor szín"/>
+	<w_phrase n="wlang_selected_line_text_color" t="Kiválasztott vonal szöveg szín"/>
+	<w_phrase n="wlang_line_separator_color" t="Vonal elválasztó szín"/>
+	<w_phrase n="wlang_scrollbar_color" t="Görgetősáv szín"/>
+	<w_phrase n="wlang_cursor_color" t="Kurzor szín"/>
+	<w_phrase n="wlang_status_msgs_background_color" t="Státusz üzenetek háttérszín"/>
+	<w_phrase n="wlang_status_msgs_border_color" t="Státusz üzenetek keret szín"/>
+	<w_phrase n="wlang_regular_font_min_font_size" t="Minimális általános betűméret"/>
+	<w_phrase n="wlang_fkeys_ssi_full_label_mode" t="Teljes címke mód"/>
+	<w_phrase n="wlang_fkeys_ssi_label_mode" t="Címke mód"/>
+	<w_phrase n="wlang_fkeys_ssi_unknown" t="Ismeretlen"/>
+	<w_phrase n="wlang_advanced_ssi_settings_refresh" t="Beállítások frissítési ideje"/>
+	<w_phrase n="wlang_advanced_tmz_unused" t="Nincs használatban"/>
+	<w_phrase n="wlang_ldap_search_filter_during_call" t="LDAP névszűrő hívás közben"/>
+	<w_phrase n="wlang_ldap_number_filter_during_call" t="LDAP telefonszám szűrő hívás közben"/>
+	<w_phrase n="wlang_fkeyname_lock" t="Lezárás"/>
+	<w_phrase n="wlang_fkeyname_voicemail_info" t="Hangposta info"/>
+	<w_phrase n="wlang_advanced_ssi_xmpp_refresh_timer" t="XMPP frissítési idő"/>
+	<w_phrase n="wlang_advanced_xmpp" t="XMPP"/>
+	<w_phrase n="wlang_advanced_ssi_xsi_heartbeat_interval" t="XSI Heartbeat időközök"/>
+	<w_phrase n="wlang_advanced_xsi" t="XSI"/>
+	<w_phrase n="wlang_fkeyname_caller_id_blocking" t="Hívószám blokkolása"/>
+	<w_phrase n="wlang_fkeyname_hide_outgoing_id" t="Hívószám elrejtése"/>
+	<w_phrase n="wlang_outgoing" t="Kimenő"/>
+	<w_phrase n="wlang_skip_welcome" t="Üdvözlés kihagyása"/>
+	<w_phrase n="wlang_general_file" t="Fájl"/>
+	<w_phrase n="wlang_lcs" t="LCS"/>
+	<w_phrase n="wlang_cpu" t="Processzor"/>
+	<w_phrase n="wlang_advanced_ssi_als" t="Háttérvilágítás"/>
+	<w_phrase n="wlang_advanced_ssi_active" t="Aktív"/>
+	<w_phrase n="wlang_fkeyname_consultconf" t="Konferencia csatlakozás"/>
+	<w_phrase n="wlang_use_outbound_proxy_for_callback" t="Kimenő proxy használata visszahíváshoz"/>
+	<w_phrase n="wlang_advanced_ssi_optimize_infobox" t="Optimalizált Infobox"/>
+	<w_phrase n="wlang_action_ssi_poll_settings" t="URL lekérési beállítások"/>
+	<w_phrase n="wlang_action_ssi_poll" t="URL rendszeres lekérése"/>
+	<w_phrase n="wlang_advanced_ssi_sip_header_warning" t="SIP fejléc figyelmeztetés"/>
+	<w_phrase n="wlang_advanced_ssi_sip_header_warning_codes" t="SIP fejléc figyelmeztetési kódok"/>
+	<w_phrase n="wlang_prefs_tscanada" t="Kanada"/>
+	<w_phrase n="wlang_prefs_tsrussia" t="Oroszország"/>
+	<w_phrase n="wlang_advanced_contact_src_prio" t="Kontakt források prioritása"/>
+	<w_phrase n="wlang_user_contact_src_sip_prio" t="Kontakt források prioritása (SIP)"/>
+	<w_phrase n="wlang_adr_ssi_tbook_is_full" t="Telefonkönyv megtelt"/>
+	<w_phrase n="wlang_phoneui_short" t="PUI"/>
+	<w_phrase n="wlang_advanced_ssi_ldap_sort_parameters" t="LDAP sorrendezési paraméterek"/>
+	<w_phrase n="wlang_advanced_ssi_ldap_sort_mode" t="LDAP sorrendezési mód"/>
+	<w_phrase n="wlang_advanced_ssi_none" t="Nincs"/>
+	<w_phrase n="wlang_adr_file_xml" t="XML fájl"/>
+	<w_phrase n="wlang_choose_file" t="Válasszon fájlt"/>
+	<w_phrase n="wlang_all_settings_cfg" t="Minden beállítás (.cfg)"/>
+	<w_phrase n="wlang_all_settings_xml" t="Minden beállítás (.xml)"/>
+	<w_phrase n="wlang_changed_settings_xml" t="Megváltozott beállítások (.xml)"/>
+	<w_phrase n="wlang_param_map" t="TR-069 paraméter megfeleltetések"/>
+	<w_phrase n="wlang_call_screen_photo_size" t="Fénykép méret a hívás képernyőn"/>
+	<w_phrase n="wlang_size_S" t="S"/>
+	<w_phrase n="wlang_size_M" t="M"/>
+	<w_phrase n="wlang_size_L" t="L"/>
+	<w_phrase n="wlang_size_XL" t="XL"/>
+	<w_phrase n="wlang_size_XXL" t="XXL"/>
+	<w_phrase n="wlang_size_XXXL" t="XXXL"/>
+	<w_phrase n="wlang_prompt_new_value" t="Kérem adja meg az új értéket"/>
+	<w_phrase n="wlang_fkey_ssi_call_center_status" t="Callcenter státusz"/>
+	<w_phrase n="wlang_line_ssi_enable_mediasec" t="Mediasec engedélyezése"/>
+	<w_phrase n="wlang_callpark_notify" t="Parkolt hívás jelzése"/>
+	<w_phrase n="wlang_call_park" t="Hívás parkoltatása"/>
+	<w_phrase n="wlang_callpark_park_fac" t="Hívás parkoltatási kód"/>
+	<w_phrase n="wlang_smartlabel_trigger_any_smartlabel_key_short_press" t="SmartLabel rövid megnyomás"/>
+	<w_phrase n="wlang_fkeyname_ocip" t="OCI-P telefonkönyv"/>
+	<w_phrase n="wlang_fkeyname_ldap" t="LDAP telefonkönyv"/>
+	<w_phrase n="wlang_fkeyname_serverdirectory" t="Szerver telefonkönyv"/>
+	<w_phrase n="wlang_handset_volume" t="Kézibeszélő hangereje"/>
+	<w_phrase n="wlang_headset_volume" t="Fejbeszélő hangereje"/>
+	<w_phrase n="wlang_ringer_volume" t="Csörgetés hangereje"/>
+	<w_phrase n="wlang_speaker_volume" t="Kihangosító hangereje"/>
+	<w_phrase n="wlang_max_speaker_volume" t="Kihangosító maximális hangereje"/>
+	<w_phrase n="wlang_dtmf_volume" t="DTMF hangereje"/>
+	<w_phrase n="wlang_disconnect_on_onhook" t="Hívásmegszakítás a kézibeszélő letételekor"/>
+	<w_phrase n="wlang_long_cancel_is_blocking_caller" t="Adja a hívószámot a blokkolási listához a Mégse hosszú megnyomásával"/>
+	<w_phrase n="wlang_cancel_conference" t="Konferencia befejezése a Mégse megnyomásával"/>
+	<w_phrase n="wlang_short_cancel_denies_call" t="Hívás közben a mégse gomb elutasítja a bejövő hívást"/>
+	<w_phrase n="wlang_offhook_accept_calls" t="Hívásfogadás felvett kézibeszélővel"/>
+	<w_phrase n="wlang_keyboard_lock_accepted_keys" t="Engedélyezett gombok lezárt készülék esetén"/>
+	<w_phrase n="wlang_emergency_accepted_callkeys" t="Engedélyezett gombok segélyhívás esetén"/>
+	<w_phrase n="wlang_pui_icon_override_xml_icon" t="XML ikon elrejtése kontextus-érzékeny gombok esetén"/>
+	<w_phrase n="wlang_idle_status_btn_index" t="Az info gomb elhelyezkedése a kontextus-érzékeny gombokon"/>
+	<w_phrase n="wlang_ringing_time" t="Csörgetési időtartam (mp)"/>
+	<w_phrase n="wlang_always_show_active_call" t="Aktív hívások megjelenítése mindig"/>
+	<w_phrase n="wlang_mute_is_dnd_in_idle" t="Tétlen képernyő esetén a Némítás gomb váltson DND-re"/>
+	<w_phrase n="wlang_transfer_dialing_on_transfer" t="Átkapcsolás gomb működésének beállítása"/>
+	<w_phrase n="wlang_transfer_dialing_on_other" t="Más gombok átkapcsoláskori működésének beállítása"/>
+	<w_phrase n="wlang_advtab_display" t="Kijelző"/>
+	<w_phrase n="wlang_backlight_on_activity" t="Háttérvilágítás használat közben"/>
+	<w_phrase n="wlang_backlight_when_idle" t="Háttérvilágítás alvó állapotban"/>
+	<w_phrase n="wlang_contrast" t="Kontraszt"/>
+	<w_phrase n="wlang_primary_display" t="Elsődleges kijelző"/>
+	<w_phrase n="wlang_label_display" t="Másodlagos kijelző"/>
+	<w_phrase n="wlang_fkeys_ssi_usb_call_record" t="USB hívásrögzítés"/>
+	<w_phrase n="wlang_fkeys_ssi_usb_call_record_pause" t="USB hívásrögzítés szüneteltetés"/>
+	<w_phrase n="wlang_subtext_pressed_color" t="Alszöveg szín"/>
+	<w_phrase n="wlang_page_indicator_color" t="Kiválasztott vonal indikátor szín"/>
+	<w_phrase n="wlang_preferences_ui_expansion_module_colors" t="Kiegészítő modul színek"/>
+	<w_phrase n="wlang_prefs_expansion_module_text_alignment" t="Kiegészítő modul szöveg elhelyezkedés"/>
+	<w_phrase n="wlang_expansion_module_maintext_size" t="Kiegészítő modul főszöveg méret"/>
+	<w_phrase n="wlang_expansion_module_subtext_size" t="Kiegészítő modul alszöveg méret"/>
+	<w_phrase n="wlang_size_XS" t="XS"/>
+	<w_phrase n="wlang_prefs_expansion_module_background_image" t="Kiegészítő modul háttérkép"/>
+	<w_phrase n="wlang_fkeyname_context_in_idle_page_left" t="Balra"/>
+	<w_phrase n="wlang_fkeyname_context_in_idle_page_right" t="Jobbra"/>
+	<w_phrase n="wlang_reciprocal_hold" t="Kölcsönös tartás"/>
+	<w_phrase n="wlang_provisioning_order" t="Konfigurációs sorrend (Prov)"/>
+	<w_phrase n="wlang_remote_3264_hold" t="RFC 3264 tartás"/>
+	<w_phrase n="wlang_use_contact_in_refer_to_hdr" t="Használja a Contact fejlécet a Refer-To -hoz"/>
+	<w_phrase n="wlang_ack_before_reinvite_when_holding" t="ACK tartásban a Reinvite előtt"/>
+	<w_phrase n="wlang_F_CALL_PARK_DIAL" t="Hívásparkoló tárcsázása"/>
+	<w_phrase n="wlang_F_CALL_PARK_DIAL_RETRIEVE" t="Parkolt hívás átvétele"/>
+	<w_phrase n="wlang_tr69_use_acs" t="TR-069"/>
+	<w_phrase n="wlang_tr69_bootstrap" t="BOOTSTRAP küldése ACS-nek"/>
+	<w_phrase n="wlang_tr69_acs_url" t="ACS URL"/>
+	<w_phrase n="wlang_tr69_acs_user" t="ACS felhasználónév"/>
+	<w_phrase n="wlang_tr69_acs_passwd" t="ACS jelszó"/>
+	<w_phrase n="wlang_tr69_cnr_user" t="CNR felhasználónév"/>
+	<w_phrase n="wlang_tr69_cnr_pass" t="CNR jelszó"/>
+	<w_phrase n="wlang_tr69_p_inform_supervision_timeout" t="Rendszeres információcsere periódusa"/>
+	<w_phrase n="wlang_tr69_log" t="TR-069 Log"/>
+	<w_phrase n="wlang_extend_context_key_in_idle" t="12 állapotfüggő gomb üresjáratban"/>
+	<w_phrase n="wlang_edit_mode_for_directory_search" t="Alap. beviteli mód kereséshez"/>
+	<w_phrase n="wlang_edit_mode_for_passwords" t="Alapértelmezett szerkesztési mód, jelszó mód"/>
+	<w_phrase n="wlang_edit_mode_numbers" t="123"/>
+	<w_phrase n="wlang_edit_mode_lower_case" t="abc"/>
+	<w_phrase n="wlang_edit_mode_upper_case" t="ABC"/>
+	<w_phrase n="wlang_call_states_with_local_party" t="Hívás mutatja  a helyi azonosítót"/>
+	<w_phrase n="wlang_redirected_call_states_with_local_party" t="Átirényított hívás mutatja a helyi azonosítót"/>
+	<w_phrase n="wlang_call_states_when_knocking" t="Kopogtatás"/>
+	<w_phrase n="wlang_advanced_ssi_sip_tls_listen_port" t="TLS port"/>
+	<w_phrase n="wlang_advanced_ssi_tls_listen" t="SIP TLS port"/>
+	<w_phrase n="wlang_results" t="Találatok"/>
+	<w_phrase n="wlang_ocip_max_hits" t="Max. találatok száma"/>
+	<w_phrase n="wlang_suppress_sip_messages" t="Üzenetek elrejtése"/>
+	<w_phrase n="wlang_reject_calls_with_603" t="Hívás visszautasítása 603 Declined üzenettel"/>
+	<w_phrase n="wlang_action_received_subscr_notify_url" t="SIP NOTIFY esetén"/>
+	<w_phrase n="wlang_action_firewall_test" t="CSTA üzenet tűzfal teszteléshez"/>
+	<w_phrase n="wlang_adr_entry_id" t="Bejegyzés ID"/>
+	<w_phrase n="wlang_advanced_customized_ssi_mtu_size" t="MTU méret"/>
+	<w_phrase n="wlang_line_ssi_unsaf_via_received_rport" t="Nyilvános cím felismerése a REGISTER alapján"/>
+	<w_phrase n="wlang_info_branding_name" t="Branding"/>
+	<w_phrase n="wlang_info_branding_version" t="Branding Version"/>
+	<w_phrase n="wlang_info_hardware_version" t="Hardware verzió"/>
+	<w_phrase n="wlang_prefs_pa1p_controls" t="PA1+ beállítások"/>
+	<w_phrase n="wlang_prefs_ssi_pa1p_reset_button_for_dialing" t="Reset gomb használata tárcsázáshoz:"/>
+	<w_phrase n="wlang_prefs_ssi_pa1p_nr_to_dial" t="Reset gomb által hívandó telefonszám:"/>
+	<w_phrase n="wlang_prefs_ssi_pa1p_call_timeout" t="Hívás befejezése a megadott mp múlva:"/>
+	<w_phrase n="wlang_prefs_ssi_pa1p_speaker_volume" t="Kihangosító hangereje (1-15):"/>
+	<w_phrase n="wlang_prefs_ssi_pa1p_amp_gain" t="Erősítő fokozás (0-3):"/>
+	<w_phrase n="wlang_prefs_ssi_pa1p_spkr" t="Kihangosító:"/>
+	<w_phrase n="wlang_prefs_ssi_pa1p_pin1" t="PIN 1:"/>
+	<w_phrase n="wlang_prefs_ssi_pa1p_pin2" t="PIN 2:"/>
+	<w_phrase n="wlang_prefs_ssi_pa1p_pin3" t="PIN 3:"/>
+	<w_phrase n="wlang_prefs_ssi_pa1p_pin4" t="PIN 4:"/>
+	<w_phrase n="wlang_prefs_ssi_pa1p_pin1_time" t="PIN 1 kikapcsolási idő (mp):"/>
+	<w_phrase n="wlang_prefs_ssi_pa1p_pin2_time" t="PIN 2 kikapcsolási idő (mp):"/>
+	<w_phrase n="wlang_prefs_ssi_pa1p_pin3_time" t="PIN 3 kikapcsolási idő (mp):"/>
+	<w_phrase n="wlang_prefs_ssi_pa1p_pin4_time" t="PIN 4 kikapcsolási idő (mp):"/>
+	<w_phrase n="wlang_line_ssi_multicast_relay_address" t="Multicast relay címe:"/>
+	<w_phrase n="wlang_advanced_ssi_eth_port_1" t="Port 1:"/>
+	<w_phrase n="wlang_advanced_ssi_eth_port_2" t="Port 2:"/>
+	<w_phrase n="wlang_line_ssi_rtcpencryption" t="RTP titkosítás"/>
+	<w_phrase n="wlang_advanced_ssi_headset_mic" t="Fejbeszélő hangereje (1-8):"/>
+	<w_phrase n="wlang_advanced_ssi_blf_pickup_audio_indication" t="Hangjelzés hívás átvétel esetén"/>
+	<w_phrase n="wlang_advanced_ssi_dkey_dnd_behavior" t="Más gombok működésének beállítása DND esetén"/>
+	<w_phrase n="wlang_advanced_ssi_dkey_dnd_behavior_normal" t="Normál"/>
+	<w_phrase n="wlang_advanced_ssi_dkey_dnd_behavior_reverse" t="Fordított"/>
+	<w_phrase n="wlang_advanced_early_media" t="Early Media"/>
+	<w_phrase n="wlang_advanced_early_media_playback" t="Bejátszás"/>
+	<w_phrase n="wlang_advanced_early_media_playback_never" t="Soha"/>
+	<w_phrase n="wlang_advanced_early_media_playback_preferred" t="Preferált"/>
+	<w_phrase n="wlang_advanced_early_media_playback_enforced" t="Kényszerített"/>
+	<w_phrase n="wlang_advanced_early_media_ring_fallback" t="Csengetési visszhang türelmi idő"/>
+	<w_phrase n="wlang_advanced_ssi_user_ringer_once" t="Csengetési hang csak egyszer"/>
+	<w_phrase n="wlang_fkeyname_identities" t="Azonosítók"/>
+	<w_phrase n="wlang_action_ssi_received_sip_update" t="SIP UPDATE érkezett"/>
+	<w_phrase n="wlang_fkeyname_answer" t="Answer"/>
+	<w_phrase n="wlang_fkeyname_forward" t="Forward"/>
+	<w_phrase n="wlang_fkeyname_reject" t="Reject"/>
+	<w_phrase n="wlang_fkeyname_end_call" t="End call"/>
+	<w_phrase n="wlang_fkeyname_group_park" t="Group Park"/>
+	<w_phrase n="wlang_fkeyname_new_call" t="New Call"/>
+	<w_phrase n="wlang_fkeyname_resume" t="Resume"/>
+	<w_phrase n="wlang_fkeyname_back_space" t="Backspace"/>
+</w_phrases>

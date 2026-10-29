@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<IPPhoneMenu line_separator="yes" line_height="45" icon_xoffset="$(math_eval:$(gui_display_xsize)/20-5)" text_xoffset="$(math_eval:$(gui_display_xsize)/20-7)" line_yoffset="$(math_eval:$(gui_display_ysize)/6)" speedselect="off" state="relevant" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../schemas/minibrowser.xsd">
+  <If condition="$(show_feature:FEATURE_PUI_STYLE_SIO)">
+    <Title>$(lang:status_messages)</Title>
+  </If>
+  <Else>
+    <Title>$(lang:status_messages) $(lang:$(var:list_type))</Title>
+  </Else>
+  <IconSize>XXS</IconSize>
+  <If condition="$(show_feature:FEATURE_PUI_STYLE_SIO)">
+    <ListIndicator count="2" page_with_warning="-1" active_page="$(var:active_page)">$(lang:$(var:list_type))</ListIndicator>
+    <Repeat values="$(status_message:$(var:list_type))" token="|__MAIN__|__SUB__|__ICON__|__ID__|__ESSENTIAL__|">
+      <MenuItem name="__MAIN__" id="__ID__">
+        <SubText>__SUB__</SubText>
+        <IconType>__ICON__</IconType>
+        <SoftKeyItem>
+          <Name>RIGHT</Name>
+          <If condition="$(var:list_type)==important">
+            <Url>file:///xml/gui/state_status_messages.xml#var:list_type=active&amp;var:active_page=1</Url>
+          </If>
+          <Else>
+            <Url>file:///xml/gui/state_status_messages.xml#var:list_type=important&amp;var:active_page=0</Url>
+          </Else>
+        </SoftKeyItem>
+        <SoftKeyItem>
+          <Name>LEFT</Name>
+          <If condition="$(var:list_type)==important">
+            <Url>file:///xml/gui/state_status_messages.xml#var:list_type=active&amp;var:active_page=1</Url>
+          </If>
+          <Else>
+            <Url>file:///xml/gui/state_status_messages.xml#var:list_type=important&amp;var:active_page=0</Url>
+          </Else>
+        </SoftKeyItem>
+        <SoftKeyItem>
+          <Name>ENTER</Name>
+          <If condition="__ID__==-1">
+            <Url>phone://mb_nop</Url>
+          </If>
+          <Elif condition="$(status_message_id:UxmUpdateRequired)==__ID__">
+            <Url>file:///xml/gui/templates.xml#sub=*[@id="text_template"]&amp;var:text_translate=yes&amp;var:text_content=$(lang:status_detail_uxm_update_required)%3Cbr/%3E$(lang:status_detail_uxm_update_required2)&amp;var:text_title=$(lang:message_label)&amp;var:text_softkeys=|F1|F_SOFTWARE_UPDATE|phone://mb_nop#uxm_update=file:///uxm/uxm_update.bin||</Url>
+          </Elif>
+          <Elif condition="$(status_message_id:WlanStatus)==__ID__">
+            <Url>file:///xml/wifi/wifi.xml#sub=*[@id="SIOwlan"]</Url>
+          </Elif>
+          <Else>
+            <SoftKey>F_DETAILS</SoftKey>
+          </Else>
+        </SoftKeyItem>
+        <If condition="$(set:idle_status_btn_index)==4">
+          <If condition="$(is_reboot_required)">
+            <SoftKeyItem>
+              <Name>F1</Name>
+              <SoftKey>F_REBOOT</SoftKey>
+            </SoftKeyItem>
+          </If>
+          <If condition="__ID__!=-1">
+            <SoftKeyItem>
+              <Name>F2</Name>
+              <If condition="$(status_message_id:UxmUpdateRequired)==__ID__">
+                <Label>F_DETAILS</Label>
+                <Url>file:///xml/gui/templates.xml#sub=*[@id="text_template"]&amp;var:text_translate=yes&amp;var:text_content=$(lang:status_detail_uxm_update_required)%3Cbr/%3E$(lang:status_detail_uxm_update_required2)&amp;var:text_title=$(lang:message_label)&amp;var:text_softkeys=|F1|F_SOFTWARE_UPDATE|phone://mb_nop#uxm_update=file:///uxm/uxm_update.bin||</Url>
+              </If>
+              <Elif condition="$(status_message_id:WlanStatus)==__ID__">
+                <Label>F_DETAILS</Label>
+                <Url>file:///xml/wifi/wifi.xml#sub=*[@id="SIOwlan"]</Url>
+              </Elif>
+              <Else>
+                <SoftKey>F_DETAILS</SoftKey>
+              </Else>
+            </SoftKeyItem>
+          </If>
+          <If condition="__ESSENTIAL__==0">
+            <If condition="$(var:list_type)==important">
+              <SoftKeyItem>
+                <Name>F3</Name>
+                <SoftKey>F_DELETE</SoftKey>
+              </SoftKeyItem>
+            </If>
+          </If>
+          <SoftKeyItem>
+            <Name>F4</Name>
+            <SoftKey>STATE_IDLE_FKEY4</SoftKey>
+            <Icon>$(set:context_key_icon_type[3])</Icon>
+            <Label>$(key_name_default_idle_f4)</Label>
+          </SoftKeyItem>
+        </If>
+        <Else>
+          <If condition="__ID__!=-1">
+            <SoftKeyItem>
+              <Name>F3</Name>
+              <If condition="$(status_message_id:UxmUpdateRequired)==__ID__">
+                <Label>F_DETAILS</Label>
+                <Url>file:///xml/gui/templates.xml#sub=*[@id="text_template"]&amp;var:text_translate=yes&amp;var:text_content=$(lang:status_detail_uxm_update_required)%3Cbr/%3E$(lang:status_detail_uxm_update_required2)&amp;var:text_title=$(lang:message_label)&amp;var:text_softkeys=|F1|F_SOFTWARE_UPDATE|phone://mb_nop#uxm_update=file:///uxm/uxm_update.bin||</Url>
+              </If>
+              <Elif condition="$(status_message_id:WlanStatus)==__ID__">
+                <Label>F_DETAILS</Label>
+                <Url>file:///xml/wifi/wifi.xml#sub=*[@id="SIOwlan"]</Url>
+              </Elif>
+              <Else>
+                <SoftKey>F_DETAILS</SoftKey>
+              </Else>
+            </SoftKeyItem>
+          </If>
+          <If condition="__ESSENTIAL__==0">
+            <If condition="$(var:list_type)==important">
+              <SoftKeyItem>
+                <Name>F4</Name>
+                <SoftKey>F_DELETE</SoftKey>
+              </SoftKeyItem>
+            </If>
+          </If>
+        </Else>
+      </MenuItem>
+    </Repeat>
+  </If>
+  <Else>
+    <Repeat values="$(status_message:$(var:list_type))" token="|__X__|__Y__|__ESSENTIAL__|">
+      <MenuItem name="__X__" id="__Y__">
+        <SoftKeyItem>
+          <Name>RIGHT</Name>
+          <If condition="$(var:list_type)==important">
+            <Url>file:///xml/gui/state_status_messages.xml#var:list_type=active&amp;var:active_page=1</Url>
+          </If>
+          <Else>
+            <Url>file:///xml/gui/state_status_messages.xml#var:list_type=important&amp;var:active_page=0</Url>
+          </Else>
+        </SoftKeyItem>
+        <SoftKeyItem>
+          <Name>LEFT</Name>
+          <If condition="$(var:list_type)==important">
+            <Url>file:///xml/gui/state_status_messages.xml#var:list_type=active&amp;var:active_page=1</Url>
+          </If>
+          <Else>
+            <Url>file:///xml/gui/state_status_messages.xml#var:list_type=important&amp;var:active_page=0</Url>
+          </Else>
+        </SoftKeyItem>
+        <If condition="$(set:idle_status_btn_index)==4">
+          <SoftKeyItem>
+            <Name>ENTER</Name>
+            <If condition="__Y__==-1">
+              <Url>phone://mb_nop</Url>
+            </If>
+            <Elif condition="$(status_message_id:UxmUpdateRequired)==__Y__">
+              <Url>file:///xml/gui/templates.xml#sub=*[@id="text_template"]&amp;var:text_translate=yes&amp;var:text_content=$(lang:status_detail_uxm_update_required)%3Cbr/%3E$(lang:status_detail_uxm_update_required2)&amp;var:text_title=$(lang:message_label)&amp;var:text_softkeys=|F1|F_SOFTWARE_UPDATE|phone://mb_nop#uxm_update=file:///uxm/uxm_update.bin||</Url>
+            </Elif>
+            <Elif condition="$(status_message_id:WlanStatus)==__Y__">
+              <Url>file:///xml/wifi/wifi.xml#sub=*[@id="SIOwlan"]</Url>
+            </Elif>
+            <Else>
+              <SoftKey>F_DETAILS</SoftKey>
+            </Else>
+          </SoftKeyItem>
+          <If condition="$(is_reboot_required)">
+            <SoftKeyItem>
+              <Name>F1</Name>
+              <SoftKey>F_REBOOT</SoftKey>
+            </SoftKeyItem>
+          </If>
+          <If condition="__Y__!=-1">
+            <SoftKeyItem>
+              <Name>F2</Name>
+              <If condition="$(status_message_id:UxmUpdateRequired)==__Y__">
+                <Label>F_DETAILS</Label>
+                <Url>file:///xml/gui/templates.xml#sub=*[@id="text_template"]&amp;var:text_translate=yes&amp;var:text_content=$(lang:status_detail_uxm_update_required)%3Cbr/%3E$(lang:status_detail_uxm_update_required2)&amp;var:text_title=$(lang:message_label)&amp;var:text_softkeys=|F1|F_SOFTWARE_UPDATE|phone://mb_nop#uxm_update=file:///uxm/uxm_update.bin||</Url>
+              </If>
+              <Elif condition="$(status_message_id:WlanStatus)==__Y__">
+                <Label>F_DETAILS</Label>
+                <Url>file:///xml/wifi/wifi.xml#sub=*[@id="SIOwlan"]</Url>
+              </Elif>
+              <Else>
+                <SoftKey>F_DETAILS</SoftKey>
+              </Else>
+            </SoftKeyItem>
+          </If>
+          <If condition="__ESSENTIAL__==0">
+            <If condition="$(var:list_type)==important">
+              <SoftKeyItem>
+                <Name>F3</Name>
+                <SoftKey>F_DELETE</SoftKey>
+              </SoftKeyItem>
+            </If>
+          </If>
+          <SoftKeyItem>
+            <Name>F4</Name>
+            <SoftKey>STATE_IDLE_FKEY4</SoftKey>
+            <Icon>$(set:context_key_icon_type[3])</Icon>
+            <Label>$(key_name_default_idle_f4)</Label>
+          </SoftKeyItem>
+        </If>
+        <Else>
+          <SoftKeyItem>
+            <Name>ENTER</Name>
+            <If condition="__Y__==-1">
+              <Url>phone://mb_nop</Url>
+            </If>
+            <Elif condition="$(status_message_id:UxmUpdateRequired)==__Y__">
+              <Url>file:///xml/gui/templates.xml#sub=*[@id="text_template"]&amp;var:text_translate=yes&amp;var:text_content=$(lang:status_detail_uxm_update_required)%3Cbr/%3E$(lang:status_detail_uxm_update_required2)&amp;var:text_title=$(lang:message_label)&amp;var:text_softkeys=|F1|F_SOFTWARE_UPDATE|phone://mb_nop#uxm_update=file:///uxm/uxm_update.bin||</Url>
+            </Elif>
+            <Elif condition="$(status_message_id:WlanStatus)==__Y__">
+              <Url>file:///xml/wifi/wifi.xml#sub=*[@id="SIOwlan"]</Url>
+            </Elif>
+            <Else>
+              <SoftKey>F_DETAILS</SoftKey>
+            </Else>
+          </SoftKeyItem>
+          <If condition="__Y__!=-1">
+            <SoftKeyItem>
+              <Name>F3</Name>
+              <If condition="$(status_message_id:UxmUpdateRequired)==__Y__">
+                <Label>F_DETAILS</Label>
+                <Url>file:///xml/gui/templates.xml#sub=*[@id="text_template"]&amp;var:text_translate=yes&amp;var:text_content=$(lang:status_detail_uxm_update_required)%3Cbr/%3E$(lang:status_detail_uxm_update_required2)&amp;var:text_title=$(lang:message_label)&amp;var:text_softkeys=|F1|F_SOFTWARE_UPDATE|phone://mb_nop#uxm_update=file:///uxm/uxm_update.bin||</Url>
+              </If>
+              <Elif condition="$(status_message_id:WlanStatus)==__Y__">
+                <Label>F_DETAILS</Label>
+                <Url>file:///xml/wifi/wifi.xml#sub=*[@id="SIOwlan"]</Url>
+              </Elif>
+              <Else>
+                <SoftKey>F_DETAILS</SoftKey>
+              </Else>
+            </SoftKeyItem>
+          </If>
+          <If condition="__ESSENTIAL__==0">
+            <If condition="$(var:list_type)==important">
+              <SoftKeyItem>
+                <Name>F4</Name>
+                <SoftKey>F_DELETE</SoftKey>
+              </SoftKeyItem>
+            </If>
+          </If>
+        </Else>
+      </MenuItem>
+    </Repeat>
+  </Else>
+</IPPhoneMenu>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<IPPhoneBatch xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../schemas/minibrowser.xsd">
+  <IPPhoneMenu id="wificonnecting" stop_auto_leave="yes">
+    <If condition="$(show_feature:FEATURE_PUI_STYLE_SIO)">
+      <Fetch mil="1">file:///xml/wifi/wifi_connecting.xml#sub=*[@id="on_board_wifi_connecting_menu"]&amp;var:animationcounter=0</Fetch>
+    </If>
+    <Else>
+      <Fetch mil="1">file:///xml/wifi/wifi_connecting.xml#sub=*[@id="on_board_wifi_connecting_menu"]</Fetch>
+    </Else>
+  </IPPhoneMenu>
+  <!-- Wifi connecting message display menu -->
+  <IPPhoneMenu track="no" speedselect="off" stop_auto_leave="yes" id="on_board_wifi_connecting_menu">
+    <If condition="$(var_ifc:PUI::get_is_wifi_new_association_in_progress)==true">
+      <Title>$(lang:WIFI_SCAN_NETWORKS)</Title>
+      <If condition="$(show_feature:FEATURE_PUI_STYLE_SIO)">
+        <MenuItem name="$(lang:WIFI_CONNECTING) $(lang:please_wait)">
+          <ExtraIconType>$(math_eval:$(icon_type_enum:kIconTypeMenuConnectzero)+$(var:animationcounter))</ExtraIconType>
+          <Url>phone://mb_nop</Url>
+        </MenuItem>
+        <If condition="$(var:animationcounter)==3">
+          <Fetch mil="200">phone://mb_nop#var:animationcounter=0</Fetch>
+        </If>
+        <Else>
+          <Fetch mil="200">phone://mb_nop#var:animationcounter=$(math_eval:$(var:animationcounter)+1)</Fetch>
+        </Else>
+      </If>
+      <Else>
+        <MenuItem name="$(lang:WIFI_CONNECTING) $(lang:please_wait)">
+          <Url>phone://mb_nop</Url>
+        </MenuItem>
+        <Fetch mil="200">phone://mb_nop</Fetch>
+      </Else>
+    </If>
+    <Elif condition="$(var_ifc:PUI::get_is_wifi_new_association_in_progress)==false">
+      <Fetch mil="200">phone://mb_nop#go_back</Fetch>
+    </Elif>
+  </IPPhoneMenu>
+</IPPhoneBatch>

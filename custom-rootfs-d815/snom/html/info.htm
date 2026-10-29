@@ -1,0 +1,269 @@
+<?ssi title info_ssi_title?>
+<?ssi file common1.htm?>
+<TR><TD vAlign="top" height="16"><IMG height="16" src="img/clr.gif" width="16"></TD></TR>
+<TR>
+  <TD vAlign="top">
+    <FORM method="post">
+      <?ssi skipon VTECH?>
+      <TABLE class="bubbleTable" cellSpacing="0" cellPadding="0" width="100%" border="0">
+      <?ssi skipoff VTECH?>
+      <?ssi skipon SNOM?>
+      <TABLE cellSpacing="4" cellPadding="0" width="100%" border="0">
+      <?ssi skipoff SNOM?>
+      <TBODY>
+        <TR>
+          <TD class="background" width="12" height="5">
+            <?ssi skipon VTECH?>
+            <IMG height="12" src=<?ssi img-corner-gif ul?> width="12">
+            <?ssi skipoff VTECH?>
+          </TD>
+          <TD width="30%"></TD>
+          <TD width="70%"></TD>
+          <TD class="background" width="12" height="5">
+            <?ssi skipon VTECH?>
+            <IMG height="12" src=<?ssi img-corner-gif ur?> width="12">
+            <?ssi skipoff VTECH?>
+          </TD>
+        </TR>
+        <?ssi hidden_tag?>
+        <TR><TD></TD>
+          <?ssi skipon VTECH?>
+          <TD colspan="2" class="regularline"><B>
+          <?ssi skipoff VTECH?>
+          <?ssi skipon SNOM?>
+          <TD class="titleText">
+          <?ssi skipoff SNOM?>
+          <?lng sysinfo_sysinfo?></B>
+          </TD>
+          <TD></TD>
+        </TR>
+        <TR>
+          <TD></TD><TD class="regularline"><?lng info_phonetype?></TD><TD class="regularline"><?ssi snom_type_long?></TD><TD></TD>
+        </TR>
+        <?ssi skipon NOT_VPN?>
+        <TR>
+          <TD></TD><TD class="regularline"><?lng vpn_ssi_vpn_on?></TD><TD><?ssi vpnstatus?></TD><TD></TD>
+        </TR>
+        <?ssi skipoff NOT_VPN?>
+        <?ssi skipon NOT_L2TP?>
+        <TR>
+          <TD></TD><TD class="regularline"><?lng ssi_l2tp_on?></TD><TD><?ssi l2tpstatus?></TD><TD></TD>
+        </TR>
+        <TR>
+          <TD></TD><TD class="regularline"><?lng info_l2tp_ipaddress?></TD><TD><?ssi l2tp_ip_adr?></TD><TD></TD>
+        </TR>
+        <?ssi skipoff NOT_L2TP?>
+        <?ssi skipon NOT_SBC?>
+        <TR>
+          <TD></TD><TD class="regularline"><?lng ssi_sbc_on?></TD><TD><?ssi sbcstatus?></TD><TD></TD>
+        </TR>
+        <?ssi skipoff NOT_SBC?>
+        <TR>
+          <TD></TD><TD class="regularline"><?lng info_macaddress?></TD><TD><?ssi variable mac?></TD><TD></TD>
+        </TR>
+        <?ssi skipon NO_BUILT_IN_WIFI?>
+        <?ssi skipon NO_WIFI_MAC?>
+        <TR>
+          <TD></TD><TD class="regularline"><?lng info_wifi_mac_address?></TD><TD><?ssi variable wifi_mac?></TD><TD></TD>
+        </TR>
+        <?ssi skipoff NO_WIFI_MAC?>
+        <?ssi skipoff NO_BUILT_IN_WIFI?>
+        <TR>
+          <TD></TD><TD class="regularline"><?lng info_ipaddress?></TD><TD><?ssi variable ip_adr?></TD><TD></TD>
+        </TR>
+        <?ssi skipon NO_IPV6_SUPPORT?>
+        <TR>
+          <TD></TD><TD class="regularline"><?lng info_ipaddress_v6?></TD><TD><?ssi variable ip_adr_v6?></TD><TD></TD>
+        </TR>
+        <?ssi skipoff NO_IPV6_SUPPORT?>
+        <TR>
+          <TD></TD><TD class="regularline"><?lng info_firmware_version?></TD><TD><?ssi snom_type_version?></TD><TD></TD>
+        </TR>
+        <?ssi skipon NO_BRANDING_NAME?>
+        <TR>
+          <TD></TD><TD class="regularline"><?lng info_branding_name?></TD><TD><?ssi snom_type_branding?></TD><TD></TD>
+        </TR>
+        <?ssi skipoff NO_BRANDING_NAME?>
+        <?ssi skipon NO_BRANDING_VERSION?>
+        <TR>
+          <TD></TD><TD class="regularline"><?lng info_branding_version?></TD><TD><?ssi snom_type_branding_version?></TD><TD></TD>
+        </TR>
+        <?ssi skipoff NO_BRANDING_VERSION?>
+        <TR>
+          <TD></TD><TD class="regularline"><?lng info_hardware_version?></TD><TD><?ssi snom_hardware_version?></TD><TD></TD>
+        </TR>
+        <TR>
+          <TD></TD><TD class="regularline"><?lng info_firmware_url?></TD><TD><?ssi variable firmware?></TD><TD></TD>
+        </TR>
+        <TR>
+          <TD></TD><TD class="regulartwoline"><?lng info_production_info?></TD><TD class="regularline"><?ssi variable license_data?></TD><TD></TD>
+        </TR>
+        <TR>
+          <TD></TD><TD class="regularline"><?lng info_uptime_info?></TD><TD><?ssi uptime?></TD><TD></TD>
+        </TR>
+        <TR>
+          <TD></TD><TD class="regularline"><?lng lcs?></TD><TD><?ssi lcsuptime?> (<?ssi lcsexit?>)</TD><TD></TD>
+        </TR>
+        <TR>
+          <TD></TD><TD class="regularline"><?lng info_memfree_info?></TD><TD><?ssi memfree?>&nbsp;K</TD><TD></TD>
+        </TR>
+        <TR>
+          <TD></TD><TD class="regularline"><?lng cpu?></TD><TD><?ssi loadavg?></TD><TD></TD>
+        </TR>
+        <TR>
+          <TD></TD><TD class="regularline"><?lng info_uboot_version_info?></TD><TD><?ssi variable uboot_version?></TD><TD></TD>
+        </TR>
+        <?ssi skipon NO_UARTSIDECAR_SUPPORT?>
+        <TR>
+          <TD></TD><TD class="regularline"><?lng fkeys_sidecar?>:</TD><TD><?ssi variable extension_board?></TD><TD></TD>
+        </TR>
+        <?ssi skipoff NO_UARTSIDECAR_SUPPORT?>
+        <?ssi skipon NOT_UXM ?>
+        <TR>
+          <TD></TD><TD class="regularline"><?lng usb_expansion_module?></TD><TD><?ssi uxm_info?></TD><TD></TD>
+        </TR>
+        <?ssi skipoff NOT_UXM ?>
+        <?ssi skipon NOT_UXMC ?>
+        <TR>
+          <TD></TD><TD class="regularline"><?lng usb_expansion_module?></TD><TD><?ssi uxmc_info?></TD><TD></TD>
+        </TR>
+        <?ssi skipoff NOT_UXMC ?>
+        <TR><TD></TD><TD>&nbsp;</TD></TR>
+        <TR><TD></TD>
+          <?ssi skipon VTECH?>
+          <TD colspan="2" class="regularline"><B>
+          <?ssi skipoff VTECH?>
+          <?ssi skipon SNOM?>
+          <TD class="titleText">
+          <?ssi skipoff SNOM?>
+          <?lng sysinfo_siplinestatus?></B>
+          </TD>
+          <TD></TD>
+        </TR>
+        <TR>
+          <TD></TD><TD class="regularline"><?lng leftnav_lineone?>&nbsp;<?lng line_status?></TD><TD><?ssi reg_state_line1?></TD><TD></TD>
+        </TR>
+        <TR>
+          <TD></TD><TD class="regularline"><?lng leftnav_linetwo?>&nbsp;<?lng line_status?></TD><TD><?ssi reg_state_line2?></TD><TD></TD>
+        </TR>
+        <?ssi skipon TWO_IDENTITIES?>
+        <TR>
+          <TD></TD><TD class="regularline"><?lng leftnav_linethree?>&nbsp;<?lng line_status?></TD><TD><?ssi reg_state_line3?></TD><TD></TD>
+        </TR>
+        <TR>
+          <TD></TD><TD class="regularline"><?lng leftnav_linefour?>&nbsp;<?lng line_status?></TD><TD><?ssi reg_state_line4?></TD><TD></TD>
+        </TR>
+        <?ssi skipon FOUR_IDENTITIES?>
+        <TR>
+          <TD></TD><TD class="regularline"><?lng leftnav_linefive?>&nbsp;<?lng line_status?></TD><TD><?ssi reg_state_line5?></TD><TD></TD>
+        </TR>
+        <TR>
+          <TD></TD><TD class="regularline"><?lng leftnav_linesix?>&nbsp;<?lng line_status?></TD><TD><?ssi reg_state_line6?></TD><TD></TD>
+        </TR>
+        <?ssi skipon SIX_IDENTITIES?>
+        <TR>
+          <TD></TD><TD class="regularline"><?lng leftnav_lineseven?>&nbsp;<?lng line_status?></TD><TD><?ssi reg_state_line7?></TD><TD></TD>
+        </TR>
+        <TR>
+          <TD></TD><TD class="regularline"><?lng leftnav_lineeight?>&nbsp;<?lng line_status?></TD><TD><?ssi reg_state_line8?></TD><TD></TD>
+        </TR>
+        <?ssi skipon EIGHT_IDENTITIES?>
+        <TR>
+          <TD></TD><TD class="regularline"><?lng leftnav_linenine?>&nbsp;<?lng line_status?></TD><TD><?ssi reg_state_line9?></TD><TD></TD>
+        </TR>
+        <TR>
+          <TD></TD><TD class="regularline"><?lng leftnav_lineten?>&nbsp;<?lng line_status?></TD><TD><?ssi reg_state_line10?></TD><TD></TD>
+        </TR>
+        <TR>
+          <TD></TD><TD class="regularline"><?lng leftnav_lineeleven?>&nbsp;<?lng line_status?></TD><TD><?ssi reg_state_line11?></TD><TD></TD>
+        </TR>
+        <TR>
+          <TD></TD><TD class="regularline"><?lng leftnav_linetwelve?>&nbsp;<?lng line_status?></TD><TD><?ssi reg_state_line12?></TD><TD></TD>
+        </TR>
+        <?ssi skipon TWELVE_IDENTITIES?>
+        <TR>
+          <TD></TD><TD class="regularline"><?lng leftnav_linethirteen?>&nbsp;<?lng line_status?></TD><TD><?ssi reg_state_line13?></TD><TD></TD>
+        </TR>
+        <TR>
+          <TD></TD><TD class="regularline"><?lng leftnav_linefourteen?>&nbsp;<?lng line_status?></TD><TD><?ssi reg_state_line14?></TD><TD></TD>
+        </TR>
+        <TR>
+          <TD></TD><TD class="regularline"><?lng leftnav_linefifteen?>&nbsp;<?lng line_status?></TD><TD><?ssi reg_state_line15?></TD><TD></TD>
+        </TR>
+        <TR>
+          <TD></TD><TD class="regularline"><?lng leftnav_linesixteen?>&nbsp;<?lng line_status?></TD><TD><?ssi reg_state_line16?></TD><TD></TD>
+        </TR>
+        <?ssi skipoff TWELVE_IDENTITIES?>
+        <?ssi skipoff EIGHT_IDENTITIES?>
+        <?ssi skipoff SIX_IDENTITIES?>
+        <?ssi skipoff FOUR_IDENTITIES?>
+        <?ssi skipoff TWO_IDENTITIES?>
+        <?ssi skipon NOT_ETH_SWITCH_DEVICE?>
+        <TR><TD></TD><TD>&nbsp;</TD><TD></TD><TD></TD></TR>
+        <TR><TD></TD>
+          <?ssi skipon VTECH?>
+          <TD colspan="2" class="regularline"><B>
+          <?ssi skipoff VTECH?>
+          <?ssi skipon SNOM?>
+          <TD class="titleText">
+          <?ssi skipoff SNOM?>
+            <?ssi skipon SNOMPA1P?>
+            <?lng advanced_ssi_eth_net_port?></B>
+            <?ssi skipoff SNOMPA1P?>
+            <?ssi skipon NOT_SNOMPA1P?>
+            <?lng advanced_ssi_eth_port_1?></B>
+            <?ssi skipoff NOT_SNOMPA1P?>
+          </TD>
+          <TD></TD>
+        </TR>
+        <TR>
+          <TD></TD><TD class="regularline"><?lng sysinfo_ethernet_connection_type?></TD><TD><?ssi eth_net_state?></TD><TD></TD>
+        </TR>
+        <TR>
+          <TD></TD><TD class="regularline"><?lng sysinfo_ethernet_status2?></TD><TD><?ssi eth_net_link?></TD><TD></TD>
+        </TR>
+        <TR><TD></TD><TD>&nbsp;</TD><TD></TD><TD></TD></TR>
+        <TR><TD></TD>
+          <?ssi skipon VTECH?>
+          <TD colspan="2" class="regularline"><B>
+          <?ssi skipoff VTECH?>
+          <?ssi skipon SNOM?>
+          <TD class="titleText">
+          <?ssi skipoff SNOM?>
+            <?ssi skipon SNOMPA1P?>
+            <?lng advanced_ssi_eth_pc_port?></B>
+            <?ssi skipoff SNOMPA1P?>
+            <?ssi skipon NOT_SNOMPA1P?>
+            <?lng advanced_ssi_eth_port_2?></B>
+            <?ssi skipoff NOT_SNOMPA1P?>
+          </TD>
+          <TD></TD>
+        </TR>
+        <TR>
+          <TD></TD><TD class="regularline"><?lng sysinfo_ethernet_connection_type?></TD><TD><?ssi eth_pc_state?></TD><TD></TD>
+        </TR>
+        <TR>
+          <TD></TD><TD class="regularline"><?lng sysinfo_ethernet_status2?></TD><TD><?ssi eth_pc_link?></TD><TD></TD>
+        </TR>
+        <TR><TD></TD><TD>&nbsp;</TD><TD></TD><TD></TD></TR>
+        <?ssi skipoff NOT_ETH_SWITCH_DEVICE?>
+        <TR>
+          <TD class="background" vAlign="bottom" align="left" width="12" height="5">
+            <?ssi skipon VTECH?>
+            <IMG height="12" src=<?ssi img-corner-gif ll?> width="12">
+            <?ssi skipoff VTECH?>
+          </TD>
+          <TD></TD>
+          <TD></TD>
+          <TD class="background" vAlign="bottom" align="right" width="12" height="5">
+            <?ssi skipon VTECH?>
+            <IMG height="12" src=<?ssi img-corner-gif lr?> width="12">
+            <?ssi skipoff VTECH?>
+          </TD>
+        </TR>
+      </TBODY>
+      </TABLE>
+    </FORM>
+  </TD>
+</TR>
+<?ssi file common9.htm?></HTML>

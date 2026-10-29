@@ -1,0 +1,367 @@
+# Parameter Mapping File
+#
+# Snom
+# frequently used settings to the top
+unsignedInt:Device.ManagementServer.PeriodicInformInterval=60
+dateTime:Device.ManagementServer.PeriodicInformTime=
+string:Device.ManagementServer.ParameterKey=
+boolean:Device.ManagementServer.PeriodicInformEnable=1
+unsignedInt:Device.X_Snom_RebootAfterNr={reboot_after_nr}
+
+#tr111 parameters
+string:Device.ManagementServer.ConnectionRequestURL!={CONNECTIONREQUESTURL}
+string:Device.ManagementServer.ConnectionRequestUsername={tr69_cnr_user}
+string:Device.ManagementServer.ConnectionRequestPassword={tr69_cnr_pass}
+boolean:Device.ManagementServer.UpgradesManaged=1
+
+############ other less frequent settings..
+unsignedInt:Device.X_Snom_ActiveLine$={active_line}
+unsignedInt:Device.X_Snom_OutgoingIdentity$={outgoing_identity}
+boolean:Device.X_Snom_LogonWizard={logon_wizard}
+string:Device.X_Snom_HTTPClientUser={http_client_user}
+string:Device.X_Snom_HTTPClientPassword={http_client_pass}
+
+
+################ snom settings
+string:Device.X_Snom_SettingServer={setting_server}
+string:Device.X_Snom_FirmwareVersion={firmware_version}
+
+################ snom localization
+string:Device.X_Snom_Language={language}
+string:Device.X_Snom_WebLanguage={web_language}
+string:Device.X_Snom_Timezone={timezone}
+string:Device.X_Snom_ToneScheme={tone_scheme}
+boolean:Device.X_Snom_DateUsFormat={date_us_format}
+boolean:Device.X_Snom_Time24Format={time_24_format}
+
+################ snom network
+unsignedInt:Device.X_Snom_CodecTos={codec_tos}
+boolean:Device.X_Snom_EthernetDetect={ethernet_detect}
+unsignedInt:Device.X_Snom_MaxBootDelay={max_boot_delay}
+
+################ global RTCP XR
+string:Device.X_Snom_RTCPXR={rtcp_xr}
+string:Device.X_Snom_VqReportCollector={vq_report_collector|1}
+
+
+################ snom web GUI access
+string:Device.X_Snom_HttpUser={http_user}
+string:Device.X_Snom_HttpPass={http_pass}
+string:Device.X_Snom_HttpScheme={http_scheme}
+string:Device.X_Snom_WebserverType={webserver_type}
+boolean:Device.X_Snom_AdminMode={admin_mode}
+string:Device.X_Snom_AdminModeLogin={admin_mode_login}
+string:Device.X_Snom_AdminModePassword={admin_mode_password}
+unsignedInt:Device.X_Snom_WebLogoutTimer={web_logout_timer}
+boolean:Device.X_Snom_Advertisement={advertisement}
+
+################ snom call behaviour
+string:Device.X_Snom_AutoDial={auto_dial}
+boolean:Device.X_Snom_PrivacyIn={privacy_in}
+boolean:Device.X_Snom_PrivacyOut={privacy_out|1}
+string:Device.X_Snom_MwiDialtone={mwi_dialtone}
+boolean:Device.X_Snom_ReleaseSound={release_sound}
+boolean:Device.X_Snom_KeyboardLock={keyboard_lock}
+string:Device.X_Snom_KeyboardLockPw={keyboard_lock_pw}
+boolean:Device.X_Snom_AutoRedial={auto_redial}
+boolean:Device.X_Snom_ShowHistoryInfo={show_history_info}
+
+boolean:Device.X_Snom_EnableKeyboardLock={enable_keyboard_lock}
+
+################ overlapping to snom identity definitions
+boolean:Device.ManagementServer.STUNEnable=0
+string:Device.ManagementServer.STUNServerAddress=
+
+#################
+# upload URL // not existing in snom300, snom320, snom360
+string:Device.X_Snom_UploadGUI={upload_gui}
+string:Device.X_Snom_UploadWeb={upload_web}
+
+
+# TR 106 - one time per boot settings.
+string:Device.DeviceSummary!=Device:1.1[](Baseline:1, EthernetLAN:1, Time:1, IPPing:1, DeviceAssociation:1),VoiceService:1.0[1](SIPEndpoint:1, Endpoint:1)
+string:Device.DeviceInfo.Manufacturer!=snom technology GmbH
+string:Device.DeviceInfo.ManufacturerOUI!={MANUFACTUREOUI}
+string:Device.GatewayInfo.ManufacturerOUI!=
+string:Device.DeviceInfo.ModelName!={LCS2_PRODUCT}
+string:Device.DeviceInfo.Description!={LCS2_PRODUCT}
+string:Device.DeviceInfo.ProductClass!={LCS2_PRODUCT}
+string:Device.GatewayInfo.ProductClass!=
+string:Device.DeviceInfo.SerialNumber!={serialnumber}
+string:Device.GatewayInfo.SerialNumber!=
+# value might exist
+#################
+string:Device.DeviceInfo.SoftwareVersion!={LCS2_VERSION}
+string:Device.DeviceInfo.HardwareVersion!=1.0
+string:Device.DeviceInfo.SpecVersion!=1.0
+# bootloader Version ?
+#################
+string:Device.DeviceInfo.ProvisioningCode=0.001
+# SIP enabled / SIP disabled / license ??
+#################
+unsignedInt:Device.DeviceInfo.UpTime!={UPTIME}
+string:Device.DeviceInfo.FirstUseDate!={INITIAL_FIRST_USE_DATE}
+
+string:Device.ManagementServer.URL={tr69_acs_url}
+string:Device.ManagementServer.Username={tr69_acs_user}
+string:Device.ManagementServer.Password={tr69_acs_passwd}
+
+string:Device.Time.NTPServer1={ntp_server}
+string:Device.Time.LocalTimeZone={timezone}
+
+string:Device.UserInterface.AutoUpdateServer={setting_server}
+string:Device.UserInterface.UserUpdateServer={setting_server}
+string:Device.UserInterface.AvailableLanguages!={LANGUAGES}
+string:Device.UserInterface.CurrentLanguage={language}
+
+# snom LDAP client
+string:Device.UserInterface.X_Snom_LdapSearchFilter={ldap_search_filter}
+string:Device.UserInterface.X_Snom_LdapNumberFilter={ldap_number_filter}
+string:Device.UserInterface.X_Snom_LdapNameAttributes={ldap_name_attributes}
+string:Device.UserInterface.X_Snom_LdapNumberAttributes={ldap_number_attributes}
+string:Device.UserInterface.X_Snom_LdapDisplayName={ldap_display_name}
+string:Device.UserInterface.X_Snom_LdapCountryCode={country_code}
+string:Device.UserInterface.X_Snom_LdapAreaCode={area_code}
+# xcap xdms xdmc
+unsignedInt:Device.UserInterface.X_Snom_XcapTbookSyncInterval={xcap_tbook_sync_interval}
+string:Device.UserInterface.X_Snom_XcapServerName={xcap_server_name}
+string:Device.UserInterface.X_Snom_XcapDirectoryAuid={xcap_directory_auid}
+string:Device.UserInterface.X_Snom_XcapDirDocName={xcap_dir_doc_name}
+unsignedInt:Device.UserInterface.X_Snom_XcapServerPort={xcap_server_port}
+
+# The following can have the values DHCP or Static
+string:Device.LAN.AddressingType={DHCP}
+string:Device.LAN.IPAddress={ip_adr}
+string:Device.LAN.SubnetMask={netmask}
+string:Device.LAN.DefaultGateway={gateway}
+string:Device.LAN.DNSServers={DNS}
+string:Device.LAN.MACAddress={mac}
+
+#################
+# snom VLAN and active VLAN tagging
+unsignedInt:Device.LAN.X_Snom_VlanId={vlan_id}
+unsignedInt:Device.LAN.X_Snom_VlanQos={vlan_qos}
+boolean:Device.LAN.X_Snom_VlanPortTagging={vlan_port_tagging}
+unsignedInt:Device.LAN.X_Snom_VlanPcId={vlan_pc_id}
+unsignedInt:Device.LAN.X_Snom_VlanPcPriority={vlan_pc_priority}
+
+# diffserv TOS
+unsignedInt:Device.LAN.X_Snom_SignalingTos={signaling_tos}
+
+
+# keys INDEX in snom settings STARTS with 0 NOT 1
+# programmable keys
+unsignedInt:Device.UserInterface.X_Snom_NumberOfProgrammableKeys=120
+
+string:Device.UserInterface.X_Snom_ProgrammableKeys.1.X_Snom_Fkey={fkey|0}
+
+string:Device.UserInterface.X_Snom_ProgrammableKeys.1.X_Snom_FkeyLabel={fkey_label|0}
+
+string:Device.UserInterface.X_Snom_ProgrammableKeys.1.X_Snom_FkeyContext={fkey_context|0}
+
+# soft keys
+unsignedInt:Device.UserInterface.X_Snom_NumberOfSoftKeys=4
+
+string:Device.UserInterface.X_Snom_SoftKeys.1.X_Snom_GuiFkey={gui_fkey1}
+string:Device.UserInterface.X_Snom_SoftKeys.2.X_Snom_GuiFkey={gui_fkey2}
+string:Device.UserInterface.X_Snom_SoftKeys.3.X_Snom_GuiFkey={gui_fkey3}
+string:Device.UserInterface.X_Snom_SoftKeys.4.X_Snom_GuiFkey={gui_fkey4}
+
+# fixed keys
+string:Device.UserInterface.X_Snom_FixedKeys.X_Snom_DkeyMenu={dkey_menu}
+string:Device.UserInterface.X_Snom_FixedKeys.X_Snom_DkeyHelp={dkey_help}
+string:Device.UserInterface.X_Snom_FixedKeys.X_Snom_DkeySnom={dkey_snom}
+string:Device.UserInterface.X_Snom_FixedKeys.X_Snom_DkeyConf={dkey_conf}
+string:Device.UserInterface.X_Snom_FixedKeys.X_Snom_DkeyTransfer={dkey_transfer}
+string:Device.UserInterface.X_Snom_FixedKeys.X_Snom_DkeyHold={dkey_hold}
+string:Device.UserInterface.X_Snom_FixedKeys.X_Snom_DkeyDnd={dkey_dnd}
+string:Device.UserInterface.X_Snom_FixedKeys.X_Snom_DkeyRecord={dkey_record}
+string:Device.UserInterface.X_Snom_FixedKeys.X_Snom_DkeyRetrieve={dkey_retrieve}
+string:Device.UserInterface.X_Snom_FixedKeys.X_Snom_DkeyRedial={dkey_redial}
+string:Device.UserInterface.X_Snom_FixedKeys.X_Snom_DkeyDirectory={dkey_directory}
+
+# hide Menus
+string:Device.UserInterface.X_Snom_Customize.X_Snom_LeftnavHiddenAdmin={leftnav_hidden_admin}
+string:Device.UserInterface.X_Snom_Customize.X_Snom_LeftnavHiddenUser={leftnav_hidden_user}
+
+#preferences
+string:Device.UserInterface.X_Snom_DisplayMethod={display_method}
+unsignedInt:Device.UserInterface.X_Snom_DimTimer={dim_timer}
+boolean:Device.UserInterface.X_Snom_Advertisement={advertisement}
+
+string:Device.UserInterface.X_Snom_RedirectIdentity.1.X_Snom_FwdAllEnabled={fwd_all_enabled|1}
+string:Device.UserInterface.X_Snom_RedirectIdentity.1.X_Snom_FwdAllTarget={fwd_all_target|1}
+
+string:Device.UserInterface.X_Snom_RingerHeadsetDevice={ringer_headset_device}
+
+unsignedInt:Device.UserInterface.X_Snom_AwayTimeout={away_timeout}
+
+string:Device.UserInterface.X_Snom_FriendsRingSound={friends_ring_sound}
+string:Device.UserInterface.X_Snom_FamilyRingSound={family_ring_sound}
+string:Device.UserInterface.X_Snom_ColleaguesRingSound={colleagues_ring_sound}
+string:Device.UserInterface.X_Snom_VipRingSound={vip_ring_sound}
+
+string:Device.UserInterface.X_Snom_AlertInternalRingText={alert_internal_ring_text}
+string:Device.UserInterface.X_Snom_AlertInternalRingSound={alert_internal_ring_sound}
+string:Device.UserInterface.X_Snom_AlertExternalRingText={alert_external_ring_text}
+string:Device.UserInterface.X_Snom_AlertExternalRingSound={alert_external_ring_sound}
+string:Device.UserInterface.X_Snom_AlertGroupRingText={alert_group_ring_text}
+string:Device.UserInterface.X_Snom_AlertGroupRingSound={alert_group_ring_sound}
+
+string:Device.UserInterface.X_Snom_InternalRinger.0.X_Snom_InternalRingerText={internal_ringer_text|0}
+
+string:Device.UserInterface.X_Snom_InternalRinger.0.X_Snom_InternalRingerFile={internal_ringer_file|0}
+
+# Settings laden)
+string:Device.X_Snom_ConfigUrl=
+# Firmware update
+string:Device.X_Snom_UpdateUrl=
+# paramMap laden
+string:Device.X_Snom_ParamMapUrl=
+
+
+# Home Automation
+#string:Device.X_Snom_HomeAutomation.X_Snom_HARunCommand={ha_run_command}
+#
+# tr106 compliance Device.Services.xxx
+boolean:Device.Services.VoiceService.1.Capabilities.ButtonMap!=0
+unsignedInt:Device.Services.VoiceService.1.Capabilities.Codecs.1.BitRate= 64000
+string:Device.Services.VoiceService.1.Capabilities.Codecs.1.Codec= G.711MuLaw
+unsignedInt:Device.Services.VoiceService.1.Capabilities.Codecs.1.EntryID= 1
+string:Device.Services.VoiceService.1.Capabilities.Codecs.1.PacketizationPeriod= 10, 20, 40, 60
+boolean:Device.Services.VoiceService.1.Capabilities.Codecs.1.SilenceSuppression= 1
+boolean:Device.Services.VoiceService.1.Capabilities.DigitMap!=1
+boolean:Device.Services.VoiceService.1.Capabilities.FaxPassThrough!=0
+boolean:Device.Services.VoiceService.1.Capabilities.FaxT38!=0
+boolean:Device.Services.VoiceService.1.Capabilities.FileBasedRingGeneration!=0
+boolean:Device.Services.VoiceService.1.Capabilities.FileBasedToneGeneration!=0
+unsignedInt:Device.Services.VoiceService.1.Capabilities.MaxLineCount!={MAX_IDENT}
+unsignedInt:Device.Services.VoiceService.1.Capabilities.MaxProfileCount!={MAX_IDENT}
+unsignedInt:Device.Services.VoiceService.1.Capabilities.MaxSessionCount!={MAXSESSIONS}
+unsignedInt:Device.Services.VoiceService.1.Capabilities.MaxSessionsPerLine!=3
+boolean:Device.Services.VoiceService.1.Capabilities.ModemPassThrough!=0
+boolean:Device.Services.VoiceService.1.Capabilities.NumberingPlan!=1
+boolean:Device.Services.VoiceService.1.Capabilities.PatternBasedRingGeneration!=0
+boolean:Device.Services.VoiceService.1.Capabilities.PatternBasedToneGeneration!=0
+boolean:Device.Services.VoiceService.1.Capabilities.PSTNSoftSwitchOver!=0
+string:Device.Services.VoiceService.1.Capabilities.Regions!= BE, BG, CN, DK, DE, EE, FI, FR, GE, GR, HK, IN, IE, IS, IL, IT, YU, CA, KR, LV, LT, LU, MT, MX, NZ, NL, NO, AT, PL, PT, RO, RU, SE, CH, TR, US, GB, CY
+boolean:Device.Services.VoiceService.1.Capabilities.RingDescriptionsEditable!=0
+string:Device.Services.VoiceService.1.Capabilities.RingFileFormats!= WAV, snom8KhzMonoWAV
+boolean:Device.Services.VoiceService.1.Capabilities.RingGeneration!=1
+boolean:Device.Services.VoiceService.1.Capabilities.RingPatternEditable!=0
+boolean:Device.Services.VoiceService.1.Capabilities.RTCP!=1
+string:Device.Services.VoiceService.1.Capabilities.SignalingProtocols!=SIP/2.0
+boolean:Device.Services.VoiceService.1.Capabilities.SIP.EventSubscription!= 1
+string:Device.Services.VoiceService.1.Capabilities.SIP.Extensions!=
+boolean:Device.Services.VoiceService.1.Capabilities.SIP.ResponseMap!= 0
+string:Device.Services.VoiceService.1.Capabilities.SIP.Role!=UserAgent
+string:Device.Services.VoiceService.1.Capabilities.SIP.TLSAuthenticationKeySizes!= 1024, 2048, 4096
+string:Device.Services.VoiceService.1.Capabilities.SIP.TLSAuthenticationProtocols!= Null, MD5, SHA-1
+string:Device.Services.VoiceService.1.Capabilities.SIP.TLSEncryptionKeySizes!= 1024, 2048, 4096
+string:Device.Services.VoiceService.1.Capabilities.SIP.TLSEncryptionProtocols!= Null, RC4, RC2, DES, 3DES
+string:Device.Services.VoiceService.1.Capabilities.SIP.TLSKeyExchangeProtocols!= RSA
+string:Device.Services.VoiceService.1.Capabilities.SIP.Transports!=UDP,TCP,TLS
+string:Device.Services.VoiceService.1.Capabilities.SIP.URISchemes!= tel
+boolean:Device.Services.VoiceService.1.Capabilities.SRTP!=1
+string:Device.Services.VoiceService.1.Capabilities.SRTPEncryptionKeySizes!= 1024
+string:Device.Services.VoiceService.1.Capabilities.SRTPKeyingMethods!= SDP
+boolean:Device.Services.VoiceService.1.Capabilities.ToneDescriptionsEditable!=0
+boolean:Device.Services.VoiceService.1.Capabilities.ToneGeneration!=1
+boolean:Device.Services.VoiceService.1.Capabilities.VoicePortTests!=0
+string:Device.Services.VoiceService.1.VoiceProfile.1.AuthPassword={user_pass|1}
+string:Device.Services.VoiceService.1.VoiceProfile.1.AuthUserName={user_name|1}
+string:Device.Services.VoiceService.1.VoiceProfile.1.DigitMap={user_dp_str|1}
+boolean:Device.Services.VoiceService.1.VoiceProfile.1.DigitMapEnable={USERDPSTRENABLE|1}
+string:Device.Services.VoiceService.1.VoiceProfile.1.DTMFMethod={DTMFMETHOD|1}
+string:Device.Services.VoiceService.1.VoiceProfile.1.DTMFMethodG711={DTMFMETHOD|1}
+string:Device.Services.VoiceService.1.VoiceProfile.1.Enable={user_active|1}
+unsignedInt:Device.Services.VoiceService.1.VoiceProfile.1.Line.1.Codec.List.1.BitRate=64000
+string:Device.Services.VoiceService.1.VoiceProfile.1.Line.1.Codec.List.1.Codec={codec1_name|1}
+boolean:Device.Services.VoiceService.1.VoiceProfile.1.Line.1.Codec.List.1.Enable=1
+unsignedInt:Device.Services.VoiceService.1.VoiceProfile.1.Line.1.Codec.List.1.EntryID=1
+string:Device.Services.VoiceService.1.VoiceProfile.1.Line.1.Codec.List.1.PacketizationPeriod={codec_size|1}
+unsignedInt:Device.Services.VoiceService.1.VoiceProfile.1.Line.1.Codec.List.1.Priority=1
+string:Device.Services.VoiceService.1.VoiceProfile.1.Line.1.Enable={user_active|1}
+string:Device.Services.VoiceService.1.VoiceProfile.1.Line.1.SIP.AuthPassword={user_pass|1}
+string:Device.Services.VoiceService.1.VoiceProfile.1.Line.1.SIP.AuthUserName={user_name|1}
+string:Device.Services.VoiceService.1.VoiceProfile.1.Line.1.SIP.authUserName={user_name|1}
+string:Device.Services.VoiceService.1.VoiceProfile.1.Line.1.SIP.OutboundProxy={user_outbound|1}
+string:Device.Services.VoiceService.1.VoiceProfile.1.Line.1.SIP.RegistrarServer={user_host|1}
+string:Device.Services.VoiceService.1.VoiceProfile.1.Line.1.SIP.URI=
+string:Device.Services.VoiceService.1.VoiceProfile.1.Line.1.SIP.X_Snom_UserAdditionalSupportHeader={user_additional_supported_header|1}
+boolean:Device.Services.VoiceService.1.VoiceProfile.1.Line.1.SIP.X_Snom_UserAuthTag={user_auth_tag|1}
+string:Device.Services.VoiceService.1.VoiceProfile.1.Line.1.SIP.X_Snom_UserDefaultContactUri={user_default_contact_uri|1}
+string:Device.Services.VoiceService.1.VoiceProfile.1.Line.1.SIP.X_Snom_UserDtmfInfo={user_dtmf_info|1}
+string:Device.Services.VoiceService.1.VoiceProfile.1.Line.1.SIP.X_Snom_UserEventListUri={user_event_list_uri|1}
+unsignedInt:Device.Services.VoiceService.1.VoiceProfile.1.Line.1.SIP.X_Snom_UserExpiry={user_expiry|1}
+string:Device.Services.VoiceService.1.VoiceProfile.1.Line.1.SIP.X_Snom_UserFailoverIdentity={user_failover_identity|1}
+string:Device.Services.VoiceService.1.VoiceProfile.1.Line.1.SIP.X_Snom_UserIdleText={user_idle_text|1}
+string:Device.Services.VoiceService.1.VoiceProfile.1.Line.1.SIP.X_Snom_UserMailbox={user_mailbox|1}
+string:Device.Services.VoiceService.1.VoiceProfile.1.Line.1.SIP.X_Snom_UserPname={user_pname|1}
+string:Device.Services.VoiceService.1.VoiceProfile.1.Line.1.SIP.X_Snom_UserPresenceBuddyListUri={user_presence_buddy_list_uri|1}
+string:Device.Services.VoiceService.1.VoiceProfile.1.Line.1.SIP.X_Snom_UserPresenceIdentity={user_presence_identity|1}
+boolean:Device.Services.VoiceService.1.VoiceProfile.1.Line.1.SIP.X_Snom_HideIdentity={hide_identity|1}
+boolean:Device.Services.VoiceService.1.VoiceProfile.1.Line.1.SIP.X_Snom_IsVoiceIdentity={is_voice_identity|1}
+boolean:Device.Services.VoiceService.1.VoiceProfile.1.Line.1.SIP.X_Snom_UserPresenceSubscription={user_presence_subscription|1}
+string:Device.Services.VoiceService.1.VoiceProfile.1.Line.1.SIP.X_Snom_UserProxyRequire={user_proxy_require|1}
+boolean:Device.Services.VoiceService.1.VoiceProfile.1.Line.1.SIP.X_Snom_UserPublishPresenceBootup={user_publish_presence_bootup|1}
+boolean:Device.Services.VoiceService.1.VoiceProfile.1.Line.1.SIP.X_Snom_PublishPresence={publish_presence|1}
+string:Device.Services.VoiceService.1.VoiceProfile.1.Line.1.SIP.X_Snom_UserRealname={user_realname|1}
+boolean:Device.Services.VoiceService.1.VoiceProfile.1.Line.1.SIP.X_Snom_UserReportMachineState={user_report_machine_state|1}
+boolean:Device.Services.VoiceService.1.VoiceProfile.1.Line.1.SIP.X_Snom_UserReportPhoneState={user_report_phone_state|1}
+string:Device.Services.VoiceService.1.VoiceProfile.1.Line.1.SIP.X_Snom_UserRinger={user_ringer|1}
+string:Device.Services.VoiceService.1.VoiceProfile.1.Line.1.SIP.X_Snom_UserServerType={user_server_type|1}
+boolean:Device.Services.VoiceService.1.VoiceProfile.1.Line.1.SIP.X_Snom_UserSymmetricalRtp={user_symmetrical_rtp|1}
+string:Device.Services.VoiceService.1.VoiceProfile.1.Line.1.SIP.X_Snom_UserXMLScreenUrl={user_xml_screen_url|1}
+boolean:Device.Services.VoiceService.1.VoiceProfile.1.Line.1.SIP.X_Snom_UsingServerManagedDnd={using_server_managed_dnd|1}
+boolean:Device.Services.VoiceService.1.VoiceProfile.1.Line.1.SIP.X_Snom_UsingServerManagedFwdAll={using_server_managed_fwd_all|1}
+boolean:Device.Services.VoiceService.1.VoiceProfile.1.Line.1.SIP.X_Snom_UsingServerManagedFwdBusy={using_server_managed_fwd_busy|1}
+boolean:Device.Services.VoiceService.1.VoiceProfile.1.Line.1.SIP.X_Snom_UsingServerManagedFwdTime={using_server_managed_fwd_time|1}
+string:Device.Services.VoiceService.1.VoiceProfile.1.Line.1.Status!={LINESTATUS|1}
+string:Device.Services.VoiceService.1.VoiceProfile.1.Line.1.CallState!={LINECALLSTATE|1}
+unsignedInt:Device.Services.VoiceService.1.VoiceProfile.1.MaxSessions=3
+unsignedInt:Device.Services.VoiceService.1.VoiceProfile.1.NumberOfLines!={MAX_IDENT}
+string:Device.Services.VoiceService.1.VoiceProfile.1.Region= BE, BG, CN, DK, DE, EE, FI, FR, GE, GR, HK, IN, IE, IS, IL, IT, YU, CA, KR, LV, LT, LU, MT, MX, NZ, NL, NO, AT, PL, PT, RO, RU, SE, CH, TR, US, GB, CY
+boolean:Device.Services.VoiceService.1.VoiceProfile.1.Reset={LOGOFF|1}
+unsignedInt:Device.Services.VoiceService.1.VoiceProfile.1.RTP.LocalPortMax= 65534
+unsignedInt:Device.Services.VoiceService.1.VoiceProfile.1.RTP.LocalPortMin= 49152
+boolean:Device.Services.VoiceService.1.VoiceProfile.1.RTP.RTCP.Enable=1
+unsignedInt:Device.Services.VoiceService.1.VoiceProfile.1.RTP.RTCP.TxRepeatInterval=10000
+boolean:Device.Services.VoiceService.1.VoiceProfile.1.RTP.SRTP.Enable=1
+string:Device.Services.VoiceService.1.VoiceProfile.1.RTP.SRTP.EncryptionKeySizes=1024
+string:Device.Services.VoiceService.1.VoiceProfile.1.RTP.SRTP.KeyingMethods= SDP
+string:Device.Services.VoiceService.1.VoiceProfile.1.RTP.TelephoneEventPayloadType=101
+string:Device.Services.VoiceService.1.VoiceProfile.1.SignalingProtocol=SIP/2.0
+string:Device.Services.VoiceService.1.VoiceProfile.1.SIP.OutboundProxy={user_outbound|1}
+unsignedInt:Device.Services.VoiceService.1.VoiceProfile.1.SIP.OutboundProxyPort={OUTBOUNDPROXYPORT|1}
+unsignedInt:Device.Services.VoiceService.1.VoiceProfile.1.SIP.RegisterExpires=3600
+unsignedInt:Device.Services.VoiceService.1.VoiceProfile.1.SIP.RegisterMinExpires=90
+string:Device.Services.VoiceService.1.VoiceProfile.1.SIP.RegistrarServer={user_host|1}
+unsignedInt:Device.Services.VoiceService.1.VoiceProfile.1.SIP.RegistrarServerPort={REGISTRARSERVERPORT|1}
+string:Device.Services.VoiceService.1.VoiceProfile.1.SIP.RegistrarServerTransport={REGISTRARSERVERTRANSPORT|1}
+unsignedInt:Device.Services.VoiceService.1.VoiceProfile.1.SIP.RegistrationPeriod={user_expiry|1}
+unsignedInt:Device.Services.VoiceService.1.VoiceProfile.1.SIP.SIPEventSubscribeNumberOfElements=0
+unsignedInt:Device.Services.VoiceService.1.VoiceProfile.1.SIP.SIPResponseMapNumberOfElements=0
+unsignedInt:Device.Services.VoiceService.1.VoiceProfile.1.SIP.TimerT1={sip_retry_t1}
+boolean:Device.Services.VoiceService.1.VoiceProfile.1.SIP.UseCodecPriorityInSDPResponse=1
+boolean:Device.Services.VoiceService.1.VoiceProfile.1.STUNEnable={STUNENABLE|1}
+string:Device.Services.VoiceService.1.VoiceProfile.1.STUNServer={stun_server|1}
+
+# unfortunately there are still servers not conforming to RFC
+boolean:Device.X_Snom_UserSipusernameAsLine1={user_sipusername_as_line|1}
+
+
+# must have for getting any existing setting parameter by using e.g. Device.X_Snom.X_Snom_syslog_server= on
+boolean:Device.X_Snom_Enable_GenericParameters=1
+string:Device.DeviceInfo.DeviceLog!={CURRENT_LOG}
+
+# Setting upload
+boolean:Device.X_Snom_Export.X_Snom_Config=1
+boolean:Device.X_Snom_Export.X_Snom_FKeys=1
+boolean:Device.X_Snom_Export.X_Snom_Phonebook=1
+boolean:Device.X_Snom_Export.X_Snom_Dialplan=1
+boolean:Device.X_Snom_Export.X_Snom_FirmwareSettings=1
+string:Device.X_Snom_Export.X_Snom_SkipSettings=
+
+#debugging
+boolean:Device.X_Snom_ReregisterTrigger=1

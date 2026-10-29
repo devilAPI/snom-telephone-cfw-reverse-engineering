@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<IPPhoneBatch xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../schemas/minibrowser.xsd">
+  <IPPhoneMenu id="colour_transparency" state="others_except_mb" dtmf="off">
+    <Title>$(lang:screen_items_color_and_opacity_title)</Title>
+    <Menu name="$(lang:screen_items_color_title)">
+      <ExtraIconType>$(icon_type_enum:kIconTypeMenuArrowRight)</ExtraIconType>
+      <Url>file:///xml/gui/color_transparency.xml#sub=*[@id="color_list"]</Url>
+    </Menu>
+    <Menu name="$(lang:screen_items_opacity_title)">
+      <ExtraIconType>$(icon_type_enum:kIconTypeMenuArrowRight)</ExtraIconType>
+      <Url>file:///xml/gui/color_transparency.xml#sub=*[@id="opacity_detail"]&amp;var:opacity_item_value=&amp;var:opacity_item_name=</Url>
+    </Menu>
+  </IPPhoneMenu>
+  <IPPhoneMenu id="color_list" state="others_except_mb" dtmf="off">
+    <Repeat values="$(user_screen_items:color_items)" token="|__TITLE__|__ITEMNAME__|__RGB__|">
+      <Title>$(lang:screen_items_color_title)</Title>
+      <MenuItem name="__TITLE__">
+        <!-- Here ExtraText is used to set the color value for the rectangle because ExtraIconType is kIconTypeDrawSquare -->
+        <ExtraText>__RGB__</ExtraText>
+        <ExtraIconType>$(icon_type_enum:kIconTypeDrawSquare)</ExtraIconType>
+        <Url>file:///xml/gui/color_transparency.xml#sub=*[@id="color_detail"]&amp;var:rgb_red=&amp;var:rgb_green=&amp;var:rgb_blue=&amp;var:rgb_state=0&amp;var:combo=&amp;var:color_item_title=__TITLE__&amp;var:color_item_name=__ITEMNAME__&amp;var:custom_input=</Url>
+      </MenuItem>
+    </Repeat>
+  </IPPhoneMenu>
+  <IPPhoneMenu id="opacity_detail" state="others_except_mb" dtmf="off">
+    <Title>$(lang:screen_items_opacity_title)</Title>
+    <Repeat values="$(user_screen_items:opacity_items)" token="|__TITLE__|__ITEMNAME__|__OPACITY__|">
+      <MenuItem name="__TITLE__">
+        <SubText>__OPACITY__</SubText>
+        <ExtraIconType>$(icon_type_enum:kIconTypeTransparency)</ExtraIconType>
+        <Url>file:///xml/gui/templates.xml#sub=*[@id="input_template"]&amp;var:input_displayname=$(lang:screen_items_opacity_title)&amp;var:input_token=__X__&amp;var:input_flags=N&amp;var:input_default=__OPACITY__&amp;var:input_url=$(urlencode:"phone://mb_nop#go_back&amp;%24[user_screen_items:set_opacity:__ITEMNAME__:__X__]")</Url>
+      </MenuItem>
+    </Repeat>
+  </IPPhoneMenu>
+  <IPPhoneMenu id="color_detail" state="others_except_mb" dtmf="off" line_height="32">
+    <Title>$(var:color_item_title)</Title>
+    <Repeat values="$(user_screen_items:color_list:$(var:color_item_name))" token="|__COLOR__|__RGB__|">
+      <If condition="__COLOR__==$(lang:screen_items_color_name_custom)">
+        <MenuItem name="__COLOR__" custom_line_height="44" sel="$(condition:$(user_screen_items:is_standard_color:__RGB__)==)">
+          <SubText>__RGB__</SubText>
+          <If condition="$(user_screen_items:is_standard_color:__RGB__)==">
+            <ExtraIconType2>$(icon_type_enum:kIconTypeMenuCheckboxOn)</ExtraIconType2>
+          </If>
+          <Else>
+            <ExtraIconType2>$(icon_type_enum:kIconTypeMenuCheckboxOff)</ExtraIconType2>
+          </Else>
+          <!-- Here ExtraText is used to set the color value for the rectangle because ExtraIconType is kIconTypeDrawSquare -->
+          <ExtraText>__RGB__</ExtraText>
+          <ExtraIconType>$(icon_type_enum:kIconTypeDrawSquare)</ExtraIconType>
+          <Url>file:///xml/gui/color_transparency.xml#sub=*[@id="rgb_input_menu"]&amp;var:rgb_red=$(user_screen_items:get_red:$(var:color_item_name))&amp;var:rgb_green=$(user_screen_items:get_green:$(var:color_item_name))&amp;var:rgb_blue=$(user_screen_items:get_blue:$(var:color_item_name))</Url>
+        </MenuItem>
+      </If>
+      <Else>
+        <MenuItem name="__COLOR__" sel="$(condition:$(user_screen_items:get_rgb:$(var:color_item_name))==__RGB__)">
+          <If condition="$(user_screen_items:get_rgb:$(var:color_item_name))==__RGB__">
+            <ExtraIconType2>$(icon_type_enum:kIconTypeMenuCheckboxOn)</ExtraIconType2>
+          </If>
+          <Else>
+            <ExtraIconType2>$(icon_type_enum:kIconTypeMenuCheckboxOff)</ExtraIconType2>
+          </Else>
+          <!-- Here ExtraText is used to set the color value for the rectangle because ExtraIconType is kIconTypeDrawSquare -->
+          <ExtraText>__RGB__</ExtraText>
+          <ExtraIconType>$(icon_type_enum:kIconTypeDrawSquare)</ExtraIconType>
+          <Url track="no">file:///xml/gui/color_transparency.xml#sub=*[@id="color_detail"]&amp;set:$(var:color_item_name)=$(user_screen_items:add_opacity:$(var:color_item_name):__RGB__)</Url>
+        </MenuItem>
+      </Else>
+    </Repeat>
+  </IPPhoneMenu>
+  <IPPhoneMenu id="rgb_input_menu" state="others_except_mb" dtmf="off">
+    <Title>$(lang:screen_items_enter_custom_color_title)</Title>
+    <MenuItem name="$(lang:screen_items_color_name_red)" speedselect="off">
+      <SubText>$(var:rgb_red)</SubText>
+      <ExtraIconType>$(icon_type_enum:kIconTypeMenuArrowRight)</ExtraIconType>
+      <Url>file:///xml/gui/templates.xml#sub=*[@id="input_template"]&amp;var:input_displayname=$(lang:screen_items_color_name_red)&amp;var:input_token=__X__&amp;var:input_flags=N&amp;var:input_default=$(var:rgb_red)&amp;var:input_url=$(urlencode:"phone://mb_nop#go_back&amp;var:rgb_red=__X__")</Url>
+    </MenuItem>
+    <MenuItem name="$(lang:screen_items_color_name_green)" speedselect="off">
+      <SubText>$(var:rgb_green)</SubText>
+      <ExtraIconType>$(icon_type_enum:kIconTypeMenuArrowRight)</ExtraIconType>
+      <Url>file:///xml/gui/templates.xml#sub=*[@id="input_template"]&amp;var:input_displayname=$(lang:screen_items_color_name_green)&amp;var:input_token=__X__&amp;var:input_flags=N&amp;var:input_default=$(var:rgb_green)&amp;var:input_url=$(urlencode:"phone://mb_nop#go_back&amp;var:rgb_green=__X__")</Url>
+    </MenuItem>
+    <MenuItem name="$(lang:screen_items_color_name_blue)" speedselect="off">
+      <SubText>$(var:rgb_blue)</SubText>
+      <ExtraIconType>$(icon_type_enum:kIconTypeMenuArrowRight)</ExtraIconType>
+      <Url>file:///xml/gui/templates.xml#sub=*[@id="input_template"]&amp;var:input_displayname=$(lang:screen_items_color_name_blue)&amp;var:input_token=__X__&amp;var:input_flags=N&amp;var:input_default=$(var:rgb_blue)&amp;var:input_url=$(urlencode:"phone://mb_nop#go_back&amp;var:rgb_blue=__X__")</Url>
+    </MenuItem>
+    <SoftKeyItem>
+      <Name>F1</Name>
+      <Label>F_SAVE</Label>
+      <Url>phone://mb_nop#go_back&amp;var:combo=%24[user_screen_items:set_rgb:$(var:color_item_name):$(var:rgb_red) $(var:rgb_green) $(var:rgb_blue)]</Url>
+    </SoftKeyItem>
+  </IPPhoneMenu>
+</IPPhoneBatch>

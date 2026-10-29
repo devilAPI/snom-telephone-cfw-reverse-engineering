@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<IPPhoneBatch xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../schemas/minibrowser.xsd">
+  <IPPhoneMenu id="calllist_details_menu" track="yes" dtmf="off" speedselect="on" sort="yes" state="others_except_mb">
+    <Title>$(lang:addressbook_menu)</Title>
+    <If condition="$(is_set:$(var:tbook_full))">
+      <InfoBox>
+        <Line>
+          <Text>$(lang:tbook_is_full)</Text>
+        </Line>
+      </InfoBox>
+      <Fetch mil="2000">phone://mb_nop#var:tbook_full=</Fetch>
+    </If>
+    <MenuItem name="$(lang:addressbook_menu_local)">
+      <If condition="$(status_active:TbookFull)">
+        <Url>phone://mb_nop#var:tbook_full=1</Url>
+      </If>
+      <Else>
+        <Url>file:///xml/gui/state_addressbook.xml#sub=*[@id="local_directory_input"]&amp;var:selection=__IDX__&amp;var:field_to_edit=tb_number&amp;var:add_contact=add_number&amp;var:tbook_input_default=$(call_list_caller_number:$(var:calllist_id))&amp;var:contact_name=$(call_list_caller_name:$(var:calllist_id))&amp;var:from_call_list=1</Url>
+      </Else>
+    </MenuItem>
+    <If condition="$(set:user_server_type[$(current_line)])==broadsoft">
+      <MenuItem name="$(lang:menu_web_webserver_type)">
+        <Url track="yes">file:///xml/gui/contact_details_xsi_edit.xml</Url>
+      </MenuItem>
+    </If>
+  </IPPhoneMenu>
+</IPPhoneBatch>

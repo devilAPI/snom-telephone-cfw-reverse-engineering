@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<IPPhoneBatch xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../schemas/minibrowser.xsd">
+  <IPPhoneMenu track="no" icon_xoffset="$(math_eval:$(gui_display_xsize)/20-5)" text_xoffset="$(math_eval:$(gui_display_xsize)/20-7)" line_separator="yes" line_yoffset="$(math_eval:$(gui_display_ysize)/6)" dtmf="off" speedselect="off" id="$(var:calllist_type)" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../schemas/minibrowser.xsd" sort="$(var:sort_active)" state="others_except_mb">
+    <IconSize>XS</IconSize>
+    <If condition="$(show_feature:FEATURE_PUI_STYLE_SIO)">
+      <Title>$(lang:lang_menu100_call_lists)</Title>
+    </If>
+    <Else>
+      <Title>$(lang:$(var:calllist_title))</Title>
+    </Else>
+    <If condition="$(show_feature:FEATURE_PUI_STYLE_SIO)">
+      <If condition="$(var:calllist_type)==Missed">
+        <ListIndicator count="$(number_of_call_lists)" page_with_warning="$(call_list_page_with_warning)" active_page="$(active_call_list:$(var:calllist_type))">$(lang:$(var:calllist_title))$(number_of_missed_calls)</ListIndicator>
+      </If>
+      <Else>
+        <ListIndicator count="$(number_of_call_lists)" page_with_warning="$(call_list_page_with_warning)" active_page="$(active_call_list:$(var:calllist_type))">$(lang:$(var:calllist_title))</ListIndicator>
+      </Else>
+    </If>
+    <If condition="$(is_set:$(var:tbook_full))">
+      <InfoBox>
+        <Line>
+          <Text>$(lang:tbook_is_full)</Text>
+        </Line>
+      </InfoBox>
+      <Fetch mil="2000">phone://mb_nop#var:tbook_full=</Fetch>
+    </If>
+    <Fetch mil="120000">phone://mb_exit</Fetch>
+    <If condition="$(show_feature:FEATURE_PUI_STYLE_SIO)">
+      <Repeat lazy="yes" values="$(call_list:$(var:calllist_type))" token="|__DATE__|__TIME__|__NAME__|__NUMBER__|__CALLLIST_ID__|__URL__|__ICON__">
+        <MenuItem name="__NAME__" id="__CALLLIST_ID__" sort_key="__NAME__">
+          <SubText>__NUMBER__</SubText>
+          <ExtraText>__TIME__</ExtraText>
+          <ExtraText2>__DATE__</ExtraText2>
+          <Url>__URL__</Url>
+          <DetailUrl>file:///xml/gui/call_lists_details.xml#var:calllist=$(var:calllist_type)&amp;var:calllist_title=$(var:calllist_title)</DetailUrl>
+          <If condition="$(set:user_server_type[$(current_line)])==broadsoft">
+            <PresenceState>$(calllistpresence:__CALLLIST_ID__)</PresenceState>
+          </If>
+          <IconType>__ICON__</IconType>
+          <If condition="!$(empty:__CALLLIST_ID__)">
+            <SoftKeyItem>
+              <Name>F1</Name>
+              <Label>F_DETAILS</Label>
+              <Url track="yes" consume_key_event="1">file:///xml/gui/call_lists_details.xml#var:calllist_type=$(var:calllist_type)&amp;var:calllist_title=$(var:calllist_title)&amp;var:calllist_id="__CALLLIST_ID__"&amp;var:phone_no=__NUMBER__</Url>
+            </SoftKeyItem>
+            <SoftKeyItem>
+              <Name>F2</Name>
+              <If condition="$(var:calllist_type)==Rejected">
+                <Label>F_ADD_REJECTED_CONTACT</Label>
+                <If condition="$(status_active:TbookFull)">
+                  <Url>phone://mb_nop#var:tbook_full=1</Url>
+                </If>
+                <Else>
+                  <Url consume_key_event="1">phone://mb_nop#calllistsave=__CALLLIST_ID__</Url>
+                </Else>
+              </If>
+              <Else>
+                <Label>TKEY_TB_SORT</Label>
+                <Url track="yes" consume_key_event="1">file:///xml/gui/call_lists_list.xml#sub=*[@id="call_sort"]</Url>
+              </Else>
+            </SoftKeyItem>
+            <!-- Better would be not to use current_line, but the index of identity saved inside the CallRecordId. Will be solved in the future -->
+            <If condition="$(bool_eval:$(condition:$(set:user_server_type[$(current_line)])!=metaswitch)|$(condition:$(set:call_logs[$(current_line)])!=server))">
+              <SoftKeyItem>
+                <Name>F3</Name>
+                <Label>F_DELETE</Label>
+                <If condition="$(var:calllist_type)==Rejected">
+                  <Url consume_key_event="1">file:///xml/gui/decision.xml#sub=*[@id="dsc_url"]&amp;var:dsc_title=$(lang:lang_confirm_del_deny_list_item_title)&amp;var:dsc_text=$(lang:lang_confirm_del_number_from_deny_list)&amp;var:number=__NUMBER__&amp;calllistdelete=sel&amp;var:dsc_yes=1&amp;var:dsc_no=1&amp;var:dsc_yes_url=phone://mb_exit%23denied_list_delete%3Dyes&amp;var:dsc_no_url=phone://mb_nop%23go_back&amp;var:xml_yes_fkey=F2&amp;var:xml_no_fkey=F1&amp;var:xml_abort_fkey=F3</Url>
+                </If>
+                <Else>
+                  <Url consume_key_event="1">phone://mb_nop#calllistdelete=sel</Url>
+                </Else>
+              </SoftKeyItem>
+              <If condition="$(var:calllist_type)!=Rejected">
+                <SoftKeyItem>
+                  <Name>F4</Name>
+                  <Label>F_CLEAR</Label>
+                  <Url consume_key_event="1">file:///xml/gui/call_lists_list.xml#calllistclear=$(var:calllist_type)</Url>
+                </SoftKeyItem>
+              </If>
+            </If>
+            <SoftKeyItem>
+              <Name>OFFHOOK</Name>
+              <SoftKey>ENTER</SoftKey>
+            </SoftKeyItem>
+          </If>
+          <Else>
+            <SoftKeyItem>
+              <Name>OFFHOOK</Name>
+              <Url>phone://mb_exit</Url>
+            </SoftKeyItem>
+            <SoftKeyItem>
+              <Name>SPEAKER</Name>
+              <Url>phone://mb_exit</Url>
+            </SoftKeyItem>
+            <SoftKeyItem>
+              <Name>HEADSET_OFFHOOK</Name>
+              <Url>phone://mb_exit</Url>
+            </SoftKeyItem>
+            <SoftKeyItem>
+              <Name>HEADSET</Name>
+              <Url>phone://mb_exit</Url>
+            </SoftKeyItem>
+          </Else>
+          <If condition="$(var:saved)==1">
+            <SoftKeyItem>
+              <Name>CANCEL</Name>
+              <Url>phone://mb_nop#go_back&amp;contact_saved</Url>
+            </SoftKeyItem>
+          </If>
+          <SoftKeyItem>
+            <Name>REDIAL</Name>
+            <SoftKey>ENTER</SoftKey>
+          </SoftKeyItem>
+          <SoftKeyItem>
+            <Name>F_REDIAL</Name>
+            <SoftKey>ENTER</SoftKey>
+          </SoftKeyItem>
+          <SoftKeyItem>
+            <Name>RIGHT</Name>
+            <If condition="$(var:calllist_type)==All">
+              <Url track="no">file:///xml/gui/call_lists_list.xml#var:calllist_type=Missed&amp;var:calllist_title=lang_list_missed</Url>
+            </If>
+            <ElIf condition="$(var:calllist_type)==Missed">
+              <Url track="no">file:///xml/gui/call_lists_list.xml#var:calllist_type=Received&amp;var:calllist_title=lang_list_taken</Url>
+            </ElIf>
+            <ElIf condition="$(var:calllist_type)==Received">
+              <Url track="no">file:///xml/gui/call_lists_list.xml#var:calllist_type=Dialed&amp;var:calllist_title=lang_list_dialed</Url>
+            </ElIf>
+            <ElIf condition="$(var:calllist_type)==Dialed">
+              <If condition="$(bool_eval:$(condition:$(set:user_server_type[$(current_line)])==metaswitch)|!$(empty:$(number_of_rejected_calls)))">
+                <Url track="no">file:///xml/gui/call_lists_list.xml#var:calllist_type=Rejected&amp;var:calllist_title=lang_list_rejected</Url>
+              </If>
+              <Else>
+                <Url track="no">file:///xml/gui/call_lists_list.xml#var:calllist_type=All&amp;var:calllist_title=lang_list_all</Url>
+              </Else>
+            </ElIf>
+            <ElIf condition="$(var:calllist_type)==Rejected">
+              <Url track="no">file:///xml/gui/call_lists_list.xml#var:calllist_type=All&amp;var:calllist_title=lang_list_all</Url>
+            </ElIf>
+          </SoftKeyItem>
+          <SoftKeyItem>
+            <Name>LEFT</Name>
+            <If condition="$(var:calllist_type)==Rejected">
+              <Url track="no">file:///xml/gui/call_lists_list.xml#var:calllist_type=Dialed&amp;var:calllist_title=lang_list_dialed</Url>
+            </If>
+            <ElIf condition="$(var:calllist_type)==Dialed">
+              <Url track="no">file:///xml/gui/call_lists_list.xml#var:calllist_type=Received&amp;var:calllist_title=lang_list_taken</Url>
+            </ElIf>
+            <ElIf condition="$(var:calllist_type)==Received">
+              <Url track="no">file:///xml/gui/call_lists_list.xml#var:calllist_type=Missed&amp;var:calllist_title=lang_list_missed</Url>
+            </ElIf>
+            <ElIf condition="$(var:calllist_type)==Missed">
+              <Url track="no">file:///xml/gui/call_lists_list.xml#var:calllist_type=All&amp;var:calllist_title=lang_list_all</Url>
+            </ElIf>
+            <ElIf condition="$(var:calllist_type)==All">
+              <If condition="$(bool_eval:$(condition:$(set:user_server_type[$(current_line)])==metaswitch)|!$(empty:$(number_of_rejected_calls)))">
+                <Url track="no">file:///xml/gui/call_lists_list.xml#var:calllist_type=Rejected&amp;var:calllist_title=lang_list_rejected</Url>
+              </If>
+              <Else>
+                <Url track="no">file:///xml/gui/call_lists_list.xml#var:calllist_type=Dialed&amp;var:calllist_title=lang_list_dialed</Url>
+              </Else>
+            </ElIf>
+          </SoftKeyItem>
+        </MenuItem>
+      </Repeat>
+    </If>
+    <Else>
+      <Repeat lazy="yes" values="$(call_list:$(var:calllist_type))" token="|__TIME__|__NAME__|__CALLLIST_ID__|__URL__|__NUMBER__|__IMAGE__|">
+        <MenuItem name="__TIME__ __NAME__" id="__CALLLIST_ID__" sort_key="__NAME__">
+          <Url>__URL__</Url>
+          <DetailUrl>file:///xml/gui/call_lists_details.xml#var:calllist=$(var:calllist_type)&amp;var:calllist_title=$(var:calllist_title)</DetailUrl>
+          <Image default="file:///bmp/colored/snom_photo_unknown.png">__IMAGE__</Image>
+          <If condition="!$(empty:__CALLLIST_ID__)">
+            <SoftKeyItem>
+              <Name>F1</Name>
+              <Label>F_DETAILS</Label>
+              <Url track="yes" consume_key_event="1">file:///xml/gui/call_lists_details.xml#var:calllist_type=$(var:calllist_type)&amp;var:calllist_title=$(var:calllist_title)&amp;var:calllist_id="__CALLLIST_ID__"&amp;var:phone_no=__NUMBER__</Url>
+            </SoftKeyItem>
+            <SoftKeyItem>
+              <Name>F2</Name>
+              <If condition="$(var:calllist_type)==Rejected">
+                <Label>F_ADD_REJECTED_CONTACT</Label>
+                <If condition="$(status_active:TbookFull)">
+                  <Url>phone://mb_nop#var:tbook_full=1</Url>
+                </If>
+                <Else>
+                  <Url consume_key_event="1">phone://mb_nop#go_back&amp;calllistsave=__CALLLIST_ID__</Url>
+                </Else>
+              </If>
+              <Else>
+                <Label>TKEY_TB_SORT</Label>
+                <Url track="yes" consume_key_event="1">file:///xml/gui/call_lists_list.xml#sub=*[@id="call_sort"]</Url>
+              </Else>
+            </SoftKeyItem>
+            <!-- Better would be not to use current_line, but the index of identity saved inside the CallRecordId. Will be solved in the future -->
+            <If condition="$(bool_eval:$(condition:$(set:user_server_type[$(current_line)])!=metaswitch)|$(condition:$(set:call_logs[$(current_line)])!=server))">
+              <SoftKeyItem>
+                <Name>F3</Name>
+                <Label>F_DELETE</Label>
+                <If condition="$(var:calllist_type)==Rejected">
+                  <Url consume_key_event="1">file:///xml/gui/decision.xml#sub=*[@id="dsc_url"]&amp;var:dsc_title=$(lang:lang_confirm_del_deny_list_item_title)&amp;var:dsc_text=$(lang:lang_confirm_del_number_from_deny_list)&amp;var:number=__NUMBER__&amp;calllistdelete=sel&amp;var:dsc_yes=1&amp;var:dsc_no=1&amp;var:dsc_yes_url=phone://mb_exit%23denied_list_delete%3Dyes&amp;var:dsc_no_url=phone://mb_nop%23go_back&amp;var:xml_yes_fkey=F2&amp;var:xml_no_fkey=F1&amp;var:xml_abort_fkey=F3</Url>
+                </If>
+                <Else>
+                  <Url consume_key_event="1">phone://mb_nop#calllistdelete=sel</Url>
+                </Else>
+              </SoftKeyItem>
+              <If condition="$(var:calllist_type)!=Rejected">
+                <SoftKeyItem>
+                  <Name>F4</Name>
+                  <Label>F_CLEAR</Label>
+                  <Url consume_key_event="1">file:///xml/gui/call_lists_list.xml#calllistclear=$(var:calllist_type)</Url>
+                </SoftKeyItem>
+              </If>
+            </If>
+            <If condition="$(var:saved)==1">
+              <SoftKeyItem>
+                <Name>CANCEL</Name>
+                <Url>phone://mb_nop#go_back&amp;contact_saved</Url>
+              </SoftKeyItem>
+            </If>
+            <SoftKeyItem>
+              <Name>OFFHOOK</Name>
+              <SoftKey>ENTER</SoftKey>
+            </SoftKeyItem>
+          </If>
+          <Else>
+            <SoftKeyItem>
+              <Name>OFFHOOK</Name>
+              <Url>phone://mb_exit</Url>
+            </SoftKeyItem>
+            <SoftKeyItem>
+              <Name>SPEAKER</Name>
+              <Url>phone://mb_exit</Url>
+            </SoftKeyItem>
+            <SoftKeyItem>
+              <Name>HEADSET_OFFHOOK</Name>
+              <Url>phone://mb_exit</Url>
+            </SoftKeyItem>
+            <SoftKeyItem>
+              <Name>HEADSET</Name>
+              <Url>phone://mb_exit</Url>
+            </SoftKeyItem>
+          </Else>
+          <SoftKeyItem>
+            <Name>REDIAL</Name>
+            <SoftKey>ENTER</SoftKey>
+          </SoftKeyItem>
+          <SoftKeyItem>
+            <Name>F_REDIAL</Name>
+            <SoftKey>ENTER</SoftKey>
+          </SoftKeyItem>
+          <SoftKeyItem>
+            <Name>RIGHT</Name>
+            <If condition="$(var:calllist_type)==All">
+              <Url track="no">file:///xml/gui/call_lists_list.xml#var:calllist_type=Missed&amp;var:calllist_title=lang_list_missed</Url>
+            </If>
+            <ElIf condition="$(var:calllist_type)==Missed">
+              <Url track="no">file:///xml/gui/call_lists_list.xml#var:calllist_type=Received&amp;var:calllist_title=lang_list_taken</Url>
+            </ElIf>
+            <ElIf condition="$(var:calllist_type)==Received">
+              <Url track="no">file:///xml/gui/call_lists_list.xml#var:calllist_type=Dialed&amp;var:calllist_title=lang_list_dialed</Url>
+            </ElIf>
+            <ElIf condition="$(var:calllist_type)==Dialed">
+              <If condition="$(bool_eval:$(condition:$(set:user_server_type[$(current_line)])==metaswitch)|!$(empty:$(number_of_rejected_calls)))">
+                <Url track="no">file:///xml/gui/call_lists_list.xml#var:calllist_type=Rejected&amp;var:calllist_title=lang_list_rejected</Url>
+              </If>
+              <Else>
+                <Url track="no">file:///xml/gui/call_lists_list.xml#var:calllist_type=All&amp;var:calllist_title=lang_list_all</Url>
+              </Else>
+            </ElIf>
+            <ElIf condition="$(var:calllist_type)==Rejected">
+              <Url track="no">file:///xml/gui/call_lists_list.xml#var:calllist_type=All&amp;var:calllist_title=lang_list_all</Url>
+            </ElIf>
+          </SoftKeyItem>
+          <SoftKeyItem>
+            <Name>LEFT</Name>
+            <If condition="$(var:calllist_type)==Rejected">
+              <Url track="no">file:///xml/gui/call_lists_list.xml#var:calllist_type=Dialed&amp;var:calllist_title=lang_list_dialed</Url>
+            </If>
+            <ElIf condition="$(var:calllist_type)==Dialed">
+              <Url track="no">file:///xml/gui/call_lists_list.xml#var:calllist_type=Received&amp;var:calllist_title=lang_list_taken</Url>
+            </ElIf>
+            <ElIf condition="$(var:calllist_type)==Received">
+              <Url track="no">file:///xml/gui/call_lists_list.xml#var:calllist_type=Missed&amp;var:calllist_title=lang_list_missed</Url>
+            </ElIf>
+            <ElIf condition="$(var:calllist_type)==Missed">
+              <Url track="no">file:///xml/gui/call_lists_list.xml#var:calllist_type=All&amp;var:calllist_title=lang_list_all</Url>
+            </ElIf>
+            <ElIf condition="$(var:calllist_type)==All">
+              <If condition="$(bool_eval:$(condition:$(set:user_server_type[$(current_line)])==metaswitch)|!$(empty:$(number_of_rejected_calls)))">
+                <Url track="no">file:///xml/gui/call_lists_list.xml#var:calllist_type=Rejected&amp;var:calllist_title=lang_list_rejected</Url>
+              </If>
+              <Else>
+                <Url track="no">file:///xml/gui/call_lists_list.xml#var:calllist_type=Dialed&amp;var:calllist_title=lang_list_dialed</Url>
+              </Else>
+            </ElIf>
+          </SoftKeyItem>
+        </MenuItem>
+      </Repeat>
+    </Else>
+  </IPPhoneMenu>
+  <IPPhoneMenu track="no" id="call_sort" state="others_except_mb" dtmf="off">
+    <Title>$(lang:title_sort)</Title>
+    <MenuItem name="$(lang:current_date)" sel="$(bool_eval:$(condition:$(var:sort_active)==no)|$(empty:$(var:sort_active)))">
+      <If condition="$(bool_eval:$(condition:$(var:sort_active)==no)|$(empty:$(var:sort_active)))">
+        <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOn)</ExtraIconType>
+      </If>
+      <Else>
+        <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOff)</ExtraIconType>
+      </Else>
+      <Url>phone://mb_nop_ignore_prev_frags#go_back&amp;sub=*[@id="$(var:calllist_type)"]&amp;var:sort_active=no&amp;sel=@line=0</Url>
+    </MenuItem>
+    <MenuItem name="$(lang:voicemail_name)" sel="$(condition:$(var:sort_active)==yes)">
+      <If condition="$(var:sort_active)==yes">
+        <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOn)</ExtraIconType>
+      </If>
+      <Else>
+        <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOff)</ExtraIconType>
+      </Else>
+      <Url>phone://mb_nop_ignore_prev_frags#go_back&amp;sub=*[@id="$(var:calllist_type)"]&amp;var:sort_active=yes&amp;sel=@line=0</Url>
+    </MenuItem>
+  </IPPhoneMenu>
+</IPPhoneBatch>

@@ -1,0 +1,77 @@
+#!/bin/sh
+
+function createEmptyConfigIfNecessary () {
+    local configFile=$1
+    if [ ! -e "$1" ]; then
+        echo '<?xml version="1.0" encoding="utf-8"?>' > $1
+        echo '<phone-settings e="2">' >> $1
+        echo '</phone-settings>' >> $1
+    fi
+}
+
+# set the given setting in config.xml to the given value
+function setConfigSetting () {
+    local i
+    local settingName=$1
+    local settingValue=$2
+    local settingPerm=$3
+    local org="/snom/snomconfig/config.xml"
+    local tmp="/tmp/config.xml"
+    local didIt=0
+
+    #echo "Set "$settingName" to value "$settingValue
+
+    createEmptyConfigIfNecessary $org
+
+    while read -r i; do
+        if [ "${i#</phone-settings>}" != "$i" ] && [ $didIt -eq 0 ]; then
+            echo "<$settingName perm=\"$settingPerm\" c=\"1\">$settingValue</$settingName>"
+            echo "$i"
+            didIt=1
+        elif [ "${i#<$settingName}" != "$i" ]; then
+            echo "<$settingName perm=\"$settingPerm\" c=\"1\">$settingValue</$settingName>"
+            didIt=1
+        else
+            echo "$i"
+        fi
+    done < $org > $tmp
+    cp $tmp $org
+    rm -f $tmp
+}
+
+echo "Initialize network via DHCP"
+kill -9 `ps | egrep "[u]dhcpc" | sed -e 's/^ *//g' -e 's/  */ /g' | cut -d" " -s -f 1` >/dev/null 2>&1
+# Required by some devices (e.g. D895)
+ifconfig eth0 up
+# We use --clientid-none to prevent some DHCP servers (e.g. the FritzBox) to provide a new IP address.
+/sbin/udhcpc -i eth0 -s /etc/simple.script -t 10 --clientid-none >/dev/null 2>&1
+
+if [ ! -e "/etc/ssh/ssh_host_rsa_key" ]; then
+    echo "Generating ssh keys"
+
+    # rsa1 and dsa are no longer supported by openssh
+    /usr/bin/ssh-keygen -t rsa -f /etc/ssh/ssh_host_rsa_key -N ""
+fi
+
+echo "Configure phone for static ip and disable watchdog"
+ip=`ifconfig | grep 'inet addr:'| grep -v '127.0.0.1' | cut -d: -f2 | awk '{ print $1}'`
+netmask=`ifconfig | grep 'inet addr:'| grep -v '127.0.0.1' | cut -d: -f4`
+gateway=`route | awk '/default/ { print $2 }'`
+nameservers=`sed -e '/^$/d' /etc/resolv.conf | awk '{if (tolower($1)=="nameserver") print $2}'`
+
+setConfigSetting "dhcp" "off" "RW"
+setConfigSetting "ip_adr" $ip "RW"
+setConfigSetting "netmask" $netmask "RW"
+setConfigSetting "gateway" $gateway "RW"
+i=1
+for nameserver in $nameservers
+do
+    setConfigSetting "dns_server"$i $nameserver "RW"
+    i=$(( i + 1 ))
+done
+setConfigSetting "watchdog" "off" "RW"
+
+echo "Start sshd"
+/usr/sbin/sshd
+
+echo "Current IP:" $ip

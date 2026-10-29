@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<IPPhoneMenu icon_xoffset="$(math_eval:$(gui_display_xsize)/20-5)" text_xoffset="$(math_eval:$(gui_display_xsize)/20-7)" state="others_except_mb" dtmf="off" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="../schemas/minibrowser.xsd">
+  <Title>$(lang:menu100_settings)</Title>
+  <IconSize>XS</IconSize>
+  <Menu name="$(lang:preferences_settings)" id="preferences">
+    <If condition="$(show_feature:FEATURE_PUI_STYLE_SIO)">
+      <IconType>$(icon_type_enum:kIconSettingsPreferences)</IconType>
+      <SubText>$(lang:date_and_time), $(lang:language), $(lang:audio_settings), $(lang:display_settings), $(lang:menu_function_key), $(lang:preferences_general)</SubText>
+    </If>
+    <Url>file://xml/gui/preferences.xml</Url>
+  </Menu>
+  <Menu name="$(lang:call_features_settings)" id="call_features">
+    <If condition="$(show_feature:FEATURE_PUI_STYLE_SIO)">
+      <IconType>$(icon_type_enum:kIconSettingsCallFeatures)</IconType>
+      <SubText>$(lang:redirect_settings), $(lang:outgoing_calls_settings), $(lang:incoming_calls_settings), $(lang:continuous_text_speed_dial)</SubText>
+    </If>
+    <Url>file://xml/gui/call_features.xml</Url>
+  </Menu>
+  <Menu name="$(lang:identity_settings)" id="identity">
+    <If condition="$(show_feature:FEATURE_PUI_STYLE_SIO)">
+      <IconType>$(icon_type_enum:kIconSettingsIdentity)</IconType>
+      <SubText>$(lang:sel100_activeline), $(lang:sel100_reregister_line), $(lang:sel100_edit_line), $(lang:sel100_logoff_one)</SubText>
+    </If>
+    <Url>file://xml/gui/identity.xml</Url>
+  </Menu>
+  <If condition="$(set:admin_mode)">
+    <Menu name="$(lang:network_settings)" id="network">
+      <If condition="$(show_feature:FEATURE_PUI_STYLE_SIO)">
+        <IconType>$(icon_type_enum:kIconSettingsNetwork)</IconType>
+        <SubText>$(lang:ip_settings_wizzard), $(lang:webserver_settings), $(lang:vlan_settings), $(lang:wlan_settings), $(lang:networkadvanced_settings)</SubText>
+      </If>
+      <If condition="$(show_feature:FEATURE_USB_SUPPORT)">
+        <Url>file://xml/gui/network.xml#action_ifc:pui=get_wifi_status</Url>
+      </If>
+      <Else>
+        <Url>file://xml/gui/network.xml</Url>
+      </Else>
+    </Menu>
+  </If>
+  <Menu name="$(lang:maintenance_settings)" id="maintenance">
+    <If condition="$(show_feature:FEATURE_PUI_STYLE_SIO)">
+      <IconType>$(icon_type_enum:kIconSettingsMaintenance)</IconType>
+      <SubText>$(lang:menu_security), $(lang:continuous_text_reboot), $(lang:reset_settings), $(lang:device_management_service), $(lang:sync_settings), $(lang:tbook_download), $(lang:storage_umount)</SubText>
+    </If>
+    <Url>file://xml/gui/maintenance.xml</Url>
+  </Menu>
+  <Menu name="$(lang:information_settings)" id="information">
+    <If condition="$(show_feature:FEATURE_PUI_STYLE_SIO)">
+      <IconType>$(icon_type_enum:kIconSettingsInformation)</IconType>
+      <If condition="$(set:admin_mode)">
+        <SubText>$(lang:status_messages), $(lang:system_information_menu), $(lang:demo_mode), $(lang:help_label)</SubText>
+      </If>
+      <Else>
+        <SubText>$(lang:status_messages), $(lang:system_information_menu), $(lang:help_label)</SubText>
+      </Else>
+    </If>
+    <Url>file://xml/gui/information.xml</Url>
+  </Menu>
+  <If condition="$(phone_state)!=Settings">
+    <SoftKeyItem>
+      <Name>CANCEL</Name>
+      <Url track="no">phone://mb_nop#go_back</Url>
+    </SoftKeyItem>
+  </If>
+</IPPhoneMenu>

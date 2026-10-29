@@ -1,0 +1,1882 @@
+<?xml version="1.0" encoding="utf-8"?>
+<phrases>
+	<language t="Dansk"/>
+	<phrase n="lang_none" t=""/>
+	<phrase n="lang_language_name" t="Dansk"/>
+	<phrase n="lang_cntry_CHN" t="Kina"/>
+	<phrase n="lang_cntry_FIN" t="Finland"/>
+	<phrase n="lang_cntry_GER" t="Tyskland"/>
+	<phrase n="lang_cntry_IND" t="Indien"/>
+	<phrase n="lang_cntry_IDN" t="Indonesien"/>
+	<phrase n="lang_cntry_MYS" t="Malaysia"/>
+	<phrase n="lang_cntry_MEX" t="Mexico"/>
+	<phrase n="lang_cntry_NLD" t="Holland"/>
+	<phrase n="lang_cntry_PRT" t="Portugal"/>
+	<phrase n="lang_cntry_ZAF" t="Sydafrika"/>
+	<phrase n="lang_cntry_GBR" t="England"/>
+	<phrase n="lang_cntry_USA" t="USA"/>
+	<phrase n="lang_cntry_CAM" t="Mellemamerika"/>
+	<phrase n="lang_cntry_CAN" t="Canada"/>
+	<phrase n="lang_cntry_CHL" t="Chile"/>
+	<phrase n="lang_cntry_BHS" t="Bahamas"/>
+	<phrase n="lang_cntry_CUB" t="Cuba"/>
+	<phrase n="lang_cntry_PRY" t="Paraguay"/>
+	<phrase n="lang_cntry_BMU" t="Bermuda"/>
+	<phrase n="lang_cntry_FLK" t="Falklandsøerne"/>
+	<phrase n="lang_cntry_GRL" t="Grønland"/>
+	<phrase n="lang_cntry_FRO" t="Færøerne"/>
+	<phrase n="lang_cntry_IRL" t="Irland"/>
+	<phrase n="lang_cntry_ESP" t="Spanien"/>
+	<phrase n="lang_cntry_ALB" t="Albanien"/>
+	<phrase n="lang_cntry_AUT" t="Østrig"/>
+	<phrase n="lang_cntry_BEL" t="Belgien"/>
+	<phrase n="lang_cntry_BRA" t="Brasilien"/>
+	<phrase n="lang_cntry_CAI" t="Caicos"/>
+	<phrase n="lang_cntry_CHA" t="Chatam"/>
+	<phrase n="lang_cntry_HRV" t="Kroatien"/>
+	<phrase n="lang_cntry_CZE" t="Tjekkiet"/>
+	<phrase n="lang_cntry_DNK" t="Danmark"/>
+	<phrase n="lang_cntry_FRA" t="Frankrig"/>
+	<phrase n="lang_cntry_HUN" t="Ungarn"/>
+	<phrase n="lang_cntry_ITA" t="Italien"/>
+	<phrase n="lang_cntry_LUX" t="Luxemburg"/>
+	<phrase n="lang_cntry_MAK" t="Makedonien"/>
+	<phrase n="lang_cntry_NAM" t="Namibia"/>
+	<phrase n="lang_cntry_NOR" t="Norge"/>
+	<phrase n="lang_cntry_POL" t="Polen"/>
+	<phrase n="lang_cntry_SVK" t="Slovakiet"/>
+	<phrase n="lang_cntry_SWD" t="Sverige"/>
+	<phrase n="lang_cntry_CHE" t="Schweiz"/>
+	<phrase n="lang_cntry_GIB" t="Gibraltar"/>
+	<phrase n="lang_cntry_YUG" t="Serbien"/>
+	<phrase n="lang_cntry_BLR" t="Hviderusland"/>
+	<phrase n="lang_cntry_BGR" t="Bulgarien"/>
+	<phrase n="lang_cntry_CYP" t="Cypern"/>
+	<phrase n="lang_cntry_EGY" t="Egypten"/>
+	<phrase n="lang_cntry_EST" t="Estland"/>
+	<phrase n="lang_cntry_GAZ" t="Gaza"/>
+	<phrase n="lang_cntry_GRC" t="Grækenland"/>
+	<phrase n="lang_cntry_ISR" t="Israel"/>
+	<phrase n="lang_cntry_JOR" t="Jordan"/>
+	<phrase n="lang_cntry_LVA" t="Letland"/>
+	<phrase n="lang_cntry_LTU" t="Litauen"/>
+	<phrase n="lang_cntry_LBN" t="Libanon"/>
+	<phrase n="lang_cntry_MDA" t="Moldova"/>
+	<phrase n="lang_cntry_RUS" t="Rusland"/>
+	<phrase n="lang_cntry_ROU" t="Rumænien"/>
+	<phrase n="lang_cntry_SYR" t="Syrien"/>
+	<phrase n="lang_cntry_TUR" t="Tyrkiet"/>
+	<phrase n="lang_cntry_UKR" t="Ukraine"/>
+	<phrase n="lang_cntry_IRQ" t="Irak"/>
+	<phrase n="lang_cntry_IRN" t="Iran"/>
+	<phrase n="lang_cntry_ARM" t="Armenien"/>
+	<phrase n="lang_cntry_AZE" t="Aserbadjan"/>
+	<phrase n="lang_cntry_GEO" t="Georgien"/>
+	<phrase n="lang_cntry_KAZ" t="Kazakstan"/>
+	<phrase n="lang_cntry_KGZ" t="Kirgisiske Republik"/>
+	<phrase n="lang_cntry_PAK" t="Pakistan"/>
+	<phrase n="lang_cntry_SGP" t="Singapore"/>
+	<phrase n="lang_cntry_KOR" t="Korea"/>
+	<phrase n="lang_cntry_JPN" t="Japan"/>
+	<phrase n="lang_cntry_AUS" t="Australien"/>
+	<phrase n="lang_cntry_NZL" t="New Zealand"/>
+	<phrase n="lang_cntry_TON" t="Tonga"/>
+	<phrase n="lang_cntry_COL" t="Colombia"/>
+	<phrase n="lang_cntry_ECU" t="Ecuador"/>
+	<phrase n="lang_cntry_TTB" t="Trinidad og Tobago"/>
+	<phrase n="lang_cntry_ARG" t="Argentina"/>
+	<phrase n="lang_cntry_WAT" t="Vestafrika"/>
+	<phrase n="lang_cntry_CAT" t="Centralafrika"/>
+	<phrase n="lang_cntry_EAT" t="Østafrika"/>
+	<phrase n="lang_cntry_VEN" t="Venezuela"/>
+	<phrase n="lang_cntry_NCL" t="Ny Kaledonien"/>
+	<phrase n="lang_cntry_UAE" t="Forenede Arabiske Emirater"/>
+	<phrase n="lang_cntry_THA" t="Thailand"/>
+	<phrase n="lang_F_SEARCH" t="Søg"/>
+	<phrase n="lang_F_SEARCH_typeSio" t="Søg"/>
+	<phrase n="lang_F_REBOOT" t="Genstart"/>
+	<phrase n="lang_F_REBOOT_typeSio" t="Genstart"/>
+	<phrase n="lang_F_REBOOT_smartlabel" t="Genstart"/>
+	<phrase n="lang_F_PAIR" t="Parre"/>
+	<phrase n="lang_F_UNPAIR" t="Ophæv parring"/>
+	<phrase n="lang_F_JOIN" t="Tilslut"/>
+	<phrase n="lang_F_JOIN_typeSio" t="Deltag"/>
+	<phrase n="lang_F_JOIN_WITH" t="Tilslut med"/>
+	<phrase n="lang_F_LEAVE" t="Forlad"/>
+	<phrase n="lang_F_LEAVE_typeSio" t="Forlad"/>
+	<phrase n="lang_F_OK" t="OK"/>
+	<phrase n="lang_F_ACCEPT_CALL" t="Acceptere"/>
+	<phrase n="lang_F_ACCEPT_CALL_typeSio" t="Acceptere"/>
+	<phrase n="lang_F_CANCEL" t="Afbryd"/>
+	<phrase n="lang_F_CANCEL_typeSio" t="Afbryd"/>
+	<phrase n="lang_F_YES" t="Ja"/>
+	<phrase n="lang_F_NO" t="Nej"/>
+	<phrase n="lang_F_ADD_SPEAKER" t="+Spkr"/>
+	<phrase n="lang_F_ADD_SPEAKER_typeSio" t="+Højttaler"/>
+	<phrase n="lang_F_REMOVE_SPEAKER" t="-Spkr"/>
+	<phrase n="lang_F_REMOVE_SPEAKER_typeSio" t="-Højttaler"/>
+	<phrase n="lang_F_ADD_HANDSET" t="+Hndst"/>
+	<phrase n="lang_F_ADD_HANDSET_typeSio" t="+Håndsæt"/>
+	<phrase n="lang_F_REMOVE_HANDSET" t="-Hndst"/>
+	<phrase n="lang_F_REMOVE_HANDSET_typeSio" t="-Håndsæt"/>
+	<phrase n="lang_F_DELETE" t="Del"/>
+	<phrase n="lang_F_DELETE_typeSio" t="Slet"/>
+	<phrase n="lang_F_ADR_BOOK" t="Tlf.bog"/>
+	<phrase n="lang_F_ADR_BOOK_typeSio" t="Telefonbog"/>
+	<phrase n="lang_F_ADR_BOOK_smartlabel" t="Telefonbog"/>
+	<phrase n="lang_F_DENYALL" t="Bloker"/>
+	<phrase n="lang_F_DENYALL_typeSio" t="Bloker opkalder"/>
+	<phrase n="lang_F_DENYALL_smartlabel" t="Blocker"/>
+	<phrase n="lang_F_CALL_LIST" t="Log"/>
+	<phrase n="lang_F_CALL_LIST_typeSio" t="Log"/>
+	<phrase n="lang_F_CALL_LIST_smartlabel" t="Log"/>
+	<phrase n="lang_F_PLAY" t="Afspil"/>
+	<phrase n="lang_F_STOP" t="Stop"/>
+	<phrase n="lang_F_RESCAN" t="Scan igen"/>
+	<phrase n="lang_F_INCREASE" t="Øg"/>
+	<phrase n="lang_F_DECREASE" t="Formindske"/>
+	<phrase n="lang_F_BACK" t="⌫"/>
+	<phrase n="lang_F_BACK_typeSio" t="Backspace"/>
+	<phrase n="lang_F_REDIAL" t="Genopkald"/>
+	<phrase n="lang_F_REDIAL_typeSio" t="Genopkald"/>
+	<phrase n="lang_F_REDIAL_smartlabel" t="Genopkald"/>
+	<phrase n="lang_F_INSTANT_REDIAL" t="Genopkald"/>
+	<phrase n="lang_F_INSTANT_REDIAL_typeSio" t="Øjeblikkelig genopkald"/>
+	<phrase n="lang_F_INSTANT_REDIAL_smartlabel" t="Genopkald"/>
+	<phrase n="lang_F_ADD_NUMBER" t="Tilføj"/>
+	<phrase n="lang_F_ADD_NUMBER_typeSio" t="Tilføj nummer"/>
+	<phrase n="lang_F_CONTACTS" t="Kontakter"/>
+	<phrase n="lang_F_PRESENCE" t="Stat"/>
+	<phrase n="lang_F_PRESENCE_typeSio" t="Tilstedeværelse"/>
+	<phrase n="lang_F_PRESENCE_smartlabel" t="Tilstedeværelse"/>
+	<phrase n="lang_F_SPEED_DIAL" t="Hurtig"/>
+	<phrase n="lang_F_SPEED_DIAL_typeSio" t="Hurtigopkald"/>
+	<phrase n="lang_F_SPEED_DIAL_smartlabel" t="Hurtig"/>
+	<phrase n="lang_F_SAFE_TRANSFER" t="Sikker"/>
+	<phrase n="lang_F_SAFE_TRANSFER_typeSio" t="Sikker overførsel"/>
+	<phrase n="lang_F_MENUS_USERINPUT_SENDSIPINFO" t="UserInputAndSendSipInfo"/>
+	<phrase n="lang_F_MENUS_SENDSIPINFO" t="SendSipInfo"/>
+	<phrase n="lang_F_USERINPUT_SENDSIPINFO" t="SIP"/>
+	<phrase n="lang_F_SENDSIPINFO" t="SIP"/>
+	<phrase n="lang_F_SENDSIPINFO_typeSio" t="SIP INFO"/>
+	<phrase n="lang_F_SENDSIPINFO_smartlabel" t="SIP&lt;br&gt;INFO"/>
+	<phrase n="lang_F_REC_START" t="Rec"/>
+	<phrase n="lang_F_REC_STOP" t="Stop R"/>
+	<phrase n="lang_F_RECORDER_START" t="Optag"/>
+	<phrase n="lang_F_RECORDER_STOP" t="Stop Rec"/>
+	<phrase n="lang_F_RECORD_ON" t="Optag"/>
+	<phrase n="lang_F_RECORD_OFF" t="Stop optagning"/>
+	<phrase n="lang_F_RECORDING" t="indspilning"/>
+	<phrase n="lang_F_LOGOFF_ALL" t="Log af"/>
+	<phrase n="lang_F_LOGOFF_ALL_typeSio" t="Log alle af"/>
+	<phrase n="lang_F_LOGOFF_ALL_smartlabel" t="Log af"/>
+	<phrase n="lang_F_STARCODE_short" t="S Code"/>
+	<phrase n="lang_F_STARCODE" t="Stjernekode"/>
+	<phrase n="lang_F_RELOAD_SERVER_AB" t="Genindlæs"/>
+	<phrase n="lang_F_SERVER_AB" t="Server Dir"/>
+	<phrase n="lang_F_ANONYMOUS" t="Anon ID"/>
+	<phrase n="lang_F_ANONYMOUS_long" t="Anonymt ID"/>
+	<phrase n="lang_F_ANONYMOUS_smartlabel" t="Anon ID"/>
+	<phrase n="lang_F_VOICEMAIL_INFO_NEW_MSG" t="Voicemail information"/>
+	<phrase n="lang_F_VOICEMAIL_INFO_short" t="Voicemail"/>
+	<phrase n="lang_F_VOICEMAIL_INFO" t="Voicemail information"/>
+	<phrase n="lang_F_NO_NEW_MESSAGE" t="Ingen nye beskeder"/>
+	<phrase n="lang_F_NEW_MESSAGE" t="Nye beskeder"/>
+	<phrase n="lang_F_GUEST_LOCK" t="Lås"/>
+	<phrase n="lang_F_GUEST_UNLOCK" t="Lås op"/>
+	<phrase n="lang_F_IVR" t="Interaktiv stemmerespons"/>
+	<phrase n="lang_F_DTMF" t="Dual-tone multi-frekvens"/>
+	<phrase n="lang_F_ACTION_URL" t="URL"/>
+	<phrase n="lang_F_ACTION_URL_typeSio" t="Handlings URL"/>
+	<phrase n="lang_F_ACTION_URL_smartlabel" t="URL"/>
+	<phrase n="lang_F_AUTO_ANSWER" t="AutoA"/>
+	<phrase n="lang_F_AUTO_ANSWER_typeSio" t="Auto svar"/>
+	<phrase n="lang_F_AUTO_ANSWER_smartlabel" t="Auto svar"/>
+	<phrase n="lang_F_AUTO_ANSWER_ON" t="Auto svar"/>
+	<phrase n="lang_F_BLF_short" t="BLF"/>
+	<phrase n="lang_F_BLF" t="Travlt Lampefelt"/>
+	<phrase n="lang_F_LINE" t="Linje"/>
+	<phrase n="lang_F_LINE_short" t="Linje"/>
+	<phrase n="lang_F_LINE_RINGING" t="ringer"/>
+	<phrase n="lang_F_LINE_OUTGOING" t="Ringer"/>
+	<phrase n="lang_F_LINE_OFFHOOK" t="af krogen"/>
+	<phrase n="lang_F_LINE_IDLE" t="ledig"/>
+	<phrase n="lang_F_LINE_HOLD" t="i venteposition"/>
+	<phrase n="lang_F_LINE_FAILED" t="Offline"/>
+	<phrase n="lang_F_LINE_DISCONNECTED" t="afbrudt"/>
+	<phrase n="lang_F_LINE_DISCONNECTED_typeSio" t="afbrudt"/>
+	<phrase n="lang_F_LINE_CONNECTED" t="tilsluttet"/>
+	<phrase n="lang_F_LINE_BUSY" t="Optaget"/>
+	<phrase n="lang_F_LINE_HELD" t="Bliver holdt"/>
+	<phrase n="lang_F_LINE_CALLING" t="ringer"/>
+	<phrase n="lang_F_LINE_RINGBACK" t="ring tilbage"/>
+	<phrase n="lang_F_LINE_HOLDING" t="bedrift"/>
+	<phrase n="lang_F_LINE_UNREGISTERED" t="Uregistreret"/>
+	<phrase n="lang_F_LINE_IN_USE" t="I brug"/>
+	<phrase n="lang_F_LINE_FREE" t="ledig"/>
+	<phrase n="lang_F_LINE_UNKNOWN" t="ukendt"/>
+	<phrase n="lang_F_LINE_TALKING" t="taler"/>
+	<phrase n="lang_F_LINE_SEIZED" t="beslaglagt"/>
+	<phrase n="lang_F_LINE_UNVAILABLE" t="ikke tilgængelig"/>
+	<phrase n="lang_F_LINE_ACTIVE" t="Aktiv"/>
+	<phrase n="lang_F_LINE_AVAILABLE" t="ledig"/>
+	<phrase n="lang_F_LINE_CLOSED" t="lukket"/>
+	<phrase n="lang_F_LINE_AUTO_REDIAL" t="automatisk genopkald"/>
+	<phrase n="lang_F_LINE_AUTO_REDIAL_typeSio" t="automatisk genopkald"/>
+	<phrase n="lang_F_LINE_CONFERENCING" t="konferencer"/>
+	<phrase n="lang_F_LINE_PARKED" t="parkeret"/>
+	<phrase n="lang_F_LINE_NO_BUDDY" t="ikke tildelt"/>
+	<phrase n="lang_F_LINE_DISABLED" t="handicappet"/>
+	<phrase n="lang_F_LINE_MSG_WAITING" t="beskeder venter"/>
+	<phrase n="lang_F_SHARED_LINE" t="S Linje"/>
+	<phrase n="lang_F_SHARED_LINE_typeSio" t="Delt linje"/>
+	<phrase n="lang_F_SHARED_LINE_smartlabel" t="S Linje"/>
+	<phrase n="lang_F_SHARED_LINE_REMOTE_SEIZED" t="Delt linje"/>
+	<phrase n="lang_F_SHARED_LINE_REMOTE_HOLD" t="Delt linje"/>
+	<phrase n="lang_F_SHARED_LINE_REMOTE_ALERT" t="Delt linje"/>
+	<phrase n="lang_F_SHARED_LINE_REMOTE_ACTIVE" t="Delt linje"/>
+	<phrase n="lang_F_SHARED_LINE_BRIDGE_ACTIVE" t="Delt linje"/>
+	<phrase n="lang_F_SHARED_LINE_BRIDGE_HOLD" t="Delt linje"/>
+	<phrase n="lang_F_SHARED_LINE_LOCAL_SEIZED" t="Delt linje"/>
+	<phrase n="lang_F_SHARED_LINE_LOCAL_HOLD" t="Delt linje"/>
+	<phrase n="lang_F_SHARED_LINE_LOCAL_ALERT" t="Delt linje"/>
+	<phrase n="lang_F_SHARED_LINE_LOCAL_ACTIVE" t="Delt linje"/>
+	<phrase n="lang_F_MULTICAST" t="MCast"/>
+	<phrase n="lang_F_MULTICAST_typeSio" t="Multicast"/>
+	<phrase n="lang_F_MULTICAST_smartlabel" t="MC side"/>
+	<phrase n="lang_F_MULTICAST_ON" t="Multicast"/>
+	<phrase n="lang_F_MULTICAST_ZONE" t="MZone"/>
+	<phrase n="lang_F_MULTICAST_ZONE_typeSio" t="Multicast Zone"/>
+	<phrase n="lang_F_MULTICAST_ZONE_smartlabel" t="MC Zone"/>
+	<phrase n="lang_F_BUTTON_typeSio" t="PBX knap"/>
+	<phrase n="lang_F_BUTTON" t="Knap"/>
+	<phrase n="lang_F_BUTTON_smartlabel" t="Knap"/>
+	<phrase n="lang_F_PUSH_TO_TALK" t="PTT"/>
+	<phrase n="lang_F_PUSH_TO_TALK_typeSio" t="Tryk for at tale"/>
+	<phrase n="lang_F_PUSH_TO_TALK_smartlabel" t="PTT"/>
+	<phrase n="lang_F_INTERCOM_ON" t="Internt opkald"/>
+	<phrase n="lang_F_INTERCOM" t="Icom"/>
+	<phrase n="lang_F_INTERCOM_typeSio" t="Internt opkald"/>
+	<phrase n="lang_F_INTERCOM_smartlabel" t="Icom"/>
+	<phrase n="lang_F_PICKUP" t="Saml op"/>
+	<phrase n="lang_F_CALL_CENTER_LIST" t="Call Center Liste"/>
+	<phrase n="lang_F_REMOTE_OFFICE" t="Kontor"/>
+	<phrase n="lang_F_REMOTE_OFFICE_typeSio" t="Fjernkontor"/>
+	<phrase n="lang_F_REMOTE_OFFICE_smartlabel" t="R kontor"/>
+	<phrase n="lang_F_REMOTE_OFFICE_ON" t="Tænd"/>
+	<phrase n="lang_F_REMOTE_OFFICE_OFF" t="Sluk"/>
+	<phrase n="lang_F_ACD" t="ACD"/>
+	<phrase n="lang_F_ACD_WRAPUP" t="Afslutning"/>
+	<phrase n="lang_F_ACD_UNAVAILABLE" t="Ikke tilgængelig"/>
+	<phrase n="lang_F_ACD_AVAILABLE" t="Ledig"/>
+	<phrase n="lang_F_ACD_SIGN_OUT" t="Log ud"/>
+	<phrase n="lang_F_ACD_SIGN_IN" t="Log ind"/>
+	<phrase n="lang_F_ACD_LOGOUT" t="Log ud"/>
+	<phrase n="lang_F_ACD_LOGIN" t="Log ind"/>
+	<phrase n="lang_F_ZONES" t="M-Side"/>
+	<phrase n="lang_F_SMART_TRANSFER" t="SmartTransfer"/>
+	<phrase n="lang_F_SMART_TRANSFER_short" t="SmartTr"/>
+	<phrase n="lang_F_ALTERNATE_MODE" t="Skifte"/>
+	<phrase n="lang_F_LABEL_PAGE_NEXT_typeSio" t="Næste"/>
+	<phrase n="lang_F_LABEL_PAGE_NEXT" t="Næste"/>
+	<phrase n="lang_F_LABEL_PAGE_NEXT_SMART_long" t="Næste side"/>
+	<phrase n="lang_F_LABEL_PAGE_NEXT_SMART_short" t="Side&gt;&gt;"/>
+	<phrase n="lang_F_LABEL_PAGE_PREV_typeSio" t="Forrige"/>
+	<phrase n="lang_F_LABEL_PAGE_PREV" t="For"/>
+	<phrase n="lang_F_LABEL_PAGE_PREV_SMART_long" t="Forrige side"/>
+	<phrase n="lang_F_LABEL_PAGE_PREV_SMART_short" t="&lt;&lt;Side"/>
+	<phrase n="lang_F_ADD_REJECTED_CONTACT" t="Tilføj"/>
+	<phrase n="lang_F_SAVE_XSI_CONTACT" t="Gem"/>
+	<phrase n="lang_F_REFRESH" t="Opdater"/>
+	<phrase n="lang_F_ADD_CONTACT" t="Tilføj"/>
+	<phrase n="lang_F_ADD_CONTACT_typeSio" t="Tilføj kontakt"/>
+	<phrase n="lang_F_SAVE_DIRECTORY_EDIT" t="Gem"/>
+	<phrase n="lang_F_GO_NEXT" t="Næste"/>
+	<phrase n="lang_F_GO_BACK" t="Forrige"/>
+	<phrase n="lang_F_MENU_BACK" t="Tilbage"/>
+	<phrase n="lang_F_SAVE" t="Gem"/>
+	<phrase n="lang_F_SAVE_CONTACT" t="Gem"/>
+	<phrase n="lang_F_SAFE_TRANSFER_OFF" t="Xfer"/>
+	<phrase n="lang_F_SAFE_TRANSFER_OFF_typeSio" t="Overfør"/>
+	<phrase n="lang_F_PARK" t="Parkere"/>
+	<phrase n="lang_F_CALL_PARK_GROUP_DIAL" t="Gruppeparkering"/>
+	<phrase n="lang_F_PARK_typeSio" t="Vdrst"/>
+	<phrase n="lang_F_PARK_smartlabel" t="Parkere"/>
+	<phrase n="lang_F_CALLRECORD_PAUSE" t="Pause Rec"/>
+	<phrase n="lang_F_CALLRECORD_RESUME" t="Genoptag Rec"/>
+	<phrase n="lang_F_CALLRECORD_CONTROL_ON" t="Optag"/>
+	<phrase n="lang_F_CALLRECORD_CONTROL_OFF" t="Optag"/>
+	<phrase n="lang_F_STATUS_UNREAD" t="Info"/>
+	<phrase n="lang_F_STATUS" t="Info"/>
+	<phrase n="lang_F_STATUS_long" t="Info beskeder"/>
+	<phrase n="lang_F_STATUS_NOTIFICATIONS" t="Notifikationer"/>
+	<phrase n="lang_F_FAVORITES" t="Fav"/>
+	<phrase n="lang_F_FAVORITES_typeSio" t="Favoritter"/>
+	<phrase n="lang_F_FAVORITES_smartlabel" t="Favoritter"/>
+	<phrase n="lang_F_SORT" t="Sorter"/>
+	<phrase n="lang_F_SORT_typeSio" t="Sortere"/>
+	<phrase n="lang_F_CONTACTPOOL" t="Pool"/>
+	<phrase n="lang_F_CONTACTPOOL_typeSio" t="Kontakter"/>
+	<phrase n="lang_F_CONTACTPOOL_smartlabel" t="Pool"/>
+	<phrase n="lang_F_NEXT" t="Næste"/>
+	<phrase n="lang_F_DIRECTORY_SEARCH" t="LDAP"/>
+	<phrase n="lang_F_MISSED_LIST" t="Opkald"/>
+	<phrase n="lang_F_MISSED_LIST_typeSio" t="Ubesvarede opkald"/>
+	<phrase n="lang_F_MISSED_LIST_smartlabel" t="Ubesvarede"/>
+	<phrase n="lang_F_DIALED_LIST" t="Ringet op"/>
+	<phrase n="lang_F_DIALED_LIST_typeSio" t="Ubesvarede opkald"/>
+	<phrase n="lang_F_DIALED_LIST_smartlabel" t="Ringet op"/>
+	<phrase n="lang_F_ACCEPTED_LIST" t="Opkald"/>
+	<phrase n="lang_F_ACCEPTED_LIST_typeSio" t="Accepterede opkald"/>
+	<phrase n="lang_F_ACCEPTED_LIST_smartlabel" t="Accepterede"/>
+	<phrase n="lang_F_DIALED" t="Ringet op"/>
+	<phrase n="lang_F_RETRIEVE" t="VoiceMail"/>
+	<phrase n="lang_F_RETRIEVE_smartlabel" t="VoiceMail"/>
+	<phrase n="lang_F_RETRIEVE_typeSio" t="VoiceMail"/>
+	<phrase n="lang_F_RETRIEVE_ON" t="VoiceMail"/>
+	<phrase n="lang_F_REDIRECT_OFF" t="noFwd"/>
+	<phrase n="lang_F_REDIRECT_OFF_smartlabel" t="noFwd"/>
+	<phrase n="lang_F_REDIRECT_OFF_typeSio" t="Viderstil fra"/>
+	<phrase n="lang_F_REDIRECT_ON" t="Viderestilling af opkald"/>
+	<phrase n="lang_F_REDIRECT_ON_typeSio" t="Viderestilling af opkald"/>
+	<phrase n="lang_F_REDIRECT_smartlabel" t="Vdrst"/>
+	<phrase n="lang_F_RINGER_SILENT" t="Lydløs"/>
+	<phrase n="lang_F_RINGER_SILENT_typeSio" t="Lydløs"/>
+	<phrase n="lang_F_RINGER_SILENT_smartlabel" t="Lydløs"/>
+	<phrase n="lang_F_ABORT" t="ESC"/>
+	<phrase n="lang_F_ABORT_typeSio" t="Afslut"/>
+	<phrase n="lang_F_SUPPORT" t="Hjælp"/>
+	<phrase n="lang_F_JUMP_BACK" t="Hop"/>
+	<phrase n="lang_F_JUMP" t="Hop"/>
+	<phrase n="lang_F_REDUCED" t="Reducere"/>
+	<phrase n="lang_F_ALL" t="Mere"/>
+	<phrase n="lang_F_DIALOG" t="Opkald"/>
+	<phrase n="lang_F_DIALOG_typeSio" t="Overvåg opkald"/>
+	<phrase n="lang_F_DIALOG_smartlabel" t="Opkald"/>
+	<phrase n="lang_F_HEADSET" t="HS"/>
+	<phrase n="lang_F_HEADSET_typeSio" t="Headset"/>
+	<phrase n="lang_F_HEADSET_smartlabel" t="Headset"/>
+	<phrase n="lang_F_HEADSET_ON" t="HS"/>
+	<phrase n="lang_F_HEADSET_ON_typeSio" t="Headset"/>
+	<phrase n="lang_F_HEADSET_ON_smartlabel" t="Headset"/>
+	<phrase n="lang_F_SOFTWARE_UPDATE" t="SW"/>
+	<phrase n="lang_F_UPDATE" t="Opdt"/>
+	<phrase n="lang_F_SMS" t="SMS"/>
+	<phrase n="lang_F_CMC" t="CMC"/>
+	<phrase n="lang_F_CALL_COMPLETION" t="CC"/>
+	<phrase n="lang_F_UNMUTE" t="Slå lyden til"/>
+	<phrase n="lang_F_UNMUTE_typeSio" t="Slå lyden til"/>
+	<phrase n="lang_F_UNMUTE_smartlabel" t="Lyd til"/>
+	<phrase n="lang_F_MUTE" t="Lyd fra"/>
+	<phrase n="lang_F_MUTE_typeSio" t="Lyd fra"/>
+	<phrase n="lang_F_MUTE_smartlabel" t="Lyd fra"/>
+	<phrase n="lang_F_REG_ACTIVATE" t="Aktiver"/>
+	<phrase n="lang_F_ADD_PHONEBOOK" t="Tilføj"/>
+	<phrase n="lang_F_ADD_PHONEBOOK_typeSio" t="Tilføj kontakt"/>
+	<phrase n="lang_F_LIST_MISSED" t="Ubesvarede"/>
+	<phrase n="lang_F_LIST_TAKEN" t="Indgående"/>
+	<phrase n="lang_F_LIST_TAKEN_typeSio" t="Indgående opkald"/>
+	<phrase n="lang_F_LIST_TAKEN_smartlabel" t="Indgående"/>
+	<phrase n="lang_F_DETAILS" t="Detaljer"/>
+	<phrase n="lang_F_DND_OFF" t="DND"/>
+	<phrase n="lang_F_DND_OFF_typeSio" t="Forstyr ej"/>
+	<phrase n="lang_F_DND_OFF_smartlabel" t="DND"/>
+	<phrase n="lang_F_DND" t="DND"/>
+	<phrase n="lang_F_DND_typeSio" t="Forstyr ej"/>
+	<phrase n="lang_F_DND_smartlabel" t="DND"/>
+	<phrase n="lang_F_DEF_ON" t="*Tænd"/>
+	<phrase n="lang_F_DEF_OFF" t="*Sluk"/>
+	<phrase n="lang_F_ON" t="Tænd"/>
+	<phrase n="lang_F_OFF" t="Sluk"/>
+	<phrase n="lang_F_START" t="Start"/>
+	<phrase n="lang_F_END" t="Slut"/>
+	<phrase n="lang_F_IDENTITY" t="Identitet"/>
+	<phrase n="lang_F_SETTINGS_typeSio" t="Indstillinger"/>
+	<phrase n="lang_F_SETTINGS" t="Indstillinger"/>
+	<phrase n="lang_F_EXECUTIVE_ASSISTANT_CONFIG" t="Executive-Assistent Config"/>
+	<phrase n="lang_F_EXECUTIVE_CONFIG" t="Exec.&lt;br&gt;Konfig"/>
+	<phrase n="lang_F_EXECUTIVE_CONFIG_typeSio" t="Executive Config"/>
+	<phrase n="lang_F_ASSISTANT_CONFIG" t="Assist.&lt;br&gt;Konfig"/>
+	<phrase n="lang_F_ASSISTANT_CONFIG_typeSio" t="Assistant Konfig"/>
+	<phrase n="lang_F_EXEC_ASSIST_BEHALF_PUI_LISTING" t="Executive-Assistent På vegne af"/>
+	<phrase n="lang_F_EXEC_ASSIST_BEHALF" t="Vegne af"/>
+	<phrase n="lang_F_NEW" t="Ny"/>
+	<phrase n="lang_F_URLU" t="a»A"/>
+	<phrase n="lang_F_URLU_typeSio" t="Redigeringstilstand"/>
+	<phrase n="lang_F_URLL" t="1»a"/>
+	<phrase n="lang_F_URLL_typeSio" t="Redigeringstilstand"/>
+	<phrase n="lang_F_123" t="A»1"/>
+	<phrase n="lang_F_123_typeSio" t="Redigeringstilstand"/>
+	<phrase n="lang_F_REDIRECT" t="Vdrst"/>
+	<phrase n="lang_F_REDIRECT_typeSio" t="Viderstil"/>
+	<phrase n="lang_F_HOLD_typeSio" t="Vent"/>
+	<phrase n="lang_F_HOLD" t="Vent"/>
+	<phrase n="lang_F_CONSULTCONF_ADD" t="Tilføj"/>
+	<phrase n="lang_F_CONSULTCONF_ADD_typeSio" t="Tilføj Konference"/>
+	<phrase n="lang_F_CONSULTCONF_ADD_smartlabel" t="Tilføj"/>
+	<phrase n="lang_F_CONSULTCONF_JOIN" t="Deltag"/>
+	<phrase n="lang_F_CONSULTCONF_JOIN_typeSio" t="Deltag Konference"/>
+	<phrase n="lang_F_CONSULTCONF_JOIN_smartlabel" t="Deltag"/>
+	<phrase n="lang_F_CONSULTCONF" t="Konference"/>
+	<phrase n="lang_F_CONFERENCE" t="Konf"/>
+	<phrase n="lang_F_CONFERENCE_smartlabel" t="Konf"/>
+	<phrase n="lang_F_CONFERENCE_typeSio" t="Konference"/>
+	<phrase n="lang_F_CONFERENCE_ON" t="Konferencehold"/>
+	<phrase n="lang_F_NO_CONFERENCE" t="ingen konf."/>
+	<phrase n="lang_F_DEFLECT" t="Afbøje"/>
+	<phrase n="lang_F_BLIND_TRANSFER" t="Blind"/>
+	<phrase n="lang_F_BLIND_TRANSFER_typeSio" t="Blind overførsel"/>
+	<phrase n="lang_F_TRANSFER" t="Vidrest."/>
+	<phrase n="lang_F_TRANSFER_typeSio" t="Overfør"/>
+	<phrase n="lang_F_TRANSFER_smartlabel" t="Overfør"/>
+	<phrase n="lang_F_TRANSFER_CALL" t="Overfør dette opkald"/>
+	<phrase n="lang_F_TRANSFER_SELECTED" t="Overfør valgt"/>
+	<phrase n="lang_F_DENY" t="Afvis"/>
+	<phrase n="lang_F_DIAL" t="Ring"/>
+	<phrase n="lang_F_EDIT" t="Rediger"/>
+	<phrase n="lang_F_CLEAR" t="Slet"/>
+	<phrase n="lang_F_DOWN" t="Ned"/>
+	<phrase n="lang_F_UP" t="Op"/>
+	<phrase n="lang_F_LEFT" t="Venstre"/>
+	<phrase n="lang_F_RIGHT" t="Højre"/>
+	<phrase n="lang_F_EXTENSION" t="Udv"/>
+	<phrase n="lang_F_EXTENSION_typeSio" t="Udvidelse"/>
+	<phrase n="lang_F_EXTENSION_smartlabel" t="Udv"/>
+	<phrase n="lang_F_MESSAGE" t="Besked"/>
+	<phrase n="lang_F_CONTACT_STATE_UNKNOWN" t="Ukendt"/>
+	<phrase n="lang_F_CONTACT_STATE_AVAILABLE" t="Ledig"/>
+	<phrase n="lang_F_CONTACT_STATE_AVAILABLE_ON_MOBILE" t="Tilgængelig (mobil)"/>
+	<phrase n="lang_F_CONTACT_STATE_AVAILABLE_AT_DESK" t="Tilgængelig (skrivebord)"/>
+	<phrase n="lang_F_CONTACT_STATE_INACTIVE" t="Inaktiv"/>
+	<phrase n="lang_F_CONTACT_STATE_BUSY" t="Travl"/>
+	<phrase n="lang_F_CONTACT_STATE_URGENT_INTERRUPTIONS_ONLY" t="Kun akutte afbrydelser"/>
+	<phrase n="lang_F_CONTACT_STATE_IN_A_CALL" t="I et opkald"/>
+	<phrase n="lang_F_CONTACT_STATE_IN_A_CONFERENCE" t="I et telefonmøde"/>
+	<phrase n="lang_F_CONTACT_STATE_IN_A_MEETING" t="I et møde"/>
+	<phrase n="lang_F_CONTACT_STATE_MEETING" t="Møde"/>
+	<phrase n="lang_F_CONTACT_STATE_HOLDING" t="Holder"/>
+	<phrase n="lang_F_CONTACT_STATE_DND" t="Forstyr ej"/>
+	<phrase n="lang_F_CONTACT_STATE_DND_ALL" t="Forstyr ikke (alle)"/>
+	<phrase n="lang_F_CONTACT_STATE_DND_SELF" t="Forstyr ikke (selv)"/>
+	<phrase n="lang_F_CONTACT_STATE_BE_RIGHT_BACK" t="Er straks tilbage"/>
+	<phrase n="lang_F_CONTACT_STATE_AWAY" t="Væk"/>
+	<phrase n="lang_F_CONTACT_STATE_OFFLINE" t="Offline"/>
+	<phrase n="lang_F_CONTACT_STATE_INVISIBLE" t="Usynlig"/>
+	<phrase n="lang_F_CONTACT_STATE_GROUP" t="Gruppe"/>
+	<phrase n="lang_F_KEYEVENT" t="Nøgle"/>
+	<phrase n="lang_F_KEYEVENT_typeSio" t="Tastehændelse"/>
+	<phrase n="lang_F_KEYEVENT_short" t="Nøgle"/>
+	<phrase n="lang_F_XML" t="XML"/>
+	<phrase n="lang_continuous_text_speed_dial" t="Hurtigopkald"/>
+	<phrase n="lang_continuous_text_reboot" t="Genstart"/>
+	<phrase n="lang_continuous_text_network_restart" t="Genstart af netværk"/>
+	<phrase n="lang_continuous_text_search" t="Søg"/>
+	<phrase n="lang_continuous_text_cancel" t="Afbryd"/>
+	<phrase n="lang_continuous_text_yes" t="Ja"/>
+	<phrase n="lang_continuous_text_no" t="Nej"/>
+	<phrase n="lang_confirm_reboot" t="Genstart?"/>
+	<phrase n="lang_on" t="Tænd"/>
+	<phrase n="lang_off" t="Sluk"/>
+	<phrase n="lang_busy" t="Optaget"/>
+	<phrase n="lang_short" t="Kort"/>
+	<phrase n="lang_full" t="Fuld"/>
+	<phrase n="lang_half" t="Halv"/>
+	<phrase n="lang_F_HOLD_PRIVATE" t="Parker"/>
+	<phrase n="lang_F_HOLD_PRIVATE_typeSio" t="Privat hold"/>
+	<phrase n="lang_F_HOLD_PRIVATE_smartlabel" t="Parker"/>
+	<phrase n="lang_conference_off" t="Konf. fra"/>
+	<phrase n="lang_conference_off_typeSio" t="Konf. fra"/>
+	<phrase n="lang_edit_cmc" t="Kundesagskode:"/>
+	<phrase n="lang_dnd" t="DND"/>
+	<phrase n="lang_red" t="Omstil"/>
+	<phrase n="lang_red_typeSio" t="Omstil"/>
+	<phrase n="lang_missed" t="Ubesvaret: "/>
+	<phrase n="lang_missed_typeSio" t="Ubesvaret: "/>
+	<phrase n="lang_edit" t="Rediger"/>
+	<phrase n="lang_F_EDIT_AND_DIAL" t="Re-Ed"/>
+	<phrase n="lang_F_EDIT_AND_DIAL_typeSio" t="Rediger &amp; Ring"/>
+	<phrase n="lang_edit_dial" t="Rediger og ring op"/>
+	<phrase n="lang_dhcp" t="DHCP"/>
+	<phrase n="lang_enum" t="ENUM"/>
+	<phrase n="lang_mwi_mailbox1" t="Mailbox fra:"/>
+	<phrase n="lang_mwi_mailbox2" t="Du har"/>
+	<phrase n="lang_mwi_mailbox3" t="Du har beskeder."/>
+	<phrase n="lang_mwi_urgent" t="presserende"/>
+	<phrase n="lang_mwi_goto_mailbox" t="Gå til Mailbox?"/>
+	<phrase n="lang_challenge_user" t="Bruger"/>
+	<phrase n="lang_challenge_pw" t="Kodeord"/>
+	<phrase n="lang_use_enum" t="Anvend ENUM?"/>
+	<phrase n="lang_wiz_dhcp" t="Anvend DHCP?"/>
+	<phrase n="lang_wiz_l2tp_ip_adr" t="L2TP IP Adr:"/>
+	<phrase n="lang_wiz_ip_adr" t="IP adr:"/>
+	<phrase n="lang_wiz_mac" t="MAC:"/>
+	<phrase n="lang_wiz_wifi_mac" t="Wi-Fi MAC:"/>
+	<phrase n="lang_wiz_version" t="Version:"/>
+	<phrase n="lang_wiz_netmask" t="Netmaske:"/>
+	<phrase n="lang_wiz_gateway" t="IP-gateway:"/>
+	<phrase n="lang_wiz_dns_server" t="DNS-server:"/>
+	<phrase n="lang_wiz_welcome" t="Tryk en tast for at logge på."/>
+	<phrase n="lang_wiz_http_user" t="Indtast nyt HTTP-brugernavn"/>
+	<phrase n="lang_wiz_http_pass" t="Indtast nyt HTTP-adgangskode"/>
+	<phrase n="lang_wiz_short_pass" t="Adgangskode er for kort"/>
+	<phrase n="lang_terminated_finished" t="Lagt på"/>
+	<phrase n="lang_try_parking" t="Parkeringsopkald"/>
+	<phrase n="lang_try_parking_typeSio" t="Parkeringsopkald"/>
+	<phrase n="lang_holding" t="Parkerede opkald: "/>
+	<phrase n="lang_select_list" t="Opkaldsliste"/>
+	<phrase n="lang_list_all" t="Alle"/>
+	<phrase n="lang_list_new" t="Nye"/>
+	<phrase n="lang_list_old" t="Gamle"/>
+	<phrase n="lang_list_missed" t="Ubesvarede"/>
+	<phrase n="lang_list_taken" t="Indgående"/>
+	<phrase n="lang_list_dialed" t="Udgående"/>
+	<phrase n="lang_list_no_data" t="(ingen info)"/>
+	<phrase n="lang_list_details" t="Detaljer"/>
+	<phrase n="lang_list_details_time" t="Tid:"/>
+	<phrase n="lang_list_details_duration" t="Længde:"/>
+	<phrase n="lang_list_details_costs" t="Udgift:"/>
+	<phrase n="lang_list_details_missed" t="Ubesvaret:"/>
+	<phrase n="lang_list_details_to" t="Til:"/>
+	<phrase n="lang_list_details_from" t="Fra:"/>
+	<phrase n="lang_reg_activate" t="Aktiver"/>
+	<phrase n="lang_reg_account" t="Konto:"/>
+	<phrase n="lang_reg_registrar" t="Registrator:"/>
+	<phrase n="lang_reg_explanation_failed" t="Registration mislykket"/>
+	<phrase n="lang_reg_explanation_registering" t="Registrerer"/>
+	<phrase n="lang_reg_explanation_registered" t="Registreret"/>
+	<phrase n="lang_menu_info_320" t="Information"/>
+	<phrase n="lang_menu_conf_reset" t="Nulstil"/>
+	<phrase n="lang_menu_gen_contrast" t="Kontrast"/>
+	<phrase n="lang_menu_gen_ringtone" t="Ringer"/>
+	<phrase n="lang_menu_web_webserver_type" t="Server"/>
+	<phrase n="lang_menu_function_key" t="Funktionstaster"/>
+	<phrase n="lang_menu_tser_timer" t="Timer"/>
+	<phrase n="lang_menu_red_target" t="Mål"/>
+	<phrase n="lang_menu_ringer1" t="Ringer 1"/>
+	<phrase n="lang_menu_ringer2" t="Ringer 2"/>
+	<phrase n="lang_menu_ringer3" t="Ringer 3"/>
+	<phrase n="lang_menu_ringer4" t="Ringer 4"/>
+	<phrase n="lang_menu_ringer5" t="Ringer 5"/>
+	<phrase n="lang_menu_ringer6" t="Ringer 6"/>
+	<phrase n="lang_menu_ringer7" t="Ringer 7"/>
+	<phrase n="lang_menu_ringer8" t="Ringer 8"/>
+	<phrase n="lang_menu_ringer9" t="Ringer 9"/>
+	<phrase n="lang_menu_ringer10" t="Ringer 10"/>
+	<phrase n="lang_vol_headset" t="Headset Volume"/>
+	<phrase n="lang_vol_handset" t="Håndsæt Volume"/>
+	<phrase n="lang_vol_speaker" t="Højtaler volume"/>
+	<phrase n="lang_audio_speaker" t="Højtaler"/>
+	<phrase n="lang_audio_handset" t="Håndsæt"/>
+	<phrase n="lang_audio_headset" t="Hovedtelefon"/>
+	<phrase n="lang_vol_contrast" t="Skærm kontrast"/>
+	<phrase n="lang_confirm_factory" t="Gendan fabriksindstillinger?"/>
+	<phrase n="lang_confirm_logoff_all" t="Log alle af?"/>
+	<phrase n="lang_calling" t="Ringer op"/>
+	<phrase n="lang_connected" t="Tilsluttet"/>
+	<phrase n="lang_connected_typeSio" t="Tilsluttet"/>
+	<phrase n="lang_ringing" t="Ringer"/>
+	<phrase n="lang_enter_number" t="Indtast nummer"/>
+	<phrase n="lang_held_by" t="På hold af: "/>
+	<phrase n="lang_ok" t="[Okay?]"/>
+	<phrase n="lang_menu100_phone_book" t="Telefon bog"/>
+	<phrase n="lang_menu100_ldap_book" t="LDAP adgang"/>
+	<phrase n="lang_menu100_call_lists" t="Opkaldsliste"/>
+	<phrase n="lang_menu100_settings" t="Indstillinger"/>
+	<phrase n="lang_sel100_logoff_all" t="Log alle af"/>
+	<phrase n="lang_sel100_logoff_one" t="Log bruger af"/>
+	<phrase n="lang_sel100_activeline" t="Vælg udgående linje"/>
+	<phrase n="lang_sel100_admin_mode" t="Admin tilstand"/>
+	<phrase n="lang_sel100_user_mode" t="Bruger tilstand"/>
+	<phrase n="lang_sel100_net_info" t="Net info"/>
+	<phrase n="lang_sel100_mem_info" t="Mem Info"/>
+	<phrase n="lang_menu_ringtone" t="Ringetone"/>
+	<phrase n="lang_dnd_active" t="Forstyr ej aktiv"/>
+	<phrase n="lang_update" t="SW"/>
+	<phrase n="lang_update_a" t="Udfør?"/>
+	<phrase n="lang_update_reboot" t="Genstart for SW opdatering"/>
+	<phrase n="lang_unplugged" t="Frakoblet"/>
+	<phrase n="lang_ethernet_cable" t="Netværk kabel afbrudt"/>
+	<phrase n="lang_hid_plug" t="Tilslutning af HID-enhed"/>
+	<phrase n="lang_hid_connected" t="HID-enhed tilsluttet"/>
+	<phrase n="lang_hid_disconnected" t="HID-enhed afbrudt"/>
+	<phrase n="lang_temperature" t="Temperatur"/>
+	<phrase n="lang_temperature_connected" t="Temperaturmåler tilsluttet"/>
+	<phrase n="lang_language" t="Sprog"/>
+	<phrase n="lang_current_date" t="Dato"/>
+	<phrase n="lang_current_time" t="Tid"/>
+	<phrase n="lang_network_settings" t="Netværk"/>
+	<phrase n="lang_dns_domain" t="DNS domæne"/>
+	<phrase n="lang_dns_server1" t="DNS-server 1"/>
+	<phrase n="lang_dns_server2" t="DNS-server 2"/>
+	<phrase n="lang_ntp_server" t="NTP-server"/>
+	<phrase n="lang_no_ip_adr" t="Ugyldig IP-adresse"/>
+	<phrase n="lang_password" t="Kodeord"/>
+	<phrase n="lang_username" t="Bruger"/>
+	<phrase n="lang_reset_settings" t="Nulstil værdier"/>
+	<phrase n="lang_networkadvanced_settings" t="Avanceret"/>
+	<phrase n="lang_admin_mode_password" t="Admin mode Kodeord"/>
+	<phrase n="lang_guess_number" t="Hurtigt opslag"/>
+	<phrase n="lang_guess_number_len" t="QuickLookup Startlængde"/>
+	<phrase n="lang_admin_mode_pwd" t="Admin kode"/>
+	<phrase n="lang_call_waiting" t="Opkald ventende"/>
+	<phrase n="lang_menu100_red_time" t="Viderestil efter"/>
+	<phrase n="lang_menu100_red_time_typeSio" t="Viderestil efter"/>
+	<phrase n="lang_menu100_timezone" t="Tidszone"/>
+	<phrase n="lang_menu100_dialtone" t="Tone skema"/>
+	<phrase n="lang_menu100_call_completion" t="Opkaldsfuldførelse"/>
+	<phrase n="lang_menu100_cc_waiting" t="Venter: "/>
+	<phrase n="lang_menu100_cc_dial" t="Ring: "/>
+	<phrase n="lang_menu100_netmask" t="Netmaske"/>
+	<phrase n="lang_menu100_gateway" t="IP gateway"/>
+	<phrase n="lang_menu100_webserver_type" t="Webserver type"/>
+	<phrase n="lang_enum100_disp_always" t="Altid"/>
+	<phrase n="lang_enum100_disp_on" t="Tænd"/>
+	<phrase n="lang_enum100_disp_off" t="Sluk"/>
+	<phrase n="lang_enum_disp_webserver_off" t="Sluk"/>
+	<phrase n="lang_enum_disp_webserver_http" t="Kun HTTP"/>
+	<phrase n="lang_enum_disp_webserver_https" t="Kun HTTPS"/>
+	<phrase n="lang_enum_disp_webserver_http_https" t="HTTP og HTTPS"/>
+	<phrase n="lang_enum_disp_func_key_destination" t="Udvidelse"/>
+	<phrase n="lang_enum_disp_func_key" t="Nøgle"/>
+	<phrase n="lang_xsi_silent_alert" t="Lydløs alarmering"/>
+	<phrase n="lang_privacy_out" t="Skjul egen udgående ID"/>
+	<phrase n="lang_quick_transfer" t="Hurtig viderestilling"/>
+	<phrase n="lang_quick_transfer_newcall" t="Foretag nyt opkald"/>
+	<phrase n="lang_quick_transfer_blind" t="Blind viderestilling"/>
+	<phrase n="lang_quick_transfer_attended" t="Deltog i viderestilling"/>
+	<phrase n="lang_privacy_in" t="Afvis annonyme"/>
+	<phrase n="lang_privacy_in_typeSio" t="Afvis annonyme"/>
+	<phrase n="lang_auto_dial" t="Automatisk opkald"/>
+	<phrase n="lang_call_completion" t="Opkaldsfuldførelse"/>
+	<phrase n="lang_vlan_id" t="VLAN ID (1-4094)"/>
+	<phrase n="lang_vlan_qos" t="VLAN Prioritet (0-7)"/>
+	<phrase n="lang_vlan_reset" t="Nulstil VLAN"/>
+	<phrase n="lang_vlan_port_tagging" t="VLAN-tagging på LAN"/>
+	<phrase n="lang_vlan_pc_id" t="VLAN-ID på LAN-port"/>
+	<phrase n="lang_identity_settings" t="Identitet"/>
+	<phrase n="lang_preferences_settings" t="Præferencer"/>
+	<phrase n="lang_maintenance_settings" t="Vedligeholdelse"/>
+	<phrase n="lang_auto_connect_indication" t="Auto svar indikation"/>
+	<phrase n="lang_sel100_reregister_line" t="Reregistrer bruger"/>
+	<phrase n="lang_sel100_edit_line" t="Rediger bruger"/>
+	<phrase n="lang_enum_disp_cw_visual" t="Kun visuel"/>
+	<phrase n="lang_enum_disp_cw_visual_short" t="Visuel"/>
+	<phrase n="lang_enum_disp_cw_ringer" t="Ringer"/>
+	<phrase n="lang_confirm_del_adr_item" t="Er du sikker?"/>
+	<phrase n="lang_confirm_del_adr_item_title" t="Slet kontakt"/>
+	<phrase n="lang_confirm_del_adr_item_title_typeSio" t="Slet kontakt"/>
+	<phrase n="lang_confirm_del_adr_title" t="Slet adresse bog"/>
+	<phrase n="lang_confirm_del_adr_item_title_short" t="Slet kontakt"/>
+	<phrase n="lang_vol_ringer" t="Ringestyrke"/>
+	<phrase n="lang_keybd_unlock_PIN" t="Tastaturlås PINkode"/>
+	<phrase n="lang_enum_disp_func_key_mult" t="Delt linie"/>
+	<phrase n="lang_enum_disp_func_key_keyevent" t="Tastehændelse"/>
+	<phrase n="lang_menu_ringer_silent" t="Lydløs"/>
+	<phrase n="lang_menu_ringer_custom" t="Individuel"/>
+	<phrase n="lang_enum_disp_func_key_none" t="Ingen"/>
+	<phrase n="lang_presence_online" t="Online"/>
+	<phrase n="lang_presence_busy" t="Optaget"/>
+	<phrase n="lang_presence_invisible" t="Usynlig"/>
+	<phrase n="lang_presence_title" t="Nuværende tilstand"/>
+	<phrase n="lang_dialog_title" t="Opkald"/>
+	<phrase n="lang_buddies_title" t="Kontakter"/>
+	<phrase n="lang_use_backlight" t="Baggrundslys"/>
+	<phrase n="lang_backlight_on_activity" t="Baggrundslys på aktivitet"/>
+	<phrase n="lang_backlight_when_idle" t="Baggrundslys i tomgang"/>
+	<phrase n="lang_activity" t="Aktivitet"/>
+	<phrase n="lang_display_settings" t="Skærm"/>
+	<phrase n="lang_audio_settings" t="Lyd"/>
+	<phrase n="lang_redirect_settings" t="Viderestilling"/>
+	<phrase n="lang_redirect_settings_typeSio" t="Viderestilling"/>
+	<phrase n="lang_reboot_required" t="Genstart krævet"/>
+	<phrase n="lang_network_restart_required" t="Genstart af netværk påkrævet"/>
+	<phrase n="lang_auto_redialing" t="Genopkald"/>
+	<phrase n="lang_conference" t="Konference"/>
+	<phrase n="lang_directory_search" t="Søgning i telefonbog"/>
+	<phrase n="lang_wrong_pw" t="Forkert adgangskode"/>
+	<phrase n="lang_http_password_not_set" t="HTTP-adgangskode ikke angivet"/>
+	<phrase n="lang_start_auto_redial" t="Automatisk genopkald?"/>
+	<phrase n="lang_call_features_settings" t="Opkaldsfunktioner"/>
+	<phrase n="lang_all" t="Alle"/>
+	<phrase n="lang_outgoing_calls_settings" t="Udgående opkald"/>
+	<phrase n="lang_incoming_calls_settings" t="Indgående opkald"/>
+	<phrase n="lang_ip_settings_wizzard" t="IP indstillinger"/>
+	<phrase n="lang_webserver_settings" t="Webserver"/>
+	<phrase n="lang_vlan_settings" t="VLAN"/>
+	<phrase n="lang_wlan_settings" t="WLAN"/>
+	<phrase n="lang_wifi_reboot_to_connect_to" t="Genstart for at oprette forbindelse til"/>
+	<phrase n="lang_system_information_menu" t="Systeminfo"/>
+	<phrase n="lang_its_a_caller_info" t="Ringer op"/>
+	<phrase n="lang_its_a_callee_info" t="Callee"/>
+	<phrase n="lang_redirect_all" t="Videresend alle"/>
+	<phrase n="lang_redirect_all_typeSio" t="Videresend alle"/>
+	<phrase n="lang_redirect_busy" t="Videresend når optaget"/>
+	<phrase n="lang_redirect_busy_typeSio" t="Videresend når optaget"/>
+	<phrase n="lang_redirect_time" t="Frem efter timeout"/>
+	<phrase n="lang_redirect_time_typeSio" t="Frem efter timeout"/>
+	<phrase n="lang_do_redirect" t="Aktiver videresendelse"/>
+	<phrase n="lang_do_redirect_typeSio" t="Aktiver videresendelse"/>
+	<phrase n="lang_redirect_target" t="Mål ved videresendelse"/>
+	<phrase n="lang_redirect_target_typeSio" t="Mål ved videresendelse"/>
+	<phrase n="lang_help_label" t="Hjælp"/>
+	<phrase n="lang_sysinfo_mem1" t="RAM:"/>
+	<phrase n="lang_sysinfo_mem2" t="af"/>
+	<phrase n="lang_sysinfo_mem3" t="tilbage"/>
+	<phrase n="lang_goto_phonepage_msg" t="For at konfigurere din telefon skal du navigere din webbrowser til:"/>
+	<phrase n="lang_goto_phonepage_msg_typeSio" t="For at konfigurere din telefon skal du navigere din webbrowser til:"/>
+	<phrase n="lang_goto_help_msg" t="For at få mere hjælp besøg:"/>
+	<phrase n="lang_linestate_connected" t="tilsluttet"/>
+	<phrase n="lang_linestate_on_hold" t="i venteposition"/>
+	<phrase n="lang_linestate_ringing" t="ringer"/>
+	<phrase n="lang_linename_message" t="Besked"/>
+	<phrase n="lang_linename_redial" t="Genopkald"/>
+	<phrase n="lang_linename_transfer" t="Overførsel"/>
+	<phrase n="lang_linename_rec_on" t="Start optagelse"/>
+	<phrase n="lang_linename_rec_off" t="Stop optagelse"/>
+	<phrase n="lang_linetype_auto_answer" t="Automatisk svar"/>
+	<phrase n="lang_linetype_blf" t="BLF"/>
+	<phrase n="lang_connecting" t="Tilslutning"/>
+	<phrase n="lang_fkey_add_contact_typeSio" t="Tilføj kontakt"/>
+	<phrase n="lang_cancelconference" t="Aflys konference"/>
+	<phrase n="lang_confirm_cancelconference" t="Vil du forlade konferencen?"/>
+	<phrase n="lang_xmlgui_dialnumber" t="Tast et nummer"/>
+	<phrase n="lang_xmlgui_contactlist" t="Kontakt liste"/>
+	<phrase n="lang_xmlgui_dial" t="Ring"/>
+	<phrase n="lang_menu_equalizer" t="Equalizer"/>
+	<phrase n="lang_equalizer_soft" t="Blød lyd"/>
+	<phrase n="lang_equalizer_normal" t="Normal lyd"/>
+	<phrase n="lang_equalizer_bright" t="Lys lyd"/>
+	<phrase n="lang_contactpool" t="Pool"/>
+	<phrase n="lang_tb_nickname" t="Kælenavn"/>
+	<phrase n="lang_tb_number" t="Telefon nummer"/>
+	<phrase n="lang_tb_contact" t="Kontakttype"/>
+	<phrase n="lang_tb_outgoing_id" t="Udadvendt identitet"/>
+	<phrase n="lang_tb_firstname" t="Fornavn"/>
+	<phrase n="lang_tb_lastname" t="Efternavn"/>
+	<phrase n="lang_tb_group" t="Gruppe"/>
+	<phrase n="lang_day" t="Dag"/>
+	<phrase n="lang_month" t="Måned"/>
+	<phrase n="lang_year" t="År"/>
+	<phrase n="lang_tb_title" t="Titel"/>
+	<phrase n="lang_tb_organization" t="Organisation"/>
+	<phrase n="lang_tb_email" t="E-mail"/>
+	<phrase n="lang_tb_note" t="Note"/>
+	<phrase n="lang_tb_photo" t="Billede"/>
+	<phrase n="lang_tb_favorite" t="Favorit"/>
+	<phrase n="lang_linename_transfer_short" t="Xfer"/>
+	<phrase n="lang_linetype_key_event_short" t="Nøgle"/>
+	<phrase n="lang_linetype_url_short" t="URL"/>
+	<phrase n="lang_grouptype_family" t="Familie"/>
+	<phrase n="lang_grouptype_friend" t="Ven"/>
+	<phrase n="lang_grouptype_collegue" t="Kollega"/>
+	<phrase n="lang_grouptype_work" t="Arbejde"/>
+	<phrase n="lang_title_sort" t="Sorter efter"/>
+	<phrase n="lang_title_select_entry" t="Vælg en post"/>
+	<phrase n="lang_entry_general" t="Generelle detaljer"/>
+	<phrase n="lang_title_entry_general" t="Generelle detaljer vedr"/>
+	<phrase n="lang_fav_add_from_tbook" t="Tilføj fra telefonbog"/>
+	<phrase n="lang_redirect_on_timeout" t="omdirigering ved timeout:"/>
+	<phrase n="lang_redirect_on_timeout_typeSio" t="omdirigering ved timeout:"/>
+	<phrase n="lang_redirect_when_busy" t="omdirigere når optaget:"/>
+	<phrase n="lang_redirect_when_busy_typeSio" t="omdirigere når optaget:"/>
+	<phrase n="lang_sip_disabled" t="SIP deaktiveret"/>
+	<phrase n="lang_low_memory" t="Lav hukommelse"/>
+	<phrase n="lang_title_error" t="Fejl"/>
+	<phrase n="lang_error_code" t="Fejlkode:"/>
+	<phrase n="lang_bad_server_response" t="dårlig serverrespons"/>
+	<phrase n="lang_bad_xml_response" t="dårligt XML-svar..."/>
+	<phrase n="lang_title_loading" t="Indlæser"/>
+	<phrase n="lang_active_id" t="Aktiv identitet"/>
+	<phrase n="lang_1st_id" t="1. identitet"/>
+	<phrase n="lang_2nd_id" t="2. identitet"/>
+	<phrase n="lang_3rd_id" t="3. identitet"/>
+	<phrase n="lang_4th_id" t="4. identitet"/>
+	<phrase n="lang_5th_id" t="5. identitet"/>
+	<phrase n="lang_6th_id" t="6. identitet"/>
+	<phrase n="lang_7th_id" t="7. identitet"/>
+	<phrase n="lang_8th_id" t="8. identitet"/>
+	<phrase n="lang_9th_id" t="9. identitet"/>
+	<phrase n="lang_10th_id" t="10. identitet"/>
+	<phrase n="lang_11th_id" t="11. identitet"/>
+	<phrase n="lang_12th_id" t="12. identitet"/>
+	<phrase n="lang_contacttype_vip" t="VIP"/>
+	<phrase n="lang_contacttype_deny" t="spærre"/>
+	<phrase n="lang_unknown" t="Ukendt"/>
+	<phrase n="lang_month_01" t="januar"/>
+	<phrase n="lang_month_02" t="februar"/>
+	<phrase n="lang_month_03" t="marts"/>
+	<phrase n="lang_month_04" t="april"/>
+	<phrase n="lang_month_05" t="maj"/>
+	<phrase n="lang_month_06" t="juni"/>
+	<phrase n="lang_month_07" t="juli"/>
+	<phrase n="lang_month_08" t="august"/>
+	<phrase n="lang_month_09" t="september"/>
+	<phrase n="lang_month_10" t="oktober"/>
+	<phrase n="lang_month_11" t="november"/>
+	<phrase n="lang_month_12" t="december"/>
+	<phrase n="lang_tb_name_label" t="Navn"/>
+	<phrase n="lang_tb_number_label" t="Telefon"/>
+	<phrase n="lang_title_transfer" t="Overførselsfest"/>
+	<phrase n="lang_linestate_label" t="Stat"/>
+	<phrase n="lang_reboot_uploads" t="Genstart for at aktivere uploads."/>
+	<phrase n="lang_cc_dial_now" t="Ring nu?"/>
+	<phrase n="lang_cc_complete_now" t="Du kan afslutte dit opkald til"/>
+	<phrase n="lang_cc_waiting_for" t="Venter på at afslutte opkald til"/>
+	<phrase n="lang_cc_set_warning" t="i øjeblikket er opkaldsfuldførelse allerede indstillet, men du kan overskrive det."/>
+	<phrase n="lang_cc_change_title" t="Vil du ændre mål for opkaldsgennemførelse?"/>
+	<phrase n="lang_cc_change_message" t="Udskiftning af nuværende CC-Target med"/>
+	<phrase n="lang_cc_status_waiting_on" t="Venter på, at %dst er tilgængelig."/>
+	<phrase n="lang_cc_activate" t="vil vente på at afslutte opkaldet."/>
+	<phrase n="lang_cc_activated" t="venter stadig på at afslutte opkaldet."/>
+	<phrase n="lang_call_contact" t="Ring til kontakt"/>
+	<phrase n="lang_call_work" t="Ring til arbejde"/>
+	<phrase n="lang_call_work_typeSio" t="Ring til arbejde"/>
+	<phrase n="lang_call_mobile" t="Ring til mobil"/>
+	<phrase n="lang_call_home" t="Ring til hjem"/>
+	<phrase n="lang_call_home_typeSio" t="Ring til hjem"/>
+	<phrase n="lang_call_other" t="Ring til andre"/>
+	<phrase n="lang_call_voicemail" t="Ring til Voicemail"/>
+	<phrase n="lang_xfer_to_contact" t="Overfør til kontakt"/>
+	<phrase n="lang_xfer_to_work" t="Overførsel til arbejde"/>
+	<phrase n="lang_xfer_to_work_typeSio" t="Overførsel til arbejde"/>
+	<phrase n="lang_xfer_to_mobile" t="Overfør til mobil"/>
+	<phrase n="lang_xfer_to_home" t="Overfør til hjemmet"/>
+	<phrase n="lang_xfer_to_home_typeSio" t="Overfør til hjemmet"/>
+	<phrase n="lang_xfer_to_other" t="Overfør til Andet"/>
+	<phrase n="lang_xfer_to_voicemail" t="Overfør til telefonsvarer"/>
+	<phrase n="lang_cfw_to_contact" t="Videresend til kontakt"/>
+	<phrase n="lang_cfw_to_contact_typeSio" t="Videresend til kontakt"/>
+	<phrase n="lang_cfw_to_voicemail_typeSio" t="Videresend til telefonsvarer"/>
+	<phrase n="lang_cfw_to_work" t="Frem til arbejde"/>
+	<phrase n="lang_cfw_to_work_typeSio" t="Frem til arbejde"/>
+	<phrase n="lang_cfw_to_mobile" t="Frem til arbejde"/>
+	<phrase n="lang_cfw_to_mobile_typeSio" t="Frem til arbejde"/>
+	<phrase n="lang_cfw_to_home" t="Frem til hjem"/>
+	<phrase n="lang_cfw_to_home_typeSio" t="Frem til hjem"/>
+	<phrase n="lang_cfw_to_other" t="Frem til andre"/>
+	<phrase n="lang_cfw_to_other_typeSio" t="Frem til andre"/>
+	<phrase n="lang_cfw_to_voicemail" t="Frem til voicemail"/>
+	<phrase n="lang_assign_to_key" t="Tildel til nøgle"/>
+	<phrase n="lang_contact_state_unknown" t="Ukendt"/>
+	<phrase n="lang_contact_state_available" t="Ledig"/>
+	<phrase n="lang_contact_state_available_on_mobile" t="Tilgængelig (mobil)"/>
+	<phrase n="lang_contact_state_available_at_desk" t="Tilgængelig (skrivebord)"/>
+	<phrase n="lang_contact_state_inactive" t="Inaktiv"/>
+	<phrase n="lang_contact_state_busy" t="Travl"/>
+	<phrase n="lang_contact_state_urgent_interruptions_only" t="Kun akutte afbrydelser"/>
+	<phrase n="lang_contact_state_in_a_call" t="I et opkald"/>
+	<phrase n="lang_contact_state_in_a_meeting" t="I et møde"/>
+	<phrase n="lang_contact_state_meeting" t="Møde"/>
+	<phrase n="lang_contact_state_holding" t="Holder"/>
+	<phrase n="lang_contact_state_dnd" t="Forstyr ikke"/>
+	<phrase n="lang_contact_state_dnd_all" t="Forstyr ikke (alle)"/>
+	<phrase n="lang_contact_state_dnd_self" t="Forstyr ikke (selv)"/>
+	<phrase n="lang_contact_state_be_right_back" t="Er straks tilbage"/>
+	<phrase n="lang_contact_state_away" t="Væk"/>
+	<phrase n="lang_contact_state_offline" t="Offline"/>
+	<phrase n="lang_contact_state_reset" t="Nulstil status"/>
+	<phrase n="lang_remote_book_name_ldap" t="LDAP Telefon bog"/>
+	<phrase n="lang_remote_book_choose_title" t="Vælg adressebog"/>
+	<phrase n="lang_title_add_to_favorites" t="Tilføj til favoritter"/>
+	<phrase n="lang_title_add_to_favorites_typeSio" t="Tilføj til favoritter"/>
+	<phrase n="lang_title_favorites" t="Favoritter"/>
+	<phrase n="lang_unknown_partner" t="Ukendt"/>
+	<phrase n="lang_nrtype_sip" t="SIP"/>
+	<phrase n="lang_nrtype_business" t="Virksomhed"/>
+	<phrase n="lang_nrtype_fixed" t="Fastnet"/>
+	<phrase n="lang_nrtype_extension" t="Udvidelse"/>
+	<phrase n="lang_tb_number_type" t="Type nummer"/>
+	<phrase n="lang_tb_number_type_label" t="Type"/>
+	<phrase n="lang_title_no_permission" t="Ingen tilladelse"/>
+	<phrase n="lang_target_office" t="Kontor"/>
+	<phrase n="lang_target_replyto" t="Svar til"/>
+	<phrase n="lang_target_unqualified" t="Ukvalificeret"/>
+	<phrase n="lang_target_work" t="Arbejde"/>
+	<phrase n="lang_target_work_typeSio" t="Arbejde"/>
+	<phrase n="lang_target_mobile" t="Mobil"/>
+	<phrase n="lang_target_home" t="Hjem"/>
+	<phrase n="lang_target_home_typeSio" t="Hjem"/>
+	<phrase n="lang_target_other" t="Andre"/>
+	<phrase n="lang_target_voicemail" t="Voice Mail"/>
+	<phrase n="lang_target_new_number" t="Nyt nummer"/>
+	<phrase n="lang_target_contact" t="Kontakt"/>
+	<phrase n="lang_directory_too_big_to_import__long" t="Remote Directory er for stor"/>
+	<phrase n="lang_target_cancel" t="Viderestil ikke opkald"/>
+	<phrase n="lang_target_cancel_typeSio" t="Viderestil ikke opkald"/>
+	<phrase n="lang_target_forward" t="Viderestil opkald til"/>
+	<phrase n="lang_target_forward_typeSio" t="Viderestil opkald til"/>
+	<phrase n="lang_tls_unknown_certificate_alert" t="En sikker forbindelse er blevet afvist, som tilbød et ukendt certifikat. Du kan udtrykkeligt give tilladelse til at stole på denne forbindelse via webgrænsefladen i sektionen Certifikater."/>
+	<phrase n="lang_tls_unknown_certificate_alert_title" t="Sikker forbindelse mislykkedes"/>
+	<phrase n="lang_tls_properties_changed" t="Genstart venligst. Ændrede sikkerhedsegenskaber kan ikke anvendes på igangværende sessioner."/>
+	<phrase n="lang_call_completed_by_part1" t="Opkald afsluttet pr"/>
+	<phrase n="lang_call_completed_by_part2" t="på en anden terminal."/>
+	<phrase n="lang_call_completed_by_part2_typeSio" t="på en anden terminal."/>
+	<phrase n="lang_challenge_sip_pw" t="Kodeord"/>
+	<phrase n="lang_line_ocs_wz_user" t="Domæne\Bruger"/>
+	<phrase n="lang_line_ocs_wz_pwd" t="Kodeord"/>
+	<phrase n="lang_unregistered_ids_title" t="Ikke registreret:"/>
+	<phrase n="lang_message_label" t="Info"/>
+	<phrase n="lang_status_messages" t="Status info"/>
+	<phrase n="lang_information_settings" t="Information"/>
+	<phrase n="lang_user_realname" t="Vist navn"/>
+	<phrase n="lang_user_idle_number" t="Vis nummer"/>
+	<phrase n="lang_user_name" t="Profil"/>
+	<phrase n="lang_user_pass" t="Kode"/>
+	<phrase n="lang_user_host" t="Registrator"/>
+	<phrase n="lang_user_outbound" t="Udgående Proxy"/>
+	<phrase n="lang_user_pname" t="Autentificering brugernavn"/>
+	<phrase n="lang_user_mailbox" t="Postkasse"/>
+	<phrase n="lang_user_mailbox_retrieve" t="Mailbox Dial-in"/>
+	<phrase n="lang_hotdesking" t="Hotdesking"/>
+	<phrase n="lang_keyb_enter_current_pin" t="Indtast den aktuelle PIN-kode"/>
+	<phrase n="lang_keyb_enter_new_pin" t="Indtast ny pinkode"/>
+	<phrase n="lang_keyb_reenter_new_pin" t="Indtast den nye PIN-kode igen"/>
+	<phrase n="lang_keyb_enter_password" t="Indtast adgangskoden for at nulstille PIN-koden"/>
+	<phrase n="lang_keyb_locked" t="Tryk og hold * nede for at låse op."/>
+	<phrase n="lang_keyb_permanently_locked" t="Tryk på og hold * nede for at nulstille PIN-koden."/>
+	<phrase n="lang_title_unlock" t="Tastatur låst"/>
+	<phrase n="lang_confirm_unlock" t="Låse op? Tryk på OK."/>
+	<phrase n="lang_transfer_failed_msg" t="Overførslen mislykkedes"/>
+	<phrase n="lang_action_failed_msg" t="Handlingen mislykkedes"/>
+	<phrase n="lang_vpn_fetch" t="Henter VPN-tarball fra:"/>
+	<phrase n="lang_vpn_fetch_failed" t="Det lykkedes ikke at hente VPN-tarball"/>
+	<phrase n="lang_vpn_flash" t="Udpakker VPN-filer..."/>
+	<phrase n="lang_vpn_reboot" t="Genstarter systemet for at aktivere VPN..."/>
+	<phrase n="lang_l2tp_fetch" t="Henter L2TP tarball fra:"/>
+	<phrase n="lang_l2tp_fetch_failed" t="Hentning af L2TP-tarball mislykkedes"/>
+	<phrase n="lang_l2tp_flash" t="Udpakker L2TP-filer..."/>
+	<phrase n="lang_l2tp_reboot" t="Genstarter systemet for at aktivere L2TP..."/>
+	<phrase n="lang_sbc_fetch" t="Henter sbc-konfigurationsfil fra:"/>
+	<phrase n="lang_sbc_fetch_failed" t="Hentning af sbc-konfigurationsfil mislykkedes"/>
+	<phrase n="lang_sbc_flash" t="Kopiér sbc-konfigurationsfil..."/>
+	<phrase n="lang_sbc_reboot" t="Genstarter systemet for at aktivere sbc..."/>
+	<phrase n="lang_sbc_active" t="SBC er aktiv"/>
+	<phrase n="lang_keyb_min_digits" t="(min. # cifre)"/>
+	<phrase n="lang_empty_dir_search_list" t="Indtast navn! Brug * for plads."/>
+	<phrase n="lang_key_unassigned" t="Nøglen er ikke tildelt"/>
+	<phrase n="lang_key_unassigned_typeSio" t="Nøglen er ikke tildelt"/>
+	<phrase n="lang_label_conference_partner" t="Parti"/>
+	<phrase n="lang_incoming_call_title_while_connected" t="Opkald venter"/>
+	<phrase n="lang_active" t="Aktiv"/>
+	<phrase n="lang_emergency_call" t="nødopkald"/>
+	<phrase n="lang_ntp_pending" t="Kontakter NTP-serveren"/>
+	<phrase n="lang_ntp_unreachable" t="NTP-serveren er ikke tilgængelig"/>
+	<phrase n="lang_download_server_unreachable" t="Serveren er ikke tilgængelig"/>
+	<phrase n="lang_network_busy" t="Netværk optaget"/>
+	<phrase n="lang_pstn_reroute_attempt" t="Dette opkald kan tage længere tid at gennemføre. Netværket kan være optaget."/>
+	<phrase n="lang_menu_location" t="Lokation"/>
+	<phrase n="lang_linestate_holding_upper_case" t="Holder"/>
+	<phrase n="lang_linestate_on_hold_upper_case" t="I venteposition"/>
+	<phrase n="lang_location_retrieval_failed" t="Placeringen kunne ikke hentes"/>
+	<phrase n="lang_route_private_line" t="Privat linje"/>
+	<phrase n="lang_route_forwarded" t="Videresendt"/>
+	<phrase n="lang_route_forwarded_typeSio" t="Videresendt"/>
+	<phrase n="lang_route_delegated" t="Delegeret"/>
+	<phrase n="lang_route_team_call" t="Team Call"/>
+	<phrase n="lang_route_acd" t="Gruppe kald"/>
+	<phrase n="lang_route_cccp_conference" t="Konferenceopkald"/>
+	<phrase n="lang_route_cccp_conference_typeSio" t="Konferenceopkald"/>
+	<phrase n="lang_dfks_failed" t="Synkronisering af funktioner mislykkedes"/>
+	<phrase n="lang_no_shared_key" t="Ingen delt linjenøgle tilgængelig"/>
+	<phrase n="lang_shared_seize_active" t="Linjebeslag er stadig aktiv"/>
+	<phrase n="lang_not_a_shared_key" t="Den valgte tast er ikke en delt linjetast"/>
+	<phrase n="lang_active_key_not_a_shared_key" t='Delt linjetast fungerer ikke med "aktiv" konteksttildeling.'/>
+	<phrase n="lang_ipv4_conflict" t="IPv4: konflikt"/>
+	<phrase n="lang_contact_saved" t="Kontakten er gemt"/>
+	<phrase n="lang_query_pending" t="Søger..."/>
+	<phrase n="lang_no_conference" t="På grund af CPU-belastning er en %Aconference ikke tilladt"/>
+	<phrase n="lang_no_conference_with_codec" t="På grund af CPU-belastning er en %Aconference ikke tilladt, hvis en part bruger codec %B"/>
+	<phrase n="lang_no_conference_with_encrypted_codec" t="På grund af CPU-belastning er en %Aconference ikke tilladt, hvis en part bruger codec %B med kryptering"/>
+	<phrase n="lang_no_conference_without_unencrypted_codec" t="På grund af CPU-belastning er en %Aconference ikke tilladt, hvis den ene part ikke bruger codec %B uden kryptering"/>
+	<phrase n="lang_setup_language" t="Opsætningssprog"/>
+	<phrase n="lang_please_wait" t="Vent venligst..."/>
+	<phrase n="lang_download_failed" t="Download fejlede"/>
+	<phrase n="lang_function_blocked" t="Blokeret"/>
+	<phrase n="lang_activating_uploads" t="Aktivering af uploads"/>
+	<phrase n="lang_provisioning" t="Forsyning"/>
+	<phrase n="lang_provisioning_failed" t="Klargøring mislykkedes"/>
+	<phrase n="lang_tr69_provisioning" t="TR-069 Prov. i gang"/>
+	<phrase n="lang_start_provisioning" t="Forsyning i gang"/>
+	<phrase n="lang_waitTime" t="Ventetid"/>
+	<phrase n="lang_ccUserId" t="bruger ID"/>
+	<phrase n="lang_callCenterName" t="Navn"/>
+	<phrase n="lang_numCallsInQueue" t="Opkald i kø"/>
+	<phrase n="lang_acd_ready" t="Ledig"/>
+	<phrase n="lang_acd_not_ready" t="Ikke tilgængelig"/>
+	<phrase n="lang_acd_working_after_call" t="Afslutning"/>
+	<phrase n="lang_acd_log_on" t="Log ind"/>
+	<phrase n="lang_acd_log_off" t="Log ud"/>
+	<phrase n="lang_acd_unkown_state" t="Ukendt stat"/>
+	<phrase n="lang_change_state_to" t="Skift tilstand"/>
+	<phrase n="lang_call_parked" t="Opkald parkeret"/>
+	<phrase n="lang_call_unparked" t="Opkald uparkeret"/>
+	<phrase n="lang_firmware_update_failed" t="SW-opdatering mislykkedes"/>
+	<phrase n="lang_firmware_update_restart" t="Genstarte SW-opdatering?"/>
+	<phrase n="lang_temp_unavail" t="midlertidigt utilgængelig"/>
+	<phrase n="lang_limited_func" t="Begrænset funktionalitet på grund af udfald"/>
+	<phrase n="lang_limited_func_exp" t="Et netværksproblem begrænser midlertidigt funktioner som Presence eller CF"/>
+	<phrase n="lang_limited_func_exp_typeSio" t="Et netværksproblem begrænser midlertidigt funktioner som Presence eller CF"/>
+	<phrase n="lang_call_park_failed" t="Parkering mislykkedes"/>
+	<phrase n="lang_park_failed_reason" t="Ingen bane tilgængelig"/>
+	<phrase n="lang_list_parked" t="Parkeret"/>
+	<phrase n="lang_vision" t="Vision"/>
+	<phrase n="lang_unpair_vision" t="Ophæv parring af Vision"/>
+	<phrase n="lang_scan_for_visions" t="Scanning for visioner"/>
+	<phrase n="lang_paired_with_vision" t="Parret med Vision:"/>
+	<phrase n="lang_vision_connection_lost" t="Vision forbindelse mistet"/>
+	<phrase n="lang_unpair_vision_question" t="Vil du ophæve parringen af Vision?"/>
+	<phrase n="lang_isconnected" t="tilsluttet"/>
+	<phrase n="lang_isdisconnected" t="afbrudt"/>
+	<phrase n="lang_isdisconnected_typeSio" t="afbrudt"/>
+	<phrase n="lang_hotdesking_ntlm" t="Kontooplysninger"/>
+	<phrase n="lang_hotdesking_pin" t="PIN"/>
+	<phrase n="lang_prompt_phone_num" t="Din udvidelse"/>
+	<phrase n="lang_prompt_pin" t="Din pinkode"/>
+	<phrase n="lang_pin_signin_active" t="logger ind..."/>
+	<phrase n="lang_pin_signin_failure" t="Det er ikke muligt at logge ind med telefonnummer og pinkode"/>
+	<phrase n="lang_firmware_update_in" t="SW-Opdatering i"/>
+	<phrase n="lang_firmware_update_available" t="SW-opdatering tilgængelig"/>
+	<phrase n="lang_call_for" t="Ring for"/>
+	<phrase n="lang_linetype_bossadmin" t="Boss/admin"/>
+	<phrase n="lang_linetype_bossadmin_short" t="B/A"/>
+	<phrase n="lang_success_msg_transferred_to" t="%A overført til %B"/>
+	<phrase n="lang_pickup_call" t="Besvar opkald"/>
+	<phrase n="lang_call_on_behalf_of" t="Ring på vegne af"/>
+	<phrase n="lang_boss_group" t="Personer, jeg administrerer opkald til"/>
+	<phrase n="lang_delegate_group" t="Delegerede"/>
+	<phrase n="lang_all_delegates" t="Tildel alle delegerede til en nøgle"/>
+	<phrase n="lang_call_failed_network_issue" t="Opkaldet mislykkedes på grund af netværksproblemer"/>
+	<phrase n="lang_call_failed_network_issue_typeSio" t="Opkaldet mislykkedes på grund af netværksproblemer"/>
+	<phrase n="lang_ethernet_detection" t="Ethernet-detektering"/>
+	<phrase n="lang_firmware_update_not_available" t="Ingen SW-opdatering tilgængelig"/>
+	<phrase n="lang_check_sw_update" t="Tjek SW-Update"/>
+	<phrase n="lang_continuous_text_label" t="Etiket"/>
+	<phrase n="lang_short_text" t="Kort tekst"/>
+	<phrase n="lang_headline_admins" t="administratorer"/>
+	<phrase n="lang_always_delegate_forward" t="Deleger altid videre"/>
+	<phrase n="lang_always_deleg_sim" t="Ring altid samtidigt"/>
+	<phrase n="lang_always_deleg_forw" t="Altid fremad"/>
+	<phrase n="lang_always_deleg_forw_typeSio" t="Altid fremad"/>
+	<phrase n="lang_tb_action_url" t="handling url"/>
+	<phrase n="lang_clear_call_history" t="Ryd opkaldshistorik"/>
+	<phrase n="lang_headset_volume_only" t="Det er kun muligt at ændre USB-headsettets lydstyrke på selve headsettet."/>
+	<phrase n="lang_hold_error" t="Hold mislykkedes, opkaldet er blevet slået fra. Tryk på hold igen for at prøve igen."/>
+	<phrase n="lang_retr_by" t="Ved"/>
+	<phrase n="lang_ipv4" t="IPv4"/>
+	<phrase n="lang_ipv6" t="IPv6"/>
+	<phrase n="lang_ipv6_autoconf" t="SLAAC"/>
+	<phrase n="lang_refresh" t="Opdater"/>
+	<phrase n="lang_may_take_some_time" t="Opdateringen kan tage noget tid. Fortsæt alligevel?"/>
+	<phrase n="lang_ip_address_not_available" t="Ikke tilgængelig"/>
+	<phrase n="lang_menu_unlock" t="Lås op"/>
+	<phrase n="lang_menu_security" t="Sikkerhed"/>
+	<phrase n="lang_route_team_call_for" t="Team Call for"/>
+	<phrase n="lang_route_acd_for" t="Gruppeopkald til"/>
+	<phrase n="lang_route_anonymous_acd" t="Anonymt gruppeopkald"/>
+	<phrase n="lang_route_anonymous_acd_for" t="Anonym gruppeopkald til"/>
+	<phrase n="lang_anonymous" t="Anonym"/>
+	<phrase n="lang_wish_barge_in" t="Ønsker du at pramme ind?"/>
+	<phrase n="lang_location" t="Lokation:"/>
+	<phrase n="lang_subject" t="Emne"/>
+	<phrase n="lang_dates" t="Aftaler"/>
+	<phrase n="lang_menu_dates_today" t="Dagens aftaler"/>
+	<phrase n="lang_label_conference_organizer" t="Arrangør:"/>
+	<phrase n="lang_date_ongoing" t="NU:"/>
+	<phrase n="lang_date_remind_me_later" t="Mind mig om det senere"/>
+	<phrase n="lang_date_remind_later" t="Senere"/>
+	<phrase n="lang_date_set_reminder_to" t="Til"/>
+	<phrase n="lang_minutes" t="Minutter"/>
+	<phrase n="lang_date_reset_reminder" t="Nulstil påmindelse"/>
+	<phrase n="lang_cannot_access_exchange" t="Kan ikke få adgang til Exchange Server."/>
+	<phrase n="lang_no_dates_today" t="Intet planlagt i dag"/>
+	<phrase n="lang_participants" t="Deltagere:"/>
+	<phrase n="lang_expansion_modules" t="Udvidelsesmoduler"/>
+	<phrase n="lang_wiz_vlan" t="Bruger du VLAN?"/>
+	<phrase n="lang_wiz_ip4" t="Vil du opsætte IPv4?"/>
+	<phrase n="lang_wiz_ip6" t="Konfigurer IPv6"/>
+	<phrase n="lang_sxm_connected" t="Seriel udvidelsesmodul tilsluttet"/>
+	<phrase n="lang_uxm_connected" t="USB-udvidelsesmodul tilsluttet"/>
+	<phrase n="lang_uxm_cabeling_broken" t="Forkert udvidelsesmodulkabling"/>
+	<phrase n="lang_uxm_limit_exceeded" t="For mange USB-udvidelsesmoduler tilsluttet"/>
+	<phrase n="lang_vpn_active" t="VPN er aktiv"/>
+	<phrase n="lang_wlan_active" t="Wlan er aktiv"/>
+	<phrase n="lang_list_no_devices" t="(Ingen tilgængelige enheder)"/>
+	<phrase n="lang_bluetooth" t="Bluetooth"/>
+	<phrase n="lang_bluetooth_connected_title" t="Tilsluttet enhed"/>
+	<phrase n="lang_bluetooth_paired_list_title" t="Liste over parrede enheder"/>
+	<phrase n="lang_bluetooth_active_connection" t="Bluetooth-forbindelse aktiv"/>
+	<phrase n="lang_bluetooth_discovered_list_title" t="Liste over opdagede enheder"/>
+	<phrase n="lang_bluetooth_discovering" t="Opdagende"/>
+	<phrase n="lang_bluetooth_unpairing" t="Ophævelse af parring"/>
+	<phrase n="lang_bluetooth_pairing" t="Parring"/>
+	<phrase n="lang_bluetooth_connecting" t="Tilslutning"/>
+	<phrase n="lang_bluetooth_disconnecting" t="Afbryder forbindelsen"/>
+	<phrase n="lang_callback_on_busy" t="Tilbagekald ved optaget"/>
+	<phrase n="lang_auto_busy_redial" t="Auto optaget genopkald"/>
+	<phrase n="lang_decision_cob" t="er i øjeblikket optaget. Tryk på 'Bekræft' for at få besked, når den er tilgængelig. Tryk på 'X' for at lægge en besked."/>
+	<phrase n="lang_decision_cob_withoutvm" t="er i øjeblikket optaget. Tryk på 'Bekræft' for at få besked, når den er tilgængelig."/>
+	<phrase n="lang_callback" t="Ring tilbage"/>
+	<phrase n="lang_callback_available" t="Tilbagekald tilgængelig"/>
+	<phrase n="lang_linetype_callback" t="Ring tilbage"/>
+	<phrase n="lang_linetype_callback_short" t="CoB"/>
+	<phrase n="lang_ringback_callpark_service" t="Sendt igennem af Call Park Service"/>
+	<phrase n="lang_callpark_service" t="Ring til Park Service"/>
+	<phrase n="lang_storage_mounted" t="USB-disk tilsluttet"/>
+	<phrase n="lang_storage_mounted_typeSio" t="USB-disk tilsluttet"/>
+	<phrase n="lang_storage_tomany" t="Du kan kun tilslutte én USB-disk"/>
+	<phrase n="lang_storage_umount" t="Afmonter USB-disk"/>
+	<phrase n="lang_no_participants_detected" t="ingen deltagere fundet"/>
+	<phrase n="lang_ieee8021_method" t="Mode"/>
+	<phrase n="lang_menu_fkey_functions" t="Funktion"/>
+	<phrase n="lang_uxm_appearance" t="Udseende"/>
+	<phrase n="lang_put_through_by" t="Sæt igennem af"/>
+	<phrase n="lang_contact_not_in_list" t="ikke fundet i kontaktlisten"/>
+	<phrase n="lang_msg_speaker_active" t="Håndfri aktiveret"/>
+	<phrase n="lang_msg_headset_active" t="Headset-tilstand er aktiveret"/>
+	<phrase n="lang_msg_handset_active" t="Håndsættilstand er aktiveret"/>
+	<phrase n="lang_msg_ringing_disabled" t="Ringning deaktiveret"/>
+	<phrase n="lang_msg_mute_active" t="Telefonen er slået fra"/>
+	<phrase n="lang_wiz_aborted" t="Wizard afbrudt."/>
+	<phrase n="lang_menu_set_kbd_lock_pin" t="Skift pinkode til tastaturlås"/>
+	<phrase n="lang_menu_change_kbd_lock_pin" t="Skift pinkode til tastaturlås"/>
+	<phrase n="lang_no_valid_dsearch_config" t="Ingen gyldig mappesøgningskonfiguration"/>
+	<phrase n="lang_title_conferences" t="Konferencer"/>
+	<phrase n="lang_no_conferences_found" t="ingen konferencer fundet"/>
+	<phrase n="lang_conference_type" t="Type"/>
+	<phrase n="lang_conference_status" t="Status"/>
+	<phrase n="lang_join_conference_long" t="deltage i konferencen"/>
+	<phrase n="lang_join_conference_as_moderator" t="Deltag som moderator"/>
+	<phrase n="lang_choose_menu" t="Vælg en menu"/>
+	<phrase n="lang_menu_shortcut" t="Menu genvej"/>
+	<phrase n="lang_using_time" t="bruge tid"/>
+	<phrase n="lang_waiting_for_pnp" t="Venter på PnP"/>
+	<phrase n="lang_fkey_contact_list_buddy" t="BLF (server)"/>
+	<phrase n="lang_fkey_xmpp_presence" t="Kontakttilstedeværelse (XMPP)"/>
+	<phrase n="lang_csta_prompt_title" t="Ring nu?"/>
+	<phrase n="lang_contact_is_favorite" t="Er denne kontakt en af dine favoritter?"/>
+	<phrase n="lang_currently_set_to" t="I øjeblikket indstillet til:"/>
+	<phrase n="lang_vol_label_contrast" t="Sekundær skærmkontrast"/>
+	<phrase n="lang_menu_fkeys_phone" t="Linjetaster"/>
+	<phrase n="lang_menu_dkeys_phone" t="Dedikerede nøgler"/>
+	<phrase n="lang_menu_context_sensitive_keys_phone" t="Kontekstfølsomme taster"/>
+	<phrase n="lang_menu_smartlabel_fkeys" t="SmartLabel taster"/>
+	<phrase n="lang_menu_smartlabel_page" t="Side"/>
+	<phrase n="lang_menu_fkeys_page" t="Linjetastside"/>
+	<phrase n="lang_menu_fkeys_sxm" t="Taster på SXM"/>
+	<phrase n="lang_menu_fkeys_uxm" t="Udvidelsestaster"/>
+	<phrase n="lang_server_directory_search" t="Serverkatalogsøgning"/>
+	<phrase n="lang_menu_fontsize" t="Skriftstørrelse"/>
+	<phrase n="lang_uxm_fontsize_lines" t="Skriftstørrelse (Linjelayout)"/>
+	<phrase n="lang_uxm_fontsize_tiles" t="Skriftstørrelse (fliselayout)"/>
+	<phrase n="lang_menu_text_alignment" t="Tekstjustering"/>
+	<phrase n="lang_left" t="Venstre"/>
+	<phrase n="lang_right" t="Højre"/>
+	<phrase n="lang_center" t="Center"/>
+	<phrase n="lang_alternate" t="Skifte"/>
+	<phrase n="lang_menu_return_to_first_page" t="Vend tilbage til første side"/>
+	<phrase n="lang_automatic_return" t="Automatisk retur"/>
+	<phrase n="lang_warning" t="Advarsel"/>
+	<phrase n="lang_public_address" t="Offentlig adresse"/>
+	<phrase n="lang_menu_volume" t="Lydstyrke   "/>
+	<phrase n="lang_vol_ringer_text" t="Ringestyrke"/>
+	<phrase n="lang_vol_headset_text" t="Lydstyrke for headset"/>
+	<phrase n="lang_vol_handset_text" t="Håndsæts lydstyrke"/>
+	<phrase n="lang_vol_speaker_text" t="Højttalervolumen"/>
+	<phrase n="lang_list_rejected" t="Afvist"/>
+	<phrase n="lang_enum_disp_func_key_conference" t="Konference"/>
+	<phrase n="lang_enum_disp_func_key_ivr" t="IVR"/>
+	<phrase n="lang_enum_disp_func_key_callback_on_busy" t="Ring tilbage"/>
+	<phrase n="lang_fkeys_ssi_context" t="Sammenhæng"/>
+	<phrase n="lang_fkeys_ssi_type" t="Type"/>
+	<phrase n="lang_fkeys_ssi_active" t="Aktiv"/>
+	<phrase n="lang_fkeys_ssi_icon" t="Ikon"/>
+	<phrase n="lang_default_icon" t="Standard ikon"/>
+	<phrase n="lang_custom_icon" t="Brugerdefineret ikon"/>
+	<phrase n="lang_FirstName" t="Fornavn"/>
+	<phrase n="lang_LastName" t="Efternavn"/>
+	<phrase n="lang_Home" t="Hjem nummer"/>
+	<phrase n="lang_Office" t="Kontornummer"/>
+	<phrase n="lang_Mobile" t="Mobilnummer"/>
+	<phrase n="lang_Unqualified" t="Ukvalificeret nummer"/>
+	<phrase n="lang_edit_contact" t="Rediger kontakt"/>
+	<phrase n="lang_msw_query" t="Sending af kontaktdata til server mislykkedes:"/>
+	<phrase n="lang_indicator" t="Indikator"/>
+	<phrase n="lang_protocol" t="Protokol"/>
+	<phrase n="lang_target_forward_busy" t="Viderestil opkald, når optaget er til"/>
+	<phrase n="lang_target_forward_timeout" t="Viderestil opkald efter"/>
+	<phrase n="lang_target_forward_timeout_typeSio" t="Viderestil opkald efter"/>
+	<phrase n="lang_WIFI_SSID" t="Netværksnavn"/>
+	<phrase n="lang_WIFI_auth_mode" t="Kryptering"/>
+	<phrase n="lang_WIFI_WPA_Encryption" t="WPA Kryptering"/>
+	<phrase n="lang_WIFI_WPA" t="WPA"/>
+	<phrase n="lang_WIFI_WPA2PSK" t="WPA2"/>
+	<phrase n="lang_WIFI_WEP" t="WEP"/>
+	<phrase n="lang_WIFI_OPEN" t="Åben"/>
+	<phrase n="lang_WIFI_AES" t="AES"/>
+	<phrase n="lang_WIFI_TKIP" t="TKIP"/>
+	<phrase n="lang_WIFI_SCAN_NETWORKS" t="Scan WLAN"/>
+	<phrase n="lang_WIFI_MANUAL_SETUP" t="Manuel opsætning"/>
+	<phrase n="lang_contact_details" t="Kontaktoplysninger"/>
+	<phrase n="lang_WIFI_CONNECTED_TO" t="Forbundet til"/>
+	<phrase n="lang_WIFI_NOT_CONNECTED" t="Ikke forbundet"/>
+	<phrase n="lang_unhold" t="Hent"/>
+	<phrase n="lang_empty" t="tom"/>
+	<phrase n="lang_F_SNOM" t="snom/Cloud"/>
+	<phrase n="lang_prefs_ssi_date_us_format" t="Datoformat"/>
+	<phrase n="lang_prefs_ssi_time_24_format" t="24 timers ur"/>
+	<phrase n="lang_time_symbol_second" t="s"/>
+	<phrase n="lang_all_accounts" t="Alle identiteter"/>
+	<phrase n="lang_reboot_to_apply_new_settings" t="Genstart nu, så nye indstillinger kan træde i kraft?"/>
+	<phrase n="lang_TLS" t="TLS"/>
+	<phrase n="lang_MD5" t="MD5"/>
+	<phrase n="lang_WIFI_SWITCH_OFF_WLAN" t="Sluk for WLAN"/>
+	<phrase n="lang_ErrorNotSupportedByManager" t="Ikke understøttet"/>
+	<phrase n="lang_ErrorContactNotFound" t="Kontakt ikke fundet"/>
+	<phrase n="lang_ErrorInvalidCredentials" t="Ugyldige legitimationsoplysninger"/>
+	<phrase n="lang_ErrorInvalidArgument" t="Ugyldigt argument"/>
+	<phrase n="lang_ErrorRequestPending" t="Anmodning afventer"/>
+	<phrase n="lang_ErrorNotInitialized" t="Ikke initialiseret"/>
+	<phrase n="lang_ErrorInComplete" t="Ufuldstændig"/>
+	<phrase n="lang_ErrorOutOfMemory" t="Ikke mere hukommelse"/>
+	<phrase n="lang_Contact_pool" t="Kontakt Pool"/>
+	<phrase n="lang_advanced_autoneg" t="Autoforhandling"/>
+	<phrase n="lang_advanced_10full" t="10 Mbit fuld dupleks"/>
+	<phrase n="lang_advanced_10half" t="10 Mbit Halv Duplex"/>
+	<phrase n="lang_advanced_100full" t="100 Mbit fuld dupleks"/>
+	<phrase n="lang_advanced_100half" t="100 Mbit Halv Duplex"/>
+	<phrase n="lang_advanced_1000full" t="1000 Mbit fuld dupleks"/>
+	<phrase n="lang_Hardware" t="Hardware"/>
+	<phrase n="lang_NET_port_speed" t="Netto porthastighed/dupleks"/>
+	<phrase n="lang_PC_port_speed" t="Netto porthastighed/dupleks"/>
+	<phrase n="lang_Action_on_eth_replug" t="Handling på Ethernet-kabeltilslutning"/>
+	<phrase n="lang_advanced_donothing" t="Ignorere"/>
+	<phrase n="lang_line_reregister" t="Genregistrer dig"/>
+	<phrase n="lang_NTP" t="NTP"/>
+	<phrase n="lang_DNS" t="DNS"/>
+	<phrase n="lang_LLDP" t="LLDP"/>
+	<phrase n="lang_NTP_refresh_timer" t="NTP-opdateringstimer"/>
+	<phrase n="lang_8021x" t="802.1X"/>
+	<phrase n="lang_Expansion" t="Udvidelse"/>
+	<phrase n="lang_expansion_layout" t="Udvidelseslayout"/>
+	<phrase n="lang_Expansion_module" t="Udvidelsesmodul"/>
+	<phrase n="lang_Please_reboot" t="Genstart venligst!"/>
+	<phrase n="lang_All_settings_saved" t="Alle indstillinger gemt"/>
+	<phrase n="lang_WIFI_SCAN_RUNNING" t="Scanner..."/>
+	<phrase n="lang_WIFI_CONNECTING" t="Tilslutning..."/>
+	<phrase n="lang_wifi_connect_success_reboot_to_continue_msg1" t="Genstart for at fortsætte"/>
+	<phrase n="lang_wifi_connect_success_password_ok_msg2" t="Adgangskode OK"/>
+	<phrase n="lang_wifi_connect_fail_invalid_settings_msg1" t="Ugyldige indstillinger"/>
+	<phrase n="lang_wifi_connect_fail_please_retry_msg2" t="Prøv venligst igen"/>
+	<phrase n="lang_usb_wifi_unavailable" t="USB WiFi ikke tilgængelig"/>
+	<phrase n="lang_usb_wifi_connected" t="USB WiFi tilsluttet"/>
+	<phrase n="lang_usb_wifi_disconnected" t="USB WiFi afbrudt"/>
+	<phrase n="lang_is_a_favorite" t="er en favorit"/>
+	<phrase n="lang_Lines" t="Linje layout"/>
+	<phrase n="lang_Tiles" t="Fliselayout"/>
+	<phrase n="lang_tbook_emtpy" t="&lt;Tom&gt;"/>
+	<phrase n="lang_enter_starting_uppercase" t="Gå ind"/>
+	<phrase n="lang_characters_starting_lowercase" t="tegn"/>
+	<phrase n="lang_user_server_type" t="Understøttet servertype"/>
+	<phrase n="lang_broadsoft_features" t="Broadsoft funktioner"/>
+	<phrase n="lang_xsi_server" t="XSI server"/>
+	<phrase n="lang_xsi_user" t="XSI bruger"/>
+	<phrase n="lang_xsi_password" t="XSI Kode"/>
+	<phrase n="lang_xsi_retry_timer" t="XSI Forsøg timer"/>
+	<phrase n="lang_xsi_events" t="XSI begivenheder"/>
+	<phrase n="lang_xmpp_jid" t="XMPP ID"/>
+	<phrase n="lang_xmpp_password" t="XMPP adgangskode"/>
+	<phrase n="lang_no_headset_present" t="Intet headset til stede"/>
+	<phrase n="lang_headset_detection" t="Headset-genkendelse"/>
+	<phrase n="lang_msw_services" t="Metaswitch-tjenester"/>
+	<phrase n="lang_msw_directory_number" t="Metaswitch-katalognummer"/>
+	<phrase n="lang_msw_password" t="Metaswitch adgangskode"/>
+	<phrase n="lang_msw_web_url" t="Metaswitch Server URL"/>
+	<phrase n="lang_xsi_dir_enterprise" t="Enterprise Directory"/>
+	<phrase n="lang_xsi_dir_enterprise_common" t="Virksomhedens fælles telefonliste"/>
+	<phrase n="lang_xsi_dir_group" t="Gruppekatalog"/>
+	<phrase n="lang_xsi_dir_group_common" t="Gruppe fælles telefonliste"/>
+	<phrase n="lang_xsi_dir_personal" t="Personlig telefonliste"/>
+	<phrase n="lang_xsi_anywhere" t="Overalt"/>
+	<phrase n="lang_xsi_location_new_entry" t="&lt;Ny post&gt;"/>
+	<phrase n="lang_xsi_location_edit_description" t="Rediger lokationsbeskrivelse"/>
+	<phrase n="lang_xsi_location_description" t="Beskrivelse"/>
+	<phrase n="lang_xsi_location_edit_number" t="Rediger lokationsnummer"/>
+	<phrase n="lang_number_str" t="Nummer "/>
+	<phrase n="lang_xsi_location_status_creating" t="skabende"/>
+	<phrase n="lang_xsi_location_status_modifying" t="modificerende"/>
+	<phrase n="lang_xsi_location_status_deleting" t="sletter"/>
+	<phrase n="lang_xsi_location_error_empty_number" t="Telefonnummer må ikke være tomt"/>
+	<phrase n="lang_xsi_location_error_number_exists" t="Telefonnummeret findes allerede"/>
+	<phrase n="lang_xsi_location_error_empty_description" t="Beskrivelsen må ikke være tom"/>
+	<phrase n="lang_visual_voicemail" t="Visuel telefonsvarer"/>
+	<phrase n="lang_feature_works" t="Funktionen virker"/>
+	<phrase n="lang_voicemail_name" t="Navn"/>
+	<phrase n="lang_voicemail_call_number" t="Ring til nummer"/>
+	<phrase n="lang_voicemail_date_time" t="Dato og tid"/>
+	<phrase n="lang_voicemail_duration" t="Varighed"/>
+	<phrase n="lang_xsi_anywhere_clicktodial" t="Klik for at ringe op"/>
+	<phrase n="lang_xsi_anywhere_grouppaging" t="Gruppesøgning"/>
+	<phrase n="lang_xsi_anywhere_settings" t="Indstillinger"/>
+	<phrase n="lang_remote_office" t="Fjernkontor"/>
+	<phrase n="lang_xsi_anywhereportal" t="Hvor som helst portal"/>
+	<phrase n="lang_xsi_anywhereportal_number" t="Telefonnummer"/>
+	<phrase n="lang_menu_primary_display" t="Primær skærm"/>
+	<phrase n="lang_menu_secondary_display" t="Sekundær skærm"/>
+	<phrase n="lang_enable_remote_office" t="Aktiver Remote Office"/>
+	<phrase n="lang_call_center_list" t="Call Center Liste"/>
+	<phrase n="lang_call_center_status" t="Call Center Status"/>
+	<phrase n="lang_call_center_joined" t="Tiltrådte"/>
+	<phrase n="lang_call_center_unable_to_join" t="Kan ikke tilmelde dig Call Center"/>
+	<phrase n="lang_call_center_join_not_allowed" t="Ikke tilladt at være med"/>
+	<phrase n="lang_call_center_unjoin_not_allowed" t="Ikke tilladt at afmelde sig"/>
+	<phrase n="lang_call_center_joining" t="Deltager"/>
+	<phrase n="lang_call_recording_control" t="Kontrol af opkaldsoptagelse"/>
+	<phrase n="lang_pause_recording" t="Sæt optagelse på pause"/>
+	<phrase n="lang_resume_recording" t="Genoptag optagelse"/>
+	<phrase n="lang_xsi_simul_ring" t="Samtidig ringning"/>
+	<phrase n="lang_xsi_simul_ring_on_call" t="Ring ikke under et opkald"/>
+	<phrase n="lang_xsi_simul_ring_edit_phone_number" t="Telefonnummer"/>
+	<phrase n="lang_xsi_simul_ring_enter_phone_number" t="Indtast telefonnummer"/>
+	<phrase n="lang_xsi_simul_ring_edit" t="Redigere"/>
+	<phrase n="lang_xsi_simul_ring_number" t="Telefonnummer"/>
+	<phrase n="lang_xsi_simul_ring_add_entry" t="Tilføj en ny post"/>
+	<phrase n="lang_xsi_simul_ring_ans_confirm" t="Bekræftelse af svar"/>
+	<phrase n="lang_xsi_simul_ring_number_exists_error" t="Telefonnummeret findes allerede"/>
+	<phrase n="lang_xsi_simul_ring_number_empty_error" t="Telefonnummeret er tomt."/>
+	<phrase n="lang_xsi_executive" t="Executive"/>
+	<phrase n="lang_xsi_executive_assistant" t="Executive Assistant"/>
+	<phrase n="lang_xsi_call_filtering" t="Opkaldsfiltrering"/>
+	<phrase n="lang_xsi_call_filtering_enable" t="Opkaldsfiltrering"/>
+	<phrase n="lang_xsi_call_filtering_mode" t="Filtreringstilstand"/>
+	<phrase n="lang_xsi_call_filtering_type" t="Filtreringstype"/>
+	<phrase n="lang_xsi_call_filtering_simple" t="Enkel"/>
+	<phrase n="lang_xsi_call_filtering_advanced" t="Avanceret"/>
+	<phrase n="lang_xsi_call_filtering_all" t="Alle Opkald"/>
+	<phrase n="lang_xsi_call_filtering_internal" t="Alle interne opkald"/>
+	<phrase n="lang_xsi_call_filtering_external" t="Alle eksterne opkald"/>
+	<phrase n="lang_xsi_call_screening" t="Opkaldsscreening"/>
+	<phrase n="lang_xsi_call_screening_type" t="Advarselstype"/>
+	<phrase n="lang_xsi_call_screening_alert_mobile" t="Alarm Mobile Locations"/>
+	<phrase n="lang_xsi_call_screening_alert_anywhere" t="Alarm hvor som helst"/>
+	<phrase n="lang_xsi_call_screening_alert_sca" t="Alarm SCA-lokationer"/>
+	<phrase n="lang_xsi_call_screening_silent" t="Lydløs"/>
+	<phrase n="lang_xsi_call_screening_ringsplash" t="Ring Splash"/>
+	<phrase n="lang_xsi_executive_view_assistants" t="Se assistenter"/>
+	<phrase n="lang_xsi_executive_allow_optin" t="Tillad assistenter til- og fravalg"/>
+	<phrase n="lang_xsi_opt_in_out_to_executive" t="Opt-in/out Executive"/>
+	<phrase n="lang_xsi_opt_in_to_executive" t="Tilmeld"/>
+	<phrase n="lang_xsi_opt_out_to_executive" t="Frameld"/>
+	<phrase n="lang_xsi_assistant_call_divert" t="Aflede"/>
+	<phrase n="lang_xsi_assistant_call_divert_number" t="Omstillingsnummer"/>
+	<phrase n="lang_xsi_call_alerting" t="Opkaldsalarm"/>
+	<phrase n="lang_xsi_call_alerting_mode" t="Alarmtilstand"/>
+	<phrase n="lang_xsi_call_alerting_mode_simu" t="Samtidig"/>
+	<phrase n="lang_xsi_call_alerting_mode_seq" t="Sekventiel"/>
+	<phrase n="lang_xsi_call_alerting_id_name" t="Opkaldslinje-id-navn"/>
+	<phrase n="lang_xsi_call_alerting_id_exec_name" t="Executive navn"/>
+	<phrase n="lang_xsi_call_alerting_id_origin_name" t="Ophavsmands navn"/>
+	<phrase n="lang_xsi_call_alerting_id_exec_origin_name" t="Navne på ledere og ophavsmænd"/>
+	<phrase n="lang_xsi_call_alerting_id_origin_exec_name" t="Ophavsmand-Executive Navne"/>
+	<phrase n="lang_xsi_call_custom_name" t="Brugerdefinerede"/>
+	<phrase n="lang_xsi_call_alerting_custom_id_name" t="Brugerdefineret opkaldslinje-id-navn"/>
+	<phrase n="lang_xsi_call_alerting_id_number" t="Opkaldslinje ID-nummer"/>
+	<phrase n="lang_xsi_call_alerting_id_exec_number" t="Executive nummer"/>
+	<phrase n="lang_xsi_call_alerting_id_origin_number" t="Ophavsmandsnummer"/>
+	<phrase n="lang_xsi_call_alerting_custom_id_number" t="Custom Calling Line ID-nummer"/>
+	<phrase n="lang_xsi_call_alerting_recall_after" t="Ring Push Recall Efter"/>
+	<phrase n="lang_xsi_call_alerting_recall_after_range" t="Indtast antal opkald (2-20)"/>
+	<phrase n="lang_xsi_call_alerting_next_assistant" t="Avanceret til næste assistent efter"/>
+	<phrase n="lang_xsi_call_alerting_next_assistant_range" t="Indtast antal opkald (1-20)"/>
+	<phrase n="lang_xsi_call_alerting_rollover_after" t="Rollover efter ventetid"/>
+	<phrase n="lang_xsi_call_alerting_rollover_after_time" t="Rollover ventetid"/>
+	<phrase n="lang_xsi_call_alerting_rollover_after_time_range" t="Indtast tid i sekunder (0-60)"/>
+	<phrase n="lang_xsi_call_alerting_rollover_action" t="Rollover handling"/>
+	<phrase n="lang_xsi_call_alerting_rollover_action_vm" t="Voice Messaging"/>
+	<phrase n="lang_xsi_call_alerting_rollover_action_fwd" t="Frem"/>
+	<phrase n="lang_xsi_call_alerting_rollover_action_na" t="Behandling af intet svar"/>
+	<phrase n="lang_xsi_call_alerting_rollover_fwd_number" t="Rollover Forward-nummer"/>
+	<phrase n="lang_value_out_of_range" t="Værdi indtastet uden for området"/>
+	<phrase n="lang_xsi_callon_behalfof_select_executive" t="Vælg Executive"/>
+	<phrase n="lang_collaborate_room_details" t="Samarbejd værelsesdetaljer"/>
+	<phrase n="lang_collaborate_room_name" t="Værelsesnavn"/>
+	<phrase n="lang_collaborate_room_type" t="Værelsestype"/>
+	<phrase n="lang_collaborate_join_room" t="Deltag i værelset"/>
+	<phrase n="lang_unavailable_state" t="Indtast Unavail. Kode"/>
+	<phrase n="lang_enter_unavailable_code" t="Indtast Unavail. Kode"/>
+	<phrase n="lang_ringer_is_off" t="Ringesignal er slukket"/>
+	<phrase n="lang_uxm_update" t="Opdatering af udvidelsesmodul"/>
+	<phrase n="lang_uxm_update_infotext_progress" t="Opdatering i gang. Tag ikke telefonen eller udvidelsesmodulet ud under opdatering."/>
+	<phrase n="lang_uxm_update_infotext_prepare" t="Forbereder til opdatering. Tag ikke telefonen eller udvidelsen ud under opdatering."/>
+	<phrase n="lang_F_DELETE_MSG" t="Slet M"/>
+	<phrase n="lang_F_DELETE_MSG_typeSio" t="Slet Besked"/>
+	<phrase n="lang_F_DELETE_MSG_smartlabel" t="Slet Besked"/>
+	<phrase n="lang_F_DELETE_MSG_full" t="Slet Besked"/>
+	<phrase n="lang_F_NEXT_ID" t="ID↓"/>
+	<phrase n="lang_F_NEXT_ID_typeSio" t="Næste identitet"/>
+	<phrase n="lang_F_NEXT_ID_smartlabel" t="Næste ID"/>
+	<phrase n="lang_F_PREV_ID" t="ID↑"/>
+	<phrase n="lang_F_PREV_ID_typeSio" t="Tidligere identitet"/>
+	<phrase n="lang_F_PREV_ID_smartlabel" t="Tid ID"/>
+	<phrase n="lang_F_OCIP" t="OCI-P"/>
+	<phrase n="lang_F_SAB" t="S Dir"/>
+	<phrase n="lang_F_SAB_typeSio" t="Telefonbog"/>
+	<phrase n="lang_F_SAB_smartlabel" t="Telefonbog"/>
+	<phrase n="lang_F_ABS" t="ABS"/>
+	<phrase n="lang_F_ABS_typeSio" t="AB Søg"/>
+	<phrase n="lang_addressbook_menu" t="Vælg Adressebog"/>
+	<phrase n="lang_addressbook_menu_local" t="Lokal"/>
+	<phrase n="lang_multicast_zones_title" t="Multicast-zoner"/>
+	<phrase n="lang_no_multicast_zones" t="Ingen tilgængelige multicast-zoner"/>
+	<phrase n="lang_acd_state" t="ACD tilstand"/>
+	<phrase n="lang_please_sign_into_set_acd_state" t="Log venligst ind for at indstille ACD-tilstand"/>
+	<phrase n="lang_fkey_longpress_support" t="LP-funktion"/>
+	<phrase n="lang_important" t="Vigtig"/>
+	<phrase n="lang_SmartTransferEditDescription" t="Indtast SmartTransfer Target"/>
+	<phrase n="lang_SmartTransfer" t="SmartTransfer"/>
+	<phrase n="lang_SmartTransfer_ready" t="Softkey klar til at overføre opkald."/>
+	<phrase n="lang_department" t="Afdeling"/>
+	<phrase n="lang_extensions" t="Udvidelser"/>
+	<phrase n="lang_menu_title_text_options" t="Tekstindstillinger"/>
+	<phrase n="lang_F_ADD_LOCATION" t="Tilføj lokation"/>
+	<phrase n="lang_gk_mode_none" t="Ingen"/>
+	<phrase n="lang_demo_mode" t="Demo Mode"/>
+	<phrase n="lang_transfer_or" t="Overfør eller"/>
+	<phrase n="lang_call_pickup" t="Afhentning af opkald?"/>
+	<phrase n="lang_choose_an_action" t="Vælg en handling"/>
+	<phrase n="lang_Conference_Setup" t="Konferenceopsætning"/>
+	<phrase n="lang_Conference_First_Participant" t="Konferencedeltager en"/>
+	<phrase n="lang_Conference_Second_Participant" t="Konferencedeltager to"/>
+	<phrase n="lang_menu_smart_label" t="SmartLabel-indstillinger"/>
+	<phrase n="lang_menu_idle_screen" t="Inaktiv skærmadfærd"/>
+	<phrase n="lang_menu_call_screen" t="Opkaldsskærms adfærd"/>
+	<phrase n="lang_menu_other_screen" t="Andre skærmopførsel"/>
+	<phrase n="lang_menu_label_default_mode" t="Standard visningstilstand"/>
+	<phrase n="lang_menu_label_expanded_mode" t="Alternativ visningstilstand"/>
+	<phrase n="lang_menu_label_expansion_triggers" t="Alternativ Display Trigger"/>
+	<phrase n="lang_menu_short_label" t="Kort etiket"/>
+	<phrase n="lang_menu_full_label" t="Fuld etiket"/>
+	<phrase n="lang_menu_short_label_mode" t="Kort etikettilstand"/>
+	<phrase n="lang_menu_short_press" t="Kort tryk på sidetasten"/>
+	<phrase n="lang_menu_long_press" t="Langt tryk på sidetasten"/>
+	<phrase n="lang_menu_proximity_sensor" t="Nærhedssensor"/>
+	<phrase n="lang_menu_P2_short_press" t="Tryk kort på P2"/>
+	<phrase n="lang_menu_P2_long_press" t="Langt tryk på P2"/>
+	<phrase n="lang_menu_P3_short_press" t="Kort tryk P3"/>
+	<phrase n="lang_menu_P3_long_press" t="Langt tryk på P3"/>
+	<phrase n="lang_menu_P4_short_press" t="Kort tryk P4"/>
+	<phrase n="lang_menu_P4_long_press" t="Langt tryk på P4"/>
+	<phrase n="lang_menu_P8_short_press" t="Kort tryk P8"/>
+	<phrase n="lang_menu_P8_long_press" t="Langt tryk på P8"/>
+	<phrase n="lang_menu_P10_short_press" t="Tryk kort på P10"/>
+	<phrase n="lang_menu_P10_long_press" t="Langt tryk på P10"/>
+	<phrase n="lang_short_press" t="Kort tryk"/>
+	<phrase n="lang_fkey_press" t="Tryk på F-tasten"/>
+	<phrase n="lang_long_press" t="Langt tryk"/>
+	<phrase n="lang_short_label_mode_icon" t="Kun ikon"/>
+	<phrase n="lang_smartlabel_mode_text" t="Kun tekst"/>
+	<phrase n="lang_smartlabel_mode_icon_text" t="Ikon og tekst"/>
+	<phrase n="lang_status_msg_uxm_update_required" t=" trænger til opdatering"/>
+	<phrase n="lang_status_detail_uxm_update_required" t="Opdater udvidelsesmodulet til den nyeste version for at aktivere det."/>
+	<phrase n="lang_status_detail_uxm_update_required2" t="Sørg for, at der kun er én udvidelse tilsluttet telefonen, og at udvidelsen ikke er tilsluttet en separat strømforsyning."/>
+	<phrase n="lang_unhandled_item" t="Uhåndteret ting:"/>
+	<phrase n="lang_preferences_general" t="Generelt"/>
+	<phrase n="lang_quick_dial_contacts" t="Quick Dial-kontakter"/>
+	<phrase n="lang_start_tbook_download" t="Start biblioteksdownload?"/>
+	<phrase n="lang_tbook_download" t="Directory download"/>
+	<phrase n="lang_tbook_download_started" t="Directory-download startet for identitet"/>
+	<phrase n="lang_tbook_download_finished" t="Directory-download fuldført for identitet"/>
+	<phrase n="lang_tbook_download_failed" t="Directory-download mislykkedes for identitet"/>
+	<phrase n="lang_tbook_download_not_possible" t="Directory download ikke muligt på identitet"/>
+	<phrase n="lang_tbook_download_overflowed" t="Directory download ufuldstændig (intern grænse overskredet)."/>
+	<phrase n="lang_tbook_is_full" t="Adressebogen fuld"/>
+	<phrase n="lang_F_HOTELING" t="Hotel"/>
+	<phrase n="lang_F_HOTELING_typeSio" t="Hotelophold"/>
+	<phrase n="lang_F_HOTELING_smartlabel" t="Hotelophold"/>
+	<phrase n="lang_F_GUEST_LOGIN" t="Gæstelogin"/>
+	<phrase n="lang_F_GUEST_LOGOUT" t="Gæstelog ud"/>
+	<phrase n="lang_F_GUEST_LOGIN_smartlabel" t="Gæst ind"/>
+	<phrase n="lang_F_GUEST_LOGOUT_smartlabel" t="Gæst ud"/>
+	<phrase n="lang_F_LOGIN" t="Logind"/>
+	<phrase n="lang_F_LOGOUT" t="Log ud"/>
+	<phrase n="lang_smartlabel_id" t="ID"/>
+	<phrase n="lang_title_guest_logout" t="Gæstelog ud"/>
+	<phrase n="lang_confirm_guest_logout" t="Er du sikker på, at du vil logge ud?"/>
+	<phrase n="lang_no_contacts" t="Ingen kontakter"/>
+	<phrase n="lang_hoteling_guest" t="Hotelgæst"/>
+	<phrase n="lang_logging_out" t="Logger ud..."/>
+	<phrase n="lang_logging_in" t="Logger ind..."/>
+	<phrase n="lang_login_failed" t="Login mislykkedes"/>
+	<phrase n="lang_acd_signout_message" t="Du vil blive logget ud af ACD. Vil du fortsætte med gæstelogin?"/>
+	<phrase n="lang_title_guest_login" t="Gæstelogin"/>
+	<phrase n="lang_F_MARK_READ" t="Marker læst"/>
+	<phrase n="lang_F_MARK_UNREAD" t="Marker som ulæst"/>
+	<phrase n="lang_call_recording_mode_never" t="Aldrig"/>
+	<phrase n="lang_call_recording_mode_always" t="Altid"/>
+	<phrase n="lang_call_recording_mode_always_pause_resume" t="Altid med pause/genoptag"/>
+	<phrase n="lang_call_recording_mode_on_demand" t="On-demand"/>
+	<phrase n="lang_call_recording_mode_on_demand_user_start" t="On-demand-bruger-start"/>
+	<phrase n="lang_smartlabel_dismiss_timeout" t="Vend tilbage til standardtilstand"/>
+	<phrase n="lang_call_recording_mode" t="Opkaldsoptagelsestilstand"/>
+	<phrase n="lang_menu_full_label_mode" t="Fuld etikettilstand"/>
+	<phrase n="lang_menu_label_mode" t="Etikettilstand"/>
+	<phrase n="lang_guest_pin" t="Gæste-pinkode"/>
+	<phrase n="lang_incorrect_pin" t="Forkert pinkode"/>
+	<phrase n="lang_voicemail_info" t="Voicemail info"/>
+	<phrase n="lang_confirm_del_deny_list_item_title" t="Slet bloklisteelement"/>
+	<phrase n="lang_confirm_del_number_from_deny_list" t="Vil du fjerne fra blokeringslisten?"/>
+	<phrase n="lang_confirm_del_menu_configuration" t="Fjern indstillingsnøglekonfiguration"/>
+	<phrase n="lang_confirm_message" t="Vil du virkelig gøre dette?"/>
+	<phrase n="lang_caller_id_blocking" t="Blokering af nummervisning"/>
+	<phrase n="lang_screen_items_color_and_opacity_title" t="Farve og Opacitet"/>
+	<phrase n="lang_ui_themes" t="Temaer"/>
+	<phrase n="lang_theme_light" t="Lys"/>
+	<phrase n="lang_theme_dark" t="Mørk"/>
+	<phrase n="lang_theme_colorful" t="Farverig"/>
+	<phrase n="lang_theme_industrial" t="Industriel"/>
+	<phrase n="lang_theme_contrast" t="Kontrast"/>
+	<phrase n="lang_screen_items_color_title" t="Farve"/>
+	<phrase n="lang_screen_items_opacity_title" t="Gennemsigtighed"/>
+	<phrase n="lang_screen_items_enter_custom_color_title" t="Indtast brugerdefinerede værdier"/>
+	<phrase n="lang_screen_item_titlebar_text" t="Titellinjetekst"/>
+	<phrase n="lang_screen_item_text" t="Tekst"/>
+	<phrase n="lang_screen_item_subtext" t="Undertekst"/>
+	<phrase n="lang_screen_item_extratext" t="Ekstra tekst"/>
+	<phrase n="lang_screen_item_extratext2" t="Ekstra tekst 2"/>
+	<phrase n="lang_screen_item_titlebar_background" t="Titellinje baggrund"/>
+	<phrase n="lang_screen_item_background" t="Baggrund"/>
+	<phrase n="lang_screen_item_fkey_background" t="Fkey baggrund"/>
+	<phrase n="lang_screen_item_fkey_pressed_background" t="Ftast trykt baggrund"/>
+	<phrase n="lang_screen_item_fkey_separator" t="Ftast Separator"/>
+	<phrase n="lang_screen_item_fkey_label" t="Fkey etiket"/>
+	<phrase n="lang_screen_item_fkey_pressed_label" t="Ftast trykket etiket"/>
+	<phrase n="lang_screen_item_line_background" t="Linje baggrund"/>
+	<phrase n="lang_screen_item_selected_line_background" t="Valgt linjebaggrund"/>
+	<phrase n="lang_screen_item_selected_line_indicator" t="Valgt linjeindikator"/>
+	<phrase n="lang_screen_item_selected_line_text" t="Valgt linjetekst"/>
+	<phrase n="lang_screen_item_line_separator" t="Linjeskiller"/>
+	<phrase n="lang_screen_item_scrollbar" t="Rullebar"/>
+	<phrase n="lang_screen_item_cursor" t="cursoren"/>
+	<phrase n="lang_screen_item_status_msgs_background" t="Statusmeddelelser Baggrund"/>
+	<phrase n="lang_screen_item_status_msgs_border" t="Statusmeddelelser kant"/>
+	<phrase n="lang_screen_item_smartlabel_background" t="SmartLabel baggrund"/>
+	<phrase n="lang_screen_item_smartlabel_pressed_background" t="SmartLabel presset baggrund"/>
+	<phrase n="lang_screen_item_smartlabel_separator" t="SmartLabel Separator"/>
+	<phrase n="lang_screen_item_smartlabel_label" t="SmartLabel Label"/>
+	<phrase n="lang_screen_item_smartlabel_pressed_label" t="SmartLabel presset etiket"/>
+	<phrase n="lang_screen_item_expansion_module_background" t="Udvidelsesmodulets baggrund"/>
+	<phrase n="lang_screen_item_expansion_module_pressed_background" t="Udvidelsesmodul presset baggrund"/>
+	<phrase n="lang_screen_item_expansion_module_separator" t="Udvidelsesmodul-separator"/>
+	<phrase n="lang_screen_item_expansion_module_maintext" t="Udvidelsesmodulets hovedtekst"/>
+	<phrase n="lang_screen_item_expansion_module_pressed_maintext" t="Udvidelsesmodul trykket Hovedtekst"/>
+	<phrase n="lang_screen_item_expansion_module_subtext" t="Udvidelsesmodul undertekst"/>
+	<phrase n="lang_screen_item_expansion_module_pressed_subtext" t="Udvidelsesmodul Trykt undertekst"/>
+	<phrase n="lang_screen_item_expansion_module_page_indicator" t="Sideindikator for udvidelsesmodul"/>
+	<phrase n="lang_screen_items_color_name_onyx_black" t="Onyx sort"/>
+	<phrase n="lang_screen_items_color_name_midnight_black" t="Midnats sort"/>
+	<phrase n="lang_screen_items_color_name_obsidian_black" t="Obsidian sort"/>
+	<phrase n="lang_screen_items_color_name_dark_grey" t="Mørkegrå"/>
+	<phrase n="lang_screen_items_color_name_grey" t="Grå"/>
+	<phrase n="lang_screen_items_color_name_light_grey" t="Lysegrå"/>
+	<phrase n="lang_screen_items_color_name_grey_white" t="Gråhvid"/>
+	<phrase n="lang_screen_items_color_name_white" t="Hvid"/>
+	<phrase n="lang_screen_items_color_name_light_yellow" t="Lysegul"/>
+	<phrase n="lang_screen_items_color_name_yellow" t="Gul"/>
+	<phrase n="lang_screen_items_color_name_light_red" t="Lys rød"/>
+	<phrase n="lang_screen_items_color_name_red" t="Rød"/>
+	<phrase n="lang_screen_items_color_name_light_blue" t="Lyseblå"/>
+	<phrase n="lang_screen_items_color_name_blue" t="Blå"/>
+	<phrase n="lang_screen_items_color_name_light_green" t="Lysegrøn"/>
+	<phrase n="lang_screen_items_color_name_green" t="Grøn"/>
+	<phrase n="lang_screen_items_color_name_black" t="Sort"/>
+	<phrase n="lang_screen_items_color_name_carbon" t="Carbon"/>
+	<phrase n="lang_screen_items_color_name_dim_grey" t="Dæmpet grå"/>
+	<phrase n="lang_screen_items_color_name_silver" t="Sølv"/>
+	<phrase n="lang_screen_items_color_name_gainsboro" t="Gainsboro (grå)"/>
+	<phrase n="lang_screen_items_color_name_snowflake" t="Snefnug"/>
+	<phrase n="lang_screen_items_color_name_white_smoke" t="Hvid røg"/>
+	<phrase n="lang_screen_items_color_name_custom" t="Brugerdefineret farve"/>
+	<phrase n="lang_monitored_extensions" t="Overvågede udvidelser"/>
+	<phrase n="lang_ALS" t="Omgivende lyssensor"/>
+	<phrase n="lang_all_available_calls" t="Alle tilgængelige opkald"/>
+	<phrase n="lang_new_call" t="Nyt opkald"/>
+	<phrase n="lang_select_conf_participant" t="Vælg Konferencedeltager"/>
+	<phrase n="lang_consult_conference" t="Rådfør dig med konferencen"/>
+	<phrase n="lang_guess_max_hits" t="Maksimalt antal hits"/>
+	<phrase n="lang_guess_results" t="Resultater"/>
+	<phrase n="lang_new_network_policy" t="Ny netværkspolitik"/>
+	<phrase n="lang_wrong_lldp_policy" t="Forkert LLDP-politik"/>
+	<phrase n="lang_F_MODERATE" t="Moderat"/>
+	<phrase n="lang_sip_warning" t="SIP-advarsel"/>
+	<phrase n="lang_sync_settings" t="Synkroniser indstillinger"/>
+	<phrase n="lang_confirm_sync_settings" t="Synkronisere indstillinger med serverkonfiguration?"/>
+	<phrase n="lang_no_configured_extensions" t="Ingen konfigurerede udvidelser"/>
+	<phrase n="lang_no_active_calls_on_extensions" t="Ingen aktive opkald på lokalnumre"/>
+	<phrase n="lang_sip_response_code_400" t="Dårlig anmodning"/>
+	<phrase n="lang_sip_response_code_402" t="Betaling påkrævet"/>
+	<phrase n="lang_sip_response_code_403" t="Forbudt"/>
+	<phrase n="lang_sip_response_code_404" t="Ikke fundet"/>
+	<phrase n="lang_sip_response_code_405" t="metode ikke tilladt"/>
+	<phrase n="lang_sip_response_code_406" t="Ikke acceptabelt"/>
+	<phrase n="lang_sip_response_code_407" t="Proxy-godkendelse påkrævet"/>
+	<phrase n="lang_sip_response_code_408" t="Bed om pause"/>
+	<phrase n="lang_sip_response_code_410" t="Væk"/>
+	<phrase n="lang_sip_response_code_413" t="Anmodningsenheden er for stor"/>
+	<phrase n="lang_sip_response_code_414" t="Request-URI for lang"/>
+	<phrase n="lang_sip_response_code_415" t="Ikke-understøttet medietype"/>
+	<phrase n="lang_sip_response_code_416" t="Ikke-understøttet URI-skema"/>
+	<phrase n="lang_sip_response_code_420" t="Dårlig udvidelse"/>
+	<phrase n="lang_sip_response_code_421" t="Udvidelse påkrævet"/>
+	<phrase n="lang_sip_response_code_422" t="Sessionsinterval for lille"/>
+	<phrase n="lang_sip_response_code_423" t="Interval for kort"/>
+	<phrase n="lang_sip_response_code_480" t="Midlertidigt utilgængelig"/>
+	<phrase n="lang_sip_response_code_481" t="Opkald/transaktion findes ikke"/>
+	<phrase n="lang_sip_response_code_482" t="Loop registreret"/>
+	<phrase n="lang_sip_response_code_483" t="For mange Hops"/>
+	<phrase n="lang_sip_response_code_484" t="Adresse ufuldstændig"/>
+	<phrase n="lang_sip_response_code_485" t="Tvetydigt"/>
+	<phrase n="lang_sip_response_code_486" t="Travlt her"/>
+	<phrase n="lang_sip_response_code_487" t="Anmodning afsluttet"/>
+	<phrase n="lang_sip_response_code_488" t="Ikke acceptabelt her"/>
+	<phrase n="lang_sip_response_code_491" t="Anmodning afventer"/>
+	<phrase n="lang_sip_response_code_493" t="Utydelige"/>
+	<phrase n="lang_sip_response_code_500" t="Server intern fejl"/>
+	<phrase n="lang_sip_response_code_501" t="Ikke implementeret"/>
+	<phrase n="lang_sip_response_code_502" t="Dårlig Gateway"/>
+	<phrase n="lang_sip_response_code_503" t="Service ikke tilgængelig"/>
+	<phrase n="lang_sip_response_code_504" t="Server timeout"/>
+	<phrase n="lang_sip_response_code_505" t="Version understøttes ikke"/>
+	<phrase n="lang_sip_response_code_513" t="Meddelelsen er for stor"/>
+	<phrase n="lang_sip_response_code_599" t="Network Connect Timeout Fejl"/>
+	<phrase n="lang_sip_response_code_600" t="Optaget overalt"/>
+	<phrase n="lang_sip_response_code_603" t="Afvis"/>
+	<phrase n="lang_sip_response_code_604" t="Findes ikke nogen steder"/>
+	<phrase n="lang_sip_response_code_606" t="Ikke acceptabelt"/>
+	<phrase n="lang_sort_order" t="Sorteringsrækkefølge"/>
+	<phrase n="lang_directory_display_order" t="Vis rækkefølge"/>
+	<phrase n="lang_display_order_first_name_last_name" t="Fornavn, efternavn"/>
+	<phrase n="lang_display_order_last_name_first_name" t="Efternavn, fornavn"/>
+	<phrase n="lang_visual_options" t="Visuelle muligheder"/>
+	<phrase n="lang_call_screen_photo_size" t="Fotostørrelse i opkaldsskærme"/>
+	<phrase n="lang_size_XS" t="XS"/>
+	<phrase n="lang_size_S" t="S"/>
+	<phrase n="lang_size_M" t="M"/>
+	<phrase n="lang_size_L" t="L"/>
+	<phrase n="lang_size_XL" t="XL"/>
+	<phrase n="lang_size_XXL" t="XXL"/>
+	<phrase n="lang_size_XXXL" t="XXXL"/>
+	<phrase n="lang_prefer_saved_over_received_photo" t="Foretrækker lokale billeder"/>
+	<phrase n="lang_display_method" t="Nummervisningsstil"/>
+	<phrase n="lang_display_method_full_contact" t="Fuld kontakt"/>
+	<phrase n="lang_display_method_display_name" t="Navn"/>
+	<phrase n="lang_display_method_display_number" t="Nummer"/>
+	<phrase n="lang_display_method_display_name_number" t="Navn + nummer"/>
+	<phrase n="lang_display_method_display_number_name" t="Nummer + navn"/>
+	<phrase n="lang_no_calls_for_transfer" t="Ingen tilgængelige opkald til omstilling"/>
+	<phrase n="lang_brand_variant_select_title" t="Vælg mærkevariant"/>
+	<phrase n="lang_brand_variant_default" t="Standard"/>
+	<phrase n="lang_brand_variant_updated_title" t="Variant opdateret"/>
+	<phrase n="lang_brand_variant_selected" t="Variant valgt"/>
+	<phrase n="lang_system_reboot_now" t="Systemet vil nu genstarte"/>
+	<phrase n="lang_select_identity" t="Vælg Identitet"/>
+	<phrase n="lang_F_CALL_CENTER_STATUS" t="Call Center Status"/>
+	<phrase n="lang_F_ATTENDED_TRANSFER" t="Deltog"/>
+	<phrase n="lang_disposition_code_sent" t="sendt"/>
+	<phrase n="lang_disposition_code_selection" t="Vælg Disp. Kode"/>
+	<phrase n="lang_disposition_code_entry" t="Indtast Disp. Kode"/>
+	<phrase n="lang_F_DISP_CODE" t="D kode"/>
+	<phrase n="lang_F_DISP_CODE_typeSio" t="Dispositionskode"/>
+	<phrase n="lang_F_DISP_CODE_smartlabel" t="D Kode"/>
+	<phrase n="lang_disposition_code_display_text_list" t="Liste"/>
+	<phrase n="lang_parked_calls_settings" t="Parkerede opkald"/>
+	<phrase n="lang_call_parked_on" t="Parkeret på"/>
+	<phrase n="lang_no_parked_call" t="Intet parkeret opkald tilgængeligt."/>
+	<phrase n="lang_F_CALL_PARK_IDLE" t="Parker tomgang"/>
+	<phrase n="lang_F_CALL_PARK_typeSio" t="Ring til Park"/>
+	<phrase n="lang_menu_any_smartlabel_key_short_press" t="Kort tryk på SmartLabel"/>
+	<phrase n="lang_monitored_extension_is_ringing" t="Overvåget lokalnummer ringer"/>
+	<phrase n="lang_disposition_code_not_sent" t="Kode ikke sendt."/>
+	<phrase n="lang_disposition_code_identity_mismatch" t="Identitetsmismatch."/>
+	<phrase n="lang_F_EXEC_ASSIST_CALL_PUSH" t="Ring til Push"/>
+	<phrase n="lang_usb_mass_storage_plug" t="USB-drev fundet"/>
+	<phrase n="lang_usb_mass_storage_unplug" t="USB-drev fjernet"/>
+	<phrase n="lang_information_menu_usb_info" t="USB info"/>
+	<phrase n="lang_usb_mass_storage_title" t="USB-masselager"/>
+	<phrase n="lang_F_USB_EJECT" t="Skub USB ud"/>
+	<phrase n="lang_usb_mass_storage_safe_to_remove" t="Det er nu sikkert at fjerne USB-drev"/>
+	<phrase n="lang_F_USBREC_START" t="Start USB Rec."/>
+	<phrase n="lang_F_USBREC_START_typeSio" t="Start USB-optagelse"/>
+	<phrase n="lang_F_USBREC_START_smartlabel" t="Start&lt;br&gt;USB Rec."/>
+	<phrase n="lang_F_USBREC_STOP" t="Stop USB-optagelse."/>
+	<phrase n="lang_F_USBREC_STOP_typeSio" t="Stop USB-optagelse"/>
+	<phrase n="lang_F_USBREC_STOP_smartlabel" t="Stop&lt;br&gt;USB Rec."/>
+	<phrase n="lang_F_USBREC_PAUSE" t="Sæt USB-optagelse på pause."/>
+	<phrase n="lang_F_USBREC_PAUSE_typeSio" t="Sæt USB-optagelse på pause"/>
+	<phrase n="lang_F_USBREC_PAUSE_smartlabel" t="Pause&lt;br&gt;USB Rec."/>
+	<phrase n="lang_F_USBREC_RESUME" t="Genoptag USB-optagelse."/>
+	<phrase n="lang_F_USBREC_RESUME_typeSio" t="Genoptag USB-optagelse"/>
+	<phrase n="lang_F_USBREC_RESUME_smartlabel" t="Resume&lt;br&gt;USB Rec."/>
+	<phrase n="lang_F_PAUSE" t="Pause"/>
+	<phrase n="lang_F_RESUME" t="Fortsæt"/>
+	<phrase n="lang_usb_recording_processing_wait" t="Vent venligst på, at optagelsesprocessen er fuldført!"/>
+	<phrase n="lang_usb_recording_processing_completed" t="Optagelsesprocessen færdig!"/>
+	<phrase n="lang_usb_recording_call_terminated" t="Optagelse af opkald afsluttet"/>
+	<phrase n="lang_usb_recording_terminated_drive_full" t="Optagelsen er afsluttet, USB-drevet er fuldt"/>
+	<phrase n="lang_usb_recording_terminated_max_file_size" t="Optagelse afsluttet, Max optagelængde"/>
+	<phrase n="lang_usb_recording_no_usb_drive_detected" t="Intet USB-drev fundet"/>
+	<phrase n="lang_usb_recording_terminated_errno" t="Optagelsen er afsluttet, fejl: "/>
+	<phrase n="lang_usb_playback_browse_recordings" t="Gennemse optagelser"/>
+	<phrase n="lang_usb_playback_browse_recordings_title" t="Opkaldsoptagelser"/>
+	<phrase n="lang_usb_playback_play_recording_title" t="Optagelse Afspilning"/>
+	<phrase n="lang_usb_playback_invalid_header_or_encrypted_file" t="Ugyldig wav-header eller krypteret fil:"/>
+	<phrase n="lang_usb_playback_recording_information_title" t="Optagelse af oplysninger"/>
+	<phrase n="lang_usb_playback_delete_recording_title" t="Slet optagelse"/>
+	<phrase n="lang_label_rewind" t="Spol tilbage"/>
+	<phrase n="lang_label_fast_forward" t="Spol frem"/>
+	<phrase n="lang_text_size" t="Størrelse"/>
+	<phrase n="lang_usb_playback_no_recordings" t="Ingen optagelser"/>
+	<phrase n="lang_usb_recording_aborted_by_conference" t="USB-optagelse afbrudt af konference"/>
+	<phrase n="lang_usb_recording_cannot_record_conference" t="Kan ikke optage konference til USB"/>
+	<phrase n="lang_date_and_time" t="Dato og tid"/>
+	<phrase n="lang_label_context_key_page_left" t="Side til venstre"/>
+	<phrase n="lang_label_context_key_page_right" t="Side til højre"/>
+	<phrase n="lang_expansion_module_text_alignment" t="Tekstjustering"/>
+	<phrase n="lang_expansion_module_color_font_sizes_XXL_XS" t="Hovedtekst XXL &amp; Undertekst XS"/>
+	<phrase n="lang_expansion_module_color_font_sizes_XL_XS" t="Hovedtekst XL &amp; Undertekst XS"/>
+	<phrase n="lang_expansion_module_color_font_sizes_XL_S" t="Hovedtekst XL &amp; Undertekst S"/>
+	<phrase n="lang_expansion_module_color_font_sizes_L_XS" t="Hovedtekst L &amp; Undertekst XS"/>
+	<phrase n="lang_expansion_module_color_font_sizes_L_S" t="Hovedtekst L &amp; Undertekst S"/>
+	<phrase n="lang_expansion_module_color_font_sizes_L_M" t="Hovedtekst L &amp; Undertekst M"/>
+	<phrase n="lang_expansion_module_color_font_sizes_M_XS" t="Hovedtekst M &amp; Undertekst XS"/>
+	<phrase n="lang_expansion_module_color_font_sizes_M_S" t="Hovedtekst M &amp; Undertekst S"/>
+	<phrase n="lang_expansion_module_color_font_sizes_M_M" t="Hovedtekst M &amp; Undertekst M"/>
+	<phrase n="lang_expansion_module_color_font_sizes_S_XS" t="Hovedtekst S &amp; Undertekst XS"/>
+	<phrase n="lang_expansion_module_color_font_sizes_S_S" t="Hovedtekst S &amp; Undertekst S"/>
+	<phrase n="lang_expansion_module_color_font_sizes_XS_XS" t="Hovedtekst XS &amp; Undertekst XS"/>
+	<phrase n="lang_edit_mode_upper_case" t="ABC"/>
+	<phrase n="lang_edit_mode_lower_case" t="abc"/>
+	<phrase n="lang_edit_mode_numbers" t="123"/>
+	<phrase n="lang_F_IDLE_CONTEXT_PAGE_LEFT" t="Venstre"/>
+	<phrase n="lang_F_IDLE_CONTEXT_PAGE_LEFT_typeSio" t="Side til venstre"/>
+	<phrase n="lang_F_IDLE_CONTEXT_PAGE_RIGHT" t="Højre"/>
+	<phrase n="lang_F_IDLE_CONTEXT_PAGE_RIGHT_typeSio" t="Side til højre"/>
+	<phrase n="lang_F_NONE" t=" "/>
+	<phrase n="lang_branding_name" t="Branding:"/>
+	<phrase n="lang_hardware_version" t="Hardwareversion:"/>
+	<phrase n="lang_branding_version" t="Branding-version:"/>
+	<phrase n="lang_NickName" t="Kaldenavn"/>
+	<phrase n="lang_FirstShortCode" t="Første kode"/>
+	<phrase n="lang_LastShortCode" t="Sidste kode"/>
+	<phrase n="lang_FirstExternalDirectoryNumber" t="Første nummer"/>
+	<phrase n="lang_LastExternalDirectoryNumber" t="Sidste Nummer"/>
+	<phrase n="lang_DialingPlanCode" t="Plan"/>
+	<phrase n="lang_DialingPlanCodeDetail" t="Opkaldsplankode"/>
+	<phrase n="lang_FirstShortCodeDetail" t="Første kortkode"/>
+	<phrase n="lang_FirstExternalDirectoryDetail" t="Første eksterne bibliotek"/>
+	<phrase n="lang_LastExternalDirectoryDetail" t="Sidste eksterne bibliotek"/>
+	<phrase n="lang_Department" t="Afdeling"/>
+	<phrase n="lang_shortcodes" t="Korte koder"/>
+	<phrase n="lang_emergency_call_number_is_misconfigured" t="Nødnumre er forkert konfigureret"/>
+	<phrase n="lang_tb_alias" t="Alias"/>
+	<phrase n="lang_web_user_credentials_not_set" t="Der er ikke angivet nogen legitimationsoplysninger for webbrugeren"/>
+	<phrase n="lang_web_admin_credentials_not_set" t="Der er ikke angivet nogen legitimationsoplysninger for webadministratoren"/>
+	<phrase n="lang_not_registered" t=" Ikke registreret"/>
+	<phrase n="lang_fake_number" t="Falsk nummer"/>
+	<phrase n="lang_BLF_DND_on" t="DND tændt"/>
+	<phrase n="lang_BLF_On_a_call" t="I et opkald"/>
+	<phrase n="lang_BLF_Idle" t="Ledig"/>
+	<phrase n="lang_MediaStack_restarting_All_lines_will_be_closed" t="MediaStack genstarter. Alle linjer vil blive lukket."/>
+	<phrase n="lang_Firmware_update_starting" t="Firmwareopdatering: starter"/>
+	<phrase n="lang_Firmware_update_sent_install_request" t="Firmwareopdatering: venter på svar fra filserveren"/>
+	<phrase n="lang_Firmware_update_download" t="Firmwareopdatering: downloader"/>
+	<phrase n="lang_Firmware_update_transfer_to_swupdate" t="Firmwareopdatering: behandler"/>
+	<phrase n="lang_Firmware_update_verification_and_install" t="Firmwareopdatering: installerer"/>
+	<phrase n="lang_File_server_response" t="Serversvar: "/>
+	<phrase n="lang_File_server_unreachable" t="Filserveren er ikke tilgængelig."/>
+	<phrase n="lang_File_not_found" t="Fil ikke fundet."/>
+	<phrase n="lang_Firmware_invalid" t="Firmware ugyldigt."/>
+	<phrase n="lang_firmware_update" t="Firmware-opdatering"/>
+	<phrase n="lang_menu_ringer_once" t="Kun én gang"/>
+	<phrase n="lang_voicemail_no_access_code" t="Nummers eller funktionens adgangskode er ikke programmeret"/>
+	<phrase n="lang_F_WIFI" t="Wi-Fi"/>
+	<phrase n="lang_parties" t="deltagere"/>
+	<phrase n="lang_fwd_by" t="Viderestillet af:"/>
+	<phrase n="lang_firmware_update_completed_pending_reboot" t="Telefonen genstarter snart for at fuldføre firmware-opdateringen. Genstarter om %d sekunder ..."/>
+	<phrase n="lang_F_CLOSE" t="Luk"/>
+	<phrase n="lang_ip_assigment" t="IP-tildeling"/>
+	<phrase n="lang_disable" t="Deaktiver"/>
+	<phrase n="lang_enable" t="Aktiver"/>
+	<phrase n="lang_reregister" t="Registrer igen"/>
+	<phrase n="lang_phonemanager" t="Telefonhåndtering (webbrugerflade)"/>
+	<phrase n="lang_locale" t="Format for dato og tid"/>
+	<phrase n="lang_webserver_admin_name" t="Admin-navn"/>
+	<phrase n="lang_webserver_admin_password" t="Admin adgangskode"/>
+	<phrase n="lang_webserver_user_name" t="Brugernavn"/>
+	<phrase n="lang_webserver_user_password" t="Brugeradgangskode"/>
+	<phrase n="lang_startup_wizard" t="Startup Wizard"/>
+	<phrase n="lang_no_voicemail" t="Ingen voiceMail"/>
+	<phrase n="lang_new_voicemail" t="Ny voiceMail"/>
+	<phrase n="lang_old_voicemail" t="Gammel voicemail"/>
+	<phrase n="lang_phonemanager_credentials" t="Loginoplysninger til Telefonhåndtering (brugergrænseflade)"/>
+	<phrase n="lang_static_ip" t="Statisk IP"/>
+	<phrase n="lang_dhcp_or_static_ip" t="DHCP eller Statisk IP"/>
+	<phrase n="lang_locale_ar_AE" t="Arabisk (Forenede Arabiske Emirater)"/>
+	<phrase n="lang_locale_az_AZ" t="Azərbaycanca (Aserbajdsjan)"/>
+	<phrase n="lang_locale_bs_BA" t="Bosanki (Bosnien)"/>
+	<phrase n="lang_locale_ca_ES" t="Català (Spanien)"/>
+	<phrase n="lang_locale_cs_CZ" t="Čeština (Tjekkiet)"/>
+	<phrase n="lang_locale_da_DK" t="Dansk (Danmark)"/>
+	<phrase n="lang_locale_de_DE" t="Deutsch (Tyskland)"/>
+	<phrase n="lang_locale_el_GR" t="Ελληνικά (Grækenkand)"/>
+	<phrase n="lang_locale_en_DE" t="English (Tyskland)"/>
+	<phrase n="lang_locale_en_GB" t="English (Storbritannien)"/>
+	<phrase n="lang_locale_en_US" t="English (USA)"/>
+	<phrase n="lang_locale_es_ES" t="Español (Spanien)"/>
+	<phrase n="lang_locale_et_EE" t="Eesti (Estland)"/>
+	<phrase n="lang_locale_eu_ES" t="Euskara (Spanien)"/>
+	<phrase n="lang_locale_fi_FI" t="Suomi (Finland)"/>
+	<phrase n="lang_locale_fr_FR" t="Français (Frankrig)"/>
+	<phrase n="lang_locale_he_IL" t="Hebraisk (Israel)"/>
+	<phrase n="lang_locale_hr_HR" t="Hrvatski (Kroatien)"/>
+	<phrase n="lang_locale_hu_HU" t="Magyar (Ungarn)"/>
+	<phrase n="lang_locale_it_IT" t="Italiano (Italien)"/>
+	<phrase n="lang_locale_ja_JP" t="Japansk (Japan)"/>
+	<phrase n="lang_locale_kk_KZ" t="қазақша (Kazakhstan)"/>
+	<phrase n="lang_locale_lt_LT" t="Lietuvių (Litauen)"/>
+	<phrase n="lang_locale_lv_LV" t="Latviešu (Letland)"/>
+	<phrase n="lang_locale_nl_NL" t="Nederlands (Holland)"/>
+	<phrase n="lang_locale_nb_NO" t="Norsk (Norge)"/>
+	<phrase n="lang_locale_pl_PL" t="Polski (Polen)"/>
+	<phrase n="lang_locale_pt_PT" t="Português (Portugal)"/>
+	<phrase n="lang_locale_ro_RO" t="Română (Rumænien)"/>
+	<phrase n="lang_locale_ru_RU" t="Русский (Rusland)"/>
+	<phrase n="lang_locale_sl_SI" t="Slovenščina (Slovenien)"/>
+	<phrase n="lang_locale_sv_SE" t="Svenska (Sverige)"/>
+	<phrase n="lang_locale_tr_TR" t="Türkçe (Tyrkiet)"/>
+	<phrase n="lang_locale_uk_UA" t="Українська (Ukraine)"/>
+	<phrase n="lang_locale_zh_CN" t="Simplified Chinese (Kina)"/>
+	<phrase n="lang_locale_zh_TW" t="Traditional Chinese (Taiwan)"/>
+	<phrase n="lang_no_error" t="Ingen fejl"/>
+	<phrase n="lang_unknown_command" t="ukendt kommando"/>
+	<phrase n="lang_invalid_missing_params" t="ugyldig(e) eller manglende parameter/parametre"/>
+	<phrase n="lang_not_implemented" t="ikke implementeret"/>
+	<phrase n="lang_failed" t="mislykkedes"/>
+	<phrase n="lang_refer_to_logs" t="Se systemloggene for detaljer"/>
+	<phrase n="lang_software_update_confirmation" t="Softwareopdateringen tager et par minutter og genstarter din telefon. Hvis du er i gang med et opkald, starter opdateringen, når alle opkald er afsluttet. Sluk ikke din telefon under opdateringen. Vil du opdatere nu?"/>
+	<phrase n="lang_firmware_field_is_empty" t="Firmware-feltet er tomt."/>
+	<phrase n="lang_software_update_in_progress" t="Softwareopdatering i gang. Vent venligst på, at din telefon genstarter. Når den genstarter, skal du opdatere din browser for at få adgang til WUI'en igen."/>
+	<phrase n="lang_edit_mode" t="Redigeringstilstand"/>
+	<phrase n="lang_vlan_pc_qos" t="VLAN Prioritet på LAN-port (0-7)"/>
+	<phrase n="lang_bluetooth_devices" t="Enheder"/>
+	<phrase n="lang_bluetooth_not_ready" t="Bluetooth er ikke klar"/>
+	<phrase n="lang_F_ACCEPT_CALL_ext_ui" t="Svar"/>
+	<phrase n="lang_F_DEFLECT_ext_ui" t="Viderestil"/>
+	<phrase n="lang_F_DENY_ext_ui" t="Afvis"/>
+	<phrase n="lang_F_END_ext_ui" t="Afslut opkald"/>
+	<phrase n="lang_F_CALL_PARK_DIAL" t="Opkald parkeret ring op"/>
+	<phrase n="lang_F_NEW_CALL" t="Nyt opkald"/>
+	<phrase n="lang_device_management_service" t="Device Management Service"/>
+	<phrase n="lang_manage_dms" t="Manage DMS"/>
+	<phrase n="lang_3_days" t="3 Days"/>
+	<phrase n="lang_dms_enabled" t="DMS is enabled until"/>
+	<phrase n="lang_dms" t="DMS"/>
+</phrases>
