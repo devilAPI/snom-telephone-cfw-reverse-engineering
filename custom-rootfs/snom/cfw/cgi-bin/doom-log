@@ -11,6 +11,9 @@ a{color:#f66}</style></head><body><h1>Boot Doom log</h1><pre>
 HDR
 if [ -s /tmp/doom.log ]; then
     tail -n 40 /tmp/doom.log | sed 's/&/\&amp;/g; s/</\&lt;/g'
+elif [ -s /snom/cfw/doom/last.log ]; then
+    echo "(previous run, saved before the reboot)"
+    tail -n 40 /snom/cfw/doom/last.log | sed 's/&/\&amp;/g; s/</\&lt;/g'
 else
     echo "(no log yet)"
 fi

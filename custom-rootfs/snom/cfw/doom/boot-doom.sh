@@ -96,6 +96,11 @@ log "starting Doom with $WAD"
 touch /tmp/ssh_fast_update
 
 "$ENGINE" -iwad "$WAD" >> "$LOG" 2>&1 < /dev/null
+log "Doom exited with status $?"
+
+# /tmp is lost on the reboot: keep this run's log on flash so the CFW page can
+# still show why Doom quit (e.g. an engine I_Error).
+tail -n 60 "$LOG" > /snom/cfw/doom/last.log 2>/dev/null
 
 rm -f "$WAD"
 rm -f /tmp/ssh_fast_update

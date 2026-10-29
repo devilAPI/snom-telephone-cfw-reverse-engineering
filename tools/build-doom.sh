@@ -22,6 +22,8 @@ export PATH=/opt/arm-linux-musleabi-cross/bin:$PATH
 CC=arm-linux-musleabi-gcc
 
 git clone --depth 1 https://github.com/ozkl/doomgeneric.git /src >/dev/null 2>&1
+# Centre/clip widescreen patches instead of I_Error (2024 re-release IWADs).
+git -C /src apply /port/doomgeneric/widescreen-patches.patch
 cd /src/doomgeneric
 # Inject our platform file, the halaudio sound module (replaces the stub
 # i_sound.c), and the shared snd_hal sink.
