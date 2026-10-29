@@ -73,11 +73,7 @@ send_notify() {
     fi
 }
 
-URL="${PROTOCOL}://${PHONE_HOST}/command.htm"
-PARAMS="number=${NUMBER}"
-if [[ -n "$OUTGOING_URI" ]]; then
-    PARAMS="${PARAMS}&outgoing_uri=${OUTGOING_URI}"
-fi
+BASE_URL="${PROTOCOL}://${PHONE_HOST}"
 
 CURL_ARGS=(
     --silent
@@ -93,12 +89,30 @@ fi
 echo "Dialing ${NUMBER} via ${PHONE_HOST}..."
 send_notify "Dialing ${NUMBER}..."
 
-CURL_EXIT=0
-HTTP_CODE="$(curl "${CURL_ARGS[@]}" -o /dev/null -w '%{http_code}' "${URL}?${PARAMS}" 2>/dev/null)" || CURL_EXIT=$?
+# Fetch a hidden_tag from the phone (required when passwords are non-default)
+INDEX_PAGE="$(curl "${CURL_ARGS[@]}" "${BASE_URL}/index.htm" 2>/dev/null)" || {
+    echo "Error: could not connect to phone at ${PHONE_HOST}" >&2
+    send_notify "Failed to connect to phone"
+    exit 1
+}
 
-# Snom D8xx phones reset the connection after processing a command (curl exit 52/56).
-# The command still executes, so treat these as success.
-if [[ "$HTTP_CODE" == "200" ]] || [[ "$CURL_EXIT" -eq 52 ]] || [[ "$CURL_EXIT" -eq 56 ]]; then
+HIDDEN_TAG="$(echo "$INDEX_PAGE" | grep -oP 'hidden_tag=\K[a-z0-9]+' | head -1)"
+if [[ -z "$HIDDEN_TAG" ]]; then
+    echo "Error: could not get session tag from phone (auth failed?)" >&2
+    send_notify "Authentication failed"
+    exit 1
+fi
+
+POST_DATA="number=${NUMBER}&hidden_tag=${HIDDEN_TAG}"
+if [[ -n "$OUTGOING_URI" ]]; then
+    POST_DATA="${POST_DATA}&outgoing_uri=${OUTGOING_URI}"
+fi
+
+CURL_EXIT=0
+HTTP_CODE="$(curl "${CURL_ARGS[@]}" -o /dev/null -w '%{http_code}' \
+    -d "$POST_DATA" "${BASE_URL}/command.htm" 2>/dev/null)" || CURL_EXIT=$?
+
+if [[ "$HTTP_CODE" == "302" ]] || [[ "$HTTP_CODE" == "200" ]]; then
     echo "Call initiated successfully"
     send_notify "Call to ${NUMBER} initiated"
 elif [[ "$HTTP_CODE" == "401" ]]; then
