@@ -1,0 +1,40 @@
+#!/bin/sh
+# CFW: "Scripts" menu on the phone. No args: list /snom/cfw-data/scripts/*.sh.
+# ?run=NAME.sh: run it (20 s limit) and show the output as IPPhoneText.
+. /snom/cfw/lib/cfw.sh
+. /snom/cfw/lib/scripts-run.sh
+NAME=$(cfw_param run)
+if [ -n "$NAME" ]; then
+    if ! scripts_name_ok "$NAME"; then
+        cfw_phone_text "Scripts" "Invalid script name"; exit 0
+    fi
+    OUT=$(scripts_run "$NAME")
+    cfw_phone_text "$NAME" "$OUT"
+    exit 0
+fi
+echo "Content-type: text/xml"
+echo ""
+echo '<?xml version="1.0" encoding="UTF-8"?>'
+echo '<IPPhoneMenu state="others_except_mb" dtmf="off">'
+echo '  <Title>Scripts</Title>'
+n=0
+for f in $(scripts_dir)/*.sh; do
+    [ -f "$f" ] || continue
+    b=${f##*/}
+    scripts_name_ok "$b" || continue
+    n=$((n+1))
+    printf '  <MenuItem name="%s">\n    <Url>http://127.0.0.1:8081/cgi-bin/phone-scripts?run=%s</Url>\n  </MenuItem>\n' \
+        "$(printf '%s' "$b" | cfw_xml_escape)" "$b"
+done
+if [ "$n" -eq 0 ]; then
+    echo '  <MenuItem name="(no scripts - add in web panel)">'
+    echo '    <Url track="no">phone://mb_nop#go_back</Url>'
+    echo '  </MenuItem>'
+fi
+cat <<'EOF2'
+  <SoftKeyItem>
+    <Name>CANCEL</Name>
+    <Url track="no">phone://mb_nop#go_back</Url>
+  </SoftKeyItem>
+</IPPhoneMenu>
+EOF2

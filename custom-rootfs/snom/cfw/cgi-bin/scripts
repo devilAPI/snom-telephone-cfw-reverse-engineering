@@ -1,0 +1,48 @@
+#!/bin/sh
+# CFW web panel: manage /snom/cfw-data/scripts (list / create+edit / delete / run).
+# Upload = paste into the textarea (multipart parsing in busybox sh is not worth it).
+. /snom/cfw/lib/cfw.sh
+. /snom/cfw/lib/scripts-run.sh
+echo "Content-type: text/html"
+echo ""
+D=$(scripts_dir)
+ACT=$(cfw_param act); NAME=$(cfw_param name)
+[ -n "$NAME" ] || NAME=$(cfw_param edit)
+MSG=""; OUT=""
+if [ -n "$ACT" ] && ! scripts_name_ok "$NAME"; then
+    MSG="Invalid name (allowed: letters, digits, . _ - and ending in .sh)"; ACT=""
+fi
+case "$ACT" in
+save)
+    cfw_rw
+    if cfw_param content | tr -d '\r' > "$D/$NAME.tmp" 2>/dev/null && mv "$D/$NAME.tmp" "$D/$NAME"; then
+        chmod 755 "$D/$NAME"; MSG="Saved $NAME"
+    else
+        rm -f "$D/$NAME.tmp"; MSG="ERROR: could not write $D (flash full or read-only?)"
+    fi ;;
+delete) cfw_rw; rm -f "$D/$NAME" && MSG="Deleted $NAME"; NAME="" ;;
+run) OUT=$(scripts_run "$NAME"); MSG="Ran $NAME (exit $SCRIPTS_RC)" ;;
+esac
+cfw_html_head "Scripts"
+[ -z "$MSG" ] || printf '<div class="card"><b>%s</b></div>\n' "$(printf '%s' "$MSG" | cfw_html_escape)"
+[ -z "$OUT" ] || printf '<div class="card"><pre>%s</pre></div>\n' "$(printf '%s' "$OUT" | cfw_html_escape)"
+echo '<div class="card"><h2>Your scripts</h2>'
+n=0
+for f in "$D"/*.sh; do
+    [ -f "$f" ] || continue
+    b=${f##*/}; scripts_name_ok "$b" || continue
+    n=$((n+1)); e=$(printf '%s' "$b" | cfw_html_escape)
+    printf '<form method="post" action="/cgi-bin/scripts" style="margin:6px 0"><input type="hidden" name="name" value="%s"><b>%s</b> ' "$e" "$e"
+    printf '<button name="act" value="run">Run</button> <a href="/cgi-bin/scripts?edit=%s">Edit</a> ' "$b"
+    printf '<button name="act" value="delete" style="background:#c33" onclick="return confirm(\x27Delete?\x27)">Delete</button></form>\n'
+done
+[ "$n" -gt 0 ] || echo '<p>No scripts yet.</p>'
+echo '</div>'
+CUR=""
+if [ -n "$NAME" ] && scripts_name_ok "$NAME" && [ -f "$D/$NAME" ] && [ "$ACT" != delete ]; then CUR=$(cat "$D/$NAME"); fi
+printf '<div class="card"><h2>New / edit script</h2><form method="post" action="/cgi-bin/scripts"><input type="hidden" name="act" value="save">'
+printf '<input name="name" value="%s" placeholder="name.sh" required pattern="[A-Za-z0-9._-]+\\.sh"><br>' "$(printf '%s' "$NAME" | cfw_html_escape)"
+printf '<textarea name="content" rows="12" cols="70" style="font-family:monospace">%s</textarea><br>' "$(printf '%s' "$CUR" | cfw_html_escape)"
+echo '<button type="submit">Save</button></form>'
+echo '<p class="warn">Examples: /snom/cfw/scripts-examples/ on the phone. Scripts run as root.</p></div>'
+cfw_html_foot
