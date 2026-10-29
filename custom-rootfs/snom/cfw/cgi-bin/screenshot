@@ -1,0 +1,27 @@
+#!/bin/sh
+# CFW: current phone screen as a BMP. The framebuffer is 32bpp BGRX, which is
+# exactly a BI_RGB 32-bit BMP pixel row; a negative height makes the rows
+# top-down, so the image is just a 54-byte header + the visible fb page.
+FB=/sys/class/graphics/fb0
+MODE=$(head -n 1 $FB/modes 2>/dev/null)          # e.g. U:480x272p-0
+W=$(echo "$MODE" | sed -n 's/^[^:]*:\([0-9]*\)x\([0-9]*\).*/\1/p')
+H=$(echo "$MODE" | sed -n 's/^[^:]*:\([0-9]*\)x\([0-9]*\).*/\2/p')
+[ -n "$W" ] || { W=480; H=272; }
+STRIDE=$(cat $FB/stride 2>/dev/null); [ -n "$STRIDE" ] || STRIDE=$((W * 4))
+PANY=$(cut -d, -f2 $FB/pan 2>/dev/null); [ -n "$PANY" ] || PANY=0
+SIZE=$((STRIDE * H))
+
+le32() {  # little-endian 32-bit as octal printf escapes
+    v=$(( $1 & 0xffffffff ))
+    printf "\\$(printf %03o $((v & 255)))\\$(printf %03o $(((v >> 8) & 255)))\\$(printf %03o $(((v >> 16) & 255)))\\$(printf %03o $(((v >> 24) & 255)))"
+}
+
+echo "Content-type: image/bmp"
+echo "Content-Disposition: inline; filename=\"snom-screen-$(date +%Y%m%d-%H%M%S).bmp\""
+echo "Cache-Control: no-store"
+echo ""
+printf 'BM'; le32 $((54 + SIZE)); le32 0; le32 54          # file header
+le32 40; le32 $((STRIDE / 4)); le32 $((-H))                 # DIB: width, top-down height
+printf '\001\000\040\000'                                    # planes=1, bpp=32
+le32 0; le32 $SIZE; le32 2835; le32 2835; le32 0; le32 0
+dd if=/dev/fb0 bs=$STRIDE skip=$PANY count=$H 2>/dev/null
