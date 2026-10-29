@@ -43,6 +43,9 @@
   <!-- CFW: Doom / NES launcher, menu served by the CFW httpd (snom/cfw/cgi-bin/phone-games) -->
   <Menu name="Games" id="cfw_games">
     <If condition="$(show_feature:FEATURE_PUI_STYLE_SIO)">
+      <!-- menus only take built-in icon enums: kIconTypeDect is unused on the
+           D375, its dect*.png are replaced by a gamepad (tools/make-games-icon.py) -->
+      <IconType>$(icon_type_enum:kIconTypeDect)</IconType>
       <SubText>DOOM, NES</SubText>
     </If>
     <Url>http://127.0.0.1:8080/cgi-bin/phone-games</Url>

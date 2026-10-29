@@ -25,13 +25,18 @@ doom|nes)
     if [ -s "$HIST" ]; then
         while read -r u; do
             [ -n "$u" ] || continue
-            name=$(basename "${u%%\?*}" | sed 's/%20/ /g; s/%2[bB]/+/g')
+            name=$(basename "$(echo "${u%%\?*}" | sed 's|%2[fF]|/|g')" | sed 's/%20/ /g; s/%2[bB]/+/g')
             item "$name" "$B/phone-boot?game=$GAME&url=$(urlenc "$u")"
         done < "$HIST"
     fi
     if [ "$GAME" = doom ]; then
-        # Freely distributable Doom shareware IWAD (v1.9).
-        item "Shareware DOOM1.WAD" "$B/phone-boot?game=doom&url=$(urlenc https://archive.org/download/doom-shareware-custom/DOOM1.WAD)"
+        # Freely distributable IWADs: Doom shareware (v1.9) and Freedoom 0.13
+        # (members of archive.org zips, extracted server-side).
+        F=https://archive.org/download/freedoom-0.13.0
+        item "Freedoom: Phase 1" "$B/phone-boot?game=doom&url=$(urlenc $F/freedoom-0.13.0.zip/freedoom-0.13.0%2Ffreedoom1.wad)"
+        item "Freedoom: Phase 2" "$B/phone-boot?game=doom&url=$(urlenc $F/freedoom-0.13.0.zip/freedoom-0.13.0%2Ffreedoom2.wad)"
+        item "FreeDM (deathmatch)" "$B/phone-boot?game=doom&url=$(urlenc $F/freedm-0.13.0.zip/freedm-0.13.0%2Ffreedm.wad)"
+        item "DOOM Shareware" "$B/phone-boot?game=doom&url=$(urlenc https://archive.org/download/doom-shareware-custom/DOOM1.WAD)"
     fi
     item "Enter URL..." "$B/phone-url?game=$GAME"
     ;;

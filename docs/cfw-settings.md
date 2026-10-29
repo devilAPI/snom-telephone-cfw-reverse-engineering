@@ -77,9 +77,15 @@ phone as `state_settings.xml.orig`.
 
 | CGI | Returns |
 |-----|---------|
-| `phone-games` | `IPPhoneMenu`: DOOM / NES; with `?game=doom\|nes`, the recent URLs (`/snom/cfw/<game>/history`), presets (Doom: shareware `DOOM1.WAD` from archive.org) and "Enter URL..." |
+| `phone-games` | `IPPhoneMenu`: DOOM / NES; with `?game=doom\|nes`, the recent URLs (`/snom/cfw/<game>/history`), presets (Doom: Freedoom Phase 1/2, FreeDM and shareware `DOOM1.WAD`, all freely distributable, from archive.org) and "Enter URL..." |
 | `phone-url?game=` | `IPPhoneInput`: keypad URL entry; the typed text replaces `__U__` in the target URL |
 | `phone-boot?game=&url=` | starts `boot-doom.sh` / `boot-nes.sh` detached, answers with an `IPPhoneText` "Starting..." |
+
+**Icon.** `<Menu>` entries only accept built-in `IconType` enums (`IconUrl`
+and `file://` images are ignored there; tested). The Games entry uses
+`kIconTypeDect`, which is unused on the D375 (it has no DECT radio). Its
+`icontype_icons/24x24/dect.png` / `dect_active.png` in all four themes are
+overwritten with a gamepad drawn by `tools/make-games-icon.py`.
 
 The launchers record every URL that downloaded and validated in
 `/snom/cfw/<game>/history` (newest first, max 8). Links used from the web panel
