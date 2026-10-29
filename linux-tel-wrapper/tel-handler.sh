@@ -103,14 +103,17 @@ if [[ -z "$HIDDEN_TAG" ]]; then
     exit 1
 fi
 
-POST_DATA="number=${NUMBER}&hidden_tag=${HIDDEN_TAG}"
+POST_ARGS=(
+    --data-urlencode "number=${NUMBER}"
+    --data-urlencode "hidden_tag=${HIDDEN_TAG}"
+)
 if [[ -n "$OUTGOING_URI" ]]; then
-    POST_DATA="${POST_DATA}&outgoing_uri=${OUTGOING_URI}"
+    POST_ARGS+=(--data-urlencode "outgoing_uri=${OUTGOING_URI}")
 fi
 
 CURL_EXIT=0
 HTTP_CODE="$(curl "${CURL_ARGS[@]}" -o /dev/null -w '%{http_code}' \
-    -d "$POST_DATA" "${BASE_URL}/command.htm" 2>/dev/null)" || CURL_EXIT=$?
+    "${POST_ARGS[@]}" "${BASE_URL}/command.htm" 2>/dev/null)" || CURL_EXIT=$?
 
 if [[ "$HTTP_CODE" == "302" ]] || [[ "$HTTP_CODE" == "200" ]]; then
     echo "Call initiated successfully"
