@@ -48,7 +48,15 @@
       <IconType>$(icon_type_enum:kIconTypeDect)</IconType>
       <SubText>DOOM, NES</SubText>
     </If>
-    <Url>http://127.0.0.1:8080/cgi-bin/phone-games</Url>
+    <Url>http://127.0.0.1:8081/cgi-bin/phone-games</Url>
+  </Menu>
+  <!-- CFW: tools menu, rendered from snom/cfw/phone-menu.d by cgi-bin/phone-tools (loopback httpd :8081) -->
+  <Menu name="CFW Tools" id="cfw_tools">
+    <If condition="$(show_feature:FEATURE_PUI_STYLE_SIO)">
+      <IconType>$(icon_type_enum:kIconSettingsInformation)</IconType>
+      <SubText>Games, scripts, ...</SubText>
+    </If>
+    <Url>http://127.0.0.1:8081/cgi-bin/phone-tools</Url>
   </Menu>
   <Menu name="$(lang:information_settings)" id="information">
     <If condition="$(show_feature:FEATURE_PUI_STYLE_SIO)">
