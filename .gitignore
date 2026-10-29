@@ -1,0 +1,26 @@
+# Firmware binaries (large, proprietary)
+orig_firm/
+original_firmware/
+custom-firmware/
+
+# Decrypted/extracted rootfs
+decrypted/
+custom-rootfs/
+custom-rootfs-d815/
+custom-rootfs.broken/
+
+# Private signing keys
+custom-key/
+custom-key-d815/
+
+# Phone backups
+backups/
+
+# VPN server (contains private PKI)
+vpn-server/
+
+# OpenVPN configs
+ovpn/
+
+# GPL source tarballs
+gpl_src/
