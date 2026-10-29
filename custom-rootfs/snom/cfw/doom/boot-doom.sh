@@ -88,6 +88,12 @@ case "$NAME" in
 esac
 WAD="/tmp/$NAME"
 mv "$DL" "$WAD"
+
+# Remember this URL for the phone's Settings -> Games menu (newest first, no
+# duplicates, at most 8).
+H=/snom/cfw/doom/history
+{ echo "$1"; grep -vxF "$1" "$H" 2>/dev/null; } | head -n 8 > "$H.new" && mv "$H.new" "$H"
+
 log "starting Doom with $WAD"
 
 # Hold rcS's fast-update guard so killing the phone app doesn't reboot us. The

@@ -40,6 +40,13 @@
     </If>
     <Url>file://xml/gui/maintenance.xml</Url>
   </Menu>
+  <!-- CFW: Doom / NES launcher, menu served by the CFW httpd (snom/cfw/cgi-bin/phone-games) -->
+  <Menu name="Games" id="cfw_games">
+    <If condition="$(show_feature:FEATURE_PUI_STYLE_SIO)">
+      <SubText>DOOM, NES</SubText>
+    </If>
+    <Url>http://127.0.0.1:8080/cgi-bin/phone-games</Url>
+  </Menu>
   <Menu name="$(lang:information_settings)" id="information">
     <If condition="$(show_feature:FEATURE_PUI_STYLE_SIO)">
       <IconType>$(icon_type_enum:kIconSettingsInformation)</IconType>

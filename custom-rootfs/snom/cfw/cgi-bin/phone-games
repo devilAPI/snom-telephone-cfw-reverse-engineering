@@ -1,0 +1,50 @@
+#!/bin/sh
+# CFW: the "Games" menu shown on the phone's own screen (Settings -> Games).
+# lcsD375's minibrowser fetches this from 127.0.0.1:8080 and renders the
+# IPPhoneMenu XML. ?game=doom|nes shows that game's sources: recently used
+# URLs (saved by the launchers), presets, and "Enter URL...".
+echo "Content-type: text/xml"
+echo ""
+B=http://127.0.0.1:8080/cgi-bin
+GAME=$(echo "$QUERY_STRING" | sed -n 's/.*game=\([a-z]*\).*/\1/p')
+
+xmlesc() { sed 's/&/\&amp;/g; s/</\&lt;/g; s/>/\&gt;/g; s/"/\&quot;/g'; }
+# Escape what would break the query string; phone-boot decodes any %XX.
+urlenc() { printf '%s' "$1" | sed 's/%/%25/g; s/&/%26/g; s/ /%20/g; s/?/%3F/g; s/=/%3D/g; s/#/%23/g; s/+/%2B/g'; }
+item() {  # $1 = label, $2 = url
+    printf '  <MenuItem name="%s">\n    <Url>%s</Url>\n  </MenuItem>\n' \
+        "$(printf '%s' "$1" | xmlesc)" "$(printf '%s' "$2" | xmlesc)"
+}
+
+echo '<?xml version="1.0" encoding="UTF-8"?>'
+echo '<IPPhoneMenu state="others_except_mb" dtmf="off">'
+case "$GAME" in
+doom|nes)
+    if [ "$GAME" = doom ]; then echo '  <Title>DOOM</Title>'; else echo '  <Title>NES</Title>'; fi
+    HIST=/snom/cfw/$GAME/history
+    if [ -s "$HIST" ]; then
+        while read -r u; do
+            [ -n "$u" ] || continue
+            name=$(basename "${u%%\?*}" | sed 's/%20/ /g; s/%2[bB]/+/g')
+            item "$name" "$B/phone-boot?game=$GAME&url=$(urlenc "$u")"
+        done < "$HIST"
+    fi
+    if [ "$GAME" = doom ]; then
+        # Freely distributable Doom shareware IWAD (v1.9).
+        item "Shareware DOOM1.WAD" "$B/phone-boot?game=doom&url=$(urlenc https://archive.org/download/doom-shareware-custom/DOOM1.WAD)"
+    fi
+    item "Enter URL..." "$B/phone-url?game=$GAME"
+    ;;
+*)
+    echo '  <Title>Games</Title>'
+    item "DOOM" "$B/phone-games?game=doom"
+    item "NES" "$B/phone-games?game=nes"
+    ;;
+esac
+cat <<'EOF2'
+  <SoftKeyItem>
+    <Name>CANCEL</Name>
+    <Url track="no">phone://mb_nop#go_back</Url>
+  </SoftKeyItem>
+</IPPhoneMenu>
+EOF2

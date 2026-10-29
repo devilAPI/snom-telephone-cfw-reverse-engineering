@@ -62,3 +62,29 @@ config. If that becomes a problem, put the panel behind busybox httpd basic auth
 - `etc/init.d/rcS` and `snom/html/leftnav.htm` are listed in
   `etc/checksum.md5`; editing them means refreshing their md5 entries or the
   build's `md5sum -c` check fails. The build script enforces this.
+
+## On-phone Games menu (Settings → Games)
+
+Doom and NES can be started from the phone itself, with no browser involved.
+
+**How it hooks in.** The phone UI (`lcsD375`) builds its menus from snom
+minibrowser XML in `/snom/html/xml/gui/`. `state_settings.xml` is the top-level
+**Settings** menu. We add one `<Menu name="Games">` whose `<Url>` is
+`http://127.0.0.1:8080/cgi-bin/phone-games`. The minibrowser fetches http URLs
+like `file://` ones and renders the returned XML. `lcsD375` re-reads the file
+each time the menu opens, so no restart is needed. The stock file is kept on the
+phone as `state_settings.xml.orig`.
+
+| CGI | Returns |
+|-----|---------|
+| `phone-games` | `IPPhoneMenu`: DOOM / NES; with `?game=doom\|nes`, the recent URLs (`/snom/cfw/<game>/history`), presets (Doom: shareware `DOOM1.WAD` from archive.org) and "Enter URL..." |
+| `phone-url?game=` | `IPPhoneInput`: keypad URL entry; the typed text replaces `__U__` in the target URL |
+| `phone-boot?game=&url=` | starts `boot-doom.sh` / `boot-nes.sh` detached, answers with an `IPPhoneText` "Starting..." |
+
+The launchers record every URL that downloaded and validated in
+`/snom/cfw/<game>/history` (newest first, max 8). Links used from the web panel
+therefore show up in the phone menu too.
+
+Remote testing without touching the phone: the stock web UI's
+`http://<phone>/command.htm?key=SETTINGS|DOWN|ENTER|LEFT` injects keys, and
+`/dev/fb0` (480x272 BGRX) can be dumped to PNG.

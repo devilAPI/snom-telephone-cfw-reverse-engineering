@@ -1,0 +1,21 @@
+#!/bin/sh
+# CFW: on-phone URL entry for a WAD/ROM (keypad input, minibrowser IPPhoneInput).
+# The phone substitutes the typed text for __U__ and opens phone-boot.
+echo "Content-type: text/xml"
+echo ""
+GAME=$(echo "$QUERY_STRING" | sed -n 's/.*game=\([a-z]*\).*/\1/p')
+case "$GAME" in doom) WHAT="WAD" ;; nes) WHAT="ROM" ;; *) GAME=doom; WHAT="WAD" ;; esac
+cat <<EOF2
+<?xml version="1.0" encoding="UTF-8"?>
+<IPPhoneInput dtmf="off">
+  <Title>$WHAT URL</Title>
+  <Url input_required="yes">http://127.0.0.1:8080/cgi-bin/phone-boot?game=$GAME&amp;url=__U__</Url>
+  <CancelUrl>phone://mb_nop#go_back</CancelUrl>
+  <InputItem>
+    <DisplayName>$WHAT URL</DisplayName>
+    <InputToken>__U__</InputToken>
+    <InputFlags>a</InputFlags>
+    <DefaultValue>https://</DefaultValue>
+  </InputItem>
+</IPPhoneInput>
+EOF2

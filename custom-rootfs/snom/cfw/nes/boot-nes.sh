@@ -22,6 +22,12 @@ case "$(dd if="$ROM" bs=3 count=1 2>/dev/null)" in
     *) echo "not an iNES ROM" >> "$LOG"; rm -f "$ROM"; exit 1 ;;
 esac
 
+# Remember this URL for the phone's Settings -> Games menu (newest first, no
+# duplicates, at most 8).
+H=/snom/cfw/nes/history
+{ echo "$1"; grep -vxF "$1" "$H" 2>/dev/null; } | head -n 8 > "$H.new" && mv "$H.new" "$H"
+
+
 # Hold rcS's fast-update guard so killing the phone app doesn't reboot us. The
 # engine itself kills lid+media_daemon (after arming hands-free audio while the
 # daemon is still alive -- see snd/snd_hal.c).
