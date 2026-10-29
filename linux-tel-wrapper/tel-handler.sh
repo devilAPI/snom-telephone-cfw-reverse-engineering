@@ -93,18 +93,21 @@ fi
 echo "Dialing ${NUMBER} via ${PHONE_HOST}..."
 send_notify "Dialing ${NUMBER}..."
 
-HTTP_CODE="$(curl "${CURL_ARGS[@]}" -o /dev/null -w '%{http_code}' "${URL}?${PARAMS}" 2>/dev/null)" || {
-    echo "Error: could not connect to phone at ${PHONE_HOST}" >&2
-    send_notify "Failed to connect to phone"
-    exit 1
-}
+CURL_EXIT=0
+HTTP_CODE="$(curl "${CURL_ARGS[@]}" -o /dev/null -w '%{http_code}' "${URL}?${PARAMS}" 2>/dev/null)" || CURL_EXIT=$?
 
-if [[ "$HTTP_CODE" == "200" ]]; then
+# Snom D8xx phones reset the connection after processing a command (curl exit 52/56).
+# The command still executes, so treat these as success.
+if [[ "$HTTP_CODE" == "200" ]] || [[ "$CURL_EXIT" -eq 52 ]] || [[ "$CURL_EXIT" -eq 56 ]]; then
     echo "Call initiated successfully"
     send_notify "Call to ${NUMBER} initiated"
 elif [[ "$HTTP_CODE" == "401" ]]; then
     echo "Error: authentication failed (HTTP 401)" >&2
     send_notify "Authentication failed"
+    exit 1
+elif [[ "$CURL_EXIT" -ne 0 ]]; then
+    echo "Error: could not connect to phone at ${PHONE_HOST}" >&2
+    send_notify "Failed to connect to phone"
     exit 1
 else
     echo "Error: phone returned HTTP ${HTTP_CODE}" >&2
