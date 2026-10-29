@@ -1,0 +1,38 @@
+#!/bin/sh
+# CFW: system numbers as JSON (same data as /cgi-bin/sysinfo). No cfw.sh needed.
+echo "Content-type: application/json"
+echo "Cache-Control: no-store"
+echo ""
+jstr() { sed -e 's/\\/\\\\/g' -e 's/"/\\"/g' -e 's/	/ /g' | tr -d '\000-\037'; }
+meminfo() { sed -n "s/^$1:[ ]*\([0-9]*\) kB.*/\1/p" /proc/meminfo | head -n1; }
+fsjson() {  # name path
+    set -- "$1" $(df -k "$2" 2>/dev/null | tail -n 1 | awk '{print $2, $3, $4}')
+    printf '"%s":{"size_kb":%s,"used_kb":%s,"avail_kb":%s}' "$1" "${2:-0}" "${3:-0}" "${4:-0}"
+}
+read L1 L5 L15 _ < /proc/loadavg
+UP=$(cut -d. -f1 /proc/uptime)
+MODEL=$(sed -n 's/^Processor[^:]*:[ ]*//p' /proc/cpuinfo | head -n1 | jstr)
+BOGO=$(sed -n 's/^BogoMIPS[^:]*:[ ]*//p' /proc/cpuinfo | head -n1)
+NCPU=$(grep -c '^processor' /proc/cpuinfo); [ "$NCPU" -ge 1 ] 2>/dev/null || NCPU=1
+printf '{"uptime_s":%s,"load":{"1":%s,"5":%s,"15":%s},' "${UP:-0}" "$L1" "$L5" "$L15"
+printf '"cpu":{"model":"%s","bogomips":%s,"count":%s},' "$MODEL" "${BOGO:-0}" "$NCPU"
+printf '"mem":{"total_kb":%s,"free_kb":%s,"buffers_kb":%s,"cached_kb":%s,"swap_total_kb":%s},' \
+    "$(meminfo MemTotal)" "$(meminfo MemFree)" "$(meminfo Buffers)" "$(meminfo Cached)" "$(meminfo SwapTotal)"
+printf '"fs":{'; fsjson root /; printf ','; fsjson tmp /tmp; printf ','; fsjson protected /protected; printf '},'
+printf '"mtd":['
+sed 1d /proc/mtd | while read dev size erase name; do
+    printf '%s{"dev":"%s","size":%s,"name":%s}' "$S" "${dev%:}" "$((0x$size))" "$(echo "$name" | jstr | sed 's/^\\"/"/; s/\\"$/"/')"
+    S=,
+done
+printf '],"procs":['
+for d in /proc/[0-9]*; do
+    p=${d#/proc/}
+    rss=$(sed -n 's/^VmRSS:[ 	]*\([0-9]*\) kB.*/\1/p' $d/status 2>/dev/null)
+    [ -n "$rss" ] || continue
+    nm=$(sed -n 's/^Name:[ 	]*//p' $d/status 2>/dev/null | jstr)
+    echo "$rss $p $nm"
+done | sort -rn | head -n 10 | while read rss p nm; do
+    printf '%s{"pid":%s,"rss_kb":%s,"name":"%s"}' "$S" "$p" "$rss" "$nm"
+    S=,
+done
+printf ']}\n'
