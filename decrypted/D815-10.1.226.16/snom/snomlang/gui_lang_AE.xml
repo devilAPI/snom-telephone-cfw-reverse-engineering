@@ -1,0 +1,1882 @@
+<?xml version="1.0" encoding="utf-8"?>
+<phrases>
+	<language t="Arabic"/>
+	<phrase n="lang_none" t=""/>
+	<phrase n="lang_language_name" t="Arabic"/>
+	<phrase n="lang_cntry_CHN" t="الصين"/>
+	<phrase n="lang_cntry_FIN" t="فنلندا"/>
+	<phrase n="lang_cntry_GER" t="ألمانيا"/>
+	<phrase n="lang_cntry_IND" t="الهند"/>
+	<phrase n="lang_cntry_IDN" t="اندونيسيا"/>
+	<phrase n="lang_cntry_MYS" t="ماليزيا"/>
+	<phrase n="lang_cntry_MEX" t="المكسيك"/>
+	<phrase n="lang_cntry_NLD" t="هولندا"/>
+	<phrase n="lang_cntry_PRT" t="البرتغال"/>
+	<phrase n="lang_cntry_ZAF" t="جنوب إفريقيا"/>
+	<phrase n="lang_cntry_GBR" t="بريطانيا العظمى"/>
+	<phrase n="lang_cntry_USA" t="الولايات المتحدة الأمريكية."/>
+	<phrase n="lang_cntry_CAM" t="Central America"/>
+	<phrase n="lang_cntry_CAN" t="كندا"/>
+	<phrase n="lang_cntry_CHL" t="شيلي"/>
+	<phrase n="lang_cntry_BHS" t="الباهاما"/>
+	<phrase n="lang_cntry_CUB" t="كوبا"/>
+	<phrase n="lang_cntry_PRY" t="براغواي"/>
+	<phrase n="lang_cntry_BMU" t="برمودا"/>
+	<phrase n="lang_cntry_FLK" t="جزر فوكلاند"/>
+	<phrase n="lang_cntry_GRL" t="غرينلاند"/>
+	<phrase n="lang_cntry_FRO" t="جزر الفارو"/>
+	<phrase n="lang_cntry_IRL" t="أيرلاندا"/>
+	<phrase n="lang_cntry_ESP" t="أسبانيا"/>
+	<phrase n="lang_cntry_ALB" t="ألبانيا"/>
+	<phrase n="lang_cntry_AUT" t="النمسا"/>
+	<phrase n="lang_cntry_BEL" t="بلجيكا"/>
+	<phrase n="lang_cntry_BRA" t="البرازيل"/>
+	<phrase n="lang_cntry_CAI" t="وكايكوس"/>
+	<phrase n="lang_cntry_CHA" t="شاتان"/>
+	<phrase n="lang_cntry_HRV" t="كرواتيا"/>
+	<phrase n="lang_cntry_CZE" t="جمهورية التشيك"/>
+	<phrase n="lang_cntry_DNK" t="الدنمارك"/>
+	<phrase n="lang_cntry_FRA" t="فرنسا"/>
+	<phrase n="lang_cntry_HUN" t="المجر"/>
+	<phrase n="lang_cntry_ITA" t="ايطاليا"/>
+	<phrase n="lang_cntry_LUX" t="لوكسمبورج"/>
+	<phrase n="lang_cntry_MAK" t="مقدونيا"/>
+	<phrase n="lang_cntry_NAM" t="ناميبيا"/>
+	<phrase n="lang_cntry_NOR" t="النرويج"/>
+	<phrase n="lang_cntry_POL" t="بولندا"/>
+	<phrase n="lang_cntry_SVK" t="جمهورية سلوفاكيا"/>
+	<phrase n="lang_cntry_SWD" t="السويد"/>
+	<phrase n="lang_cntry_CHE" t="سويسرا"/>
+	<phrase n="lang_cntry_GIB" t="جبل طارق"/>
+	<phrase n="lang_cntry_YUG" t="صربيا والجبل الأسود"/>
+	<phrase n="lang_cntry_BLR" t="روسيا البيضاء"/>
+	<phrase n="lang_cntry_BGR" t="بلغاريا"/>
+	<phrase n="lang_cntry_CYP" t="قبرص"/>
+	<phrase n="lang_cntry_EGY" t="مصر"/>
+	<phrase n="lang_cntry_EST" t="استونيا"/>
+	<phrase n="lang_cntry_GAZ" t="غزة"/>
+	<phrase n="lang_cntry_GRC" t="اليونان"/>
+	<phrase n="lang_cntry_ISR" t="اسرائيل"/>
+	<phrase n="lang_cntry_JOR" t="الأردن"/>
+	<phrase n="lang_cntry_LVA" t="لاتفيا"/>
+	<phrase n="lang_cntry_LTU" t="ليتوانيا"/>
+	<phrase n="lang_cntry_LBN" t="لبنان"/>
+	<phrase n="lang_cntry_MDA" t="مولدافيا"/>
+	<phrase n="lang_cntry_RUS" t="روسيا"/>
+	<phrase n="lang_cntry_ROU" t="رومانيا"/>
+	<phrase n="lang_cntry_SYR" t="سوريا"/>
+	<phrase n="lang_cntry_TUR" t="تركيا"/>
+	<phrase n="lang_cntry_UKR" t="أوكرانيا"/>
+	<phrase n="lang_cntry_IRQ" t="العراق"/>
+	<phrase n="lang_cntry_IRN" t="إيران"/>
+	<phrase n="lang_cntry_ARM" t="أرمينيا"/>
+	<phrase n="lang_cntry_AZE" t="أذربيجان"/>
+	<phrase n="lang_cntry_GEO" t="جورجيا"/>
+	<phrase n="lang_cntry_KAZ" t="كازاخستان"/>
+	<phrase n="lang_cntry_KGZ" t="جمهورية قيرغيزستان"/>
+	<phrase n="lang_cntry_PAK" t="باكستان"/>
+	<phrase n="lang_cntry_SGP" t="سنغافورة"/>
+	<phrase n="lang_cntry_KOR" t="كوريا"/>
+	<phrase n="lang_cntry_JPN" t="اليابان"/>
+	<phrase n="lang_cntry_AUS" t="أستراليا"/>
+	<phrase n="lang_cntry_NZL" t="نيوزيلندا"/>
+	<phrase n="lang_cntry_TON" t="تونجا"/>
+	<phrase n="lang_cntry_COL" t="كولومبيا"/>
+	<phrase n="lang_cntry_ECU" t="الاكوادور"/>
+	<phrase n="lang_cntry_TTB" t="ترينيداد وتوباغو"/>
+	<phrase n="lang_cntry_ARG" t="الأرجنتين"/>
+	<phrase n="lang_cntry_WAT" t="غرب أفريقيا"/>
+	<phrase n="lang_cntry_CAT" t="افريقيا الوسطى"/>
+	<phrase n="lang_cntry_EAT" t="شرق افريقيا"/>
+	<phrase n="lang_cntry_VEN" t="فنزويلا"/>
+	<phrase n="lang_cntry_NCL" t="كاليدونيا الجديدة"/>
+	<phrase n="lang_cntry_UAE" t="الإمارات العربية المتحدة"/>
+	<phrase n="lang_cntry_THA" t="تايلاند"/>
+	<phrase n="lang_F_SEARCH" t="يبحث"/>
+	<phrase n="lang_F_SEARCH_typeSio" t="يبحث"/>
+	<phrase n="lang_F_REBOOT" t="التشغيل"/>
+	<phrase n="lang_F_REBOOT_typeSio" t="التشغيل"/>
+	<phrase n="lang_F_REBOOT_smartlabel" t="اعادة التشغيل"/>
+	<phrase n="lang_F_PAIR" t="زوج"/>
+	<phrase n="lang_F_UNPAIR" t="إلغاء الاقتران"/>
+	<phrase n="lang_F_JOIN" t="ينضم"/>
+	<phrase n="lang_F_JOIN_typeSio" t="ينضم"/>
+	<phrase n="lang_F_JOIN_WITH" t="اضاف مع"/>
+	<phrase n="lang_F_LEAVE" t="يترك"/>
+	<phrase n="lang_F_LEAVE_typeSio" t="يترك"/>
+	<phrase n="lang_F_OK" t="موافق"/>
+	<phrase n="lang_F_ACCEPT_CALL" t="قبول"/>
+	<phrase n="lang_F_ACCEPT_CALL_typeSio" t="قبول"/>
+	<phrase n="lang_F_CANCEL" t="الغاء"/>
+	<phrase n="lang_F_CANCEL_typeSio" t="الغاء"/>
+	<phrase n="lang_F_YES" t="نعم"/>
+	<phrase n="lang_F_NO" t="لا"/>
+	<phrase n="lang_F_ADD_SPEAKER" t="مكبر الصوت +"/>
+	<phrase n="lang_F_ADD_SPEAKER_typeSio" t="مكبر الصوت +"/>
+	<phrase n="lang_F_REMOVE_SPEAKER" t="مكبر الصوت -"/>
+	<phrase n="lang_F_REMOVE_SPEAKER_typeSio" t="مكبر الصوت -"/>
+	<phrase n="lang_F_ADD_HANDSET" t="+سماعة"/>
+	<phrase n="lang_F_ADD_HANDSET_typeSio" t="+سماعة"/>
+	<phrase n="lang_F_REMOVE_HANDSET" t="-سماعة"/>
+	<phrase n="lang_F_REMOVE_HANDSET_typeSio" t="-سماعة"/>
+	<phrase n="lang_F_DELETE" t="ديل"/>
+	<phrase n="lang_F_DELETE_typeSio" t="مسح"/>
+	<phrase n="lang_F_ADR_BOOK" t="دليل الهاتف"/>
+	<phrase n="lang_F_ADR_BOOK_typeSio" t="دليل الهاتف"/>
+	<phrase n="lang_F_ADR_BOOK_smartlabel" t="الدليل"/>
+	<phrase n="lang_F_DENYALL" t="كتلة"/>
+	<phrase n="lang_F_DENYALL_typeSio" t="حظر المتصل"/>
+	<phrase n="lang_F_DENYALL_smartlabel" t="حاجز"/>
+	<phrase n="lang_F_CALL_LIST" t="السجل"/>
+	<phrase n="lang_F_CALL_LIST_typeSio" t="السجل"/>
+	<phrase n="lang_F_CALL_LIST_smartlabel" t="اتصل باصمت"/>
+	<phrase n="lang_F_PLAY" t="لعب"/>
+	<phrase n="lang_F_STOP" t="قف"/>
+	<phrase n="lang_F_RESCAN" t="إعادة المسح"/>
+	<phrase n="lang_F_INCREASE" t="زيادة"/>
+	<phrase n="lang_F_DECREASE" t="تخفيض"/>
+	<phrase n="lang_F_BACK" t="⌫"/>
+	<phrase n="lang_F_BACK_typeSio" t="مسافة للخلف"/>
+	<phrase n="lang_F_REDIAL" t="إعادة الطلب"/>
+	<phrase n="lang_F_REDIAL_typeSio" t="إعادة الطلب"/>
+	<phrase n="lang_F_REDIAL_smartlabel" t="إعادة الطلب"/>
+	<phrase n="lang_F_INSTANT_REDIAL" t="إعادة الطلب"/>
+	<phrase n="lang_F_INSTANT_REDIAL_typeSio" t="إعادة الاتصال الفوري"/>
+	<phrase n="lang_F_INSTANT_REDIAL_smartlabel" t="إعادة الطلب"/>
+	<phrase n="lang_F_ADD_NUMBER" t="اضافة"/>
+	<phrase n="lang_F_ADD_NUMBER_typeSio" t="أضف رقم"/>
+	<phrase n="lang_F_CONTACTS" t="متصلين"/>
+	<phrase n="lang_F_PRESENCE" t="حالة"/>
+	<phrase n="lang_F_PRESENCE_typeSio" t="حضور"/>
+	<phrase n="lang_F_PRESENCE_smartlabel" t="حضور"/>
+	<phrase n="lang_F_SPEED_DIAL" t="سريع"/>
+	<phrase n="lang_F_SPEED_DIAL_typeSio" t="خط مباشر"/>
+	<phrase n="lang_F_SPEED_DIAL_smartlabel" t="سرعة"/>
+	<phrase n="lang_F_SAFE_TRANSFER" t="آمن"/>
+	<phrase n="lang_F_SAFE_TRANSFER_typeSio" t="النقل الآمن"/>
+	<phrase n="lang_F_MENUS_USERINPUT_SENDSIPINFO" t="UserInputAndSendSipInfo"/>
+	<phrase n="lang_F_MENUS_SENDSIPINFO" t="SendSipInfo"/>
+	<phrase n="lang_F_USERINPUT_SENDSIPINFO" t="رشفة"/>
+	<phrase n="lang_F_SENDSIPINFO" t="رشفة"/>
+	<phrase n="lang_F_SENDSIPINFO_typeSio" t="معلومات رشفة"/>
+	<phrase n="lang_F_SENDSIPINFO_smartlabel" t="SIP&lt;br&gt;INFO"/>
+	<phrase n="lang_F_REC_START" t="تفصيل"/>
+	<phrase n="lang_F_REC_STOP" t="توقف ر"/>
+	<phrase n="lang_F_RECORDER_START" t="تسجيل"/>
+	<phrase n="lang_F_RECORDER_STOP" t="إيقاف التسجيل"/>
+	<phrase n="lang_F_RECORD_ON" t="سِجِلّ"/>
+	<phrase n="lang_F_RECORD_OFF" t="إيقاف التسجيل"/>
+	<phrase n="lang_F_RECORDING" t="تسجيل"/>
+	<phrase n="lang_F_LOGOFF_ALL" t="إطفاء"/>
+	<phrase n="lang_F_LOGOFF_ALL_typeSio" t="تسجيل الخروج الكل"/>
+	<phrase n="lang_F_LOGOFF_ALL_smartlabel" t="إطفاء"/>
+	<phrase n="lang_F_STARCODE_short" t="كود S"/>
+	<phrase n="lang_F_STARCODE" t="كود النجمة"/>
+	<phrase n="lang_F_RELOAD_SERVER_AB" t="إعادة تحميل"/>
+	<phrase n="lang_F_SERVER_AB" t="دير الخادم"/>
+	<phrase n="lang_F_ANONYMOUS" t="معرف أنون"/>
+	<phrase n="lang_F_ANONYMOUS_long" t="معرف مجهول"/>
+	<phrase n="lang_F_ANONYMOUS_smartlabel" t="معرف أنون"/>
+	<phrase n="lang_F_VOICEMAIL_INFO_NEW_MSG" t="معلومات البريد الصوتي"/>
+	<phrase n="lang_F_VOICEMAIL_INFO_short" t="بريد V"/>
+	<phrase n="lang_F_VOICEMAIL_INFO" t="معلومات البريد الصوتي"/>
+	<phrase n="lang_F_NO_NEW_MESSAGE" t="لا يوجد رسائل جديدة"/>
+	<phrase n="lang_F_NEW_MESSAGE" t="رسائل جديدة"/>
+	<phrase n="lang_F_GUEST_LOCK" t="قفل"/>
+	<phrase n="lang_F_GUEST_UNLOCK" t="الغاء القفل"/>
+	<phrase n="lang_F_IVR" t="الرد الآلي"/>
+	<phrase n="lang_F_DTMF" t="دتمف"/>
+	<phrase n="lang_F_ACTION_URL" t="URL"/>
+	<phrase n="lang_F_ACTION_URL_typeSio" t="عنوان URL للإجراء"/>
+	<phrase n="lang_F_ACTION_URL_smartlabel" t="URL"/>
+	<phrase n="lang_F_AUTO_ANSWER" t="أوتوأ"/>
+	<phrase n="lang_F_AUTO_ANSWER_typeSio" t="رد ألي"/>
+	<phrase n="lang_F_AUTO_ANSWER_smartlabel" t="الإجابة التلقائية"/>
+	<phrase n="lang_F_AUTO_ANSWER_ON" t="اجابة الية"/>
+	<phrase n="lang_F_BLF_short" t="بي إل إف"/>
+	<phrase n="lang_F_BLF" t="حقل المصباح مشغول"/>
+	<phrase n="lang_F_LINE" t="خط"/>
+	<phrase n="lang_F_LINE_short" t="خط"/>
+	<phrase n="lang_F_LINE_RINGING" t="يرن"/>
+	<phrase n="lang_F_LINE_OUTGOING" t="الاتصال"/>
+	<phrase n="lang_F_LINE_OFFHOOK" t="خارج الخطاف"/>
+	<phrase n="lang_F_LINE_IDLE" t="عاطل"/>
+	<phrase n="lang_F_LINE_HOLD" t="في الانتظار"/>
+	<phrase n="lang_F_LINE_FAILED" t="مخفي"/>
+	<phrase n="lang_F_LINE_DISCONNECTED" t="انقطع الاتصال"/>
+	<phrase n="lang_F_LINE_DISCONNECTED_typeSio" t="انقطع الاتصال"/>
+	<phrase n="lang_F_LINE_CONNECTED" t="متصل"/>
+	<phrase n="lang_F_LINE_BUSY" t="مشغول"/>
+	<phrase n="lang_F_LINE_HELD" t="يعقد"/>
+	<phrase n="lang_F_LINE_CALLING" t="اتصال"/>
+	<phrase n="lang_F_LINE_RINGBACK" t="يرن"/>
+	<phrase n="lang_F_LINE_HOLDING" t="انتظار"/>
+	<phrase n="lang_F_LINE_UNREGISTERED" t="غير مسجل"/>
+	<phrase n="lang_F_LINE_IN_USE" t="في الاستخدام"/>
+	<phrase n="lang_F_LINE_FREE" t="خالي"/>
+	<phrase n="lang_F_LINE_UNKNOWN" t="مجهول"/>
+	<phrase n="lang_F_LINE_TALKING" t="تحدث"/>
+	<phrase n="lang_F_LINE_SEIZED" t="مضبوط"/>
+	<phrase n="lang_F_LINE_UNVAILABLE" t="غير متوفر"/>
+	<phrase n="lang_F_LINE_ACTIVE" t="فعال"/>
+	<phrase n="lang_F_LINE_AVAILABLE" t="متوفر"/>
+	<phrase n="lang_F_LINE_CLOSED" t="مغلق"/>
+	<phrase n="lang_F_LINE_AUTO_REDIAL" t="توجيه الي"/>
+	<phrase n="lang_F_LINE_AUTO_REDIAL_typeSio" t="توجيه الي"/>
+	<phrase n="lang_F_LINE_CONFERENCING" t="عقد المؤتمرات"/>
+	<phrase n="lang_F_LINE_PARKED" t="اتصالت موقفة مؤقتا"/>
+	<phrase n="lang_F_LINE_NO_BUDDY" t="غير معين"/>
+	<phrase n="lang_F_LINE_DISABLED" t="عاجز"/>
+	<phrase n="lang_F_LINE_MSG_WAITING" t="انتظار msgs"/>
+	<phrase n="lang_F_SHARED_LINE" t="خط S"/>
+	<phrase n="lang_F_SHARED_LINE_typeSio" t="خط مشترك"/>
+	<phrase n="lang_F_SHARED_LINE_smartlabel" t="خط S"/>
+	<phrase n="lang_F_SHARED_LINE_REMOTE_SEIZED" t="خط مشترك"/>
+	<phrase n="lang_F_SHARED_LINE_REMOTE_HOLD" t="خط مشترك"/>
+	<phrase n="lang_F_SHARED_LINE_REMOTE_ALERT" t="خط مشترك"/>
+	<phrase n="lang_F_SHARED_LINE_REMOTE_ACTIVE" t="خط مشترك"/>
+	<phrase n="lang_F_SHARED_LINE_BRIDGE_ACTIVE" t="الخط المشترك"/>
+	<phrase n="lang_F_SHARED_LINE_BRIDGE_HOLD" t="الخط المشترك"/>
+	<phrase n="lang_F_SHARED_LINE_LOCAL_SEIZED" t="خط مشترك"/>
+	<phrase n="lang_F_SHARED_LINE_LOCAL_HOLD" t="خط مشترك"/>
+	<phrase n="lang_F_SHARED_LINE_LOCAL_ALERT" t="خط مشترك"/>
+	<phrase n="lang_F_SHARED_LINE_LOCAL_ACTIVE" t="خط مشترك"/>
+	<phrase n="lang_F_MULTICAST" t="مكاست"/>
+	<phrase n="lang_F_MULTICAST_typeSio" t="البث المتعدد"/>
+	<phrase n="lang_F_MULTICAST_smartlabel" t="صفحة إم سي"/>
+	<phrase n="lang_F_MULTICAST_ON" t="البث المتعدد"/>
+	<phrase n="lang_F_MULTICAST_ZONE" t="منطقة مزون"/>
+	<phrase n="lang_F_MULTICAST_ZONE_typeSio" t="منطقة البث المتعدد"/>
+	<phrase n="lang_F_MULTICAST_ZONE_smartlabel" t="منطقة ام سي"/>
+	<phrase n="lang_F_BUTTON_typeSio" t="زر PBX"/>
+	<phrase n="lang_F_BUTTON" t="زر"/>
+	<phrase n="lang_F_BUTTON_smartlabel" t="زر"/>
+	<phrase n="lang_F_PUSH_TO_TALK" t="الضغط والتحدث"/>
+	<phrase n="lang_F_PUSH_TO_TALK_typeSio" t="اضغط للتحدث"/>
+	<phrase n="lang_F_PUSH_TO_TALK_smartlabel" t="الضغط والتحدث"/>
+	<phrase n="lang_F_INTERCOM_ON" t="تسجيل الصوت"/>
+	<phrase n="lang_F_INTERCOM" t="إيكوم"/>
+	<phrase n="lang_F_INTERCOM_typeSio" t="تسجيل الصوت"/>
+	<phrase n="lang_F_INTERCOM_smartlabel" t="إيكوم"/>
+	<phrase n="lang_F_PICKUP" t="مستعجل"/>
+	<phrase n="lang_F_CALL_CENTER_LIST" t="قائمة مركز الاتصال"/>
+	<phrase n="lang_F_REMOTE_OFFICE" t="مكتب"/>
+	<phrase n="lang_F_REMOTE_OFFICE_typeSio" t="المكتب البعيد"/>
+	<phrase n="lang_F_REMOTE_OFFICE_smartlabel" t="مكتب آر"/>
+	<phrase n="lang_F_REMOTE_OFFICE_ON" t="تشغيل"/>
+	<phrase n="lang_F_REMOTE_OFFICE_OFF" t="إيقاف"/>
+	<phrase n="lang_F_ACD" t="حوار التعاون الآسيوي"/>
+	<phrase n="lang_F_ACD_WRAPUP" t="يتم إحتوائه"/>
+	<phrase n="lang_F_ACD_UNAVAILABLE" t="غير متوفره"/>
+	<phrase n="lang_F_ACD_AVAILABLE" t="متاح"/>
+	<phrase n="lang_F_ACD_SIGN_OUT" t="خروج"/>
+	<phrase n="lang_F_ACD_SIGN_IN" t="تسجيل الدخول"/>
+	<phrase n="lang_F_ACD_LOGOUT" t="خروج"/>
+	<phrase n="lang_F_ACD_LOGIN" t="تسجيل الدخول"/>
+	<phrase n="lang_F_ZONES" t="صفحة M"/>
+	<phrase n="lang_F_SMART_TRANSFER" t="نقل ذكي"/>
+	<phrase n="lang_F_SMART_TRANSFER_short" t="SmartTr"/>
+	<phrase n="lang_F_ALTERNATE_MODE" t="البديل"/>
+	<phrase n="lang_F_LABEL_PAGE_NEXT_typeSio" t="التالي"/>
+	<phrase n="lang_F_LABEL_PAGE_NEXT" t="التالي"/>
+	<phrase n="lang_F_LABEL_PAGE_NEXT_SMART_long" t="الصفحة التالية"/>
+	<phrase n="lang_F_LABEL_PAGE_NEXT_SMART_short" t="Page&gt;&gt;"/>
+	<phrase n="lang_F_LABEL_PAGE_PREV_typeSio" t="السابق"/>
+	<phrase n="lang_F_LABEL_PAGE_PREV" t="السابق"/>
+	<phrase n="lang_F_LABEL_PAGE_PREV_SMART_long" t="الصفحة السابقة"/>
+	<phrase n="lang_F_LABEL_PAGE_PREV_SMART_short" t="&lt;&lt;Page"/>
+	<phrase n="lang_F_ADD_REJECTED_CONTACT" t="اضافة"/>
+	<phrase n="lang_F_SAVE_XSI_CONTACT" t="احفظ"/>
+	<phrase n="lang_F_REFRESH" t="ينعش"/>
+	<phrase n="lang_F_ADD_CONTACT" t="اضافة"/>
+	<phrase n="lang_F_ADD_CONTACT_typeSio" t="إضافة جهة اتصال"/>
+	<phrase n="lang_F_SAVE_DIRECTORY_EDIT" t="احفظ"/>
+	<phrase n="lang_F_GO_NEXT" t="التالي"/>
+	<phrase n="lang_F_GO_BACK" t="عودة"/>
+	<phrase n="lang_F_MENU_BACK" t="Back"/>
+	<phrase n="lang_F_SAVE" t="احفظ"/>
+	<phrase n="lang_F_SAVE_CONTACT" t="احفظ"/>
+	<phrase n="lang_F_SAFE_TRANSFER_OFF" t="كفير"/>
+	<phrase n="lang_F_SAFE_TRANSFER_OFF_typeSio" t="تحويل"/>
+	<phrase n="lang_F_PARK" t="توقيف"/>
+	<phrase n="lang_F_CALL_PARK_GROUP_DIAL" t="Group Park"/>
+	<phrase n="lang_F_PARK_typeSio" t="حديقة"/>
+	<phrase n="lang_F_PARK_smartlabel" t="حديقة"/>
+	<phrase n="lang_F_CALLRECORD_PAUSE" t="وقفة التوصية"/>
+	<phrase n="lang_F_CALLRECORD_RESUME" t="استئناف التوصية"/>
+	<phrase n="lang_F_CALLRECORD_CONTROL_ON" t="تسجيل"/>
+	<phrase n="lang_F_CALLRECORD_CONTROL_OFF" t="تسجيل"/>
+	<phrase n="lang_F_STATUS_UNREAD" t="معلومات"/>
+	<phrase n="lang_F_STATUS" t="معلومات"/>
+	<phrase n="lang_F_STATUS_long" t="رسائل المعلومات"/>
+	<phrase n="lang_F_STATUS_NOTIFICATIONS" t="Notifications"/>
+	<phrase n="lang_F_FAVORITES" t="مفضل"/>
+	<phrase n="lang_F_FAVORITES_typeSio" t="المفضلة"/>
+	<phrase n="lang_F_FAVORITES_smartlabel" t="المفضلة"/>
+	<phrase n="lang_F_SORT" t="نوع"/>
+	<phrase n="lang_F_SORT_typeSio" t="نوع"/>
+	<phrase n="lang_F_CONTACTPOOL" t="حمام سباحة"/>
+	<phrase n="lang_F_CONTACTPOOL_typeSio" t="تجمع الاتصال"/>
+	<phrase n="lang_F_CONTACTPOOL_smartlabel" t="حمام سباحة"/>
+	<phrase n="lang_F_NEXT" t="التالي"/>
+	<phrase n="lang_F_DIRECTORY_SEARCH" t="لداب"/>
+	<phrase n="lang_F_MISSED_LIST" t="م يدعو"/>
+	<phrase n="lang_F_MISSED_LIST_typeSio" t="مكالمات فائتة"/>
+	<phrase n="lang_F_MISSED_LIST_smartlabel" t="مٌفتَقد"/>
+	<phrase n="lang_F_DIALED_LIST" t="تم الاتصال به"/>
+	<phrase n="lang_F_DIALED_LIST_typeSio" t="مكالمات تم الاتصال بها"/>
+	<phrase n="lang_F_DIALED_LIST_smartlabel" t="تم الاتصال به"/>
+	<phrase n="lang_F_ACCEPTED_LIST" t="مكالمات"/>
+	<phrase n="lang_F_ACCEPTED_LIST_typeSio" t="المكالمات المقبولة"/>
+	<phrase n="lang_F_ACCEPTED_LIST_smartlabel" t="قبلت"/>
+	<phrase n="lang_F_DIALED" t="صادرة"/>
+	<phrase n="lang_F_RETRIEVE" t="صندوق الرسائل"/>
+	<phrase n="lang_F_RETRIEVE_smartlabel" t="صندوق الرسائل"/>
+	<phrase n="lang_F_RETRIEVE_typeSio" t="البريد الصوتي"/>
+	<phrase n="lang_F_RETRIEVE_ON" t="صندوق الرسائل"/>
+	<phrase n="lang_F_REDIRECT_OFF" t="لاFwd"/>
+	<phrase n="lang_F_REDIRECT_OFF_smartlabel" t="noFwd"/>
+	<phrase n="lang_F_REDIRECT_OFF_typeSio" t="إلى الأمام معطلة"/>
+	<phrase n="lang_F_REDIRECT_ON" t="CFwd"/>
+	<phrase n="lang_F_REDIRECT_ON_typeSio" t="دعوة إلى الأمام"/>
+	<phrase n="lang_F_REDIRECT_smartlabel" t="CFwd"/>
+	<phrase n="lang_F_RINGER_SILENT" t="صامتة"/>
+	<phrase n="lang_F_RINGER_SILENT_typeSio" t="الوضع الصامت"/>
+	<phrase n="lang_F_RINGER_SILENT_smartlabel" t="صامتة"/>
+	<phrase n="lang_F_ABORT" t="خروج"/>
+	<phrase n="lang_F_ABORT_typeSio" t="مخرج"/>
+	<phrase n="lang_F_SUPPORT" t="المساعدة"/>
+	<phrase n="lang_F_JUMP_BACK" t="انطلاق"/>
+	<phrase n="lang_F_JUMP" t="انطلاق"/>
+	<phrase n="lang_F_REDUCED" t="اخفض"/>
+	<phrase n="lang_F_ALL" t="ارفع"/>
+	<phrase n="lang_F_DIALOG" t="مكالمات"/>
+	<phrase n="lang_F_DIALOG_typeSio" t="مراقبة المكالمات"/>
+	<phrase n="lang_F_DIALOG_smartlabel" t="المكالمات"/>
+	<phrase n="lang_F_HEADSET" t="HS"/>
+	<phrase n="lang_F_HEADSET_typeSio" t="سماعة الرأس"/>
+	<phrase n="lang_F_HEADSET_smartlabel" t="سماعة الرأس"/>
+	<phrase n="lang_F_HEADSET_ON" t="HS"/>
+	<phrase n="lang_F_HEADSET_ON_typeSio" t="سماعة الرأس"/>
+	<phrase n="lang_F_HEADSET_ON_smartlabel" t="سماعة الرأس"/>
+	<phrase n="lang_F_SOFTWARE_UPDATE" t="جنوب غرب"/>
+	<phrase n="lang_F_UPDATE" t="تحديث"/>
+	<phrase n="lang_F_SMS" t="الرسائل القصيرة"/>
+	<phrase n="lang_F_CMC" t="CMC"/>
+	<phrase n="lang_F_CALL_COMPLETION" t="نسخة"/>
+	<phrase n="lang_F_UNMUTE" t="غيرصامت"/>
+	<phrase n="lang_F_UNMUTE_typeSio" t="إعادة الصوت"/>
+	<phrase n="lang_F_UNMUTE_smartlabel" t="إعادة الصوت"/>
+	<phrase n="lang_F_MUTE" t="صامت"/>
+	<phrase n="lang_F_MUTE_typeSio" t="صامت"/>
+	<phrase n="lang_F_MUTE_smartlabel" t="صامت"/>
+	<phrase n="lang_F_REG_ACTIVATE" t="تفعيل"/>
+	<phrase n="lang_F_ADD_PHONEBOOK" t="اضافة"/>
+	<phrase n="lang_F_ADD_PHONEBOOK_typeSio" t="إضافة جهة اتصال"/>
+	<phrase n="lang_F_LIST_MISSED" t="فائتة"/>
+	<phrase n="lang_F_LIST_TAKEN" t="واردة"/>
+	<phrase n="lang_F_LIST_TAKEN_typeSio" t="Received Calls"/>
+	<phrase n="lang_F_LIST_TAKEN_smartlabel" t="Received"/>
+	<phrase n="lang_F_DETAILS" t="التفاصيل"/>
+	<phrase n="lang_F_DND_OFF" t="عدم الإزعاج"/>
+	<phrase n="lang_F_DND_OFF_typeSio" t="لا تخل"/>
+	<phrase n="lang_F_DND_OFF_smartlabel" t="عدم الإزعاج"/>
+	<phrase n="lang_F_DND" t="عدم الإزعاج"/>
+	<phrase n="lang_F_DND_typeSio" t="لا تخل"/>
+	<phrase n="lang_F_DND_smartlabel" t="عدم الإزعاج"/>
+	<phrase n="lang_F_DEF_ON" t="تشغيل*"/>
+	<phrase n="lang_F_DEF_OFF" t="إيقاف*"/>
+	<phrase n="lang_F_ON" t="تشغيل"/>
+	<phrase n="lang_F_OFF" t="إيقاف"/>
+	<phrase n="lang_F_START" t="بداية"/>
+	<phrase n="lang_F_END" t="نهاية"/>
+	<phrase n="lang_F_IDENTITY" t="خط"/>
+	<phrase n="lang_F_SETTINGS_typeSio" t="إعدادات"/>
+	<phrase n="lang_F_SETTINGS" t="إعدادات"/>
+	<phrase n="lang_F_EXECUTIVE_ASSISTANT_CONFIG" t="تكوين المساعد التنفيذي"/>
+	<phrase n="lang_F_EXECUTIVE_CONFIG" t="Exec.&lt;br&gt;Config"/>
+	<phrase n="lang_F_EXECUTIVE_CONFIG_typeSio" t="التكوين التنفيذي"/>
+	<phrase n="lang_F_ASSISTANT_CONFIG" t="Assist.&lt;br&gt;Config"/>
+	<phrase n="lang_F_ASSISTANT_CONFIG_typeSio" t="التكوين المساعد"/>
+	<phrase n="lang_F_EXEC_ASSIST_BEHALF_PUI_LISTING" t="مساعد تنفيذي نيابة عن"/>
+	<phrase n="lang_F_EXEC_ASSIST_BEHALF" t="نيابة عن"/>
+	<phrase n="lang_F_NEW" t="جديد"/>
+	<phrase n="lang_F_URLU" t="أ»أ"/>
+	<phrase n="lang_F_URLU_typeSio" t="وضع التحرير"/>
+	<phrase n="lang_F_URLL" t="1»أ"/>
+	<phrase n="lang_F_URLL_typeSio" t="وضع التحرير"/>
+	<phrase n="lang_F_123" t="أ»1"/>
+	<phrase n="lang_F_123_typeSio" t="وضع التحرير"/>
+	<phrase n="lang_F_REDIRECT" t="CFwd"/>
+	<phrase n="lang_F_REDIRECT_typeSio" t="دعوة إلى الأمام"/>
+	<phrase n="lang_F_HOLD_typeSio" t="انتظار"/>
+	<phrase n="lang_F_HOLD" t="انتظار"/>
+	<phrase n="lang_F_CONSULTCONF_ADD" t="يضيف"/>
+	<phrase n="lang_F_CONSULTCONF_ADD_typeSio" t="إضافة المؤتمر"/>
+	<phrase n="lang_F_CONSULTCONF_ADD_smartlabel" t="اضافة"/>
+	<phrase n="lang_F_CONSULTCONF_JOIN" t="ينضم"/>
+	<phrase n="lang_F_CONSULTCONF_JOIN_typeSio" t="الانضمام إلى المؤتمر"/>
+	<phrase n="lang_F_CONSULTCONF_JOIN_smartlabel" t="ينضم"/>
+	<phrase n="lang_F_CONSULTCONF" t="اجتماع"/>
+	<phrase n="lang_F_CONFERENCE" t="مكالمة"/>
+	<phrase n="lang_F_CONFERENCE_smartlabel" t="مكالمة"/>
+	<phrase n="lang_F_CONFERENCE_typeSio" t="اجتماع"/>
+	<phrase n="lang_F_CONFERENCE_ON" t="عقد المؤتمر"/>
+	<phrase n="lang_F_NO_CONFERENCE" t="لا أسيوط."/>
+	<phrase n="lang_F_DEFLECT" t="تشتيت"/>
+	<phrase n="lang_F_BLIND_TRANSFER" t="ربط"/>
+	<phrase n="lang_F_BLIND_TRANSFER_typeSio" t="نقل أعمى"/>
+	<phrase n="lang_F_TRANSFER" t="كفير"/>
+	<phrase n="lang_F_TRANSFER_typeSio" t="تحويل"/>
+	<phrase n="lang_F_TRANSFER_smartlabel" t="تحويل"/>
+	<phrase n="lang_F_TRANSFER_CALL" t="تحويل هذه المكالمة"/>
+	<phrase n="lang_F_TRANSFER_SELECTED" t="تحويل الخيار"/>
+	<phrase n="lang_F_DENY" t="رفض"/>
+	<phrase n="lang_F_DIAL" t="اتصل"/>
+	<phrase n="lang_F_EDIT" t="تعديل"/>
+	<phrase n="lang_F_CLEAR" t="شطب"/>
+	<phrase n="lang_F_DOWN" t="يوقف"/>
+	<phrase n="lang_F_UP" t="أعلى"/>
+	<phrase n="lang_F_LEFT" t="غادر"/>
+	<phrase n="lang_F_RIGHT" t="يمين"/>
+	<phrase n="lang_F_EXTENSION" t="تحويلة"/>
+	<phrase n="lang_F_EXTENSION_typeSio" t="نطاق"/>
+	<phrase n="lang_F_EXTENSION_smartlabel" t="تحويلة"/>
+	<phrase n="lang_F_MESSAGE" t="رسالة"/>
+	<phrase n="lang_F_CONTACT_STATE_UNKNOWN" t="مجهول"/>
+	<phrase n="lang_F_CONTACT_STATE_AVAILABLE" t="متوفر"/>
+	<phrase n="lang_F_CONTACT_STATE_AVAILABLE_ON_MOBILE" t="متاح (الجوال)"/>
+	<phrase n="lang_F_CONTACT_STATE_AVAILABLE_AT_DESK" t="متاح (مكتب)"/>
+	<phrase n="lang_F_CONTACT_STATE_INACTIVE" t="غير نشط"/>
+	<phrase n="lang_F_CONTACT_STATE_BUSY" t="مشغول"/>
+	<phrase n="lang_F_CONTACT_STATE_URGENT_INTERRUPTIONS_ONLY" t="انقطاعات عاجلة فقط"/>
+	<phrase n="lang_F_CONTACT_STATE_IN_A_CALL" t="في مكالمة"/>
+	<phrase n="lang_F_CONTACT_STATE_IN_A_CONFERENCE" t="في مؤتمر"/>
+	<phrase n="lang_F_CONTACT_STATE_IN_A_MEETING" t="في اجتماع"/>
+	<phrase n="lang_F_CONTACT_STATE_MEETING" t="مقابلة"/>
+	<phrase n="lang_F_CONTACT_STATE_HOLDING" t="تحتجز"/>
+	<phrase n="lang_F_CONTACT_STATE_DND" t="ممنوع الإزعاج"/>
+	<phrase n="lang_F_CONTACT_STATE_DND_ALL" t="عدم الإزعاج (الكل)"/>
+	<phrase n="lang_F_CONTACT_STATE_DND_SELF" t="عدم الإزعاج (النفس)"/>
+	<phrase n="lang_F_CONTACT_STATE_BE_RIGHT_BACK" t="سأعود حال"/>
+	<phrase n="lang_F_CONTACT_STATE_AWAY" t="بالخارج"/>
+	<phrase n="lang_F_CONTACT_STATE_OFFLINE" t="غير متصل على الانترنت"/>
+	<phrase n="lang_F_CONTACT_STATE_INVISIBLE" t="غير مرئى"/>
+	<phrase n="lang_F_CONTACT_STATE_GROUP" t="مجموعة"/>
+	<phrase n="lang_F_KEYEVENT" t="مفتاح"/>
+	<phrase n="lang_F_KEYEVENT_typeSio" t="الحدث الرئيسي"/>
+	<phrase n="lang_F_KEYEVENT_short" t="مفتاح"/>
+	<phrase n="lang_F_XML" t="XML"/>
+	<phrase n="lang_continuous_text_speed_dial" t="خط مباشر"/>
+	<phrase n="lang_continuous_text_reboot" t="التشغيل"/>
+	<phrase n="lang_continuous_text_network_restart" t="Network restart"/>
+	<phrase n="lang_continuous_text_search" t="يبحث"/>
+	<phrase n="lang_continuous_text_cancel" t="الغاء"/>
+	<phrase n="lang_continuous_text_yes" t="نعم"/>
+	<phrase n="lang_continuous_text_no" t="لا"/>
+	<phrase n="lang_confirm_reboot" t="اعادة التشغيل؟"/>
+	<phrase n="lang_on" t="تشغيل"/>
+	<phrase n="lang_off" t="إيقاف"/>
+	<phrase n="lang_busy" t="مشغول"/>
+	<phrase n="lang_short" t="قصير"/>
+	<phrase n="lang_full" t="ممتلىء"/>
+	<phrase n="lang_half" t="نصف"/>
+	<phrase n="lang_F_HOLD_PRIVATE" t="ف عقد"/>
+	<phrase n="lang_F_HOLD_PRIVATE_typeSio" t="عقد خاص"/>
+	<phrase n="lang_F_HOLD_PRIVATE_smartlabel" t="عقد خاص"/>
+	<phrase n="lang_conference_off" t="كنف. عقد"/>
+	<phrase n="lang_conference_off_typeSio" t="المؤتمر معطل"/>
+	<phrase n="lang_edit_cmc" t="رمز مسألة العميل:"/>
+	<phrase n="lang_dnd" t="عدم الإزعاج"/>
+	<phrase n="lang_red" t="CFwd"/>
+	<phrase n="lang_red_typeSio" t="دعوة إلى الأمام"/>
+	<phrase n="lang_missed" t="مكالما ت"/>
+	<phrase n="lang_missed_typeSio" t="مكالما ت"/>
+	<phrase n="lang_edit" t="تعديل"/>
+	<phrase n="lang_F_EDIT_AND_DIAL" t="قصب"/>
+	<phrase n="lang_F_EDIT_AND_DIAL_typeSio" t="Edit &amp; Dial"/>
+	<phrase n="lang_edit_dial" t="تحرير والاتصال الهاتفي"/>
+	<phrase n="lang_dhcp" t="دكب"/>
+	<phrase n="lang_enum" t="التعداد"/>
+	<phrase n="lang_mwi_mailbox1" t="صندوق الرسائل ل"/>
+	<phrase n="lang_mwi_mailbox2" t="لديك"/>
+	<phrase n="lang_mwi_mailbox3" t="لديك رسائل:"/>
+	<phrase n="lang_mwi_urgent" t="عاجلة"/>
+	<phrase n="lang_mwi_goto_mailbox" t="اذهب إلى صندوق الرسائل"/>
+	<phrase n="lang_challenge_user" t="مستخدم"/>
+	<phrase n="lang_challenge_pw" t="كلمة السر"/>
+	<phrase n="lang_use_enum" t="استخدم ENUM"/>
+	<phrase n="lang_wiz_dhcp" t="هل تستخدم DHCP ؟"/>
+	<phrase n="lang_wiz_l2tp_ip_adr" t="عنوان IP L2TP:"/>
+	<phrase n="lang_wiz_ip_adr" t="عنوان IP"/>
+	<phrase n="lang_wiz_mac" t="ماك:"/>
+	<phrase n="lang_wiz_wifi_mac" t="واي فاي ماك:"/>
+	<phrase n="lang_wiz_version" t="إصدار"/>
+	<phrase n="lang_wiz_netmask" t="قناع"/>
+	<phrase n="lang_wiz_gateway" t="منفذ ip"/>
+	<phrase n="lang_wiz_dns_server" t="سيرفر DNS"/>
+	<phrase n="lang_wiz_welcome" t="مرحبا اضغط على اي زر للدخول"/>
+	<phrase n="lang_wiz_http_user" t="Enter new HTTP username"/>
+	<phrase n="lang_wiz_http_pass" t="Enter new HTTP password"/>
+	<phrase n="lang_wiz_short_pass" t="Password too short"/>
+	<phrase n="lang_terminated_finished" t="انتهى"/>
+	<phrase n="lang_try_parking" t="وقف المكالمة"/>
+	<phrase n="lang_try_parking_typeSio" t="وقف المكالمة"/>
+	<phrase n="lang_holding" t="مكالمات في الانتظار"/>
+	<phrase n="lang_select_list" t="سجل المكالمات"/>
+	<phrase n="lang_list_all" t="الجميع"/>
+	<phrase n="lang_list_new" t="جديدة"/>
+	<phrase n="lang_list_old" t="رسائل قديمة"/>
+	<phrase n="lang_list_missed" t="فائتة"/>
+	<phrase n="lang_list_taken" t="واردة"/>
+	<phrase n="lang_list_dialed" t="صادرة"/>
+	<phrase n="lang_list_no_data" t="لا توجد أي معطيات"/>
+	<phrase n="lang_list_details" t="التفاصيل"/>
+	<phrase n="lang_list_details_time" t="الوقت :"/>
+	<phrase n="lang_list_details_duration" t="المدة :"/>
+	<phrase n="lang_list_details_costs" t="التكلفة :"/>
+	<phrase n="lang_list_details_missed" t="فائتة"/>
+	<phrase n="lang_list_details_to" t="الى"/>
+	<phrase n="lang_list_details_from" t="من"/>
+	<phrase n="lang_reg_activate" t="تفعيل"/>
+	<phrase n="lang_reg_account" t="حساب"/>
+	<phrase n="lang_reg_registrar" t="المسجل :"/>
+	<phrase n="lang_reg_explanation_failed" t="خطأ في التسجيل"/>
+	<phrase n="lang_reg_explanation_registering" t="تسجيل مستمر"/>
+	<phrase n="lang_reg_explanation_registered" t="تسجيل ناجح"/>
+	<phrase n="lang_menu_info_320" t="معلومات"/>
+	<phrase n="lang_menu_conf_reset" t="إعادة للوضع السابق"/>
+	<phrase n="lang_menu_gen_contrast" t="تباين"/>
+	<phrase n="lang_menu_gen_ringtone" t="رنين"/>
+	<phrase n="lang_menu_web_webserver_type" t="سيرفر"/>
+	<phrase n="lang_menu_function_key" t="مفاتيح الوظائف"/>
+	<phrase n="lang_menu_tser_timer" t="عداد"/>
+	<phrase n="lang_menu_red_target" t="الرقم"/>
+	<phrase n="lang_menu_ringer1" t="رنة 1"/>
+	<phrase n="lang_menu_ringer2" t="رنة 2"/>
+	<phrase n="lang_menu_ringer3" t="رنة 3"/>
+	<phrase n="lang_menu_ringer4" t="رنة 4"/>
+	<phrase n="lang_menu_ringer5" t="رنة 5"/>
+	<phrase n="lang_menu_ringer6" t="رنة 6"/>
+	<phrase n="lang_menu_ringer7" t="رنة 7"/>
+	<phrase n="lang_menu_ringer8" t="رنة 8"/>
+	<phrase n="lang_menu_ringer9" t="رنة 9"/>
+	<phrase n="lang_menu_ringer10" t="رنة 10"/>
+	<phrase n="lang_vol_headset" t="سماعة الرأس"/>
+	<phrase n="lang_vol_handset" t="سماعة"/>
+	<phrase n="lang_vol_speaker" t="مكبر الصوت"/>
+	<phrase n="lang_audio_speaker" t="مكبر الصوت"/>
+	<phrase n="lang_audio_handset" t="سماعة"/>
+	<phrase n="lang_audio_headset" t="سماعة الرأس"/>
+	<phrase n="lang_vol_contrast" t="تباين الشاشة "/>
+	<phrase n="lang_confirm_factory" t="إعادة الضبط"/>
+	<phrase n="lang_confirm_logoff_all" t="اقطع الاتصال مع كل المستخدمين"/>
+	<phrase n="lang_calling" t="اتصال"/>
+	<phrase n="lang_connected" t="متصل"/>
+	<phrase n="lang_connected_typeSio" t="متصل"/>
+	<phrase n="lang_ringing" t="اتصال"/>
+	<phrase n="lang_enter_number" t="ادخل الرقم"/>
+	<phrase n="lang_held_by" t="موقف من: "/>
+	<phrase n="lang_ok" t="موافق؟"/>
+	<phrase n="lang_menu100_phone_book" t="دليل الهاتف"/>
+	<phrase n="lang_menu100_ldap_book" t="قائمة المكالمات"/>
+	<phrase n="lang_menu100_call_lists" t="سجل المكالمات"/>
+	<phrase n="lang_menu100_settings" t="إعدادات"/>
+	<phrase n="lang_sel100_logoff_all" t="تسجيل الخروج كافة الهويات"/>
+	<phrase n="lang_sel100_logoff_one" t="تسجيل الخروج الهوية"/>
+	<phrase n="lang_sel100_activeline" t="خط خارج"/>
+	<phrase n="lang_sel100_admin_mode" t="وضع المسؤول"/>
+	<phrase n="lang_sel100_user_mode" t="وضع المستخدم"/>
+	<phrase n="lang_sel100_net_info" t="صافي المعلومات"/>
+	<phrase n="lang_sel100_mem_info" t="معلومات ميم"/>
+	<phrase n="lang_menu_ringtone" t="رنة"/>
+	<phrase n="lang_dnd_active" t="DND نشط"/>
+	<phrase n="lang_update" t="جنوب غرب"/>
+	<phrase n="lang_update_a" t="ينفذ؟"/>
+	<phrase n="lang_update_reboot" t="للتحديث الرجاء اعادة التشغيل"/>
+	<phrase n="lang_unplugged" t="موصول"/>
+	<phrase n="lang_ethernet_cable" t="كابل إيثرنت غير موصول"/>
+	<phrase n="lang_hid_plug" t="توصيل جهاز HID"/>
+	<phrase n="lang_hid_connected" t="جهاز HID متصل"/>
+	<phrase n="lang_hid_disconnected" t="تم قطع اتصال جهاز HID"/>
+	<phrase n="lang_temperature" t="درجة حرارة"/>
+	<phrase n="lang_temperature_connected" t="تم توصيل مستشعر درجة الحرارة"/>
+	<phrase n="lang_language" t="اللغة"/>
+	<phrase n="lang_current_date" t="التاريخ"/>
+	<phrase n="lang_current_time" t="الوقت"/>
+	<phrase n="lang_network_settings" t="الشبكة"/>
+	<phrase n="lang_dns_domain" t="مجال DNS"/>
+	<phrase n="lang_dns_server1" t="سيرفر1 DNS"/>
+	<phrase n="lang_dns_server2" t="سيرف2 DNS"/>
+	<phrase n="lang_ntp_server" t="سيرفر NTP"/>
+	<phrase n="lang_no_ip_adr" t="عنوان IP غير صالح"/>
+	<phrase n="lang_password" t="كلمة السر ل"/>
+	<phrase n="lang_username" t="ادمن"/>
+	<phrase n="lang_reset_settings" t="اعادة القيم الى الوضع الاولي"/>
+	<phrase n="lang_networkadvanced_settings" t="متقدم"/>
+	<phrase n="lang_admin_mode_password" t="كلمة مرور وضع المسؤول"/>
+	<phrase n="lang_guess_number" t="بحث سريع"/>
+	<phrase n="lang_guess_number_len" t="طول بدء البحث السريع"/>
+	<phrase n="lang_admin_mode_pwd" t="Admin Passw."/>
+	<phrase n="lang_call_waiting" t="خدمة انتظار المكالمات"/>
+	<phrase n="lang_menu100_red_time" t="تحويل المكالمات بعد(ثواني)"/>
+	<phrase n="lang_menu100_red_time_typeSio" t="تحويل المكالمات بعد(ثواني)"/>
+	<phrase n="lang_menu100_timezone" t="المنطقة الزمنية"/>
+	<phrase n="lang_menu100_dialtone" t="مخطط النغمة"/>
+	<phrase n="lang_menu100_call_completion" t="إكمال المكالمة"/>
+	<phrase n="lang_menu100_cc_waiting" t="منتظر: "/>
+	<phrase n="lang_menu100_cc_dial" t="يتصل: "/>
+	<phrase n="lang_menu100_netmask" t="قناع الشبكة"/>
+	<phrase n="lang_menu100_gateway" t="بوابة الملكية الفكرية"/>
+	<phrase n="lang_menu100_webserver_type" t="ويب سيرفر"/>
+	<phrase n="lang_enum100_disp_always" t="دائماً"/>
+	<phrase n="lang_enum100_disp_on" t="على"/>
+	<phrase n="lang_enum100_disp_off" t="عن"/>
+	<phrase n="lang_enum_disp_webserver_off" t="مغلق"/>
+	<phrase n="lang_enum_disp_webserver_http" t="HTTP فقط"/>
+	<phrase n="lang_enum_disp_webserver_https" t="HTTPS فقط"/>
+	<phrase n="lang_enum_disp_webserver_http_https" t="HTTP &amp; HTTPS"/>
+	<phrase n="lang_enum_disp_func_key_destination" t="امتداد"/>
+	<phrase n="lang_enum_disp_func_key" t="مفتاح"/>
+	<phrase n="lang_xsi_silent_alert" t="التنبيه الصامت"/>
+	<phrase n="lang_privacy_out" t="إخفاء الهوية الصادرة"/>
+	<phrase n="lang_quick_transfer" t="Quick transfer"/>
+	<phrase n="lang_quick_transfer_newcall" t="Make new call"/>
+	<phrase n="lang_quick_transfer_blind" t="Blind xfer"/>
+	<phrase n="lang_quick_transfer_attended" t="Attended xfer"/>
+	<phrase n="lang_privacy_in" t="Reject anonymous"/>
+	<phrase n="lang_privacy_in_typeSio" t="رفض مجهول"/>
+	<phrase n="lang_auto_dial" t="الطلب التلقائي"/>
+	<phrase n="lang_call_completion" t="إكمال المكالمة"/>
+	<phrase n="lang_vlan_id" t="معرف الشبكة المحلية الافتراضية (1-4094)"/>
+	<phrase n="lang_vlan_qos" t="أولوية شبكة VLAN (0-7)"/>
+	<phrase n="lang_vlan_reset" t="إعادة ضبط VLAN"/>
+	<phrase n="lang_vlan_port_tagging" t="VLAN tagging on LAN"/>
+	<phrase n="lang_vlan_pc_id" t="VLAN ID on LAN port"/>
+	<phrase n="lang_identity_settings" t="خط"/>
+	<phrase n="lang_preferences_settings" t="التفضيلات"/>
+	<phrase n="lang_maintenance_settings" t="الصيانة"/>
+	<phrase n="lang_auto_connect_indication" t="إشارة الرد التلقائي"/>
+	<phrase n="lang_sel100_reregister_line" t="إعادة تسجيل الهوية"/>
+	<phrase n="lang_sel100_edit_line" t="تحرير الهوية"/>
+	<phrase n="lang_enum_disp_cw_visual" t="بصري فقط"/>
+	<phrase n="lang_enum_disp_cw_visual_short" t="بصري"/>
+	<phrase n="lang_enum_disp_cw_ringer" t="رنة"/>
+	<phrase n="lang_confirm_del_adr_item" t="متأكد"/>
+	<phrase n="lang_confirm_del_adr_item_title" t="حذف مشترك"/>
+	<phrase n="lang_confirm_del_adr_item_title_typeSio" t="حذف مشترك"/>
+	<phrase n="lang_confirm_del_adr_title" t="حذف دليل الهاتف"/>
+	<phrase n="lang_confirm_del_adr_item_title_short" t="حذف مشترك"/>
+	<phrase n="lang_vol_ringer" t="قوة الرنة"/>
+	<phrase n="lang_keybd_unlock_PIN" t="فتح لوحة المفاتيح"/>
+	<phrase n="lang_enum_disp_func_key_mult" t="خط مشترك"/>
+	<phrase n="lang_enum_disp_func_key_keyevent" t="نتيجة المفتاح"/>
+	<phrase n="lang_menu_ringer_silent" t="سكوت"/>
+	<phrase n="lang_menu_ringer_custom" t="شخصيا"/>
+	<phrase n="lang_enum_disp_func_key_none" t="انظر"/>
+	<phrase n="lang_presence_online" t="حاضر"/>
+	<phrase n="lang_presence_busy" t="مشغول"/>
+	<phrase n="lang_presence_invisible" t="مخفي"/>
+	<phrase n="lang_presence_title" t="حالة الحضور"/>
+	<phrase n="lang_dialog_title" t="مكالمات"/>
+	<phrase n="lang_buddies_title" t="المتصلين"/>
+	<phrase n="lang_use_backlight" t="الإضاءة الخلفية"/>
+	<phrase n="lang_backlight_on_activity" t="الإضاءة الخلفية على النشاط"/>
+	<phrase n="lang_backlight_when_idle" t="Backlight when idle"/>
+	<phrase n="lang_activity" t="نشاط"/>
+	<phrase n="lang_display_settings" t="نشر"/>
+	<phrase n="lang_audio_settings" t="سمعي"/>
+	<phrase n="lang_redirect_settings" t="تحويل المكالمات "/>
+	<phrase n="lang_redirect_settings_typeSio" t="تحويل المكالمات "/>
+	<phrase n="lang_reboot_required" t="اعادة التسغيل ب"/>
+	<phrase n="lang_network_restart_required" t="Network restart required"/>
+	<phrase n="lang_auto_redialing" t="اعادة الإتصال"/>
+	<phrase n="lang_conference" t="اجتماع"/>
+	<phrase n="lang_directory_search" t="بحث في الدليل"/>
+	<phrase n="lang_wrong_pw" t="كلمة المرور خاطئة"/>
+	<phrase n="lang_http_password_not_set" t="كلمة المرور ليست مثبة HTTP"/>
+	<phrase n="lang_start_auto_redial" t="اعادة الإتصال"/>
+	<phrase n="lang_call_features_settings" t="انواع المكالمات"/>
+	<phrase n="lang_all" t="All"/>
+	<phrase n="lang_outgoing_calls_settings" t="الخروج من المكالمة"/>
+	<phrase n="lang_incoming_calls_settings" t="المكالمات الواردة"/>
+	<phrase n="lang_ip_settings_wizzard" t="إعدادات IP"/>
+	<phrase n="lang_webserver_settings" t="خدمة ويب"/>
+	<phrase n="lang_vlan_settings" t="شبكة محلية ظاهرية"/>
+	<phrase n="lang_wlan_settings" t="شبكة محلية لاسلكية"/>
+	<phrase n="lang_wifi_reboot_to_connect_to" t="أعد التشغيل للاتصال"/>
+	<phrase n="lang_system_information_menu" t="معلومات النظام"/>
+	<phrase n="lang_its_a_caller_info" t="زائر"/>
+	<phrase n="lang_its_a_callee_info" t="كالي"/>
+	<phrase n="lang_redirect_all" t="تحويل كل المكالمات"/>
+	<phrase n="lang_redirect_all_typeSio" t="تحويل كل المكالمات"/>
+	<phrase n="lang_redirect_busy" t=" تحويل كل المكالمات"/>
+	<phrase n="lang_redirect_busy_typeSio" t=" تحويل كل المكالمات"/>
+	<phrase n="lang_redirect_time" t=" تحويل المكالمات بعد نهاية المهلة "/>
+	<phrase n="lang_redirect_time_typeSio" t=" تحويل المكالمات بعد نهاية المهلة "/>
+	<phrase n="lang_do_redirect" t="تشغيل تحويل المكالمات "/>
+	<phrase n="lang_do_redirect_typeSio" t="تشغيل تحويل المكالمات "/>
+	<phrase n="lang_redirect_target" t="تحويل المكالمات الى: "/>
+	<phrase n="lang_redirect_target_typeSio" t="تحويل المكالمات الى: "/>
+	<phrase n="lang_help_label" t="المساعدة"/>
+	<phrase n="lang_sysinfo_mem1" t="كبش:"/>
+	<phrase n="lang_sysinfo_mem2" t="اغلاق"/>
+	<phrase n="lang_sysinfo_mem3" t="حر"/>
+	<phrase n="lang_goto_phonepage_msg" t="لإعداد هاتفك، يرجى الانتقال إلى متصفح الويب الخاص بك إلى:"/>
+	<phrase n="lang_goto_phonepage_msg_typeSio" t="لإعداد هاتفك، يرجى الانتقال إلى متصفح الويب الخاص بك إلى:"/>
+	<phrase n="lang_goto_help_msg" t="لمساعدة اكثر زور :"/>
+	<phrase n="lang_linestate_connected" t="متصل"/>
+	<phrase n="lang_linestate_on_hold" t="في الانتظار"/>
+	<phrase n="lang_linestate_ringing" t="يرن"/>
+	<phrase n="lang_linename_message" t="رسالة"/>
+	<phrase n="lang_linename_redial" t="إعادة الطلب"/>
+	<phrase n="lang_linename_transfer" t="تحويل"/>
+	<phrase n="lang_linename_rec_on" t="مواصلة التسجيل"/>
+	<phrase n="lang_linename_rec_off" t="وقف التسجيل"/>
+	<phrase n="lang_linetype_auto_answer" t="اجابة الية"/>
+	<phrase n="lang_linetype_blf" t="بي إل إف"/>
+	<phrase n="lang_connecting" t="اتصال"/>
+	<phrase n="lang_fkey_add_contact_typeSio" t="إضافة جهة اتصال"/>
+	<phrase n="lang_cancelconference" t="الغاء المجموعة"/>
+	<phrase n="lang_confirm_cancelconference" t="شطب المجموعة ؟"/>
+	<phrase n="lang_xmlgui_dialnumber" t="اتصل برقم"/>
+	<phrase n="lang_xmlgui_contactlist" t="قائمة المتصلين"/>
+	<phrase n="lang_xmlgui_dial" t="محادثة"/>
+	<phrase n="lang_menu_equalizer" t="متساوي"/>
+	<phrase n="lang_equalizer_soft" t="خافت"/>
+	<phrase n="lang_equalizer_normal" t="عادي"/>
+	<phrase n="lang_equalizer_bright" t="مضيء"/>
+	<phrase n="lang_contactpool" t="حمام سباحة"/>
+	<phrase n="lang_tb_nickname" t="كنية"/>
+	<phrase n="lang_tb_number" t="رقم هاتف"/>
+	<phrase n="lang_tb_contact" t="نوع الاتصال"/>
+	<phrase n="lang_tb_outgoing_id" t="الهوية الصادرة"/>
+	<phrase n="lang_tb_firstname" t="الاسم الاول"/>
+	<phrase n="lang_tb_lastname" t="اسم العائلة"/>
+	<phrase n="lang_tb_group" t="مجموعة"/>
+	<phrase n="lang_day" t="يوم"/>
+	<phrase n="lang_month" t="شهر"/>
+	<phrase n="lang_year" t="عام"/>
+	<phrase n="lang_tb_title" t="عنوان"/>
+	<phrase n="lang_tb_organization" t="منظمة"/>
+	<phrase n="lang_tb_email" t="بريد الالكتروني"/>
+	<phrase n="lang_tb_note" t="ملحوظة"/>
+	<phrase n="lang_tb_photo" t="صورة"/>
+	<phrase n="lang_tb_favorite" t="مفضل"/>
+	<phrase n="lang_linename_transfer_short" t="كفير"/>
+	<phrase n="lang_linetype_key_event_short" t="مفتاح"/>
+	<phrase n="lang_linetype_url_short" t="URL"/>
+	<phrase n="lang_grouptype_family" t="عائلة"/>
+	<phrase n="lang_grouptype_friend" t="صديق"/>
+	<phrase n="lang_grouptype_collegue" t="Collegue"/>
+	<phrase n="lang_grouptype_work" t="عمل"/>
+	<phrase n="lang_title_sort" t="ترتيب حسب"/>
+	<phrase n="lang_title_select_entry" t="حدد إدخالاً"/>
+	<phrase n="lang_entry_general" t="تفاصيل عامة"/>
+	<phrase n="lang_title_entry_general" t="تفاصيل عامة عن"/>
+	<phrase n="lang_fav_add_from_tbook" t="إضافة من دليل الهاتف"/>
+	<phrase n="lang_redirect_on_timeout" t="إعادة التوجيه عند انتهاء المهلة:"/>
+	<phrase n="lang_redirect_on_timeout_typeSio" t="إعادة التوجيه عند انتهاء المهلة:"/>
+	<phrase n="lang_redirect_when_busy" t="إعادة التوجيه عند الانشغال:"/>
+	<phrase n="lang_redirect_when_busy_typeSio" t="إعادة التوجيه عند الانشغال:"/>
+	<phrase n="lang_sip_disabled" t="تم تعطيل SIP"/>
+	<phrase n="lang_low_memory" t="ذاكرة منخفضة"/>
+	<phrase n="lang_title_error" t="خطأ"/>
+	<phrase n="lang_error_code" t="خطا بالكود:"/>
+	<phrase n="lang_bad_server_response" t="استجابة الخادم سيئة"/>
+	<phrase n="lang_bad_xml_response" t="استجابة XML سيئة..."/>
+	<phrase n="lang_title_loading" t="تحميل"/>
+	<phrase n="lang_active_id" t="الهوية النشطة"/>
+	<phrase n="lang_1st_id" t="الهوية الأولى"/>
+	<phrase n="lang_2nd_id" t="الهوية الثانية"/>
+	<phrase n="lang_3rd_id" t="الهوية الثالثة"/>
+	<phrase n="lang_4th_id" t="الهوية الرابعة"/>
+	<phrase n="lang_5th_id" t="الهوية الخامسة"/>
+	<phrase n="lang_6th_id" t="الهوية السادسة"/>
+	<phrase n="lang_7th_id" t="الهوية السابعة"/>
+	<phrase n="lang_8th_id" t="الهوية الثامنة"/>
+	<phrase n="lang_9th_id" t="الهوية التاسعة"/>
+	<phrase n="lang_10th_id" t="الهوية العاشرة"/>
+	<phrase n="lang_11th_id" t="الهوية الحادية عشرة"/>
+	<phrase n="lang_12th_id" t="الهوية ال12"/>
+	<phrase n="lang_contacttype_vip" t="شخصيات هامة"/>
+	<phrase n="lang_contacttype_deny" t="حاجز"/>
+	<phrase n="lang_unknown" t="مجهول"/>
+	<phrase n="lang_month_01" t="يناير"/>
+	<phrase n="lang_month_02" t="شهر فبراير"/>
+	<phrase n="lang_month_03" t="يمشي"/>
+	<phrase n="lang_month_04" t="أبريل"/>
+	<phrase n="lang_month_05" t="قد"/>
+	<phrase n="lang_month_06" t="يونيو"/>
+	<phrase n="lang_month_07" t="يوليو"/>
+	<phrase n="lang_month_08" t="أغسطس"/>
+	<phrase n="lang_month_09" t="سبتمبر"/>
+	<phrase n="lang_month_10" t="شهر اكتوبر"/>
+	<phrase n="lang_month_11" t="شهر نوفمبر"/>
+	<phrase n="lang_month_12" t="ديسمبر"/>
+	<phrase n="lang_tb_name_label" t="اسم"/>
+	<phrase n="lang_tb_number_label" t="هاتف"/>
+	<phrase n="lang_title_transfer" t="حزب النقل"/>
+	<phrase n="lang_linestate_label" t="حالة"/>
+	<phrase n="lang_reboot_uploads" t="إعادة التشغيل لتفعيل التحميلات."/>
+	<phrase n="lang_cc_dial_now" t="اتصل الان؟"/>
+	<phrase n="lang_cc_complete_now" t="يمكنك إكمال مكالمتك ل"/>
+	<phrase n="lang_cc_waiting_for" t="في انتظار استكمال المكالمة إلى"/>
+	<phrase n="lang_cc_set_warning" t="تم حاليًا تعيين إكمال المكالمة بالفعل، ولكن يمكنك استبدال ذلك."/>
+	<phrase n="lang_cc_change_title" t="هل تريد تغيير هدف إكمال المكالمة؟"/>
+	<phrase n="lang_cc_change_message" t="استبدال CC-Target الحالي بـ"/>
+	<phrase n="lang_cc_status_waiting_on" t="في انتظار إتاحة %dst."/>
+	<phrase n="lang_cc_activate" t="سوف يكون في انتظار استكمال المكالمة."/>
+	<phrase n="lang_cc_activated" t="لا تزال تنتظر إكمال المكالمة."/>
+	<phrase n="lang_call_contact" t="اتصل بجهة الاتصال"/>
+	<phrase n="lang_call_work" t="اتصل بالعمل"/>
+	<phrase n="lang_call_work_typeSio" t="اتصل بالعمل"/>
+	<phrase n="lang_call_mobile" t="مكالمة الجوال"/>
+	<phrase n="lang_call_home" t="اتصل بالمنزل"/>
+	<phrase n="lang_call_home_typeSio" t="اتصل بالمنزل"/>
+	<phrase n="lang_call_other" t="اتصل بأخرى"/>
+	<phrase n="lang_call_voicemail" t="اتصل بالبريد الصوتي"/>
+	<phrase n="lang_xfer_to_contact" t="نقل إلى جهة الاتصال"/>
+	<phrase n="lang_xfer_to_work" t="نقل إلى العمل"/>
+	<phrase n="lang_xfer_to_work_typeSio" t="نقل إلى العمل"/>
+	<phrase n="lang_xfer_to_mobile" t="نقل إلى الجوال"/>
+	<phrase n="lang_xfer_to_home" t="نقل إلى المنزل"/>
+	<phrase n="lang_xfer_to_home_typeSio" t="نقل إلى المنزل"/>
+	<phrase n="lang_xfer_to_other" t="نقل إلى أخرى"/>
+	<phrase n="lang_xfer_to_voicemail" t="نقل إلى البريد الصوتي"/>
+	<phrase n="lang_cfw_to_contact" t="إلى الأمام للاتصال"/>
+	<phrase n="lang_cfw_to_contact_typeSio" t="إلى الأمام للاتصال"/>
+	<phrase n="lang_cfw_to_voicemail_typeSio" t="إعادة التوجيه إلى البريد الصوتي"/>
+	<phrase n="lang_cfw_to_work" t="إلى الأمام للعمل"/>
+	<phrase n="lang_cfw_to_work_typeSio" t="إلى الأمام للعمل"/>
+	<phrase n="lang_cfw_to_mobile" t="إلى الأمام إلى الجوال"/>
+	<phrase n="lang_cfw_to_mobile_typeSio" t="إلى الأمام إلى الجوال"/>
+	<phrase n="lang_cfw_to_home" t="إلى الأمام إلى المنزل"/>
+	<phrase n="lang_cfw_to_home_typeSio" t="إلى الأمام إلى المنزل"/>
+	<phrase n="lang_cfw_to_other" t="إلى الأمام إلى أخرى"/>
+	<phrase n="lang_cfw_to_other_typeSio" t="إلى الأمام إلى أخرى"/>
+	<phrase n="lang_cfw_to_voicemail" t="إعادة التوجيه إلى البريد الصوتي"/>
+	<phrase n="lang_assign_to_key" t="تخصيص مفتاح"/>
+	<phrase n="lang_contact_state_unknown" t="مجهول"/>
+	<phrase n="lang_contact_state_available" t="متوفر"/>
+	<phrase n="lang_contact_state_available_on_mobile" t="متاح (الجوال)"/>
+	<phrase n="lang_contact_state_available_at_desk" t="متاح (مكتب)"/>
+	<phrase n="lang_contact_state_inactive" t="غير نشط"/>
+	<phrase n="lang_contact_state_busy" t="مشغول"/>
+	<phrase n="lang_contact_state_urgent_interruptions_only" t="انقطاعات عاجلة فقط"/>
+	<phrase n="lang_contact_state_in_a_call" t="في مكالمة"/>
+	<phrase n="lang_contact_state_in_a_meeting" t="في اجتماع"/>
+	<phrase n="lang_contact_state_meeting" t="مقابلة"/>
+	<phrase n="lang_contact_state_holding" t="تحتجز"/>
+	<phrase n="lang_contact_state_dnd" t="ممنوع الإزعاج"/>
+	<phrase n="lang_contact_state_dnd_all" t="عدم الإزعاج (الكل)"/>
+	<phrase n="lang_contact_state_dnd_self" t="عدم الإزعاج (النفس)"/>
+	<phrase n="lang_contact_state_be_right_back" t="سأعود حال"/>
+	<phrase n="lang_contact_state_away" t="بالخارج"/>
+	<phrase n="lang_contact_state_offline" t="غير متصل على الانترنت"/>
+	<phrase n="lang_contact_state_reset" t="إعادة تعيين حالة الحضور"/>
+	<phrase n="lang_remote_book_name_ldap" t="دليل LDAP"/>
+	<phrase n="lang_remote_book_choose_title" t="حدد دفتر العناوين"/>
+	<phrase n="lang_title_add_to_favorites" t="اضافة الى المفضلة"/>
+	<phrase n="lang_title_add_to_favorites_typeSio" t="اضافة الى المفضلة"/>
+	<phrase n="lang_title_favorites" t="المفضلة"/>
+	<phrase n="lang_unknown_partner" t="مجهول"/>
+	<phrase n="lang_nrtype_sip" t="رشفة"/>
+	<phrase n="lang_nrtype_business" t="عمل"/>
+	<phrase n="lang_nrtype_fixed" t="هاتف ارضي"/>
+	<phrase n="lang_nrtype_extension" t="نطاق"/>
+	<phrase n="lang_tb_number_type" t="نوع الرقم"/>
+	<phrase n="lang_tb_number_type_label" t="يكتب"/>
+	<phrase n="lang_title_no_permission" t="لا يوجد إذن"/>
+	<phrase n="lang_target_office" t="مكتب"/>
+	<phrase n="lang_target_replyto" t="الرد على"/>
+	<phrase n="lang_target_unqualified" t="غير مؤهل"/>
+	<phrase n="lang_target_work" t="عمل"/>
+	<phrase n="lang_target_work_typeSio" t="عمل"/>
+	<phrase n="lang_target_mobile" t="التليفون المحمول"/>
+	<phrase n="lang_target_home" t="الصفحة الرئيسية"/>
+	<phrase n="lang_target_home_typeSio" t="الصفحة الرئيسية"/>
+	<phrase n="lang_target_other" t="آخر"/>
+	<phrase n="lang_target_voicemail" t="البريد الصوتي"/>
+	<phrase n="lang_target_new_number" t="رقم جديد"/>
+	<phrase n="lang_target_contact" t="اتصل"/>
+	<phrase n="lang_directory_too_big_to_import__long" t="الدليل البعيد كبير جدًا"/>
+	<phrase n="lang_target_cancel" t="لا تعيد توجيه الاتصال"/>
+	<phrase n="lang_target_cancel_typeSio" t="لا تعيد توجيه الاتصال"/>
+	<phrase n="lang_target_forward" t="إ توجيه"/>
+	<phrase n="lang_target_forward_typeSio" t="إ توجيه"/>
+	<phrase n="lang_tls_unknown_certificate_alert" t="تم رفض الاتصال الآمن الذي قدم شهادة غير معروفة. يمكنك منح الإذن بشكل صريح بالثقة في هذا الاتصال عبر واجهة الويب في قسم الشهادات."/>
+	<phrase n="lang_tls_unknown_certificate_alert_title" t="فشل الاتصال الآمن"/>
+	<phrase n="lang_tls_properties_changed" t="لطفا اعد التشغيل. لا يمكن تطبيق خصائص الأمان التي تم تغييرها على الجلسات المستمرة."/>
+	<phrase n="lang_call_completed_by_part1" t="اكتملت المكالمة بواسطة"/>
+	<phrase n="lang_call_completed_by_part2" t="على محطة أخرى."/>
+	<phrase n="lang_call_completed_by_part2_typeSio" t="على محطة أخرى."/>
+	<phrase n="lang_challenge_sip_pw" t="كلمة السر"/>
+	<phrase n="lang_line_ocs_wz_user" t="المجال\المستخدم"/>
+	<phrase n="lang_line_ocs_wz_pwd" t="كلمة السر"/>
+	<phrase n="lang_unregistered_ids_title" t="غير مسجل:"/>
+	<phrase n="lang_message_label" t="معلومات"/>
+	<phrase n="lang_status_messages" t="معلومات الحالة"/>
+	<phrase n="lang_information_settings" t="معلومات"/>
+	<phrase n="lang_user_realname" t="اسم العرض"/>
+	<phrase n="lang_user_idle_number" t="رقم العرض"/>
+	<phrase n="lang_user_name" t="حساب"/>
+	<phrase n="lang_user_pass" t="كلمة المرور"/>
+	<phrase n="lang_user_host" t="المسجل"/>
+	<phrase n="lang_user_outbound" t="بروكسي الصادر"/>
+	<phrase n="lang_user_pname" t="اسم مستخدم المصادقة"/>
+	<phrase n="lang_user_mailbox" t="صندوق بريد"/>
+	<phrase n="lang_user_mailbox_retrieve" t="الاتصال بصندوق البريد"/>
+	<phrase n="lang_hotdesking" t="مكتب ساخن"/>
+	<phrase n="lang_keyb_enter_current_pin" t="أدخل رقم التعريف الشخصي الحالي"/>
+	<phrase n="lang_keyb_enter_new_pin" t="أدخل رقم التعريف الشخصي الجديد"/>
+	<phrase n="lang_keyb_reenter_new_pin" t="أعد إدخال رقم التعريف الشخصي الجديد"/>
+	<phrase n="lang_keyb_enter_password" t="أدخل كلمة المرور لإعادة تعيين رقم التعريف الشخصي"/>
+	<phrase n="lang_keyb_locked" t="اضغط مع الاستمرار على * لفتح القفل."/>
+	<phrase n="lang_keyb_permanently_locked" t="اضغط مع الاستمرار على * لإعادة ضبط رقم التعريف الشخصي (PIN)."/>
+	<phrase n="lang_title_unlock" t="لوحة المفاتيح مقفلة"/>
+	<phrase n="lang_confirm_unlock" t="الغاء القفل؟ اضغط موافق."/>
+	<phrase n="lang_transfer_failed_msg" t="فشل النقل"/>
+	<phrase n="lang_action_failed_msg" t="العمل: فشل"/>
+	<phrase n="lang_vpn_fetch" t="جلب VPN tarball من:"/>
+	<phrase n="lang_vpn_fetch_failed" t="فشل جلب كرة قطران VPN"/>
+	<phrase n="lang_vpn_flash" t="جارٍ استخراج ملفات VPN..."/>
+	<phrase n="lang_vpn_reboot" t="جارٍ إعادة تشغيل النظام لتفعيل VPN..."/>
+	<phrase n="lang_l2tp_fetch" t="جلب كرة القطران L2TP من:"/>
+	<phrase n="lang_l2tp_fetch_failed" t="فشل جلب كرة القطران L2TP"/>
+	<phrase n="lang_l2tp_flash" t="جارٍ استخراج ملفات L2TP..."/>
+	<phrase n="lang_l2tp_reboot" t="إعادة تشغيل النظام لتفعيل L2TP..."/>
+	<phrase n="lang_sbc_fetch" t="جلب ملف تكوين sbc من:"/>
+	<phrase n="lang_sbc_fetch_failed" t="فشل جلب ملف تكوين sbc"/>
+	<phrase n="lang_sbc_flash" t="انسخ ملف تكوين sbc..."/>
+	<phrase n="lang_sbc_reboot" t="إعادة تشغيل النظام لتفعيل SBC..."/>
+	<phrase n="lang_sbc_active" t="SBC نشط"/>
+	<phrase n="lang_keyb_min_digits" t="(# رقم على الأقل)"/>
+	<phrase n="lang_empty_dir_search_list" t="أدخل الاسم! استخدم * للمساحة."/>
+	<phrase n="lang_key_unassigned" t="لم يتم تعيين المفتاح"/>
+	<phrase n="lang_key_unassigned_typeSio" t="لم يتم تعيين المفتاح"/>
+	<phrase n="lang_label_conference_partner" t="حزب"/>
+	<phrase n="lang_incoming_call_title_while_connected" t="خدمة انتظار المكالمات"/>
+	<phrase n="lang_active" t="نشيط"/>
+	<phrase n="lang_emergency_call" t="مكالمة طارئة"/>
+	<phrase n="lang_ntp_pending" t="الاتصال بخادم NTP"/>
+	<phrase n="lang_ntp_unreachable" t="خادم NTP غير قابل للوصول"/>
+	<phrase n="lang_download_server_unreachable" t="الخادم غير قابل للوصول"/>
+	<phrase n="lang_network_busy" t="الشبكة مشغولة"/>
+	<phrase n="lang_pstn_reroute_attempt" t="قد تستغرق هذه المكالمة وقتًا أطول حتى تكتمل. قد تكون الشبكة مشغولة."/>
+	<phrase n="lang_menu_location" t="موقع"/>
+	<phrase n="lang_linestate_holding_upper_case" t="انتظار"/>
+	<phrase n="lang_linestate_on_hold_upper_case" t="في الانتظار"/>
+	<phrase n="lang_location_retrieval_failed" t="غير قادر على استرداد الموقع"/>
+	<phrase n="lang_route_private_line" t="الخط الخاص"/>
+	<phrase n="lang_route_forwarded" t="إعادة توجيه"/>
+	<phrase n="lang_route_forwarded_typeSio" t="إعادة توجيه"/>
+	<phrase n="lang_route_delegated" t="مفوض"/>
+	<phrase n="lang_route_team_call" t="نداء الفريق"/>
+	<phrase n="lang_route_acd" t="مكالمة جماعية"/>
+	<phrase n="lang_route_cccp_conference" t="مكالمة مؤتمرية"/>
+	<phrase n="lang_route_cccp_conference_typeSio" t="مكالمة مؤتمرية"/>
+	<phrase n="lang_dfks_failed" t="فشلت مزامنة الميزات"/>
+	<phrase n="lang_no_shared_key" t="لا يوجد مفتاح خط مشترك متاح"/>
+	<phrase n="lang_shared_seize_active" t="لا يزال الاستيلاء على الخط نشطًا"/>
+	<phrase n="lang_not_a_shared_key" t="المفتاح المحدد ليس مفتاح خط مشترك"/>
+	<phrase n="lang_active_key_not_a_shared_key" t='لا يعمل مفتاح الخط المشترك مع تعيين السياق "النشط".'/>
+	<phrase n="lang_ipv4_conflict" t="IPv4: الصراع"/>
+	<phrase n="lang_contact_saved" t="تم حفظ جهة الاتصال"/>
+	<phrase n="lang_query_pending" t="يبحث..."/>
+	<phrase n="lang_no_conference" t="بسبب تحميل وحدة المعالجة المركزية، لا يُسمح بـ %Aconference"/>
+	<phrase n="lang_no_conference_with_codec" t="بسبب تحميل وحدة المعالجة المركزية، لا يُسمح بعقد مؤتمر %A إذا كان أحد الأطراف يستخدم برنامج الترميز %B"/>
+	<phrase n="lang_no_conference_with_encrypted_codec" t="بسبب تحميل وحدة المعالجة المركزية، لا يُسمح بعقد مؤتمر %A إذا كان أحد الأطراف يستخدم برنامج الترميز %B مع التشفير"/>
+	<phrase n="lang_no_conference_without_unencrypted_codec" t="بسبب تحميل وحدة المعالجة المركزية، لا يُسمح بعقد مؤتمر %A إذا كان أحد الأطراف لا يستخدم برنامج الترميز %B بدون تشفير"/>
+	<phrase n="lang_setup_language" t="لغة الإعداد"/>
+	<phrase n="lang_please_wait" t="انتظر من فضلك..."/>
+	<phrase n="lang_download_failed" t="التحميل فشل"/>
+	<phrase n="lang_function_blocked" t="محظور"/>
+	<phrase n="lang_activating_uploads" t="تفعيل التحميلات"/>
+	<phrase n="lang_provisioning" t="التزويد"/>
+	<phrase n="lang_provisioning_failed" t="فشل التزويد"/>
+	<phrase n="lang_tr69_provisioning" t="TR-069 بروف. في تَقَدم"/>
+	<phrase n="lang_start_provisioning" t="جارٍ توفير الخدمة"/>
+	<phrase n="lang_waitTime" t="وقت الانتظار"/>
+	<phrase n="lang_ccUserId" t="معرف المستخدم"/>
+	<phrase n="lang_callCenterName" t="اسم"/>
+	<phrase n="lang_numCallsInQueue" t="المكالمات في قائمة الانتظار"/>
+	<phrase n="lang_acd_ready" t="متاح"/>
+	<phrase n="lang_acd_not_ready" t="غير متوفره"/>
+	<phrase n="lang_acd_working_after_call" t="يتم إحتوائه"/>
+	<phrase n="lang_acd_log_on" t="تسجيل الدخول"/>
+	<phrase n="lang_acd_log_off" t="خروج"/>
+	<phrase n="lang_acd_unkown_state" t="دولة غير معروفة"/>
+	<phrase n="lang_change_state_to" t="دولة التغيير"/>
+	<phrase n="lang_call_parked" t="اتصالت موقفة مؤقتا"/>
+	<phrase n="lang_call_unparked" t="اتصل غير متوقف"/>
+	<phrase n="lang_firmware_update_failed" t="فشل تحديث SW"/>
+	<phrase n="lang_firmware_update_restart" t="هل تريد إعادة تشغيل SW-Update؟"/>
+	<phrase n="lang_temp_unavail" t="غير متاح مؤقتا"/>
+	<phrase n="lang_limited_func" t="وظائف محدودة بسبب انقطاع الخدمة"/>
+	<phrase n="lang_limited_func_exp" t="هناك مشكلة في الشبكة تؤدي إلى تقييد ميزات مثل التواجد أو CF مؤقتًا"/>
+	<phrase n="lang_limited_func_exp_typeSio" t="هناك مشكلة في الشبكة تؤدي إلى تقييد ميزات مثل التواجد أو CF مؤقتًا"/>
+	<phrase n="lang_call_park_failed" t="فشل وقوف السيارات"/>
+	<phrase n="lang_park_failed_reason" t="لا يوجد مدار متاح"/>
+	<phrase n="lang_list_parked" t="اتصالت موقفة مؤقتا"/>
+	<phrase n="lang_vision" t="رؤية"/>
+	<phrase n="lang_unpair_vision" t="إلغاء اقتران الرؤية"/>
+	<phrase n="lang_scan_for_visions" t="المسح للرؤى"/>
+	<phrase n="lang_paired_with_vision" t="مقترنة بالرؤية:"/>
+	<phrase n="lang_vision_connection_lost" t="فقدت اتصال الرؤية"/>
+	<phrase n="lang_unpair_vision_question" t="إلغاء الرؤية؟"/>
+	<phrase n="lang_isconnected" t="متصل"/>
+	<phrase n="lang_isdisconnected" t="انقطع الاتصال"/>
+	<phrase n="lang_isdisconnected_typeSio" t="انقطع الاتصال"/>
+	<phrase n="lang_hotdesking_ntlm" t="بيانات اعتماد الحساب"/>
+	<phrase n="lang_hotdesking_pin" t="دبوس"/>
+	<phrase n="lang_prompt_phone_num" t="التمديد الخاص بك"/>
+	<phrase n="lang_prompt_pin" t="رقمك السري"/>
+	<phrase n="lang_pin_signin_active" t="تسجيل الدخول..."/>
+	<phrase n="lang_pin_signin_failure" t="تسجيل الدخول باستخدام رقم الهاتف ورقم التعريف الشخصي غير ممكن"/>
+	<phrase n="lang_firmware_update_in" t="تحديث SW في"/>
+	<phrase n="lang_firmware_update_available" t="تحديث SW متاح"/>
+	<phrase n="lang_call_for" t="يدعو إلى"/>
+	<phrase n="lang_linetype_bossadmin" t="رئيس / المشرف"/>
+	<phrase n="lang_linetype_bossadmin_short" t="ب/أ"/>
+	<phrase n="lang_success_msg_transferred_to" t="تم نقل %A إلى %B"/>
+	<phrase n="lang_pickup_call" t="اجب على المكالمة"/>
+	<phrase n="lang_call_on_behalf_of" t="اتصل نيابة عن"/>
+	<phrase n="lang_boss_group" t="الأشخاص الذين أدير المكالمات لهم"/>
+	<phrase n="lang_delegate_group" t="المندوبون"/>
+	<phrase n="lang_all_delegates" t="تعيين كافة المندوبين إلى مفتاح"/>
+	<phrase n="lang_call_failed_network_issue" t="فشل الاتصال بسبب مشاكل في الشبكة"/>
+	<phrase n="lang_call_failed_network_issue_typeSio" t="فشل الاتصال بسبب مشاكل في الشبكة"/>
+	<phrase n="lang_ethernet_detection" t="كشف إيثرنت"/>
+	<phrase n="lang_firmware_update_not_available" t="لا يتوفر تحديث SW"/>
+	<phrase n="lang_check_sw_update" t="تحقق من تحديث SW"/>
+	<phrase n="lang_continuous_text_label" t="ملصق"/>
+	<phrase n="lang_short_text" t="نص قصير"/>
+	<phrase n="lang_headline_admins" t="المشرفون"/>
+	<phrase n="lang_always_delegate_forward" t="تفويض دائما إلى الأمام"/>
+	<phrase n="lang_always_deleg_sim" t="دائما رنين في وقت واحد"/>
+	<phrase n="lang_always_deleg_forw" t="دائما إلى الأمام"/>
+	<phrase n="lang_always_deleg_forw_typeSio" t="دائما إلى الأمام"/>
+	<phrase n="lang_tb_action_url" t="عنوان URL للعمل"/>
+	<phrase n="lang_clear_call_history" t="مسح سجل المكالمات"/>
+	<phrase n="lang_headset_volume_only" t="لا يمكن تغيير مستوى صوت سماعة رأس USB إلا على سماعة الرأس نفسها."/>
+	<phrase n="lang_hold_error" t="Hold failure, call has been muted. Press hold again to retry."/>
+	<phrase n="lang_retr_by" t="بواسطة"/>
+	<phrase n="lang_ipv4" t="IPv4"/>
+	<phrase n="lang_ipv6" t="IPv6"/>
+	<phrase n="lang_ipv6_autoconf" t="سلاك"/>
+	<phrase n="lang_refresh" t="ينعش"/>
+	<phrase n="lang_may_take_some_time" t="قد يستغرق التحديث بعض الوقت. الاستمرار على أي حال؟"/>
+	<phrase n="lang_ip_address_not_available" t="غير متاح"/>
+	<phrase n="lang_menu_unlock" t="الغاء القفل"/>
+	<phrase n="lang_menu_security" t="حماية"/>
+	<phrase n="lang_route_team_call_for" t="دعوة الفريق ل"/>
+	<phrase n="lang_route_acd_for" t="دعوة جماعية ل"/>
+	<phrase n="lang_route_anonymous_acd" t="مكالمة جماعية مجهولة"/>
+	<phrase n="lang_route_anonymous_acd_for" t="دعوة جماعية مجهولة ل"/>
+	<phrase n="lang_anonymous" t="مجهول"/>
+	<phrase n="lang_wish_barge_in" t="هل ترغب في الدخول؟"/>
+	<phrase n="lang_location" t="موقع:"/>
+	<phrase n="lang_subject" t="موضوع"/>
+	<phrase n="lang_dates" t="تعيينات"/>
+	<phrase n="lang_menu_dates_today" t="مواعيد اليوم"/>
+	<phrase n="lang_label_conference_organizer" t="منظم:"/>
+	<phrase n="lang_date_ongoing" t="الآن:"/>
+	<phrase n="lang_date_remind_me_later" t="ذكرني لاحقا"/>
+	<phrase n="lang_date_remind_later" t="لاحقاً"/>
+	<phrase n="lang_date_set_reminder_to" t="ل"/>
+	<phrase n="lang_minutes" t="عشر دقائق"/>
+	<phrase n="lang_date_reset_reminder" t="إعادة تعيين التذكير"/>
+	<phrase n="lang_cannot_access_exchange" t="لا يمكن الوصول إلى خادم Exchange."/>
+	<phrase n="lang_no_dates_today" t="لا شيء مقرر لهذا اليوم"/>
+	<phrase n="lang_participants" t="مشاركون:"/>
+	<phrase n="lang_expansion_modules" t="وحدات التوسع"/>
+	<phrase n="lang_wiz_vlan" t="هل تستخدم شبكة محلية ظاهرية (VLAN)؟"/>
+	<phrase n="lang_wiz_ip4" t="هل تريد إعداد IPv4؟"/>
+	<phrase n="lang_wiz_ip6" t="قم بإعداد IPv6"/>
+	<phrase n="lang_sxm_connected" t="وحدة التوسعة التسلسلية متصلة"/>
+	<phrase n="lang_uxm_connected" t="تم توصيل وحدة توسيع USB"/>
+	<phrase n="lang_uxm_cabeling_broken" t="كابلات وحدة التوسعة خاطئة"/>
+	<phrase n="lang_uxm_limit_exceeded" t="تم توصيل عدد كبير جدًا من وحدات توسيع USB"/>
+	<phrase n="lang_vpn_active" t="VPN نشطة"/>
+	<phrase n="lang_wlan_active" t="الشبكة المحلية اللاسلكية نشطة"/>
+	<phrase n="lang_list_no_devices" t="(لا توجد أجهزة متوفرة)"/>
+	<phrase n="lang_bluetooth" t="بلوتوث"/>
+	<phrase n="lang_bluetooth_connected_title" t="جهاز متصل"/>
+	<phrase n="lang_bluetooth_paired_list_title" t="قائمة الأجهزة المقترنة"/>
+	<phrase n="lang_bluetooth_active_connection" t="اتصال بلوتوث نشط"/>
+	<phrase n="lang_bluetooth_discovered_list_title" t="قائمة الأجهزة المكتشفة"/>
+	<phrase n="lang_bluetooth_discovering" t="اكتشاف"/>
+	<phrase n="lang_bluetooth_unpairing" t="إلغاء الاقتران"/>
+	<phrase n="lang_bluetooth_pairing" t="الاقتران"/>
+	<phrase n="lang_bluetooth_connecting" t="توصيل"/>
+	<phrase n="lang_bluetooth_disconnecting" t="قطع الاتصال"/>
+	<phrase n="lang_callback_on_busy" t="رد الاتصال على مشغول"/>
+	<phrase n="lang_auto_busy_redial" t="إعادة طلب الانشغال التلقائي"/>
+	<phrase n="lang_decision_cob" t='مشغول حاليا. للإعلام عندما يكون متاحًا، اضغط على "تأكيد". لترك رسالة اضغط على "X".'/>
+	<phrase n="lang_decision_cob_withoutvm" t='مشغول حاليا. للإعلام عندما يكون متاحًا، اضغط على "تأكيد".'/>
+	<phrase n="lang_callback" t="أتصل مرة أخرى"/>
+	<phrase n="lang_callback_available" t="رد الاتصال متاح"/>
+	<phrase n="lang_linetype_callback" t="أتصل مرة أخرى"/>
+	<phrase n="lang_linetype_callback_short" t="كوب"/>
+	<phrase n="lang_ringback_callpark_service" t="تم وضعه عن طريق Call Park Service"/>
+	<phrase n="lang_callpark_service" t="اتصل بخدمة بارك"/>
+	<phrase n="lang_storage_mounted" t="قرص USB متصل"/>
+	<phrase n="lang_storage_mounted_typeSio" t="قرص USB متصل"/>
+	<phrase n="lang_storage_tomany" t="يمكنك توصيل قرص USB واحد فقط"/>
+	<phrase n="lang_storage_umount" t="قم بإلغاء تحميل قرص USB"/>
+	<phrase n="lang_no_participants_detected" t="لم يتم اكتشاف أي مشاركين"/>
+	<phrase n="lang_ieee8021_method" t="وضع"/>
+	<phrase n="lang_menu_fkey_functions" t="دور"/>
+	<phrase n="lang_uxm_appearance" t="مظهر"/>
+	<phrase n="lang_put_through_by" t="ضع من خلال"/>
+	<phrase n="lang_contact_not_in_list" t="غير موجود في قائمة جهات الاتصال"/>
+	<phrase n="lang_msg_speaker_active" t="تم تفعيل السماعة غير اليدوية"/>
+	<phrase n="lang_msg_headset_active" t="تم تنشيط وضع سماعة الرأس"/>
+	<phrase n="lang_msg_handset_active" t="تم تنشيط وضع الهاتف"/>
+	<phrase n="lang_msg_ringing_disabled" t="تم تعطيل الرنين"/>
+	<phrase n="lang_msg_mute_active" t="تم كتم صوت الهاتف"/>
+	<phrase n="lang_wiz_aborted" t="تم إحباط المعالج."/>
+	<phrase n="lang_menu_set_kbd_lock_pin" t="Change keyboard-lock PIN"/>
+	<phrase n="lang_menu_change_kbd_lock_pin" t="تغيير رقم التعريف الشخصي لقفل لوحة المفاتيح"/>
+	<phrase n="lang_no_valid_dsearch_config" t="لا يوجد تكوين صالح للبحث في الدليل"/>
+	<phrase n="lang_title_conferences" t="المؤتمرات"/>
+	<phrase n="lang_no_conferences_found" t="لم يتم العثور على مؤتمرات"/>
+	<phrase n="lang_conference_type" t="يكتب"/>
+	<phrase n="lang_conference_status" t="حالة"/>
+	<phrase n="lang_join_conference_long" t="الانضمام إلى المؤتمر"/>
+	<phrase n="lang_join_conference_as_moderator" t="انضم كمشرف"/>
+	<phrase n="lang_choose_menu" t="اختر قائمة"/>
+	<phrase n="lang_menu_shortcut" t="اختصار القائمة"/>
+	<phrase n="lang_using_time" t="باستخدام الوقت"/>
+	<phrase n="lang_waiting_for_pnp" t="في انتظار الحزب الوطني التقدمي"/>
+	<phrase n="lang_fkey_contact_list_buddy" t="بي إل إف (الخادم)"/>
+	<phrase n="lang_fkey_xmpp_presence" t="حضور جهة الاتصال (XMPP)"/>
+	<phrase n="lang_csta_prompt_title" t="اطلب الآن؟"/>
+	<phrase n="lang_contact_is_favorite" t="هل جهة الاتصال هذه هي إحدى جهات الاتصال المفضلة لديك؟"/>
+	<phrase n="lang_currently_set_to" t="تم ضبطه حاليًا على:"/>
+	<phrase n="lang_vol_label_contrast" t="تباين العرض الثانوي"/>
+	<phrase n="lang_menu_fkeys_phone" t="مفاتيح الخط"/>
+	<phrase n="lang_menu_dkeys_phone" t="مفاتيح مخصصة"/>
+	<phrase n="lang_menu_context_sensitive_keys_phone" t="مفاتيح حساسة للسياق"/>
+	<phrase n="lang_menu_smartlabel_fkeys" t="مفاتيح التسمية الذكية"/>
+	<phrase n="lang_menu_smartlabel_page" t="صفحة"/>
+	<phrase n="lang_menu_fkeys_page" t="صفحة مفاتيح الخط"/>
+	<phrase n="lang_menu_fkeys_sxm" t="مفاتيح على SXM"/>
+	<phrase n="lang_menu_fkeys_uxm" t="مفاتيح التوسع"/>
+	<phrase n="lang_server_directory_search" t="بحث في دليل الخادم"/>
+	<phrase n="lang_menu_fontsize" t="حجم الخط"/>
+	<phrase n="lang_uxm_fontsize_lines" t="حجم الخط (تخطيط الخط)"/>
+	<phrase n="lang_uxm_fontsize_tiles" t="حجم الخط (تخطيط البلاط)"/>
+	<phrase n="lang_menu_text_alignment" t="محاذاة النص"/>
+	<phrase n="lang_left" t="غادر"/>
+	<phrase n="lang_right" t="يمين"/>
+	<phrase n="lang_center" t="مركز"/>
+	<phrase n="lang_alternate" t="البديل"/>
+	<phrase n="lang_menu_return_to_first_page" t="العودة إلى الصفحة الأولى"/>
+	<phrase n="lang_automatic_return" t="العودة التلقائية"/>
+	<phrase n="lang_warning" t="تحذير"/>
+	<phrase n="lang_public_address" t="العنوان العام"/>
+	<phrase n="lang_menu_volume" t="جهارة الصوت"/>
+	<phrase n="lang_vol_ringer_text" t="قوة الرنة"/>
+	<phrase n="lang_vol_headset_text" t="سماعة الرأس"/>
+	<phrase n="lang_vol_handset_text" t="سماعة"/>
+	<phrase n="lang_vol_speaker_text" t="مكبر الصوت"/>
+	<phrase n="lang_list_rejected" t="مرفوض"/>
+	<phrase n="lang_enum_disp_func_key_conference" t="مؤتمر"/>
+	<phrase n="lang_enum_disp_func_key_ivr" t="الرد الآلي"/>
+	<phrase n="lang_enum_disp_func_key_callback_on_busy" t="أتصل مرة أخرى"/>
+	<phrase n="lang_fkeys_ssi_context" t="سياق"/>
+	<phrase n="lang_fkeys_ssi_type" t="يكتب"/>
+	<phrase n="lang_fkeys_ssi_active" t="نشيط"/>
+	<phrase n="lang_fkeys_ssi_icon" t="أيقونة"/>
+	<phrase n="lang_default_icon" t="الرمز الافتراضي"/>
+	<phrase n="lang_custom_icon" t="أيقونة مخصصة"/>
+	<phrase n="lang_FirstName" t="الاسم الاول"/>
+	<phrase n="lang_LastName" t="اسم العائلة"/>
+	<phrase n="lang_Home" t="رقم البيت"/>
+	<phrase n="lang_Office" t="رقم المكتب"/>
+	<phrase n="lang_Mobile" t="رقم الهاتف المحمول"/>
+	<phrase n="lang_Unqualified" t="رقم غير مؤهل"/>
+	<phrase n="lang_edit_contact" t="تحرير جهة الاتصال"/>
+	<phrase n="lang_msw_query" t="فشل إرسال بيانات الاتصال إلى الخادم:"/>
+	<phrase n="lang_indicator" t="مؤشر"/>
+	<phrase n="lang_protocol" t="بروتوكول"/>
+	<phrase n="lang_target_forward_busy" t="إعادة توجيه المكالمات عندما تكون مشغولاً إلى"/>
+	<phrase n="lang_target_forward_timeout" t="إعادة توجيه المكالمات بعد ذلك"/>
+	<phrase n="lang_target_forward_timeout_typeSio" t="إعادة توجيه المكالمات بعد ذلك"/>
+	<phrase n="lang_WIFI_SSID" t="اسم الشبكة"/>
+	<phrase n="lang_WIFI_auth_mode" t="التشفير"/>
+	<phrase n="lang_WIFI_WPA_Encryption" t="WPA التشفير"/>
+	<phrase n="lang_WIFI_WPA" t="وبا"/>
+	<phrase n="lang_WIFI_WPA2PSK" t="WPA2"/>
+	<phrase n="lang_WIFI_WEP" t="WEP"/>
+	<phrase n="lang_WIFI_OPEN" t="يفتح"/>
+	<phrase n="lang_WIFI_AES" t="الخدمات المعمارية والهندسية"/>
+	<phrase n="lang_WIFI_TKIP" t="TKIP"/>
+	<phrase n="lang_WIFI_SCAN_NETWORKS" t="مسح شبكة WLAN"/>
+	<phrase n="lang_WIFI_MANUAL_SETUP" t="إعداد يدوي"/>
+	<phrase n="lang_contact_details" t="بيانات المتصل"/>
+	<phrase n="lang_WIFI_CONNECTED_TO" t="متصلا"/>
+	<phrase n="lang_WIFI_NOT_CONNECTED" t="غير متصل"/>
+	<phrase n="lang_unhold" t="يسترد"/>
+	<phrase n="lang_empty" t="فارغ"/>
+	<phrase n="lang_F_SNOM" t="سنوم/سحابة"/>
+	<phrase n="lang_prefs_ssi_date_us_format" t="صيغة التاريخ"/>
+	<phrase n="lang_prefs_ssi_time_24_format" t="ساعة بنظام 24 ساعة"/>
+	<phrase n="lang_time_symbol_second" t=" ث"/>
+	<phrase n="lang_all_accounts" t="جميع الهويات"/>
+	<phrase n="lang_reboot_to_apply_new_settings" t="هل تريد إعادة التشغيل الآن حتى تدخل الإعدادات الجديدة حيز التنفيذ؟"/>
+	<phrase n="lang_TLS" t="TLS"/>
+	<phrase n="lang_MD5" t="MD5"/>
+	<phrase n="lang_WIFI_SWITCH_OFF_WLAN" t="قم بإيقاف تشغيل شبكة WLAN"/>
+	<phrase n="lang_ErrorNotSupportedByManager" t="غير مدعوم"/>
+	<phrase n="lang_ErrorContactNotFound" t="لم يتم العثور على جهة الاتصال"/>
+	<phrase n="lang_ErrorInvalidCredentials" t="بيانات الاعتماد غير صالحة"/>
+	<phrase n="lang_ErrorInvalidArgument" t="سيطة غير صالحة"/>
+	<phrase n="lang_ErrorRequestPending" t="الطلب معلق"/>
+	<phrase n="lang_ErrorNotInitialized" t="لم يتم تهيئة"/>
+	<phrase n="lang_ErrorInComplete" t="غير مكتمل"/>
+	<phrase n="lang_ErrorOutOfMemory" t="خارج الذاكرة"/>
+	<phrase n="lang_Contact_pool" t="تجمع الاتصال"/>
+	<phrase n="lang_advanced_autoneg" t="التفاوض الذاتي"/>
+	<phrase n="lang_advanced_10full" t="10 ميغابت دوبلكس كامل"/>
+	<phrase n="lang_advanced_10half" t="10 ميغابت نصف دوبلكس"/>
+	<phrase n="lang_advanced_100full" t="100 ميغابت دوبلكس كامل"/>
+	<phrase n="lang_advanced_100half" t="100 ميغابت نصف مزدوج"/>
+	<phrase n="lang_advanced_1000full" t="1000 ميغابت دوبلكس كامل"/>
+	<phrase n="lang_Hardware" t="المعدات"/>
+	<phrase n="lang_NET_port_speed" t="سرعة المنفذ الصافي/الازدواج"/>
+	<phrase n="lang_PC_port_speed" t="سرعة منفذ الكمبيوتر/الازدواج"/>
+	<phrase n="lang_Action_on_eth_replug" t="الإجراء المتعلق بإعادة توصيل كابل Ethernet"/>
+	<phrase n="lang_advanced_donothing" t="يتجاهل"/>
+	<phrase n="lang_line_reregister" t="إعادة التسجيل"/>
+	<phrase n="lang_NTP" t="نتب"/>
+	<phrase n="lang_DNS" t="DNS"/>
+	<phrase n="lang_LLDP" t="إل دي بي"/>
+	<phrase n="lang_NTP_refresh_timer" t="مؤقت تحديث NTP"/>
+	<phrase n="lang_8021x" t="802.1X"/>
+	<phrase n="lang_Expansion" t="توسع"/>
+	<phrase n="lang_expansion_layout" t="تخطيط التوسع"/>
+	<phrase n="lang_Expansion_module" t="وحدة التوسع"/>
+	<phrase n="lang_Please_reboot" t="لطفا اعد التشغيل!"/>
+	<phrase n="lang_All_settings_saved" t="تم حفظ جميع الإعدادات"/>
+	<phrase n="lang_WIFI_SCAN_RUNNING" t="يتم المسح..."/>
+	<phrase n="lang_WIFI_CONNECTING" t="توصيل..."/>
+	<phrase n="lang_wifi_connect_success_reboot_to_continue_msg1" t="أعد التشغيل للمتابعة"/>
+	<phrase n="lang_wifi_connect_success_password_ok_msg2" t="كلمة المرور موافق"/>
+	<phrase n="lang_wifi_connect_fail_invalid_settings_msg1" t="إعدادات غير صالحة"/>
+	<phrase n="lang_wifi_connect_fail_please_retry_msg2" t="الرجاء اعادة المحاولة"/>
+	<phrase n="lang_usb_wifi_unavailable" t="USB واي فاي غير متوفر"/>
+	<phrase n="lang_usb_wifi_connected" t="تم توصيل USB بشبكة WiFi"/>
+	<phrase n="lang_usb_wifi_disconnected" t="تم قطع اتصال USB WiFi"/>
+	<phrase n="lang_is_a_favorite" t="هو المفضل"/>
+	<phrase n="lang_Lines" t="تخطيط الخط"/>
+	<phrase n="lang_Tiles" t="تخطيط البلاط"/>
+	<phrase n="lang_tbook_emtpy" t="&lt;Empty&gt;"/>
+	<phrase n="lang_enter_starting_uppercase" t="يدخل"/>
+	<phrase n="lang_characters_starting_lowercase" t="الشخصيات"/>
+	<phrase n="lang_user_server_type" t="نوع الخادم المدعوم"/>
+	<phrase n="lang_broadsoft_features" t="مميزات برودسوفت"/>
+	<phrase n="lang_xsi_server" t="خادم XSI"/>
+	<phrase n="lang_xsi_user" t="مستخدم XSI"/>
+	<phrase n="lang_xsi_password" t="كلمة مرور XSI"/>
+	<phrase n="lang_xsi_retry_timer" t="مؤقت إعادة المحاولة XSI"/>
+	<phrase n="lang_xsi_events" t="أحداث XSI"/>
+	<phrase n="lang_xmpp_jid" t="معرف XMPP"/>
+	<phrase n="lang_xmpp_password" t="كلمة مرور XMPP"/>
+	<phrase n="lang_no_headset_present" t="لا توجد سماعة رأس"/>
+	<phrase n="lang_headset_detection" t="كشف سماعة الرأس"/>
+	<phrase n="lang_msw_services" t="خدمات ميتاسويتش"/>
+	<phrase n="lang_msw_directory_number" t="رقم دليل ميتاسويتش"/>
+	<phrase n="lang_msw_password" t="كلمة المرور ميتاسويتش"/>
+	<phrase n="lang_msw_web_url" t="عنوان URL لخادم ميتاسويتش"/>
+	<phrase n="lang_xsi_dir_enterprise" t="دليل المؤسسة"/>
+	<phrase n="lang_xsi_dir_enterprise_common" t="قائمة الهواتف المشتركة للمؤسسة"/>
+	<phrase n="lang_xsi_dir_group" t="دليل المجموعة"/>
+	<phrase n="lang_xsi_dir_group_common" t="قائمة الهواتف المشتركة للمجموعة"/>
+	<phrase n="lang_xsi_dir_personal" t="قائمة الهواتف الشخصية"/>
+	<phrase n="lang_xsi_anywhere" t="في أى مكان"/>
+	<phrase n="lang_xsi_location_new_entry" t="&lt;New Entry&gt;"/>
+	<phrase n="lang_xsi_location_edit_description" t="تحرير وصف الموقع"/>
+	<phrase n="lang_xsi_location_description" t="وصف"/>
+	<phrase n="lang_xsi_location_edit_number" t="تعديل رقم الموقع"/>
+	<phrase n="lang_number_str" t="الرقم "/>
+	<phrase n="lang_xsi_location_status_creating" t="خلق"/>
+	<phrase n="lang_xsi_location_status_modifying" t="تعديل"/>
+	<phrase n="lang_xsi_location_status_deleting" t="حذف"/>
+	<phrase n="lang_xsi_location_error_empty_number" t="رقم الهاتف يجب ألا يكون فارغا"/>
+	<phrase n="lang_xsi_location_error_number_exists" t="رقم الهاتف موجود بالفعل"/>
+	<phrase n="lang_xsi_location_error_empty_description" t="يجب ألا يكون الوصف فارغًا"/>
+	<phrase n="lang_visual_voicemail" t="البريد الصوتي المرئي"/>
+	<phrase n="lang_feature_works" t="تعمل الميزة"/>
+	<phrase n="lang_voicemail_name" t="اسم"/>
+	<phrase n="lang_voicemail_call_number" t="اتصل بالرقم"/>
+	<phrase n="lang_voicemail_date_time" t="Date &amp; Time"/>
+	<phrase n="lang_voicemail_duration" t="مدة"/>
+	<phrase n="lang_xsi_anywhere_clicktodial" t="انقر للاتصال"/>
+	<phrase n="lang_xsi_anywhere_grouppaging" t="ترحيل المجموعة"/>
+	<phrase n="lang_xsi_anywhere_settings" t="إعدادات"/>
+	<phrase n="lang_remote_office" t="المكتب البعيد"/>
+	<phrase n="lang_xsi_anywhereportal" t="بوابة في أي مكان"/>
+	<phrase n="lang_xsi_anywhereportal_number" t="رقم التليفون"/>
+	<phrase n="lang_menu_primary_display" t="العرض الأولي"/>
+	<phrase n="lang_menu_secondary_display" t="العرض الثانوي"/>
+	<phrase n="lang_enable_remote_office" t="تمكين المكتب البعيد"/>
+	<phrase n="lang_call_center_list" t="قائمة مركز الاتصال"/>
+	<phrase n="lang_call_center_status" t="حالة مركز الاتصال"/>
+	<phrase n="lang_call_center_joined" t="انضم"/>
+	<phrase n="lang_call_center_unable_to_join" t="غير قادر على الانضمام إلى مركز الاتصال"/>
+	<phrase n="lang_call_center_join_not_allowed" t="غير مسموح بالانضمام"/>
+	<phrase n="lang_call_center_unjoin_not_allowed" t="غير مسموح بإلغاء الانضمام"/>
+	<phrase n="lang_call_center_joining" t="انضمام"/>
+	<phrase n="lang_call_recording_control" t="التحكم في تسجيل المكالمات"/>
+	<phrase n="lang_pause_recording" t="إيقاف التسجيل مؤقتًا"/>
+	<phrase n="lang_resume_recording" t="استئناف التسجيل"/>
+	<phrase n="lang_xsi_simul_ring" t="الرنين المتزامن"/>
+	<phrase n="lang_xsi_simul_ring_on_call" t="لا ترن عند إجراء مكالمة"/>
+	<phrase n="lang_xsi_simul_ring_edit_phone_number" t="رقم الهاتف"/>
+	<phrase n="lang_xsi_simul_ring_enter_phone_number" t="أدخل رقم الهاتف"/>
+	<phrase n="lang_xsi_simul_ring_edit" t="يحرر"/>
+	<phrase n="lang_xsi_simul_ring_number" t="رقم التليفون"/>
+	<phrase n="lang_xsi_simul_ring_add_entry" t="إضافة إدخال جديد"/>
+	<phrase n="lang_xsi_simul_ring_ans_confirm" t="تأكيد الإجابة"/>
+	<phrase n="lang_xsi_simul_ring_number_exists_error" t="رقم الهاتف موجود بالفعل"/>
+	<phrase n="lang_xsi_simul_ring_number_empty_error" t="رقم الهاتف فارغ."/>
+	<phrase n="lang_xsi_executive" t="تنفيذي"/>
+	<phrase n="lang_xsi_executive_assistant" t="مساعد تنفيذي"/>
+	<phrase n="lang_xsi_call_filtering" t="تصفية المكالمات"/>
+	<phrase n="lang_xsi_call_filtering_enable" t="تصفية المكالمات"/>
+	<phrase n="lang_xsi_call_filtering_mode" t="وضع التصفية"/>
+	<phrase n="lang_xsi_call_filtering_type" t="نوع التصفية"/>
+	<phrase n="lang_xsi_call_filtering_simple" t="بسيط"/>
+	<phrase n="lang_xsi_call_filtering_advanced" t="متقدم"/>
+	<phrase n="lang_xsi_call_filtering_all" t="جميع المكالمات"/>
+	<phrase n="lang_xsi_call_filtering_internal" t="جميع المكالمات الداخلية"/>
+	<phrase n="lang_xsi_call_filtering_external" t="جميع المكالمات الخارجية"/>
+	<phrase n="lang_xsi_call_screening" t="فحص المكالمات"/>
+	<phrase n="lang_xsi_call_screening_type" t="النوع المحذر"/>
+	<phrase n="lang_xsi_call_screening_alert_mobile" t="تنبيه مواقع الجوال"/>
+	<phrase n="lang_xsi_call_screening_alert_anywhere" t="تنبيه في أي مكان المواقع"/>
+	<phrase n="lang_xsi_call_screening_alert_sca" t="تنبيه مواقع SCA"/>
+	<phrase n="lang_xsi_call_screening_silent" t="صامتة"/>
+	<phrase n="lang_xsi_call_screening_ringsplash" t="سبلاش الدائري"/>
+	<phrase n="lang_xsi_executive_view_assistants" t="عرض المساعدين"/>
+	<phrase n="lang_xsi_executive_allow_optin" t="السماح للمساعدين بالاشتراك/الخروج"/>
+	<phrase n="lang_xsi_opt_in_out_to_executive" t="الاشتراك في / الخروج التنفيذي"/>
+	<phrase n="lang_xsi_opt_in_to_executive" t="الاشتراك"/>
+	<phrase n="lang_xsi_opt_out_to_executive" t="انسحب"/>
+	<phrase n="lang_xsi_assistant_call_divert" t="تحويل"/>
+	<phrase n="lang_xsi_assistant_call_divert_number" t="تحويل الرقم"/>
+	<phrase n="lang_xsi_call_alerting" t="تنبيه المكالمات"/>
+	<phrase n="lang_xsi_call_alerting_mode" t="وضع التنبيه"/>
+	<phrase n="lang_xsi_call_alerting_mode_simu" t="متزامنة"/>
+	<phrase n="lang_xsi_call_alerting_mode_seq" t="تسلسلي"/>
+	<phrase n="lang_xsi_call_alerting_id_name" t="اسم معرف الخط المتصل"/>
+	<phrase n="lang_xsi_call_alerting_id_exec_name" t="الاسم التنفيذي"/>
+	<phrase n="lang_xsi_call_alerting_id_origin_name" t="اسم المنشئ"/>
+	<phrase n="lang_xsi_call_alerting_id_exec_origin_name" t="أسماء المنشئ التنفيذي"/>
+	<phrase n="lang_xsi_call_alerting_id_origin_exec_name" t="أسماء المنشئين التنفيذيين"/>
+	<phrase n="lang_xsi_call_custom_name" t="مخصص"/>
+	<phrase n="lang_xsi_call_alerting_custom_id_name" t="اسم معرف خط الاتصال المخصص"/>
+	<phrase n="lang_xsi_call_alerting_id_number" t="رقم معرف الخط المتصل"/>
+	<phrase n="lang_xsi_call_alerting_id_exec_number" t="الرقم التنفيذي"/>
+	<phrase n="lang_xsi_call_alerting_id_origin_number" t="رقم المنشئ"/>
+	<phrase n="lang_xsi_call_alerting_custom_id_number" t="رقم معرف خط الاتصال المخصص"/>
+	<phrase n="lang_xsi_call_alerting_recall_after" t="استدعاء دفع استدعاء بعد"/>
+	<phrase n="lang_xsi_call_alerting_recall_after_range" t="أدخل عدد الحلقات (2-20)"/>
+	<phrase n="lang_xsi_call_alerting_next_assistant" t="متقدم إلى المساعد التالي بعد"/>
+	<phrase n="lang_xsi_call_alerting_next_assistant_range" t="أدخل عدد الحلقات (1-20)"/>
+	<phrase n="lang_xsi_call_alerting_rollover_after" t="التمرير بعد الانتظار"/>
+	<phrase n="lang_xsi_call_alerting_rollover_after_time" t="وقت انتظار التمديد"/>
+	<phrase n="lang_xsi_call_alerting_rollover_after_time_range" t="أدخل الوقت بالثواني (0-60)"/>
+	<phrase n="lang_xsi_call_alerting_rollover_action" t="عمل التمديد"/>
+	<phrase n="lang_xsi_call_alerting_rollover_action_vm" t="الرسائل الصوتية"/>
+	<phrase n="lang_xsi_call_alerting_rollover_action_fwd" t="إلى الأمام"/>
+	<phrase n="lang_xsi_call_alerting_rollover_action_na" t="لا توجد معالجة للإجابة"/>
+	<phrase n="lang_xsi_call_alerting_rollover_fwd_number" t="رقم التمديد إلى الأمام"/>
+	<phrase n="lang_value_out_of_range" t="القيمة التي تم إدخالها خارج النطاق"/>
+	<phrase n="lang_xsi_callon_behalfof_select_executive" t="اختر تنفيذي"/>
+	<phrase n="lang_collaborate_room_details" t="تفاصيل غرفة التعاون"/>
+	<phrase n="lang_collaborate_room_name" t="اسم الغرفة"/>
+	<phrase n="lang_collaborate_room_type" t="نوع الغرفة"/>
+	<phrase n="lang_collaborate_join_room" t="انضم الى الغرفة"/>
+	<phrase n="lang_unavailable_state" t="أدخل غير صالح. شفرة"/>
+	<phrase n="lang_enter_unavailable_code" t="أدخل غير صالح. شفرة"/>
+	<phrase n="lang_ringer_is_off" t="قارع الأجراس معطل"/>
+	<phrase n="lang_uxm_update" t="تحديث وحدة التوسعة"/>
+	<phrase n="lang_uxm_update_infotext_progress" t="التحديث قيد التقدم. لا تقم بفصل الهاتف أو وحدة التوسيع أثناء التحديث."/>
+	<phrase n="lang_uxm_update_infotext_prepare" t="التحضير للتحديث. لا تقم بفصل الهاتف أو التوسعة أثناء التحديث."/>
+	<phrase n="lang_F_DELETE_MSG" t="ديل م"/>
+	<phrase n="lang_F_DELETE_MSG_typeSio" t="رسالة ديل"/>
+	<phrase n="lang_F_DELETE_MSG_smartlabel" t="ديل رسالة"/>
+	<phrase n="lang_F_DELETE_MSG_full" t="حذف رسالة"/>
+	<phrase n="lang_F_NEXT_ID" t="معرف ↓"/>
+	<phrase n="lang_F_NEXT_ID_typeSio" t="الهوية التالية"/>
+	<phrase n="lang_F_NEXT_ID_smartlabel" t="المعرف التالي"/>
+	<phrase n="lang_F_PREV_ID" t="المعرف ↑"/>
+	<phrase n="lang_F_PREV_ID_typeSio" t="الهوية السابقة"/>
+	<phrase n="lang_F_PREV_ID_smartlabel" t="المعرف السابق"/>
+	<phrase n="lang_F_OCIP" t="أوسي-P"/>
+	<phrase n="lang_F_SAB" t="اس دير"/>
+	<phrase n="lang_F_SAB_typeSio" t="دليل S"/>
+	<phrase n="lang_F_SAB_smartlabel" t="الدليل"/>
+	<phrase n="lang_F_ABS" t="عضلات المعدة"/>
+	<phrase n="lang_F_ABS_typeSio" t="بحث أب"/>
+	<phrase n="lang_addressbook_menu" t="حدد دفتر العناوين"/>
+	<phrase n="lang_addressbook_menu_local" t="محلي"/>
+	<phrase n="lang_multicast_zones_title" t="مناطق البث المتعدد"/>
+	<phrase n="lang_no_multicast_zones" t="لا تتوفر مناطق البث المتعدد"/>
+	<phrase n="lang_acd_state" t="دولة حوار التعاون الآسيوي"/>
+	<phrase n="lang_please_sign_into_set_acd_state" t="الرجاء تسجيل الدخول لتعيين حالة ACD"/>
+	<phrase n="lang_fkey_longpress_support" t="ميزة LP"/>
+	<phrase n="lang_important" t="مهم"/>
+	<phrase n="lang_SmartTransferEditDescription" t="أدخل هدف SmartTransfer"/>
+	<phrase n="lang_SmartTransfer" t="نقل ذكي"/>
+	<phrase n="lang_SmartTransfer_ready" t="مفتاح مرن جاهز لتحويل المكالمات."/>
+	<phrase n="lang_department" t=" قسم، أقسام"/>
+	<phrase n="lang_extensions" t="ملحقات"/>
+	<phrase n="lang_menu_title_text_options" t="خيارات النص"/>
+	<phrase n="lang_F_ADD_LOCATION" t="أضف الموقع"/>
+	<phrase n="lang_gk_mode_none" t="لا أحد"/>
+	<phrase n="lang_demo_mode" t="الوضع التجريبي"/>
+	<phrase n="lang_transfer_or" t="نقل أو"/>
+	<phrase n="lang_call_pickup" t="التقاط مكالمة؟"/>
+	<phrase n="lang_choose_an_action" t="اختيار إجراء"/>
+	<phrase n="lang_Conference_Setup" t="إعداد المؤتمر"/>
+	<phrase n="lang_Conference_First_Participant" t="مشارك في المؤتمر واحد"/>
+	<phrase n="lang_Conference_Second_Participant" t="المشارك الثاني في المؤتمر"/>
+	<phrase n="lang_menu_smart_label" t="خيارات التسمية الذكية"/>
+	<phrase n="lang_menu_idle_screen" t="سلوك الشاشة الخاملة"/>
+	<phrase n="lang_menu_call_screen" t="سلوك شاشات الاتصال"/>
+	<phrase n="lang_menu_other_screen" t="سلوك الشاشات الأخرى"/>
+	<phrase n="lang_menu_label_default_mode" t="وضع العرض الافتراضي"/>
+	<phrase n="lang_menu_label_expanded_mode" t="وضع العرض البديل"/>
+	<phrase n="lang_menu_label_expansion_triggers" t="مشغل العرض البديل"/>
+	<phrase n="lang_menu_short_label" t="تسمية قصيرة"/>
+	<phrase n="lang_menu_full_label" t="التسمية الكاملة"/>
+	<phrase n="lang_menu_short_label_mode" t="وضع التسمية القصيرة"/>
+	<phrase n="lang_menu_short_press" t="اضغط على مفتاح الصفحة القصير"/>
+	<phrase n="lang_menu_long_press" t="الضغط لفترة طويلة على مفتاح الصفحة"/>
+	<phrase n="lang_menu_proximity_sensor" t="مستشعر القرب"/>
+	<phrase n="lang_menu_P2_short_press" t="اضغط لفترة قصيرة على P2"/>
+	<phrase n="lang_menu_P2_long_press" t="اضغط لفترة طويلة P2"/>
+	<phrase n="lang_menu_P3_short_press" t="اضغط لفترة قصيرة على P3"/>
+	<phrase n="lang_menu_P3_long_press" t="الضغط لفترة طويلة P3"/>
+	<phrase n="lang_menu_P4_short_press" t="ضغطة قصيرة على P4"/>
+	<phrase n="lang_menu_P4_long_press" t="اضغط لفترة طويلة على P4"/>
+	<phrase n="lang_menu_P8_short_press" t="اضغط لفترة قصيرة على P8"/>
+	<phrase n="lang_menu_P8_long_press" t="اضغط لفترة طويلة على P8"/>
+	<phrase n="lang_menu_P10_short_press" t="اضغط لفترة قصيرة على P10"/>
+	<phrase n="lang_menu_P10_long_press" t="اضغط لفترة طويلة على P10"/>
+	<phrase n="lang_short_press" t="ضغطة قصيرة"/>
+	<phrase n="lang_fkey_press" t="اضغط على مفتاح فكي"/>
+	<phrase n="lang_long_press" t="ضغطة طويلة"/>
+	<phrase n="lang_short_label_mode_icon" t="أيقونة فقط"/>
+	<phrase n="lang_smartlabel_mode_text" t="نص فقط"/>
+	<phrase n="lang_smartlabel_mode_icon_text" t="أيقونة والنص"/>
+	<phrase n="lang_status_msg_uxm_update_required" t=" يحتاج إلى تحديث"/>
+	<phrase n="lang_status_detail_uxm_update_required" t="قم بتحديث وحدة التوسيع إلى الإصدار الأحدث لتمكينها."/>
+	<phrase n="lang_status_detail_uxm_update_required2" t="يرجى التأكد من وجود توسعة واحدة فقط متصلة بالهاتف وعدم توصيل التوسعة بمصدر طاقة منفصل."/>
+	<phrase n="lang_unhandled_item" t="عنصر غير معالج:"/>
+	<phrase n="lang_preferences_general" t="عام"/>
+	<phrase n="lang_quick_dial_contacts" t="اتصالات الطلب السريع"/>
+	<phrase n="lang_start_tbook_download" t="هل تريد بدء تنزيل الدليل؟"/>
+	<phrase n="lang_tbook_download" t="تحميل الدليل"/>
+	<phrase n="lang_tbook_download_started" t="بدأ تنزيل الدليل للهوية"/>
+	<phrase n="lang_tbook_download_finished" t="اكتمل تنزيل الدليل للهوية"/>
+	<phrase n="lang_tbook_download_failed" t="فشل تنزيل الدليل للهوية"/>
+	<phrase n="lang_tbook_download_not_possible" t="تنزيل الدليل غير ممكن على الهوية"/>
+	<phrase n="lang_tbook_download_overflowed" t="تنزيل الدليل غير مكتمل (تم تجاوز الحد الداخلي)."/>
+	<phrase n="lang_tbook_is_full" t="دفتر العناوين ممتلئ"/>
+	<phrase n="lang_F_HOTELING" t="الفندق"/>
+	<phrase n="lang_F_HOTELING_typeSio" t="الفنادق"/>
+	<phrase n="lang_F_HOTELING_smartlabel" t="الفنادق"/>
+	<phrase n="lang_F_GUEST_LOGIN" t="زائر الرجاء تسجيل الدخول"/>
+	<phrase n="lang_F_GUEST_LOGOUT" t="تسجيل خروج الضيف"/>
+	<phrase n="lang_F_GUEST_LOGIN_smartlabel" t="ضيف في"/>
+	<phrase n="lang_F_GUEST_LOGOUT_smartlabel" t="ضيف خارج"/>
+	<phrase n="lang_F_LOGIN" t="تسجيل الدخول"/>
+	<phrase n="lang_F_LOGOUT" t="تسجيل خروج"/>
+	<phrase n="lang_smartlabel_id" t="بطاقة تعريف"/>
+	<phrase n="lang_title_guest_logout" t="تسجيل خروج الضيف"/>
+	<phrase n="lang_confirm_guest_logout" t="هل أنت متأكد أنك ترغب في تسجيل الخروج؟"/>
+	<phrase n="lang_no_contacts" t="لا اتصالات"/>
+	<phrase n="lang_hoteling_guest" t="ضيف الفندق"/>
+	<phrase n="lang_logging_out" t="تسجيل الخروج..."/>
+	<phrase n="lang_logging_in" t="تسجيل الدخول..."/>
+	<phrase n="lang_login_failed" t="فشل تسجيل الدخول"/>
+	<phrase n="lang_acd_signout_message" t="سيتم تسجيل خروجك من ACD. هل تريد الاستمرار في تسجيل دخول الضيف؟"/>
+	<phrase n="lang_title_guest_login" t="زائر الرجاء تسجيل الدخول"/>
+	<phrase n="lang_F_MARK_READ" t="علامة القراءة"/>
+	<phrase n="lang_F_MARK_UNREAD" t="علامة غير مقروء"/>
+	<phrase n="lang_call_recording_mode_never" t="أبداً"/>
+	<phrase n="lang_call_recording_mode_always" t="دائماً"/>
+	<phrase n="lang_call_recording_mode_always_pause_resume" t="دائما مع وقفة / استئناف"/>
+	<phrase n="lang_call_recording_mode_on_demand" t="على الطلب"/>
+	<phrase n="lang_call_recording_mode_on_demand_user_start" t="بدء المستخدم عند الطلب"/>
+	<phrase n="lang_smartlabel_dismiss_timeout" t="العودة إلى الوضع الافتراضي"/>
+	<phrase n="lang_call_recording_mode" t="وضع تسجيل المكالمات"/>
+	<phrase n="lang_menu_full_label_mode" t="وضع التسمية الكاملة"/>
+	<phrase n="lang_menu_label_mode" t="وضع التسمية"/>
+	<phrase n="lang_guest_pin" t="رقم التعريف الشخصي للضيف"/>
+	<phrase n="lang_incorrect_pin" t="رقم التعريف الشخصي غير صحيح"/>
+	<phrase n="lang_voicemail_info" t="معلومات البريد الصوتي"/>
+	<phrase n="lang_confirm_del_deny_list_item_title" t="حذف عنصر قائمة الحظر"/>
+	<phrase n="lang_confirm_del_number_from_deny_list" t="هل تريد الإزالة من قائمة الحظر؟"/>
+	<phrase n="lang_confirm_del_menu_configuration" t="إزالة تكوين مفتاح الإعدادات"/>
+	<phrase n="lang_confirm_message" t="هل تريد حقا أن تفعل هذا؟"/>
+	<phrase n="lang_caller_id_blocking" t="حظر معرف المتصل"/>
+	<phrase n="lang_screen_items_color_and_opacity_title" t="اللون والتعتيم"/>
+	<phrase n="lang_ui_themes" t="المواضيع"/>
+	<phrase n="lang_theme_light" t="ضوء"/>
+	<phrase n="lang_theme_dark" t="مظلم"/>
+	<phrase n="lang_theme_colorful" t="زاهى الألوان"/>
+	<phrase n="lang_theme_industrial" t="صناعي"/>
+	<phrase n="lang_theme_contrast" t="Contrast"/>
+	<phrase n="lang_screen_items_color_title" t="لون"/>
+	<phrase n="lang_screen_items_opacity_title" t="العتامة"/>
+	<phrase n="lang_screen_items_enter_custom_color_title" t="أدخل القيم المخصصة"/>
+	<phrase n="lang_screen_item_titlebar_text" t="نص شريط العنوان"/>
+	<phrase n="lang_screen_item_text" t="نص"/>
+	<phrase n="lang_screen_item_subtext" t="نص فرعي"/>
+	<phrase n="lang_screen_item_extratext" t="نص إضافي"/>
+	<phrase n="lang_screen_item_extratext2" t="نص إضافي 2"/>
+	<phrase n="lang_screen_item_titlebar_background" t="خلفية شريط العنوان"/>
+	<phrase n="lang_screen_item_background" t="خلفية"/>
+	<phrase n="lang_screen_item_fkey_background" t="خلفية مفتاحية"/>
+	<phrase n="lang_screen_item_fkey_pressed_background" t="خلفية مضغوطة Fkey"/>
+	<phrase n="lang_screen_item_fkey_separator" t="فاصل مفتاحي"/>
+	<phrase n="lang_screen_item_fkey_label" t="تسمية Fkey"/>
+	<phrase n="lang_screen_item_fkey_pressed_label" t="تسمية مضغوطة Fkey"/>
+	<phrase n="lang_screen_item_line_background" t="خلفية الخط"/>
+	<phrase n="lang_screen_item_selected_line_background" t="خلفية الخط المحدد"/>
+	<phrase n="lang_screen_item_selected_line_indicator" t="مؤشر الخط المحدد"/>
+	<phrase n="lang_screen_item_selected_line_text" t="نص الخط المحدد"/>
+	<phrase n="lang_screen_item_line_separator" t="فاصل الخط"/>
+	<phrase n="lang_screen_item_scrollbar" t="شريط التمرير"/>
+	<phrase n="lang_screen_item_cursor" t="المؤشر"/>
+	<phrase n="lang_screen_item_status_msgs_background" t="خلفية رسائل الحالة"/>
+	<phrase n="lang_screen_item_status_msgs_border" t="حدود رسائل الحالة"/>
+	<phrase n="lang_screen_item_smartlabel_background" t="خلفية التسمية الذكية"/>
+	<phrase n="lang_screen_item_smartlabel_pressed_background" t="خلفية SmartLabel المضغوطة"/>
+	<phrase n="lang_screen_item_smartlabel_separator" t="فاصل SmartLabel"/>
+	<phrase n="lang_screen_item_smartlabel_label" t="تسمية SmartLabel"/>
+	<phrase n="lang_screen_item_smartlabel_pressed_label" t="تسمية SmartLabel المضغوطة"/>
+	<phrase n="lang_screen_item_expansion_module_background" t="خلفية وحدة التوسع"/>
+	<phrase n="lang_screen_item_expansion_module_pressed_background" t="وحدة التوسيع تم الضغط على الخلفية"/>
+	<phrase n="lang_screen_item_expansion_module_separator" t="فاصل وحدة التوسع"/>
+	<phrase n="lang_screen_item_expansion_module_maintext" t="توسيع وحدة النص الأساسي"/>
+	<phrase n="lang_screen_item_expansion_module_pressed_maintext" t="وحدة التوسيع تم الضغط على النص الأساسي"/>
+	<phrase n="lang_screen_item_expansion_module_subtext" t="توسيع وحدة النص الفرعي"/>
+	<phrase n="lang_screen_item_expansion_module_pressed_subtext" t="وحدة التوسيع تم الضغط على النص الفرعي"/>
+	<phrase n="lang_screen_item_expansion_module_page_indicator" t="مؤشر صفحة وحدة التوسيع"/>
+	<phrase n="lang_screen_items_color_name_onyx_black" t="العقيق الأسود"/>
+	<phrase n="lang_screen_items_color_name_midnight_black" t="سواد منتصف الليل"/>
+	<phrase n="lang_screen_items_color_name_obsidian_black" t="سبج الأسود"/>
+	<phrase n="lang_screen_items_color_name_dark_grey" t="الرمادي الداكن"/>
+	<phrase n="lang_screen_items_color_name_grey" t="رمادي"/>
+	<phrase n="lang_screen_items_color_name_light_grey" t="رمادي فاتح"/>
+	<phrase n="lang_screen_items_color_name_grey_white" t="رمادي أبيض"/>
+	<phrase n="lang_screen_items_color_name_white" t="أبيض"/>
+	<phrase n="lang_screen_items_color_name_light_yellow" t="أصفر فاتح"/>
+	<phrase n="lang_screen_items_color_name_yellow" t="أصفر"/>
+	<phrase n="lang_screen_items_color_name_light_red" t="أحمر فاتح"/>
+	<phrase n="lang_screen_items_color_name_red" t="أحمر"/>
+	<phrase n="lang_screen_items_color_name_light_blue" t="أزرق فاتح"/>
+	<phrase n="lang_screen_items_color_name_blue" t="أزرق"/>
+	<phrase n="lang_screen_items_color_name_light_green" t="اخضر فاتح"/>
+	<phrase n="lang_screen_items_color_name_green" t="أخضر"/>
+	<phrase n="lang_screen_items_color_name_black" t="أسود"/>
+	<phrase n="lang_screen_items_color_name_carbon" t="كربون"/>
+	<phrase n="lang_screen_items_color_name_dim_grey" t="رمادي خافت"/>
+	<phrase n="lang_screen_items_color_name_silver" t="فضة"/>
+	<phrase n="lang_screen_items_color_name_gainsboro" t="جينزبورو"/>
+	<phrase n="lang_screen_items_color_name_snowflake" t="ندفة الثلج"/>
+	<phrase n="lang_screen_items_color_name_white_smoke" t="دخان ابيض"/>
+	<phrase n="lang_screen_items_color_name_custom" t="لون مخصص"/>
+	<phrase n="lang_monitored_extensions" t="الامتدادات المراقبة"/>
+	<phrase n="lang_ALS" t="مستشعر الإضاءة المحيطة"/>
+	<phrase n="lang_all_available_calls" t="جميع المكالمات المتاحة"/>
+	<phrase n="lang_new_call" t="مكالمة جديدة"/>
+	<phrase n="lang_select_conf_participant" t="حدد مشارك في المؤتمر"/>
+	<phrase n="lang_consult_conference" t="مؤتمر التشاور"/>
+	<phrase n="lang_guess_max_hits" t="الحد الأقصى للزيارات"/>
+	<phrase n="lang_guess_results" t="نتائج"/>
+	<phrase n="lang_new_network_policy" t="سياسة الشبكة الجديدة"/>
+	<phrase n="lang_wrong_lldp_policy" t="سياسة LLDP الخاطئة"/>
+	<phrase n="lang_F_MODERATE" t="معتدل"/>
+	<phrase n="lang_sip_warning" t="تحذير SIP"/>
+	<phrase n="lang_sync_settings" t="مزامنة الإعدادات"/>
+	<phrase n="lang_confirm_sync_settings" t="هل تريد مزامنة الإعدادات مع تكوين الخادم؟"/>
+	<phrase n="lang_no_configured_extensions" t="لا توجد ملحقات تم تكوينها"/>
+	<phrase n="lang_no_active_calls_on_extensions" t="لا توجد مكالمات نشطة على الملحقات"/>
+	<phrase n="lang_sip_response_code_400" t="اقتراح غير جيد"/>
+	<phrase n="lang_sip_response_code_402" t="الدفع مطلوب"/>
+	<phrase n="lang_sip_response_code_403" t="مُحرَّم"/>
+	<phrase n="lang_sip_response_code_404" t="غير معثور عليه"/>
+	<phrase n="lang_sip_response_code_405" t="الطريقة غير مسموحة"/>
+	<phrase n="lang_sip_response_code_406" t="غير مقبول"/>
+	<phrase n="lang_sip_response_code_407" t="مطلوب مصادقة الوكيل"/>
+	<phrase n="lang_sip_response_code_408" t="مهلة الطلب"/>
+	<phrase n="lang_sip_response_code_410" t="ذهب"/>
+	<phrase n="lang_sip_response_code_413" t="طلب الوحدة كبير جدا"/>
+	<phrase n="lang_sip_response_code_414" t="طلب-URI طويل جدًا"/>
+	<phrase n="lang_sip_response_code_415" t="نوع الوسائط غير مدعوم"/>
+	<phrase n="lang_sip_response_code_416" t="نظام URI غير مدعوم"/>
+	<phrase n="lang_sip_response_code_420" t="ملحق سيء"/>
+	<phrase n="lang_sip_response_code_421" t="التمديد مطلوب"/>
+	<phrase n="lang_sip_response_code_422" t="الفاصل الزمني للجلسة صغير جدًا"/>
+	<phrase n="lang_sip_response_code_423" t="الفاصل الزمني قصير جدًا"/>
+	<phrase n="lang_sip_response_code_480" t="غير متاح مؤقتا"/>
+	<phrase n="lang_sip_response_code_481" t="المكالمة/المعاملة غير موجودة"/>
+	<phrase n="lang_sip_response_code_482" t="تم الكشف عن الحلقة"/>
+	<phrase n="lang_sip_response_code_483" t="الكثير من القفزات"/>
+	<phrase n="lang_sip_response_code_484" t="العنوان غير مكتمل"/>
+	<phrase n="lang_sip_response_code_485" t="غامض"/>
+	<phrase n="lang_sip_response_code_486" t="مشغول هنا"/>
+	<phrase n="lang_sip_response_code_487" t="تم إنهاء الطلب"/>
+	<phrase n="lang_sip_response_code_488" t="غير مقبول هنا"/>
+	<phrase n="lang_sip_response_code_491" t="الطلب معلق"/>
+	<phrase n="lang_sip_response_code_493" t="غير قابل للفك"/>
+	<phrase n="lang_sip_response_code_500" t="خطأ داخلي في الخادم"/>
+	<phrase n="lang_sip_response_code_501" t="لم تنفذ"/>
+	<phrase n="lang_sip_response_code_502" t="مدخل خاطأ"/>
+	<phrase n="lang_sip_response_code_503" t="الخدمة غير متوفرة"/>
+	<phrase n="lang_sip_response_code_504" t="مهلة الخادم"/>
+	<phrase n="lang_sip_response_code_505" t="الإصدار غير مدعوم"/>
+	<phrase n="lang_sip_response_code_513" t="الرسالة كبيرة جدًا"/>
+	<phrase n="lang_sip_response_code_599" t="خطأ في مهلة اتصال الشبكة"/>
+	<phrase n="lang_sip_response_code_600" t="مشغول في كل مكان"/>
+	<phrase n="lang_sip_response_code_603" t="يتناقص"/>
+	<phrase n="lang_sip_response_code_604" t="غير موجود في أي مكان"/>
+	<phrase n="lang_sip_response_code_606" t="غير مقبول"/>
+	<phrase n="lang_sort_order" t="امر ترتيب"/>
+	<phrase n="lang_directory_display_order" t="ترتيب العرض"/>
+	<phrase n="lang_display_order_first_name_last_name" t="الاسم الاول الاسم الاخير"/>
+	<phrase n="lang_display_order_last_name_first_name" t="اسم العائلة الاسم الأول"/>
+	<phrase n="lang_visual_options" t="الخيارات المرئية"/>
+	<phrase n="lang_call_screen_photo_size" t="حجم الصورة في شاشات الاتصال"/>
+	<phrase n="lang_size_XS" t="XS"/>
+	<phrase n="lang_size_S" t="S"/>
+	<phrase n="lang_size_M" t="M"/>
+	<phrase n="lang_size_L" t="L"/>
+	<phrase n="lang_size_XL" t="XL"/>
+	<phrase n="lang_size_XXL" t="XXL"/>
+	<phrase n="lang_size_XXXL" t="XXXL"/>
+	<phrase n="lang_prefer_saved_over_received_photo" t="تفضل الصور المحلية"/>
+	<phrase n="lang_display_method" t="نمط عرض الأرقام"/>
+	<phrase n="lang_display_method_full_contact" t="اتصال كامل"/>
+	<phrase n="lang_display_method_display_name" t="اسم"/>
+	<phrase n="lang_display_method_display_number" t="رقم"/>
+	<phrase n="lang_display_method_display_name_number" t="الاسم + الرقم"/>
+	<phrase n="lang_display_method_display_number_name" t="الرقم + الاسم"/>
+	<phrase n="lang_no_calls_for_transfer" t="لا توجد مكالمات متاحة للتحويل"/>
+	<phrase n="lang_brand_variant_select_title" t="حدد متغير العلامة التجارية"/>
+	<phrase n="lang_brand_variant_default" t="تقصير"/>
+	<phrase n="lang_brand_variant_updated_title" t="تم تحديث البديل"/>
+	<phrase n="lang_brand_variant_selected" t="تم تحديد البديل"/>
+	<phrase n="lang_system_reboot_now" t="سيتم الآن إعادة تشغيل النظام"/>
+	<phrase n="lang_select_identity" t="حدد الهوية"/>
+	<phrase n="lang_F_CALL_CENTER_STATUS" t="حالة مركز الاتصال"/>
+	<phrase n="lang_F_ATTENDED_TRANSFER" t="حضرها"/>
+	<phrase n="lang_disposition_code_sent" t="مرسل"/>
+	<phrase n="lang_disposition_code_selection" t="حدد عرض. شفرة"/>
+	<phrase n="lang_disposition_code_entry" t="أدخل ديس. شفرة"/>
+	<phrase n="lang_F_DISP_CODE" t="كود د"/>
+	<phrase n="lang_F_DISP_CODE_typeSio" t="رمز التصرف"/>
+	<phrase n="lang_F_DISP_CODE_smartlabel" t="كود د"/>
+	<phrase n="lang_disposition_code_display_text_list" t="قائمة"/>
+	<phrase n="lang_parked_calls_settings" t="المكالمات المتوقفة"/>
+	<phrase n="lang_call_parked_on" t="متوقفة على"/>
+	<phrase n="lang_no_parked_call" t="لا تتوفر مكالمة متوقفة."/>
+	<phrase n="lang_F_CALL_PARK_IDLE" t="بارك إيدل"/>
+	<phrase n="lang_F_CALL_PARK_typeSio" t="اتصل بارك"/>
+	<phrase n="lang_menu_any_smartlabel_key_short_press" t="اضغط لفترة قصيرة على SmartLabel"/>
+	<phrase n="lang_monitored_extension_is_ringing" t="التمديد المراقب يرن"/>
+	<phrase n="lang_disposition_code_not_sent" t="لم يتم إرسال الرمز."/>
+	<phrase n="lang_disposition_code_identity_mismatch" t="عدم تطابق الهوية."/>
+	<phrase n="lang_F_EXEC_ASSIST_CALL_PUSH" t="اتصل بالدفع"/>
+	<phrase n="lang_usb_mass_storage_plug" t="تم اكتشاف محرك أقراص USB"/>
+	<phrase n="lang_usb_mass_storage_unplug" t="تمت إزالة محرك أقراص USB"/>
+	<phrase n="lang_information_menu_usb_info" t="معلومات يو اس بي"/>
+	<phrase n="lang_usb_mass_storage_title" t="تخزين USB كبيرة"/>
+	<phrase n="lang_F_USB_EJECT" t="إخراج USB"/>
+	<phrase n="lang_usb_mass_storage_safe_to_remove" t="أصبح الآن من الآمن إزالة محرك أقراص USB"/>
+	<phrase n="lang_F_USBREC_START" t="بدء تسجيل USB."/>
+	<phrase n="lang_F_USBREC_START_typeSio" t="ابدأ التسجيل عبر USB"/>
+	<phrase n="lang_F_USBREC_START_smartlabel" t="Start&lt;br&gt;USB Rec."/>
+	<phrase n="lang_F_USBREC_STOP" t="إيقاف تسجيل USB."/>
+	<phrase n="lang_F_USBREC_STOP_typeSio" t="إيقاف تسجيل USB"/>
+	<phrase n="lang_F_USBREC_STOP_smartlabel" t="Stop&lt;br&gt;USB Rec."/>
+	<phrase n="lang_F_USBREC_PAUSE" t="إيقاف تسجيل USB مؤقتًا."/>
+	<phrase n="lang_F_USBREC_PAUSE_typeSio" t="إيقاف تسجيل USB مؤقتًا"/>
+	<phrase n="lang_F_USBREC_PAUSE_smartlabel" t="Pause&lt;br&gt;USB Rec."/>
+	<phrase n="lang_F_USBREC_RESUME" t="استئناف تسجيل USB."/>
+	<phrase n="lang_F_USBREC_RESUME_typeSio" t="استئناف تسجيل USB"/>
+	<phrase n="lang_F_USBREC_RESUME_smartlabel" t="Resume&lt;br&gt;USB Rec."/>
+	<phrase n="lang_F_PAUSE" t="يوقف"/>
+	<phrase n="lang_F_RESUME" t="سيرة ذاتية"/>
+	<phrase n="lang_usb_recording_processing_wait" t="يرجى الانتظار حتى تكتمل عملية التسجيل!"/>
+	<phrase n="lang_usb_recording_processing_completed" t="اكتملت عملية التسجيل!"/>
+	<phrase n="lang_usb_recording_call_terminated" t="تم إنهاء تسجيل المكالمات"/>
+	<phrase n="lang_usb_recording_terminated_drive_full" t="تم إنهاء التسجيل، محرك أقراص USB ممتلئ"/>
+	<phrase n="lang_usb_recording_terminated_max_file_size" t="تم إنهاء التسجيل، الحد الأقصى لطول التسجيل"/>
+	<phrase n="lang_usb_recording_no_usb_drive_detected" t="لم يتم اكتشاف محرك أقراص USB"/>
+	<phrase n="lang_usb_recording_terminated_errno" t="تم إنهاء التسجيل، خطأ: "/>
+	<phrase n="lang_usb_playback_browse_recordings" t="تصفح التسجيلات"/>
+	<phrase n="lang_usb_playback_browse_recordings_title" t="تسجيلات المكالمات"/>
+	<phrase n="lang_usb_playback_play_recording_title" t="تشغيل التسجيل"/>
+	<phrase n="lang_usb_playback_invalid_header_or_encrypted_file" t="رأس wav أو ملف مشفر غير صالح:"/>
+	<phrase n="lang_usb_playback_recording_information_title" t="معلومات التسجيل"/>
+	<phrase n="lang_usb_playback_delete_recording_title" t="حذف التسجيل"/>
+	<phrase n="lang_label_rewind" t="الترجيع"/>
+	<phrase n="lang_label_fast_forward" t="سريع إلى الأمام"/>
+	<phrase n="lang_text_size" t="مقاس"/>
+	<phrase n="lang_usb_playback_no_recordings" t="لا توجد تسجيلات"/>
+	<phrase n="lang_usb_recording_aborted_by_conference" t="تم إحباط تسجيل USB عن طريق المؤتمر"/>
+	<phrase n="lang_usb_recording_cannot_record_conference" t="لا يمكن تسجيل المؤتمر على USB"/>
+	<phrase n="lang_date_and_time" t="Date &amp; Time"/>
+	<phrase n="lang_label_context_key_page_left" t="الصفحة اليسرى"/>
+	<phrase n="lang_label_context_key_page_right" t="الصفحة اليمنى"/>
+	<phrase n="lang_expansion_module_text_alignment" t="محاذاة النص"/>
+	<phrase n="lang_expansion_module_color_font_sizes_XXL_XS" t="Maintext XXL &amp; Subtext XS"/>
+	<phrase n="lang_expansion_module_color_font_sizes_XL_XS" t="Maintext XL &amp; Subtext XS"/>
+	<phrase n="lang_expansion_module_color_font_sizes_XL_S" t="Maintext XL &amp; Subtext S"/>
+	<phrase n="lang_expansion_module_color_font_sizes_L_XS" t="Maintext L &amp; Subtext XS"/>
+	<phrase n="lang_expansion_module_color_font_sizes_L_S" t="Maintext L &amp; Subtext S"/>
+	<phrase n="lang_expansion_module_color_font_sizes_L_M" t="Maintext L &amp; Subtext M"/>
+	<phrase n="lang_expansion_module_color_font_sizes_M_XS" t="Maintext M &amp; Subtext XS"/>
+	<phrase n="lang_expansion_module_color_font_sizes_M_S" t="Maintext M &amp; Subtext S"/>
+	<phrase n="lang_expansion_module_color_font_sizes_M_M" t="Maintext M &amp; Subtext M"/>
+	<phrase n="lang_expansion_module_color_font_sizes_S_XS" t="Maintext S &amp; Subtext XS"/>
+	<phrase n="lang_expansion_module_color_font_sizes_S_S" t="Maintext S &amp; Subtext S"/>
+	<phrase n="lang_expansion_module_color_font_sizes_XS_XS" t="Maintext XS &amp; Subtext XS"/>
+	<phrase n="lang_edit_mode_upper_case" t="اي بي سي"/>
+	<phrase n="lang_edit_mode_lower_case" t="اي بي سي"/>
+	<phrase n="lang_edit_mode_numbers" t="123"/>
+	<phrase n="lang_F_IDLE_CONTEXT_PAGE_LEFT" t="غادر"/>
+	<phrase n="lang_F_IDLE_CONTEXT_PAGE_LEFT_typeSio" t="الصفحة اليسرى"/>
+	<phrase n="lang_F_IDLE_CONTEXT_PAGE_RIGHT" t="يمين"/>
+	<phrase n="lang_F_IDLE_CONTEXT_PAGE_RIGHT_typeSio" t="الصفحة اليمنى"/>
+	<phrase n="lang_F_NONE" t=""/>
+	<phrase n="lang_branding_name" t="العلامة التجارية:"/>
+	<phrase n="lang_hardware_version" t="النسخة الأجهزة:"/>
+	<phrase n="lang_branding_version" t="Branding Version:"/>
+	<phrase n="lang_NickName" t="كنية"/>
+	<phrase n="lang_FirstShortCode" t="الكود الأول"/>
+	<phrase n="lang_LastShortCode" t="الرمز الأخير"/>
+	<phrase n="lang_FirstExternalDirectoryNumber" t="الرقم الأول"/>
+	<phrase n="lang_LastExternalDirectoryNumber" t="الرقم الأخير"/>
+	<phrase n="lang_DialingPlanCode" t="يخطط"/>
+	<phrase n="lang_DialingPlanCodeDetail" t="رمز خطة الاتصال"/>
+	<phrase n="lang_FirstShortCodeDetail" t="الرمز القصير الأول"/>
+	<phrase n="lang_FirstExternalDirectoryDetail" t="الدليل الخارجي الأول"/>
+	<phrase n="lang_LastExternalDirectoryDetail" t="آخر دليل خارجي"/>
+	<phrase n="lang_Department" t=" قسم، أقسام"/>
+	<phrase n="lang_shortcodes" t="رموز قصيرة"/>
+	<phrase n="lang_emergency_call_number_is_misconfigured" t="تم تكوين أرقام الطوارئ بشكل خاطئ"/>
+	<phrase n="lang_tb_alias" t="الاسم المستعار"/>
+	<phrase n="lang_web_user_credentials_not_set" t="لم يتم تعيين بيانات اعتماد لمستخدم الويب"/>
+	<phrase n="lang_web_admin_credentials_not_set" t="لم يتم تعيين بيانات اعتماد لمشرف الويب"/>
+	<phrase n="lang_not_registered" t=" غير مسجل"/>
+	<phrase n="lang_fake_number" t="رقم زائف"/>
+	<phrase n="lang_BLF_DND_on" t="تشغيل DND"/>
+	<phrase n="lang_BLF_On_a_call" t="على مكالمة"/>
+	<phrase n="lang_BLF_Idle" t="عاطل"/>
+	<phrase n="lang_MediaStack_restarting_All_lines_will_be_closed" t="إعادة تشغيل ميديا ستاك. سيتم إغلاق كافة الخطوط."/>
+	<phrase n="lang_Firmware_update_starting" t="تحديث البرنامج الثابت: البدء"/>
+	<phrase n="lang_Firmware_update_sent_install_request" t="تحديث البرنامج الثابت: في انتظار استجابة خادم الملفات"/>
+	<phrase n="lang_Firmware_update_download" t="تحديث البرنامج الثابت: التنزيل"/>
+	<phrase n="lang_Firmware_update_transfer_to_swupdate" t="تحديث البرامج الثابتة: المعالجة"/>
+	<phrase n="lang_Firmware_update_verification_and_install" t="تحديث البرنامج الثابت: التثبيت"/>
+	<phrase n="lang_File_server_response" t="استجابة الخادم: "/>
+	<phrase n="lang_File_server_unreachable" t="خادم الملفات غير قابل للوصول."/>
+	<phrase n="lang_File_not_found" t="لم يتم العثور على الملف."/>
+	<phrase n="lang_Firmware_invalid" t="البرامج الثابتة غير صالحة."/>
+	<phrase n="lang_firmware_update" t="تحديث البرامج الثابتة"/>
+	<phrase n="lang_menu_ringer_once" t="مرة واحدة فقط"/>
+	<phrase n="lang_voicemail_no_access_code" t="Number or feature access code is not programmed"/>
+	<phrase n="lang_F_WIFI" t="Wi-Fi"/>
+	<phrase n="lang_parties" t="parties"/>
+	<phrase n="lang_fwd_by" t="Fwd by:"/>
+	<phrase n="lang_firmware_update_completed_pending_reboot" t="Phone is about to reboot to complete the firmware update. Rebooting in %d seconds..."/>
+	<phrase n="lang_F_CLOSE" t="نهاية"/>
+	<phrase n="lang_ip_assigment" t="IP Assignment"/>
+	<phrase n="lang_disable" t="Disable"/>
+	<phrase n="lang_enable" t="Enable"/>
+	<phrase n="lang_reregister" t="Re-register"/>
+	<phrase n="lang_phonemanager" t="Phone Manager (Web UI)"/>
+	<phrase n="lang_locale" t="Date &amp; Time format"/>
+	<phrase n="lang_webserver_admin_name" t="Admin name"/>
+	<phrase n="lang_webserver_admin_password" t="Admin password"/>
+	<phrase n="lang_webserver_user_name" t="User name"/>
+	<phrase n="lang_webserver_user_password" t="User password"/>
+	<phrase n="lang_startup_wizard" t="Startup Wizard"/>
+	<phrase n="lang_no_voicemail" t="No voicemail"/>
+	<phrase n="lang_new_voicemail" t="New voicemail"/>
+	<phrase n="lang_old_voicemail" t="Old voicemail"/>
+	<phrase n="lang_phonemanager_credentials" t="Phone Manager (Web UI) login credentials"/>
+	<phrase n="lang_static_ip" t="Static IP"/>
+	<phrase n="lang_dhcp_or_static_ip" t="DHCP or Static IP"/>
+	<phrase n="lang_locale_ar_AE" t="Arabic (United Arab Emirates)"/>
+	<phrase n="lang_locale_az_AZ" t="Azərbaycanca (Azerbaijan)"/>
+	<phrase n="lang_locale_bs_BA" t="Bosanki (Bosnia)"/>
+	<phrase n="lang_locale_ca_ES" t="Català (Spain)"/>
+	<phrase n="lang_locale_cs_CZ" t="Čeština (Czech Republic)"/>
+	<phrase n="lang_locale_da_DK" t="Dansk (Denmark)"/>
+	<phrase n="lang_locale_de_DE" t="Deutsch (Germany)"/>
+	<phrase n="lang_locale_el_GR" t="Ελληνικά (Greece)"/>
+	<phrase n="lang_locale_en_DE" t="English (Germany)"/>
+	<phrase n="lang_locale_en_GB" t="English (UK)"/>
+	<phrase n="lang_locale_en_US" t="English (US)"/>
+	<phrase n="lang_locale_es_ES" t="Español (Spain)"/>
+	<phrase n="lang_locale_et_EE" t="Eesti (Estonia)"/>
+	<phrase n="lang_locale_eu_ES" t="Euskara (Spain)"/>
+	<phrase n="lang_locale_fi_FI" t="Suomi (Finland)"/>
+	<phrase n="lang_locale_fr_FR" t="Français (France)"/>
+	<phrase n="lang_locale_he_IL" t="Hebrew (Israel)"/>
+	<phrase n="lang_locale_hr_HR" t="Hrvatski (Croatia)"/>
+	<phrase n="lang_locale_hu_HU" t="Magyar (Hungary)"/>
+	<phrase n="lang_locale_it_IT" t="Italiano (Italy)"/>
+	<phrase n="lang_locale_ja_JP" t="Japanese (Japan)"/>
+	<phrase n="lang_locale_kk_KZ" t="қазақша (Kazakhstan)"/>
+	<phrase n="lang_locale_lt_LT" t="Lietuvių (Lithuania)"/>
+	<phrase n="lang_locale_lv_LV" t="Latviešu (Latvia)"/>
+	<phrase n="lang_locale_nl_NL" t="Nederlands (Netherlands)"/>
+	<phrase n="lang_locale_nb_NO" t="Norsk (Norway)"/>
+	<phrase n="lang_locale_pl_PL" t="Polski (Poland)"/>
+	<phrase n="lang_locale_pt_PT" t="Português (Portugal)"/>
+	<phrase n="lang_locale_ro_RO" t="Română (Romania)"/>
+	<phrase n="lang_locale_ru_RU" t="Русский (Russia)"/>
+	<phrase n="lang_locale_sl_SI" t="Slovenščina (Slovenia)"/>
+	<phrase n="lang_locale_sv_SE" t="Svenska (Sweden)"/>
+	<phrase n="lang_locale_tr_TR" t="Türkçe (Turkey)"/>
+	<phrase n="lang_locale_uk_UA" t="Українська (Ukraine)"/>
+	<phrase n="lang_locale_zh_CN" t="Simplified Chinese (China)"/>
+	<phrase n="lang_locale_zh_TW" t="Traditional Chinese (Taiwan)"/>
+	<phrase n="lang_no_error" t="no error"/>
+	<phrase n="lang_unknown_command" t="unknown command"/>
+	<phrase n="lang_invalid_missing_params" t="invalid or missing parameter(s)"/>
+	<phrase n="lang_not_implemented" t="not implemented"/>
+	<phrase n="lang_failed" t="failed"/>
+	<phrase n="lang_refer_to_logs" t="Refer to the system logs for details"/>
+	<phrase n="lang_software_update_confirmation" t="The software update takes a few minutes and will reboot your phone. If you are on call(s), the update will start when all calls are terminated. Do not turn off your phone during the update. Update now?"/>
+	<phrase n="lang_firmware_field_is_empty" t="Firmware field is empty."/>
+	<phrase n="lang_software_update_in_progress" t="Software update in progress. Please wait for your phone to reboot. Once it restarts, refresh your browser to regain access to the WUI."/>
+	<phrase n="lang_edit_mode" t="Edit Mode"/>
+	<phrase n="lang_vlan_pc_qos" t="VLAN Priority on LAN port (0-7)"/>
+	<phrase n="lang_bluetooth_devices" t="Devices"/>
+	<phrase n="lang_bluetooth_not_ready" t="Bluetooth is not ready"/>
+	<phrase n="lang_F_ACCEPT_CALL_ext_ui" t="Answer"/>
+	<phrase n="lang_F_DEFLECT_ext_ui" t="Forward"/>
+	<phrase n="lang_F_DENY_ext_ui" t="Reject"/>
+	<phrase n="lang_F_END_ext_ui" t="End call"/>
+	<phrase n="lang_F_CALL_PARK_DIAL" t="Call Park Dial"/>
+	<phrase n="lang_F_NEW_CALL" t="New Call"/>
+	<phrase n="lang_device_management_service" t="Device Management Service"/>
+	<phrase n="lang_manage_dms" t="Manage DMS"/>
+	<phrase n="lang_3_days" t="3 Days"/>
+	<phrase n="lang_dms_enabled" t="DMS is enabled until"/>
+	<phrase n="lang_dms" t="DMS"/>
+</phrases>

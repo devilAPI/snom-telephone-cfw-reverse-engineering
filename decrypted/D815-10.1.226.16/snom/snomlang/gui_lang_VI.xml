@@ -1,0 +1,1882 @@
+<?xml version="1.0" encoding="utf-8"?>
+<phrases>
+	<language t="Tiếng Việt"/>
+	<phrase n="lang_none" t=""/>
+	<phrase n="lang_language_name" t="Tiếng Việt"/>
+	<phrase n="lang_cntry_CHN" t="Trung Quốc"/>
+	<phrase n="lang_cntry_FIN" t="Phần Lan"/>
+	<phrase n="lang_cntry_GER" t="Đức"/>
+	<phrase n="lang_cntry_IND" t="Ấn Độ"/>
+	<phrase n="lang_cntry_IDN" t="In-đô-nê-xi-a"/>
+	<phrase n="lang_cntry_MYS" t="Malaysia"/>
+	<phrase n="lang_cntry_MEX" t="Mê-hi-cô"/>
+	<phrase n="lang_cntry_NLD" t="Hà Lan"/>
+	<phrase n="lang_cntry_PRT" t="Bồ Đào Nha"/>
+	<phrase n="lang_cntry_ZAF" t="Nam Phi"/>
+	<phrase n="lang_cntry_GBR" t="Vương quốc Anh"/>
+	<phrase n="lang_cntry_USA" t="Hoa Kỳ"/>
+	<phrase n="lang_cntry_CAM" t="Central America"/>
+	<phrase n="lang_cntry_CAN" t="Canada"/>
+	<phrase n="lang_cntry_CHL" t="Chi-Lê"/>
+	<phrase n="lang_cntry_BHS" t="Bahamas"/>
+	<phrase n="lang_cntry_CUB" t="Cuba"/>
+	<phrase n="lang_cntry_PRY" t="Pa-ra-goay"/>
+	<phrase n="lang_cntry_BMU" t="Bermuda"/>
+	<phrase n="lang_cntry_FLK" t="Quần đảo Falkland"/>
+	<phrase n="lang_cntry_GRL" t="Greenland"/>
+	<phrase n="lang_cntry_FRO" t="Quần đảo Faroe"/>
+	<phrase n="lang_cntry_IRL" t="Ai Len"/>
+	<phrase n="lang_cntry_ESP" t="Tây ban nha"/>
+	<phrase n="lang_cntry_ALB" t="Albania"/>
+	<phrase n="lang_cntry_AUT" t="Áo"/>
+	<phrase n="lang_cntry_BEL" t="Bỉ"/>
+	<phrase n="lang_cntry_BRA" t="Brazil"/>
+	<phrase n="lang_cntry_CAI" t="Caicos"/>
+	<phrase n="lang_cntry_CHA" t="Chatam"/>
+	<phrase n="lang_cntry_HRV" t="Crô-át-ti-a"/>
+	<phrase n="lang_cntry_CZE" t="Cộng hòa Séc"/>
+	<phrase n="lang_cntry_DNK" t="Đan Mạch"/>
+	<phrase n="lang_cntry_FRA" t="Pháp"/>
+	<phrase n="lang_cntry_HUN" t="Hung-ga-ry"/>
+	<phrase n="lang_cntry_ITA" t="Ý"/>
+	<phrase n="lang_cntry_LUX" t="Lúc-xăm-bua"/>
+	<phrase n="lang_cntry_MAK" t="Ma-xê-đô-ni-a"/>
+	<phrase n="lang_cntry_NAM" t="Namibia"/>
+	<phrase n="lang_cntry_NOR" t="Na Uy"/>
+	<phrase n="lang_cntry_POL" t="Ba Lan"/>
+	<phrase n="lang_cntry_SVK" t="Cộng hòa Slovakia"/>
+	<phrase n="lang_cntry_SWD" t="Thuỵ Điển"/>
+	<phrase n="lang_cntry_CHE" t="Thuỵ Sỹ"/>
+	<phrase n="lang_cntry_GIB" t="Gibralta"/>
+	<phrase n="lang_cntry_YUG" t="Xéc-bi-a"/>
+	<phrase n="lang_cntry_BLR" t="Bêlarut"/>
+	<phrase n="lang_cntry_BGR" t="Bulgari"/>
+	<phrase n="lang_cntry_CYP" t="Quần đảo Síp"/>
+	<phrase n="lang_cntry_EGY" t="Ai Cập"/>
+	<phrase n="lang_cntry_EST" t="E-xtô-ni-a"/>
+	<phrase n="lang_cntry_GAZ" t="Dải Gaza"/>
+	<phrase n="lang_cntry_GRC" t="Hy Lạp"/>
+	<phrase n="lang_cntry_ISR" t="Israel"/>
+	<phrase n="lang_cntry_JOR" t="Gioóc-đa-ni"/>
+	<phrase n="lang_cntry_LVA" t="Lát-vi-a"/>
+	<phrase n="lang_cntry_LTU" t="Litva"/>
+	<phrase n="lang_cntry_LBN" t="Li Băng"/>
+	<phrase n="lang_cntry_MDA" t="Môn-đô-va"/>
+	<phrase n="lang_cntry_RUS" t="Nga"/>
+	<phrase n="lang_cntry_ROU" t="Ru-ma-ni"/>
+	<phrase n="lang_cntry_SYR" t="Sy-ri"/>
+	<phrase n="lang_cntry_TUR" t="Thổ Nhĩ Kỳ"/>
+	<phrase n="lang_cntry_UKR" t="Ukraina"/>
+	<phrase n="lang_cntry_IRQ" t="I-rắc"/>
+	<phrase n="lang_cntry_IRN" t="I-ran"/>
+	<phrase n="lang_cntry_ARM" t="Ác-mê-ni-a"/>
+	<phrase n="lang_cntry_AZE" t="A-déc-bai-gian"/>
+	<phrase n="lang_cntry_GEO" t="Gruzia"/>
+	<phrase n="lang_cntry_KAZ" t="Ca-dắc-xtan"/>
+	<phrase n="lang_cntry_KGZ" t="Cộng hoà Kyrgyz"/>
+	<phrase n="lang_cntry_PAK" t="Pa-ki-xtan"/>
+	<phrase n="lang_cntry_SGP" t="Singapore"/>
+	<phrase n="lang_cntry_KOR" t="Hàn Quốc"/>
+	<phrase n="lang_cntry_JPN" t="Nhật Bản"/>
+	<phrase n="lang_cntry_AUS" t="Úc"/>
+	<phrase n="lang_cntry_NZL" t="New Zealand (Tân Tây Lan)"/>
+	<phrase n="lang_cntry_TON" t="Tông-ga"/>
+	<phrase n="lang_cntry_COL" t="Cô-lôm-bi-a"/>
+	<phrase n="lang_cntry_ECU" t="Ê-cu-a-đo"/>
+	<phrase n="lang_cntry_TTB" t="Trinidad &amp; Tobago"/>
+	<phrase n="lang_cntry_ARG" t="Ác-hen-ti-na"/>
+	<phrase n="lang_cntry_WAT" t="Tây Phi"/>
+	<phrase n="lang_cntry_CAT" t="Trung Phi"/>
+	<phrase n="lang_cntry_EAT" t="Đông Phi"/>
+	<phrase n="lang_cntry_VEN" t="Vê-nê-xu-ê-la"/>
+	<phrase n="lang_cntry_NCL" t="Tân Ca-lê-đô-ni-a"/>
+	<phrase n="lang_cntry_UAE" t="các Tiểu Vương Quốc Ả Rập Thống Nhất"/>
+	<phrase n="lang_cntry_THA" t="Thái Lan"/>
+	<phrase n="lang_F_SEARCH" t="Tìm"/>
+	<phrase n="lang_F_SEARCH_typeSio" t="Tìm kiếm"/>
+	<phrase n="lang_F_REBOOT" t="Reboot"/>
+	<phrase n="lang_F_REBOOT_typeSio" t="Khởi động lại"/>
+	<phrase n="lang_F_REBOOT_smartlabel" t="Restart"/>
+	<phrase n="lang_F_PAIR" t="Ghép nối"/>
+	<phrase n="lang_F_UNPAIR" t="Huỷ ghép nối"/>
+	<phrase n="lang_F_JOIN" t="ThamDự"/>
+	<phrase n="lang_F_JOIN_typeSio" t="Tham gia"/>
+	<phrase n="lang_F_JOIN_WITH" t="Tham gia với"/>
+	<phrase n="lang_F_LEAVE" t="Rời Đi"/>
+	<phrase n="lang_F_LEAVE_typeSio" t="Rời khỏi"/>
+	<phrase n="lang_F_OK" t="Đồng ý"/>
+	<phrase n="lang_F_ACCEPT_CALL" t="Đồng ý"/>
+	<phrase n="lang_F_ACCEPT_CALL_typeSio" t="Đồng ý"/>
+	<phrase n="lang_F_CANCEL" t="Huỷ"/>
+	<phrase n="lang_F_CANCEL_typeSio" t="Huỷ bỏ"/>
+	<phrase n="lang_F_YES" t="Có"/>
+	<phrase n="lang_F_NO" t="Không"/>
+	<phrase n="lang_F_ADD_SPEAKER" t="+Spkr"/>
+	<phrase n="lang_F_ADD_SPEAKER_typeSio" t="+Loa ngoài"/>
+	<phrase n="lang_F_REMOVE_SPEAKER" t="-Spkr"/>
+	<phrase n="lang_F_REMOVE_SPEAKER_typeSio" t="-Loa ngoài"/>
+	<phrase n="lang_F_ADD_HANDSET" t="+Hndst"/>
+	<phrase n="lang_F_ADD_HANDSET_typeSio" t="+Điện thoại"/>
+	<phrase n="lang_F_REMOVE_HANDSET" t="-Hndst"/>
+	<phrase n="lang_F_REMOVE_HANDSET_typeSio" t="-Điện thoại"/>
+	<phrase n="lang_F_DELETE" t="Xoá"/>
+	<phrase n="lang_F_DELETE_typeSio" t="Xoá"/>
+	<phrase n="lang_F_ADR_BOOK" t="Dir"/>
+	<phrase n="lang_F_ADR_BOOK_typeSio" t="Danh mục"/>
+	<phrase n="lang_F_ADR_BOOK_smartlabel" t="Danh mục"/>
+	<phrase n="lang_F_DENYALL" t="Chặn"/>
+	<phrase n="lang_F_DENYALL_typeSio" t="Chặn cuộc gọi"/>
+	<phrase n="lang_F_DENYALL_smartlabel" t="Chặn"/>
+	<phrase n="lang_F_CALL_LIST" t="Lịch sử"/>
+	<phrase n="lang_F_CALL_LIST_typeSio" t="Lịch sử cuộc gọi"/>
+	<phrase n="lang_F_CALL_LIST_smartlabel" t="Cuộc gọi"/>
+	<phrase n="lang_F_PLAY" t="Phát"/>
+	<phrase n="lang_F_STOP" t="Dừng lại"/>
+	<phrase n="lang_F_RESCAN" t="Quét lại"/>
+	<phrase n="lang_F_INCREASE" t="Tăng"/>
+	<phrase n="lang_F_DECREASE" t="Giảm"/>
+	<phrase n="lang_F_BACK" t="⌫"/>
+	<phrase n="lang_F_BACK_typeSio" t="Quay lại"/>
+	<phrase n="lang_F_REDIAL" t="Gọi lại"/>
+	<phrase n="lang_F_REDIAL_typeSio" t="Quay số lại"/>
+	<phrase n="lang_F_REDIAL_smartlabel" t="Gọi lại"/>
+	<phrase n="lang_F_INSTANT_REDIAL" t="Gọi lại"/>
+	<phrase n="lang_F_INSTANT_REDIAL_typeSio" t="Gọi lại ngay"/>
+	<phrase n="lang_F_INSTANT_REDIAL_smartlabel" t="Gọi lại"/>
+	<phrase n="lang_F_ADD_NUMBER" t="Thêm"/>
+	<phrase n="lang_F_ADD_NUMBER_typeSio" t="Thêm liên hệ"/>
+	<phrase n="lang_F_CONTACTS" t="Danh bạ"/>
+	<phrase n="lang_F_PRESENCE" t="State"/>
+	<phrase n="lang_F_PRESENCE_typeSio" t="Hiện tại"/>
+	<phrase n="lang_F_PRESENCE_smartlabel" t="Hiện tại"/>
+	<phrase n="lang_F_SPEED_DIAL" t="Nhanh"/>
+	<phrase n="lang_F_SPEED_DIAL_typeSio" t="Gọi nhanh"/>
+	<phrase n="lang_F_SPEED_DIAL_smartlabel" t="Nhanh"/>
+	<phrase n="lang_F_SAFE_TRANSFER" t="AnToàn"/>
+	<phrase n="lang_F_SAFE_TRANSFER_typeSio" t="Chuyển an toàn"/>
+	<phrase n="lang_F_MENUS_USERINPUT_SENDSIPINFO" t="Nhập và Gửi THÔNG TIN SIP"/>
+	<phrase n="lang_F_MENUS_SENDSIPINFO" t="Gửi Thôn tin Sip"/>
+	<phrase n="lang_F_USERINPUT_SENDSIPINFO" t="SIP"/>
+	<phrase n="lang_F_SENDSIPINFO" t="SIP"/>
+	<phrase n="lang_F_SENDSIPINFO_typeSio" t="Thông tin SIP"/>
+	<phrase n="lang_F_SENDSIPINFO_smartlabel" t="Thông tin&lt;br&gt;SIP"/>
+	<phrase n="lang_F_REC_START" t="Ghi"/>
+	<phrase n="lang_F_REC_STOP" t="Dừng"/>
+	<phrase n="lang_F_RECORDER_START" t="Ghi lại"/>
+	<phrase n="lang_F_RECORDER_STOP" t="Dừng ghi"/>
+	<phrase n="lang_F_RECORD_ON" t="Ghi lại"/>
+	<phrase n="lang_F_RECORD_OFF" t="Dừng ghi"/>
+	<phrase n="lang_F_RECORDING" t="Đang ghi lại"/>
+	<phrase n="lang_F_LOGOFF_ALL" t="Thoát"/>
+	<phrase n="lang_F_LOGOFF_ALL_typeSio" t="Thoát tất cả"/>
+	<phrase n="lang_F_LOGOFF_ALL_smartlabel" t="Thoát"/>
+	<phrase n="lang_F_STARCODE_short" t="Mã sao"/>
+	<phrase n="lang_F_STARCODE" t="Mã Sao"/>
+	<phrase n="lang_F_RELOAD_SERVER_AB" t="Tải lại"/>
+	<phrase n="lang_F_SERVER_AB" t="Địa chỉ máy chủ"/>
+	<phrase n="lang_F_ANONYMOUS" t="ID Ẩn"/>
+	<phrase n="lang_F_ANONYMOUS_long" t="ID Ẩn danh"/>
+	<phrase n="lang_F_ANONYMOUS_smartlabel" t="ID Ẩn"/>
+	<phrase n="lang_F_VOICEMAIL_INFO_NEW_MSG" t="Thông tin hộp thư thoại"/>
+	<phrase n="lang_F_VOICEMAIL_INFO_short" t="VMail"/>
+	<phrase n="lang_F_VOICEMAIL_INFO" t="Thông tin hộp thư thoại"/>
+	<phrase n="lang_F_NO_NEW_MESSAGE" t="Không có tin nhắn mới"/>
+	<phrase n="lang_F_NEW_MESSAGE" t="Tin nhắn mới"/>
+	<phrase n="lang_F_GUEST_LOCK" t="Khoá"/>
+	<phrase n="lang_F_GUEST_UNLOCK" t="Mở khoá"/>
+	<phrase n="lang_F_IVR" t="IVR"/>
+	<phrase n="lang_F_DTMF" t="DTMF"/>
+	<phrase n="lang_F_ACTION_URL" t="URL"/>
+	<phrase n="lang_F_ACTION_URL_typeSio" t="Tác vụ URL"/>
+	<phrase n="lang_F_ACTION_URL_smartlabel" t="URL"/>
+	<phrase n="lang_F_AUTO_ANSWER" t="AutoA"/>
+	<phrase n="lang_F_AUTO_ANSWER_typeSio" t="Tự Động Trả Lời"/>
+	<phrase n="lang_F_AUTO_ANSWER_smartlabel" t="Tự Trả Lời"/>
+	<phrase n="lang_F_AUTO_ANSWER_ON" t="Tự động trả lời"/>
+	<phrase n="lang_F_BLF_short" t="BLF"/>
+	<phrase n="lang_F_BLF" t="Đèn hiệu trên điện thoại IP"/>
+	<phrase n="lang_F_LINE" t="Đường dây"/>
+	<phrase n="lang_F_LINE_short" t="Line"/>
+	<phrase n="lang_F_LINE_RINGING" t="Đang đổ chuông"/>
+	<phrase n="lang_F_LINE_OUTGOING" t="Đang gọi"/>
+	<phrase n="lang_F_LINE_OFFHOOK" t="Nhấc máy"/>
+	<phrase n="lang_F_LINE_IDLE" t="Nhàn rỗi"/>
+	<phrase n="lang_F_LINE_HOLD" t="Giữ máy"/>
+	<phrase n="lang_F_LINE_FAILED" t="Ngoại tuyến"/>
+	<phrase n="lang_F_LINE_DISCONNECTED" t="Ngắt kết nối"/>
+	<phrase n="lang_F_LINE_DISCONNECTED_typeSio" t="Đã ngắt kết nối"/>
+	<phrase n="lang_F_LINE_CONNECTED" t="Đã kết nối"/>
+	<phrase n="lang_F_LINE_BUSY" t="Bận"/>
+	<phrase n="lang_F_LINE_HELD" t="Đang giữ"/>
+	<phrase n="lang_F_LINE_CALLING" t="Đang gọi"/>
+	<phrase n="lang_F_LINE_RINGBACK" t="Gọi lại"/>
+	<phrase n="lang_F_LINE_HOLDING" t="Đang giữ"/>
+	<phrase n="lang_F_LINE_UNREGISTERED" t="Chưa đăng ký"/>
+	<phrase n="lang_F_LINE_IN_USE" t="Đang sử dụng"/>
+	<phrase n="lang_F_LINE_FREE" t="rảnh rỗi"/>
+	<phrase n="lang_F_LINE_UNKNOWN" t="Không xác định"/>
+	<phrase n="lang_F_LINE_TALKING" t="Đang nói"/>
+	<phrase n="lang_F_LINE_SEIZED" t="Nắm giữ"/>
+	<phrase n="lang_F_LINE_UNVAILABLE" t="Không khả dụng"/>
+	<phrase n="lang_F_LINE_ACTIVE" t="Đang hoạt động"/>
+	<phrase n="lang_F_LINE_AVAILABLE" t="Khả dụng"/>
+	<phrase n="lang_F_LINE_CLOSED" t="Đã đóng"/>
+	<phrase n="lang_F_LINE_AUTO_REDIAL" t="Tự động quay số lại"/>
+	<phrase n="lang_F_LINE_AUTO_REDIAL_typeSio" t="Tự động quay số lại"/>
+	<phrase n="lang_F_LINE_CONFERENCING" t="Hội nghị"/>
+	<phrase n="lang_F_LINE_PARKED" t="Đang chờ người khác nhấc máy"/>
+	<phrase n="lang_F_LINE_NO_BUDDY" t="Chưa được chỉ định"/>
+	<phrase n="lang_F_LINE_DISABLED" t="Vô hiệu hoá"/>
+	<phrase n="lang_F_LINE_MSG_WAITING" t="Tin nhắn chờ"/>
+	<phrase n="lang_F_SHARED_LINE" t="S Line"/>
+	<phrase n="lang_F_SHARED_LINE_typeSio" t="Đường dây chung"/>
+	<phrase n="lang_F_SHARED_LINE_smartlabel" t="S Line"/>
+	<phrase n="lang_F_SHARED_LINE_REMOTE_SEIZED" t="Đường dây chung"/>
+	<phrase n="lang_F_SHARED_LINE_REMOTE_HOLD" t="Đường dây chung"/>
+	<phrase n="lang_F_SHARED_LINE_REMOTE_ALERT" t="Đường dây chung"/>
+	<phrase n="lang_F_SHARED_LINE_REMOTE_ACTIVE" t="Đường dây chung"/>
+	<phrase n="lang_F_SHARED_LINE_BRIDGE_ACTIVE" t="Đường dây chung"/>
+	<phrase n="lang_F_SHARED_LINE_BRIDGE_HOLD" t="Đường dây chung"/>
+	<phrase n="lang_F_SHARED_LINE_LOCAL_SEIZED" t="Đường dây chung"/>
+	<phrase n="lang_F_SHARED_LINE_LOCAL_HOLD" t="Đường dây chung"/>
+	<phrase n="lang_F_SHARED_LINE_LOCAL_ALERT" t="Đường dây chung"/>
+	<phrase n="lang_F_SHARED_LINE_LOCAL_ACTIVE" t="Đường dây chung"/>
+	<phrase n="lang_F_MULTICAST" t="MCast"/>
+	<phrase n="lang_F_MULTICAST_typeSio" t="Đa tuyến"/>
+	<phrase n="lang_F_MULTICAST_smartlabel" t="Trang MC"/>
+	<phrase n="lang_F_MULTICAST_ON" t="Đa tuyến"/>
+	<phrase n="lang_F_MULTICAST_ZONE" t="M Zone"/>
+	<phrase n="lang_F_MULTICAST_ZONE_typeSio" t="Vùng phát đa tuyến"/>
+	<phrase n="lang_F_MULTICAST_ZONE_smartlabel" t="Vùng MC"/>
+	<phrase n="lang_F_BUTTON_typeSio" t="Nút PBX"/>
+	<phrase n="lang_F_BUTTON" t="Nút"/>
+	<phrase n="lang_F_BUTTON_smartlabel" t="Nút"/>
+	<phrase n="lang_F_PUSH_TO_TALK" t="PTT"/>
+	<phrase n="lang_F_PUSH_TO_TALK_typeSio" t="Ân đế nói"/>
+	<phrase n="lang_F_PUSH_TO_TALK_smartlabel" t="PTT"/>
+	<phrase n="lang_F_INTERCOM_ON" t="Liên lạc nội bộ"/>
+	<phrase n="lang_F_INTERCOM" t="Icom"/>
+	<phrase n="lang_F_INTERCOM_typeSio" t="Liên lạc nội bộ"/>
+	<phrase n="lang_F_INTERCOM_smartlabel" t="Icom"/>
+	<phrase n="lang_F_PICKUP" t="Nhấc máy"/>
+	<phrase n="lang_F_CALL_CENTER_LIST" t="Danh sách tổng đài"/>
+	<phrase n="lang_F_REMOTE_OFFICE" t="Chỗ làm"/>
+	<phrase n="lang_F_REMOTE_OFFICE_typeSio" t="Văn phòng từ xa"/>
+	<phrase n="lang_F_REMOTE_OFFICE_smartlabel" t="VP từ xa"/>
+	<phrase n="lang_F_REMOTE_OFFICE_ON" t="Mở"/>
+	<phrase n="lang_F_REMOTE_OFFICE_OFF" t="Tắt"/>
+	<phrase n="lang_F_ACD" t="ACD"/>
+	<phrase n="lang_F_ACD_WRAPUP" t="Kết thúc"/>
+	<phrase n="lang_F_ACD_UNAVAILABLE" t="Không khả dụng"/>
+	<phrase n="lang_F_ACD_AVAILABLE" t="Khả dụng"/>
+	<phrase n="lang_F_ACD_SIGN_OUT" t="Đăng xuất"/>
+	<phrase n="lang_F_ACD_SIGN_IN" t="Đăng nhập"/>
+	<phrase n="lang_F_ACD_LOGOUT" t="Đăng xuất"/>
+	<phrase n="lang_F_ACD_LOGIN" t="Đăng nhập"/>
+	<phrase n="lang_F_ZONES" t="Trang đa tuyến"/>
+	<phrase n="lang_F_SMART_TRANSFER" t="Chuyển cuộc gọi thông minh"/>
+	<phrase n="lang_F_SMART_TRANSFER_short" t="SmartTr"/>
+	<phrase n="lang_F_ALTERNATE_MODE" t="Thay thế"/>
+	<phrase n="lang_F_LABEL_PAGE_NEXT_typeSio" t="Sau"/>
+	<phrase n="lang_F_LABEL_PAGE_NEXT" t="Sau"/>
+	<phrase n="lang_F_LABEL_PAGE_NEXT_SMART_long" t="Trang sau"/>
+	<phrase n="lang_F_LABEL_PAGE_NEXT_SMART_short" t="Trang&gt;&gt;"/>
+	<phrase n="lang_F_LABEL_PAGE_PREV_typeSio" t="Trước"/>
+	<phrase n="lang_F_LABEL_PAGE_PREV" t="Trước"/>
+	<phrase n="lang_F_LABEL_PAGE_PREV_SMART_long" t="Trang trước"/>
+	<phrase n="lang_F_LABEL_PAGE_PREV_SMART_short" t="&lt;&lt;Trang"/>
+	<phrase n="lang_F_ADD_REJECTED_CONTACT" t="Thêm"/>
+	<phrase n="lang_F_SAVE_XSI_CONTACT" t="Lưu"/>
+	<phrase n="lang_F_REFRESH" t="Làm mới"/>
+	<phrase n="lang_F_ADD_CONTACT" t="Thêm"/>
+	<phrase n="lang_F_ADD_CONTACT_typeSio" t="Thêm liên hệ"/>
+	<phrase n="lang_F_SAVE_DIRECTORY_EDIT" t="Lưu"/>
+	<phrase n="lang_F_GO_NEXT" t="Sau"/>
+	<phrase n="lang_F_GO_BACK" t="Trước"/>
+	<phrase n="lang_F_MENU_BACK" t="Back"/>
+	<phrase n="lang_F_SAVE" t="Lưu"/>
+	<phrase n="lang_F_SAVE_CONTACT" t="Lưu"/>
+	<phrase n="lang_F_SAFE_TRANSFER_OFF" t="Xfer"/>
+	<phrase n="lang_F_SAFE_TRANSFER_OFF_typeSio" t="Chuyển"/>
+	<phrase n="lang_F_PARK" t="Park"/>
+	<phrase n="lang_F_CALL_PARK_GROUP_DIAL" t="Group Park"/>
+	<phrase n="lang_F_PARK_typeSio" t="Chờ nối máy"/>
+	<phrase n="lang_F_PARK_smartlabel" t="Park"/>
+	<phrase n="lang_F_CALLRECORD_PAUSE" t="Tạm dừng ghi lại"/>
+	<phrase n="lang_F_CALLRECORD_RESUME" t="Tiếp tục ghi lại"/>
+	<phrase n="lang_F_CALLRECORD_CONTROL_ON" t="Ghi lại"/>
+	<phrase n="lang_F_CALLRECORD_CONTROL_OFF" t="Ghi lại"/>
+	<phrase n="lang_F_STATUS_UNREAD" t="Thông tin"/>
+	<phrase n="lang_F_STATUS" t="Thông tin"/>
+	<phrase n="lang_F_STATUS_long" t="Thông tin tin nhắn"/>
+	<phrase n="lang_F_STATUS_NOTIFICATIONS" t="Notifications"/>
+	<phrase n="lang_F_FAVORITES" t="ƯuTiên"/>
+	<phrase n="lang_F_FAVORITES_typeSio" t="Yêu thích"/>
+	<phrase n="lang_F_FAVORITES_smartlabel" t="Yêu thích"/>
+	<phrase n="lang_F_SORT" t="Lọc"/>
+	<phrase n="lang_F_SORT_typeSio" t="Sắp xếp"/>
+	<phrase n="lang_F_CONTACTPOOL" t="Danh bạ"/>
+	<phrase n="lang_F_CONTACTPOOL_typeSio" t="Danh bạ"/>
+	<phrase n="lang_F_CONTACTPOOL_smartlabel" t="Danh bạ"/>
+	<phrase n="lang_F_NEXT" t="Sau"/>
+	<phrase n="lang_F_DIRECTORY_SEARCH" t="Giao thức ứng dụng truy cập các cấu trúc thư mục"/>
+	<phrase n="lang_F_MISSED_LIST" t="Gọi nhỡ"/>
+	<phrase n="lang_F_MISSED_LIST_typeSio" t="Cuộc gọi nhỡ"/>
+	<phrase n="lang_F_MISSED_LIST_smartlabel" t="Đã nhỡ"/>
+	<phrase n="lang_F_DIALED_LIST" t="Đã gọi"/>
+	<phrase n="lang_F_DIALED_LIST_typeSio" t="Cuộc gọi đã gọi"/>
+	<phrase n="lang_F_DIALED_LIST_smartlabel" t="Đã gọi"/>
+	<phrase n="lang_F_ACCEPTED_LIST" t="Gọi đến"/>
+	<phrase n="lang_F_ACCEPTED_LIST_typeSio" t="Cuộc gọi đến"/>
+	<phrase n="lang_F_ACCEPTED_LIST_smartlabel" t="Đã nhận"/>
+	<phrase n="lang_F_DIALED" t="Đã gọi"/>
+	<phrase n="lang_F_RETRIEVE" t="Hộp thư thoại"/>
+	<phrase n="lang_F_RETRIEVE_smartlabel" t="Hộp thư thoại"/>
+	<phrase n="lang_F_RETRIEVE_typeSio" t="Hộp thư thoại"/>
+	<phrase n="lang_F_RETRIEVE_ON" t="Hộp thư thoại"/>
+	<phrase n="lang_F_REDIRECT_OFF" t="noFwd"/>
+	<phrase n="lang_F_REDIRECT_OFF_smartlabel" t="noFwd"/>
+	<phrase n="lang_F_REDIRECT_OFF_typeSio" t="Tắt chuyển tiếp"/>
+	<phrase n="lang_F_REDIRECT_ON" t="CFwd"/>
+	<phrase n="lang_F_REDIRECT_ON_typeSio" t="Chuyển cuộc gọi"/>
+	<phrase n="lang_F_REDIRECT_smartlabel" t="Chuyển cuộc gọi"/>
+	<phrase n="lang_F_RINGER_SILENT" t="Im lặng"/>
+	<phrase n="lang_F_RINGER_SILENT_typeSio" t="Chế độ Im Lặng"/>
+	<phrase n="lang_F_RINGER_SILENT_smartlabel" t="Im lặng"/>
+	<phrase n="lang_F_ABORT" t="ESC"/>
+	<phrase n="lang_F_ABORT_typeSio" t="Thoát"/>
+	<phrase n="lang_F_SUPPORT" t="Trợ giúp"/>
+	<phrase n="lang_F_JUMP_BACK" t="Nhảy"/>
+	<phrase n="lang_F_JUMP" t="Nhảy"/>
+	<phrase n="lang_F_REDUCED" t="Ít hơn"/>
+	<phrase n="lang_F_ALL" t="Thêm"/>
+	<phrase n="lang_F_DIALOG" t="Gọi"/>
+	<phrase n="lang_F_DIALOG_typeSio" t="Giám sát cuộc gọi"/>
+	<phrase n="lang_F_DIALOG_smartlabel" t="Cuộc gọi"/>
+	<phrase n="lang_F_HEADSET" t="TaiNghe"/>
+	<phrase n="lang_F_HEADSET_typeSio" t="Tai nghe"/>
+	<phrase n="lang_F_HEADSET_smartlabel" t="Tai nghe"/>
+	<phrase n="lang_F_HEADSET_ON" t="TaiNghe"/>
+	<phrase n="lang_F_HEADSET_ON_typeSio" t="Tai nghe"/>
+	<phrase n="lang_F_HEADSET_ON_smartlabel" t="Tai nghe"/>
+	<phrase n="lang_F_SOFTWARE_UPDATE" t="Phần mềm"/>
+	<phrase n="lang_F_UPDATE" t="Cập nhật"/>
+	<phrase n="lang_F_SMS" t="Tin nhắn"/>
+	<phrase n="lang_F_CMC" t="CMC"/>
+	<phrase n="lang_F_CALL_COMPLETION" t="Hoàn tất cuộc gọi"/>
+	<phrase n="lang_F_UNMUTE" t="Unmute"/>
+	<phrase n="lang_F_UNMUTE_typeSio" t="Tắt im lặng"/>
+	<phrase n="lang_F_UNMUTE_smartlabel" t="BỏImLặng"/>
+	<phrase n="lang_F_MUTE" t="Im lặng"/>
+	<phrase n="lang_F_MUTE_typeSio" t="Im lặng"/>
+	<phrase n="lang_F_MUTE_smartlabel" t="Im lặng"/>
+	<phrase n="lang_F_REG_ACTIVATE" t="Kích hoạt"/>
+	<phrase n="lang_F_ADD_PHONEBOOK" t="Thêm"/>
+	<phrase n="lang_F_ADD_PHONEBOOK_typeSio" t="Thêm liên hệ"/>
+	<phrase n="lang_F_LIST_MISSED" t="Đã nhỡ"/>
+	<phrase n="lang_F_LIST_TAKEN" t="Đã nhận"/>
+	<phrase n="lang_F_LIST_TAKEN_typeSio" t="Received Calls"/>
+	<phrase n="lang_F_LIST_TAKEN_smartlabel" t="Received"/>
+	<phrase n="lang_F_DETAILS" t="Chi tiết"/>
+	<phrase n="lang_F_DND_OFF" t="Im lặng"/>
+	<phrase n="lang_F_DND_OFF_typeSio" t="Không làm phiền"/>
+	<phrase n="lang_F_DND_OFF_smartlabel" t="Im lặng"/>
+	<phrase n="lang_F_DND" t="Im lặng"/>
+	<phrase n="lang_F_DND_typeSio" t="Không làm phiền"/>
+	<phrase n="lang_F_DND_smartlabel" t="Im lặng"/>
+	<phrase n="lang_F_DEF_ON" t="*Mở"/>
+	<phrase n="lang_F_DEF_OFF" t="*Tắt"/>
+	<phrase n="lang_F_ON" t="Mở"/>
+	<phrase n="lang_F_OFF" t="Tắt"/>
+	<phrase n="lang_F_START" t="Bắt đầu"/>
+	<phrase n="lang_F_END" t="Kết thúc"/>
+	<phrase n="lang_F_IDENTITY" t="Định danh"/>
+	<phrase n="lang_F_SETTINGS_typeSio" t="Cài đặt"/>
+	<phrase n="lang_F_SETTINGS" t="Cài đặt"/>
+	<phrase n="lang_F_EXECUTIVE_ASSISTANT_CONFIG" t="Cấu hình Quản lý-Hỗ trợ"/>
+	<phrase n="lang_F_EXECUTIVE_CONFIG" t="Exec.&lt;br&gt;Config"/>
+	<phrase n="lang_F_EXECUTIVE_CONFIG_typeSio" t="Cấu hình Quản lý"/>
+	<phrase n="lang_F_ASSISTANT_CONFIG" t="Assist.&lt;br&gt;Config"/>
+	<phrase n="lang_F_ASSISTANT_CONFIG_typeSio" t="Cấu hình hỗ trợ"/>
+	<phrase n="lang_F_EXEC_ASSIST_BEHALF_PUI_LISTING" t="Trợ lý giám đốc thay mặt"/>
+	<phrase n="lang_F_EXEC_ASSIST_BEHALF" t="Thay mặt"/>
+	<phrase n="lang_F_NEW" t="Mới"/>
+	<phrase n="lang_F_URLU" t="a»A"/>
+	<phrase n="lang_F_URLU_typeSio" t="Chuyển chế độ"/>
+	<phrase n="lang_F_URLL" t="1»a"/>
+	<phrase n="lang_F_URLL_typeSio" t="Chuyển chế độ"/>
+	<phrase n="lang_F_123" t="A»1"/>
+	<phrase n="lang_F_123_typeSio" t="Chuyển chế độ"/>
+	<phrase n="lang_F_REDIRECT" t="Chuyển cuộc gọi"/>
+	<phrase n="lang_F_REDIRECT_typeSio" t="Chuyển cuộc gọi"/>
+	<phrase n="lang_F_HOLD_typeSio" t="Giữ máy"/>
+	<phrase n="lang_F_HOLD" t="Giữ"/>
+	<phrase n="lang_F_CONSULTCONF_ADD" t="Thêm"/>
+	<phrase n="lang_F_CONSULTCONF_ADD_typeSio" t="Thêm hội nghị"/>
+	<phrase n="lang_F_CONSULTCONF_ADD_smartlabel" t="Thêm"/>
+	<phrase n="lang_F_CONSULTCONF_JOIN" t="Tham gia"/>
+	<phrase n="lang_F_CONSULTCONF_JOIN_typeSio" t="Tham gia hội nghị"/>
+	<phrase n="lang_F_CONSULTCONF_JOIN_smartlabel" t="Tham gia"/>
+	<phrase n="lang_F_CONSULTCONF" t="Hội nghị"/>
+	<phrase n="lang_F_CONFERENCE" t="Conf"/>
+	<phrase n="lang_F_CONFERENCE_smartlabel" t="Conf"/>
+	<phrase n="lang_F_CONFERENCE_typeSio" t="Hội nghị"/>
+	<phrase n="lang_F_CONFERENCE_ON" t="Tổ chức hội nghị"/>
+	<phrase n="lang_F_NO_CONFERENCE" t="Không hội nghị"/>
+	<phrase n="lang_F_DEFLECT" t="làm lệch cuộc gọi"/>
+	<phrase n="lang_F_BLIND_TRANSFER" t="Không báo trước"/>
+	<phrase n="lang_F_BLIND_TRANSFER_typeSio" t="Chuyển không báo trước"/>
+	<phrase n="lang_F_TRANSFER" t="Xfer"/>
+	<phrase n="lang_F_TRANSFER_typeSio" t="Chuyển"/>
+	<phrase n="lang_F_TRANSFER_smartlabel" t="Chuyển"/>
+	<phrase n="lang_F_TRANSFER_CALL" t="Chuyển cuộc gọi này"/>
+	<phrase n="lang_F_TRANSFER_SELECTED" t="Đã chọn chuyển"/>
+	<phrase n="lang_F_DENY" t="Từ chối"/>
+	<phrase n="lang_F_DIAL" t="Gọi"/>
+	<phrase n="lang_F_EDIT" t="Sửa"/>
+	<phrase n="lang_F_CLEAR" t="Xoá"/>
+	<phrase n="lang_F_DOWN" t="Xuống"/>
+	<phrase n="lang_F_UP" t="Lên"/>
+	<phrase n="lang_F_LEFT" t="Trái"/>
+	<phrase n="lang_F_RIGHT" t="Phải"/>
+	<phrase n="lang_F_EXTENSION" t="Thoát"/>
+	<phrase n="lang_F_EXTENSION_typeSio" t="Mở rộng"/>
+	<phrase n="lang_F_EXTENSION_smartlabel" t="Mở rộng"/>
+	<phrase n="lang_F_MESSAGE" t="Tin nhắn"/>
+	<phrase n="lang_F_CONTACT_STATE_UNKNOWN" t="Không xác định"/>
+	<phrase n="lang_F_CONTACT_STATE_AVAILABLE" t="Khả dụng"/>
+	<phrase n="lang_F_CONTACT_STATE_AVAILABLE_ON_MOBILE" t="Khả dụng (Điện thoại)"/>
+	<phrase n="lang_F_CONTACT_STATE_AVAILABLE_AT_DESK" t="Khả dụng (Bàn)"/>
+	<phrase n="lang_F_CONTACT_STATE_INACTIVE" t="Không hoạt động"/>
+	<phrase n="lang_F_CONTACT_STATE_BUSY" t="Bận"/>
+	<phrase n="lang_F_CONTACT_STATE_URGENT_INTERRUPTIONS_ONLY" t="Chỉ những trường hợp gián đoạn khẩn cấp"/>
+	<phrase n="lang_F_CONTACT_STATE_IN_A_CALL" t="Đang trong cuộc gọi"/>
+	<phrase n="lang_F_CONTACT_STATE_IN_A_CONFERENCE" t="In a Conference"/>
+	<phrase n="lang_F_CONTACT_STATE_IN_A_MEETING" t="Đang trong cuộc họp"/>
+	<phrase n="lang_F_CONTACT_STATE_MEETING" t="Đang họp"/>
+	<phrase n="lang_F_CONTACT_STATE_HOLDING" t="Đang giữ"/>
+	<phrase n="lang_F_CONTACT_STATE_DND" t="Không làm phiền"/>
+	<phrase n="lang_F_CONTACT_STATE_DND_ALL" t="Không làm phiền (Tất cả)"/>
+	<phrase n="lang_F_CONTACT_STATE_DND_SELF" t="Không làm phiền (Chính mình)"/>
+	<phrase n="lang_F_CONTACT_STATE_BE_RIGHT_BACK" t="Trở lại ngay"/>
+	<phrase n="lang_F_CONTACT_STATE_AWAY" t="Nhàn rỗi"/>
+	<phrase n="lang_F_CONTACT_STATE_OFFLINE" t="Ngoại tuyến"/>
+	<phrase n="lang_F_CONTACT_STATE_INVISIBLE" t="Invisible"/>
+	<phrase n="lang_F_CONTACT_STATE_GROUP" t="Group"/>
+	<phrase n="lang_F_KEYEVENT" t="Khoá"/>
+	<phrase n="lang_F_KEYEVENT_typeSio" t="Sự kiện chính"/>
+	<phrase n="lang_F_KEYEVENT_short" t="Khoá"/>
+	<phrase n="lang_F_XML" t="XML"/>
+	<phrase n="lang_continuous_text_speed_dial" t="Gọi nhanh"/>
+	<phrase n="lang_continuous_text_reboot" t="Khởi động lại"/>
+	<phrase n="lang_continuous_text_network_restart" t="Network restart"/>
+	<phrase n="lang_continuous_text_search" t="Tìm kiếm"/>
+	<phrase n="lang_continuous_text_cancel" t="Huỷ"/>
+	<phrase n="lang_continuous_text_yes" t="Có"/>
+	<phrase n="lang_continuous_text_no" t="Không"/>
+	<phrase n="lang_confirm_reboot" t="Khởi động lại?"/>
+	<phrase n="lang_on" t="Mở"/>
+	<phrase n="lang_off" t="Tắt"/>
+	<phrase n="lang_busy" t="Bận"/>
+	<phrase n="lang_short" t="Ngắn"/>
+	<phrase n="lang_full" t="Đầy đủ"/>
+	<phrase n="lang_half" t="Nửa"/>
+	<phrase n="lang_F_HOLD_PRIVATE" t="Riêng tư"/>
+	<phrase n="lang_F_HOLD_PRIVATE_typeSio" t="Giữ riêng tư"/>
+	<phrase n="lang_F_HOLD_PRIVATE_smartlabel" t="Để riêng tư"/>
+	<phrase n="lang_conference_off" t="Cnf.Hld"/>
+	<phrase n="lang_conference_off_typeSio" t="Tắt hội nghị"/>
+	<phrase n="lang_edit_cmc" t="Mã số về các vấn đề của khách hàng:"/>
+	<phrase n="lang_dnd" t="Im lặng"/>
+	<phrase n="lang_red" t="CFwd"/>
+	<phrase n="lang_red_typeSio" t="Chuyển cuộc gọi"/>
+	<phrase n="lang_missed" t="Đã nhỡ: "/>
+	<phrase n="lang_missed_typeSio" t="Đã nhỡ: "/>
+	<phrase n="lang_edit" t="Sửa"/>
+	<phrase n="lang_F_EDIT_AND_DIAL" t="Sửa số gọi lại"/>
+	<phrase n="lang_F_EDIT_AND_DIAL_typeSio" t="Sửa &amp; Gọi"/>
+	<phrase n="lang_edit_dial" t="Sửa và Gọi"/>
+	<phrase n="lang_dhcp" t="DHCP"/>
+	<phrase n="lang_enum" t="ENUM"/>
+	<phrase n="lang_mwi_mailbox1" t="Hộp thư của:"/>
+	<phrase n="lang_mwi_mailbox2" t="Bạn có"/>
+	<phrase n="lang_mwi_mailbox3" t="Bạn có tin nhắn."/>
+	<phrase n="lang_mwi_urgent" t="Khẩn cấp"/>
+	<phrase n="lang_mwi_goto_mailbox" t="Đi đến hộp thư?"/>
+	<phrase n="lang_challenge_user" t="Người dùng đăng nhập"/>
+	<phrase n="lang_challenge_pw" t="Mật Khẩu đăng nhập"/>
+	<phrase n="lang_use_enum" t="sử dụng ENUM?"/>
+	<phrase n="lang_wiz_dhcp" t="Bạn có sử dụng DHCP không?"/>
+	<phrase n="lang_wiz_l2tp_ip_adr" t="Địa chỉ IP L2TP:"/>
+	<phrase n="lang_wiz_ip_adr" t="Địa chỉ IP:"/>
+	<phrase n="lang_wiz_mac" t="Địa chỉ MAC:"/>
+	<phrase n="lang_wiz_wifi_mac" t="Địa chỉ Wi-Fi MAC:"/>
+	<phrase n="lang_wiz_version" t="Phiên bản:"/>
+	<phrase n="lang_wiz_netmask" t="Netmask:"/>
+	<phrase n="lang_wiz_gateway" t="Cổng IP:"/>
+	<phrase n="lang_wiz_dns_server" t="Máy chủ DNS:"/>
+	<phrase n="lang_wiz_welcome" t="Chào mừng! Hãy nhấn một nút bất kỳ để đăng nhập."/>
+	<phrase n="lang_wiz_http_user" t="Enter new HTTP username"/>
+	<phrase n="lang_wiz_http_pass" t="Enter new HTTP password"/>
+	<phrase n="lang_wiz_short_pass" t="Password too short"/>
+	<phrase n="lang_terminated_finished" t="Đã kết thúc"/>
+	<phrase n="lang_try_parking" t="Cuộc gọi đang giữ máy chờ người khác nhấc máy."/>
+	<phrase n="lang_try_parking_typeSio" t="Cuộc gọi đang giữ máy chờ người khác nghe máy"/>
+	<phrase n="lang_holding" t="Giữ Cuộc Gọi: "/>
+	<phrase n="lang_select_list" t="Lịch sử cuộc gọi"/>
+	<phrase n="lang_list_all" t="Tất cả"/>
+	<phrase n="lang_list_new" t="Mới"/>
+	<phrase n="lang_list_old" t="Cũ"/>
+	<phrase n="lang_list_missed" t="Đã nhỡ"/>
+	<phrase n="lang_list_taken" t="Đã nhận"/>
+	<phrase n="lang_list_dialed" t="Đã gọi"/>
+	<phrase n="lang_list_no_data" t="(không có sẵn dữ liệu)"/>
+	<phrase n="lang_list_details" t="Chi tiết"/>
+	<phrase n="lang_list_details_time" t="Thời gian:"/>
+	<phrase n="lang_list_details_duration" t="Thời lượng:"/>
+	<phrase n="lang_list_details_costs" t="Chi phí:"/>
+	<phrase n="lang_list_details_missed" t="Đã nhỡ:"/>
+	<phrase n="lang_list_details_to" t="Đến:"/>
+	<phrase n="lang_list_details_from" t="Từ:"/>
+	<phrase n="lang_reg_activate" t="Kích hoạt"/>
+	<phrase n="lang_reg_account" t="Tài khoản:"/>
+	<phrase n="lang_reg_registrar" t="Đăng ký:"/>
+	<phrase n="lang_reg_explanation_failed" t="Đăng ký thất bại"/>
+	<phrase n="lang_reg_explanation_registering" t="Đang đăng ký"/>
+	<phrase n="lang_reg_explanation_registered" t="Đã đăng ký"/>
+	<phrase n="lang_menu_info_320" t="Thông tin"/>
+	<phrase n="lang_menu_conf_reset" t="Thiết lập lại"/>
+	<phrase n="lang_menu_gen_contrast" t="Tương phản, trái ngược"/>
+	<phrase n="lang_menu_gen_ringtone" t="Nhạc chuông"/>
+	<phrase n="lang_menu_web_webserver_type" t="Máy chủ"/>
+	<phrase n="lang_menu_function_key" t="Phím chức năng"/>
+	<phrase n="lang_menu_tser_timer" t="Bộ đếm thời gian"/>
+	<phrase n="lang_menu_red_target" t="Mục tiêu"/>
+	<phrase n="lang_menu_ringer1" t="Nhạc chuông 1"/>
+	<phrase n="lang_menu_ringer2" t="Nhạc chuông 2"/>
+	<phrase n="lang_menu_ringer3" t="Nhạc chuông 3"/>
+	<phrase n="lang_menu_ringer4" t="Nhạc chuông 4"/>
+	<phrase n="lang_menu_ringer5" t="Nhạc chuông 5"/>
+	<phrase n="lang_menu_ringer6" t="Nhạc chuông 6"/>
+	<phrase n="lang_menu_ringer7" t="Nhạc chuông 7"/>
+	<phrase n="lang_menu_ringer8" t="Nhạc chuông 8"/>
+	<phrase n="lang_menu_ringer9" t="Nhạc chuông 9"/>
+	<phrase n="lang_menu_ringer10" t="Nhạc chuông 10"/>
+	<phrase n="lang_vol_headset" t="Âm lượng tai nghe"/>
+	<phrase n="lang_vol_handset" t="Âm lượng thiết bị ngoại vi"/>
+	<phrase n="lang_vol_speaker" t="Âm lượng loa ngoài"/>
+	<phrase n="lang_audio_speaker" t="Loa ngoài"/>
+	<phrase n="lang_audio_handset" t="Điện thoại"/>
+	<phrase n="lang_audio_headset" t="Tai nghe"/>
+	<phrase n="lang_vol_contrast" t="Độ tương phản màn hình"/>
+	<phrase n="lang_confirm_factory" t="Khôi phục cài đặt gốc?"/>
+	<phrase n="lang_confirm_logoff_all" t="Đăng xuất tất cả người dùng?"/>
+	<phrase n="lang_calling" t="Đang gọi"/>
+	<phrase n="lang_connected" t="Đã kết nối"/>
+	<phrase n="lang_connected_typeSio" t="Đã kết nối"/>
+	<phrase n="lang_ringing" t="Đang đổ chuông"/>
+	<phrase n="lang_enter_number" t="Nhập số"/>
+	<phrase n="lang_held_by" t="Giữ bởi: "/>
+	<phrase n="lang_ok" t="Nhấn Ok để gọi một số"/>
+	<phrase n="lang_menu100_phone_book" t="Danh bạ"/>
+	<phrase n="lang_menu100_ldap_book" t="Truy cập LDAP"/>
+	<phrase n="lang_menu100_call_lists" t="Lịch sử cuộc gọi"/>
+	<phrase n="lang_menu100_settings" t="Cài đặt"/>
+	<phrase n="lang_sel100_logoff_all" t="Đăng xuất tất cả người dùng"/>
+	<phrase n="lang_sel100_logoff_one" t="Đăng xuất người dùng"/>
+	<phrase n="lang_sel100_activeline" t="Lựa chọn danh tính gửi đi"/>
+	<phrase n="lang_sel100_admin_mode" t="Chế độ quản trị"/>
+	<phrase n="lang_sel100_user_mode" t="Chế độ người dùng"/>
+	<phrase n="lang_sel100_net_info" t="Thông tin Net"/>
+	<phrase n="lang_sel100_mem_info" t="Thông tin Mem"/>
+	<phrase n="lang_menu_ringtone" t="Nhạc chuông"/>
+	<phrase n="lang_dnd_active" t="Kích hoạt Không làm phiền"/>
+	<phrase n="lang_update" t="Phần mềm"/>
+	<phrase n="lang_update_a" t="Thực thi?"/>
+	<phrase n="lang_update_reboot" t="Khởi động lại để cập nhật phần mềm"/>
+	<phrase n="lang_unplugged" t="Rút đầu cắm"/>
+	<phrase n="lang_ethernet_cable" t="Rút cáp mạng Ethernet"/>
+	<phrase n="lang_hid_plug" t="Kết nối thiết bị HID"/>
+	<phrase n="lang_hid_connected" t="Đã kết nối thiết bị HID"/>
+	<phrase n="lang_hid_disconnected" t="Đã ngắt kết nối thiết bị HID"/>
+	<phrase n="lang_temperature" t="Temperature"/>
+	<phrase n="lang_temperature_connected" t="Temperature sensor connected"/>
+	<phrase n="lang_language" t="Ngôn ngữ"/>
+	<phrase n="lang_current_date" t="Ngày"/>
+	<phrase n="lang_current_time" t="Thời gian"/>
+	<phrase n="lang_network_settings" t="Mạng"/>
+	<phrase n="lang_dns_domain" t="Tên miền DNS"/>
+	<phrase n="lang_dns_server1" t="Máy chủ DNS 1"/>
+	<phrase n="lang_dns_server2" t="Máy chủ DNS 2"/>
+	<phrase n="lang_ntp_server" t="Máy chủ NTP"/>
+	<phrase n="lang_no_ip_adr" t="Địa chỉ IP không hợp lệ"/>
+	<phrase n="lang_password" t="Mật khẩu"/>
+	<phrase n="lang_username" t="Tên người dùng"/>
+	<phrase n="lang_reset_settings" t="Đặt lại giá trị"/>
+	<phrase n="lang_networkadvanced_settings" t="Nâng cao"/>
+	<phrase n="lang_admin_mode_password" t="Mật khẩu chế độ quản trị"/>
+	<phrase n="lang_guess_number" t="Tra nhanh"/>
+	<phrase n="lang_guess_number_len" t="Số ký tự nhỏ nhất để bắt đầu tra nhanh"/>
+	<phrase n="lang_admin_mode_pwd" t="Mật khẩu chế độ quản trị"/>
+	<phrase n="lang_call_waiting" t="Cuộc gọi chờ"/>
+	<phrase n="lang_menu100_red_time" t="Thời gian chuyển tiếp cuộc gọi"/>
+	<phrase n="lang_menu100_red_time_typeSio" t="Thời gian chuyển tiếp cuộc gọi"/>
+	<phrase n="lang_menu100_timezone" t="Múi giờ"/>
+	<phrase n="lang_menu100_dialtone" t="Âm vực"/>
+	<phrase n="lang_menu100_call_completion" t="Hoàn tất cuộc gọi"/>
+	<phrase n="lang_menu100_cc_waiting" t="Đang chờ: "/>
+	<phrase n="lang_menu100_cc_dial" t="Gọi: "/>
+	<phrase n="lang_menu100_netmask" t="Netmask"/>
+	<phrase n="lang_menu100_gateway" t="Cổng IP"/>
+	<phrase n="lang_menu100_webserver_type" t="Loại máy chủ web"/>
+	<phrase n="lang_enum100_disp_always" t="Luôn luôn"/>
+	<phrase n="lang_enum100_disp_on" t="Mở"/>
+	<phrase n="lang_enum100_disp_off" t="Tắt"/>
+	<phrase n="lang_enum_disp_webserver_off" t="Tắt"/>
+	<phrase n="lang_enum_disp_webserver_http" t="Chỉ HTTP"/>
+	<phrase n="lang_enum_disp_webserver_https" t="Chỉ HTTPS"/>
+	<phrase n="lang_enum_disp_webserver_http_https" t="HTTP và HTTPS"/>
+	<phrase n="lang_enum_disp_func_key_destination" t="Mở rộng"/>
+	<phrase n="lang_enum_disp_func_key" t="Phím"/>
+	<phrase n="lang_xsi_silent_alert" t="Im lặng báo chuông"/>
+	<phrase n="lang_privacy_out" t="Ẩn ID cuộc gọi đi"/>
+	<phrase n="lang_quick_transfer" t="Quick transfer"/>
+	<phrase n="lang_quick_transfer_newcall" t="Make new call"/>
+	<phrase n="lang_quick_transfer_blind" t="Blind xfer"/>
+	<phrase n="lang_quick_transfer_attended" t="Attended xfer"/>
+	<phrase n="lang_privacy_in" t="Từ chối Ẩn danh"/>
+	<phrase n="lang_privacy_in_typeSio" t="Từ chối Ẩn danh"/>
+	<phrase n="lang_auto_dial" t="Tự động gọi"/>
+	<phrase n="lang_call_completion" t="Hoàn thành cuộc gọi"/>
+	<phrase n="lang_vlan_id" t="VLAN ID (1-4094)"/>
+	<phrase n="lang_vlan_qos" t="VLAN Ưu tiên (0-7)"/>
+	<phrase n="lang_vlan_reset" t="Đặt lại VLAN"/>
+	<phrase n="lang_vlan_port_tagging" t="VLAN tagging on LAN"/>
+	<phrase n="lang_vlan_pc_id" t="VLAN ID on LAN port"/>
+	<phrase n="lang_identity_settings" t="Danh tính"/>
+	<phrase n="lang_preferences_settings" t="Ưa thích"/>
+	<phrase n="lang_maintenance_settings" t="Bảo trì"/>
+	<phrase n="lang_auto_connect_indication" t="Chỉ báo trả lời tự động"/>
+	<phrase n="lang_sel100_reregister_line" t="Đăng ký lại định danh"/>
+	<phrase n="lang_sel100_edit_line" t="Chỉnh sửa Định danh"/>
+	<phrase n="lang_enum_disp_cw_visual" t="Chỉ xem"/>
+	<phrase n="lang_enum_disp_cw_visual_short" t="Xem"/>
+	<phrase n="lang_enum_disp_cw_ringer" t="Nhạc chuông"/>
+	<phrase n="lang_confirm_del_adr_item" t="Bạn có chắc chắn?"/>
+	<phrase n="lang_confirm_del_adr_item_title" t="Xoá liên hệ"/>
+	<phrase n="lang_confirm_del_adr_item_title_typeSio" t="Xoá liên hệ"/>
+	<phrase n="lang_confirm_del_adr_title" t="Xoá danh bạ"/>
+	<phrase n="lang_confirm_del_adr_item_title_short" t="Xoá liên hệ"/>
+	<phrase n="lang_vol_ringer" t="Âm lượng nhạc chuông"/>
+	<phrase n="lang_keybd_unlock_PIN" t="Mã PIN mở khóa bàn phím"/>
+	<phrase n="lang_enum_disp_func_key_mult" t="Thuê bao chung"/>
+	<phrase n="lang_enum_disp_func_key_keyevent" t="Phím sự kiện"/>
+	<phrase n="lang_menu_ringer_silent" t="Im lặng"/>
+	<phrase n="lang_menu_ringer_custom" t="Tuỳ chỉnh"/>
+	<phrase n="lang_enum_disp_func_key_none" t="Không"/>
+	<phrase n="lang_presence_online" t="Trực tuyến"/>
+	<phrase n="lang_presence_busy" t="Bận"/>
+	<phrase n="lang_presence_invisible" t="Vô hình"/>
+	<phrase n="lang_presence_title" t="Trạng thái hiện diện"/>
+	<phrase n="lang_dialog_title" t="Cuộc gọi"/>
+	<phrase n="lang_buddies_title" t="Liên hệ"/>
+	<phrase n="lang_use_backlight" t="Đèn nền"/>
+	<phrase n="lang_backlight_on_activity" t="Độ sáng khi hoạt động"/>
+	<phrase n="lang_backlight_when_idle" t="Độ sáng khi không hoạt động"/>
+	<phrase n="lang_activity" t="Hoạt động"/>
+	<phrase n="lang_display_settings" t="Màn hình"/>
+	<phrase n="lang_audio_settings" t="Âm thanh"/>
+	<phrase n="lang_redirect_settings" t="Chuyển tiếp cuộc gọi"/>
+	<phrase n="lang_redirect_settings_typeSio" t="Chuyển tiếp cuộc gọi"/>
+	<phrase n="lang_reboot_required" t="Yêu cầu khởi động lại"/>
+	<phrase n="lang_network_restart_required" t="Network restart required"/>
+	<phrase n="lang_auto_redialing" t="Gọi lại"/>
+	<phrase n="lang_conference" t="Hội nghị"/>
+	<phrase n="lang_directory_search" t="Tìm danh bạ"/>
+	<phrase n="lang_wrong_pw" t="Sai mật khẩu"/>
+	<phrase n="lang_http_password_not_set" t="Chưa đặt mật khẩu HTTP"/>
+	<phrase n="lang_start_auto_redial" t="Tự động gọi lại?"/>
+	<phrase n="lang_call_features_settings" t="Tính năng gọi điện"/>
+	<phrase n="lang_all" t="All"/>
+	<phrase n="lang_outgoing_calls_settings" t="Cuộc gọi đi"/>
+	<phrase n="lang_incoming_calls_settings" t="Cuộc gọi đến"/>
+	<phrase n="lang_ip_settings_wizzard" t="Cài đặt IP"/>
+	<phrase n="lang_webserver_settings" t="Máy chủ web"/>
+	<phrase n="lang_vlan_settings" t="VLAN"/>
+	<phrase n="lang_wlan_settings" t="WLAN"/>
+	<phrase n="lang_wifi_reboot_to_connect_to" t="Khởi động lại để kết nối với"/>
+	<phrase n="lang_system_information_menu" t="Thông tin hệ thống"/>
+	<phrase n="lang_its_a_caller_info" t="Người gọi"/>
+	<phrase n="lang_its_a_callee_info" t="Người nghe"/>
+	<phrase n="lang_redirect_all" t="Chuyển tiếp tất cả"/>
+	<phrase n="lang_redirect_all_typeSio" t="Chuyển tiếp tất cả"/>
+	<phrase n="lang_redirect_busy" t="Chuyển tiếp khi Bận"/>
+	<phrase n="lang_redirect_busy_typeSio" t="Chuyển tiếp khi Bận"/>
+	<phrase n="lang_redirect_time" t="Chuyển tiếp sau khi hết thời gian chờ"/>
+	<phrase n="lang_redirect_time_typeSio" t="Chuyển tiếp sau khi hết thời gian chờ"/>
+	<phrase n="lang_do_redirect" t="Bật chuyển tiếp cuộc gọi"/>
+	<phrase n="lang_do_redirect_typeSio" t="Bật chuyển tiếp cuộc gọi"/>
+	<phrase n="lang_redirect_target" t="Mục tiêu khi chuyển tiếp cuộc gọi"/>
+	<phrase n="lang_redirect_target_typeSio" t="Mục tiêu khi chuyển tiếp cuộc gọi"/>
+	<phrase n="lang_help_label" t="Giúp đỡ"/>
+	<phrase n="lang_sysinfo_mem1" t="RAM:"/>
+	<phrase n="lang_sysinfo_mem2" t="của"/>
+	<phrase n="lang_sysinfo_mem3" t="trống"/>
+	<phrase n="lang_goto_phonepage_msg" t="Để cài đặt điện thoại của bạn, vui lòng đi đến địa chỉ web:"/>
+	<phrase n="lang_goto_phonepage_msg_typeSio" t="Để cài đặt điện thoại của bạn, vui lòng đi đến địa chỉ web:"/>
+	<phrase n="lang_goto_help_msg" t="Để được trợ giúp thêm hãy đi đến:"/>
+	<phrase n="lang_linestate_connected" t="Tôi đang nói chuyện với người khác"/>
+	<phrase n="lang_linestate_on_hold" t="Đang giữ máy"/>
+	<phrase n="lang_linestate_ringing" t="Đang đổ chuông"/>
+	<phrase n="lang_linename_message" t="Tin nhắn"/>
+	<phrase n="lang_linename_redial" t="Gọi lại"/>
+	<phrase n="lang_linename_transfer" t="Chuyển"/>
+	<phrase n="lang_linename_rec_on" t="Bắt đầu ghi lại"/>
+	<phrase n="lang_linename_rec_off" t="Dừng ghi lại"/>
+	<phrase n="lang_linetype_auto_answer" t="Tự động trả lời"/>
+	<phrase n="lang_linetype_blf" t="BLF"/>
+	<phrase n="lang_connecting" t="Đang kết nối"/>
+	<phrase n="lang_fkey_add_contact_typeSio" t="Thêm liên hệ"/>
+	<phrase n="lang_cancelconference" t="Huỷ hội nghị"/>
+	<phrase n="lang_confirm_cancelconference" t="Thoát hội nghị?"/>
+	<phrase n="lang_xmlgui_dialnumber" t="Quay số"/>
+	<phrase n="lang_xmlgui_contactlist" t="Danh sách liên hệ"/>
+	<phrase n="lang_xmlgui_dial" t="Quay số"/>
+	<phrase n="lang_menu_equalizer" t="Bộ chỉnh âm"/>
+	<phrase n="lang_equalizer_soft" t="Âm thanh nhẹ nhàng"/>
+	<phrase n="lang_equalizer_normal" t="Âm thanh thông thường"/>
+	<phrase n="lang_equalizer_bright" t="Âm thanh to rõ"/>
+	<phrase n="lang_contactpool" t="Danh bạ"/>
+	<phrase n="lang_tb_nickname" t="Biệt danh"/>
+	<phrase n="lang_tb_number" t="Số điện thoại"/>
+	<phrase n="lang_tb_contact" t="Kiểu loại liên hệ"/>
+	<phrase n="lang_tb_outgoing_id" t="Định danh cuộc gọi đi"/>
+	<phrase n="lang_tb_firstname" t="Tên họ"/>
+	<phrase n="lang_tb_lastname" t="Tên gọi"/>
+	<phrase n="lang_tb_group" t="Nhóm"/>
+	<phrase n="lang_day" t="Ngày"/>
+	<phrase n="lang_month" t="Tháng"/>
+	<phrase n="lang_year" t="Năm"/>
+	<phrase n="lang_tb_title" t="Tiêu đề"/>
+	<phrase n="lang_tb_organization" t="Tổ chức"/>
+	<phrase n="lang_tb_email" t="Email"/>
+	<phrase n="lang_tb_note" t="Ghi chú"/>
+	<phrase n="lang_tb_photo" t="Hình ảnh"/>
+	<phrase n="lang_tb_favorite" t="Yêu thích"/>
+	<phrase n="lang_linename_transfer_short" t="Xfer"/>
+	<phrase n="lang_linetype_key_event_short" t="Phím"/>
+	<phrase n="lang_linetype_url_short" t="URL"/>
+	<phrase n="lang_grouptype_family" t="Gia đình"/>
+	<phrase n="lang_grouptype_friend" t="Bạn bè"/>
+	<phrase n="lang_grouptype_collegue" t="Đồng nghiệp"/>
+	<phrase n="lang_grouptype_work" t="Công việc"/>
+	<phrase n="lang_title_sort" t="Sắp xếp theo"/>
+	<phrase n="lang_title_select_entry" t="Chọn một mục"/>
+	<phrase n="lang_entry_general" t="Chi tiết chung"/>
+	<phrase n="lang_title_entry_general" t="Chi tiết chung về"/>
+	<phrase n="lang_fav_add_from_tbook" t="Thêm từ danh bạ điện thoại"/>
+	<phrase n="lang_redirect_on_timeout" t="Chuyển khi hết thời gian chờ:"/>
+	<phrase n="lang_redirect_on_timeout_typeSio" t="Chuyển khi hết thời gian chờ:"/>
+	<phrase n="lang_redirect_when_busy" t="Chuyển khi bận:"/>
+	<phrase n="lang_redirect_when_busy_typeSio" t="Chuyển khi bận:"/>
+	<phrase n="lang_sip_disabled" t="Đã vô hiệu hoá SIP"/>
+	<phrase n="lang_low_memory" t="Sắp hết bộ nhớ"/>
+	<phrase n="lang_title_error" t="Lỗi"/>
+	<phrase n="lang_error_code" t="Mã lỗi:"/>
+	<phrase n="lang_bad_server_response" t="Phản hồi máy chủ kém"/>
+	<phrase n="lang_bad_xml_response" t="Phản hồi XML kém..."/>
+	<phrase n="lang_title_loading" t="Đang tải"/>
+	<phrase n="lang_active_id" t="Ngưởi dùng hoạt động"/>
+	<phrase n="lang_1st_id" t="Người dùng đầu tiên"/>
+	<phrase n="lang_2nd_id" t="Người dùng thứ 2"/>
+	<phrase n="lang_3rd_id" t="Người dùng thứ 3"/>
+	<phrase n="lang_4th_id" t="Người dùng thứ 4"/>
+	<phrase n="lang_5th_id" t="Người dùng thứ 5"/>
+	<phrase n="lang_6th_id" t="Người dùng thứ 6"/>
+	<phrase n="lang_7th_id" t="Người dùng thứ 7"/>
+	<phrase n="lang_8th_id" t="Người dùng thứ 8"/>
+	<phrase n="lang_9th_id" t="Người dùng thứ 9"/>
+	<phrase n="lang_10th_id" t="Ngưởi dùng thứ 10"/>
+	<phrase n="lang_11th_id" t="Ngưởi dùng thứ 11"/>
+	<phrase n="lang_12th_id" t="Ngưởi dùng thứ 12"/>
+	<phrase n="lang_contacttype_vip" t="VIP"/>
+	<phrase n="lang_contacttype_deny" t="chặn"/>
+	<phrase n="lang_unknown" t="Không xác định"/>
+	<phrase n="lang_month_01" t="Tháng 1"/>
+	<phrase n="lang_month_02" t="Tháng 2"/>
+	<phrase n="lang_month_03" t="Tháng 3"/>
+	<phrase n="lang_month_04" t="Tháng 4"/>
+	<phrase n="lang_month_05" t="Tháng 5"/>
+	<phrase n="lang_month_06" t="Tháng 6"/>
+	<phrase n="lang_month_07" t="Tháng 7"/>
+	<phrase n="lang_month_08" t="Tháng 8"/>
+	<phrase n="lang_month_09" t="Tháng 9"/>
+	<phrase n="lang_month_10" t="Tháng 10"/>
+	<phrase n="lang_month_11" t="Tháng 11"/>
+	<phrase n="lang_month_12" t="Tháng 12"/>
+	<phrase n="lang_tb_name_label" t="Tên"/>
+	<phrase n="lang_tb_number_label" t="Phone"/>
+	<phrase n="lang_title_transfer" t="Bên chuyển"/>
+	<phrase n="lang_linestate_label" t="Trạng thái"/>
+	<phrase n="lang_reboot_uploads" t="Khởi động lại để kích hoạt tải lên."/>
+	<phrase n="lang_cc_dial_now" t="Gọi ngay?"/>
+	<phrase n="lang_cc_complete_now" t="Bạn có thể hoàn thành cuộc gọi đến"/>
+	<phrase n="lang_cc_waiting_for" t="Chờ hoàn tất cuộc gọi đến"/>
+	<phrase n="lang_cc_set_warning" t="hoàn thành cuộc gọi hiện tại đã được đặt, nhưng bạn có thể gọi lại."/>
+	<phrase n="lang_cc_change_title" t="Thay đổi Mục tiêu hoàn thành cuộc gọi?"/>
+	<phrase n="lang_cc_change_message" t="Thay thế Mục tiêu-CC hiện tại bằng"/>
+	<phrase n="lang_cc_status_waiting_on" t="Đang đợi %dst khả dụng."/>
+	<phrase n="lang_cc_activate" t="sẽ chờ để hoàn thành cuộc gọi."/>
+	<phrase n="lang_cc_activated" t="vẫn đang chờ hoàn thành cuộc gọi."/>
+	<phrase n="lang_call_contact" t="Cuộc gọi liên hệ"/>
+	<phrase n="lang_call_work" t="Cuộc gọi công việc"/>
+	<phrase n="lang_call_work_typeSio" t="Cuộc gọi công việc"/>
+	<phrase n="lang_call_mobile" t="Cuộc gọi di động"/>
+	<phrase n="lang_call_home" t="Cuộc gọi Gia đình"/>
+	<phrase n="lang_call_home_typeSio" t="Cuộc gọi Gia đình"/>
+	<phrase n="lang_call_other" t="Cuộc gọi khác"/>
+	<phrase n="lang_call_voicemail" t="Cuộc gọi hộp thư thoại"/>
+	<phrase n="lang_xfer_to_contact" t="Chuyển đến liên hệ"/>
+	<phrase n="lang_xfer_to_work" t="Chuyển đến Công việc"/>
+	<phrase n="lang_xfer_to_work_typeSio" t="Chuyển đến Công việc"/>
+	<phrase n="lang_xfer_to_mobile" t="Chuyển đến Di động"/>
+	<phrase n="lang_xfer_to_home" t="Chuyển đến Gia đình"/>
+	<phrase n="lang_xfer_to_home_typeSio" t="Chuyển đến Gia đình"/>
+	<phrase n="lang_xfer_to_other" t="Chuyển đến Khác"/>
+	<phrase n="lang_xfer_to_voicemail" t="Chuyển đến Hộp thư thoại"/>
+	<phrase n="lang_cfw_to_contact" t="Chuyển tiếp đến Liên hệ"/>
+	<phrase n="lang_cfw_to_contact_typeSio" t="Chuyển tiếp đến Liên hệ"/>
+	<phrase n="lang_cfw_to_voicemail_typeSio" t="Chuyển tiếp đến Hộp thư thoại"/>
+	<phrase n="lang_cfw_to_work" t="Chuyển tiếp đến Công việc"/>
+	<phrase n="lang_cfw_to_work_typeSio" t="Chuyển tiếp đến Công việc"/>
+	<phrase n="lang_cfw_to_mobile" t="Chuyển tiếp đến Di động"/>
+	<phrase n="lang_cfw_to_mobile_typeSio" t="Chuyển tiếp đến Di động"/>
+	<phrase n="lang_cfw_to_home" t="Chuyển tiếp đến Gia đình"/>
+	<phrase n="lang_cfw_to_home_typeSio" t="Chuyển tiếp đến Gia đình"/>
+	<phrase n="lang_cfw_to_other" t="Chuyển tiếp đến Khác"/>
+	<phrase n="lang_cfw_to_other_typeSio" t="Chuyển tiếp đến Khác"/>
+	<phrase n="lang_cfw_to_voicemail" t="Chuyển tiếp đến Hộp thư thoại"/>
+	<phrase n="lang_assign_to_key" t="Gán vào Phím"/>
+	<phrase n="lang_contact_state_unknown" t="Không xác định"/>
+	<phrase n="lang_contact_state_available" t="Khả dụng"/>
+	<phrase n="lang_contact_state_available_on_mobile" t="Khả dụng (Di động)"/>
+	<phrase n="lang_contact_state_available_at_desk" t="Khả dụng (máy bàn)"/>
+	<phrase n="lang_contact_state_inactive" t="Không hoạt động"/>
+	<phrase n="lang_contact_state_busy" t="Bận"/>
+	<phrase n="lang_contact_state_urgent_interruptions_only" t="Chỉ những trường hợp gián đoạn khẩn cấp"/>
+	<phrase n="lang_contact_state_in_a_call" t="Đang trong cuộc gọi"/>
+	<phrase n="lang_contact_state_in_a_meeting" t="Đang trong cuộc họp"/>
+	<phrase n="lang_contact_state_meeting" t="Họp"/>
+	<phrase n="lang_contact_state_holding" t="Đang giữ máy"/>
+	<phrase n="lang_contact_state_dnd" t="Không làm phiền"/>
+	<phrase n="lang_contact_state_dnd_all" t="Không làm phiền (Tất cả)"/>
+	<phrase n="lang_contact_state_dnd_self" t="Không làm phiền (Chính mình)"/>
+	<phrase n="lang_contact_state_be_right_back" t="Quay lại ngay"/>
+	<phrase n="lang_contact_state_away" t="Tạm xa"/>
+	<phrase n="lang_contact_state_offline" t="Ngoại tuyến"/>
+	<phrase n="lang_contact_state_reset" t="Đặt lại trạng thái"/>
+	<phrase n="lang_remote_book_name_ldap" t="Danh bạ LDAP"/>
+	<phrase n="lang_remote_book_choose_title" t="Chọn sổ địa chỉ"/>
+	<phrase n="lang_title_add_to_favorites" t="Thêm vào Yêu thích"/>
+	<phrase n="lang_title_add_to_favorites_typeSio" t="Thêm vào Yêu thích"/>
+	<phrase n="lang_title_favorites" t="Yêu thích"/>
+	<phrase n="lang_unknown_partner" t="Không xác định"/>
+	<phrase n="lang_nrtype_sip" t="SIP"/>
+	<phrase n="lang_nrtype_business" t="Doanh nghiệp"/>
+	<phrase n="lang_nrtype_fixed" t="Thuê bao cố định"/>
+	<phrase n="lang_nrtype_extension" t="Mở rộng"/>
+	<phrase n="lang_tb_number_type" t="Kiểu số"/>
+	<phrase n="lang_tb_number_type_label" t="Kiểu"/>
+	<phrase n="lang_title_no_permission" t="Không cho phép"/>
+	<phrase n="lang_target_office" t="Văn phòng"/>
+	<phrase n="lang_target_replyto" t="Trả lời"/>
+	<phrase n="lang_target_unqualified" t="Không đủ điều kiện"/>
+	<phrase n="lang_target_work" t="Công việc"/>
+	<phrase n="lang_target_work_typeSio" t="Công việc"/>
+	<phrase n="lang_target_mobile" t="Di động"/>
+	<phrase n="lang_target_home" t="Gia đình"/>
+	<phrase n="lang_target_home_typeSio" t="Gia đình"/>
+	<phrase n="lang_target_other" t="Khác"/>
+	<phrase n="lang_target_voicemail" t="Hộp thư thoại"/>
+	<phrase n="lang_target_new_number" t="Số mới"/>
+	<phrase n="lang_target_contact" t="Liên hệ"/>
+	<phrase n="lang_directory_too_big_to_import__long" t="Thư mục từ xa quá lớn"/>
+	<phrase n="lang_target_cancel" t="Không chuyển tiếp cuộc gọi"/>
+	<phrase n="lang_target_cancel_typeSio" t="Không chuyển tiếp cuộc gọi"/>
+	<phrase n="lang_target_forward" t="Chuyển tiếp cuộc gọi đến"/>
+	<phrase n="lang_target_forward_typeSio" t="Chuyển cuộc gọi đến"/>
+	<phrase n="lang_tls_unknown_certificate_alert" t="Một kết nối an toàn đã bị từ chối vì cung cấp chứng chỉ không xác định. Bạn có thể cấp quyền tin tưởng kết nối này một cách rõ ràng thông qua Giao diện web trong phần Chứng chỉ."/>
+	<phrase n="lang_tls_unknown_certificate_alert_title" t="Kết nối an toàn thất bại"/>
+	<phrase n="lang_tls_properties_changed" t="Vui lòng khởi động lại. Không thể áp dụng các thuộc tính bảo mật đã thay đổi cho phiên hiện hoạt."/>
+	<phrase n="lang_call_completed_by_part1" t="Cuộc gọi đã hoàn tất bởi"/>
+	<phrase n="lang_call_completed_by_part2" t="Trên thiết bị đầu cuối khác."/>
+	<phrase n="lang_call_completed_by_part2_typeSio" t="Trên thiết bị đầu cuối khác"/>
+	<phrase n="lang_challenge_sip_pw" t="Mật khẩu SIP"/>
+	<phrase n="lang_line_ocs_wz_user" t="Tên miền\Người dùng"/>
+	<phrase n="lang_line_ocs_wz_pwd" t="Mật khẩu"/>
+	<phrase n="lang_unregistered_ids_title" t="Chưa đăng ký:"/>
+	<phrase n="lang_message_label" t="Info"/>
+	<phrase n="lang_status_messages" t="Thông tin trạng thái"/>
+	<phrase n="lang_information_settings" t="Thông tin"/>
+	<phrase n="lang_user_realname" t="Hiển thị tên"/>
+	<phrase n="lang_user_idle_number" t="Hiển thị số"/>
+	<phrase n="lang_user_name" t="Tài khoản"/>
+	<phrase n="lang_user_pass" t="Mật khẩu"/>
+	<phrase n="lang_user_host" t="Sổ đăng ký"/>
+	<phrase n="lang_user_outbound" t="Proxy gửi đi"/>
+	<phrase n="lang_user_pname" t="Tên người dùng xác thực"/>
+	<phrase n="lang_user_mailbox" t="Hộp thư"/>
+	<phrase n="lang_user_mailbox_retrieve" t="Hộp thư số"/>
+	<phrase n="lang_hotdesking" t="Nơi làm việc chung (Hotdesking)"/>
+	<phrase n="lang_keyb_enter_current_pin" t="Nhập mã PIN hiện tại"/>
+	<phrase n="lang_keyb_enter_new_pin" t="Nhập mã PIN mới"/>
+	<phrase n="lang_keyb_reenter_new_pin" t="Nhập lại mã PIN mới"/>
+	<phrase n="lang_keyb_enter_password" t="Nhập mật khẩu để đặt lại PIN"/>
+	<phrase n="lang_keyb_locked" t="Nhấn và giữ * để mở khoá."/>
+	<phrase n="lang_keyb_permanently_locked" t="Nhấn và giữ * để đặt lại PIN."/>
+	<phrase n="lang_title_unlock" t="Đã khoá bàn phím"/>
+	<phrase n="lang_confirm_unlock" t="Mở khoá? Nhấn Ok."/>
+	<phrase n="lang_transfer_failed_msg" t="Chuyển thất bại"/>
+	<phrase n="lang_action_failed_msg" t="Hoạt động thất bại"/>
+	<phrase n="lang_vpn_fetch" t="Đang tìm nạp tarball VPN từ:"/>
+	<phrase n="lang_vpn_fetch_failed" t="Tìm nạp tarball VPN thất bại"/>
+	<phrase n="lang_vpn_flash" t="Đang giải nén các tệp VPN..."/>
+	<phrase n="lang_vpn_reboot" t="Khởi động lại hệ thống để kích hoạt VPN..."/>
+	<phrase n="lang_l2tp_fetch" t="Đang tìm nạp tarball L2TP từ:"/>
+	<phrase n="lang_l2tp_fetch_failed" t="Tìm nạp tarball L2TP thất bại"/>
+	<phrase n="lang_l2tp_flash" t="Đang giải nén các tệp L2TP..."/>
+	<phrase n="lang_l2tp_reboot" t="Khởi động lại hệ thống để kích hoạt L2TP..."/>
+	<phrase n="lang_sbc_fetch" t="Đang tìm nạp tệp cấu hình sbc từ:"/>
+	<phrase n="lang_sbc_fetch_failed" t="Tìm nạp tệp cấu hình sbc thất bại"/>
+	<phrase n="lang_sbc_flash" t="Sao chép tập tin cấu hình sbc..."/>
+	<phrase n="lang_sbc_reboot" t="Khởi động lại hệ thống để kích hoạt sbc..."/>
+	<phrase n="lang_sbc_active" t="SBC đang hoạt động"/>
+	<phrase n="lang_keyb_min_digits" t="(ít nhất. # ký tự)"/>
+	<phrase n="lang_empty_dir_search_list" t="Nhập tên! Sử dụng * cho dấu cách."/>
+	<phrase n="lang_key_unassigned" t="Đã gỡ gán Phím"/>
+	<phrase n="lang_key_unassigned_typeSio" t="Đã gỡ gán Phím"/>
+	<phrase n="lang_label_conference_partner" t="Bên"/>
+	<phrase n="lang_incoming_call_title_while_connected" t="Cuộc gọi chờ"/>
+	<phrase n="lang_active" t="Đang hoạt động"/>
+	<phrase n="lang_emergency_call" t="Cuộc gọi khẩn cấp"/>
+	<phrase n="lang_ntp_pending" t="Đang liên hệ với máy chủ NTP"/>
+	<phrase n="lang_ntp_unreachable" t="Không thể truy cập máy chủ NTP"/>
+	<phrase n="lang_download_server_unreachable" t="Server unreachable"/>
+	<phrase n="lang_network_busy" t="Nghẽn mạng"/>
+	<phrase n="lang_pstn_reroute_attempt" t="Cuộc gọi này có thể mất nhiều thời gian hơn để hoàn thành. Mạng có thể bị nghẽn."/>
+	<phrase n="lang_menu_location" t="Vị trí"/>
+	<phrase n="lang_linestate_holding_upper_case" t="Đang giữ máy"/>
+	<phrase n="lang_linestate_on_hold_upper_case" t="Đang giữ máy"/>
+	<phrase n="lang_location_retrieval_failed" t="Không thể truy xuất vị trí"/>
+	<phrase n="lang_route_private_line" t="Thuê bao riêng tư"/>
+	<phrase n="lang_route_forwarded" t="Đã chuyển tiếp"/>
+	<phrase n="lang_route_forwarded_typeSio" t="Đã chuyển tiếp"/>
+	<phrase n="lang_route_delegated" t="Đã uỷ quyền"/>
+	<phrase n="lang_route_team_call" t="Cuộc gọi nhóm"/>
+	<phrase n="lang_route_acd" t="Cuộc gọi nhóm"/>
+	<phrase n="lang_route_cccp_conference" t="Cuộc gọi hội nghị"/>
+	<phrase n="lang_route_cccp_conference_typeSio" t="Cuộc gọi hội nghị"/>
+	<phrase n="lang_dfks_failed" t="Đồng bộ tính năng thất bại"/>
+	<phrase n="lang_no_shared_key" t="Không có Phím Thuê bao chung"/>
+	<phrase n="lang_shared_seize_active" t="Đường dây bắt buộc vẫn đang hoạt động"/>
+	<phrase n="lang_not_a_shared_key" t="Phím đã chọn không phải là phím đường dây chung"/>
+	<phrase n="lang_active_key_not_a_shared_key" t='Phím đường dây chung không đúng chức năng "đang hoạt động".'/>
+	<phrase n="lang_ipv4_conflict" t="IPv4: xung đột"/>
+	<phrase n="lang_contact_saved" t="Đã lưu liên hệ"/>
+	<phrase n="lang_query_pending" t="Đang tìm kiếm..."/>
+	<phrase n="lang_no_conference" t="Do tải CPU nên %Aconference không được phép"/>
+	<phrase n="lang_no_conference_with_codec" t="Do CPU tải, %Aconference không được phép nếu một bên đang sử dụng codec %B"/>
+	<phrase n="lang_no_conference_with_encrypted_codec" t="Do tải CPU, %Aconference không được phép nếu một bên đang sử dụng codec %B đã mã hóa"/>
+	<phrase n="lang_no_conference_without_unencrypted_codec" t="Do CPU tải, %Aconference không được phép nếu một bên không sử dụng codec %B mà không mã hóa"/>
+	<phrase n="lang_setup_language" t="Cài đặt ngôn ngữ"/>
+	<phrase n="lang_please_wait" t="Vui lòng chờ..."/>
+	<phrase n="lang_download_failed" t="Tải xuống thất bại"/>
+	<phrase n="lang_function_blocked" t="Đã khoá"/>
+	<phrase n="lang_activating_uploads" t="Đang kích hoạt tải lên"/>
+	<phrase n="lang_provisioning" t="Đang cung cấp"/>
+	<phrase n="lang_provisioning_failed" t="Cung cấp thất bại"/>
+	<phrase n="lang_tr69_provisioning" t="TR-069 Prov. trong tiến trình"/>
+	<phrase n="lang_start_provisioning" t="Đang cung cấp"/>
+	<phrase n="lang_waitTime" t="Thời gian chờ"/>
+	<phrase n="lang_ccUserId" t="ID ngưởi dùng"/>
+	<phrase n="lang_callCenterName" t="Tên"/>
+	<phrase n="lang_numCallsInQueue" t="Cuộc gọi trong hàng đợi"/>
+	<phrase n="lang_acd_ready" t="Khả dụng"/>
+	<phrase n="lang_acd_not_ready" t="Không khả dụng"/>
+	<phrase n="lang_acd_working_after_call" t="Tóm lược"/>
+	<phrase n="lang_acd_log_on" t="Đăng nhập"/>
+	<phrase n="lang_acd_log_off" t="Đăng xuất"/>
+	<phrase n="lang_acd_unkown_state" t="Trạng thái không xác định"/>
+	<phrase n="lang_change_state_to" t="Thay đổi trạng thái"/>
+	<phrase n="lang_call_parked" t="Cuộc gọi đang chờ nối máy"/>
+	<phrase n="lang_call_unparked" t="Cuộc gọi thôi chờ nối máy"/>
+	<phrase n="lang_firmware_update_failed" t="Cập nhật phần mềm thất bại"/>
+	<phrase n="lang_firmware_update_restart" t="Khởi động lại cập nhật SW?"/>
+	<phrase n="lang_temp_unavail" t="Tạm thời không khả dụng"/>
+	<phrase n="lang_limited_func" t="chức năng hạn chế do mất điện"/>
+	<phrase n="lang_limited_func_exp" t="Sự cố mạng đang tạm thời hạn chế các tính năng như Hiện diện hoặc CF"/>
+	<phrase n="lang_limited_func_exp_typeSio" t="Sự cố mạng đang tạm thời hạn chế các tính năng như Hiện diện hoặc CF"/>
+	<phrase n="lang_call_park_failed" t="Chờ nối máy thất bại"/>
+	<phrase n="lang_park_failed_reason" t="Không có quỹ đạo nào"/>
+	<phrase n="lang_list_parked" t="Đang chờ nối máy"/>
+	<phrase n="lang_vision" t="Vision"/>
+	<phrase n="lang_unpair_vision" t="Thôi ghép nối Vision"/>
+	<phrase n="lang_scan_for_visions" t="Đang quét Visions"/>
+	<phrase n="lang_paired_with_vision" t="Ghép nối với Vision:"/>
+	<phrase n="lang_vision_connection_lost" t="Mất kết nối Vision"/>
+	<phrase n="lang_unpair_vision_question" t="Thôi kết nối Vision?"/>
+	<phrase n="lang_isconnected" t="Đã kết nối"/>
+	<phrase n="lang_isdisconnected" t="Đã ngắt kết nối"/>
+	<phrase n="lang_isdisconnected_typeSio" t="Đã ngắt kết nối"/>
+	<phrase n="lang_hotdesking_ntlm" t="Thông tin đăng nhập tài khoản"/>
+	<phrase n="lang_hotdesking_pin" t="Mã PIN"/>
+	<phrase n="lang_prompt_phone_num" t="Mở rộng"/>
+	<phrase n="lang_prompt_pin" t="Mã PIN của bạn"/>
+	<phrase n="lang_pin_signin_active" t="Đang đăng nhập..."/>
+	<phrase n="lang_pin_signin_failure" t="Đang đăng nhập với số điện thoại và và PIN nếu có thể"/>
+	<phrase n="lang_firmware_update_in" t="Cập nhật SW ở"/>
+	<phrase n="lang_firmware_update_available" t="Có cập nhật SW mới"/>
+	<phrase n="lang_call_for" t="Gọi cho"/>
+	<phrase n="lang_linetype_bossadmin" t="Chủ quản/Quản trị viên"/>
+	<phrase n="lang_linetype_bossadmin_short" t="B/A"/>
+	<phrase n="lang_success_msg_transferred_to" t="%A được chuyển đến %B"/>
+	<phrase n="lang_pickup_call" t="Nhấc máy"/>
+	<phrase n="lang_call_on_behalf_of" t="Gọi thay mặt"/>
+	<phrase n="lang_boss_group" t="Quản lý cuộc gọi nhân viên"/>
+	<phrase n="lang_delegate_group" t="Đại diện"/>
+	<phrase n="lang_all_delegates" t="Gán tất cả Đại diện vào một Phím"/>
+	<phrase n="lang_call_failed_network_issue" t="Cuộc gọi thất bại do vấn đề mạng"/>
+	<phrase n="lang_call_failed_network_issue_typeSio" t="Cuộc gọi thất bại do vấn đề mạng"/>
+	<phrase n="lang_ethernet_detection" t="Phát hiện mạng Ethernet"/>
+	<phrase n="lang_firmware_update_not_available" t="Không có cập nhật SW mới"/>
+	<phrase n="lang_check_sw_update" t="Kiểm tra cập nhật SW"/>
+	<phrase n="lang_continuous_text_label" t="Nhãn"/>
+	<phrase n="lang_short_text" t="Văn bản ngắn"/>
+	<phrase n="lang_headline_admins" t="Quản trị viên"/>
+	<phrase n="lang_always_delegate_forward" t="Luôn chuyển tiếp ủy thác"/>
+	<phrase n="lang_always_deleg_sim" t="Luôn đổ chuông đồng thời"/>
+	<phrase n="lang_always_deleg_forw" t="Luôn chuyển tiếp"/>
+	<phrase n="lang_always_deleg_forw_typeSio" t="Luôn chuyển tiếp"/>
+	<phrase n="lang_tb_action_url" t="url hoạt động"/>
+	<phrase n="lang_clear_call_history" t="Xoá lịch sử cuộc gọi"/>
+	<phrase n="lang_headset_volume_only" t="Chỉ có thể thay đổi âm lượng tai nghe USB trên chính tai nghe."/>
+	<phrase n="lang_hold_error" t="Hold failure, call has been muted. Press hold again to retry."/>
+	<phrase n="lang_retr_by" t="Bởi"/>
+	<phrase n="lang_ipv4" t="IPv4"/>
+	<phrase n="lang_ipv6" t="IPv6"/>
+	<phrase n="lang_ipv6_autoconf" t="SLAAC"/>
+	<phrase n="lang_refresh" t="Làm mới"/>
+	<phrase n="lang_may_take_some_time" t="Quá trình làm mới có thể mất một chút thời gian. Vẫn tiếp tục?"/>
+	<phrase n="lang_ip_address_not_available" t="Không khả dụng"/>
+	<phrase n="lang_menu_unlock" t="Mở khoá"/>
+	<phrase n="lang_menu_security" t="Bảo mật"/>
+	<phrase n="lang_route_team_call_for" t="Gọi nhóm"/>
+	<phrase n="lang_route_acd_for" t="Gọi nhóm"/>
+	<phrase n="lang_route_anonymous_acd" t="Gọi nhóm ẩn danh"/>
+	<phrase n="lang_route_anonymous_acd_for" t="Gọi nhóm ẩn danh"/>
+	<phrase n="lang_anonymous" t="Ẩn danh"/>
+	<phrase n="lang_wish_barge_in" t="Bạn có muốn tiến vào không?"/>
+	<phrase n="lang_location" t="Vị trí:"/>
+	<phrase n="lang_subject" t="Chủ đề"/>
+	<phrase n="lang_dates" t="Cuộc hẹn"/>
+	<phrase n="lang_menu_dates_today" t="Cuộc hẹn hôm nay"/>
+	<phrase n="lang_label_conference_organizer" t="Nhà tổ chức:"/>
+	<phrase n="lang_date_ongoing" t="BÂY GIỜ:"/>
+	<phrase n="lang_date_remind_me_later" t="Nhắc tối sau"/>
+	<phrase n="lang_date_remind_later" t="Sau"/>
+	<phrase n="lang_date_set_reminder_to" t="Đến"/>
+	<phrase n="lang_minutes" t="Phút"/>
+	<phrase n="lang_date_reset_reminder" t="Đặt lại nhắc nhở"/>
+	<phrase n="lang_cannot_access_exchange" t="Không thể truy cập Máy chủ Exchange."/>
+	<phrase n="lang_no_dates_today" t="Không có lịch trình nào cho ngày hôm nay"/>
+	<phrase n="lang_participants" t="Người tham gia:"/>
+	<phrase n="lang_expansion_modules" t="mô-đun mở rộng"/>
+	<phrase n="lang_wiz_vlan" t="Bạn có đang dùng VLAN?"/>
+	<phrase n="lang_wiz_ip4" t="Bạn có muốn cài đặt IPv4?"/>
+	<phrase n="lang_wiz_ip6" t="Cài đặt IPv6"/>
+	<phrase n="lang_sxm_connected" t="Seri mô-đun mở rộng đã kết nối"/>
+	<phrase n="lang_uxm_connected" t="Đã kết nối mô-đun mở rộng USB"/>
+	<phrase n="lang_uxm_cabeling_broken" t="Cáp mô-đun mở rộng sai"/>
+	<phrase n="lang_uxm_limit_exceeded" t="Quá nhiều mô-đun mở rộng USB được kết nối"/>
+	<phrase n="lang_vpn_active" t="VPN đang hoạt động"/>
+	<phrase n="lang_wlan_active" t="Wlan đang hoạt động"/>
+	<phrase n="lang_list_no_devices" t="(Không có thiết bị nào)"/>
+	<phrase n="lang_bluetooth" t="Bluetooth"/>
+	<phrase n="lang_bluetooth_connected_title" t="Thiết bị đã kết nối"/>
+	<phrase n="lang_bluetooth_paired_list_title" t="Danh sách thiết bị đã ghép nối"/>
+	<phrase n="lang_bluetooth_active_connection" t="Kết nối Bluetooth đang hoạt động"/>
+	<phrase n="lang_bluetooth_discovered_list_title" t="Danh sách các thiết bị được phát hiện"/>
+	<phrase n="lang_bluetooth_discovering" t="Đang phát hiện"/>
+	<phrase n="lang_bluetooth_unpairing" t="Đang thôi ghép nối"/>
+	<phrase n="lang_bluetooth_pairing" t="Đang ghép nối"/>
+	<phrase n="lang_bluetooth_connecting" t="Đang kết nối"/>
+	<phrase n="lang_bluetooth_disconnecting" t="Đang ngắt kết nối"/>
+	<phrase n="lang_callback_on_busy" t="Gọi lại khi bận"/>
+	<phrase n="lang_auto_busy_redial" t="Tự động gọi lại khi bận"/>
+	<phrase n="lang_decision_cob" t="hiện đang bận. Để có thông báo khi có thể gọi lại, hãy nhấn 'Xác nhận'. Để để lại tin nhắn, nhấn 'X'."/>
+	<phrase n="lang_decision_cob_withoutvm" t="hiện đang bận. Để có thông báo khi có thể gọi lại, hãy nhấn 'Xác nhận'."/>
+	<phrase n="lang_callback" t="Gọi lại"/>
+	<phrase n="lang_callback_available" t="Có thể gọi lại"/>
+	<phrase n="lang_linetype_callback" t="Gọi lại"/>
+	<phrase n="lang_linetype_callback_short" t="CoB"/>
+	<phrase n="lang_ringback_callpark_service" t="Thực hiện thông qua Call Park Service (cuộc gọi chờ kết nối)"/>
+	<phrase n="lang_callpark_service" t="Dịch vụ cuộc gọi chờ kết nối"/>
+	<phrase n="lang_storage_mounted" t="Ổ cứng USB đã kết nối"/>
+	<phrase n="lang_storage_mounted_typeSio" t="Ổ cứng USB đã kết nối"/>
+	<phrase n="lang_storage_tomany" t="Bạn chỉ có thể kết nối một USB"/>
+	<phrase n="lang_storage_umount" t="Ngắt kết nối USB"/>
+	<phrase n="lang_no_participants_detected" t="không có phát hiện người tham gia nào"/>
+	<phrase n="lang_ieee8021_method" t="ChếĐộ"/>
+	<phrase n="lang_menu_fkey_functions" t="Chức năng"/>
+	<phrase n="lang_uxm_appearance" t="Ngoại hình"/>
+	<phrase n="lang_put_through_by" t="Thực hiện bởi"/>
+	<phrase n="lang_contact_not_in_list" t="Không tìm thấy trong danh sách liên hệ"/>
+	<phrase n="lang_msg_speaker_active" t="Đã kích hoạt chế độ loa ngoài"/>
+	<phrase n="lang_msg_headset_active" t="Chế độ tai nghe đã được kích hoạt"/>
+	<phrase n="lang_msg_handset_active" t="Đã kích hoạt chế độ loa ngoài"/>
+	<phrase n="lang_msg_ringing_disabled" t="Tắt chuông báo"/>
+	<phrase n="lang_msg_mute_active" t="Điện thoại đã tắt tiếng"/>
+	<phrase n="lang_wiz_aborted" t="Huỷ bỏ hướng dẫn."/>
+	<phrase n="lang_menu_set_kbd_lock_pin" t="Cài mã PIN khoá bàn phím"/>
+	<phrase n="lang_menu_change_kbd_lock_pin" t="Thay đổi mã PIN khoá bàn phím"/>
+	<phrase n="lang_no_valid_dsearch_config" t="Không có cấu hình tìm kiếm danh bạ hợp lệ"/>
+	<phrase n="lang_title_conferences" t="Hội nghị"/>
+	<phrase n="lang_no_conferences_found" t="không tìm thấy hội nghị"/>
+	<phrase n="lang_conference_type" t="Kiểu loại"/>
+	<phrase n="lang_conference_status" t="Trạng thái"/>
+	<phrase n="lang_join_conference_long" t="Tham gia hội nghị"/>
+	<phrase n="lang_join_conference_as_moderator" t="Tham gia với tư cách là Người điều hành"/>
+	<phrase n="lang_choose_menu" t="Chọn một menu"/>
+	<phrase n="lang_menu_shortcut" t="Phím tắt menu"/>
+	<phrase n="lang_using_time" t="Thời gian sử dụng"/>
+	<phrase n="lang_waiting_for_pnp" t="Đang chờ PnP"/>
+	<phrase n="lang_fkey_contact_list_buddy" t="BLF (Máy chủ)"/>
+	<phrase n="lang_fkey_xmpp_presence" t="Hiện diện liên hệ (XMPP)"/>
+	<phrase n="lang_csta_prompt_title" t="Quay số ngay?"/>
+	<phrase n="lang_contact_is_favorite" t="Liên hệ này có phải là một trong những liên hệ yêu thích của bạn không?"/>
+	<phrase n="lang_currently_set_to" t="Hiện được đặt thành:"/>
+	<phrase n="lang_vol_label_contrast" t="Độ tương phản màn hình phụ"/>
+	<phrase n="lang_menu_fkeys_phone" t="Phím đường dây"/>
+	<phrase n="lang_menu_dkeys_phone" t="Phím chức năng"/>
+	<phrase n="lang_menu_context_sensitive_keys_phone" t="Phím nhạy cảm theo ngữ cảnh"/>
+	<phrase n="lang_menu_smartlabel_fkeys" t="Phím nhãn thông minh"/>
+	<phrase n="lang_menu_smartlabel_page" t="Trang"/>
+	<phrase n="lang_menu_fkeys_page" t="Trang phím dòng"/>
+	<phrase n="lang_menu_fkeys_sxm" t="Phím SXM"/>
+	<phrase n="lang_menu_fkeys_uxm" t="Phím mở rộng"/>
+	<phrase n="lang_server_directory_search" t="Tìm kiếm danh bạ máy chủ"/>
+	<phrase n="lang_menu_fontsize" t="Cỡ chữ"/>
+	<phrase n="lang_uxm_fontsize_lines" t="Cỡ chữ (Bố cục dòng)"/>
+	<phrase n="lang_uxm_fontsize_tiles" t="Cỡ chữ (Bố cục tiêu đề)"/>
+	<phrase n="lang_menu_text_alignment" t="Căn lề chữ"/>
+	<phrase n="lang_left" t="Bên trái"/>
+	<phrase n="lang_right" t="Bên phải"/>
+	<phrase n="lang_center" t="Ở giữa"/>
+	<phrase n="lang_alternate" t="So le"/>
+	<phrase n="lang_menu_return_to_first_page" t="Quay lại trang đầu"/>
+	<phrase n="lang_automatic_return" t="Tự động quay lại"/>
+	<phrase n="lang_warning" t="Cảnh báo"/>
+	<phrase n="lang_public_address" t="Địa chỉ công khai"/>
+	<phrase n="lang_menu_volume" t="Cài đặt âm lượng...   "/>
+	<phrase n="lang_vol_ringer_text" t="Âm lượng chuông"/>
+	<phrase n="lang_vol_headset_text" t="Âm lượng tai nghe"/>
+	<phrase n="lang_vol_handset_text" t="Âm lượng điện thoại"/>
+	<phrase n="lang_vol_speaker_text" t="Âm lượng loa ngoài"/>
+	<phrase n="lang_list_rejected" t="Đã ngắt"/>
+	<phrase n="lang_enum_disp_func_key_conference" t="Hội nghị"/>
+	<phrase n="lang_enum_disp_func_key_ivr" t="IVR"/>
+	<phrase n="lang_enum_disp_func_key_callback_on_busy" t="Gọi lại"/>
+	<phrase n="lang_fkeys_ssi_context" t="Ngữ cảnh"/>
+	<phrase n="lang_fkeys_ssi_type" t="Kiểu"/>
+	<phrase n="lang_fkeys_ssi_active" t="Kích hoạt"/>
+	<phrase n="lang_fkeys_ssi_icon" t="Biểu tượng"/>
+	<phrase n="lang_default_icon" t="Biểu tượng mặc định"/>
+	<phrase n="lang_custom_icon" t="Biểu tượng tuỳ chỉnh"/>
+	<phrase n="lang_FirstName" t="Tên họ"/>
+	<phrase n="lang_LastName" t="Tên gọi"/>
+	<phrase n="lang_Home" t="Số điện thoại Nhà"/>
+	<phrase n="lang_Office" t="Số điện thoại văn phòng"/>
+	<phrase n="lang_Mobile" t="Số điện thoại di động"/>
+	<phrase n="lang_Unqualified" t="Số không hợp lệ"/>
+	<phrase n="lang_edit_contact" t="Chỉnh sửa liên hệ"/>
+	<phrase n="lang_msw_query" t="Gửi dữ liệu liên hệ đến máy chủ thất bại:"/>
+	<phrase n="lang_indicator" t="Chỉ báo"/>
+	<phrase n="lang_protocol" t="Giao thức"/>
+	<phrase n="lang_target_forward_busy" t="Chuyển tiếp cuộc gọi khi bận đến"/>
+	<phrase n="lang_target_forward_timeout" t="Chuyển tiếp cuộc gọi Sau khi"/>
+	<phrase n="lang_target_forward_timeout_typeSio" t="Chuyển tiếp cuộc gọi Sau khi"/>
+	<phrase n="lang_WIFI_SSID" t="Tên Mạng"/>
+	<phrase n="lang_WIFI_auth_mode" t="Mã hoá"/>
+	<phrase n="lang_WIFI_WPA_Encryption" t="Mã hóa WPA"/>
+	<phrase n="lang_WIFI_WPA" t="WPA"/>
+	<phrase n="lang_WIFI_WPA2PSK" t="WPA2"/>
+	<phrase n="lang_WIFI_WEP" t="WEP"/>
+	<phrase n="lang_WIFI_OPEN" t="Mở"/>
+	<phrase n="lang_WIFI_AES" t="AES"/>
+	<phrase n="lang_WIFI_TKIP" t="TKIP"/>
+	<phrase n="lang_WIFI_SCAN_NETWORKS" t="Quét WLAN"/>
+	<phrase n="lang_WIFI_MANUAL_SETUP" t="Cài đặt thủ công"/>
+	<phrase n="lang_contact_details" t="Chi tiết liên hệ"/>
+	<phrase n="lang_WIFI_CONNECTED_TO" t="Đã kết nối"/>
+	<phrase n="lang_WIFI_NOT_CONNECTED" t="Chưa kết nối"/>
+	<phrase n="lang_unhold" t="Lấy lại"/>
+	<phrase n="lang_empty" t="Trống"/>
+	<phrase n="lang_F_SNOM" t="snom/Đám mây"/>
+	<phrase n="lang_prefs_ssi_date_us_format" t="Định dang ngày tháng"/>
+	<phrase n="lang_prefs_ssi_time_24_format" t="Đồng hồ 24 giờ"/>
+	<phrase n="lang_time_symbol_second" t="s"/>
+	<phrase n="lang_all_accounts" t="Tất cả người dùng"/>
+	<phrase n="lang_reboot_to_apply_new_settings" t="Khởi động lại ngay để cài đặt mới được áp dụng?"/>
+	<phrase n="lang_TLS" t="TLS"/>
+	<phrase n="lang_MD5" t="MD5"/>
+	<phrase n="lang_WIFI_SWITCH_OFF_WLAN" t="Tắt mạng WLAN"/>
+	<phrase n="lang_ErrorNotSupportedByManager" t="Không hỗ trợ"/>
+	<phrase n="lang_ErrorContactNotFound" t="Không tìm thấy liên hệ"/>
+	<phrase n="lang_ErrorInvalidCredentials" t="Thông tin xác thực không hợp lệ"/>
+	<phrase n="lang_ErrorInvalidArgument" t="Đối số không hợp lệ"/>
+	<phrase n="lang_ErrorRequestPending" t="Yêu cầu đang chờ xử lý"/>
+	<phrase n="lang_ErrorNotInitialized" t="Chưa khởi tạo"/>
+	<phrase n="lang_ErrorInComplete" t="Chưa hoàn thành"/>
+	<phrase n="lang_ErrorOutOfMemory" t="Đầy bộ nhớ"/>
+	<phrase n="lang_Contact_pool" t="Danh bạ liên hệ"/>
+	<phrase n="lang_advanced_autoneg" t="Tự động điều chỉnh"/>
+	<phrase n="lang_advanced_10full" t="10 Mbit song công đầy đủ"/>
+	<phrase n="lang_advanced_10half" t="10 Mbit Đơn công"/>
+	<phrase n="lang_advanced_100full" t="100 Mbit Song công đầy đủ"/>
+	<phrase n="lang_advanced_100half" t="100 Mbit đơn công"/>
+	<phrase n="lang_advanced_1000full" t="1000 Mbit Song công đầy đủ"/>
+	<phrase n="lang_Hardware" t="Phần cứng"/>
+	<phrase n="lang_NET_port_speed" t="Tốc độ cổng mạng/Song công"/>
+	<phrase n="lang_PC_port_speed" t="Tốc độ cổng PC/Song công"/>
+	<phrase n="lang_Action_on_eth_replug" t="Thao tác cắm lại cáp Ethernet"/>
+	<phrase n="lang_advanced_donothing" t="Bỏ qua"/>
+	<phrase n="lang_line_reregister" t="Đăng ký lại"/>
+	<phrase n="lang_NTP" t="NTP"/>
+	<phrase n="lang_DNS" t="DNS"/>
+	<phrase n="lang_LLDP" t="LLDP"/>
+	<phrase n="lang_NTP_refresh_timer" t="Hẹn giờ làm mới NTP"/>
+	<phrase n="lang_8021x" t="802.1X"/>
+	<phrase n="lang_Expansion" t="Mở rộng"/>
+	<phrase n="lang_expansion_layout" t="Bố cục mở rộng"/>
+	<phrase n="lang_Expansion_module" t="Mô-đun mở rộng"/>
+	<phrase n="lang_Please_reboot" t="Vui lòng khởi động lại!"/>
+	<phrase n="lang_All_settings_saved" t="Tất cả cài đặt đã được lưu"/>
+	<phrase n="lang_WIFI_SCAN_RUNNING" t="Đang quét..."/>
+	<phrase n="lang_WIFI_CONNECTING" t="Đang kết nối..."/>
+	<phrase n="lang_wifi_connect_success_reboot_to_continue_msg1" t="Khởi động lại để tiếp tục"/>
+	<phrase n="lang_wifi_connect_success_password_ok_msg2" t="Mật khẩu đúng"/>
+	<phrase n="lang_wifi_connect_fail_invalid_settings_msg1" t="Cài đặt không hợp lệ"/>
+	<phrase n="lang_wifi_connect_fail_please_retry_msg2" t="Vui lòng thử lại"/>
+	<phrase n="lang_usb_wifi_unavailable" t="USB WiFi không khả dụng"/>
+	<phrase n="lang_usb_wifi_connected" t="USB WiFi đã kết nối"/>
+	<phrase n="lang_usb_wifi_disconnected" t="USB WiFi đã ngắt kết nối"/>
+	<phrase n="lang_is_a_favorite" t="là mục yêu thích"/>
+	<phrase n="lang_Lines" t="Bố cục dòng"/>
+	<phrase n="lang_Tiles" t="Bố cục tiêu đề"/>
+	<phrase n="lang_tbook_emtpy" t="&lt;Trống&gt;"/>
+	<phrase n="lang_enter_starting_uppercase" t="Nhập"/>
+	<phrase n="lang_characters_starting_lowercase" t="ký tự"/>
+	<phrase n="lang_user_server_type" t="Kiểu máy chủ hỗ trợ"/>
+	<phrase n="lang_broadsoft_features" t="Tính năng Broadsoft"/>
+	<phrase n="lang_xsi_server" t="Máy chủ XSI"/>
+	<phrase n="lang_xsi_user" t="Người dùng XSI"/>
+	<phrase n="lang_xsi_password" t="Mật khẩu XSI"/>
+	<phrase n="lang_xsi_retry_timer" t="Hẹn giờ thử lại XSI"/>
+	<phrase n="lang_xsi_events" t="Sự kiện XSI"/>
+	<phrase n="lang_xmpp_jid" t="XMPP ID"/>
+	<phrase n="lang_xmpp_password" t="Mật khẩu XMPP"/>
+	<phrase n="lang_no_headset_present" t="Hiện không có tai nghe"/>
+	<phrase n="lang_headset_detection" t="Phát hiện tai nghe"/>
+	<phrase n="lang_msw_services" t="Dịch vụ Metaswitch"/>
+	<phrase n="lang_msw_directory_number" t="Số danh bạ Metaswitch"/>
+	<phrase n="lang_msw_password" t="Mật khẩu Metaswitch"/>
+	<phrase n="lang_msw_web_url" t="URL máy chủ Metaswitch"/>
+	<phrase n="lang_xsi_dir_enterprise" t="Danh bạ doanh nghiệp"/>
+	<phrase n="lang_xsi_dir_enterprise_common" t="Danh sách danh bạ doanh nghiệp thông dụng"/>
+	<phrase n="lang_xsi_dir_group" t="Danh bạ nhóm"/>
+	<phrase n="lang_xsi_dir_group_common" t="Danh sách điện thoại nhóm thông dụng"/>
+	<phrase n="lang_xsi_dir_personal" t="Danh sách điện thoại cá nhân"/>
+	<phrase n="lang_xsi_anywhere" t="Bất kỳ đâu"/>
+	<phrase n="lang_xsi_location_new_entry" t="&lt;Thêm mới&gt;"/>
+	<phrase n="lang_xsi_location_edit_description" t="Sửa mô tả địa điểm"/>
+	<phrase n="lang_xsi_location_description" t="Mô tả"/>
+	<phrase n="lang_xsi_location_edit_number" t="Thay đổi số vị trí"/>
+	<phrase n="lang_number_str" t="Số "/>
+	<phrase n="lang_xsi_location_status_creating" t="đang tạo"/>
+	<phrase n="lang_xsi_location_status_modifying" t="đang sửa đổi"/>
+	<phrase n="lang_xsi_location_status_deleting" t="đang xoá"/>
+	<phrase n="lang_xsi_location_error_empty_number" t="Số điện thoại không được để trống"/>
+	<phrase n="lang_xsi_location_error_number_exists" t="Số điện thoại đã tồn tại"/>
+	<phrase n="lang_xsi_location_error_empty_description" t="Mô tả không được để trống"/>
+	<phrase n="lang_visual_voicemail" t="Thư thoại trực quan"/>
+	<phrase n="lang_feature_works" t="Tính năng công việc"/>
+	<phrase n="lang_voicemail_name" t="Tên"/>
+	<phrase n="lang_voicemail_call_number" t="Số điện thoại"/>
+	<phrase n="lang_voicemail_date_time" t="Ngày &amp; Thời gian"/>
+	<phrase n="lang_voicemail_duration" t="Thời lượng"/>
+	<phrase n="lang_xsi_anywhere_clicktodial" t="Nhấp để gọi"/>
+	<phrase n="lang_xsi_anywhere_grouppaging" t="Phân trang theo nhóm"/>
+	<phrase n="lang_xsi_anywhere_settings" t="Cài đặt"/>
+	<phrase n="lang_remote_office" t="Văn phòng từ xa"/>
+	<phrase n="lang_xsi_anywhereportal" t="Cổng thông tin mọi nơi"/>
+	<phrase n="lang_xsi_anywhereportal_number" t="Số điện thoại"/>
+	<phrase n="lang_menu_primary_display" t="Màn hình chính"/>
+	<phrase n="lang_menu_secondary_display" t="Màn hình phụ"/>
+	<phrase n="lang_enable_remote_office" t="Bật tính năng văn phòng từ xa"/>
+	<phrase n="lang_call_center_list" t="Danh sách tổng đài"/>
+	<phrase n="lang_call_center_status" t="Trang thái tổng đài"/>
+	<phrase n="lang_call_center_joined" t="Đã tham gia"/>
+	<phrase n="lang_call_center_unable_to_join" t="Không thể tham gia Trung tâm liên lạc"/>
+	<phrase n="lang_call_center_join_not_allowed" t="Không được phép tham gia"/>
+	<phrase n="lang_call_center_unjoin_not_allowed" t="Không được phép rời khỏi"/>
+	<phrase n="lang_call_center_joining" t="Đang tham gia"/>
+	<phrase n="lang_call_recording_control" t="Điều khiển ghi âm cuộc gọi"/>
+	<phrase n="lang_pause_recording" t="Tạm dừng ghi lại"/>
+	<phrase n="lang_resume_recording" t="Tiếp tục ghi lại"/>
+	<phrase n="lang_xsi_simul_ring" t="Đổ chuông đồng thời"/>
+	<phrase n="lang_xsi_simul_ring_on_call" t="Không đổ chuông khi có cuộc gọi"/>
+	<phrase n="lang_xsi_simul_ring_edit_phone_number" t="Số điện thoại"/>
+	<phrase n="lang_xsi_simul_ring_enter_phone_number" t="Nhập số điện thoại"/>
+	<phrase n="lang_xsi_simul_ring_edit" t="Sửa"/>
+	<phrase n="lang_xsi_simul_ring_number" t="Số điện thoại"/>
+	<phrase n="lang_xsi_simul_ring_add_entry" t="Thêm một mục mới"/>
+	<phrase n="lang_xsi_simul_ring_ans_confirm" t="Xác nhận trả lời"/>
+	<phrase n="lang_xsi_simul_ring_number_exists_error" t="Số điện thoại đã tồn tại"/>
+	<phrase n="lang_xsi_simul_ring_number_empty_error" t="Số điện thoại đang trống."/>
+	<phrase n="lang_xsi_executive" t="Điều hành"/>
+	<phrase n="lang_xsi_executive_assistant" t="Trợ lý Điều hành"/>
+	<phrase n="lang_xsi_call_filtering" t="Lọc cuộc gọi"/>
+	<phrase n="lang_xsi_call_filtering_enable" t="Lọc cuộc gọi"/>
+	<phrase n="lang_xsi_call_filtering_mode" t="Chế độ lọc"/>
+	<phrase n="lang_xsi_call_filtering_type" t="Kiểu lọc"/>
+	<phrase n="lang_xsi_call_filtering_simple" t="Đơn giản"/>
+	<phrase n="lang_xsi_call_filtering_advanced" t="Nâng cao"/>
+	<phrase n="lang_xsi_call_filtering_all" t="Tất cả cuộc gọi"/>
+	<phrase n="lang_xsi_call_filtering_internal" t="Tất cả cuộc gọi nội bộ"/>
+	<phrase n="lang_xsi_call_filtering_external" t="Tất cả cuộc gọi bên ngoài"/>
+	<phrase n="lang_xsi_call_screening" t="Sàng lọc cuộc gọi"/>
+	<phrase n="lang_xsi_call_screening_type" t="Kiểu cảnh báo"/>
+	<phrase n="lang_xsi_call_screening_alert_mobile" t="Thông báo Vị trí Di động"/>
+	<phrase n="lang_xsi_call_screening_alert_anywhere" t="Cảnh báo mọi nơi"/>
+	<phrase n="lang_xsi_call_screening_alert_sca" t="Cảnh báo Vị trí SCA"/>
+	<phrase n="lang_xsi_call_screening_silent" t="Im lặng"/>
+	<phrase n="lang_xsi_call_screening_ringsplash" t="Chuông tương ứng"/>
+	<phrase n="lang_xsi_executive_view_assistants" t="Hiện hỗ trợ"/>
+	<phrase n="lang_xsi_executive_allow_optin" t="Cho phép Trợ lý chọn chấp nhận/ hoặc không tham gia"/>
+	<phrase n="lang_xsi_opt_in_out_to_executive" t="Chọn chấp nhân/ hoặc không tham gia thực thi"/>
+	<phrase n="lang_xsi_opt_in_to_executive" t="Chấp nhận"/>
+	<phrase n="lang_xsi_opt_out_to_executive" t="Không muốn chấp nhận"/>
+	<phrase n="lang_xsi_assistant_call_divert" t="Chuyển tiếp"/>
+	<phrase n="lang_xsi_assistant_call_divert_number" t="Số chuyển tiếp"/>
+	<phrase n="lang_xsi_call_alerting" t="Cảnh báo cuộc gọi"/>
+	<phrase n="lang_xsi_call_alerting_mode" t="Chế độ cảnh báo"/>
+	<phrase n="lang_xsi_call_alerting_mode_simu" t="Đồng thời"/>
+	<phrase n="lang_xsi_call_alerting_mode_seq" t="Tuần tự"/>
+	<phrase n="lang_xsi_call_alerting_id_name" t="Tên ID đường dây đang gọi"/>
+	<phrase n="lang_xsi_call_alerting_id_exec_name" t="Tên Điều hành"/>
+	<phrase n="lang_xsi_call_alerting_id_origin_name" t="Tên người gọi"/>
+	<phrase n="lang_xsi_call_alerting_id_exec_origin_name" t="Tên người Điều hành - Người gọi"/>
+	<phrase n="lang_xsi_call_alerting_id_origin_exec_name" t="Tên người Gọi - người Điều hành"/>
+	<phrase n="lang_xsi_call_custom_name" t="Tuỳ chỉnh"/>
+	<phrase n="lang_xsi_call_alerting_custom_id_name" t="Tên ID người gọi tùy chỉnh"/>
+	<phrase n="lang_xsi_call_alerting_id_number" t="Số ID người gọi"/>
+	<phrase n="lang_xsi_call_alerting_id_exec_number" t="Số người Điều hành"/>
+	<phrase n="lang_xsi_call_alerting_id_origin_number" t="Số người Gọi"/>
+	<phrase n="lang_xsi_call_alerting_custom_id_number" t="Số ID người gọi tuỳ chỉnh"/>
+	<phrase n="lang_xsi_call_alerting_recall_after" t="Gọi lại cuộc gọi đẩy"/>
+	<phrase n="lang_xsi_call_alerting_recall_after_range" t="Nhập Số lần đổ chuông (2-20)"/>
+	<phrase n="lang_xsi_call_alerting_next_assistant" t="Chuyển đến người trợ giúp tiếp theo sau"/>
+	<phrase n="lang_xsi_call_alerting_next_assistant_range" t="Nhập số lần đổ chuông (1-20)"/>
+	<phrase n="lang_xsi_call_alerting_rollover_after" t="Chuyển cuộc gọi sau khi chờ đợi"/>
+	<phrase n="lang_xsi_call_alerting_rollover_after_time" t="Thời gian chờ chuyển đổi"/>
+	<phrase n="lang_xsi_call_alerting_rollover_after_time_range" t="Nhập thời gian theo giây (0-60)"/>
+	<phrase n="lang_xsi_call_alerting_rollover_action" t="Hành động tái chuyển đổi"/>
+	<phrase n="lang_xsi_call_alerting_rollover_action_vm" t="Tin nhắn thoại"/>
+	<phrase n="lang_xsi_call_alerting_rollover_action_fwd" t="Chuyển tiếp"/>
+	<phrase n="lang_xsi_call_alerting_rollover_action_na" t="Chưa xử lý trả lời"/>
+	<phrase n="lang_xsi_call_alerting_rollover_fwd_number" t="Chuyển đến số chuyển tiếp"/>
+	<phrase n="lang_value_out_of_range" t="Giá trị đã nhập nằm ngoài phạm vi"/>
+	<phrase n="lang_xsi_callon_behalfof_select_executive" t="Chọn người Điều hành"/>
+	<phrase n="lang_collaborate_room_details" t="Chi tiết phòng hợp tác"/>
+	<phrase n="lang_collaborate_room_name" t="Tên phòng"/>
+	<phrase n="lang_collaborate_room_type" t="Kiểu phòng"/>
+	<phrase n="lang_collaborate_join_room" t="Tham gia phòng"/>
+	<phrase n="lang_unavailable_state" t="Mã nhập không khả dụng"/>
+	<phrase n="lang_enter_unavailable_code" t="Mã nhập không khả dụng"/>
+	<phrase n="lang_ringer_is_off" t="Chuông đang tắt"/>
+	<phrase n="lang_uxm_update" t="Cập nhật Mô-đun mở rộng"/>
+	<phrase n="lang_uxm_update_infotext_progress" t="Đang cập nhật. Không rút nguồn điện thoại hoặc mô-đun mở rộng khi đang cập nhật."/>
+	<phrase n="lang_uxm_update_infotext_prepare" t="Đang chuẩn bị update. Không rút nguồn điện thoại hoặc Mô-đun mở rộng trong quá trình cập nhật."/>
+	<phrase n="lang_F_DELETE_MSG" t="Xoá tin nhắn"/>
+	<phrase n="lang_F_DELETE_MSG_typeSio" t="Xoá tin nhắn"/>
+	<phrase n="lang_F_DELETE_MSG_smartlabel" t="Xoá tin nhắn"/>
+	<phrase n="lang_F_DELETE_MSG_full" t="Xoá tin nhắn"/>
+	<phrase n="lang_F_NEXT_ID" t="ID↓"/>
+	<phrase n="lang_F_NEXT_ID_typeSio" t="Người dùng tiếp"/>
+	<phrase n="lang_F_NEXT_ID_smartlabel" t="ID Tiếp"/>
+	<phrase n="lang_F_PREV_ID" t="ID↑"/>
+	<phrase n="lang_F_PREV_ID_typeSio" t="Người dùng trước"/>
+	<phrase n="lang_F_PREV_ID_smartlabel" t="ID Trước"/>
+	<phrase n="lang_F_OCIP" t="OCI-P"/>
+	<phrase n="lang_F_SAB" t="S Dir"/>
+	<phrase n="lang_F_SAB_typeSio" t="Danh bạ máy chủ"/>
+	<phrase n="lang_F_SAB_smartlabel" t="Danh bạ"/>
+	<phrase n="lang_F_ABS" t="ABS"/>
+	<phrase n="lang_F_ABS_typeSio" t="Tìm kiếm sổ địa chỉ"/>
+	<phrase n="lang_addressbook_menu" t="Chọn sổ địa chỉ"/>
+	<phrase n="lang_addressbook_menu_local" t="Cục bộ"/>
+	<phrase n="lang_multicast_zones_title" t="Vùng phát đa hướng"/>
+	<phrase n="lang_no_multicast_zones" t="Không có vùng phát đa hướng"/>
+	<phrase n="lang_acd_state" t="Trạng thái ACD"/>
+	<phrase n="lang_please_sign_into_set_acd_state" t="Vui lòng đăng nhập để cài đặt trạng thái ACD"/>
+	<phrase n="lang_fkey_longpress_support" t="Chức năng nhấn lâu"/>
+	<phrase n="lang_important" t="Quan trọng"/>
+	<phrase n="lang_SmartTransferEditDescription" t="Nhập mục tiêu của chuyển thông minh"/>
+	<phrase n="lang_SmartTransfer" t="Chuyển tiếp thông minh"/>
+	<phrase n="lang_SmartTransfer_ready" t="Phím mềm chuyển cuộc gọi."/>
+	<phrase n="lang_department" t="Phòng ban"/>
+	<phrase n="lang_extensions" t="Số máy nhánh"/>
+	<phrase n="lang_menu_title_text_options" t="Lựa chọn văn bản"/>
+	<phrase n="lang_F_ADD_LOCATION" t="Thêm địa điểm"/>
+	<phrase n="lang_gk_mode_none" t="Không"/>
+	<phrase n="lang_demo_mode" t="Chế độ Chạy thử"/>
+	<phrase n="lang_transfer_or" t="Chuyển hoặc"/>
+	<phrase n="lang_call_pickup" t="Nhấc máy?"/>
+	<phrase n="lang_choose_an_action" t="Chọn một tác vụ"/>
+	<phrase n="lang_Conference_Setup" t="Thiết lập hội nghị"/>
+	<phrase n="lang_Conference_First_Participant" t="Một người tham gia hội nghị"/>
+	<phrase n="lang_Conference_Second_Participant" t="Hai người tham gia hội nghị"/>
+	<phrase n="lang_menu_smart_label" t="Tùy chọn nhãn thông minh"/>
+	<phrase n="lang_menu_idle_screen" t="Trạng thái màn hình ở chế độ chờ"/>
+	<phrase n="lang_menu_call_screen" t="Trạng thái màn hình cuộc gọi"/>
+	<phrase n="lang_menu_other_screen" t="Trạng thái màn hình khác"/>
+	<phrase n="lang_menu_label_default_mode" t="Chế độ hiển thị mặc định"/>
+	<phrase n="lang_menu_label_expanded_mode" t="Chế độ màn hình ngoài"/>
+	<phrase n="lang_menu_label_expansion_triggers" t="Kích hoạt hiển thị màn hình ngoài"/>
+	<phrase n="lang_menu_short_label" t="Nhãn ngắn"/>
+	<phrase n="lang_menu_full_label" t="Nhãn đầy đủ"/>
+	<phrase n="lang_menu_short_label_mode" t="Chế độ nhãn ngắn"/>
+	<phrase n="lang_menu_short_press" t="Phím Trang Nhấn Tắt"/>
+	<phrase n="lang_menu_long_press" t="Phím Trang Nhấn và Giữ"/>
+	<phrase n="lang_menu_proximity_sensor" t="Cảm biến tiệm cận"/>
+	<phrase n="lang_menu_P2_short_press" t="Short Press P2"/>
+	<phrase n="lang_menu_P2_long_press" t="Nhấn và giữ P2"/>
+	<phrase n="lang_menu_P3_short_press" t="Phím ấn nhanh P3"/>
+	<phrase n="lang_menu_P3_long_press" t="Nhấn và giữ P3"/>
+	<phrase n="lang_menu_P4_short_press" t="Nhấn nhanh P4"/>
+	<phrase n="lang_menu_P4_long_press" t="Nhấn và giữ P4"/>
+	<phrase n="lang_menu_P8_short_press" t="Nhấn nhanh P8"/>
+	<phrase n="lang_menu_P8_long_press" t="Nhấn và giữ P8"/>
+	<phrase n="lang_menu_P10_short_press" t="Short Press P10"/>
+	<phrase n="lang_menu_P10_long_press" t="Long Press P10"/>
+	<phrase n="lang_short_press" t="Nhấn nhanh"/>
+	<phrase n="lang_fkey_press" t="Nhấn Fkey"/>
+	<phrase n="lang_long_press" t="Nhấn và giữ"/>
+	<phrase n="lang_short_label_mode_icon" t="Chỉ mỗi biểu tượng"/>
+	<phrase n="lang_smartlabel_mode_text" t="Chỉ văn bản"/>
+	<phrase n="lang_smartlabel_mode_icon_text" t="Biểu tượng và Văn bản"/>
+	<phrase n="lang_status_msg_uxm_update_required" t=" .cần Cập nhật"/>
+	<phrase n="lang_status_detail_uxm_update_required" t="Cập nhật Mô-đun mở rộng lên phiên bản mới nhất để kích hoạt."/>
+	<phrase n="lang_status_detail_uxm_update_required2" t="Vui lòng đảm bảo rằng chỉ có một phần mở rộng được kết nối với điện thoại và phần mở rộng đó không được kết nối với nguồn cấp điện riêng biệt."/>
+	<phrase n="lang_unhandled_item" t="Mục chưa được xử lý:"/>
+	<phrase n="lang_preferences_general" t="Chung"/>
+	<phrase n="lang_quick_dial_contacts" t="Liên hệ quay số nhanh"/>
+	<phrase n="lang_start_tbook_download" t="Bắt đầu tải xuống danh bạ?"/>
+	<phrase n="lang_tbook_download" t="Tải xuống Danh bạ"/>
+	<phrase n="lang_tbook_download_started" t="Đã bắt đầu tải xuống thư mục đối với danh tính"/>
+	<phrase n="lang_tbook_download_finished" t="Đã hoàn tất tải xuống thư mục đối với danh tính"/>
+	<phrase n="lang_tbook_download_failed" t="Tải xuống thư mục không thành công đối với danh tính"/>
+	<phrase n="lang_tbook_download_not_possible" t="Không thể tải xuống thư mục trên danh tính"/>
+	<phrase n="lang_tbook_download_overflowed" t="Tải xuống thư mục không hoàn thành (vượt quá giới hạn nội bộ)."/>
+	<phrase n="lang_tbook_is_full" t="Danh bạ đầy đủ"/>
+	<phrase n="lang_F_HOTELING" t="Khách sạn"/>
+	<phrase n="lang_F_HOTELING_typeSio" t="Việc làm khách sạn"/>
+	<phrase n="lang_F_HOTELING_smartlabel" t="Việc làm khách sạn"/>
+	<phrase n="lang_F_GUEST_LOGIN" t="Việc đăng nhập của khách"/>
+	<phrase n="lang_F_GUEST_LOGOUT" t="Việc đăng xuất của khách"/>
+	<phrase n="lang_F_GUEST_LOGIN_smartlabel" t="Khách vào"/>
+	<phrase n="lang_F_GUEST_LOGOUT_smartlabel" t="Khách ra"/>
+	<phrase n="lang_F_LOGIN" t="Đăng nhập"/>
+	<phrase n="lang_F_LOGOUT" t="Đăng xuất"/>
+	<phrase n="lang_smartlabel_id" t="Nhận diện"/>
+	<phrase n="lang_title_guest_logout" t="Khách đăng xuất"/>
+	<phrase n="lang_confirm_guest_logout" t="Bạn có chắc muốn đăng xuất không?"/>
+	<phrase n="lang_no_contacts" t="Không có liên hệ"/>
+	<phrase n="lang_hoteling_guest" t="Khách của Khách sạn"/>
+	<phrase n="lang_logging_out" t="Đang đăng xuất..."/>
+	<phrase n="lang_logging_in" t="Đang đăng nhập..."/>
+	<phrase n="lang_login_failed" t="Đăng nhập thất bại"/>
+	<phrase n="lang_acd_signout_message" t="Bạn sẽ được đăng xuất khỏi ACD. Tiếp tục đăng nhập với tư cách là khách?"/>
+	<phrase n="lang_title_guest_login" t="Khách đăng nhập"/>
+	<phrase n="lang_F_MARK_READ" t="Đánh dấu là đã đọc rồi"/>
+	<phrase n="lang_F_MARK_UNREAD" t="Đánh dấu là chưa đọc"/>
+	<phrase n="lang_call_recording_mode_never" t="Không bao giờ"/>
+	<phrase n="lang_call_recording_mode_always" t="Luôn luôn"/>
+	<phrase n="lang_call_recording_mode_always_pause_resume" t="Luôn luôn có Tạm dừng/Tiếp tục"/>
+	<phrase n="lang_call_recording_mode_on_demand" t="Theo nhu cầu"/>
+	<phrase n="lang_call_recording_mode_on_demand_user_start" t="Bắt đầu người dùng theo nhu cầu"/>
+	<phrase n="lang_smartlabel_dismiss_timeout" t="Quay lại Chế độ mặc định"/>
+	<phrase n="lang_call_recording_mode" t="Chế độ ghi âm cuộc gọi"/>
+	<phrase n="lang_menu_full_label_mode" t="Chế độ nhãn đầy đủ"/>
+	<phrase n="lang_menu_label_mode" t="Chế độ nhãn mác"/>
+	<phrase n="lang_guest_pin" t="Mã PIN khách hàng"/>
+	<phrase n="lang_incorrect_pin" t="Mã PIN không đúng"/>
+	<phrase n="lang_voicemail_info" t="Thông tin thư thoại"/>
+	<phrase n="lang_confirm_del_deny_list_item_title" t="Xóa mục danh sách khối"/>
+	<phrase n="lang_confirm_del_number_from_deny_list" t="Xóa khỏi danh sách chặn?"/>
+	<phrase n="lang_confirm_del_menu_configuration" t="Xóa Cài đặt Cấu hình chính"/>
+	<phrase n="lang_confirm_message" t="Bạn có thực sự muốn làm điều này?"/>
+	<phrase n="lang_caller_id_blocking" t="Chặn ID người gọi"/>
+	<phrase n="lang_screen_items_color_and_opacity_title" t="Màu sắc và Độ mờ"/>
+	<phrase n="lang_ui_themes" t="Các chủ đề"/>
+	<phrase n="lang_theme_light" t="Sáng"/>
+	<phrase n="lang_theme_dark" t="Tối"/>
+	<phrase n="lang_theme_colorful" t="Đầy màu sắc"/>
+	<phrase n="lang_theme_industrial" t="Thuộc về công nghiệp"/>
+	<phrase n="lang_theme_contrast" t="Contrast"/>
+	<phrase n="lang_screen_items_color_title" t="Màu sắc"/>
+	<phrase n="lang_screen_items_opacity_title" t="Độ mờ"/>
+	<phrase n="lang_screen_items_enter_custom_color_title" t="Nhập các giá trị tùy chỉnh"/>
+	<phrase n="lang_screen_item_titlebar_text" t="Văn bản thanh tiêu đề"/>
+	<phrase n="lang_screen_item_text" t="Văn bản"/>
+	<phrase n="lang_screen_item_subtext" t="Văn bản phụ"/>
+	<phrase n="lang_screen_item_extratext" t="Văn bản mở rộng"/>
+	<phrase n="lang_screen_item_extratext2" t="Văn bản mở rộng 2"/>
+	<phrase n="lang_screen_item_titlebar_background" t="Nền thanh tiêu đề"/>
+	<phrase n="lang_screen_item_background" t="Nền"/>
+	<phrase n="lang_screen_item_fkey_background" t="Nền Fkey (Mã tra cứu trên từng hóa đơn)"/>
+	<phrase n="lang_screen_item_fkey_pressed_background" t="Nền phím F"/>
+	<phrase n="lang_screen_item_fkey_separator" t="Dấu tách Fkey"/>
+	<phrase n="lang_screen_item_fkey_label" t="Nhãn Fkey"/>
+	<phrase n="lang_screen_item_fkey_pressed_label" t="Fkey được nhấn nhãn mác"/>
+	<phrase n="lang_screen_item_line_background" t="Nền đường"/>
+	<phrase n="lang_screen_item_selected_line_background" t="Nền đường đã chọn"/>
+	<phrase n="lang_screen_item_selected_line_indicator" t="Chỉ báo đường đã chọn"/>
+	<phrase n="lang_screen_item_selected_line_text" t="Dòng văn bản đã chọn"/>
+	<phrase n="lang_screen_item_line_separator" t="Dấu phân cách dòng"/>
+	<phrase n="lang_screen_item_scrollbar" t="Thanh cuộn"/>
+	<phrase n="lang_screen_item_cursor" t="Con trỏ"/>
+	<phrase n="lang_screen_item_status_msgs_background" t="Nền tin nhắn trạng thái"/>
+	<phrase n="lang_screen_item_status_msgs_border" t="Đường viền Tin nhắn trạng thái"/>
+	<phrase n="lang_screen_item_smartlabel_background" t="Nền nhãn thông minh"/>
+	<phrase n="lang_screen_item_smartlabel_pressed_background" t="Nền được ép nhãn thông minh"/>
+	<phrase n="lang_screen_item_smartlabel_separator" t="Bộ tách nhãn thông minh"/>
+	<phrase n="lang_screen_item_smartlabel_label" t="Nhãn mác nhãn thông minh"/>
+	<phrase n="lang_screen_item_smartlabel_pressed_label" t="Nhãn được ép nhãn thông minh"/>
+	<phrase n="lang_screen_item_expansion_module_background" t="Nền mô-đun mở rộng"/>
+	<phrase n="lang_screen_item_expansion_module_pressed_background" t="Nền ép mô-đun mở rộng"/>
+	<phrase n="lang_screen_item_expansion_module_separator" t="Bộ tách mô-đun mở rộng"/>
+	<phrase n="lang_screen_item_expansion_module_maintext" t="Mô đun mở rộng Văn bản chính"/>
+	<phrase n="lang_screen_item_expansion_module_pressed_maintext" t="Mô-đun mở rộng Văn bản chính bị nén"/>
+	<phrase n="lang_screen_item_expansion_module_subtext" t="Mô-đun mở rộng Văn bản phụ"/>
+	<phrase n="lang_screen_item_expansion_module_pressed_subtext" t="Mô-đun mở rộng Văn bản phụ bị nén"/>
+	<phrase n="lang_screen_item_expansion_module_page_indicator" t="Chỉ báo trang mô-đun mở rộng"/>
+	<phrase n="lang_screen_items_color_name_onyx_black" t="Đá Onyx Đen"/>
+	<phrase n="lang_screen_items_color_name_midnight_black" t="Đen Midnight"/>
+	<phrase n="lang_screen_items_color_name_obsidian_black" t="Đen Obsidian"/>
+	<phrase n="lang_screen_items_color_name_dark_grey" t="Màu xám đen"/>
+	<phrase n="lang_screen_items_color_name_grey" t="Xám"/>
+	<phrase n="lang_screen_items_color_name_light_grey" t="Màu xám nhạt"/>
+	<phrase n="lang_screen_items_color_name_grey_white" t="Xám trắng"/>
+	<phrase n="lang_screen_items_color_name_white" t="Màu trắng"/>
+	<phrase n="lang_screen_items_color_name_light_yellow" t="Màu vàng sáng"/>
+	<phrase n="lang_screen_items_color_name_yellow" t="Màu vàng"/>
+	<phrase n="lang_screen_items_color_name_light_red" t="Đỏ nhạt"/>
+	<phrase n="lang_screen_items_color_name_red" t="Đỏ"/>
+	<phrase n="lang_screen_items_color_name_light_blue" t="Xanh nhạt"/>
+	<phrase n="lang_screen_items_color_name_blue" t="Xanh đại dương"/>
+	<phrase n="lang_screen_items_color_name_light_green" t="Xanh lá cây sáng"/>
+	<phrase n="lang_screen_items_color_name_green" t="Màu xanh lá cây"/>
+	<phrase n="lang_screen_items_color_name_black" t="Black"/>
+	<phrase n="lang_screen_items_color_name_carbon" t="Carbon"/>
+	<phrase n="lang_screen_items_color_name_dim_grey" t="Dim Grey"/>
+	<phrase n="lang_screen_items_color_name_silver" t="Silver"/>
+	<phrase n="lang_screen_items_color_name_gainsboro" t="Gainsboro"/>
+	<phrase n="lang_screen_items_color_name_snowflake" t="Snowflake"/>
+	<phrase n="lang_screen_items_color_name_white_smoke" t="White Smoke"/>
+	<phrase n="lang_screen_items_color_name_custom" t="Màu tùy chỉnh"/>
+	<phrase n="lang_monitored_extensions" t="Tiện ích mở rộng được giám sát"/>
+	<phrase n="lang_ALS" t="Cảm biến ánh sáng xung quanh"/>
+	<phrase n="lang_all_available_calls" t="Tất cả các cuộc gọi có sẵn"/>
+	<phrase n="lang_new_call" t="Cuộc gọi mới"/>
+	<phrase n="lang_select_conf_participant" t="Chọn người tham gia hội nghị"/>
+	<phrase n="lang_consult_conference" t="Hội nghị tư vấn"/>
+	<phrase n="lang_guess_max_hits" t="Đạt mức tối đa"/>
+	<phrase n="lang_guess_results" t="Kết quả"/>
+	<phrase n="lang_new_network_policy" t="Chính sách mạng lưới mới"/>
+	<phrase n="lang_wrong_lldp_policy" t="Chính sách LLDP sai"/>
+	<phrase n="lang_F_MODERATE" t="Trung bình"/>
+	<phrase n="lang_sip_warning" t="Cảnh báo SIP"/>
+	<phrase n="lang_sync_settings" t="Đồng bộ cài đặt"/>
+	<phrase n="lang_confirm_sync_settings" t="Đồng bộ hóa cài đặt với cấu hình máy chủ?"/>
+	<phrase n="lang_no_configured_extensions" t="Không có máy nhánh nào được định cấu hình"/>
+	<phrase n="lang_no_active_calls_on_extensions" t="Không có cuộc gọi đang hoạt động trên tiện ích mở rộng"/>
+	<phrase n="lang_sip_response_code_400" t="Yêu cầu không hợp lệ"/>
+	<phrase n="lang_sip_response_code_402" t="Yêu cầu thanh toán"/>
+	<phrase n="lang_sip_response_code_403" t="Bị cấm"/>
+	<phrase n="lang_sip_response_code_404" t="Không tìm thấy"/>
+	<phrase n="lang_sip_response_code_405" t="Phương thức không cho phép"/>
+	<phrase n="lang_sip_response_code_406" t="Không chấp nhận"/>
+	<phrase n="lang_sip_response_code_407" t="Yêu cầu xác thực proxy"/>
+	<phrase n="lang_sip_response_code_408" t="Hết thời gian yêu cầu"/>
+	<phrase n="lang_sip_response_code_410" t="Đã qua"/>
+	<phrase n="lang_sip_response_code_413" t="Yêu cầu quá lớn"/>
+	<phrase n="lang_sip_response_code_414" t="URI yêu cầu quá dài"/>
+	<phrase n="lang_sip_response_code_415" t="Loại phương tiện không được hỗ trợ"/>
+	<phrase n="lang_sip_response_code_416" t="Giao thức URI không được hỗ trợ"/>
+	<phrase n="lang_sip_response_code_420" t="Tiện ích mở rộng không hợp lệ"/>
+	<phrase n="lang_sip_response_code_421" t="Yêu cầu tiện ích mở rộng"/>
+	<phrase n="lang_sip_response_code_422" t="Thời lượng phiên quá nhỏ"/>
+	<phrase n="lang_sip_response_code_423" t="Khoảng thời gian quá ngắn"/>
+	<phrase n="lang_sip_response_code_480" t="Tạm thời không khả dụng"/>
+	<phrase n="lang_sip_response_code_481" t="Cuộc gọi/chuyển tiếp không tồn tại"/>
+	<phrase n="lang_sip_response_code_482" t="Đã phát hiện vòng lặp"/>
+	<phrase n="lang_sip_response_code_483" t="Quá phức tạp"/>
+	<phrase n="lang_sip_response_code_484" t="Địa chỉ không đầy đủ"/>
+	<phrase n="lang_sip_response_code_485" t="Không rõ ràng"/>
+	<phrase n="lang_sip_response_code_486" t="Bận"/>
+	<phrase n="lang_sip_response_code_487" t="Đã dừng yêu cầu"/>
+	<phrase n="lang_sip_response_code_488" t="Không chấp nhận ở đây"/>
+	<phrase n="lang_sip_response_code_491" t="Yêu cầu đang chờ"/>
+	<phrase n="lang_sip_response_code_493" t="không thể giải mã"/>
+	<phrase n="lang_sip_response_code_500" t="Lỗi nội bộ máy chủ"/>
+	<phrase n="lang_sip_response_code_501" t="Không được thực hiện"/>
+	<phrase n="lang_sip_response_code_502" t="Cổng không hợp lệ"/>
+	<phrase n="lang_sip_response_code_503" t="Dịch vụ không khả dụng"/>
+	<phrase n="lang_sip_response_code_504" t="Hết thời gian chờ máy chủ"/>
+	<phrase n="lang_sip_response_code_505" t="Phiên bản không được hỗ trợ"/>
+	<phrase n="lang_sip_response_code_513" t="Tin nhắn quá dài"/>
+	<phrase n="lang_sip_response_code_599" t="Lỗi hết thời gian chờ kết nối mạng"/>
+	<phrase n="lang_sip_response_code_600" t="Bận ở mọi nơi"/>
+	<phrase n="lang_sip_response_code_603" t="Từ chối"/>
+	<phrase n="lang_sip_response_code_604" t="Không tồn tại ở mọi nơi"/>
+	<phrase n="lang_sip_response_code_606" t="Không chấp nhận"/>
+	<phrase n="lang_sort_order" t="Thứ tự sắp xếp"/>
+	<phrase n="lang_directory_display_order" t="Thứ tự hiển thị"/>
+	<phrase n="lang_display_order_first_name_last_name" t="Họ và tên"/>
+	<phrase n="lang_display_order_last_name_first_name" t="Họ và tên"/>
+	<phrase n="lang_visual_options" t="Các tùy chọn trực quan"/>
+	<phrase n="lang_call_screen_photo_size" t="Kích thước ảnh trong màn hình cuộc gọi"/>
+	<phrase n="lang_size_XS" t="XS"/>
+	<phrase n="lang_size_S" t="S"/>
+	<phrase n="lang_size_M" t="M"/>
+	<phrase n="lang_size_L" t="L"/>
+	<phrase n="lang_size_XL" t="XL"/>
+	<phrase n="lang_size_XXL" t="XXL"/>
+	<phrase n="lang_size_XXXL" t="XXXL"/>
+	<phrase n="lang_prefer_saved_over_received_photo" t="Ưu tiên hình ảnh cục bộ"/>
+	<phrase n="lang_display_method" t="Kiểu hiển thị số"/>
+	<phrase n="lang_display_method_full_contact" t="Liên hệ đầy đủ"/>
+	<phrase n="lang_display_method_display_name" t="Tên"/>
+	<phrase n="lang_display_method_display_number" t="Số"/>
+	<phrase n="lang_display_method_display_name_number" t="Tên + Số"/>
+	<phrase n="lang_display_method_display_number_name" t="Số + Tên"/>
+	<phrase n="lang_no_calls_for_transfer" t="Không có cuộc gọi nào để chuyển"/>
+	<phrase n="lang_brand_variant_select_title" t="Chọn biến thể thương hiệu"/>
+	<phrase n="lang_brand_variant_default" t="Mặc định"/>
+	<phrase n="lang_brand_variant_updated_title" t="Đã cập nhật biến thể"/>
+	<phrase n="lang_brand_variant_selected" t="Đã chọn biến thể"/>
+	<phrase n="lang_system_reboot_now" t="Bây giờ hệ thống sẽ khởi động lại"/>
+	<phrase n="lang_select_identity" t="Chọn người dùng"/>
+	<phrase n="lang_F_CALL_CENTER_STATUS" t="Tình trạng Tổng đài"/>
+	<phrase n="lang_F_ATTENDED_TRANSFER" t="Đã tham dự"/>
+	<phrase n="lang_disposition_code_sent" t="Đã gửi"/>
+	<phrase n="lang_disposition_code_selection" t="Chọn mã định vị"/>
+	<phrase n="lang_disposition_code_entry" t="Nhập mã định vị"/>
+	<phrase n="lang_F_DISP_CODE" t="Mã D"/>
+	<phrase n="lang_F_DISP_CODE_typeSio" t="Mã định vị"/>
+	<phrase n="lang_F_DISP_CODE_smartlabel" t="Mã Đ"/>
+	<phrase n="lang_disposition_code_display_text_list" t="Danh sách"/>
+	<phrase n="lang_parked_calls_settings" t="Cuộc gọi chờ nối máy"/>
+	<phrase n="lang_call_parked_on" t="Chờ kết nối máy đang bật"/>
+	<phrase n="lang_no_parked_call" t="Không có cuộc gọi chờ nào."/>
+	<phrase n="lang_F_CALL_PARK_IDLE" t="Đang chờ nối máy"/>
+	<phrase n="lang_F_CALL_PARK_typeSio" t="Cuộc gọi chờ nối máy"/>
+	<phrase n="lang_menu_any_smartlabel_key_short_press" t="Nhấn nhanh Nhãn thông minh"/>
+	<phrase n="lang_monitored_extension_is_ringing" t="Máy nhánh theo dõi đang đổ chuông"/>
+	<phrase n="lang_disposition_code_not_sent" t="Mã code chưa được gửi."/>
+	<phrase n="lang_disposition_code_identity_mismatch" t="Không khớp danh tính."/>
+	<phrase n="lang_F_EXEC_ASSIST_CALL_PUSH" t="Cuộc gọi đẩy"/>
+	<phrase n="lang_usb_mass_storage_plug" t="Đã phát hiện ổ USB"/>
+	<phrase n="lang_usb_mass_storage_unplug" t="Đã ngắt kết nối USB"/>
+	<phrase n="lang_information_menu_usb_info" t="Thông tin USB"/>
+	<phrase n="lang_usb_mass_storage_title" t="Dung lượng bộ nhớ USB"/>
+	<phrase n="lang_F_USB_EJECT" t="Rút USB"/>
+	<phrase n="lang_usb_mass_storage_safe_to_remove" t="Đã an toàn để rút USB ra"/>
+	<phrase n="lang_F_USBREC_START" t="Bắt đầu ghi lại vào USB."/>
+	<phrase n="lang_F_USBREC_START_typeSio" t="Bắt đầu ghi lại USB"/>
+	<phrase n="lang_F_USBREC_START_smartlabel" t="Bắt đầu&lt;br&gt;Ghi lại USB."/>
+	<phrase n="lang_F_USBREC_STOP" t="Dừng ghi lại USB."/>
+	<phrase n="lang_F_USBREC_STOP_typeSio" t="Dừng ghi lại USB"/>
+	<phrase n="lang_F_USBREC_STOP_smartlabel" t="Dừng&lt;br&gt;Ghi lại USB."/>
+	<phrase n="lang_F_USBREC_PAUSE" t="Tạm dừng ghi lại USB."/>
+	<phrase n="lang_F_USBREC_PAUSE_typeSio" t="Tạm dừng ghi lại USB"/>
+	<phrase n="lang_F_USBREC_PAUSE_smartlabel" t="Tạm dừng&lt;br&gt;Ghi lại USB."/>
+	<phrase n="lang_F_USBREC_RESUME" t="Tiếp tục ghi lại USB."/>
+	<phrase n="lang_F_USBREC_RESUME_typeSio" t="Tiếp tục ghi lại USB"/>
+	<phrase n="lang_F_USBREC_RESUME_smartlabel" t="Tiếp tục&lt;br&gt;Ghi lại USB."/>
+	<phrase n="lang_F_PAUSE" t="Tạm dừng"/>
+	<phrase n="lang_F_RESUME" t="Tiếp tục"/>
+	<phrase n="lang_usb_recording_processing_wait" t="Vui lòng chờ quá trình ghi lại hoàn tất!"/>
+	<phrase n="lang_usb_recording_processing_completed" t="Quá trình ghi lại hoàn tất!"/>
+	<phrase n="lang_usb_recording_call_terminated" t="Dừng ghi âm cuộc gọi"/>
+	<phrase n="lang_usb_recording_terminated_drive_full" t="Dừng ghi lại, ổ USB đã đầy"/>
+	<phrase n="lang_usb_recording_terminated_max_file_size" t="Quá trình ghi đã kết thúc, Đạt đến thời lượng ghi tối đa"/>
+	<phrase n="lang_usb_recording_no_usb_drive_detected" t="Không có ổ USB nào được phát hiện"/>
+	<phrase n="lang_usb_recording_terminated_errno" t="Dừng ghi lại, lỗi: "/>
+	<phrase n="lang_usb_playback_browse_recordings" t="Duyệt bản ghi"/>
+	<phrase n="lang_usb_playback_browse_recordings_title" t="Bản ghi cuộc gọi"/>
+	<phrase n="lang_usb_playback_play_recording_title" t="Phát bản ghi"/>
+	<phrase n="lang_usb_playback_invalid_header_or_encrypted_file" t="Tiêu đề wav không hợp lệ hoặc tệp được mã hóa:"/>
+	<phrase n="lang_usb_playback_recording_information_title" t="Thông tin bản ghi"/>
+	<phrase n="lang_usb_playback_delete_recording_title" t="Xoá bản ghi"/>
+	<phrase n="lang_label_rewind" t="Tua lại"/>
+	<phrase n="lang_label_fast_forward" t="Chuyển tiếp nhanh"/>
+	<phrase n="lang_text_size" t="Kích cỡ"/>
+	<phrase n="lang_usb_playback_no_recordings" t="Không ghi lại"/>
+	<phrase n="lang_usb_recording_aborted_by_conference" t="Ghi USB bị hủy bỏ bởi hội nghị"/>
+	<phrase n="lang_usb_recording_cannot_record_conference" t="Không thể ghi âm hội nghị vào USB"/>
+	<phrase n="lang_date_and_time" t="Ngày &amp; Thời gian"/>
+	<phrase n="lang_label_context_key_page_left" t="Trang trái"/>
+	<phrase n="lang_label_context_key_page_right" t="Trang phải"/>
+	<phrase n="lang_expansion_module_text_alignment" t="Căn chỉnh chữ"/>
+	<phrase n="lang_expansion_module_color_font_sizes_XXL_XS" t="Văn bản chính XXL &amp; Văn bản phụ XS"/>
+	<phrase n="lang_expansion_module_color_font_sizes_XL_XS" t="Văn bản chính XL &amp; Văn bản phụ XS"/>
+	<phrase n="lang_expansion_module_color_font_sizes_XL_S" t="Văn bản chính XL &amp; Văn bản phụ S"/>
+	<phrase n="lang_expansion_module_color_font_sizes_L_XS" t="Văn bản chính L &amp; Văn bản phụ XS"/>
+	<phrase n="lang_expansion_module_color_font_sizes_L_S" t="Văn bản chính L &amp; Văn bản phụ S"/>
+	<phrase n="lang_expansion_module_color_font_sizes_L_M" t="Văn bản chính L &amp; Văn bản phụ M"/>
+	<phrase n="lang_expansion_module_color_font_sizes_M_XS" t="Văn bản chính M &amp; Văn bản phụ XS"/>
+	<phrase n="lang_expansion_module_color_font_sizes_M_S" t="Văn bản chính M &amp; Văn bản phụ S"/>
+	<phrase n="lang_expansion_module_color_font_sizes_M_M" t="Văn bản chính M &amp; Văn bản phụ M"/>
+	<phrase n="lang_expansion_module_color_font_sizes_S_XS" t="Văn bản chính S &amp; Văn bản phụ XS"/>
+	<phrase n="lang_expansion_module_color_font_sizes_S_S" t="Văn bản chính S &amp; Văn bản phụ S"/>
+	<phrase n="lang_expansion_module_color_font_sizes_XS_XS" t="Văn bản chính XS &amp; Văn bản phụ XS"/>
+	<phrase n="lang_edit_mode_upper_case" t="ABC"/>
+	<phrase n="lang_edit_mode_lower_case" t="abc"/>
+	<phrase n="lang_edit_mode_numbers" t="123"/>
+	<phrase n="lang_F_IDLE_CONTEXT_PAGE_LEFT" t="Bên trái"/>
+	<phrase n="lang_F_IDLE_CONTEXT_PAGE_LEFT_typeSio" t="Trang trái"/>
+	<phrase n="lang_F_IDLE_CONTEXT_PAGE_RIGHT" t="Bên phải"/>
+	<phrase n="lang_F_IDLE_CONTEXT_PAGE_RIGHT_typeSio" t="Trang phải"/>
+	<phrase n="lang_F_NONE" t=""/>
+	<phrase n="lang_branding_name" t="Thương hiệu:"/>
+	<phrase n="lang_hardware_version" t="Phiên bản phần cứng:"/>
+	<phrase n="lang_branding_version" t="Branding Version:"/>
+	<phrase n="lang_NickName" t="Biệt danh"/>
+	<phrase n="lang_FirstShortCode" t="Mã đầu tiên"/>
+	<phrase n="lang_LastShortCode" t="Mã cuối cùng"/>
+	<phrase n="lang_FirstExternalDirectoryNumber" t="Số đầu tiên"/>
+	<phrase n="lang_LastExternalDirectoryNumber" t="Số cuối cùng"/>
+	<phrase n="lang_DialingPlanCode" t="Gói"/>
+	<phrase n="lang_DialingPlanCodeDetail" t="Mã Gói Gọi Điện"/>
+	<phrase n="lang_FirstShortCodeDetail" t="Mã ngắn đầu tiên"/>
+	<phrase n="lang_FirstExternalDirectoryDetail" t="Danh bạ bên ngoài đầu tiên"/>
+	<phrase n="lang_LastExternalDirectoryDetail" t="Danh bạ bên ngoài cuối cùng"/>
+	<phrase n="lang_Department" t="Phòng ban"/>
+	<phrase n="lang_shortcodes" t="Mã ngắn"/>
+	<phrase n="lang_emergency_call_number_is_misconfigured" t="cấu hình sai số điện thoại khẩn cấp"/>
+	<phrase n="lang_tb_alias" t="Bí danh"/>
+	<phrase n="lang_web_user_credentials_not_set" t="Không có thông tin xác thực nào được đặt cho người dùng web này"/>
+	<phrase n="lang_web_admin_credentials_not_set" t="Chưa có thông tin xác thực nào được đặt cho quản trị viên web này"/>
+	<phrase n="lang_not_registered" t=" not registered"/>
+	<phrase n="lang_fake_number" t="Fake Number"/>
+	<phrase n="lang_BLF_DND_on" t="DND on"/>
+	<phrase n="lang_BLF_On_a_call" t="On a call"/>
+	<phrase n="lang_BLF_Idle" t="Idle"/>
+	<phrase n="lang_MediaStack_restarting_All_lines_will_be_closed" t="MediaStack restarting. All lines will be closed."/>
+	<phrase n="lang_Firmware_update_starting" t="Firmware update: starting"/>
+	<phrase n="lang_Firmware_update_sent_install_request" t="Firmware update: waiting for file server response"/>
+	<phrase n="lang_Firmware_update_download" t="Firmware update: downloading"/>
+	<phrase n="lang_Firmware_update_transfer_to_swupdate" t="Firmware update: processing"/>
+	<phrase n="lang_Firmware_update_verification_and_install" t="Firmware update: installing"/>
+	<phrase n="lang_File_server_response" t="Server response: "/>
+	<phrase n="lang_File_server_unreachable" t="File server unreachable."/>
+	<phrase n="lang_File_not_found" t="File not found."/>
+	<phrase n="lang_Firmware_invalid" t="Firmware invalid."/>
+	<phrase n="lang_firmware_update" t="Firmware Update"/>
+	<phrase n="lang_menu_ringer_once" t="Only once"/>
+	<phrase n="lang_voicemail_no_access_code" t="Number or feature access code is not programmed"/>
+	<phrase n="lang_F_WIFI" t="Wi-Fi"/>
+	<phrase n="lang_parties" t="parties"/>
+	<phrase n="lang_fwd_by" t="Fwd by:"/>
+	<phrase n="lang_firmware_update_completed_pending_reboot" t="Phone is about to reboot to complete the firmware update. Rebooting in %d seconds..."/>
+	<phrase n="lang_F_CLOSE" t="Close"/>
+	<phrase n="lang_ip_assigment" t="IP Assignment"/>
+	<phrase n="lang_disable" t="Disable"/>
+	<phrase n="lang_enable" t="Enable"/>
+	<phrase n="lang_reregister" t="Re-register"/>
+	<phrase n="lang_phonemanager" t="Phone Manager (Web UI)"/>
+	<phrase n="lang_locale" t="Date &amp; Time format"/>
+	<phrase n="lang_webserver_admin_name" t="Admin name"/>
+	<phrase n="lang_webserver_admin_password" t="Admin password"/>
+	<phrase n="lang_webserver_user_name" t="User name"/>
+	<phrase n="lang_webserver_user_password" t="User password"/>
+	<phrase n="lang_startup_wizard" t="Startup Wizard"/>
+	<phrase n="lang_no_voicemail" t="No voicemail"/>
+	<phrase n="lang_new_voicemail" t="New voicemail"/>
+	<phrase n="lang_old_voicemail" t="Old voicemail"/>
+	<phrase n="lang_phonemanager_credentials" t="Phone Manager (Web UI) login credentials"/>
+	<phrase n="lang_static_ip" t="Static IP"/>
+	<phrase n="lang_dhcp_or_static_ip" t="DHCP or Static IP"/>
+	<phrase n="lang_locale_ar_AE" t="Arabic (United Arab Emirates)"/>
+	<phrase n="lang_locale_az_AZ" t="Azərbaycanca (Azerbaijan)"/>
+	<phrase n="lang_locale_bs_BA" t="Bosanki (Bosnia)"/>
+	<phrase n="lang_locale_ca_ES" t="Català (Spain)"/>
+	<phrase n="lang_locale_cs_CZ" t="Čeština (Czech Republic)"/>
+	<phrase n="lang_locale_da_DK" t="Dansk (Denmark)"/>
+	<phrase n="lang_locale_de_DE" t="Deutsch (Germany)"/>
+	<phrase n="lang_locale_el_GR" t="Ελληνικά (Greece)"/>
+	<phrase n="lang_locale_en_DE" t="English (Germany)"/>
+	<phrase n="lang_locale_en_GB" t="English (UK)"/>
+	<phrase n="lang_locale_en_US" t="English (US)"/>
+	<phrase n="lang_locale_es_ES" t="Español (Spain)"/>
+	<phrase n="lang_locale_et_EE" t="Eesti (Estonia)"/>
+	<phrase n="lang_locale_eu_ES" t="Euskara (Spain)"/>
+	<phrase n="lang_locale_fi_FI" t="Suomi (Finland)"/>
+	<phrase n="lang_locale_fr_FR" t="Français (France)"/>
+	<phrase n="lang_locale_he_IL" t="Hebrew (Israel)"/>
+	<phrase n="lang_locale_hr_HR" t="Hrvatski (Croatia)"/>
+	<phrase n="lang_locale_hu_HU" t="Magyar (Hungary)"/>
+	<phrase n="lang_locale_it_IT" t="Italiano (Italy)"/>
+	<phrase n="lang_locale_ja_JP" t="Japanese (Japan)"/>
+	<phrase n="lang_locale_kk_KZ" t="қазақша (Kazakhstan)"/>
+	<phrase n="lang_locale_lt_LT" t="Lietuvių (Lithuania)"/>
+	<phrase n="lang_locale_lv_LV" t="Latviešu (Latvia)"/>
+	<phrase n="lang_locale_nl_NL" t="Nederlands (Netherlands)"/>
+	<phrase n="lang_locale_nb_NO" t="Norsk (Norway)"/>
+	<phrase n="lang_locale_pl_PL" t="Polski (Poland)"/>
+	<phrase n="lang_locale_pt_PT" t="Português (Portugal)"/>
+	<phrase n="lang_locale_ro_RO" t="Română (Romania)"/>
+	<phrase n="lang_locale_ru_RU" t="Русский (Russia)"/>
+	<phrase n="lang_locale_sl_SI" t="Slovenščina (Slovenia)"/>
+	<phrase n="lang_locale_sv_SE" t="Svenska (Sweden)"/>
+	<phrase n="lang_locale_tr_TR" t="Türkçe (Turkey)"/>
+	<phrase n="lang_locale_uk_UA" t="Українська (Ukraine)"/>
+	<phrase n="lang_locale_zh_CN" t="Simplified Chinese (China)"/>
+	<phrase n="lang_locale_zh_TW" t="Traditional Chinese (Taiwan)"/>
+	<phrase n="lang_no_error" t="no error"/>
+	<phrase n="lang_unknown_command" t="unknown command"/>
+	<phrase n="lang_invalid_missing_params" t="invalid or missing parameter(s)"/>
+	<phrase n="lang_not_implemented" t="not implemented"/>
+	<phrase n="lang_failed" t="failed"/>
+	<phrase n="lang_refer_to_logs" t="Refer to the system logs for details"/>
+	<phrase n="lang_software_update_confirmation" t="The software update takes a few minutes and will reboot your phone. If you are on call(s), the update will start when all calls are terminated. Do not turn off your phone during the update. Update now?"/>
+	<phrase n="lang_firmware_field_is_empty" t="Firmware field is empty."/>
+	<phrase n="lang_software_update_in_progress" t="Software update in progress. Please wait for your phone to reboot. Once it restarts, refresh your browser to regain access to the WUI."/>
+	<phrase n="lang_edit_mode" t="Edit Mode"/>
+	<phrase n="lang_vlan_pc_qos" t="VLAN Priority on LAN port (0-7)"/>
+	<phrase n="lang_bluetooth_devices" t="Devices"/>
+	<phrase n="lang_bluetooth_not_ready" t="Bluetooth is not ready"/>
+	<phrase n="lang_F_ACCEPT_CALL_ext_ui" t="Answer"/>
+	<phrase n="lang_F_DEFLECT_ext_ui" t="Forward"/>
+	<phrase n="lang_F_DENY_ext_ui" t="Reject"/>
+	<phrase n="lang_F_END_ext_ui" t="End call"/>
+	<phrase n="lang_F_CALL_PARK_DIAL" t="Call Park Dial"/>
+	<phrase n="lang_F_NEW_CALL" t="New Call"/>
+	<phrase n="lang_device_management_service" t="Device Management Service"/>
+	<phrase n="lang_manage_dms" t="Manage DMS"/>
+	<phrase n="lang_3_days" t="3 Days"/>
+	<phrase n="lang_dms_enabled" t="DMS is enabled until"/>
+	<phrase n="lang_dms" t="DMS"/>
+</phrases>

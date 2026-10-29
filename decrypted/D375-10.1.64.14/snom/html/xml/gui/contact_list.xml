@@ -1,0 +1,744 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<IPPhoneBatch xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../schemas/minibrowser.xsd">
+  <IPPhoneMenu track="no" icon_xoffset="$(math_eval:$(gui_display_xsize)/20-5)" text_xoffset="$(math_eval:$(gui_display_xsize)/20-7)" line_yoffset="$(contact_line_y_offset)" dtmf="off" id="contacts" speedselect="off" selectable="$(contactssize)" scrollbar="false" sort="$(var:sort)" predict="false" state="only_mb" document_id="contact_list">
+    <Fetch mil="120000">phone://mb_exit</Fetch>
+    <If condition="$(bool_eval:$(condition:$(var:manager_name)==Xmpp) &amp; $(show_feature:FEATURE_PUI_STYLE_SIO))">
+      <Title>$(var:search_title)</Title>
+    </If>
+    <Else>
+      <If condition="$(empty:$(contactgroupname))">
+        <Title>$(var:search_title)</Title>
+      </If>
+      <Else>
+        <Title>$(contactgroupname)</Title>
+      </Else>
+    </Else>
+    <If condition="$(var:group)==1">
+      <SoftKeyItem>
+        <Name>CANCEL</Name>
+        <If condition="$(var:manager_name)==Metaswitch">
+          <Url>phone://mb_nop#collapsegroup</Url>
+        </If>
+        <Else>
+          <Url>file:///xml/gui/contact_list.xml#collapsegroup</Url>
+        </Else>
+      </SoftKeyItem>
+      <SoftKeyItem>
+        <Name>LEFT</Name>
+        <If condition="$(var:manager_name)==Metaswitch">
+          <Url>phone://mb_nop#collapsegroup</Url>
+        </If>
+        <Else>
+          <Url>file:///xml/gui/contact_list.xml#collapsegroup</Url>
+        </Else>
+      </SoftKeyItem>
+    </If>
+    <If condition="$(contacthasinputfield:$(var:manager_name))">
+      <InputField>
+          <If condition="$(var:lookup)">
+            <Handler event="timeout">phone://mb_nop#contactquery=$(var:manager_name)&amp;var:searchdone=42</Handler>
+            <Handler event="keypress">phone://mb_nop#contact_transfer_or_dial=-1;$[current_input]&amp;var:searchdone=42</Handler>
+            <Timeout>500</Timeout>
+          </If>
+          <Else>
+            <Handler event="timeout">phone://mb_nop#contactquery=$(var:manager_name)&amp;var:searchdone=42</Handler>
+            <Handler event="keypress">phone://mb_nop#contactquery=$(var:manager_name)&amp;var:searchdone=42</Handler>
+            <Timeout>1000</Timeout>
+          </Else>
+          <Minimum>$(var:input_minimum)</Minimum>
+        <DefaultValue>$(var:input_default)</DefaultValue>
+        <DefaultEditMode>$(set:edit_mode_for_directory_search)</DefaultEditMode>
+        <If condition="$(show_feature:BW_BDF_DISP)">
+          <prompt>&#60346;</prompt>
+        </If>
+        <Else>
+          <IconType>$(icon_type_enum:kIconTypeSearch)</IconType>
+        </Else>
+        <Key>ENTER</Key>
+        <SoftKeyItem>
+          <Name>F1</Name>
+          <If condition="$(edit_mode)==0">
+            <Label>F_URLL</Label>
+          </If>
+          <Elif condition="$(edit_mode)==1">
+            <Label>F_URLU</Label>
+          </Elif>
+          <Else>
+            <Label>F_123</Label>
+          </Else>
+          <Url>phone://mb_nop#next_edit_mode</Url>
+        </SoftKeyItem>
+        <SoftKeyItem>
+          <Name>F2</Name>
+          <Label>F_BACK</Label>
+          <SoftKey>F_BACK</SoftKey>
+        </SoftKeyItem>
+        <If condition="$(bool_eval:$(condition:select!=$(var:purpose)) &amp; !$(empty:$(var:purpose)))">
+          <SoftKeyItem>
+            <Name>F3</Name>
+            <If condition="transfer==$(var:purpose)">
+              <Label>F_TRANSFER</Label>
+            </If>
+            <Else>
+              <Label>F_DIAL</Label>
+            </Else>
+            <Url>phone://mb_nop#contact_transfer_or_dial=-1;"$[current_input]";F_DIAL</Url>
+          </SoftKeyItem>
+        </If> <!-- $(var:purpose)!=select -->
+        <ElIf condition="$(var:manager_name)==Xsi">
+          <SoftKeyItem>
+            <Name>F3</Name>
+            <If condition="$(empty:$(contactgroupname))"> <!-- execute query if in main directory list -->
+              <SoftKey>F_RELOAD_SERVER_AB</SoftKey>
+            </If>
+            <Else>
+              <Label>F_RELOAD_SERVER_AB</Label> <!-- execute query if within a directory -->
+              <Url track="no">file:///xml/gui/contact_list.xml#contactquery=$(var:manager_name)&amp;var:searchdone=42</Url>
+            </Else>
+          </SoftKeyItem>
+        </ElIf>
+        <!-- Sorting works only for Broadsoft -->
+        <If condition="$(bool_eval:$(condition:$(set:user_server_type[$(current_line)])==broadsoft) &amp; $(bool_eval:!$(empty:$(contactgroupname)) | $(bool_eval:$(condition:$(contactssize)!=0) &amp; !$(empty:$(current_input)))))">
+          <SoftKeyItem>
+            <Name>F4</Name>
+            <Label>$(lang:lang_F_SORT)</Label>
+            <SoftKey>TKEY_TB_SORT</SoftKey>
+          </SoftKeyItem>
+        </If>
+        <If condition="$(var:group)==1">
+          <SoftKeyItem>
+            <Name>CANCEL</Name>
+            <Url>file:///xml/gui/contact_list.xml#collapsegroup</Url>
+          </SoftKeyItem>
+          <SoftKeyItem>
+            <Name>LEFT</Name>
+            <Url>file:///xml/gui/contact_list.xml#collapsegroup</Url>
+          </SoftKeyItem>
+        </If>
+        <If condition="$(var:purpose)!=select">
+          <SoftKeyItem>
+            <Name>TRANSFER</Name>
+            <Url>file:///xml/gui/contact_list.xml#contact_transfer_or_dial=-1;"$[current_input]";TRANSFER</Url>
+          </SoftKeyItem>
+          <SoftKeyItem>
+            <Name>F_TRANSFER</Name>
+            <Url>file:///xml/gui/contact_list.xml#contact_transfer_or_dial=-1;"$[current_input]";F_TRANSFER</Url>
+          </SoftKeyItem>
+          <SoftKeyItem>
+            <Name>F_BLIND_TRANSFER</Name>
+            <Url>file:///xml/gui/contact_list.xml#contact_transfer_or_dial=-1;"$[current_input]";F_BLIND_TRANSFER</Url>
+          </SoftKeyItem>
+          <SoftKeyItem>
+            <Name>F_DIAL</Name>
+            <Url>file:///xml/gui/contact_list.xml#contact_transfer_or_dial=-1;"$[current_input]";F_DIAL</Url>
+          </SoftKeyItem>
+          <SoftKeyItem>
+            <Name>OFFHOOK</Name>
+            <Url>file:///xml/gui/contact_list.xml#contact_transfer_or_dial=-1;"$[current_input]";OFFHOOK</Url>
+          </SoftKeyItem>
+          <SoftKeyItem>
+            <Name>HEADSET_OFFHOOK</Name>
+            <Url>file:///xml/gui/contact_list.xml#contact_transfer_or_dial=-1;"$[current_input]";HEADSET_OFFHOOK</Url>
+          </SoftKeyItem>
+        </If> <!-- $(var:purpose)!=select -->
+      </InputField>
+    </If>
+    <ElIf condition="$(contact_is_add_allowed:$(var:manager_name))">
+      <SoftKeyItem>
+        <Name>F2</Name>
+        <SoftKey>F_ADD_CONTACT</SoftKey>
+      </SoftKeyItem>
+    </ElIf>
+    <If condition="$(bool_eval:$(condition:$(var:manager_name)==Xmpp) &amp; $(show_feature:FEATURE_PUI_STYLE_SIO))">
+      <If condition="!$(contactsearchpending)">
+        <If condition="$(contactssize:group)>5">
+          <!-- Limit to 5 dots -->
+          <If condition="$(contactgroupindex)<5">
+            <ListIndicator count="5" active_page="$(contactgroupindex)">$(contactgroupname)</ListIndicator>
+          </If>
+          <Else>
+            <!-- Make sure group index does not go over the limit -->
+            <ListIndicator count="5" active_page="4">$(contactgroupname)</ListIndicator>
+          </Else>
+        </If>
+        <Elif condition="$(contactssize:group)>1">
+          <ListIndicator count="$(contactssize:group)" active_page="$(contactgroupindex)">$(contactgroupname)</ListIndicator>
+        </Elif>
+      </If>
+    </If>
+
+    <If condition="$(contactssize)!=0"> <!-- contacts found -->
+      <If condition="$(contactsearchpending)">
+        <MenuItem sel="false" name="$(lang:query_pending)"></MenuItem>
+      </If>
+      <Else> <!-- search complete -->
+        <Repeat value_key="$(contacts)" token="|__NAME__|__CONTACTID__|__URL__|__PRESENCE__|__FREETEXT__|__IMAGE__|__ICON_TYPE__|__SELECTED__|__GROUP__|__DIAL_NR__|__READONLY__|__LABEL__|__MULTILABEL__">
+          <MenuItem name="__NAME__" id="__CONTACTID__" sel="__SELECTED__">
+            <If condition="$(show_feature:FEATURE_PUI_STYLE_SIO)">
+              <ExtraIconType>$(icon_type_enum:kIconTypeMenuArrowRight)</ExtraIconType>
+            </If>
+            <ItemData>
+              <Variable name="nr2dial" value="__DIAL_NR__" />
+            </ItemData>
+            <If condition="__GROUP__">
+              <Url track="yes">file:///xml/gui/contact_list.xml#var:Group=1&amp;contact_expand_group=__CONTACTID__</Url>
+            </If>
+            <Elif condition="!$(empty:$(var:linekey))">
+              <If condition="$(var:manager_name)==Xmpp">
+                <If condition="$(is_set:$(contact_detail:__CONTACTID__;Value[Name]max_results:1))">
+                  <Url>phone://mb_exit#change_linekey="$(var:linekey),
+                   MB_LK_CONTEXT=(ignore=$(var:ignore_linekey_context),clear=$(var:clear_linekey_context))
+                                 :$(current_line),
+                   MB_LK_TYPE=(ignore=$(var:ignore_linekey_type),clear=$(var:clear_linekey_type))
+                              :XMPP-ContactPresence,
+                   MB_LK_LABEL=(ignore=$(var:ignore_linekey_label),clear=$(var:clear_linekey_label))
+                               :$(contact_detail:__CONTACTID__;Value[Name]max_results:1),
+                   MB_LK_NUMBER=(ignore=$(var:ignore_linekey_number),clear=$(var:clear_linekey_number))
+                                :$(contact_detail:__CONTACTID__;Value[Presence,])"</Url>
+                </If>
+                <Else>
+                  <Url>phone://mb_exit#change_linekey="$(var:linekey),
+                   MB_LK_CONTEXT=(ignore=$(var:ignore_linekey_context),clear=$(var:clear_linekey_context))
+                                 :$(current_line),
+                   MB_LK_TYPE=(ignore=$(var:ignore_linekey_type),clear=$(var:clear_linekey_type))
+                              :XMPP-ContactPresence,
+                   MB_LK_LABEL=(ignore=$(var:ignore_linekey_label),clear=true)
+                               :,
+                   MB_LK_NUMBER=(ignore=$(var:ignore_linekey_number),clear=$(var:clear_linekey_number))
+                                :$(contact_detail:__CONTACTID__;Value[Presence,])"</Url>
+                </Else>
+              </If>
+            </Elif>
+            <Elif condition="!$(empty:__DIAL_NR__)">
+              <If condition="$(var:purpose)==select">
+                <Url track="yes">phone://mb_exit#contact_select=__DIAL_NR__</Url>
+              </If>
+              <Else>
+                <If condition="$(set:user_default_contact_uri[$(current_line)])==main">
+                  <Url track="yes">phone://mb_exit/#var:Group=0&amp;contact_transfer_or_dial=__CONTACTID__;"__DIAL_NR__";ENTER</Url>
+                </If>
+                <Else>
+                  <Url track="yes">file:///xml/gui/contact_list.xml#sub=*[@id="details"]&amp;var:contact_id=__CONTACTID__&amp;action_ifc:identity.$(current_line).contact_my_room=fetch_my_room, contactId=__CONTACTID__</Url>
+                </Else>
+              </Else>
+            </Elif>
+            <Else>
+              <Url track="yes">file:///xml/gui/contact_list.xml#sub=*[@id="details"]&amp;var:contact_id=__CONTACTID__&amp;action_ifc:identity.$(current_line).contact_my_room=fetch_my_room, contactId=__CONTACTID__</Url>
+            </Else>
+            <DetailUrl track="yes">file:///xml/gui/contact_list.xml#sub=*[@id="details"]&amp;var:contact_id=__CONTACTID__&amp;action_ifc:identity.$(current_line).contact_my_room=fetch_my_room, contactId=__CONTACTID__</DetailUrl>
+            <If condition="$(bool_eval:$(condition:$(set:user_server_type[$(current_line)])==ocs) | $(condition:$(set:user_server_type[$(current_line)])==broadsoft))">
+              <Icon>$(presence_icon:__PRESENCE__)</Icon>
+            </If>
+            <If condition="$(var:support_photo)">
+              <If condition="$(show_feature:FEATURE_PUI_STYLE_SIO)">
+                <IconType>__ICON_TYPE__</IconType>
+              </If>
+              <If condition="!__GROUP__">
+                <If condition="$(show_feature:FEATURE_PUI_STYLE_SIO)">
+                  <If condition="$(presence_state_text:__PRESENCE__)!=$(lang:contact_state_unknown)">
+                    <If condition="$(is_set:__PRESENCE__)">
+                      <If condition="$(is_set:__FREETEXT__)">
+                        <SubText>$(presence_state_text:__PRESENCE__) - __FREETEXT__</SubText>
+                      </If>
+                      <Else>
+                        <SubText>$(presence_state_text:__PRESENCE__)</SubText>
+                      </Else>
+                    </If>
+                  </If>
+                  <IconUrl>__IMAGE__</IconUrl>
+                </If>
+                <Else>
+                  <Image default="file:///bmp/colored/snom_photo_unknown.png">__IMAGE__</Image>
+                </Else>
+              </If>
+            </If>
+            <If condition="$(show_feature:FEATURE_PUI_STYLE_SIO)">
+              <If condition="!__GROUP__">
+                <If condition="$(is_set:__DIAL_NR__)">
+                  <If condition="$(is_set:__MULTILABEL__)">
+                    <subtext>__MULTILABEL__</subtext>
+                  </If>
+                  <Elif condition="$(is_set:__LABEL__)">
+                    <subtext>__LABEL__: __DIAL_NR__</subtext>
+                  </Elif>
+                  <Else>
+                    <subtext>__DIAL_NR__</subtext>
+                  </Else>
+                </If>
+              </If>
+            </If>
+            <If condition="$(bool_eval:$(condition:$(var:manager_name)==Xmpp) &amp; $(show_feature:FEATURE_PUI_STYLE_SIO))">
+              <If condition="$(contactssize:group)>1">
+                <SoftKeyItem>
+                  <Name>RIGHT</Name>
+                  <Url track="no">file:///xml/gui/contact_list.xml#contact_expand_group=$(contactnextgroupid)</Url>
+                </SoftKeyItem>
+                <SoftKeyItem>
+                  <Name>LEFT</Name>
+                  <Url track="no">file:///xml/gui/contact_list.xml#contact_expand_group=$(contactprevgroupid)</Url>
+                </SoftKeyItem>
+              </If>
+            </If>
+            <Else>
+              <SoftKeyItem>
+                <Name>RIGHT</Name>
+                <If condition="__GROUP__">
+                  <Url track="yes">file:///xml/gui/contact_list.xml#var:Group=1&amp;contact_expand_group=__CONTACTID__</Url>
+                </If>
+                <Else>
+                  <Url track="yes">file:///xml/gui/contact_list.xml#sub=*[@id="details"]&amp;var:contact_id=__CONTACTID__&amp;action_ifc:identity.$(current_line).contact_my_room=fetch_my_room, contactId=__CONTACTID__</Url>
+                </Else>
+              </SoftKeyItem>
+
+              <If condition="$(var:group)==1">
+                <SoftKeyItem>
+                  <Name>CANCEL</Name>
+                  <If condition="$(var:manager_name)==Metaswitch">
+                    <Url>phone://mb_nop#collapsegroup</Url>
+                  </If>
+                  <Else>
+                    <Url>file:///xml/gui/contact_list.xml#collapsegroup</Url>
+                  </Else>
+                </SoftKeyItem>
+                <SoftKeyItem>
+                  <Name>LEFT</Name>
+                  <If condition="$(var:manager_name)==Metaswitch">
+                    <Url>phone://mb_nop#collapsegroup</Url>
+                  </If>
+                  <Else>
+                    <Url>file:///xml/gui/contact_list.xml#collapsegroup</Url>
+                  </Else>
+                </SoftKeyItem>
+              </If>
+            </Else>
+
+            <If condition="$(contact_is_add_allowed:$(var:manager_name))">
+              <SoftKeyItem>
+                <Name>F2</Name>
+                <SoftKey>F_ADD_CONTACT</SoftKey>
+              </SoftKeyItem>
+            </If>
+            <If condition="$(display_type)!=color_touch">
+              <If condition="!$(empty:__DIAL_NR__)">
+                <SoftKeyItem>
+                  <Name>F1</Name>
+                  <If condition="transfer==$(var:purpose)">
+                    <Label>F_TRANSFER</Label>
+                  </If>
+                  <Else>
+                    <Label>F_DIAL</Label>
+                  </Else>
+                  <Url>phone://mb_exit#contact_transfer_or_dial=__CONTACTID__;"__DIAL_NR__";F_DIAL</Url>
+                </SoftKeyItem>
+              </If>
+              <If condition="!__GROUP__">
+                <SoftKeyItem>
+                  <Name>F3</Name>
+                  <Label>F_DETAILS</Label>
+                  <If condition="!__READONLY__">
+                    <Url track="yes">file:///xml/gui/contact_details_edit.xml#sub=*[@id="contact_details_edit"]&amp;var:contact_id=__CONTACTID__&amp;var:contact_delete=1</Url>
+                  </If>
+                  <Else>
+                    <Url track="yes">file:///xml/gui/contact_list.xml#sub=*[@id="details"]&amp;var:contact_id=__CONTACTID__&amp;action_ifc:identity.$(current_line).contact_my_room=fetch_my_room, contactId=__CONTACTID__</Url>
+                  </Else>
+                </SoftKeyItem>
+              </If>
+              <ElIf condition="$(contact_is_add_allowed:$(var:manager_name))">
+                <SoftKeyItem>
+                  <Name>F2</Name>
+                  <SoftKey>F_ADD_CONTACT</SoftKey>
+                </SoftKeyItem>
+              </ElIf>
+              <SoftKeyItem>
+                <Name>F4</Name>
+                <If condition="$(bool_eval:$(bool_eval:$(condition:$(set:user_server_type[$(current_line)])==broadsoft) |
+                               $(condition:$(set:user_server_type[$(current_line)])==metaswitch)) &amp; $(condition:!__GROUP__))">
+                  <Label>$(lang:lang_F_SORT)</Label>
+                  <SoftKey>TKEY_TB_SORT</SoftKey>
+                </If>
+                <Else>
+                  <Label>$(lang:lang_F_ABORT)</Label>
+                  <SoftKey>F_ABORT</SoftKey>
+                </Else>
+              </SoftKeyItem>
+            </If> <!-- not a touch display -->
+            <If condition="!$(empty:__DIAL_NR__)">
+              <If condition="!$(var:purpose)==select">
+                <SoftKeyItem>
+                  <Name>TRANSFER</Name>
+                  <SoftKey>ENTER</SoftKey>
+                </SoftKeyItem>
+                <SoftKeyItem>
+                  <Name>F_TRANSFER</Name>
+                  <SoftKey>ENTER</SoftKey>
+                </SoftKeyItem>
+                <SoftKeyItem>
+                  <Name>F_BLIND_TRANSFER</Name>
+                  <SoftKey>ENTER</SoftKey>
+                </SoftKeyItem>
+                <SoftKeyItem>
+                  <Name>F_DIAL</Name>
+                  <SoftKey>ENTER</SoftKey>
+                </SoftKeyItem>
+                <SoftKeyItem>
+                  <Name>OFFHOOK</Name>
+                  <Url>file:///xml/gui/contact_list.xml#contact_transfer_or_dial=__CONTACTID__;"__DIAL_NR__";OFFHOOK</Url>
+                </SoftKeyItem>
+                <SoftKeyItem>
+                  <Name>HEADSET_OFFHOOK</Name>
+                  <Url>file:///xml/gui/contact_list.xml#contact_transfer_or_dial=__CONTACTID__;"__DIAL_NR__";HEADSET_OFFHOOK</Url>
+                </SoftKeyItem>
+                <SoftKeyItem>
+                  <Name>SPEAKER</Name>
+                  <Url>file:///xml/gui/contact_list.xml#contact_transfer_or_dial=__CONTACTID__;"__DIAL_NR__";SPEAKER</Url>
+                </SoftKeyItem>
+                <SoftKeyItem>
+                  <Name>HEADSET</Name>
+                  <Url>file:///xml/gui/contact_list.xml#contact_transfer_or_dial=__CONTACTID__;"__DIAL_NR__";HEADSET</Url>
+                </SoftKeyItem>
+              </If> <!-- $(var:purpose)!=select -->
+            </If>
+            <Else>
+              <SoftKeyItem>
+                <Name>TRANSFER</Name>
+                <SoftKey>ENTER</SoftKey>
+              </SoftKeyItem>
+              <SoftKeyItem>
+                <Name>F_TRANSFER</Name>
+                <SoftKey>ENTER</SoftKey>
+              </SoftKeyItem>
+              <SoftKeyItem>
+                <Name>F_BLIND_TRANSFER</Name>
+                <SoftKey>ENTER</SoftKey>
+              </SoftKeyItem>
+              <SoftKeyItem>
+                <Name>F_DIAL</Name>
+                <SoftKey>ENTER</SoftKey>
+              </SoftKeyItem>
+              <SoftKeyItem>
+                <Name>OFFHOOK</Name>
+                <SoftKey>ENTER</SoftKey>
+              </SoftKeyItem>
+              <SoftKeyItem>
+                <Name>HEADSET_OFFHOOK</Name>
+                <SoftKey>HEADSET_OFFHOOK</SoftKey>
+              </SoftKeyItem>
+            </Else>
+          </MenuItem>
+        </Repeat>
+      </Else> <!-- search complete -->
+    </If> <!-- contacts found -->
+    <Else> <!-- no contacts found/available -->
+      <If condition="$(var:searchdone)==42"> <!-- initial search was triggered -->
+        <If condition="$(contactsearchpending)">
+          <MenuItem sel="false" name="$(lang:query_pending)"></MenuItem>
+        </If>
+        <Else> <!-- search complete -->
+          <MenuItem sel="false" name="$(lang:no_contacts)"></MenuItem>
+        </Else> <!-- search complete -->
+      </If>
+      <ElIf condition="!$(contactsearchpending)">
+        <MenuItem sel="false" name="$(lang:no_contacts)"></MenuItem>
+      </ElIf>
+      <If condition="$(set:user_server_type[$(current_line)])==metaswitch">
+        <If condition="$(contactsearchpending)">
+          <MenuItem sel="false" name="$(lang:query_pending)"></MenuItem>
+        </If>
+        <Else>
+          <MenuItem name="$(lang:no_contacts)">
+            <Url>phone://mb_nop</Url>
+          </MenuItem>
+        </Else>
+      </If>
+      <If condition="$(var:manager_name)==Xmpp">
+        <If condition="!$(contactsearchpending)">
+          <MenuItem name="$(lang:no_contacts)">
+            <Url>phone://mb_nop</Url>
+          </MenuItem>
+          <If condition="$(show_feature:FEATURE_PUI_STYLE_SIO)">
+            <If condition="$(contactssize:group)>1">
+              <SoftKeyItem>
+                <Name>RIGHT</Name>
+                <Url track="no">file:///xml/gui/contact_list.xml#contact_expand_group=$(contactnextgroupid)</Url>
+              </SoftKeyItem>
+              <SoftKeyItem>
+                <Name>LEFT</Name>
+                <Url track="no">file:///xml/gui/contact_list.xml#contact_expand_group=$(contactprevgroupid)</Url>
+              </SoftKeyItem>
+            </If>
+          </If>
+        </If>
+      </If>
+
+        <If condition="$(contacthasinputfield:$(var:manager_name))">
+          <SoftKeyItem>
+            <Name>F1</Name>
+            <If condition="$(edit_mode)==0">
+              <Label>F_URLL</Label>
+            </If>
+            <Elif condition="$(edit_mode)==1">
+              <Label>F_URLU</Label>
+            </Elif>
+            <Else>
+              <Label>F_123</Label>
+            </Else>
+            <Url>file:///xml/gui/contact_list.xml#next_edit_mode</Url>
+          </SoftKeyItem>
+            <SoftKeyItem>
+              <Name>F2</Name>
+              <Label>F_BACK</Label>
+              <SoftKey>F_BACK</SoftKey>
+            </SoftKeyItem>
+        </If>
+        <If condition="$(display_type)!=color_touch">
+          <SoftKeyItem>
+            <Name>F4</Name>
+            <Label>$(lang:lang_F_ABORT)</Label>
+            <SoftKey>F_ABORT</SoftKey>
+          </SoftKeyItem>
+        </If> <!-- not a touch display -->
+      <If condition="$(var:lookup)">
+        <SoftKeyItem>
+          <Name>ENTER</Name>
+          <Url>file:///xml/gui/contact_list.xml#contact_transfer_or_dial=-1;"$[current_input]";ENTER</Url>
+        </SoftKeyItem>
+        <SoftKeyItem>
+          <Name>TRANSFER</Name>
+          <Url>file:///xml/gui/contact_list.xml#contact_transfer_or_dial=-1;"$[current_input]";TRANSFER</Url>
+        </SoftKeyItem>
+        <SoftKeyItem>
+          <Name>F_TRANSFER</Name>
+          <Url>file:///xml/gui/contact_list.xml#contact_transfer_or_dial=-1;"$[current_input]";F_TRANSFER</Url>
+        </SoftKeyItem>
+        <SoftKeyItem>
+          <Name>F_BLIND_TRANSFER</Name>
+          <Url>file:///xml/gui/contact_list.xml#contact_transfer_or_dial=-1;"$[current_input]";F_BLIND_TRANSFER</Url>
+        </SoftKeyItem>
+        <SoftKeyItem>
+          <Name>F_DIAL</Name>
+          <Url>file:///xml/gui/contact_list.xml#contact_transfer_or_dial=-1;"$[current_input]";F_DIAL</Url>
+        </SoftKeyItem>
+        <SoftKeyItem>
+          <Name>OFFHOOK</Name>
+          <Url>file:///xml/gui/contact_list.xml#contact_transfer_or_dial=-1;"$[current_input]";OFFHOOK</Url>
+        </SoftKeyItem>
+        <SoftKeyItem>
+          <Name>HEADSET_OFFHOOK</Name>
+          <Url>file:///xml/gui/contact_list.xml#contact_transfer_or_dial=-1;"$[current_input]";HEADSET_OFFHOOK</Url>
+        </SoftKeyItem>
+      </If>
+    </Else> <!-- no contacts found/available -->
+  </IPPhoneMenu>
+
+  <!-- DETAILS-screen -->
+
+  <IPPhoneMenu icon_xoffset="$(math_eval:$(gui_display_xsize)/20-5)" text_xoffset="$(math_eval:$(gui_display_xsize)/20-7)" line_height="48" id="details" speedselect="off" state="others_except_mb" document_id="contact_details">
+    <Fetch mil="120000">phone://mb_exit</Fetch>
+      <Title>$(lang:contact_details)</Title>
+    <If condition="$(bool_eval:$(var:support_photo) &amp; $(condition:$(display_type)==color))">
+      <If condition="$(is_set:$(contact_detail:$(lastsel);Value[Name]max_results:1))">
+        <MenuItem name="$(contact_detail:$(lastsel);Value[Name]max_results:1)">
+          <If condition="$(show_feature:FEATURE_PUI_STYLE_SIO)">
+            <If condition="$(is_set:$(contactpresence:$(var:contact_id)))">
+              <Icon>$(presence_icon:$(contactpresence:$(var:contact_id)))</Icon>
+              <IconType>$(icon_type_enum:kIconTypeNone)</IconType>
+              <If condition="$(presence_state_text:$(contactpresence:$(var:contact_id)))!=$(lang:contact_state_unknown)">
+                <If condition="$(is_set:$(contactfreetext:$(var:contact_id)))">
+                  <SubText>$(presence_state_text:$(contactpresence:$(var:contact_id))) - $(contactfreetext:$(var:contact_id))</SubText>
+                </If>
+                <Else>
+                  <SubText>$(presence_state_text:$(contactpresence:$(var:contact_id)))</SubText>
+                </Else>
+              </If>
+            </If>
+            <Else>
+              <IconType>$(icon_type_enum:kIconTypeContactStateUnknown)</IconType>
+            </Else>
+            <IconUrl>$(contact_detail:$(lastsel);Value[Thumbnail,])</IconUrl>
+          </If>
+          <Elif condition="$(is_set:$(contactpresence:$(var:contact_id)))">
+            <Icon>$(presence_icon:$(contactpresence:$(var:contact_id)))</Icon>
+            <Image default="file:///bmp/colored/snom_photo_unknown.png">$(contact_detail:$(lastsel);Value[Thumbnail,])</Image>
+          </Elif>
+        </MenuItem>
+      </If>
+      <Else>
+        <MenuItem name="Photo">
+          <If condition="$(show_feature:FEATURE_PUI_STYLE_SIO)">
+            <If condition="$(is_set:$(contactpresence:$(var:contact_id)))">
+              <Icon>$(presence_icon:$(contactpresence:$(var:contact_id)))</Icon>
+              <IconType>$(icon_type_enum:kIconTypeNone)</IconType>
+            </If>
+            <Else>
+              <IconType>$(icon_type_enum:kIconTypeContactStateUnknown)</IconType>
+            </Else>
+            <IconUrl>$(contact_detail:$(lastsel);Value[Thumbnail,])</IconUrl>
+          </If>
+          <Else>
+            <If condition="$(is_set:$(contactpresence:$(var:contact_id)))">
+              <Icon>$(presence_icon:$(contactpresence:$(var:contact_id)))</Icon>
+            </If>
+            <Image default="file:///bmp/colored/snom_photo_unknown.png">$(contact_detail:$(lastsel);Value[Thumbnail,])</Image>
+          </Else>
+        </MenuItem>
+      </Else>
+    </If>
+    <Elif condition="$(is_set:$(contact_detail:$(lastsel);Value[Name]max_results:1))">
+      <MenuItem name="$(contact_detail:$(lastsel);Value[Name]max_results:1)">
+        <If condition="$(is_set:$(contactpresence:$(var:contact_id)))">
+          <Icon>$(presence_icon:$(contactpresence:$(var:contact_id)))</Icon>
+          <IconType>$(icon_type_enum:kIconTypeNone)</IconType>
+        </If>
+      </MenuItem>
+    </Elif>
+    <If condition="!$(show_feature:FEATURE_PUI_STYLE_SIO)">
+      <If condition="$(is_set:$(contactfreetext:$(var:contact_id)))">
+        <MenuItem name="$(contactfreetext:$(var:contact_id))">
+          <Icon>$(contactfreetext_icon)</Icon>
+        </MenuItem>
+      </If>
+    </If>
+    <Repeat values="$(contact_numbers:$(lastsel))" token="|__ID__|__URL__|__CONTACT_ID__|__DIAL_NR__|__VALUE__|__ICON__|__IMAGE__|__LABEL__|__IS_MAIN__|">
+      <MenuItem id="__ID__" sel="$(bool_eval:__IS_MAIN__)">
+        <If condition="$(is_set:__ICON__)">
+          <If condition="$(show_feature:FEATURE_PUI_STYLE_SIO)">
+            <If condition="$(condition:__LABEL__==Mobile)">
+              <Name>$(lang:Mobile)</Name>
+            </If>
+            <ElIf condition="$(condition:__LABEL__==Home)">
+              <Name>$(lang:Home)</Name>
+            </ElIf>
+            <ElIf condition="$(condition:__LABEL__==Office)">
+              <Name>$(lang:Office)</Name>
+            </ElIf>
+            <Elif condition="$(condition:__LABEL__==Extension)">
+              <Name>$(lang:enum_disp_func_key_destination)</Name>
+            </Elif>
+            <ElIf condition="$(condition:__LABEL__==Unqualified)">
+              <Name>$(lang:Unqualified)</Name>
+            </ElIf>
+            <Else>
+              <Name>__LABEL__</Name>
+            </Else>
+            <SubText>__VALUE__</SubText>
+            <ExtraIconType>__ICON__</ExtraIconType>
+          </If>
+          <Else>
+            <Name>__VALUE__</Name>
+            <Icon>__ICON__</Icon>
+          </Else>
+        </If>
+        <Elif condition="$(is_set:__IMAGE__)">
+          <Name>__VALUE__</Name>
+          <Image>__IMAGE__</Image>
+        </Elif>
+        <Else>
+          <Name>__VALUE__</Name>
+          <Icon>$(lang:__LABEL__):</Icon>
+        </Else>
+        <If condition="$(var:purpose)==select">
+          <Url track="yes">phone://mb_exit#contact_select=__DIAL_NR__</Url>
+        </If>
+        <Else>
+          <Url>phone://mb_exit#contact_transfer_or_dial=__CONTACT_ID__;"__DIAL_NR__";ENTER</Url>
+          <SoftKeyItem>
+            <Name>TRANSFER</Name>
+            <Url>phone://mb_exit#contact_transfer_or_dial=__CONTACT_ID__;"__DIAL_NR__";TRANSFER</Url>
+          </SoftKeyItem>
+          <SoftKeyItem>
+            <Name>F_TRANSFER</Name>
+            <Url>phone://mb_exit#contact_transfer_or_dial=__CONTACT_ID__;"__DIAL_NR__";F_TRANSFER</Url>
+          </SoftKeyItem>
+          <SoftKeyItem>
+            <Name>F_BLIND_TRANSFER</Name>
+            <Url>phone://mb_exit#contact_transfer_or_dial=__CONTACT_ID__;"__DIAL_NR__";F_BLIND_TRANSFER</Url>
+          </SoftKeyItem>
+          <SoftKeyItem>
+            <Name>F_DIAL</Name>
+            <Url>phone://mb_exit#contact_transfer_or_dial=__CONTACT_ID__;"__DIAL_NR__";F_DIAL</Url>
+          </SoftKeyItem>
+          <SoftKeyItem>
+            <Name>OFFHOOK</Name>
+            <Url>phone://mb_exit#contact_transfer_or_dial=__CONTACT_ID__;"__DIAL_NR__";OFFHOOK</Url>
+          </SoftKeyItem>
+          <SoftKeyItem>
+            <Name>HEADSET_OFFHOOK</Name>
+            <Url>phone://mb_exit#contact_transfer_or_dial=__CONTACT_ID__;"__DIAL_NR__";HEADSET_OFFHOOK</Url>
+          </SoftKeyItem>
+        </Else>
+      </MenuItem>
+    </Repeat>
+    <If condition="$(is_set:$(contact_detail:$(lastsel);Value[EmailAddress,]))">
+      <MenuItem name="$(contact_detail:$(lastsel);Value[EmailAddress,]) ($(contact_detail:$(lastsel);Label[EmailAddress,]))"/>
+    </If>
+    <If condition="$(is_set:$(contact_detail:$(lastsel);Value[Organization,]))">
+      <MenuItem name="$(contact_detail:$(lastsel);Value[Organization,]) ($(contact_detail:$(lastsel);Label[Organization,]))"/>
+    </If>
+    <If condition="$(is_set:$(contact_detail:$(lastsel);Value[Office,]))">
+      <MenuItem name="$(contact_detail:$(lastsel);Value[Office,]) ($(contact_detail:$(lastsel);Label[Office,]))"/>
+    </If>
+    <If condition="$(var:manager_name)==Xmpp">
+      <!-- Join room menu item for MyRoom integration-->
+      <If condition="!$(empty:$(var_ifc:identity.$(current_line).contact_my_room::get_room_id))">
+        <If condition="!$(empty:$(var_ifc:identity.$(current_line).contact_my_room::get_dial_number))">
+          <MenuItem name="$(lang:collaborate_join_room)">
+            <Url>phone://mb_exit#contact_transfer_or_dial=$(lastsel);"$(var_ifc:identity.$(current_line).contact_my_room::get_dial_number);roomid=$(var_ifc:identity.$(current_line).contact_my_room::get_room_id)";ENTER</Url>
+            <If condition="$(show_feature:FEATURE_PUI_STYLE_SIO)">
+              <SubText>$(var_ifc:identity.$(current_line).contact_my_room::get_dial_number)- $(lang:smartlabel_id) $(var_ifc:identity.$(current_line).contact_my_room::get_room_id)</SubText>
+              <ExtraIconType>$(icon_type_enum:kIconTypeMenuConference)</ExtraIconType>
+            </If>
+            <Else>
+              <Icon>$(var_ifc:identity.$(current_line).contact_my_room::get_mono_conference_icon)</Icon>
+            </Else>
+          </MenuItem>
+        </If>
+      </If>
+    </If>
+    <If condition="$(is_set:$(contact_detail:$(lastsel);Value[Presence,]))">
+      <If condition="$(var:manager_name)==Xmpp">
+        <MenuItem name="$(lang:assign_to_key)">
+          <If condition="$(is_set:$(contact_detail:$(lastsel);Value[Name]max_results:1))">
+            <Url>file:///xml/gui/pkeys.xml#sub=*[@id="units"]
+                 &amp;var:linekey_context=$(current_line)
+                 &amp;var:linekey_type=XMPP-ContactPresence
+                 &amp;var:linekey_number=$(contact_detail:$(lastsel);Value[Presence,])
+                 &amp;var:linekey_label=$(contact_detail:$(lastsel);Value[Name]max_results:1)</Url>
+          </If>
+          <Else>
+            <Url>file:///xml/gui/pkeys.xml#sub=*[@id="units"]
+                 &amp;var:linekey_context=$(current_line)
+                 &amp;var:linekey_type=XMPP-ContactPresence
+                 &amp;var:linekey_number=$(contact_detail:$(lastsel);Value[Presence,])
+                 &amp;var:clear_linekey_label=true)</Url>
+          </Else>
+        </MenuItem>
+      </If>
+    </If>
+  </IPPhoneMenu>
+
+
+
+  <!-- full-screen photo -->
+
+  <IPPhoneText id="photo_detail" dtmf="off" state="others_except_mb" document_id="contact_photo">
+    <Fetch mil="120000">phone://mb_exit</Fetch>
+    <SoftKeyItem>
+      <Name>LEFT</Name>
+      <SoftKey>CANCEL</SoftKey>
+    </SoftKeyItem>
+    <If condition="$(is_set:$(contact_detail:$(var:contact_id);Value[Name]max_results:1))">
+      <Title>$(contact_detail:$(var:contact_id);Value[Name]max_results:1)</Title>
+    </If>
+    <Else>
+      <Title>PHOTO</Title>
+    </Else>
+    <Image default="file:///bmp/colored/snom_photo_unknown.png">
+      <LocationX>0</LocationX>
+      <LocationY>23</LocationY>
+      <Width>320</Width>
+      <Height>167</Height>
+      <Url>$(contact_detail:$(var:contact_id);Value[Thumbnail,])</Url>
+    </Image>
+  </IPPhoneText>
+
+</IPPhoneBatch>

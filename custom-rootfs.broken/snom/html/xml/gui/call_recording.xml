@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<IPPhoneMenu state="others_except_mb" dtmf="off" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../schemas/minibrowser.xsd">
+  <Title>$(lang:call_recording_control)</Title>
+  <!-- If the call is on hold -->
+  <If condition="$(var_ifc:CallRecording::CallIsHold) == true">
+    <If condition="$(var_ifc:CallRecording::CallRecordPref) == on">
+      <MenuItem name="$(lang:linename_rec_off)">
+        <Url>phone://mb_exit#action_ifc:CallRecording=stop</Url>
+        <ExtraIconType>$(icon_type_enum:kIconTypeStopCallRecording)</ExtraIconType>
+      </MenuItem>
+    </If>
+    <Else>
+      <MenuItem name="$(lang:linename_rec_on)">
+        <Url>phone://mb_exit#action_ifc:CallRecording=start</Url>
+        <ExtraIconType>$(icon_type_enum:kIconTypeStartCallRecording)</ExtraIconType>
+      </MenuItem>
+    </Else>
+  </If>
+  <Else>
+    <If condition="$(var_ifc:CallRecording::mode) == on-demand">
+      <If condition="$(var_ifc:CallRecording::state) == on">
+        <MenuItem name="$(lang:pause_recording)">
+          <Url>phone://mb_exit#action_ifc:CallRecording=pause</Url>
+          <ExtraIconType>$(icon_type_enum:kIconTypePauseCallRecording)</ExtraIconType>
+        </MenuItem>
+      </If>
+      <Elif condition="$(var_ifc:CallRecording::state) == paused">
+        <MenuItem name="$(lang:resume_recording)">
+          <Url>phone://mb_exit#action_ifc:CallRecording=resume</Url>
+          <ExtraIconType>$(icon_type_enum:kIconTypeMenuPlay)</ExtraIconType>
+        </MenuItem>
+      </Elif>
+      <Else>
+        <MenuItem name="$(lang:linename_rec_on)">
+          <Url>phone://mb_exit#action_ifc:CallRecording=start</Url>
+          <ExtraIconType>$(icon_type_enum:kIconTypeStartCallRecording)</ExtraIconType>
+        </MenuItem>
+      </Else>
+    </If>
+    <Else>
+      <If condition="$(var_ifc:CallRecording::state) == on">
+        <MenuItem name="$(lang:pause_recording)">
+          <Url>phone://mb_exit#action_ifc:CallRecording=pause</Url>
+          <ExtraIconType>$(icon_type_enum:kIconTypePauseCallRecording)</ExtraIconType>
+        </MenuItem>
+        <MenuItem name="$(lang:linename_rec_off)">
+          <Url>phone://mb_exit#action_ifc:CallRecording=stop</Url>
+          <ExtraIconType>$(icon_type_enum:kIconTypeStopCallRecording)</ExtraIconType>
+        </MenuItem>
+      </If>
+      <Elif condition="$(var_ifc:CallRecording::state) == paused">
+        <MenuItem name="$(lang:resume_recording)">
+          <Url>phone://mb_exit#action_ifc:CallRecording=resume</Url>
+          <ExtraIconType>$(icon_type_enum:kIconTypeMenuPlay)</ExtraIconType>
+        </MenuItem>
+        <MenuItem name="$(lang:linename_rec_off)">
+          <Url>phone://mb_exit#action_ifc:CallRecording=stop</Url>
+          <ExtraIconType>$(icon_type_enum:kIconTypeStopCallRecording)</ExtraIconType>
+        </MenuItem>
+      </Elif>
+      <Else>
+        <MenuItem name="$(lang:linename_rec_on)">
+          <Url>phone://mb_exit#action_ifc:CallRecording=start</Url>
+          <ExtraIconType>$(icon_type_enum:kIconTypeStartCallRecording)</ExtraIconType>
+        </MenuItem>
+      </Else>
+    </Else>
+  </Else>
+</IPPhoneMenu>

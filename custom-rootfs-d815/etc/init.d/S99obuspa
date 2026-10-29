@@ -1,0 +1,186 @@
+#!/bin/sh
+#
+#
+# Note: All paths and filenames MUST NOT contain spaces
+#
+PATH=/bin:/usr/bin:/sbin:/usr/sbin
+THIS=$0
+DAEMON=/snom/obuspa
+PIDFILE=/var/run/obuspa.pid
+OBUSPA_DIR=/snom/snomconfig/obuspa
+
+LOG_LEVEL=1 # 0=off, 1=error, 2=warning, 3=info, 4=debug, 5=debug+msg
+LOG_FILE=syslog # Can also be 'stdout' or '/tmp/obuspa.log'
+
+CONFIG_TEMPLATE=$OBUSPA_DIR/config.template
+CONFIG_FILE=/tmp/obuspa_defconfig.txt
+DB_FILE=$OBUSPA_DIR/usp.db
+
+SNOM_CA_FILE=/snom/snomconfig/certificates/authority_certs/root_certificates.pem
+SNOM_CERT_FILE=/protected/certificate2.txt
+SNOM_KEY_FILE=/protected/privatekey2.txt
+CERT_FILE=/tmp/obuspa_cert.pem
+CA_FILE="/tmp/obuspa_cas.pem"
+# The following is needed for support of the SRAPS staging server.
+# Can be simply removed if no longer needed
+SERVER_CERT_DIR=/snom/snomconfig/certificates/server_certs
+STAGING_CLIENT_KEY_FILE=$OBUSPA_DIR/certificates/client.key
+STAGING_CA_FILE=$OBUSPA_DIR/certificates/root.crt
+
+# Branding CAs location
+BRANDING_CERT_DIR=/snom/branding/certificates/authority_certs
+
+# The MAC address of the Ethernet interface will be used as client ID
+get_mac() {
+  local mac=$(fw_printenv ethaddr | cut -d "=" -f 2)
+  if [ "$mac" == "" ]; then
+    mac=$(cat /sys/class/net/eth0/address)
+  fi
+  # Need to make it lower case for SRAPS
+  mac=$(echo $mac | sed s/://g | tr '[:upper:]' '[:lower:]')
+  echo $mac
+}
+
+# Get the interface that provides the uplink
+get_uplink_iface() {
+  local iface=$(ip route get 1.1.1.1 | cut -d " " -f 5)
+  if [ "$iface" == "" ]; then
+    # Try again with IPv6
+    iface=$(ip route get 2606:4700:4700::1111 | cut -d " " -f 5)
+    if [ "$iface" == "" ]; then
+      # No default route. Use first Ethernet iface
+      iface=$(ip -o link | grep ether | grep UP | head -n1 | cut -d ":" -f 2 | sed "s/ //")
+    fi
+  fi
+  echo $iface
+}
+
+# Provide certificates
+setup_certs() {
+  # Default root CAs
+  cat "$SNOM_CA_FILE" > "$CA_FILE"
+
+  if [ -n "$STAGING_CA_FILE" ] && [ -e "$STAGING_CA_FILE" ]; then
+    # We have a special root CA file for the staging server. Append it to the default root CAs
+    echo >> "$CA_FILE"
+    cat "$STAGING_CA_FILE" >> "$CA_FILE"
+  fi
+
+  # Add branding specific CAs to the bundle
+  for branding_cert in "$BRANDING_CERT_DIR"/*; do
+    [ -e "$branding_cert" ] || continue
+    echo >> "$CA_FILE"
+    cat "$branding_cert" >> "$CA_FILE"
+  done
+
+  # Client cert and key
+  rm -f $CERT_FILE
+  if [ -n $STAGING_CLIENT_KEY_FILE -a -e $STAGING_CLIENT_KEY_FILE ]; then
+    # Check if we have a client cert for the device manager that was uploaded by the user
+    # If yes, use it together with the compiled-in key
+    for client_cert in $SERVER_CERT_DIR/*; do
+      [ -e "$client_cert" ] || continue
+      if openssl x509 -in "$client_cert" -noout -text | grep "Device Manager" > /dev/null; then
+        cat $STAGING_CLIENT_KEY_FILE > $CERT_FILE
+        echo >> $CERT_FILE
+        cat "$client_cert" >> $CERT_FILE
+      fi
+    done
+  fi
+  if [ ! -e $CERT_FILE ]; then
+    # Use the phone's default client cert
+    cat $SNOM_KEY_FILE > $CERT_FILE
+    echo >> $CERT_FILE
+    cat $SNOM_CERT_FILE >> $CERT_FILE
+  fi
+}
+
+# Create default config file
+setup_defaults() {
+  local endpoint_id=$(get_mac)
+  cat $CONFIG_TEMPLATE | sed "s/\[EndpointID\]/$endpoint_id/g" > $CONFIG_FILE
+}
+
+# Get options for logging
+get_log_opts() {
+  local log_opts=""
+  case $LOG_LEVEL in
+    "0")
+      log_opts="-v 0";;
+    "1" | "2" | "3" | "4")
+      log_opts="-v $LOG_LEVEL -l $LOG_FILE";;
+    "5")
+      log_opts="-v 4 -p -l $LOG_FILE";;
+  esac
+  echo $log_opts
+}
+
+# Check if obuspa is running
+is_obuspa_running() {
+  pgrep $DAEMON > /dev/null
+  return $?
+}
+
+# Check if the phone software is running and the network is operable
+is_phone_up() {
+  pgrep "/snom/lcs" > /dev/null
+  local ret=$?
+  if ret; then
+    ip route | grep -q default
+    ret=$?
+  fi
+  return $ret
+}
+
+run_as_daemon() {
+  while ! is_phone_up; do
+    sleep 10
+  done
+  sleep 20
+  setup_defaults
+  setup_certs
+  exec $DAEMON $(get_log_opts) -i $(get_uplink_iface) -a $CERT_FILE -t $CA_FILE -r $CONFIG_FILE -f $DB_FILE
+}
+
+start() {
+  if is_obuspa_running; then
+    echo "The OB-USP-Agent is already running"
+    exit 1
+  fi
+  # -n "nosuchprocess" is (ab)used to switch off checking for an already running instance of $THIS
+  start-stop-daemon -S -b -m -p "$PIDFILE" -n "nosuchprocess" -x $THIS -- daemon
+}
+
+stop() {
+  start-stop-daemon -K -p "$PIDFILE"
+  sleep 2
+  if is_obuspa_running; then
+    # Hard kill
+    killall -SIGKILL $DAEMON
+  fi
+  rm -f $PIDFILE
+}
+
+factoryreset() {
+  local restart_obuspa=false
+  if is_obuspa_running; then
+    restart_obuspa=true
+    stop
+  fi
+  rm -f $DB_FILE
+  if [ $restart_obuspa = true ]; then
+    start
+  fi
+}
+
+case "$1" in
+  start|stop|factoryreset)
+    "$1";;
+  daemon)
+    run_as_daemon;;
+  *)
+    echo "Usage: $0 {start|stop|factoryreset}"
+    exit 1;;
+esac
+
+exit 0

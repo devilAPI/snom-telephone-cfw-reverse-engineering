@@ -1,0 +1,197 @@
+<?ssi title line$l_ssi_title?>
+<?ssi file common1.htm?>
+<TR><TD vAlign="top" height="16"><IMG height="16" src="img/clr.gif" width="16"></TD></TR>
+<TR>
+  <TD vAlign="top">
+    <FORM method="post">
+    <?ssi hidden_tag?>
+    <?ssi skipon VTECH?>
+    <TABLE class="bubbleTable" cellSpacing="0" cellPadding="0" width="100%" border="0">
+    <?ssi skipoff VTECH?>
+    <?ssi skipon SNOM?>
+    <TABLE cellSpacing="4" cellPadding="0" width="100%" border="0">
+    <?ssi skipoff SNOM?>
+    <TBODY>
+    <?ssi file tab_line.htm?>
+      <TR>
+        <TD width="12" height="5"><IMG height="12" src="img/clr.gif" width="12"></TD>
+        <TD width="12" height="5"><IMG height="5" src="img/clr.gif" width="12"></TD>
+        <TD width="12" height="5"><IMG height="5" src="img/clr.gif" width="12"></TD>
+        <TD class="background" width="12" height="5">
+          <?ssi skipon VTECH?>
+          <IMG height="12" src=<?ssi img-corner-gif ur?> width="12">
+          <?ssi skipoff VTECH?>
+        </TD>
+      </TR>
+      <TR><TD></TD>
+        <?ssi skipon VTECH?>
+        <TD width="50%"><B>
+        <?ssi skipoff VTECH?>
+        <?ssi skipon SNOM?>
+        <TD class="titleText" width="50%">
+        <?ssi skipoff SNOM?>
+        <?lng prefs_redirection?></B>
+        </TD>
+        <TD width="50%"></TD>
+      </TR>
+      <TR><TD></TD><?ssi radio prefs_redirection_always$i fwd_all_enabled$l advanced_ssi_on advanced_ssi_off?></TR>
+      <TR><TD></TD><TD><?ssi input prefs_redirect_number fwd_all_target$l?></TD></TR>
+      <TR><TD></TD><TD><?ssi input prefs_ssi_redirect_on_code fwd_all_on_code$l?></TD></TR>
+      <TR><TD></TD><TD><?ssi input prefs_ssi_redirect_off_code fwd_all_off_code$l?></TD></TR>
+      <TR><TD></TD><?ssi radio prefs_redirection_busy$i fwd_busy_enabled$l advanced_ssi_on advanced_ssi_off?></TR>
+      <TR><TD></TD><TD><?ssi input prefs_redirect_number fwd_busy_target$l?></TD></TR>
+      <TR><TD></TD><TD><?ssi input prefs_ssi_redirect_on_code fwd_busy_on_code$l?></TD></TR>
+      <TR><TD></TD><TD><?ssi input prefs_ssi_redirect_off_code fwd_busy_off_code$l?></TD></TR>
+      <TR><TD></TD><?ssi radio prefs_redirection_time$i fwd_time_enabled$l advanced_ssi_on advanced_ssi_off?></TR>
+      <TR><TD></TD><TD><?ssi input prefs_timeout fwd_time_secs$l?></TD></TR>
+      <TR><TD></TD><TD><?ssi input prefs_redirect_number fwd_time_target$l?></TD></TR>
+      <TR><TD></TD><TD><?ssi input prefs_ssi_redirect_on_code fwd_time_on_code$l?></TD></TR>
+      <TR><TD></TD><TD><?ssi input prefs_ssi_redirect_off_code fwd_time_off_code$l?></TD></TR>
+      <TR><TD></TD><TD>&nbsp;</TD></TR>
+      <TR><TD></TD><?ssi radio prefs_dnd$b dnd_mode$l advanced_ssi_on advanced_ssi_off?></TR>
+      <TR><TD></TD><TD><?ssi input prefs_ssi_redirect_on_code dnd_on_code$l?></TD></TR>
+      <TR><TD></TD><TD><?ssi input prefs_ssi_redirect_off_code dnd_off_code$l?></TD></TR>
+      <TR><TD></TD><TD>&nbsp;</TD></TR>
+      <TR><TD></TD>
+        <?ssi skipon VTECH?>
+        <TD><B>
+        <?ssi skipoff VTECH?>
+        <?ssi skipon SNOM?>
+        <TD class="titleText">
+        <?ssi skipoff SNOM?>
+        <?lng line_server_managed?>:</B>
+        </TD>
+      </TR>
+      <TR><TD></TD><?ssi radio prefs_redirection_fwd_always using_server_managed_fwd_all$l advanced_ssi_on advanced_ssi_off?></TR>
+      <TR><TD></TD><?ssi radio prefs_redirection_fwd_busy using_server_managed_fwd_busy$l advanced_ssi_on advanced_ssi_off?></TR>
+      <TR><TD></TD><?ssi radio prefs_redirection_fwd_time using_server_managed_fwd_time$l advanced_ssi_on advanced_ssi_off?></TR>
+      <TR><TD></TD><?ssi radio fkeyname_dnd using_server_managed_dnd$l advanced_ssi_on advanced_ssi_off?></TR>
+      <TR><TD></TD><TD><?lng line_call_logs?></TD><TD><select name="call_logs<?ssi line?>" <?ssi disabled call_logs$l?>size="1" <?ssi tabindex?>>
+       <option value="local"<?ssi selected call_logs$l local?>><?lng line_ssi_local?></option>
+       <option value="server"<?ssi selected call_logs$l server?>><?lng line_ssi_server?></option>
+      </select><?ssi help call_logs?>
+      <TR><TD></TD><TD>&nbsp;</TD></TR>
+      <TR><TD></TD>
+        <?ssi skipon VTECH?>
+        <TD><B>
+        <?ssi skipoff VTECH?>
+        <?ssi skipon SNOM?>
+        <TD class="titleText">
+        <?ssi skipoff SNOM?>
+        <?lng line_tbook_download?></B>
+        </TD>
+      </TR>
+      <TR><TD></TD><TD><?ssi input line_tbook_download_interval tbook_download_interval$l?></TD></TR>
+      <TR><TD></TD><TD><?ssi input line_server_directories_download tbook_download_directories$l?></TD></TR>
+      <TR><TD></TD><TD>&nbsp;</TD></TR>
+      <TR><TD></TD>
+        <?ssi skipon VTECH?>
+        <TD><B>
+        <?ssi skipoff VTECH?>
+        <?ssi skipon SNOM?>
+        <TD class="titleText">
+        <?ssi skipoff SNOM?>
+        <?lng line_broadsoft_features?></B>
+        </TD>
+      </TR>
+      <TR><TD></TD><TD><?ssi input line_xsi_server xsi_server$l?></TD></TR>
+      <TR><TD></TD><TD><?ssi input line_xsi_user xsi_auth_user$l?></TD></TR>
+      <TR><TD></TD><TD><?ssi inpass line_xsi_password xsi_auth_pass$l?></TD></TR>
+      <TR><TD></TD><TD><?ssi input line_xsi_retry_timer xsi_retry_timer$l?></TD></TR>
+      <TR><TD></TD><?ssi radio line_xsi_events xsi_events$l advanced_ssi_on advanced_ssi_off?></TR>
+      <TR><TD></TD><TD><?ssi input line_xsi_polling xsi_polling_interval$l?></TD></TR>
+      <TR><TD></TD><TD><?ssi input line_xsi_conf_updating xsi_conf_timer$l?></TD></TR>
+      <TR><TD></TD><TD><?ssi input line_server_directories_search server_directories$l?></TD></TR>
+      <TR><TD></TD><TD><?ssi input callpark_park_fac callpark_park_fac$l?></TD></TR>
+      <TR><TD></TD><TD><?ssi input line_blf_park_pick_up_code blf_park_pick_up$l?></TD></TR>
+      <TR><TD></TD><TD><?ssi input line_blf_directed_call_pickup_code blf_directed_call_pickup$l?></TD></TR>
+      <TR><TD></TD><?ssi radio line_xsi_anywhere xsi_anywhere$l advanced_ssi_on advanced_ssi_off?></TR>
+      <TR><TD></TD><?ssi radio line_xsi_visual_voicemail xsi_visual_voicemail$l advanced_ssi_on advanced_ssi_off?></TR>
+      <TR><TD></TD><?ssi radio line_xsi_callcenter_list xsi_callcenter_list$l advanced_ssi_on advanced_ssi_off?></TR>
+      <TR><TD></TD><?ssi radio caller_id_blocking xsi_caller_id_blocking$l advanced_ssi_on advanced_ssi_off?></TR>
+      <TR><TD></TD><?ssi radio line_xsi_simultaneous_ring xsi_simultaneous_ring$l advanced_ssi_on advanced_ssi_off?></TR>
+      <TR><TD></TD><?ssi radio line_xsi_remote_office xsi_remote_office$l advanced_ssi_on advanced_ssi_off?></TR>
+      <TR><TD></TD><?ssi radio silent_alerting xsi_silent_alert$l advanced_ssi_on advanced_ssi_off?></TR>
+      <TR><TD></TD><?ssi radio hoteling hoteling$l advanced_ssi_on advanced_ssi_off?></TR>
+      <TR><TD></TD><?ssi radio callpark_notify callpark_notify$l advanced_ssi_on advanced_ssi_off?></TR>
+      <TR><TD></TD><?ssi radio line_xsi_directoryfullsearch xsi_directory_fullsearch$l advanced_ssi_on advanced_ssi_off?></TR>
+      <?ssi skipon NO_FEATURE_XMPP?>
+      <TR><TD></TD><TD><?ssi input line_xmpp_jid xmpp_jid$l?></TD></TR>
+      <TR><TD></TD><TD><?ssi inpass line_xmpp_password xmpp_password$l?></TD></TR>
+      <TR><TD></TD><?ssi radio line_xmpp_display_profile_image xmpp_display_profile_image$l advanced_ssi_on advanced_ssi_off?></TR>
+      <?ssi skipoff NO_FEATURE_XMPP?>
+      <TR><TD></TD><TD>&nbsp;</TD></TR>
+      <TR><TD></TD>
+        <?ssi skipon VTECH?>
+        <TD><B>
+        <?ssi skipoff VTECH?>
+        <?ssi skipon SNOM?>
+        <TD class="titleText">
+        <?ssi skipoff SNOM?>
+        <?lng line_msw_services?></B>
+        </TD>
+      </TR>
+      <TR><TD></TD><TD><?ssi input line_msw_web_url msw_web_url$l?></TD></TR>
+      <TR><TD></TD><TD><?ssi input line_msw_directory_number msw_directory_number$l?></TD></TR>
+      <TR><TD></TD><TD><?ssi inpass line_msw_password msw_password$l?></TD></TR>
+      <TR><TD></TD><TD>&nbsp;</TD></TR>
+      <TR><TD></TD>
+        <?ssi skipon VTECH?>
+        <TD><B>
+        <?ssi skipoff VTECH?>
+        <?ssi skipon SNOM?>
+        <TD class="titleText">
+        <?ssi skipoff SNOM?>
+        <?lng preferences_general?></B>
+        </TD>
+      </TR>
+      <?ssi skipon MONOCHROME_BDF?>
+      <TR><TD></TD><TD><?ssi input line_ssi_xml_screen_url user_xml_screen_url$l?></TD></TR>
+      <?ssi skipoff MONOCHROME_BDF?>
+      <TR><TD/><?ssi radio advanced_ssi_disconnectonhook conf_hangup$l advanced_ssi_on advanced_ssi_off?></TR>
+      <TR><TD></TD><?ssi radio line_ssi_record_missed_calls record_missed_calls$l advanced_ssi_on advanced_ssi_off?></TR>
+      <TR><TD></TD><?ssi radio line_ssi_record_dialed_calls record_dialed_calls$l advanced_ssi_on advanced_ssi_off?></TR>
+      <TR><TD></TD><?ssi radio line_ssi_record_received_calls record_received_calls$l advanced_ssi_on advanced_ssi_off?></TR>
+      <TR><TD></TD><TD>&nbsp;</TD></TR>
+      <TR><TD></TD>
+        <?ssi skipon VTECH?>
+        <TD><B>
+        <?ssi skipoff VTECH?>
+        <?ssi skipon SNOM?>
+        <TD class="titleText">
+        <?ssi skipoff SNOM?>
+        <?lng prefs_privacysetting?></B>
+        </TD>
+      </TR>
+      <TR><TD><?ssi radio prefs_ssi_privclir privacy_in$l prefs_reject prefs_accept?></TD></TR>
+      <TR><TD><?ssi radio prefs_ssi_privclip privacy_out$l prefs_hide prefs_show?></TD></TR>
+      <TR><TD></TD><TD>&nbsp;</TD></TR>
+      <TR>
+        <TD></TD>
+        <TD>
+          <input type="hidden" value="<?lng apply_button?>" name="Settings">
+          <!--Hidden input is used to allow onchange event to apply settings automatically-->
+          <input type="submit" value="<?lng apply_button?>" name="Settings" <?ssi tabindex?> >
+        </TD>
+      </TR>
+      <TR>
+        <TD class="background" vAlign="bottom" align="left" width="12" height="5">
+          <?ssi skipon VTECH?>
+          <IMG height="12" src=<?ssi img-corner-gif ll?> width="12">
+          <?ssi skipoff VTECH?>
+        </TD>
+        <TD width="12" height="5"><IMG height="5" src="img/clr.gif" width="12"></TD>
+        <TD width="12" height="5"><IMG height="5" src="img/clr.gif" width="12"></TD>
+        <TD class="background" vAlign="bottom" align="right" width="12" height="5">
+          <?ssi skipon VTECH?>
+          <IMG height="12" src=<?ssi img-corner-gif lr?> width="12">
+          <?ssi skipoff VTECH?>
+        </TD>
+      </TR>
+    </TBODY>
+    </TABLE>
+    </FORM>
+  </TD>
+</TR>
+<script type="text/javascript" src="fox.js" charset="utf-8"></script>
+<?ssi file common9.htm?></HTML>

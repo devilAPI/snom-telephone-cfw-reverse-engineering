@@ -1,8 +1,11 @@
-# snom v10 firmware image format
+# snom v10 .bin firmware format (D1xx / D3xx / D7xx)
 
-This applies to the snom v10 D1xx/D3xx/D7xx/D8xx line. Both `tools/fw-unpack.sh`
+This applies to the snom v10 D1xx/D3xx/D7xx line. Both `tools/fw-unpack.sh`
 and `tools/build-custom-firmware.sh` implement it. It mirrors what the phone's
 `verifySoftwareUpdateFile()` does.
+
+> For the D8xx `.swu` format (SWUpdate), see
+> [firmware-format-swu.md](firmware-format-swu.md).
 
 Sources: the [encrypted.at D785 write-up](https://www.encrypted.at/remote-root-shell-on-a-snom-d785-voip-phone-using-openvpn-configuration-files/)
 and forum.coredump.ch/t/235. Confirmed working on the D375 by round-tripping

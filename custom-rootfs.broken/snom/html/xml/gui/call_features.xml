@@ -1,0 +1,516 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<IPPhoneMenu state="others_except_mb" dtmf="off" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../schemas/minibrowser.xsd" document_id="call_features">
+  <Title>$(lang:call_features_settings)</Title>
+  <If condition="$(bool_eval:$(condition:!$(var:dfks)) &amp; $(condition:$(set:user_server_type[$(current_line)])==broadsoft) &amp; $(condition:$(set:dfks[$(current_line)])))">
+    <If condition="$(show_feature:FEATURE_PUI_STYLE_SIO)">
+      <MenuItem name="$(lang:redirect_settings)"></MenuItem>
+      <SubText>$(lang:dfks_failed)</SubText>
+    </If>
+    <Else>
+      <MenuItem name="$(lang:redirect_settings) $(lang:dfks_failed)"></MenuItem>
+    </Else>
+  </If>
+  <Else>
+    <Menu name="$(lang:redirect_settings)" id="redirect">
+      <Menu name="$(lang:redirect_all)" id="redirect_all">
+        <MenuItem>
+          <If condition="$(show_feature:FEATURE_PUI_STYLE_SIO)">
+            <Name>$(lang:do_redirect)</Name>
+            <SubText>$(yes_no:$(set:fwd_all_enabled[$(current_line)]))</SubText>
+          </If>
+          <Else>
+            <Name>$(lang:reg_activate)</Name>
+          </Else>
+          <If condition="$(bool_eval:$(set:fwd_all_enabled[$(current_line)]))">
+            <Url>phone://mb_nop#toggleset:fwd_all_enabled[$(current_line)]</Url>
+          </If>
+          <Else>
+            <If condition="$(bool_eval:$(set:fwd_all_target[$(current_line)]))">
+              <Url>phone://mb_nop#toggleset:fwd_all_enabled[$(current_line)]</Url>
+            </If>
+            <Else>
+              <Url>file:///xml/gui/templates.xml#sub=*[@id="input_template"]&amp;var:input_pool_key=1&amp;var:input_displayname=$(lang:menu_red_target)&amp;var:input_token=__Y__&amp;var:input_required=yes&amp;var:input_flags=e&amp;var:input_default=$(set:fwd_all_target[$(current_line)])&amp;var:input_url=$(urlencode:"phone://mb_nop%23go_back%26set:fwd_all_target[$(current_line)]=__Y__%26toggleset:fwd_all_enabled[$(current_line)]%26var:input_required=")</Url>
+            </Else>
+          </Else>
+          <If condition="$(bool_eval:$(set:fwd_all_enabled[$(current_line)]))">
+            <ExtraIconType>$(icon_type_enum:kIconTypeMenuSliderOn)</ExtraIconType>
+          </If>
+          <Else>
+            <ExtraIconType>$(icon_type_enum:kIconTypeMenuSliderOff)</ExtraIconType>
+          </Else>
+        </MenuItem>
+        <If condition="$(set:fwd_all_enabled[$(current_line)])">
+          <MenuItem name="$(lang:menu_red_target)">
+            <If condition="$(show_feature:FEATURE_PUI_STYLE_SIO)">
+              <SubText>$(set:fwd_all_target[$(current_line)])</SubText>
+            </If>
+            <Url>file:///xml/gui/templates.xml#sub=*[@id="input_template"]&amp;var:input_pool_key=1&amp;var:input_displayname=$(lang:menu_red_target)&amp;var:input_token=__Y__&amp;var:input_required=yes&amp;var:input_flags=e&amp;var:input_default=$(set:fwd_all_target[$(current_line)])&amp;var:input_url=$(urlencode:"phone://mb_nop%23go_back%26set:fwd_all_target[$(current_line)]=__Y__%26var:input_required=")</Url>
+            <ExtraIconType>$(icon_type_enum:kIconTypeMenuArrowRight)</ExtraIconType>
+          </MenuItem>
+        </If>
+      </Menu>
+      <Menu name="$(lang:redirect_busy)" id="redirect_busy">
+        <MenuItem>
+          <If condition="$(show_feature:FEATURE_PUI_STYLE_SIO)">
+            <Name>$(lang:do_redirect)</Name>
+            <SubText>$(yes_no:$(set:fwd_busy_enabled[$(current_line)]))</SubText>
+          </If>
+          <Else>
+            <Name>$(lang:reg_activate)</Name>
+          </Else>
+          <If condition="$(bool_eval:$(set:fwd_busy_enabled[$(current_line)]))">
+            <Url>phone://mb_nop#toggleset:fwd_busy_enabled[$(current_line)]</Url>
+          </If>
+          <Else>
+            <If condition="$(bool_eval:$(set:fwd_busy_target[$(current_line)]))">
+              <Url>phone://mb_nop#toggleset:fwd_busy_enabled[$(current_line)]</Url>
+            </If>
+            <Else>
+              <Url>file:///xml/gui/templates.xml#sub=*[@id="input_template"]&amp;var:input_pool_key=1&amp;var:input_displayname=$(lang:menu_red_target)&amp;var:input_token=__Y__&amp;var:input_required=yes&amp;var:input_flags=e&amp;var:input_default=$(set:fwd_busy_target[$(current_line)])&amp;var:input_url=$(urlencode:"phone://mb_nop%23go_back%26set:fwd_busy_target[$(current_line)]=__Y__%26toggleset:fwd_busy_enabled[$(current_line)]%26var:input_required=")</Url>
+            </Else>
+          </Else>
+          <If condition="$(bool_eval:$(set:fwd_busy_enabled[$(current_line)]))">
+            <ExtraIconType>$(icon_type_enum:kIconTypeMenuSliderOn)</ExtraIconType>
+          </If>
+          <Else>
+            <ExtraIconType>$(icon_type_enum:kIconTypeMenuSliderOff)</ExtraIconType>
+          </Else>
+        </MenuItem>
+        <If condition="$(set:fwd_busy_enabled[$(current_line)])">
+          <MenuItem name="$(lang:menu_red_target)">
+            <If condition="$(show_feature:FEATURE_PUI_STYLE_SIO)">
+              <SubText>$(set:fwd_busy_target[$(current_line)])</SubText>
+            </If>
+            <Url>file:///xml/gui/templates.xml#sub=*[@id="input_template"]&amp;var:input_pool_key=1&amp;var:input_displayname=$(lang:menu_red_target)&amp;var:input_token=__Y__&amp;var:input_required=yes&amp;var:input_flags=e&amp;var:input_default=$(set:fwd_busy_target[$(current_line)])&amp;var:input_url=$(urlencode:"phone://mb_nop%23go_back%26set:fwd_busy_target[$(current_line)]=__Y__%26var:input_required=")</Url>
+            <ExtraIconType>$(icon_type_enum:kIconTypeMenuArrowRight)</ExtraIconType>
+          </MenuItem>
+        </If>
+      </Menu>
+      <Menu name="$(lang:redirect_time)" id="redirect_time">
+        <MenuItem>
+          <If condition="$(show_feature:FEATURE_PUI_STYLE_SIO)">
+            <Name>$(lang:do_redirect)</Name>
+            <SubText>$(yes_no:$(set:fwd_time_enabled[$(current_line)]))</SubText>
+          </If>
+          <Else>
+            <Name>$(lang:reg_activate)</Name>
+          </Else>
+          <If condition="$(bool_eval:$(set:fwd_time_enabled[$(current_line)]))">
+            <Url>phone://mb_nop#toggleset:fwd_time_enabled[$(current_line)]</Url>
+          </If>
+          <Else>
+            <If condition="$(bool_eval:$(set:fwd_time_target[$(current_line)]))">
+              <Url>phone://mb_nop#toggleset:fwd_time_enabled[$(current_line)]</Url>
+            </If>
+            <Else>
+              <Url>file:///xml/gui/templates.xml#sub=*[@id="input_template"]&amp;var:input_pool_key=1&amp;var:input_displayname=$(lang:menu_red_target)&amp;var:input_token=__Y__&amp;var:input_required=yes&amp;var:input_flags=e&amp;var:input_default=$(set:fwd_time_target[$(current_line)])&amp;var:input_url=$(urlencode:"phone://mb_nop%23go_back%26set:fwd_time_target[$(current_line)]=__Y__%26toggleset:fwd_time_enabled[$(current_line)]%26var:input_required=")</Url>
+            </Else>
+          </Else>
+          <If condition="$(bool_eval:$(set:fwd_time_enabled[$(current_line)]))">
+            <ExtraIconType>$(icon_type_enum:kIconTypeMenuSliderOn)</ExtraIconType>
+          </If>
+          <Else>
+            <ExtraIconType>$(icon_type_enum:kIconTypeMenuSliderOff)</ExtraIconType>
+          </Else>
+        </MenuItem>
+        <If condition="$(set:fwd_time_enabled[$(current_line)])">
+          <MenuItem name="$(lang:menu_red_target)">
+            <If condition="$(show_feature:FEATURE_PUI_STYLE_SIO)">
+              <SubText>$(set:fwd_time_target[$(current_line)])</SubText>
+            </If>
+            <Url>file:///xml/gui/templates.xml#sub=*[@id="input_template"]&amp;var:input_pool_key=1&amp;var:input_displayname=$(lang:menu_red_target)&amp;var:input_token=__Y__&amp;var:input_required=yes&amp;var:input_flags=e&amp;var:input_default=$(set:fwd_time_target[$(current_line)])&amp;var:input_url=$(urlencode:"phone://mb_nop%23go_back%26set:fwd_time_target[$(current_line)]=__Y__%26var:input_required=")</Url>
+            <ExtraIconType>$(icon_type_enum:kIconTypeMenuArrowRight)</ExtraIconType>
+          </MenuItem>
+          <MenuItem name="$(lang:waitTime)">
+            <If condition="$(show_feature:FEATURE_PUI_STYLE_SIO)">
+              <SubText>$(set:fwd_time_secs[$(current_line)])$(lang:time_symbol_second)</SubText>
+            </If>
+            <Url>file:///xml/gui/templates.xml#sub=*[@id="input_template"]&amp;var:input_pool_key=1&amp;var:input_displayname=$(lang:waitTime)&amp;var:input_token=__Y__&amp;var:input_required=yes&amp;var:input_flags=e&amp;var:input_default=$(set:fwd_time_secs[$(current_line)])&amp;var:input_url=$(urlencode:"phone://mb_nop%23go_back%26set:fwd_time_secs[$(current_line)]=__Y__%26var:input_required=")</Url>
+            <ExtraIconType>$(icon_type_enum:kIconTypeMenuArrowRight)</ExtraIconType>
+          </MenuItem>
+        </If>
+      </Menu>
+    </Menu>
+  </Else>
+  <Menu name="$(lang:outgoing_calls_settings)" id="outgoing_calls">
+    <If condition="$(bool_eval:$(condition:$(set:user_server_type)==broadsoft) &amp;
+    $(condition:$(is_set:$(set:xsi_server))) &amp; $(condition:$(set:xsi_caller_id_blocking)))">
+      <Url>file://xml/gui/call_features.xml#action_ifc:identity.$(set:active_line).server_settings_xsi=initialize_line_id_blocking&amp;menu=/IPPhoneMenu/Menu[@id="outgoing_calls"]</Url>
+    </If>
+    <If condition="$(set:admin_mode)">
+      <Menu name="$(lang:auto_dial)">
+        <MenuItem name="$(lang:auto_dial)">
+          <If condition="$(bool_eval:$(condition:$(set:auto_dial)!=off))">
+            <ExtraIconType>$(icon_type_enum:kIconTypeMenuSliderOn)</ExtraIconType>
+          </If>
+          <Else>
+            <ExtraIconType>$(icon_type_enum:kIconTypeMenuSliderOff)</ExtraIconType>
+          </Else>
+          <If condition="$(set:auto_dial)">
+            <Url>phone://mb_nop#var:last_auto_dial=$(set:auto_dial)&amp;set:auto_dial=off</Url>
+            <If condition="$(show_feature:FEATURE_PUI_STYLE_SIO)">
+              <SubText>$(lang:on)</SubText>
+            </If>
+          </If>
+          <Else>
+            <If condition="$(show_feature:FEATURE_PUI_STYLE_SIO)">
+              <SubText>$(lang:$(set:auto_dial))</SubText>
+            </If>
+            <If condition="$(is_set:$(var:last_auto_dial))">
+              <Url>phone://mb_nop#set:auto_dial=$(var:last_auto_dial)</Url>
+            </If>
+            <Else>
+              <Url>phone://mb_nop#set:auto_dial=5</Url>
+            </Else>
+          </Else>
+        </MenuItem>
+        <If condition="$(set:auto_dial)">
+          <MenuItem name="$(lang:menu_red_target)" id="auto_dial_target">
+            <If condition="$(show_feature:FEATURE_PUI_STYLE_SIO)">
+              <SubText>$(set:auto_dial_target)</SubText>
+            </If>
+            <ExtraIconType>$(icon_type_enum:kIconTypeMenuArrowRight)</ExtraIconType>
+            <Url>file:///xml/gui/templates.xml#sub=*[@id="input_template"]&amp;var:input_pool_key=1&amp;var:input_displayname=$(lang:menu_red_target)&amp;var:input_token=__Y__&amp;var:input_flags=e&amp;var:input_default=$(set:auto_dial_target)&amp;var:input_url=$(urlencode:"phone://mb_nop%23go_back%26set:auto_dial_target=__Y__")</Url>
+          </MenuItem>
+        </If>
+        <If condition="$(set:auto_dial)">
+          <MenuItem name="$(lang:menu_tser_timer)">
+            <If condition="$(show_feature:FEATURE_PUI_STYLE_SIO)">
+              <SubText>$(set:auto_dial)$(lang:time_symbol_second)</SubText>
+            </If>
+            <ExtraIconType>$(icon_type_enum:kIconTypeMenuArrowRight)</ExtraIconType>
+            <Url>file:///xml/gui/templates.xml#sub=*[@id="input_template"]&amp;var:input_pool_key=0&amp;var:input_displayname=$(lang:menu_tser_timer)&amp;var:input_token=__Y__&amp;var:input_flags=e&amp;var:input_default=$(set:auto_dial)&amp;var:input_url=$(urlencode:"phone://mb_nop%23go_back%26set:auto_dial=__Y__")</Url>
+          </MenuItem>
+        </If>
+      </Menu>
+    </If>
+    <Menu name="$(lang:auto_busy_redial)">
+      <MenuItem name="$(lang:auto_busy_redial)">
+        <If condition="$(show_feature:FEATURE_PUI_STYLE_SIO)">
+          <SubText>$(on_off:$(set:auto_redial))</SubText>
+        </If>
+        <If condition="$(bool_eval:$(set:auto_redial))">
+          <ExtraIconType>$(icon_type_enum:kIconTypeMenuSliderOn)</ExtraIconType>
+        </If>
+        <Else>
+          <ExtraIconType>$(icon_type_enum:kIconTypeMenuSliderOff)</ExtraIconType>
+        </Else>
+        <Url>phone://mb_nop#toggleset:auto_redial</Url>
+      </MenuItem>
+      <If condition="$(set:auto_redial)">
+        <MenuItem name="$(lang:menu_tser_timer)">
+          <If condition="$(show_feature:FEATURE_PUI_STYLE_SIO)">
+            <SubText>$(set:auto_redial_value)$(lang:time_symbol_second)</SubText>
+          </If>
+          <ExtraIconType>$(icon_type_enum:kIconTypeMenuArrowRight)</ExtraIconType>
+          <Url>file:///xml/gui/templates.xml#sub=*[@id="input_template"]&amp;var:input_pool_key=0&amp;var:input_displayname=$(lang:menu_tser_timer)&amp;var:input_token=__Y__&amp;var:input_flags=e&amp;var:input_default=$(set:auto_redial_value)&amp;var:input_url=$(urlencode:"phone://mb_nop%23go_back%26set:auto_redial_value=__Y__")</Url>
+        </MenuItem>
+      </If>
+    </Menu>
+    <MenuItem id="call_completion" name="$(lang:call_completion)">
+      <If condition="$(show_feature:FEATURE_PUI_STYLE_SIO)">
+        <SubText>$(on_off:$(set:call_completion))</SubText>
+      </If>
+      <If condition="$(bool_eval:$(set:call_completion))">
+        <ExtraIconType>$(icon_type_enum:kIconTypeMenuSliderOn)</ExtraIconType>
+      </If>
+      <Else>
+        <ExtraIconType>$(icon_type_enum:kIconTypeMenuSliderOff)</ExtraIconType>
+      </Else>
+      <Url>phone://mb_nop#toggleset:call_completion</Url>
+    </MenuItem>
+    <MenuItem id="hide_number">
+      <If condition="$(bool_eval:$(condition:$(set:user_server_type)==broadsoft) &amp;
+       $(condition:$(is_set:$(set:xsi_server))) &amp; $(condition:$(set:xsi_caller_id_blocking)))">
+        <!-- Managed by xsi -->
+        <Name>$(lang:caller_id_blocking)</Name>
+        <If condition="$(show_feature:FEATURE_PUI_STYLE_SIO)">
+          <SubText>$(yes_no:$(condition:$(var_ifc:identity.$(current_line).server_settings_xsi::line_id_blocking)==enabled))</SubText>
+        </If>
+        <If condition="$(bool_eval:$(condition:$(var_ifc:identity.$(current_line).server_settings_xsi::line_id_blocking)==enabled))">
+          <ExtraIconType>$(icon_type_enum:kIconTypeMenuSliderOn)</ExtraIconType>
+        </If>
+        <Else>
+          <ExtraIconType>$(icon_type_enum:kIconTypeMenuSliderOff)</ExtraIconType>
+        </Else>
+        <Url>phone://mb_nop_ignore_prev_frags#action_ifc:identity.$(current_line).server_settings_xsi=line_id_blocking</Url>
+      </If>
+      <Else>
+        <!-- Managed locally -->
+        <Name>$(lang:privacy_out)</Name>
+        <If condition="$(show_feature:FEATURE_PUI_STYLE_SIO)">
+          <SubText>$(yes_no:$(set:privacy_out))</SubText>
+        </If>
+        <If condition="$(bool_eval:$(set:privacy_out))">
+          <ExtraIconType>$(icon_type_enum:kIconTypeMenuSliderOn)</ExtraIconType>
+        </If>
+        <Else>
+          <ExtraIconType>$(icon_type_enum:kIconTypeMenuSliderOff)</ExtraIconType>
+        </Else>
+        <Url>phone://mb_nop#toggleset:privacy_out[$(current_line)]</Url>
+      </Else>
+    </MenuItem>
+  </Menu>
+  <Menu name="$(lang:incoming_calls_settings)" id="incoming_calls">
+    <If condition="$(set:xsi_silent_alert)==on">
+      <Url>file://xml/gui/call_features.xml#action_ifc:identity.$(set:active_line).server_settings_xsi=initialize_line_silent_alerting&amp;menu=/IPPhoneMenu/Menu[@id="incoming_calls"]</Url>
+    </If>
+    <Menu name="$(lang:call_waiting)">
+      <MenuItem name="$(lang:call_waiting)">
+        <If condition="$(show_feature:FEATURE_PUI_STYLE_SIO)">
+          <SubText>$(lang:$(set:call_waiting[$(current_line)]))</SubText>
+        </If>
+        <If condition="$(bool_eval:$(condition:$(set:call_waiting[$(current_line)])!=off))">
+          <ExtraIconType>$(icon_type_enum:kIconTypeMenuSliderOn)</ExtraIconType>
+        </If>
+        <Else>
+          <ExtraIconType>$(icon_type_enum:kIconTypeMenuSliderOff)</ExtraIconType>
+        </Else>
+        <If condition="$(set:call_waiting[$(current_line)])==off">
+          <If condition="$(is_set:$(var:last_call_waiting))">
+            <Url>phone://mb_nop#set:call_waiting[$(current_line)]=$(var:last_call_waiting)</Url>
+          </If>
+          <Else>
+            <Url>phone://mb_nop#set:call_waiting[$(current_line)]=on</Url>
+          </Else>
+        </If>
+        <Else>
+          <If condition="$(show_feature:FEATURE_PUI_STYLE_SIO)">
+            <SubText>$(lang:on)</SubText>
+          </If>
+          <Url>phone://mb_nop#var:last_call_waiting=$(set:call_waiting[$(current_line)])&amp;set:call_waiting[$(current_line)]=off</Url>
+        </Else>
+      </MenuItem>
+      <If condition="!$(set:call_waiting[$(current_line)])==off">
+        <Menu name="$(lang:indicator)">
+          <If condition="$(show_feature:FEATURE_PUI_STYLE_SIO)">
+            <If condition="$(set:call_waiting[$(current_line)])==on">
+              <SubText>$(lang:enum_disp_cw_visual_short) &amp; $(lang:enum_disp_cw_ringer)</SubText>
+            </If>
+            <Elif condition="$(set:call_waiting[$(current_line)])==visual">
+              <SubText>$(lang:enum_disp_cw_visual)</SubText>
+            </Elif>
+            <Elif condition="$(set:call_waiting[$(current_line)])==ringer">
+              <SubText>$(lang:enum_disp_cw_ringer)</SubText>
+            </Elif>
+          </If>
+          <MenuItem name="$(lang:enum_disp_cw_visual_short) &amp; $(lang:enum_disp_cw_ringer)" sel="$(condition:$(set:call_waiting[$(current_line)])==on)">
+            <Url>phone://mb_nop#go_back&amp;set:call_waiting[$(current_line)]=on</Url>
+            <If condition="$(set:call_waiting[$(current_line)])==on">
+              <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOn)</ExtraIconType>
+            </If>
+            <Else>
+              <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOff)</ExtraIconType>
+            </Else>
+          </MenuItem>
+          <MenuItem name="$(lang:enum_disp_cw_visual)" sel="$(condition:$(set:call_waiting[$(current_line)])==visual)">
+            <Url>phone://mb_nop#go_back&amp;set:call_waiting[$(current_line)]=visual</Url>
+            <If condition="$(set:call_waiting[$(current_line)])==visual">
+              <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOn)</ExtraIconType>
+            </If>
+            <Else>
+              <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOff)</ExtraIconType>
+            </Else>
+          </MenuItem>
+          <MenuItem name="$(lang:enum_disp_cw_ringer)" sel="$(condition:$(set:call_waiting[$(current_line)])==ringer)">
+            <Url>phone://mb_nop#go_back&amp;set:call_waiting[$(current_line)]=ringer</Url>
+            <If condition="$(set:call_waiting[$(current_line)])==ringer">
+              <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOn)</ExtraIconType>
+            </If>
+            <Else>
+              <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOff)</ExtraIconType>
+            </Else>
+          </MenuItem>
+        </Menu>
+      </If>
+    </Menu>
+    <Menu name="$(lang:linetype_auto_answer)">
+      <If condition="$(set:admin_mode)">
+        <MenuItem id="user_auto_connect" name="$(lang:linetype_auto_answer)">
+          <If condition="$(show_feature:FEATURE_PUI_STYLE_SIO)">
+            <SubText>$(yes_no:$(set:user_auto_connect))</SubText>
+          </If>
+          <If condition="$(bool_eval:$(set:user_auto_connect[$(current_line)]))">
+            <ExtraIconType>$(icon_type_enum:kIconTypeMenuSliderOn)</ExtraIconType>
+          </If>
+          <Else>
+            <ExtraIconType>$(icon_type_enum:kIconTypeMenuSliderOff)</ExtraIconType>
+          </Else>
+          <Url>phone://mb_nop#toggleset:user_auto_connect[$(current_line)]</Url>
+        </MenuItem>
+      </If>
+      <MenuItem id="auto_connect_indication" name="$(lang:auto_connect_indication)">
+        <If condition="$(show_feature:FEATURE_PUI_STYLE_SIO)">
+          <SubText>$(yes_no:$(set:auto_connect_indication))</SubText>
+        </If>
+        <If condition="$(bool_eval:$(set:auto_connect_indication))">
+          <ExtraIconType>$(icon_type_enum:kIconTypeMenuSliderOn)</ExtraIconType>
+        </If>
+        <Else>
+          <ExtraIconType>$(icon_type_enum:kIconTypeMenuSliderOff)</ExtraIconType>
+        </Else>
+        <Url>phone://mb_nop#toggleset:auto_connect_indication</Url>
+      </MenuItem>
+    </Menu>
+    <MenuItem id="privacy_in" name="$(lang:privacy_in)">
+      <If condition="$(show_feature:FEATURE_PUI_STYLE_SIO)">
+        <SubText>$(yes_no:$(set:privacy_in))</SubText>
+      </If>
+      <If condition="$(bool_eval:$(set:privacy_in))">
+        <ExtraIconType>$(icon_type_enum:kIconTypeMenuSliderOn)</ExtraIconType>
+      </If>
+      <Else>
+        <ExtraIconType>$(icon_type_enum:kIconTypeMenuSliderOff)</ExtraIconType>
+      </Else>
+      <Url>phone://mb_nop#toggleset:privacy_in</Url>
+    </MenuItem>
+    <If condition="$(var_ifc:identity.$(set:active_line).server_settings_xsi::line_silent_alerting_feature)==enabled">
+      <MenuItem id="silent_alert" name="$(lang:xsi_silent_alert)">
+        <If condition="$(show_feature:FEATURE_PUI_STYLE_SIO)">
+          <SubText>$(yes_no:$(condition:$(var_ifc:identity.$(set:active_line).server_settings_xsi::line_silent_alerting)==enabled))</SubText>
+        </If>
+        <If condition="$(bool_eval:$(condition:$(var_ifc:identity.$(set:active_line).server_settings_xsi::line_silent_alerting)==enabled))">
+          <ExtraIconType>$(icon_type_enum:kIconTypeMenuSliderOn)</ExtraIconType>
+        </If>
+        <Else>
+          <ExtraIconType>$(icon_type_enum:kIconTypeMenuSliderOff)</ExtraIconType>
+        </Else>
+        <Url>phone://mb_nop_ignore_prev_frags#action_ifc:identity.$(set:active_line).server_settings_xsi=line_silent_alerting</Url>
+      </MenuItem>
+    </If>
+    <If condition="$(set:user_server_type[$(current_line)])!=broadsoft">
+      <MenuItem id="silent_mode" name="$(lang:F_RINGER_SILENT_typeSio)">
+        <If condition="$(show_feature:FEATURE_PUI_STYLE_SIO)">
+          <SubText>$(on_off:$(silent_mode_on_off))</SubText>
+        </If>
+        <If condition="$(bool_eval:$(silent_mode_on_off))">
+          <ExtraIconType>$(icon_type_enum:kIconTypeMenuSliderOn)</ExtraIconType>
+        </If>
+        <Else>
+          <ExtraIconType>$(icon_type_enum:kIconTypeMenuSliderOff)</ExtraIconType>
+        </Else>
+        <Url>phone://mb_nop_ignore_prev_frags#silent_mode</Url>
+      </MenuItem>
+    </If>
+    <MenuItem name="$(lang:contact_state_dnd)">
+      <If condition="$(show_feature:FEATURE_PUI_STYLE_SIO)">
+        <SubText>$(lang:$(set:dnd_mode[$(current_line)]))</SubText>
+      </If>
+      <If condition="$(bool_eval:$(set:dnd_mode[$(current_line)]))">
+        <ExtraIconType>$(icon_type_enum:kIconTypeMenuSliderOn)</ExtraIconType>
+      </If>
+      <Else>
+        <ExtraIconType>$(icon_type_enum:kIconTypeMenuSliderOff)</ExtraIconType>
+      </Else>
+      <Url>phone://mb_nop#toggleset:dnd_mode[$(current_line)]</Url>
+    </MenuItem>
+  </Menu>
+  <If condition="$(set:user_server_type[$(current_line)])==broadsoft">
+    <Menu name="$(lang:title_conferences)" id="conferences">
+      <ExtraIconType>$(icon_type_enum:kIconTypeMenuArrowRight)</ExtraIconType>
+      <Url>file:///xml/gui/broadsoft_conferences.xml#action_ifc:identity.$(set:active_line).appointments=get_conferences&amp;action_ifc:identity.$(set:active_line).collaborate=number_of_rooms</Url>
+    </Menu>
+  </If>
+  <If condition="$(set:user_server_type[$(current_line)])==broadsoft">
+    <If condition="$(set:xsi_simultaneous_ring[$(current_line)])==on">
+      <MenuItem name="$(lang:xsi_simul_ring)">
+        <ExtraIconType>$(icon_type_enum:kIconTypeMenuArrowRight)</ExtraIconType>
+        <Url>file:///xml/gui/broadsoft_simul_ring.xml#action_ifc:identity.$(set:active_line).simul_ring=simul_ring_init</Url>
+      </MenuItem>
+    </If>
+  </If>
+  <If condition="$(set:user_server_type[$(current_line)])==broadsoft">
+    <If condition="$(bool_eval:$(condition:$(set:exec_assistant_enable)==on) &amp; $(condition:$(set:exec_assistant_identity)==$(current_line)))">
+      <If condition="$(var_ifc:identity.$(set:active_line).exec_assist::exec_assist_mode)==exec">
+        <MenuItem name="$(lang:xsi_executive)">
+          <ExtraIconType>$(icon_type_enum:kIconTypeMenuArrowRight)</ExtraIconType>
+          <Url>file:///xml/gui/broadsoft_exec.xml#action_ifc:identity.$(set:active_line).exec_assist=exec_init</Url>
+        </MenuItem>
+      </If>
+      <Elif condition="$(var_ifc:identity.$(set:active_line).exec_assist::exec_assist_mode)==assist">
+        <MenuItem name="$(lang:xsi_executive_assistant)">
+          <ExtraIconType>$(icon_type_enum:kIconTypeMenuArrowRight)</ExtraIconType>
+          <Url>file:///xml/gui/broadsoft_exec_assist.xml#action_ifc:identity.$(set:active_line).exec_assist=exec_assist_init</Url>
+        </MenuItem>
+      </Elif>
+    </If>
+  </If>
+  <If condition="$(bool_eval:$(condition:$(set:xsi_anywhere[$(current_line)])==on) &amp; $(condition:$(set:user_server_type[$(current_line)])==broadsoft))">
+    <MenuItem name="$(lang:xsi_anywhere)">
+      <ExtraIconType>$(icon_type_enum:kIconTypeMenuArrowRight)</ExtraIconType>
+      <Url>file:///xml/gui/locations.xml#action_ifc:identity.$(set:active_line).locations=retrieve_locations</Url>
+    </MenuItem>
+  </If>
+  <If condition="$(set:user_server_type[$(current_line)])==broadsoft">
+    <If condition="$(set:xsi_remote_office[$(current_line)])==on">
+      <MenuItem name="$(lang:remote_office)" id="remote_office">
+        <ExtraIconType>$(icon_type_enum:kIconTypeMenuArrowRight)</ExtraIconType>
+        <Url>file:///xml/gui/remote_office_xsi.xml#action_ifc:identity.$(set:active_line).server_settings_xsi=get_remote_office</Url>
+      </MenuItem>
+    </If>
+    <If condition="$(set:xsi_visual_voicemail[$(current_line)])==on">
+      <MenuItem name="$(lang:visual_voicemail)" id="feature_works">
+        <ExtraIconType>$(icon_type_enum:kIconTypeMenuArrowRight)</ExtraIconType>
+        <If condition="$(show_feature:FEATURE_PUI_STYLE_SIO)">
+          <Url>file:///xml/gui/voicemail_inbox_lists_list.xml#action_ifc:identity.$(set:active_line).visual_voicemail=fetch_voicemail&amp;var:voicemail_type=All&amp;var:voicemail_title=list_all</Url>
+        </If>
+        <Else>
+          <Url>file:///xml/gui/voicemail_inbox_lists_list.xml#sub=*[@id="menulisting"]&amp;action_ifc:identity.$(set:active_line).visual_voicemail=fetch_voicemail</Url>
+        </Else>
+      </MenuItem>
+    </If>
+  </If>
+  <Menu name="$(lang:continuous_text_speed_dial)" id="speed_dial">
+    <Repeat values="$(speed_dial_keys)" token="|__KEY__|">
+      <MenuItem name="$(lang:continuous_text_speed_dial) __KEY__" id="speeddialkeys__IDX__">
+        <ExtraIconType>$(icon_type_enum:kIconTypeMenuArrowRight)</ExtraIconType>
+        <If condition="$(show_feature:FEATURE_PUI_STYLE_SIO)">
+          <SubText>$(set:speed[__IDX__])</SubText>
+        </If>
+        <Url>file:///xml/gui/templates.xml#sub=*[@id="input_template"]&amp;var:input_pool_key=1&amp;var:input_displayname=$(lang:continuous_text_speed_dial) __KEY__&amp;var:input_token=__Y__&amp;var:input_flags=e&amp;var:input_default=$(set:speed[__IDX__])&amp;var:input_url=$(urlencode:"phone://mb_nop%23go_back%26set:speed[__IDX__]=__Y__")</Url>
+      </MenuItem>
+    </Repeat>
+  </Menu>
+  <If condition="$(set:user_server_type[$(current_line)])==broadsoft">
+    <MenuItem name="$(lang:call_recording_mode)">
+      <If condition="$(show_feature:FEATURE_PUI_STYLE_SIO)">
+        <SubText>$(var_ifc:CallRecording::mode_text)</SubText>
+      </If>
+      <Else>
+        <Url>file:///xml/gui/templates.xml#sub=*[@id="text_template"]&amp;var:text_translate=no&amp;var:text_content=$(var_ifc:CallRecording::mode_text)&amp;var:text_title=$(lang:call_recording_mode)</Url>
+      </Else>
+    </MenuItem>
+  </If>
+  <If condition="$(var_ifc:CallCenterStatus::count_feature_enabled) > 0">
+  <!-- Call Center Status Menu Item-->
+  <MenuItem name="$(lang:F_CALL_CENTER_STATUS)">
+    <ExtraIconType>$(icon_type_enum:kIconTypeMenuArrowRight)</ExtraIconType>
+    <If condition="$(var_ifc:CallCenterStatus::count_feature_enabled) == 1">
+      <!-- Only 1 identity enables the feature, show the call center status page directly -->
+      <Url>file:///xml/gui/call_center_status.xml#sub=*[@id="call_center_status"]&amp;var:identity=$(var_ifc:CallCenterStatus::get_enabled_identity)</Url>
+    </If>
+    <Else>
+      <!-- If there are several identities enable the feature, display all identities first -->
+      <Url>file:///xml/gui/call_center_status.xml#sub=*[@id="identity_list"]</Url>
+    </Else>
+  </MenuItem>
+  </If>
+  <If condition="$(var_ifc:CallPark::show_parked_calls)==on">
+    <MenuItem name="$(lang:parked_calls_settings)">
+      <ExtraIconType>$(icon_type_enum:kIconTypeMenuArrowRight)</ExtraIconType>
+      <Url>file:///xml/gui/call_park.xml</Url>
+    </MenuItem>
+  </If>
+  <If condition="$(show_feature:FEATURE_USB_RECORD_PLAYBACK) &amp; $(is_usb_mass_storage_connected))">
+    <MenuItem name="$(lang:usb_playback_browse_recordings)">
+      <ExtraIconType>$(icon_type_enum:kIconTypeMenuArrowRight)</ExtraIconType>
+      <Url>file:///xml/gui/call_recordings.xml</Url>
+    </MenuItem>
+  </If>
+  <If condition="$(phone_state)!=Settings">
+    <SoftKeyItem>
+      <Name>CANCEL</Name>
+      <Url track="no">phone://mb_nop#go_back</Url>
+    </SoftKeyItem>
+  </If>
+</IPPhoneMenu>

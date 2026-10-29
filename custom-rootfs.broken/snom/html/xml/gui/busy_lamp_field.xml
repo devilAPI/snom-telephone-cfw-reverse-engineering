@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<IPPhoneMenu state="others_except_mb" dtmf="off" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../schemas/minibrowser.xsd">
+  <If condition="$(show_feature:FEATURE_PUI_STYLE_SIO)">
+    <Title>$(lang:lang_monitored_extensions)</Title>
+  </If>
+  <Else>
+    <Title>$(lang:lang_linetype_blf)</Title>
+  </Else>
+  <Repeat value_key="$(var_ifc:BusyLampField::get_monitored_extensions,$(var:target_identity))" token="|__NAME__|__NUMBER__|__INDEX__|">
+    <If condition="!$(empty:__NAME__)">
+      <MenuItem name="__NAME__" id="__NUMBER__">
+        <If condition="$(show_feature:FEATURE_PUI_STYLE_SIO)">
+          <Subtext>__NUMBER__</Subtext>
+          <ExtraText>$(lang:linetype_key_event_short) __INDEX__</ExtraText>
+        </If>
+        <Url>phone://mb_exit#action_ifc:BusyLampField=handle_selected,contact_number=__NUMBER__</Url>
+      </MenuItem>
+    </If>
+    <Else>
+      <MenuItem name="__NUMBER__" id="__NUMBER__">
+        <If condition="$(show_feature:FEATURE_PUI_STYLE_SIO)">
+          <ExtraText>$(lang:linetype_key_event_short) __INDEX__</ExtraText>
+        </If>
+        <Url>phone://mb_exit#action_ifc:BusyLampField=handle_selected,contact_number=__NUMBER__</Url>
+      </MenuItem>
+    </Else>
+  </Repeat>
+</IPPhoneMenu>

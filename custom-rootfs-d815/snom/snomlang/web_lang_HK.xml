@@ -1,0 +1,1447 @@
+<?xml version="1.0" encoding="utf-8"?>
+<w_phrases>
+	<language t="Traditional Chinese"/>
+	<w_phrase n="wlang_iso_code" t="HK"/>
+	<w_phrase n="wlang_web_language_name" t="Traditional Chinese"/>
+	<w_phrase n="wlang_index_infotext" t="在此網絡界面，您可以輕鬆、準確地設定電話及使用其進階功能。如果需要撥打號碼，請在下面位置輸入號碼。 您可以輸入簡單的電話號碼（例如0114930398330）或URI（例如info@example.com）。"/>
+	<w_phrase n="wlang_index_dialnumber" t="撥打號碼"/>
+	<w_phrase n="wlang_index_dialnumberbutton" t="撥號"/>
+	<w_phrase n="wlang_index_hangupbutton" t="掛斷"/>
+	<w_phrase n="wlang_index_outgoingident" t="外出用戶"/>
+	<w_phrase n="wlang_index_setbutton" t="設定"/>
+	<w_phrase n="wlang_index_dialednumbers" t="已撥號碼"/>
+	<w_phrase n="wlang_index_dialed" t="已撥"/>
+	<w_phrase n="wlang_index_missedcalls" t="未接來電"/>
+	<w_phrase n="wlang_index_missed" t="未接"/>
+	<w_phrase n="wlang_index_rejectedcalls" t="已拒來電"/>
+	<w_phrase n="wlang_index_rejected" t="已拒"/>
+	<w_phrase n="wlang_index_receivedcalls" t="已接來電"/>
+	<w_phrase n="wlang_index_received" t="已接"/>
+	<w_phrase n="wlang_index_date" t="日期"/>
+	<w_phrase n="wlang_index_number" t="號碼"/>
+	<w_phrase n="wlang_leftnav_operation" t="公司"/>
+	<w_phrase n="wlang_leftnav_home" t="家庭"/>
+	<w_phrase n="wlang_leftnav_addressbook" t="電話簿"/>
+	<w_phrase n="wlang_leftnav_setup" t="設定"/>
+	<w_phrase n="wlang_leftnav_preferences" t="偏好設定"/>
+	<w_phrase n="wlang_leftnav_speeddial" t="快速撥號"/>
+	<w_phrase n="wlang_leftnav_functionkeys" t="功能鍵"/>
+	<w_phrase n="wlang_leftnav_lineone" t="用戶 1"/>
+	<w_phrase n="wlang_leftnav_linetwo" t="用戶 2"/>
+	<w_phrase n="wlang_leftnav_linethree" t="用戶 3"/>
+	<w_phrase n="wlang_leftnav_linefour" t="用戶 4"/>
+	<w_phrase n="wlang_leftnav_linefive" t="用戶 5"/>
+	<w_phrase n="wlang_leftnav_linesix" t="用戶 6"/>
+	<w_phrase n="wlang_leftnav_lineseven" t="用戶 7"/>
+	<w_phrase n="wlang_leftnav_lineeight" t="用戶 8"/>
+	<w_phrase n="wlang_leftnav_linenine" t="用戶 9"/>
+	<w_phrase n="wlang_leftnav_lineten" t="用戶 10"/>
+	<w_phrase n="wlang_leftnav_lineeleven" t="用戶 11"/>
+	<w_phrase n="wlang_leftnav_linetwelve" t="用戶 12"/>
+	<w_phrase n="wlang_leftnav_linethirteen" t="Identity 13"/>
+	<w_phrase n="wlang_leftnav_linefourteen" t="Identity 14"/>
+	<w_phrase n="wlang_leftnav_linefifteen" t="Identity 15"/>
+	<w_phrase n="wlang_leftnav_linesixteen" t="Identity 16"/>
+	<w_phrase n="wlang_leftnav_advanced" t="進階"/>
+	<w_phrase n="wlang_leftnav_softupdate" t="軟件更新"/>
+	<w_phrase n="wlang_leftnav_status" t="狀態"/>
+	<w_phrase n="wlang_leftnav_sysinfo" t="系統資料"/>
+	<w_phrase n="wlang_leftnav_siptrace" t="SIP 追蹤"/>
+	<w_phrase n="wlang_leftnav_httptrace" t="HTTP 追蹤"/>
+	<w_phrase n="wlang_leftnav_upnptrace" t="UPnP 追蹤"/>
+	<w_phrase n="wlang_leftnav_dnscache" t="DNS 緩存"/>
+	<w_phrase n="wlang_leftnav_pcaptrace" t="PCAP 追蹤"/>
+	<w_phrase n="wlang_leftnav_log" t="記錄"/>
+	<w_phrase n="wlang_leftnav_memory" t="記憶體"/>
+	<w_phrase n="wlang_leftnav_settings" t="設定"/>
+	<w_phrase n="wlang_leftnav_manual" t="手動"/>
+	<w_phrase n="wlang_adr_name" t="姓名"/>
+	<w_phrase n="wlang_adr_number" t="號碼"/>
+	<w_phrase n="wlang_adr_contacttype" t="聯絡人類型"/>
+	<w_phrase n="wlang_adr_edit" t="編輯"/>
+	<w_phrase n="wlang_adr_delete" t="删除"/>
+	<w_phrase n="wlang_adr_addeditentry" t="新增或編輯記錄"/>
+	<w_phrase n="wlang_adr_ctnone" t="無"/>
+	<w_phrase n="wlang_adr_ctfriends" t="朋友"/>
+	<w_phrase n="wlang_adr_ctfamily" t="家人"/>
+	<w_phrase n="wlang_adr_ctcolleagues" t="同事"/>
+	<w_phrase n="wlang_adr_ctvip" t="VIP"/>
+	<w_phrase n="wlang_adr_ctdeny" t="黑名單"/>
+	<w_phrase n="wlang_adr_ctserver" t="Server"/>
+	<w_phrase n="wlang_adr_searchbutton" t="Search"/>
+	<w_phrase n="wlang_adr_addeditbutton" t="Add"/>
+	<w_phrase n="wlang_adr_importadrbook" t="匯入電話簿(CVS)"/>
+	<w_phrase n="wlang_adr_filename" t="文件名稱"/>
+	<w_phrase n="wlang_adr_loadbutton" t="加載"/>
+	<w_phrase n="wlang_prefs_generalinfo" t="基本資料"/>
+	<w_phrase n="wlang_prefs_language" t="語言"/>
+	<w_phrase n="wlang_prefs_web_language" t="網頁界面語言"/>
+	<w_phrase n="wlang_prefs_displaystyle" t="號碼顯示類型"/>
+	<w_phrase n="wlang_prefs_dsfullcontact" t="全部聯絡人"/>
+	<w_phrase n="wlang_prefs_dsname" t="姓名"/>
+	<w_phrase n="wlang_prefs_dsnumber" t="號碼"/>
+	<w_phrase n="wlang_prefs_dsnamenumber" t="姓名和號碼"/>
+	<w_phrase n="wlang_prefs_tonescheme" t="音調"/>
+	<w_phrase n="wlang_prefs_tsaustralia" t="澳洲"/>
+	<w_phrase n="wlang_prefs_tschina" t="中國"/>
+	<w_phrase n="wlang_prefs_tsdenmark" t="丹麥"/>
+	<w_phrase n="wlang_prefs_tsgermany" t="德國"/>
+	<w_phrase n="wlang_prefs_tsindia" t="印度"/>
+	<w_phrase n="wlang_prefs_tsjapan" t="日本"/>
+	<w_phrase n="wlang_prefs_tsmexico" t="墨西哥"/>
+	<w_phrase n="wlang_prefs_tsuk" t="英國"/>
+	<w_phrase n="wlang_prefs_tsus" t="美國"/>
+	<w_phrase n="wlang_prefs_tsgreece" t="希臘"/>
+	<w_phrase n="wlang_prefs_mwinotifi" t="語音留言提示"/>
+	<w_phrase n="wlang_prefs_mwisilent" t="靜音"/>
+	<w_phrase n="wlang_prefs_mwibeep" t="提示音"/>
+	<w_phrase n="wlang_prefs_mwireminder" t="提示"/>
+	<w_phrase n="wlang_prefs_mwidialtone" t="語音留言撥號音"/>
+	<w_phrase n="wlang_prefs_mwidialnormal" t="正常"/>
+	<w_phrase n="wlang_prefs_mwidialstutter" t="斷斷續續"/>
+	<w_phrase n="wlang_prefs_on" t="開啟"/>
+	<w_phrase n="wlang_prefs_off" t="關閉"/>
+	<w_phrase n="wlang_prefs_redirection" t="來電轉駁"/>
+	<w_phrase n="wlang_prefs_timeout" t="超時（秒）"/>
+	<w_phrase n="wlang_prefs_ringtones" t="鈴聲"/>
+	<w_phrase n="wlang_prefs_friends" t="朋友"/>
+	<w_phrase n="wlang_prefs_ringer1" t="鈴聲 1"/>
+	<w_phrase n="wlang_prefs_ringer2" t="鈴聲 2"/>
+	<w_phrase n="wlang_prefs_ringer3" t="鈴聲 3"/>
+	<w_phrase n="wlang_prefs_ringer4" t="鈴聲 4"/>
+	<w_phrase n="wlang_prefs_ringer5" t="鈴聲 5"/>
+	<w_phrase n="wlang_prefs_ringer6" t="鈴聲 6"/>
+	<w_phrase n="wlang_prefs_ringer7" t="鈴聲 7"/>
+	<w_phrase n="wlang_prefs_ringer8" t="鈴聲 8"/>
+	<w_phrase n="wlang_prefs_ringersilent" t="靜音"/>
+	<w_phrase n="wlang_prefs_family" t="家庭"/>
+	<w_phrase n="wlang_prefs_colleagues" t="同事"/>
+	<w_phrase n="wlang_prefs_ringdeviceheadset" t="耳機鈴聲設備"/>
+	<w_phrase n="wlang_prefs_ringvolume_amplification" t="提高鈴聲音量"/>
+	<w_phrase n="wlang_prefs_ringspeaker" t="使用喇叭"/>
+	<w_phrase n="wlang_prefs_ringheadset" t="使用耳機"/>
+	<w_phrase n="wlang_prefs_ringspeaker_and_headset" t="Use Headset and Speaker"/>
+	<w_phrase n="wlang_prefs_ssi_custommelody" t="自定旋律網址"/>
+	<w_phrase n="wlang_prefs_autoanswer" t="自動應答"/>
+	<w_phrase n="wlang_prefs_ssi_aaautoanswer" t="自動 應答"/>
+	<w_phrase n="wlang_prefs_ssi_aaindication" t="自動 應答 指示"/>
+	<w_phrase n="wlang_prefs_ssi_aaindicationtone" t="Auto Answer Indication Tone"/>
+	<w_phrase n="wlang_prefs_privacysetting" t="私隱設定"/>
+	<w_phrase n="wlang_prefs_ssi_privclip" t="Show/hide outgoing caller ID (CLIP/CLIR)"/>
+	<w_phrase n="wlang_prefs_ssi_privclir" t="拒絕匿名電話打入"/>
+	<w_phrase n="wlang_prefs_original" t="Original"/>
+	<w_phrase n="wlang_prefs_new" t="New"/>
+	<w_phrase n="wlang_prefs_dimension" t="Dimension"/>
+	<w_phrase n="wlang_prefs_hide" t="隱藏"/>
+	<w_phrase n="wlang_prefs_show" t="顯示"/>
+	<w_phrase n="wlang_prefs_reject" t="拒絕"/>
+	<w_phrase n="wlang_prefs_accept" t="接受"/>
+	<w_phrase n="wlang_prefs_savebutton" t="儲存"/>
+	<w_phrase n="wlang_hcilog_download" t="Save hcilog"/>
+	<w_phrase n="wlang_hcipcap_download" t="Save hcitrace.pcap"/>
+	<w_phrase n="wlang_connectivityd_log_download" t="Save connectivityd log"/>
+	<w_phrase n="wlang_speed_speeddialtable" t="快速撥號名單"/>
+	<w_phrase n="wlang_fkeys_keysettings" t="按鍵設定"/>
+	<w_phrase n="wlang_fkeys_ssi_number" t="號碼"/>
+	<w_phrase n="wlang_fkeys_ssi_line" t="線路"/>
+	<w_phrase n="wlang_fkeys_ssi_dest" t="分機"/>
+	<w_phrase n="wlang_fkeys_ssi_intercom" t="內線對講"/>
+	<w_phrase n="wlang_fkeys_ssi_parkorbit" t="Park"/>
+	<w_phrase n="wlang_fkeys_ssi_voicerecorder" t="Record"/>
+	<w_phrase n="wlang_fkeys_ssi_dtmf" t="DTMF"/>
+	<w_phrase n="wlang_line_logininfo" t="登入資訊"/>
+	<w_phrase n="wlang_line_ssi_name" t="顯示名稱"/>
+	<w_phrase n="wlang_line_ssi_account" t="帳戶"/>
+	<w_phrase n="wlang_line_ssi_password" t="密碼"/>
+	<w_phrase n="wlang_line_ssi_registrar" t="註冊商"/>
+	<w_phrase n="wlang_line_ssi_secondary_registrar" t="Secondary Registrar"/>
+	<w_phrase n="wlang_line_status" t="狀態"/>
+	<w_phrase n="wlang_line_ssi_mailbox" t="電郵"/>
+	<w_phrase n="wlang_line_ssi_mailbox_retrieve" t="Mailbox Dial-in (if different from Mailbox)"/>
+	<w_phrase n="wlang_line_ringtone" t="鈴聲"/>
+	<w_phrase n="wlang_line_ringer1" t="鈴聲 1"/>
+	<w_phrase n="wlang_line_ringer2" t="鈴聲 2"/>
+	<w_phrase n="wlang_line_ringer3" t="鈴聲 3"/>
+	<w_phrase n="wlang_line_ringer4" t="鈴聲 4"/>
+	<w_phrase n="wlang_line_ringer5" t="鈴聲 5"/>
+	<w_phrase n="wlang_line_ringer6" t="鈴聲 6"/>
+	<w_phrase n="wlang_line_ringer7" t="鈴聲 7"/>
+	<w_phrase n="wlang_line_ringer8" t="鈴聲 8"/>
+	<w_phrase n="wlang_line_ringer9" t="鈴聲 9"/>
+	<w_phrase n="wlang_line_ringer10" t="鈴聲 10"/>
+	<w_phrase n="wlang_line_silent" t="靜音"/>
+	<w_phrase n="wlang_line_splash" t="Splash"/>
+	<w_phrase n="wlang_line_ssi_outboundproxy" t="Outbound Proxy"/>
+	<w_phrase n="wlang_line_ssi_secondary_outboundproxy" t="Secondary Outbound Proxy"/>
+	<w_phrase n="wlang_line_ssi_dialplan" t="撥號計劃字符串"/>
+	<w_phrase n="wlang_line_qvalue" t="Q值"/>
+	<w_phrase n="wlang_line_expire" t="建議期限"/>
+	<w_phrase n="wlang_line_codec" t="編解碼器"/>
+	<w_phrase n="wlang_current_codeclist" t="已過濾的編解碼器清單"/>
+	<w_phrase n="wlang_line_packetsize" t="數據包大小"/>
+	<w_phrase n="wlang_line_ssi_rtpencryption" t="RTP加密"/>
+	<w_phrase n="wlang_update_info" t="您可以選擇安裝想使用的軟件版本，請填寫http URL（例如http://www.example.com/firmware.bin)造訪你指定使用的firmware。  按下加載按鈕後，電話將會重新啟動。"/>
+	<w_phrase n="wlang_update_manualsoftup" t="手動軟件更新"/>
+	<w_phrase n="wlang_update_manualsoftup_uxm" t="手動擴展模塊軟件更新"/>
+	<w_phrase n="wlang_update_info_uxm" t="每次只能連接一個擴展模塊到電話進行軟件更新。"/>
+	<w_phrase n="wlang_update_ssi_firmware" t="韌體"/>
+	<w_phrase n="wlang_update_loadbutton" t="加載"/>
+	<w_phrase n="wlang_info_phonetype" t="電話類型"/>
+	<w_phrase n="wlang_info_macaddress" t="MAC地址"/>
+	<w_phrase n="wlang_info_wifi_mac_address" t="Wi-Fi MAC Address"/>
+	<w_phrase n="wlang_info_ipaddress" t="IP地址"/>
+	<w_phrase n="wlang_info_l2tp_ipaddress" t="L2TP IP Address"/>
+	<w_phrase n="wlang_info_firmware_url" t="韌體網址"/>
+	<w_phrase n="wlang_trace_clearbutton" t="清除"/>
+	<w_phrase n="wlang_trace_reloadbutton" t="重新下載"/>
+	<w_phrase n="wlang_trace_downloadbutton" t="Download"/>
+	<w_phrase n="wlang_log_level" t="日誌級別"/>
+	<w_phrase n="wlang_log_level_type" t="日誌級別類型"/>
+	<w_phrase n="wlang_log_ssi_overall" t="整體"/>
+	<w_phrase n="wlang_module_log_level" t="模塊級別"/>
+	<w_phrase n="wlang_log_ssi_module" t="模塊"/>
+	<w_phrase n="wlang_log_clearbutton" t="清除"/>
+	<w_phrase n="wlang_advanced_network" t="網絡"/>
+	<w_phrase n="wlang_advanced_ssi_dhcp" t="DHCP"/>
+	<w_phrase n="wlang_advanced_ssi_on" t="開啟"/>
+	<w_phrase n="wlang_advanced_ssi_off" t="關閉"/>
+	<w_phrase n="wlang_advanced_ssi_ipaddress" t="IP地址"/>
+	<w_phrase n="wlang_advanced_ssi_netmask" t="子網掩碼"/>
+	<w_phrase n="wlang_advanced_ssi_phonename" t="主機名稱"/>
+	<w_phrase n="wlang_advanced_ssi_ipgateway" t="IP閘道器"/>
+	<w_phrase n="wlang_advanced_dns" t="域名服務器"/>
+	<w_phrase n="wlang_advanced_ssi_domain" t="域名"/>
+	<w_phrase n="wlang_advanced_ssi_dnsserver1" t="DNS 服務器 1"/>
+	<w_phrase n="wlang_advanced_ssi_dnsserver2" t="DNS服務器 2"/>
+	<w_phrase n="wlang_advanced_time" t="時間"/>
+	<w_phrase n="wlang_advanced_ssi_ntptimeserver" t="NTP 時間服務器"/>
+	<w_phrase n="wlang_advanced_timezone" t="時區"/>
+	<w_phrase n="wlang_advanced_http" t="HTTP"/>
+	<w_phrase n="wlang_advanced_ssi_user" t="用戶"/>
+	<w_phrase n="wlang_advanced_ssi_password" t="密碼"/>
+	<w_phrase n="wlang_not_default" t="Not Default"/>
+	<w_phrase n="wlang_advanced_ssi_httpproxy" t="HTTP代理"/>
+	<w_phrase n="wlang_advanced_ssi_httpport" t="HTTP端口"/>
+	<w_phrase n="wlang_advanced_ssi_httpsport" t="HTTPS端口"/>
+	<w_phrase n="wlang_advanced_webservercon" t="Webserver連接類型"/>
+	<w_phrase n="wlang_advanced_httponly" t="僅限HTTP"/>
+	<w_phrase n="wlang_advanced_httpsonly" t="僅限HTTPS"/>
+	<w_phrase n="wlang_advanced_httphttps" t="HTTP或HTTPS"/>
+	<w_phrase n="wlang_advanced_off" t="關閉"/>
+	<w_phrase n="wlang_advanced_phonebehavior" t="電話性能"/>
+	<w_phrase n="wlang_advanced_ssi_callcompletion" t="撥打完成"/>
+	<w_phrase n="wlang_advanced_ssi_lldp" t="LLDP"/>
+	<w_phrase n="wlang_advanced_ssi_lldp_network_policy_timeout" t="LLDP Network Policy Timeout"/>
+	<w_phrase n="wlang_advanced_ssi_idnasupport" t="IDNA （RFC 3490）支援"/>
+	<w_phrase n="wlang_advanced_actionethernet" t="乙太網電器重新駁上"/>
+	<w_phrase n="wlang_advanced_reboot" t="重新啟動"/>
+	<w_phrase n="wlang_advanced_donothing" t="忽略"/>
+	<w_phrase n="wlang_advanced_ssi_numberguessing" t="QuickLookup"/>
+	<w_phrase n="wlang_advanced_ssi_blockurldialing" t="封鎖URL 撥號"/>
+	<w_phrase n="wlang_advanced_ssi_challengeresponse" t="Challenge Response on Phone"/>
+	<w_phrase n="wlang_advanced_ssi_callwaitingindi" t="通話等待指示"/>
+	<w_phrase n="wlang_advanced_ssi_dialtonehold" t="撥號音   通話保留"/>
+	<w_phrase n="wlang_advanced_ssi_disconnectonhook" t="Disconnect On-hook"/>
+	<w_phrase n="wlang_advanced_keys" t="按鍵"/>
+	<w_phrase n="wlang_advanced_ssi_transferonhook" t="Transfer On-hook"/>
+	<w_phrase n="wlang_advanced_ssi_blockdnd" t="攔截  請勿打擾"/>
+	<w_phrase n="wlang_advanced_ssi_logonwizard" t="登入嚮導"/>
+	<w_phrase n="wlang_advanced_preselection" t="預設"/>
+	<w_phrase n="wlang_advanced_ssi_prefix" t="前綴(字首)"/>
+	<w_phrase n="wlang_advanced_audio" t="音頻"/>
+	<w_phrase n="wlang_advanced_ssi_disablecasingspeaker" t="關閉喇叭"/>
+	<w_phrase n="wlang_advanced_ssi_dtmfechospeaker" t="DTMF  迴聲 開啟 喇叭 電話"/>
+	<w_phrase n="wlang_advanced_ssi_dtmf_payload_type" t="DTMF Payload Type"/>
+	<w_phrase n="wlang_advanced_ssi_callreleasednotify" t="來電 顯示 通知"/>
+	<w_phrase n="wlang_line_ssi_stunserver" t="STUN 服務器 （IP-地址端口）"/>
+	<w_phrase n="wlang_line_ssi_keepaliveint" t="連接 間隔 （秒）"/>
+	<w_phrase n="wlang_advanced_ssi_dynamicrtpstart" t="動態  RTP 端口 開始"/>
+	<w_phrase n="wlang_advanced_ssi_dynamicrtpstop" t="動態  RTP 端口 停止"/>
+	<w_phrase n="wlang_advanced_ssi_typeofservice" t="實時傳輸 服務類型（TOS/ Diffserv）"/>
+	<w_phrase n="wlang_advanced_ssi_payloadtype" t="DTMF 負載 類型"/>
+	<w_phrase n="wlang_advanced_ssi_networkidentport" t="網絡用戶 （端口）"/>
+	<w_phrase n="wlang_advanced_ssi_sipt1" t="SIP  T1 （ms）"/>
+	<w_phrase n="wlang_advanced_ssi_sipsessiontimer" t="SIP服務器 會話 計時（秒）"/>
+	<w_phrase n="wlang_advanced_ssi_sipdirtyhostttl" t="SIP服務器 主機 TTL（秒）"/>
+	<w_phrase n="wlang_advanced_ssi_sipmaxforward" t="SIP服務器 最大值 轉駁"/>
+	<w_phrase n="wlang_advanced_ssi_enumsuffix" t="ENUM Suffix"/>
+	<w_phrase n="wlang_advanced_ssi_musiconholdserver" t="通話保留音樂服務器"/>
+	<w_phrase n="wlang_advanced_ssi_useuserphone" t="使用 用戶=電話"/>
+	<w_phrase n="wlang_advanced_ssi_publishpresence" t="發布 在線"/>
+	<w_phrase n="wlang_advanced_ssi_refertobrackets" t="引用括號"/>
+	<w_phrase n="wlang_advanced_ssi_requireprack" t="需要PRACK"/>
+	<w_phrase n="wlang_advanced_ssi_symmetricrtp" t="對稱RTP"/>
+	<w_phrase n="wlang_advanced_update" t="更新"/>
+	<w_phrase n="wlang_advanced_updatepolicy" t="更新政策"/>
+	<w_phrase n="wlang_advanced_upautomatically" t="自動更新"/>
+	<w_phrase n="wlang_advanced_upaskupdate" t="要求更新"/>
+	<w_phrase n="wlang_advanced_upneverupdatesetting" t="從不更新，只加載設定"/>
+	<w_phrase n="wlang_advanced_upneverupdatenosetting" t="從不更新，不要加載設定"/>
+	<w_phrase n="wlang_advanced_ssi_settingurl" t="設定 URL"/>
+	<w_phrase n="wlang_advanced_debug" t="除錯器"/>
+	<w_phrase n="wlang_advanced_ssi_lcserver" t="LCS服務器"/>
+	<w_phrase n="wlang_advanced_resetbutton" t="重設"/>
+	<w_phrase n="wlang_advanced_rebootbutton" t="重新啟動"/>
+	<w_phrase n="wlang_advanced_security" t="保安"/>
+	<w_phrase n="wlang_advanced_ssi_adminmode" t="管理員 模式"/>
+	<w_phrase n="wlang_advanced_ssi_adminpassword" t="管理員 密碼"/>
+	<w_phrase n="wlang_advanced_ssi_adminpassconf" t="管理員 密碼 （確認）"/>
+	<w_phrase n="wlang_advanced_ssi_adminlogin" t="管理員 登入"/>
+	<w_phrase n="wlang_advanced_savebutton" t="儲存"/>
+	<w_phrase n="wlang_advanced_tmz_USAm10" t="-10 美國 - 夏威夷-阿留申"/>
+	<w_phrase n="wlang_advanced_tmz_USAm9" t="-9 美國 - 阿拉斯加時間"/>
+	<w_phrase n="wlang_advanced_tmz_CANm8" t="-8 加拿大（溫哥華，白馬）"/>
+	<w_phrase n="wlang_advanced_tmz_MEXm8" t="-8 墨西哥（蒂華納，墨西卡利）"/>
+	<w_phrase n="wlang_advanced_tmz_USAm8" t="-8 美國 - 太平洋時間"/>
+	<w_phrase n="wlang_advanced_tmz_CANm7" t="-7 加拿大（埃德蒙頓，卡爾加里）"/>
+	<w_phrase n="wlang_advanced_tmz_MEXm7" t="-7 墨西哥（奇瓦瓦州，馬薩特蘭）"/>
+	<w_phrase n="wlang_advanced_tmz_USAm7" t="-7 美國 - 山區時間"/>
+	<w_phrase n="wlang_advanced_tmz_CANm6" t="-6 加拿大 - 曼尼托巴（溫尼伯）"/>
+	<w_phrase n="wlang_advanced_tmz_CAN2m6" t="-6 Canada - Saskatchewan (Regina)"/>
+	<w_phrase n="wlang_advanced_tmz_CAMm6" t="-6 Central America (No DST)"/>
+	<w_phrase n="wlang_advanced_tmz_CHLm6" t="-6 智利（復活節島）"/>
+	<w_phrase n="wlang_advanced_tmz_MEXm6" t="-6 墨西哥（墨西哥城，阿卡普爾科）"/>
+	<w_phrase n="wlang_advanced_tmz_USAm6" t="-6 美國 - 中部時間"/>
+	<w_phrase n="wlang_advanced_tmz_BHSm5" t="-5 巴哈馬（拿索）"/>
+	<w_phrase n="wlang_advanced_tmz_CANm5" t="-5 加拿大（蒙特利爾，渥太華，魁北克）"/>
+	<w_phrase n="wlang_advanced_tmz_COLm5" t="-5 哥倫比亞（波哥大）"/>
+	<w_phrase n="wlang_advanced_tmz_CUBm5" t="-5 古巴（哈瓦那）"/>
+	<w_phrase n="wlang_advanced_tmz_ECUm5" t="-5 厄瓜多爾（基多）"/>
+	<w_phrase n="wlang_advanced_tmz_USAm5" t="-5 美國 - 東部時間"/>
+	<w_phrase n="wlang_advanced_tmz_CANm4" t="-4 加拿大（哈利法克斯，聖約翰）"/>
+	<w_phrase n="wlang_advanced_tmz_CHLm4" t="-4 智利（聖地亞哥）"/>
+	<w_phrase n="wlang_advanced_tmz_PRYm4" t="-4 巴拉圭（亞松森）"/>
+	<w_phrase n="wlang_advanced_tmz_BMUm4" t="-4 英國 - (百慕大）"/>
+	<w_phrase n="wlang_advanced_tmz_FLKm4" t="-4 英國（福克蘭群島）"/>
+	<w_phrase n="wlang_advanced_tmz_CANm35" t="-3.5 加拿大 - 紐芬蘭（聖約翰斯）"/>
+	<w_phrase n="wlang_advanced_tmz_GRLm2" t="-2 Denmark - Greenland (Nuuk)"/>
+	<w_phrase n="wlang_advanced_tmz_PRTm1" t="-1 葡萄牙（亞速爾群島）"/>
+	<w_phrase n="wlang_advanced_tmz_FROm0" t="0 丹麥 - 法羅群島（Tórshavn）"/>
+	<w_phrase n="wlang_advanced_tmz_IRLm0" t="0 愛爾蘭（都柏林）"/>
+	<w_phrase n="wlang_advanced_tmz_PRTm0" t="0 葡萄牙（里斯本，波爾圖，豐沙爾）"/>
+	<w_phrase n="wlang_advanced_tmz_ESPm0" t="0 西班牙 - 加那利群島（拉斯帕爾馬斯）"/>
+	<w_phrase n="wlang_advanced_tmz_GBRm0" t="0 英國（倫敦）"/>
+	<w_phrase n="wlang_advanced_tmz_ALBp1" t="+1 阿爾巴尼亞（地拉那）"/>
+	<w_phrase n="wlang_advanced_tmz_AUTp1" t="+1 奧地利（維也納）"/>
+	<w_phrase n="wlang_advanced_tmz_BELp1" t="+1 比利時（布魯塞爾）"/>
+	<w_phrase n="wlang_advanced_tmz_CAIm4" t="-4 凱科斯"/>
+	<w_phrase n="wlang_advanced_tmz_HRVp1" t="+1 克羅地亞（薩格勒布）"/>
+	<w_phrase n="wlang_advanced_tmz_CZEp1" t="+1 捷克（布拉格）"/>
+	<w_phrase n="wlang_advanced_tmz_DNKp1" t="+1 丹麥（哥本哈根）"/>
+	<w_phrase n="wlang_advanced_tmz_FRAp1" t="+1 法國（尼斯）"/>
+	<w_phrase n="wlang_advanced_tmz_GERp1" t="+1 德國（柏林）"/>
+	<w_phrase n="wlang_advanced_tmz_HUNp1" t="+1 匈牙利（布達佩斯）"/>
+	<w_phrase n="wlang_advanced_tmz_ITAp1" t="+1 意大利（羅馬）"/>
+	<w_phrase n="wlang_advanced_tmz_LUXp1" t="+1 盧森堡（盧森堡）"/>
+	<w_phrase n="wlang_advanced_tmz_MAKp1" t="+1 馬其頓（史高比耶）"/>
+	<w_phrase n="wlang_advanced_tmz_NLDp1" t="+1 荷蘭（阿姆斯特丹）"/>
+	<w_phrase n="wlang_advanced_tmz_NAMp1" t="+1 納米比亞（溫得和克）"/>
+	<w_phrase n="wlang_advanced_tmz_NORp1" t="+1 挪威（奧斯陸）"/>
+	<w_phrase n="wlang_advanced_tmz_POLp1" t="+1 波蘭（華沙）"/>
+	<w_phrase n="wlang_advanced_tmz_SVKp1" t="+1 斯洛伐克共和國（布拉提斯拉瓦）"/>
+	<w_phrase n="wlang_advanced_tmz_ESPp1" t="+1 西班牙（馬德里，帕爾馬）"/>
+	<w_phrase n="wlang_advanced_tmz_SWEp1" t="+1 瑞典（斯德哥爾摩）"/>
+	<w_phrase n="wlang_advanced_tmz_CHEp1" t="+1 瑞士（伯恩）"/>
+	<w_phrase n="wlang_advanced_tmz_GIBp1" t="+1 英國（直布羅陀）"/>
+	<w_phrase n="wlang_advanced_tmz_YUGp1" t="+1 塞爾維亞（貝爾格萊德）"/>
+	<w_phrase n="wlang_advanced_tmz_BLRp3" t="+3 Belarus (Minsk)"/>
+	<w_phrase n="wlang_advanced_tmz_BGRp2" t="+2 保加利亞（索非亞）"/>
+	<w_phrase n="wlang_advanced_tmz_CYPp2" t="+2 塞浦路斯（尼科西亞）"/>
+	<w_phrase n="wlang_advanced_tmz_EGYp2" t="+2 埃及（開羅）"/>
+	<w_phrase n="wlang_advanced_tmz_ESTp2" t="+2 愛沙尼亞（塔林）"/>
+	<w_phrase n="wlang_advanced_tmz_FINp2" t="+2 芬蘭（赫爾辛基）"/>
+	<w_phrase n="wlang_advanced_tmz_GAZp2" t="+2 加沙地帶（加沙）"/>
+	<w_phrase n="wlang_advanced_tmz_GRCp2" t="+2 希臘（雅典）"/>
+	<w_phrase n="wlang_advanced_tmz_ISRp2" t="+2 以色列（特拉維夫）"/>
+	<w_phrase n="wlang_advanced_tmz_JORp2" t="+2 約旦（安曼）"/>
+	<w_phrase n="wlang_advanced_tmz_LVAp2" t="+2 拉脫維亞（里加）"/>
+	<w_phrase n="wlang_advanced_tmz_LTUp2" t="+2 立陶宛（維爾紐斯）"/>
+	<w_phrase n="wlang_advanced_tmz_LBNp2" t="+2 黎巴嫩（貝魯特）"/>
+	<w_phrase n="wlang_advanced_tmz_MDAp2" t="+2 摩爾多瓦（基希訥烏）"/>
+	<w_phrase n="wlang_advanced_tmz_RUSp2" t="+2 俄羅斯（加里寧格勒）"/>
+	<w_phrase n="wlang_advanced_tmz_ROUp2" t="+2 羅馬尼亞（布加勒斯特）"/>
+	<w_phrase n="wlang_advanced_tmz_SYRp2" t="+2 敘利亞（大馬士革）"/>
+	<w_phrase n="wlang_advanced_tmz_TURp3" t="+3 土耳其（安卡拉）"/>
+	<w_phrase n="wlang_advanced_tmz_UKRp2" t="+2 烏克蘭（基輔，敖德薩）"/>
+	<w_phrase n="wlang_advanced_tmz_IRQp3" t="+3 伊拉克（巴格達）"/>
+	<w_phrase n="wlang_advanced_tmz_RUSp3" t="+3 俄羅斯（莫斯科）"/>
+	<w_phrase n="wlang_advanced_tmz_IRNp35" t="+3.5 伊朗（德黑蘭）"/>
+	<w_phrase n="wlang_advanced_tmz_ARMp4" t="+4 亞美尼亞（埃里溫）"/>
+	<w_phrase n="wlang_advanced_tmz_AZEp4" t="+4 阿塞拜疆（巴庫）"/>
+	<w_phrase n="wlang_advanced_tmz_GEOp4" t="+4 格魯吉亞（第比利斯）"/>
+	<w_phrase n="wlang_advanced_tmz_KAZp4" t="+4 哈薩克斯坦（阿克陶）"/>
+	<w_phrase n="wlang_advanced_tmz_RUSp4" t="+4 俄羅斯（薩馬拉）"/>
+	<w_phrase n="wlang_advanced_tmz_KAZp5" t="+5 哈薩克斯坦（阿克托比）"/>
+	<w_phrase n="wlang_advanced_tmz_KGZp5" t="+5 吉爾吉斯斯坦（比什凱克）"/>
+	<w_phrase n="wlang_advanced_tmz_PAKp5" t="+5 巴基斯坦（伊斯蘭堡）"/>
+	<w_phrase n="wlang_advanced_tmz_RUSp5" t="+5 俄羅斯（車里雅賓斯克）"/>
+	<w_phrase n="wlang_advanced_tmz_INDp55" t="+5.5 印度（加爾各答）"/>
+	<w_phrase n="wlang_advanced_tmz_KAZp6" t="+6 哈薩克斯坦（阿斯塔納，阿拉木圖）"/>
+	<w_phrase n="wlang_advanced_tmz_RUSp6" t="+6 俄羅斯（新西伯利亞，鄂木斯克）"/>
+	<w_phrase n="wlang_advanced_tmz_CHNp7" t="+8 中國（北京）"/>
+	<w_phrase n="wlang_advanced_tmz_RUSp7" t="+7 俄羅斯（克拉斯諾亞爾斯克）"/>
+	<w_phrase n="wlang_advanced_tmz_THAp7" t="+7 泰國（曼谷）"/>
+	<w_phrase n="wlang_advanced_tmz_SGPp8" t="+8 新加坡（新加坡）"/>
+	<w_phrase n="wlang_advanced_tmz_KORp8" t="+9 韓國（首爾）"/>
+	<w_phrase n="wlang_advanced_tmz_JPNp9" t="+9 日本（東京）"/>
+	<w_phrase n="wlang_advanced_tmz_AUSp95" t="+9.5 澳洲（阿德萊德）"/>
+	<w_phrase n="wlang_advanced_tmz_AUSp10" t="+10 澳洲（悉尼，墨爾本，坎培拉）"/>
+	<w_phrase n="wlang_advanced_tmz_AUS2p10" t="+10 澳洲（布里斯班）"/>
+	<w_phrase n="wlang_advanced_tmz_RUSp10" t="+10 俄羅斯（海參崴）"/>
+	<w_phrase n="wlang_advanced_tmz_AUSp105" t="+10.5 澳洲（豪勳爵島）"/>
+	<w_phrase n="wlang_advanced_tmz_NZLp12" t="+12 新西蘭（奧克蘭，惠靈頓）"/>
+	<w_phrase n="wlang_advanced_tmz_RUSp12" t="+12 俄羅斯（阿納德爾，堪察加）"/>
+	<w_phrase n="wlang_advanced_tmz_NZLp1275" t="+12.75 新西蘭（查塔姆群島）"/>
+	<w_phrase n="wlang_advanced_tmz_TONp13" t="+13 湯加（努庫阿洛法）"/>
+	<w_phrase n="wlang_adr_ssi_title" t="電話簿"/>
+	<w_phrase n="wlang_advanced_ssi_title" t="進階 設定"/>
+	<w_phrase n="wlang_fkeys_ssi_title" t="功能 鍵"/>
+	<w_phrase n="wlang_index_ssi_title" t="歡迎 使用 您的 電話！"/>
+	<w_phrase n="wlang_info_ssi_title" t="系統資訊"/>
+	<w_phrase n="wlang_line1_ssi_title" t="配置 用戶 1"/>
+	<w_phrase n="wlang_line2_ssi_title" t="配置 用戶 2"/>
+	<w_phrase n="wlang_line3_ssi_title" t="配置 用戶 3"/>
+	<w_phrase n="wlang_line4_ssi_title" t="配置 用戶 4"/>
+	<w_phrase n="wlang_line5_ssi_title" t="配置 用戶 5"/>
+	<w_phrase n="wlang_line6_ssi_title" t="配置 用戶 6"/>
+	<w_phrase n="wlang_line7_ssi_title" t="配置 用戶 7"/>
+	<w_phrase n="wlang_line8_ssi_title" t="配置 用戶 8"/>
+	<w_phrase n="wlang_line9_ssi_title" t="配置 用戶 9"/>
+	<w_phrase n="wlang_line10_ssi_title" t="配置 用戶 10"/>
+	<w_phrase n="wlang_line11_ssi_title" t="配置 用戶 11"/>
+	<w_phrase n="wlang_line12_ssi_title" t="配置 用戶 12"/>
+	<w_phrase n="wlang_log_ssi_title" t="系統記錄"/>
+	<w_phrase n="wlang_memstat_ssi_title" t="記憶體資訊"/>
+	<w_phrase n="wlang_prefs_ssi_title" t="偏好設定"/>
+	<w_phrase n="wlang_settings_ssi_title" t="設定"/>
+	<w_phrase n="wlang_speed_ssi_title" t="快速撥號"/>
+	<w_phrase n="wlang_sip_trace_ssi_title" t="SIP追踪"/>
+	<w_phrase n="wlang_http_trace_ssi_title" t="HTTP追踪"/>
+	<w_phrase n="wlang_update_ssi_title" t="手動軟件更新"/>
+	<w_phrase n="wlang_adr_preview_name" t="姓名"/>
+	<w_phrase n="wlang_adr_preview_number" t="號碼"/>
+	<w_phrase n="wlang_adr_preview_reading" t="閱讀"/>
+	<w_phrase n="wlang_adr_preview_contact_type" t="聯絡人類型"/>
+	<w_phrase n="wlang_adr_preview_ignore" t="忽視"/>
+	<w_phrase n="wlang_adr_file_type" t="檔案類型"/>
+	<w_phrase n="wlang_adr_file_csv" t="CSV 文件"/>
+	<w_phrase n="wlang_adr_file_unicode" t="Unicode Tab-separated"/>
+	<w_phrase n="wlang_adr_prev_ssi_title" t="載入預覽"/>
+	<w_phrase n="wlang_adr_prev_description" t="請檢查電話簿欄列的分配，完成後按儲存按鈕。"/>
+	<w_phrase n="wlang_adr_prev_apply" t="儲存"/>
+	<w_phrase n="wlang_advanced_ssi_http_register" t="註冊HTTP聯絡人"/>
+	<w_phrase n="wlang_advanced_ssi_auth_scheme" t="認證方案"/>
+	<w_phrase n="wlang_advanced_ssi_digest" t="文摘"/>
+	<w_phrase n="wlang_advanced_ssi_basic" t="基本"/>
+	<w_phrase n="wlang_advanced_ssi_offer_gruu" t="GRUU 提供"/>
+	<w_phrase n="wlang_line_none" t="無"/>
+	<w_phrase n="wlang_advanced_ssi_offer_mpo" t="MPO 提供"/>
+	<w_phrase n="wlang_h323_trace_ssi_title" t="H323 追踪"/>
+	<w_phrase n="wlang_advanced_ssi_challenge_reboot" t="SIP 重新啟動驗證"/>
+	<w_phrase n="wlang_advanced_ssi_challenge_checksync" t="SIP同步檢查認證"/>
+	<w_phrase n="wlang_dns_ssi_title" t="DNS 緩存/域名系統 緩存"/>
+	<w_phrase n="wlang_pcap_trace_ssi_title" t="PCAP Trace"/>
+	<w_phrase n="wlang_pcap_text" t="您可以在此頁面中開啟PCAP文件查看正進行操作的網絡級別。 這些文件通過各類網絡工具讀取，例如wireshark。 請點擊開始按鈕開始錄製; 請單擊停止按鈕停止錄製。 請記住數據會儲存在一個循環緩衝區中以避免溢出（即是當緩衝區滿時，最舊的數據將被覆蓋），並且記錄可能會對電話性能產生負面影響。"/>
+	<w_phrase n="wlang_leftnav_action" t="啟動URL設定"/>
+	<w_phrase n="wlang_action_ssi_title" t="啟動URL設定"/>
+	<w_phrase n="wlang_action_settings" t="啟動URL設定"/>
+	<w_phrase n="wlang_action_ssi_dnd_on" t="請勿打擾 開啟"/>
+	<w_phrase n="wlang_action_ssi_dnd_off" t="請勿打擾 關閉"/>
+	<w_phrase n="wlang_action_ssi_redirection_on" t="電話轉駁 開啟"/>
+	<w_phrase n="wlang_action_ssi_redirection_off" t="電話轉駁 關閉"/>
+	<w_phrase n="wlang_action_ssi_incoming" t="來電"/>
+	<w_phrase n="wlang_action_ssi_blacklist" t="檢查黑名單"/>
+	<w_phrase n="wlang_action_ssi_outgoing" t="外電"/>
+	<w_phrase n="wlang_action_ssi_setup" t="設定 完成"/>
+	<w_phrase n="wlang_action_ssi_offhook" t="Off-hook"/>
+	<w_phrase n="wlang_action_ssi_onhook" t="On-hook"/>
+	<w_phrase n="wlang_radcom_ssi_title" t="自動播放/調度"/>
+	<w_phrase n="wlang_playback_ssi_settings" t="自動播放設定"/>
+	<w_phrase n="wlang_playback_ssi_feature" t="自動 重演"/>
+	<w_phrase n="wlang_playback_ssi_url" t="WAV 文件 網址"/>
+	<w_phrase n="wlang_scheduling_ssi_settings" t="調度設定"/>
+	<w_phrase n="wlang_scheduling_ssi_feature" t="調度"/>
+	<w_phrase n="wlang_scheduling_ssi_frequency" t="撥打於每"/>
+	<w_phrase n="wlang_scheduling_ssi_day" t="天"/>
+	<w_phrase n="wlang_scheduling_ssi_hour" t="小時"/>
+	<w_phrase n="wlang_scheduling_ssi_minute" t="分鐘"/>
+	<w_phrase n="wlang_scheduling_ssi_number" t="等待撥號碼"/>
+	<w_phrase n="wlang_scheduling_ssi_start" t="開始 (dd.mm.yyyy hhmm)"/>
+	<w_phrase n="wlang_scheduling_ssi_end" t="結束 (dd.mm.yyyy hhmm)"/>
+	<w_phrase n="wlang_scheduling_ssi_call_duration" t="自動結束通話"/>
+	<w_phrase n="wlang_index_time" t="時間"/>
+	<w_phrase n="wlang_index_duration" t="時間長度"/>
+	<w_phrase n="wlang_advanced_ssi_user_pic" t="用戶 圖片 URL"/>
+	<w_phrase n="wlang_line_custom" t="自定旋律"/>
+	<w_phrase n="wlang_prefs_vip" t="VIP/重要人物"/>
+	<w_phrase n="wlang_prefs_ssi_date_us_format" t="U.S. 日期格式 (mm/dd)"/>
+	<w_phrase n="wlang_prefs_ssi_time_24_format" t="24小時制"/>
+	<w_phrase n="wlang_advanced_ssi_call_join_xfer" t="通話 加入 轉接"/>
+	<w_phrase n="wlang_prefs_tssweden" t="瑞典"/>
+	<w_phrase n="wlang_prefs_tsswitzerland" t="瑞士"/>
+	<w_phrase n="wlang_advanced_ssi_client" t="客戶"/>
+	<w_phrase n="wlang_advanced_ssi_server" t="服務器"/>
+	<w_phrase n="wlang_line_ssi_idle_text" t="顯示 文字 閒置/待機 畫面"/>
+	<w_phrase n="wlang_line_ssi_idle_cfwd" t="Display Text for Call Forwarding Target"/>
+	<w_phrase n="wlang_line_ssi_idle_number" t="顯示 號碼 閒置/待機 畫面"/>
+	<w_phrase n="wlang_line_ssi_alert_info" t="提示 資訊 URL"/>
+	<w_phrase n="wlang_advanced_ssi_alert_info_playback" t="提示 資訊 播放"/>
+	<w_phrase n="wlang_advanced_ssi_syslog_server" t="系統日誌服務器"/>
+	<w_phrase n="wlang_advanced_ssi_aoc_pulse_currency" t="AOC Pulse Currency"/>
+	<w_phrase n="wlang_advanced_ssi_aoc_cost_pulse" t="AOC Cost/ Pulse"/>
+	<w_phrase n="wlang_advanced_aoc_amount_display" t="AOC數據顯示"/>
+	<w_phrase n="wlang_advanced_aoc_amount_charged" t="帶電"/>
+	<w_phrase n="wlang_advanced_aoc_amount_balance" t="平衡"/>
+	<w_phrase n="wlang_advanced_audio_device_indicator" t="聲音設備指示器"/>
+	<w_phrase n="wlang_prefs_ringtone_defaults" t="鈴聲預設值"/>
+	<w_phrase n="wlang_prefs_ringtone_addressbook" t="電話簿鈴聲"/>
+	<w_phrase n="wlang_leftnav_trusted_cert" t="證書"/>
+	<w_phrase n="wlang_advanced_on" t="開啟"/>
+	<w_phrase n="wlang_advanced_call_waiting_visual" t="純視覺"/>
+	<w_phrase n="wlang_line_ssi_pname" t="認證用戶名稱"/>
+	<w_phrase n="wlang_adr_deletebutton" t="刪除"/>
+	<w_phrase n="wlang_adr_prev_del_before" t="在...之前刪除整個電話薄"/>
+	<w_phrase n="wlang_advanced_ssi_filter_registrar" t="註冊商過濾數據包"/>
+	<w_phrase n="wlang_line_sipsettings" t="SIP用戶設定"/>
+	<w_phrase n="wlang_line_rtpsettings" t="RTP用戶設定"/>
+	<w_phrase n="wlang_line_natsettings" t="NAT用戶設定"/>
+	<w_phrase n="wlang_line_ssi_descr_contact" t="長SIP聯絡人（RFC3840）"/>
+	<w_phrase n="wlang_line_ssi_sipusername_as_line" t="支援損壞的註冊商"/>
+	<w_phrase n="wlang_advanced_snmp" t="SNMP/簡單網絡管理協議"/>
+	<w_phrase n="wlang_advanced_ssi_snmp_port" t="端口"/>
+	<w_phrase n="wlang_advanced_ssi_snmp_trusted" t="可信地址"/>
+	<w_phrase n="wlang_advanced_ssi_sip_short_form" t="使用SIP壓縮標題"/>
+	<w_phrase n="wlang_sysinfo_siplinestatus" t="SIP身份狀態"/>
+	<w_phrase n="wlang_sysinfo_sysinfo" t="系統資訊"/>
+	<w_phrase n="wlang_adr_outgoingid" t="外出用戶"/>
+	<w_phrase n="wlang_adr_lineid_active" t="啟用"/>
+	<w_phrase n="wlang_adr_lineid1" t="用戶 1"/>
+	<w_phrase n="wlang_adr_lineid2" t="用戶 2"/>
+	<w_phrase n="wlang_adr_lineid3" t="用戶 3"/>
+	<w_phrase n="wlang_adr_lineid4" t="用戶 4"/>
+	<w_phrase n="wlang_adr_lineid5" t="用戶 5"/>
+	<w_phrase n="wlang_adr_lineid6" t="用戶 6"/>
+	<w_phrase n="wlang_adr_lineid7" t="用戶 7"/>
+	<w_phrase n="wlang_adr_lineid8" t="用戶 8"/>
+	<w_phrase n="wlang_adr_lineid9" t="用戶 9"/>
+	<w_phrase n="wlang_adr_lineid10" t="用戶 10"/>
+	<w_phrase n="wlang_adr_lineid11" t="用戶 11"/>
+	<w_phrase n="wlang_adr_lineid12" t="用戶 12"/>
+	<w_phrase n="wlang_adr_lineid13" t="Identity 13"/>
+	<w_phrase n="wlang_adr_lineid14" t="Identity 14"/>
+	<w_phrase n="wlang_adr_lineid15" t="Identity 15"/>
+	<w_phrase n="wlang_adr_lineid16" t="Identity 16"/>
+	<w_phrase n="wlang_adr_preview_outgoing_id" t="外電用戶"/>
+	<w_phrase n="wlang_line_ssi_record_missed_calls" t="未接來電記錄"/>
+	<w_phrase n="wlang_line_ssi_user_send_diversion_header" t="Send Diversion Header"/>
+	<w_phrase n="wlang_index_local_identity" t="本地用戶"/>
+	<w_phrase n="wlang_advanced_ssi_holding_reminder" t="通話保留提示"/>
+	<w_phrase n="wlang_info_production_info" t="生產資訊"/>
+	<w_phrase n="wlang_line_reregister" t="重新註冊"/>
+	<w_phrase n="wlang_confirm_head" t="注意！"/>
+	<w_phrase n="wlang_confirm_button_yes" t="是"/>
+	<w_phrase n="wlang_confirm_button_no" t="不是"/>
+	<w_phrase n="wlang_confirm_ssi_title" t="確認"/>
+	<w_phrase n="wlang_conf_text_del_adrbook" t="請注意，您的電話簿將會完全消失！ 您確定要刪除電話簿所有項目？"/>
+	<w_phrase n="wlang_conf_text_reset" t="請記住，如果您確認是，則所有設定包括通話記錄，電話簿等都將會掉失。 您還確定要將電話重置為原廠設定嗎？"/>
+	<w_phrase n="wlang_conf_text_reboot" t="您確定要重啟電話嗎？"/>
+	<w_phrase n="wlang_line_ssi_active" t="啟用用戶"/>
+	<w_phrase n="wlang_line_play" t="播放鈴聲"/>
+	<w_phrase n="wlang_line_ssi_proxyrequire" t="代理要求"/>
+	<w_phrase n="wlang_advanced_detectethernet" t="乙太網電纜顯示已拔除"/>
+	<w_phrase n="wlang_advanced_ssi_rtcp_support" t="RTCP支援"/>
+	<w_phrase n="wlang_update_manuallicense" t="許可證上傳"/>
+	<w_phrase n="wlang_update_licensefile" t="許可證檔案"/>
+	<w_phrase n="wlang_advanced_ssi_high_mic_gain" t="調高喇叭音量（TIA標準以上）"/>
+	<w_phrase n="wlang_advanced_handset_agc" t="子機AGC"/>
+	<w_phrase n="wlang_advanced_headset_agc" t="耳機AGC"/>
+	<w_phrase n="wlang_advanced_ssi_partial_lookup" t="部分號碼查詢"/>
+	<w_phrase n="wlang_ssi_number_lookup" t="Contact Search"/>
+	<w_phrase n="wlang_fkeys_ssi_url" t="網址操作"/>
+	<w_phrase n="wlang_advanced_ssi_sig_tos" t="SIP 服務類型 （TOS / Diffserv的）"/>
+	<w_phrase n="wlang_advanced_ssi_guess_start_length" t="QuickLookup Start Length"/>
+	<w_phrase n="wlang_advanced_ethernet" t="乙太網端口"/>
+	<w_phrase n="wlang_advanced_ssi_eth_net_port" t="網絡端口"/>
+	<w_phrase n="wlang_advanced_ssi_eth_pc_port" t="PC端口"/>
+	<w_phrase n="wlang_advanced_autoneg" t="自動協商"/>
+	<w_phrase n="wlang_advanced_10full" t="10 Mbit 全雙工"/>
+	<w_phrase n="wlang_advanced_10half" t="10 Mbit 半雙工"/>
+	<w_phrase n="wlang_advanced_100full" t="100 Mbit 全雙工"/>
+	<w_phrase n="wlang_advanced_100half" t="100 Mbit 半雙工"/>
+	<w_phrase n="wlang_sysinfo_ethernet_status" t="乙太網絡狀態"/>
+	<w_phrase n="wlang_sysinfo_ethernet_status2" t="狀態"/>
+	<w_phrase n="wlang_connected" t="已連接"/>
+	<w_phrase n="wlang_disconnected" t="未連接"/>
+	<w_phrase n="wlang_sysinfo_ethernet_connection_type" t="連接類型"/>
+	<w_phrase n="wlang_index_costs" t="成本"/>
+	<w_phrase n="wlang_action_ssi_missed" t="未接來電"/>
+	<w_phrase n="wlang_line_ssi_stunbindint" t="STUN 相隔 （秒）"/>
+	<w_phrase n="wlang_action_info" t="操作URL基本上是在電話發生特定事件時發出的HTTP GET請求。"/>
+	<w_phrase n="wlang_fkeys_ssi_p2t" t="Push-to-Talk"/>
+	<w_phrase n="wlang_advanced_load_certs" t="上傳服務器證書"/>
+	<w_phrase n="wlang_advanced_load_sets_manually" t="手動上傳設定文件"/>
+	<w_phrase n="wlang_advanced_load_warning" t="點擊下方的加載 按鈕，電話將 RESET 設定，並從指定文件加載新設定及重新啟動。 因此，當前所有設定都將會消失！"/>
+	<w_phrase n="wlang_advanced_answer_after_policy" t="內線對講政策"/>
+	<w_phrase n="wlang_advanced_answer_after_idle" t="僅在待機時"/>
+	<w_phrase n="wlang_advanced_answer_after_always" t="總是"/>
+	<w_phrase n="wlang_ldap_server_name" t="Server Name"/>
+	<w_phrase n="wlang_ldap_server" t="服務器地址"/>
+	<w_phrase n="wlang_ldap_port" t="端口"/>
+	<w_phrase n="wlang_ldap_base" t="主機"/>
+	<w_phrase n="wlang_ldap_username" t="用戶名稱"/>
+	<w_phrase n="wlang_ldap_password" t="密碼"/>
+	<w_phrase n="wlang_guess_max_hits" t="最大點擊數"/>
+	<w_phrase n="wlang_ldap_prefs" t="LDAP"/>
+	<w_phrase n="wlang_prefs_ssi_keyboard_lock" t="鍵盤鎖定"/>
+	<w_phrase n="wlang_prefs_ssi_keyboard_lock_pw" t="PIN to Unlock"/>
+	<w_phrase n="wlang_line_ssi_country" t="國家代碼"/>
+	<w_phrase n="wlang_line_ssi_area" t="區號"/>
+	<w_phrase n="wlang_advanced_ssi_enum" t="ENUM 支援"/>
+	<w_phrase n="wlang_advanced_ssi_tcp_listen" t="監聽SIP TCP端口"/>
+	<w_phrase n="wlang_advanced_tmz_AUSp8" t="+8 澳洲（珀斯）"/>
+	<w_phrase n="wlang_advanced_tmz_AUS2p95" t="+9.5 澳洲（達爾文）"/>
+	<w_phrase n="wlang_advanced_tmz_AUS3p10" t="+10 澳洲（霍巴特）"/>
+	<w_phrase n="wlang_advanced_tmz_BRA1m3" t="-3 巴西（DST）"/>
+	<w_phrase n="wlang_advanced_tmz_BRA2m3" t="-3 巴西（無DST）"/>
+	<w_phrase n="wlang_advanced_tmz_BRAm2" t="-2 巴西（無DST）"/>
+	<w_phrase n="wlang_advanced_tmz_ARGm3" t="-3 阿根廷（布宜諾斯艾利斯）"/>
+	<w_phrase n="wlang_advanced_tmz_EATp3" t="+3 東非時間"/>
+	<w_phrase n="wlang_advanced_tmz_CATp2" t="+2 中非時間"/>
+	<w_phrase n="wlang_advanced_tmz_WATp1" t="+1 西非時間"/>
+	<w_phrase n="wlang_fkeys_ssi_context" t="內文"/>
+	<w_phrase n="wlang_fkeys_ssi_type" t="類型"/>
+	<w_phrase n="wlang_fkeys_ssi_keyevent" t="重要活動"/>
+	<w_phrase n="wlang_advanced_ssi_peer_to_peer_cc" t="點對點通話完成"/>
+	<w_phrase n="wlang_advanced_logon_logoff" t="登入/登出"/>
+	<w_phrase n="wlang_advanced_ssi_auto_logoff_time" t="不活動 （分鐘） 後 自動 登出 所有 線"/>
+	<w_phrase n="wlang_advanced_logoffall" t="刪除所有用戶"/>
+	<w_phrase n="wlang_advanced_logoffline" t="刪除用戶"/>
+	<w_phrase n="wlang_conf_text_logoff_all" t="請注意，所有SIP用戶設定都將丟失。 您確定要刪除所有的用戶？"/>
+	<w_phrase n="wlang_fkey_info" t="在此頁面中，您可以設定電話上的可編程按鍵。 使用Context指定按鍵意思，例如 被定義的按鍵是用來預訂特定的分機。 Type將選擇特定鍵的實際功能。 在最後一個參數字段Number中，可以儲存實際的電話號碼，SIP URL，DTMF序列，動作URL或密鑰類型。 詳情請參閱電話手冊。"/>
+	<w_phrase n="wlang_advanced_tmz_TTBm4" t="-4 特立尼達和多巴哥（西班牙港）"/>
+	<w_phrase n="wlang_line_ssi_shared_line" t="共享線路"/>
+	<w_phrase n="wlang_advanced_ssi_text_softkey" t="僅在softkey上顯示文字"/>
+	<w_phrase n="wlang_advanced_ssi_softkey_and_text" t="顯示除Softkey標誌以外的文字"/>
+	<w_phrase n="wlang_line_ssi_dtmf_info" t="通過SIP信息的雙音多頻"/>
+	<w_phrase n="wlang_line_ssi_xml_screen_url" t="XML 待機畫面 URL"/>
+	<w_phrase n="wlang_prefs_ssi_ringer_animation" t="鈴聲"/>
+	<w_phrase n="wlang_advanced_ssi_speaker_dialer" t="使用喇叭鍵撥號"/>
+	<w_phrase n="wlang_action_ssi_connected" t="在 連接"/>
+	<w_phrase n="wlang_action_ssi_disconnected" t="在 解除連接"/>
+	<w_phrase n="wlang_advanced_ssi_overlap_dialing" t="重疊 撥號"/>
+	<w_phrase n="wlang_fkeys_ssi_speed" t="快速撥號"/>
+	<w_phrase n="wlang_fkeys_ssi_none" t="無"/>
+	<w_phrase n="wlang_prefs_ssi_redundant_softkeys" t="多餘Softkeys"/>
+	<w_phrase n="wlang_advanced_ssi_web_logout" t="自動 登出 （分鐘）"/>
+	<w_phrase n="wlang_prefs_ringer9" t="鈴聲 9"/>
+	<w_phrase n="wlang_prefs_ringer10" t="鈴聲 10"/>
+	<w_phrase n="wlang_advanced_ssi_cancel_on_hold" t="取消通話保留鍵"/>
+	<w_phrase n="wlang_advanced_call_waiting_ringer" t="鈴聲"/>
+	<w_phrase n="wlang_advanced_ssi_ntp_refresh" t="NTP 更新 時間 （秒）"/>
+	<w_phrase n="wlang_line_ssi_ring_after_delay" t="延時 （秒） 後 響鈴"/>
+	<w_phrase n="wlang_prefs_ssi_redirect_on_code" t="轉接開啟代碼"/>
+	<w_phrase n="wlang_prefs_ssi_redirect_off_code" t="轉接關閉代碼"/>
+	<w_phrase n="wlang_prefs_redirection_always" t="Unconditional"/>
+	<w_phrase n="wlang_prefs_redirection_busy" t="When busy"/>
+	<w_phrase n="wlang_prefs_redirection_time" t="When no reply"/>
+	<w_phrase n="wlang_prefs_dnd" t="請勿打擾"/>
+	<w_phrase n="wlang_prefs_redirect_number" t="Forward to"/>
+	<w_phrase n="wlang_advanced_ssi_pnp_config" t="PnP 配置"/>
+	<w_phrase n="wlang_advanced_ssi_flood_tracing" t="SIP追踪登記/訂閱/通知"/>
+	<w_phrase n="wlang_reboot_ssi_title" t="重新啟動中…"/>
+	<w_phrase n="wlang_text_reboot_info" t="電話將會重新開機。 請耐心等待，直至再次完全啟動。 當顯示屏上再次出現待機畫面時，可以再次使用包含網絡接口的電話。"/>
+	<w_phrase n="wlang_advanced_ssi_xml_notify" t="XML NOTIFY支持"/>
+	<w_phrase n="wlang_minibrowser_pref" t="Minibrowser"/>
+	<w_phrase n="wlang_advanced_ssi_enable_timer_support" t="定時器支持（RFC4028）"/>
+	<w_phrase n="wlang_prefs_dsnumbername" t="號碼+姓名"/>
+	<w_phrase n="wlang_prefs_ssi_keyboard_lock_dp" t="緊急電話號碼"/>
+	<w_phrase n="wlang_prefs_alert_internal_text" t="提示內部文字"/>
+	<w_phrase n="wlang_prefs_ssi_alert_internal_sound" t="提示內部鈴聲"/>
+	<w_phrase n="wlang_prefs_alert_external_text" t="提示外部文字"/>
+	<w_phrase n="wlang_prefs_ssi_alert_external_sound" t="提示外部鈴聲"/>
+	<w_phrase n="wlang_prefs_alert_group_text" t="提示群組文字"/>
+	<w_phrase n="wlang_prefs_ssi_alert_group_sound" t="提示群組鈴聲"/>
+	<w_phrase n="wlang_prefs_alert_info_ringer" t="提示信息鈴聲"/>
+	<w_phrase n="wlang_prefs_ssi_scroll_outgoing" t="啟用用戶滾動"/>
+	<w_phrase n="wlang_advanced_tmz_USA2m7" t="-7 美國 - MST無DST"/>
+	<w_phrase n="wlang_prefs_ssi_show_local_line" t="顯示用戶指引"/>
+	<w_phrase n="wlang_advanced_ssi_pickup_indication" t="對話信息提取的音頻指示"/>
+	<w_phrase n="wlang_advanced_multicast" t="多點廣播"/>
+	<w_phrase n="wlang_advanced_ssi_multicast_listen" t="多點廣播支援"/>
+	<w_phrase n="wlang_advanced_ssi_multicast_address" t="IP地址"/>
+	<w_phrase n="wlang_advanced_ssi_multicast_port" t="端口"/>
+	<w_phrase n="wlang_language_name" t="Traditional Chinese"/>
+	<w_phrase n="wlang_advanced_qos" t="服務質量"/>
+	<w_phrase n="wlang_advanced_rtp" t="RTP/RTCP"/>
+	<w_phrase n="wlang_advanced_sip" t="SIP"/>
+	<w_phrase n="wlang_advtab_network" t="網絡"/>
+	<w_phrase n="wlang_advtab_behavior" t="行為"/>
+	<w_phrase n="wlang_advtab_audio" t="音頻"/>
+	<w_phrase n="wlang_advtab_sip" t="SIP/RTP"/>
+	<w_phrase n="wlang_advtab_update" t="更新"/>
+	<w_phrase n="wlang_advtab_security" t="服務質量/安全"/>
+	<w_phrase n="wlang_linetab_login" t="登入"/>
+	<w_phrase n="wlang_linetab_feat" t="功能"/>
+	<w_phrase n="wlang_linetab_sip" t="SIP"/>
+	<w_phrase n="wlang_linetab_nat" t="NAT"/>
+	<w_phrase n="wlang_linetab_rtp" t="RTP"/>
+	<w_phrase n="wlang_line_ssi_server_type" t="服務器類型支援"/>
+	<w_phrase n="wlang_line_broadsoft" t="BroadSoft公司"/>
+	<w_phrase n="wlang_line_sylantro" t="Sylantro"/>
+	<w_phrase n="wlang_line_pbxnsip" t="PBXnSIP"/>
+	<w_phrase n="wlang_line_default" t="預設"/>
+	<w_phrase n="wlang_line_ssi_event_list_uri" t="Extension Monitoring &amp; Call Pickup List URI"/>
+	<w_phrase n="wlang_web_confirm_apply_set_change" t="套用設定更改？"/>
+	<w_phrase n="wlang_line_ssi_presence_subscription" t="聯絡人清單"/>
+	<w_phrase n="wlang_line_ssi_presence_buddy_list_uri" t="聯絡人清單URI"/>
+	<w_phrase n="wlang_line_ssi_full_sdp_answer" t="詳細SDP应答"/>
+	<w_phrase n="wlang_info_firmware_version" t="固件版本"/>
+	<w_phrase n="wlang_advanced_ssi_redirect_ringing" t="Allow Incoming Call Redirection Through Programmable Keys"/>
+	<w_phrase n="wlang_advanced_ssi_auto_redial" t="忙碌時自動重撥"/>
+	<w_phrase n="wlang_advanced_ssi_auto_redial_value" t="（秒）後重撥"/>
+	<w_phrase n="wlang_advanced_ssi_disable_blind_transfer" t="開閉盲轉（REFER）"/>
+	<w_phrase n="wlang_advanced_ssi_disable_deflection" t="關閉電話轉移（代碼302）"/>
+	<w_phrase n="wlang_action_ssi_log_on" t="登入"/>
+	<w_phrase n="wlang_action_ssi_log_off" t="登出"/>
+	<w_phrase n="wlang_prefs_ssi_show_call_status" t="顯示通話狀態信息"/>
+	<w_phrase n="wlang_action_ssi_reg_failed" t="註冊 失敗"/>
+	<w_phrase n="wlang_subscriptions_ssi_title" t="訂閱 狀態"/>
+	<w_phrase n="wlang_leftnav_subscriptions" t="訂閱"/>
+	<w_phrase n="wlang_advanced_ssi_max_boot_delay" t="最大啟動延遲（秒）"/>
+	<w_phrase n="wlang_advanced_http_server" t="HTTP Server"/>
+	<w_phrase n="wlang_advanced_http_client" t="HTTP Client"/>
+	<w_phrase n="wlang_advanced_ssi_mailbox_active" t="僅處理活躍用戶郵箱"/>
+	<w_phrase n="wlang_line_ssi_remove_all_bindings" t="移除所有與非註冊者的綁定"/>
+	<w_phrase n="wlang_line_ssi_include_listeners" t="Include Listeners in REGISTER"/>
+	<w_phrase n="wlang_vpn_ssi_vpn_on" t="VPN"/>
+	<w_phrase n="wlang_vpn_ssi_tarball_url" t="解壓縮的VPN配置tarball"/>
+	<w_phrase n="wlang_ssi_l2tp_on" t="L2TP"/>
+	<w_phrase n="wlang_ssi_l2tp_tarball_url" t="Unzipped L2TP config tarball"/>
+	<w_phrase n="wlang_ssi_sbc_on" t="SBC"/>
+	<w_phrase n="wlang_ssi_sbc_prov_url" t="SBC config file URL"/>
+	<w_phrase n="wlang_advanced_ssi_idle_offhook" t="Return to Idle Screen on Off-hook"/>
+	<w_phrase n="wlang_prefs_ssi_enable_keyboard_lock" t="允許鍵盤鎖定"/>
+	<w_phrase n="wlang_advanced_ssi_vlan_port_tagging" t="取消/標記去往/來自特定交換機端口的VLAN流量"/>
+	<w_phrase n="wlang_advanced_ssi_vlan_id" t="VLAN ID（1-4094）"/>
+	<w_phrase n="wlang_advanced_ssi_vlan_priority" t="VLAN優先（0-7）"/>
+	<w_phrase n="wlang_advanced_vlan" t="VLAN"/>
+	<w_phrase n="wlang_line_failover_identity" t="故障轉移標識"/>
+	<w_phrase n="wlang_fkeys_sidecar" t="擴展模塊"/>
+	<w_phrase n="wlang_usb_expansion_module" t="USB擴展模塊"/>
+	<w_phrase n="wlang_sidecar_layout_lines" t="目錄佈局"/>
+	<w_phrase n="wlang_sidecar_layout_tiles" t="磚塊佈局"/>
+	<w_phrase n="wlang_line_ssi_record_dialed_calls" t="錄製已撥號通話"/>
+	<w_phrase n="wlang_line_ssi_record_received_calls" t="錄製已接來電"/>
+	<w_phrase n="wlang_prefs_ssi_emergency_proxy" t="Outbound Proxy"/>
+	<w_phrase n="wlang_line_telepo" t="Telepo"/>
+	<w_phrase n="wlang_fkeys_ssi_button" t="按鈕"/>
+	<w_phrase n="wlang_advanced_ssi_retryafterfailedregister" t="註冊失敗後，間隔(s)重試"/>
+	<w_phrase n="wlang_line_ssi_subscription_expiry" t="訂閱期限"/>
+	<w_phrase n="wlang_line_metaswitch" t="數據元"/>
+	<w_phrase n="wlang_advanced_ssi_sendprack" t="發送PRACK"/>
+	<w_phrase n="wlang_watchdog" t="監控器"/>
+	<w_phrase n="wlang_advanced_ssi_rtp_keepalive" t="保持實時傳輸協議連接"/>
+	<w_phrase n="wlang_ldap_search_filter" t="LDAP名稱過濾/輕量級目錄存取協定名稱過濾"/>
+	<w_phrase n="wlang_ldap_number_filter" t="LDAP號碼過濾/輕量級目錄存取協定號碼過濾"/>
+	<w_phrase n="wlang_ldap_name_attributes" t="LDAP名稱屬性"/>
+	<w_phrase n="wlang_ldap_number_attributes" t="LDAP號碼屬性"/>
+	<w_phrase n="wlang_ldap_display_name" t="LDAP顯示名稱"/>
+	<w_phrase n="wlang_advanced_ssi_ldap_over_tls" t="傳輸層安全的輕量級目錄存取"/>
+	<w_phrase n="wlang_prefs_tsaustria" t="奧地利"/>
+	<w_phrase n="wlang_prefs_tsfrance" t="法國"/>
+	<w_phrase n="wlang_prefs_tsitaly" t="意大利"/>
+	<w_phrase n="wlang_prefs_tsnetherlands" t="荷蘭"/>
+	<w_phrase n="wlang_prefs_tsnorway" t="挪威"/>
+	<w_phrase n="wlang_prefs_tsnewzealand" t="新西蘭"/>
+	<w_phrase n="wlang_prefs_tsspain" t="西班牙"/>
+	<w_phrase n="wlang_prefs_tsgreatbritain" t="大不列顛"/>
+	<w_phrase n="wlang_advanced_tmz_VENm4" t="-4 委內瑞拉（加拉加斯）"/>
+	<w_phrase n="wlang_advanced_tmz_NCLp11" t="+11 新喀裡多尼亞（努美阿）"/>
+	<w_phrase n="wlang_line_ssi_enable_hookflash" t="開啟話機閃斷"/>
+	<w_phrase n="wlang_vpn_netcat_server" t="Netcat服務器（例如192.168.0.188 5000）"/>
+	<w_phrase n="wlang_fkeys_ssi_presence" t="在線"/>
+	<w_phrase n="wlang_fkeys_ssi_disp_code" t="Disposition Code"/>
+	<w_phrase n="wlang_prefs_custom_internal_alert_info" t="使用內置的旋律自定義警報信息"/>
+	<w_phrase n="wlang_prefs_ca_ringer_text" t="內部鈴聲文本"/>
+	<w_phrase n="wlang_prefs_ssi_ca_ringer_file" t="內部鈴聲文件"/>
+	<w_phrase n="wlang_line_nortel" t="北電網絡"/>
+	<w_phrase n="wlang_action_ssi_hold" t="通話保留"/>
+	<w_phrase n="wlang_action_ssi_unhold" t="恢復通話"/>
+	<w_phrase n="wlang_action_ssi_transfer" t="轉接 電話"/>
+	<w_phrase n="wlang_action_ssi_blind_transfer" t="盲轉"/>
+	<w_phrase n="wlang_action_ssi_attended_transfer" t="諮詢轉接"/>
+	<w_phrase n="wlang_action_ssi_longpress_url" t="線鍵長按"/>
+	<w_phrase n="wlang_advanced_ssi_csta_control" t="允許  CSTA 控制"/>
+	<w_phrase n="wlang_line_ssi_dtmf_info_sip_info_only" t="僅限SIP信息"/>
+	<w_phrase n="wlang_advanced_ssi_speaker_receive_call" t="按喇叭/耳機鍵接聽電話"/>
+	<w_phrase n="wlang_prefs_ssi_global_missed_counter" t="未接電話整體計數器"/>
+	<w_phrase n="wlang_advanced_ssi_http_password_not_set" t="HTTP密碼未設定！"/>
+	<w_phrase n="wlang_text_login_failed_info1" t="在嘗試IP地址失敗多次後，"/>
+	<w_phrase n="wlang_text_login_failed_info2" t="需要…(分鐘)才能重新嘗試。"/>
+	<w_phrase n="wlang_text_login_failed_info3" t="進一步無效的登入嘗試會加倍等待解鎖時間。"/>
+	<w_phrase n="wlang_text_login_failed_info4" t="，網頁界面已被封鎖！"/>
+	<w_phrase n="wlang_login_failed_ssi_title" t="登入失敗！"/>
+	<w_phrase n="wlang_web_confirm_logout" t="要從網頁登出用戶？"/>
+	<w_phrase n="wlang_advanced_logoutbutton" t="登出"/>
+	<w_phrase n="wlang_line_ssi_savp" t="RTP/ SAVP"/>
+	<w_phrase n="wlang_advanced_ssi_use_hidden_tags" t="使用隱藏標籤"/>
+	<w_phrase n="wlang_fkeys_ssi_blf" t="BLF"/>
+	<w_phrase n="wlang_advanced_ssi_show_history_info" t="顯示歷史信息"/>
+	<w_phrase n="wlang_security_warning_ssi_title" t="Security Warning!"/>
+	<w_phrase n="wlang_text_security_warning_info1" t="您或其他遠程用戶向電話發送了未經授權的HTTP POST請求。"/>
+	<w_phrase n="wlang_text_security_warning_info2" t="此請求已被跳過，驗證關閉。"/>
+	<w_phrase n="wlang_text_security_warning_info3" t="您必須重新進行用戶驗證才能再次使用網頁界面。"/>
+	<w_phrase n="wlang_security_advice" t="安全建議"/>
+	<w_phrase n="wlang_security_settings_state" t="Security Settings State"/>
+	<w_phrase n="wlang_Recommended" t="Recommended"/>
+	<w_phrase n="wlang_Mandatory" t="Mandatory"/>
+	<w_phrase n="wlang_security_text_advice1" t="We strongly recommend that you secure the web interface in order to protect your phone against remote attacks. Therefore the HTTP User as well as the   Administrator Password should be changed from the default value. Changing   the HTTP Password is mandatory."/>
+	<w_phrase n="wlang_security_text_advice2" t="另外，您應該使用隱藏的安全標記來保護網頁界面，防止遠程攻擊者嘗試用虛假的HTTP POST要求更改電話設定。"/>
+	<w_phrase n="wlang_security_apply_button_ignore" t="Apply and ignore the warning until reboot."/>
+	<w_phrase n="wlang_security_apply_button_ignore_forever" t="Apply and ignore the warning forever."/>
+	<w_phrase n="wlang_security_ssi_title" t="安全"/>
+	<w_phrase n="wlang_advanced_ssi_ignore_warning" t="忽略安全建議"/>
+	<w_phrase n="wlang_advanced_ssi_naptr_sip_uri" t="在SIP URIs 上使用NAPTR"/>
+	<w_phrase n="wlang_line_ssi_optional" t="可選的"/>
+	<w_phrase n="wlang_line_ssi_mandatory" t="強制性"/>
+	<w_phrase n="wlang_prefs_backlight_dim" t="暗淡"/>
+	<w_phrase n="wlang_advanced_ssi_show_diversion" t="顯示轉換"/>
+	<w_phrase n="wlang_advanced_ssi_offhook_dial_prompt" t="Dial Prompt on Off-hook"/>
+	<w_phrase n="wlang_fkeys_ssi_ivr" t="交換式語音應答"/>
+	<w_phrase n="wlang_info_uptime_info" t="運行時間"/>
+	<w_phrase n="wlang_info_memfree_info" t="記憶體空間"/>
+	<w_phrase n="wlang_info_uboot_version_info" t="引導程序，版本"/>
+	<w_phrase n="wlang_line_ssi_authtag" t="SRTP授權標籤"/>
+	<w_phrase n="wlang_line_ssi_aes32" t="AES-32"/>
+	<w_phrase n="wlang_line_ssi_aes80" t="AES-80"/>
+	<w_phrase n="wlang_prefs_ssi_show_ivr_digits" t="連接時顯示IVR數字"/>
+	<w_phrase n="wlang_line_ssi_dynamic_payload" t="動態G.726有效載荷"/>
+	<w_phrase n="wlang_advanced_ssi_show" t="顯示"/>
+	<w_phrase n="wlang_fkeyname_retrieve" t="Voicemail"/>
+	<w_phrase n="wlang_fkeyname_dnd" t="請勿打擾"/>
+	<w_phrase n="wlang_fkeyname_menu" t="Settings"/>
+	<w_phrase n="wlang_fkeyname_exec_assist_config" t="Executive-Assistant Config"/>
+	<w_phrase n="wlang_fkeyname_exec_assist_callon_behalfof" t="Executive-Assistant Behalf Of"/>
+	<w_phrase n="wlang_fkeyname_transfer" t="轉接"/>
+	<w_phrase n="wlang_fkeyname_hold" t="保留"/>
+	<w_phrase n="wlang_fkeyname_missed" t="未接來電"/>
+	<w_phrase n="wlang_fkeyname_accepted" t="接聽的電話"/>
+	<w_phrase n="wlang_fkeyname_dailed" t="Dialed Calls"/>
+	<w_phrase n="wlang_advanced_tmz_USA2m10" t="-10 美國 - 阿拉斯加阿留申"/>
+	<w_phrase n="wlang_fkeyname_call_lists" t="Call History"/>
+	<w_phrase n="wlang_fkeyname_support" t="幫助"/>
+	<w_phrase n="wlang_fkeyname_headset" t="耳機"/>
+	<w_phrase n="wlang_fkeyname_presence" t="Presence"/>
+	<w_phrase n="wlang_fkeyname_buddies" t="聯絡人"/>
+	<w_phrase n="wlang_fkeyname_redial" t="重撥"/>
+	<w_phrase n="wlang_fkeyname_instant_redial" t="Instant Redial"/>
+	<w_phrase n="wlang_fkeyname_denyall" t="Block Caller"/>
+	<w_phrase n="wlang_fkeyname_contactpool" t="Pool"/>
+	<w_phrase n="wlang_fkeyname_addr" t="電話簿"/>
+	<w_phrase n="wlang_ocip_prefs" t="OCI-P (Broadsoft)"/>
+	<w_phrase n="wlang_advanced_dfks" t="設備功鍵同步"/>
+	<w_phrase n="wlang_line_ssi_publish_presence_bootup" t="發布 在線 在 啟動時"/>
+	<w_phrase n="wlang_fkeyname_record" t="記錄"/>
+	<w_phrase n="wlang_fkeyname_conference" t="會議"/>
+	<w_phrase n="wlang_fkeyname_id_next" t="Next Identity"/>
+	<w_phrase n="wlang_fkeyname_id_prev" t="Previous Identity"/>
+	<w_phrase n="wlang_fkeyname_mobility" t="記錄/移動"/>
+	<w_phrase n="wlang_ocs_outbound_proxy" t="Outbound Proxy/外出代理服務器"/>
+	<w_phrase n="wlang_prefs_ssi_advertisement" t="通知"/>
+	<w_phrase n="wlang_fkeyname_monitored_calls" t="監測電話"/>
+	<w_phrase n="wlang_fkeys_ssi_transfer" t="Transfer"/>
+	<w_phrase n="wlang_fkeys_ssi_redirect" t="Call Forward"/>
+	<w_phrase n="wlang_fkeys_ssi_auto_answer" t="自動應答"/>
+	<w_phrase n="wlang_wifi_auth_mode" t="Security"/>
+	<w_phrase n="wlang_wifi_scanning" t="Scanning"/>
+	<w_phrase n="wlang_wifi_wpa2" t="WPA2"/>
+	<w_phrase n="wlang_wifi_wpa" t="WPA"/>
+	<w_phrase n="wlang_wifi_wep" t="WEP"/>
+	<w_phrase n="wlang_wifi_open" t="OPEN"/>
+	<w_phrase n="wlang_wifi_wpapsk" t="Password"/>
+	<w_phrase n="wlang_wifi_wpa_encryptype" t="加密類型"/>
+	<w_phrase n="wlang_wifi_tkip" t="TKIP"/>
+	<w_phrase n="wlang_wifi_aes" t="AES"/>
+	<w_phrase n="wlang_wifi_essid" t="Network Name"/>
+	<w_phrase n="wlang_advanced_wifi" t="無線區域網"/>
+	<w_phrase n="wlang_bt_enabled" t="Bluetooth Enabled"/>
+	<w_phrase n="wlang_advanced_tr069" t="TR-069"/>
+	<w_phrase n="wlang_wifi_wep_key1" t="Password"/>
+	<w_phrase n="wlang_line_asterisk" t="星號"/>
+	<w_phrase n="wlang_line_ccm" t="CCM模式"/>
+	<w_phrase n="wlang_advanced_ssi_typeanswering" t="Intercom Answering for Alert Info"/>
+	<w_phrase n="wlang_advanced_ssi_call_info_audio_device" t="Intercom Answering for Call Info"/>
+	<w_phrase n="wlang_advanced_ssi_tahandsfree" t="免提"/>
+	<w_phrase n="wlang_advanced_ssi_tahandset" t="子機"/>
+	<w_phrase n="wlang_advanced_ssi_taheadset" t="耳機"/>
+	<w_phrase n="wlang_advanced_ssi_taactivedevice" t="Active device"/>
+	<w_phrase n="wlang_line_ssi_additional_supported_headers" t="額外的支持標題"/>
+	<w_phrase n="wlang_prefs_ssi_dim_timer" t="昏暗後（以秒為單位）"/>
+	<w_phrase n="wlang_prefs_character_settings" t="字符設定"/>
+	<w_phrase n="wlang_fkeyname_mute" t="靜音"/>
+	<w_phrase n="wlang_advanced_ssi_empty_tls_client_cert" t="空的客戶證書"/>
+	<w_phrase n="wlang_advanced_vq_report_collector" t="語音質量報告收集器"/>
+	<w_phrase n="wlang_fkeyname_reboot" t="重新啟動"/>
+	<w_phrase n="wlang_fkeyname_logoff_all" t="Logoff All"/>
+	<w_phrase n="wlang_fkeyname_auto_answer" t="自動應答"/>
+	<w_phrase n="wlang_fkeyname_reset" t="重設"/>
+	<w_phrase n="wlang_prefs_keyboard_lock_timeout" t="在多分鐘鍵盤鎖上"/>
+	<w_phrase n="wlang_logged_out_info" t="您已經從電話中登出。如 要再次登入，請點擊登入按鈕。"/>
+	<w_phrase n="wlang_logged_out_title" t="登出"/>
+	<w_phrase n="wlang_advanced_loginbutton" t="登入"/>
+	<w_phrase n="wlang_advanced_ssi_sip_tracing" t="SIP追踪"/>
+	<w_phrase n="wlang_advanced_ssi_http_tracing" t="HTTP追踪"/>
+	<w_phrase n="wlang_line_ssi_g726_packing_order" t="G.726 Byte順序"/>
+	<w_phrase n="wlang_line_ssi_rfc3551" t="RFC3551"/>
+	<w_phrase n="wlang_line_ssi_aal2" t="AAL2"/>
+	<w_phrase n="wlang_adr_first_name" t="名字"/>
+	<w_phrase n="wlang_adr_last_name" t="姓氏"/>
+	<w_phrase n="wlang_adr_group" t="群組"/>
+	<w_phrase n="wlang_adr_title" t="職位"/>
+	<w_phrase n="wlang_adr_organization" t="組織"/>
+	<w_phrase n="wlang_adr_email" t="電郵"/>
+	<w_phrase n="wlang_adr_note" t="備註"/>
+	<w_phrase n="wlang_adr_favorite" t="喜愛"/>
+	<w_phrase n="wlang_adr_work" t="工作"/>
+	<w_phrase n="wlang_adr_addsub_button" t="添加小組"/>
+	<w_phrase n="wlang_adr_change_button" t="更改"/>
+	<w_phrase n="wlang_advanced_goto_monitor_state_on_line_activity" t="活動狀態下使用通話監控"/>
+	<w_phrase n="wlang_adr_skip_first_line" t="跳過第一行"/>
+	<w_phrase n="wlang_advanced_prefer_saved_over_received_photo" t="Prefer local Photos"/>
+	<w_phrase n="wlang_adr_photo" t="照片"/>
+	<w_phrase n="wlang_line_use_photo_from_tbook" t="從電話簿提取"/>
+	<w_phrase n="wlang_line_teles" t="電信設備"/>
+	<w_phrase n="wlang_fkeys_ssi_replacement_label_header" t="短文本"/>
+	<w_phrase n="wlang_fkeys_ssi_short_label" t="Short Label"/>
+	<w_phrase n="wlang_fkeys_ssi_full_label" t="Full Label"/>
+	<w_phrase n="wlang_fkeys_ssi_short_label_mode" t="Short Label Mode"/>
+	<w_phrase n="wlang_fkeyname_favorites" t="Favorites"/>
+	<w_phrase n="wlang_advanced_load_param_map" t="Load TR-069 Parameter Map Manually"/>
+	<w_phrase n="wlang_line_default_contact_uri" t="預設電話號碼"/>
+	<w_phrase n="wlang_contact_none" t="無"/>
+	<w_phrase n="wlang_contact_mobile" t="手機"/>
+	<w_phrase n="wlang_contact_home" t="家庭"/>
+	<w_phrase n="wlang_contact_main" t="Main"/>
+	<w_phrase n="wlang_advanced_ssi_suppress_ringing_during_hold" t="Suppress Ringtone During Hold"/>
+	<w_phrase n="wlang_advanced_ssi_play_music_during_hold" t="通話保留音樂播放"/>
+	<w_phrase n="wlang_advanced_ssi_offer_outbound" t="使用外出模式"/>
+	<w_phrase n="wlang_advanced_tmz_UAEp4" t="+4 阿拉伯聯合酋長國（迪拜）"/>
+	<w_phrase n="wlang_prefs_ssi_dialnumber_us_format" t="美國撥打號碼  格式"/>
+	<w_phrase n="wlang_advanced_ssi_transferonhookstarcode" t="星碼轉接接聽電話"/>
+	<w_phrase n="wlang_advanced_load_dialplan" t="手動加載Dialplan XML"/>
+	<w_phrase n="wlang_jb" t="增強的JB"/>
+	<w_phrase n="wlang_jb_adaptive" t="適應性播放"/>
+	<w_phrase n="wlang_jb_adjust_silence" t="在靜識時調整"/>
+	<w_phrase n="wlang_jb_adjust_immediately" t="立即調整"/>
+	<w_phrase n="wlang_jb_max" t="JB_最大"/>
+	<w_phrase n="wlang_jb_min" t="JB_最小"/>
+	<w_phrase n="wlang_jb_average" t="JB_平均"/>
+	<w_phrase n="wlang_adr_nrtype_sip" t="sip"/>
+	<w_phrase n="wlang_adr_nrtype_business" t="商業"/>
+	<w_phrase n="wlang_adr_nrtype_landline" t="Landline"/>
+	<w_phrase n="wlang_adr_nrtype_extension" t="extension"/>
+	<w_phrase n="wlang_adr_number_type" t="數字類型"/>
+	<w_phrase n="wlang_adr_nickname" t="暱稱"/>
+	<w_phrase n="wlang_fkeys_ssi_multicast" t="Multicast"/>
+	<w_phrase n="wlang_fkeys_ssi_xml" t="XML Definition"/>
+	<w_phrase n="wlang_fkeys_ssi_conference_server" t="Conference"/>
+	<w_phrase n="wlang_action_ssi_received_attended_transfer" t="收到SIP INVITE"/>
+	<w_phrase n="wlang_line_ssi_mediatransportoffer" t="媒體傳輸"/>
+	<w_phrase n="wlang_line_ssi_mediatransportoffersetup" t="媒體傳輸設定"/>
+	<w_phrase n="wlang_line_ssi_mto_active" t="主動"/>
+	<w_phrase n="wlang_line_ssi_mto_passive" t="被動"/>
+	<w_phrase n="wlang_line_ssi_mto_any" t="任何"/>
+	<w_phrase n="wlang_line_ssi_hold_inactive" t="保留不活動線路"/>
+	<w_phrase n="wlang_prefs_ssi_upper_chars_0" t="Uppercase Character Sequence Key 0"/>
+	<w_phrase n="wlang_prefs_ssi_upper_chars_1" t="Uppercase Character Sequence Key 1"/>
+	<w_phrase n="wlang_prefs_ssi_upper_chars_2" t="Uppercase Character Sequence Key 2"/>
+	<w_phrase n="wlang_prefs_ssi_upper_chars_3" t="Uppercase Character Sequence Key 3"/>
+	<w_phrase n="wlang_prefs_ssi_upper_chars_4" t="Uppercase Character Sequence Key 4"/>
+	<w_phrase n="wlang_prefs_ssi_upper_chars_5" t="Uppercase Character Sequence Key 5"/>
+	<w_phrase n="wlang_prefs_ssi_upper_chars_6" t="Uppercase Character Sequence Key 6"/>
+	<w_phrase n="wlang_prefs_ssi_upper_chars_7" t="Uppercase Character Sequence Key 7"/>
+	<w_phrase n="wlang_prefs_ssi_upper_chars_8" t="Uppercase Character Sequence Key 8"/>
+	<w_phrase n="wlang_prefs_ssi_upper_chars_9" t="Uppercase Character Sequence Key 9"/>
+	<w_phrase n="wlang_prefs_ssi_lower_chars_0" t="Lowercase Character Sequence Key 0"/>
+	<w_phrase n="wlang_prefs_ssi_lower_chars_1" t="Lowercase Character Sequence Key 1"/>
+	<w_phrase n="wlang_prefs_ssi_lower_chars_2" t="Lowercase Character Sequence Key 2"/>
+	<w_phrase n="wlang_prefs_ssi_lower_chars_3" t="Lowercase Character Sequence Key 3"/>
+	<w_phrase n="wlang_prefs_ssi_lower_chars_4" t="Lowercase Character Sequence Key 4"/>
+	<w_phrase n="wlang_prefs_ssi_lower_chars_5" t="Lowercase Character Sequence Key 5"/>
+	<w_phrase n="wlang_prefs_ssi_lower_chars_6" t="Lowercase Character Sequence Key 6"/>
+	<w_phrase n="wlang_prefs_ssi_lower_chars_7" t="Lowercase Character Sequence Key 7"/>
+	<w_phrase n="wlang_prefs_ssi_lower_chars_8" t="Lowercase Character Sequence Key 8"/>
+	<w_phrase n="wlang_prefs_ssi_lower_chars_9" t="Lowercase Character Sequence Key 9"/>
+	<w_phrase n="wlang_line_ssi_subscription_expiry_after_failed" t="訂閱失敗重試時間(秒)"/>
+	<w_phrase n="wlang_advanced_ssi_transferonhooknonpots" t="Independent Transfer on On-hook"/>
+	<w_phrase n="wlang_advanced_ssi_check_sdp_version" t="檢查SDP版本"/>
+	<w_phrase n="wlang_prefs_ssi_show_clock" t="顯示時鐘"/>
+	<w_phrase n="wlang_ldap_perform_initial_query" t="做一個初始查詢"/>
+	<w_phrase n="wlang_cert_tab_unknown_certs" t="未知 證書"/>
+	<w_phrase n="wlang_cert_tab_tlsdsk_certs" t="安全傳輸層協議 DSK"/>
+	<w_phrase n="wlang_cert_add_trusted_cert" t="添加自定證書（DER格式）"/>
+	<w_phrase n="wlang_tls_server_authentication_notification" t="在預設情況下，電話不會在安全連接（TLS）中驗證服務器用戶，因為這些連接很容易受到中間人攻擊。但請注意基於安全考慮，啟用該功能後，您只能回復原廠設定情況下才能禁用該功能。想了解更多，請參閱WIKI。"/>
+	<w_phrase n="wlang_tls_server_authentication_title" t="TLS服務器用戶驗證"/>
+	<w_phrase n="wlang_tls_server_authentication_activate" t="啟用"/>
+	<w_phrase n="wlang_read_more" t="閱讀更多"/>
+	<w_phrase n="wlang_advanced_1000full" t="1000 Mbit 半雙工"/>
+	<w_phrase n="wlang_advanced_1000half" t="1001 Mbit 全雙工"/>
+	<w_phrase n="wlang_advanced_rtcp_xr" t="RTCP-XR報告格式"/>
+	<w_phrase n="wlang_dialplan_count_failed_match_groups" t="在撥號計劃中計算所有群組"/>
+	<w_phrase n="wlang_advanced_ssi_allow_rtp_on_mute" t="靜音時發送靜音RTP數據包"/>
+	<w_phrase n="wlang_line_ssi_is_voice_identity" t="用戶可以接聽電話"/>
+	<w_phrase n="wlang_line_ssi_hide_identity" t="隱藏用戶"/>
+	<w_phrase n="wlang_fkeyname_status_messages" t="Info"/>
+	<w_phrase n="wlang_advanced_ssi_min_pin_length" t="最低PIN長度"/>
+	<w_phrase n="wlang_advanced_ssi_max_pin_retry" t="最多PIN重試次數"/>
+	<w_phrase n="wlang_line_ssi_allow_inc_dialog_subscribe" t="允許來電延長顯示"/>
+	<w_phrase n="wlang_prefs_scroll_text_interval" t="滾動步長間隔"/>
+	<w_phrase n="wlang_prefs_scroll_text_step_count" t="滾動步數"/>
+	<w_phrase n="wlang_prefs_scroll_text_wait_multiplier" t="滾動步驟暫停"/>
+	<w_phrase n="wlang_apply_button" t="應用"/>
+	<w_phrase n="wlang_unsaved_settings" t="設定還沒有永久儲存。"/>
+	<w_phrase n="wlang_view_changes_button" t="查看更改"/>
+	<w_phrase n="wlang_changed_dialplan_msg" t="XML撥號計劃已更改。"/>
+	<w_phrase n="wlang_changed_settings_header" t="以下設定已更改"/>
+	<w_phrase n="wlang_no_changed_settings_msg" t="所有設定已儲存。"/>
+	<w_phrase n="wlang_line_ssi_extension_monitoring_group" t="延長顯示/監控組ID"/>
+	<w_phrase n="wlang_soundcard_event_map" t="音頻參數"/>
+	<w_phrase n="wlang_license_info" t="您的電話預先安裝了有效的許可證。您亦可以手動上傳新的許可證文件，以啟用其他軟件功能，或者重新安裝預先安裝的許可證以防遺失或損壞。如果上傳的許可證文件無效（例如，不能配對電話的MAC地址），則會被忽略，並保留現有的許可證。"/>
+	<w_phrase n="wlang_advanced_ssi_restrict_uri_queries" t="限制URI查詢"/>
+	<w_phrase n="wlang_advanced_ssi_release_xfer_on" t="釋放電話轉接方"/>
+	<w_phrase n="wlang_advanced_ssi_retrieve_xfer_on" t="恢復電話轉接方"/>
+	<w_phrase n="wlang_fkeyname_hold_private" t="Private Hold"/>
+	<w_phrase n="wlang_fkey_contact_list_buddy" t="BLF（服務器）"/>
+	<w_phrase n="wlang_advanced_ssi_allow_sip_settings" t="允許SIP設定"/>
+	<w_phrase n="wlang_prefs_tsczech" t="捷克"/>
+	<w_phrase n="wlang_advanced_ssi_dhcp_options_on_ip_aquire" t="DHCP上的選項=開啟"/>
+	<w_phrase n="wlang_advanced_ssi_dhcp_options_on_inform" t="DHCP上的選項=關閉"/>
+	<w_phrase n="wlang_advanced_ssi_headset_rings_once" t="耳機只響一次"/>
+	<w_phrase n="wlang_F_ACD" t="ACD"/>
+	<w_phrase n="wlang_disabled" t="無效"/>
+	<w_phrase n="wlang_unknown" t="未知"/>
+	<w_phrase n="wlang_sysinfo_ssi_status" t="狀態"/>
+	<w_phrase n="wlang_sysinfo_ssi_paired_with" t="配對"/>
+	<w_phrase n="wlang_sysinfo_ssi_vision_status" t="連接狀態"/>
+	<w_phrase n="wlang_line_snomone" t="snomONE"/>
+	<w_phrase n="wlang_line_sutus" t="SUTUS BC"/>
+	<w_phrase n="wlang_prefs_redirection_fwd_always" t="Call Forwarding Unconditional (CFU)"/>
+	<w_phrase n="wlang_prefs_redirection_fwd_busy" t="Call Forwarding Busy (CFB)"/>
+	<w_phrase n="wlang_prefs_redirection_fwd_time" t="Call Forwarding No Reply (CFNR)"/>
+	<w_phrase n="wlang_line_server_managed" t="服務器管理"/>
+	<w_phrase n="wlang_fkeys_ssi_starcode" t="Star Code"/>
+	<w_phrase n="wlang_prio_asserted" t="確定優先級"/>
+	<w_phrase n="wlang_replacement_dialp" t="XML樣板已更改​"/>
+	<w_phrase n="wlang_adr_action_url" t="Action-Url"/>
+	<w_phrase n="wlang_sip_force_sendrecv_no_sdp" t="在沒有SDP的邀請下強制使用SENDRECV"/>
+	<w_phrase n="wlang_advanced_ssi_dnsserver1_v6" t="DNS  服務器  1（V6）"/>
+	<w_phrase n="wlang_advanced_ssi_dnsserver2_v6" t="DNS  服務器  2（V6）"/>
+	<w_phrase n="wlang_advanced_ssi_dnsserver3_v6" t="DNS  服務器  3（V6）"/>
+	<w_phrase n="wlang_advanced_ssi_dnsserver4_v6" t="DNS  服務器  4（V6）"/>
+	<w_phrase n="wlang_advanced_ssi_ntptimeserver_v6" t="NTP  時間 服務器（V6）"/>
+	<w_phrase n="wlang_info_ipaddress_v6" t="IPv6 地址"/>
+	<w_phrase n="wlang_advanced_ssi_domain_v6" t="域名(v6)"/>
+	<w_phrase n="wlang_advanced_ssi_ipaddress_v6" t="IP 地址（V6）"/>
+	<w_phrase n="wlang_advanced_ssi_ipv6_over_ipv4" t="Prefer IPv6"/>
+	<w_phrase n="wlang_advanced_ssi_dhcp_v6" t="DHCP（V6）"/>
+	<w_phrase n="wlang_advanced_ssi_dhcp_v6_autoconf" t="自動配置"/>
+	<w_phrase n="wlang_advanced_ssi_ipv6" t="IPv6"/>
+	<w_phrase n="wlang_advanced_ssi_more_control" t="更多管理"/>
+	<w_phrase n="wlang_cert_tab_8021x_certs" t="802.1X 證書"/>
+	<w_phrase n="wlang_cert_add_8021x_cert" t="添加802.1X證書（TAR存檔）"/>
+	<w_phrase n="wlang_cert_8021x_config" t="802.1X配置"/>
+	<w_phrase n="wlang_ieee8021x_eap_auth_method_choice" t="IEEE 802.1X Authentication"/>
+	<w_phrase n="wlang_ieee8021x_eap_auth_method_choice_eap_md5" t="EAP Credentials"/>
+	<w_phrase n="wlang_ieee8021x_eap_auth_method_choice_eap_tls" t="EAP Certificate"/>
+	<w_phrase n="wlang_usb_storage_text" t="USB貯存空間"/>
+	<w_phrase n="wlang_usb_storage_allow_swupdate_text" t="允許軟件更新"/>
+	<w_phrase n="wlang_usb_storage_allow_syslog_text" t="允許系統日誌追踪"/>
+	<w_phrase n="wlang_usb_storage_allow_siptrace_text" t="允許SIP追踪"/>
+	<w_phrase n="wlang_usb_storage_allow_httptrace_text" t="允許HTTP追踪"/>
+	<w_phrase n="wlang_usb_storage_allow_pcap_text" t="允許PCAP追踪"/>
+	<w_phrase n="wlang_usb_storage_passphrase_text" t="AES通行碼"/>
+	<w_phrase n="wlang_check_cseq_dlginfo_notify" t="在DLG信息通知中檢查的Cseq"/>
+	<w_phrase n="wlang_line_xsi_server" t="XSI服務器"/>
+	<w_phrase n="wlang_line_xsi_user" t="XSI用戶"/>
+	<w_phrase n="wlang_line_xsi_password" t="XSI密碼"/>
+	<w_phrase n="wlang_line_xsi_retry_timer" t="XSI重試定時器（秒）"/>
+	<w_phrase n="wlang_line_xsi_events" t="XSI活動"/>
+	<w_phrase n="wlang_line_xsi_polling" t="XSI動作輪詢間隔（秒）"/>
+	<w_phrase n="wlang_line_tbook_download_interval" t="Phone Book Download Interval (s)"/>
+	<w_phrase n="wlang_line_xsi_conf_updating" t="XSI會議行動更新間距（秒）"/>
+	<w_phrase n="wlang_line_xsi_anywhere" t="任何地方"/>
+	<w_phrase n="wlang_line_server_directories_search" t="服務器目錄 (Search)"/>
+	<w_phrase n="wlang_line_server_directories_download" t="服務器目錄 (Download)"/>
+	<w_phrase n="wlang_line_blf_park_pick_up_code" t="BLF Park Pick Up Code"/>
+	<w_phrase n="wlang_line_blf_directed_call_pickup_code" t="BLF Directed Call Pickup Code"/>
+	<w_phrase n="wlang_line_xsi_visual_voicemail" t="可視語音信箱"/>
+	<w_phrase n="wlang_line_xsi_callcenter_list" t="電話中心清單"/>
+	<w_phrase n="wlang_line_xmpp_jid" t="XMPP ID"/>
+	<w_phrase n="wlang_line_xmpp_password" t="XMPP密碼"/>
+	<w_phrase n="wlang_fkey_xmpp_presence" t="Contact (XMPP)"/>
+	<w_phrase n="wlang_F_STARCODE" t="Star Code"/>
+	<w_phrase n="wlang_line_conference_server" t="會議服務器"/>
+	<w_phrase n="wlang_line_call_logs" t="通話記錄"/>
+	<w_phrase n="wlang_line_ssi_local" t="Local"/>
+	<w_phrase n="wlang_line_tbook_download" t="Directory Download"/>
+	<w_phrase n="wlang_line_broadsoft_features" t="Broadsoft功能"/>
+	<w_phrase n="wlang_number_sign_encoding" t="數字符號編碼"/>
+	<w_phrase n="wlang_fkeyname_label_page_prev" t="標籤   上一頁"/>
+	<w_phrase n="wlang_fkeyname_label_page_next" t="標籤   下一頁"/>
+	<w_phrase n="wlang_fkeyname_smartlabel_page_prev" t="Previous Page"/>
+	<w_phrase n="wlang_fkeyname_smartlabel_page_next" t="標籤   下一頁"/>
+	<w_phrase n="wlang_first_page" t="First Page"/>
+	<w_phrase n="wlang_last_page" t="Last Page"/>
+	<w_phrase n="wlang_fkeyname_alternate_mode" t="Alternate   Alternate"/>
+	<w_phrase n="wlang_monitor_notify_for_subscription_refresh" t="訂閱顯示通知"/>
+	<w_phrase n="wlang_fkey_page_text" t="頁"/>
+	<w_phrase n="wlang_prefs_label_font_size" t="標籤字體大小"/>
+	<w_phrase n="wlang_prefs_context_key_font_size" t="Context Key Label Font Size"/>
+	<w_phrase n="wlang_prefs_label_scroll_timeout" t="在（秒）後，返回標籤頁1"/>
+	<w_phrase n="wlang_prefs_ssi_large_edit_font" t="大編輯字體"/>
+	<w_phrase n="wlang_prefs_custom_bg_image_url" t="自定網址背景圖片"/>
+	<w_phrase n="wlang_prefs_custom_images" t="Custom Images"/>
+	<w_phrase n="wlang_prefs_custom_images_Light" t="Theme Light Images"/>
+	<w_phrase n="wlang_prefs_custom_images_Dark" t="Theme Dark Images"/>
+	<w_phrase n="wlang_prefs_custom_images_Colorful" t="Theme Colorful Images"/>
+	<w_phrase n="wlang_prefs_custom_images_Industrial" t="Theme Industrial Images"/>
+	<w_phrase n="wlang_prefs_custom_images_Contrast" t="Theme Contrast Images"/>
+	<w_phrase n="wlang_prefs_fkey_icons" t="Fkey"/>
+	<w_phrase n="wlang_prefs_call_icons" t="Call"/>
+	<w_phrase n="wlang_prefs_call_overlay_icons" t="Call Overlay"/>
+	<w_phrase n="wlang_prefs_circle_overlay_icons" t="Circle Overlay"/>
+	<w_phrase n="wlang_prefs_identity_state_icons" t="Identity State"/>
+	<w_phrase n="wlang_prefs_contact_state_icons" t="Contact State"/>
+	<w_phrase n="wlang_prefs_contact_state_overlay_icons" t="Contact State Overlay"/>
+	<w_phrase n="wlang_prefs_contact_type_icons" t="Contact Type"/>
+	<w_phrase n="wlang_prefs_icon_type_icons" t="Icon Type"/>
+	<w_phrase n="wlang_prefs_titlebar_icons" t="Titlebar"/>
+	<w_phrase n="wlang_prefs_error_icons" t="Error"/>
+	<w_phrase n="wlang_prefs_settings_window_icons" t="Settings Window"/>
+	<w_phrase n="wlang_prefs_system_icons" t="System"/>
+	<w_phrase n="wlang_prefs_other_icons" t="Other"/>
+	<w_phrase n="wlang_prefs_background_icons" t="Background"/>
+	<w_phrase n="wlang_prefs_extra_icons" t="Extra"/>
+	<w_phrase n="wlang_prefs_upload" t="Upload"/>
+	<w_phrase n="wlang_accept_event_talk_without_sdp" t="接受沒有SDP的事件對話"/>
+	<w_phrase n="wlang_fkeyname_snom" t="SNOM /雲端"/>
+	<w_phrase n="wlang_prefs_ssi_sort_server_dir_result_by_last_name" t="按姓氏排列服務器目錄搜索結果"/>
+	<w_phrase n="wlang_directory_display_order" t="Directory Display Order"/>
+	<w_phrase n="wlang_display_order_first_name_last_name" t="First Name, Last Name"/>
+	<w_phrase n="wlang_display_order_last_name_first_name" t="Last Name, First Name"/>
+	<w_phrase n="wlang_prefs_uxm_line_font_size" t="UXM字體大小（線路佈局）"/>
+	<w_phrase n="wlang_prefs_label_text_alignment" t="文本對齊第二顯示"/>
+	<w_phrase n="wlang_prefs_left" t="靠左"/>
+	<w_phrase n="wlang_prefs_right" t="靠右"/>
+	<w_phrase n="wlang_prefs_center" t="置中"/>
+	<w_phrase n="wlang_prefs_alternate" t="左右對齊"/>
+	<w_phrase n="wlang_prefs_uxm_tile_font_size" t="UXM字體大小（磚塊布局）"/>
+	<w_phrase n="wlang_line_ssi_initial_rtp_keep_alives" t="RTP端口上的初始保活數量"/>
+	<w_phrase n="wlang_line_msw_directory_number" t="電話簿號碼"/>
+	<w_phrase n="wlang_line_msw_password" t="密碼"/>
+	<w_phrase n="wlang_line_msw_web_url" t="網址"/>
+	<w_phrase n="wlang_line_msw_services" t="Metaswitch服務"/>
+	<w_phrase n="wlang_line_ssi_server" t="服務器"/>
+	<w_phrase n="wlang_cert_tab_custom_certs" t="自定＆NBSP;證書"/>
+	<w_phrase n="wlang_cert_tab_preinstalled_certs" t="預先安裝＆NBSP;證書"/>
+	<w_phrase n="wlang_advanced_ssi_http_trace_size" t="HTTP追踪大小（訊息數量）"/>
+	<w_phrase n="wlang_advanced_ssi_http_body_trace_size" t="將HTTP正文截斷為這個大小 (in Bytes)"/>
+	<w_phrase n="wlang_advanced_ssi_sip_trace_size" t="SIP追踪大小（訊息數量）"/>
+	<w_phrase n="wlang_advanced_ssi_sip_body_trace_size" t="將SIP正文截斷為此大小 (in Bytes)"/>
+	<w_phrase n="wlang_user_default_blf_direction" t="預設BLF方向"/>
+	<w_phrase n="wlang_user_direction_none" t="無"/>
+	<w_phrase n="wlang_xsi_anywhere" t="任何地方"/>
+	<w_phrase n="wlang_ssi_status" t="狀態"/>
+	<w_phrase n="wlang_adr_del_photo" t="刪除照片"/>
+	<w_phrase n="wlang_caller_id_blocking" t="來電顯示屏蔽"/>
+	<w_phrase n="wlang_line_xsi_remote_office" t="遠程辦公室"/>
+	<w_phrase n="wlang_line_xsi_simultaneous_ring" t="同時響鈴"/>
+	<w_phrase n="wlang_line_xsi_directoryfullsearch" t="全名搜索"/>
+	<w_phrase n="wlang_advanced_ssi_xfer_dest_order_lifo" t="預設上次通話保留下轉接目標"/>
+	<w_phrase n="wlang_silent_alerting" t="靜音提示"/>
+	<w_phrase n="wlang_advanced_ssi_call_join_1_held" t="當只有一個通話在保留"/>
+	<w_phrase n="wlang_advanced_ssi_call_join_always" t="總是"/>
+	<w_phrase n="wlang_fkeyname_ringer_silent" t="Silent Mode"/>
+	<w_phrase n="wlang_fkeyname_delete_msg" t="刪除訊息"/>
+	<w_phrase n="wlang_line_xmpp_display_profile_image" t="顯示個人頭像圖片"/>
+	<w_phrase n="wlang_advanced_ssi_prov_polling_enabled" t="投票"/>
+	<w_phrase n="wlang_advanced_ssi_prov_polling_mode" t="投票模式"/>
+	<w_phrase n="wlang_advanced_ssi_prov_polling_mode_rel" t="相對"/>
+	<w_phrase n="wlang_advanced_ssi_prov_polling_mode_abs" t="絕對"/>
+	<w_phrase n="wlang_advanced_ssi_prov_polling_mode_random" t="隨機"/>
+	<w_phrase n="wlang_advanced_ssi_prov_polling_period" t="投票期間"/>
+	<w_phrase n="wlang_advanced_ssi_prov_polling_time" t="投票時間"/>
+	<w_phrase n="wlang_advanced_ssi_prov_polling_time_random_end" t="投票隨機結束"/>
+	<w_phrase n="wlang_advanced_ssi_show_desktop_msg_in_call_screens" t="在通話畫面顯示桌面訊息"/>
+	<w_phrase n="wlang_str_zone" t="區域"/>
+	<w_phrase n="wlang_F_REMOTE_OFFICE" t="遠程辦公室"/>
+	<w_phrase n="wlang_fkeyname_zones" t="多點廣播區域"/>
+	<w_phrase n="wlang_fkeys_xml_label" t="XML標籤"/>
+	<w_phrase n="wlang_advanced_ssi_type_quick_xfer_spd_dial_and_ext" t="快速轉接到快速撥號/分機"/>
+	<w_phrase n="wlang_advanced_ssi_new_call" t="新通話"/>
+	<w_phrase n="wlang_advanced_ssi_blind_transfer" t="盲轉"/>
+	<w_phrase n="wlang_advanced_ssi_attended_transfer" t="諮詢轉接"/>
+	<w_phrase n="wlang_fkeyname_pgm" t="可編程的"/>
+	<w_phrase n="wlang_ssi_text" t="文本"/>
+	<w_phrase n="wlang_ssi_icon" t="圖標"/>
+	<w_phrase n="wlang_ssi_icon_text" t="圖標和文本"/>
+	<w_phrase n="wlang_fkeys_ssi_header_smartlabel" t="智能標籤鍵"/>
+	<w_phrase n="wlang_fkeys_ssi_header_soft" t="Context-Sensitive Keys"/>
+	<w_phrase n="wlang_fkeys_ssi_header_nav" t="導航鍵"/>
+	<w_phrase n="wlang_fkeys_ssi_header_hard" t="硬鍵"/>
+	<w_phrase n="wlang_fkeys_ssi_header_line" t="線路鍵"/>
+	<w_phrase n="wlang_fkeys_ssi_header_uxm" t="UXM鍵"/>
+	<w_phrase n="wlang_fkeys_key_assignment" t="設置鍵"/>
+	<w_phrase n="wlang_fkeys_smartlabel" t="智能標籤"/>
+	<w_phrase n="wlang_line_idle_screen" t="待機屏幕"/>
+	<w_phrase n="wlang_line_default_smartlabel_display_mode" t="默認智能標籤顯示模式"/>
+	<w_phrase n="wlang_line_expanded_smartlable_display_mode" t="擴展的智能標籤l顯示模式"/>
+	<w_phrase n="wlang_line_short" t="短"/>
+	<w_phrase n="wlang_line_half" t="Half"/>
+	<w_phrase n="wlang_line_full" t="完整"/>
+	<w_phrase n="wlang_line_call_screens" t="通話屏幕"/>
+	<w_phrase n="wlang_line_other_screens" t="其他屏幕"/>
+	<w_phrase n="wlang_line_smartlabel_options" t="Options"/>
+	<w_phrase n="wlang_line_smartlabel_dismissal_time" t="Reset to default display mode after (sec.)"/>
+	<w_phrase n="wlang_fkeyname_cancel" t="取消"/>
+	<w_phrase n="wlang_fkeyname_ok" t="OK"/>
+	<w_phrase n="wlang_fkeyname_left" t="Left"/>
+	<w_phrase n="wlang_fkeyname_right" t="Right"/>
+	<w_phrase n="wlang_fkeyname_up" t="Up"/>
+	<w_phrase n="wlang_fkeyname_down" t="Down"/>
+	<w_phrase n="wlang_hoteling" t="酒店"/>
+	<w_phrase n="wlang_fkeyname_hoteling" t="酒店"/>
+	<w_phrase n="wlang_advanced_listen_in_on_handset" t="Listen In On Handset"/>
+	<w_phrase n="wlang_prefs_auto_dial_target" t="Auto Dial Target"/>
+	<w_phrase n="wlang_prefs_auto_dial_timeout" t="Auto Dial Timeout"/>
+	<w_phrase n="wlang_smartlabel_trigger_proximity" t="Proximity Sensor"/>
+	<w_phrase n="wlang_smartlabel_trigger_shortpress" t="Short Press Page Key"/>
+	<w_phrase n="wlang_smartlabel_trigger_longpress" t="Long Press Page Key"/>
+	<w_phrase n="wlang_smartlabel_trigger_smartlabel_key_2_short_press" t="Short Press P2"/>
+	<w_phrase n="wlang_smartlabel_trigger_smartlabel_key_2_long_press" t="Long Press P2"/>
+	<w_phrase n="wlang_smartlabel_trigger_smartlabel_key_3_short_press" t="Short Press P3"/>
+	<w_phrase n="wlang_smartlabel_trigger_smartlabel_key_3_long_press" t="Long Press P3"/>
+	<w_phrase n="wlang_smartlabel_trigger_smartlabel_key_4_short_press" t="Short Press P4"/>
+	<w_phrase n="wlang_smartlabel_trigger_smartlabel_key_4_long_press" t="Long Press P4"/>
+	<w_phrase n="wlang_smartlabel_trigger_smartlabel_key_8_short_press" t="Short Press P8"/>
+	<w_phrase n="wlang_smartlabel_trigger_smartlabel_key_8_long_press" t="Long Press P8"/>
+	<w_phrase n="wlang_smartlabel_trigger_smartlabel_key_10_short_press" t="Short Press P10"/>
+	<w_phrase n="wlang_smartlabel_trigger_smartlabel_key_10_long_press" t="Long Press P10"/>
+	<w_phrase n="wlang_smartlabel_trigger" t="Alternative Display Trigger"/>
+	<w_phrase n="wlang_smart_transfer" t="SmartTransfer"/>
+	<w_phrase n="wlang_preferences_appearance" t="Appearance"/>
+	<w_phrase n="wlang_preferences_general" t="General"/>
+	<w_phrase n="wlang_preferences_ui_elements" t="Interface Elements"/>
+	<w_phrase n="wlang_preferences_expansion_module_ui_elements" t="Expansion Module Interface Elements"/>
+	<w_phrase n="wlang_preferences_font" t="Font Options"/>
+	<w_phrase n="wlang_preferences_expansion_module_font" t="Expansion Module Font Options"/>
+	<w_phrase n="wlang_preferences_ui_colors" t="Interface Colors"/>
+	<w_phrase n="wlang_preferences_ui_smartlabel_colors" t="Smartlabel Colors"/>
+	<w_phrase n="wlang_ui_theme" t="UI Color Theme"/>
+	<w_phrase n="wlang_theme_Light" t="Light Theme"/>
+	<w_phrase n="wlang_theme_Dark" t="Dark Theme"/>
+	<w_phrase n="wlang_theme_Colorful" t="Colorful Theme"/>
+	<w_phrase n="wlang_theme_Industrial" t="Industrial Theme"/>
+	<w_phrase n="wlang_theme_Contrast" t="Contrast Theme"/>
+	<w_phrase n="wlang_text_color" t="Text Color"/>
+	<w_phrase n="wlang_titlebar_text_color" t="Titlebar Text Color"/>
+	<w_phrase n="wlang_titlebar_background_color" t="Titlebar Background Color"/>
+	<w_phrase n="wlang_subtext_color" t="Subtext Color"/>
+	<w_phrase n="wlang_extratext_color" t="Extratext Color"/>
+	<w_phrase n="wlang_extratext2_color" t="Extratext2 Color"/>
+	<w_phrase n="wlang_background_color" t="Background Color"/>
+	<w_phrase n="wlang_fkey_background_color" t="Fkey Background Color"/>
+	<w_phrase n="wlang_fkey_pressed_background_color" t="Fkey Pressed Background Color"/>
+	<w_phrase n="wlang_fkey_separator_color" t="Fkey Separator Color"/>
+	<w_phrase n="wlang_fkey_label_color" t="Fkey Label Color"/>
+	<w_phrase n="wlang_fkey_pressed_label_color" t="Fkey Pressed Label Color"/>
+	<w_phrase n="wlang_line_background_color" t="Line Background Color"/>
+	<w_phrase n="wlang_selected_line_background_color" t="Selected Line Background Color"/>
+	<w_phrase n="wlang_selected_line_indicator_color" t="Selected Line Indicator Color"/>
+	<w_phrase n="wlang_selected_line_text_color" t="Selected Line Text Color"/>
+	<w_phrase n="wlang_line_separator_color" t="Line Separator Color"/>
+	<w_phrase n="wlang_scrollbar_color" t="Scrollbar Color"/>
+	<w_phrase n="wlang_cursor_color" t="Cursor Color"/>
+	<w_phrase n="wlang_status_msgs_background_color" t="Status Messages Background Color"/>
+	<w_phrase n="wlang_status_msgs_border_color" t="Status Messages Border Color"/>
+	<w_phrase n="wlang_regular_font_min_font_size" t="Minimum Regular Font Size"/>
+	<w_phrase n="wlang_fkeys_ssi_full_label_mode" t="Full Label Mode"/>
+	<w_phrase n="wlang_fkeys_ssi_label_mode" t="Label Mode"/>
+	<w_phrase n="wlang_fkeys_ssi_unknown" t="Unknown"/>
+	<w_phrase n="wlang_advanced_ssi_settings_refresh" t="設定更新計時器"/>
+	<w_phrase n="wlang_advanced_tmz_unused" t="沒用過"/>
+	<w_phrase n="wlang_ldap_search_filter_during_call" t="LDAP Name Filter During Call"/>
+	<w_phrase n="wlang_ldap_number_filter_during_call" t="LDAP Number Filter During Call"/>
+	<w_phrase n="wlang_fkeyname_lock" t="鎖上"/>
+	<w_phrase n="wlang_fkeyname_voicemail_info" t="Voicemail Info"/>
+	<w_phrase n="wlang_advanced_ssi_xmpp_refresh_timer" t="XMPP Refresh Timeout"/>
+	<w_phrase n="wlang_advanced_xmpp" t="XMPP"/>
+	<w_phrase n="wlang_advanced_ssi_xsi_heartbeat_interval" t="XSI Heartbeat Interval"/>
+	<w_phrase n="wlang_advanced_xsi" t="XSI"/>
+	<w_phrase n="wlang_fkeyname_caller_id_blocking" t="Caller ID Blocking"/>
+	<w_phrase n="wlang_fkeyname_hide_outgoing_id" t="Hide Outgoing ID"/>
+	<w_phrase n="wlang_outgoing" t="Outgoing"/>
+	<w_phrase n="wlang_skip_welcome" t="Skip Welcome"/>
+	<w_phrase n="wlang_general_file" t="File"/>
+	<w_phrase n="wlang_lcs" t="LCS"/>
+	<w_phrase n="wlang_cpu" t="CPU"/>
+	<w_phrase n="wlang_advanced_ssi_als" t="Ambient Light"/>
+	<w_phrase n="wlang_advanced_ssi_active" t="Active"/>
+	<w_phrase n="wlang_fkeyname_consultconf" t="Consult Conference"/>
+	<w_phrase n="wlang_use_outbound_proxy_for_callback" t="Use Outbound Proxy for Callback"/>
+	<w_phrase n="wlang_advanced_ssi_optimize_infobox" t="Optimized Infobox"/>
+	<w_phrase n="wlang_action_ssi_poll_settings" t="Action URL Poll Settings"/>
+	<w_phrase n="wlang_action_ssi_poll" t="Poll URL"/>
+	<w_phrase n="wlang_advanced_ssi_sip_header_warning" t="SIP Header Warning"/>
+	<w_phrase n="wlang_advanced_ssi_sip_header_warning_codes" t="SIP Header Warning Codes"/>
+	<w_phrase n="wlang_prefs_tscanada" t="Canada"/>
+	<w_phrase n="wlang_prefs_tsrussia" t="Russia"/>
+	<w_phrase n="wlang_advanced_contact_src_prio" t="Contact Source Priority"/>
+	<w_phrase n="wlang_user_contact_src_sip_prio" t="Contact Source Priority (SIP)"/>
+	<w_phrase n="wlang_adr_ssi_tbook_is_full" t="Address book full"/>
+	<w_phrase n="wlang_phoneui_short" t="PUI"/>
+	<w_phrase n="wlang_advanced_ssi_ldap_sort_parameters" t="LDAP Sort Parameters"/>
+	<w_phrase n="wlang_advanced_ssi_ldap_sort_mode" t="LDAP Sort Mode"/>
+	<w_phrase n="wlang_advanced_ssi_none" t="None"/>
+	<w_phrase n="wlang_adr_file_xml" t="XML File"/>
+	<w_phrase n="wlang_choose_file" t="Choose File"/>
+	<w_phrase n="wlang_all_settings_cfg" t="All Settings (.cfg)"/>
+	<w_phrase n="wlang_all_settings_xml" t="All Settings (.xml)"/>
+	<w_phrase n="wlang_changed_settings_xml" t="Changed Settings (.xml)"/>
+	<w_phrase n="wlang_param_map" t="TR-069 Parameter Map"/>
+	<w_phrase n="wlang_call_screen_photo_size" t="Photo Size in Call Screens"/>
+	<w_phrase n="wlang_size_S" t="S"/>
+	<w_phrase n="wlang_size_M" t="M"/>
+	<w_phrase n="wlang_size_L" t="L"/>
+	<w_phrase n="wlang_size_XL" t="XL"/>
+	<w_phrase n="wlang_size_XXL" t="XXL"/>
+	<w_phrase n="wlang_size_XXXL" t="XXXL"/>
+	<w_phrase n="wlang_prompt_new_value" t="Please enter the new value"/>
+	<w_phrase n="wlang_fkey_ssi_call_center_status" t="Call Center Status"/>
+	<w_phrase n="wlang_line_ssi_enable_mediasec" t="Enable Mediasec"/>
+	<w_phrase n="wlang_callpark_notify" t="Call Park Notification"/>
+	<w_phrase n="wlang_call_park" t="Call Park"/>
+	<w_phrase n="wlang_callpark_park_fac" t="Call Park Code"/>
+	<w_phrase n="wlang_smartlabel_trigger_any_smartlabel_key_short_press" t="Short Press SmartLabel"/>
+	<w_phrase n="wlang_fkeyname_ocip" t="OCI-P Directory"/>
+	<w_phrase n="wlang_fkeyname_ldap" t="LDAP Directory"/>
+	<w_phrase n="wlang_fkeyname_serverdirectory" t="Server Directory"/>
+	<w_phrase n="wlang_handset_volume" t="Handset Volume"/>
+	<w_phrase n="wlang_headset_volume" t="Headset Volume"/>
+	<w_phrase n="wlang_ringer_volume" t="Ringer Volume"/>
+	<w_phrase n="wlang_speaker_volume" t="Speaker Volume"/>
+	<w_phrase n="wlang_max_speaker_volume" t="Maximum Speaker Volume"/>
+	<w_phrase n="wlang_dtmf_volume" t="DTMF Volume"/>
+	<w_phrase n="wlang_disconnect_on_onhook" t="Disconnect Call on On-hook"/>
+	<w_phrase n="wlang_long_cancel_is_blocking_caller" t="Add Caller to Block List with Long Press Cancel"/>
+	<w_phrase n="wlang_cancel_conference" t="End Conference on Cancel Press"/>
+	<w_phrase n="wlang_short_cancel_denies_call" t="Cancel declines Incoming Call while Connected"/>
+	<w_phrase n="wlang_offhook_accept_calls" t="Accept Incoming Call on Off-hook"/>
+	<w_phrase n="wlang_keyboard_lock_accepted_keys" t="Accepted Keys when Phone is Locked"/>
+	<w_phrase n="wlang_emergency_accepted_callkeys" t="Accepted Keys when Phone is in Emergency Call"/>
+	<w_phrase n="wlang_pui_icon_override_xml_icon" t="Hide XML Icon on Context-Sensitive Keys"/>
+	<w_phrase n="wlang_idle_status_btn_index" t="Position of Info Button on Context-Senstive Keys"/>
+	<w_phrase n="wlang_ringing_time" t="Ring Time before Decline (s)"/>
+	<w_phrase n="wlang_always_show_active_call" t="Always Show Active Call"/>
+	<w_phrase n="wlang_mute_is_dnd_in_idle" t="Mute acts as DND in Idle Screen"/>
+	<w_phrase n="wlang_transfer_dialing_on_transfer" t="Behavior of Transfer Key in Transfer"/>
+	<w_phrase n="wlang_transfer_dialing_on_other" t="Behavior of Other Keys in Transfer"/>
+	<w_phrase n="wlang_advtab_display" t="Display"/>
+	<w_phrase n="wlang_backlight_on_activity" t="Backlight on Activity"/>
+	<w_phrase n="wlang_backlight_when_idle" t="Backlight when Idle"/>
+	<w_phrase n="wlang_contrast" t="Contrast"/>
+	<w_phrase n="wlang_primary_display" t="Primary Display"/>
+	<w_phrase n="wlang_label_display" t="Secondary Display"/>
+	<w_phrase n="wlang_fkeys_ssi_usb_call_record" t="USB Call Recording"/>
+	<w_phrase n="wlang_fkeys_ssi_usb_call_record_pause" t="USB Call Recording Pause"/>
+	<w_phrase n="wlang_subtext_pressed_color" t="Subtext Pressed Color"/>
+	<w_phrase n="wlang_page_indicator_color" t="Page Indicator Color"/>
+	<w_phrase n="wlang_preferences_ui_expansion_module_colors" t="Expansion Module Colors"/>
+	<w_phrase n="wlang_prefs_expansion_module_text_alignment" t="Expansion Module Text Alignment"/>
+	<w_phrase n="wlang_expansion_module_maintext_size" t="Expansion Module Maintext Size"/>
+	<w_phrase n="wlang_expansion_module_subtext_size" t="Expansion Module Subtext Size"/>
+	<w_phrase n="wlang_size_XS" t="XS"/>
+	<w_phrase n="wlang_prefs_expansion_module_background_image" t="Expansion Module Background Image"/>
+	<w_phrase n="wlang_fkeyname_context_in_idle_page_left" t="Page Left"/>
+	<w_phrase n="wlang_fkeyname_context_in_idle_page_right" t="Page Right"/>
+	<w_phrase n="wlang_reciprocal_hold" t="Reciprocal Hold"/>
+	<w_phrase n="wlang_provisioning_order" t="Provisioning Order"/>
+	<w_phrase n="wlang_remote_3264_hold" t="RFC 3264 Hold"/>
+	<w_phrase n="wlang_use_contact_in_refer_to_hdr" t="Use Contact Header in Refer-To"/>
+	<w_phrase n="wlang_ack_before_reinvite_when_holding" t="ACK before Reinvite when Holding"/>
+	<w_phrase n="wlang_F_CALL_PARK_DIAL" t="Call Park Dial"/>
+	<w_phrase n="wlang_F_CALL_PARK_DIAL_RETRIEVE" t="Call Park Dial Retrieve"/>
+	<w_phrase n="wlang_tr69_use_acs" t="TR-069"/>
+	<w_phrase n="wlang_tr69_bootstrap" t="Send BOOTSTRAP to ACS"/>
+	<w_phrase n="wlang_tr69_acs_url" t="ACS URL"/>
+	<w_phrase n="wlang_tr69_acs_user" t="ACS Username"/>
+	<w_phrase n="wlang_tr69_acs_passwd" t="ACS Password"/>
+	<w_phrase n="wlang_tr69_cnr_user" t="CNR Username"/>
+	<w_phrase n="wlang_tr69_cnr_pass" t="CNR Password"/>
+	<w_phrase n="wlang_tr69_p_inform_supervision_timeout" t="Periodic Inform Supervision Timeout"/>
+	<w_phrase n="wlang_tr69_log" t="TR-069 Log"/>
+	<w_phrase n="wlang_extend_context_key_in_idle" t="Extend Context-Sensitive Keys to 12 in Idle"/>
+	<w_phrase n="wlang_edit_mode_for_directory_search" t="Default Edit Mode Directories"/>
+	<w_phrase n="wlang_edit_mode_for_passwords" t="Default Edit Mode Password Screens"/>
+	<w_phrase n="wlang_edit_mode_numbers" t="123"/>
+	<w_phrase n="wlang_edit_mode_lower_case" t="abc"/>
+	<w_phrase n="wlang_edit_mode_upper_case" t="ABC"/>
+	<w_phrase n="wlang_call_states_with_local_party" t="Call States showing Local Identity"/>
+	<w_phrase n="wlang_redirected_call_states_with_local_party" t="Redirected Call States showing Local Identity"/>
+	<w_phrase n="wlang_call_states_when_knocking" t="Call States playing Knocking Tone"/>
+	<w_phrase n="wlang_advanced_ssi_sip_tls_listen_port" t="TLS Listener Port"/>
+	<w_phrase n="wlang_advanced_ssi_tls_listen" t="Listen on SIP TLS Port"/>
+	<w_phrase n="wlang_results" t="Results"/>
+	<w_phrase n="wlang_ocip_max_hits" t="Maximum Number of Hits"/>
+	<w_phrase n="wlang_suppress_sip_messages" t="Hide Desktop Messages"/>
+	<w_phrase n="wlang_reject_calls_with_603" t="Reject Calls with 603 Declined"/>
+	<w_phrase n="wlang_action_received_subscr_notify_url" t="Received NOTIFY Subscription"/>
+	<w_phrase n="wlang_action_firewall_test" t="Received CSTA Message Firetest"/>
+	<w_phrase n="wlang_adr_entry_id" t="Entry ID"/>
+	<w_phrase n="wlang_advanced_customized_ssi_mtu_size" t="MTU size"/>
+	<w_phrase n="wlang_line_ssi_unsaf_via_received_rport" t="Determine Public Address from REGISTER Response Via Header"/>
+	<w_phrase n="wlang_info_branding_name" t="Branding"/>
+	<w_phrase n="wlang_info_branding_version" t="Branding Version"/>
+	<w_phrase n="wlang_info_hardware_version" t="Hardware Version"/>
+	<w_phrase n="wlang_prefs_pa1p_controls" t="PA1+ Controls"/>
+	<w_phrase n="wlang_prefs_ssi_pa1p_reset_button_for_dialing" t="Use reset button for dialing:"/>
+	<w_phrase n="wlang_prefs_ssi_pa1p_nr_to_dial" t="Reset button dials number:"/>
+	<w_phrase n="wlang_prefs_ssi_pa1p_call_timeout" t="Phone ends call after set seconds:"/>
+	<w_phrase n="wlang_prefs_ssi_pa1p_speaker_volume" t="Speaker Volume (1-15):"/>
+	<w_phrase n="wlang_prefs_ssi_pa1p_amp_gain" t="Amplifier Gain (0-3):"/>
+	<w_phrase n="wlang_prefs_ssi_pa1p_spkr" t="Speaker :"/>
+	<w_phrase n="wlang_prefs_ssi_pa1p_pin1" t="Pin 1:"/>
+	<w_phrase n="wlang_prefs_ssi_pa1p_pin2" t="Pin 2:"/>
+	<w_phrase n="wlang_prefs_ssi_pa1p_pin3" t="Pin 3:"/>
+	<w_phrase n="wlang_prefs_ssi_pa1p_pin4" t="Pin 4:"/>
+	<w_phrase n="wlang_prefs_ssi_pa1p_pin1_time" t="Pin1 off timer (seconds):"/>
+	<w_phrase n="wlang_prefs_ssi_pa1p_pin2_time" t="Pin2 off timer (seconds):"/>
+	<w_phrase n="wlang_prefs_ssi_pa1p_pin3_time" t="Pin3 off timer (seconds):"/>
+	<w_phrase n="wlang_prefs_ssi_pa1p_pin4_time" t="Pin4 off timer (seconds):"/>
+	<w_phrase n="wlang_line_ssi_multicast_relay_address" t="Multicast relay address:"/>
+	<w_phrase n="wlang_advanced_ssi_eth_port_1" t="Port 1:"/>
+	<w_phrase n="wlang_advanced_ssi_eth_port_2" t="Port 2:"/>
+	<w_phrase n="wlang_line_ssi_rtcpencryption" t="RTCP Encryption"/>
+	<w_phrase n="wlang_advanced_ssi_headset_mic" t="Headset Mic Volume (1 - 8):"/>
+	<w_phrase n="wlang_advanced_ssi_blf_pickup_audio_indication" t="Audio Indication for BLF Pickup"/>
+	<w_phrase n="wlang_advanced_ssi_dkey_dnd_behavior" t="Behavior of Dedicated Keys in DND"/>
+	<w_phrase n="wlang_advanced_ssi_dkey_dnd_behavior_normal" t="normal"/>
+	<w_phrase n="wlang_advanced_ssi_dkey_dnd_behavior_reverse" t="reverse"/>
+	<w_phrase n="wlang_advanced_early_media" t="Early Media"/>
+	<w_phrase n="wlang_advanced_early_media_playback" t="Playback Mode"/>
+	<w_phrase n="wlang_advanced_early_media_playback_never" t="Never"/>
+	<w_phrase n="wlang_advanced_early_media_playback_preferred" t="Preferred"/>
+	<w_phrase n="wlang_advanced_early_media_playback_enforced" t="Enforced"/>
+	<w_phrase n="wlang_advanced_early_media_ring_fallback" t="Ringback Tone Fallback"/>
+	<w_phrase n="wlang_advanced_ssi_user_ringer_once" t="Ringtone is played only once"/>
+	<w_phrase n="wlang_fkeyname_identities" t="Identities"/>
+	<w_phrase n="wlang_action_ssi_received_sip_update" t="Received SIP UPDATE"/>
+	<w_phrase n="wlang_fkeyname_answer" t="Answer"/>
+	<w_phrase n="wlang_fkeyname_forward" t="Forward"/>
+	<w_phrase n="wlang_fkeyname_reject" t="Reject"/>
+	<w_phrase n="wlang_fkeyname_end_call" t="End call"/>
+	<w_phrase n="wlang_fkeyname_group_park" t="Group Park"/>
+	<w_phrase n="wlang_fkeyname_new_call" t="New Call"/>
+	<w_phrase n="wlang_fkeyname_resume" t="Resume"/>
+	<w_phrase n="wlang_fkeyname_back_space" t="Backspace"/>
+</w_phrases>

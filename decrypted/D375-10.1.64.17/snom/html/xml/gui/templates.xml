@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<IPPhoneBatch xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="../schemas/minibrowser.xsd">
+  <IPPhoneInput track="no" dtmf="off" id="input_template" document_id="user_input_template">
+    <Url input_required="$(var:input_required)">$(var:input_url)</Url>
+    <InputItem>
+      <DisplayName>$(var:input_displayname)</DisplayName>
+      <InputToken>$(var:input_token)</InputToken>
+      <InputFlags>$(var:input_flags)</InputFlags>
+      <InputMask>$(var:input_mask)</InputMask>
+      <DefaultValue>$(var:input_default)</DefaultValue>
+      <Range>$(var:input_range)</Range>
+      <ContactPoolInEdit>$(var:input_pool_key)</ContactPoolInEdit>
+    </InputItem>
+    <If condition="$(is_set:$(var:custom_f4))">
+      <SoftKeyItem>
+        <Name>F4</Name>
+        <SoftKey>$(var:custom_f4)</SoftKey>
+      </SoftKeyItem>
+    </If>
+  </IPPhoneInput>
+  <IPPhoneMenu track="no" id="selection_template" document_id="user_selection_template">
+    <Title>$(var:list_title)</Title>
+    <If condition="!$(empty:$(repeat_values:$(var:list_values)))">
+      <Repeat values="$(repeat_values:$(var:list_values))" token="|__NAME__|__ID__|__URL__|">
+        <MenuItem name="__NAME__" id="__ID__">
+          <Url>__URL__</Url>
+        </MenuItem>
+      </Repeat>
+    </If>
+    <Else>
+      <MenuItem sel="true" name="$(lang:list_no_data)"></MenuItem>
+    </Else>
+  </IPPhoneMenu>
+  <IPPhoneText track="no" id="text_template" document_id="user_text_template">
+    <Title>$(var:text_title)</Title>
+    <If condition="$(is_set:$(var:text_image_url))">
+      <Image>
+        <LocationX>$(var:text_image_locationx)</LocationX>
+        <LocationY>$(var:text_image_locationy)</LocationY>
+        <Url>$(var:text_image_url)</Url>
+      </Image>
+    </If>
+    <LocationX>$(var:text_locationx)</LocationX>
+    <LocationY>$(var:text_locationy)</LocationY>
+    <Text translate_callbacks="$(var:text_translate)">$(var:text_content)</Text>
+    <If condition="$(is_set:$(var:text_softkeys))">
+      <Repeat values="$(var:text_softkeys)" token="|__NAME__|__LABEL__|__URL__|__SOFTKEY__|">
+        <SoftKeyItem>
+          <Name>__NAME__</Name>
+          <Label>__LABEL__</Label>
+          <Url>__URL__</Url>
+          <SoftKey>__SOFTKEY__</SoftKey>
+        </SoftKeyItem>
+      </Repeat>
+    </If>
+  </IPPhoneText>
+</IPPhoneBatch>

@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<IPPhoneBatch xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../schemas/minibrowser.xsd">
+  <IPPhoneMenu id="SIOwlan" dtmf="off" state="others_except_mb">
+    <If condition="$(bool_eval:$(condition:$(status_active:PhoneWantsReboot)) | $(condition:$(is_set:$(var:reboot_required))))">
+      <Title>$(lang:Please_reboot)</Title>
+    </If>
+    <Else>
+      <Title>$(lang:wlan_settings)</Title>
+    </Else>
+    <If condition="$(bool_eval:$(condition:$(status_active:PhoneWantsReboot)) | $(condition:$(is_set:$(var:reboot_required))))">
+      <SoftKeyItem>
+        <Name>F1</Name>
+        <SoftKey>F_REBOOT</SoftKey>
+      </SoftKeyItem>
+    </If>
+    <MenuItem id="wlan">
+      <If condition="!$(set:wifi_auth_mode)==off">
+        <If condition="$(show_feature:FEATURE_PUI_STYLE_SIO)">
+          <Name>$(lang:wlan_settings)</Name>
+          <If condition="$(is_set:$(set:wifi_essid))">
+            <SubText>$(lang:on) - $(lang:WIFI_CONNECTED_TO) $(set:wifi_essid)</SubText>
+          </If>
+          <Else>
+            <SubText>$(lang:on)</SubText>
+          </Else>
+        </If>
+        <Else>
+          <Name>$(lang:wlan_settings) $(set:wifi_essid)</Name>
+          <!-- on monochrome we show the essid in the toggle line -->
+        </Else>
+        <Url>phone://mb_nop#set:wifi_auth_mode=off&amp;set:wifi_essid=&amp;set:wifi_wpa_encryptype=&amp;set:wifi_wpapsk=&amp;set:wifi_wep_key1=&amp;var:reboot_required=true</Url>
+        <ExtraIconType>$(icon_type_enum:kIconTypeMenuSliderOn)</ExtraIconType>
+      </If>
+      <Else>
+        <Name>$(lang:wlan_settings)</Name>
+        <If condition="$(show_feature:FEATURE_PUI_STYLE_SIO)">
+          <SubText>$(lang:off)</SubText>
+        </If>
+        <Url>phone://mb_nop#set:wifi_auth_mode=scanning</Url>
+        <ExtraIconType>$(icon_type_enum:kIconTypeMenuSliderOff)</ExtraIconType>
+      </Else>
+    </MenuItem>
+    <If condition="!$(set:wifi_auth_mode)==off">
+      <MenuItem name="$(lang:WIFI_SCAN_NETWORKS)">
+        <If condition="$(show_feature:FEATURE_PUI_STYLE_SIO)">
+          <ExtraIconType>$(icon_type_enum:kIconTypeWlan100)</ExtraIconType>
+        </If>
+        <Url>file:///xml/wifi/wifi.xml#sub=*[@id="SIOscan"]</Url>
+      </MenuItem>
+      <Menu name="$(lang:WIFI_MANUAL_SETUP)">
+        <If condition="$(bool_eval:$(condition:$(status_active:PhoneWantsReboot)) &amp; $(condition:$(is_set:$(set:wifi_essid))))">
+          <Title>$(lang:Please_reboot)</Title>
+        </If>
+        <Else>
+          <Title>$(lang:WIFI_MANUAL_SETUP)</Title>
+        </Else>
+        <If condition="$(bool_eval:$(condition:$(status_active:PhoneWantsReboot)) &amp; $(condition:$(is_set:$(set:wifi_essid))))">
+          <SoftKeyItem>
+            <Name>F1</Name>
+            <SoftKey>F_REBOOT</SoftKey>
+          </SoftKeyItem>
+        </If>
+        <MenuItem name="$(lang:WIFI_SSID)" id="wifi_essid">
+          <Url>file:///xml/gui/templates.xml#sub=*[@id="input_template"]&amp;var:input_pool_key=0&amp;var:input_displayname=$(lang:WIFI_SSID)&amp;var:input_token=__Y__&amp;var:input_flags=A&amp;var:input_default=$(set:wifi_essid)&amp;var:input_url=$(urlencode:"phone://mb_nop%23go_back%26set:wifi_essid=__Y__")</Url>
+          <If condition="$(is_set:$(set:wifi_essid))">
+            <If condition="$(show_feature:FEATURE_PUI_STYLE_SIO)">
+              <SubText>$(set:wifi_essid)</SubText>
+            </If>
+          </If>
+          <Else>
+            <If condition="$(show_feature:FEATURE_PUI_STYLE_SIO)">
+              <SubText>&lt;$(lang:empty)&gt;</SubText>
+            </If>
+          </Else>
+          <ExtraIconType>$(icon_type_enum:kIconTypeMenuArrowRight)</ExtraIconType>
+        </MenuItem>
+        <Menu name="$(lang:WIFI_auth_mode)" id="wifi_auth_mode">
+          <If condition="!$(set:wifi_auth_mode)==scanning">
+            <If condition="$(show_feature:FEATURE_PUI_STYLE_SIO)">
+              <SubText>$(set:wifi_auth_mode)</SubText>
+            </If>
+          </If>
+          <Else>
+            <If condition="$(show_feature:FEATURE_PUI_STYLE_SIO)">
+              <SubText>&lt;$(lang:empty)&gt;</SubText>
+            </If>
+          </Else>
+          <ExtraIconType>$(icon_type_enum:kIconTypeMenuArrowRight)</ExtraIconType>
+          <MenuItem name="$(lang:WIFI_WPA2PSK)" sel="$(condition:$(set:wifi_auth_mode)==WPA2PSK)">
+            <URL>phone://mb_nop#go_back%26set:wifi_auth_mode=WPA2PSK</URL>
+          </MenuItem>
+          <MenuItem name="$(lang:WIFI_WPA)" sel="$(condition:$(set:wifi_auth_mode)==WPA)">
+            <URL>phone://mb_nop#go_back%26set:wifi_auth_mode=WPA</URL>
+          </MenuItem>
+          <MenuItem name="$(lang:WIFI_WEP)" sel="$(condition:$(set:wifi_auth_mode)==WEP)">
+            <URL>phone://mb_nop#go_back%26set:wifi_auth_mode=WEP</URL>
+          </MenuItem>
+          <MenuItem name="$(lang:WIFI_OPEN)" sel="$(condition:$(set:wifi_auth_mode)==OPEN)">
+            <URL>phone://mb_nop#go_back%26set:wifi_auth_mode=OPEN</URL>
+          </MenuItem>
+        </Menu>
+        <If condition="$(bool_eval:$(condition:$(set:wifi_auth_mode)==WPA2PSK) | $(condition:$(set:wifi_auth_mode)==WPA))">
+          <Menu name="$(lang:WIFI_WPA_Encryption)" id="wifi_wpa_encryption">
+            <If condition="$(show_feature:FEATURE_PUI_STYLE_SIO)">
+              <If condition="$(is_set:$(set:wifi_wpa_encryptype))">
+                <SubText>$(set:wifi_wpa_encryptype)</SubText>
+              </If>
+              <Else>
+                <SubText>&lt;$(lang:empty)&gt;</SubText>
+              </Else>
+            </If>
+            <ExtraIconType>$(icon_type_enum:kIconTypeMenuArrowRight)</ExtraIconType>
+            <MenuItem name="$(lang:WIFI_TKIP)" sel="$(condition:$(set:wifi_wpa_encryptype)==TKIP)">
+              <URL>phone://mb_nop#go_back%26set:wifi_wpa_encryptype=TKIP</URL>
+            </MenuItem>
+            <MenuItem name="$(lang:WIFI_AES)" sel="$(condition:$(set:wifi_wpa_encryptype)==AES)">
+              <URL>phone://mb_nop#go_back%26set:wifi_wpa_encryptype=AES</URL>
+            </MenuItem>
+          </Menu>
+        </If>
+        <If condition="!$(set:wifi_auth_mode)==OPEN">
+          <MenuItem name="$(lang:user_pass)">
+            <ExtraIconType>$(icon_type_enum:kIconTypeMenuArrowRight)</ExtraIconType>
+            <If condition="$(set:wifi_auth_mode)==WEP">
+              <Url>file:///xml/gui/templates.xml#sub=*[@id="input_template"]&amp;var:input_pool_key=0&amp;var:input_displayname=$(lang:user_pass)&amp;var:input_token=__Y__&amp;var:input_flags=p&amp;var:input_default=&amp;var:input_url=$(urlencode:"phone://mb_nop%23go_back%26set:wifi_wep_key1=__Y__")</Url>
+            </If>
+            <Else>
+              <Url>file:///xml/gui/templates.xml#sub=*[@id="input_template"]&amp;var:input_pool_key=0&amp;var:input_displayname=$(lang:user_pass)&amp;var:input_token=__Y__&amp;var:input_flags=p&amp;var:input_default=&amp;var:input_url=$(urlencode:"phone://mb_nop%23go_back%26set:wifi_wpapsk=__Y__")</Url>
+            </Else>
+          </MenuItem>
+        </If>
+      </Menu>
+    </If>
+  </IPPhoneMenu>
+  <IPPhoneText id="SIOscan" track="no" state="others_except_mb">
+    <If condition="$(show_feature:FEATURE_PUI_STYLE_SIO)">
+      <Fetch mil="1000">file:///xml/wifi/scan.xml#sub=*[@id="SIOscan"]</Fetch>
+    </If>
+    <Else>
+      <Fetch mil="1000">file:///xml/wifi/scan.xml#sub=*[@id="BWscan"]</Fetch>
+    </Else>
+    <Title>$(lang:WIFI_NETWORKS_SCAN)</Title>
+    <Text>$(lang:WIFI_SCAN_RUNNING)</Text>
+  </IPPhoneText>
+</IPPhoneBatch>

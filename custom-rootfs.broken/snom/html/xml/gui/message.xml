@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<IPPhoneText state="relevant" document_id="Minibrowser_Message">
+  <If condition="$(is_set:$(msg_index))">
+    <fetch mil="$(msg_timeout)">phone://mb_exit#deactivate_message=$(msg_index)</fetch>
+  </If>
+  <Else>
+    <fetch mil="$(msg_timeout)">phone://mb_exit</fetch>
+  </Else>
+  <Title>$(msg_title)</Title>
+  <Text>$(msg_text)</Text>
+  <If condition="$(msg_show_fkey_background)==yes">
+    <SoftKeyItem><Name>F1</Name><SoftKey>F_NONE2</SoftKey></SoftKeyItem>
+  </If>
+  <SoftKeyItem>
+    <Name>ONHOOK</Name>
+    <Url>phone://mb_exit</Url>
+  </SoftKeyItem>
+  <SoftKeyItem>
+    <Name>SPEAKER</Name>
+    <Url>phone://mb_exit</Url>
+  </SoftKeyItem>
+</IPPhoneText>
+

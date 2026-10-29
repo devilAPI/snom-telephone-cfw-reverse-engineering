@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<IPPhoneBatch  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../schemas/minibrowser.xsd">
+  <IPPhoneMenu selectable="yes" line_separator="yes" dtmf="off" speedselect="off" id="disposition_menu" document_id="Disposition_Menu">
+    <fetch mil="$(msg_timeout)">phone://mb_exit</fetch>
+    <Title>$(lang:disposition_code_selection)</Title>
+    <If condition="$(bool_eval:$(show_feature:HAS_LARGER_PIXEL_SIZE))">
+      <FontSize>L</FontSize>
+      <FontSize2>S</FontSize2>
+    </If>
+    <Else>
+      <FontSize>XL</FontSize>
+      <FontSize2>M</FontSize2>
+    </Else>
+    <Repeat values="$(var:disp_codes_list)" token="|__DISPCODE__|__DESCRIPTION__|">
+      <MenuItem name="__DESCRIPTION__">
+        <SubText>__DISPCODE__</SubText>
+        <If condition="$(is_set:$(var:in_idle))">
+          <Url>phone://mb_exit#disposition_code_dial=$(var:send_identity),__DISPCODE__</Url>
+        </If>
+        <Else>
+          <Url>phone://mb_exit#disposition_code_send_sip_info=$(var:send_identity),__DISPCODE__</Url>
+        </Else>
+      </MenuItem>
+    </Repeat>
+    <CancelUrl>phone://mb_nop#go_back</CancelUrl>
+  </IPPhoneMenu>
+  <IPPhoneInput id="disposition_input">
+    <If condition="$(is_set:$(var:in_idle))">
+      <Url input_required="yes">phone://mb_exit#disposition_code_dial=$(var:send_identity),__Y__</Url>
+    </If>
+    <Else>
+      <Url input_required="yes">phone://mb_exit#disposition_code_send_sip_info=$(var:send_identity),__Y__</Url>
+    </Else>
+    <CancelUrl>phone://mb_nop#go_back</CancelUrl>
+    <InputItem>
+      <DisplayName>$(lang:disposition_code_entry)</DisplayName>
+      <InputToken>__Y__</InputToken>
+      <InputFlags>AN</InputFlags>
+      <InputModeFixed>$(set:block_url_dialing)</InputModeFixed>
+      <DefaultValue></DefaultValue>
+      <ContactPoolInEdit>0</ContactPoolInEdit>
+    </InputItem>
+  </IPPhoneInput>
+</IPPhoneBatch>

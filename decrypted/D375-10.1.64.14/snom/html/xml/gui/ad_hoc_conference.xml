@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<IPPhoneBatch xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../schemas/minibrowser.xsd">
+  <IPPhoneInput id="ad_hoc_conference_participant1" document_id="ad_hoc_conference">
+    <Url input_required="yes">phone://mb_nop#sub=*[@id="ad_hoc_conference_participant2"]&amp;var:first_participant=__Y__</Url>
+    <CancelUrl>phone://mb_nop#go_back</CancelUrl>
+    <InputItem>
+      <DisplayName>$(lang:Conference_Setup)</DisplayName>
+      <InputToken>__Y__</InputToken>
+      <InputFlags>AN</InputFlags>
+      <InputModeFixed>$(set:block_url_dialing)</InputModeFixed>
+      <DefaultValue>$(var:first_participant)</DefaultValue>
+      <ContactPoolInEdit>1</ContactPoolInEdit>
+      <InputDescription>$(lang:Conference_First_Participant)</InputDescription>
+      <If condition="$(show_feature:FEATURE_PUI_STYLE_SIO)">
+        <Image>File:///bmp/colored/input_info_images/conference_one.png</Image>
+      </If>
+    </InputItem>
+    <SoftKeyItem>
+      <Name>F4</Name>
+      <SoftKey>F_GO_NEXT</SoftKey>
+    </SoftKeyItem>
+  </IPPhoneInput>
+  <IPPhoneInput id="ad_hoc_conference_participant2" document_id="ad_hoc_conference">
+    <Url input_required="yes">phone://mb_exit#action_ifc:CallInterface=ad_hoc_conference,identity=$(set:active_line),remote1=$(var:first_participant),remote2=__X__</Url>
+    <CancelUrl>phone://mb_nop#sub=*[@id="ad_hoc_conference_participant1"]&amp;var:second_participant=__X__</CancelUrl>
+    <InputItem>
+      <DisplayName>$(lang:Conference_Setup)</DisplayName>
+      <InputToken>__X__</InputToken>
+      <InputFlags>AN</InputFlags>
+      <InputModeFixed>$(set:block_url_dialing)</InputModeFixed>
+      <DefaultValue>$(var:second_participant)</DefaultValue>
+      <ContactPoolInEdit>1</ContactPoolInEdit>
+      <InputDescription>$(lang:Conference_Second_Participant)</InputDescription>
+      <If condition="$(show_feature:FEATURE_PUI_STYLE_SIO)">
+        <Image>File:///bmp/colored/input_info_images/conference_two.png</Image>
+      </If>
+    </InputItem>
+    <SoftKeyItem>
+      <Name>F4</Name>
+      <SoftKey>F_GO_BACK</SoftKey>
+    </SoftKeyItem>
+  </IPPhoneInput>
+  <IPPhoneInput id="ad_hoc_conference_escalation" document_id="ad_hoc_conference">
+    <Url input_required="yes">phone://mb_exit#action_ifc:CallInterface=ad_hoc_conference_escalation,remote2=__X__</Url>
+    <CancelUrl>phone://mb_nop#go_back</CancelUrl>
+    <InputItem>
+      <DisplayName>$(lang:Conference_Setup)</DisplayName>
+      <InputToken>__X__</InputToken>
+      <InputFlags>AN</InputFlags>
+      <InputModeFixed>$(set:block_url_dialing)</InputModeFixed>
+      <DefaultValue>$(var:second_participant)</DefaultValue>
+      <ContactPoolInEdit>1</ContactPoolInEdit>
+      <InputDescription>$(lang:Conference_Second_Participant)</InputDescription>
+      <If condition="$(show_feature:FEATURE_PUI_STYLE_SIO)">
+        <Image>File:///bmp/colored/input_info_images/conference_two.png</Image>
+      </If>
+    </InputItem>
+    <SoftKeyItem>
+      <Name>F4</Name>
+      <SoftKey>F_NONE</SoftKey>
+    </SoftKeyItem>
+  </IPPhoneInput>
+</IPPhoneBatch>

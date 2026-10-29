@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='utf8'?>
+<settings>
+<phone-settings>
+<cw_dialtone>off</cw_dialtone>
+<always_show_active_call>off</always_show_active_call>
+<transfer_dialing_on_other>attended</transfer_dialing_on_other>
+<shared_call_without_line_keys>on</shared_call_without_line_keys>
+<auto_dial>3</auto_dial>
+<referred_by_brackets idx="*">on</referred_by_brackets>
+<acd_unavailable_req idx="*">off</acd_unavailable_req>
+<keep_provisioning_url_after_reboot>off</keep_provisioning_url_after_reboot>
+<call_screen_fkeys_on_connected>F_CONSULTCONF F_HOLD transfer F_NEXT_CALL_SCREEN</call_screen_fkeys_on_connected>
+<call_screen_fkeys_on_holding>F_CONSULTCONF F_HOLD transfer F_NEXT_CALL_SCREEN</call_screen_fkeys_on_holding>
+<dns_load_balancing>off</dns_load_balancing>
+</phone-settings>
+</settings>

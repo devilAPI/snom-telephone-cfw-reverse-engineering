@@ -1,0 +1,130 @@
+#
+# This file contains a factory reset database in text format
+#
+# If no USP database exists when OB-USP-AGENT starts, then OB-USP-AGENT will create a database containing
+# the parameters specified in a text file located by the '-r' option.
+# Example:
+#    obuspa -p -v 4 -r factory_reset_example.txt
+#
+# Each line of this file contains either a comment (denoted by '#' at the start of the line)
+# or a USP data model parameter and its factory reset value.
+# The parameter and value are separated by whitespace.
+# The value may optionally be enclosed in speech marks "" (this is the only way to specify an empty string)
+#
+##########################################################################################################
+# Values with [] will be replaced by the startup script
+
+Device.LocalAgent.EndpointID "[EndpointID]"
+Internal.Reboot.Cause "LocalFactoryReset"
+
+##########################
+## SRAPS USP CONTROLLER ##
+##########################
+# The following values are about SRAPS and some of them will be overwritten according
+# to tr369_xxxx1 settings during vendor/snom_rpc.cpp/snom_rpc_start() execution.
+
+Device.MQTT.Client.1.BrokerAddress "dm.snom.com"
+Device.MQTT.Client.1.ProtocolVersion "3.1.1"
+Device.MQTT.Client.1.BrokerPort "8883"
+Device.MQTT.Client.1.TransportProtocol "TLS"
+Device.MQTT.Client.1.Username ""
+Device.MQTT.Client.1.Password ""
+Device.MQTT.Client.1.Alias "[EndpointID]"
+Device.MQTT.Client.1.Enable true
+Device.MQTT.Client.1.ClientID "[EndpointID]"
+Device.MQTT.Client.1.KeepAliveTime "60"
+Device.MQTT.Client.1.ConnectRetryTime "5"
+Device.MQTT.Client.1.ConnectRetryIntervalMultiplier "2000"
+Device.MQTT.Client.1.ConnectRetryMaxInterval "30"
+
+Device.LocalAgent.MTP.1.Alias "cpe-1"
+Device.LocalAgent.MTP.1.Enable true
+Device.LocalAgent.MTP.1.Protocol "MQTT"
+Device.LocalAgent.MTP.1.MQTT.ResponseTopicConfigured "usp/endpoints/[EndpointID]"
+Device.LocalAgent.MTP.1.MQTT.Reference "Device.MQTT.Client.1"
+
+Device.LocalAgent.Controller.1.Alias "cpe-1"
+Device.LocalAgent.Controller.1.Enable true
+Device.LocalAgent.Controller.1.PeriodicNotifInterval "86400"
+Device.LocalAgent.Controller.1.PeriodicNotifTime "0001-01-01T00:00:00Z"
+Device.LocalAgent.Controller.1.ControllerCode ""
+Device.LocalAgent.Controller.1.EndpointID "self::usp-controller"
+Device.LocalAgent.Controller.1.BootParameter.1.Enable true
+Device.LocalAgent.Controller.1.BootParameter.1.ParameterName "Device.LocalAgent.EndpointID"
+Device.LocalAgent.Controller.1.MTP.1.Alias "cpe-1"
+Device.LocalAgent.Controller.1.MTP.1.Enable true
+Device.LocalAgent.Controller.1.MTP.1.Protocol "MQTT"
+Device.LocalAgent.Controller.1.MTP.1.MQTT.Reference "Device.MQTT.Client.1"
+Device.LocalAgent.Controller.1.MTP.1.MQTT.Topic "usp/endpoints/[EndpointID]"
+#
+# For E2ESession with SRAPS, the payload for every MQTT Publish request can be no larger
+# than 128 Kilobytes (131,072 bytes). With 130000 bytes, we are safe the sent USP Record
+# will not exceed that size once packed into a MQTT packet.
+#
+Device.LocalAgent.Controller.1.E2ESession.SessionMode "Allow"
+Device.LocalAgent.Controller.1.E2ESession.MaxUSPRecordSize "130000"
+
+# Subscription declared after associated Device.LocalAgent.Controller is set
+Device.LocalAgent.Subscription.1.Alias "cpe-1"
+Device.LocalAgent.Subscription.1.Enable true
+Device.LocalAgent.Subscription.1.ID "default-boot-event-ACS"
+Device.LocalAgent.Subscription.1.Recipient "Device.LocalAgent.Controller.1"
+Device.LocalAgent.Subscription.1.NotifType Event
+Device.LocalAgent.Subscription.1.ReferenceList Device.Boot!
+Device.LocalAgent.Subscription.1.Persistent true
+
+
+#############################
+## CUSTOMER USP CONTROLLER ##
+#############################
+# The following values are about a second controller instance for the customer and some of
+# them will be overwritten according to tr369_xxxx2 settings during vendor/snom_rpc.cpp/snom_rpc_start() execution.
+
+Device.MQTT.Client.2.BrokerAddress "127.0.0.1"
+Device.MQTT.Client.2.ProtocolVersion "5.0"
+Device.MQTT.Client.2.BrokerPort "1888"
+Device.MQTT.Client.2.TransportProtocol "TCP/IP"
+Device.MQTT.Client.2.Username ""
+Device.MQTT.Client.2.Password ""
+Device.MQTT.Client.2.Alias "[EndpointID]"
+Device.MQTT.Client.2.Enable false
+Device.MQTT.Client.2.ClientID "[EndpointID]"
+Device.MQTT.Client.2.KeepAliveTime "60"
+Device.MQTT.Client.2.ConnectRetryTime "5"
+Device.MQTT.Client.2.ConnectRetryIntervalMultiplier "2000"
+Device.MQTT.Client.2.ConnectRetryMaxInterval "30"
+
+Device.LocalAgent.MTP.2.Alias "cpe-2"
+Device.LocalAgent.MTP.2.Enable false
+Device.LocalAgent.MTP.2.Protocol "MQTT"
+Device.LocalAgent.MTP.2.MQTT.ResponseTopicConfigured "usp/endpoints/[EndpointID]"
+Device.LocalAgent.MTP.2.MQTT.Reference "Device.MQTT.Client.2"
+
+Device.LocalAgent.Controller.2.Alias "cpe-2"
+Device.LocalAgent.Controller.2.Enable false
+Device.LocalAgent.Controller.2.PeriodicNotifInterval "86400"
+Device.LocalAgent.Controller.2.PeriodicNotifTime "0001-01-01T00:00:00Z"
+Device.LocalAgent.Controller.2.ControllerCode ""
+Device.LocalAgent.Controller.2.EndpointID ""
+Device.LocalAgent.Controller.2.BootParameter.1.Enable false
+Device.LocalAgent.Controller.2.BootParameter.1.ParameterName "Device.LocalAgent.EndpointID"
+Device.LocalAgent.Controller.2.MTP.1.Alias "cpe-2"
+Device.LocalAgent.Controller.2.MTP.1.Enable false
+Device.LocalAgent.Controller.2.MTP.1.Protocol "MQTT"
+Device.LocalAgent.Controller.2.MTP.1.MQTT.Reference "Device.MQTT.Client.2"
+Device.LocalAgent.Controller.2.MTP.1.MQTT.Topic "usp/endpoints/[EndpointID]"
+Device.LocalAgent.Controller.2.MTP.1.WebSocket.Host ""
+Device.LocalAgent.Controller.2.MTP.1.WebSocket.Port "8443"
+Device.LocalAgent.Controller.2.MTP.1.WebSocket.Path ""
+Device.LocalAgent.Controller.2.MTP.1.WebSocket.EnableEncryption "true"
+Device.LocalAgent.Controller.2.E2ESession.SessionMode "Allow"
+Device.LocalAgent.Controller.2.E2ESession.MaxUSPRecordSize "0"
+
+# Subscription declared after associated Device.LocalAgent.Controller is set
+Device.LocalAgent.Subscription.2.Alias "cpe-2"
+Device.LocalAgent.Subscription.2.Enable false
+Device.LocalAgent.Subscription.2.ID "default-boot-event-cpe2"
+Device.LocalAgent.Subscription.2.Recipient "Device.LocalAgent.Controller.2"
+Device.LocalAgent.Subscription.2.NotifType Event
+Device.LocalAgent.Subscription.2.ReferenceList Device.Boot!
+Device.LocalAgent.Subscription.2.Persistent false

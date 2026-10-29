@@ -1,50 +1,186 @@
 # Getting and keeping root access
 
-## 1. First root shell: OpenVPN configuration files
+## D3xx / D7xx (D375, D385, D785, …)
+
+### 1. First root shell: OpenVPN configuration files
 
 This follows [Remote root shell on a snom D785 using OpenVPN configuration files](https://www.encrypted.at/remote-root-shell-on-a-snom-d785-voip-phone-using-openvpn-configuration-files/)
-(encrypted.at). It also works on the D375.
+(encrypted.at). It also works on the D375 and D385.
 
 In short: the phone's VPN feature takes an uploaded OpenVPN configuration
 bundle, and OpenVPN runs as root. A config with script hooks (`up` and
 similar, plus `script-security`) therefore runs commands as root on the phone.
-The hook is used to start a shell or SSH service. The VPN server this needs
-lives in `vpn-server/` (gitignored: it holds keys and config).
+The hook is used to start sshd. The VPN server config lives in `vpn-server/`
+(gitignored: it holds keys and config).
 
-See the write-up for the exact bundle format and steps. Record any
-D375-specific differences here:
-
-- _TODO: firmware version used, menu path for VPN upload, any differences from the D785._
+Steps:
+1. Generate VPN PKI: `./tools/setup-ovpn.sh`
+2. Start the OpenVPN server: `cd vpn-server && sudo openvpn --config server.conf`
+3. Serve the client tarball: `cd vpn-server && python3 -m http.server 8080`
+4. On the phone web UI: **Advanced → VPN → OpenVPN** → set provisioning URL
+   to `http://<your-ip>:8080/vpnclient.tar`
+5. The phone connects to the VPN and the `up` hook starts sshd
+6. SSH in: `ssh root@<phone-vpn-ip>` (empty password by default)
 
 This shell only lasts until the next reboot or VPN reconnect.
 
-## 2. Persistent root: custom firmware with SSH on boot
+### 2. Persistent root: custom firmware with SSH on boot
 
 With root, install a custom `/firmware1.pub` ([signing-keys.md](signing-keys.md))
-and flash an image whose rootfs starts an SSH server at boot. The current
-custom image does this.
+and flash an image whose rootfs starts sshd at boot.
 
-Exactly how SSH is started (binary, init script, credentials) was set up in an
-earlier session that wasn't committed. Recover it with:
+The D375 custom firmware modifies:
+- `/etc/shadow` — root password hash (default: `snom375`)
+- `/etc/ssh/sshd_config` — `PermitEmptyPasswords no`
+- `/etc/init.d/rcS` — adds `mkdir -p /dev/pts && mount devpts /dev/pts -t devpts && /usr/sbin/sshd`
+  after the phone application startup
+- `/etc/ssh/ssh_host_rsa_key` — pre-generated host key
 
+Build and flash:
 ```sh
-./tools/rootfs-diff.sh decrypted custom-rootfs
+./tools/fw-pull-from-device.sh <phone-ip> --raw --extract
+./tools/prepare-pulled-rootfs.sh decrypted/snomD375-10.1.64.17-SIP-r/rootfs
+# edit custom-rootfs/ as needed
+./tools/build-custom-firmware.sh
+# install custom key on phone, then flash via web UI
 ```
 
-and record the result here:
+---
 
-- _TODO: SSH server binary and path (dropbear? where from?)_
-- _TODO: init hook that starts it (file, runlevel)_
-- _TODO: authentication (root password / authorized_keys location)_
-- _TODO: host keys: generated on first boot or baked into the image?_
+## D8xx (D810, D812, D815, D815W, …)
 
-Once known, move these files into the overlay (see [roadmap.md](roadmap.md))
-so they're tracked in git.
+### 1. First root shell: OpenVPN + development mode
+
+The D8xx line uses the same OpenVPN method for first root access. The VPN
+client tarball (`vpn-server/vpnclient.tar`) works the same way — the `up`
+hook starts sshd.
+
+The D815W additionally ships with `development=yes` in U-Boot env, which
+already starts sshd on boot via `/etc/init.d/rcS` → `getStartMode()`. This
+means SSH may already be available without the VPN step (with empty root
+password). Check with: `ssh root@<phone-ip>`.
+
+### 2. Persistent root: overlay filesystem (no reflash needed)
+
+The D8xx uses a **read-only UBIFS rootfs** with a **writable unionfs overlay**
+backed by the `ubi0:overlay` UBI volume. `/etc` and `/snom` are overlaid:
+
+```
+unionfs on /etc type unionfs (rw, dirs=/overlay/etc=rw:/etc=ro)
+unionfs on /snom type unionfs (rw, dirs=/overlay/snom=rw:/snom=ro)
+```
+
+This means persistent changes to `/etc` survive reboots without building a
+custom firmware image. Changes are written to `/overlay/etc/` on the writable
+overlay volume.
+
+#### What we changed (D815W, firmware 10.1.226.16)
+
+**Set root password** (`snom815`):
+```sh
+sed -i 's|^root:[^:]*:|root:'"$(openssl passwd -5 snom815)"':|' /etc/shadow
+```
+
+**Disable empty password login**:
+```sh
+sed -i 's/PermitEmptyPasswords yes/PermitEmptyPasswords no/' /etc/ssh/sshd_config
+```
+
+**Unconditional sshd startup** (regardless of `development` U-Boot variable):
+
+The stock `rcS` only starts sshd inside a `if [ "$development" = "development=yes" ]`
+block in `getStartMode()`. We patched the `startUp()` function's D815 case
+(which runs unconditionally after `startUpDaemons`) to always start sshd:
+
+```sh
+sed -i '/\"snomD717\".*\"snomD815\".*\"VTechET635\")/,/;;/ {
+    /\/css\/cssload\.sh/a\
+        # CFW: always start sshd\
+        if [ ! -e "/etc/ssh/ssh_host_rsa_key" ]; then\
+            /usr/bin/ssh-keygen -t rsa -f /etc/ssh/ssh_host_rsa_key -N ""\
+        fi\
+        /usr/sbin/sshd
+}' /etc/init.d/rcS
+```
+
+This adds sshd startup right after the audio firmware load in the D815 block
+of `startUp()`, which runs after `setUpFileSystems`, `cleanUpRootfs`,
+`setUpNetwork`, `loadKernelModules`, and `startUpDaemons` — and after devpts
+is already mounted.
+
+#### Verifying the overlay changes
+
+```sh
+ls -la /overlay/etc/          # shows shadow, ssh/, init.d/ modified
+grep PermitEmpty /etc/ssh/sshd_config   # should say "no"
+grep "CFW: always start sshd" /etc/init.d/rcS  # should match
+```
+
+#### Why not reflash?
+
+We attempted the SWU reflash approach (`swupdate -i` with custom-signed
+firmware) but hit two issues:
+
+1. **swupdate silent failure**: when run from CLI with `-i /tmp/firmware.swu`,
+   swupdate exits with code 1 and produces zero output (not even to its log
+   file). Likely caused by insufficient free tmpfs (90MB SWU in 100MB /tmp).
+2. **No `ubiupdatevol`**: the phone lacks mtd-utils, so direct UBI volume
+   writes are not possible without cross-compiling tools.
+3. **Read-only rootfs**: `/firmware1.pub` and `/firmware1.aes` live on the
+   read-only UBIFS root and cannot be replaced for the stock swupdate daemon
+   to accept custom-signed images.
+
+The overlay approach is simpler and sufficient for SSH persistence. A full
+custom firmware flash would be needed for changes outside `/etc` and `/snom`
+(e.g., adding binaries to `/usr/bin`).
+
+### 3. Changing the web interface password (after Webex provisioning)
+
+When provisioned by Webex (or another cloud platform), the phone's web
+interface password is set to an unknown encrypted value and there is no way
+to log in through the browser. With SSH access you can reset it:
+
+```sh
+# Deploy the script once (persistent on the overlay)
+scp tools/snom-webpass.sh root@<phone-ip>:/snom/snom-webpass.sh
+
+# Change the password
+ssh root@<phone-ip> /snom/snom-webpass.sh <new-password>
+```
+
+The script:
+1. Writes the new password into `config.xml` (`http_pass` + `admin_mode_password`)
+2. Clears `setting_server` and sets `update_policy=never` so the provisioning
+   server cannot overwrite the password on the next boot
+3. Restarts `lcsD815` so the change takes effect immediately (no full reboot)
+4. Verifies the new password works via HTTP Digest auth
+
+After this, the web UI at `http://<phone-ip>` is accessible with user `admin`
+and the password you chose.
+
+### 4. Firmware key dump (for future custom firmware builds)
+
+Three key files were dumped from the D815W:
+
+| File | Location on device | Purpose |
+|------|-------------------|---------|
+| `/firmware1.pub` | RSA-2048 public key | SWUpdate signature verification (`swupdate -k`) |
+| `/firmware1.aes` | AES-256 key + IV | Rootfs decryption (`swupdate -K`) |
+| `/firmwareUXM.pub` | RSA-1024 public key | Legacy/UXM compatibility |
+
+These are saved in `keys/snomD815-*`. The AES key format is:
+`<64-char hex key> <32-char hex IV>` on a single line.
+
+Decrypt a stock D815 firmware:
+```sh
+./tools/swu-unpack.sh original_firmware/snomD815-10.1.226.16-SIP-r.swu keys/snomD815-firmware1.aes decrypted/D815-10.1.226.16
+```
 
 ## SSH client notes
 
-- Older dropbear builds only offer `ssh-rsa`, which modern OpenSSH turns off by default:
+- The D8xx phones run OpenSSH (not dropbear), so modern key algorithms work.
+- The D3xx/D7xx may use older dropbear builds that only offer `ssh-rsa`:
   `ssh -o HostKeyAlgorithms=+ssh-rsa -o PubkeyAcceptedAlgorithms=+ssh-rsa root@<ip>`
-  (the tools take this through `SSH_OPTS="..."`).
-- Don't count on `scp`/`sftp` being on the phone. The tools stream files with
+- Don't count on `scp`/`sftp` being on the D3xx phone. The tools stream files with
   `ssh host 'cat > file' < local` and `ssh host cat file > local`.
+- The D815W has both `curl` and busybox `wget` available.

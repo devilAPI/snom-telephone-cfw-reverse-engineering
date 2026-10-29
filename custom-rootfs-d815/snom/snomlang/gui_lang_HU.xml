@@ -1,0 +1,1882 @@
+<?xml version="1.0" encoding="utf-8"?>
+<phrases>
+	<language t="Magyar"/>
+	<phrase n="lang_none" t=""/>
+	<phrase n="lang_language_name" t="Magyar"/>
+	<phrase n="lang_cntry_CHN" t="Kína"/>
+	<phrase n="lang_cntry_FIN" t="Finnország"/>
+	<phrase n="lang_cntry_GER" t="Németország"/>
+	<phrase n="lang_cntry_IND" t="India"/>
+	<phrase n="lang_cntry_IDN" t="Indonézia"/>
+	<phrase n="lang_cntry_MYS" t="Malajzia"/>
+	<phrase n="lang_cntry_MEX" t="Mexikó"/>
+	<phrase n="lang_cntry_NLD" t="Hollandia"/>
+	<phrase n="lang_cntry_PRT" t="Portugália"/>
+	<phrase n="lang_cntry_ZAF" t="Dél-afrikai Köztársaság"/>
+	<phrase n="lang_cntry_GBR" t="Nagy-Britannia"/>
+	<phrase n="lang_cntry_USA" t="Amerikai Egyesült Államok"/>
+	<phrase n="lang_cntry_CAM" t="Közép-Amerika"/>
+	<phrase n="lang_cntry_CAN" t="Kanada"/>
+	<phrase n="lang_cntry_CHL" t="Chile"/>
+	<phrase n="lang_cntry_BHS" t="Bahama-szigetek"/>
+	<phrase n="lang_cntry_CUB" t="Kuba"/>
+	<phrase n="lang_cntry_PRY" t="Paraguay"/>
+	<phrase n="lang_cntry_BMU" t="Bermuda"/>
+	<phrase n="lang_cntry_FLK" t="Falkland-szigetek"/>
+	<phrase n="lang_cntry_GRL" t="Grönland"/>
+	<phrase n="lang_cntry_FRO" t="Feröer-szigetek"/>
+	<phrase n="lang_cntry_IRL" t="Írország"/>
+	<phrase n="lang_cntry_ESP" t="Spanyolország"/>
+	<phrase n="lang_cntry_ALB" t="Albánia"/>
+	<phrase n="lang_cntry_AUT" t="Ausztria"/>
+	<phrase n="lang_cntry_BEL" t="Belgium"/>
+	<phrase n="lang_cntry_BRA" t="Brazília"/>
+	<phrase n="lang_cntry_CAI" t="Caicos-szigetek"/>
+	<phrase n="lang_cntry_CHA" t="Chatham-szigetek"/>
+	<phrase n="lang_cntry_HRV" t="Horvátország"/>
+	<phrase n="lang_cntry_CZE" t="Cseh Köztársaság"/>
+	<phrase n="lang_cntry_DNK" t="Dánia"/>
+	<phrase n="lang_cntry_FRA" t="Franciaország"/>
+	<phrase n="lang_cntry_HUN" t="Magyarország"/>
+	<phrase n="lang_cntry_ITA" t="Olaszország"/>
+	<phrase n="lang_cntry_LUX" t="Luxemburg"/>
+	<phrase n="lang_cntry_MAK" t="Észak-Macedónia"/>
+	<phrase n="lang_cntry_NAM" t="Namíbia"/>
+	<phrase n="lang_cntry_NOR" t="Norvégia"/>
+	<phrase n="lang_cntry_POL" t="Lengyelország"/>
+	<phrase n="lang_cntry_SVK" t="Szlovákia"/>
+	<phrase n="lang_cntry_SWD" t="Svédország"/>
+	<phrase n="lang_cntry_CHE" t="Svájc"/>
+	<phrase n="lang_cntry_GIB" t="Gibraltár"/>
+	<phrase n="lang_cntry_YUG" t="Szerbia"/>
+	<phrase n="lang_cntry_BLR" t="Fehéroroszország"/>
+	<phrase n="lang_cntry_BGR" t="Bulgária"/>
+	<phrase n="lang_cntry_CYP" t="Ciprus"/>
+	<phrase n="lang_cntry_EGY" t="Egyiptom"/>
+	<phrase n="lang_cntry_EST" t="Észtország"/>
+	<phrase n="lang_cntry_GAZ" t="Gáza"/>
+	<phrase n="lang_cntry_GRC" t="Görögország"/>
+	<phrase n="lang_cntry_ISR" t="Izrael"/>
+	<phrase n="lang_cntry_JOR" t="Jordánia"/>
+	<phrase n="lang_cntry_LVA" t="Lettország"/>
+	<phrase n="lang_cntry_LTU" t="Litvánia"/>
+	<phrase n="lang_cntry_LBN" t="Libanon"/>
+	<phrase n="lang_cntry_MDA" t="Moldova"/>
+	<phrase n="lang_cntry_RUS" t="Oroszország"/>
+	<phrase n="lang_cntry_ROU" t="Románia"/>
+	<phrase n="lang_cntry_SYR" t="Szíria"/>
+	<phrase n="lang_cntry_TUR" t="Törökország"/>
+	<phrase n="lang_cntry_UKR" t="Ukrajna"/>
+	<phrase n="lang_cntry_IRQ" t="Irak"/>
+	<phrase n="lang_cntry_IRN" t="Irán"/>
+	<phrase n="lang_cntry_ARM" t="Örményország"/>
+	<phrase n="lang_cntry_AZE" t="Azerbajdzsán"/>
+	<phrase n="lang_cntry_GEO" t="Grúzia"/>
+	<phrase n="lang_cntry_KAZ" t="Kazahsztán"/>
+	<phrase n="lang_cntry_KGZ" t="Kirgizisztán"/>
+	<phrase n="lang_cntry_PAK" t="Pakisztán"/>
+	<phrase n="lang_cntry_SGP" t="Szingapúr"/>
+	<phrase n="lang_cntry_KOR" t="Dél-Korea"/>
+	<phrase n="lang_cntry_JPN" t="Japán"/>
+	<phrase n="lang_cntry_AUS" t="Ausztrália"/>
+	<phrase n="lang_cntry_NZL" t="Új-Zéland"/>
+	<phrase n="lang_cntry_TON" t="Tonga"/>
+	<phrase n="lang_cntry_COL" t="Kolumbia"/>
+	<phrase n="lang_cntry_ECU" t="Ecuador"/>
+	<phrase n="lang_cntry_TTB" t="Trinidad és Tobago"/>
+	<phrase n="lang_cntry_ARG" t="Argentína"/>
+	<phrase n="lang_cntry_WAT" t="Nyugat-Afrika"/>
+	<phrase n="lang_cntry_CAT" t="Közép-Afrika"/>
+	<phrase n="lang_cntry_EAT" t="Kelet-Afrika"/>
+	<phrase n="lang_cntry_VEN" t="Venezuela"/>
+	<phrase n="lang_cntry_NCL" t="Új-Kaledónia"/>
+	<phrase n="lang_cntry_UAE" t="Egyesült Arab Emírségek"/>
+	<phrase n="lang_cntry_THA" t="Thaiföld"/>
+	<phrase n="lang_F_SEARCH" t="Keres"/>
+	<phrase n="lang_F_SEARCH_typeSio" t="Keresés"/>
+	<phrase n="lang_F_REBOOT" t="Újraindít"/>
+	<phrase n="lang_F_REBOOT_typeSio" t="Újraindítás"/>
+	<phrase n="lang_F_REBOOT_smartlabel" t="Újraindít"/>
+	<phrase n="lang_F_PAIR" t="Párosítás"/>
+	<phrase n="lang_F_UNPAIR" t="Leválasztás"/>
+	<phrase n="lang_F_JOIN" t="Csatl"/>
+	<phrase n="lang_F_JOIN_typeSio" t="Csatlakozás"/>
+	<phrase n="lang_F_JOIN_WITH" t="Csatlakozás"/>
+	<phrase n="lang_F_LEAVE" t="Kilép"/>
+	<phrase n="lang_F_LEAVE_typeSio" t="Kilépés"/>
+	<phrase n="lang_F_OK" t="OK"/>
+	<phrase n="lang_F_ACCEPT_CALL" t="Fogad"/>
+	<phrase n="lang_F_ACCEPT_CALL_typeSio" t="Fogadás"/>
+	<phrase n="lang_F_CANCEL" t="Mégse"/>
+	<phrase n="lang_F_CANCEL_typeSio" t="Mégse"/>
+	<phrase n="lang_F_YES" t="Igen"/>
+	<phrase n="lang_F_NO" t="Nem"/>
+	<phrase n="lang_F_ADD_SPEAKER" t="+Kihang"/>
+	<phrase n="lang_F_ADD_SPEAKER_typeSio" t="+Kihangosítás"/>
+	<phrase n="lang_F_REMOVE_SPEAKER" t="-Kihang"/>
+	<phrase n="lang_F_REMOVE_SPEAKER_typeSio" t="-Kihangosítás"/>
+	<phrase n="lang_F_ADD_HANDSET" t="+Kézi"/>
+	<phrase n="lang_F_ADD_HANDSET_typeSio" t="+Kézibeszélő"/>
+	<phrase n="lang_F_REMOVE_HANDSET" t="-Kézi"/>
+	<phrase n="lang_F_REMOVE_HANDSET_typeSio" t="-Kézibeszélő"/>
+	<phrase n="lang_F_DELETE" t="Töröl"/>
+	<phrase n="lang_F_DELETE_typeSio" t="Törlés"/>
+	<phrase n="lang_F_ADR_BOOK" t="Tkönyv"/>
+	<phrase n="lang_F_ADR_BOOK_typeSio" t="Telefonkönyv"/>
+	<phrase n="lang_F_ADR_BOOK_smartlabel" t="Telefonkönyv"/>
+	<phrase n="lang_F_DENYALL" t="Letilt"/>
+	<phrase n="lang_F_DENYALL_typeSio" t="Letiltás"/>
+	<phrase n="lang_F_DENYALL_smartlabel" t="Letilt"/>
+	<phrase n="lang_F_CALL_LIST" t="Lista"/>
+	<phrase n="lang_F_CALL_LIST_typeSio" t="Híváslista"/>
+	<phrase n="lang_F_CALL_LIST_smartlabel" t="Hívások"/>
+	<phrase n="lang_F_PLAY" t="Lejátszás"/>
+	<phrase n="lang_F_STOP" t="Megállítás"/>
+	<phrase n="lang_F_RESCAN" t="Újra-keresés"/>
+	<phrase n="lang_F_INCREASE" t="Növelés"/>
+	<phrase n="lang_F_DECREASE" t="Csökkentés"/>
+	<phrase n="lang_F_BACK" t="⌫"/>
+	<phrase n="lang_F_BACK_typeSio" t="Visszatörlés"/>
+	<phrase n="lang_F_REDIAL" t="Újra"/>
+	<phrase n="lang_F_REDIAL_typeSio" t="Újrahívás"/>
+	<phrase n="lang_F_REDIAL_smartlabel" t="Újrahívás"/>
+	<phrase n="lang_F_INSTANT_REDIAL" t="Újra"/>
+	<phrase n="lang_F_INSTANT_REDIAL_typeSio" t="Azonnal újra"/>
+	<phrase n="lang_F_INSTANT_REDIAL_smartlabel" t="Újra"/>
+	<phrase n="lang_F_ADD_NUMBER" t="Hozzáad"/>
+	<phrase n="lang_F_ADD_NUMBER_typeSio" t="Hozzáadás"/>
+	<phrase n="lang_F_CONTACTS" t="Kontaktok"/>
+	<phrase n="lang_F_PRESENCE" t="Állapot"/>
+	<phrase n="lang_F_PRESENCE_typeSio" t="Állapot"/>
+	<phrase n="lang_F_PRESENCE_smartlabel" t="Állapot"/>
+	<phrase n="lang_F_SPEED_DIAL" t="Gyors"/>
+	<phrase n="lang_F_SPEED_DIAL_typeSio" t="Gyorshívó"/>
+	<phrase n="lang_F_SPEED_DIAL_smartlabel" t="Gyors"/>
+	<phrase n="lang_F_SAFE_TRANSFER" t="Biztos"/>
+	<phrase n="lang_F_SAFE_TRANSFER_typeSio" t="Biztos átkapcsolás"/>
+	<phrase n="lang_F_MENUS_USERINPUT_SENDSIPINFO" t="UserInputAndSendSipInfo"/>
+	<phrase n="lang_F_MENUS_SENDSIPINFO" t="SIP INFO küldés"/>
+	<phrase n="lang_F_USERINPUT_SENDSIPINFO" t="SIP"/>
+	<phrase n="lang_F_SENDSIPINFO" t="SIP"/>
+	<phrase n="lang_F_SENDSIPINFO_typeSio" t="SIP INFO"/>
+	<phrase n="lang_F_SENDSIPINFO_smartlabel" t="SIP&lt;br&gt;INFO"/>
+	<phrase n="lang_F_REC_START" t="Rögzít"/>
+	<phrase n="lang_F_REC_STOP" t="Megáll"/>
+	<phrase n="lang_F_RECORDER_START" t="Rögzítés"/>
+	<phrase n="lang_F_RECORDER_STOP" t="Megállítás"/>
+	<phrase n="lang_F_RECORD_ON" t="Rögzítés"/>
+	<phrase n="lang_F_RECORD_OFF" t="Megállítás"/>
+	<phrase n="lang_F_RECORDING" t="rögzítés"/>
+	<phrase n="lang_F_LOGOFF_ALL" t="Kijelentkezés"/>
+	<phrase n="lang_F_LOGOFF_ALL_typeSio" t="Kijelentkezés"/>
+	<phrase n="lang_F_LOGOFF_ALL_smartlabel" t="Kijelentkezés"/>
+	<phrase n="lang_F_STARCODE_short" t="* kód"/>
+	<phrase n="lang_F_STARCODE" t="* kód"/>
+	<phrase n="lang_F_RELOAD_SERVER_AB" t="Újratöltés"/>
+	<phrase n="lang_F_SERVER_AB" t="Telkönyv"/>
+	<phrase n="lang_F_ANONYMOUS" t="Rejt"/>
+	<phrase n="lang_F_ANONYMOUS_long" t="Rejtett szám"/>
+	<phrase n="lang_F_ANONYMOUS_smartlabel" t="Rejtett"/>
+	<phrase n="lang_F_VOICEMAIL_INFO_NEW_MSG" t="Hangposta"/>
+	<phrase n="lang_F_VOICEMAIL_INFO_short" t="Hangposta"/>
+	<phrase n="lang_F_VOICEMAIL_INFO" t="Hangposta"/>
+	<phrase n="lang_F_NO_NEW_MESSAGE" t="Nincs új üzenet"/>
+	<phrase n="lang_F_NEW_MESSAGE" t="Új üzenet"/>
+	<phrase n="lang_F_GUEST_LOCK" t="Lezárás"/>
+	<phrase n="lang_F_GUEST_UNLOCK" t="Feloldás"/>
+	<phrase n="lang_F_IVR" t="IVR"/>
+	<phrase n="lang_F_DTMF" t="DTMF"/>
+	<phrase n="lang_F_ACTION_URL" t="URL"/>
+	<phrase n="lang_F_ACTION_URL_typeSio" t="URL"/>
+	<phrase n="lang_F_ACTION_URL_smartlabel" t="URL"/>
+	<phrase n="lang_F_AUTO_ANSWER" t="Autofog"/>
+	<phrase n="lang_F_AUTO_ANSWER_typeSio" t="Automatikus hívásfogadás"/>
+	<phrase n="lang_F_AUTO_ANSWER_smartlabel" t="Autofog"/>
+	<phrase n="lang_F_AUTO_ANSWER_ON" t="Automatikus hívásfogadás"/>
+	<phrase n="lang_F_BLF_short" t="BLF"/>
+	<phrase n="lang_F_BLF" t="Foglaltság jelző"/>
+	<phrase n="lang_F_LINE" t="Vonal"/>
+	<phrase n="lang_F_LINE_short" t="Vonal"/>
+	<phrase n="lang_F_LINE_RINGING" t="csörgés"/>
+	<phrase n="lang_F_LINE_OUTGOING" t="Hívásban"/>
+	<phrase n="lang_F_LINE_OFFHOOK" t="felemelve"/>
+	<phrase n="lang_F_LINE_IDLE" t="szabad"/>
+	<phrase n="lang_F_LINE_HOLD" t="tartásban"/>
+	<phrase n="lang_F_LINE_FAILED" t="Offline"/>
+	<phrase n="lang_F_LINE_DISCONNECTED" t="szétkapcsolva"/>
+	<phrase n="lang_F_LINE_DISCONNECTED_typeSio" t="szétkapcsolva"/>
+	<phrase n="lang_F_LINE_CONNECTED" t="kapcsolódva"/>
+	<phrase n="lang_F_LINE_BUSY" t="Foglalt"/>
+	<phrase n="lang_F_LINE_HELD" t="tartásban"/>
+	<phrase n="lang_F_LINE_CALLING" t="hívásban"/>
+	<phrase n="lang_F_LINE_RINGBACK" t="csörgetés"/>
+	<phrase n="lang_F_LINE_HOLDING" t="tartás"/>
+	<phrase n="lang_F_LINE_UNREGISTERED" t="kiregisztrálva"/>
+	<phrase n="lang_F_LINE_IN_USE" t="Használatban"/>
+	<phrase n="lang_F_LINE_FREE" t="szabad"/>
+	<phrase n="lang_F_LINE_UNKNOWN" t="ismeretlen"/>
+	<phrase n="lang_F_LINE_TALKING" t="beszélgetésben"/>
+	<phrase n="lang_F_LINE_SEIZED" t="foglalt"/>
+	<phrase n="lang_F_LINE_UNVAILABLE" t="nem elérhető"/>
+	<phrase n="lang_F_LINE_ACTIVE" t="Aktív"/>
+	<phrase n="lang_F_LINE_AVAILABLE" t="elérhető"/>
+	<phrase n="lang_F_LINE_CLOSED" t="zárva"/>
+	<phrase n="lang_F_LINE_AUTO_REDIAL" t="automatikus újrahívás"/>
+	<phrase n="lang_F_LINE_AUTO_REDIAL_typeSio" t="automatikus újrahívás"/>
+	<phrase n="lang_F_LINE_CONFERENCING" t="konferenciában"/>
+	<phrase n="lang_F_LINE_PARKED" t="parkolva"/>
+	<phrase n="lang_F_LINE_NO_BUDDY" t="kiosztatlan"/>
+	<phrase n="lang_F_LINE_DISABLED" t="letiltva"/>
+	<phrase n="lang_F_LINE_MSG_WAITING" t="üzenete van"/>
+	<phrase n="lang_F_SHARED_LINE" t="Közös"/>
+	<phrase n="lang_F_SHARED_LINE_typeSio" t="Közös vonal"/>
+	<phrase n="lang_F_SHARED_LINE_smartlabel" t="Közös vonal"/>
+	<phrase n="lang_F_SHARED_LINE_REMOTE_SEIZED" t="Közös vonal"/>
+	<phrase n="lang_F_SHARED_LINE_REMOTE_HOLD" t="Közös vonal"/>
+	<phrase n="lang_F_SHARED_LINE_REMOTE_ALERT" t="Közös vonal"/>
+	<phrase n="lang_F_SHARED_LINE_REMOTE_ACTIVE" t="Közös vonal"/>
+	<phrase n="lang_F_SHARED_LINE_BRIDGE_ACTIVE" t="Közös vonal"/>
+	<phrase n="lang_F_SHARED_LINE_BRIDGE_HOLD" t="Közös vonal"/>
+	<phrase n="lang_F_SHARED_LINE_LOCAL_SEIZED" t="Közös vonal"/>
+	<phrase n="lang_F_SHARED_LINE_LOCAL_HOLD" t="Közös vonal"/>
+	<phrase n="lang_F_SHARED_LINE_LOCAL_ALERT" t="Közös vonal"/>
+	<phrase n="lang_F_SHARED_LINE_LOCAL_ACTIVE" t="Közös vonal"/>
+	<phrase n="lang_F_MULTICAST" t="MCast"/>
+	<phrase n="lang_F_MULTICAST_typeSio" t="Multicast"/>
+	<phrase n="lang_F_MULTICAST_smartlabel" t="MC Page"/>
+	<phrase n="lang_F_MULTICAST_ON" t="Multicast"/>
+	<phrase n="lang_F_MULTICAST_ZONE" t="MCzóna"/>
+	<phrase n="lang_F_MULTICAST_ZONE_typeSio" t="Multicast zóna"/>
+	<phrase n="lang_F_MULTICAST_ZONE_smartlabel" t="MC zóna"/>
+	<phrase n="lang_F_BUTTON_typeSio" t="PBX gomb"/>
+	<phrase n="lang_F_BUTTON" t="Gomb"/>
+	<phrase n="lang_F_BUTTON_smartlabel" t="Gomb"/>
+	<phrase n="lang_F_PUSH_TO_TALK" t="PTT"/>
+	<phrase n="lang_F_PUSH_TO_TALK_typeSio" t="Push-to-Talk"/>
+	<phrase n="lang_F_PUSH_TO_TALK_smartlabel" t="PTT"/>
+	<phrase n="lang_F_INTERCOM_ON" t="Hangosbemondó"/>
+	<phrase n="lang_F_INTERCOM" t="Hbemond"/>
+	<phrase n="lang_F_INTERCOM_typeSio" t="Hangosbemondó"/>
+	<phrase n="lang_F_INTERCOM_smartlabel" t="Hbemond"/>
+	<phrase n="lang_F_PICKUP" t="Átvétel"/>
+	<phrase n="lang_F_CALL_CENTER_LIST" t="Callcenter lista"/>
+	<phrase n="lang_F_REMOTE_OFFICE" t="Iroda"/>
+	<phrase n="lang_F_REMOTE_OFFICE_typeSio" t="Távoli iroda"/>
+	<phrase n="lang_F_REMOTE_OFFICE_smartlabel" t="Táviroda"/>
+	<phrase n="lang_F_REMOTE_OFFICE_ON" t="Be"/>
+	<phrase n="lang_F_REMOTE_OFFICE_OFF" t="Ki"/>
+	<phrase n="lang_F_ACD" t="ACD"/>
+	<phrase n="lang_F_ACD_WRAPUP" t="Felfutás"/>
+	<phrase n="lang_F_ACD_UNAVAILABLE" t="Nem elérhető"/>
+	<phrase n="lang_F_ACD_AVAILABLE" t="Elérhető"/>
+	<phrase n="lang_F_ACD_SIGN_OUT" t="Kilépés"/>
+	<phrase n="lang_F_ACD_SIGN_IN" t="Belépés"/>
+	<phrase n="lang_F_ACD_LOGOUT" t="Kilépés"/>
+	<phrase n="lang_F_ACD_LOGIN" t="Belépés"/>
+	<phrase n="lang_F_ZONES" t="M-Page"/>
+	<phrase n="lang_F_SMART_TRANSFER" t="SmartTransfer"/>
+	<phrase n="lang_F_SMART_TRANSFER_short" t="OkosÁt"/>
+	<phrase n="lang_F_ALTERNATE_MODE" t="Alternatív"/>
+	<phrase n="lang_F_LABEL_PAGE_NEXT_typeSio" t="Köv"/>
+	<phrase n="lang_F_LABEL_PAGE_NEXT" t="Köv"/>
+	<phrase n="lang_F_LABEL_PAGE_NEXT_SMART_long" t="Köv. oldal"/>
+	<phrase n="lang_F_LABEL_PAGE_NEXT_SMART_short" t="Oldal&gt;&gt;"/>
+	<phrase n="lang_F_LABEL_PAGE_PREV_typeSio" t="Előző"/>
+	<phrase n="lang_F_LABEL_PAGE_PREV" t="Előző"/>
+	<phrase n="lang_F_LABEL_PAGE_PREV_SMART_long" t="Előző oldal"/>
+	<phrase n="lang_F_LABEL_PAGE_PREV_SMART_short" t="&lt;&lt;Oldal"/>
+	<phrase n="lang_F_ADD_REJECTED_CONTACT" t="Hozzáadás"/>
+	<phrase n="lang_F_SAVE_XSI_CONTACT" t="Mentés"/>
+	<phrase n="lang_F_REFRESH" t="Frissítés"/>
+	<phrase n="lang_F_ADD_CONTACT" t="Hozzáadás"/>
+	<phrase n="lang_F_ADD_CONTACT_typeSio" t="Kontakt hozzáadás"/>
+	<phrase n="lang_F_SAVE_DIRECTORY_EDIT" t="Mentés"/>
+	<phrase n="lang_F_GO_NEXT" t="Következő"/>
+	<phrase n="lang_F_GO_BACK" t="Előző"/>
+	<phrase n="lang_F_MENU_BACK" t="Vissza"/>
+	<phrase n="lang_F_SAVE" t="Mentés"/>
+	<phrase n="lang_F_SAVE_CONTACT" t="Mentés"/>
+	<phrase n="lang_F_SAFE_TRANSFER_OFF" t="Átkapcs"/>
+	<phrase n="lang_F_SAFE_TRANSFER_OFF_typeSio" t="Átkapcsolás"/>
+	<phrase n="lang_F_PARK" t="Vár"/>
+	<phrase n="lang_F_CALL_PARK_GROUP_DIAL" t="Csoportos hívásparkolás"/>
+	<phrase n="lang_F_PARK_typeSio" t="Várakoztatás"/>
+	<phrase n="lang_F_PARK_smartlabel" t="Parkol"/>
+	<phrase n="lang_F_CALLRECORD_PAUSE" t="Rögzítés szüneteltetés"/>
+	<phrase n="lang_F_CALLRECORD_RESUME" t="Rögzítés folytatás"/>
+	<phrase n="lang_F_CALLRECORD_CONTROL_ON" t="Rögzítés"/>
+	<phrase n="lang_F_CALLRECORD_CONTROL_OFF" t="Rögzítés"/>
+	<phrase n="lang_F_STATUS_UNREAD" t="Info"/>
+	<phrase n="lang_F_STATUS" t="Info"/>
+	<phrase n="lang_F_STATUS_long" t="Üzenetek"/>
+	<phrase n="lang_F_STATUS_NOTIFICATIONS" t="Értesítések"/>
+	<phrase n="lang_F_FAVORITES" t="Kedv"/>
+	<phrase n="lang_F_FAVORITES_typeSio" t="Kedvencek"/>
+	<phrase n="lang_F_FAVORITES_smartlabel" t="Kedv"/>
+	<phrase n="lang_F_SORT" t="Rend"/>
+	<phrase n="lang_F_SORT_typeSio" t="Rendezés"/>
+	<phrase n="lang_F_CONTACTPOOL" t="Gyorstár"/>
+	<phrase n="lang_F_CONTACTPOOL_typeSio" t="Kontaktok"/>
+	<phrase n="lang_F_CONTACTPOOL_smartlabel" t="Gyorstár"/>
+	<phrase n="lang_F_NEXT" t="Következő"/>
+	<phrase n="lang_F_DIRECTORY_SEARCH" t="LDAP"/>
+	<phrase n="lang_F_MISSED_LIST" t="Nem fog"/>
+	<phrase n="lang_F_MISSED_LIST_typeSio" t="Nem fogadott hívások"/>
+	<phrase n="lang_F_MISSED_LIST_smartlabel" t="Nem fog"/>
+	<phrase n="lang_F_DIALED_LIST" t="Hívott"/>
+	<phrase n="lang_F_DIALED_LIST_typeSio" t="Hívott számok"/>
+	<phrase n="lang_F_DIALED_LIST_smartlabel" t="Tárcsázott"/>
+	<phrase n="lang_F_ACCEPTED_LIST" t="Fogad"/>
+	<phrase n="lang_F_ACCEPTED_LIST_typeSio" t="Fogadott hívások"/>
+	<phrase n="lang_F_ACCEPTED_LIST_smartlabel" t="Fogadott"/>
+	<phrase n="lang_F_DIALED" t="Tárcsázott"/>
+	<phrase n="lang_F_RETRIEVE" t="Hangposta"/>
+	<phrase n="lang_F_RETRIEVE_smartlabel" t="Hangposta"/>
+	<phrase n="lang_F_RETRIEVE_typeSio" t="Hangposta"/>
+	<phrase n="lang_F_RETRIEVE_ON" t="Hangposta"/>
+	<phrase n="lang_F_REDIRECT_OFF" t="neÁtr"/>
+	<phrase n="lang_F_REDIRECT_OFF_smartlabel" t="neÁtr"/>
+	<phrase n="lang_F_REDIRECT_OFF_typeSio" t="Hívásátírányítás ki"/>
+	<phrase n="lang_F_REDIRECT_ON" t="Átrny"/>
+	<phrase n="lang_F_REDIRECT_ON_typeSio" t="Hívásátírányítás"/>
+	<phrase n="lang_F_REDIRECT_smartlabel" t="Átrny"/>
+	<phrase n="lang_F_RINGER_SILENT" t="Néma"/>
+	<phrase n="lang_F_RINGER_SILENT_typeSio" t="Némítás"/>
+	<phrase n="lang_F_RINGER_SILENT_smartlabel" t="Némítás"/>
+	<phrase n="lang_F_ABORT" t="ESC"/>
+	<phrase n="lang_F_ABORT_typeSio" t="Kilépés"/>
+	<phrase n="lang_F_SUPPORT" t="Segítség"/>
+	<phrase n="lang_F_JUMP_BACK" t="Ugrás"/>
+	<phrase n="lang_F_JUMP" t="Ugrás"/>
+	<phrase n="lang_F_REDUCED" t="Röviden"/>
+	<phrase n="lang_F_ALL" t="Több"/>
+	<phrase n="lang_F_DIALOG" t="Hívások"/>
+	<phrase n="lang_F_DIALOG_typeSio" t="Rögzített hívások"/>
+	<phrase n="lang_F_DIALOG_smartlabel" t="Hívások"/>
+	<phrase n="lang_F_HEADSET" t="Fejbesz"/>
+	<phrase n="lang_F_HEADSET_typeSio" t="Fejbeszélő"/>
+	<phrase n="lang_F_HEADSET_smartlabel" t="Fejbesz"/>
+	<phrase n="lang_F_HEADSET_ON" t="Fejbesz"/>
+	<phrase n="lang_F_HEADSET_ON_typeSio" t="Fejbeszélő"/>
+	<phrase n="lang_F_HEADSET_ON_smartlabel" t="Fejbesz"/>
+	<phrase n="lang_F_SOFTWARE_UPDATE" t="Szoftver"/>
+	<phrase n="lang_F_UPDATE" t="Frissít"/>
+	<phrase n="lang_F_SMS" t="SMS"/>
+	<phrase n="lang_F_CMC" t="CMC"/>
+	<phrase n="lang_F_CALL_COMPLETION" t="AÚjraH"/>
+	<phrase n="lang_F_UNMUTE" t="neNémít"/>
+	<phrase n="lang_F_UNMUTE_typeSio" t="Némítást megszüntet"/>
+	<phrase n="lang_F_UNMUTE_smartlabel" t="Felold"/>
+	<phrase n="lang_F_MUTE" t="Némít"/>
+	<phrase n="lang_F_MUTE_typeSio" t="Némítás"/>
+	<phrase n="lang_F_MUTE_smartlabel" t="Némít"/>
+	<phrase n="lang_F_REG_ACTIVATE" t="Aktivál"/>
+	<phrase n="lang_F_ADD_PHONEBOOK" t="Hozzáad"/>
+	<phrase n="lang_F_ADD_PHONEBOOK_typeSio" t="Kontakt hozzáadása"/>
+	<phrase n="lang_F_LIST_MISSED" t="Nem fogadott"/>
+	<phrase n="lang_F_LIST_TAKEN" t="Fogadott"/>
+	<phrase n="lang_F_LIST_TAKEN_typeSio" t="Fogadott hívások"/>
+	<phrase n="lang_F_LIST_TAKEN_smartlabel" t="Fogadott"/>
+	<phrase n="lang_F_DETAILS" t="Adatok"/>
+	<phrase n="lang_F_DND_OFF" t="DND"/>
+	<phrase n="lang_F_DND_OFF_typeSio" t="Ne zavarj"/>
+	<phrase n="lang_F_DND_OFF_smartlabel" t="DND"/>
+	<phrase n="lang_F_DND" t="DND"/>
+	<phrase n="lang_F_DND_typeSio" t="Ne zavarj"/>
+	<phrase n="lang_F_DND_smartlabel" t="DND"/>
+	<phrase n="lang_F_DEF_ON" t="*Be"/>
+	<phrase n="lang_F_DEF_OFF" t="*Ki"/>
+	<phrase n="lang_F_ON" t="Be"/>
+	<phrase n="lang_F_OFF" t="Ki"/>
+	<phrase n="lang_F_START" t="Start"/>
+	<phrase n="lang_F_END" t="Vége"/>
+	<phrase n="lang_F_IDENTITY" t="Azonosító"/>
+	<phrase n="lang_F_SETTINGS_typeSio" t="Beállítások"/>
+	<phrase n="lang_F_SETTINGS" t="Beállítások"/>
+	<phrase n="lang_F_EXECUTIVE_ASSISTANT_CONFIG" t="Főnök/titkár beállításai"/>
+	<phrase n="lang_F_EXECUTIVE_CONFIG" t="F/T&lt;br&gt;Beállítás"/>
+	<phrase n="lang_F_EXECUTIVE_CONFIG_typeSio" t="Főnök beállításai"/>
+	<phrase n="lang_F_ASSISTANT_CONFIG" t="Titkár&lt;br&gt;Beállítás"/>
+	<phrase n="lang_F_ASSISTANT_CONFIG_typeSio" t="Titkár beállításai"/>
+	<phrase n="lang_F_EXEC_ASSIST_BEHALF_PUI_LISTING" t="Főnök-titkár más nevében"/>
+	<phrase n="lang_F_EXEC_ASSIST_BEHALF" t="A következő nevében:"/>
+	<phrase n="lang_F_NEW" t="Új"/>
+	<phrase n="lang_F_URLU" t="a»A"/>
+	<phrase n="lang_F_URLU_typeSio" t="Szerkesztési mód"/>
+	<phrase n="lang_F_URLL" t="1»a"/>
+	<phrase n="lang_F_URLL_typeSio" t="Szerkesztési mód"/>
+	<phrase n="lang_F_123" t="A»1"/>
+	<phrase n="lang_F_123_typeSio" t="Szerkesztési mód"/>
+	<phrase n="lang_F_REDIRECT" t="Átrny"/>
+	<phrase n="lang_F_REDIRECT_typeSio" t="Hívásátírányítás"/>
+	<phrase n="lang_F_HOLD_typeSio" t="Tartás"/>
+	<phrase n="lang_F_HOLD" t="Tartás"/>
+	<phrase n="lang_F_CONSULTCONF_ADD" t="Hozad"/>
+	<phrase n="lang_F_CONSULTCONF_ADD_typeSio" t="Konferencia"/>
+	<phrase n="lang_F_CONSULTCONF_ADD_smartlabel" t="Hozzáad"/>
+	<phrase n="lang_F_CONSULTCONF_JOIN" t="Csatl"/>
+	<phrase n="lang_F_CONSULTCONF_JOIN_typeSio" t="Konferencia"/>
+	<phrase n="lang_F_CONSULTCONF_JOIN_smartlabel" t="Csatlakoz"/>
+	<phrase n="lang_F_CONSULTCONF" t="Konferencia"/>
+	<phrase n="lang_F_CONFERENCE" t="Konf"/>
+	<phrase n="lang_F_CONFERENCE_smartlabel" t="Konf"/>
+	<phrase n="lang_F_CONFERENCE_typeSio" t="Konferencia"/>
+	<phrase n="lang_F_CONFERENCE_ON" t="Konferencia tartásba"/>
+	<phrase n="lang_F_NO_CONFERENCE" t="neKonf"/>
+	<phrase n="lang_F_DEFLECT" t="Elutasít"/>
+	<phrase n="lang_F_BLIND_TRANSFER" t="Vak"/>
+	<phrase n="lang_F_BLIND_TRANSFER_typeSio" t="Vak átkapcsolás"/>
+	<phrase n="lang_F_TRANSFER" t="Átkapcs"/>
+	<phrase n="lang_F_TRANSFER_typeSio" t="Átkapcsol"/>
+	<phrase n="lang_F_TRANSFER_smartlabel" t="Átkapcs"/>
+	<phrase n="lang_F_TRANSFER_CALL" t="Hívás átkapcsolása"/>
+	<phrase n="lang_F_TRANSFER_SELECTED" t="Átkapcsolás kiválasztva"/>
+	<phrase n="lang_F_DENY" t="Elutasít"/>
+	<phrase n="lang_F_DIAL" t="Hívás"/>
+	<phrase n="lang_F_EDIT" t="Szerkeszt"/>
+	<phrase n="lang_F_CLEAR" t="Töröl"/>
+	<phrase n="lang_F_DOWN" t="Le"/>
+	<phrase n="lang_F_UP" t="Fel"/>
+	<phrase n="lang_F_LEFT" t="Bal"/>
+	<phrase n="lang_F_RIGHT" t="Jobb"/>
+	<phrase n="lang_F_EXTENSION" t="Mellék"/>
+	<phrase n="lang_F_EXTENSION_typeSio" t="Mellék"/>
+	<phrase n="lang_F_EXTENSION_smartlabel" t="Mellék"/>
+	<phrase n="lang_F_MESSAGE" t="Üzenet"/>
+	<phrase n="lang_F_CONTACT_STATE_UNKNOWN" t="Ismeretlen"/>
+	<phrase n="lang_F_CONTACT_STATE_AVAILABLE" t="Elérhető"/>
+	<phrase n="lang_F_CONTACT_STATE_AVAILABLE_ON_MOBILE" t="Elérhető (mobil)"/>
+	<phrase n="lang_F_CONTACT_STATE_AVAILABLE_AT_DESK" t="Elérhető (asztali készülék)"/>
+	<phrase n="lang_F_CONTACT_STATE_INACTIVE" t="Inaktív"/>
+	<phrase n="lang_F_CONTACT_STATE_BUSY" t="Foglalt"/>
+	<phrase n="lang_F_CONTACT_STATE_URGENT_INTERRUPTIONS_ONLY" t="Csak sürgős esetben"/>
+	<phrase n="lang_F_CONTACT_STATE_IN_A_CALL" t="Hívásban"/>
+	<phrase n="lang_F_CONTACT_STATE_IN_A_CONFERENCE" t="Konferenciában"/>
+	<phrase n="lang_F_CONTACT_STATE_IN_A_MEETING" t="Megbeszélésen"/>
+	<phrase n="lang_F_CONTACT_STATE_MEETING" t="Megbeszélés"/>
+	<phrase n="lang_F_CONTACT_STATE_HOLDING" t="Tartásban"/>
+	<phrase n="lang_F_CONTACT_STATE_DND" t="Ne zavarj"/>
+	<phrase n="lang_F_CONTACT_STATE_DND_ALL" t="DND (minden eszközön)"/>
+	<phrase n="lang_F_CONTACT_STATE_DND_SELF" t="DND (ezen az eszközön)"/>
+	<phrase n="lang_F_CONTACT_STATE_BE_RIGHT_BACK" t="Hamarosan visszatérek"/>
+	<phrase n="lang_F_CONTACT_STATE_AWAY" t="Távol"/>
+	<phrase n="lang_F_CONTACT_STATE_OFFLINE" t="Offline"/>
+	<phrase n="lang_F_CONTACT_STATE_INVISIBLE" t="Láthatatlan"/>
+	<phrase n="lang_F_CONTACT_STATE_GROUP" t="Csoport"/>
+	<phrase n="lang_F_KEYEVENT" t="Gomb"/>
+	<phrase n="lang_F_KEYEVENT_typeSio" t="Gombnyomás"/>
+	<phrase n="lang_F_KEYEVENT_short" t="Gomb"/>
+	<phrase n="lang_F_XML" t="XML"/>
+	<phrase n="lang_continuous_text_speed_dial" t="Gyorshívó"/>
+	<phrase n="lang_continuous_text_reboot" t="Újraindítás"/>
+	<phrase n="lang_continuous_text_network_restart" t="Hálózati újraindítás"/>
+	<phrase n="lang_continuous_text_search" t="Keresés"/>
+	<phrase n="lang_continuous_text_cancel" t="Mégse"/>
+	<phrase n="lang_continuous_text_yes" t="Igen"/>
+	<phrase n="lang_continuous_text_no" t="Nem"/>
+	<phrase n="lang_confirm_reboot" t="Újraindítás?"/>
+	<phrase n="lang_on" t="Be"/>
+	<phrase n="lang_off" t="Ki"/>
+	<phrase n="lang_busy" t="Foglalt"/>
+	<phrase n="lang_short" t="Rövid"/>
+	<phrase n="lang_full" t="Teljes"/>
+	<phrase n="lang_half" t="Fél"/>
+	<phrase n="lang_F_HOLD_PRIVATE" t="Tartás"/>
+	<phrase n="lang_F_HOLD_PRIVATE_typeSio" t="Tartás"/>
+	<phrase n="lang_F_HOLD_PRIVATE_smartlabel" t="Tartás"/>
+	<phrase n="lang_conference_off" t="neKonf"/>
+	<phrase n="lang_conference_off_typeSio" t="Konferencia ki"/>
+	<phrase n="lang_edit_cmc" t="Ügyfélkód:"/>
+	<phrase n="lang_dnd" t="DND"/>
+	<phrase n="lang_red" t="Átrny"/>
+	<phrase n="lang_red_typeSio" t="Hívásátírányítás"/>
+	<phrase n="lang_missed" t="Nem fogadott: "/>
+	<phrase n="lang_missed_typeSio" t="Nem fogadott: "/>
+	<phrase n="lang_edit" t="Szerkeszt"/>
+	<phrase n="lang_F_EDIT_AND_DIAL" t="Szerkeszt"/>
+	<phrase n="lang_F_EDIT_AND_DIAL_typeSio" t="Szerkeszt és tárcsáz"/>
+	<phrase n="lang_edit_dial" t="Szerkeszt és tárcsáz"/>
+	<phrase n="lang_dhcp" t="DHCP"/>
+	<phrase n="lang_enum" t="ENUM"/>
+	<phrase n="lang_mwi_mailbox1" t="Hangposta:"/>
+	<phrase n="lang_mwi_mailbox2" t="Van"/>
+	<phrase n="lang_mwi_mailbox3" t="Üzenete van."/>
+	<phrase n="lang_mwi_urgent" t="sürgős"/>
+	<phrase n="lang_mwi_goto_mailbox" t="Ugrás a hangpostához?"/>
+	<phrase n="lang_challenge_user" t="Felhasználó"/>
+	<phrase n="lang_challenge_pw" t="Jelszó"/>
+	<phrase n="lang_use_enum" t="ENUM használata?"/>
+	<phrase n="lang_wiz_dhcp" t="Használ DHCP-t?"/>
+	<phrase n="lang_wiz_l2tp_ip_adr" t="L2TP IP cím:"/>
+	<phrase n="lang_wiz_ip_adr" t="IP cím:"/>
+	<phrase n="lang_wiz_mac" t="MAC:"/>
+	<phrase n="lang_wiz_wifi_mac" t="Wi-Fi MAC:"/>
+	<phrase n="lang_wiz_version" t="Verzió:"/>
+	<phrase n="lang_wiz_netmask" t="Netmaszk:"/>
+	<phrase n="lang_wiz_gateway" t="IP gateway:"/>
+	<phrase n="lang_wiz_dns_server" t="DNS szerver:"/>
+	<phrase n="lang_wiz_welcome" t="Üdvözlöm! Bejelentkezéshez nyomjon meg egy gombot."/>
+	<phrase n="lang_wiz_http_user" t="Adja meg az új HTTP felhasználónevét"/>
+	<phrase n="lang_wiz_http_pass" t="Adja meg az új HTTP jelszavát"/>
+	<phrase n="lang_wiz_short_pass" t="A jelszó túl rövid"/>
+	<phrase n="lang_terminated_finished" t="Hívás vége"/>
+	<phrase n="lang_try_parking" t="Hívás parkolása"/>
+	<phrase n="lang_try_parking_typeSio" t="Hívás parkolása"/>
+	<phrase n="lang_holding" t="Hívás tartásban: "/>
+	<phrase n="lang_select_list" t="Híváslista"/>
+	<phrase n="lang_list_all" t="Összes"/>
+	<phrase n="lang_list_new" t="Új"/>
+	<phrase n="lang_list_old" t="Régi"/>
+	<phrase n="lang_list_missed" t="Nem fogadott"/>
+	<phrase n="lang_list_taken" t="Fogadott"/>
+	<phrase n="lang_list_dialed" t="Tárcsázott"/>
+	<phrase n="lang_list_no_data" t="(Nincs adat)"/>
+	<phrase n="lang_list_details" t="Adatok"/>
+	<phrase n="lang_list_details_time" t="Idő:"/>
+	<phrase n="lang_list_details_duration" t="Időtartam:"/>
+	<phrase n="lang_list_details_costs" t="Költségek:"/>
+	<phrase n="lang_list_details_missed" t="Nem fogadott:"/>
+	<phrase n="lang_list_details_to" t="Címzett:"/>
+	<phrase n="lang_list_details_from" t="Feladó:"/>
+	<phrase n="lang_reg_activate" t="Aktivál"/>
+	<phrase n="lang_reg_account" t="Fiók:"/>
+	<phrase n="lang_reg_registrar" t="Regisztrációs szerver:"/>
+	<phrase n="lang_reg_explanation_failed" t="Regisztráció sikertelen"/>
+	<phrase n="lang_reg_explanation_registering" t="Regisztrálás"/>
+	<phrase n="lang_reg_explanation_registered" t="Regisztrálva"/>
+	<phrase n="lang_menu_info_320" t="Információ"/>
+	<phrase n="lang_menu_conf_reset" t="Visszaállít"/>
+	<phrase n="lang_menu_gen_contrast" t="Kontraszt"/>
+	<phrase n="lang_menu_gen_ringtone" t="Csengőhang"/>
+	<phrase n="lang_menu_web_webserver_type" t="Szerver"/>
+	<phrase n="lang_menu_function_key" t="Funkciógombok"/>
+	<phrase n="lang_menu_tser_timer" t="Időmérő"/>
+	<phrase n="lang_menu_red_target" t="Cél"/>
+	<phrase n="lang_menu_ringer1" t="Dallam 1"/>
+	<phrase n="lang_menu_ringer2" t="Dallam 2"/>
+	<phrase n="lang_menu_ringer3" t="Dallam 3"/>
+	<phrase n="lang_menu_ringer4" t="Dallam 4"/>
+	<phrase n="lang_menu_ringer5" t="Dallam 5"/>
+	<phrase n="lang_menu_ringer6" t="Dallam 6"/>
+	<phrase n="lang_menu_ringer7" t="Dallam 7"/>
+	<phrase n="lang_menu_ringer8" t="Dallam 8"/>
+	<phrase n="lang_menu_ringer9" t="Dallam 9"/>
+	<phrase n="lang_menu_ringer10" t="Dallam 10"/>
+	<phrase n="lang_vol_headset" t="Fejbeszélő hangereje"/>
+	<phrase n="lang_vol_handset" t="Kézibeszélő hangereje"/>
+	<phrase n="lang_vol_speaker" t="Kihangosító hangereje"/>
+	<phrase n="lang_audio_speaker" t="Kihangosító"/>
+	<phrase n="lang_audio_handset" t="Kézibeszélő"/>
+	<phrase n="lang_audio_headset" t="Fejbeszélő"/>
+	<phrase n="lang_vol_contrast" t="Kijelző kontraszt"/>
+	<phrase n="lang_confirm_factory" t="Gyári beállítások?"/>
+	<phrase n="lang_confirm_logoff_all" t="Minden felhasználó kiléptetése?"/>
+	<phrase n="lang_calling" t="Hívás"/>
+	<phrase n="lang_connected" t="Csatlakoztatva"/>
+	<phrase n="lang_connected_typeSio" t="Csatlakoztatva"/>
+	<phrase n="lang_ringing" t="Csengetés"/>
+	<phrase n="lang_enter_number" t="Telefonszám bevitele"/>
+	<phrase n="lang_held_by" t="Tartásban: "/>
+	<phrase n="lang_ok" t="[Ok?]"/>
+	<phrase n="lang_menu100_phone_book" t="Telefonkönyv"/>
+	<phrase n="lang_menu100_ldap_book" t="LDAP hozzáférés"/>
+	<phrase n="lang_menu100_call_lists" t="Híváslista"/>
+	<phrase n="lang_menu100_settings" t="Beállítások"/>
+	<phrase n="lang_sel100_logoff_all" t="Mindenki kijelentkezik"/>
+	<phrase n="lang_sel100_logoff_one" t="Kijelentkezés"/>
+	<phrase n="lang_sel100_activeline" t="Kimenő hívások azonosítója"/>
+	<phrase n="lang_sel100_admin_mode" t="Adminisztrátor mód"/>
+	<phrase n="lang_sel100_user_mode" t="Felhasználó mód"/>
+	<phrase n="lang_sel100_net_info" t="Hálózat információ"/>
+	<phrase n="lang_sel100_mem_info" t="Memória információ"/>
+	<phrase n="lang_menu_ringtone" t="Csengőhang"/>
+	<phrase n="lang_dnd_active" t="DND aktív"/>
+	<phrase n="lang_update" t="Szoftver"/>
+	<phrase n="lang_update_a" t="Végrehajtás?"/>
+	<phrase n="lang_update_reboot" t="Újraindítás szoftvertelepítéshez"/>
+	<phrase n="lang_unplugged" t="Kihúzva"/>
+	<phrase n="lang_ethernet_cable" t="Ethernet kábel kihúzva"/>
+	<phrase n="lang_hid_plug" t="HID eszköz kapcsolódás"/>
+	<phrase n="lang_hid_connected" t="HID eszköz kapcsolódva"/>
+	<phrase n="lang_hid_disconnected" t="HID eszköz leválasztva"/>
+	<phrase n="lang_temperature" t="Hőmérséklet"/>
+	<phrase n="lang_temperature_connected" t="Hőmérséklet szenzor kapcsolódva"/>
+	<phrase n="lang_language" t="Nyelv"/>
+	<phrase n="lang_current_date" t="Dátum"/>
+	<phrase n="lang_current_time" t="Idő"/>
+	<phrase n="lang_network_settings" t="Hálózat"/>
+	<phrase n="lang_dns_domain" t="DNS domain"/>
+	<phrase n="lang_dns_server1" t="DNS szerver 1"/>
+	<phrase n="lang_dns_server2" t="DNS szerver 2"/>
+	<phrase n="lang_ntp_server" t="NTP szerver"/>
+	<phrase n="lang_no_ip_adr" t="Érvénytelen IP cím"/>
+	<phrase n="lang_password" t="Jelszó"/>
+	<phrase n="lang_username" t="Felhasználói név"/>
+	<phrase n="lang_reset_settings" t="Értékek visszaállítása"/>
+	<phrase n="lang_networkadvanced_settings" t="Haladó"/>
+	<phrase n="lang_admin_mode_password" t="Adminisztrátor mód jelszava"/>
+	<phrase n="lang_guess_number" t="Gyorskereső"/>
+	<phrase n="lang_guess_number_len" t="Gyorskeresési hossz"/>
+	<phrase n="lang_admin_mode_pwd" t="Admin jelszó"/>
+	<phrase n="lang_call_waiting" t="Hívásvárakoztatás"/>
+	<phrase n="lang_menu100_red_time" t="Hívásátírányítás ideje"/>
+	<phrase n="lang_menu100_red_time_typeSio" t="Hívásátírányítás ideje"/>
+	<phrase n="lang_menu100_timezone" t="Időzóna"/>
+	<phrase n="lang_menu100_dialtone" t="Tárcsahang"/>
+	<phrase n="lang_menu100_call_completion" t="Újrahívás"/>
+	<phrase n="lang_menu100_cc_waiting" t="Várakozás: "/>
+	<phrase n="lang_menu100_cc_dial" t="Hívás: "/>
+	<phrase n="lang_menu100_netmask" t="Hálózati maszk"/>
+	<phrase n="lang_menu100_gateway" t="IP gateway"/>
+	<phrase n="lang_menu100_webserver_type" t="Webszerver típusa"/>
+	<phrase n="lang_enum100_disp_always" t="Mindig"/>
+	<phrase n="lang_enum100_disp_on" t="Be"/>
+	<phrase n="lang_enum100_disp_off" t="Ki"/>
+	<phrase n="lang_enum_disp_webserver_off" t="Ki"/>
+	<phrase n="lang_enum_disp_webserver_http" t="Csak HTTP"/>
+	<phrase n="lang_enum_disp_webserver_https" t="Csak HTTPS"/>
+	<phrase n="lang_enum_disp_webserver_http_https" t="HTTP és HTTPS"/>
+	<phrase n="lang_enum_disp_func_key_destination" t="Mellék"/>
+	<phrase n="lang_enum_disp_func_key" t="Gomb"/>
+	<phrase n="lang_xsi_silent_alert" t="Néma jelzés"/>
+	<phrase n="lang_privacy_out" t="Hívószám elrejtése"/>
+	<phrase n="lang_quick_transfer" t="Gyors átkapcsolás"/>
+	<phrase n="lang_quick_transfer_newcall" t="Új hívás"/>
+	<phrase n="lang_quick_transfer_blind" t="Vak átkapcsolás"/>
+	<phrase n="lang_quick_transfer_attended" t="Bejelentett átkapcsolás"/>
+	<phrase n="lang_privacy_in" t="Rejtett szám visszautasítása"/>
+	<phrase n="lang_privacy_in_typeSio" t="Rejtett szám visszautasítása"/>
+	<phrase n="lang_auto_dial" t="Automatikus tárcsázás"/>
+	<phrase n="lang_call_completion" t="Újrahívás"/>
+	<phrase n="lang_vlan_id" t="VLAN ID (1-4094)"/>
+	<phrase n="lang_vlan_qos" t="VLAN prioritás (0-7)"/>
+	<phrase n="lang_vlan_reset" t="VLAN visszaállítás"/>
+	<phrase n="lang_vlan_port_tagging" t="VLAN tagging használat"/>
+	<phrase n="lang_vlan_pc_id" t="VLAN ID a LAN porton"/>
+	<phrase n="lang_identity_settings" t="Azonosító"/>
+	<phrase n="lang_preferences_settings" t="Preferenciák"/>
+	<phrase n="lang_maintenance_settings" t="Üzemeltetés"/>
+	<phrase n="lang_auto_connect_indication" t="Automatikus hívásfogadás kijelzése"/>
+	<phrase n="lang_sel100_reregister_line" t="Felhasználó regisztrálása"/>
+	<phrase n="lang_sel100_edit_line" t="Felhasználó módosítása"/>
+	<phrase n="lang_enum_disp_cw_visual" t="Csak vizuális"/>
+	<phrase n="lang_enum_disp_cw_visual_short" t="Vizuális"/>
+	<phrase n="lang_enum_disp_cw_ringer" t="Dallam"/>
+	<phrase n="lang_confirm_del_adr_item" t="Biztos benne?"/>
+	<phrase n="lang_confirm_del_adr_item_title" t="Telefonkönyv bejegyzés törlése"/>
+	<phrase n="lang_confirm_del_adr_item_title_typeSio" t="Telefonkönyv bejegyzés törlése"/>
+	<phrase n="lang_confirm_del_adr_title" t="Telefonkönyv törlése"/>
+	<phrase n="lang_confirm_del_adr_item_title_short" t="Telefonkönyv bejegyzés törlése"/>
+	<phrase n="lang_vol_ringer" t="Csengetési hangerő"/>
+	<phrase n="lang_keybd_unlock_PIN" t="Billentyűzet feloldókód"/>
+	<phrase n="lang_enum_disp_func_key_mult" t="Közös vonal"/>
+	<phrase n="lang_enum_disp_func_key_keyevent" t="Gombnyomás"/>
+	<phrase n="lang_menu_ringer_silent" t="Csendes"/>
+	<phrase n="lang_menu_ringer_custom" t="Egyéni"/>
+	<phrase n="lang_enum_disp_func_key_none" t="Egyik sem"/>
+	<phrase n="lang_presence_online" t="Online"/>
+	<phrase n="lang_presence_busy" t="Foglalt"/>
+	<phrase n="lang_presence_invisible" t="Láthatatlan"/>
+	<phrase n="lang_presence_title" t="Állapot"/>
+	<phrase n="lang_dialog_title" t="Hívások"/>
+	<phrase n="lang_buddies_title" t="Kontaktok"/>
+	<phrase n="lang_use_backlight" t="Háttérvilágítás"/>
+	<phrase n="lang_backlight_on_activity" t="Háttérvilágítás használat közben"/>
+	<phrase n="lang_backlight_when_idle" t="Háttérvilágítás alvó állapotban"/>
+	<phrase n="lang_activity" t="Tevékenység"/>
+	<phrase n="lang_display_settings" t="Kijelző"/>
+	<phrase n="lang_audio_settings" t="Audió"/>
+	<phrase n="lang_redirect_settings" t="Hívásátírányítás"/>
+	<phrase n="lang_redirect_settings_typeSio" t="Hívásátírányítás"/>
+	<phrase n="lang_reboot_required" t="Újraindítás szükséges"/>
+	<phrase n="lang_network_restart_required" t="Hálózati újraindítás szükséges"/>
+	<phrase n="lang_auto_redialing" t="Újrahívás"/>
+	<phrase n="lang_conference" t="Konferencia"/>
+	<phrase n="lang_directory_search" t="Telefonkönyv keresés"/>
+	<phrase n="lang_wrong_pw" t="Helytelen jelszó"/>
+	<phrase n="lang_http_password_not_set" t="HTTP jelszó nincs beállítva"/>
+	<phrase n="lang_start_auto_redial" t="Automatikus újrahívás?"/>
+	<phrase n="lang_call_features_settings" t="Hívás funkciók"/>
+	<phrase n="lang_all" t="Összes"/>
+	<phrase n="lang_outgoing_calls_settings" t="Kimenő hívások"/>
+	<phrase n="lang_incoming_calls_settings" t="Bejövő hívások"/>
+	<phrase n="lang_ip_settings_wizzard" t="IP beállítások"/>
+	<phrase n="lang_webserver_settings" t="Webszerver"/>
+	<phrase n="lang_vlan_settings" t="VLAN"/>
+	<phrase n="lang_wlan_settings" t="WLAN"/>
+	<phrase n="lang_wifi_reboot_to_connect_to" t="Újraindítás a kapcsolódáshoz"/>
+	<phrase n="lang_system_information_menu" t="Rendszerinformáció"/>
+	<phrase n="lang_its_a_caller_info" t="Hívó"/>
+	<phrase n="lang_its_a_callee_info" t="Hívott"/>
+	<phrase n="lang_redirect_all" t="Hívásátírányítás mindig"/>
+	<phrase n="lang_redirect_all_typeSio" t="Hívásátírányítás mindig"/>
+	<phrase n="lang_redirect_busy" t="Hívásátírányítás, ha foglalt"/>
+	<phrase n="lang_redirect_busy_typeSio" t="Hívásátírányítás, ha foglalt"/>
+	<phrase n="lang_redirect_time" t="Hívásátírányítás, ha nem válaszol"/>
+	<phrase n="lang_redirect_time_typeSio" t="Hívásátírányítás, ha nem válaszol"/>
+	<phrase n="lang_do_redirect" t="Átírányítás bekapcsolva"/>
+	<phrase n="lang_do_redirect_typeSio" t="Átírányítás bekapcsolva"/>
+	<phrase n="lang_redirect_target" t="Átírányítási cél"/>
+	<phrase n="lang_redirect_target_typeSio" t="Átírányítási cél"/>
+	<phrase n="lang_help_label" t="Segítség"/>
+	<phrase n="lang_sysinfo_mem1" t="RAM:"/>
+	<phrase n="lang_sysinfo_mem2" t="-ból"/>
+	<phrase n="lang_sysinfo_mem3" t="szabad"/>
+	<phrase n="lang_goto_phonepage_msg" t="A telefon beállításához kérem böngészőjével látogasson a következő címre:"/>
+	<phrase n="lang_goto_phonepage_msg_typeSio" t="A telefon beállításához kérem böngészőjével látogasson a következő címre:"/>
+	<phrase n="lang_goto_help_msg" t="További segítségért látogasson a következő címre:"/>
+	<phrase n="lang_linestate_connected" t="hívásban"/>
+	<phrase n="lang_linestate_on_hold" t="tartásban"/>
+	<phrase n="lang_linestate_ringing" t="csörgetés"/>
+	<phrase n="lang_linename_message" t="Üzenet"/>
+	<phrase n="lang_linename_redial" t="Újrahívás"/>
+	<phrase n="lang_linename_transfer" t="Átkapcsolás"/>
+	<phrase n="lang_linename_rec_on" t="Rögzítés indítása"/>
+	<phrase n="lang_linename_rec_off" t="Rögzítés leállítása"/>
+	<phrase n="lang_linetype_auto_answer" t="Automatikus hívásfogadás"/>
+	<phrase n="lang_linetype_blf" t="BLF"/>
+	<phrase n="lang_connecting" t="Kapcsolódás"/>
+	<phrase n="lang_fkey_add_contact_typeSio" t="Kontakt hozzáadása"/>
+	<phrase n="lang_cancelconference" t="Konferencia megszüntetése"/>
+	<phrase n="lang_confirm_cancelconference" t="Kilép a konferenciából?"/>
+	<phrase n="lang_xmlgui_dialnumber" t="Szám tárcsázása"/>
+	<phrase n="lang_xmlgui_contactlist" t="Névjegyzék"/>
+	<phrase n="lang_xmlgui_dial" t="Hívás"/>
+	<phrase n="lang_menu_equalizer" t="Equalizer"/>
+	<phrase n="lang_equalizer_soft" t="Lágy hang"/>
+	<phrase n="lang_equalizer_normal" t="Normál hang"/>
+	<phrase n="lang_equalizer_bright" t="Éles hang"/>
+	<phrase n="lang_contactpool" t="Gyorstár"/>
+	<phrase n="lang_tb_nickname" t="Becenév"/>
+	<phrase n="lang_tb_number" t="Telefonszám"/>
+	<phrase n="lang_tb_contact" t="Kontakt típusa"/>
+	<phrase n="lang_tb_outgoing_id" t="Kimenő azonosító"/>
+	<phrase n="lang_tb_firstname" t="Keresztnév"/>
+	<phrase n="lang_tb_lastname" t="Vezetéknév"/>
+	<phrase n="lang_tb_group" t="Csoport"/>
+	<phrase n="lang_day" t="Nap"/>
+	<phrase n="lang_month" t="Hónap"/>
+	<phrase n="lang_year" t="Év"/>
+	<phrase n="lang_tb_title" t="Beosztás"/>
+	<phrase n="lang_tb_organization" t="Szervezet"/>
+	<phrase n="lang_tb_email" t="E-mail"/>
+	<phrase n="lang_tb_note" t="Jegyzet"/>
+	<phrase n="lang_tb_photo" t="Kép"/>
+	<phrase n="lang_tb_favorite" t="Kedvenc"/>
+	<phrase n="lang_linename_transfer_short" t="Átkapcs"/>
+	<phrase n="lang_linetype_key_event_short" t="Gomb"/>
+	<phrase n="lang_linetype_url_short" t="URL"/>
+	<phrase n="lang_grouptype_family" t="Család"/>
+	<phrase n="lang_grouptype_friend" t="Barát"/>
+	<phrase n="lang_grouptype_collegue" t="Kolléga"/>
+	<phrase n="lang_grouptype_work" t="Munkahelyi"/>
+	<phrase n="lang_title_sort" t="Rendezés"/>
+	<phrase n="lang_title_select_entry" t="Választás"/>
+	<phrase n="lang_entry_general" t="Általános adatok"/>
+	<phrase n="lang_title_entry_general" t="Általános adatok"/>
+	<phrase n="lang_fav_add_from_tbook" t="Hozzáadás a telefonkönyvből"/>
+	<phrase n="lang_redirect_on_timeout" t="átírányítás nincs válasz esetén:"/>
+	<phrase n="lang_redirect_on_timeout_typeSio" t="átírányítás nincs válasz esetén:"/>
+	<phrase n="lang_redirect_when_busy" t="átírányítás foglaltság esetén:"/>
+	<phrase n="lang_redirect_when_busy_typeSio" t="átírányítás foglaltság esetén:"/>
+	<phrase n="lang_sip_disabled" t="SIP letiltva"/>
+	<phrase n="lang_low_memory" t="Kevés memória"/>
+	<phrase n="lang_title_error" t="Hiba"/>
+	<phrase n="lang_error_code" t="Hibakód:"/>
+	<phrase n="lang_bad_server_response" t="Hibás szerver válasz"/>
+	<phrase n="lang_bad_xml_response" t="Hibás XML válasz..."/>
+	<phrase n="lang_title_loading" t="Töltés"/>
+	<phrase n="lang_active_id" t="Aktív azonosító"/>
+	<phrase n="lang_1st_id" t="1-es azonosító"/>
+	<phrase n="lang_2nd_id" t="2-es azonosító"/>
+	<phrase n="lang_3rd_id" t="3-as azonosító"/>
+	<phrase n="lang_4th_id" t="4-es azonosító"/>
+	<phrase n="lang_5th_id" t="5-ös azonosító"/>
+	<phrase n="lang_6th_id" t="6-os azonosító"/>
+	<phrase n="lang_7th_id" t="7-es azonosító"/>
+	<phrase n="lang_8th_id" t="8-as azonosító"/>
+	<phrase n="lang_9th_id" t="9-es azonosító"/>
+	<phrase n="lang_10th_id" t="10-es azonosító"/>
+	<phrase n="lang_11th_id" t="11-es azonosító"/>
+	<phrase n="lang_12th_id" t="12-es azonosító"/>
+	<phrase n="lang_contacttype_vip" t="VIP"/>
+	<phrase n="lang_contacttype_deny" t="blokkolás"/>
+	<phrase n="lang_unknown" t="Ismeretlen"/>
+	<phrase n="lang_month_01" t="Január"/>
+	<phrase n="lang_month_02" t="Február"/>
+	<phrase n="lang_month_03" t="Március"/>
+	<phrase n="lang_month_04" t="Április"/>
+	<phrase n="lang_month_05" t="Május"/>
+	<phrase n="lang_month_06" t="Június"/>
+	<phrase n="lang_month_07" t="Július"/>
+	<phrase n="lang_month_08" t="Augusztus"/>
+	<phrase n="lang_month_09" t="Szeptember"/>
+	<phrase n="lang_month_10" t="Október"/>
+	<phrase n="lang_month_11" t="November"/>
+	<phrase n="lang_month_12" t="December"/>
+	<phrase n="lang_tb_name_label" t="Név"/>
+	<phrase n="lang_tb_number_label" t="Telefon"/>
+	<phrase n="lang_title_transfer" t="Átkapcsolás"/>
+	<phrase n="lang_linestate_label" t="Státusz"/>
+	<phrase n="lang_reboot_uploads" t="Újraindítás a feltöltések aktiválásához."/>
+	<phrase n="lang_cc_dial_now" t="Hívás?"/>
+	<phrase n="lang_cc_complete_now" t="Az újrahívás most lehetséges. Hívja a következőt:"/>
+	<phrase n="lang_cc_waiting_for" t="Várakozás az újrahívásra:"/>
+	<phrase n="lang_cc_set_warning" t="az automatikus újrahívás beállítva, de bármikor módosítható."/>
+	<phrase n="lang_cc_change_title" t="Megváltoztatja az automatikus újrahívás célszámát?"/>
+	<phrase n="lang_cc_change_message" t="Az automatikus újrahívás célszámának megváltoztatása a következőre:"/>
+	<phrase n="lang_cc_status_waiting_on" t="Várakozás %dst-re, hogy elérhető legyen."/>
+	<phrase n="lang_cc_activate" t="várakozás a hívás befejezésére."/>
+	<phrase n="lang_cc_activated" t="még mindig várakozás a hívás befejezésére."/>
+	<phrase n="lang_call_contact" t="Kontakt hívása"/>
+	<phrase n="lang_call_work" t="Munkahelyi szám hívása"/>
+	<phrase n="lang_call_work_typeSio" t="Munkahelyi szám hívása"/>
+	<phrase n="lang_call_mobile" t="Mobilszám hívása"/>
+	<phrase n="lang_call_home" t="Otthoni szám hívása"/>
+	<phrase n="lang_call_home_typeSio" t="Otthoni szám hívása"/>
+	<phrase n="lang_call_other" t="Egyéb szám hívása"/>
+	<phrase n="lang_call_voicemail" t="Hangposta hívása"/>
+	<phrase n="lang_xfer_to_contact" t="Átkapcsolás a kontakt részére"/>
+	<phrase n="lang_xfer_to_work" t="Átkapcsolás a munkahelyi számra"/>
+	<phrase n="lang_xfer_to_work_typeSio" t="Átkapcsolás a munkahelyi számra"/>
+	<phrase n="lang_xfer_to_mobile" t="Átkapcsolás a mobilszámra"/>
+	<phrase n="lang_xfer_to_home" t="Átkapcsolás az otthoni számra"/>
+	<phrase n="lang_xfer_to_home_typeSio" t="Átkapcsolás az otthoni számra"/>
+	<phrase n="lang_xfer_to_other" t="Átkapcsolás az egyéb számra"/>
+	<phrase n="lang_xfer_to_voicemail" t="Átkapcsolás hangpostára"/>
+	<phrase n="lang_cfw_to_contact" t="Átírányítás egy kontakthoz"/>
+	<phrase n="lang_cfw_to_contact_typeSio" t="Átírányítás egy kontakthoz"/>
+	<phrase n="lang_cfw_to_voicemail_typeSio" t="Átírányítás hangpostára"/>
+	<phrase n="lang_cfw_to_work" t="Átírányítás a munkahelyre"/>
+	<phrase n="lang_cfw_to_work_typeSio" t="Átírányítás a munkahelyre"/>
+	<phrase n="lang_cfw_to_mobile" t="Átírányítás a mobilra"/>
+	<phrase n="lang_cfw_to_mobile_typeSio" t="Átírányítás a mobilra"/>
+	<phrase n="lang_cfw_to_home" t="Átírányítás otthonra"/>
+	<phrase n="lang_cfw_to_home_typeSio" t="Átírányítás otthonra"/>
+	<phrase n="lang_cfw_to_other" t="Átírányítás máshova"/>
+	<phrase n="lang_cfw_to_other_typeSio" t="Átírányítás máshova"/>
+	<phrase n="lang_cfw_to_voicemail" t="Átírányítás hangpostára"/>
+	<phrase n="lang_assign_to_key" t="Gombhoz rendelés"/>
+	<phrase n="lang_contact_state_unknown" t="Ismeretlen"/>
+	<phrase n="lang_contact_state_available" t="Elérhető"/>
+	<phrase n="lang_contact_state_available_on_mobile" t="Elérhető (mobil)"/>
+	<phrase n="lang_contact_state_available_at_desk" t="Elérhető (asztali készülék)"/>
+	<phrase n="lang_contact_state_inactive" t="Inaktív"/>
+	<phrase n="lang_contact_state_busy" t="Foglalt"/>
+	<phrase n="lang_contact_state_urgent_interruptions_only" t="Csak sürgős esetben"/>
+	<phrase n="lang_contact_state_in_a_call" t="Hívásban"/>
+	<phrase n="lang_contact_state_in_a_meeting" t="Megbeszélésen"/>
+	<phrase n="lang_contact_state_meeting" t="Megbeszélés"/>
+	<phrase n="lang_contact_state_holding" t="Tartásban"/>
+	<phrase n="lang_contact_state_dnd" t="Ne zavarj"/>
+	<phrase n="lang_contact_state_dnd_all" t="DND (minden eszközön)"/>
+	<phrase n="lang_contact_state_dnd_self" t="DND (ezen az eszközön)"/>
+	<phrase n="lang_contact_state_be_right_back" t="Hamarosan visszatérek"/>
+	<phrase n="lang_contact_state_away" t="Távol"/>
+	<phrase n="lang_contact_state_offline" t="Offline"/>
+	<phrase n="lang_contact_state_reset" t="Állapot visszaállítás"/>
+	<phrase n="lang_remote_book_name_ldap" t="LDAP telefonkönyv"/>
+	<phrase n="lang_remote_book_choose_title" t="Telefonkönyv kiválasztás"/>
+	<phrase n="lang_title_add_to_favorites" t="Kedvenchez adás"/>
+	<phrase n="lang_title_add_to_favorites_typeSio" t="Kedvenchez adás"/>
+	<phrase n="lang_title_favorites" t="Kedvencek"/>
+	<phrase n="lang_unknown_partner" t="Ismeretlen"/>
+	<phrase n="lang_nrtype_sip" t="SIP"/>
+	<phrase n="lang_nrtype_business" t="Üzleti"/>
+	<phrase n="lang_nrtype_fixed" t="Vezetékes"/>
+	<phrase n="lang_nrtype_extension" t="Mellék"/>
+	<phrase n="lang_tb_number_type" t="Szám típusa"/>
+	<phrase n="lang_tb_number_type_label" t="Típus"/>
+	<phrase n="lang_title_no_permission" t="Nincs hozzáférés"/>
+	<phrase n="lang_target_office" t="Iroda"/>
+	<phrase n="lang_target_replyto" t="Válasz neki"/>
+	<phrase n="lang_target_unqualified" t="Meghatározatlan"/>
+	<phrase n="lang_target_work" t="Munkahelyi"/>
+	<phrase n="lang_target_work_typeSio" t="Munkahelyi"/>
+	<phrase n="lang_target_mobile" t="Mobil"/>
+	<phrase n="lang_target_home" t="Otthoni"/>
+	<phrase n="lang_target_home_typeSio" t="Otthoni"/>
+	<phrase n="lang_target_other" t="Egyéb"/>
+	<phrase n="lang_target_voicemail" t="Hangposta"/>
+	<phrase n="lang_target_new_number" t="Új szám"/>
+	<phrase n="lang_target_contact" t="Kontakt"/>
+	<phrase n="lang_directory_too_big_to_import__long" t="A távoli telefonkönyv túl nagy"/>
+	<phrase n="lang_target_cancel" t="Nincs hívásátirányítás"/>
+	<phrase n="lang_target_cancel_typeSio" t="Nincs hívásátirányítás"/>
+	<phrase n="lang_target_forward" t="Hívásátírányítás"/>
+	<phrase n="lang_target_forward_typeSio" t="Hívásátírányítás"/>
+	<phrase n="lang_tls_unknown_certificate_alert" t="A biztonságos kapcsolat az ismeretlen tanúsítvány miatt visszautasításra került. A böngészőjében a tanúsítványok beállításánal külön engedélyezheti azt."/>
+	<phrase n="lang_tls_unknown_certificate_alert_title" t="A biztonságos kapcsolat felépítése nem sikerült"/>
+	<phrase n="lang_tls_properties_changed" t="Kérem indítsa újra a készüléket a megváltoztatott biztonsági beállítások érvényesítéséhez."/>
+	<phrase n="lang_call_completed_by_part1" t="A hívást befejezte"/>
+	<phrase n="lang_call_completed_by_part2" t="a készülékén."/>
+	<phrase n="lang_call_completed_by_part2_typeSio" t="a készülékén."/>
+	<phrase n="lang_challenge_sip_pw" t="Jelszó"/>
+	<phrase n="lang_line_ocs_wz_user" t="Domain\Felhasználó"/>
+	<phrase n="lang_line_ocs_wz_pwd" t="Jelszó"/>
+	<phrase n="lang_unregistered_ids_title" t="nincs regisztrálva:"/>
+	<phrase n="lang_message_label" t="Info"/>
+	<phrase n="lang_status_messages" t="Státusz info"/>
+	<phrase n="lang_information_settings" t="Információ"/>
+	<phrase n="lang_user_realname" t="Kijelzendő név"/>
+	<phrase n="lang_user_idle_number" t="Kijelzendő szám"/>
+	<phrase n="lang_user_name" t="Fiók"/>
+	<phrase n="lang_user_pass" t="Jelszó"/>
+	<phrase n="lang_user_host" t="Regisztrációs szerver"/>
+	<phrase n="lang_user_outbound" t="Kimenő proxy"/>
+	<phrase n="lang_user_pname" t="Felhasználói név"/>
+	<phrase n="lang_user_mailbox" t="Hangposta"/>
+	<phrase n="lang_user_mailbox_retrieve" t="Hangposta"/>
+	<phrase n="lang_hotdesking" t="Hotdesking"/>
+	<phrase n="lang_keyb_enter_current_pin" t="Adja meg a PIN kódját"/>
+	<phrase n="lang_keyb_enter_new_pin" t="Adja meg az új PIN kódot"/>
+	<phrase n="lang_keyb_reenter_new_pin" t="Ismételje meg a PIN kódot"/>
+	<phrase n="lang_keyb_enter_password" t="Adja meg jelszavát a PIN visszaállításához"/>
+	<phrase n="lang_keyb_locked" t="Nyomja meg a * gombot a feloldáshoz."/>
+	<phrase n="lang_keyb_permanently_locked" t="Nyomja meg a * gombot a PIN visszaállításához."/>
+	<phrase n="lang_title_unlock" t="Billentyűzet lezárva"/>
+	<phrase n="lang_confirm_unlock" t="Feloldás? Nyomja meg az OK-ot!"/>
+	<phrase n="lang_transfer_failed_msg" t="Sikertelen átkapcsolás"/>
+	<phrase n="lang_action_failed_msg" t="Végrehajtás sikertelen"/>
+	<phrase n="lang_vpn_fetch" t="VPN tar file letöltése:"/>
+	<phrase n="lang_vpn_fetch_failed" t="VPN tar file letöltése sikertelen"/>
+	<phrase n="lang_vpn_flash" t="VPN file kitömörítése..."/>
+	<phrase n="lang_vpn_reboot" t="Készülék újraindítása a VPN aktiváláshoz..."/>
+	<phrase n="lang_l2tp_fetch" t="L2tP tar file letöltése:"/>
+	<phrase n="lang_l2tp_fetch_failed" t="L2TP tar file letöltése sikertelen"/>
+	<phrase n="lang_l2tp_flash" t="L2TP file kibontása..."/>
+	<phrase n="lang_l2tp_reboot" t="Készülék újraindítása az L2TP aktiváláshoz..."/>
+	<phrase n="lang_sbc_fetch" t="SBC tar file letöltése:"/>
+	<phrase n="lang_sbc_fetch_failed" t="SBC tar file letöltése sikertelen"/>
+	<phrase n="lang_sbc_flash" t="SBC konfiguráció másolása..."/>
+	<phrase n="lang_sbc_reboot" t="Készülék újraindítása az SBC aktiváláshoz..."/>
+	<phrase n="lang_sbc_active" t="SBC aktív"/>
+	<phrase n="lang_keyb_min_digits" t="(min. # számjegy)"/>
+	<phrase n="lang_empty_dir_search_list" t="Adja meg a nevet! Szóközhöz használja a * billentyűt."/>
+	<phrase n="lang_key_unassigned" t="A gomb nincs kiosztva"/>
+	<phrase n="lang_key_unassigned_typeSio" t="A gomb nincs kiosztva"/>
+	<phrase n="lang_label_conference_partner" t="Résztvevő"/>
+	<phrase n="lang_incoming_call_title_while_connected" t="Hívásvárakoztatás"/>
+	<phrase n="lang_active" t="Aktív"/>
+	<phrase n="lang_emergency_call" t="Segélyhívás"/>
+	<phrase n="lang_ntp_pending" t="Kapcsolódás az NTP szerverhez"/>
+	<phrase n="lang_ntp_unreachable" t="NTP szerver nem elérhető"/>
+	<phrase n="lang_download_server_unreachable" t="Szerver nem elérhető"/>
+	<phrase n="lang_network_busy" t="Hálózat foglalt"/>
+	<phrase n="lang_pstn_reroute_attempt" t="Ez a hívás hosszabb ideig tarthat, mivel a hálózat foglalt."/>
+	<phrase n="lang_menu_location" t="Helyszín"/>
+	<phrase n="lang_linestate_holding_upper_case" t="Tartásban"/>
+	<phrase n="lang_linestate_on_hold_upper_case" t="Tartásban"/>
+	<phrase n="lang_location_retrieval_failed" t="Nem sikerült a helyszín lekérése"/>
+	<phrase n="lang_route_private_line" t="Privát vonal"/>
+	<phrase n="lang_route_forwarded" t="Átirányított"/>
+	<phrase n="lang_route_forwarded_typeSio" t="Átirányított"/>
+	<phrase n="lang_route_delegated" t="Megbízott"/>
+	<phrase n="lang_route_team_call" t="Csapat hívás"/>
+	<phrase n="lang_route_acd" t="Csoport hívás"/>
+	<phrase n="lang_route_cccp_conference" t="Konferencia hívás"/>
+	<phrase n="lang_route_cccp_conference_typeSio" t="Konferencia hívás"/>
+	<phrase n="lang_dfks_failed" t="A funkció szinkronizálása sikertelen"/>
+	<phrase n="lang_no_shared_key" t="Nincs elérhető közös vonali gomb"/>
+	<phrase n="lang_shared_seize_active" t="Vonal állapot ellenőrzése"/>
+	<phrase n="lang_not_a_shared_key" t="A kiválasztott gomb nem egy közös vonali gomb"/>
+	<phrase n="lang_active_key_not_a_shared_key" t="Aktív gomb nem lehet közös vonali gomb."/>
+	<phrase n="lang_ipv4_conflict" t="IPv4: cím ütközés"/>
+	<phrase n="lang_contact_saved" t="Kontakt elmentve"/>
+	<phrase n="lang_query_pending" t="Keresés..."/>
+	<phrase n="lang_no_conference" t="A CPU leterheltsége miatt a %A konferencia nem indítható"/>
+	<phrase n="lang_no_conference_with_codec" t="A CPU leterheltsége miatt a %A konferencia nem indítható, ha bármelyik résztvevő a %B kodeket használja"/>
+	<phrase n="lang_no_conference_with_encrypted_codec" t="A CPU leterheltsége miatt a %A konferencia nem indítható, ha bármelyik résztvevő a %B kodeket titkosítással használja"/>
+	<phrase n="lang_no_conference_without_unencrypted_codec" t="A CPU leterheltsége miatt a %A konferencia nem indítható, ha bármelyik résztvevő a %B kodeket titkosítás nélkül használja"/>
+	<phrase n="lang_setup_language" t="Nyelv beállítása"/>
+	<phrase n="lang_please_wait" t="Kérem várjon..."/>
+	<phrase n="lang_download_failed" t="Letöltés sikertelen"/>
+	<phrase n="lang_function_blocked" t="Blokkolva"/>
+	<phrase n="lang_activating_uploads" t="Feltöltések aktiválása"/>
+	<phrase n="lang_provisioning" t="Provisioning"/>
+	<phrase n="lang_provisioning_failed" t="Provisioning sikertelen"/>
+	<phrase n="lang_tr69_provisioning" t="TR-069 provisioning folyamatban"/>
+	<phrase n="lang_start_provisioning" t="Provisioning folyamatban"/>
+	<phrase n="lang_waitTime" t="Várakozási idő"/>
+	<phrase n="lang_ccUserId" t="Felhasználó"/>
+	<phrase n="lang_callCenterName" t="Név"/>
+	<phrase n="lang_numCallsInQueue" t="Sorban álló hívások"/>
+	<phrase n="lang_acd_ready" t="Elérhető"/>
+	<phrase n="lang_acd_not_ready" t="Nem elérhető"/>
+	<phrase n="lang_acd_working_after_call" t="Felfutás"/>
+	<phrase n="lang_acd_log_on" t="Belépés"/>
+	<phrase n="lang_acd_log_off" t="Kilépés"/>
+	<phrase n="lang_acd_unkown_state" t="Ismeretlen állapot"/>
+	<phrase n="lang_change_state_to" t="Állapotváltás"/>
+	<phrase n="lang_call_parked" t="Hívás parkoltatva"/>
+	<phrase n="lang_call_unparked" t="Hívás visszavéve"/>
+	<phrase n="lang_firmware_update_failed" t="Szoftver frissítés sikertelen"/>
+	<phrase n="lang_firmware_update_restart" t="Újraindítás szoftver frissítés miatt?"/>
+	<phrase n="lang_temp_unavail" t="Ideiglenesen nem elérhető"/>
+	<phrase n="lang_limited_func" t="Korlátozott funkciók üzemszünet miatt"/>
+	<phrase n="lang_limited_func_exp" t="Hálózati hiba miatt korlátozott a státusz és átirányítás funkció"/>
+	<phrase n="lang_limited_func_exp_typeSio" t="Hálózati hiba miatt korlátozott a státusz és átirányítás funkció"/>
+	<phrase n="lang_call_park_failed" t="Parkoltatás sikertelen"/>
+	<phrase n="lang_park_failed_reason" t="Nincs elérhető parkolási részleg"/>
+	<phrase n="lang_list_parked" t="Parkoltatva"/>
+	<phrase n="lang_vision" t="Vision"/>
+	<phrase n="lang_unpair_vision" t="Vision leválasztása"/>
+	<phrase n="lang_scan_for_visions" t="Vision keresése"/>
+	<phrase n="lang_paired_with_vision" t="Vision csatlakoztatva:"/>
+	<phrase n="lang_vision_connection_lost" t="Vision kapcsolat megszűnt"/>
+	<phrase n="lang_unpair_vision_question" t="Vision leválasztása?"/>
+	<phrase n="lang_isconnected" t="kapcsolódva"/>
+	<phrase n="lang_isdisconnected" t="leválasztva"/>
+	<phrase n="lang_isdisconnected_typeSio" t="leválasztva"/>
+	<phrase n="lang_hotdesking_ntlm" t="Fiók adatok"/>
+	<phrase n="lang_hotdesking_pin" t="PIN"/>
+	<phrase n="lang_prompt_phone_num" t="Az Ön melléke"/>
+	<phrase n="lang_prompt_pin" t="Az Ön PIN kódja"/>
+	<phrase n="lang_pin_signin_active" t="belépés..."/>
+	<phrase n="lang_pin_signin_failure" t="Belépés a telefonszámával és a PIN kódjával nem lehetséges"/>
+	<phrase n="lang_firmware_update_in" t="Szoftver frissítés"/>
+	<phrase n="lang_firmware_update_available" t="Szoftver frissítés elérhető"/>
+	<phrase n="lang_call_for" t="Hívás"/>
+	<phrase n="lang_linetype_bossadmin" t="Főnök/Titkár"/>
+	<phrase n="lang_linetype_bossadmin_short" t="F/T"/>
+	<phrase n="lang_success_msg_transferred_to" t="%A átkapcsolva %B-hez"/>
+	<phrase n="lang_pickup_call" t="Hívásátvétel"/>
+	<phrase n="lang_call_on_behalf_of" t="Hívás a következő nevében:"/>
+	<phrase n="lang_boss_group" t="A következő hívásokat kezelem:"/>
+	<phrase n="lang_delegate_group" t="Helyettesek"/>
+	<phrase n="lang_all_delegates" t="Az összes helyettes hozzárendelése egy gombhoz"/>
+	<phrase n="lang_call_failed_network_issue" t="A hívás sikertelen hálózati hiba miatt"/>
+	<phrase n="lang_call_failed_network_issue_typeSio" t="A hívás sikertelen hálózati hiba miatt"/>
+	<phrase n="lang_ethernet_detection" t="Ethernet detektálás"/>
+	<phrase n="lang_firmware_update_not_available" t="Nincs elérhető szoftver frissítés"/>
+	<phrase n="lang_check_sw_update" t="Szoftver frissítés ellenőrzése"/>
+	<phrase n="lang_continuous_text_label" t="Címke"/>
+	<phrase n="lang_short_text" t="Rövid szöveg"/>
+	<phrase n="lang_headline_admins" t="Adminisztrátorok"/>
+	<phrase n="lang_always_delegate_forward" t="Mindig a helyettesnek továbbítás"/>
+	<phrase n="lang_always_deleg_sim" t="Mindig egyidejű csörgetés"/>
+	<phrase n="lang_always_deleg_forw" t="Mindig átirányít"/>
+	<phrase n="lang_always_deleg_forw_typeSio" t="Mindig átirányít"/>
+	<phrase n="lang_tb_action_url" t="URL"/>
+	<phrase n="lang_clear_call_history" t="Híváslista törlése"/>
+	<phrase n="lang_headset_volume_only" t="Az USB fejbeszélő hangereje csak magán a fejbeszélőn állítható."/>
+	<phrase n="lang_hold_error" t="A tartás sikertelen, a hívás elnémításra került. Kérjük, hogy az újrapróbálkozáshoz nyomja meg újra."/>
+	<phrase n="lang_retr_by" t="Következőtől:"/>
+	<phrase n="lang_ipv4" t="IPv4"/>
+	<phrase n="lang_ipv6" t="IPv6"/>
+	<phrase n="lang_ipv6_autoconf" t="SLAAC"/>
+	<phrase n="lang_refresh" t="Frissítés"/>
+	<phrase n="lang_may_take_some_time" t="A frissítés több időbe telhet. Folytassuk?"/>
+	<phrase n="lang_ip_address_not_available" t="Nem elérhető"/>
+	<phrase n="lang_menu_unlock" t="Feloldás"/>
+	<phrase n="lang_menu_security" t="Biztonság"/>
+	<phrase n="lang_route_team_call_for" t="Csapat hívás"/>
+	<phrase n="lang_route_acd_for" t="Csoport hívás"/>
+	<phrase n="lang_route_anonymous_acd" t="Rejtett számú csoport hívás"/>
+	<phrase n="lang_route_anonymous_acd_for" t="Rejtett számú csoport hívás"/>
+	<phrase n="lang_anonymous" t="Rejtett szám"/>
+	<phrase n="lang_wish_barge_in" t="Bele szeretne hallgatni?"/>
+	<phrase n="lang_location" t="Helyszín:"/>
+	<phrase n="lang_subject" t="Tárgy"/>
+	<phrase n="lang_dates" t="Időpontok"/>
+	<phrase n="lang_menu_dates_today" t="Mai események"/>
+	<phrase n="lang_label_conference_organizer" t="Szervező:"/>
+	<phrase n="lang_date_ongoing" t="MOST:"/>
+	<phrase n="lang_date_remind_me_later" t="Emlékeztess később"/>
+	<phrase n="lang_date_remind_later" t="Később"/>
+	<phrase n="lang_date_set_reminder_to" t="Címzett"/>
+	<phrase n="lang_minutes" t="perc"/>
+	<phrase n="lang_date_reset_reminder" t="Emlékeztető módosítása"/>
+	<phrase n="lang_cannot_access_exchange" t="Az Exchange szerver nem elérhető."/>
+	<phrase n="lang_no_dates_today" t="Nincs mai esemény"/>
+	<phrase n="lang_participants" t="Résztvevők:"/>
+	<phrase n="lang_expansion_modules" t="Kiegészítő modulok"/>
+	<phrase n="lang_wiz_vlan" t="Használ VLAN-t?"/>
+	<phrase n="lang_wiz_ip4" t="Szeretne IPv4-et beállítani?"/>
+	<phrase n="lang_wiz_ip6" t="IPv6 beállítás"/>
+	<phrase n="lang_sxm_connected" t="Soros kiegészítő modul csatlakoztatva"/>
+	<phrase n="lang_uxm_connected" t="USB kiegészítő modul csatlakoztatva"/>
+	<phrase n="lang_uxm_cabeling_broken" t="Helytelen kiegészítő modul kábel bekötés"/>
+	<phrase n="lang_uxm_limit_exceeded" t="Túl sok USB kiegészítő modul"/>
+	<phrase n="lang_vpn_active" t="VPN aktív"/>
+	<phrase n="lang_wlan_active" t="WLAN aktív"/>
+	<phrase n="lang_list_no_devices" t="(Nincs elérhető eszköz)"/>
+	<phrase n="lang_bluetooth" t="Bluetooth"/>
+	<phrase n="lang_bluetooth_connected_title" t="Eszköz kapcsolódva"/>
+	<phrase n="lang_bluetooth_paired_list_title" t="Párosított eszközök listája"/>
+	<phrase n="lang_bluetooth_active_connection" t="Bluetooth kapcsolat aktív"/>
+	<phrase n="lang_bluetooth_discovered_list_title" t="Elérhető eszközök listája"/>
+	<phrase n="lang_bluetooth_discovering" t="Keresés"/>
+	<phrase n="lang_bluetooth_unpairing" t="Leválasztás"/>
+	<phrase n="lang_bluetooth_pairing" t="Párosítás"/>
+	<phrase n="lang_bluetooth_connecting" t="Kapcsolódás"/>
+	<phrase n="lang_bluetooth_disconnecting" t="Leválasztás"/>
+	<phrase n="lang_callback_on_busy" t="Visszahívás foglalt esetén"/>
+	<phrase n="lang_auto_busy_redial" t="Automatikus újrahívás foglalt esetén"/>
+	<phrase n="lang_decision_cob" t="foglalt. Visszajelzés kéréséhez, ha ismét elérhető lesz, nyomja meg a 'Confirm'-t. Üzenet hagyásához nyomja meg az 'X'-et."/>
+	<phrase n="lang_decision_cob_withoutvm" t="foglalt. Visszajelzés kéréséhez, ha ismét elérhető lesz, nyomja meg a 'Confirm'-t."/>
+	<phrase n="lang_callback" t="Visszahívás"/>
+	<phrase n="lang_callback_available" t="Visszahívás lehetséges"/>
+	<phrase n="lang_linetype_callback" t="Visszahívás"/>
+	<phrase n="lang_linetype_callback_short" t="ViszHív"/>
+	<phrase n="lang_ringback_callpark_service" t="Call Park Service használata"/>
+	<phrase n="lang_callpark_service" t="Hívás parkoltatás szolgáltatás"/>
+	<phrase n="lang_storage_mounted" t="USB tároló kapcsolódva"/>
+	<phrase n="lang_storage_mounted_typeSio" t="USB tároló kapcsolódva"/>
+	<phrase n="lang_storage_tomany" t="Csak egy USB tároló csatlakoztatható"/>
+	<phrase n="lang_storage_umount" t="USB tároló leválasztása"/>
+	<phrase n="lang_no_participants_detected" t="Résztvevő nem található"/>
+	<phrase n="lang_ieee8021_method" t="Mód"/>
+	<phrase n="lang_menu_fkey_functions" t="Funkció"/>
+	<phrase n="lang_uxm_appearance" t="Megjelenítés"/>
+	<phrase n="lang_put_through_by" t="Használatával"/>
+	<phrase n="lang_contact_not_in_list" t="nem található a névjegyzékben"/>
+	<phrase n="lang_msg_speaker_active" t="Kihangosító használatban"/>
+	<phrase n="lang_msg_headset_active" t="Fejbeszélő használatban"/>
+	<phrase n="lang_msg_handset_active" t="Készibeszélő aktíválva"/>
+	<phrase n="lang_msg_ringing_disabled" t="Csengetés letiltva"/>
+	<phrase n="lang_msg_mute_active" t="Készülék némítva"/>
+	<phrase n="lang_wiz_aborted" t="Wizard megszakítva."/>
+	<phrase n="lang_menu_set_kbd_lock_pin" t="Billentyűzár beállítása"/>
+	<phrase n="lang_menu_change_kbd_lock_pin" t="Billentyűzet kód megváltoztatása"/>
+	<phrase n="lang_no_valid_dsearch_config" t="Nincs telefonkönyv kereső beállítva"/>
+	<phrase n="lang_title_conferences" t="Konferenciák"/>
+	<phrase n="lang_no_conferences_found" t="Nem található konferencia"/>
+	<phrase n="lang_conference_type" t="Típus"/>
+	<phrase n="lang_conference_status" t="Állapot"/>
+	<phrase n="lang_join_conference_long" t="Belépés a konferenciába"/>
+	<phrase n="lang_join_conference_as_moderator" t="Belépés mint moderátor"/>
+	<phrase n="lang_choose_menu" t="Válasszon egy menüt"/>
+	<phrase n="lang_menu_shortcut" t="Gyorselérés menühöz"/>
+	<phrase n="lang_using_time" t="használati idő"/>
+	<phrase n="lang_waiting_for_pnp" t="Várakozás PnP-re"/>
+	<phrase n="lang_fkey_contact_list_buddy" t="BLF (szerver)"/>
+	<phrase n="lang_fkey_xmpp_presence" t="Kontakt állapot (XMPP)"/>
+	<phrase n="lang_csta_prompt_title" t="Hívás?"/>
+	<phrase n="lang_contact_is_favorite" t="Ez egy kedvenc kontakt?"/>
+	<phrase n="lang_currently_set_to" t="Jelenleg beállítva:"/>
+	<phrase n="lang_vol_label_contrast" t="Másodlagos kijelző kontraszt"/>
+	<phrase n="lang_menu_fkeys_phone" t="Vonal gombok"/>
+	<phrase n="lang_menu_dkeys_phone" t="Dedikált gombok"/>
+	<phrase n="lang_menu_context_sensitive_keys_phone" t="Állapotfüggő gombok"/>
+	<phrase n="lang_menu_smartlabel_fkeys" t="SmartLabel gombok"/>
+	<phrase n="lang_menu_smartlabel_page" t="Oldal"/>
+	<phrase n="lang_menu_fkeys_page" t="Vonal gombok oldala"/>
+	<phrase n="lang_menu_fkeys_sxm" t="SXM gombok"/>
+	<phrase n="lang_menu_fkeys_uxm" t="Kiegészítő gombok"/>
+	<phrase n="lang_server_directory_search" t="Szerver telefonkönyv kereső"/>
+	<phrase n="lang_menu_fontsize" t="Betűméret"/>
+	<phrase n="lang_uxm_fontsize_lines" t="Betűméret (vonalas elrendezés)"/>
+	<phrase n="lang_uxm_fontsize_tiles" t="Betűméret (négyzetes elrendezés)"/>
+	<phrase n="lang_menu_text_alignment" t="Szöveg elhelyezkedés"/>
+	<phrase n="lang_left" t="Bal"/>
+	<phrase n="lang_right" t="Jobb"/>
+	<phrase n="lang_center" t="Középre"/>
+	<phrase n="lang_alternate" t="Altenatív"/>
+	<phrase n="lang_menu_return_to_first_page" t="Vissza az első oldalra"/>
+	<phrase n="lang_automatic_return" t="Automatikus visszatérés"/>
+	<phrase n="lang_warning" t="Figyelem"/>
+	<phrase n="lang_public_address" t="Publikus cím"/>
+	<phrase n="lang_menu_volume" t="Hangerő beállítás   "/>
+	<phrase n="lang_vol_ringer_text" t="Csengetési hangerő"/>
+	<phrase n="lang_vol_headset_text" t="Fejbeszélő hangereje"/>
+	<phrase n="lang_vol_handset_text" t="Kézibeszélő hangereje"/>
+	<phrase n="lang_vol_speaker_text" t="Kihangosító hangereje"/>
+	<phrase n="lang_list_rejected" t="Visszautasított"/>
+	<phrase n="lang_enum_disp_func_key_conference" t="Konferencia"/>
+	<phrase n="lang_enum_disp_func_key_ivr" t="Hangmenü"/>
+	<phrase n="lang_enum_disp_func_key_callback_on_busy" t="Visszahívás"/>
+	<phrase n="lang_fkeys_ssi_context" t="Kontextus"/>
+	<phrase n="lang_fkeys_ssi_type" t="Típus"/>
+	<phrase n="lang_fkeys_ssi_active" t="Aktív"/>
+	<phrase n="lang_fkeys_ssi_icon" t="Ikon"/>
+	<phrase n="lang_default_icon" t="Alapértelmezett ikon"/>
+	<phrase n="lang_custom_icon" t="Egyedi ikon"/>
+	<phrase n="lang_FirstName" t="Keresztnév"/>
+	<phrase n="lang_LastName" t="Vezetéknév"/>
+	<phrase n="lang_Home" t="Otthoni telefonszám"/>
+	<phrase n="lang_Office" t="Munkahelyi telefonszám"/>
+	<phrase n="lang_Mobile" t="Mobilszám"/>
+	<phrase n="lang_Unqualified" t="Meghatározatlan telefonszám"/>
+	<phrase n="lang_edit_contact" t="Kontakt szerkesztés"/>
+	<phrase n="lang_msw_query" t="A kontakt szerverhez küldése sikertelen:"/>
+	<phrase n="lang_indicator" t="Indikátor"/>
+	<phrase n="lang_protocol" t="Protokoll"/>
+	<phrase n="lang_target_forward_busy" t="Hívásátirányítás, ha foglalt"/>
+	<phrase n="lang_target_forward_timeout" t="Hívásátirányítás késleltetés"/>
+	<phrase n="lang_target_forward_timeout_typeSio" t="Hívásátirányítás késleltetés"/>
+	<phrase n="lang_WIFI_SSID" t="Hálózati név"/>
+	<phrase n="lang_WIFI_auth_mode" t="Titkosítás"/>
+	<phrase n="lang_WIFI_WPA_Encryption" t="WPA titkosítás"/>
+	<phrase n="lang_WIFI_WPA" t="WPA"/>
+	<phrase n="lang_WIFI_WPA2PSK" t="WPA2"/>
+	<phrase n="lang_WIFI_WEP" t="WEP"/>
+	<phrase n="lang_WIFI_OPEN" t="Nyílt"/>
+	<phrase n="lang_WIFI_AES" t="AES"/>
+	<phrase n="lang_WIFI_TKIP" t="TKIP"/>
+	<phrase n="lang_WIFI_SCAN_NETWORKS" t="WLAN keresés"/>
+	<phrase n="lang_WIFI_MANUAL_SETUP" t="Kézi beállítás"/>
+	<phrase n="lang_contact_details" t="Kontakt adatok"/>
+	<phrase n="lang_WIFI_CONNECTED_TO" t="Kapcsolódva"/>
+	<phrase n="lang_WIFI_NOT_CONNECTED" t="Nincs csatlakoztatva"/>
+	<phrase n="lang_unhold" t="Visszavétel"/>
+	<phrase n="lang_empty" t="üres"/>
+	<phrase n="lang_F_SNOM" t="snom/Cloud"/>
+	<phrase n="lang_prefs_ssi_date_us_format" t="Dátum formátum"/>
+	<phrase n="lang_prefs_ssi_time_24_format" t="24 órás kijelzés"/>
+	<phrase n="lang_time_symbol_second" t="mp"/>
+	<phrase n="lang_all_accounts" t="Minden azonosító"/>
+	<phrase n="lang_reboot_to_apply_new_settings" t="Újraindítás most, hogy a beállítások érvényre lépjenek?"/>
+	<phrase n="lang_TLS" t="TLS"/>
+	<phrase n="lang_MD5" t="MD5"/>
+	<phrase n="lang_WIFI_SWITCH_OFF_WLAN" t="WLAN kikapcsolása"/>
+	<phrase n="lang_ErrorNotSupportedByManager" t="Nem támogatott"/>
+	<phrase n="lang_ErrorContactNotFound" t="Kontakt nem található"/>
+	<phrase n="lang_ErrorInvalidCredentials" t="Hibás azonosító"/>
+	<phrase n="lang_ErrorInvalidArgument" t="Hibás argumentum"/>
+	<phrase n="lang_ErrorRequestPending" t="Lekérés függőben"/>
+	<phrase n="lang_ErrorNotInitialized" t="Nincs inicializálva"/>
+	<phrase n="lang_ErrorInComplete" t="Befejezetlen"/>
+	<phrase n="lang_ErrorOutOfMemory" t="Elfogyott a memória"/>
+	<phrase n="lang_Contact_pool" t="Kontakt gyorstár"/>
+	<phrase n="lang_advanced_autoneg" t="Automatikus"/>
+	<phrase n="lang_advanced_10full" t="10 Mbit full duplex"/>
+	<phrase n="lang_advanced_10half" t="10 Mbit half duplex"/>
+	<phrase n="lang_advanced_100full" t="100 Mbit full duplex"/>
+	<phrase n="lang_advanced_100half" t="100 Mbit half duplex"/>
+	<phrase n="lang_advanced_1000full" t="1000 Mbit full duplex"/>
+	<phrase n="lang_Hardware" t="Hardver"/>
+	<phrase n="lang_NET_port_speed" t="Hálózati port sebesség/duplexitás"/>
+	<phrase n="lang_PC_port_speed" t="PC port sebesség/duplexitás"/>
+	<phrase n="lang_Action_on_eth_replug" t="Ethernet kábel visszadugása esetén"/>
+	<phrase n="lang_advanced_donothing" t="Figyelmen kívül hagyás"/>
+	<phrase n="lang_line_reregister" t="Újra-regisztráció"/>
+	<phrase n="lang_NTP" t="NTP"/>
+	<phrase n="lang_DNS" t="DNS"/>
+	<phrase n="lang_LLDP" t="LLDP"/>
+	<phrase n="lang_NTP_refresh_timer" t="NTP frissítési időzítés"/>
+	<phrase n="lang_8021x" t="802.1X"/>
+	<phrase n="lang_Expansion" t="Bővítés"/>
+	<phrase n="lang_expansion_layout" t="Bővítés elhelyezkedés"/>
+	<phrase n="lang_Expansion_module" t="Kiegészítő modul"/>
+	<phrase n="lang_Please_reboot" t="Kérem indítsa újra a készüléket!"/>
+	<phrase n="lang_All_settings_saved" t="Minden beállítás elmentve"/>
+	<phrase n="lang_WIFI_SCAN_RUNNING" t="Keresés..."/>
+	<phrase n="lang_WIFI_CONNECTING" t="Kapcsolódás..."/>
+	<phrase n="lang_wifi_connect_success_reboot_to_continue_msg1" t="Újraindítás a folytatáshoz"/>
+	<phrase n="lang_wifi_connect_success_password_ok_msg2" t="Jelszó elfogadva"/>
+	<phrase n="lang_wifi_connect_fail_invalid_settings_msg1" t="Érvénytelen beállítások"/>
+	<phrase n="lang_wifi_connect_fail_please_retry_msg2" t="Kérem próbálja újra!"/>
+	<phrase n="lang_usb_wifi_unavailable" t="USB WiFi nem elérhető"/>
+	<phrase n="lang_usb_wifi_connected" t="USB WiFi kapcsolódva"/>
+	<phrase n="lang_usb_wifi_disconnected" t="USB WiFi szétkapcsolva"/>
+	<phrase n="lang_is_a_favorite" t="egy kedvenc"/>
+	<phrase n="lang_Lines" t="Vonalas elrendezés"/>
+	<phrase n="lang_Tiles" t="Négyzetes elrendezés"/>
+	<phrase n="lang_tbook_emtpy" t="&lt;Üres&gt;"/>
+	<phrase n="lang_enter_starting_uppercase" t="Enter"/>
+	<phrase n="lang_characters_starting_lowercase" t="karakterek"/>
+	<phrase n="lang_user_server_type" t="Támogatott szerver típus"/>
+	<phrase n="lang_broadsoft_features" t="Broadsoft funkciók"/>
+	<phrase n="lang_xsi_server" t="XSI szerver"/>
+	<phrase n="lang_xsi_user" t="XSI felhasználó"/>
+	<phrase n="lang_xsi_password" t="XSI jelszó"/>
+	<phrase n="lang_xsi_retry_timer" t="XSI újrapróbálkozási idő"/>
+	<phrase n="lang_xsi_events" t="XSI események"/>
+	<phrase n="lang_xmpp_jid" t="XMPP azonosító"/>
+	<phrase n="lang_xmpp_password" t="XMPP jelszó"/>
+	<phrase n="lang_no_headset_present" t="Nem található fejbeszélő"/>
+	<phrase n="lang_headset_detection" t="Fejbeszélő keresés"/>
+	<phrase n="lang_msw_services" t="Metaswitch Services"/>
+	<phrase n="lang_msw_directory_number" t="Metaswitch Telefonkönyv szám"/>
+	<phrase n="lang_msw_password" t="Metaswitch jelszó"/>
+	<phrase n="lang_msw_web_url" t="Metaswitch szerver URL"/>
+	<phrase n="lang_xsi_dir_enterprise" t="Vállalati telefonkönyv"/>
+	<phrase n="lang_xsi_dir_enterprise_common" t="Vállalati közös telefonszámok listája"/>
+	<phrase n="lang_xsi_dir_group" t="Csoportos telefonkönyv"/>
+	<phrase n="lang_xsi_dir_group_common" t="Csoportos közös telefonszámok listája"/>
+	<phrase n="lang_xsi_dir_personal" t="Személyes telefonszámok listája"/>
+	<phrase n="lang_xsi_anywhere" t="Anywhere"/>
+	<phrase n="lang_xsi_location_new_entry" t="&lt;Új bejegyzés&gt;"/>
+	<phrase n="lang_xsi_location_edit_description" t="Helyszín leírás szerkesztése"/>
+	<phrase n="lang_xsi_location_description" t="Leírás"/>
+	<phrase n="lang_xsi_location_edit_number" t="Helyszín telefonszám szerkesztése"/>
+	<phrase n="lang_number_str" t="Szám "/>
+	<phrase n="lang_xsi_location_status_creating" t="létrehozás"/>
+	<phrase n="lang_xsi_location_status_modifying" t="módosítás"/>
+	<phrase n="lang_xsi_location_status_deleting" t="törlés"/>
+	<phrase n="lang_xsi_location_error_empty_number" t="A telefonszám nem lehet üres"/>
+	<phrase n="lang_xsi_location_error_number_exists" t="A telefonszám már létezik"/>
+	<phrase n="lang_xsi_location_error_empty_description" t="A leírás nem lehet üres"/>
+	<phrase n="lang_visual_voicemail" t="Vizuális hangposta"/>
+	<phrase n="lang_feature_works" t="Feature Works"/>
+	<phrase n="lang_voicemail_name" t="Név"/>
+	<phrase n="lang_voicemail_call_number" t="Telefonszám"/>
+	<phrase n="lang_voicemail_date_time" t="Dátum és időpont"/>
+	<phrase n="lang_voicemail_duration" t="Időtartam"/>
+	<phrase n="lang_xsi_anywhere_clicktodial" t="Click to Dial"/>
+	<phrase n="lang_xsi_anywhere_grouppaging" t="Csoport hívása"/>
+	<phrase n="lang_xsi_anywhere_settings" t="Beállítások"/>
+	<phrase n="lang_remote_office" t="Remote Office"/>
+	<phrase n="lang_xsi_anywhereportal" t="Anywhere Portal"/>
+	<phrase n="lang_xsi_anywhereportal_number" t="Telefonszám"/>
+	<phrase n="lang_menu_primary_display" t="Elsődleges kijelző"/>
+	<phrase n="lang_menu_secondary_display" t="Másodlagos kijelző"/>
+	<phrase n="lang_enable_remote_office" t="Remote Office engedélyezése"/>
+	<phrase n="lang_call_center_list" t="Callcenter lista"/>
+	<phrase n="lang_call_center_status" t="Call center státusz"/>
+	<phrase n="lang_call_center_joined" t="Csatlakozott"/>
+	<phrase n="lang_call_center_unable_to_join" t="Nem lehet a callcenterhez csatlakozni"/>
+	<phrase n="lang_call_center_join_not_allowed" t="Nincs engedélyezve a csatlakozás"/>
+	<phrase n="lang_call_center_unjoin_not_allowed" t="Nincs engedélyezve a leválasztás"/>
+	<phrase n="lang_call_center_joining" t="Csatlakozás"/>
+	<phrase n="lang_call_recording_control" t="Hívásrögzítés"/>
+	<phrase n="lang_pause_recording" t="Rögzítés szüneteltetése"/>
+	<phrase n="lang_resume_recording" t="Rögzítés folytatása"/>
+	<phrase n="lang_xsi_simul_ring" t="Egyidejű csörgetés"/>
+	<phrase n="lang_xsi_simul_ring_on_call" t="Nincs csörgetés, ha hívásban van"/>
+	<phrase n="lang_xsi_simul_ring_edit_phone_number" t="Telefonszám"/>
+	<phrase n="lang_xsi_simul_ring_enter_phone_number" t="Adja meg a telefonszámot"/>
+	<phrase n="lang_xsi_simul_ring_edit" t="Szerkesztés"/>
+	<phrase n="lang_xsi_simul_ring_number" t="Telefonszám"/>
+	<phrase n="lang_xsi_simul_ring_add_entry" t="Új bejegyzés hozzáadása"/>
+	<phrase n="lang_xsi_simul_ring_ans_confirm" t="Hívásfogadás megerősítése"/>
+	<phrase n="lang_xsi_simul_ring_number_exists_error" t="A telefonszám már létezik"/>
+	<phrase n="lang_xsi_simul_ring_number_empty_error" t="A telefonszám nem lehet üres."/>
+	<phrase n="lang_xsi_executive" t="Executive"/>
+	<phrase n="lang_xsi_executive_assistant" t="Executive Assistant"/>
+	<phrase n="lang_xsi_call_filtering" t="Hívásszűrés"/>
+	<phrase n="lang_xsi_call_filtering_enable" t="Hívásszűrés"/>
+	<phrase n="lang_xsi_call_filtering_mode" t="Szűrési mód"/>
+	<phrase n="lang_xsi_call_filtering_type" t="Szűrés típus"/>
+	<phrase n="lang_xsi_call_filtering_simple" t="Egyszerű"/>
+	<phrase n="lang_xsi_call_filtering_advanced" t="Haladó"/>
+	<phrase n="lang_xsi_call_filtering_all" t="Minden hívás"/>
+	<phrase n="lang_xsi_call_filtering_internal" t="Minden belső hívás"/>
+	<phrase n="lang_xsi_call_filtering_external" t="Minden külső hívás"/>
+	<phrase n="lang_xsi_call_screening" t="Hívás megjelenítés"/>
+	<phrase n="lang_xsi_call_screening_type" t="Jelzés típus"/>
+	<phrase n="lang_xsi_call_screening_alert_mobile" t="Mobil értesítése"/>
+	<phrase n="lang_xsi_call_screening_alert_anywhere" t="Anywhere helyszínek értesítése"/>
+	<phrase n="lang_xsi_call_screening_alert_sca" t="SCA helyszínek értesítése"/>
+	<phrase n="lang_xsi_call_screening_silent" t="Néma"/>
+	<phrase n="lang_xsi_call_screening_ringsplash" t="Becsörgés"/>
+	<phrase n="lang_xsi_executive_view_assistants" t="Asszisztens megntekintése"/>
+	<phrase n="lang_xsi_executive_allow_optin" t="Asszisztens Ki/Be"/>
+	<phrase n="lang_xsi_opt_in_out_to_executive" t="Ki/Be Executive"/>
+	<phrase n="lang_xsi_opt_in_to_executive" t="Be"/>
+	<phrase n="lang_xsi_opt_out_to_executive" t="Ki"/>
+	<phrase n="lang_xsi_assistant_call_divert" t="Átirányít"/>
+	<phrase n="lang_xsi_assistant_call_divert_number" t="Hívás átirányítása"/>
+	<phrase n="lang_xsi_call_alerting" t="Hívás jelzése"/>
+	<phrase n="lang_xsi_call_alerting_mode" t="Csengetési mód"/>
+	<phrase n="lang_xsi_call_alerting_mode_simu" t="Egyidejű csörgetés"/>
+	<phrase n="lang_xsi_call_alerting_mode_seq" t="Egymás utáni"/>
+	<phrase n="lang_xsi_call_alerting_id_name" t="Hívó vonal"/>
+	<phrase n="lang_xsi_call_alerting_id_exec_name" t="Executive"/>
+	<phrase n="lang_xsi_call_alerting_id_origin_name" t="Hívás kezdeményező neve"/>
+	<phrase n="lang_xsi_call_alerting_id_exec_origin_name" t="Executive-Kezdeményező nevek"/>
+	<phrase n="lang_xsi_call_alerting_id_origin_exec_name" t="Kezdeményező-Executive nevek"/>
+	<phrase n="lang_xsi_call_custom_name" t="Egyéni"/>
+	<phrase n="lang_xsi_call_alerting_custom_id_name" t="Egyedi hívó vonal neve"/>
+	<phrase n="lang_xsi_call_alerting_id_number" t="Hívó vonal száma"/>
+	<phrase n="lang_xsi_call_alerting_id_exec_number" t="Executive szám"/>
+	<phrase n="lang_xsi_call_alerting_id_origin_number" t="Kezdeményező száma"/>
+	<phrase n="lang_xsi_call_alerting_custom_id_number" t="Egyéb hívó vonal"/>
+	<phrase n="lang_xsi_call_alerting_recall_after" t="Főnökhöz kapcsolás miután"/>
+	<phrase n="lang_xsi_call_alerting_recall_after_range" t="Csengetések száma (2-20)"/>
+	<phrase n="lang_xsi_call_alerting_next_assistant" t="Következő titkárhoz küldés"/>
+	<phrase n="lang_xsi_call_alerting_next_assistant_range" t="Csengetések száma (1-20)"/>
+	<phrase n="lang_xsi_call_alerting_rollover_after" t="Várakozás utáni esemény"/>
+	<phrase n="lang_xsi_call_alerting_rollover_after_time" t="Várakozási idő"/>
+	<phrase n="lang_xsi_call_alerting_rollover_after_time_range" t="Idő másodpercben (0-60)"/>
+	<phrase n="lang_xsi_call_alerting_rollover_action" t="Válasszon műveletet"/>
+	<phrase n="lang_xsi_call_alerting_rollover_action_vm" t="Hangposta"/>
+	<phrase n="lang_xsi_call_alerting_rollover_action_fwd" t="Átirányítás"/>
+	<phrase n="lang_xsi_call_alerting_rollover_action_na" t="Nincs válasz"/>
+	<phrase n="lang_xsi_call_alerting_rollover_fwd_number" t="Hívásátírányítás száma"/>
+	<phrase n="lang_value_out_of_range" t="Nem megfelelő érték"/>
+	<phrase n="lang_xsi_callon_behalfof_select_executive" t="Főnök kiválasztása"/>
+	<phrase n="lang_collaborate_room_details" t="Szoba adatai"/>
+	<phrase n="lang_collaborate_room_name" t="Szoba név"/>
+	<phrase n="lang_collaborate_room_type" t="Szoba típus"/>
+	<phrase n="lang_collaborate_join_room" t="Belépés a szobába"/>
+	<phrase n="lang_unavailable_state" t="Nem elérhető kód"/>
+	<phrase n="lang_enter_unavailable_code" t="Nem elérhető kód"/>
+	<phrase n="lang_ringer_is_off" t="Csörgetés kikapcsolva"/>
+	<phrase n="lang_uxm_update" t="Kiegészítő modul frissítése"/>
+	<phrase n="lang_uxm_update_infotext_progress" t="Frissítés folyamatban. Ne húzza ki a telefont és a kiegészítő modult a frissítés közben."/>
+	<phrase n="lang_uxm_update_infotext_prepare" t="Frissítés előkészítése. Ne húzza ki a telefont és a kiegészítő modult a frissítés közben."/>
+	<phrase n="lang_F_DELETE_MSG" t="ÜzTöröl"/>
+	<phrase n="lang_F_DELETE_MSG_typeSio" t="Üzenet törlése"/>
+	<phrase n="lang_F_DELETE_MSG_smartlabel" t="Üzenet törlése"/>
+	<phrase n="lang_F_DELETE_MSG_full" t="Üzenet törlése"/>
+	<phrase n="lang_F_NEXT_ID" t="Azon↓"/>
+	<phrase n="lang_F_NEXT_ID_typeSio" t="Köv. azonosító"/>
+	<phrase n="lang_F_NEXT_ID_smartlabel" t="Köv azon"/>
+	<phrase n="lang_F_PREV_ID" t="Azon↑"/>
+	<phrase n="lang_F_PREV_ID_typeSio" t="Előző azonosító"/>
+	<phrase n="lang_F_PREV_ID_smartlabel" t="El azon"/>
+	<phrase n="lang_F_OCIP" t="OCI-P"/>
+	<phrase n="lang_F_SAB" t="SzTK"/>
+	<phrase n="lang_F_SAB_typeSio" t="Szerver telefonkönyv"/>
+	<phrase n="lang_F_SAB_smartlabel" t="Telefonkönyv"/>
+	<phrase n="lang_F_ABS" t="TKKeres"/>
+	<phrase n="lang_F_ABS_typeSio" t="Telefonkönyv keresés"/>
+	<phrase n="lang_addressbook_menu" t="Telefonkönyv kiválasztása"/>
+	<phrase n="lang_addressbook_menu_local" t="Helyi"/>
+	<phrase n="lang_multicast_zones_title" t="Multicast zónák"/>
+	<phrase n="lang_no_multicast_zones" t="Nincs elérhető multicast zóna"/>
+	<phrase n="lang_acd_state" t="ACD státusz"/>
+	<phrase n="lang_please_sign_into_set_acd_state" t="Kérem lépjen be az ACD státusz állításához"/>
+	<phrase n="lang_fkey_longpress_support" t="LP-Funkció"/>
+	<phrase n="lang_important" t="Fontos"/>
+	<phrase n="lang_SmartTransferEditDescription" t="Adja meg a SmartTransfer célját"/>
+	<phrase n="lang_SmartTransfer" t="SmartTransfer"/>
+	<phrase n="lang_SmartTransfer_ready" t="A gomb készen áll a hívások átkapcsolásához."/>
+	<phrase n="lang_department" t="Részleg"/>
+	<phrase n="lang_extensions" t="Mellékek"/>
+	<phrase n="lang_menu_title_text_options" t="Szöveg opciók"/>
+	<phrase n="lang_F_ADD_LOCATION" t="Helyszín hozzáadása"/>
+	<phrase n="lang_gk_mode_none" t="Egyik sem"/>
+	<phrase n="lang_demo_mode" t="Demo mód"/>
+	<phrase n="lang_transfer_or" t="Átkapcsolás vagy"/>
+	<phrase n="lang_call_pickup" t="Hívásátvétel?"/>
+	<phrase n="lang_choose_an_action" t="Válasszon műveletet"/>
+	<phrase n="lang_Conference_Setup" t="Konferencia beállítása"/>
+	<phrase n="lang_Conference_First_Participant" t="Konferencia résztvevő 1"/>
+	<phrase n="lang_Conference_Second_Participant" t="Konferencia résztvevő 2"/>
+	<phrase n="lang_menu_smart_label" t="SmartLabel opciók"/>
+	<phrase n="lang_menu_idle_screen" t="Képernyő beállítása tétlen állapot esetén"/>
+	<phrase n="lang_menu_call_screen" t="Hívás képernyő beállítás"/>
+	<phrase n="lang_menu_other_screen" t="Más képernyő beállítás"/>
+	<phrase n="lang_menu_label_default_mode" t="Alapértelmezett kijelző használat"/>
+	<phrase n="lang_menu_label_expanded_mode" t="Alternatív kijelző használat"/>
+	<phrase n="lang_menu_label_expansion_triggers" t="Alternatív kijelző"/>
+	<phrase n="lang_menu_short_label" t="Rövid címke"/>
+	<phrase n="lang_menu_full_label" t="Teljes címke"/>
+	<phrase n="lang_menu_short_label_mode" t="Rövid címke mód"/>
+	<phrase n="lang_menu_short_press" t="Oldal gomb rövid megnyomása"/>
+	<phrase n="lang_menu_long_press" t="Oldal gomb hosszú megnyomása"/>
+	<phrase n="lang_menu_proximity_sensor" t="Közelítésérzékelő"/>
+	<phrase n="lang_menu_P2_short_press" t="P2 rövid megnyomása"/>
+	<phrase n="lang_menu_P2_long_press" t="P2 hosszú megnyomása"/>
+	<phrase n="lang_menu_P3_short_press" t="P3 rövid megnyomása"/>
+	<phrase n="lang_menu_P3_long_press" t="P3 hosszú megnyomása"/>
+	<phrase n="lang_menu_P4_short_press" t="P4 rövid megnyomása"/>
+	<phrase n="lang_menu_P4_long_press" t="P4 hosszú megnyomása"/>
+	<phrase n="lang_menu_P8_short_press" t="P8 rövid megnyomása"/>
+	<phrase n="lang_menu_P8_long_press" t="P8 hosszú megnyomása"/>
+	<phrase n="lang_menu_P10_short_press" t="P10 rövid megnyomása"/>
+	<phrase n="lang_menu_P10_long_press" t="P10 hosszú megnyomása"/>
+	<phrase n="lang_short_press" t="Rövid megnyomás"/>
+	<phrase n="lang_fkey_press" t="Funkciógomb megnyomása"/>
+	<phrase n="lang_long_press" t="Hosszú megnyomás"/>
+	<phrase n="lang_short_label_mode_icon" t="Csak ikon"/>
+	<phrase n="lang_smartlabel_mode_text" t="Csak szöveg"/>
+	<phrase n="lang_smartlabel_mode_icon_text" t="Ikon és szöveg"/>
+	<phrase n="lang_status_msg_uxm_update_required" t=" frissítés szükséges"/>
+	<phrase n="lang_status_detail_uxm_update_required" t="Frissítse a kiegészítő modult, hogy beüzemelhető legyen."/>
+	<phrase n="lang_status_detail_uxm_update_required2" t="Kérem győződjön meg róla, hogy csak egy kiegészítő modul van csatlakoztatva, és az nem használ külön tápegységet."/>
+	<phrase n="lang_unhandled_item" t="Nem kezelt elem:"/>
+	<phrase n="lang_preferences_general" t="Általános"/>
+	<phrase n="lang_quick_dial_contacts" t="Gyorshívó kontaktok"/>
+	<phrase n="lang_start_tbook_download" t="Telefonkönyv letöltésének kezdése?"/>
+	<phrase n="lang_tbook_download" t="Telefonkönyv letöltése"/>
+	<phrase n="lang_tbook_download_started" t="A telefonkönyv letöltése elkezdődött a következő azonosítóval"/>
+	<phrase n="lang_tbook_download_finished" t="A telefonkönyv letöltése befejeződött a következő azonosítóval"/>
+	<phrase n="lang_tbook_download_failed" t="A telefonkönyv letöltése nem sikerült a következő azonosítóval"/>
+	<phrase n="lang_tbook_download_not_possible" t="A telefonkönyv letöltése nem lehetséges a következő azonosítóval"/>
+	<phrase n="lang_tbook_download_overflowed" t="A telefonkönyv letöltése nem teljes (belső korlát túllépve)."/>
+	<phrase n="lang_tbook_is_full" t="A telefonkönyv betelt"/>
+	<phrase n="lang_F_HOTELING" t="Hotel"/>
+	<phrase n="lang_F_HOTELING_typeSio" t="Hotel funkció"/>
+	<phrase n="lang_F_HOTELING_smartlabel" t="Hotel"/>
+	<phrase n="lang_F_GUEST_LOGIN" t="Vendég bejelentkezés"/>
+	<phrase n="lang_F_GUEST_LOGOUT" t="Vendég kijelentkezés"/>
+	<phrase n="lang_F_GUEST_LOGIN_smartlabel" t="Vendég belépés"/>
+	<phrase n="lang_F_GUEST_LOGOUT_smartlabel" t="Vendég kilépés"/>
+	<phrase n="lang_F_LOGIN" t="Bejelentkezés"/>
+	<phrase n="lang_F_LOGOUT" t="Kijelentkezés"/>
+	<phrase n="lang_smartlabel_id" t="Azonosító"/>
+	<phrase n="lang_title_guest_logout" t="Vendég kijelentkezés"/>
+	<phrase n="lang_confirm_guest_logout" t="Biztos benne, hogy kijelentkezik?"/>
+	<phrase n="lang_no_contacts" t="Nincs kontakt"/>
+	<phrase n="lang_hoteling_guest" t="Hotel vendég"/>
+	<phrase n="lang_logging_out" t="Kijelentkezés..."/>
+	<phrase n="lang_logging_in" t="Bejelentkezés..."/>
+	<phrase n="lang_login_failed" t="Bejelentkezés sikertelen"/>
+	<phrase n="lang_acd_signout_message" t="Ön kijelentkezésre kerül az ACD-ből. Bejelentkezik mint vendég?"/>
+	<phrase n="lang_title_guest_login" t="Vendég bejelentkezés"/>
+	<phrase n="lang_F_MARK_READ" t="Olvasottnak jelölés"/>
+	<phrase n="lang_F_MARK_UNREAD" t="Olvasatlannak jelölés"/>
+	<phrase n="lang_call_recording_mode_never" t="Soha"/>
+	<phrase n="lang_call_recording_mode_always" t="Mindig"/>
+	<phrase n="lang_call_recording_mode_always_pause_resume" t="Mindig szüneteltetéssel/folytatással"/>
+	<phrase n="lang_call_recording_mode_on_demand" t="Igény esetén"/>
+	<phrase n="lang_call_recording_mode_on_demand_user_start" t="Felhasználói indítással"/>
+	<phrase n="lang_smartlabel_dismiss_timeout" t="Alapértelmezett mód visszaállítása"/>
+	<phrase n="lang_call_recording_mode" t="Hívásrögzítési mód"/>
+	<phrase n="lang_menu_full_label_mode" t="Teljes címke mód"/>
+	<phrase n="lang_menu_label_mode" t="Címke mód"/>
+	<phrase n="lang_guest_pin" t="Vendég PIN"/>
+	<phrase n="lang_incorrect_pin" t="Helytelen PIN"/>
+	<phrase n="lang_voicemail_info" t="Hangposta"/>
+	<phrase n="lang_confirm_del_deny_list_item_title" t="Törlés a blokkolt listából"/>
+	<phrase n="lang_confirm_del_number_from_deny_list" t="Töröljük a blokkolt listából?"/>
+	<phrase n="lang_confirm_del_menu_configuration" t="A billentyűzet beállítások törlése"/>
+	<phrase n="lang_confirm_message" t="Biztos benne?"/>
+	<phrase n="lang_caller_id_blocking" t="Hívószám letiltása"/>
+	<phrase n="lang_screen_items_color_and_opacity_title" t="Szín és átlátszóság"/>
+	<phrase n="lang_ui_themes" t="Téma"/>
+	<phrase n="lang_theme_light" t="Világos"/>
+	<phrase n="lang_theme_dark" t="Sötét"/>
+	<phrase n="lang_theme_colorful" t="Színes"/>
+	<phrase n="lang_theme_industrial" t="Ipari"/>
+	<phrase n="lang_theme_contrast" t="Kontrasztos"/>
+	<phrase n="lang_screen_items_color_title" t="Szín"/>
+	<phrase n="lang_screen_items_opacity_title" t="Átlátszóság"/>
+	<phrase n="lang_screen_items_enter_custom_color_title" t="Egyedi értékek megadása"/>
+	<phrase n="lang_screen_item_titlebar_text" t="Címsor szöveg"/>
+	<phrase n="lang_screen_item_text" t="Szöveg"/>
+	<phrase n="lang_screen_item_subtext" t="Alszöveg"/>
+	<phrase n="lang_screen_item_extratext" t="Extra szöveg"/>
+	<phrase n="lang_screen_item_extratext2" t="Extra szöveg 2"/>
+	<phrase n="lang_screen_item_titlebar_background" t="Címsor háttér"/>
+	<phrase n="lang_screen_item_background" t="Háttér"/>
+	<phrase n="lang_screen_item_fkey_background" t="Funkciógomb háttér"/>
+	<phrase n="lang_screen_item_fkey_pressed_background" t="Funkciógomb megnyomva háttér"/>
+	<phrase n="lang_screen_item_fkey_separator" t="Funkciógomb elválasztó"/>
+	<phrase n="lang_screen_item_fkey_label" t="Funkciógomb címke"/>
+	<phrase n="lang_screen_item_fkey_pressed_label" t="Funkciógomb megnyomva címke"/>
+	<phrase n="lang_screen_item_line_background" t="Vonal háttér"/>
+	<phrase n="lang_screen_item_selected_line_background" t="Kiválasztott vonal háttér"/>
+	<phrase n="lang_screen_item_selected_line_indicator" t="Kiválasztott vonal jelzés"/>
+	<phrase n="lang_screen_item_selected_line_text" t="Kiválasztott vonal szöveg"/>
+	<phrase n="lang_screen_item_line_separator" t="Vonal elválasztó"/>
+	<phrase n="lang_screen_item_scrollbar" t="Görgetősáv"/>
+	<phrase n="lang_screen_item_cursor" t="Kurzor"/>
+	<phrase n="lang_screen_item_status_msgs_background" t="Státusz üzenet háttér"/>
+	<phrase n="lang_screen_item_status_msgs_border" t="Státusz üzenet keret"/>
+	<phrase n="lang_screen_item_smartlabel_background" t="SmartLabel háttér"/>
+	<phrase n="lang_screen_item_smartlabel_pressed_background" t="SmartLabel megnyomva háttér"/>
+	<phrase n="lang_screen_item_smartlabel_separator" t="SmartLabel elválasztó"/>
+	<phrase n="lang_screen_item_smartlabel_label" t="SmartLabel címke"/>
+	<phrase n="lang_screen_item_smartlabel_pressed_label" t="SmartLabel megnyomva címke"/>
+	<phrase n="lang_screen_item_expansion_module_background" t="Kiegészítő modul háttere"/>
+	<phrase n="lang_screen_item_expansion_module_pressed_background" t="Funkciógomb megnyomva / háttér"/>
+	<phrase n="lang_screen_item_expansion_module_separator" t="Kiegészítő modul elválasztóvonal"/>
+	<phrase n="lang_screen_item_expansion_module_maintext" t="Kiegészítő modul címsor"/>
+	<phrase n="lang_screen_item_expansion_module_pressed_maintext" t="Kiegészítő modul címsor - megnyomva"/>
+	<phrase n="lang_screen_item_expansion_module_subtext" t="Kiegészítő modul alcím"/>
+	<phrase n="lang_screen_item_expansion_module_pressed_subtext" t="Kiegészítő modul alcím - megnyomva"/>
+	<phrase n="lang_screen_item_expansion_module_page_indicator" t="Kiegészítő modul oldal jelző"/>
+	<phrase n="lang_screen_items_color_name_onyx_black" t="Fekete (onyx)"/>
+	<phrase n="lang_screen_items_color_name_midnight_black" t="Fekete (midnight)"/>
+	<phrase n="lang_screen_items_color_name_obsidian_black" t="Fekete (obsidian)"/>
+	<phrase n="lang_screen_items_color_name_dark_grey" t="Sötét szürke"/>
+	<phrase n="lang_screen_items_color_name_grey" t="Szürke"/>
+	<phrase n="lang_screen_items_color_name_light_grey" t="Világos szürke"/>
+	<phrase n="lang_screen_items_color_name_grey_white" t="Szürkés fehér"/>
+	<phrase n="lang_screen_items_color_name_white" t="Fehér"/>
+	<phrase n="lang_screen_items_color_name_light_yellow" t="Világos sárga"/>
+	<phrase n="lang_screen_items_color_name_yellow" t="Sárga"/>
+	<phrase n="lang_screen_items_color_name_light_red" t="Világos piros"/>
+	<phrase n="lang_screen_items_color_name_red" t="Piros"/>
+	<phrase n="lang_screen_items_color_name_light_blue" t="Világos kék"/>
+	<phrase n="lang_screen_items_color_name_blue" t="Kék"/>
+	<phrase n="lang_screen_items_color_name_light_green" t="Világos zöld"/>
+	<phrase n="lang_screen_items_color_name_green" t="Zöld"/>
+	<phrase n="lang_screen_items_color_name_black" t="Fekete"/>
+	<phrase n="lang_screen_items_color_name_carbon" t="Karbon"/>
+	<phrase n="lang_screen_items_color_name_dim_grey" t="Halvány szürke"/>
+	<phrase n="lang_screen_items_color_name_silver" t="Ezüst"/>
+	<phrase n="lang_screen_items_color_name_gainsboro" t="Szürke (gainsboro)"/>
+	<phrase n="lang_screen_items_color_name_snowflake" t="Szürke (snowflake)"/>
+	<phrase n="lang_screen_items_color_name_white_smoke" t="Fehér (white smoke)"/>
+	<phrase n="lang_screen_items_color_name_custom" t="Egyedi szín"/>
+	<phrase n="lang_monitored_extensions" t="Figyelt mellékek"/>
+	<phrase n="lang_ALS" t="Fényérzékelő"/>
+	<phrase n="lang_all_available_calls" t="Minden elérhető hívás"/>
+	<phrase n="lang_new_call" t="Új hívás"/>
+	<phrase n="lang_select_conf_participant" t="Konferencia résztvevő kiválasztása"/>
+	<phrase n="lang_consult_conference" t="Konferencia csatlakozás"/>
+	<phrase n="lang_guess_max_hits" t="Maximális találat"/>
+	<phrase n="lang_guess_results" t="Eredmény"/>
+	<phrase n="lang_new_network_policy" t="Új hálózati beállítás"/>
+	<phrase n="lang_wrong_lldp_policy" t="Hibás LLDP"/>
+	<phrase n="lang_F_MODERATE" t="Moderálás"/>
+	<phrase n="lang_sip_warning" t="SIP figyelmeztetés"/>
+	<phrase n="lang_sync_settings" t="Szinkronizációs beállítások"/>
+	<phrase n="lang_confirm_sync_settings" t="Szinkronizáljuk a beállításokat a szerverrel?"/>
+	<phrase n="lang_no_configured_extensions" t="Nincsenek beállított mellékek"/>
+	<phrase n="lang_no_active_calls_on_extensions" t="Nincs aktív hívás a mellékeken"/>
+	<phrase n="lang_sip_response_code_400" t="Hibás lekérés"/>
+	<phrase n="lang_sip_response_code_402" t="Fizetés szükséges"/>
+	<phrase n="lang_sip_response_code_403" t="Tiltott"/>
+	<phrase n="lang_sip_response_code_404" t="Nem található"/>
+	<phrase n="lang_sip_response_code_405" t="A metódus nem engedélyezett"/>
+	<phrase n="lang_sip_response_code_406" t="SIP válasz: 406 Not acceptable"/>
+	<phrase n="lang_sip_response_code_407" t="Proxy azonosítás szükséges"/>
+	<phrase n="lang_sip_response_code_408" t="Lekérés lejárt"/>
+	<phrase n="lang_sip_response_code_410" t="SIP válasz: 410 Gone"/>
+	<phrase n="lang_sip_response_code_413" t="Lekérés túl nagy"/>
+	<phrase n="lang_sip_response_code_414" t="Lekérési URI túl nagy"/>
+	<phrase n="lang_sip_response_code_415" t="Nem támogatott média típus"/>
+	<phrase n="lang_sip_response_code_416" t="Nem támogatott URI séma"/>
+	<phrase n="lang_sip_response_code_420" t="Hibás mellék"/>
+	<phrase n="lang_sip_response_code_421" t="Mellék szükséges"/>
+	<phrase n="lang_sip_response_code_422" t="SIP válasz: 422 Session interval too small"/>
+	<phrase n="lang_sip_response_code_423" t="SIP válasz: 423 Interval too brief"/>
+	<phrase n="lang_sip_response_code_480" t="Ideiglenesen nem elérhető"/>
+	<phrase n="lang_sip_response_code_481" t="SIP válasz: 481 Call/transaction does not exist"/>
+	<phrase n="lang_sip_response_code_482" t="Loop érzékelve"/>
+	<phrase n="lang_sip_response_code_483" t="Túl sok hop"/>
+	<phrase n="lang_sip_response_code_484" t="Hiányos cím"/>
+	<phrase n="lang_sip_response_code_485" t="SIP válasz: 485 Ambiguous"/>
+	<phrase n="lang_sip_response_code_486" t="Foglalt"/>
+	<phrase n="lang_sip_response_code_487" t="Lekérés megszakítva"/>
+	<phrase n="lang_sip_response_code_488" t="Nem elfogadható itt"/>
+	<phrase n="lang_sip_response_code_491" t="Lekérés függőben"/>
+	<phrase n="lang_sip_response_code_493" t="SIP válasz: 493 Undecipherable"/>
+	<phrase n="lang_sip_response_code_500" t="Szerver hiba"/>
+	<phrase n="lang_sip_response_code_501" t="Nincs implementálva"/>
+	<phrase n="lang_sip_response_code_502" t="Hibás gateway"/>
+	<phrase n="lang_sip_response_code_503" t="Szolgáltatás nem elérhető"/>
+	<phrase n="lang_sip_response_code_504" t="SIP válasz: 504 Server time-out"/>
+	<phrase n="lang_sip_response_code_505" t="A verzió nem támogatott"/>
+	<phrase n="lang_sip_response_code_513" t="Az üzenet túl hosszú"/>
+	<phrase n="lang_sip_response_code_599" t="Hálózati csatlakozási hiba"/>
+	<phrase n="lang_sip_response_code_600" t="Minden foglalt"/>
+	<phrase n="lang_sip_response_code_603" t="Elutasítva"/>
+	<phrase n="lang_sip_response_code_604" t="Nem létezik"/>
+	<phrase n="lang_sip_response_code_606" t="Nem elfogadható"/>
+	<phrase n="lang_sort_order" t="Rendezés"/>
+	<phrase n="lang_directory_display_order" t="Kijelző sorrend"/>
+	<phrase n="lang_display_order_first_name_last_name" t="Keresztnév, Vezetéknév"/>
+	<phrase n="lang_display_order_last_name_first_name" t="Vezetéknév, Keresztnév"/>
+	<phrase n="lang_visual_options" t="Megjelenítési opciók"/>
+	<phrase n="lang_call_screen_photo_size" t="Fénykép méret a hívás képernyőn"/>
+	<phrase n="lang_size_XS" t="XS"/>
+	<phrase n="lang_size_S" t="S"/>
+	<phrase n="lang_size_M" t="M"/>
+	<phrase n="lang_size_L" t="L"/>
+	<phrase n="lang_size_XL" t="XL"/>
+	<phrase n="lang_size_XXL" t="XXL"/>
+	<phrase n="lang_size_XXXL" t="XXXL"/>
+	<phrase n="lang_prefer_saved_over_received_photo" t="Elsődlegesen helyi fényképek"/>
+	<phrase n="lang_display_method" t="Szám kijelzési stílus"/>
+	<phrase n="lang_display_method_full_contact" t="Kapcsolatok"/>
+	<phrase n="lang_display_method_display_name" t="Név"/>
+	<phrase n="lang_display_method_display_number" t="Telefonszám"/>
+	<phrase n="lang_display_method_display_name_number" t="Név + Telefonszám"/>
+	<phrase n="lang_display_method_display_number_name" t="Telefonszám + Név"/>
+	<phrase n="lang_no_calls_for_transfer" t="Nincs átkapcsolható hívás"/>
+	<phrase n="lang_brand_variant_select_title" t="Változat választás"/>
+	<phrase n="lang_brand_variant_default" t="Alapértelmezett"/>
+	<phrase n="lang_brand_variant_updated_title" t="Változat frissítve"/>
+	<phrase n="lang_brand_variant_selected" t="Változat kiválasztva"/>
+	<phrase n="lang_system_reboot_now" t="A készülék most újraindul"/>
+	<phrase n="lang_select_identity" t="Azonosító kiválasztása"/>
+	<phrase n="lang_F_CALL_CENTER_STATUS" t="Call center státusz"/>
+	<phrase n="lang_F_ATTENDED_TRANSFER" t="Bejelentett"/>
+	<phrase n="lang_disposition_code_sent" t="elküldve"/>
+	<phrase n="lang_disposition_code_selection" t="Bontási kód választás"/>
+	<phrase n="lang_disposition_code_entry" t="Bontási kód megadása"/>
+	<phrase n="lang_F_DISP_CODE" t="Bkód"/>
+	<phrase n="lang_F_DISP_CODE_typeSio" t="Bontási kód"/>
+	<phrase n="lang_F_DISP_CODE_smartlabel" t="Bontási kód"/>
+	<phrase n="lang_disposition_code_display_text_list" t="Lista"/>
+	<phrase n="lang_parked_calls_settings" t="Parkoló hívások"/>
+	<phrase n="lang_call_parked_on" t="Parkoló hívás"/>
+	<phrase n="lang_no_parked_call" t="Nincs parkoló hívás."/>
+	<phrase n="lang_F_CALL_PARK_IDLE" t="Parkol"/>
+	<phrase n="lang_F_CALL_PARK_typeSio" t="Hívás parkoltatás"/>
+	<phrase n="lang_menu_any_smartlabel_key_short_press" t="SmartLabel rövid megnyomása"/>
+	<phrase n="lang_monitored_extension_is_ringing" t="Mellék csörög"/>
+	<phrase n="lang_disposition_code_not_sent" t="Kód nem került küldésre."/>
+	<phrase n="lang_disposition_code_identity_mismatch" t="Hibás azonosító."/>
+	<phrase n="lang_F_EXEC_ASSIST_CALL_PUSH" t="Hívásátadás"/>
+	<phrase n="lang_usb_mass_storage_plug" t="USB tároló kapcsolódva"/>
+	<phrase n="lang_usb_mass_storage_unplug" t="USD eltávolítva"/>
+	<phrase n="lang_information_menu_usb_info" t="USB Info"/>
+	<phrase n="lang_usb_mass_storage_title" t="USB adathordozó"/>
+	<phrase n="lang_F_USB_EJECT" t="USA leválasztása"/>
+	<phrase n="lang_usb_mass_storage_safe_to_remove" t="Az USB-meghajtó eltávolítható"/>
+	<phrase n="lang_F_USBREC_START" t="Rögzítés indítása"/>
+	<phrase n="lang_F_USBREC_START_typeSio" t="Rögzítés indítása"/>
+	<phrase n="lang_F_USBREC_START_smartlabel" t="USB Felvétel&lt;br&gt;Start"/>
+	<phrase n="lang_F_USBREC_STOP" t="Felvétel megállítása"/>
+	<phrase n="lang_F_USBREC_STOP_typeSio" t="Rögzítés leállítása"/>
+	<phrase n="lang_F_USBREC_STOP_smartlabel" t="Felvétel&lt;br&gt;megállítása"/>
+	<phrase n="lang_F_USBREC_PAUSE" t="Rögzítés szüneteltetés"/>
+	<phrase n="lang_F_USBREC_PAUSE_typeSio" t="Rögzítés szüneteltetése"/>
+	<phrase n="lang_F_USBREC_PAUSE_smartlabel" t="Rögzítés&lt;br&gt;szüneteltetés"/>
+	<phrase n="lang_F_USBREC_RESUME" t="Rögzítés folytatás"/>
+	<phrase n="lang_F_USBREC_RESUME_typeSio" t="Rögzítés folytatása"/>
+	<phrase n="lang_F_USBREC_RESUME_smartlabel" t="Rögzítés folytatás"/>
+	<phrase n="lang_F_PAUSE" t="Szüneteltetés"/>
+	<phrase n="lang_F_RESUME" t="Rögzítés folytatás"/>
+	<phrase n="lang_usb_recording_processing_wait" t="Kérjük, várja meg, amíg a felvétel befejeződik!"/>
+	<phrase n="lang_usb_recording_processing_completed" t="Felvétel elkészült"/>
+	<phrase n="lang_usb_recording_call_terminated" t="Hívásrögzítési megszakadt"/>
+	<phrase n="lang_usb_recording_terminated_drive_full" t="A felvétel befejeződött, az USB-meghajtó megtelt"/>
+	<phrase n="lang_usb_recording_terminated_max_file_size" t="A felvétel befejeződött, nincs több hely"/>
+	<phrase n="lang_usb_recording_no_usb_drive_detected" t="Nem található USB tároló"/>
+	<phrase n="lang_usb_recording_terminated_errno" t="A felvétel leállt, hibakód: "/>
+	<phrase n="lang_usb_playback_browse_recordings" t="Felvételek böngészése"/>
+	<phrase n="lang_usb_playback_browse_recordings_title" t="Felvételek"/>
+	<phrase n="lang_usb_playback_play_recording_title" t="Felvétel lejátszás"/>
+	<phrase n="lang_usb_playback_invalid_header_or_encrypted_file" t="Érvénytelen wav fejléc vagy titkosított fájl:"/>
+	<phrase n="lang_usb_playback_recording_information_title" t="Felvétel részletei"/>
+	<phrase n="lang_usb_playback_delete_recording_title" t="Felvétel törlése"/>
+	<phrase n="lang_label_rewind" t="Visszatekerés"/>
+	<phrase n="lang_label_fast_forward" t="Előre ugrás"/>
+	<phrase n="lang_text_size" t="Méret"/>
+	<phrase n="lang_usb_playback_no_recordings" t="Nincs felvétel"/>
+	<phrase n="lang_usb_recording_aborted_by_conference" t="Az USB-felvétel konferencia miatt megszakadt"/>
+	<phrase n="lang_usb_recording_cannot_record_conference" t="USBre nem lehet konferencát rögzítni"/>
+	<phrase n="lang_date_and_time" t="Dátum és idő"/>
+	<phrase n="lang_label_context_key_page_left" t="Baloldal"/>
+	<phrase n="lang_label_context_key_page_right" t="Jobboldal"/>
+	<phrase n="lang_expansion_module_text_alignment" t="Szöveg igazítása"/>
+	<phrase n="lang_expansion_module_color_font_sizes_XXL_XS" t="Szöveg XXL, alszöveg XS"/>
+	<phrase n="lang_expansion_module_color_font_sizes_XL_XS" t="Szöveg XL, alszöveg XS"/>
+	<phrase n="lang_expansion_module_color_font_sizes_XL_S" t="Szöveg XL, alszöveg S"/>
+	<phrase n="lang_expansion_module_color_font_sizes_L_XS" t="Szöveg L, alszöveg XS"/>
+	<phrase n="lang_expansion_module_color_font_sizes_L_S" t="Szöveg L, alszöveg S"/>
+	<phrase n="lang_expansion_module_color_font_sizes_L_M" t="Szöveg L, alszöveg M"/>
+	<phrase n="lang_expansion_module_color_font_sizes_M_XS" t="Szöveg M, alszöveg XS"/>
+	<phrase n="lang_expansion_module_color_font_sizes_M_S" t="Szöveg M, alszöveg S"/>
+	<phrase n="lang_expansion_module_color_font_sizes_M_M" t="Szöveg M, alszöveg M"/>
+	<phrase n="lang_expansion_module_color_font_sizes_S_XS" t="Szöveg S, alszöveg S"/>
+	<phrase n="lang_expansion_module_color_font_sizes_S_S" t="Szöveg S, alszöveg S"/>
+	<phrase n="lang_expansion_module_color_font_sizes_XS_XS" t="Szöveg XS, alszöveg XS"/>
+	<phrase n="lang_edit_mode_upper_case" t="ABC"/>
+	<phrase n="lang_edit_mode_lower_case" t="abc"/>
+	<phrase n="lang_edit_mode_numbers" t="123"/>
+	<phrase n="lang_F_IDLE_CONTEXT_PAGE_LEFT" t="Bal"/>
+	<phrase n="lang_F_IDLE_CONTEXT_PAGE_LEFT_typeSio" t="Bal oldal"/>
+	<phrase n="lang_F_IDLE_CONTEXT_PAGE_RIGHT" t="Jobb"/>
+	<phrase n="lang_F_IDLE_CONTEXT_PAGE_RIGHT_typeSio" t="Jobb oldal"/>
+	<phrase n="lang_F_NONE" t="Üres"/>
+	<phrase n="lang_branding_name" t="Egyedi márka"/>
+	<phrase n="lang_hardware_version" t="Hardver verzió:"/>
+	<phrase n="lang_branding_version" t="Márkaverzió:"/>
+	<phrase n="lang_NickName" t="Becenév"/>
+	<phrase n="lang_FirstShortCode" t="Első kód"/>
+	<phrase n="lang_LastShortCode" t="Utolsó kód"/>
+	<phrase n="lang_FirstExternalDirectoryNumber" t="Első szám"/>
+	<phrase n="lang_LastExternalDirectoryNumber" t="Utolsó szám"/>
+	<phrase n="lang_DialingPlanCode" t="Terv"/>
+	<phrase n="lang_DialingPlanCodeDetail" t="Tárcsázási terv kód"/>
+	<phrase n="lang_FirstShortCodeDetail" t="Első rövid kód"/>
+	<phrase n="lang_FirstExternalDirectoryDetail" t="Első külső telefonkönyv"/>
+	<phrase n="lang_LastExternalDirectoryDetail" t="Utolsó külső telefonkönyv"/>
+	<phrase n="lang_Department" t="Részleg"/>
+	<phrase n="lang_shortcodes" t="Rövid kódok"/>
+	<phrase n="lang_emergency_call_number_is_misconfigured" t="A segélyhívó szám nincs megfelelően beállítva"/>
+	<phrase n="lang_tb_alias" t="Álnév"/>
+	<phrase n="lang_web_user_credentials_not_set" t="Nincs elérés beállítva a web felhasználó számára"/>
+	<phrase n="lang_web_admin_credentials_not_set" t="Nincs elérés beállítva a web rendszergazda számára"/>
+	<phrase n="lang_not_registered" t=" nincs regisztrálva"/>
+	<phrase n="lang_fake_number" t="Hamis szám"/>
+	<phrase n="lang_BLF_DND_on" t="Ne zavarj"/>
+	<phrase n="lang_BLF_On_a_call" t="Hívásban"/>
+	<phrase n="lang_BLF_Idle" t="Szabad"/>
+	<phrase n="lang_MediaStack_restarting_All_lines_will_be_closed" t="MediaStack újraindul. Minden vonal lezárásra kerül."/>
+	<phrase n="lang_Firmware_update_starting" t="Firmware frissítés: kezdés"/>
+	<phrase n="lang_Firmware_update_sent_install_request" t="Firmware frissítés: file szerverre várakozás"/>
+	<phrase n="lang_Firmware_update_download" t="Firmware frissítés: letöltés"/>
+	<phrase n="lang_Firmware_update_transfer_to_swupdate" t="Firmware frissítés: feldolgozás"/>
+	<phrase n="lang_Firmware_update_verification_and_install" t="Firmware frissítés: telepítés"/>
+	<phrase n="lang_File_server_response" t="Szerver válasz: "/>
+	<phrase n="lang_File_server_unreachable" t="File szerver nem elérhető."/>
+	<phrase n="lang_File_not_found" t="File nem található."/>
+	<phrase n="lang_Firmware_invalid" t="Helytelen firmware."/>
+	<phrase n="lang_firmware_update" t="Firmware frissítés"/>
+	<phrase n="lang_menu_ringer_once" t="Csak egyszer"/>
+	<phrase n="lang_voicemail_no_access_code" t="A szám vagy funkció elérési kódja nincs rögzítve"/>
+	<phrase n="lang_F_WIFI" t="Wi-Fi"/>
+	<phrase n="lang_parties" t="felek"/>
+	<phrase n="lang_fwd_by" t="Átirányította:"/>
+	<phrase n="lang_firmware_update_completed_pending_reboot" t="A telefon újraindul, hogy befejezze a firmware frissítését. Újraindítás %d mp múlva..."/>
+	<phrase n="lang_F_CLOSE" t="Bezár"/>
+	<phrase n="lang_ip_assigment" t="IP összerendelés"/>
+	<phrase n="lang_disable" t="Letiltva"/>
+	<phrase n="lang_enable" t="Engedélyezve"/>
+	<phrase n="lang_reregister" t="Újra-regisztrálás"/>
+	<phrase n="lang_phonemanager" t="Phone Manager (webfelület)"/>
+	<phrase n="lang_locale" t="Dátum és időpont formátum"/>
+	<phrase n="lang_webserver_admin_name" t="Rendszergazda neve"/>
+	<phrase n="lang_webserver_admin_password" t="Rendszergazda jelszava"/>
+	<phrase n="lang_webserver_user_name" t="Felhasználói név"/>
+	<phrase n="lang_webserver_user_password" t="Felhasználó jelszava"/>
+	<phrase n="lang_startup_wizard" t="Indulás varázsló"/>
+	<phrase n="lang_no_voicemail" t="Nincs hangposta"/>
+	<phrase n="lang_new_voicemail" t="Új hangposta"/>
+	<phrase n="lang_old_voicemail" t="Régi hangposta"/>
+	<phrase n="lang_phonemanager_credentials" t="Phone Manager (web felület) belépési adatok"/>
+	<phrase n="lang_static_ip" t="Statikus IP"/>
+	<phrase n="lang_dhcp_or_static_ip" t="DHCP vagy statikus IP"/>
+	<phrase n="lang_locale_ar_AE" t="Arab (Egyesült Arab Emírségek)"/>
+	<phrase n="lang_locale_az_AZ" t="Azeri (Azerbaijan)"/>
+	<phrase n="lang_locale_bs_BA" t="Bosnyák (Bosznia)"/>
+	<phrase n="lang_locale_ca_ES" t="Katalán (Spanyol)"/>
+	<phrase n="lang_locale_cs_CZ" t="Cseh (Cseh Köztársaság)"/>
+	<phrase n="lang_locale_da_DK" t="Dán (Dánia)"/>
+	<phrase n="lang_locale_de_DE" t="Német (Németország)"/>
+	<phrase n="lang_locale_el_GR" t="Görög (Görögország)"/>
+	<phrase n="lang_locale_en_DE" t="Angol (Németország)"/>
+	<phrase n="lang_locale_en_GB" t="Angol (UK)"/>
+	<phrase n="lang_locale_en_US" t="Angol (US)"/>
+	<phrase n="lang_locale_es_ES" t="Spanyol (Spanyolország)"/>
+	<phrase n="lang_locale_et_EE" t="Észt (Észtország)"/>
+	<phrase n="lang_locale_eu_ES" t="Baszk (Spanyolország)"/>
+	<phrase n="lang_locale_fi_FI" t="Finn (Finnország)"/>
+	<phrase n="lang_locale_fr_FR" t="Francia (Franciaország)"/>
+	<phrase n="lang_locale_he_IL" t="Héber (Izrael)"/>
+	<phrase n="lang_locale_hr_HR" t="Horvát (Horvátország)"/>
+	<phrase n="lang_locale_hu_HU" t="Magyar (Magyarország)"/>
+	<phrase n="lang_locale_it_IT" t="Olasz (Olszaország)"/>
+	<phrase n="lang_locale_ja_JP" t="Japán (Japán)"/>
+	<phrase n="lang_locale_kk_KZ" t="Kazak (Kazahsztán)"/>
+	<phrase n="lang_locale_lt_LT" t="Litván (Litvánia)"/>
+	<phrase n="lang_locale_lv_LV" t="Lett (Lettország)"/>
+	<phrase n="lang_locale_nl_NL" t="Holland (Hollandia)"/>
+	<phrase n="lang_locale_nb_NO" t="Norvég (Norvégia)"/>
+	<phrase n="lang_locale_pl_PL" t="Lengyel (Lengyelország)"/>
+	<phrase n="lang_locale_pt_PT" t="Portugál (Portugália)"/>
+	<phrase n="lang_locale_ro_RO" t="Román (Románia)"/>
+	<phrase n="lang_locale_ru_RU" t="Orosz (Oroszország)"/>
+	<phrase n="lang_locale_sl_SI" t="Szlovén (Szlovénia)"/>
+	<phrase n="lang_locale_sv_SE" t="Svéd (Svédország)"/>
+	<phrase n="lang_locale_tr_TR" t="Török (Törökország)"/>
+	<phrase n="lang_locale_uk_UA" t="Ukrán (Ukrajna)"/>
+	<phrase n="lang_locale_zh_CN" t="Egyszerűsített kínai (Kína)"/>
+	<phrase n="lang_locale_zh_TW" t="Tradicionális kínai (Tajvan)"/>
+	<phrase n="lang_no_error" t="nincs hiba"/>
+	<phrase n="lang_unknown_command" t="ismeretlen parancs"/>
+	<phrase n="lang_invalid_missing_params" t="hibás vagy hiányzó paraméter(ek)"/>
+	<phrase n="lang_not_implemented" t="nincs implementálva"/>
+	<phrase n="lang_failed" t="sikertelen"/>
+	<phrase n="lang_refer_to_logs" t="A részletekért nézze meg a rendszernaplót"/>
+	<phrase n="lang_software_update_confirmation" t="A szoftverfrissítés néhány percet vesz igénybe, majd újraindítja a telefont. A frissítés csak akkor kezdődik, ha nincs éppen hívás. Ne kapcsolja ki a telefont a frissítés alatt! Kezdődhet a frissítés?"/>
+	<phrase n="lang_firmware_field_is_empty" t="A firmware mező üres."/>
+	<phrase n="lang_software_update_in_progress" t="Szoftverfrissítés folyamatban. Kérem várjon, amíg a telefon újraindul! Az újraindítást követően frissítse a böngészőjét, hogy ismét hozzáférjen a webes felülethez (WUI)!"/>
+	<phrase n="lang_edit_mode" t="Szerkesztési mód"/>
+	<phrase n="lang_vlan_pc_qos" t="VLAN prioritás a LAN porton (0-7)"/>
+	<phrase n="lang_bluetooth_devices" t="Eszközök"/>
+	<phrase n="lang_bluetooth_not_ready" t="A Bluetooth nem áll készen"/>
+	<phrase n="lang_F_ACCEPT_CALL_ext_ui" t="Hívásfogadás"/>
+	<phrase n="lang_F_DEFLECT_ext_ui" t="Továbbítás"/>
+	<phrase n="lang_F_DENY_ext_ui" t="Elutasítás"/>
+	<phrase n="lang_F_END_ext_ui" t="Hívás befejezése"/>
+	<phrase n="lang_F_CALL_PARK_DIAL" t="Hívásparkoló tárcsázása"/>
+	<phrase n="lang_F_NEW_CALL" t="Új hívás"/>
+	<phrase n="lang_device_management_service" t="Device Management Service"/>
+	<phrase n="lang_manage_dms" t="Manage DMS"/>
+	<phrase n="lang_3_days" t="3 Days"/>
+	<phrase n="lang_dms_enabled" t="DMS is enabled until"/>
+	<phrase n="lang_dms" t="DMS"/>
+</phrases>

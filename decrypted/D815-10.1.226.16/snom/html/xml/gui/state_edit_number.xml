@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<IPPhoneBatch xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../schemas/minibrowser.xsd">
+  <IPPhoneMenu track="yes" has_phone_state="on" document_id="state_edit_number" icon_xoffset="$(math_eval:$(show_quick_lookup)*$(math_eval:$(gui_display_xsize)/20-5))" text_xoffset="$(math_eval:$(show_quick_lookup)*$(math_eval:$(gui_display_xsize)/20-7))" line_height="$(math_eval:$(gui_display_ysize)/5)" speedselect="off" state="others_except_mb" hide_results="!$(show_quick_lookup)" selectable="$(show_quick_lookup)">
+    <If condition="$(bool_eval:!$(show_feature:FEATURE_PUI_STYLE_SIO) &amp; !$(empty:$(call_waiting_info)) &amp; $(empty:$(var:ignore_call_waiting_info)))">
+      <Title>$(call_waiting_info)</Title>
+    </If>
+    <ElIf condition="$(bool_eval:$(show_feature:FEATURE_PUI_STYLE_SIO) | !$(show_quick_lookup))">
+      <Title>$(lang:enter_number)</Title>
+    </ElIf>
+    <Else>
+      <Title>$(lang:guess_results): $(num_quick_lookup_results) </Title>
+    </Else>
+    <InputField formatting="$(number_format)" custom_line_height="$(math_eval:$(gui_display_ysize)/4)" custom_font_size="XXL">
+      <If condition="$(show_quick_lookup)">
+        <If condition="$(bool_eval:$(show_feature:FEATURE_PUI_STYLE_SIO))">
+          <IconType>$(icon_type_enum:kIconTypeDial)</IconType>
+          <ExtraText>$(lang:guess_results)</ExtraText>
+          <ExtraText2>$(num_quick_lookup_results)</ExtraText2>
+        </If>
+        <Else>
+          <Prompt>&#60213;</Prompt> <!-- CharFkeyDial -->
+        </Else>
+      </If>
+      <DefaultValue>$(current_number)</DefaultValue>
+      <UseStateKeyHandler>1</UseStateKeyHandler>
+      <UseDialingEditMode>1</UseDialingEditMode>
+      <Pinned>1</Pinned>
+      <If condition="!$(empty:$(enter_number_fkey_list:$(var:ignore_call_waiting_info)))">
+        <Repeat values="$(enter_number_fkey_list:$(var:ignore_call_waiting_info))" token="/_NAME_/_FKEY_/">
+          <SoftKeyItem>
+            <Name>_NAME_</Name>
+            <Label>_FKEY_</Label>
+            <SoftKey>_FKEY_</SoftKey>
+          </SoftKeyItem>
+        </Repeat>
+      </If>
+      <If condition="$(bool_eval:$(empty:$(var:ignore_call_waiting_info)) &amp; !$(empty:$(call_waiting_info)))">
+        <SoftKeyItem>
+          <Name>CANCEL</Name>
+          <Url consume_key_event="1">phone://mb_nop_ignore_prev_frags#var:ignore_call_waiting_info=F_DEFLECT,F_ACCEPT_CALL,F_DENY,have_incoming_call</Url>
+        </SoftKeyItem>
+      </If>
+      <Else>
+        <SoftKeyItem>
+          <Name>CANCEL</Name>
+          <Url>phone://mb_nop</Url>
+        </SoftKeyItem>
+      </Else>
+    </InputField>
+    <If condition="$(bool_eval:$(show_feature:FEATURE_PUI_STYLE_SIO) &amp; !$(empty:$(call_waiting_info)) &amp; $(empty:$(var:ignore_call_waiting_info)))">
+      <InfoBox>
+        <Line>
+          <Icon>kIconTypeRinging</Icon>
+          <Text>$(call_waiting_info)</Text>
+        </Line>
+      </InfoBox>
+    </If>
+    <If condition="$(show_quick_lookup)">
+      <Repeat value_key="$(quick_lookup_result:$(number_format))" token="|__NAME__|__NUMBER__|__URI__|__OUTGOING_ID__|__IMAGE__|">
+         <MenuItem>
+           <If condition="$(show_feature:FEATURE_PUI_STYLE_SIO)">
+             <name>__NUMBER__</name>
+             <SubText>__NAME__</SubText>
+             <IconType>$(icon_type_enum:kIconTypeContactStateUnknown)</IconType>
+             <If condition="$(is_set:__IMAGE__)">
+               <IconUrl>__IMAGE__</IconUrl>
+             </If>
+           </If>
+           <Else>
+             <If condition="$(is_set:__NAME__)">
+               <name>__NUMBER__ - __NAME__</name>
+             </If>
+             <Else>
+               <name>__NUMBER__</name>
+             </Else>
+             <Icon>&#60164;</Icon> <!-- CharBuddyOnline -->
+           </Else>
+           <Url>phone://mb_exit#action_ifc:CallInterface=make_call,remote=__URI__,identity=__OUTGOING_ID__</Url>
+           <SoftKeyItem>
+             <Name>OFFHOOK</Name>
+             <SoftKey>Enter</SoftKey>
+           </SoftKeyItem>
+           <SoftKeyItem>
+             <Name>RIGHT</Name>
+             <Url>phone://mb_nop_ignore_prev_frags#action_ifc:pui=update_current_number,num=__NUMBER__&amp;sel=@line=0</Url>
+           </SoftKeyItem>
+           <If condition="$(bool_eval:$(empty:$(var:ignore_call_waiting_info)) &amp; !$(empty:$(call_waiting_info)))">
+             <SoftKeyItem>
+               <Name>CANCEL</Name>
+               <Url consume_key_event="1">phone://mb_nop_ignore_prev_frags#var:ignore_call_waiting_info=F_DEFLECT,F_ACCEPT_CALL,F_DENY,have_incoming_call</Url>
+             </SoftKeyItem>
+           </If>
+           <Else>
+             <SoftKeyItem>
+               <!-- refresh only, state will handle closing line, minibrowser and exiting the state -->
+               <Name>CANCEL</Name>
+               <Url>phone://mb_nop</Url>
+             </SoftKeyItem>
+           </Else>
+         </MenuItem>
+      </Repeat>
+    </If>
+  </IPPhoneMenu>
+</IPPhoneBatch>

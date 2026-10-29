@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<IPPhoneBatch xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../schemas/minibrowser.xsd">
+  <IPPhoneMenu icon_xoffset="$(math_eval:$(gui_display_xsize)/20-5)" text_xoffset="$(math_eval:$(gui_display_xsize)/20-7)" line_height="48" id="vcard" has_scrollbar="true" speedselect="off" state="others_except_mb" document_id="vcard_menu">
+    <Fetch mil="120000">phone://mb_exit</Fetch>
+    <Title>$(var_ifc:$(var:presence_module_id)::name)</Title>
+    <If condition="$(bool_eval:$(var:support_photo) &amp; $(condition:$(display_type)==color))">
+      <MenuItem name="$(var_ifc:$(var:presence_module_id)::name)">
+        <If condition="$(show_feature:FEATURE_PUI_STYLE_SIO)">
+          <Icon>$(presence_icon:$(var_ifc:$(var:presence_module_id)::state_enum))</Icon>
+          <IconType>$(icon_type_enum:kIconTypeNone)</IconType>
+          <If condition="!$(empty:$(var_ifc:$(var:presence_module_id)::note))">
+            <SubText>$(presence_state_text:$(var_ifc:$(var:presence_module_id)::state_enum)) - $(var_ifc:$(var:presence_module_id)::note)</SubText>
+          </If>
+          <Else>
+            <SubText>$(presence_state_text:$(var_ifc:$(var:presence_module_id)::state_enum))</SubText>
+          </Else>
+          <IconUrl>$(var_ifc:$(var:presence_module_id)::photo_url)</IconUrl>
+        </If>
+        <Else>
+          <Icon>$(presence_icon:$(var_ifc:$(var:presence_module_id)::state_enum))</Icon>
+          <Image default="file:///bmp/colored/snom_photo_unknown.png">$(var_ifc:$(var:presence_module_id)::photo_url)</Image>
+        </Else>
+      </MenuItem>
+    </If>
+    <Else>
+      <MenuItem name="$(lang:linestate_label): $(presence_state_text:$(var_ifc:$(var:presence_module_id)::state_enum))">
+        <Icon>$(presence_icon:$(var_ifc:$(var:presence_module_id)::state_enum))</Icon>
+      </MenuItem>
+    </Else>
+    <If condition="!$(show_feature:FEATURE_PUI_STYLE_SIO)">
+      <If condition="!$(empty:$(var_ifc:$(var:presence_module_id)::note))">
+        <MenuItem name="$(var_ifc:$(var:presence_module_id)::note)">
+          <Icon>$(contactfreetext_icon)</Icon>
+        </MenuItem>
+      </If>
+    </If>
+    <Repeat values="$(var_ifc:$(var:presence_module_id)::numbers)" token="|__DIAL_NR__|__VALUE__|__ICON__|__IMAGE__|__LABEL__|">
+      <!--Preselect the first contact number so that user does not need to navigate as much to choose number for dialing. -->
+      <MenuItem sel="$(condition:__IDX__==0)">
+        <If condition="$(is_set:__ICON__)">
+          <If condition="$(show_feature:FEATURE_PUI_STYLE_SIO)">
+            <If condition="$(condition:__LABEL__==Mobile)">
+              <Name>$(lang:Mobile)</Name>
+            </If>
+            <ElIf condition="$(condition:__LABEL__==Home)">
+              <Name>$(lang:Home)</Name>
+            </ElIf>
+            <ElIf condition="$(condition:__LABEL__==Office)">
+              <Name>$(lang:Office)</Name>
+            </ElIf>
+            <Elif condition="$(condition:__LABEL__==Extension)">
+              <Name>$(lang:enum_disp_func_key_destination)</Name>
+            </Elif>
+            <ElIf condition="$(condition:__LABEL__==Unqualified)">
+              <Name>$(lang:Unqualified)</Name>
+            </ElIf>
+            <Else>
+              <Name>__LABEL__</Name>
+            </Else>
+            <SubText>__VALUE__</SubText>
+            <ExtraIconType>__ICON__</ExtraIconType>
+          </If>
+          <Else>
+            <Name>__VALUE__</Name>
+            <Icon>__ICON__</Icon>
+          </Else>
+        </If>
+        <Elif condition="$(is_set:__IMAGE__)">
+          <Name>__VALUE__</Name>
+          <Image>__IMAGE__</Image>
+        </Elif>
+        <Else>
+          <Name>__VALUE__</Name>
+          <Icon>$(lang:__LABEL__):</Icon>
+        </Else>
+        <Url>phone://mb_exit#contact_transfer_or_dial=-1;"__DIAL_NR__";ENTER</Url>
+        <SoftKeyItem>
+          <Name>TRANSFER</Name>
+          <Url>phone://mb_exit#contact_transfer_or_dial=-1;"__DIAL_NR__";TRANSFER</Url>
+        </SoftKeyItem>
+        <SoftKeyItem>
+          <Name>F_TRANSFER</Name>
+          <Url>phone://mb_exit#contact_transfer_or_dial=-1;"__DIAL_NR__";F_TRANSFER</Url>
+        </SoftKeyItem>
+        <SoftKeyItem>
+          <Name>F_BLIND_TRANSFER</Name>
+          <Url>phone://mb_exit#contact_transfer_or_dial=-1;"__DIAL_NR__";F_BLIND_TRANSFER</Url>
+        </SoftKeyItem>
+        <SoftKeyItem>
+          <Name>F_DIAL</Name>
+          <Url>phone://mb_exit#contact_transfer_or_dial=-1;"__DIAL_NR__";F_DIAL</Url>
+        </SoftKeyItem>
+        <SoftKeyItem>
+          <Name>OFFHOOK</Name>
+          <Url>phone://mb_exit#contact_transfer_or_dial=-1;"__DIAL_NR__";OFFHOOK</Url>
+        </SoftKeyItem>
+        <SoftKeyItem>
+          <Name>HEADSET_OFFHOOK</Name>
+          <Url>phone://mb_exit#contact_transfer_or_dial=-1;"__DIAL_NR__";HEADSET_OFFHOOK</Url>
+        </SoftKeyItem>
+      </MenuItem>
+    </Repeat>
+  </IPPhoneMenu>
+</IPPhoneBatch>

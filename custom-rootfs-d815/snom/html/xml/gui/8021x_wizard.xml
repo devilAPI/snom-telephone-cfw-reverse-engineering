@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<IPPhoneBatch xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="../schemas/minibrowser.xsd">
+  <IPPhoneInput id="eap_username">
+    <URL>file:///xml/gui/8021x_wizard.xml#sub=*[@id="eap_password"]&amp;setcache:ieee8021x_eap_md5_username=__USERNAME__</URL>
+    <CancelUrl>phone://mb_nop#go_back</CancelUrl>
+    <InputItem>
+      <DisplayName>$(lang:username)</DisplayName>
+      <InputToken>__USERNAME__</InputToken>
+      <InputFlags>a</InputFlags>
+      <DefaultValue>$(set:ieee8021x_eap_md5_username)</DefaultValue>
+    </InputItem>
+  </IPPhoneInput>
+  <IPPhoneInput id="eap_password">
+    <Title>$(lang:user_pass)</Title>
+    <If condition="$(arch_series)==snomD3X5">
+      <URL>file:///xml/gui/8021x_wizard.xml#sub=*[@id="eap_reboot"]&amp;setcache:ieee8021x_eap_md5_password=__PASSWORD__&amp;var:xml_yes_fkey=F2&amp;var:xml_no_fkey=F1&amp;var:xml_abort_fkey=F3</URL>
+    </If>
+    <Else>
+      <URL>file:///xml/gui/8021x_wizard.xml#sub=*[@id="eap_reboot"]&amp;setcache:ieee8021x_eap_md5_password=__PASSWORD__&amp;var:xml_yes_fkey=F1&amp;var:xml_no_fkey=F2&amp;var:xml_abort_fkey=F3</URL>
+    </Else>
+    <CancelUrl>phone://mb_nop#go_back</CancelUrl>
+    <InputItem>
+      <DisplayName>$(lang:user_pass)</DisplayName>
+      <InputToken>__PASSWORD__</InputToken>
+      <InputFlags>p</InputFlags>
+      <DefaultValue></DefaultValue>
+    </InputItem>
+  </IPPhoneInput>
+  <IPPhoneText id="eap_reboot">
+    <Title>$(lang:confirm_reboot)</Title>
+    <Text>$(lang:reboot_to_apply_new_settings)</Text>
+    <SoftKeyItem>
+      <Name>ENTER</Name>
+      <URL>phone://mb_exit#flush&amp;reboot</URL>
+    </SoftKeyItem>
+    <SoftKeyItem>
+      <If condition="!$(empty:$(var:xml_yes_fkey))">
+        <Name>$(var:xml_yes_fkey)</Name>
+      <Else>
+        <Name>F1</Name>
+      </Else>
+      </If>
+      <Label>F_OK</Label>
+      <URL>phone://mb_exit#flush&amp;reboot</URL>
+    </SoftKeyItem>
+    <SoftKeyItem>
+      <Name>CANCEL</Name>
+      <URL>phone://mb_nop#flush&amp;go_back</URL>
+    </SoftKeyItem>
+    <SoftKeyItem>
+      <If condition="!$(empty:$(var:xml_no_fkey))">
+        <Name>$(var:xml_no_fkey)</Name>
+      <Else>
+        <Name>F2</Name>
+      </Else>
+      </If>
+      <Label>F_CANCEL</Label>
+      <URL>phone://mb_nop#flush&amp;go_back</URL>
+    </SoftKeyItem>
+    <SoftKeyItem>
+      <If condition="!$(empty:$(var:xml_abort_fkey))">
+        <Name>$(var:xml_abort_fkey)</Name>
+      <Else>
+        <Name>F3</Name>
+      </Else>
+      </If>
+      <Label>F_ABORT</Label>
+      <URL>phone://mb_nop#go_back</URL>
+    </SoftKeyItem>
+    <SoftKeyItem>
+      <Name>ABORT</Name>
+      <URL>phone://mb_nop#go_back</URL>
+    </SoftKeyItem>
+  </IPPhoneText>
+</IPPhoneBatch>

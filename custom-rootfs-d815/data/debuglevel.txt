@@ -1,0 +1,7 @@
+# text set <module name> <debug level> <debug print on(1), off(0)>
+# Available module names - 0-> any module , 1-> RTP module
+# Available debig levels - 0 - Alert, 1 - Critical, 16 - Error, 18 - Info, 32- Debug  
+text set     0                     1 0
+text set 1 1    0
+#EOF DONT DELETE THIS LINE
+

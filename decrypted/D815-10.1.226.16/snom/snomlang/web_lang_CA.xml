@@ -1,0 +1,1447 @@
+<?xml version="1.0" encoding="utf-8"?>
+<w_phrases>
+	<language t="Català"/>
+	<w_phrase n="wlang_iso_code" t="CA"/>
+	<w_phrase n="wlang_web_language_name" t="Català"/>
+	<w_phrase n="wlang_index_infotext" t="Aquesta pàgina web facilita la configuració del vostre telèfon i us permet l'accés a les característiques avançades. Per marcar un número, només cal que introduïu el número al camp inferior. Podeu introduir un número de telèfon (p.ex. 0114930398330) o URI com info@example.com."/>
+	<w_phrase n="wlang_index_dialnumber" t="Introduïu un número"/>
+	<w_phrase n="wlang_index_dialnumberbutton" t="Marca"/>
+	<w_phrase n="wlang_index_hangupbutton" t="Penja"/>
+	<w_phrase n="wlang_index_outgoingident" t="Identitat de sortida"/>
+	<w_phrase n="wlang_index_setbutton" t="Configura"/>
+	<w_phrase n="wlang_index_dialednumbers" t="Números Trucats"/>
+	<w_phrase n="wlang_index_dialed" t="Trucats"/>
+	<w_phrase n="wlang_index_missedcalls" t="Trucades Perdudes"/>
+	<w_phrase n="wlang_index_missed" t="Perduda"/>
+	<w_phrase n="wlang_index_rejectedcalls" t="Trucades rebutjades"/>
+	<w_phrase n="wlang_index_rejected" t="Rebutjades"/>
+	<w_phrase n="wlang_index_receivedcalls" t="Trucades Rebudes"/>
+	<w_phrase n="wlang_index_received" t="Rebuda"/>
+	<w_phrase n="wlang_index_date" t="Data"/>
+	<w_phrase n="wlang_index_number" t="Número"/>
+	<w_phrase n="wlang_leftnav_operation" t="Operació"/>
+	<w_phrase n="wlang_leftnav_home" t="Principal"/>
+	<w_phrase n="wlang_leftnav_addressbook" t="Agenda"/>
+	<w_phrase n="wlang_leftnav_setup" t="Configuració"/>
+	<w_phrase n="wlang_leftnav_preferences" t="Preferències"/>
+	<w_phrase n="wlang_leftnav_speeddial" t="Trucada ràpida"/>
+	<w_phrase n="wlang_leftnav_functionkeys" t="Tecles de Funcions"/>
+	<w_phrase n="wlang_leftnav_lineone" t="Identitat 1"/>
+	<w_phrase n="wlang_leftnav_linetwo" t="Identitat 2"/>
+	<w_phrase n="wlang_leftnav_linethree" t="Identitat 3"/>
+	<w_phrase n="wlang_leftnav_linefour" t="Identitat 4"/>
+	<w_phrase n="wlang_leftnav_linefive" t="Identitat 5"/>
+	<w_phrase n="wlang_leftnav_linesix" t="Identitat 6"/>
+	<w_phrase n="wlang_leftnav_lineseven" t="Identitat 7"/>
+	<w_phrase n="wlang_leftnav_lineeight" t="Identitat 8"/>
+	<w_phrase n="wlang_leftnav_linenine" t="Identitat 9"/>
+	<w_phrase n="wlang_leftnav_lineten" t="Identitat 10"/>
+	<w_phrase n="wlang_leftnav_lineeleven" t="Identitat 11"/>
+	<w_phrase n="wlang_leftnav_linetwelve" t="Identitat 12"/>
+	<w_phrase n="wlang_leftnav_linethirteen" t="Identitat 13"/>
+	<w_phrase n="wlang_leftnav_linefourteen" t="Identitat 14"/>
+	<w_phrase n="wlang_leftnav_linefifteen" t="Identitat 15"/>
+	<w_phrase n="wlang_leftnav_linesixteen" t="Identitat 16"/>
+	<w_phrase n="wlang_leftnav_advanced" t="Avançat"/>
+	<w_phrase n="wlang_leftnav_softupdate" t="Actualització de Firmware"/>
+	<w_phrase n="wlang_leftnav_status" t="Estat"/>
+	<w_phrase n="wlang_leftnav_sysinfo" t="Informació del Sistema"/>
+	<w_phrase n="wlang_leftnav_siptrace" t="Traça SIP"/>
+	<w_phrase n="wlang_leftnav_httptrace" t="Traça HTTP"/>
+	<w_phrase n="wlang_leftnav_upnptrace" t="Traça UPnP"/>
+	<w_phrase n="wlang_leftnav_dnscache" t="Memòria cau de DNS"/>
+	<w_phrase n="wlang_leftnav_pcaptrace" t="Traça PCAP"/>
+	<w_phrase n="wlang_leftnav_log" t="Registre"/>
+	<w_phrase n="wlang_leftnav_memory" t="Memòria"/>
+	<w_phrase n="wlang_leftnav_settings" t="Configuració"/>
+	<w_phrase n="wlang_leftnav_manual" t="Manual"/>
+	<w_phrase n="wlang_adr_name" t="Nom"/>
+	<w_phrase n="wlang_adr_number" t="Número"/>
+	<w_phrase n="wlang_adr_contacttype" t="Tipus de Contacte"/>
+	<w_phrase n="wlang_adr_edit" t="Edita"/>
+	<w_phrase n="wlang_adr_delete" t="Suprimeix"/>
+	<w_phrase n="wlang_adr_addeditentry" t="Afegeix o Edita Registre"/>
+	<w_phrase n="wlang_adr_ctnone" t="Cap"/>
+	<w_phrase n="wlang_adr_ctfriends" t="Amics"/>
+	<w_phrase n="wlang_adr_ctfamily" t="Família"/>
+	<w_phrase n="wlang_adr_ctcolleagues" t="Col·legues"/>
+	<w_phrase n="wlang_adr_ctvip" t="VIP"/>
+	<w_phrase n="wlang_adr_ctdeny" t="Llista Negra"/>
+	<w_phrase n="wlang_adr_ctserver" t="Servidor"/>
+	<w_phrase n="wlang_adr_searchbutton" t="Cerca"/>
+	<w_phrase n="wlang_adr_addeditbutton" t="Afegeix"/>
+	<w_phrase n="wlang_adr_importadrbook" t="Importa Agenda (CSV)"/>
+	<w_phrase n="wlang_adr_filename" t="Fitxer"/>
+	<w_phrase n="wlang_adr_loadbutton" t="Carrega"/>
+	<w_phrase n="wlang_prefs_generalinfo" t="Informació General"/>
+	<w_phrase n="wlang_prefs_language" t="Idioma"/>
+	<w_phrase n="wlang_prefs_web_language" t="Idioma de la Interfície Web"/>
+	<w_phrase n="wlang_prefs_displaystyle" t="Estil de Número mostrat"/>
+	<w_phrase n="wlang_prefs_dsfullcontact" t="Dades de Contacte"/>
+	<w_phrase n="wlang_prefs_dsname" t="Nom"/>
+	<w_phrase n="wlang_prefs_dsnumber" t="Número"/>
+	<w_phrase n="wlang_prefs_dsnamenumber" t="Nom + Número"/>
+	<w_phrase n="wlang_prefs_tonescheme" t="To de Línia"/>
+	<w_phrase n="wlang_prefs_tsaustralia" t="Austràlia"/>
+	<w_phrase n="wlang_prefs_tschina" t="Xina"/>
+	<w_phrase n="wlang_prefs_tsdenmark" t="Dinamarca"/>
+	<w_phrase n="wlang_prefs_tsgermany" t="Alemanya"/>
+	<w_phrase n="wlang_prefs_tsindia" t="Índia"/>
+	<w_phrase n="wlang_prefs_tsjapan" t="Japó"/>
+	<w_phrase n="wlang_prefs_tsmexico" t="Mèxic"/>
+	<w_phrase n="wlang_prefs_tsuk" t="Regne Unit"/>
+	<w_phrase n="wlang_prefs_tsus" t="Estats Units"/>
+	<w_phrase n="wlang_prefs_tsgreece" t="Grècia"/>
+	<w_phrase n="wlang_prefs_mwinotifi" t="Notificació MWI"/>
+	<w_phrase n="wlang_prefs_mwisilent" t="Silenciat"/>
+	<w_phrase n="wlang_prefs_mwibeep" t="To"/>
+	<w_phrase n="wlang_prefs_mwireminder" t="Recordatori"/>
+	<w_phrase n="wlang_prefs_mwidialtone" t="To d'Avís MWI"/>
+	<w_phrase n="wlang_prefs_mwidialnormal" t="Normal"/>
+	<w_phrase n="wlang_prefs_mwidialstutter" t="Avís MWI"/>
+	<w_phrase n="wlang_prefs_on" t="habilitat"/>
+	<w_phrase n="wlang_prefs_off" t="inhabilitat"/>
+	<w_phrase n="wlang_prefs_redirection" t="Desviament de Trucades"/>
+	<w_phrase n="wlang_prefs_timeout" t="Temps (s)"/>
+	<w_phrase n="wlang_prefs_ringtones" t="Timbre de Trucades"/>
+	<w_phrase n="wlang_prefs_friends" t="Amics"/>
+	<w_phrase n="wlang_prefs_ringer1" t="To 1"/>
+	<w_phrase n="wlang_prefs_ringer2" t="To 2"/>
+	<w_phrase n="wlang_prefs_ringer3" t="To 3"/>
+	<w_phrase n="wlang_prefs_ringer4" t="To 4"/>
+	<w_phrase n="wlang_prefs_ringer5" t="To 5"/>
+	<w_phrase n="wlang_prefs_ringer6" t="To 6"/>
+	<w_phrase n="wlang_prefs_ringer7" t="To 7"/>
+	<w_phrase n="wlang_prefs_ringer8" t="To 8"/>
+	<w_phrase n="wlang_prefs_ringersilent" t="Silenciat"/>
+	<w_phrase n="wlang_prefs_family" t="Família"/>
+	<w_phrase n="wlang_prefs_colleagues" t="Col·legues"/>
+	<w_phrase n="wlang_prefs_ringdeviceheadset" t="Dispositiu de timbrat quan auricular connectat"/>
+	<w_phrase n="wlang_prefs_ringvolume_amplification" t="Puja volum de Timbrat"/>
+	<w_phrase n="wlang_prefs_ringspeaker" t="Usa Altaveu"/>
+	<w_phrase n="wlang_prefs_ringheadset" t="Usa Auriculars"/>
+	<w_phrase n="wlang_prefs_ringspeaker_and_headset" t="Usar auriculars i altaveu"/>
+	<w_phrase n="wlang_prefs_ssi_custommelody" t="URL de To personalitzat"/>
+	<w_phrase n="wlang_prefs_autoanswer" t="Despenjat automàtic"/>
+	<w_phrase n="wlang_prefs_ssi_aaautoanswer" t="Despenjat automàtic"/>
+	<w_phrase n="wlang_prefs_ssi_aaindication" t="Avís de despenjat automàtic"/>
+	<w_phrase n="wlang_prefs_ssi_aaindicationtone" t="Avís de despenjat automàtic"/>
+	<w_phrase n="wlang_prefs_privacysetting" t="Configuració de Privadesa"/>
+	<w_phrase n="wlang_prefs_ssi_privclip" t="Mostra/oculta l'identificador de trucada sortint (CLIP/CLIR)"/>
+	<w_phrase n="wlang_prefs_ssi_privclir" t="Rebutja trucades anònimes"/>
+	<w_phrase n="wlang_prefs_original" t="Original"/>
+	<w_phrase n="wlang_prefs_new" t="Nou"/>
+	<w_phrase n="wlang_prefs_dimension" t="Dimensió"/>
+	<w_phrase n="wlang_prefs_hide" t="Oculta"/>
+	<w_phrase n="wlang_prefs_show" t="Mostra"/>
+	<w_phrase n="wlang_prefs_reject" t="Rebutja"/>
+	<w_phrase n="wlang_prefs_accept" t="Accepta"/>
+	<w_phrase n="wlang_prefs_savebutton" t="Desa"/>
+	<w_phrase n="wlang_hcilog_download" t="Guardar hcilog"/>
+	<w_phrase n="wlang_hcipcap_download" t="Guardar hcitrace.pcap"/>
+	<w_phrase n="wlang_connectivityd_log_download" t="Guardar connectivityd log"/>
+	<w_phrase n="wlang_speed_speeddialtable" t="Números de trucada ràpida"/>
+	<w_phrase n="wlang_fkeys_keysettings" t="Configuració de Tecles"/>
+	<w_phrase n="wlang_fkeys_ssi_number" t="Número"/>
+	<w_phrase n="wlang_fkeys_ssi_line" t="Línia"/>
+	<w_phrase n="wlang_fkeys_ssi_dest" t="Extensió"/>
+	<w_phrase n="wlang_fkeys_ssi_intercom" t="Intercomunicador"/>
+	<w_phrase n="wlang_fkeys_ssi_parkorbit" t="Aparcament"/>
+	<w_phrase n="wlang_fkeys_ssi_voicerecorder" t="Grava"/>
+	<w_phrase n="wlang_fkeys_ssi_dtmf" t="DTMF"/>
+	<w_phrase n="wlang_line_logininfo" t="Informació d'Accés"/>
+	<w_phrase n="wlang_line_ssi_name" t="Nom Mostrat"/>
+	<w_phrase n="wlang_line_ssi_account" t="Compte"/>
+	<w_phrase n="wlang_line_ssi_password" t="Contrasenya"/>
+	<w_phrase n="wlang_line_ssi_registrar" t="IP Registre"/>
+	<w_phrase n="wlang_line_ssi_secondary_registrar" t="Segon registre"/>
+	<w_phrase n="wlang_line_status" t="Estat"/>
+	<w_phrase n="wlang_line_ssi_mailbox" t="Bústia de Veu"/>
+	<w_phrase n="wlang_line_ssi_mailbox_retrieve" t="Número Bústia de Veu"/>
+	<w_phrase n="wlang_line_ringtone" t="Timbre de Trucada"/>
+	<w_phrase n="wlang_line_ringer1" t="To 1"/>
+	<w_phrase n="wlang_line_ringer2" t="To 2"/>
+	<w_phrase n="wlang_line_ringer3" t="To 3"/>
+	<w_phrase n="wlang_line_ringer4" t="To 4"/>
+	<w_phrase n="wlang_line_ringer5" t="To 5"/>
+	<w_phrase n="wlang_line_ringer6" t="To 6"/>
+	<w_phrase n="wlang_line_ringer7" t="To 7"/>
+	<w_phrase n="wlang_line_ringer8" t="To 8"/>
+	<w_phrase n="wlang_line_ringer9" t="To 9"/>
+	<w_phrase n="wlang_line_ringer10" t="To 10"/>
+	<w_phrase n="wlang_line_silent" t="Silenciat"/>
+	<w_phrase n="wlang_line_splash" t="Splash"/>
+	<w_phrase n="wlang_line_ssi_outboundproxy" t="Proxy de Sortida"/>
+	<w_phrase n="wlang_line_ssi_secondary_outboundproxy" t="Proxy de Sortida secundari"/>
+	<w_phrase n="wlang_line_ssi_dialplan" t="Pla de Marcat"/>
+	<w_phrase n="wlang_line_qvalue" t="Valor Q"/>
+	<w_phrase n="wlang_line_expire" t="Expiració Proposada"/>
+	<w_phrase n="wlang_line_codec" t="Còdec"/>
+	<w_phrase n="wlang_current_codeclist" t="Llista de còdecs filtrats"/>
+	<w_phrase n="wlang_line_packetsize" t="Mida del Paquet"/>
+	<w_phrase n="wlang_line_ssi_rtpencryption" t="Xifratge RTP"/>
+	<w_phrase n="wlang_update_info" t="Podeu especificar explícitament quina versió de programa desitgeu carregar en aquest telèfon. Si us plau, indiqueu en el camp adreça http l’URL que desitgeu fer servir per al firmware. Si us plau, utilitzeu només una URL http completa (p. ex. http://www.example.com/firmware.bin). El telèfon es reiniciarà automàticament després de prémer el botó Carrega."/>
+	<w_phrase n="wlang_update_manualsoftup" t="Actualització Manual de Firmware"/>
+	<w_phrase n="wlang_update_manualsoftup_uxm" t="Actualització de Firmware del Mòdul d'Expansió"/>
+	<w_phrase n="wlang_update_info_uxm" t="Si us plau, connecteu només UN mòdul d'expansió per iniciar el procés d'actualització de firmware"/>
+	<w_phrase n="wlang_update_ssi_firmware" t="Firmware"/>
+	<w_phrase n="wlang_update_loadbutton" t="Carrega"/>
+	<w_phrase n="wlang_info_phonetype" t="Tipus de Telèfon"/>
+	<w_phrase n="wlang_info_macaddress" t="Adreça MAC"/>
+	<w_phrase n="wlang_info_wifi_mac_address" t="Adreça MAC Wi-Fi"/>
+	<w_phrase n="wlang_info_ipaddress" t="Adreça IP"/>
+	<w_phrase n="wlang_info_l2tp_ipaddress" t="Adreça L2TP IP"/>
+	<w_phrase n="wlang_info_firmware_url" t="URL de Firmware"/>
+	<w_phrase n="wlang_trace_clearbutton" t="Suprimeix"/>
+	<w_phrase n="wlang_trace_reloadbutton" t="Torna a carregar"/>
+	<w_phrase n="wlang_trace_downloadbutton" t="Descarrega"/>
+	<w_phrase n="wlang_log_level" t="Nivell de Registre"/>
+	<w_phrase n="wlang_log_level_type" t="Tipus de Nivell de Registre"/>
+	<w_phrase n="wlang_log_ssi_overall" t="General"/>
+	<w_phrase n="wlang_module_log_level" t="Nivell de Mòdul"/>
+	<w_phrase n="wlang_log_ssi_module" t="Mòduls"/>
+	<w_phrase n="wlang_log_clearbutton" t="Suprimeix"/>
+	<w_phrase n="wlang_advanced_network" t="Xarxa"/>
+	<w_phrase n="wlang_advanced_ssi_dhcp" t="DHCP"/>
+	<w_phrase n="wlang_advanced_ssi_on" t="habilitat"/>
+	<w_phrase n="wlang_advanced_ssi_off" t="inhabilitat"/>
+	<w_phrase n="wlang_advanced_ssi_ipaddress" t="Adreça IP"/>
+	<w_phrase n="wlang_advanced_ssi_netmask" t="Màscara de Xarxa"/>
+	<w_phrase n="wlang_advanced_ssi_phonename" t="Nom de Host"/>
+	<w_phrase n="wlang_advanced_ssi_ipgateway" t="Passarel·la d’IP"/>
+	<w_phrase n="wlang_advanced_dns" t="DNS"/>
+	<w_phrase n="wlang_advanced_ssi_domain" t="Domini"/>
+	<w_phrase n="wlang_advanced_ssi_dnsserver1" t="Servidor DNS 1"/>
+	<w_phrase n="wlang_advanced_ssi_dnsserver2" t="Servidor DNS 2"/>
+	<w_phrase n="wlang_advanced_time" t="Temps"/>
+	<w_phrase n="wlang_advanced_ssi_ntptimeserver" t="Servidor NTP"/>
+	<w_phrase n="wlang_advanced_timezone" t="Zona Horària"/>
+	<w_phrase n="wlang_advanced_http" t="HTTP"/>
+	<w_phrase n="wlang_advanced_ssi_user" t="Usuari"/>
+	<w_phrase n="wlang_advanced_ssi_password" t="Contrasenya"/>
+	<w_phrase n="wlang_not_default" t="No ès per defecte"/>
+	<w_phrase n="wlang_advanced_ssi_httpproxy" t="Proxy HTTP"/>
+	<w_phrase n="wlang_advanced_ssi_httpport" t="Port HTTP"/>
+	<w_phrase n="wlang_advanced_ssi_httpsport" t="Port HTTPS"/>
+	<w_phrase n="wlang_advanced_webservercon" t="Tipus d'accés Interfície Web"/>
+	<w_phrase n="wlang_advanced_httponly" t="Només HTTP"/>
+	<w_phrase n="wlang_advanced_httpsonly" t="Només HTTPS"/>
+	<w_phrase n="wlang_advanced_httphttps" t="HTTP i HTTPS"/>
+	<w_phrase n="wlang_advanced_off" t="inhabilitat"/>
+	<w_phrase n="wlang_advanced_phonebehavior" t="Comportament Telèfon"/>
+	<w_phrase n="wlang_advanced_ssi_callcompletion" t="Call Completion"/>
+	<w_phrase n="wlang_advanced_ssi_lldp" t="LLDP"/>
+	<w_phrase n="wlang_advanced_ssi_lldp_network_policy_timeout" t="Timeout Política de Xarxa LLDP"/>
+	<w_phrase n="wlang_advanced_ssi_idnasupport" t="Suport IDNA (RFC 3490)"/>
+	<w_phrase n="wlang_advanced_actionethernet" t="Acció en tornar a connectar cable de xarxa"/>
+	<w_phrase n="wlang_advanced_reboot" t="Reinicia"/>
+	<w_phrase n="wlang_advanced_donothing" t="Ignora"/>
+	<w_phrase n="wlang_advanced_ssi_numberguessing" t="Vista Ràpida"/>
+	<w_phrase n="wlang_advanced_ssi_blockurldialing" t="Bloqueja URL de domini SIP"/>
+	<w_phrase n="wlang_advanced_ssi_challengeresponse" t="Accés Autenticació per Desafiament"/>
+	<w_phrase n="wlang_advanced_ssi_callwaitingindi" t="Indicació trucada en espera"/>
+	<w_phrase n="wlang_advanced_ssi_dialtonehold" t="To quan retingut"/>
+	<w_phrase n="wlang_advanced_ssi_disconnectonhook" t="Desconnecta Penjat (On-hook)"/>
+	<w_phrase n="wlang_advanced_keys" t="Tecles"/>
+	<w_phrase n="wlang_advanced_ssi_transferonhook" t="Transfereix en penjar"/>
+	<w_phrase n="wlang_advanced_ssi_blockdnd" t="Inhabilita DND"/>
+	<w_phrase n="wlang_advanced_ssi_logonwizard" t="Assistent d'Accés"/>
+	<w_phrase n="wlang_advanced_preselection" t="Preselecció"/>
+	<w_phrase n="wlang_advanced_ssi_prefix" t="Prefix"/>
+	<w_phrase n="wlang_advanced_audio" t="Àudio"/>
+	<w_phrase n="wlang_advanced_ssi_disablecasingspeaker" t="Inhabilita Altaveu Intern"/>
+	<w_phrase n="wlang_advanced_ssi_dtmfechospeaker" t="Eco DTMF en Altaveu"/>
+	<w_phrase n="wlang_advanced_ssi_dtmf_payload_type" t="Tipos DTMF Payload"/>
+	<w_phrase n="wlang_advanced_ssi_callreleasednotify" t="Notificació de trucada alliberada"/>
+	<w_phrase n="wlang_line_ssi_stunserver" t="Servidor STUN (IP:Port)"/>
+	<w_phrase n="wlang_line_ssi_keepaliveint" t="Temps de Ping (s)"/>
+	<w_phrase n="wlang_advanced_ssi_dynamicrtpstart" t="Port Inici Rang RTP"/>
+	<w_phrase n="wlang_advanced_ssi_dynamicrtpstop" t="Port Fi Rang RTP"/>
+	<w_phrase n="wlang_advanced_ssi_typeofservice" t="Tipus de Servei (TOS)"/>
+	<w_phrase n="wlang_advanced_ssi_payloadtype" t="ID DTMF (Payload)"/>
+	<w_phrase n="wlang_advanced_ssi_networkidentport" t="Identitat de Xarxa (Port)"/>
+	<w_phrase n="wlang_advanced_ssi_sipt1" t="SIP T1 (ms)"/>
+	<w_phrase n="wlang_advanced_ssi_sipsessiontimer" t="SIP Session Timer (s)"/>
+	<w_phrase n="wlang_advanced_ssi_sipdirtyhostttl" t="SIP Dirty Host TTL (s)"/>
+	<w_phrase n="wlang_advanced_ssi_sipmaxforward" t="SIP Max Forwards"/>
+	<w_phrase n="wlang_advanced_ssi_enumsuffix" t="Sufix ENUM"/>
+	<w_phrase n="wlang_advanced_ssi_musiconholdserver" t="Servidor de Música en Espera"/>
+	<w_phrase n="wlang_advanced_ssi_useuserphone" t="Usa user=phone"/>
+	<w_phrase n="wlang_advanced_ssi_publishpresence" t="Publica Presència"/>
+	<w_phrase n="wlang_advanced_ssi_refertobrackets" t="Refer-To Brackets"/>
+	<w_phrase n="wlang_advanced_ssi_requireprack" t="Usa PRACK"/>
+	<w_phrase n="wlang_advanced_ssi_symmetricrtp" t="RTP Simètric"/>
+	<w_phrase n="wlang_advanced_update" t="Actualitza"/>
+	<w_phrase n="wlang_advanced_updatepolicy" t="Actualitza Política"/>
+	<w_phrase n="wlang_advanced_upautomatically" t="Actualització Automàtica"/>
+	<w_phrase n="wlang_advanced_upaskupdate" t="Confirma actualització"/>
+	<w_phrase n="wlang_advanced_upneverupdatesetting" t="Mai actualitzis, carrega només configuració"/>
+	<w_phrase n="wlang_advanced_upneverupdatenosetting" t="Mai actualitzis, tampoc configuracions"/>
+	<w_phrase n="wlang_advanced_ssi_settingurl" t="URL d’Aprovisionament"/>
+	<w_phrase n="wlang_advanced_debug" t="Depuració"/>
+	<w_phrase n="wlang_advanced_ssi_lcserver" t="Servidor"/>
+	<w_phrase n="wlang_advanced_resetbutton" t="Restableix"/>
+	<w_phrase n="wlang_advanced_rebootbutton" t="Reinicia"/>
+	<w_phrase n="wlang_advanced_security" t="Seguretat"/>
+	<w_phrase n="wlang_advanced_ssi_adminmode" t="Mode Administrador"/>
+	<w_phrase n="wlang_advanced_ssi_adminpassword" t="Contrasenya Administrador"/>
+	<w_phrase n="wlang_advanced_ssi_adminpassconf" t="Contrasenya Administrador (Confirma)"/>
+	<w_phrase n="wlang_advanced_ssi_adminlogin" t="Accés Administrador"/>
+	<w_phrase n="wlang_advanced_savebutton" t="Desa"/>
+	<w_phrase n="wlang_advanced_tmz_USAm10" t="-10 Estats Units - Hawaii-Aleutian"/>
+	<w_phrase n="wlang_advanced_tmz_USAm9" t="-9 Estats Units - Hora d'Alaska"/>
+	<w_phrase n="wlang_advanced_tmz_CANm8" t="-8 Canadà (Vancouver, Whitehorse)"/>
+	<w_phrase n="wlang_advanced_tmz_MEXm8" t="-8 Mèxic (Tijuana, Mexicali)"/>
+	<w_phrase n="wlang_advanced_tmz_USAm8" t="-8 Estats Units - Hora de Pacífic"/>
+	<w_phrase n="wlang_advanced_tmz_CANm7" t="-7 Canadà (Edmonton, Calgary)"/>
+	<w_phrase n="wlang_advanced_tmz_MEXm7" t="-7 Mèxic (Mazatlán, Chihuahua)"/>
+	<w_phrase n="wlang_advanced_tmz_USAm7" t="-7 Estats Units - Hora de les muntanyes"/>
+	<w_phrase n="wlang_advanced_tmz_CANm6" t="-6 Canadà - Manitoba (Winnipeg)"/>
+	<w_phrase n="wlang_advanced_tmz_CAN2m6" t="-6 Canadà - Saskatchewan (Regina)"/>
+	<w_phrase n="wlang_advanced_tmz_CAMm6" t="-6 Hora d’Àfrica Central (No DST)"/>
+	<w_phrase n="wlang_advanced_tmz_CHLm6" t="-6 Xile (Illa de Pasqua)"/>
+	<w_phrase n="wlang_advanced_tmz_MEXm6" t="-6 Mèxic (Ciutat de Mèxic, Acapulco)"/>
+	<w_phrase n="wlang_advanced_tmz_USAm6" t="-6 Estats Units - Hora Central"/>
+	<w_phrase n="wlang_advanced_tmz_BHSm5" t="-5 Bahames (Nassau)"/>
+	<w_phrase n="wlang_advanced_tmz_CANm5" t="-5 Canadà (Mont-real, Ottawa, Quebec)"/>
+	<w_phrase n="wlang_advanced_tmz_COLm5" t="-5 Colòmbia (Bogotà)"/>
+	<w_phrase n="wlang_advanced_tmz_CUBm5" t="-5 Cuba (Havana)"/>
+	<w_phrase n="wlang_advanced_tmz_ECUm5" t="-5 Equador (Quito)"/>
+	<w_phrase n="wlang_advanced_tmz_USAm5" t="-5 Estats Units - Hora de l'Est"/>
+	<w_phrase n="wlang_advanced_tmz_CANm4" t="-4 Canadà (Halifax, Saint John)"/>
+	<w_phrase n="wlang_advanced_tmz_CHLm4" t="-4 Xile (Santiago)"/>
+	<w_phrase n="wlang_advanced_tmz_PRYm4" t="-4 Paraguai (Asunción)"/>
+	<w_phrase n="wlang_advanced_tmz_BMUm4" t="-4 Regne Unit - Bermudes (Bermudes)"/>
+	<w_phrase n="wlang_advanced_tmz_FLKm4" t="-4 Regne Unit (Illes Falkland)"/>
+	<w_phrase n="wlang_advanced_tmz_CANm35" t="-3.5 Canadà - New Foundland (St. Johns)"/>
+	<w_phrase n="wlang_advanced_tmz_GRLm2" t="-2 Denmark - Greenland (Nuuk)"/>
+	<w_phrase n="wlang_advanced_tmz_PRTm1" t="-1 Portugal (Açores)"/>
+	<w_phrase n="wlang_advanced_tmz_FROm0" t="0 Dinamarca - Illes Fèroe (Torshaven)"/>
+	<w_phrase n="wlang_advanced_tmz_IRLm0" t="0 Irlanda (Dublín)"/>
+	<w_phrase n="wlang_advanced_tmz_PRTm0" t="0 Portugal (Lisboa, Porto, Funchal)"/>
+	<w_phrase n="wlang_advanced_tmz_ESPm0" t="0 Espanya - Illes Canàries (Las Palmas)"/>
+	<w_phrase n="wlang_advanced_tmz_GBRm0" t="0 Regne Unit (Londres)"/>
+	<w_phrase n="wlang_advanced_tmz_ALBp1" t="+1 Albània (Tirana)"/>
+	<w_phrase n="wlang_advanced_tmz_AUTp1" t="+1 Àustria (Viena)"/>
+	<w_phrase n="wlang_advanced_tmz_BELp1" t="+1 Bèlgica (Brussel·les)"/>
+	<w_phrase n="wlang_advanced_tmz_CAIm4" t="-4 Caicos"/>
+	<w_phrase n="wlang_advanced_tmz_HRVp1" t="+1 Croàcia (Zagreb)"/>
+	<w_phrase n="wlang_advanced_tmz_CZEp1" t="+1 República Txeca (Praga)"/>
+	<w_phrase n="wlang_advanced_tmz_DNKp1" t="+1 Dinamarca (Copenhaguen)"/>
+	<w_phrase n="wlang_advanced_tmz_FRAp1" t="+1 França (Niça)"/>
+	<w_phrase n="wlang_advanced_tmz_GERp1" t="+1 Alemanya (Berlín)"/>
+	<w_phrase n="wlang_advanced_tmz_HUNp1" t="+1 Hongria (Budapest)"/>
+	<w_phrase n="wlang_advanced_tmz_ITAp1" t="+1 Itàlia (Roma)"/>
+	<w_phrase n="wlang_advanced_tmz_LUXp1" t="+1 Luxemburg (Luxemburg)"/>
+	<w_phrase n="wlang_advanced_tmz_MAKp1" t="+1 Macedònia (Skopje)"/>
+	<w_phrase n="wlang_advanced_tmz_NLDp1" t="+1 Holanda (Amsterdam)"/>
+	<w_phrase n="wlang_advanced_tmz_NAMp1" t="+1 Namíbia (Windhoek)"/>
+	<w_phrase n="wlang_advanced_tmz_NORp1" t="+1 Noruega (Oslo)"/>
+	<w_phrase n="wlang_advanced_tmz_POLp1" t="+1 Polònia (Varsòvia)"/>
+	<w_phrase n="wlang_advanced_tmz_SVKp1" t="+1 República Eslovaca (Bratislava)"/>
+	<w_phrase n="wlang_advanced_tmz_ESPp1" t="+1 Espanya (Madrid, Palma)"/>
+	<w_phrase n="wlang_advanced_tmz_SWEp1" t="+1 Suècia (Estocolm)"/>
+	<w_phrase n="wlang_advanced_tmz_CHEp1" t="+1 Suïssa (Berna)"/>
+	<w_phrase n="wlang_advanced_tmz_GIBp1" t="+1 Regne Unit (Gibraltar)"/>
+	<w_phrase n="wlang_advanced_tmz_YUGp1" t="+1 Sèrbia (Belgrad)"/>
+	<w_phrase n="wlang_advanced_tmz_BLRp3" t="+3 Bielorússia (Minsk)"/>
+	<w_phrase n="wlang_advanced_tmz_BGRp2" t="+2 Bulgària (Sofia)"/>
+	<w_phrase n="wlang_advanced_tmz_CYPp2" t="+2 Xipre (Nicòsia)"/>
+	<w_phrase n="wlang_advanced_tmz_EGYp2" t="+2 Egipte (El Caire)"/>
+	<w_phrase n="wlang_advanced_tmz_ESTp2" t="+2 Estònia (Talinin)"/>
+	<w_phrase n="wlang_advanced_tmz_FINp2" t="+2 Finlàndia (Hèlsinki)"/>
+	<w_phrase n="wlang_advanced_tmz_GAZp2" t="+2 Franja de Gaza (Gaza)"/>
+	<w_phrase n="wlang_advanced_tmz_GRCp2" t="+2 Grècia (Atenes)"/>
+	<w_phrase n="wlang_advanced_tmz_ISRp2" t="+2 Israel (Tel Aviv)"/>
+	<w_phrase n="wlang_advanced_tmz_JORp2" t="+2 Jordània (Amman)"/>
+	<w_phrase n="wlang_advanced_tmz_LVAp2" t="+2 Letònia (Riga)"/>
+	<w_phrase n="wlang_advanced_tmz_LTUp2" t="+2 Lituània (Vílnius)"/>
+	<w_phrase n="wlang_advanced_tmz_LBNp2" t="+2 Líban (Beirut)"/>
+	<w_phrase n="wlang_advanced_tmz_MDAp2" t="+2 Moldàvia (Chișinău)"/>
+	<w_phrase n="wlang_advanced_tmz_RUSp2" t="+2 Rússia (Kaliningrado)"/>
+	<w_phrase n="wlang_advanced_tmz_ROUp2" t="+2 Romania (Bucarest)"/>
+	<w_phrase n="wlang_advanced_tmz_SYRp2" t="+2 Síria (Damasc)"/>
+	<w_phrase n="wlang_advanced_tmz_TURp3" t="+3 Turquia (Ankara)"/>
+	<w_phrase n="wlang_advanced_tmz_UKRp2" t="+2 Ucraïna (Kíev, Odessa)"/>
+	<w_phrase n="wlang_advanced_tmz_IRQp3" t="+3 lraq (Bagdad)"/>
+	<w_phrase n="wlang_advanced_tmz_RUSp3" t="+3 Rússia (Moscou)"/>
+	<w_phrase n="wlang_advanced_tmz_IRNp35" t="+3.5 Iran (Teheran)"/>
+	<w_phrase n="wlang_advanced_tmz_ARMp4" t="+4 Armènia (Erevan)"/>
+	<w_phrase n="wlang_advanced_tmz_AZEp4" t="+4 Azerbaidjan (Bakú)"/>
+	<w_phrase n="wlang_advanced_tmz_GEOp4" t="+4 Geòrgia (Tbilissi)"/>
+	<w_phrase n="wlang_advanced_tmz_KAZp4" t="+4 Kazakhstan (Aqtau)"/>
+	<w_phrase n="wlang_advanced_tmz_RUSp4" t="+4 Rússia (Samara)"/>
+	<w_phrase n="wlang_advanced_tmz_KAZp5" t="+5 Kazakhstan (Aqtobe)"/>
+	<w_phrase n="wlang_advanced_tmz_KGZp5" t="+5 Kirguizistan (Bishkek)"/>
+	<w_phrase n="wlang_advanced_tmz_PAKp5" t="+5 Pakistan (Islamabad)"/>
+	<w_phrase n="wlang_advanced_tmz_RUSp5" t="+5 Rússia (Chelyabinsk)"/>
+	<w_phrase n="wlang_advanced_tmz_INDp55" t="+5.5 Índia (Calcuta)"/>
+	<w_phrase n="wlang_advanced_tmz_KAZp6" t="+6 Kazakhstan (Astana, Almaty)"/>
+	<w_phrase n="wlang_advanced_tmz_RUSp6" t="+6 Rússia (Novosibirsk, Omsk)"/>
+	<w_phrase n="wlang_advanced_tmz_CHNp7" t="+8 Xina (Beijing)"/>
+	<w_phrase n="wlang_advanced_tmz_RUSp7" t="+7 Rússia (Krasnoyarsk)"/>
+	<w_phrase n="wlang_advanced_tmz_THAp7" t="+7 Tailàndia (Bangkok)"/>
+	<w_phrase n="wlang_advanced_tmz_SGPp8" t="+8 Singapur (Singapur)"/>
+	<w_phrase n="wlang_advanced_tmz_KORp8" t="+9 Corea (Seül)"/>
+	<w_phrase n="wlang_advanced_tmz_JPNp9" t="+9 Japó (Tòquio)"/>
+	<w_phrase n="wlang_advanced_tmz_AUSp95" t="+9.5 Austràlia (Adelaida)"/>
+	<w_phrase n="wlang_advanced_tmz_AUSp10" t="+10 Austràlia (Sydney, Melbourne, Canberra)"/>
+	<w_phrase n="wlang_advanced_tmz_AUS2p10" t="+10 Austràlia (Brisbane)"/>
+	<w_phrase n="wlang_advanced_tmz_RUSp10" t="+10 Rússia (Vladivostok)"/>
+	<w_phrase n="wlang_advanced_tmz_AUSp105" t="+10.5 Austràlia (Illes Lord Howe)"/>
+	<w_phrase n="wlang_advanced_tmz_NZLp12" t="+12 Nova Zelanda (Wellington, Auckland)"/>
+	<w_phrase n="wlang_advanced_tmz_RUSp12" t="+12 Rússia (Anadyr, Kamchatka)"/>
+	<w_phrase n="wlang_advanced_tmz_NZLp1275" t="+12.75 Nova Zelanda (Illes Chatham)"/>
+	<w_phrase n="wlang_advanced_tmz_TONp13" t="+13 Tonga (Nukuʻalofa)"/>
+	<w_phrase n="wlang_adr_ssi_title" t="Agenda"/>
+	<w_phrase n="wlang_advanced_ssi_title" t="Configuració Avançada"/>
+	<w_phrase n="wlang_fkeys_ssi_title" t="Tecles de Funció"/>
+	<w_phrase n="wlang_index_ssi_title" t="Benvingut/da al vostre Telèfon!"/>
+	<w_phrase n="wlang_info_ssi_title" t="Informació del Sistema"/>
+	<w_phrase n="wlang_line1_ssi_title" t="Configuració Identitat 1"/>
+	<w_phrase n="wlang_line2_ssi_title" t="Configuració Identitat 2"/>
+	<w_phrase n="wlang_line3_ssi_title" t="Configuració Identitat 3"/>
+	<w_phrase n="wlang_line4_ssi_title" t="Configuració Identitat 4"/>
+	<w_phrase n="wlang_line5_ssi_title" t="Configuració Identitat 5"/>
+	<w_phrase n="wlang_line6_ssi_title" t="Configuració Identitat 6"/>
+	<w_phrase n="wlang_line7_ssi_title" t="Configuració Identitat 7"/>
+	<w_phrase n="wlang_line8_ssi_title" t="Configuració Identitat 8"/>
+	<w_phrase n="wlang_line9_ssi_title" t="Configuració Identitat 9"/>
+	<w_phrase n="wlang_line10_ssi_title" t="Configuració Identitat 10"/>
+	<w_phrase n="wlang_line11_ssi_title" t="Configuració Identitat 11"/>
+	<w_phrase n="wlang_line12_ssi_title" t="Configuració Identitat 12"/>
+	<w_phrase n="wlang_log_ssi_title" t="Registre del Sistema"/>
+	<w_phrase n="wlang_memstat_ssi_title" t="Informació Memòria"/>
+	<w_phrase n="wlang_prefs_ssi_title" t="Preferències"/>
+	<w_phrase n="wlang_settings_ssi_title" t="Configuració"/>
+	<w_phrase n="wlang_speed_ssi_title" t="Marcat ràpid"/>
+	<w_phrase n="wlang_sip_trace_ssi_title" t="Traça SIP"/>
+	<w_phrase n="wlang_http_trace_ssi_title" t="Traça HTTP"/>
+	<w_phrase n="wlang_update_ssi_title" t="Actualització Manual de Firmware"/>
+	<w_phrase n="wlang_adr_preview_name" t="Nom"/>
+	<w_phrase n="wlang_adr_preview_number" t="Número"/>
+	<w_phrase n="wlang_adr_preview_reading" t="Llegint"/>
+	<w_phrase n="wlang_adr_preview_contact_type" t="Tipus de Contacte"/>
+	<w_phrase n="wlang_adr_preview_ignore" t="Ignora"/>
+	<w_phrase n="wlang_adr_file_type" t="Tipus de fitxer"/>
+	<w_phrase n="wlang_adr_file_csv" t="Format CSV"/>
+	<w_phrase n="wlang_adr_file_unicode" t="Unicode Tab-separat"/>
+	<w_phrase n="wlang_adr_prev_ssi_title" t="Importa Previsualització"/>
+	<w_phrase n="wlang_adr_prev_description" t="Si us plau, reviseu les assignacions de les columnes en els camps d'agenda i quan hàgiu acabat, pressioneu el botó Desa."/>
+	<w_phrase n="wlang_adr_prev_apply" t="Desa"/>
+	<w_phrase n="wlang_advanced_ssi_http_register" t="Enregistra Contacte HTTP"/>
+	<w_phrase n="wlang_advanced_ssi_auth_scheme" t="Tipus d'Autenticació"/>
+	<w_phrase n="wlang_advanced_ssi_digest" t="Digest"/>
+	<w_phrase n="wlang_advanced_ssi_basic" t="Bàsic"/>
+	<w_phrase n="wlang_advanced_ssi_offer_gruu" t="Ofereix GRUU"/>
+	<w_phrase n="wlang_line_none" t="Cap"/>
+	<w_phrase n="wlang_advanced_ssi_offer_mpo" t="Ofereix MPO"/>
+	<w_phrase n="wlang_h323_trace_ssi_title" t="Traça H323"/>
+	<w_phrase n="wlang_advanced_ssi_challenge_reboot" t="Autenticació per a Reinici SIP"/>
+	<w_phrase n="wlang_advanced_ssi_challenge_checksync" t="Autenticació per a Check-Sync SIP"/>
+	<w_phrase n="wlang_dns_ssi_title" t="Memòria cau DNS"/>
+	<w_phrase n="wlang_pcap_trace_ssi_title" t="Traça PCAP"/>
+	<w_phrase n="wlang_pcap_text" t="Per veure el que succeeix a nivell de la xarxa, podeu generar fitxers PCAP en aquesta pàgina. Aquests fitxers es poden llegir amb diverses eines de la xarxa, per exemple, wireshark. Per començar a gravar, premeu el botó d'inici, i per aturar, premeu el botó d’aturada. Si us plau, recordeu que les dades es desen en una memòria intermèdia circular per evitar sobreeiximent (quan la memòria intermèdia està plena, la informació més antiga se sobreescriu) i que la gravació pot afectar negativament al comportament del telèfon."/>
+	<w_phrase n="wlang_leftnav_action" t="Configuració d’Action URL"/>
+	<w_phrase n="wlang_action_ssi_title" t="Action URL"/>
+	<w_phrase n="wlang_action_settings" t="Action URL"/>
+	<w_phrase n="wlang_action_ssi_dnd_on" t="DND activat"/>
+	<w_phrase n="wlang_action_ssi_dnd_off" t="DND desactivat"/>
+	<w_phrase n="wlang_action_ssi_redirection_on" t="Desviament de trucades activat"/>
+	<w_phrase n="wlang_action_ssi_redirection_off" t="Desviament de trucades desactivat"/>
+	<w_phrase n="wlang_action_ssi_incoming" t="Trucada entrant"/>
+	<w_phrase n="wlang_action_ssi_blacklist" t="Comprova en Llista Negra"/>
+	<w_phrase n="wlang_action_ssi_outgoing" t="Trucada Sortint"/>
+	<w_phrase n="wlang_action_ssi_setup" t="Configuració finalitzada"/>
+	<w_phrase n="wlang_action_ssi_offhook" t="Despenjat"/>
+	<w_phrase n="wlang_action_ssi_onhook" t="Pensar"/>
+	<w_phrase n="wlang_radcom_ssi_title" t="Autoreproducció/Programat"/>
+	<w_phrase n="wlang_playback_ssi_settings" t="Configuració d’Autoreproducció"/>
+	<w_phrase n="wlang_playback_ssi_feature" t="Reproducció automàtica"/>
+	<w_phrase n="wlang_playback_ssi_url" t="URL de fitxer WAV"/>
+	<w_phrase n="wlang_scheduling_ssi_settings" t="Configuració de Planificació"/>
+	<w_phrase n="wlang_scheduling_ssi_feature" t="Planificació"/>
+	<w_phrase n="wlang_scheduling_ssi_frequency" t="Trucada cada"/>
+	<w_phrase n="wlang_scheduling_ssi_day" t="dia(es)"/>
+	<w_phrase n="wlang_scheduling_ssi_hour" t="hora(es)"/>
+	<w_phrase n="wlang_scheduling_ssi_minute" t="minut(s)"/>
+	<w_phrase n="wlang_scheduling_ssi_number" t="Número per trucar"/>
+	<w_phrase n="wlang_scheduling_ssi_start" t="Inici el (dd.mm.aa. hh.mm)"/>
+	<w_phrase n="wlang_scheduling_ssi_end" t="Finalitza el (dd.mm.aa. hh.mm)"/>
+	<w_phrase n="wlang_scheduling_ssi_call_duration" t="Finalitza trucada automàticament després de (s)"/>
+	<w_phrase n="wlang_index_time" t="Temps"/>
+	<w_phrase n="wlang_index_duration" t="Durada"/>
+	<w_phrase n="wlang_advanced_ssi_user_pic" t="URL de Foto d'Usuari"/>
+	<w_phrase n="wlang_line_custom" t="Melodia Personalitzada"/>
+	<w_phrase n="wlang_prefs_vip" t="VIP"/>
+	<w_phrase n="wlang_prefs_ssi_date_us_format" t="Format Data EUA (mm/dd)"/>
+	<w_phrase n="wlang_prefs_ssi_time_24_format" t="Rellotge 24 hores  "/>
+	<w_phrase n="wlang_advanced_ssi_call_join_xfer" t="Uneix trucada en transferir"/>
+	<w_phrase n="wlang_prefs_tssweden" t="Suècia"/>
+	<w_phrase n="wlang_prefs_tsswitzerland" t="Suïssa"/>
+	<w_phrase n="wlang_advanced_ssi_client" t="Client"/>
+	<w_phrase n="wlang_advanced_ssi_server" t="Servidor"/>
+	<w_phrase n="wlang_line_ssi_idle_text" t="Text mostrat en pantalla repòs"/>
+	<w_phrase n="wlang_line_ssi_idle_cfwd" t="Text mostrat per a destinació transferida"/>
+	<w_phrase n="wlang_line_ssi_idle_number" t="Número mostrat en pantalla repòs"/>
+	<w_phrase n="wlang_line_ssi_alert_info" t="URL Alert Info"/>
+	<w_phrase n="wlang_advanced_ssi_alert_info_playback" t="Reproducció Alert Info"/>
+	<w_phrase n="wlang_advanced_ssi_syslog_server" t="Servidor de Syslog"/>
+	<w_phrase n="wlang_advanced_ssi_aoc_pulse_currency" t="Senyal de moneda AOC"/>
+	<w_phrase n="wlang_advanced_ssi_aoc_cost_pulse" t="Cost/Senyal AOC"/>
+	<w_phrase n="wlang_advanced_aoc_amount_display" t="Quantitat Mostrada AOC"/>
+	<w_phrase n="wlang_advanced_aoc_amount_charged" t="Facturat"/>
+	<w_phrase n="wlang_advanced_aoc_amount_balance" t="Saldo"/>
+	<w_phrase n="wlang_advanced_audio_device_indicator" t="Indicador Dispositiu Àudio"/>
+	<w_phrase n="wlang_prefs_ringtone_defaults" t="To de Trucada per defecte"/>
+	<w_phrase n="wlang_prefs_ringtone_addressbook" t="To d'Agenda"/>
+	<w_phrase n="wlang_leftnav_trusted_cert" t="Certificats"/>
+	<w_phrase n="wlang_advanced_on" t="en"/>
+	<w_phrase n="wlang_advanced_call_waiting_visual" t="només visualment"/>
+	<w_phrase n="wlang_line_ssi_pname" t="Usuari d'Autenticació"/>
+	<w_phrase n="wlang_adr_deletebutton" t="Suprimeix"/>
+	<w_phrase n="wlang_adr_prev_del_before" t="Suprimeix agenda abans"/>
+	<w_phrase n="wlang_advanced_ssi_filter_registrar" t="Admet només paquets d’Enregistra"/>
+	<w_phrase n="wlang_line_sipsettings" t="Configuració d’Identitat SIP"/>
+	<w_phrase n="wlang_line_rtpsettings" t="Configuració d’Identitat RTP"/>
+	<w_phrase n="wlang_line_natsettings" t="Configuració d’Identitat NAT"/>
+	<w_phrase n="wlang_line_ssi_descr_contact" t="SIP-Contact Llarg (RFC3840)"/>
+	<w_phrase n="wlang_line_ssi_sipusername_as_line" t="Suport Broken Registra"/>
+	<w_phrase n="wlang_advanced_snmp" t="SNMP"/>
+	<w_phrase n="wlang_advanced_ssi_snmp_port" t="Port"/>
+	<w_phrase n="wlang_advanced_ssi_snmp_trusted" t="Adreça Confiable"/>
+	<w_phrase n="wlang_advanced_ssi_sip_short_form" t="Usa Capçaleres SIP Compactes"/>
+	<w_phrase n="wlang_sysinfo_siplinestatus" t="Estat d'Identitat SIP"/>
+	<w_phrase n="wlang_sysinfo_sysinfo" t="Informació del Sistema"/>
+	<w_phrase n="wlang_adr_outgoingid" t="Identitat Sortint"/>
+	<w_phrase n="wlang_adr_lineid_active" t="Activa"/>
+	<w_phrase n="wlang_adr_lineid1" t="Identitat 1"/>
+	<w_phrase n="wlang_adr_lineid2" t="Identitat 2"/>
+	<w_phrase n="wlang_adr_lineid3" t="Identitat 3"/>
+	<w_phrase n="wlang_adr_lineid4" t="Identitat 4"/>
+	<w_phrase n="wlang_adr_lineid5" t="Identitat 5"/>
+	<w_phrase n="wlang_adr_lineid6" t="Identitat 6"/>
+	<w_phrase n="wlang_adr_lineid7" t="Identitat 7"/>
+	<w_phrase n="wlang_adr_lineid8" t="Identitat 8"/>
+	<w_phrase n="wlang_adr_lineid9" t="Identitat 9"/>
+	<w_phrase n="wlang_adr_lineid10" t="Identitat 10"/>
+	<w_phrase n="wlang_adr_lineid11" t="Identitat 11"/>
+	<w_phrase n="wlang_adr_lineid12" t="Identitat 12"/>
+	<w_phrase n="wlang_adr_lineid13" t="Identitat 13"/>
+	<w_phrase n="wlang_adr_lineid14" t="Identitat 14"/>
+	<w_phrase n="wlang_adr_lineid15" t="Identitat 15"/>
+	<w_phrase n="wlang_adr_lineid16" t="Identitat 16"/>
+	<w_phrase n="wlang_adr_preview_outgoing_id" t="Identitat Sortint"/>
+	<w_phrase n="wlang_line_ssi_record_missed_calls" t="Llista de Trucades Perdudes"/>
+	<w_phrase n="wlang_line_ssi_user_send_diversion_header" t="Envia Capçalera Diversion"/>
+	<w_phrase n="wlang_index_local_identity" t="Identitat Local"/>
+	<w_phrase n="wlang_advanced_ssi_holding_reminder" t="Recordatori de trucada en espera"/>
+	<w_phrase n="wlang_info_production_info" t="Informació de Producció"/>
+	<w_phrase n="wlang_line_reregister" t="Torna a Enregistrar"/>
+	<w_phrase n="wlang_confirm_head" t="Atenció!"/>
+	<w_phrase n="wlang_confirm_button_yes" t="Sí"/>
+	<w_phrase n="wlang_confirm_button_no" t="No"/>
+	<w_phrase n="wlang_confirm_ssi_title" t="Confirmació"/>
+	<w_phrase n="wlang_conf_text_del_adrbook" t="Tingueu en compte que l'agenda se suprimirà completament. Realment voleu fer-ho?"/>
+	<w_phrase n="wlang_conf_text_reset" t="Si us plau, tingueu en compte que totes les opcions, incloent-hi el llistat de trucades, agendes, etc., es perdran si confirmeu amb Sí. Esteu segur que voleu restablir el telèfon amb els valors de fàbrica?"/>
+	<w_phrase n="wlang_conf_text_reboot" t="Esteu segur que voleu reiniciar el telèfon?"/>
+	<w_phrase n="wlang_line_ssi_active" t="Identitat Activa"/>
+	<w_phrase n="wlang_line_play" t="Reprodueix To"/>
+	<w_phrase n="wlang_line_ssi_proxyrequire" t="Requereix Proxy"/>
+	<w_phrase n="wlang_advanced_detectethernet" t="Detecta desconnexió de cable de xarxa"/>
+	<w_phrase n="wlang_advanced_ssi_rtcp_support" t="Suport RTCP"/>
+	<w_phrase n="wlang_update_manuallicense" t="Puja Llicència Manualment"/>
+	<w_phrase n="wlang_update_licensefile" t="Fitxer de Llicència"/>
+	<w_phrase n="wlang_advanced_ssi_high_mic_gain" t="Més Guany de micròfon (fora de norma TIA)"/>
+	<w_phrase n="wlang_advanced_handset_agc" t="AGC telèfon"/>
+	<w_phrase n="wlang_advanced_headset_agc" t="AGC Auricular"/>
+	<w_phrase n="wlang_advanced_ssi_partial_lookup" t="Cerca Parcial de Número"/>
+	<w_phrase n="wlang_ssi_number_lookup" t="Cerca de Contactes"/>
+	<w_phrase n="wlang_fkeys_ssi_url" t="Action URL"/>
+	<w_phrase n="wlang_advanced_ssi_sig_tos" t="Tipus de Servei SIP (TOS/Diffserv)"/>
+	<w_phrase n="wlang_advanced_ssi_guess_start_length" t="Longitud Inici QuickLookup"/>
+	<w_phrase n="wlang_advanced_ethernet" t="Ports Ethernet"/>
+	<w_phrase n="wlang_advanced_ssi_eth_net_port" t="Port de Xarxa"/>
+	<w_phrase n="wlang_advanced_ssi_eth_pc_port" t="Port de PC"/>
+	<w_phrase n="wlang_advanced_autoneg" t="Autonegociació"/>
+	<w_phrase n="wlang_advanced_10full" t="10 Mbit Full Duplex"/>
+	<w_phrase n="wlang_advanced_10half" t="10 Mbit Half Duplex"/>
+	<w_phrase n="wlang_advanced_100full" t="100 Mbit Full Duplex"/>
+	<w_phrase n="wlang_advanced_100half" t="10 Mbit Half Duplex"/>
+	<w_phrase n="wlang_sysinfo_ethernet_status" t="Estat d’Ethernet"/>
+	<w_phrase n="wlang_sysinfo_ethernet_status2" t="Estat"/>
+	<w_phrase n="wlang_connected" t="connectat"/>
+	<w_phrase n="wlang_disconnected" t="desconnectat"/>
+	<w_phrase n="wlang_sysinfo_ethernet_connection_type" t="Tipus de Connexió"/>
+	<w_phrase n="wlang_index_costs" t="Costos"/>
+	<w_phrase n="wlang_action_ssi_missed" t="Trucada Perduda"/>
+	<w_phrase n="wlang_line_ssi_stunbindint" t="Interval de STUN (s)"/>
+	<w_phrase n="wlang_action_info" t="Les Action URLs realitzen bàsicament peticions HTTP GET quan es produeix algun esdeveniment al telèfon."/>
+	<w_phrase n="wlang_fkeys_ssi_p2t" t="Push-to-Talk"/>
+	<w_phrase n="wlang_advanced_load_certs" t="Carrega Certificat de Servidor"/>
+	<w_phrase n="wlang_advanced_load_sets_manually" t="Carrega Fitxer de Configuració Manualment"/>
+	<w_phrase n="wlang_advanced_load_warning" t="En prémer el botó Carrega, el telèfon reiniciarà totes les seves opcions, carregarà les noves opcions des del fitxer especificat i es reiniciarà. Així que les opcions actuals se sobreescriuran!"/>
+	<w_phrase n="wlang_advanced_answer_after_policy" t="Política d’Intercom"/>
+	<w_phrase n="wlang_advanced_answer_after_idle" t="només en repòs"/>
+	<w_phrase n="wlang_advanced_answer_after_always" t="sempre"/>
+	<w_phrase n="wlang_ldap_server_name" t="Server Name"/>
+	<w_phrase n="wlang_ldap_server" t="Adreça de Servidor"/>
+	<w_phrase n="wlang_ldap_port" t="Port"/>
+	<w_phrase n="wlang_ldap_base" t="Base"/>
+	<w_phrase n="wlang_ldap_username" t="Usuari"/>
+	<w_phrase n="wlang_ldap_password" t="Contrasenya"/>
+	<w_phrase n="wlang_guess_max_hits" t="Max Hits"/>
+	<w_phrase n="wlang_ldap_prefs" t="LDAP"/>
+	<w_phrase n="wlang_prefs_ssi_keyboard_lock" t="Teclat Bloquejat"/>
+	<w_phrase n="wlang_prefs_ssi_keyboard_lock_pw" t="PIN per Desbloquejar"/>
+	<w_phrase n="wlang_line_ssi_country" t="Codi de País"/>
+	<w_phrase n="wlang_line_ssi_area" t="Codi d'Àrea"/>
+	<w_phrase n="wlang_advanced_ssi_enum" t="Suport ENUM"/>
+	<w_phrase n="wlang_advanced_ssi_tcp_listen" t="Port SIP TCP d'escolta"/>
+	<w_phrase n="wlang_advanced_tmz_AUSp8" t="+8 Austràlia (Perth)"/>
+	<w_phrase n="wlang_advanced_tmz_AUS2p95" t="+9.5 Austràlia (Darwin)"/>
+	<w_phrase n="wlang_advanced_tmz_AUS3p10" t="+10 Austràlia (Hobart)"/>
+	<w_phrase n="wlang_advanced_tmz_BRA1m3" t="-3 Brasil (DST)"/>
+	<w_phrase n="wlang_advanced_tmz_BRA2m3" t="-3 Brasil (no DST)"/>
+	<w_phrase n="wlang_advanced_tmz_BRAm2" t="-2 Brasil (no DST)"/>
+	<w_phrase n="wlang_advanced_tmz_ARGm3" t="-3 Argentina (Buenos Aires)"/>
+	<w_phrase n="wlang_advanced_tmz_EATp3" t="+3 Hora d’Àfrica Oriental"/>
+	<w_phrase n="wlang_advanced_tmz_CATp2" t="+2 Hora d’Àfrica Central"/>
+	<w_phrase n="wlang_advanced_tmz_WATp1" t="+1 Hora d’Àfrica Occidental"/>
+	<w_phrase n="wlang_fkeys_ssi_context" t="Context"/>
+	<w_phrase n="wlang_fkeys_ssi_type" t="Tipus"/>
+	<w_phrase n="wlang_fkeys_ssi_keyevent" t="Esdeveniment de Tecla"/>
+	<w_phrase n="wlang_advanced_ssi_peer_to_peer_cc" t="Call Completion Punt a punt"/>
+	<w_phrase n="wlang_advanced_logon_logoff" t="Inici de Sessió/Tanca Sessió"/>
+	<w_phrase n="wlang_advanced_ssi_auto_logoff_time" t="Tanca Sessió en totes les línies per inactivitat (min)"/>
+	<w_phrase n="wlang_advanced_logoffall" t="Suprimeix Totes les Identitats"/>
+	<w_phrase n="wlang_advanced_logoffline" t="Suprimeix Identitat"/>
+	<w_phrase n="wlang_conf_text_logoff_all" t="Tingueu en compte que se suprimiran totes les configuracions de la identitat SIP. Esteu d'acord a suprimir totes les identitats?"/>
+	<w_phrase n="wlang_fkey_info" t="En aquesta pàgina podeu especificar les opcions de les tecles programables del vostre telèfon. Utilitzeu Context per especificar el context de la identitat, per exemple, aquesta identitat s'utilitzarà per supervisar una extensió específica. Tipus permet seleccionar la funció real d’una tecla en concret. En l'últim argument, el camp Número, poden emmagatzemar-se el número real de telèfon, la sip url, la seqüència dtmf, l’action url o el tipus de tecla. Si us plau, consulteu el manual per ampliar aquesta informació."/>
+	<w_phrase n="wlang_advanced_tmz_TTBm4" t="-4 Trinitat i Tobago"/>
+	<w_phrase n="wlang_line_ssi_shared_line" t="Línia Compartida"/>
+	<w_phrase n="wlang_advanced_ssi_text_softkey" t="Mostra només text en les Tecles contextuals"/>
+	<w_phrase n="wlang_advanced_ssi_softkey_and_text" t="Mostra text i icones en les Tecles contextuals"/>
+	<w_phrase n="wlang_line_ssi_dtmf_info" t="DTMF usant SIP INFO"/>
+	<w_phrase n="wlang_line_ssi_xml_screen_url" t="URL de l’XML de Pantalla en Repòs"/>
+	<w_phrase n="wlang_prefs_ssi_ringer_animation" t="Animació de timbre"/>
+	<w_phrase n="wlang_advanced_ssi_speaker_dialer" t="Usa la tecla Altaveu per marcar"/>
+	<w_phrase n="wlang_action_ssi_connected" t="Està Connectat"/>
+	<w_phrase n="wlang_action_ssi_disconnected" t="Està desconnectat"/>
+	<w_phrase n="wlang_advanced_ssi_overlap_dialing" t="Marcat Overlap"/>
+	<w_phrase n="wlang_fkeys_ssi_speed" t="Marcat Ràpid"/>
+	<w_phrase n="wlang_fkeys_ssi_none" t="Cap"/>
+	<w_phrase n="wlang_prefs_ssi_redundant_softkeys" t="Tecles Contextuals Redundants"/>
+	<w_phrase n="wlang_advanced_ssi_web_logout" t="Tanca Sessió Automàticament (min)"/>
+	<w_phrase n="wlang_prefs_ringer9" t="Timbre 9"/>
+	<w_phrase n="wlang_prefs_ringer10" t="Timbre 10"/>
+	<w_phrase n="wlang_advanced_ssi_cancel_on_hold" t="Tecla Cancel·la en Trucada retinguda"/>
+	<w_phrase n="wlang_advanced_call_waiting_ringer" t="Timbre"/>
+	<w_phrase n="wlang_advanced_ssi_ntp_refresh" t="Temps d’Actualització NTP (s)"/>
+	<w_phrase n="wlang_line_ssi_ring_after_delay" t="Sona després de (s)"/>
+	<w_phrase n="wlang_prefs_ssi_redirect_on_code" t="Codi On"/>
+	<w_phrase n="wlang_prefs_ssi_redirect_off_code" t="Codi Off"/>
+	<w_phrase n="wlang_prefs_redirection_always" t="Incondicional"/>
+	<w_phrase n="wlang_prefs_redirection_busy" t="Quan ocupat"/>
+	<w_phrase n="wlang_prefs_redirection_time" t="Quan no respostar"/>
+	<w_phrase n="wlang_prefs_dnd" t="DND"/>
+	<w_phrase n="wlang_prefs_redirect_number" t="Desviament de trucades a"/>
+	<w_phrase n="wlang_advanced_ssi_pnp_config" t="Configuració PnP"/>
+	<w_phrase n="wlang_advanced_ssi_flood_tracing" t="Traça SIP només per a REGISTER/SUBSCRIU/NOTIFY"/>
+	<w_phrase n="wlang_reboot_ssi_title" t="Reiniciant…"/>
+	<w_phrase n="wlang_text_reboot_info" t="El vostre telèfon es reiniciarà en breu. Tingueu paciència fins que s’hagi reiniciat completament. Quan aparegui de nou la pantalla en repòs, voldrà dir que el telèfon pot utilitzar-se de nou, inclosa la interfície web."/>
+	<w_phrase n="wlang_advanced_ssi_xml_notify" t="Suport XML NOTIFY"/>
+	<w_phrase n="wlang_minibrowser_pref" t="Minibrowser"/>
+	<w_phrase n="wlang_advanced_ssi_enable_timer_support" t="Suport Timer (RFC4028)"/>
+	<w_phrase n="wlang_prefs_dsnumbername" t="Número + Nom"/>
+	<w_phrase n="wlang_prefs_ssi_keyboard_lock_dp" t="Números d'Emergència"/>
+	<w_phrase n="wlang_prefs_alert_internal_text" t="Text d'Alerta Interna"/>
+	<w_phrase n="wlang_prefs_ssi_alert_internal_sound" t="Timbre d'Alerta Interna"/>
+	<w_phrase n="wlang_prefs_alert_external_text" t="Text d'Alerta Externa"/>
+	<w_phrase n="wlang_prefs_ssi_alert_external_sound" t="Timbre d'Alerta Externa"/>
+	<w_phrase n="wlang_prefs_alert_group_text" t="Text d'Alerta de Grup"/>
+	<w_phrase n="wlang_prefs_ssi_alert_group_sound" t="Timbre d'Alerta de Grup"/>
+	<w_phrase n="wlang_prefs_alert_info_ringer" t="Timbre Alert-Info"/>
+	<w_phrase n="wlang_prefs_ssi_scroll_outgoing" t="Scroll d'Identitat Activa"/>
+	<w_phrase n="wlang_advanced_tmz_USA2m7" t="-7 Estats Units - MST no DST "/>
+	<w_phrase n="wlang_prefs_ssi_show_local_line" t="Mostra Índex d'Identitat"/>
+	<w_phrase n="wlang_advanced_ssi_pickup_indication" t="Indicació audible per a captura Dialog Info"/>
+	<w_phrase n="wlang_advanced_multicast" t="Multicast"/>
+	<w_phrase n="wlang_advanced_ssi_multicast_listen" t="Suport Multicast"/>
+	<w_phrase n="wlang_advanced_ssi_multicast_address" t="Adreça IP"/>
+	<w_phrase n="wlang_advanced_ssi_multicast_port" t="Port"/>
+	<w_phrase n="wlang_language_name" t="Espanyol"/>
+	<w_phrase n="wlang_advanced_qos" t="Qualitat de Servei"/>
+	<w_phrase n="wlang_advanced_rtp" t="RTP/RTCP"/>
+	<w_phrase n="wlang_advanced_sip" t="SIP"/>
+	<w_phrase n="wlang_advtab_network" t="Xarxa"/>
+	<w_phrase n="wlang_advtab_behavior" t="Comportament"/>
+	<w_phrase n="wlang_advtab_audio" t="Àudio"/>
+	<w_phrase n="wlang_advtab_sip" t="SIP/RTP"/>
+	<w_phrase n="wlang_advtab_update" t="Actualitza"/>
+	<w_phrase n="wlang_advtab_security" t="QoS/Seguretat"/>
+	<w_phrase n="wlang_linetab_login" t="Accés"/>
+	<w_phrase n="wlang_linetab_feat" t="Funcionalitats"/>
+	<w_phrase n="wlang_linetab_sip" t="SIP"/>
+	<w_phrase n="wlang_linetab_nat" t="NAT"/>
+	<w_phrase n="wlang_linetab_rtp" t="RTP"/>
+	<w_phrase n="wlang_line_ssi_server_type" t="Tipus Servidor Admès"/>
+	<w_phrase n="wlang_line_broadsoft" t="Broadsoft"/>
+	<w_phrase n="wlang_line_sylantro" t="Sylantro"/>
+	<w_phrase n="wlang_line_pbxnsip" t="PBXnSIP"/>
+	<w_phrase n="wlang_line_default" t="Per Defecte"/>
+	<w_phrase n="wlang_line_ssi_event_list_uri" t="URL Supervisió Extensions i Llista de Captura de Trucades"/>
+	<w_phrase n="wlang_web_confirm_apply_set_change" t="Voleu aplicar els canvis?"/>
+	<w_phrase n="wlang_line_ssi_presence_subscription" t="Llista de Contactes"/>
+	<w_phrase n="wlang_line_ssi_presence_buddy_list_uri" t="URI Llista de Contactes"/>
+	<w_phrase n="wlang_line_ssi_full_sdp_answer" t="Resposta SDP Full"/>
+	<w_phrase n="wlang_info_firmware_version" t="Versió de Firmware"/>
+	<w_phrase n="wlang_advanced_ssi_redirect_ringing" t="Permet redireccionament de trucades entrants per mitjà de tecles programables"/>
+	<w_phrase n="wlang_advanced_ssi_auto_redial" t="Retrucada automàtica quan ocupat"/>
+	<w_phrase n="wlang_advanced_ssi_auto_redial_value" t="Retrucada després de (s)"/>
+	<w_phrase n="wlang_advanced_ssi_disable_blind_transfer" t="Inhabilita Transferència Cega (REFER)"/>
+	<w_phrase n="wlang_advanced_ssi_disable_deflection" t="Inhabilita Deflection (Codi 302)"/>
+	<w_phrase n="wlang_action_ssi_log_on" t="Inici de Sessió"/>
+	<w_phrase n="wlang_action_ssi_log_off" t="Abandona Sessió"/>
+	<w_phrase n="wlang_prefs_ssi_show_call_status" t="Mostra Estat de Trucades"/>
+	<w_phrase n="wlang_action_ssi_reg_failed" t="El registre ha fallat"/>
+	<w_phrase n="wlang_subscriptions_ssi_title" t="Estat de Subscripcions"/>
+	<w_phrase n="wlang_leftnav_subscriptions" t="Subscripcions"/>
+	<w_phrase n="wlang_advanced_ssi_max_boot_delay" t="Temps màxim d'Arrencada (s)"/>
+	<w_phrase n="wlang_advanced_http_server" t="Servidor HTTP"/>
+	<w_phrase n="wlang_advanced_http_client" t="Client HTTP"/>
+	<w_phrase n="wlang_advanced_ssi_mailbox_active" t="Usa Bústia de Veu només en la Identitat Activa"/>
+	<w_phrase n="wlang_line_ssi_remove_all_bindings" t="Desfés tots els Bindings en Desenregistrar"/>
+	<w_phrase n="wlang_line_ssi_include_listeners" t="Inclou els oients al REGISTRE"/>
+	<w_phrase n="wlang_vpn_ssi_vpn_on" t="VPN"/>
+	<w_phrase n="wlang_vpn_ssi_tarball_url" t="Fitxer de configuració VPN Descomprimit"/>
+	<w_phrase n="wlang_ssi_l2tp_on" t="L2TP"/>
+	<w_phrase n="wlang_ssi_l2tp_tarball_url" t="S'ha descomprimit la configuració tarball de L2TP"/>
+	<w_phrase n="wlang_ssi_sbc_on" t="SBC"/>
+	<w_phrase n="wlang_ssi_sbc_prov_url" t="URL del fitxer de configuració SBC"/>
+	<w_phrase n="wlang_advanced_ssi_idle_offhook" t="Torna a la pantalla en repòs en Penjar"/>
+	<w_phrase n="wlang_prefs_ssi_enable_keyboard_lock" t="Permet Bloqueig de Teclat"/>
+	<w_phrase n="wlang_advanced_ssi_vlan_port_tagging" t="Marca/Desmarca tràfic VLAN als Ports Ethernet"/>
+	<w_phrase n="wlang_advanced_ssi_vlan_id" t="ID VLAN (1-4094)"/>
+	<w_phrase n="wlang_advanced_ssi_vlan_priority" t="Prioritat VLAN (0-7)"/>
+	<w_phrase n="wlang_advanced_vlan" t="VLAN"/>
+	<w_phrase n="wlang_line_failover_identity" t="Identitat de Backup"/>
+	<w_phrase n="wlang_fkeys_sidecar" t="Mòdul d'Expansió"/>
+	<w_phrase n="wlang_usb_expansion_module" t="Mòdul d'Expansió USB"/>
+	<w_phrase n="wlang_sidecar_layout_lines" t="Esquema de Línia"/>
+	<w_phrase n="wlang_sidecar_layout_tiles" t="Esquema de Línies"/>
+	<w_phrase n="wlang_line_ssi_record_dialed_calls" t="Emmagatzema Trucades Fetes"/>
+	<w_phrase n="wlang_line_ssi_record_received_calls" t="Emmagatzema Trucades Rebudes"/>
+	<w_phrase n="wlang_prefs_ssi_emergency_proxy" t="Proxy de Sortida per a Números d'Emergència"/>
+	<w_phrase n="wlang_line_telepo" t="TeclaTelepo"/>
+	<w_phrase n="wlang_fkeys_ssi_button" t="Tecla"/>
+	<w_phrase n="wlang_advanced_ssi_retryafterfailedregister" t="Interval de Reintent per a Registres Erronis (s)"/>
+	<w_phrase n="wlang_line_ssi_subscription_expiry" t="Temps d'Expiració SUBSCRIBE (s)"/>
+	<w_phrase n="wlang_line_metaswitch" t="MetaSwitch"/>
+	<w_phrase n="wlang_advanced_ssi_sendprack" t="Envia PRACK"/>
+	<w_phrase n="wlang_watchdog" t="Watchdog"/>
+	<w_phrase n="wlang_advanced_ssi_rtp_keepalive" t="Ping RTP"/>
+	<w_phrase n="wlang_ldap_search_filter" t="Filtre Nom LDAP"/>
+	<w_phrase n="wlang_ldap_number_filter" t="Filtre de Números LDAP"/>
+	<w_phrase n="wlang_ldap_name_attributes" t="Atributs de Nom LDAP"/>
+	<w_phrase n="wlang_ldap_number_attributes" t="Atributs de Número LDAP"/>
+	<w_phrase n="wlang_ldap_display_name" t="Nom Mostrat LDAP"/>
+	<w_phrase n="wlang_advanced_ssi_ldap_over_tls" t="LDAP sobre TLS"/>
+	<w_phrase n="wlang_prefs_tsaustria" t="Àustria"/>
+	<w_phrase n="wlang_prefs_tsfrance" t="França"/>
+	<w_phrase n="wlang_prefs_tsitaly" t="Itàlia"/>
+	<w_phrase n="wlang_prefs_tsnetherlands" t="Holanda"/>
+	<w_phrase n="wlang_prefs_tsnorway" t="Noruega"/>
+	<w_phrase n="wlang_prefs_tsnewzealand" t="Nova Zelanda"/>
+	<w_phrase n="wlang_prefs_tsspain" t="Espanya"/>
+	<w_phrase n="wlang_prefs_tsgreatbritain" t="Gran Bretanya"/>
+	<w_phrase n="wlang_advanced_tmz_VENm4" t="-4 Veneçuela (Caracas)"/>
+	<w_phrase n="wlang_advanced_tmz_NCLp11" t="+11 Nova Caledònia (Nouméa)"/>
+	<w_phrase n="wlang_line_ssi_enable_hookflash" t="Hook Flash"/>
+	<w_phrase n="wlang_vpn_netcat_server" t="Servidor Netcat (p.ex. 10.0.1.2 5000)"/>
+	<w_phrase n="wlang_fkeys_ssi_presence" t="Presència"/>
+	<w_phrase n="wlang_fkeys_ssi_disp_code" t="Codi Disposició"/>
+	<w_phrase n="wlang_prefs_custom_internal_alert_info" t="Alert-Info personalitzat usant melodies integrades"/>
+	<w_phrase n="wlang_prefs_ca_ringer_text" t="Text de Timbre Intern"/>
+	<w_phrase n="wlang_prefs_ssi_ca_ringer_file" t="Fitxer de Timbre Intern"/>
+	<w_phrase n="wlang_line_nortel" t="Nortel"/>
+	<w_phrase n="wlang_action_ssi_hold" t="Retén trucada"/>
+	<w_phrase n="wlang_action_ssi_unhold" t="Recupera Trucada"/>
+	<w_phrase n="wlang_action_ssi_transfer" t="Transfereix Trucada"/>
+	<w_phrase n="wlang_action_ssi_blind_transfer" t="Transferència Cega"/>
+	<w_phrase n="wlang_action_ssi_attended_transfer" t="Transferència Atesa"/>
+	<w_phrase n="wlang_action_ssi_longpress_url" t="Pulsació llarga de Tecla de Línia"/>
+	<w_phrase n="wlang_advanced_ssi_csta_control" t="Permet gestió mitjançant CSTA"/>
+	<w_phrase n="wlang_line_ssi_dtmf_info_sip_info_only" t="Només SIP INFO"/>
+	<w_phrase n="wlang_advanced_ssi_speaker_receive_call" t="Usa Tecla Altaveu/Auricular per acceptar trucades"/>
+	<w_phrase n="wlang_prefs_ssi_global_missed_counter" t="Comptador Global per a trucades perdudes"/>
+	<w_phrase n="wlang_advanced_ssi_http_password_not_set" t="Contrasenya HTTP no establerta!"/>
+	<w_phrase n="wlang_text_login_failed_info1" t="Després de diversos accessos incorrectes, s’ha bloquejat la interfície web per seguretat!"/>
+	<w_phrase n="wlang_text_login_failed_info2" t="Estarà de nou disponible en"/>
+	<w_phrase n="wlang_text_login_failed_info3" t="minut(s). Els accessos incorrectes posteriors duplicaran el temps que caldrà esperar per desbloquejar la interfície web."/>
+	<w_phrase n="wlang_text_login_failed_info4" t=",s’ha bloquejat l'accés web!"/>
+	<w_phrase n="wlang_login_failed_ssi_title" t="Accés incorrecte!"/>
+	<w_phrase n="wlang_web_confirm_logout" t="Voleu abandonar sessió web?"/>
+	<w_phrase n="wlang_advanced_logoutbutton" t="Abandona Sessió"/>
+	<w_phrase n="wlang_line_ssi_savp" t="RTP/SAVP"/>
+	<w_phrase n="wlang_advanced_ssi_use_hidden_tags" t="Usa hidden tags"/>
+	<w_phrase n="wlang_fkeys_ssi_blf" t="BLF"/>
+	<w_phrase n="wlang_advanced_ssi_show_history_info" t="Mostra History-Info"/>
+	<w_phrase n="wlang_security_warning_ssi_title" t="Avís de Seguretat!"/>
+	<w_phrase n="wlang_text_security_warning_info1" t="Vós o un altre usuari remot ha enviat una petició sense autenticar HTTP POST a aquest telèfon."/>
+	<w_phrase n="wlang_text_security_warning_info2" t="Aquesta petició ha estat obviada i la sessió tancada."/>
+	<w_phrase n="wlang_text_security_warning_info3" t="Heu de tornar a autenticar-vos per accedir de nou a la interfície."/>
+	<w_phrase n="wlang_security_advice" t="Avís de Seguretat"/>
+	<w_phrase n="wlang_security_settings_state" t="Estat de la configuració de seguretat"/>
+	<w_phrase n="wlang_Recommended" t="Recomanat"/>
+	<w_phrase n="wlang_Mandatory" t="Obligatori"/>
+	<w_phrase n="wlang_security_text_advice1" t="Us recomanem encaridament que protegiu l'accés a la interfície web per evitar atacs remots. S’ha de canviar l'usuari HTTP i la contrasenya d'Administrador dels valors per defecte. És obligatori canviar la contrasenya HTTP."/>
+	<w_phrase n="wlang_security_text_advice2" t="A més cal protegir la interfície web fent servir els hidden tags per impedir que es produeixin canvis en el telèfon amb peticions HTTP POST."/>
+	<w_phrase n="wlang_security_apply_button_ignore" t="Aplica i ignora l'avís fins que es reiniciï."/>
+	<w_phrase n="wlang_security_apply_button_ignore_forever" t="Aplica i ignorar l'avís per sempre."/>
+	<w_phrase n="wlang_security_ssi_title" t="Seguretat"/>
+	<w_phrase n="wlang_advanced_ssi_ignore_warning" t="Ignora Avisos de Seguretat"/>
+	<w_phrase n="wlang_advanced_ssi_naptr_sip_uri" t="Usa NAPTR en URIs SIP"/>
+	<w_phrase n="wlang_line_ssi_optional" t="opcional"/>
+	<w_phrase n="wlang_line_ssi_mandatory" t="obligatori"/>
+	<w_phrase n="wlang_prefs_backlight_dim" t="atenua"/>
+	<w_phrase n="wlang_advanced_ssi_show_diversion" t="Mostra Desviament"/>
+	<w_phrase n="wlang_advanced_ssi_offhook_dial_prompt" t="Invitació a Marcar quan despengi"/>
+	<w_phrase n="wlang_fkeys_ssi_ivr" t="IVR"/>
+	<w_phrase n="wlang_info_uptime_info" t="Temps d'Activitat"/>
+	<w_phrase n="wlang_info_memfree_info" t="Memòria Lliure"/>
+	<w_phrase n="wlang_info_uboot_version_info" t="Versió d'Arrencada"/>
+	<w_phrase n="wlang_line_ssi_authtag" t="Etiqueta Autenticació SRTP"/>
+	<w_phrase n="wlang_line_ssi_aes32" t="AES-32"/>
+	<w_phrase n="wlang_line_ssi_aes80" t="AES-80"/>
+	<w_phrase n="wlang_prefs_ssi_show_ivr_digits" t="Mostra els codis DTMF en IVR durant trucada"/>
+	<w_phrase n="wlang_line_ssi_dynamic_payload" t="Payload G.726 Dinàmic"/>
+	<w_phrase n="wlang_advanced_ssi_show" t="mostra"/>
+	<w_phrase n="wlang_fkeyname_retrieve" t="Bústia de Veu"/>
+	<w_phrase n="wlang_fkeyname_dnd" t="DND"/>
+	<w_phrase n="wlang_fkeyname_menu" t="Configuracions"/>
+	<w_phrase n="wlang_fkeyname_exec_assist_config" t="Configuració Executive-Assistant"/>
+	<w_phrase n="wlang_fkeyname_exec_assist_callon_behalfof" t="Comportament Executiu-Assistent de"/>
+	<w_phrase n="wlang_fkeyname_transfer" t="Transferència"/>
+	<w_phrase n="wlang_fkeyname_hold" t="Retén"/>
+	<w_phrase n="wlang_fkeyname_missed" t="Trucades Perdudes"/>
+	<w_phrase n="wlang_fkeyname_accepted" t="Trucades Acceptades"/>
+	<w_phrase n="wlang_fkeyname_dailed" t="Trucades Fetes"/>
+	<w_phrase n="wlang_advanced_tmz_USA2m10" t="-10 Estats Units - Alaska-Aleutian"/>
+	<w_phrase n="wlang_fkeyname_call_lists" t="Registre de Trucades"/>
+	<w_phrase n="wlang_fkeyname_support" t="Ajuda"/>
+	<w_phrase n="wlang_fkeyname_headset" t="Auricular"/>
+	<w_phrase n="wlang_fkeyname_presence" t="Presència"/>
+	<w_phrase n="wlang_fkeyname_buddies" t="Contactes"/>
+	<w_phrase n="wlang_fkeyname_redial" t="Retrucada"/>
+	<w_phrase n="wlang_fkeyname_instant_redial" t="Retrucada Instantània"/>
+	<w_phrase n="wlang_fkeyname_denyall" t="Bloqueja Remitent"/>
+	<w_phrase n="wlang_fkeyname_contactpool" t="Rang"/>
+	<w_phrase n="wlang_fkeyname_addr" t="Agenda"/>
+	<w_phrase n="wlang_ocip_prefs" t="OCI-P (Broadsoft)"/>
+	<w_phrase n="wlang_advanced_dfks" t="Sincronització Device Feature Key"/>
+	<w_phrase n="wlang_line_ssi_publish_presence_bootup" t="Publica Presència en arrencada"/>
+	<w_phrase n="wlang_fkeyname_record" t="Grava"/>
+	<w_phrase n="wlang_fkeyname_conference" t="Conferència"/>
+	<w_phrase n="wlang_fkeyname_id_next" t="Següent Identitat"/>
+	<w_phrase n="wlang_fkeyname_id_prev" t="Identitat Anterior"/>
+	<w_phrase n="wlang_fkeyname_mobility" t="Grava/Mobilitat"/>
+	<w_phrase n="wlang_ocs_outbound_proxy" t="Proxy de Sortida"/>
+	<w_phrase n="wlang_prefs_ssi_advertisement" t="Anuncis"/>
+	<w_phrase n="wlang_fkeyname_monitored_calls" t="Supervisa Trucades"/>
+	<w_phrase n="wlang_fkeys_ssi_transfer" t="Transferència"/>
+	<w_phrase n="wlang_fkeys_ssi_redirect" t="Desviament de Trucades"/>
+	<w_phrase n="wlang_fkeys_ssi_auto_answer" t="Autoresposta"/>
+	<w_phrase n="wlang_wifi_auth_mode" t="Security"/>
+	<w_phrase n="wlang_wifi_scanning" t="Scanning"/>
+	<w_phrase n="wlang_wifi_wpa2" t="WPA2"/>
+	<w_phrase n="wlang_wifi_wpa" t="WPA"/>
+	<w_phrase n="wlang_wifi_wep" t="WEP"/>
+	<w_phrase n="wlang_wifi_open" t="OPEN"/>
+	<w_phrase n="wlang_wifi_wpapsk" t="Password"/>
+	<w_phrase n="wlang_wifi_wpa_encryptype" t="Tipus de Xifratge"/>
+	<w_phrase n="wlang_wifi_tkip" t="TKIP"/>
+	<w_phrase n="wlang_wifi_aes" t="AES"/>
+	<w_phrase n="wlang_wifi_essid" t="Network Name"/>
+	<w_phrase n="wlang_advanced_wifi" t="WLAN"/>
+	<w_phrase n="wlang_bt_enabled" t="Bluetooth Enabled"/>
+	<w_phrase n="wlang_advanced_tr069" t="TR-069"/>
+	<w_phrase n="wlang_wifi_wep_key1" t="Password"/>
+	<w_phrase n="wlang_line_asterisk" t="Asterisk"/>
+	<w_phrase n="wlang_line_ccm" t="CCM"/>
+	<w_phrase n="wlang_advanced_ssi_typeanswering" t="Informació d'alerta de l'intercomunicador"/>
+	<w_phrase n="wlang_advanced_ssi_call_info_audio_device" t="Informació de trucada de l'intercomunicador"/>
+	<w_phrase n="wlang_advanced_ssi_tahandsfree" t="Mans Lliures"/>
+	<w_phrase n="wlang_advanced_ssi_tahandset" t="Telèfon"/>
+	<w_phrase n="wlang_advanced_ssi_taheadset" t="Auricular"/>
+	<w_phrase n="wlang_advanced_ssi_taactivedevice" t="Dispositiu Actiu"/>
+	<w_phrase n="wlang_line_ssi_additional_supported_headers" t="Capçaleres Addicionals Admeses"/>
+	<w_phrase n="wlang_prefs_ssi_dim_timer" t="Enfosqueix després de (s)"/>
+	<w_phrase n="wlang_prefs_character_settings" t="Configuració de Caràcters"/>
+	<w_phrase n="wlang_fkeyname_mute" t="Emmudeix"/>
+	<w_phrase n="wlang_advanced_ssi_empty_tls_client_cert" t="Certificat de Client Buit"/>
+	<w_phrase n="wlang_advanced_vq_report_collector" t="Voice Quality Report Collector"/>
+	<w_phrase n="wlang_fkeyname_reboot" t="Reinicia"/>
+	<w_phrase n="wlang_fkeyname_logoff_all" t="Abandona Totes"/>
+	<w_phrase n="wlang_fkeyname_auto_answer" t="Autoresposta"/>
+	<w_phrase n="wlang_fkeyname_reset" t="Restableix"/>
+	<w_phrase n="wlang_prefs_keyboard_lock_timeout" t="Bloqueja Teclat després de (s)"/>
+	<w_phrase n="wlang_logged_out_info" t="Ara heu abandonat la sessió del vostre telèfon. Per iniciar sessió de nou, premeu el botó d’inici de sessió."/>
+	<w_phrase n="wlang_logged_out_title" t="Abandona Sessió"/>
+	<w_phrase n="wlang_advanced_loginbutton" t="Obre Sessió"/>
+	<w_phrase n="wlang_advanced_ssi_sip_tracing" t="Traça SIP"/>
+	<w_phrase n="wlang_advanced_ssi_http_tracing" t="Traça HTTP"/>
+	<w_phrase n="wlang_line_ssi_g726_packing_order" t="Ordre de Byte G.726"/>
+	<w_phrase n="wlang_line_ssi_rfc3551" t="RFC3551"/>
+	<w_phrase n="wlang_line_ssi_aal2" t="AAL2"/>
+	<w_phrase n="wlang_adr_first_name" t="Nom"/>
+	<w_phrase n="wlang_adr_last_name" t="Cognom"/>
+	<w_phrase n="wlang_adr_group" t="Grup"/>
+	<w_phrase n="wlang_adr_title" t="Tractament"/>
+	<w_phrase n="wlang_adr_organization" t="Organització"/>
+	<w_phrase n="wlang_adr_email" t="Correu Electrònic"/>
+	<w_phrase n="wlang_adr_note" t="Nota"/>
+	<w_phrase n="wlang_adr_favorite" t="Favorit"/>
+	<w_phrase n="wlang_adr_work" t="Feina"/>
+	<w_phrase n="wlang_adr_addsub_button" t="Afegeix Sub"/>
+	<w_phrase n="wlang_adr_change_button" t="Canvia"/>
+	<w_phrase n="wlang_advanced_goto_monitor_state_on_line_activity" t="Vés a Call-Monitor quan hi hagi activitat"/>
+	<w_phrase n="wlang_adr_skip_first_line" t="Omet la Primera Línia"/>
+	<w_phrase n="wlang_advanced_prefer_saved_over_received_photo" t="Fotos Locals Preferides"/>
+	<w_phrase n="wlang_adr_photo" t="Foto"/>
+	<w_phrase n="wlang_line_use_photo_from_tbook" t="Obtén des de l'Agenda"/>
+	<w_phrase n="wlang_line_teles" t="Teles"/>
+	<w_phrase n="wlang_fkeys_ssi_replacement_label_header" t="Etiqueta"/>
+	<w_phrase n="wlang_fkeys_ssi_short_label" t="Etiqueta Curta"/>
+	<w_phrase n="wlang_fkeys_ssi_full_label" t="Etiqueta Completa"/>
+	<w_phrase n="wlang_fkeys_ssi_short_label_mode" t="Mode d’Etiqueta Curta"/>
+	<w_phrase n="wlang_fkeyname_favorites" t="Favorits"/>
+	<w_phrase n="wlang_advanced_load_param_map" t="Carrega paràmetres TR-069 Manualment"/>
+	<w_phrase n="wlang_line_default_contact_uri" t="Número de contacte per defecte"/>
+	<w_phrase n="wlang_contact_none" t="Cap"/>
+	<w_phrase n="wlang_contact_mobile" t="Mòbil"/>
+	<w_phrase n="wlang_contact_home" t="Casa"/>
+	<w_phrase n="wlang_contact_main" t="Principal"/>
+	<w_phrase n="wlang_advanced_ssi_suppress_ringing_during_hold" t="Suprimir l'anell durant la retenció"/>
+	<w_phrase n="wlang_advanced_ssi_play_music_during_hold" t="Reprodueix Música durant espera"/>
+	<w_phrase n="wlang_advanced_ssi_offer_outbound" t="Usa Sortida"/>
+	<w_phrase n="wlang_advanced_tmz_UAEp4" t="+4 Unió dels Emirats Àrabs (Dubai)"/>
+	<w_phrase n="wlang_prefs_ssi_dialnumber_us_format" t="Format de Números Americans"/>
+	<w_phrase n="wlang_advanced_ssi_transferonhookstarcode" t="Codi * per a Captura de Trucades"/>
+	<w_phrase n="wlang_advanced_load_dialplan" t="Carrega Pla de trucades XML Manualment"/>
+	<w_phrase n="wlang_jb" t="JB Millorat"/>
+	<w_phrase n="wlang_jb_adaptive" t="Playout Adaptatiu"/>
+	<w_phrase n="wlang_jb_adjust_silence" t="Ajusta durant Silenci"/>
+	<w_phrase n="wlang_jb_adjust_immediately" t="Ajusta immediatament"/>
+	<w_phrase n="wlang_jb_max" t="JB_Max"/>
+	<w_phrase n="wlang_jb_min" t="JB_Min"/>
+	<w_phrase n="wlang_jb_average" t="JB_Average"/>
+	<w_phrase n="wlang_adr_nrtype_sip" t="sip"/>
+	<w_phrase n="wlang_adr_nrtype_business" t="negocis"/>
+	<w_phrase n="wlang_adr_nrtype_landline" t="Telèfon Fix"/>
+	<w_phrase n="wlang_adr_nrtype_extension" t="extensió"/>
+	<w_phrase n="wlang_adr_number_type" t="Tipus de Número"/>
+	<w_phrase n="wlang_adr_nickname" t="Àlies"/>
+	<w_phrase n="wlang_fkeys_ssi_multicast" t="Multicast"/>
+	<w_phrase n="wlang_fkeys_ssi_xml" t="Definició XML"/>
+	<w_phrase n="wlang_fkeys_ssi_conference_server" t="Conferència"/>
+	<w_phrase n="wlang_action_ssi_received_attended_transfer" t="SIP INVITE Rebut"/>
+	<w_phrase n="wlang_line_ssi_mediatransportoffer" t="Oferta de Transport de Mitjans"/>
+	<w_phrase n="wlang_line_ssi_mediatransportoffersetup" t="Configuració Oferta de Transport de Mitjans"/>
+	<w_phrase n="wlang_line_ssi_mto_active" t="activa"/>
+	<w_phrase n="wlang_line_ssi_mto_passive" t="passiva"/>
+	<w_phrase n="wlang_line_ssi_mto_any" t="qualsevol"/>
+	<w_phrase n="wlang_line_ssi_hold_inactive" t="Envia Hold com a inactiu"/>
+	<w_phrase n="wlang_prefs_ssi_upper_chars_0" t="Tecla 0 de seqüència de caràcters en majúscules"/>
+	<w_phrase n="wlang_prefs_ssi_upper_chars_1" t="Tecla 1 de seqüència de caràcters en majúscules"/>
+	<w_phrase n="wlang_prefs_ssi_upper_chars_2" t="Clau 2 de seqüència de caràcters en majúscules"/>
+	<w_phrase n="wlang_prefs_ssi_upper_chars_3" t="Clau 3 de seqüència de caràcters en majúscules"/>
+	<w_phrase n="wlang_prefs_ssi_upper_chars_4" t="Clau 4 de seqüència de caràcters en majúscules"/>
+	<w_phrase n="wlang_prefs_ssi_upper_chars_5" t="Clau 5 de seqüència de caràcters en majúscules"/>
+	<w_phrase n="wlang_prefs_ssi_upper_chars_6" t="Clau 6 de seqüència de caràcters en majúscules"/>
+	<w_phrase n="wlang_prefs_ssi_upper_chars_7" t="Clau 7 de seqüència de caràcters en majúscules"/>
+	<w_phrase n="wlang_prefs_ssi_upper_chars_8" t="Clau 8 de seqüència de caràcters en majúscules"/>
+	<w_phrase n="wlang_prefs_ssi_upper_chars_9" t="Clau 9 de seqüència de caràcters en majúscules"/>
+	<w_phrase n="wlang_prefs_ssi_lower_chars_0" t="Clau 0 de seqüència de caràcters en minúscula"/>
+	<w_phrase n="wlang_prefs_ssi_lower_chars_1" t="Clau 1 de seqüència de caràcters en minúscula"/>
+	<w_phrase n="wlang_prefs_ssi_lower_chars_2" t="Clau 2 de seqüència de caràcters en minúscula"/>
+	<w_phrase n="wlang_prefs_ssi_lower_chars_3" t="Clau 3 de seqüència de caràcters en minúscula"/>
+	<w_phrase n="wlang_prefs_ssi_lower_chars_4" t="Clau 4 de seqüència de caràcters en minúscula"/>
+	<w_phrase n="wlang_prefs_ssi_lower_chars_5" t="Clau 5 de seqüència de caràcters en minúscula"/>
+	<w_phrase n="wlang_prefs_ssi_lower_chars_6" t="Clau 6 de seqüència de caràcters en minúscula"/>
+	<w_phrase n="wlang_prefs_ssi_lower_chars_7" t="Clau 7 de seqüència de caràcters en minúscula"/>
+	<w_phrase n="wlang_prefs_ssi_lower_chars_8" t="Clau 8 de seqüència de caràcters en minúscula"/>
+	<w_phrase n="wlang_prefs_ssi_lower_chars_9" t="Clau 9 de seqüència de caràcters en minúscula"/>
+	<w_phrase n="wlang_line_ssi_subscription_expiry_after_failed" t="Temps de reintents de subscripció (s)"/>
+	<w_phrase n="wlang_advanced_ssi_transferonhooknonpots" t="Transferència Independent Penjada"/>
+	<w_phrase n="wlang_advanced_ssi_check_sdp_version" t="Comprova Versió de SDP"/>
+	<w_phrase n="wlang_prefs_ssi_show_clock" t="Mostra Rellotge"/>
+	<w_phrase n="wlang_ldap_perform_initial_query" t="Consulta Inicial"/>
+	<w_phrase n="wlang_cert_tab_unknown_certs" t="Certificats Desconeguts"/>
+	<w_phrase n="wlang_cert_tab_tlsdsk_certs" t="TLS DSK"/>
+	<w_phrase n="wlang_cert_add_trusted_cert" t="Afegeix Certificat Personalitzat (Format DER)"/>
+	<w_phrase n="wlang_tls_server_authentication_notification" t='Per defecte, els telèfons no validen connexions segures de servidor (TLS). Aquestes connexions són vulnerables a atacs de "persona al mig". Es pot habilitar aquesta funcionalitat, però tingueu en compte que degut a motius de seguretat només es pot inhabilitar amb un reinici de fàbrica. Consulteu service.snom.com per a més informació.'/>
+	<w_phrase n="wlang_tls_server_authentication_title" t="Autenticació TLS de Servidor"/>
+	<w_phrase n="wlang_tls_server_authentication_activate" t="Activa"/>
+	<w_phrase n="wlang_read_more" t="Llegeix més"/>
+	<w_phrase n="wlang_advanced_1000full" t="Gigabit Full Duplex"/>
+	<w_phrase n="wlang_advanced_1000half" t="Gigabit Half Duplex"/>
+	<w_phrase n="wlang_advanced_rtcp_xr" t="Format d’Informes RTCP-XR"/>
+	<w_phrase n="wlang_dialplan_count_failed_match_groups" t="Compta tots els grups en el Pla de Trucades"/>
+	<w_phrase n="wlang_advanced_ssi_allow_rtp_on_mute" t="Envia paquets silenci RTP en emmudir"/>
+	<w_phrase n="wlang_line_ssi_is_voice_identity" t="Identitat pot rebre trucades"/>
+	<w_phrase n="wlang_line_ssi_hide_identity" t="Identitat Oculta"/>
+	<w_phrase n="wlang_fkeyname_status_messages" t="Informació"/>
+	<w_phrase n="wlang_advanced_ssi_min_pin_length" t="Longitud mínima de PIN"/>
+	<w_phrase n="wlang_advanced_ssi_max_pin_retry" t="Màxims Reintents de PIN"/>
+	<w_phrase n="wlang_line_ssi_allow_inc_dialog_subscribe" t="Permet Supervisió Entrant d'Extensions"/>
+	<w_phrase n="wlang_prefs_scroll_text_interval" t="Interval de Passos de Scroll"/>
+	<w_phrase n="wlang_prefs_scroll_text_step_count" t="Compte de Passos de Scroll"/>
+	<w_phrase n="wlang_prefs_scroll_text_wait_multiplier" t="Pausa de Passos de Scroll"/>
+	<w_phrase n="wlang_apply_button" t="Aplica"/>
+	<w_phrase n="wlang_unsaved_settings" t="Algunes opcions encara no estan emmagatzemades permanentment."/>
+	<w_phrase n="wlang_view_changes_button" t="Visualitza Canvis"/>
+	<w_phrase n="wlang_changed_dialplan_msg" t="S’ha canviat el Pla de Trucades XML."/>
+	<w_phrase n="wlang_changed_settings_header" t="S’han canviat les següents opcions"/>
+	<w_phrase n="wlang_no_changed_settings_msg" t="Tots els canvis emmagatzemats."/>
+	<w_phrase n="wlang_line_ssi_extension_monitoring_group" t="ID de Supervisió de Grup d'Extensions"/>
+	<w_phrase n="wlang_soundcard_event_map" t="Paràmetres d'Àudio"/>
+	<w_phrase n="wlang_license_info" t="El vostre telèfon s'envia amb una llicència preinstal·lada. És possible instal·lar una nova llicència usant la càrrega manual de llicències per habilitar funcionalitats afegides o en cas que l'original estigui danyada o absent. Si la llicència és invàlida (p. ex. no coincideix amb la MAC del telèfon), serà ignorada i es conservarà la llicència actual."/>
+	<w_phrase n="wlang_advanced_ssi_restrict_uri_queries" t="Restringeix Peticions URI"/>
+	<w_phrase n="wlang_advanced_ssi_release_xfer_on" t="Allibera en Destinació Transferida"/>
+	<w_phrase n="wlang_advanced_ssi_retrieve_xfer_on" t="Recupera en Destinació Transferida"/>
+	<w_phrase n="wlang_fkeyname_hold_private" t="Retén Privat"/>
+	<w_phrase n="wlang_fkey_contact_list_buddy" t="BLF (Servidor)"/>
+	<w_phrase n="wlang_advanced_ssi_allow_sip_settings" t="Permet Configuració SIP"/>
+	<w_phrase n="wlang_prefs_tsczech" t="Txec"/>
+	<w_phrase n="wlang_advanced_ssi_dhcp_options_on_ip_aquire" t="Opcions amb DHCP=on"/>
+	<w_phrase n="wlang_advanced_ssi_dhcp_options_on_inform" t="Opcions amb DHCP=off"/>
+	<w_phrase n="wlang_advanced_ssi_headset_rings_once" t="Auricular sona només una vegada"/>
+	<w_phrase n="wlang_F_ACD" t="ACD"/>
+	<w_phrase n="wlang_disabled" t="inhabilitat"/>
+	<w_phrase n="wlang_unknown" t="desconegut"/>
+	<w_phrase n="wlang_sysinfo_ssi_status" t="Estat"/>
+	<w_phrase n="wlang_sysinfo_ssi_paired_with" t="Aparellat amb"/>
+	<w_phrase n="wlang_sysinfo_ssi_vision_status" t="Estat de Connexió"/>
+	<w_phrase n="wlang_line_snomone" t="snomONE"/>
+	<w_phrase n="wlang_line_sutus" t="SUTUS BC"/>
+	<w_phrase n="wlang_prefs_redirection_fwd_always" t="Reenviament de trucades sense condicions (CFU)"/>
+	<w_phrase n="wlang_prefs_redirection_fwd_busy" t="Trucada reenviat ocupada (CFB)"/>
+	<w_phrase n="wlang_prefs_redirection_fwd_time" t="Trucada sense reenviament de respostes (CFNR)"/>
+	<w_phrase n="wlang_line_server_managed" t="Gestionat per Servidor"/>
+	<w_phrase n="wlang_fkeys_ssi_starcode" t="Codi *"/>
+	<w_phrase n="wlang_prio_asserted" t="Prioritat Inclosa"/>
+	<w_phrase n="wlang_replacement_dialp" t="Les plantilles XML han canviat"/>
+	<w_phrase n="wlang_adr_action_url" t="Action URL"/>
+	<w_phrase n="wlang_sip_force_sendrecv_no_sdp" t="Força sendrecv en INVITE sense SDP"/>
+	<w_phrase n="wlang_advanced_ssi_dnsserver1_v6" t="Servidor DNS 1 (IPv6)"/>
+	<w_phrase n="wlang_advanced_ssi_dnsserver2_v6" t="Servidor DNS 2 (IPv6)"/>
+	<w_phrase n="wlang_advanced_ssi_dnsserver3_v6" t="Servidor DNS 3 (IPv6)"/>
+	<w_phrase n="wlang_advanced_ssi_dnsserver4_v6" t="Servidor DNS 4 (IPv6)"/>
+	<w_phrase n="wlang_advanced_ssi_ntptimeserver_v6" t="Servidor NTP (IPv6)"/>
+	<w_phrase n="wlang_info_ipaddress_v6" t="Adreça IPv6"/>
+	<w_phrase n="wlang_advanced_ssi_domain_v6" t="Domini (IPv6)"/>
+	<w_phrase n="wlang_advanced_ssi_ipaddress_v6" t="Adreça IPv6"/>
+	<w_phrase n="wlang_advanced_ssi_ipv6_over_ipv4" t="IPv6 Preferit"/>
+	<w_phrase n="wlang_advanced_ssi_dhcp_v6" t="DHCP (IPv6)"/>
+	<w_phrase n="wlang_advanced_ssi_dhcp_v6_autoconf" t="Autoconfiguració"/>
+	<w_phrase n="wlang_advanced_ssi_ipv6" t="IPv6"/>
+	<w_phrase n="wlang_advanced_ssi_more_control" t="Més Controls"/>
+	<w_phrase n="wlang_cert_tab_8021x_certs" t="Certificats 802.1X"/>
+	<w_phrase n="wlang_cert_add_8021x_cert" t="Afegeix Certificat 802.1X (Fitxer TAR)"/>
+	<w_phrase n="wlang_cert_8021x_config" t="Configuració 802.1X"/>
+	<w_phrase n="wlang_ieee8021x_eap_auth_method_choice" t="IEEE 802.1X Authentication"/>
+	<w_phrase n="wlang_ieee8021x_eap_auth_method_choice_eap_md5" t="EAP Credentials"/>
+	<w_phrase n="wlang_ieee8021x_eap_auth_method_choice_eap_tls" t="EAP Certificate"/>
+	<w_phrase n="wlang_usb_storage_text" t="Emmagatzematge USB"/>
+	<w_phrase n="wlang_usb_storage_allow_swupdate_text" t="Permet Actualització Firmware"/>
+	<w_phrase n="wlang_usb_storage_allow_syslog_text" t="Permetre Traces de Syslog"/>
+	<w_phrase n="wlang_usb_storage_allow_siptrace_text" t="Permetre Traça SIP"/>
+	<w_phrase n="wlang_usb_storage_allow_httptrace_text" t="Permetre Traça HTTP"/>
+	<w_phrase n="wlang_usb_storage_allow_pcap_text" t="Permetre Traça PCAP"/>
+	<w_phrase n="wlang_usb_storage_passphrase_text" t="Contrasenya AES"/>
+	<w_phrase n="wlang_check_cseq_dlginfo_notify" t="Comprova CSeq en NOTIFY Dlg Info"/>
+	<w_phrase n="wlang_line_xsi_server" t="Servidor XSI"/>
+	<w_phrase n="wlang_line_xsi_user" t="Usuari XSI"/>
+	<w_phrase n="wlang_line_xsi_password" t="Contrasenya XSI"/>
+	<w_phrase n="wlang_line_xsi_retry_timer" t="Reintent Temporitzador XSI (s)"/>
+	<w_phrase n="wlang_line_xsi_events" t="Esdeveniments XSI"/>
+	<w_phrase n="wlang_line_xsi_polling" t="Interval de consulta XSI (s)"/>
+	<w_phrase n="wlang_line_tbook_download_interval" t="Interval de Descàrrega d'Agenda (s)"/>
+	<w_phrase n="wlang_line_xsi_conf_updating" t="Interval d'Actualització de Conferència XSI (s)"/>
+	<w_phrase n="wlang_line_xsi_anywhere" t="Qualsevol Lloc"/>
+	<w_phrase n="wlang_line_server_directories_search" t="Servidor Directori (Cerca)"/>
+	<w_phrase n="wlang_line_server_directories_download" t="Servidor Directori (Descàrrega)"/>
+	<w_phrase n="wlang_line_blf_park_pick_up_code" t="Codi de Captura de Trucada Aparcada BLF"/>
+	<w_phrase n="wlang_line_blf_directed_call_pickup_code" t="Codi de Captura de Trucada Directa BLF"/>
+	<w_phrase n="wlang_line_xsi_visual_voicemail" t="Bústia de Veu Visual"/>
+	<w_phrase n="wlang_line_xsi_callcenter_list" t="Llista Call Center"/>
+	<w_phrase n="wlang_line_xmpp_jid" t="ID XMPP"/>
+	<w_phrase n="wlang_line_xmpp_password" t="Contrasenya XMPP"/>
+	<w_phrase n="wlang_fkey_xmpp_presence" t="Contactes (XMPP)"/>
+	<w_phrase n="wlang_F_STARCODE" t="Codi *"/>
+	<w_phrase n="wlang_line_conference_server" t="Servidor de Conferències"/>
+	<w_phrase n="wlang_line_call_logs" t="Registres de Trucades"/>
+	<w_phrase n="wlang_line_ssi_local" t="Local"/>
+	<w_phrase n="wlang_line_tbook_download" t="Descàrrega d'Agenda"/>
+	<w_phrase n="wlang_line_broadsoft_features" t="Funcionalitats Broadsoft"/>
+	<w_phrase n="wlang_number_sign_encoding" t="Codificació de Números"/>
+	<w_phrase n="wlang_fkeyname_label_page_prev" t="Retrocés Etiquetes"/>
+	<w_phrase n="wlang_fkeyname_label_page_next" t="Endavant Etiquetes"/>
+	<w_phrase n="wlang_fkeyname_smartlabel_page_prev" t="Pàgina Anterior"/>
+	<w_phrase n="wlang_fkeyname_smartlabel_page_next" t="Pàgina Següent"/>
+	<w_phrase n="wlang_first_page" t="Primera pàgina"/>
+	<w_phrase n="wlang_last_page" t="Última pàgina"/>
+	<w_phrase n="wlang_fkeyname_alternate_mode" t="Alterna"/>
+	<w_phrase n="wlang_monitor_notify_for_subscription_refresh" t="Notifica Supervisió per a Subscriptions"/>
+	<w_phrase n="wlang_fkey_page_text" t="Pàgina"/>
+	<w_phrase n="wlang_prefs_label_font_size" t="Mida de Tipus de Lletra d'Etiqueta"/>
+	<w_phrase n="wlang_prefs_context_key_font_size" t="Mida del tipus de lletra de l'etiqueta de context"/>
+	<w_phrase n="wlang_prefs_label_scroll_timeout" t="Torna a la pàgina d'etiquetes 1 després de (s)"/>
+	<w_phrase n="wlang_prefs_ssi_large_edit_font" t="Edició Tipus de Lletra Llarga"/>
+	<w_phrase n="wlang_prefs_custom_bg_image_url" t="URL Fons d'Escriptori Personalitzat"/>
+	<w_phrase n="wlang_prefs_custom_images" t="Imatges Personalitzades"/>
+	<w_phrase n="wlang_prefs_custom_images_Light" t="Imatges de llum del tema"/>
+	<w_phrase n="wlang_prefs_custom_images_Dark" t="Imatges fosques del tema"/>
+	<w_phrase n="wlang_prefs_custom_images_Colorful" t="Imatges de color del tema"/>
+	<w_phrase n="wlang_prefs_custom_images_Industrial" t="Imatges industrials del tema"/>
+	<w_phrase n="wlang_prefs_custom_images_Contrast" t="Imatges de contrast del tema"/>
+	<w_phrase n="wlang_prefs_fkey_icons" t="Okey"/>
+	<w_phrase n="wlang_prefs_call_icons" t="Trucada"/>
+	<w_phrase n="wlang_prefs_call_overlay_icons" t="Superposiciò de Trucada"/>
+	<w_phrase n="wlang_prefs_circle_overlay_icons" t="Superposició del cercle"/>
+	<w_phrase n="wlang_prefs_identity_state_icons" t="Estat d'identitat"/>
+	<w_phrase n="wlang_prefs_contact_state_icons" t="Estat del contacte"/>
+	<w_phrase n="wlang_prefs_contact_state_overlay_icons" t="Superposició de l'estat del contacte"/>
+	<w_phrase n="wlang_prefs_contact_type_icons" t="Tipus de Contacte"/>
+	<w_phrase n="wlang_prefs_icon_type_icons" t="Tipus de icona"/>
+	<w_phrase n="wlang_prefs_titlebar_icons" t="Barra de títol"/>
+	<w_phrase n="wlang_prefs_error_icons" t="Error"/>
+	<w_phrase n="wlang_prefs_settings_window_icons" t="Finestra de configuració"/>
+	<w_phrase n="wlang_prefs_system_icons" t="Sistema"/>
+	<w_phrase n="wlang_prefs_other_icons" t="Un altre"/>
+	<w_phrase n="wlang_prefs_background_icons" t="Fons"/>
+	<w_phrase n="wlang_prefs_extra_icons" t="Extra"/>
+	<w_phrase n="wlang_prefs_upload" t="Carrega"/>
+	<w_phrase n="wlang_accept_event_talk_without_sdp" t="Accepta Event Talk sense SDP"/>
+	<w_phrase n="wlang_fkeyname_snom" t="snom/Cloud"/>
+	<w_phrase n="wlang_prefs_ssi_sort_server_dir_result_by_last_name" t="Ordena els resultats d'Agenda per Cognoms"/>
+	<w_phrase n="wlang_directory_display_order" t="Ordre en mostrar Agenda"/>
+	<w_phrase n="wlang_display_order_first_name_last_name" t="Nom,Cognoms"/>
+	<w_phrase n="wlang_display_order_last_name_first_name" t="Cognoms, Nom"/>
+	<w_phrase n="wlang_prefs_uxm_line_font_size" t="Mida Tipus de Lletra UXM (Plantilla Línia)"/>
+	<w_phrase n="wlang_prefs_label_text_alignment" t="Alineació de Text de Pantalla secundària"/>
+	<w_phrase n="wlang_prefs_left" t="Esquerra"/>
+	<w_phrase n="wlang_prefs_right" t="Dreta"/>
+	<w_phrase n="wlang_prefs_center" t="Centrat"/>
+	<w_phrase n="wlang_prefs_alternate" t="Alternat"/>
+	<w_phrase n="wlang_prefs_uxm_tile_font_size" t="Mida Tipus de Lletra UXM (Plantilla Tile)"/>
+	<w_phrase n="wlang_line_ssi_initial_rtp_keep_alives" t="Nombre de pings inicials en el port RTP"/>
+	<w_phrase n="wlang_line_msw_directory_number" t="Número d'Agenda"/>
+	<w_phrase n="wlang_line_msw_password" t="Contrasenya"/>
+	<w_phrase n="wlang_line_msw_web_url" t="URL Web"/>
+	<w_phrase n="wlang_line_msw_services" t="Serveis Metaswitch"/>
+	<w_phrase n="wlang_line_ssi_server" t="Servidor"/>
+	<w_phrase n="wlang_cert_tab_custom_certs" t="Certificats Personalitzats"/>
+	<w_phrase n="wlang_cert_tab_preinstalled_certs" t="Certificats Preinstal·lats"/>
+	<w_phrase n="wlang_advanced_ssi_http_trace_size" t="Mida de Traces HTTP (Nombre de missatges)"/>
+	<w_phrase n="wlang_advanced_ssi_http_body_trace_size" t="Talla Cos HDDP a aquesta mida (en bytes)"/>
+	<w_phrase n="wlang_advanced_ssi_sip_trace_size" t="Mida de Traça SIP (Nombre de missatges)"/>
+	<w_phrase n="wlang_advanced_ssi_sip_body_trace_size" t="Talla Cos SIP a aquesta mida (en bytes)"/>
+	<w_phrase n="wlang_user_default_blf_direction" t="Adreça per defecte de BLF"/>
+	<w_phrase n="wlang_user_direction_none" t="cap"/>
+	<w_phrase n="wlang_xsi_anywhere" t="Qualsevol lloc"/>
+	<w_phrase n="wlang_ssi_status" t="Estat"/>
+	<w_phrase n="wlang_adr_del_photo" t="Suprimeix Foto"/>
+	<w_phrase n="wlang_caller_id_blocking" t="Bloqueig d'ID remitent"/>
+	<w_phrase n="wlang_line_xsi_remote_office" t="Oficina Remota"/>
+	<w_phrase n="wlang_line_xsi_simultaneous_ring" t="Timbrat simultani"/>
+	<w_phrase n="wlang_line_xsi_directoryfullsearch" t="Cerca per Nom Complet"/>
+	<w_phrase n="wlang_advanced_ssi_xfer_dest_order_lifo" t="Destinació per defecte en transferència de darrera trucada retinguda"/>
+	<w_phrase n="wlang_silent_alerting" t="Avís Silenciós"/>
+	<w_phrase n="wlang_advanced_ssi_call_join_1_held" t="quan hi ha només una trucada retinguda"/>
+	<w_phrase n="wlang_advanced_ssi_call_join_always" t="sempre"/>
+	<w_phrase n="wlang_fkeyname_ringer_silent" t="Mode Silenciós"/>
+	<w_phrase n="wlang_fkeyname_delete_msg" t="Suprimeix Missatge"/>
+	<w_phrase n="wlang_line_xmpp_display_profile_image" t="Mostra Imatge de Perfil"/>
+	<w_phrase n="wlang_advanced_ssi_prov_polling_enabled" t="Interval Aprovisionament"/>
+	<w_phrase n="wlang_advanced_ssi_prov_polling_mode" t="Mode Aprovisionament"/>
+	<w_phrase n="wlang_advanced_ssi_prov_polling_mode_rel" t="Relatiu"/>
+	<w_phrase n="wlang_advanced_ssi_prov_polling_mode_abs" t="Absolut"/>
+	<w_phrase n="wlang_advanced_ssi_prov_polling_mode_random" t="Aleatori"/>
+	<w_phrase n="wlang_advanced_ssi_prov_polling_period" t="Període de consulta"/>
+	<w_phrase n="wlang_advanced_ssi_prov_polling_time" t="Temps de Consulta"/>
+	<w_phrase n="wlang_advanced_ssi_prov_polling_time_random_end" t="Temps de consulta fi aleatori"/>
+	<w_phrase n="wlang_advanced_ssi_show_desktop_msg_in_call_screens" t="Mostra els missatges en pantalla"/>
+	<w_phrase n="wlang_str_zone" t="Zona"/>
+	<w_phrase n="wlang_F_REMOTE_OFFICE" t="Oficina Remota"/>
+	<w_phrase n="wlang_fkeyname_zones" t="Zones Multicast"/>
+	<w_phrase n="wlang_fkeys_xml_label" t="Etiqueta XML"/>
+	<w_phrase n="wlang_advanced_ssi_type_quick_xfer_spd_dial_and_ext" t="Transferència ràpida a Speed Dial/Extension"/>
+	<w_phrase n="wlang_advanced_ssi_new_call" t="Nova Trucada"/>
+	<w_phrase n="wlang_advanced_ssi_blind_transfer" t="Transferència Cega"/>
+	<w_phrase n="wlang_advanced_ssi_attended_transfer" t="Transferència Atesa"/>
+	<w_phrase n="wlang_fkeyname_pgm" t="Programable"/>
+	<w_phrase n="wlang_ssi_text" t="Text"/>
+	<w_phrase n="wlang_ssi_icon" t="Icona"/>
+	<w_phrase n="wlang_ssi_icon_text" t="Icona i Text"/>
+	<w_phrase n="wlang_fkeys_ssi_header_smartlabel" t="Tecles SmartLabel"/>
+	<w_phrase n="wlang_fkeys_ssi_header_soft" t="Tecles Contextuals"/>
+	<w_phrase n="wlang_fkeys_ssi_header_nav" t="Tecles de Navegació"/>
+	<w_phrase n="wlang_fkeys_ssi_header_hard" t="Tecles Dedicades"/>
+	<w_phrase n="wlang_fkeys_ssi_header_line" t="Tecles de Línia"/>
+	<w_phrase n="wlang_fkeys_ssi_header_uxm" t="Tecles d'Expansió"/>
+	<w_phrase n="wlang_fkeys_key_assignment" t="Assignació de Tecles"/>
+	<w_phrase n="wlang_fkeys_smartlabel" t="SmartLabel"/>
+	<w_phrase n="wlang_line_idle_screen" t="Pantalla Repòs"/>
+	<w_phrase n="wlang_line_default_smartlabel_display_mode" t="Mode de Pantalla per defecte"/>
+	<w_phrase n="wlang_line_expanded_smartlable_display_mode" t="Mode de Pantalla Alternativa"/>
+	<w_phrase n="wlang_line_short" t="Curt"/>
+	<w_phrase n="wlang_line_half" t="Mig"/>
+	<w_phrase n="wlang_line_full" t="Complet"/>
+	<w_phrase n="wlang_line_call_screens" t="Pantalla de Trucades"/>
+	<w_phrase n="wlang_line_other_screens" t="Altres Pantalles"/>
+	<w_phrase n="wlang_line_smartlabel_options" t="Opcions"/>
+	<w_phrase n="wlang_line_smartlabel_dismissal_time" t="Restablir el display a mode per defecte després (s)"/>
+	<w_phrase n="wlang_fkeyname_cancel" t="Cancel·la"/>
+	<w_phrase n="wlang_fkeyname_ok" t="OK"/>
+	<w_phrase n="wlang_fkeyname_left" t="Esquerra"/>
+	<w_phrase n="wlang_fkeyname_right" t="Dreta"/>
+	<w_phrase n="wlang_fkeyname_up" t="Amunt"/>
+	<w_phrase n="wlang_fkeyname_down" t="Avall"/>
+	<w_phrase n="wlang_hoteling" t="Mode Hotel"/>
+	<w_phrase n="wlang_fkeyname_hoteling" t="Mode Hotel"/>
+	<w_phrase n="wlang_advanced_listen_in_on_handset" t="Escolta en auricular"/>
+	<w_phrase n="wlang_prefs_auto_dial_target" t="Destinació d'Automarcat"/>
+	<w_phrase n="wlang_prefs_auto_dial_timeout" t="Timeout d'Automarcat"/>
+	<w_phrase n="wlang_smartlabel_trigger_proximity" t="Sensor de Proximitat"/>
+	<w_phrase n="wlang_smartlabel_trigger_shortpress" t="Premeu curt en Tecla de pàgina"/>
+	<w_phrase n="wlang_smartlabel_trigger_longpress" t="Premeu curt en Tecla de pàgina"/>
+	<w_phrase n="wlang_smartlabel_trigger_smartlabel_key_2_short_press" t="Pulsació Curta P2"/>
+	<w_phrase n="wlang_smartlabel_trigger_smartlabel_key_2_long_press" t="Pulsació Llarga P2"/>
+	<w_phrase n="wlang_smartlabel_trigger_smartlabel_key_3_short_press" t="Pulsació Curta P3"/>
+	<w_phrase n="wlang_smartlabel_trigger_smartlabel_key_3_long_press" t="Pulsació Llarga P3"/>
+	<w_phrase n="wlang_smartlabel_trigger_smartlabel_key_4_short_press" t="Pulsació Curta P4"/>
+	<w_phrase n="wlang_smartlabel_trigger_smartlabel_key_4_long_press" t="Pulsació Llarga P4"/>
+	<w_phrase n="wlang_smartlabel_trigger_smartlabel_key_8_short_press" t="Pulsació Curta P8"/>
+	<w_phrase n="wlang_smartlabel_trigger_smartlabel_key_8_long_press" t="Pulsació Llarga P8"/>
+	<w_phrase n="wlang_smartlabel_trigger_smartlabel_key_10_short_press" t="Pulsació Curta P10"/>
+	<w_phrase n="wlang_smartlabel_trigger_smartlabel_key_10_long_press" t="Pulsació Llarga P10"/>
+	<w_phrase n="wlang_smartlabel_trigger" t="Disparador de Pantalla Alternativa"/>
+	<w_phrase n="wlang_smart_transfer" t="SmartTransfer"/>
+	<w_phrase n="wlang_preferences_appearance" t="Aspecte"/>
+	<w_phrase n="wlang_preferences_general" t="General"/>
+	<w_phrase n="wlang_preferences_ui_elements" t="Elements d'Interfície"/>
+	<w_phrase n="wlang_preferences_expansion_module_ui_elements" t="Elements de la interfície del mòdul d'expansió"/>
+	<w_phrase n="wlang_preferences_font" t="Opcions de Tipus de Lletra"/>
+	<w_phrase n="wlang_preferences_expansion_module_font" t="Opcions del tipus de lletra del mòdul d'expansió"/>
+	<w_phrase n="wlang_preferences_ui_colors" t="Colors d'Interfície"/>
+	<w_phrase n="wlang_preferences_ui_smartlabel_colors" t="Colors de Smartlabel"/>
+	<w_phrase n="wlang_ui_theme" t="Tema de color de la interfície"/>
+	<w_phrase n="wlang_theme_Light" t="Tema clar"/>
+	<w_phrase n="wlang_theme_Dark" t="Tema fosc"/>
+	<w_phrase n="wlang_theme_Colorful" t="Tema acolorit"/>
+	<w_phrase n="wlang_theme_Industrial" t="Tema industrial"/>
+	<w_phrase n="wlang_theme_Contrast" t="Tema de contrast"/>
+	<w_phrase n="wlang_text_color" t="Color Text"/>
+	<w_phrase n="wlang_titlebar_text_color" t="Color de Text de Títol"/>
+	<w_phrase n="wlang_titlebar_background_color" t="Color de Fons de Títol"/>
+	<w_phrase n="wlang_subtext_color" t="Color de Subtext"/>
+	<w_phrase n="wlang_extratext_color" t="Color Extratext"/>
+	<w_phrase n="wlang_extratext2_color" t="Color Extratext2"/>
+	<w_phrase n="wlang_background_color" t="Color Fons"/>
+	<w_phrase n="wlang_fkey_background_color" t="Color Fons Fkey"/>
+	<w_phrase n="wlang_fkey_pressed_background_color" t="Color de Fkey Premuda"/>
+	<w_phrase n="wlang_fkey_separator_color" t="Color de Separats Fkey"/>
+	<w_phrase n="wlang_fkey_label_color" t="Color d’Etiqueta Fkey"/>
+	<w_phrase n="wlang_fkey_pressed_label_color" t="Color d’Etiqueta Premuda Fkey"/>
+	<w_phrase n="wlang_line_background_color" t="Color de fons de Línia"/>
+	<w_phrase n="wlang_selected_line_background_color" t="Color de Fons de Línia Seleccionada"/>
+	<w_phrase n="wlang_selected_line_indicator_color" t="Color d'Indicador de Línia Seleccionada"/>
+	<w_phrase n="wlang_selected_line_text_color" t="Color de Text de Línia Seleccionada"/>
+	<w_phrase n="wlang_line_separator_color" t="Color de Separador de Línia"/>
+	<w_phrase n="wlang_scrollbar_color" t="Color de Barra de Scroll"/>
+	<w_phrase n="wlang_cursor_color" t="Color de Cursor"/>
+	<w_phrase n="wlang_status_msgs_background_color" t="Color de Fons de Missatges d'Estat"/>
+	<w_phrase n="wlang_status_msgs_border_color" t="Color de Vora de Missatges d'Estat"/>
+	<w_phrase n="wlang_regular_font_min_font_size" t="Mida de Tipus de Lletra Regular mínim"/>
+	<w_phrase n="wlang_fkeys_ssi_full_label_mode" t="Mode d’Etiquetes Complet"/>
+	<w_phrase n="wlang_fkeys_ssi_label_mode" t="Mode Etiquetes"/>
+	<w_phrase n="wlang_fkeys_ssi_unknown" t="Desconegut"/>
+	<w_phrase n="wlang_advanced_ssi_settings_refresh" t="Temporitzador d'Actualització de Configuració"/>
+	<w_phrase n="wlang_advanced_tmz_unused" t="Sense Ús"/>
+	<w_phrase n="wlang_ldap_search_filter_during_call" t="Filtrat per Nom LDAP durant trucada"/>
+	<w_phrase n="wlang_ldap_number_filter_during_call" t="Filtrat per Número LDAP durant trucada"/>
+	<w_phrase n="wlang_fkeyname_lock" t="Bloqueig"/>
+	<w_phrase n="wlang_fkeyname_voicemail_info" t="Informació Bústia de Veu"/>
+	<w_phrase n="wlang_advanced_ssi_xmpp_refresh_timer" t="Temps d’actualització XMPP"/>
+	<w_phrase n="wlang_advanced_xmpp" t="XMPP"/>
+	<w_phrase n="wlang_advanced_ssi_xsi_heartbeat_interval" t="Interval de Ping XSI"/>
+	<w_phrase n="wlang_advanced_xsi" t="XSI"/>
+	<w_phrase n="wlang_fkeyname_caller_id_blocking" t="Bloqueig d’Identificació de Trucada"/>
+	<w_phrase n="wlang_fkeyname_hide_outgoing_id" t="Oculta Identificació Sortint"/>
+	<w_phrase n="wlang_outgoing" t="Sortint"/>
+	<w_phrase n="wlang_skip_welcome" t="Omet Benvinguda"/>
+	<w_phrase n="wlang_general_file" t="Fitxer"/>
+	<w_phrase n="wlang_lcs" t="LCS"/>
+	<w_phrase n="wlang_cpu" t="CPU"/>
+	<w_phrase n="wlang_advanced_ssi_als" t="Llum ambiental"/>
+	<w_phrase n="wlang_advanced_ssi_active" t="Actiu"/>
+	<w_phrase n="wlang_fkeyname_consultconf" t="Consulta Conferència"/>
+	<w_phrase n="wlang_use_outbound_proxy_for_callback" t="Usa Proxy de Sortida per a Retrotrucada"/>
+	<w_phrase n="wlang_advanced_ssi_optimize_infobox" t="Infobox Optimitzat"/>
+	<w_phrase n="wlang_action_ssi_poll_settings" t="Configuració Consulta Action URL"/>
+	<w_phrase n="wlang_action_ssi_poll" t="Consulta URL"/>
+	<w_phrase n="wlang_advanced_ssi_sip_header_warning" t="Avís de Capçaleres SIP"/>
+	<w_phrase n="wlang_advanced_ssi_sip_header_warning_codes" t="Codis d'avís de Capçaleres SIP"/>
+	<w_phrase n="wlang_prefs_tscanada" t="Canadà"/>
+	<w_phrase n="wlang_prefs_tsrussia" t="Rússia"/>
+	<w_phrase n="wlang_advanced_contact_src_prio" t="Prioritat de Tipus de Lletra Contacte"/>
+	<w_phrase n="wlang_user_contact_src_sip_prio" t="Prioritat de Tipus de Lletra Contacte (SIP)"/>
+	<w_phrase n="wlang_adr_ssi_tbook_is_full" t="Agenda Completa"/>
+	<w_phrase n="wlang_phoneui_short" t="PUI"/>
+	<w_phrase n="wlang_advanced_ssi_ldap_sort_parameters" t="Paràmetres d'ordenació LDAP"/>
+	<w_phrase n="wlang_advanced_ssi_ldap_sort_mode" t="Mode d'Ordenació LDAP"/>
+	<w_phrase n="wlang_advanced_ssi_none" t="Cap"/>
+	<w_phrase n="wlang_adr_file_xml" t="Fitxer CSV"/>
+	<w_phrase n="wlang_choose_file" t="Seleccioneu Fitxer"/>
+	<w_phrase n="wlang_all_settings_cfg" t="Tota la configuració (.cfg)"/>
+	<w_phrase n="wlang_all_settings_xml" t="Tota la configuració (.xml)"/>
+	<w_phrase n="wlang_changed_settings_xml" t="Configuració modificada (.xml)"/>
+	<w_phrase n="wlang_param_map" t="Mapa de Paràmetres TR-069"/>
+	<w_phrase n="wlang_call_screen_photo_size" t="Mida de la Foto en pantalla de trucada"/>
+	<w_phrase n="wlang_size_S" t="S"/>
+	<w_phrase n="wlang_size_M" t="M"/>
+	<w_phrase n="wlang_size_L" t="L"/>
+	<w_phrase n="wlang_size_XL" t="XL"/>
+	<w_phrase n="wlang_size_XXL" t="XXL"/>
+	<w_phrase n="wlang_size_XXXL" t="XXXL"/>
+	<w_phrase n="wlang_prompt_new_value" t="Si us plau, introduïu el nou valor"/>
+	<w_phrase n="wlang_fkey_ssi_call_center_status" t="Estat de Call Center"/>
+	<w_phrase n="wlang_line_ssi_enable_mediasec" t="Habilita Àudio Segur"/>
+	<w_phrase n="wlang_callpark_notify" t="Notificació d'Aparcament de trucades"/>
+	<w_phrase n="wlang_call_park" t="Aparcament de Trucades"/>
+	<w_phrase n="wlang_callpark_park_fac" t="Codi d'Aparcament de Trucades"/>
+	<w_phrase n="wlang_smartlabel_trigger_any_smartlabel_key_short_press" t="Pulsació Curta SmartLabel"/>
+	<w_phrase n="wlang_fkeyname_ocip" t="Agenda OCI-P"/>
+	<w_phrase n="wlang_fkeyname_ldap" t="Agenda LDAP"/>
+	<w_phrase n="wlang_fkeyname_serverdirectory" t="Agenda en Servidor"/>
+	<w_phrase n="wlang_handset_volume" t="Volum del microteléfon"/>
+	<w_phrase n="wlang_headset_volume" t="Volum de l 'auricular"/>
+	<w_phrase n="wlang_ringer_volume" t="Volum de Timbrat"/>
+	<w_phrase n="wlang_speaker_volume" t="Speaker Volume"/>
+	<w_phrase n="wlang_max_speaker_volume" t="Maximum Speaker Volume"/>
+	<w_phrase n="wlang_dtmf_volume" t="DTMF Volume"/>
+	<w_phrase n="wlang_disconnect_on_onhook" t="Disconnect Call on On-hook"/>
+	<w_phrase n="wlang_long_cancel_is_blocking_caller" t="Add Caller to Block List with Long Press Cancel"/>
+	<w_phrase n="wlang_cancel_conference" t="End Conference on Cancel Press"/>
+	<w_phrase n="wlang_short_cancel_denies_call" t="Cancel declines Incoming Call while Connected"/>
+	<w_phrase n="wlang_offhook_accept_calls" t="Accept Incoming Call on Off-hook"/>
+	<w_phrase n="wlang_keyboard_lock_accepted_keys" t="Accepted Keys when Phone is Locked"/>
+	<w_phrase n="wlang_emergency_accepted_callkeys" t="Accepted Keys when Phone is in Emergency Call"/>
+	<w_phrase n="wlang_pui_icon_override_xml_icon" t="Hide XML Icon on Context-Sensitive Keys"/>
+	<w_phrase n="wlang_idle_status_btn_index" t="Position of Info Button on Context-Senstive Keys"/>
+	<w_phrase n="wlang_ringing_time" t="Ring Time before Decline (s)"/>
+	<w_phrase n="wlang_always_show_active_call" t="Always Show Active Call"/>
+	<w_phrase n="wlang_mute_is_dnd_in_idle" t="Mute acts as DND in Idle Screen"/>
+	<w_phrase n="wlang_transfer_dialing_on_transfer" t="Behavior of Transfer Key in Transfer"/>
+	<w_phrase n="wlang_transfer_dialing_on_other" t="Behavior of Other Keys in Transfer"/>
+	<w_phrase n="wlang_advtab_display" t="Display"/>
+	<w_phrase n="wlang_backlight_on_activity" t="Backlight on Activity"/>
+	<w_phrase n="wlang_backlight_when_idle" t="Backlight when Idle"/>
+	<w_phrase n="wlang_contrast" t="Contrast"/>
+	<w_phrase n="wlang_primary_display" t="Primary Display"/>
+	<w_phrase n="wlang_label_display" t="Secondary Display"/>
+	<w_phrase n="wlang_fkeys_ssi_usb_call_record" t="USB Call Recording"/>
+	<w_phrase n="wlang_fkeys_ssi_usb_call_record_pause" t="USB Call Recording Pause"/>
+	<w_phrase n="wlang_subtext_pressed_color" t="Subtext Pressed Color"/>
+	<w_phrase n="wlang_page_indicator_color" t="Page Indicator Color"/>
+	<w_phrase n="wlang_preferences_ui_expansion_module_colors" t="Expansion Module Colors"/>
+	<w_phrase n="wlang_prefs_expansion_module_text_alignment" t="Expansion Module Text Alignment"/>
+	<w_phrase n="wlang_expansion_module_maintext_size" t="Expansion Module Maintext Size"/>
+	<w_phrase n="wlang_expansion_module_subtext_size" t="Expansion Module Subtext Size"/>
+	<w_phrase n="wlang_size_XS" t="XS"/>
+	<w_phrase n="wlang_prefs_expansion_module_background_image" t="Expansion Module Background Image"/>
+	<w_phrase n="wlang_fkeyname_context_in_idle_page_left" t="Page Left"/>
+	<w_phrase n="wlang_fkeyname_context_in_idle_page_right" t="Page Right"/>
+	<w_phrase n="wlang_reciprocal_hold" t="Reciprocal Hold"/>
+	<w_phrase n="wlang_provisioning_order" t="Provisioning Order"/>
+	<w_phrase n="wlang_remote_3264_hold" t="RFC 3264 Hold"/>
+	<w_phrase n="wlang_use_contact_in_refer_to_hdr" t="Use Contact Header in Refer-To"/>
+	<w_phrase n="wlang_ack_before_reinvite_when_holding" t="ACK before Reinvite when Holding"/>
+	<w_phrase n="wlang_F_CALL_PARK_DIAL" t="Call Park Dial"/>
+	<w_phrase n="wlang_F_CALL_PARK_DIAL_RETRIEVE" t="Call Park Dial Retrieve"/>
+	<w_phrase n="wlang_tr69_use_acs" t="TR-069"/>
+	<w_phrase n="wlang_tr69_bootstrap" t="Send BOOTSTRAP to ACS"/>
+	<w_phrase n="wlang_tr69_acs_url" t="ACS URL"/>
+	<w_phrase n="wlang_tr69_acs_user" t="ACS Username"/>
+	<w_phrase n="wlang_tr69_acs_passwd" t="ACS Password"/>
+	<w_phrase n="wlang_tr69_cnr_user" t="CNR Username"/>
+	<w_phrase n="wlang_tr69_cnr_pass" t="CNR Password"/>
+	<w_phrase n="wlang_tr69_p_inform_supervision_timeout" t="Periodic Inform Supervision Timeout"/>
+	<w_phrase n="wlang_tr69_log" t="TR-069 Log"/>
+	<w_phrase n="wlang_extend_context_key_in_idle" t="Extend Context-Sensitive Keys to 12 in Idle"/>
+	<w_phrase n="wlang_edit_mode_for_directory_search" t="Default Edit Mode Directories"/>
+	<w_phrase n="wlang_edit_mode_for_passwords" t="Default Edit Mode Password Screens"/>
+	<w_phrase n="wlang_edit_mode_numbers" t="123"/>
+	<w_phrase n="wlang_edit_mode_lower_case" t="abc"/>
+	<w_phrase n="wlang_edit_mode_upper_case" t="ABC"/>
+	<w_phrase n="wlang_call_states_with_local_party" t="Call States showing Local Identity"/>
+	<w_phrase n="wlang_redirected_call_states_with_local_party" t="Redirected Call States showing Local Identity"/>
+	<w_phrase n="wlang_call_states_when_knocking" t="Call States playing Knocking Tone"/>
+	<w_phrase n="wlang_advanced_ssi_sip_tls_listen_port" t="TLS Listener Port"/>
+	<w_phrase n="wlang_advanced_ssi_tls_listen" t="Listen on SIP TLS Port"/>
+	<w_phrase n="wlang_results" t="Results"/>
+	<w_phrase n="wlang_ocip_max_hits" t="Maximum Number of Hits"/>
+	<w_phrase n="wlang_suppress_sip_messages" t="Hide Desktop Messages"/>
+	<w_phrase n="wlang_reject_calls_with_603" t="Reject Calls with 603 Declined"/>
+	<w_phrase n="wlang_action_received_subscr_notify_url" t="Received NOTIFY Subscription"/>
+	<w_phrase n="wlang_action_firewall_test" t="Received CSTA Message Firetest"/>
+	<w_phrase n="wlang_adr_entry_id" t="Entry ID"/>
+	<w_phrase n="wlang_advanced_customized_ssi_mtu_size" t="MTU size"/>
+	<w_phrase n="wlang_line_ssi_unsaf_via_received_rport" t="Determine Public Address from REGISTER Response Via Header"/>
+	<w_phrase n="wlang_info_branding_name" t="Branding"/>
+	<w_phrase n="wlang_info_branding_version" t="Branding Version"/>
+	<w_phrase n="wlang_info_hardware_version" t="Hardware Version"/>
+	<w_phrase n="wlang_prefs_pa1p_controls" t="PA1+ Controls"/>
+	<w_phrase n="wlang_prefs_ssi_pa1p_reset_button_for_dialing" t="Use reset button for dialing:"/>
+	<w_phrase n="wlang_prefs_ssi_pa1p_nr_to_dial" t="Reset button dials number:"/>
+	<w_phrase n="wlang_prefs_ssi_pa1p_call_timeout" t="Phone ends call after set seconds:"/>
+	<w_phrase n="wlang_prefs_ssi_pa1p_speaker_volume" t="Speaker Volume (1-15):"/>
+	<w_phrase n="wlang_prefs_ssi_pa1p_amp_gain" t="Amplifier Gain (0-3):"/>
+	<w_phrase n="wlang_prefs_ssi_pa1p_spkr" t="Speaker :"/>
+	<w_phrase n="wlang_prefs_ssi_pa1p_pin1" t="Pin 1:"/>
+	<w_phrase n="wlang_prefs_ssi_pa1p_pin2" t="Pin 2:"/>
+	<w_phrase n="wlang_prefs_ssi_pa1p_pin3" t="Pin 3:"/>
+	<w_phrase n="wlang_prefs_ssi_pa1p_pin4" t="Pin 4:"/>
+	<w_phrase n="wlang_prefs_ssi_pa1p_pin1_time" t="Pin1 off timer (seconds):"/>
+	<w_phrase n="wlang_prefs_ssi_pa1p_pin2_time" t="Pin2 off timer (seconds):"/>
+	<w_phrase n="wlang_prefs_ssi_pa1p_pin3_time" t="Pin3 off timer (seconds):"/>
+	<w_phrase n="wlang_prefs_ssi_pa1p_pin4_time" t="Pin4 off timer (seconds):"/>
+	<w_phrase n="wlang_line_ssi_multicast_relay_address" t="Multicast relay address:"/>
+	<w_phrase n="wlang_advanced_ssi_eth_port_1" t="Port 1:"/>
+	<w_phrase n="wlang_advanced_ssi_eth_port_2" t="Port 2:"/>
+	<w_phrase n="wlang_line_ssi_rtcpencryption" t="RTCP Encryption"/>
+	<w_phrase n="wlang_advanced_ssi_headset_mic" t="Headset Mic Volume (1 - 8):"/>
+	<w_phrase n="wlang_advanced_ssi_blf_pickup_audio_indication" t="Audio Indication for BLF Pickup"/>
+	<w_phrase n="wlang_advanced_ssi_dkey_dnd_behavior" t="Behavior of Dedicated Keys in DND"/>
+	<w_phrase n="wlang_advanced_ssi_dkey_dnd_behavior_normal" t="normal"/>
+	<w_phrase n="wlang_advanced_ssi_dkey_dnd_behavior_reverse" t="reverse"/>
+	<w_phrase n="wlang_advanced_early_media" t="Early Media"/>
+	<w_phrase n="wlang_advanced_early_media_playback" t="Playback Mode"/>
+	<w_phrase n="wlang_advanced_early_media_playback_never" t="Never"/>
+	<w_phrase n="wlang_advanced_early_media_playback_preferred" t="Preferred"/>
+	<w_phrase n="wlang_advanced_early_media_playback_enforced" t="Enforced"/>
+	<w_phrase n="wlang_advanced_early_media_ring_fallback" t="Ringback Tone Fallback"/>
+	<w_phrase n="wlang_advanced_ssi_user_ringer_once" t="Ringtone is played only once"/>
+	<w_phrase n="wlang_fkeyname_identities" t="Identities"/>
+	<w_phrase n="wlang_action_ssi_received_sip_update" t="Received SIP UPDATE"/>
+	<w_phrase n="wlang_fkeyname_answer" t="Answer"/>
+	<w_phrase n="wlang_fkeyname_forward" t="Forward"/>
+	<w_phrase n="wlang_fkeyname_reject" t="Reject"/>
+	<w_phrase n="wlang_fkeyname_end_call" t="End call"/>
+	<w_phrase n="wlang_fkeyname_group_park" t="Group Park"/>
+	<w_phrase n="wlang_fkeyname_new_call" t="New Call"/>
+	<w_phrase n="wlang_fkeyname_resume" t="Resume"/>
+	<w_phrase n="wlang_fkeyname_back_space" t="Backspace"/>
+</w_phrases>

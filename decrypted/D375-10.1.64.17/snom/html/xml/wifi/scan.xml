@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<IPPhoneBatch xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../schemas/minibrowser.xsd">
+  <IPPhoneMenu track="no" dtmf="off" state="others_except_mb" id="BWscan">
+    <Title>$(lang:WIFI_SCAN_NETWORKS)</Title>
+    <SoftKeyItem>
+      <Name>F1</Name>
+      <Label>$(lang:F_RESCAN)</Label>
+      <Url>phone://mb_nop</Url>
+    </SoftKeyItem>
+    <Repeat values="$(wifiscan)" token="/__SSID__/__QUAL__/__AUTH__/__ENC__/__MAC_ADDR__/">
+      <If condition="__AUTH__==OPEN">
+        <MenuItem name="__SSID__ | __QUAL__% | __MAC_ADDR__">
+          <Url>phone://mb_nop#go_back&amp;sub=*[@id="done"]&amp;set:wifi_essid=__SSID__&amp;set:wifi_auth_mode=OPEN&amp;flush</Url>
+        </MenuItem>
+      </If>
+      <Elif condition="__AUTH__==WEPAUTO">
+        <MenuItem name="__SSID__ | __QUAL__% | __MAC_ADDR__">
+          <Url>file:///xml/gui/templates.xml#sub=*[@id="input_template"]&amp;var:input_pool_key=0&amp;var:input_displayname=$(lang:user_pass)&amp;var:input_token=__Y__&amp;var:input_flags=p&amp;var:input_default=&amp;var:input_url=$(urlencode:"phone://mb_nop%23go_back%26set:wifi_wep_key1=__Y__")&amp;set:wifi_essid=__SSID__&amp;set:wifi_auth_mode=__AUTH__</Url>
+        </MenuItem>
+      </Elif>
+      <Else>
+        <MenuItem name="__SSID__ | __QUAL__% | __MAC_ADDR__">
+          <Url>file:///xml/gui/templates.xml#sub=*[@id="input_template"]&amp;var:input_pool_key=0&amp;var:input_displayname=$(lang:user_pass)&amp;var:input_token=__Y__&amp;var:input_flags=p&amp;var:input_default=&amp;var:input_url=$(urlencode:"phone://mb_nop%23go_back%26set:wifi_wpapsk=__Y__")&amp;set:wifi_essid=__SSID__&amp;set:wifi_auth_mode=__AUTH__&amp;set:wifi_wpa_encryptype=__ENC__</Url>
+        </MenuItem>
+      </Else>
+    </Repeat>
+   </IPPhoneMenu>
+   <IPPhoneMenu track="no" dtmf="off" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../schemas/minibrowser.xsd" state="others_except_mb" id="SIOscan">
+    <Title>$(lang:WIFI_SCAN_NETWORKS)</Title>
+    <SoftKeyItem>
+      <Name>F1</Name>
+      <Label>F_RESCAN</Label>
+      <Url>phone://mb_nop</Url>
+    </SoftKeyItem>
+    <If condition="!$(is_set:$(var:wifi_detailview))">
+      <SoftKeyItem>
+        <Name>F4</Name>
+        <Label>F_DETAILS</Label>
+        <Url>phone://mb_nop#var:wifi_detailview=1</Url>
+      </SoftKeyItem>
+    </If>
+    <Else>
+      <SoftKeyItem>
+        <Name>F4</Name>
+        <Label>F_DETAILS</Label>
+        <Url>phone://mb_nop#var:wifi_detailview=</Url>
+      </SoftKeyItem>
+    </Else>
+    <Repeat values="$(wifiscan)" token="/__SSID__/__QUAL__/__AUTH__/__ENC__/__MAC_ADDR__/__BITRATES__/__FREQUENCY__/">
+      <If condition="__AUTH__==OPEN">
+        <MenuItem name="__SSID__">
+          <If condition="$(is_set:$(var:wifi_detailview))">
+            <SubText>__FREQUENCY__ | __BITRATES__/s | __MAC_ADDR__</SubText>
+            <ExtraText>__AUTH__</ExtraText>
+            <ExtraText2>__QUAL__%</ExtraText2>
+          </If>
+          <Else>
+            <If condition="__QUAL__>=75">
+              <ExtraIconType>$(icon_type_enum:kIconTypeWlan100)</ExtraIconType>
+            </If>
+            <ElIf condition="__QUAL__>=50">
+              <ExtraIconType>$(icon_type_enum:kIconTypeWlan75)</ExtraIconType>
+            </ElIf>
+            <ElIf condition="__QUAL__>=25">
+              <ExtraIconType>$(icon_type_enum:kIconTypeWlan50)</ExtraIconType>
+            </ElIf>
+            <Else>
+              <ExtraIconType>$(icon_type_enum:kIconTypeWlan25)</ExtraIconType>
+            </Else>
+          </Else>
+          <Url>phone://mb_nop#go_back&amp;sub=*[@id="done"]&amp;set:wifi_essid=__SSID__&amp;set:wifi_auth_mode=OPEN&amp;flush</Url>
+        </MenuItem>
+      </If>
+      <Elif condition="__AUTH__==WEPAUTO">
+        <MenuItem name="__SSID__">
+          <If condition="$(is_set:$(var:wifi_detailview))">
+            <SubText>__FREQUENCY__ | __BITRATES__/s | __MAC_ADDR__</SubText>
+            <ExtraText>__AUTH__</ExtraText>
+            <ExtraText2>__QUAL__%</ExtraText2>
+          </If>
+          <Else>
+            <ExtraIconType2>$(icon_type_enum:kIconTypeLock)</ExtraIconType2>
+            <If condition="__QUAL__>=75">
+              <ExtraIconType>$(icon_type_enum:kIconTypeWlan100)</ExtraIconType>
+            </If>
+            <ElIf condition="__QUAL__>=50">
+              <ExtraIconType>$(icon_type_enum:kIconTypeWlan75)</ExtraIconType>
+            </ElIf>
+            <ElIf condition="__QUAL__>=25">
+              <ExtraIconType>$(icon_type_enum:kIconTypeWlan50)</ExtraIconType>
+            </ElIf>
+            <Else>
+              <ExtraIconType>$(icon_type_enum:kIconTypeWlan25)</ExtraIconType>
+            </Else>
+          </Else>
+          <Url>file:///xml/gui/templates.xml#sub=*[@id="input_template"]&amp;var:input_pool_key=0&amp;var:input_displayname=$(lang:user_pass)&amp;var:input_token=__Y__&amp;var:input_flags=p&amp;var:input_default=&amp;var:input_url=$(urlencode:"phone://mb_nop%23go_back%26set:wifi_wep_key1=__Y__")&amp;set:wifi_essid=__SSID__&amp;set:wifi_auth_mode=__AUTH__</Url>
+        </MenuItem>
+      </Elif>
+      <Else>
+        <MenuItem name="__SSID__">
+          <If condition="$(is_set:$(var:wifi_detailview))">
+            <SubText>__FREQUENCY__ | __BITRATES__/s | __MAC_ADDR__</SubText>
+            <ExtraText>__AUTH__</ExtraText>
+            <ExtraText2>__QUAL__%</ExtraText2>
+          </If>
+          <Else>
+            <ExtraIconType2>$(icon_type_enum:kIconTypeLock)</ExtraIconType2>
+            <If condition="__QUAL__>=75">
+              <ExtraIconType>$(icon_type_enum:kIconTypeWlan100)</ExtraIconType>
+            </If>
+            <ElIf condition="__QUAL__>=50">
+              <ExtraIconType>$(icon_type_enum:kIconTypeWlan75)</ExtraIconType>
+            </ElIf>
+            <ElIf condition="__QUAL__>=25">
+              <ExtraIconType>$(icon_type_enum:kIconTypeWlan50)</ExtraIconType>
+            </ElIf>
+            <Else>
+              <ExtraIconType>$(icon_type_enum:kIconTypeWlan25)</ExtraIconType>
+            </Else>
+          </Else>
+          <Url>file:///xml/gui/templates.xml#sub=*[@id="input_template"]&amp;var:input_pool_key=0&amp;var:input_displayname=$(lang:user_pass)&amp;var:input_token=__Y__&amp;var:input_flags=p&amp;var:input_default=&amp;var:input_url=$(urlencode:"phone://mb_nop%23go_back%26set:wifi_wpapsk=__Y__")&amp;set:wifi_essid=__SSID__&amp;set:wifi_auth_mode=__AUTH__&amp;set:wifi_wpa_encryptype=__ENC__</Url>
+        </MenuItem>
+      </Else>
+    </Repeat>
+  </IPPhoneMenu>
+</IPPhoneBatch>

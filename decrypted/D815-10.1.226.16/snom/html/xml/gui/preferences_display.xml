@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<IPPhoneMenu state="others_except_mb" dtmf="off" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../schemas/minibrowser.xsd">
+  <Title>$(lang:$(var:display_menu_name))</Title>
+  <If condition="$(set:phone_type)!=snomMP">
+    <MenuItem name="$(lang:menu_gen_contrast)">
+      <Action>contrast</Action>
+      <ExtraIconType>$(icon_type_enum:kIconTypeMenuArrowRight)</ExtraIconType>
+    </MenuItem>
+  </If>
+  <!-- ALS_SENSOR -->
+  <If condition="$(show_feature:ALS_SENSOR)">
+    <!-- ALS_SENSOR -->
+    <Menu name="$(lang:ALS)">
+      <If condition="$(set:enable_ambient_light)==off">
+        <SubText>$(lang:off)</SubText>
+      </If>
+      <Elif condition="$(set:enable_ambient_light)==on">
+        <SubText>$(lang:on)</SubText>
+      </Elif>
+      <Elif condition="$(set:enable_ambient_light)==active">
+        <SubText>$(lang:backlight_on_activity)</SubText>
+      </Elif>
+      <MenuItem name="$(lang:off)" sel="$(condition:$(set:enable_ambient_light)==off)">
+        <Url>phone://mb_nop#go_back&amp;set:enable_ambient_light=off</Url>
+      </MenuItem>
+      <MenuItem name="$(lang:on)" sel="$(condition:$(set:enable_ambient_light)==on)">
+        <Url>phone://mb_nop#go_back&amp;set:enable_ambient_light=on</Url>
+      </MenuItem>
+      <MenuItem name="$(lang:backlight_on_activity)" sel="$(condition:$(set:enable_ambient_light)==active)">
+        <Url>phone://mb_nop#go_back&amp;set:enable_ambient_light=active</Url>
+      </MenuItem>
+    </Menu>
+    <!-- enable_ambient_light -->
+    <If condition="$(set:enable_ambient_light)==off">
+      <MenuItem name="$(lang:backlight_on_activity)">
+        <If condition="$(show_feature:FEATURE_PUI_STYLE_SIO)">
+          <SubText>$(set:backlight)</SubText>
+        </If>
+        <ExtraIconType>$(icon_type_enum:kIconTypeMenuArrowRight)</ExtraIconType>
+        <Action>backlight_active</Action>
+      </MenuItem>
+      <MenuItem name="$(lang:backlight_when_idle)">
+        <Action>backlight_idle</Action>
+        <If condition="$(show_feature:FEATURE_PUI_STYLE_SIO)">
+          <SubText>$(set:backlight_idle)</SubText>
+        </If>
+        <ExtraIconType>$(icon_type_enum:kIconTypeMenuArrowRight)</ExtraIconType>
+      </MenuItem>
+      <!-- enable_ambient_light -->
+    </If>
+    <If condition="$(set:enable_ambient_light)==active">
+      <MenuItem name="$(lang:backlight_when_idle)">
+        <Action>backlight_idle</Action>
+        <If condition="$(show_feature:FEATURE_PUI_STYLE_SIO)">
+          <SubText>$(set:backlight_idle)</SubText>
+        </If>
+        <ExtraIconType>$(icon_type_enum:kIconTypeMenuArrowRight)</ExtraIconType>
+      </MenuItem>
+      <!-- enable_ambient_light -->
+    </If>
+    <!-- ALS_SENSOR -->
+  </If>
+  <!-- ALS_SENSOR -->
+  <Else>
+    <MenuItem name="$(lang:backlight_on_activity)">
+      <If condition="$(show_feature:FEATURE_PUI_STYLE_SIO)">
+        <SubText>$(set:backlight)</SubText>
+      </If>
+      <ExtraIconType>$(icon_type_enum:kIconTypeMenuArrowRight)</ExtraIconType>
+      <Action>backlight_active</Action>
+    </MenuItem>
+    <MenuItem name="$(lang:backlight_when_idle)">
+      <Action>backlight_idle</Action>
+      <If condition="$(show_feature:FEATURE_PUI_STYLE_SIO)">
+        <SubText>$(set:backlight_idle)</SubText>
+      </If>
+      <ExtraIconType>$(icon_type_enum:kIconTypeMenuArrowRight)</ExtraIconType>
+    </MenuItem>
+    <!-- ALS_SENSOR -->
+  </Else>
+  <If condition="$(show_feature:FEATURE_SMART_LABEL)">
+    <MenuItem name="$(lang:menu_smart_label)">
+      <ExtraIconType>$(icon_type_enum:kIconTypeMenuArrowRight)</ExtraIconType>
+      <Url>file:///xml/gui/smart_labels.xml</Url>
+    </MenuItem>
+  </If>
+  <If condition="$(show_feature:FEATURE_PUI_STYLE_SIO)">
+    <MenuItem name="$(lang:screen_items_color_and_opacity_title)">
+      <ExtraIconType>$(icon_type_enum:kIconTypeMenuArrowRight)</ExtraIconType>
+      <Url>file:///xml/gui/color_transparency.xml</Url>
+    </MenuItem>
+    <Menu name="$(lang:ui_themes)" id="ui_themes">
+      <ExtraIconType>$(icon_type_enum:kIconTypeMenuArrowRight)</ExtraIconType>
+      <MenuItem name="$(lang:theme_light)" sel="$(condition:$(set:ui_theme)==Light)">
+        <If condition="$(set:ui_theme)==Light">
+          <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOn)</ExtraIconType>
+        </If>
+        <Else>
+          <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOff)</ExtraIconType>
+        </Else>
+        <Url>phone://mb_nop#set:ui_theme=Light</Url>
+      </MenuItem>
+      <MenuItem name="$(lang:theme_dark)" sel="$(condition:$(set:ui_theme)==Dark)">
+        <If condition="$(set:ui_theme)==Dark">
+          <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOn)</ExtraIconType>
+        </If>
+        <Else>
+          <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOff)</ExtraIconType>
+        </Else>
+        <Url>phone://mb_nop#set:ui_theme=Dark</Url>
+      </MenuItem>
+      <If condition="!$(show_feature:SIMULATED_GREYSCALE_DISPLAY)">
+        <MenuItem name="$(lang:theme_colorful)" sel="$(condition:$(set:ui_theme)==Colorful)">
+          <If condition="$(set:ui_theme)==Colorful">
+            <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOn)</ExtraIconType>
+          </If>
+          <Else>
+            <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOff)</ExtraIconType>
+          </Else>
+          <Url>phone://mb_nop#set:ui_theme=Colorful</Url>
+        </MenuItem>
+        <MenuItem name="$(lang:theme_industrial)" sel="$(condition:$(set:ui_theme)==Industrial)">
+          <If condition="$(set:ui_theme)==Industrial">
+            <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOn)</ExtraIconType>
+          </If>
+          <Else>
+            <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOff)</ExtraIconType>
+          </Else>
+          <Url>phone://mb_nop#set:ui_theme=Industrial</Url>
+        </MenuItem>
+        <MenuItem name="$(lang:theme_contrast)" sel="$(condition:$(set:ui_theme)==Contrast)">
+          <If condition="$(set:ui_theme)==Contrast">
+            <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOn)</ExtraIconType>
+          </If>
+          <Else>
+            <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOff)</ExtraIconType>
+          </Else>
+          <Url>phone://mb_nop#set:ui_theme=Contrast</Url>
+        </MenuItem>
+      </If>
+    </Menu>
+  </If>
+</IPPhoneMenu>

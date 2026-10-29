@@ -1,0 +1,7 @@
+# /etc/profile: system-wide .profile file for the Bourne shell (sh(1))
+# and Bourne compatible shells (bash(1), ksh(1), ash(1), ...).
+
+export PATH="/bin:/sbin:/usr/sbin:/usr/bin:/usr/local/bin:/wifi/sbin"
+export LD_LIBRARY_PATH="/lib:/usr/lib:/wifi/lib"
+
+umask 022

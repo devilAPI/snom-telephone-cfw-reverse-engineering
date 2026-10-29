@@ -1,0 +1,1703 @@
+<?xml version="1.0" encoding="utf-8"?>
+<phrases>
+	<language t="Hrvatski"/>
+	<phrase n="lang_none" t=""/>
+	<phrase n="lang_language_name" t="Hrvatski"/>
+	<phrase n="lang_cntry_CHN" t="Kina"/>
+	<phrase n="lang_cntry_FIN" t="Finska"/>
+	<phrase n="lang_cntry_GER" t="Njemacka"/>
+	<phrase n="lang_cntry_IND" t="Indija"/>
+	<phrase n="lang_cntry_IDN" t="Indonezija"/>
+	<phrase n="lang_cntry_MYS" t="Malezija"/>
+	<phrase n="lang_cntry_MEX" t="Meksiko"/>
+	<phrase n="lang_cntry_NLD" t="Nizozemska"/>
+	<phrase n="lang_cntry_PRT" t="Portugal"/>
+	<phrase n="lang_cntry_ZAF" t="Juznoafricka Republika"/>
+	<phrase n="lang_cntry_GBR" t="Velika Britanija"/>
+	<phrase n="lang_cntry_USA" t="SAD"/>
+	<phrase n="lang_cntry_CAN" t="Kanada"/>
+	<phrase n="lang_cntry_CHL" t="Cile"/>
+	<phrase n="lang_cntry_BHS" t="Bahami"/>
+	<phrase n="lang_cntry_CUB" t="Kuba"/>
+	<phrase n="lang_cntry_PRY" t="Paragvaj"/>
+	<phrase n="lang_cntry_BMU" t="Bermuda"/>
+	<phrase n="lang_cntry_FLK" t="Foklandski otoci"/>
+	<phrase n="lang_cntry_GRL" t="Grenland"/>
+	<phrase n="lang_cntry_FRO" t="Farski otoci"/>
+	<phrase n="lang_cntry_IRL" t="Irska"/>
+	<phrase n="lang_cntry_ESP" t="Spanjolska"/>
+	<phrase n="lang_cntry_ALB" t="Albanija"/>
+	<phrase n="lang_cntry_AUT" t="Austrija"/>
+	<phrase n="lang_cntry_BEL" t="Belgija"/>
+	<phrase n="lang_cntry_BRA" t="Brazil"/>
+	<phrase n="lang_cntry_CAI" t="Caicos"/>
+	<phrase n="lang_cntry_CHA" t="Chatam"/>
+	<phrase n="lang_cntry_HRV" t="Hrvatska"/>
+	<phrase n="lang_cntry_CZE" t="Ceska"/>
+	<phrase n="lang_cntry_DNK" t="Danska"/>
+	<phrase n="lang_cntry_FRA" t="Francuska"/>
+	<phrase n="lang_cntry_HUN" t="Madjarska"/>
+	<phrase n="lang_cntry_ITA" t="Italija"/>
+	<phrase n="lang_cntry_LUX" t="Luksemburg"/>
+	<phrase n="lang_cntry_MAK" t="Makedonija"/>
+	<phrase n="lang_cntry_NAM" t="Namibija"/>
+	<phrase n="lang_cntry_NOR" t="Norveska"/>
+	<phrase n="lang_cntry_POL" t="Poljska"/>
+	<phrase n="lang_cntry_SVK" t="Slovacka"/>
+	<phrase n="lang_cntry_SWD" t="Svedska"/>
+	<phrase n="lang_cntry_CHE" t="Svicarska"/>
+	<phrase n="lang_cntry_GIB" t="Gibraltar"/>
+	<phrase n="lang_cntry_YUG" t="Srbija"/>
+	<phrase n="lang_cntry_BLR" t="Bjelorusija"/>
+	<phrase n="lang_cntry_BGR" t="Bugarska"/>
+	<phrase n="lang_cntry_CYP" t="Cipar"/>
+	<phrase n="lang_cntry_EGY" t="Egipat"/>
+	<phrase n="lang_cntry_EST" t="Estonija"/>
+	<phrase n="lang_cntry_GAZ" t="Gaza"/>
+	<phrase n="lang_cntry_GRC" t="Grcka"/>
+	<phrase n="lang_cntry_ISR" t="Izrael"/>
+	<phrase n="lang_cntry_JOR" t="Jordan"/>
+	<phrase n="lang_cntry_LVA" t="Latvija"/>
+	<phrase n="lang_cntry_LTU" t="Litva"/>
+	<phrase n="lang_cntry_LBN" t="Libanon"/>
+	<phrase n="lang_cntry_MDA" t="Moldavija"/>
+	<phrase n="lang_cntry_RUS" t="Rusija"/>
+	<phrase n="lang_cntry_ROU" t="Rumunjska"/>
+	<phrase n="lang_cntry_SYR" t="Sirija"/>
+	<phrase n="lang_cntry_TUR" t="Turska"/>
+	<phrase n="lang_cntry_UKR" t="Ukrajina"/>
+	<phrase n="lang_cntry_IRQ" t="Irak"/>
+	<phrase n="lang_cntry_IRN" t="Iran"/>
+	<phrase n="lang_cntry_ARM" t="Armenija"/>
+	<phrase n="lang_cntry_AZE" t="Azerbejdzan"/>
+	<phrase n="lang_cntry_GEO" t="Gruzija"/>
+	<phrase n="lang_cntry_KAZ" t="Kazastan"/>
+	<phrase n="lang_cntry_KGZ" t="Kirgistan"/>
+	<phrase n="lang_cntry_PAK" t="Pakistan"/>
+	<phrase n="lang_cntry_SGP" t="Singapur"/>
+	<phrase n="lang_cntry_KOR" t="Koreja"/>
+	<phrase n="lang_cntry_JPN" t="Japan"/>
+	<phrase n="lang_cntry_AUS" t="Australija"/>
+	<phrase n="lang_cntry_NZL" t="Novi Zeland"/>
+	<phrase n="lang_cntry_TON" t="Tonga"/>
+	<phrase n="lang_cntry_COL" t="Kolumbija"/>
+	<phrase n="lang_cntry_ECU" t="Ekvador"/>
+	<phrase n="lang_cntry_TTB" t="Trinidad i Tobago"/>
+	<phrase n="lang_cntry_ARG" t="Argentina"/>
+	<phrase n="lang_cntry_WAT" t="Zapadna Afrika"/>
+	<phrase n="lang_cntry_CAT" t="Centralna Afrika"/>
+	<phrase n="lang_cntry_EAT" t="Istocna Afrika"/>
+	<phrase n="lang_cntry_VEN" t="Venecuela"/>
+	<phrase n="lang_cntry_NCL" t="Nova Kaledonija"/>
+	<phrase n="lang_cntry_UAE" t="Ujedinjeni Arapski Emirati"/>
+	<phrase n="lang_cntry_THA" t="Tajland"/>
+	<phrase n="lang_F_SEARCH" t="Pretrazivanje"/>
+	<phrase n="lang_F_SEARCH_typeSio" t="Pretrazivanje"/>
+	<phrase n="lang_F_REBOOT" t="Ponovno pokreni"/>
+	<phrase n="lang_F_REBOOT_typeSio" t="Ponovno pokreni"/>
+	<phrase n="lang_F_REBOOT_smartlabel" t="Reboot"/>
+	<phrase n="lang_F_PAIR" t="Pridruzi"/>
+	<phrase n="lang_F_UNPAIR" t="Razdruzi"/>
+	<phrase n="lang_F_JOIN" t="Dodaj"/>
+	<phrase n="lang_F_JOIN_typeSio" t="Dodaj"/>
+	<phrase n="lang_F_JOIN_WITH" t="Pridruzi"/>
+	<phrase n="lang_F_LEAVE" t="Napusti"/>
+	<phrase n="lang_F_LEAVE_typeSio" t="Napusti"/>
+	<phrase n="lang_F_OK" t="OK"/>
+	<phrase n="lang_F_ACCEPT_CALL" t="Prihvati"/>
+	<phrase n="lang_F_ACCEPT_CALL_typeSio" t="Prihvati"/>
+	<phrase n="lang_F_CANCEL" t="Odustani"/>
+	<phrase n="lang_F_CANCEL_typeSio" t="Odustani"/>
+	<phrase n="lang_F_YES" t="Da"/>
+	<phrase n="lang_F_NO" t="Ne"/>
+	<phrase n="lang_F_ADD_SPEAKER" t="+Spkr"/>
+	<phrase n="lang_F_ADD_SPEAKER_typeSio" t="+Speaker"/>
+	<phrase n="lang_F_REMOVE_SPEAKER" t="-Spkr"/>
+	<phrase n="lang_F_REMOVE_SPEAKER_typeSio" t="-Speaker"/>
+	<phrase n="lang_F_ADD_HANDSET" t="+Hndst"/>
+	<phrase n="lang_F_ADD_HANDSET_typeSio" t="+Handset"/>
+	<phrase n="lang_F_REMOVE_HANDSET" t="-Hndst"/>
+	<phrase n="lang_F_REMOVE_HANDSET_typeSio" t="-Handset"/>
+	<phrase n="lang_F_DELETE" t="Del"/>
+	<phrase n="lang_F_DELETE_typeSio" t="Delete"/>
+	<phrase n="lang_F_ADR_BOOK" t="Dir"/>
+	<phrase n="lang_F_ADR_BOOK_typeSio" t="Directory"/>
+	<phrase n="lang_F_ADR_BOOK_smartlabel" t="Directory"/>
+	<phrase n="lang_F_DENYALL" t="Block"/>
+	<phrase n="lang_F_DENYALL_typeSio" t="Block Caller"/>
+	<phrase n="lang_F_DENYALL_smartlabel" t="Block"/>
+	<phrase n="lang_F_CALL_LIST" t="CHist"/>
+	<phrase n="lang_F_CALL_LIST_typeSio" t="Call History"/>
+	<phrase n="lang_F_CALL_LIST_smartlabel" t="Call Hist"/>
+	<phrase n="lang_F_PLAY" t="Play"/>
+	<phrase n="lang_F_STOP" t="Stop"/>
+	<phrase n="lang_F_RESCAN" t="Rescan"/>
+	<phrase n="lang_F_INCREASE" t="Increase"/>
+	<phrase n="lang_F_DECREASE" t="Decrease"/>
+	<phrase n="lang_F_BACK" t="⌫"/>
+	<phrase n="lang_F_BACK_typeSio" t="Backspace"/>
+	<phrase n="lang_F_REDIAL" t="Redial"/>
+	<phrase n="lang_F_REDIAL_typeSio" t="Redial"/>
+	<phrase n="lang_F_REDIAL_smartlabel" t="Redial"/>
+	<phrase n="lang_F_INSTANT_REDIAL" t="Redial"/>
+	<phrase n="lang_F_INSTANT_REDIAL_typeSio" t="Instant Redial"/>
+	<phrase n="lang_F_INSTANT_REDIAL_smartlabel" t="Redial"/>
+	<phrase n="lang_F_ADD_NUMBER" t="Add"/>
+	<phrase n="lang_F_ADD_NUMBER_typeSio" t="Add Number"/>
+	<phrase n="lang_F_CONTACTS" t="Contacts"/>
+	<phrase n="lang_F_PRESENCE" t="State"/>
+	<phrase n="lang_F_PRESENCE_typeSio" t="Presence"/>
+	<phrase n="lang_F_PRESENCE_smartlabel" t="Presence"/>
+	<phrase n="lang_F_SPEED_DIAL" t="Speed"/>
+	<phrase n="lang_F_SPEED_DIAL_typeSio" t="Speed Dial"/>
+	<phrase n="lang_F_SPEED_DIAL_smartlabel" t="Speed"/>
+	<phrase n="lang_F_SAFE_TRANSFER" t="Safe"/>
+	<phrase n="lang_F_SAFE_TRANSFER_typeSio" t="Safe Transfer"/>
+	<phrase n="lang_F_MENUS_USERINPUT_SENDSIPINFO" t="UserInputAndSendSipInfo"/>
+	<phrase n="lang_F_MENUS_SENDSIPINFO" t="SendSipInfo"/>
+	<phrase n="lang_F_USERINPUT_SENDSIPINFO" t="SIP"/>
+	<phrase n="lang_F_SENDSIPINFO" t="SIP"/>
+	<phrase n="lang_F_SENDSIPINFO_typeSio" t="SIP INFO"/>
+	<phrase n="lang_F_SENDSIPINFO_smartlabel" t="SIP&lt;br&gt;INFO"/>
+	<phrase n="lang_F_REC_START" t="Pokreni snimanje"/>
+	<phrase n="lang_F_REC_STOP" t="Stop R"/>
+	<phrase n="lang_F_RECORDER_START" t="Snimi"/>
+	<phrase n="lang_F_RECORDER_STOP" t="Stop Rec"/>
+	<phrase n="lang_F_RECORD_ON" t="Record"/>
+	<phrase n="lang_F_RECORD_OFF" t="Stop Record"/>
+	<phrase n="lang_F_RECORDING" t="Snimanje"/>
+	<phrase n="lang_F_LOGOFF_ALL" t="Logoff"/>
+	<phrase n="lang_F_LOGOFF_ALL_typeSio" t="Logoff All"/>
+	<phrase n="lang_F_LOGOFF_ALL_smartlabel" t="Logoff"/>
+	<phrase n="lang_F_STARCODE_short" t="S Code"/>
+	<phrase n="lang_F_STARCODE" t="Star Code"/>
+	<phrase n="lang_F_RELOAD_SERVER_AB" t="Ponovno ucitati"/>
+	<phrase n="lang_F_ANONYMOUS" t="Anon ID"/>
+	<phrase n="lang_F_ANONYMOUS_long" t="Anonymous ID"/>
+	<phrase n="lang_F_ANONYMOUS_smartlabel" t="Anon ID"/>
+	<phrase n="lang_F_VOICEMAIL_INFO_NEW_MSG" t="Voicemail Info"/>
+	<phrase n="lang_F_VOICEMAIL_INFO_short" t="VMail"/>
+	<phrase n="lang_F_VOICEMAIL_INFO" t="Voicemail Info"/>
+	<phrase n="lang_F_NO_NEW_MESSAGE" t="No New Msgs"/>
+	<phrase n="lang_F_NEW_MESSAGE" t="New Messages"/>
+	<phrase n="lang_F_GUEST_LOCK" t="Zakljucati"/>
+	<phrase n="lang_F_GUEST_UNLOCK" t="Otkljucati"/>
+	<phrase n="lang_F_IVR" t="IVR"/>
+	<phrase n="lang_F_DTMF" t="DTMF"/>
+	<phrase n="lang_F_ACTION_URL" t="URL"/>
+	<phrase n="lang_F_ACTION_URL_typeSio" t="Action URL"/>
+	<phrase n="lang_F_ACTION_URL_smartlabel" t="URL"/>
+	<phrase n="lang_F_AUTO_ANSWER" t="AutoA"/>
+	<phrase n="lang_F_AUTO_ANSWER_typeSio" t="Auto Answer"/>
+	<phrase n="lang_F_AUTO_ANSWER_smartlabel" t="Auto Ans"/>
+	<phrase n="lang_F_AUTO_ANSWER_ON" t="Auto odgovor"/>
+	<phrase n="lang_F_BLF_short" t="BLF"/>
+	<phrase n="lang_F_BLF" t="Lampica zauzeca"/>
+	<phrase n="lang_F_LINE" t="Linija"/>
+	<phrase n="lang_F_LINE_short" t="Lin."/>
+	<phrase n="lang_F_LINE_RINGING" t="Zvono"/>
+	<phrase n="lang_F_LINE_OUTGOING" t="Calling"/>
+	<phrase n="lang_F_LINE_OFFHOOK" t="Radno stanje linije"/>
+	<phrase n="lang_F_LINE_IDLE" t="Neaktivan"/>
+	<phrase n="lang_F_LINE_HOLD" t="Na cekanju"/>
+	<phrase n="lang_F_LINE_FAILED" t="Odspojen"/>
+	<phrase n="lang_F_LINE_DISCONNECTED" t="iskljucen"/>
+	<phrase n="lang_F_LINE_DISCONNECTED_typeSio" t="iskljucen"/>
+	<phrase n="lang_F_LINE_CONNECTED" t="Spojen"/>
+	<phrase n="lang_F_LINE_BUSY" t="Zauzeto"/>
+	<phrase n="lang_F_LINE_HELD" t="Being Held"/>
+	<phrase n="lang_F_LINE_CALLING" t="Pozivanje"/>
+	<phrase n="lang_F_LINE_RINGBACK" t="Pozadinski ton"/>
+	<phrase n="lang_F_LINE_HOLDING" t="cekanje"/>
+	<phrase n="lang_F_LINE_UNREGISTERED" t="Unregistered"/>
+	<phrase n="lang_F_LINE_IN_USE" t="In Use"/>
+	<phrase n="lang_F_LINE_FREE" t="Slobodan"/>
+	<phrase n="lang_F_LINE_UNKNOWN" t="Nepoznat"/>
+	<phrase n="lang_F_LINE_TALKING" t="Razgovor"/>
+	<phrase n="lang_F_LINE_SEIZED" t="Preuzet"/>
+	<phrase n="lang_F_LINE_UNVAILABLE" t="Nedostupan"/>
+	<phrase n="lang_F_LINE_ACTIVE" t="Aktivan"/>
+	<phrase n="lang_F_LINE_AVAILABLE" t="Dostupan"/>
+	<phrase n="lang_F_LINE_CLOSED" t="Zatvoreno"/>
+	<phrase n="lang_F_LINE_AUTO_REDIAL" t="Automatski ponovni poziv"/>
+	<phrase n="lang_F_LINE_AUTO_REDIAL_typeSio" t="Automatski ponovni poziv"/>
+	<phrase n="lang_F_LINE_CONFERENCING" t="Konferencija"/>
+	<phrase n="lang_F_LINE_PARKED" t="Na cekanju"/>
+	<phrase n="lang_F_LINE_NO_BUDDY" t="Nije prijavljen"/>
+	<phrase n="lang_F_LINE_DISABLED" t="Onemogucen"/>
+	<phrase n="lang_F_LINE_MSG_WAITING" t="Poruka na cekanju"/>
+	<phrase n="lang_F_SHARED_LINE" t="S Line"/>
+	<phrase n="lang_F_SHARED_LINE_typeSio" t="Dijeljena linija"/>
+	<phrase n="lang_F_SHARED_LINE_smartlabel" t="S Line"/>
+	<phrase n="lang_F_SHARED_LINE_REMOTE_SEIZED" t="Dijeljena linija"/>
+	<phrase n="lang_F_SHARED_LINE_REMOTE_HOLD" t="Dijeljena linija"/>
+	<phrase n="lang_F_SHARED_LINE_REMOTE_ALERT" t="Dijeljena linija"/>
+	<phrase n="lang_F_SHARED_LINE_REMOTE_ACTIVE" t="Dijeljena linija"/>
+	<phrase n="lang_F_SHARED_LINE_LOCAL_SEIZED" t="Dijeljena linija"/>
+	<phrase n="lang_F_SHARED_LINE_LOCAL_HOLD" t="Dijeljena linija"/>
+	<phrase n="lang_F_SHARED_LINE_LOCAL_ALERT" t="Dijeljena linija"/>
+	<phrase n="lang_F_SHARED_LINE_LOCAL_ACTIVE" t="Dijeljena linija"/>
+	<phrase n="lang_F_MULTICAST" t="MCast"/>
+	<phrase n="lang_F_MULTICAST_typeSio" t="Multicast"/>
+	<phrase n="lang_F_MULTICAST_smartlabel" t="MC Page"/>
+	<phrase n="lang_F_MULTICAST_ON" t="Visesmjerno"/>
+	<phrase n="lang_F_MULTICAST_ZONE" t="MZone"/>
+	<phrase n="lang_F_MULTICAST_ZONE_typeSio" t="Multicast Zone"/>
+	<phrase n="lang_F_MULTICAST_ZONE_smartlabel" t="MC Zone"/>
+	<phrase n="lang_F_BUTTON_typeSio" t="PBX tipka"/>
+	<phrase n="lang_F_BUTTON" t="Tipka"/>
+	<phrase n="lang_F_BUTTON_smartlabel" t="Tipka"/>
+	<phrase n="lang_F_PUSH_TO_TALK" t="PTT"/>
+	<phrase n="lang_F_PUSH_TO_TALK_typeSio" t="Push-to-Talk"/>
+	<phrase n="lang_F_PUSH_TO_TALK_smartlabel" t="PTT"/>
+	<phrase n="lang_F_INTERCOM_ON" t="Interkom"/>
+	<phrase n="lang_F_INTERCOM" t="Icom"/>
+	<phrase n="lang_F_INTERCOM_typeSio" t="Interkom"/>
+	<phrase n="lang_F_INTERCOM_smartlabel" t="Icom"/>
+	<phrase n="lang_F_PICKUP" t="Pokupi"/>
+	<phrase n="lang_F_CALL_CENTER_LIST" t="Popis pozivnih centara"/>
+	<phrase n="lang_F_REMOTE_OFFICE" t="Office"/>
+	<phrase n="lang_F_REMOTE_OFFICE_typeSio" t="Remote Office"/>
+	<phrase n="lang_F_REMOTE_OFFICE_smartlabel" t="R Office"/>
+	<phrase n="lang_F_REMOTE_OFFICE_ON" t="Ukljuci"/>
+	<phrase n="lang_F_REMOTE_OFFICE_OFF" t="Iskljuci"/>
+	<phrase n="lang_F_ACD" t="ACD"/>
+	<phrase n="lang_F_ACD_WRAPUP" t="Zavrsetak"/>
+	<phrase n="lang_F_ACD_UNAVAILABLE" t="Nije dostupan"/>
+	<phrase n="lang_F_ACD_AVAILABLE" t="Dostupan"/>
+	<phrase n="lang_F_ACD_SIGN_OUT" t="Odjava"/>
+	<phrase n="lang_F_ACD_SIGN_IN" t="Prijava"/>
+	<phrase n="lang_F_ACD_LOGOUT" t="Odjava"/>
+	<phrase n="lang_F_ACD_LOGIN" t="Prijava"/>
+	<phrase n="lang_F_ZONES" t="M-stranica"/>
+	<phrase n="lang_F_SMART_TRANSFER" t="Pametno prespajanje"/>
+	<phrase n="lang_F_SMART_TRANSFER_short" t="SmartTr"/>
+	<phrase n="lang_F_ALTERNATE_MODE" t="Alternate"/>
+	<phrase n="lang_F_LABEL_PAGE_NEXT_typeSio" t="Next"/>
+	<phrase n="lang_F_LABEL_PAGE_NEXT" t="Next"/>
+	<phrase n="lang_F_LABEL_PAGE_NEXT_SMART_long" t="Next Page"/>
+	<phrase n="lang_F_LABEL_PAGE_NEXT_SMART_short" t="Page&gt;&gt;"/>
+	<phrase n="lang_F_LABEL_PAGE_PREV_typeSio" t="Prev"/>
+	<phrase n="lang_F_LABEL_PAGE_PREV" t="Prev"/>
+	<phrase n="lang_F_LABEL_PAGE_PREV_SMART_long" t="Previous Page"/>
+	<phrase n="lang_F_LABEL_PAGE_PREV_SMART_short" t="&lt;&lt;Page"/>
+	<phrase n="lang_F_ADD_REJECTED_CONTACT" t="Add"/>
+	<phrase n="lang_F_SAVE_XSI_CONTACT" t="Spremi"/>
+	<phrase n="lang_F_REFRESH" t="Osvjeziti"/>
+	<phrase n="lang_F_ADD_CONTACT" t="Dodaj"/>
+	<phrase n="lang_F_ADD_CONTACT_typeSio" t="Dodaj kontakt"/>
+	<phrase n="lang_F_SAVE_DIRECTORY_EDIT" t="Spremi"/>
+	<phrase n="lang_F_GO_NEXT" t="Slijedeci"/>
+	<phrase n="lang_F_GO_BACK" t="Predhodni"/>
+	<phrase n="lang_F_SAVE" t="Spremi"/>
+	<phrase n="lang_F_SAVE_CONTACT" t="Spremi"/>
+	<phrase n="lang_F_SAFE_TRANSFER_OFF" t="Prebaci"/>
+	<phrase n="lang_F_SAFE_TRANSFER_OFF_typeSio" t="Prebaci"/>
+	<phrase n="lang_F_PARK" t="Cekanje"/>
+	<phrase n="lang_F_PARK_typeSio" t="Park"/>
+	<phrase n="lang_F_PARK_smartlabel" t="Park"/>
+	<phrase n="lang_F_CALLRECORD_PAUSE" t="Pause Rec"/>
+	<phrase n="lang_F_CALLRECORD_RESUME" t="Resume Rec"/>
+	<phrase n="lang_F_CALLRECORD_CONTROL_ON" t="Snimi"/>
+	<phrase n="lang_F_CALLRECORD_CONTROL_OFF" t="Snimi"/>
+	<phrase n="lang_F_STATUS_UNREAD" t="Info"/>
+	<phrase n="lang_F_STATUS" t="Info"/>
+	<phrase n="lang_F_STATUS_long" t="Info Messages"/>
+	<phrase n="lang_F_FAVORITES" t="Omilj."/>
+	<phrase n="lang_F_FAVORITES_typeSio" t="Favoriti"/>
+	<phrase n="lang_F_FAVORITES_smartlabel" t="Favorites"/>
+	<phrase n="lang_F_SORT" t="Sortiraj"/>
+	<phrase n="lang_F_SORT_typeSio" t="Sortiraj"/>
+	<phrase n="lang_F_CONTACTPOOL" t="Grupa"/>
+	<phrase n="lang_F_CONTACTPOOL_typeSio" t="Contact Pool"/>
+	<phrase n="lang_F_CONTACTPOOL_smartlabel" t="Pool"/>
+	<phrase n="lang_F_NEXT" t="Slijedeci"/>
+	<phrase n="lang_F_DIRECTORY_SEARCH" t="LDAP"/>
+	<phrase n="lang_F_MISSED_LIST" t="M Calls"/>
+	<phrase n="lang_F_MISSED_LIST_typeSio" t="Propušteni pozivi"/>
+	<phrase n="lang_F_MISSED_LIST_smartlabel" t="Missed"/>
+	<phrase n="lang_F_ACCEPTED_LIST" t="A Calls"/>
+	<phrase n="lang_F_ACCEPTED_LIST_typeSio" t="Prihvaceni pozivi"/>
+	<phrase n="lang_F_ACCEPTED_LIST_smartlabel" t="Accepted"/>
+	<phrase n="lang_F_DIALED" t="Ostvareni pozivi"/>
+	<phrase n="lang_F_RETRIEVE" t="Glasovna posta"/>
+	<phrase n="lang_F_RETRIEVE_smartlabel" t="Glasovna posta"/>
+	<phrase n="lang_F_RETRIEVE_typeSio" t="Glasovna poruka"/>
+	<phrase n="lang_F_RETRIEVE_ON" t="Glasovna posta"/>
+	<phrase n="lang_F_REDIRECT_OFF" t="nePreus"/>
+	<phrase n="lang_F_REDIRECT_OFF_smartlabel" t="noFwd"/>
+	<phrase n="lang_F_REDIRECT_OFF_typeSio" t="Forward Off"/>
+	<phrase n="lang_F_REDIRECT_ON" t="Preusmjeri"/>
+	<phrase n="lang_F_REDIRECT_ON_typeSio" t="Preusmjeri"/>
+	<phrase n="lang_F_REDIRECT_smartlabel" t="CFwd"/>
+	<phrase n="lang_F_RINGER_SILENT" t="Silent"/>
+	<phrase n="lang_F_RINGER_SILENT_typeSio" t="Silent Mode"/>
+	<phrase n="lang_F_RINGER_SILENT_smartlabel" t="Silent"/>
+	<phrase n="lang_F_ABORT" t="Izadji"/>
+	<phrase n="lang_F_ABORT_typeSio" t="Izadji"/>
+	<phrase n="lang_F_SUPPORT" t="Pomoc"/>
+	<phrase n="lang_F_JUMP_BACK" t="Idi"/>
+	<phrase n="lang_F_JUMP" t="Idi"/>
+	<phrase n="lang_F_REDUCED" t="Smanji"/>
+	<phrase n="lang_F_ALL" t="Vise"/>
+	<phrase n="lang_F_DIALOG" t="Pozivi"/>
+	<phrase n="lang_F_DIALOG_typeSio" t="Monitor Calls"/>
+	<phrase n="lang_F_DIALOG_smartlabel" t="Calls"/>
+	<phrase n="lang_F_HEADSET" t="HS"/>
+	<phrase n="lang_F_HEADSET_typeSio" t="Slusalice"/>
+	<phrase n="lang_F_HEADSET_smartlabel" t="Headset"/>
+	<phrase n="lang_F_HEADSET_ON" t="HS"/>
+	<phrase n="lang_F_HEADSET_ON_typeSio" t="Slusalice"/>
+	<phrase n="lang_F_HEADSET_ON_smartlabel" t="Headset"/>
+	<phrase n="lang_F_SOFTWARE_UPDATE" t="SW"/>
+	<phrase n="lang_F_UPDATE" t="Azuriraj"/>
+	<phrase n="lang_F_SMS" t="SMS"/>
+	<phrase n="lang_F_CMC" t="CMC"/>
+	<phrase n="lang_F_CALL_COMPLETION" t="CC"/>
+	<phrase n="lang_F_UNMUTE" t="Ukljuci ton"/>
+	<phrase n="lang_F_UNMUTE_typeSio" t="Unmute"/>
+	<phrase n="lang_F_UNMUTE_smartlabel" t="Unmute"/>
+	<phrase n="lang_F_MUTE" t="Iskljuci ton"/>
+	<phrase n="lang_F_MUTE_typeSio" t="Mute"/>
+	<phrase n="lang_F_MUTE_smartlabel" t="Mute"/>
+	<phrase n="lang_F_REG_ACTIVATE" t="Aktiviraj"/>
+	<phrase n="lang_F_ADD_PHONEBOOK" t="Dodaj"/>
+	<phrase n="lang_F_ADD_PHONEBOOK_typeSio" t="Dodaj kontakt"/>
+	<phrase n="lang_F_LIST_MISSED" t="Propusteni pozivi"/>
+	<phrase n="lang_F_LIST_TAKEN" t="Primljeni pozivi"/>
+	<phrase n="lang_F_DETAILS" t="Detalji"/>
+	<phrase n="lang_F_DND_OFF" t="Ne ometaj"/>
+	<phrase n="lang_F_DND_OFF_typeSio" t="Do Not Disturb"/>
+	<phrase n="lang_F_DND_OFF_smartlabel" t="DND"/>
+	<phrase n="lang_F_DND" t="Ne ometaj"/>
+	<phrase n="lang_F_DND_typeSio" t="Do Not Disturb"/>
+	<phrase n="lang_F_DND_smartlabel" t="DND"/>
+	<phrase n="lang_F_DEF_ON" t="*Ukljuci"/>
+	<phrase n="lang_F_DEF_OFF" t="*Iskljuci"/>
+	<phrase n="lang_F_ON" t="Ukljuci"/>
+	<phrase n="lang_F_OFF" t="Iskljuci"/>
+	<phrase n="lang_F_START" t="Start"/>
+	<phrase n="lang_F_END" t="End"/>
+	<phrase n="lang_F_IDENTITY" t="Identitet"/>
+	<phrase n="lang_F_SETTINGS_typeSio" t="Postavke"/>
+	<phrase n="lang_F_SETTINGS" t="Postavke"/>
+	<phrase n="lang_F_EXECUTIVE_ASSISTANT_CONFIG" t="Executive-Assistant Config"/>
+	<phrase n="lang_F_EXECUTIVE_CONFIG" t="Exec.&lt;br&gt;Config"/>
+	<phrase n="lang_F_EXECUTIVE_CONFIG_typeSio" t="Exececutive Config"/>
+	<phrase n="lang_F_ASSISTANT_CONFIG" t="Assist.&lt;br&gt;Config"/>
+	<phrase n="lang_F_ASSISTANT_CONFIG_typeSio" t="Assistant Config"/>
+	<phrase n="lang_F_EXEC_ASSIST_BEHALF_PUI_LISTING" t="Executive-Assistant Behalf Of"/>
+	<phrase n="lang_F_EXEC_ASSIST_BEHALF" t="Behalf Of"/>
+	<phrase n="lang_F_NEW" t="Novo"/>
+	<phrase n="lang_F_URLU" t="a»A"/>
+	<phrase n="lang_F_URLU_typeSio" t="Uredjivanje"/>
+	<phrase n="lang_F_URLL" t="1»a"/>
+	<phrase n="lang_F_URLL_typeSio" t="Uredjivanje"/>
+	<phrase n="lang_F_123" t="A»1"/>
+	<phrase n="lang_F_123_typeSio" t="Uredjivanje"/>
+	<phrase n="lang_F_REDIRECT" t="Preusmjeri"/>
+	<phrase n="lang_F_REDIRECT_typeSio" t="Preusmjeri"/>
+	<phrase n="lang_F_HOLD_typeSio" t="Cekanje"/>
+	<phrase n="lang_F_HOLD" t="Cekanje"/>
+	<phrase n="lang_F_CONSULTCONF_ADD" t="Add"/>
+	<phrase n="lang_F_CONSULTCONF_ADD_typeSio" t="Conference Add"/>
+	<phrase n="lang_F_CONSULTCONF_ADD_smartlabel" t="Add"/>
+	<phrase n="lang_F_CONSULTCONF_JOIN" t="Join"/>
+	<phrase n="lang_F_CONSULTCONF_JOIN_typeSio" t="Conference Join"/>
+	<phrase n="lang_F_CONSULTCONF_JOIN_smartlabel" t="Dodaj"/>
+	<phrase n="lang_F_CONSULTCONF" t="Konferencijski poziv"/>
+	<phrase n="lang_F_CONFERENCE" t="Konf"/>
+	<phrase n="lang_F_CONFERENCE_smartlabel" t="Konf"/>
+	<phrase n="lang_F_CONFERENCE_typeSio" t="Konferencijski poziv"/>
+	<phrase n="lang_F_CONFERENCE_ON" t="Konferencija iskljucena"/>
+	<phrase n="lang_F_NO_CONFERENCE" t="Bez konferencije"/>
+	<phrase n="lang_F_DEFLECT" t="Odbij dolazne"/>
+	<phrase n="lang_F_BLIND_TRANSFER" t="Prespajanje bez najave"/>
+	<phrase n="lang_F_BLIND_TRANSFER_typeSio" t="Blind Transfer"/>
+	<phrase n="lang_F_TRANSFER" t="Prebaci"/>
+	<phrase n="lang_F_TRANSFER_typeSio" t="Prebaci"/>
+	<phrase n="lang_F_TRANSFER_smartlabel" t="Transfer"/>
+	<phrase n="lang_F_TRANSFER_CALL" t="Prebaci poziv"/>
+	<phrase n="lang_F_TRANSFER_SELECTED" t="Prebacivanje odabrano"/>
+	<phrase n="lang_F_DENY" t="Odbij"/>
+	<phrase n="lang_F_DIAL" t="Biraj"/>
+	<phrase n="lang_F_EDIT" t="Uredi"/>
+	<phrase n="lang_F_CLEAR" t="Izbrisi"/>
+	<phrase n="lang_F_DOWN" t="Dolje"/>
+	<phrase n="lang_F_UP" t="Gore"/>
+	<phrase n="lang_F_LEFT" t="Lijevo"/>
+	<phrase n="lang_F_RIGHT" t="Desno"/>
+	<phrase n="lang_F_EXTENSION" t="Ext"/>
+	<phrase n="lang_F_EXTENSION_typeSio" t="Lokal"/>
+	<phrase n="lang_F_EXTENSION_smartlabel" t="Ext"/>
+	<phrase n="lang_F_MESSAGE" t="Poruka"/>
+	<phrase n="lang_F_CONTACT_STATE_UNKNOWN" t="Nepoznat"/>
+	<phrase n="lang_F_CONTACT_STATE_AVAILABLE" t="Dostupno"/>
+	<phrase n="lang_F_CONTACT_STATE_AVAILABLE_ON_MOBILE" t="Dostupno (Mobilni tel.)"/>
+	<phrase n="lang_F_CONTACT_STATE_AVAILABLE_AT_DESK" t="Dostupno (Fiksni tel.)"/>
+	<phrase n="lang_F_CONTACT_STATE_INACTIVE" t="Neaktivan"/>
+	<phrase n="lang_F_CONTACT_STATE_BUSY" t="Zauzeto"/>
+	<phrase n="lang_F_CONTACT_STATE_URGENT_INTERRUPTIONS_ONLY" t="Samo hitni pozivi"/>
+	<phrase n="lang_F_CONTACT_STATE_IN_A_CALL" t="U pozivu"/>
+	<phrase n="lang_F_CONTACT_STATE_IN_A_MEETING" t="Na sastanku"/>
+	<phrase n="lang_F_CONTACT_STATE_MEETING" t="Meeting"/>
+	<phrase n="lang_F_CONTACT_STATE_HOLDING" t="Cekanje"/>
+	<phrase n="lang_F_CONTACT_STATE_DND" t="Ne uznemiravaj"/>
+	<phrase n="lang_F_CONTACT_STATE_DND_ALL" t="Ne uznemiravaj (svi)"/>
+	<phrase n="lang_F_CONTACT_STATE_DND_SELF" t="Ne uznemiravaj (sam)"/>
+	<phrase n="lang_F_CONTACT_STATE_BE_RIGHT_BACK" t="Vracam se"/>
+	<phrase n="lang_F_CONTACT_STATE_AWAY" t="Udaljen"/>
+	<phrase n="lang_F_CONTACT_STATE_OFFLINE" t="Iskljucen"/>
+	<phrase n="lang_F_KEYEVENT" t="Key"/>
+	<phrase n="lang_F_KEYEVENT_typeSio" t="Key Event"/>
+	<phrase n="lang_F_KEYEVENT_short" t="Tipka"/>
+	<phrase n="lang_F_XML" t="XML"/>
+	<phrase n="lang_continuous_text_speed_dial" t="Speed Dial"/>
+	<phrase n="lang_continuous_text_reboot" t="Reboot"/>
+	<phrase n="lang_continuous_text_search" t="Search"/>
+	<phrase n="lang_continuous_text_cancel" t="Cancel"/>
+	<phrase n="lang_continuous_text_yes" t="Yes"/>
+	<phrase n="lang_continuous_text_no" t="No"/>
+	<phrase n="lang_confirm_reboot" t="Ponovno pokreni"/>
+	<phrase n="lang_on" t="Ukljuci"/>
+	<phrase n="lang_off" t="Iskljuci"/>
+	<phrase n="lang_busy" t="Zauzeto"/>
+	<phrase n="lang_short" t="Kratko"/>
+	<phrase n="lang_full" t="Kompletan"/>
+	<phrase n="lang_half" t="Half"/>
+	<phrase n="lang_F_HOLD_PRIVATE" t="P Hold"/>
+	<phrase n="lang_F_HOLD_PRIVATE_typeSio" t="Private Hold"/>
+	<phrase n="lang_F_HOLD_PRIVATE_smartlabel" t="Priv Hold"/>
+	<phrase n="lang_conference_off" t="Konf. poziv iskljucen"/>
+	<phrase n="lang_conference_off_typeSio" t="Konf. poziv iskljucen"/>
+	<phrase n="lang_edit_cmc" t="Korisnicki kod"/>
+	<phrase n="lang_dnd" t="Ne ometaj"/>
+	<phrase n="lang_red" t="Preusmjeri poziv"/>
+	<phrase n="lang_red_typeSio" t="Preusmjeri poziv"/>
+	<phrase n="lang_missed" t="Propusten poziv:"/>
+	<phrase n="lang_missed_typeSio" t="Propusten poziv:"/>
+	<phrase n="lang_edit" t="Uredi"/>
+	<phrase n="lang_F_EDIT_AND_DIAL" t="Re-Ed"/>
+	<phrase n="lang_F_EDIT_AND_DIAL_typeSio" t="Edit &amp; Dial"/>
+	<phrase n="lang_edit_dial" t="Edit and Dial"/>
+	<phrase n="lang_dhcp" t="DHCP"/>
+	<phrase n="lang_enum" t="ENUM"/>
+	<phrase n="lang_mwi_mailbox1" t="Pretinac od:"/>
+	<phrase n="lang_mwi_mailbox2" t="Imas"/>
+	<phrase n="lang_mwi_mailbox3" t="Imas poruku"/>
+	<phrase n="lang_mwi_urgent" t="hitno"/>
+	<phrase n="lang_mwi_goto_mailbox" t="Idi na mail poruke?"/>
+	<phrase n="lang_challenge_user" t="Korisnik"/>
+	<phrase n="lang_challenge_pw" t="Zaporka"/>
+	<phrase n="lang_use_enum" t="Koristi ENUM?"/>
+	<phrase n="lang_wiz_dhcp" t="Da li koristis DHCP?"/>
+	<phrase n="lang_wiz_ip_adr" t="IP adresa:"/>
+	<phrase n="lang_wiz_mac" t="MAC:"/>
+	<phrase n="lang_wiz_version" t="Verzija:"/>
+	<phrase n="lang_wiz_netmask" t="Mrezna maska:"/>
+	<phrase n="lang_wiz_gateway" t="IP Gateway:"/>
+	<phrase n="lang_wiz_dns_server" t="DNS Server:"/>
+	<phrase n="lang_wiz_welcome" t="Dobrodosli! Pritisi bilo koju tipku za pristup."/>
+	<phrase n="lang_terminated_finished" t="Odspojen"/>
+	<phrase n="lang_try_parking" t="Poziv na cekanju"/>
+	<phrase n="lang_try_parking_typeSio" t="Poziv na cekanju"/>
+	<phrase n="lang_holding" t="Poziv na cekanju:"/>
+	<phrase n="lang_select_list" t="Lista poziva"/>
+	<phrase n="lang_list_all" t="Svi"/>
+	<phrase n="lang_list_new" t="Novo"/>
+	<phrase n="lang_list_old" t="Staro"/>
+	<phrase n="lang_list_missed" t="Propusteni pozivi"/>
+	<phrase n="lang_list_taken" t="Primljeni pozivi"/>
+	<phrase n="lang_list_dialed" t="Ostvareni pozivi"/>
+	<phrase n="lang_list_no_data" t="(bez podataka)"/>
+	<phrase n="lang_list_details" t="Detalji"/>
+	<phrase n="lang_list_details_time" t="Vrijeme:"/>
+	<phrase n="lang_list_details_duration" t="Trajanje:"/>
+	<phrase n="lang_list_details_costs" t="Cijena:"/>
+	<phrase n="lang_list_details_missed" t="Propusteni:"/>
+	<phrase n="lang_list_details_to" t="Prema:"/>
+	<phrase n="lang_list_details_from" t="Od:"/>
+	<phrase n="lang_reg_activate" t="Aktiviraj"/>
+	<phrase n="lang_reg_account" t="Racun:"/>
+	<phrase n="lang_reg_registrar" t="Registar:"/>
+	<phrase n="lang_reg_explanation_failed" t="Neuspjesna registracija"/>
+	<phrase n="lang_reg_explanation_registering" t="Registracija"/>
+	<phrase n="lang_reg_explanation_registered" t="Registriran"/>
+	<phrase n="lang_menu_info_320" t="Informacije"/>
+	<phrase n="lang_menu_conf_reset" t="Ponistenje"/>
+	<phrase n="lang_menu_gen_contrast" t="Kontrast"/>
+	<phrase n="lang_menu_gen_ringtone" t="Zvono"/>
+	<phrase n="lang_menu_web_webserver_type" t="Server"/>
+	<phrase n="lang_menu_function_key" t="Funkcijske tipke"/>
+	<phrase n="lang_menu_tser_timer" t="Brojac"/>
+	<phrase n="lang_menu_red_target" t="Ciljani broj"/>
+	<phrase n="lang_menu_ringer1" t="Zvono 1"/>
+	<phrase n="lang_menu_ringer2" t="Zvono 2"/>
+	<phrase n="lang_menu_ringer3" t="Zvono 3"/>
+	<phrase n="lang_menu_ringer4" t="Zvono 4"/>
+	<phrase n="lang_menu_ringer5" t="Zvono 5"/>
+	<phrase n="lang_menu_ringer6" t="Zvono 6"/>
+	<phrase n="lang_menu_ringer7" t="Zvono 7"/>
+	<phrase n="lang_menu_ringer8" t="Zvono 8"/>
+	<phrase n="lang_menu_ringer9" t="Zvono 9"/>
+	<phrase n="lang_menu_ringer10" t="Zvono 10"/>
+	<phrase n="lang_vol_headset" t="Glasnoca slusalica"/>
+	<phrase n="lang_vol_handset" t="Glasnoca tel.slusalice"/>
+	<phrase n="lang_vol_speaker" t="Glasnoca zvucnika"/>
+	<phrase n="lang_audio_speaker" t="Zvucnik"/>
+	<phrase n="lang_audio_handset" t="Tel.slusalica"/>
+	<phrase n="lang_audio_headset" t="Slusalice"/>
+	<phrase n="lang_vol_contrast" t="Kontrast"/>
+	<phrase n="lang_confirm_factory" t="Povratak na tvornicke postavke?"/>
+	<phrase n="lang_confirm_logoff_all" t="Odjavi sve korisnike?"/>
+	<phrase n="lang_calling" t="Pozivanje"/>
+	<phrase n="lang_connected" t="Spojeno"/>
+	<phrase n="lang_connected_typeSio" t="Spojeno"/>
+	<phrase n="lang_ringing" t="Zvoni"/>
+	<phrase n="lang_enter_number" t="Unesi broj"/>
+	<phrase n="lang_held_by" t="Zadrzano od:"/>
+	<phrase n="lang_ok" t="[U redu?]"/>
+	<phrase n="lang_menu100_phone_book" t="Imenik"/>
+	<phrase n="lang_menu100_ldap_book" t="LDAP pristup"/>
+	<phrase n="lang_menu100_call_lists" t="Ostvareni pozivi"/>
+	<phrase n="lang_menu100_settings" t="Postavke"/>
+	<phrase n="lang_sel100_logoff_all" t="Odjavljeni svi korisnici"/>
+	<phrase n="lang_sel100_logoff_one" t="Odjavljen korisnik"/>
+	<phrase n="lang_sel100_activeline" t="Odlazne postavke"/>
+	<phrase n="lang_sel100_admin_mode" t="Administratorski mod"/>
+	<phrase n="lang_sel100_user_mode" t="Korisnicki mod"/>
+	<phrase n="lang_sel100_net_info" t="Mrezne informacije"/>
+	<phrase n="lang_sel100_mem_info" t="Status memorije"/>
+	<phrase n="lang_menu_ringtone" t="Tonovi zvona"/>
+	<phrase n="lang_dnd_active" t="DND aktivan"/>
+	<phrase n="lang_update" t="SW"/>
+	<phrase n="lang_update_a" t="Izvrsi?"/>
+	<phrase n="lang_update_reboot" t="Pokreni ponovo nadogradnju softvera"/>
+	<phrase n="lang_unplugged" t="Odspojen"/>
+	<phrase n="lang_ethernet_cable" t="Ethernet kabel odspojen"/>
+	<phrase n="lang_hid_plug" t="HID uredjaj se spaja"/>
+	<phrase n="lang_hid_connected" t="HID uredjaj spojen"/>
+	<phrase n="lang_hid_disconnected" t="HID uredjaj odspojen"/>
+	<phrase n="lang_language" t="Jezik"/>
+	<phrase n="lang_current_date" t="Datum"/>
+	<phrase n="lang_current_time" t="Vrijeme"/>
+	<phrase n="lang_network_settings" t="Mreza"/>
+	<phrase n="lang_dns_domain" t="DNS domena"/>
+	<phrase n="lang_dns_server1" t="DNS Server 1"/>
+	<phrase n="lang_dns_server2" t="DNS Server 2"/>
+	<phrase n="lang_ntp_server" t="NTP Server"/>
+	<phrase n="lang_no_ip_adr" t="Pogresna IP adresa"/>
+	<phrase n="lang_password" t="Password"/>
+	<phrase n="lang_username" t="Korisnicko ime"/>
+	<phrase n="lang_reset_settings" t="Postavi na tvornicke postavke"/>
+	<phrase n="lang_networkadvanced_settings" t="Napredno"/>
+	<phrase n="lang_admin_mode_password" t="Zaporka za administratorski mod"/>
+	<phrase n="lang_guess_number" t="QuickLookup"/>
+	<phrase n="lang_guess_number_len" t="QuickLookup Start Length"/>
+	<phrase n="lang_admin_mode_pwd" t="Zaporka za admin. mod"/>
+	<phrase n="lang_call_waiting" t="Poziv na cekanju"/>
+	<phrase n="lang_menu100_red_time" t="Vrijeme preusmjerenja"/>
+	<phrase n="lang_menu100_red_time_typeSio" t="Vrijeme preusmjerenja"/>
+	<phrase n="lang_menu100_timezone" t="Vremenska zona"/>
+	<phrase n="lang_menu100_dialtone" t="Tonovi zvona"/>
+	<phrase n="lang_menu100_call_completion" t="Zavrsen Poziv"/>
+	<phrase n="lang_menu100_cc_waiting" t="Cekanje:"/>
+	<phrase n="lang_menu100_cc_dial" t="Pozovi:"/>
+	<phrase n="lang_menu100_netmask" t="Mrezna maska"/>
+	<phrase n="lang_menu100_gateway" t="IP Gateway"/>
+	<phrase n="lang_menu100_webserver_type" t="Tip web servera"/>
+	<phrase n="lang_enum100_disp_always" t="Uvijek"/>
+	<phrase n="lang_enum100_disp_on" t="Ukljuci"/>
+	<phrase n="lang_enum100_disp_off" t="Iskljuci"/>
+	<phrase n="lang_enum_disp_webserver_off" t="Iskljuci"/>
+	<phrase n="lang_enum_disp_webserver_http" t="Samo HTTP"/>
+	<phrase n="lang_enum_disp_webserver_https" t="Samo HTTPS"/>
+	<phrase n="lang_enum_disp_webserver_http_https" t="HTTP i HTTPS"/>
+	<phrase n="lang_enum_disp_func_key_destination" t="Korisnik"/>
+	<phrase n="lang_enum_disp_func_key" t="Tipka"/>
+	<phrase n="lang_xsi_silent_alert" t="Tihi alarm"/>
+	<phrase n="lang_privacy_out" t="Sakrij svoj odlazni ID"/>
+	<phrase n="lang_privacy_in" t="Odbij anonimne"/>
+	<phrase n="lang_privacy_in_typeSio" t="Odbij anonimne"/>
+	<phrase n="lang_auto_dial" t="Automatski biraj"/>
+	<phrase n="lang_call_completion" t="Zavrsi poziv"/>
+	<phrase n="lang_vlan_id" t="VLAN ID (1-4094)"/>
+	<phrase n="lang_vlan_qos" t="VLAN Prioritet (0-7)"/>
+	<phrase n="lang_vlan_reset" t="Ponisti VLAN"/>
+	<phrase n="lang_identity_settings" t="Identitet"/>
+	<phrase n="lang_preferences_settings" t="Postavke"/>
+	<phrase n="lang_maintenance_settings" t="Odrzavanje"/>
+	<phrase n="lang_auto_connect_indication" t="Automatski odgovor"/>
+	<phrase n="lang_sel100_reregister_line" t="Registriran korisnik"/>
+	<phrase n="lang_sel100_edit_line" t="Uredi korisnika"/>
+	<phrase n="lang_enum_disp_cw_visual" t="Samo vizualno"/>
+	<phrase n="lang_enum_disp_cw_visual_short" t="Vizualno"/>
+	<phrase n="lang_enum_disp_cw_ringer" t="Zvono"/>
+	<phrase n="lang_confirm_del_adr_item" t="Da li ste sigurni?"/>
+	<phrase n="lang_confirm_del_adr_item_title" t="Izbrisi stavku imenika"/>
+	<phrase n="lang_confirm_del_adr_item_title_typeSio" t="Izbrisi stavku imenika"/>
+	<phrase n="lang_confirm_del_adr_title" t="Izbrisi imenik"/>
+	<phrase n="lang_confirm_del_adr_item_title_short" t="Izbrisi stavku imenika"/>
+	<phrase n="lang_vol_ringer" t="Jacina zvona"/>
+	<phrase n="lang_keybd_unlock_PIN" t="PIN za otkljucavanje tastature"/>
+	<phrase n="lang_enum_disp_func_key_mult" t="Dijeljeni link"/>
+	<phrase n="lang_enum_disp_func_key_keyevent" t="Funkcijska tipka"/>
+	<phrase n="lang_menu_ringer_silent" t="Necujno"/>
+	<phrase n="lang_menu_ringer_custom" t="Prilagodjeno"/>
+	<phrase n="lang_enum_disp_func_key_none" t="Nista"/>
+	<phrase n="lang_presence_online" t="Spojen"/>
+	<phrase n="lang_presence_busy" t="Zauzeto"/>
+	<phrase n="lang_presence_invisible" t="Nevidljiv"/>
+	<phrase n="lang_presence_title" t="Stanje prisutnosti"/>
+	<phrase n="lang_dialog_title" t="Pozivi"/>
+	<phrase n="lang_buddies_title" t="Kontakt"/>
+	<phrase n="lang_use_backlight" t="Pozadinsko osvjetljenje"/>
+	<phrase n="lang_backlight_on_activity" t="Pozadinsko osvjetljenje Aktivan"/>
+	<phrase n="lang_backlight_when_idle" t="Pozadinsko osvjetljenje kad je neaktivan"/>
+	<phrase n="lang_activity" t="Aktivnost"/>
+	<phrase n="lang_display_settings" t="Ekran"/>
+	<phrase n="lang_audio_settings" t="Audio"/>
+	<phrase n="lang_redirect_settings" t="Preusmjerenje"/>
+	<phrase n="lang_redirect_settings_typeSio" t="Preusmjerenje"/>
+	<phrase n="lang_reboot_required" t="Potrebno ponovo pokrenuti"/>
+	<phrase n="lang_auto_redialing" t="Ponovno pozvati"/>
+	<phrase n="lang_conference" t="Konferencijski poziv"/>
+	<phrase n="lang_directory_search" t="Pretrazi imenik"/>
+	<phrase n="lang_wrong_pw" t="Pogresna zaporka"/>
+	<phrase n="lang_admin_password_not_set" t="Nije postavljena administratorska zaporka"/>
+	<phrase n="lang_http_password_not_set" t="Nije postavljena HTTP zaporka"/>
+	<phrase n="lang_start_auto_redial" t="Automatsko ponovno biranje?"/>
+	<phrase n="lang_call_features_settings" t="Postavke poziva"/>
+	<phrase n="lang_outgoing_calls_settings" t="Odlazni poziv"/>
+	<phrase n="lang_incoming_calls_settings" t="Dolazni poziv"/>
+	<phrase n="lang_ip_settings_wizzard" t="IP postavke"/>
+	<phrase n="lang_webserver_settings" t="Web server"/>
+	<phrase n="lang_vlan_settings" t="VLAN"/>
+	<phrase n="lang_wlan_settings" t="WLAN"/>
+	<phrase n="lang_system_information_menu" t="Sistemske postavke"/>
+	<phrase n="lang_its_a_caller_info" t="Pozivatelj"/>
+	<phrase n="lang_its_a_callee_info" t="Pozvani"/>
+	<phrase n="lang_redirect_all" t="Preusmjeri sve"/>
+	<phrase n="lang_redirect_all_typeSio" t="Preusmjeri sve"/>
+	<phrase n="lang_redirect_busy" t="Preusmjeri kad je zauzeto"/>
+	<phrase n="lang_redirect_busy_typeSio" t="Preusmjeri kad je zauzeto"/>
+	<phrase n="lang_redirect_time" t="Preusmjeri nakon isteka vremena"/>
+	<phrase n="lang_redirect_time_typeSio" t="Preusmjeri nakon isteka vremena"/>
+	<phrase n="lang_do_redirect" t="Omoguci preusmjerenje"/>
+	<phrase n="lang_do_redirect_typeSio" t="Omoguci preusmjerenje"/>
+	<phrase n="lang_redirect_target" t="Broj na koji prosljedjujes"/>
+	<phrase n="lang_redirect_target_typeSio" t="Broj na koji prosljedjujes"/>
+	<phrase n="lang_help_label" t="Pomoc"/>
+	<phrase n="lang_sysinfo_mem1" t="RAM:"/>
+	<phrase n="lang_sysinfo_mem2" t="od"/>
+	<phrase n="lang_sysinfo_mem3" t="slobodno"/>
+	<phrase n="lang_goto_phonepage_msg" t="Za postavke telefona idi na:"/>
+	<phrase n="lang_goto_phonepage_msg_typeSio" t="Za postavke telefona idi na:"/>
+	<phrase n="lang_goto_help_msg" t="Za pomoc idi na:"/>
+	<phrase n="lang_snom_help_page" t="https://service.snom.com"/>
+	<phrase n="lang_linestate_connected" t="Spojen"/>
+	<phrase n="lang_linestate_on_hold" t="Na cekanju"/>
+	<phrase n="lang_linestate_ringing" t="Zvono"/>
+	<phrase n="lang_linename_message" t="Poruka"/>
+	<phrase n="lang_linename_redial" t="Ponovo biraj"/>
+	<phrase n="lang_linename_transfer" t="Prebaci"/>
+	<phrase n="lang_linename_rec_on" t="Pocni snimanje"/>
+	<phrase n="lang_linename_rec_off" t="Zaustavi snimanje"/>
+	<phrase n="lang_linetype_auto_answer" t="Auto odgovor"/>
+	<phrase n="lang_linetype_blf" t="BLF"/>
+	<phrase n="lang_connecting" t="Spajanje"/>
+	<phrase n="lang_fkey_add_contact_typeSio" t="Dodaj kontakt"/>
+	<phrase n="lang_cancelconference" t="Prekini konferencijski poziv"/>
+	<phrase n="lang_confirm_cancelconference" t="Potvrdi prekid konf. poziva?"/>
+	<phrase n="lang_xmlgui_dialnumber" t="Biraj broj"/>
+	<phrase n="lang_xmlgui_contactlist" t="Kontakt lista"/>
+	<phrase n="lang_xmlgui_dial" t="Biraj"/>
+	<phrase n="lang_menu_equalizer" t="Ekvilajzer"/>
+	<phrase n="lang_equalizer_soft" t="Tiho"/>
+	<phrase n="lang_equalizer_normal" t="Normalno"/>
+	<phrase n="lang_equalizer_bright" t="Jako"/>
+	<phrase n="lang_contactpool" t="Grupa"/>
+	<phrase n="lang_tb_nickname" t="Nadimak"/>
+	<phrase n="lang_tb_number" t="Broj telefona"/>
+	<phrase n="lang_tb_contact" t="Tip kontakta"/>
+	<phrase n="lang_tb_outgoing_id" t="Odlazni identitet"/>
+	<phrase n="lang_tb_firstname" t="Ime"/>
+	<phrase n="lang_tb_lastname" t="Prezime"/>
+	<phrase n="lang_tb_group" t="Grupa"/>
+	<phrase n="lang_day" t="Day"/>
+	<phrase n="lang_month" t="Month"/>
+	<phrase n="lang_year" t="Year"/>
+	<phrase n="lang_tb_title" t="Titula"/>
+	<phrase n="lang_tb_organization" t="Organizacija"/>
+	<phrase n="lang_tb_email" t="Elektronska posta"/>
+	<phrase n="lang_tb_note" t="Poruka"/>
+	<phrase n="lang_tb_photo" t="Slika"/>
+	<phrase n="lang_tb_favorite" t="Omiljeni"/>
+	<phrase n="lang_linename_transfer_short" t="Preb."/>
+	<phrase n="lang_linetype_key_event_short" t="Tipka"/>
+	<phrase n="lang_linetype_url_short" t="URL"/>
+	<phrase n="lang_grouptype_family" t="Obitelj"/>
+	<phrase n="lang_grouptype_friend" t="Prijatelj"/>
+	<phrase n="lang_grouptype_collegue" t="Kolega"/>
+	<phrase n="lang_grouptype_work" t="Posao"/>
+	<phrase n="lang_title_sort" t="Poredan prema"/>
+	<phrase n="lang_title_select_entry" t="Izaberi unos"/>
+	<phrase n="lang_entry_general" t="Opci detalji"/>
+	<phrase n="lang_title_entry_general" t="Opci detalji od"/>
+	<phrase n="lang_fav_add_from_tbook" t="Dodaj iz adresara"/>
+	<phrase n="lang_redirect_on_timeout" t="Preusmjeriti na timeout:"/>
+	<phrase n="lang_redirect_on_timeout_typeSio" t="Preusmjeriti na timeout:"/>
+	<phrase n="lang_redirect_when_busy" t="Preusmjeriti kada je zauzeto:"/>
+	<phrase n="lang_redirect_when_busy_typeSio" t="Preusmjeriti kada je zauzeto:"/>
+	<phrase n="lang_sip_disabled" t="SIP onemogucen"/>
+	<phrase n="lang_low_memory" t="Nema memorije"/>
+	<phrase n="lang_title_error" t="Greska"/>
+	<phrase n="lang_error_code" t="Kod greske:"/>
+	<phrase n="lang_bad_server_response" t="Server ne odgovara"/>
+	<phrase n="lang_bad_xml_response" t="XML: nema odgovora"/>
+	<phrase n="lang_title_loading" t="Ucitavam"/>
+	<phrase n="lang_active_id" t="Aktivni Identitet"/>
+	<phrase n="lang_1st_id" t=" I identitet"/>
+	<phrase n="lang_2nd_id" t="II identitet"/>
+	<phrase n="lang_3rd_id" t="III identitet"/>
+	<phrase n="lang_4th_id" t="IV identitet"/>
+	<phrase n="lang_5th_id" t="V identitet"/>
+	<phrase n="lang_6th_id" t="VI identitet"/>
+	<phrase n="lang_7th_id" t="VII identitet"/>
+	<phrase n="lang_8th_id" t="VIII identitet"/>
+	<phrase n="lang_9th_id" t="IX identitet"/>
+	<phrase n="lang_10th_id" t="X identitet"/>
+	<phrase n="lang_11th_id" t="XI identitet"/>
+	<phrase n="lang_12th_id" t="XII identitet"/>
+	<phrase n="lang_contacttype_vip" t="VIP"/>
+	<phrase n="lang_contacttype_deny" t="Blokiraj"/>
+	<phrase n="lang_unknown" t="Nepoznat"/>
+	<phrase n="lang_month_01" t="Sijecanj"/>
+	<phrase n="lang_month_02" t="Veljaca"/>
+	<phrase n="lang_month_03" t="Ozujak"/>
+	<phrase n="lang_month_04" t="Travanj"/>
+	<phrase n="lang_month_05" t="Svibanj"/>
+	<phrase n="lang_month_06" t="Lipanj"/>
+	<phrase n="lang_month_07" t="Srpanj"/>
+	<phrase n="lang_month_08" t="Kolovoz"/>
+	<phrase n="lang_month_09" t="Rujan"/>
+	<phrase n="lang_month_10" t="Listopad"/>
+	<phrase n="lang_month_11" t="Studeni"/>
+	<phrase n="lang_month_12" t="Prosinac"/>
+	<phrase n="lang_tb_name_label" t="Ime"/>
+	<phrase n="lang_tb_number_label" t="Br.tel."/>
+	<phrase n="lang_title_transfer" t="Prebaci sugovornika"/>
+	<phrase n="lang_linestate_label" t="Status"/>
+	<phrase n="lang_reboot_uploads" t="Ponovno pokretanje radi aktiviranja prijenosa."/>
+	<phrase n="lang_cc_dial_now" t="Zovi sada?"/>
+	<phrase n="lang_cc_complete_now" t="Mozete napraviti poziv za:"/>
+	<phrase n="lang_cc_waiting_for" t="Cekanje da se napravi poziv"/>
+	<phrase n="lang_cc_set_warning" t="Trenutni poziv je postavljen, mozete ga prepraviti."/>
+	<phrase n="lang_cc_change_title" t="Promjeni ciljani broj?"/>
+	<phrase n="lang_cc_change_message" t="Zamjeniti trenutni ciljani broj sa"/>
+	<phrase n="lang_cc_status_waiting_on" t="Cekam da %dst bude dostupan."/>
+	<phrase n="lang_cc_activate" t="Cekanje da se napravi poziv."/>
+	<phrase n="lang_cc_activated" t="Jos cekam da napravim poziv."/>
+	<phrase n="lang_call_contact" t="Zovi kontakt"/>
+	<phrase n="lang_call_work" t="Zovi posao"/>
+	<phrase n="lang_call_work_typeSio" t="Zovi posao"/>
+	<phrase n="lang_call_mobile" t="Zovi mobilni tel."/>
+	<phrase n="lang_call_home" t="Zovi kucni"/>
+	<phrase n="lang_call_home_typeSio" t="Zovi kucni"/>
+	<phrase n="lang_call_other" t="Zovi druge"/>
+	<phrase n="lang_call_voicemail" t="Zovi glasovnu poruku"/>
+	<phrase n="lang_xfer_to_contact" t="Prebaci na kontakte"/>
+	<phrase n="lang_xfer_to_work" t="Prebaci na posao"/>
+	<phrase n="lang_xfer_to_work_typeSio" t="Prebaci na posao"/>
+	<phrase n="lang_xfer_to_mobile" t="Prebaci na mobilni tel."/>
+	<phrase n="lang_xfer_to_home" t="Prebaci na kucni"/>
+	<phrase n="lang_xfer_to_home_typeSio" t="Prebaci na kucni"/>
+	<phrase n="lang_xfer_to_other" t="Prebaci na druge"/>
+	<phrase n="lang_xfer_to_voicemail" t="Prebaci na glasovnu poruku"/>
+	<phrase n="lang_cfw_to_contact" t="Proslijedi na kontakte"/>
+	<phrase n="lang_cfw_to_contact_typeSio" t="Proslijedi na kontakte"/>
+	<phrase n="lang_cfw_to_voicemail_typeSio" t="Proslijedi na glasovnu poruku"/>
+	<phrase n="lang_cfw_to_work" t="Proslijedi na posao"/>
+	<phrase n="lang_cfw_to_work_typeSio" t="Proslijedi na posao"/>
+	<phrase n="lang_cfw_to_mobile" t="Proslijedi na mobilni tel."/>
+	<phrase n="lang_cfw_to_mobile_typeSio" t="Proslijedi na mobilni tel."/>
+	<phrase n="lang_cfw_to_home" t="Proslijedi na kucni"/>
+	<phrase n="lang_cfw_to_home_typeSio" t="Proslijedi na kucni"/>
+	<phrase n="lang_cfw_to_other" t="Proslijedi na druge"/>
+	<phrase n="lang_cfw_to_other_typeSio" t="Proslijedi na druge"/>
+	<phrase n="lang_cfw_to_voicemail" t="Proslijedi na glasovnu poruku"/>
+	<phrase n="lang_assign_to_key" t="Dodijeli na tipku"/>
+	<phrase n="lang_contact_state_unknown" t="Nepoznat"/>
+	<phrase n="lang_contact_state_available" t="Dostupno"/>
+	<phrase n="lang_contact_state_available_on_mobile" t="Dostupno (Mobilni tel.)"/>
+	<phrase n="lang_contact_state_available_at_desk" t="Dostupno (Fiksni tel.)"/>
+	<phrase n="lang_contact_state_inactive" t="Neaktivan"/>
+	<phrase n="lang_contact_state_busy" t="Zauzeto"/>
+	<phrase n="lang_contact_state_urgent_interruptions_only" t="Samo hitni pozivi"/>
+	<phrase n="lang_contact_state_in_a_call" t="U pozivu"/>
+	<phrase n="lang_contact_state_in_a_meeting" t="Na sastanku"/>
+	<phrase n="lang_contact_state_meeting" t="Meeting"/>
+	<phrase n="lang_contact_state_holding" t="Cekanje"/>
+	<phrase n="lang_contact_state_dnd" t="Ne uznemiravaj"/>
+	<phrase n="lang_contact_state_dnd_all" t="Ne uznemiravaj (svi)"/>
+	<phrase n="lang_contact_state_dnd_self" t="Ne uznemiravaj (sam)"/>
+	<phrase n="lang_contact_state_be_right_back" t="Vracam se"/>
+	<phrase n="lang_contact_state_away" t="Udaljen"/>
+	<phrase n="lang_contact_state_offline" t="Iskljucen"/>
+	<phrase n="lang_contact_state_reset" t="Reset Status"/>
+	<phrase n="lang_remote_book_name_ldap" t="LDAP direktorij"/>
+	<phrase n="lang_remote_book_choose_title" t="Izaberi adresar"/>
+	<phrase n="lang_title_add_to_favorites" t="Dodaj u omiljene"/>
+	<phrase n="lang_title_add_to_favorites_typeSio" t="Dodaj u omiljene"/>
+	<phrase n="lang_title_favorites" t="Omiljeni"/>
+	<phrase n="lang_unknown_partner" t="Nepoznat"/>
+	<phrase n="lang_nrtype_sip" t="SIP"/>
+	<phrase n="lang_nrtype_business" t="Poslovni"/>
+	<phrase n="lang_nrtype_fixed" t="Fiksni"/>
+	<phrase n="lang_nrtype_extension" t="Lokal"/>
+	<phrase n="lang_tb_number_type" t="Tip broja"/>
+	<phrase n="lang_tb_number_type_label" t="Tip"/>
+	<phrase n="lang_title_no_permission" t="Nema dozvole"/>
+	<phrase n="lang_target_office" t="Office"/>
+	<phrase n="lang_target_replyto" t="ReplyTo"/>
+	<phrase n="lang_target_unqualified" t="Unqualified"/>
+	<phrase n="lang_target_work" t="Posao"/>
+	<phrase n="lang_target_work_typeSio" t="Posao"/>
+	<phrase n="lang_target_mobile" t="Mobitel"/>
+	<phrase n="lang_target_home" t="Kuca"/>
+	<phrase n="lang_target_home_typeSio" t="Kuca"/>
+	<phrase n="lang_target_other" t="Ostalo"/>
+	<phrase n="lang_target_voicemail" t="Glasovna poruka"/>
+	<phrase n="lang_target_new_number" t="Novi broj"/>
+	<phrase n="lang_target_contact" t="Kontakt"/>
+	<phrase n="lang_directory_too_big_to_import__long" t="Vanjski imenik je prevelik"/>
+	<phrase n="lang_target_cancel" t="Ne preusmjeravaj pozive"/>
+	<phrase n="lang_target_cancel_typeSio" t="Ne preusmjeravaj pozive"/>
+	<phrase n="lang_target_forward" t="Preusmjeri pozive na"/>
+	<phrase n="lang_target_forward_typeSio" t="Preusmjeri pozive na"/>
+	<phrase n="lang_tls_unknown_certificate_alert" t="Odbijena je sigurna veza koja je ponudila nepoznatu potvrdu. Mozete izricito dati dopustenje da vjerujete ovoj vezi putem web sucelja u odjeljku potvrde."/>
+	<phrase n="lang_tls_unknown_certificate_alert_title" t="Sigurna veza nije uspjela"/>
+	<phrase n="lang_tls_properties_changed" t="Ponovno pokrenite telefon. Promjenjena sigurnosna svojstva ne mogu se primijeniti na aktivne procese."/>
+	<phrase n="lang_call_completed_by_part1" t="Poziv dovrsen"/>
+	<phrase n="lang_call_completed_by_part2" t="na drugom terminalu."/>
+	<phrase n="lang_call_completed_by_part2_typeSio" t="na drugom terminalu."/>
+	<phrase n="lang_challenge_sip_pw" t="SIP zaporka"/>
+	<phrase n="lang_line_ocs_wz_user" t="Domenski korisnik"/>
+	<phrase n="lang_line_ocs_wz_pwd" t="Zaporka"/>
+	<phrase n="lang_unregistered_ids_title" t="nije prijavljen:"/>
+	<phrase n="lang_message_label" t="Info"/>
+	<phrase n="lang_status_messages" t="Status Info"/>
+	<phrase n="lang_information_settings" t="Informacije"/>
+	<phrase n="lang_user_realname" t="Ime"/>
+	<phrase n="lang_user_idle_number" t="Broj"/>
+	<phrase n="lang_user_name" t="Racun"/>
+	<phrase n="lang_user_pass" t="Zaporka"/>
+	<phrase n="lang_user_host" t="Registar"/>
+	<phrase n="lang_user_outbound" t="Odlazni Proxy"/>
+	<phrase n="lang_user_pname" t="Korisnicko ime"/>
+	<phrase n="lang_user_mailbox" t="Postanski pretinac"/>
+	<phrase n="lang_user_mailbox_retrieve" t="Mailbox Dial-in"/>
+	<phrase n="lang_hotdesking" t="Hotdesking"/>
+	<phrase n="lang_keyb_enter_current_pin" t="Unesite trenutni PIN"/>
+	<phrase n="lang_keyb_enter_new_pin" t="Unesite novi PIN"/>
+	<phrase n="lang_keyb_reenter_new_pin" t="Ponovno unesite novi PIN"/>
+	<phrase n="lang_keyb_enter_password" t="Unesite zaporku da ponovno namjestite PIN"/>
+	<phrase n="lang_keyb_locked" t="Pritisnite i drzite * za otkljucavanje."/>
+	<phrase n="lang_keyb_permanently_locked" t="Pritisnite i drzite * za ponovno namjestanje PINa."/>
+	<phrase n="lang_title_unlock" t="Tipkovnica je zakljucana"/>
+	<phrase n="lang_confirm_unlock" t="Otkljucati? Pritisnite OK."/>
+	<phrase n="lang_transfer_failed_msg" t="Prebacivanje nije uspjelo"/>
+	<phrase n="lang_action_failed_msg" t="Radnja nije uspjela"/>
+	<phrase n="lang_vpn_fetch" t="Dohvacanje VPN tarball od:"/>
+	<phrase n="lang_vpn_fetch_failed" t="Dohvacanje VPN tarball nije uspjelo"/>
+	<phrase n="lang_vpn_flash" t="Izdvajanje VPN datoteka..."/>
+	<phrase n="lang_vpn_reboot" t="Ponovno podizanje sustava za aktiviranje VPN-a..."/>
+	<phrase n="lang_keyb_min_digits" t="(min. # znamenke)"/>
+	<phrase n="lang_empty_dir_search_list" t="Unesite ime! Koristite * za razmak."/>
+	<phrase n="lang_key_unassigned" t="Tipka nije dodijeljena"/>
+	<phrase n="lang_key_unassigned_typeSio" t="Tipka nije dodijeljena"/>
+	<phrase n="lang_label_conference_partner" t="Partner"/>
+	<phrase n="lang_incoming_call_title_while_connected" t="Poziv na cekanju"/>
+	<phrase n="lang_active" t="Aktivan"/>
+	<phrase n="lang_emergency_call" t="hitni poziv"/>
+	<phrase n="lang_ntp_pending" t="Kontaktiranje NTP server"/>
+	<phrase n="lang_ntp_unreachable" t="NTP server nije dostupan"/>
+	<phrase n="lang_network_busy" t="Mreza zauzeta"/>
+	<phrase n="lang_pstn_reroute_attempt" t="Ovaj poziv moze potrajati dulje. Mreza moze biti zauzeta."/>
+	<phrase n="lang_menu_location" t="Lokacija"/>
+	<phrase n="lang_linestate_holding_upper_case" t="Cekanje"/>
+	<phrase n="lang_linestate_on_hold_upper_case" t="Na cekanju"/>
+	<phrase n="lang_location_retrieval_failed" t="Nije moguce dohvatiti lokaciju"/>
+	<phrase n="lang_route_private_line" t="Privatna linija"/>
+	<phrase n="lang_route_forwarded" t="Preusmjeren"/>
+	<phrase n="lang_route_forwarded_typeSio" t="Preusmjeren"/>
+	<phrase n="lang_route_delegated" t="Povjeren"/>
+	<phrase n="lang_route_team_call" t="Timski poziv"/>
+	<phrase n="lang_route_acd" t="Grupni poziv"/>
+	<phrase n="lang_route_cccp_conference" t="Konferencijski poziv"/>
+	<phrase n="lang_route_cccp_conference_typeSio" t="Konferencijski poziv"/>
+	<phrase n="lang_dfks_failed" t="Sinkronizacija znacajki nije uspjela"/>
+	<phrase n="lang_no_shared_key" t="Nema dostupnih tipaka za zajednicku liniju"/>
+	<phrase n="lang_shared_seize_active" t="Linija je i dalje aktivna"/>
+	<phrase n="lang_not_a_shared_key" t="Birana tipka nije tipka za zajednicku liniju"/>
+	<phrase n="lang_active_key_not_a_shared_key" t='Tipka za zajednicku liniju ne radi sa "aktivnim" dodatkom.'/>
+	<phrase n="lang_ipv4_conflict" t="IPv4: konflikt"/>
+	<phrase n="lang_contact_saved" t="Kontakt spremljen"/>
+	<phrase n="lang_query_pending" t="Trazenje..."/>
+	<phrase n="lang_no_conference" t="Zbog opterecenja procesora %Akonferencija nije dopustena"/>
+	<phrase n="lang_no_conference_with_codec" t="Zbog opterecenja procesora %Akonferencija nije dopustena ako jedna strana koristi codec %B"/>
+	<phrase n="lang_no_conference_with_encrypted_codec" t="Zbog opterecenja procesora %Akonferencija nije dopustena ako jedna strana koristi codec %B sa sifriranjem"/>
+	<phrase n="lang_no_conference_without_unencrypted_codec" t="Zbog opterecenja procesora %Akonferencija nije dopustena ako jedna strana ne koristi codec %B bez sifriranja"/>
+	<phrase n="lang_setup_language" t="Postavljanje jezika"/>
+	<phrase n="lang_please_wait" t="Molimo pricekajte..."/>
+	<phrase n="lang_download_failed" t="Preuzimanje nije uspjelo"/>
+	<phrase n="lang_function_blocked" t="Blokiran"/>
+	<phrase n="lang_activating_uploads" t="Aktiviranje prijenosa"/>
+	<phrase n="lang_provisioning" t="Pruzanje usluga"/>
+	<phrase n="lang_provisioning_failed" t="Pruzanje usluga nije uspjelo"/>
+	<phrase n="lang_tr69_provisioning" t="TR-069 Pr. usluga u toku"/>
+	<phrase n="lang_start_provisioning" t="Pruzanje usluga u toku"/>
+	<phrase n="lang_waitTime" t="Vrijeme cekanja"/>
+	<phrase n="lang_ccUserId" t="Korisnicki ID"/>
+	<phrase n="lang_callCenterName" t="Ime"/>
+	<phrase n="lang_numCallsInQueue" t="Poziva u cekanju"/>
+	<phrase n="lang_acd_ready" t="Dostupan"/>
+	<phrase n="lang_acd_not_ready" t="Nije dostupan"/>
+	<phrase n="lang_acd_working_after_call" t="Zavrsetak"/>
+	<phrase n="lang_acd_log_on" t="Prijava"/>
+	<phrase n="lang_acd_log_off" t="Odjava"/>
+	<phrase n="lang_acd_unkown_state" t="Nepoznato stanje"/>
+	<phrase n="lang_change_state_to" t="Promijeni stanje"/>
+	<phrase n="lang_call_parked" t="Poziv na cekanju"/>
+	<phrase n="lang_call_unparked" t="Poziv vise nije na cekanju"/>
+	<phrase n="lang_firmware_update_failed" t="SW-azuriranje nije uspjelo"/>
+	<phrase n="lang_firmware_update_restart" t="Ponovno pokrenuti SW-azuriranje?"/>
+	<phrase n="lang_temp_unavail" t="Privremeno nedostupan"/>
+	<phrase n="lang_limited_func" t="Ogranicena funkcionalnost zbog prekida rada"/>
+	<phrase n="lang_limited_func_exp" t="Problem s mrezom privremeno ogranicava znacajke kao sto su prisutnost ili preusmjerenje"/>
+	<phrase n="lang_limited_func_exp_typeSio" t="Problem s mrezom privremeno ogranicava znacajke kao sto su prisutnost ili preusmjerenje"/>
+	<phrase n="lang_call_park_failed" t="Poziv na cekanju nije uspio"/>
+	<phrase n="lang_park_failed_reason" t="Nema dostupne putanje"/>
+	<phrase n="lang_list_parked" t="Poziv na cekanju"/>
+	<phrase n="lang_vision" t="Vision"/>
+	<phrase n="lang_unpair_vision" t="Odspojiti Vision"/>
+	<phrase n="lang_scan_for_visions" t="Vision trazenje"/>
+	<phrase n="lang_paired_with_vision" t="Spojen sa Vision:"/>
+	<phrase n="lang_vision_connection_lost" t="Vision prekinuta veza"/>
+	<phrase n="lang_unpair_vision_question" t="Odspoji Vision?"/>
+	<phrase n="lang_isconnected" t="ukljucen"/>
+	<phrase n="lang_isdisconnected" t="iskljucen"/>
+	<phrase n="lang_isdisconnected_typeSio" t="iskljucen"/>
+	<phrase n="lang_hotdesking_ntlm" t="Potvrda racuna"/>
+	<phrase n="lang_hotdesking_pin" t="PIN"/>
+	<phrase n="lang_prompt_phone_num" t="Vas broj"/>
+	<phrase n="lang_prompt_pin" t="Vas PIN"/>
+	<phrase n="lang_pin_signin_active" t="prijavljivanje..."/>
+	<phrase n="lang_pin_signin_failure" t="Nije moguca prijava sa brojem telefona i PIN-om"/>
+	<phrase n="lang_firmware_update_in" t="SW-azuriranje"/>
+	<phrase n="lang_firmware_update_available" t="SW-azuriranje je dostupno"/>
+	<phrase n="lang_call_for" t="Poziv za"/>
+	<phrase n="lang_linetype_bossadmin" t="Sef/Admin"/>
+	<phrase n="lang_linetype_bossadmin_short" t="S/A"/>
+	<phrase n="lang_success_msg_transferred_to" t="%A prebacen na %B"/>
+	<phrase n="lang_pickup_call" t="Preuzeti poziv"/>
+	<phrase n="lang_call_on_behalf_of" t="Poziv u ime"/>
+	<phrase n="lang_boss_group" t="Korisnici kojima upravljam pozive"/>
+	<phrase n="lang_delegate_group" t="Povjerenici"/>
+	<phrase n="lang_all_delegates" t="Dodijeli sve povjerenike na tipku"/>
+	<phrase n="lang_call_failed_network_issue" t="Poziv nije uspio zbog mreznih problema"/>
+	<phrase n="lang_call_failed_network_issue_typeSio" t="Poziv nije uspio zbog mreznih problema"/>
+	<phrase n="lang_ethernet_detection" t="Ethernet detekcija"/>
+	<phrase n="lang_firmware_update_not_available" t="Nema dostupnog SW-azuriranja"/>
+	<phrase n="lang_check_sw_update" t="Provjera SW-azuriranja"/>
+	<phrase n="lang_continuous_text_label" t="Label"/>
+	<phrase n="lang_short_text" t="Kratki tekst"/>
+	<phrase n="lang_headline_admins" t="Administratori"/>
+	<phrase n="lang_always_delegate_forward" t="Uvijek birati preusmjerenje"/>
+	<phrase n="lang_always_deleg_sim" t="Uvijek istovremeno zvoni"/>
+	<phrase n="lang_always_deleg_forw" t="Uvijek preusmjeren"/>
+	<phrase n="lang_always_deleg_forw_typeSio" t="Uvijek preusmjeren"/>
+	<phrase n="lang_tb_action_url" t="djelatni url"/>
+	<phrase n="lang_clear_call_history" t="Izbrisati povijest poziva"/>
+	<phrase n="lang_headset_volume_only" t="Mijenjanje glasnoce USB slusalica je moguce samo na slusalicama."/>
+	<phrase n="lang_hold_error" t="Neuspjesno cekanje, poziv je prigusen. Ponovno pritisnite cekanje da iskljucite prigusenje."/>
+	<phrase n="lang_retr_by" t="Za"/>
+	<phrase n="lang_ipv4" t="IPv4"/>
+	<phrase n="lang_ipv6" t="IPv6"/>
+	<phrase n="lang_ipv6_autoconf" t="SLAAC"/>
+	<phrase n="lang_refresh" t="Osvjeziti"/>
+	<phrase n="lang_may_take_some_time" t="Osvjezavanje moze potrajati neko vrijeme. Da nastavimo?"/>
+	<phrase n="lang_menu_unlock" t="Otkljucati"/>
+	<phrase n="lang_menu_security" t="Sigurnost"/>
+	<phrase n="lang_route_team_call_for" t="Timski poziv za"/>
+	<phrase n="lang_route_acd_for" t="Grupni poziv za"/>
+	<phrase n="lang_route_anonymous_acd" t="Anonimni grupni poziv"/>
+	<phrase n="lang_route_anonymous_acd_for" t="Anonimni grupni poziv za"/>
+	<phrase n="lang_anonymous" t="Anoniman"/>
+	<phrase n="lang_wish_barge_in" t="Zelite li upasti u vezu?"/>
+	<phrase n="lang_location" t="Lokacija:"/>
+	<phrase n="lang_subject" t="Predmet"/>
+	<phrase n="lang_dates" t="Zakazano"/>
+	<phrase n="lang_menu_dates_today" t="Zakazano za danas"/>
+	<phrase n="lang_label_conference_organizer" t="Organizator:"/>
+	<phrase n="lang_date_ongoing" t="SAD:"/>
+	<phrase n="lang_date_remind_me_later" t="Podsjeti me kasnije"/>
+	<phrase n="lang_date_remind_later" t="Kasnije"/>
+	<phrase n="lang_date_set_reminder_to" t="Za"/>
+	<phrase n="lang_minutes" t="minute"/>
+	<phrase n="lang_date_reset_reminder" t="Ponisti podsjetnik"/>
+	<phrase n="lang_cannot_access_exchange" t="Nije moguce pristupiti sustavu Exchange Server."/>
+	<phrase n="lang_no_dates_today" t="Nista na rasporedu za danas"/>
+	<phrase n="lang_participants" t="Sudionici:"/>
+	<phrase n="lang_expansion_modules" t="Moduli za prosirenje"/>
+	<phrase n="lang_wiz_vlan" t="Da li koristite VLAN?"/>
+	<phrase n="lang_wiz_ip4" t="Da li zelite postaviti IPv4?"/>
+	<phrase n="lang_wiz_ip6" t="Postaviti IPv6"/>
+	<phrase n="lang_sxm_connected" t="Prikljucen je serijski modul za prosirenje"/>
+	<phrase n="lang_uxm_connected" t="USB modul za prosirenje je spojen"/>
+	<phrase n="lang_uxm_cabeling_broken" t="Pogresno kabliranje ekspanzijskog modula"/>
+	<phrase n="lang_uxm_limit_exceeded" t="Ukljuceno je previse USB modula za prosirenje"/>
+	<phrase n="lang_vpn_active" t="VPN je aktivan"/>
+	<phrase n="lang_wlan_active" t="Wlan je aktivan"/>
+	<phrase n="lang_list_no_devices" t="(nema dostupnih uredjaja)"/>
+	<phrase n="lang_bluetooth" t="Bluetooth"/>
+	<phrase n="lang_bluetooth_connected_title" t="Povezani uredjaj"/>
+	<phrase n="lang_bluetooth_paired_list_title" t="Popis uparenih uredjaja"/>
+	<phrase n="lang_bluetooth_active_connection" t="Bluetooth veza aktivna"/>
+	<phrase n="lang_bluetooth_discovered_list_title" t="Popis pronadjenih uredjaja"/>
+	<phrase n="lang_bluetooth_discovering" t="Otkrivanje"/>
+	<phrase n="lang_bluetooth_unpairing" t="Rasparivanje"/>
+	<phrase n="lang_bluetooth_pairing" t="Uparivanje"/>
+	<phrase n="lang_bluetooth_connecting" t="Spajanje"/>
+	<phrase n="lang_bluetooth_disconnecting" t="Odspajanje"/>
+	<phrase n="lang_callback_on_busy" t="Povratni poziv na zauzeto"/>
+	<phrase n="lang_auto_busy_redial" t="Automatsko ponovno pozivanje na zauzetost"/>
+	<phrase n="lang_decision_cob" t="je trenutno zauzet. Za obavijest kada je dostupan pritisnite 'Potvrdi'. Da ostavite poruku pritisnite 'X'."/>
+	<phrase n="lang_decision_cob_withoutvm" t="je trenutno zauzet. Za obavijest kada je dostupan pritisnite 'Potvrdi'."/>
+	<phrase n="lang_callback" t="Povratni poziv"/>
+	<phrase n="lang_callback_available" t="Povratni poziv je dostupan"/>
+	<phrase n="lang_linetype_callback" t="Povratni poziv"/>
+	<phrase n="lang_linetype_callback_short" t="Pov.P"/>
+	<phrase n="lang_ringback_callpark_service" t="Sprovesti uslugu poziva na cekanju"/>
+	<phrase n="lang_callpark_service" t="Usluga poziva na cekanju"/>
+	<phrase n="lang_storage_mounted" t="USB disk spojen"/>
+	<phrase n="lang_storage_mounted_typeSio" t="USB disk spojen"/>
+	<phrase n="lang_storage_tomany" t="Mozete spojiti samo jedan USB disk"/>
+	<phrase n="lang_storage_umount" t="Iskljuciti USB disk"/>
+	<phrase n="lang_no_participants_detected" t="nisu otkriveni sudionici"/>
+	<phrase n="lang_ieee8021_method" t="Nacin rada"/>
+	<phrase n="lang_menu_fkey_functions" t="Funkcija"/>
+	<phrase n="lang_uxm_appearance" t="Izgled"/>
+	<phrase n="lang_put_through_by" t="Prolaz kroz"/>
+	<phrase n="lang_contact_not_in_list" t="nije pronadjen na popisu kontakata"/>
+	<phrase n="lang_msg_speaker_active" t="Ukljucen je Handsfree"/>
+	<phrase n="lang_msg_headset_active" t="Ukljucena je  slusalica"/>
+	<phrase n="lang_msg_handset_active" t="Handset mode is activated"/>
+	<phrase n="lang_msg_ringing_disabled" t="Zvono je iskljuceno"/>
+	<phrase n="lang_msg_mute_active" t="Telefon je prigusen"/>
+	<phrase n="lang_wiz_aborted" t="Carobnjak je prekinut."/>
+	<phrase n="lang_menu_set_kbd_lock_pin" t="Postaviti PIN-a za zakljucavanje tipkovnice"/>
+	<phrase n="lang_menu_change_kbd_lock_pin" t="Promjena PIN-a za zakljucavanje tipkovnice"/>
+	<phrase n="lang_no_valid_dsearch_config" t="Nema ispravne konfiguracije za pretrazivanja mape"/>
+	<phrase n="lang_title_conferences" t="Konferencije"/>
+	<phrase n="lang_no_conferences_found" t="nisu pronadjene konferencije"/>
+	<phrase n="lang_conference_type" t="Tip"/>
+	<phrase n="lang_conference_status" t="Status"/>
+	<phrase n="lang_join_conference_long" t="pridruzite se konferenciji"/>
+	<phrase n="lang_join_conference_as_moderator" t="pridruzite se kao moderator"/>
+	<phrase n="lang_choose_menu" t="Odaberite izbornik"/>
+	<phrase n="lang_menu_shortcut" t="Menu Shortcut"/>
+	<phrase n="lang_using_time" t="koristenje vremena"/>
+	<phrase n="lang_waiting_for_pnp" t="Ceka se PnP"/>
+	<phrase n="lang_fkey_contact_list_buddy" t="BLF (Server)"/>
+	<phrase n="lang_fkey_xmpp_presence" t="Status kontakta (XMPP)"/>
+	<phrase n="lang_csta_prompt_title" t="Nazovite sada?"/>
+	<phrase n="lang_contact_is_favorite" t="Je li taj kontakt jedan od vaših favorita?"/>
+	<phrase n="lang_currently_set_to" t="Trenutacno postavljeno na:"/>
+	<phrase n="lang_vol_label_contrast" t="Sekundarni kontrast zaslona"/>
+	<phrase n="lang_menu_fkeys_phone" t="Linijske tipke"/>
+	<phrase n="lang_menu_dkeys_phone" t="Istaknute tipke"/>
+	<phrase n="lang_menu_context_sensitive_keys_phone" t="Context-Sensitive Keys"/>
+	<phrase n="lang_menu_smartlabel_fkeys" t="SmartLabel tipke"/>
+	<phrase n="lang_menu_smartlabel_page" t="Stranica"/>
+	<phrase n="lang_menu_fkeys_page" t="Stranica linijskih tipaka"/>
+	<phrase n="lang_menu_fkeys_sxm" t="Tipke na SXM"/>
+	<phrase n="lang_menu_fkeys_uxm" t="Tipke za prosirenje"/>
+	<phrase n="lang_server_directory_search" t="Pretrazivanje serverskog imenika"/>
+	<phrase n="lang_menu_fontsize" t="Velicina fonta"/>
+	<phrase n="lang_uxm_fontsize_lines" t="Velicina fonta (Raspored linije)"/>
+	<phrase n="lang_uxm_fontsize_tiles" t="Velicina fonta (Raspored plocica)"/>
+	<phrase n="lang_menu_text_alignment" t="Poravnanje teksta"/>
+	<phrase n="lang_left" t="Lijevo"/>
+	<phrase n="lang_right" t="Desno"/>
+	<phrase n="lang_center" t="Srediste"/>
+	<phrase n="lang_alternate" t="Zamjenski"/>
+	<phrase n="lang_menu_return_to_first_page" t="Povratak na prvu stranicu"/>
+	<phrase n="lang_automatic_return" t="Automatsko vracanje"/>
+	<phrase n="lang_warning" t="Upozorenje"/>
+	<phrase n="lang_public_address" t="Javna adresa"/>
+	<phrase n="lang_menu_volume" t="Podesavanje glasnoce"/>
+	<phrase n="lang_vol_ringer_text" t="Jacina zvona"/>
+	<phrase n="lang_vol_headset_text" t="Glasnoca slusalica"/>
+	<phrase n="lang_vol_handset_text" t="Glasnoca tel.slusalice"/>
+	<phrase n="lang_vol_speaker_text" t="Glasnoca zvucnika"/>
+	<phrase n="lang_list_rejected" t="Odbijen"/>
+	<phrase n="lang_enum_disp_func_key_conference" t="Konferencija"/>
+	<phrase n="lang_enum_disp_func_key_ivr" t="IVR"/>
+	<phrase n="lang_enum_disp_func_key_callback_on_busy" t="Povratni poziv"/>
+	<phrase n="lang_fkeys_ssi_context" t="Kontekst"/>
+	<phrase n="lang_fkeys_ssi_type" t="Tip"/>
+	<phrase n="lang_fkeys_ssi_active" t="Aktivan"/>
+	<phrase n="lang_fkeys_ssi_icon" t="Icon"/>
+	<phrase n="lang_default_icon" t="Default Icon"/>
+	<phrase n="lang_custom_icon" t="Custom Icon"/>
+	<phrase n="lang_FirstName" t="Ime"/>
+	<phrase n="lang_LastName" t="Prezime"/>
+	<phrase n="lang_Home" t="Kucni broj"/>
+	<phrase n="lang_Office" t="Uredski broj"/>
+	<phrase n="lang_Mobile" t="Mobilni broj"/>
+	<phrase n="lang_Unqualified" t="Bezuvjetni broj"/>
+	<phrase n="lang_edit_contact" t="Uredi kontakt"/>
+	<phrase n="lang_msw_query" t="Nije uspjelo slanje kontakt podataka na server:"/>
+	<phrase n="lang_indicator" t="Pokazatelj"/>
+	<phrase n="lang_protocol" t="Protokol"/>
+	<phrase n="lang_target_forward_busy" t="Prosljedjivanje poziva kod zauzeca na"/>
+	<phrase n="lang_target_forward_timeout" t="Prosljedjivanje poziva poslije"/>
+	<phrase n="lang_target_forward_timeout_typeSio" t="Prosljedjivanje poziva poslije"/>
+	<phrase n="lang_WIFI_SSID" t="Mrezno ime"/>
+	<phrase n="lang_WIFI_auth_mode" t="Sifriranje"/>
+	<phrase n="lang_WIFI_WPA_Encryption" t="WPA sifriranje"/>
+	<phrase n="lang_WIFI_WPA" t="WPA"/>
+	<phrase n="lang_WIFI_WPA2PSK" t="WPA2"/>
+	<phrase n="lang_WIFI_WEP" t="WEP"/>
+	<phrase n="lang_WIFI_OPEN" t="Otvoren"/>
+	<phrase n="lang_WIFI_AES" t="AES"/>
+	<phrase n="lang_WIFI_TKIP" t="TKIP"/>
+	<phrase n="lang_WIFI_SCAN_NETWORKS" t="Skeniraj WLAN"/>
+	<phrase n="lang_WIFI_MANUAL_SETUP" t="Rucno podesavanje"/>
+	<phrase n="lang_contact_details" t="Detalji kontakta"/>
+	<phrase n="lang_WIFI_CONNECTED_TO" t="Spojen na"/>
+	<phrase n="lang_unhold" t="Vrati"/>
+	<phrase n="lang_empty" t="prazno"/>
+	<phrase n="lang_F_SNOM" t="snom/Cloud"/>
+	<phrase n="lang_prefs_ssi_date_us_format" t="Oblik datuma"/>
+	<phrase n="lang_prefs_ssi_time_24_format" t="24 satno"/>
+	<phrase n="lang_time_symbol_second" t="s"/>
+	<phrase n="lang_all_accounts" t="Svi indentiteti"/>
+	<phrase n="lang_reboot_to_apply_new_settings" t="Zelite li ponovno pokrenuti sustav tako da nove postavke mogu stupiti na snagu?"/>
+	<phrase n="lang_TLS" t="TLS"/>
+	<phrase n="lang_MD5" t="MD5"/>
+	<phrase n="lang_WIFI_SWITCH_OFF_WLAN" t="Iskljuciti WLAN"/>
+	<phrase n="lang_ErrorNotSupportedByManager" t="Nije podrzano"/>
+	<phrase n="lang_ErrorContactNotFound" t="Kontakt nije pronadjen"/>
+	<phrase n="lang_ErrorInvalidCredentials" t="Nevazeci podaci"/>
+	<phrase n="lang_ErrorInvalidArgument" t="Neispravan argument"/>
+	<phrase n="lang_ErrorRequestPending" t="Zahtjev na cekanju"/>
+	<phrase n="lang_ErrorNotInitialized" t="Nije inicijalizirano"/>
+	<phrase n="lang_ErrorInComplete" t="Nepotpun"/>
+	<phrase n="lang_ErrorOutOfMemory" t="Bez memorije"/>
+	<phrase n="lang_Contact_pool" t="Kontakt lista"/>
+	<phrase n="lang_advanced_autoneg" t="Autopregovor"/>
+	<phrase n="lang_advanced_10full" t="10 Mbit Full Duplex"/>
+	<phrase n="lang_advanced_10half" t="10 Mbit Half Duplex"/>
+	<phrase n="lang_advanced_100full" t="100 Mbit Full Duplex"/>
+	<phrase n="lang_advanced_100half" t="100 Mbit Half Duplex"/>
+	<phrase n="lang_advanced_1000full" t="1000 Mbit Full Duplex"/>
+	<phrase n="lang_Hardware" t="Hardver"/>
+	<phrase n="lang_NET_port_speed" t="Brzina mreze/Duplex"/>
+	<phrase n="lang_PC_port_speed" t="Brzina PC porta/Duplex"/>
+	<phrase n="lang_Action_on_eth_replug" t="Radnja na Ethernet repliciranju"/>
+	<phrase n="lang_advanced_donothing" t="Zanemari"/>
+	<phrase n="lang_line_reregister" t="Preregistrirati"/>
+	<phrase n="lang_NTP" t="NTP"/>
+	<phrase n="lang_DNS" t="DNS"/>
+	<phrase n="lang_LLDP" t="LLDP"/>
+	<phrase n="lang_NTP_refresh_timer" t="NTP brojac osvjezenja"/>
+	<phrase n="lang_8021x" t="802.1X"/>
+	<phrase n="lang_Expansion" t="Prosirenje"/>
+	<phrase n="lang_expansion_layout" t="Expansion Layout"/>
+	<phrase n="lang_Expansion_module" t="Modul prosirenja"/>
+	<phrase n="lang_Please_reboot" t="Ponovo pokrenite!"/>
+	<phrase n="lang_All_settings_saved" t="Sve postavke spremljene"/>
+	<phrase n="lang_WIFI_NETWORKS_SCAN" t="WLAN pretraga"/>
+	<phrase n="lang_WIFI_SCAN_RUNNING" t="Radi"/>
+	<phrase n="lang_is_a_favorite" t="je favorit"/>
+	<phrase n="lang_Lines" t="Raspored linije"/>
+	<phrase n="lang_Tiles" t="Raspored plocice"/>
+	<phrase n="lang_tbook_emtpy" t="&lt;prazno&gt;"/>
+	<phrase n="lang_enter_starting_uppercase" t="Enter"/>
+	<phrase n="lang_characters_starting_lowercase" t="characters"/>
+	<phrase n="lang_user_server_type" t="Tip Serverske Podrske"/>
+	<phrase n="lang_broadsoft_features" t="Broadsoft znacajke"/>
+	<phrase n="lang_xsi_server" t="XSI Server"/>
+	<phrase n="lang_xsi_user" t="XSI korisnik"/>
+	<phrase n="lang_xsi_password" t="XSI zaporka"/>
+	<phrase n="lang_xsi_retry_timer" t="XSI brojac pokusaja"/>
+	<phrase n="lang_xsi_events" t="XSI dogadjaji"/>
+	<phrase n="lang_xmpp_jid" t="XMPP ID"/>
+	<phrase n="lang_xmpp_password" t="XMPP zaporka"/>
+	<phrase n="lang_no_headset_present" t="No Headset Present"/>
+	<phrase n="lang_headset_detection" t="Headset Detection"/>
+	<phrase n="lang_msw_services" t="Metaswitch usluge"/>
+	<phrase n="lang_msw_directory_number" t="Metaswitch broj u imeniku"/>
+	<phrase n="lang_msw_password" t="Metaswitch zaporka"/>
+	<phrase n="lang_msw_web_url" t="Metaswitch Server URL"/>
+	<phrase n="lang_xsi_dir_enterprise" t="Imenik poduzeca"/>
+	<phrase n="lang_xsi_dir_enterprise_common" t="Zajednicki popis telefona poduzeca"/>
+	<phrase n="lang_xsi_dir_group" t="Grupni imenik"/>
+	<phrase n="lang_xsi_dir_group_common" t="Grupni zajednicki popis telefona"/>
+	<phrase n="lang_xsi_dir_personal" t="Osobni popis telefona"/>
+	<phrase n="lang_xsi_anywhere" t="Bilo gdje"/>
+	<phrase n="lang_xsi_location_new_entry" t="&lt;Novi unos&gt;"/>
+	<phrase n="lang_xsi_location_edit_description" t="Uredjivanje opisa mjesta"/>
+	<phrase n="lang_xsi_location_description" t="Opis"/>
+	<phrase n="lang_xsi_location_edit_number" t="Uredjivanje broja lokacije"/>
+	<phrase n="lang_number_str" t="Broj"/>
+	<phrase n="lang_xsi_location_status_creating" t="stvarati"/>
+	<phrase n="lang_xsi_location_status_modifying" t="izmijeniti"/>
+	<phrase n="lang_xsi_location_status_deleting" t="brisati"/>
+	<phrase n="lang_xsi_location_error_empty_number" t="Telefonski broj ne smije biti prazan"/>
+	<phrase n="lang_xsi_location_error_number_exists" t="Telefonski broj postoji"/>
+	<phrase n="lang_xsi_location_error_empty_description" t="Opis ne smije biti prazan"/>
+	<phrase n="lang_visual_voicemail" t="Vizualna govorna posta"/>
+	<phrase n="lang_feature_works" t="Znacajke djela"/>
+	<phrase n="lang_voicemail_name" t="Ime"/>
+	<phrase n="lang_voicemail_call_number" t="Zovi broj"/>
+	<phrase n="lang_voicemail_date_time" t="Datum i vrijeme"/>
+	<phrase n="lang_voicemail_duration" t="Trajanje"/>
+	<phrase n="lang_xsi_anywhere_clicktodial" t="Kliknite za biranje"/>
+	<phrase n="lang_xsi_anywhere_grouppaging" t="Grupni poziv"/>
+	<phrase n="lang_xsi_anywhere_settings" t="Postavke"/>
+	<phrase n="lang_remote_office" t="Udaljeni ured"/>
+	<phrase n="lang_xsi_anywhereportal" t="Bilo gdje Portal"/>
+	<phrase n="lang_xsi_anywhereportal_number" t="Telefonski broj"/>
+	<phrase n="lang_menu_primary_display" t="Primarni zaslon"/>
+	<phrase n="lang_menu_secondary_display" t="Sekundarni zaslon"/>
+	<phrase n="lang_enable_remote_office" t="Omoguci udaljeni ured"/>
+	<phrase n="lang_call_center_list" t="Popis pozivnih centara"/>
+	<phrase n="lang_call_center_status" t="Call Center Status"/>
+	<phrase n="lang_call_center_joined" t="Pridruzen"/>
+	<phrase n="lang_call_center_unable_to_join" t="Nije moguce pridruziti se pozivnom centru"/>
+	<phrase n="lang_call_center_join_not_allowed" t="Nije dopusteno pridruzivanje"/>
+	<phrase n="lang_call_center_unjoin_not_allowed" t="Nije dopusteno odspajanje"/>
+	<phrase n="lang_call_center_joining" t="Pridruzivanje"/>
+	<phrase n="lang_call_recording_control" t="Call Recording Control"/>
+	<phrase n="lang_pause_recording" t="Pause Recording"/>
+	<phrase n="lang_resume_recording" t="Resume Recording"/>
+	<phrase n="lang_xsi_simul_ring" t="Simultano zvono"/>
+	<phrase n="lang_xsi_simul_ring_on_call" t="Ne zvoni kada ste u pozivu"/>
+	<phrase n="lang_xsi_simul_ring_edit_phone_number" t="Telefonski broj"/>
+	<phrase n="lang_xsi_simul_ring_enter_phone_number" t="Unesi telefonski broj"/>
+	<phrase n="lang_xsi_simul_ring_edit" t="Uredi"/>
+	<phrase n="lang_xsi_simul_ring_number" t="Telefonski broj"/>
+	<phrase n="lang_xsi_simul_ring_add_entry" t="Dodaj novi unos"/>
+	<phrase n="lang_xsi_simul_ring_ans_confirm" t="Potvrda javljanja"/>
+	<phrase n="lang_xsi_simul_ring_number_exists_error" t="Telefonski broj postoji"/>
+	<phrase n="lang_xsi_simul_ring_number_empty_error" t="Telefonski broj je prazan."/>
+	<phrase n="lang_xsi_executive" t="Executive"/>
+	<phrase n="lang_xsi_executive_assistant" t="Executive Assistant"/>
+	<phrase n="lang_xsi_call_filtering" t="Call Filtering"/>
+	<phrase n="lang_xsi_call_filtering_enable" t="Call Filtering"/>
+	<phrase n="lang_xsi_call_filtering_mode" t="Filtering Mode"/>
+	<phrase n="lang_xsi_call_filtering_type" t="Filtering Type"/>
+	<phrase n="lang_xsi_call_filtering_simple" t="Simple"/>
+	<phrase n="lang_xsi_call_filtering_advanced" t="Advanced"/>
+	<phrase n="lang_xsi_call_filtering_all" t="All Calls"/>
+	<phrase n="lang_xsi_call_filtering_internal" t="All Internal Calls"/>
+	<phrase n="lang_xsi_call_filtering_external" t="All External Calls"/>
+	<phrase n="lang_xsi_call_screening" t="Call Screening"/>
+	<phrase n="lang_xsi_call_screening_type" t="Alert Type"/>
+	<phrase n="lang_xsi_call_screening_alert_mobile" t="Alert Mobile Locations"/>
+	<phrase n="lang_xsi_call_screening_alert_anywhere" t="Alert Anywhere Locations"/>
+	<phrase n="lang_xsi_call_screening_alert_sca" t="Alert SCA Locations"/>
+	<phrase n="lang_xsi_call_screening_silent" t="Silent"/>
+	<phrase n="lang_xsi_call_screening_ringsplash" t="Ring Splash"/>
+	<phrase n="lang_xsi_executive_view_assistants" t="View Assistants"/>
+	<phrase n="lang_xsi_executive_allow_optin" t="Allow Assistants Opt-in/out"/>
+	<phrase n="lang_xsi_opt_in_out_to_executive" t="Opt-In/Out Executive"/>
+	<phrase n="lang_xsi_opt_in_to_executive" t="Opt-In"/>
+	<phrase n="lang_xsi_opt_out_to_executive" t="Opt-Out"/>
+	<phrase n="lang_xsi_assistant_call_divert" t="Divert"/>
+	<phrase n="lang_xsi_assistant_call_divert_number" t="Divert Number"/>
+	<phrase n="lang_xsi_call_alerting" t="Call Alerting"/>
+	<phrase n="lang_xsi_call_alerting_mode" t="Alerting Mode"/>
+	<phrase n="lang_xsi_call_alerting_mode_simu" t="Simultaneous"/>
+	<phrase n="lang_xsi_call_alerting_mode_seq" t="Sequential"/>
+	<phrase n="lang_xsi_call_alerting_id_name" t="Calling Line ID Name"/>
+	<phrase n="lang_xsi_call_alerting_id_exec_name" t="Executive Name"/>
+	<phrase n="lang_xsi_call_alerting_id_origin_name" t="Originator Name"/>
+	<phrase n="lang_xsi_call_alerting_id_exec_origin_name" t="Executive-Originator Names"/>
+	<phrase n="lang_xsi_call_alerting_id_origin_exec_name" t="Originator-Executive Names"/>
+	<phrase n="lang_xsi_call_custom_name" t="Custom"/>
+	<phrase n="lang_xsi_call_alerting_custom_id_name" t="Custom Calling Line ID Name"/>
+	<phrase n="lang_xsi_call_alerting_id_number" t="Calling Line ID Number"/>
+	<phrase n="lang_xsi_call_alerting_id_exec_number" t="Executive Number"/>
+	<phrase n="lang_xsi_call_alerting_id_origin_number" t="Originator Number"/>
+	<phrase n="lang_xsi_call_alerting_custom_id_number" t="Custom Calling Line ID Number"/>
+	<phrase n="lang_xsi_call_alerting_recall_after" t="Call Push Recall After"/>
+	<phrase n="lang_xsi_call_alerting_recall_after_range" t="Enter No. of Rings (2-20)"/>
+	<phrase n="lang_xsi_call_alerting_next_assistant" t="Advanced to Next Assistant After"/>
+	<phrase n="lang_xsi_call_alerting_next_assistant_range" t="Enter No. of Rings (1-20)"/>
+	<phrase n="lang_xsi_call_alerting_rollover_after" t="Rollover After Wait"/>
+	<phrase n="lang_xsi_call_alerting_rollover_after_time" t="Rollover Wait Time"/>
+	<phrase n="lang_xsi_call_alerting_rollover_after_time_range" t="Enter Time in Secs (0-60)"/>
+	<phrase n="lang_xsi_call_alerting_rollover_action" t="Rollover Action"/>
+	<phrase n="lang_xsi_call_alerting_rollover_action_vm" t="Voice Messaging"/>
+	<phrase n="lang_xsi_call_alerting_rollover_action_fwd" t="Forward"/>
+	<phrase n="lang_xsi_call_alerting_rollover_action_na" t="No Answer Processing"/>
+	<phrase n="lang_xsi_call_alerting_rollover_fwd_number" t="Rollover Forward Number"/>
+	<phrase n="lang_value_out_of_range" t="Value Entered Out of Range"/>
+	<phrase n="lang_xsi_callon_behalfof_select_executive" t="Select Executive"/>
+	<phrase n="lang_collaborate_room_details" t="Detalji sobe"/>
+	<phrase n="lang_collaborate_room_name" t="Ime sobe"/>
+	<phrase n="lang_collaborate_room_type" t="Tip sobe"/>
+	<phrase n="lang_collaborate_join_room" t="Pridruzi sobu"/>
+	<phrase n="lang_unavailable_state" t="Enter Unavail. Code"/>
+	<phrase n="lang_enter_unavailable_code" t="Enter Unavail. Code"/>
+	<phrase n="lang_ringer_is_off" t="Iskljuceno zvono"/>
+	<phrase n="lang_uxm_update" t="Azuriranje modula prosirenja"/>
+	<phrase n="lang_uxm_update_infotext_progress" t="Azuriranje u tijeku. Ne odspajati telefon ili modul za prosirenje tijekom azuriranja."/>
+	<phrase n="lang_uxm_update_infotext_prepare" t="Priprema za azuriranje. Ne odspajati telefon ili modul za prosirenje tijekom azuriranja."/>
+	<phrase n="lang_F_DELETE_MSG" t="Del M"/>
+	<phrase n="lang_F_DELETE_MSG_typeSio" t="Del Message"/>
+	<phrase n="lang_F_DELETE_MSG_smartlabel" t="Del Msg"/>
+	<phrase n="lang_F_DELETE_MSG_full" t="Delete Message"/>
+	<phrase n="lang_F_NEXT_ID" t="ID↓"/>
+	<phrase n="lang_F_NEXT_ID_typeSio" t="Sljedeci identitet"/>
+	<phrase n="lang_F_NEXT_ID_smartlabel" t="Next ID"/>
+	<phrase n="lang_F_PREV_ID" t="ID↑"/>
+	<phrase n="lang_F_PREV_ID_typeSio" t="Prethodni identitet"/>
+	<phrase n="lang_F_PREV_ID_smartlabel" t="Prev ID"/>
+	<phrase n="lang_F_OCIP" t="OCI-P"/>
+	<phrase n="lang_F_SAB" t="S Dir"/>
+	<phrase n="lang_F_SAB_typeSio" t="S Directory"/>
+	<phrase n="lang_F_SAB_smartlabel" t="Directory"/>
+	<phrase n="lang_F_ABS" t="ABS"/>
+	<phrase n="lang_F_ABS_typeSio" t="AB pretraga"/>
+	<phrase n="lang_addressbook_menu" t="Odaberi adresar"/>
+	<phrase n="lang_addressbook_menu_local" t="Lokal"/>
+	<phrase n="lang_multicast_zones_title" t="Multicast Zone"/>
+	<phrase n="lang_no_multicast_zones" t="Nema dostupne multicast zone"/>
+	<phrase n="lang_acd_state" t="ACD stanje"/>
+	<phrase n="lang_please_sign_into_set_acd_state" t="Prijavite se da biste postavili ACD stanje"/>
+	<phrase n="lang_fkey_longpress_support" t="LP-svojstva"/>
+	<phrase n="lang_important" t="Vazno"/>
+	<phrase n="lang_SmartTransferEditDescription" t="Unesite odabir za pametno prespajanje"/>
+	<phrase n="lang_SmartTransfer" t="Pametno prespajanje"/>
+	<phrase n="lang_SmartTransfer_ready" t="Soft tipka spremna za prijenos poziva."/>
+	<phrase n="lang_department" t="Odjel"/>
+	<phrase n="lang_extensions" t="Ekstenzija"/>
+	<phrase n="lang_menu_title_text_options" t="Opcije teksta"/>
+	<phrase n="lang_F_ADD_LOCATION" t="Dodajte lokaciju"/>
+	<phrase n="lang_gk_mode_none" t="Nijedan"/>
+	<phrase n="lang_demo_mode" t="Demo nacin"/>
+	<phrase n="lang_transfer_or" t="Prebaciti ili"/>
+	<phrase n="lang_call_pickup" t="Pokupiti poziv?"/>
+	<phrase n="lang_choose_an_action" t="Odaberite akciju"/>
+	<phrase n="lang_Conference_Setup" t="Postavke konferencije"/>
+	<phrase n="lang_Conference_First_Participant" t="Sudionik konferencije jedan"/>
+	<phrase n="lang_Conference_Second_Participant" t="Sudionik konferencije dva"/>
+	<phrase n="lang_menu_smart_label" t="Postavke pametnih oznaka"/>
+	<phrase n="lang_menu_idle_screen" t="Ponasanje zaslona u praznom hodu"/>
+	<phrase n="lang_menu_call_screen" t="Ponasanje zaslona poziva"/>
+	<phrase n="lang_menu_other_screen" t="Ponasanje drugih zaslona"/>
+	<phrase n="lang_menu_label_default_mode" t="Zadani nacin prikaza"/>
+	<phrase n="lang_menu_label_expanded_mode" t="Prosireni nacin prikaza"/>
+	<phrase n="lang_menu_label_expansion_triggers" t="Okidaci oznacenih prosirenja"/>
+	<phrase n="lang_menu_short_label" t="Kratka oznaka"/>
+	<phrase n="lang_menu_full_label" t="Potpuna oznaka"/>
+	<phrase n="lang_menu_short_label_mode" t="Nacin kratke oznake"/>
+	<phrase n="lang_menu_short_press" t="Kratki pritisak na tipku stranice"/>
+	<phrase n="lang_menu_long_press" t="Dugi pritisak na tipku stranice"/>
+	<phrase n="lang_menu_proximity_sensor" t="Senzor blizine"/>
+	<phrase n="lang_menu_P3_short_press" t="Short Press P3"/>
+	<phrase n="lang_menu_P3_long_press" t="Long Press P3"/>
+	<phrase n="lang_menu_P4_short_press" t="Short Press P4"/>
+	<phrase n="lang_menu_P4_long_press" t="Long Press P4"/>
+	<phrase n="lang_menu_P2_long_press" t="Long Press P2"/>
+	<phrase n="lang_menu_P8_short_press" t="Short Press P8"/>
+	<phrase n="lang_menu_P8_long_press" t="Long Press P8"/>
+	<phrase n="lang_short_press" t="Kratki pritisak"/>
+	<phrase n="lang_fkey_press" t="Press Fkey"/>
+	<phrase n="lang_long_press" t="Dugi pritisak"/>
+	<phrase n="lang_short_label_mode_icon" t="Samo ikona"/>
+	<phrase n="lang_smartlabel_mode_text" t="Text Only"/>
+	<phrase n="lang_smartlabel_mode_icon_text" t="Icon and Text"/>
+	<phrase n="lang_status_msg_uxm_update_required" t=" treba azurirati"/>
+	<phrase n="lang_status_detail_uxm_update_required" t="Azurirajte modul prosirenja na najnoviju verziju da biste ga aktivirali."/>
+	<phrase n="lang_status_detail_uxm_update_required2" t="Provjerite je li na telefon prikljuceno samo jedno prosirenje i da prosirenje nije spojeno na zasebni izvor napajanja."/>
+	<phrase n="lang_unhandled_item" t="Neodgovorena stavka:"/>
+	<phrase n="lang_preferences_general" t="Opcenito"/>
+	<phrase n="lang_quick_dial_contacts" t="Kontakti brzog biranja"/>
+	<phrase n="lang_start_tbook_download" t="Zapocni preuzimanja direktorija?"/>
+	<phrase n="lang_tbook_download" t="Preuzimanje direktorija"/>
+	<phrase n="lang_tbook_download_started" t="Zapocelo je preuzimanje imenika za identitet"/>
+	<phrase n="lang_tbook_download_finished" t="Zavrseno je preuzimanje imenika za identitet"/>
+	<phrase n="lang_tbook_download_failed" t="Neuspjesno preuzimanje imenika za identitet"/>
+	<phrase n="lang_tbook_download_not_possible" t="Nije moguce preuzeti imenik na identitetu"/>
+	<phrase n="lang_tbook_download_overflowed" t="Preuzimanje datoteka nije dovrseno (prekoracena je unutarnja granica)."/>
+	<phrase n="lang_tbook_is_full" t="Address book full"/>
+	<phrase n="lang_F_HOTELING" t="Hotel"/>
+	<phrase n="lang_F_HOTELING_typeSio" t="Hoteling"/>
+	<phrase n="lang_F_HOTELING_smartlabel" t="Hoteling"/>
+	<phrase n="lang_F_GUEST_LOGIN" t="Prijava gosta"/>
+	<phrase n="lang_F_GUEST_LOGOUT" t="Odjava gosta"/>
+	<phrase n="lang_F_GUEST_LOGIN_smartlabel" t="Gost prijavljen"/>
+	<phrase n="lang_F_GUEST_LOGOUT_smartlabel" t="Gost odjavljen"/>
+	<phrase n="lang_F_LOGIN" t="Login"/>
+	<phrase n="lang_F_LOGOUT" t="Logout"/>
+	<phrase n="lang_smartlabel_id" t="ID"/>
+	<phrase n="lang_title_guest_logout" t="Odjava gosta"/>
+	<phrase n="lang_confirm_guest_logout" t="Jeste li sigurni da se zelite odjaviti?"/>
+	<phrase n="lang_no_contacts" t="Nema kontakata"/>
+	<phrase n="lang_hoteling_guest" t="Hotelski gost"/>
+	<phrase n="lang_logging_out" t="Odjava..."/>
+	<phrase n="lang_logging_in" t="Prijava..."/>
+	<phrase n="lang_login_failed" t="Prijava nije uspjela"/>
+	<phrase n="lang_acd_signout_message" t="You will be signed out of ACD. Continue with guest login?"/>
+	<phrase n="lang_title_guest_login" t="Guest Login"/>
+	<phrase n="lang_F_MARK_READ" t="Mark Read"/>
+	<phrase n="lang_F_MARK_UNREAD" t="Mark Unread"/>
+	<phrase n="lang_call_recording_mode_never" t="Never"/>
+	<phrase n="lang_call_recording_mode_always" t="Always"/>
+	<phrase n="lang_call_recording_mode_always_pause_resume" t="Always with Pause/Resume"/>
+	<phrase n="lang_call_recording_mode_on_demand" t="On-demand"/>
+	<phrase n="lang_call_recording_mode_on_demand_user_start" t="On-demand-user-start"/>
+	<phrase n="lang_smartlabel_dismiss_timeout" t="Return to Default Mode"/>
+	<phrase n="lang_call_recording_mode" t="Call Recording Mode"/>
+	<phrase n="lang_menu_full_label_mode" t="Full Label Mode"/>
+	<phrase n="lang_menu_label_mode" t="Label Mode"/>
+	<phrase n="lang_guest_pin" t="Guest PIN"/>
+	<phrase n="lang_incorrect_pin" t="Incorrect PIN"/>
+	<phrase n="lang_voicemail_info" t="Voicemail Info"/>
+	<phrase n="lang_confirm_del_deny_list_item_title" t="Delete Block List Item"/>
+	<phrase n="lang_confirm_del_number_from_deny_list" t="Remove from block list?"/>
+	<phrase n="lang_confirm_del_menu_configuration" t="Remove Settings Key Configuration"/>
+	<phrase n="lang_confirm_message" t="Do you really want to do this?"/>
+	<phrase n="lang_caller_id_blocking" t="Caller ID Blocking"/>
+	<phrase n="lang_screen_items_color_and_opacity_title" t="Color and Opacity"/>
+	<phrase n="lang_ui_themes" t="Themes"/>
+	<phrase n="lang_theme_light" t="Light"/>
+	<phrase n="lang_theme_dark" t="Dark"/>
+	<phrase n="lang_theme_colorful" t="Colorful"/>
+	<phrase n="lang_theme_industrial" t="Industrial"/>
+	<phrase n="lang_screen_items_color_title" t="Color"/>
+	<phrase n="lang_screen_items_opacity_title" t="Opacity"/>
+	<phrase n="lang_screen_items_enter_custom_color_title" t="Enter Custom Values"/>
+	<phrase n="lang_screen_item_titlebar_text" t="Titlebar Text"/>
+	<phrase n="lang_screen_item_text" t="Text"/>
+	<phrase n="lang_screen_item_subtext" t="Subtext"/>
+	<phrase n="lang_screen_item_extratext" t="Extra Text"/>
+	<phrase n="lang_screen_item_extratext2" t="Extra Text 2"/>
+	<phrase n="lang_screen_item_titlebar_background" t="Titlebar Background"/>
+	<phrase n="lang_screen_item_background" t="Background"/>
+	<phrase n="lang_screen_item_fkey_background" t="Fkey Background"/>
+	<phrase n="lang_screen_item_fkey_pressed_background" t="Fkey Pressed Background"/>
+	<phrase n="lang_screen_item_fkey_separator" t="Fkey Separator"/>
+	<phrase n="lang_screen_item_fkey_label" t="Fkey Label"/>
+	<phrase n="lang_screen_item_fkey_pressed_label" t="Fkey Pressed Label"/>
+	<phrase n="lang_screen_item_line_background" t="Line Background"/>
+	<phrase n="lang_screen_item_selected_line_background" t="Selected Line Background"/>
+	<phrase n="lang_screen_item_selected_line_indicator" t="Selected Line Indicator"/>
+	<phrase n="lang_screen_item_selected_line_text" t="Selected Line Text"/>
+	<phrase n="lang_screen_item_line_separator" t="Line Separator"/>
+	<phrase n="lang_screen_item_scrollbar" t="Scrollbar"/>
+	<phrase n="lang_screen_item_cursor" t="Cursor"/>
+	<phrase n="lang_screen_item_status_msgs_background" t="Status Messages Background"/>
+	<phrase n="lang_screen_item_status_msgs_border" t="Status Messages Border"/>
+	<phrase n="lang_screen_item_smartlabel_background" t="SmartLabel Background"/>
+	<phrase n="lang_screen_item_smartlabel_pressed_background" t="SmartLabel Pressed Background"/>
+	<phrase n="lang_screen_item_smartlabel_separator" t="SmartLabel Separator"/>
+	<phrase n="lang_screen_item_smartlabel_label" t="SmartLabel Label"/>
+	<phrase n="lang_screen_item_smartlabel_pressed_label" t="SmartLabel Pressed Label"/>
+	<phrase n="lang_screen_item_expansion_module_background" t="Expansion Module Background"/>
+	<phrase n="lang_screen_item_expansion_module_pressed_background" t="Expansion Module Pressed Background"/>
+	<phrase n="lang_screen_item_expansion_module_separator" t="Expansion Module Separator"/>
+	<phrase n="lang_screen_item_expansion_module_maintext" t="Expansion Module Maintext"/>
+	<phrase n="lang_screen_item_expansion_module_pressed_maintext" t="Expansion Module Pressed Maintext"/>
+	<phrase n="lang_screen_item_expansion_module_subtext" t="Expansion Module Subtext"/>
+	<phrase n="lang_screen_item_expansion_module_pressed_subtext" t="Expansion Module Pressed Subtext"/>
+	<phrase n="lang_screen_item_expansion_module_page_indicator" t="Expansion Module Page Indicator"/>
+	<phrase n="lang_screen_items_color_name_onyx_black" t="Onyx Black"/>
+	<phrase n="lang_screen_items_color_name_midnight_black" t="Midnight Black"/>
+	<phrase n="lang_screen_items_color_name_obsidian_black" t="Obsidian Black"/>
+	<phrase n="lang_screen_items_color_name_dark_grey" t="Dark Grey"/>
+	<phrase n="lang_screen_items_color_name_grey" t="Grey"/>
+	<phrase n="lang_screen_items_color_name_light_grey" t="Light Grey"/>
+	<phrase n="lang_screen_items_color_name_grey_white" t="Grey White"/>
+	<phrase n="lang_screen_items_color_name_white" t="White"/>
+	<phrase n="lang_screen_items_color_name_light_yellow" t="Light Yellow"/>
+	<phrase n="lang_screen_items_color_name_yellow" t="Yellow"/>
+	<phrase n="lang_screen_items_color_name_light_red" t="Light Red"/>
+	<phrase n="lang_screen_items_color_name_red" t="Red"/>
+	<phrase n="lang_screen_items_color_name_light_blue" t="Light Blue"/>
+	<phrase n="lang_screen_items_color_name_blue" t="Blue"/>
+	<phrase n="lang_screen_items_color_name_light_green" t="Light Green"/>
+	<phrase n="lang_screen_items_color_name_green" t="Green"/>
+	<phrase n="lang_screen_items_color_name_custom" t="Custom Color"/>
+	<phrase n="lang_monitored_extensions" t="Monitored Extensions"/>
+	<phrase n="lang_ALS" t="Ambient Light Sensor"/>
+	<phrase n="lang_all_available_calls" t="All Available Calls"/>
+	<phrase n="lang_new_call" t="New Call"/>
+	<phrase n="lang_select_conf_participant" t="Select Conference Participant"/>
+	<phrase n="lang_consult_conference" t="Consult Conference"/>
+	<phrase n="lang_guess_max_hits" t="Maximum Hits"/>
+	<phrase n="lang_guess_results" t="Results"/>
+	<phrase n="lang_new_network_policy" t="New Network Policy"/>
+	<phrase n="lang_wrong_lldp_policy" t="Wrong LLDP Policy"/>
+	<phrase n="lang_F_MODERATE" t="Moderate"/>
+	<phrase n="lang_sip_warning" t="SIP Upozorenje"/>
+	<phrase n="lang_sync_settings" t="Synchronize Settings"/>
+	<phrase n="lang_confirm_sync_settings" t="Synchronize settings with server configuration?"/>
+	<phrase n="lang_no_configured_extensions" t="No configured extensions"/>
+	<phrase n="lang_no_active_calls_on_extensions" t="No active calls on extensions"/>
+	<phrase n="lang_sip_response_code_400" t="Bad Request"/>
+	<phrase n="lang_sip_response_code_402" t="Payment Required"/>
+	<phrase n="lang_sip_response_code_403" t="Forbidden"/>
+	<phrase n="lang_sip_response_code_404" t="Not Found"/>
+	<phrase n="lang_sip_response_code_405" t="Method Not Allowed"/>
+	<phrase n="lang_sip_response_code_406" t="Not Acceptable"/>
+	<phrase n="lang_sip_response_code_407" t="Proxy Authentication Required"/>
+	<phrase n="lang_sip_response_code_408" t="Request Timeout"/>
+	<phrase n="lang_sip_response_code_410" t="Gone"/>
+	<phrase n="lang_sip_response_code_413" t="Request Entity Too Large"/>
+	<phrase n="lang_sip_response_code_414" t="Request-URI Too Long"/>
+	<phrase n="lang_sip_response_code_415" t="Unsupported Media Type"/>
+	<phrase n="lang_sip_response_code_416" t="Unsupported URI Scheme"/>
+	<phrase n="lang_sip_response_code_420" t="Bad Extension"/>
+	<phrase n="lang_sip_response_code_421" t="Extension Required"/>
+	<phrase n="lang_sip_response_code_422" t="Session Interval Too Small"/>
+	<phrase n="lang_sip_response_code_423" t="Interval Too Brief"/>
+	<phrase n="lang_sip_response_code_480" t="Temporarily Unavailable"/>
+	<phrase n="lang_sip_response_code_481" t="Call/Transaction Does Not Exist"/>
+	<phrase n="lang_sip_response_code_482" t="Loop Detected"/>
+	<phrase n="lang_sip_response_code_483" t="Too Many Hops"/>
+	<phrase n="lang_sip_response_code_484" t="Address Incomplete"/>
+	<phrase n="lang_sip_response_code_485" t="Ambiguous"/>
+	<phrase n="lang_sip_response_code_486" t="Busy Here"/>
+	<phrase n="lang_sip_response_code_487" t="Request Terminated"/>
+	<phrase n="lang_sip_response_code_488" t="Not Acceptable Here"/>
+	<phrase n="lang_sip_response_code_491" t="Request Pending"/>
+	<phrase n="lang_sip_response_code_493" t="Undecipherable"/>
+	<phrase n="lang_sip_response_code_500" t="Server Internal Error"/>
+	<phrase n="lang_sip_response_code_501" t="Not Implemented"/>
+	<phrase n="lang_sip_response_code_502" t="Bad Gateway"/>
+	<phrase n="lang_sip_response_code_503" t="Service Unavailable"/>
+	<phrase n="lang_sip_response_code_504" t="Server Time-out"/>
+	<phrase n="lang_sip_response_code_505" t="Version Not Supported"/>
+	<phrase n="lang_sip_response_code_513" t="Message Too Large"/>
+	<phrase n="lang_sip_response_code_599" t="Network Connect Timeout Error"/>
+	<phrase n="lang_sip_response_code_600" t="Busy Everywhere"/>
+	<phrase n="lang_sip_response_code_603" t="Decline"/>
+	<phrase n="lang_sip_response_code_604" t="Does Not Exist Anywhere"/>
+	<phrase n="lang_sip_response_code_606" t="Not Acceptable"/>
+	<phrase n="lang_sort_order" t="Sort Order"/>
+	<phrase n="lang_directory_display_order" t="Display Order"/>
+	<phrase n="lang_display_order_first_name_last_name" t="First Name, Last Name"/>
+	<phrase n="lang_display_order_last_name_first_name" t="Last Name, First Name"/>
+	<phrase n="lang_visual_options" t="Visual Options"/>
+	<phrase n="lang_call_screen_photo_size" t="Photo Size in Call Screens"/>
+	<phrase n="lang_size_XS" t="XS"/>
+	<phrase n="lang_size_S" t="S"/>
+	<phrase n="lang_size_M" t="M"/>
+	<phrase n="lang_size_L" t="L"/>
+	<phrase n="lang_size_XL" t="XL"/>
+	<phrase n="lang_size_XXL" t="XXL"/>
+	<phrase n="lang_size_XXXL" t="XXXL"/>
+	<phrase n="lang_prefer_saved_over_received_photo" t="Prefer Local Photos"/>
+	<phrase n="lang_display_method" t="Number Display Style"/>
+	<phrase n="lang_display_method_full_contact" t="Full Contact"/>
+	<phrase n="lang_display_method_display_name" t="Name"/>
+	<phrase n="lang_display_method_display_number" t="Number"/>
+	<phrase n="lang_display_method_display_name_number" t="Name + Number"/>
+	<phrase n="lang_display_method_display_number_name" t="Number + Name"/>
+	<phrase n="lang_no_calls_for_transfer" t="No Calls available for Transfer"/>
+	<phrase n="lang_brand_variant_select_title" t="Select Brand Variant"/>
+	<phrase n="lang_brand_variant_default" t="Default"/>
+	<phrase n="lang_brand_variant_updated_title" t="Variant Updated"/>
+	<phrase n="lang_brand_variant_selected" t="Variant Selected"/>
+	<phrase n="lang_system_reboot_now" t="System will now reboot"/>
+	<phrase n="lang_select_identity" t="Select Identity"/>
+	<phrase n="lang_F_CALL_CENTER_STATUS" t="Call Center Status"/>
+	<phrase n="lang_F_ATTENDED_TRANSFER" t="Attended"/>
+	<phrase n="lang_disposition_code_sent" t="sent"/>
+	<phrase n="lang_disposition_code_selection" t="Select Disp. Code"/>
+	<phrase n="lang_disposition_code_entry" t="Enter Disp. Code"/>
+	<phrase n="lang_F_DISP_CODE" t="D Code"/>
+	<phrase n="lang_F_DISP_CODE_typeSio" t="Disposition Code"/>
+	<phrase n="lang_F_DISP_CODE_smartlabel" t="D Code"/>
+	<phrase n="lang_disposition_code_display_text_list" t="List"/>
+	<phrase n="lang_parked_calls_settings" t="Parked Calls"/>
+	<phrase n="lang_call_parked_on" t="Parked on"/>
+	<phrase n="lang_no_parked_call" t="No Parked Call Available."/>
+	<phrase n="lang_F_CALL_PARK_IDLE" t="Park Idle"/>
+	<phrase n="lang_F_CALL_PARK_typeSio" t="Call Park"/>
+	<phrase n="lang_menu_any_smartlabel_key_short_press" t="Short Press SmartLabel"/>
+	<phrase n="lang_monitored_extension_is_ringing" t="Monitored extension is ringing"/>
+	<phrase n="lang_disposition_code_not_sent" t="Code not sent."/>
+	<phrase n="lang_disposition_code_identity_mismatch" t="Identity mismatch."/>
+	<phrase n="lang_F_EXEC_ASSIST_CALL_PUSH" t="Call Push"/>
+	<phrase n="lang_usb_mass_storage_plug" t="USB drive detected"/>
+	<phrase n="lang_usb_mass_storage_unplug" t="USB drive removed"/>
+	<phrase n="lang_information_menu_usb_info" t="USB Info"/>
+	<phrase n="lang_usb_mass_storage_title" t="USB Mass Storage"/>
+	<phrase n="lang_F_USB_EJECT" t="Eject USB"/>
+	<phrase n="lang_usb_mass_storage_safe_to_remove" t="It is now safe to remove USB drive"/>
+	<phrase n="lang_F_USBREC_START" t="Start USB Rec."/>
+	<phrase n="lang_F_USBREC_START_typeSio" t="Start USB Recording"/>
+	<phrase n="lang_F_USBREC_START_smartlabel" t="Start&lt;br&gt;USB Rec."/>
+	<phrase n="lang_F_USBREC_STOP" t="Stop USB Rec."/>
+	<phrase n="lang_F_USBREC_STOP_typeSio" t="Stop USB Recording"/>
+	<phrase n="lang_F_USBREC_STOP_smartlabel" t="Stop&lt;br&gt;USB Rec."/>
+	<phrase n="lang_F_USBREC_PAUSE" t="Pause USB Rec."/>
+	<phrase n="lang_F_USBREC_PAUSE_typeSio" t="Pause USB Recording"/>
+	<phrase n="lang_F_USBREC_PAUSE_smartlabel" t="Pause&lt;br&gt;USB Rec."/>
+	<phrase n="lang_F_USBREC_RESUME" t="Resume USB Rec."/>
+	<phrase n="lang_F_USBREC_RESUME_typeSio" t="Resume USB Recording"/>
+	<phrase n="lang_F_USBREC_RESUME_smartlabel" t="Resume&lt;br&gt;USB Rec."/>
+	<phrase n="lang_F_PAUSE" t="Pause"/>
+	<phrase n="lang_F_RESUME" t="Resume"/>
+	<phrase n="lang_usb_recording_processing_wait" t="Please wait for recording process to complete!"/>
+	<phrase n="lang_usb_recording_processing_completed" t="Recording process complete!"/>
+	<phrase n="lang_usb_recording_call_terminated" t="Call recording terminated"/>
+	<phrase n="lang_usb_recording_terminated_drive_full" t="Recording terminated, USB drive full"/>
+	<phrase n="lang_usb_recording_terminated_max_file_size" t="Recording terminated, Max recording length"/>
+	<phrase n="lang_usb_recording_no_usb_drive_detected" t="No USB drive detected"/>
+	<phrase n="lang_usb_recording_terminated_errno" t="Recording terminated, errno: "/>
+	<phrase n="lang_usb_playback_browse_recordings" t="Browse Recordings"/>
+	<phrase n="lang_usb_playback_browse_recordings_title" t="Call Recordings"/>
+	<phrase n="lang_usb_playback_play_recording_title" t="Recording Playback"/>
+	<phrase n="lang_usb_playback_invalid_header_or_encrypted_file" t="Invalid wav header or encrypted file:"/>
+	<phrase n="lang_usb_playback_recording_information_title" t="Recording Information"/>
+	<phrase n="lang_usb_playback_delete_recording_title" t="Delete Recording"/>
+	<phrase n="lang_label_rewind" t="Rewind"/>
+	<phrase n="lang_label_fast_forward" t="Fast Forward"/>
+	<phrase n="lang_text_size" t="Size"/>
+	<phrase n="lang_usb_playback_no_recordings" t="No Recordings"/>
+	<phrase n="lang_usb_recording_aborted_by_conference" t="USB recording aborted by conference"/>
+	<phrase n="lang_usb_recording_cannot_record_conference" t="Cannot record conference to USB"/>
+	<phrase n="lang_date_and_time" t="Datum i vrijeme"/>
+	<phrase n="lang_label_context_key_page_left" t="Page Left"/>
+	<phrase n="lang_label_context_key_page_right" t="Page Right"/>
+	<phrase n="lang_expansion_module_text_alignment" t="Text Alignment"/>
+	<phrase n="lang_expansion_module_color_font_sizes_XXL_XS" t="Maintext XXL &amp; Subtext XS"/>
+	<phrase n="lang_expansion_module_color_font_sizes_XL_XS" t="Maintext XL &amp; Subtext XS"/>
+	<phrase n="lang_expansion_module_color_font_sizes_XL_S" t="Maintext XL &amp; Subtext S"/>
+	<phrase n="lang_expansion_module_color_font_sizes_L_XS" t="Maintext L &amp; Subtext XS"/>
+	<phrase n="lang_expansion_module_color_font_sizes_L_S" t="Maintext L &amp; Subtext S"/>
+	<phrase n="lang_expansion_module_color_font_sizes_L_M" t="Maintext L &amp; Subtext M"/>
+	<phrase n="lang_expansion_module_color_font_sizes_M_XS" t="Maintext M &amp; Subtext XS"/>
+	<phrase n="lang_expansion_module_color_font_sizes_M_S" t="Maintext M &amp; Subtext S"/>
+	<phrase n="lang_expansion_module_color_font_sizes_M_M" t="Maintext M &amp; Subtext M"/>
+	<phrase n="lang_expansion_module_color_font_sizes_S_XS" t="Maintext S &amp; Subtext XS"/>
+	<phrase n="lang_expansion_module_color_font_sizes_S_S" t="Maintext S &amp; Subtext S"/>
+	<phrase n="lang_expansion_module_color_font_sizes_XS_XS" t="Maintext XS &amp; Subtext XS"/>
+	<phrase n="lang_edit_mode_upper_case" t="ABC"/>
+	<phrase n="lang_edit_mode_lower_case" t="abc"/>
+	<phrase n="lang_edit_mode_numbers" t="123"/>
+	<phrase n="lang_F_IDLE_CONTEXT_PAGE_LEFT" t="Left"/>
+	<phrase n="lang_F_IDLE_CONTEXT_PAGE_LEFT_typeSio" t="Page Left"/>
+	<phrase n="lang_F_IDLE_CONTEXT_PAGE_RIGHT" t="Right"/>
+	<phrase n="lang_F_IDLE_CONTEXT_PAGE_RIGHT_typeSio" t="Page Right"/>
+	<phrase n="lang_F_NONE" t=""/>
+</phrases>

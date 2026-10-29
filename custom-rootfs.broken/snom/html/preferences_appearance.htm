@@ -1,0 +1,478 @@
+<?ssi title prefs_ssi_title?>
+<?ssi file common1.htm?>
+<TR>
+  <TD vAlign="top" height="16"><IMG height="16" src="img/clr.gif" width="16"></TD>
+</TR>
+<TR>
+  <TD vAlign="top">
+    <FORM method="post">
+      <?ssi hidden_tag?>
+      <?ssi skipon VTECH?>
+      <TABLE class="bubbleTable" cellSpacing="0" cellPadding="0" width="100%" border="0">
+      <?ssi skipoff VTECH?>
+      <?ssi skipon SNOM?>
+      <TABLE cellSpacing="4" cellPadding="0" width="100%" border="0">
+      <?ssi skipoff SNOM?>
+        <TBODY>
+          <?ssi file tab_preferences.htm?>
+          <TR>
+            <TD width="12" height="5"><IMG src="img/clr.gif" width="12" height="12"></TD>
+            <TD width="12" height="5"><IMG src="img/clr.gif" width="12" height="5"></TD>
+            <TD width="12" height="5"><IMG src="img/clr.gif" width="12" height="5"></TD>
+            <TD class="background" width="12" height="5">
+              <?ssi skipon VTECH?>
+              <IMG height="12" src=<?ssi img-corner-gif ur?> width="12">
+              <?ssi skipoff VTECH?>
+            </TD>
+          </TR>
+          <?ssi hidden_tag?>
+          <TR>
+            <TD></TD>
+            <TD width="50%"></TD>
+            <TD width="50%"></TD>
+          </TR>
+          <TR>
+            <TD></TD>
+            <?ssi skipon VTECH?>
+            <TD width="50%"><B>
+            <?ssi skipoff VTECH?>
+            <?ssi skipon SNOM?>
+            <TD class="titleText" width="50%">
+            <?ssi skipoff SNOM?>
+              <?lng preferences_ui_elements?></B>
+            </TD>
+            <TD width="50%"></TD>
+          </TR>
+          <TR>
+            <TD></TD><TD><?lng prefs_displaystyle?></TD>
+            <TD>
+              <select <?ssi disabled display_method?> name="display_method" <?ssi tabindex?> size="1">
+                <option value="full_contact"<?ssi selected display_method full_contact?>><?lng prefs_dsfullcontact?></option>
+                <option value="display_name"<?ssi selected display_method display_name?>><?lng prefs_dsname?></option>
+                <option value="display_number"<?ssi selected display_method display_number?>><?lng prefs_dsnumber?></option>
+                <option value="display_name_number"<?ssi selected display_method display_name_number?>><?lng prefs_dsnamenumber?></option>
+                <option value="display_number_name"<?ssi selected display_method display_number_name?>><?lng prefs_dsnumbername?></option>
+              </select>
+              <?ssi help display_method?>
+            </TD>
+          </TR>
+          <TR>
+            <TD></TD><?ssi radio prefs_ssi_dialnumber_us_format dialnumber_us_format advanced_ssi_on advanced_ssi_off?>
+          </TR>
+          <TR>
+            <TD></TD><?ssi radio prefs_ssi_show_ivr_digits show_ivr_digits advanced_ssi_on advanced_ssi_off?>
+          </TR>
+          <TR>
+            <TD></TD><?ssi radio prefs_ssi_date_us_format date_us_format advanced_ssi_on advanced_ssi_off?>
+          </TR>
+          <TR>
+            <TD></TD><?ssi radio prefs_ssi_time_24_format time_24_format advanced_ssi_on advanced_ssi_off?>
+          </TR>
+          <TR>
+            <TD></TD><?ssi radio prefs_ssi_show_clock show_clock advanced_ssi_on advanced_ssi_off?>
+          </TR>
+          <TR>
+            <TD></TD><?ssi radio extend_context_key_in_idle extend_context_key_in_idle advanced_ssi_on advanced_ssi_off?>
+          </TR>
+          <?ssi skipon NOT_MONOCHROME_BDF?>
+          <TR>
+            <TD></TD><?ssi radio advanced_ssi_text_softkey context_key_text advanced_ssi_on advanced_ssi_off?>
+          </TR>
+          <?ssi skipoff NOT_MONOCHROME_BDF?>
+          <?ssi skipon MONOCHROME_BDF?>
+          <TR>
+            <TD></TD><?ssi radio advanced_ssi_softkey_and_text context_key_text advanced_ssi_on advanced_ssi_off?>
+          </TR>
+          <TR>
+            <TD></TD><?ssi radio advanced_prefer_saved_over_received_photo prefer_saved_over_received_photo advanced_ssi_on advanced_ssi_off?>
+          </TR>
+          <TR>
+            <TD></TD><TD><?lng call_screen_photo_size?></TD>
+            <TD>
+              <select <?ssi disabled call_screen_photo_size?> name="call_screen_photo_size" <?ssi tabindex?> size="1">
+                <option value="S"<?ssi selected call_screen_photo_size S?>><?lng size_S?></option>
+                <option value="M"<?ssi selected call_screen_photo_size M?>><?lng size_M?></option>
+                <option value="L"<?ssi selected call_screen_photo_size L?>><?lng size_L?></option>
+                <option value="XL"<?ssi selected call_screen_photo_size XL?>><?lng size_XL?></option>
+                <option value="XXL"<?ssi selected call_screen_photo_size XXL?>><?lng size_XXL?></option>
+                <option value="XXXL"<?ssi selected call_screen_photo_size XXXL?>><?lng size_XXXL?></option>
+              </select>
+              <?ssi help call_screen_photo_size?>
+            </TD>
+          </TR>
+          <?ssi skipoff MONOCHROME_BDF?>
+          <TR>
+            <TD></TD><TD><?ssi input call_states_with_local_party call_states_with_local_party?></TD>
+          </TR>
+          <TR>
+            <TD></TD><TD><?ssi input redirected_call_states_with_local_party redirected_call_states_with_local_party?></TD>
+          </TR>
+          <?ssi skipon NO_SMARTLABEL?>
+          <?ssi skipon MONOCHROME_BDF?>
+          <TR>
+            <TD></TD><?ssi radio advanced_ssi_optimize_infobox smartlabel_optimize_info_box advanced_ssi_on advanced_ssi_off?>
+          </TR>
+          <?ssi skipoff MONOCHROME_BDF?>
+          <?ssi skipoff NO_SMARTLABEL?>
+          <TR>
+            <TD></TD><?ssi radio prefs_ssi_redundant_softkeys show_redundant_context_keys advanced_ssi_on advanced_ssi_off?>
+          </TR>
+          <TR>
+            <TD></TD><?ssi radio pui_icon_override_xml_icon pui_icon_override_xml_icon advanced_ssi_on advanced_ssi_off?>
+          </TR>
+          <TR>
+            <TD></TD><TD><?ssi input idle_status_btn_index idle_status_btn_index?></TD>
+          </TR>
+          <?ssi skipon MONOCHROME_BDF?>
+          <TR>
+            <TD></TD><?ssi radio prefs_ssi_ringer_animation ringer_animation advanced_ssi_on advanced_ssi_off?>
+          </TR>
+          <TR>
+            <TD></TD><TD><?ssi input prefs_custom_bg_image_url custom_bg_image_url?></TD>
+          </TR>
+          <TR>
+            <TD/>
+            <TD><?lng prefs_custom_images?></TD>
+            <TD>
+              <a href="image_upload.htm"><?lng advanced_ssi_more_control?></a>
+              <?ssi help Uploading+custom+images?>
+            </TD>
+          </TR>
+          <TR>
+            <TD></TD><TD>&nbsp;</TD>
+          </TR>
+          <?ssi skipoff MONOCHROME_BDF?>
+          <?ssi skipon MONOCHROME_BDF?>
+          <TR>
+            <TD></TD>
+            <?ssi skipon VTECH?>
+            <TD width="50%"><B>
+            <?ssi skipoff VTECH?>
+            <?ssi skipon SNOM?>
+            <TD class="titleText" width="50%">
+            <?ssi skipoff SNOM?>
+              <?lng preferences_ui_colors?></B>
+            </TD>
+            <TD width="50%"></TD>
+          </TR>
+          <TR>
+            <TD></TD><TD><?ssi input text_color text_color?></TD>
+          </TR>
+          <TR>
+            <TD></TD><TD><?ssi input titlebar_text_color titlebar_text_color?></TD>
+          </TR>
+          <TR>
+            <TD></TD><TD><?ssi input subtext_color subtext_color?></TD>
+          </TR>
+          <TR>
+            <TD></TD><TD><?ssi input extratext_color extratext_color?></TD>
+          </TR>
+          <TR>
+            <TD></TD><TD><?ssi input extratext2_color extratext2_color?></TD>
+          </TR>
+          <TR>
+            <TD></TD><TD><?ssi input background_color background_color?></TD>
+          </TR>
+          <TR>
+            <TD></TD><TD><?ssi input titlebar_background_color titlebar_background_color?></TD>
+          </TR>
+          <TR>
+            <TD></TD><TD><?ssi input fkey_background_color fkey_background_color?></TD>
+          </TR>
+          <TR>
+            <TD></TD><TD><?ssi input fkey_pressed_background_color fkey_pressed_background_color?></TD>
+          </TR>
+          <TR>
+            <TD></TD><TD><?ssi input fkey_separator_color fkey_separator_color?></TD>
+          </TR>
+          <TR>
+            <TD></TD><TD><?ssi input fkey_label_color fkey_label_color?></TD>
+          </TR>
+          <TR>
+            <TD></TD><TD><?ssi input fkey_pressed_label_color fkey_pressed_label_color?></TD>
+          </TR>
+          <TR>
+            <TD></TD><TD><?ssi input line_background_color line_background_color?></TD>
+          </TR>
+          <TR>
+            <TD></TD><TD><?ssi input selected_line_background_color selected_line_background_color?></TD>
+          </TR>
+          <TR>
+            <TD></TD><TD><?ssi input selected_line_indicator_color selected_line_indicator_color?></TD>
+          </TR>
+          <TR>
+            <TD></TD><TD><?ssi input selected_line_text_color selected_line_text_color?></TD>
+          </TR>
+          <TR>
+            <TD></TD><TD><?ssi input line_separator_color line_separator_color?></TD>
+          </TR>
+          <TR>
+            <TD></TD><TD><?ssi input scrollbar_color scrollbar_color?></TD>
+          </TR>
+          <TR>
+            <TD></TD><TD><?ssi input cursor_color cursor_color?></TD>
+          </TR>
+          <TR>
+            <TD></TD><TD><?ssi input status_msgs_background_color status_msgs_background_color?></TD>
+          </TR>
+          <TR>
+            <TD></TD><TD><?ssi input status_msgs_border_color status_msgs_border_color?></TD>
+          </TR>
+          <TR>
+            <TD></TD><TD>&nbsp;</TD>
+          </TR>
+          <?ssi skipon NO_SMARTLABEL?>
+          <TR>
+            <TD></TD>
+            <?ssi skipon VTECH?>
+            <TD width="50%"><B>
+            <?ssi skipoff VTECH?>
+            <?ssi skipon SNOM?>
+            <TD class="titleText" width="50%">
+            <?ssi skipoff SNOM?>
+              <?lng preferences_ui_smartlabel_colors?></B>
+            </TD>
+            <TD width="50%"></TD>
+          </TR>
+          <TR>
+            <TD></TD><TD><?ssi input fkey_background_color smartlabel_background_color?></TD>
+          </TR>
+          <TR>
+            <TD></TD><TD><?ssi input fkey_pressed_background_color smartlabel_pressed_background_color?></TD>
+          </TR>
+          <TR>
+            <TD></TD><TD><?ssi input fkey_separator_color smartlabel_separator_color?></TD>
+          </TR>
+          <TR>
+            <TD></TD><TD><?ssi input fkey_label_color smartlabel_label_color?></TD>
+          </TR>
+          <TR>
+            <TD></TD><TD><?ssi input fkey_pressed_label_color smartlabel_pressed_label_color?></TD>
+          </TR>
+          <TR>
+            <TD></TD><TD>&nbsp;</TD>
+          </TR>
+          <?ssi skipoff NO_SMARTLABEL?>
+          <?ssi skipoff MONOCHROME_BDF?>
+          <?ssi skipon NOT_UXMC ?>
+          <TR>
+            <TD></TD>
+            <?ssi skipon VTECH?>
+            <TD width="50%"><B>
+            <?ssi skipoff VTECH?>
+            <?ssi skipon SNOM?>
+            <TD class="titleText" width="50%">
+            <?ssi skipoff SNOM?>
+              <?lng preferences_ui_expansion_module_colors?></B>
+            </TD>
+            <TD width="50%"></TD>
+          </TR>
+          <TR>
+            <TD></TD><TD><?ssi input fkey_background_color expansion_module_background_color?></TD>
+          </TR>
+          <TR>
+            <TD></TD><TD><?ssi input fkey_pressed_background_color expansion_module_pressed_background_color?></TD>
+          </TR>
+          <TR>
+            <TD></TD><TD><?ssi input fkey_separator_color expansion_module_separator_color?></TD>
+          </TR>
+          <TR>
+            <TD></TD><TD><?ssi input fkey_label_color expansion_module_maintext_color?></TD>
+          </TR>
+          <TR>
+            <TD></TD><TD><?ssi input fkey_pressed_label_color expansion_module_pressed_maintext_color?></TD>
+          </TR>
+          <TR>
+            <TD></TD><TD><?ssi input subtext_color expansion_module_subtext_color?></TD>
+          </TR>
+          <TR>
+            <TD></TD><TD><?ssi input subtext_pressed_color expansion_module_pressed_subtext_color?></TD>
+          </TR>
+          <TR>
+            <TD></TD><TD><?ssi input page_indicator_color expansion_module_page_indicator_color?></TD>
+          </TR>
+          <TR>
+            <TD></TD><TD>&nbsp;</TD>
+          </TR>
+          <?ssi skipon MONOCHROME_BDF?>
+          <TR>
+            <TD></TD>
+            <?ssi skipon VTECH?>
+            <TD width="50%"><B>
+            <?ssi skipoff VTECH?>
+            <?ssi skipon SNOM?>
+            <TD class="titleText" width="50%">
+            <?ssi skipoff SNOM?>
+              <?lng preferences_expansion_module_ui_elements?></B>
+            </TD>
+            <TD width="50%"></TD>
+          </TR>
+          <TR>
+            <TD></TD><TD><?ssi input prefs_expansion_module_background_image expansion_module_background_image?></TD>
+          </TR>
+          <TR>
+            <TD></TD><TD>&nbsp;</TD>
+          </TR>
+          <?ssi skipoff NOT_UXMC?>
+          <TR>
+            <TD></TD>
+            <?ssi skipon VTECH?>
+            <TD width="50%"><B>
+            <?ssi skipoff VTECH?>
+            <?ssi skipon SNOM?>
+            <TD class="titleText" width="50%">
+            <?ssi skipoff SNOM?>
+              <?lng ui_theme?></B>
+            </TD>
+            <TD width="50%"></TD>
+          </TR>
+          <TR>
+            <TD></TD><TD><?lng ui_theme?></TD>
+            <TD>
+              <select <?ssi disabled ui_theme?> name="ui_theme" <?ssi tabindex?> size="1">
+                <option value="Light"<?ssi selected ui_theme Light?>><?lng theme_Light?></option>
+                <option value="Dark"<?ssi selected ui_theme Dark?>><?lng theme_Dark?></option>
+                <option value="Colorful"<?ssi selected ui_theme Colorful?>><?lng theme_Colorful?></option>
+                <option value="Industrial"<?ssi selected ui_theme Industrial?>><?lng theme_Industrial?></option>
+              </select>
+              <?ssi help ui_theme?>
+            </TD>
+          </TR>
+          <TR>
+            <TD></TD><TD>&nbsp;</TD>
+          </TR>
+          <?ssi skipoff MONOCHROME_BDF?>
+          <?ssi skipon NO_FEATURE_LABEL_DISPLAY?>
+          <?ssi skipon SMARTLABEL?>
+          <TR>
+            <TD></TD>
+            <?ssi skipon VTECH?>
+            <TD width="50%"><B>
+            <?ssi skipoff VTECH?>
+            <?ssi skipon SNOM?>
+            <TD class="titleText" width="50%">
+            <?ssi skipoff SNOM?>
+              <?lng preferences_font?></B>
+            </TD>
+            <TD width="50%"></TD>
+          </TR>
+          <TR>
+            <TD></TD><TD><?lng prefs_label_text_alignment?></TD>
+            <TD>
+              <select size="1" <?ssi disabled label_text_alignment?>name="label_text_alignment" <?ssi tabindex?> >
+                <option value="left"<?ssi selected label_text_alignment left?>><?lng prefs_left?></option>
+                <option value="right"<?ssi selected label_text_alignment right?>><?lng prefs_right?></option>
+                <option value="center"<?ssi selected label_text_alignment center?>><?lng prefs_center?></option>
+                <option value="alternate"<?ssi selected label_text_alignment alternate?>><?lng prefs_alternate?></option>
+              </select>
+              <?ssi help label_text_alignment?>
+            </TD>
+          </TR>
+          <!-- Hide the font size setting until properly configurable and timeout setting moved to smartlabel.htm -->
+          <TR>
+            <TD></TD><TD><?ssi input prefs_label_font_size label_font_size?></TD>
+          </TR>
+          <?ssi skipoff SMARTLABEL?>
+          <?ssi skipoff NO_FEATURE_LABEL_DISPLAY?>
+          <?ssi skipon NO_BW_HI_RES_DISP?>
+          <TR>
+            <TD></TD><?ssi radio prefs_ssi_large_edit_font large_edit_font advanced_ssi_on advanced_ssi_off?>
+          </TR>
+          <TR>
+            <TD></TD><TD><?ssi input prefs_context_key_font_size context_key_font_size?></TD>
+          </TR>
+          <TR>
+            <TD></TD><TD><?ssi input regular_font_min_font_size regular_font_min_font_size?></TD>
+          </TR>
+          <?ssi skipoff NO_BW_HI_RES_DISP?>
+          <?ssi skipon NOT_UXM?>
+          <TR>
+            <TD></TD><TD><?ssi input prefs_uxm_line_font_size uxm_line_font_size?></TD>
+          </TR>
+          <TR>
+            <TD></TD><TD><?ssi input prefs_uxm_tile_font_size uxm_tile_font_size?></TD>
+          </TR>
+          <?ssi skipoff NOT_UXM?>
+          <?ssi skipon NOT_UXMC?>
+          <TR>
+            <TD></TD>
+            <?ssi skipon VTECH?>
+            <TD width="50%"><B>
+            <?ssi skipoff VTECH?>
+            <?ssi skipon SNOM?>
+            <TD class="titleText" width="50%">
+            <?ssi skipoff SNOM?>
+              <?lng preferences_expansion_module_font?></B>
+            </TD>
+            <TD width="50%"></TD>
+          </TR>
+          <TR>
+            <TD></TD><TD><?lng expansion_module_maintext_size?></TD>
+            <TD>
+              <select <?ssi disabled expansion_module_maintext_size?> name="expansion_module_maintext_size" <?ssi tabindex?> size="1">
+                <option value="XS"<?ssi selected expansion_module_maintext_size XS?>><?lng size_XS?></option>
+                <option value="S"<?ssi selected expansion_module_maintext_size S?>><?lng size_S?></option>
+                <option value="M"<?ssi selected expansion_module_maintext_size M?>><?lng size_M?></option>
+                <option value="L"<?ssi selected expansion_module_maintext_size L?>><?lng size_L?></option>
+                <option value="XL"<?ssi selected expansion_module_maintext_size XL?>><?lng size_XL?></option>
+                <option value="XXL"<?ssi selected expansion_module_maintext_size XXL?>><?lng size_XXL?></option>
+              </select>
+              <?ssi help expansion_module_maintext_size?>
+            </TD>
+          </TR>
+          <TR>
+            <TD></TD><TD><?lng expansion_module_subtext_size?></TD>
+            <TD>
+              <select <?ssi disabled expansion_module_subtext_size?> name="expansion_module_subtext_size" <?ssi tabindex?> size="1">
+                <option value="XS"<?ssi selected expansion_module_subtext_size XS?>><?lng size_XS?></option>
+                <option value="S"<?ssi selected expansion_module_subtext_size S?>><?lng size_S?></option>
+                <option value="M"<?ssi selected expansion_module_subtext_size M?>><?lng size_M?></option>
+                <option value="L"<?ssi selected expansion_module_subtext_size L?>><?lng size_L?></option>
+                <option value="XL"<?ssi selected expansion_module_subtext_size XL?>><?lng size_XL?></option>
+                <option value="XXL"<?ssi selected expansion_module_subtext_size XXL?>><?lng size_XXL?></option>
+              </select>
+              <?ssi help expansion_module_subtext_size?>
+            </TD>
+          </TR>
+          <TR>
+            <TD></TD><TD><?lng prefs_expansion_module_text_alignment?></TD>
+            <TD>
+              <select size="1" <?ssi disabled expansion_module_text_alignment?>name="expansion_module_text_alignment" <?ssi tabindex?> >
+                <option value="left"<?ssi selected expansion_module_text_alignment left?>><?lng prefs_left?></option>
+                <option value="right"<?ssi selected expansion_module_text_alignment right?>><?lng prefs_right?></option>
+              </select>
+              <?ssi help expansion_module_text_alignment?>
+            </TD>
+          </TR>
+          <?ssi skipoff NOT_UXMC?>
+          <TR>
+            <TD></TD><TD>&nbsp;</TD>
+          </TR>
+          <TR>
+            <TD></TD>
+            <TD>
+              <input type="hidden" value="<?lng apply_button?>" name="Settings">
+              <!--Hidden input is used to allow onchange event to apply settings automatically-->
+              <input type="submit" value="<?lng apply_button?>" name="Settings" <?ssi tabindex?> >
+            </TD>
+          </TR>
+          <TR>
+            <TD class="background" vAlign="bottom" align="left" width="12" height="5">
+            <?ssi skipon VTECH?>
+              <IMG height="12" src=<?ssi img-corner-gif ll?> width="12">
+            <?ssi skipoff VTECH?>
+            </TD><TD></TD><TD></TD>
+            <TD class="background" vAlign="bottom" align="right" width="12" height="5">
+            <?ssi skipon VTECH?>
+              <IMG height="12" src=<?ssi img-corner-gif lr?> width="12">
+            <?ssi skipoff VTECH?>
+            </TD>
+          </TR>
+        </TBODY>
+      </TABLE>
+    </FORM>
+  </TD>
+</TR>
+<script type="text/javascript" src="fox.js" charset="utf-8"></script>
+<?ssi file common9.htm?>
+</HTML>

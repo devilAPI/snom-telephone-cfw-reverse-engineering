@@ -1,0 +1,530 @@
+<?ssi title adr_ssi_title?>
+<?ssi file common1.htm?>
+<TR><TD vAlign="top" height="16"><IMG height="16" src="img/clr.gif" width="16"></TD></TR>
+<TR>
+  <TD vAlign="top">
+    <FORM method="post">
+      <?ssi skipon VTECH?>
+      <TABLE class="bubbleTable" cellSpacing="0" cellPadding="0" width="100%" border="0">
+      <?ssi skipoff VTECH?>
+      <?ssi skipon SNOM?>
+      <TABLE cellSpacing="0" cellPadding="0" width="100%" border="0">
+      <?ssi skipoff SNOM?>
+      <TBODY>
+      <?ssi skipon USER_ADMIN_MODE_1_AND_ADMIN?>
+        <TR>
+          <TD class="background" width="12" height="5">
+            <?ssi skipon VTECH?>
+            <IMG height="12" src=<?ssi img-corner-gif ul?> width="12">
+            <?ssi skipoff VTECH?>
+          </TD>
+          <TD></TD>
+          <TD></TD>
+          <TD class="background" width="12" height="5">
+            <?ssi skipon VTECH?>
+            <IMG height="12" src=<?ssi img-corner-gif ur?> width="12">
+            <?ssi skipoff VTECH?>
+          </TD>
+        </TR>
+        <?ssi hidden_tag?>
+        <TR>
+          <TD></TD>
+          <TD>
+            <TABLE border="0" cellpadding="1" cellspacing="1" width="100%">
+              <TR>
+                <?ssi skipon VTECH?>
+                <TD><B>
+                <?ssi skipoff VTECH?>
+                <?ssi skipon SNOM?>
+                <TD class="titleText">
+                <?ssi skipoff SNOM?>
+                <?ssi skipon NO_WUI_HELP_LINKS?>
+                <a href="https://service.snom.com/display/wiki/Local+Directory#Editing_an_entry"><div class="help"></div></a>
+                <?ssi skipoff NO_WUI_HELP_LINKS?>
+                <?lng adr_ssi_title?></B></TD>
+              </TR>
+              <TR>
+                <TD width="100"><b><?lng adr_name?></b></TD>
+                <TD><b><?lng adr_number?></b></TD>
+                <TD><b><?lng adr_contacttype?></b></TD>
+                <TD><b><?lng adr_outgoingid?></b></TD>
+                <TD align="center"><b><?lng adr_edit?></b></TD>
+                <TD align="center"><b><?lng adr_delete?></b></TD>
+              </TR>
+            <?ssi tbook en?>
+            </TABLE>
+          </TD>
+        </TR>
+        <TR>
+          <TD colspan="9">&nbsp;</TD>
+        </TR>
+        <TR>
+          <TD></TD>
+          <TD colspan="7">
+            <div class="buttonline">
+            <a href="tbook.csv" download="tbook.csv"><div class="divbutton buttonmarginright"><?lng adr_file_csv?></div></a>
+            <a href="tbook.xml" download="tbook.xml"><div class="divbutton buttonmarginright"><?lng adr_file_xml?></div></a>
+            <input type="submit" value="<?lng adr_deletebutton?>" name="CONFIRM_DEL_TBOOK">
+            </div>
+          </TD>
+          <TD></TD>
+        </TR>
+        <TR>
+          <TD class="background" width="12" height="5">
+            <?ssi skipon VTECH?>
+            <IMG height="12" src=<?ssi img-corner-gif ll?> width="12">
+            <?ssi skipoff VTECH?>
+          </TD>
+          <TD></TD>
+          <TD></TD>
+          <TD class="background" width="12" height="5">
+            <?ssi skipon VTECH?>
+            <IMG height="12" src=<?ssi img-corner-gif lr?> width="12">
+            <?ssi skipoff VTECH?>
+          </TD>
+        </TR>
+      </TBODY>
+      </TABLE>
+    </FORM>
+  </TD>
+</TR>
+<TR>
+  <TD vAlign="top" height="16"><IMG height="16" src="img/clr.gif" width="16"></TD>
+</TR>
+<TR>
+  <TD vAlign="top">
+    <FORM method="post" <?ssi skipon SMALL_ADR_BOOK?> enctype="multipart/form-data" <?ssi skipoff SMALL_ADR_BOOK?>>
+      <?ssi skipon VTECH?>
+      <TABLE class="bubbleTable" cellSpacing="0" cellPadding="0" width="100%" border="0">
+      <?ssi skipoff VTECH?>
+      <?ssi skipon SNOM?>
+      <TABLE cellSpacing="4" cellPadding="0" width="100%" border="0">
+      <?ssi skipoff SNOM?>
+      <TBODY>
+      <TR>
+        <TD class="background" width="12" height="5">
+          <?ssi skipon VTECH?>
+          <IMG height="12" src=<?ssi img-corner-gif ul?> width="12">
+          <?ssi skipoff VTECH?>
+        </TD>
+        <TD width="30%"></TD>
+        <TD></TD>
+        <?ssi skipon NO_IMLIB_SUPPORT?>
+        <!-- Only color phones have a photo and thus the table is one column wider -->
+        <TD></TD>
+        <?ssi skipoff NO_IMLIB_SUPPORT?>
+        <TD class="background" width="12" height="5">
+        <?ssi skipon VTECH?>
+        <IMG height="12" src=<?ssi img-corner-gif ur?> width="12">
+        <?ssi skipoff VTECH?>
+        </TD>
+      </TR>
+      <?ssi hidden_tag?>
+      <TR>
+        <TD></TD>
+        <?ssi skipon VTECH?>
+        <TD colspan="3"><B>
+        <?ssi skipoff VTECH?>
+        <?ssi skipon SNOM?>
+        <TD colspan="3" class="titleText">
+        <?ssi skipoff SNOM?>
+          <?ssi skipon NO_WUI_HELP_LINKS?>
+          <a href="https://service.snom.com/display/wiki/Local+Directory#Adding_an_entry"><div class="help"></div></a>&nbsp;
+          <?ssi skipoff NO_WUI_HELP_LINKS?>
+          <?lng adr_addeditentry?></B>
+        </TD>
+        <TD></TD>
+      </TR>
+      <!--EDIT ENTRY-->
+      <?ssi skipon MULTINUMBER?>
+      <!--Name-->
+      <TR>
+        <TD></TD>
+        <TD><?lng adr_name?></TD>
+        <TD width="150">
+          <input type="text" id="tbook_name" name="tbook_name" value="<?ssi edit name?>">
+        </TD>
+        <TD></TD>
+        <TD></TD>
+      </TR>
+      <?ssi skipoff MULTINUMBER?>
+      <!--Number-->
+      <TR>
+        <TD></TD>
+        <TD><?lng adr_number?></TD>
+        <TD>
+          <input type="text" id="tbook_number" name="tbook_number" value="<?ssi edit number?>">
+        </TD>
+        <TD></TD>
+        <TD></TD>
+      </TR>
+      <?ssi skipon SMALL_ADR_BOOK?>
+      <!--Number Type-->
+      <TR>
+        <TD></TD>
+        <TD><?lng adr_number_type?></TD>
+        <TD>
+          <select name="tbook_nr_type" size="1"  ID="Select0">
+          <option value="sip"<?ssi selected tbook_nr_type sip?>><?lng adr_nrtype_sip?></option>
+          <option value="mobile"<?ssi selected tbook_nr_type mobile?>><?lng contact_mobile?></option>
+          <?ssi skipon BRIA_NOW?>
+          <option value="fixed"<?ssi selected tbook_nr_type fixed?>><?lng adr_nrtype_landline?></option>
+          <?ssi skipoff BRIA_NOW?>
+          <option value="home"<?ssi selected tbook_nr_type home?>><?lng contact_home?></option>
+          <option value="business"<?ssi selected tbook_nr_type business?>><?lng adr_nrtype_business?></option>
+          <option value="extension"<?ssi selected tbook_nr_type extension?>><?lng adr_nrtype_extension?></option>
+          </select>
+        </TD>
+        <TD></TD>
+        <TD></TD>
+      </TR>
+      <?ssi skipoff SMALL_ADR_BOOK?>
+      <!--Contact Type-->
+      <TR>
+        <TD></TD>
+        <TD><?lng adr_contacttype?></TD>
+        <TD>
+          <select name="tbook_contact" size="1"  ID="Select1">
+          <option value="none"<?ssi selected tbook_contact none?>><?lng adr_ctnone?></option>
+          <option value="vip"<?ssi selected tbook_contact vip?>><?lng adr_ctvip?></option>
+          <option value="deny"<?ssi selected tbook_contact deny?>><?lng adr_ctdeny?></option>
+          </select>
+        </TD>
+        <TD></TD>
+        <TD></TD>
+      </TR>
+      <!--Outgoing ID-->
+      <TR>
+        <TD></TD>
+        <TD><?lng adr_outgoingid?></TD>
+        <TD>
+          <select name="tbook_outgoingid" size="1"  ID="Select2">
+          <option value="active"<?ssi selected tbook_outgoingid active?>><?lng adr_lineid_active?></option>
+          <?ssi tbook_selection_outgoing_line?>
+          </select>
+        </TD>
+        <TD></TD>
+        <TD></TD>
+      </TR>
+      <?ssi skipon SMALL_ADR_BOOK?>
+      <!--EDIT ENTRY new stuff from here downwards-->
+      <!--Group-->
+      <TR <?ssi skipon NO_MULTINUMBER?> <?ssi skipon VTECH?>bgcolor="#d6dff5"<?ssi skipoff VTECH?><?ssi skipoff NO_MULTINUMBER?>>
+        <TD></TD>
+        <TD><?lng adr_group?></TD>
+        <TD>
+          <select name="tbook_group" size="1"  ID="Select3">
+          <option value="none"<?ssi selected tbook_group none?>><?lng adr_ctnone?></option>
+          <option value="friend"<?ssi selected tbook_group friend?>><?lng adr_ctfriends?></option>
+          <option value="family"<?ssi selected tbook_group family?>><?lng adr_ctfamily?></option>
+          <option value="work"<?ssi selected tbook_group work?>><?lng adr_work?></option>
+          <option value="colleague"<?ssi selected tbook_group colleague?>><?lng adr_ctcolleagues?></option>
+          <option value="server"<?ssi selected tbook_group server?>><?ssi server_tbook_group?></option>
+          </select>
+        </TD>
+        <?ssi skipon NO_IMLIB_SUPPORT?>
+        <!--Photo-->
+        <TD rowspan=8 align="left"><IMG height="100" src="<?ssi edit photoFileName?>"></TD>
+        <?ssi skipoff NO_IMLIB_SUPPORT?>
+        <TD>&nbsp;</TD>
+      </TR>
+      <?ssi skipon MULTINUMBER?>
+      <!--First Name-->
+      <TR>
+        <TD></TD>
+        <TD><?lng adr_first_name?></TD>
+        <TD>
+          <input type="text" id="tbook_first_name" name="tbook_first_name" value="<?ssi edit first_name?>">
+        </TD>
+        <TD></TD>
+        <TD></TD>
+      </TR>
+      <!--Last Name-->
+      <TR>
+        <TD></TD>
+        <TD><?lng adr_last_name?></TD>
+        <TD>
+        <input type="text" id="tbook_last_name" name="tbook_last_name" value="<?ssi edit last_name?>">
+        </TD>
+        <TD></TD>
+        <TD></TD>
+      </TR>
+      <?ssi skipoff MULTINUMBER?>
+      <!--Title-->
+      <TR <?ssi skipon NO_MULTINUMBER?> <?ssi skipon VTECH?>bgcolor="#d6dff5"<?ssi skipoff VTECH?><?ssi skipoff NO_MULTINUMBER?>>
+        <TD></TD>
+        <TD><?lng adr_title?></TD>
+        <TD>
+          <input type="text" id="tbook_title" name="tbook_title" value="<?ssi edit title?>">
+        </TD>
+        <TD></TD>
+        <TD></TD>
+      </TR>
+      <!--Organization-->
+      <TR <?ssi skipon NO_MULTINUMBER?> <?ssi skipon VTECH?>bgcolor="#d6dff5"<?ssi skipoff VTECH?><?ssi skipoff NO_MULTINUMBER?>>
+        <TD></TD>
+        <TD><?lng adr_organization?></TD>
+        <TD>
+          <input type="text" id="tbook_organization" name="tbook_organization" value="<?ssi edit organization?>">
+        </TD>
+        <TD></TD>
+        <TD></TD>
+      </TR>
+      <!--E-Mail-->
+      <TR <?ssi skipon NO_MULTINUMBER?> <?ssi skipon VTECH?>bgcolor="#d6dff5"<?ssi skipoff VTECH?><?ssi skipoff NO_MULTINUMBER?>>
+        <TD></TD>
+        <TD><?lng adr_email?></TD>
+        <TD>
+          <input type="text" id="tbook_email" name="tbook_email" value="<?ssi edit email?>">
+        </TD>
+        <TD></TD>
+        <TD></TD>
+      </TR>
+      <!--Note-->
+      <TR <?ssi skipon NO_MULTINUMBER?><?ssi skipon VTECH?>bgcolor="#d6dff5"<?ssi skipoff VTECH?><?ssi skipoff NO_MULTINUMBER?>>
+        <TD></TD>
+        <TD><?lng adr_note?></TD>
+        <TD>
+          <input type="text" id="tbook_note" name="tbook_note" value="<?ssi edit note?>">
+        </TD>
+        <TD></TD>
+        <TD></TD>
+      </TR>
+      <!--Photo-->
+      <?ssi skipon NO_IMLIB_SUPPORT?>
+      <TR <?ssi skipon NO_MULTINUMBER?><?ssi skipon VTECH?>bgcolor="#d6dff5"<?ssi skipoff VTECH?><?ssi skipoff NO_MULTINUMBER?>>
+        <TD></TD>
+        <TD><?lng adr_photo?></TD>
+        <TD>
+          <noscript><div class="linespace"><input type="file" id="tbook_photo" name="tbook_photo"></div></noscript>
+          <div class="regularline linespace buttonalign"><input type="file" class="inputfile" id="tbook_photo" name="tbook_photo">
+          <label for="tbook_photo"><span><?lng choose_file?></span></label></div>
+        </TD>
+        <TD></TD>
+        <TD></TD>
+      </TR>
+      <!--Action Url-->
+      <TR <?ssi skipon VTECH?>bgcolor="#d6dff5"<?ssi skipoff VTECH?>>
+        <TD></TD>
+        <TD><?lng adr_action_url?></TD>
+        <TD width="150">
+          <input type="text" id="tbook_action_url" name="tbook_action_url" value="<?ssi edit action_url?>">
+        </TD>
+        <TD></TD>
+        <TD></TD>
+      </TR>
+      <?ssi skipoff NO_IMLIB_SUPPORT?>
+      <?ssi skipon NO_MULTINUMBER?>
+      <!--Nickname-->
+      <TR <?ssi skipon VTECH?>bgcolor="#d6dff5"<?ssi skipoff VTECH?>>
+        <TD></TD>
+        <TD><?lng adr_nickname?></TD>
+        <TD>
+          <input type="text" id="tbook_name" name="tbook_name" value="<?ssi edit name?>">
+        </TD>
+        <TD></TD>
+        <TD></TD>
+      </TR>
+      <?ssi skipoff NO_MULTINUMBER?>
+      <?ssi skipon NO_MULTINUMBER?>
+      <!--First Name-->
+      <TR>
+        <TD></TD>
+        <TD><?lng adr_first_name?></TD>
+        <TD>
+          <input type="text" id="tbook_first_name" name="tbook_first_name" value="<?ssi edit first_name?>">
+        </TD>
+        <TD></TD>
+        <TD></TD>
+      </TR>
+      <!--Last Name-->
+      <TR>
+        <TD></TD>
+        <TD><?lng adr_last_name?></TD>
+        <TD>
+        <input type="text" id="tbook_last_name" name="tbook_last_name" value="<?ssi edit last_name?>">
+        </TD>
+        <TD></TD>
+        <TD></TD>
+      </TR>
+      <!--Favorite-->
+      <TR>
+        <TD></TD>
+        <TD><?lng adr_favorite?></TD>
+        <TD>
+          <input type="checkbox" id="checkbox1" hidefocus value="1" <?ssi finalize_checkbox_tag tbook_is_favorit?>>
+        </TD>
+        <TD></TD>
+        <TD></TD>
+      </TR>
+      <?ssi skipoff NO_MULTINUMBER?>
+      <?ssi skipoff SMALL_ADR_BOOK?>
+      <TR>
+        <TD></TD>
+        <TD>&nbsp;</TD>
+        <TD></TD>
+        <TD></TD>
+        <TD></TD>
+      </TR>
+      <!--Buttons-->
+      <TR>
+        <TD></TD>
+        <TD>
+          <?ssi skipon TBOOK_IS_FULL?>
+          <input type="submit" value="<?lng adr_addeditbutton?>" name="ADD_BOOK">
+          <?ssi skipoff TBOOK_IS_FULL?>
+        </TD>
+        <TD>
+          <div class="buttonline">
+            <?ssi skipon TBOOK_IS_FULL?>
+            <div class="buttonmarginright">
+              <?ssi button tbook_addsub?>
+            </div>
+            <?ssi skipoff TBOOK_IS_FULL?>
+            <div class="buttonmarginright">
+              <?ssi button tbook_change?>
+            </div>
+          </div>
+        </TD>
+        <TD>
+          <?ssi skipon NO_PHOTO_PICTURE?>
+          <div class="regularline buttonalign"><?ssi button tbook_delete_photo?></div>
+          <?ssi skipoff NO_PHOTO_PICTURE?>
+        </TD>
+        <TD>
+        </TD>
+        <?ssi set_internal tbook_index?>
+      </TR>
+      <TR>
+        <TD class="background" width="12" height="5">
+          <?ssi skipon VTECH?>
+          <IMG height="12" src=<?ssi img-corner-gif ll?> width="12">
+          <?ssi skipoff VTECH?>
+          </TD>
+        <TD></TD>
+        <TD></TD>
+        <?ssi skipon NO_IMLIB_SUPPORT?>
+        <!-- Only color phones have a photo and thus the table one column wider -->
+        <TD></TD>
+        <?ssi skipoff NO_IMLIB_SUPPORT?>
+        <TD class="background" width="12" height="5">
+          <?ssi skipon VTECH?>
+          <IMG height="12" src=<?ssi img-corner-gif lr?> width="12">
+          <?ssi skipoff VTECH?>
+        </TD>
+      </TR>
+      </TBODY>
+      </TABLE>
+    </FORM>
+  </TD>
+</TR>
+<TR><TD vAlign="top" height="16"><IMG height="16" src="img/clr.gif" width="16"></TD></TR>
+<TR>
+  <TD vAlign="top">
+    <FORM enctype="multipart/form-data" method="post">
+      <?ssi skipon VTECH?>
+      <TABLE class="bubbleTable" cellSpacing="0" cellPadding="0" width="100%" border="0"  ID="Table1">
+      <?ssi skipoff VTECH?>
+      <?ssi skipon SNOM?>
+      <TABLE cellSpacing="4" cellPadding="0" width="100%" border="0" ID="Table1">
+      <?ssi skipoff SNOM?>
+      <TBODY>
+        <TR>
+          <TD class="background" width="12" height="5">
+            <?ssi skipon VTECH?>
+            <IMG height="12" src=<?ssi img-corner-gif ul?> width="12">
+            <?ssi skipoff VTECH?>
+            <?ssi skipon SNOM?>
+            <IMG src="img/clr.gif" width="12" height="5">
+            <?ssi skipoff SNOM?>
+          </TD>
+          <TD></TD>
+          <TD></TD>
+          <TD class="background" width="12" height="5">
+            <?ssi skipon VTECH?>
+            <IMG height="12" src=<?ssi img-corner-gif ur?> width="12">
+            <?ssi skipoff VTECH?>
+          </TD>
+        </TR>
+        <!--IMPORT TBOOK-->
+        <?ssi hidden_tag?>
+        <TR>
+          <TD></TD>
+          <?ssi skipon VTECH?>
+          <TD><B>
+          <?ssi skipoff VTECH?>
+          <?ssi skipon SNOM?>
+          <TD class="titleText">
+          <?ssi skipoff SNOM?>
+          <?ssi skipon NO_WUI_HELP_LINKS?>
+          <a href="https://service.snom.com/display/wiki/Local+Directory#Import"><div class="help"></div></a>
+          <?ssi skipoff NO_WUI_HELP_LINKS?>
+          <?lng adr_importadrbook?></B>
+          </TD>
+        </TR>
+        <!--Filename-->
+        <TR>
+          <TD></TD>
+          <TD><?lng adr_filename?></TD>
+          <TD>
+            <noscript><div class="linespace"><input type="file" id="user_file" name="user_file"></div></noscript>
+            <div class="regularline linespace"><input type="file" class="inputfile" id="user_file" name="user_file">
+            <label for="user_file"><span><?lng choose_file?></span></label></div>
+          </TD>
+        </TR>
+        <!--Filetype-->
+        <TR>
+          <TD></TD>
+          <TD class="regularline"><?lng adr_file_type?></TD>
+          <TD>
+            <input type="radio" value="csv" name="file_type" checked>
+            <Label for="first_line"><?lng adr_file_csv?></Label>
+            <input type="radio" value="unicode" name="file_type">
+            <Label for="first_line"><?lng adr_file_unicode?></Label>
+          </TD>
+        </TR>
+        <!--Skip 1st line-->
+        <TR>
+          <TD></TD>
+          <TD class="regularline"><?lng adr_skip_first_line?></TD>
+          <TD>
+            <input type="radio" name="first_line" value="on">
+            <Label for="first_line"><?lng advanced_ssi_on?></Label>
+            <input type="radio" name="first_line" value="off" checked>
+            <Label for="first_line"><?lng advanced_ssi_off?></Label>
+          </TD>
+        </TR>
+        <TR>
+          <TD></TD>
+          <TD>&nbsp;</TD>
+        </TR>
+        <TR>
+          <TD></TD>
+          <TD>
+            <input type="hidden" value="adr_preview.htm" name="redirect_page">
+            <input type="submit" value="<?lng adr_loadbutton?>" name="LOAD_TBOOK">
+          </TD>
+        </TR>
+        <TR>
+          <TD class="background" width="12" height="5">
+            <?ssi skipon VTECH?>
+            <IMG height="12" src=<?ssi img-corner-gif ll?> width="12">
+            <?ssi skipoff VTECH?>
+          </TD>
+          <TD></TD>
+          <TD></TD>
+          <TD class="background" width="12" height="5">
+            <?ssi skipon VTECH?>
+            <IMG height="12" src=<?ssi img-corner-gif lr?> width="12">
+            <?ssi skipoff VTECH?>
+          </TD>
+        </TR>
+      </TBODY>
+      </TABLE>
+      <?ssi skipoff USER_ADMIN_MODE_1_AND_ADMIN?>
+    </FORM>
+  </TD>
+</TR>
+<script type="text/javascript" src="fox.js" charset="utf-8"></script>
+<?ssi file common9.htm?>
+</HTML>

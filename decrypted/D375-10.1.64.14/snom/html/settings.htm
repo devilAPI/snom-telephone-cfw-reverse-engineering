@@ -1,0 +1,28 @@
+<?ssi title settings_ssi_title?>
+<?ssi file common1.htm?>
+<TR><TD vAlign="top" height="16"><IMG height="16" src="img/clr.gif" width="16"></TD></TR>
+<TR>
+  <TD>
+    <div class="buttonline">
+      <a href="settings.cfg" download="settings.cfg"><div class="divbutton buttonmarginright"><?lng all_settings_cfg?></div></a>
+      <a href="settings.xml" download="settings.xml"><div class="divbutton buttonmarginright"><?lng all_settings_xml?></div></a>
+      <a href="settings_wo_default.xml" download="settings_wo_default.xml"><div class="divbutton buttonmarginright"><?lng changed_settings_xml?></div></a>
+      <?ssi skipon TR069_NOT_ENABLED?><a href="param_map" download="param_map"><div class="divbutton buttonmarginright"><?lng param_map?></div></a><?ssi skipoff TR069_NOT_ENABLED?>
+    </div>
+  </TD>
+</TR>
+<TR><TD>&nbsp;</TD></TR>
+<TR>
+  <TD><pre><?ssi settings?></pre></TD>
+</TR>
+<?ssi file common9.htm?>
+<script>
+  function updateSetting(name, value) {
+    const new_value = prompt("<?lng prompt_new_value?>", value);
+    if (new_value != null) {
+      location.href = encodeURI("?settings=save&" + name + "=" + new_value);
+    }
+    return false;
+  }
+</script>
+</HTML>
