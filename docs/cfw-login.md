@@ -51,3 +51,10 @@ cases, :8081 from the phone vs. the LAN, every `phone-menu.d` URL on :8081 and
 reset-pw with credentials, then restores the unauthenticated :8080 (the
 unauthenticated state is what the other test scripts expect until this image
 is flashed).
+
+## Gotchas found while testing
+
+- The phone's busybox httpd **ignores SIGTERM** (SigIgn mask includes 15); restart it with `pkill -9 -f 'httpd -p 8080'`.
+- `pkill -f` over `ssh host 'pkill -f ...'` kills the ssh shell itself, because the shell's command line contains the pattern. Put the commands in a script file on the phone (as `tests/login.sh` does).
+- `leftnav.htm` (stock web UI) has a "CFW Settings" link to `:8080`; that is a browser link, so the login prompt is expected there.
+- `etc/checksum.md5` has no entry for the new `etc/cfw-httpd.conf` (the controller owns that file); `etc/shadow` and `etc/passwd` are unchanged.

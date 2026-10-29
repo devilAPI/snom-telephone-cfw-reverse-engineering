@@ -5,9 +5,16 @@
 # agents test against :8080 without credentials until the new image is flashed.
 . "$(dirname "$0")/lib.sh"
 
-# Restart only the :8080 instance (pkill -f matches the exact command line).
+# Restart only the :8080 instance. The logic lives in a script on the phone because
+# pkill -f would otherwise match the ssh shell's own command line (which contains the pattern).
 restart_8080() {  # [extra httpd args]
-    ph "pkill -f 'httpd -p 8080'; sleep 1; busybox httpd -p 8080 -h /snom/cfw $*; sleep 1"
+    ph_put /dev/stdin /tmp/restart8080.sh <<'SH'
+pkill -9 -f 'httpd -p 8080'  # httpd ignores SIGTERM
+sleep 1
+busybox httpd -p 8080 -h /snom/cfw "$@"
+sleep 1
+SH
+    ph "sh /tmp/restart8080.sh $*"
 }
 restore() { with_phone_lock restart_8080 >/dev/null; echo "restored unauthenticated :8080"; }
 code() { curl -s -o /dev/null -m 20 -w '%{http_code}' "$@"; }
