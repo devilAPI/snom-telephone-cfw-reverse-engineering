@@ -12,8 +12,10 @@ cfw_urldecode() {
 }
 
 # cfw_param NAME: value of NAME from the POST body (if POST) else QUERY_STRING.
-cfw_param() {
-    case "$1" in *[!A-Za-z0-9_]*|'') return 1 ;; esac
+# Read the POST body once, in the sourcing (main) shell. cfw_param is usually
+# called as $(cfw_param x), i.e. in a subshell, so caching there would be lost
+# and a second call would block on the already-consumed stdin.
+_cfw_read_body() {
     if [ "$REQUEST_METHOD" = POST ] && [ -z "${CFW_BODY_READ:-}" ]; then
         CFW_BODY_READ=1
         CFW_BODY=
@@ -21,6 +23,12 @@ cfw_param() {
             CFW_BODY=$(head -c "$CONTENT_LENGTH")
         fi
     fi
+}
+_cfw_read_body
+
+cfw_param() {
+    case "$1" in *[!A-Za-z0-9_]*|'') return 1 ;; esac
+    _cfw_read_body
     _v=
     if [ -n "${CFW_BODY:-}" ]; then
         _v=$(printf '%s' "$CFW_BODY" | tr '&' '\n' | sed -n "s/^$1=//p" | head -n 1)
