@@ -20,6 +20,13 @@
 #define HAL_SETFREQ   0x8008413au   /* _IOR('A',58,8)    &{codec, hz} */
 #define HAL_WRITE     0x80084138u   /* _IOR('A',56,8)    &{codec, fmt}, then write(fd,buf,n) */
 
+/* write() sample format, from the kernel's built-in halaudio_write (uImage
+ * 10.1.64.17 @0xc0197630): 1 = native S16LE (passed through), 2/3 = 8-bit
+ * companded (table-expanded), ANY other value (incl. 0) = S16BE: the kernel
+ * byte-swaps every sample. Sending LE data as fmt 0 is what turned broadband
+ * game audio into level-proportional noise while pure tones stayed pitched. */
+#define HAL_FMT_S16LE 1
+
 #define HAL_CID       1             /* APM CH1 -> loudspeaker in hands-free (confirmed by ear) */
 #define HAL_RATE      16000         /* APM codec runs 16 kHz mono */
 #define HAL_IFACE     0             /* APM interface id */
@@ -77,7 +84,7 @@ static void inject_speaker(void) {
 
 static void *pump(void *arg) {
     (void)arg;
-    struct { int cid, fmt; } w = { HAL_CID, 0 };
+    struct { int cid, fmt; } w = { HAL_CID, HAL_FMT_S16LE };
     int16_t chunk[CHUNK];
     int dumpfd = -1;
     if (getenv("SND_DUMP"))

@@ -1,13 +1,12 @@
 # Sound on the snom D375 — audio architecture & status
 
-**Status: PCM path works; complex game audio is mangled by the telephony DSP.**
-We can get PCM out of the loudspeaker from a takeover app while still owning the
+**Status: working. Doom and NES play clean audio on the loudspeaker.**
+We get PCM out of the loudspeaker from a takeover app while still owning the
 keypad, and a full game-audio pipeline (decode → mix → resample → stream) is
-implemented for Doom and NES. The remaining blocker is that the only reachable
-route to the loudspeaker runs through the EPT **hands-free voice DSP**
-(noise-suppressor / AEC residual suppressor / AGC): a pure tone passes cleanly,
-but broadband game audio comes out as level-proportional noise. See
-**"Current status / what works"** at the bottom.
+implemented for Doom and NES. The long-standing "noise" problem was **not** the
+telephony DSP: the kernel's `/dev/halaudio` write path byte-swapped our samples
+because we passed `fmt = 0` (S16BE) instead of `fmt = 1` (S16LE). See
+**"The voice DSP blocker was a byte-order bug"** below.
 
 This file records how the phone's audio actually works (reverse-engineered on the
 device). It's deep because the phone has **no usable ALSA/OSS** — audio is a
@@ -145,7 +144,63 @@ Proven on-device: a 440 Hz tone via this path is **audible on the loudspeaker
 with `media_daemon` dead** (keypad simultaneously readable). The codec consumes
 at exactly 16 kHz (timed: 166000 samples ≈ 10.4 s of blocking writes).
 
-### The real blocker: the hands-free voice DSP
+### The "voice DSP" blocker was a byte-order bug — SOLVED (2026-10-29)
+
+Symptom (from earlier sessions): pure tones played pitched, but broadband game
+audio came out as level-proportional noise. This was blamed on the EPT
+hands-free AEC/NLP and chased through amxr reroutes, pxcon, `/etc/*_ecregs` and
+EC-register binary patches. **All of that was a red herring.**
+
+Root cause, found by reverse-engineering the kernel: the `/dev/halaudio` char
+device layer (`halaudio_read/write/ioctl`) is **built into the kernel**, not in
+`halaudio.ko`. Extracted the gzip'd Image from `boot/uImage` (10.1.64.17),
+located the fops table via the `__func__` string literals (`halaudio_write` @
+`0xc0197624`, `halaudio_read` @ `0xc0197798`, `halaudio_ioctl` @ `0xc0197124`,
+load base `0xc0008000`) and disassembled `halaudio_write`. It looks at the
+`fmt` stored by the `_IOR('A',56,8) {cid, fmt}` ioctl:
+
+| `fmt` | kernel behaviour |
+|-------|------------------|
+| 1     | native **S16LE**, passed straight to `halAudioWrite(..., 1, ...)` |
+| 2, 3  | 8-bit companded, expanded to 16-bit through a lookup table |
+| anything else (**incl. 0**) | treated as **S16BE**: the kernel byte-swaps every sample (loop @ `0xc0197734`), then writes |
+
+`snd_hal` sent little-endian samples with `fmt = 0`, so every sample was
+byte-swapped. A byte swap is a fixed nonlinear map: a periodic tone stays
+periodic (harsh but pitched), broadband audio turns into full-scale noise. The
+fix is one constant: `fmt = 1` (`HAL_FMT_S16LE` in `snd/snd_hal.c`). No
+media_daemon patch, no EC tuning, no serial console needed. The stock
+`media_daemon` is used unchanged.
+
+**Objective verification (no listening required).** Kernel `halAudioRead` only
+works for codecs with a read op, and APM has none (`halAudioRead` → `-EINVAL`).
+Instead, capture via the stock but normally unloaded `amxr_user_hook.ko`
+(`insmod` it; char dev major 236 = `/dev/amxruser`):
+
+- Route mic: `amxrQueryPortByName` `_IOR('M',48,36)` for `halaudio.apm1` and
+  `amxruser.bind1`, then `amxrConnect` `0x800c4d35` `{src, dst, desc=0x1010}`
+  (`0x1010` = the mono→mono descriptor media_daemon itself uses).
+- Loop: `ioctl(u, 0xc0044502)` waits for the frame sync, then
+  `ioctl(u, 0xc0044501, &{port, buf})` copies one 160-byte (5 ms, 80-sample)
+  frame. (`0xc0044500` is the SRC direction: inject 160 B into an amxr port.)
+
+Played a 5 %-amplitude feed (440 Hz sine, 200–5000 Hz log sweep, 7-tone chord)
+and fitted a 96-tap linear FIR from source to capture on the PC:
+
+| write fmt | sine | sweep | chord | capture RMS (chord) |
+|-----------|------|-------|-------|---------------------|
+| 0 (old)   | 8 %  | 25 %  | 4 %   | ~2000 (noise)       |
+| 1 (fixed) | 98 % | 98 %  | 99 %  | ~160                |
+
+(fraction of captured energy explained by a linear filter of the source). With
+`fmt = 1` the path is linear, and the user confirmed by ear that game sound is
+clean. Test tool source: `tools/halloop.c` (see its header for usage).
+
+The old EC/pxcon notes below are kept for reference only; they are **not**
+needed for game audio.
+
+<details><summary>Historical EC/pxcon investigation (not needed)</summary>
+
 
 The speaker key puts the EPT into `audio_mode_handsfree` — a **call** mode with
 AEC + residual-echo suppressor + noise-suppressor + AGC + comfort-noise active.
@@ -212,6 +267,9 @@ in a lib we haven't pulled (`/dev/ept0`). Next avenues to try:
   serial session (to capture a known-good dump as a template), after which the
   override file alone would suffice on every boot.
 
+
+</details>
+
 Also note: the injected-SPEAKER bring-up (step 2) is **racy** — it sometimes
 fails to bring the amp up (total silence). A manual speaker press is reliable.
 Needs a readiness check or retry.
@@ -232,9 +290,8 @@ Needs a readiness check or retry.
 - Both engines call `snd_hal_init()` first in `main()` (before fb/keypad), and
   the boot scripts no longer kill `media_daemon` (the engine's `snd_hal_init`
   does, after arming audio).
-- **Verified correct end-to-end digitally** (captured PCM is real game audio on
-  a PC); **works by ear only for tones** — complex audio is mangled by the voice
-  DSP described above, which is the open blocker.
+- **Works end to end**: clean game audio on the loudspeaker since the
+  `fmt = 1` fix (verified by mic capture and by ear, 2026-10-29).
 - Test tools (scratchpad, not committed): `halplay`/`halplay2` (tone + auto
   hands-free), `halfeed` (stream a raw S16/16k file; `NOINJECT=1` for a manual
   speaker press), `snd_selftest` (sine through the ring/pump path).
