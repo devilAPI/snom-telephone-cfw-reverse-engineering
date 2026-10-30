@@ -4,17 +4,22 @@
      The phone UI keeps running. While it is on, <b>the mic is live</b> for anyone with the stream link.</p>
   <p id="ic-st">Status: ?</p>
   <p style="font-size:12px;margin:0 0 6px">Playback runs in the page (Web Audio), so it works in Safari too. On iPhone, the ring/silent switch must be off to hear it.</p>
+  <p id="ic-p" style="font-size:13px;margin:4px 0">Player: idle</p>
   <p id="ic-u" style="font-size:11px;word-break:break-all"></p>
   <label style="font-size:13px">Gain <select id="ic-g">
     <option value="0">x1</option><option value="1">x2</option><option value="2" selected>x4</option>
     <option value="3">x8</option><option value="4">x16</option><option value="5">x32</option><option value="6">x64</option>
   </select></label>
   <button type="button" id="ic-on">Start</button>
+  <button type="button" id="ic-l">Listen</button>
   <button type="button" id="ic-off" style="background:#a40">Stop</button>
   <script>
   (function () {
-    var st = document.getElementById('ic-st'),
-        ue = document.getElementById('ic-u'), g = document.getElementById('ic-g');
+    var st = document.getElementById('ic-st'), ps = document.getElementById('ic-p'),
+        ue = document.getElementById('ic-u'), g = document.getElementById('ic-g'), cur = null;
+    /* Player status lives in its own line: the 5 s status poll rewrites #ic-st,
+       which used to wipe playback errors before anyone could read them. */
+    function pstat(t) { ps.textContent = 'Player: ' + t; }
 
     /* Web Audio player. Safari's <audio> rejects an endless WAV (RIFF size
        0xFFFFFFFF), so fetch the stream, skip the 44-byte header, convert
@@ -28,20 +33,26 @@
     function playStart(u) {
       if (player.url === u) return;
       playStop();
-      if (!player.ctx) return;                 /* needs a tap on Start first (iOS) */
+      if (!player.ctx) { pstat('tap Listen to hear the stream'); return; }   /* iOS: needs a tap */
+      if (!window.fetch || !window.ReadableStream || !window.AbortController) {
+        pstat('this browser cannot stream audio here; open the stream link in VLC'); return; }
       var ctx = player.ctx, ac = new AbortController(), skip = 44, carry = null, prev = 0;
       player.abort = ac; player.url = u; player.next = 0;
+      var got = 0, shown = 0;
+      pstat('connecting...');
       fetch(u, { signal: ac.signal, cache: 'no-store' }).then(function (r) {
         if (!r.ok || !r.body) throw new Error('stream HTTP ' + r.status);
         var rd = r.body.getReader();
         function pump() {
           return rd.read().then(function (x) {
-            if (x.done) { if (player.url === u) player.url = null; return; }
+            if (x.done) { if (player.url === u) player.url = null; pstat('stream ended'); return; }
             var b = x.value;
             if (skip) { var k = Math.min(skip, b.length); skip -= k; b = b.subarray(k); }
             if (carry) { var m = new Uint8Array(carry.length + b.length); m.set(carry); m.set(b, carry.length); b = m; carry = null; }
             if (b.length & 1) { carry = b.slice(b.length - 1); b = b.subarray(0, b.length - 1); }
             var n = b.length >> 1;
+            got += n;
+            if (got - shown >= 16000) { shown = got; pstat('playing, ' + Math.round(got / 16000) + ' s received (audio ' + ctx.state + ')'); }
             if (n) {
               var dv = new DataView(b.buffer, b.byteOffset, b.length), ratio = ctx.sampleRate / 16000,
                   out = Math.floor(n * ratio), buf = ctx.createBuffer(1, out, ctx.sampleRate), d = buf.getChannelData(0);
@@ -60,7 +71,7 @@
         }
         return pump();
       }).catch(function (e) {
-        if (e.name !== 'AbortError') st.textContent += ' - playback error: ' + e.message;
+        pstat(e.name === 'AbortError' ? 'stopped' : 'error: ' + e.message);
         if (player.url === u) player.url = null;
       });
     }
@@ -68,11 +79,15 @@
       if (j.running) {
         var u = 'http://' + location.hostname + ':' + j.port + '/stream.wav?k=' + j.token;
         st.innerHTML = '<b style="color:#a40">ON - mic is live</b> (level ' + (j.level.split(' ')[0] || '?') + ')';
+        cur = u;
         playStart(u);
-        ue.textContent = u;
+        ue.innerHTML = '';
+        var a = document.createElement('a'); a.href = u; a.textContent = 'Stream link (VLC, ffplay, mpv)'; a.target = '_blank';
+        ue.appendChild(a);
       } else {
         st.textContent = 'Off' + (j.error ? ' - ' + j.error : '');
-        playStop();
+        cur = null;
+        playStop(); pstat('idle');
         ue.textContent = '';
       }
       if (j.running && j.error) st.textContent += ' - ' + j.error;
@@ -85,14 +100,27 @@
           show(j);
         }).catch(function (e) { st.textContent = 'Error: ' + e; });
     }
+    function unlock() {
+      var AC = window.AudioContext || window.webkitAudioContext;
+      if (!AC) { pstat('no Web Audio in this browser; use the stream link'); return; }
+      if (!player.ctx) player.ctx = new AC();
+      if (player.ctx.resume) player.ctx.resume();
+      /* iOS unlocks output only if a sound starts inside the tap: play 1 silent sample. */
+      var b = player.ctx.createBuffer(1, 1, player.ctx.sampleRate), s = player.ctx.createBufferSource();
+      s.buffer = b; s.connect(player.ctx.destination); s.start(0);
+    }
     document.getElementById('ic-on').onclick = function () {
       /* Create/resume the AudioContext inside the tap: iOS only allows audio
          to start from a user gesture. */
-      var AC = window.AudioContext || window.webkitAudioContext;
-      if (!player.ctx && AC) player.ctx = new AC();
-      if (player.ctx && player.ctx.resume) player.ctx.resume();
+      unlock();
       player.url = null;
       call('start');
+    };
+    /* Listen: (re)start playback from a tap without restarting the mic. */
+    document.getElementById('ic-l').onclick = function () {
+      unlock();
+      player.url = null; playStop();
+      if (cur) playStart(cur); else pstat('intercom is off - press Start');
     };
     document.getElementById('ic-off').onclick = function () { call('stop'); };
     call('status');
