@@ -54,17 +54,31 @@ static int inFd = -1;
 static unsigned short keyq[KEYQ];
 static int keyqHead, keyqTail;
 
+// Key map (docs/keymap.md): scancode -> action -> Doom key, per IWAD.
+#include "cfw_keymap.h"
+enum { K_UP, K_DOWN, K_LEFT, K_RIGHT, K_FIRE, K_USE, K_ENTER, K_ESCAPE, K_STRAFE, K_RUN,
+       K_QUIT, K_VOLUP, K_VOLDOWN };
+static const char *const kNames[] = { "UP", "DOWN", "LEFT", "RIGHT", "FIRE", "USE", "ENTER",
+    "ESCAPE", "STRAFE", "RUN", "QUIT", "VOLUP", "VOLDOWN", NULL };
+static const struct cfw_keydef kDefs[] = {
+    { PK_UP, "UP" }, { PK_DOWN, "DOWN" }, { PK_LEFT, "LEFT" }, { PK_RIGHT, "RIGHT" },
+    { PK_OK, "ENTER" }, { PK_FIRE, "FIRE" }, { PK_USE, "USE" }, { PK_CANCEL, "ESCAPE" },
+    { PK_HANGUP, "QUIT" }, { 16, "VOLDOWN" }, { 119, "VOLUP" }, { 0, NULL } };
+static struct cfw_keymap g_km;
+
 static unsigned char convertToDoomKey(unsigned int code) {
-    switch (code) {
-        case PK_UP:      return KEY_UPARROW;     // forward
-        case PK_DOWN:    return KEY_DOWNARROW;   // back
-        case PK_LEFT:    return KEY_LEFTARROW;   // turn left
-        case PK_RIGHT:   return KEY_RIGHTARROW;  // turn right
-        case PK_OK:      return KEY_ENTER;       // menu select
-        case PK_FIRE:    return KEY_FIRE;        // shoot
-        case PK_USE:     return KEY_USE;         // open doors / use
-        case PK_CANCEL:  return KEY_ESCAPE;      // menu / back
-        default:         return 0;
+    switch (cfw_keymap_find(&g_km, (int)code)) {
+        case K_UP:      return KEY_UPARROW;     // forward
+        case K_DOWN:    return KEY_DOWNARROW;   // back
+        case K_LEFT:    return KEY_LEFTARROW;   // turn left
+        case K_RIGHT:   return KEY_RIGHTARROW;  // turn right
+        case K_ENTER:   return KEY_ENTER;       // menu select
+        case K_FIRE:    return KEY_FIRE;        // shoot
+        case K_USE:     return KEY_USE;         // open doors / use
+        case K_ESCAPE:  return KEY_ESCAPE;      // menu / back
+        case K_STRAFE:  return KEY_RALT;        // hold to strafe with left/right
+        case K_RUN:     return KEY_RSHIFT;      // hold to run
+        default:        return 0;
     }
 }
 
@@ -85,10 +99,15 @@ static void pumpInput(void) {
     while (inFd >= 0 && poll(&pfd, 1, 0) > 0 && (pfd.revents & POLLIN)) {
         if (read(inFd, &ev, sizeof(ev)) != (int)sizeof(ev)) break;
         if (ev.type == 1 /*EV_KEY*/) {           // value: 1 press, 0 release, 2 repeat
-            if (ev.code == PK_HANGUP && ev.value == 1) {   // red hangup -> quit Doom
+            int act = cfw_keymap_find(&g_km, ev.code);
+            if (ev.value == 1) cfw_keymap_note(&g_km, kNames, ev.code);
+            if (act < 0 && ev.code == PK_HANGUP) act = K_QUIT;   // hangup always quits unless remapped
+            if (act == K_QUIT && ev.value == 1) {   // quit Doom (launcher then restores the phone)
                 if (fbPtr) memset(fbPtr, 0, (long)fbStride * fbH);
                 exit(0);
             }
+            if (act == K_VOLUP   && ev.value == 1) snd_hal_volume_step(10);
+            if (act == K_VOLDOWN && ev.value == 1) snd_hal_volume_step(-10);
             if (ev.value != 2) enqueueKey(ev.value, ev.code);
         }
     }
@@ -199,6 +218,7 @@ int main(int argc, char **argv) {
     // Arm audio + hands-free, then take over (kill lid+media_daemon). Must run
     // while media_daemon is still alive, so it happens here before any fb/input
     // setup -- the boot script no longer kills the daemon itself.
+    cfw_keymap_load("doom", getenv("CFW_GAME_ID"), kNames, kDefs, &g_km);
     snd_hal_init();
     atexit(snd_hal_shutdown);
 

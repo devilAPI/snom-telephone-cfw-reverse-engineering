@@ -43,7 +43,10 @@ static int             g_fd = -1;
 static volatile int    g_ok = 0;
 static volatile int    g_run = 0;
 static pthread_t       g_thread;
-static int             g_vol = 256;         /* output gain, Q8 (256 = unity); SND_VOL=% */
+#define VOL_FILE "/snom/cfw-data/volume"
+static int             g_volpct = 50;       /* percent shown/persisted */
+static int             g_vol = 128;
+static int             g_volpersist = 1;    /* 0 when SND_VOL overrides (bench tests) */         /* output gain, Q8 (256 = unity); SND_VOL=% */
 static volatile int    g_underruns;
 
 /* SPSC ring (producer = game thread, consumer = pump thread). */
@@ -118,6 +121,21 @@ static void *pump(void *arg) {
     return NULL;
 }
 
+int snd_hal_volume(void) { return g_volpct; }
+
+void snd_hal_volume_step(int delta_pct) {
+    int p = g_volpct + delta_pct;
+    if (p < 0) p = 0; else if (p > 100) p = 100;
+    g_volpct = p;
+    g_vol = p * 256 / 100;
+    fprintf(stderr, "volume: %d%%\n", p);
+    FILE *f = g_volpersist ? fopen(VOL_FILE ".tmp", "w") : NULL;     /* tmp+rename: never a torn file */
+    if (f) {
+        fprintf(f, "%d\n", p);
+        if (fclose(f) == 0) rename(VOL_FILE ".tmp", VOL_FILE);
+    }
+}
+
 int snd_hal_init(void) {
     struct { int a, b; } p;
 
@@ -145,13 +163,17 @@ int snd_hal_init(void) {
     usleep(400000);
 
     /* 4. Start the pump (our client now holds the only FULL-power handle). */
-    if (g_ok) {
+    {   /* volume: /snom/cfw-data/volume (percent, default 50); SND_VOL overrides it */
         const char *vol = getenv("SND_VOL");
-        if (vol) {
-            int pct = atoi(vol);
-            if (pct < 0) pct = 0; else if (pct > 100) pct = 100;
-            g_vol = pct * 256 / 100;
-        }
+        FILE *vf = vol ? NULL : fopen(VOL_FILE, "r");
+        int pct = 50;
+        if (vf) { if (fscanf(vf, "%d", &pct) != 1) pct = 50; fclose(vf); }
+        if (vol) { pct = atoi(vol); g_volpersist = 0; }
+        if (pct < 0) pct = 0; else if (pct > 100) pct = 100;
+        g_volpct = pct;
+        g_vol = pct * 256 / 100;
+    }
+    if (g_ok) {
         g_head = g_tail = 0;
         g_run = 1;
         if (pthread_create(&g_thread, NULL, pump, NULL) != 0) {

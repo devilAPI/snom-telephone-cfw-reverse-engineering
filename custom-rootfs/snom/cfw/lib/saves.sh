@@ -12,6 +12,7 @@ saves_setup() {
     [ -n "$_sha" ] || { echo "warning: cannot hash $_rom, saves disabled" >> "${LOG:-/dev/null}"; return 1; }
     mkdir -p "$SAVES_ROOT/$_sys" 2>/dev/null ||
         echo "warning: cannot create $SAVES_ROOT/$_sys (flash read-only/full?), saves will fail" >> "${LOG:-/dev/null}"
+    CFW_GAME_ID=$_sha; export CFW_GAME_ID   # keymap id (docs/keymap.md)
     CFW_SAVE_FILE="$SAVES_ROOT/$_sys/$_sha.srm"
     export CFW_SAVE_FILE
     echo "save file: $CFW_SAVE_FILE" >> "${LOG:-/dev/null}"

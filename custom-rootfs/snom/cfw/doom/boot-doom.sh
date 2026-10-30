@@ -101,6 +101,7 @@ log "starting Doom with $WAD"
 # daemon is still alive -- see snd/snd_hal.c).
 . /snom/cfw/lib/saves.sh
 SAVEDIR=$(saves_dir_doom "${NAME%.wad}")
+CFW_GAME_ID=${NAME%.wad}; export CFW_GAME_ID   # keymap id (docs/keymap.md)
 touch /tmp/ssh_fast_update
 
 "$ENGINE" -iwad "$WAD" -savedir "$SAVEDIR" >> "$LOG" 2>&1 < /dev/null

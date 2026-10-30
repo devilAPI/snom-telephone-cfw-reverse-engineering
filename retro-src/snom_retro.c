@@ -108,18 +108,21 @@ static const struct opt core_opts[] = {
 #define PK_DIGIT1 51    /* L      */
 #define PK_DIGIT3 48    /* R      */
 
-static const struct { int code, id; } keymap[] = {
-    { PK_UP,     RETRO_DEVICE_ID_JOYPAD_UP     },
-    { PK_DOWN,   RETRO_DEVICE_ID_JOYPAD_DOWN   },
-    { PK_LEFT,   RETRO_DEVICE_ID_JOYPAD_LEFT   },
-    { PK_RIGHT,  RETRO_DEVICE_ID_JOYPAD_RIGHT  },
-    { PK_FIRE,   RETRO_DEVICE_ID_JOYPAD_A      },
-    { PK_USE,    RETRO_DEVICE_ID_JOYPAD_B      },
-    { PK_OK,     RETRO_DEVICE_ID_JOYPAD_START  },
-    { PK_CANCEL, RETRO_DEVICE_ID_JOYPAD_SELECT },
-    { PK_DIGIT1, RETRO_DEVICE_ID_JOYPAD_L      },
-    { PK_DIGIT3, RETRO_DEVICE_ID_JOYPAD_R      },
-};
+#include "cfw_keymap.h"   /* per-game key maps, docs/keymap.md */
+enum { K_A, K_B, K_SELECT, K_START, K_UP, K_DOWN, K_LEFT, K_RIGHT, K_QUIT, K_VOLUP, K_VOLDOWN, K_L, K_R };
+static const char *const kNames[] = { "A", "B", "SELECT", "START", "UP", "DOWN", "LEFT", "RIGHT",
+                                      "QUIT", "VOLUP", "VOLDOWN", "L", "R", NULL };
+static const struct cfw_keydef kDefs[] = {
+    { PK_UP, "UP" }, { PK_DOWN, "DOWN" }, { PK_LEFT, "LEFT" }, { PK_RIGHT, "RIGHT" },
+    { PK_FIRE, "A" }, { PK_USE, "B" }, { PK_OK, "START" }, { PK_CANCEL, "SELECT" },
+    { PK_DIGIT1, "L" }, { PK_DIGIT3, "R" },
+    { PK_HANGUP, "QUIT" }, { 16, "VOLDOWN" }, { 119, "VOLUP" }, { 0, NULL } };
+static struct cfw_keymap g_km;
+static const int kPad[] = {   /* action -> RETRO_DEVICE_ID_JOYPAD_*, -1 = not a pad button */
+    RETRO_DEVICE_ID_JOYPAD_A, RETRO_DEVICE_ID_JOYPAD_B, RETRO_DEVICE_ID_JOYPAD_SELECT,
+    RETRO_DEVICE_ID_JOYPAD_START, RETRO_DEVICE_ID_JOYPAD_UP, RETRO_DEVICE_ID_JOYPAD_DOWN,
+    RETRO_DEVICE_ID_JOYPAD_LEFT, RETRO_DEVICE_ID_JOYPAD_RIGHT, -1, -1, -1,
+    RETRO_DEVICE_ID_JOYPAD_L, RETRO_DEVICE_ID_JOYPAD_R };
 
 /* Audio-clocked pacing, as in the NES port: keep ~SND_LEAD samples queued. */
 #define SND_LEAD  1600  /* 100 ms at 16 kHz */
@@ -194,12 +197,16 @@ static void quit(void) {
 }
 
 static void mapKey(int code, int down) {
-    if (code == PK_HANGUP) { if (down) quit(); return; }
-    for (unsigned i = 0; i < sizeof keymap / sizeof keymap[0]; i++)
-        if (keymap[i].code == code) {
-            if (down) g_pad |= 1u << keymap[i].id; else g_pad &= ~(1u << keymap[i].id);
-            return;
-        }
+    int act = cfw_keymap_find(&g_km, code);
+    if (down) cfw_keymap_note(&g_km, kNames, code);
+    if (act < 0 && code == PK_HANGUP) act = K_QUIT;   /* hangup always quits unless remapped */
+    if (act == K_QUIT) { if (down) quit(); return; }
+    if (act == K_VOLUP)   { if (down) snd_hal_volume_step(10);  return; }
+    if (act == K_VOLDOWN) { if (down) snd_hal_volume_step(-10); return; }
+    if (act >= 0 && kPad[act] >= 0) {
+        if (down) g_pad |= 1u << kPad[act]; else g_pad &= ~(1u << kPad[act]);
+        return;
+    }
     if (g_stats && down) fprintf(stderr, TAG ": unmapped key %d\n", code);
 }
 
@@ -537,6 +544,7 @@ int main(int argc, char **argv) {
 
     /* Arm audio + hands-free, then take over (kill lid+media_daemon) while the
      * daemon is still alive. Must precede fbInit()/event0. */
+    cfw_keymap_load(TAG, getenv("CFW_GAME_ID"), kNames, kDefs, &g_km);
     snd_hal_init();
     atexit(snd_hal_shutdown);
     atexit(saveFlush);   /* runs first on exit: the save must not wait for audio teardown */

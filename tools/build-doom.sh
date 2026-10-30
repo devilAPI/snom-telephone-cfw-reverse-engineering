@@ -29,7 +29,7 @@ cd /src/doomgeneric
 # i_sound.c), and the shared snd_hal sink.
 cp /port/doomgeneric/doomgeneric_snom.c .
 cp /port/doomgeneric/i_snom_sound.c .
-cp /snd/snd_hal.h /snd/snd_hal.c .
+cp /snd/snd_hal.h /snd/snd_hal.c /snd/cfw_keymap.h .
 
 # Doom source objects (upstream Makefile list) with i_sound.o replaced by our
 # i_snom_sound.o, plus snd_hal.o and the snom platform file.

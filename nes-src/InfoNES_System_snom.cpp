@@ -100,18 +100,34 @@ static uint32_t *lut555;   /* NES 5-5-5 -> framebuffer pixel, precomputed */
 static int inFd = -1;
 struct ev16 { uint32_t sec, usec; uint16_t type, code; int32_t value; };
 
+/* Key map (docs/keymap.md): scancode -> action, per game. */
+#include "cfw_keymap.h"
+enum { K_A, K_B, K_SELECT, K_START, K_UP, K_DOWN, K_LEFT, K_RIGHT, K_QUIT, K_VOLUP, K_VOLDOWN };
+static const char *const kNames[] = { "A", "B", "SELECT", "START", "UP", "DOWN", "LEFT", "RIGHT",
+                                      "QUIT", "VOLUP", "VOLDOWN", NULL };
+static const struct cfw_keydef kDefs[] = {
+    { PK_UP, "UP" }, { PK_DOWN, "DOWN" }, { PK_LEFT, "LEFT" }, { PK_RIGHT, "RIGHT" },
+    { PK_FIRE, "A" }, { PK_USE, "B" }, { PK_OK, "START" }, { PK_CANCEL, "SELECT" },
+    { PK_HANGUP, "QUIT" }, { 16, "VOLDOWN" }, { 119, "VOLUP" }, { 0, NULL } };
+static struct cfw_keymap g_km;
+
 static void mapKey(int code, int down) {
     unsigned bit = 0;
-    switch (code) {
-        case PK_UP:    bit = PAD_UP;    break;
-        case PK_DOWN:  bit = PAD_DOWN;  break;
-        case PK_LEFT:  bit = PAD_LEFT;  break;
-        case PK_RIGHT: bit = PAD_RIGHT; break;
-        case PK_FIRE:  bit = PAD_A;     break;
-        case PK_USE:   bit = PAD_B;     break;
-        case PK_OK:    bit = PAD_START; break;
-        case PK_CANCEL:bit = PAD_SELECT;break;
-        case PK_HANGUP:
+    int act = cfw_keymap_find(&g_km, code);
+    if (down) cfw_keymap_note(&g_km, kNames, code);
+    if (act < 0 && code == PK_HANGUP) act = K_QUIT;   /* hangup always quits unless remapped */
+    switch (act) {
+        case K_UP:     bit = PAD_UP;    break;
+        case K_DOWN:   bit = PAD_DOWN;  break;
+        case K_LEFT:   bit = PAD_LEFT;  break;
+        case K_RIGHT:  bit = PAD_RIGHT; break;
+        case K_A:      bit = PAD_A;     break;
+        case K_B:      bit = PAD_B;     break;
+        case K_START:  bit = PAD_START; break;
+        case K_SELECT: bit = PAD_SELECT;break;
+        case K_VOLUP:   if (down) snd_hal_volume_step(10);  return;
+        case K_VOLDOWN: if (down) snd_hal_volume_step(-10); return;
+        case K_QUIT:
             if (down) { if (fbPtr) memset(fbPtr, 0, (long)fbStride * fbYres); exit(0); }
             return;
         default: return;
@@ -347,6 +363,7 @@ int main(int argc, char **argv) {
     /* Arm audio + hands-free, then take over (kill lid+media_daemon) while the
      * daemon is still alive. Must precede fbInit()/event0. The boot script no
      * longer kills the daemon itself. */
+    cfw_keymap_load("nes", getenv("CFW_GAME_ID"), kNames, kDefs, &g_km);
     snd_hal_init();
     atexit(snd_hal_shutdown);
     atexit(saveFlush);                    /* runs first on exit: the save must not wait for audio teardown */

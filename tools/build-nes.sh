@@ -22,7 +22,7 @@ export PATH=/opt/arm-linux-musleabi-cross/bin:$PATH
 
 git clone --depth 1 https://github.com/jay-kumogata/InfoNES.git /src >/dev/null 2>&1
 cp /port/InfoNES_System_snom.cpp /src/src/
-cp /snd/snd_hal.h /snd/snd_hal.c /snd/snom_save.h /src/src/
+cp /snd/snd_hal.h /snd/snd_hal.c /snd/snom_save.h /snd/cfw_keymap.h /src/src/
 cd /src/src
 # APU at 22050 Hz instead of 44100: half the per-sample APU work; the codec runs
 # at 16 kHz anyway (snd_hal box-filters down).
