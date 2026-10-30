@@ -65,6 +65,8 @@ static uint8_t *fbPtr;
 static int      fbFd = -1;
 static unsigned fbStride, fbBpp, fbYres, offX, offY;
 static int      swapRB;
+static unsigned fbXres;
+static uint32_t *lut555;   /* NES 5-5-5 -> framebuffer pixel, precomputed */
 
 /* ---- input ---- */
 static int inFd = -1;
@@ -108,8 +110,25 @@ static void fbInit(void) {
     fbYres = v.yres;
     fbStride = f.line_length ? f.line_length : v.xres * fbBpp;
     if (v.red.offset == 0 && v.blue.offset == 16) swapRB = 1;
+    fbXres = v.xres;
+    lut555 = (uint32_t *)malloc(32768 * sizeof *lut555);
+    for (unsigned w = 0; w < 32768; w++) {
+        unsigned r = (w >> 10) & 0x1f, g = (w >> 5) & 0x1f, b = w & 0x1f;
+        if (fbBpp == 4) {
+            r = (r << 3) | (r >> 2); g = (g << 3) | (g >> 2); b = (b << 3) | (b >> 2);
+            lut555[w] = swapRB ? ((b << 16) | (g << 8) | r) : ((r << 16) | (g << 8) | b);
+        } else {
+            lut555[w] = (r << 11) | (g << 6) | b;   /* RGB565 */
+        }
+    }
     offX = ((v.xres - NES_DISP_WIDTH)  / 2) * fbBpp;
     offY = ((v.yres - NES_DISP_HEIGHT) / 2) * fbStride;
+    /* The phone UI (lcsD375) survives the takeover (only its parent lid is
+     * killed) and would paint over us: freeze it, as Doom does. The phone
+     * restore (or reboot) after we quit kills it anyway. */
+    if (system("kill -STOP $(pidof lcsD375) 2>/dev/null") == -1)
+        perror("stop lcsD375");
+
     fbPtr = (uint8_t *)mmap(NULL, (long)fbStride * v.yres, PROT_READ|PROT_WRITE, MAP_SHARED, fbFd, 0);
     if (fbPtr == MAP_FAILED) { perror("mmap fb"); exit(1); }
     memset(fbPtr, 0, (long)fbStride * v.yres);
@@ -121,13 +140,21 @@ static void fbInit(void) {
 
 /* Audio-clocked pacing: keep ~SND_LEAD samples queued for the codec. The pump
  * drains the ring at exactly 16 kHz, so sleeping off the excess locks the game
- * to the audio clock (no drift -> no periodic underrun clicks or overflow). */
+ * to the audio clock (no drift -> no periodic underrun clicks or overflow).
+ * Runs once per emulated frame from InfoNES_SoundOutput() (called every frame,
+ * unlike InfoNES_LoadFrame(), which frameskip suppresses). When the queue runs
+ * low the next frame is emulated without rendering (FrameSkip=1) to catch up. */
 #define SND_LEAD 1600   /* 100 ms at 16 kHz */
+
+static int g_skipped;    /* frames not rendered (stats) */
 
 static void paceFrame(void) {
     if (snd_hal_ok()) {
         int q = snd_hal_queued();
         if (q > SND_LEAD) usleep((q - SND_LEAD) * 125 / 2);   /* 62.5 us/sample */
+        /* Behind: skip rendering the next frame (at most every other one). */
+        FrameSkip = (q < SND_LEAD / 2 && FrameCnt == 0) ? 1 : 0;
+        if (FrameSkip) g_skipped++;
         return;
     }
     /* No audio: fall back to the wall clock. */
@@ -139,30 +166,35 @@ static void paceFrame(void) {
     gettimeofday(&last, NULL);
 }
 
+/* Belt and braces: anything else that paints into fb0 (lcsD375 before it got
+ * SIGSTOPped showed "MediaStack restarting") stays visible in the borders,
+ * since the game only redraws its 256x240 box. Wipe them now and then. */
+static void clearBorders(void) {
+    unsigned w = NES_DISP_WIDTH * fbBpp;
+    for (unsigned y = 0; y < fbYres; y++) {
+        uint8_t *row = fbPtr + (long)y * fbStride;
+        if ((long)y * fbStride < (long)offY || (long)y * fbStride >= (long)offY + NES_DISP_HEIGHT * (long)fbStride) {
+            memset(row, 0, (size_t)fbXres * fbBpp);
+        } else {
+            memset(row, 0, offX);
+            memset(row + offX + w, 0, (size_t)fbXres * fbBpp - offX - w);
+        }
+    }
+}
+
 void InfoNES_LoadFrame() {
-    /* Frame pacing lives here (once per displayed frame). InfoNES_Wait() is
-       called per-scanline, so pacing there would multiply by ~262. */
-    paceFrame();
+    static int n;
+    if ((n++ & 63) == 0) clearBorders();
 
     for (int y = 0; y < NES_DISP_HEIGHT; y++) {
         const WORD *s = &WorkFrame[y * NES_DISP_WIDTH];
         uint8_t *d = fbPtr + offY + (long)y * fbStride + offX;
         if (fbBpp == 4) {
             uint32_t *dp = (uint32_t *)d;
-            for (int x = 0; x < NES_DISP_WIDTH; x++) {
-                WORD w = s[x];
-                unsigned r = ((w >> 10) & 0x1f) << 3;
-                unsigned g = ((w >> 5)  & 0x1f) << 3;
-                unsigned b = ( w        & 0x1f) << 3;
-                dp[x] = swapRB ? ((b<<16)|(g<<8)|r) : ((r<<16)|(g<<8)|b);
-            }
-        } else { /* 16bpp RGB565 fallback */
+            for (int x = 0; x < NES_DISP_WIDTH; x++) dp[x] = lut555[s[x] & 0x7fff];
+        } else {
             uint16_t *dp = (uint16_t *)d;
-            for (int x = 0; x < NES_DISP_WIDTH; x++) {
-                WORD w = s[x];
-                unsigned r = (w >> 10) & 0x1f, g = (w >> 5) & 0x1f, b = w & 0x1f;
-                dp[x] = (r << 11) | (g << 6) | b;
-            }
+            for (int x = 0; x < NES_DISP_WIDTH; x++) dp[x] = (uint16_t)lut555[s[x] & 0x7fff];
         }
     }
 }
@@ -215,7 +247,8 @@ void InfoNES_MessageBox( char *pszMsg, ... ) { fprintf(stderr, "%s\n", pszMsg); 
 
 /* ---- sound ----
  * InfoNES hands us 5 unsigned-8-bit channel buffers per video frame at the APU
- * rate (44100 Hz with pAPU_QUALITY=3). Their scales differ: pulse = 0x11*vol
+ * rate (22050 Hz: tools/build-nes.sh sets pAPU_QUALITY=2, half the APU work of
+ * 44.1 kHz and still above the codec's 16 kHz). Their scales differ: pulse = 0x11*vol
  * (0..255), triangle 0..255, noise 0..15, DPCM 0..127. We mix them with the
  * NES's own relative levels (linear approximation of the 2A03 mixer, Q4), run
  * a one-pole DC blocker to recentre the unsigned levels, and hand the result to
@@ -225,9 +258,9 @@ void InfoNES_MessageBox( char *pszMsg, ... ) { fprintf(stderr, "%s\n", pszMsg); 
 #define W_TRI    18
 #define W_NOISE  179
 #define W_DPCM   121
-#define DC_R     32604   /* 0.995 in Q15: ~35 Hz high-pass at 44.1 kHz */
+#define DC_R     32604   /* 0.995 in Q15: ~18 Hz high-pass at 22.05 kHz */
 
-static int g_apu_rate = 44100;
+static int g_apu_rate = 22050;
 static int g_stats;      /* NES_STATS=1: log fps/queue/underruns to stderr */
 
 void InfoNES_SoundInit( void ) {}
@@ -248,13 +281,15 @@ static void logStats(void) {
     if (frames % 300) return;
     gettimeofday(&now, NULL);
     long ms = (now.tv_sec - t0.tv_sec) * 1000L + (now.tv_usec - t0.tv_usec) / 1000;
-    fprintf(stderr, "nes: %ld.%ld fps, queued %d, underruns %d, frameskip %d\n",
-            300000L / ms, (3000000L / ms) % 10, snd_hal_queued(), snd_hal_underruns(), FrameSkip);
+    fprintf(stderr, "nes: %ld.%ld fps, queued %d, underruns %d, skipped %d\n",
+            300000L / ms, (3000000L / ms) % 10, snd_hal_queued(), snd_hal_underruns(), g_skipped);
+    g_skipped = 0;
     t0 = now;
 }
 
 void InfoNES_SoundOutput(int s, BYTE *w1, BYTE *w2, BYTE *w3, BYTE *w4, BYTE *w5) {
     if (g_stats) logStats();
+    paceFrame();
     if (!snd_hal_ok() || s <= 0) return;
     static int dcx, dcy;                  /* DC blocker state */
     static short buf[1024];

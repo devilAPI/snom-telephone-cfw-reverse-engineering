@@ -1,0 +1,52 @@
+#!/bin/sh
+# CFW: GB / GBA from the phone's own Games menu (minibrowser XML, loopback :8081).
+#   ?sys=gba|gb            IPPhoneInput: type a ROM URL
+#   ?sys=gba|gb&url=<url>  start it (url last: a typed URL may arrive
+#                          unencoded and contain '&'), answer with IPPhoneText
+. /snom/cfw/lib/cfw.sh
+SYS=$(printf '%s' "$QUERY_STRING" | sed -n 's/^sys=\([a-z]*\).*/\1/p')
+case "$SYS" in
+    gba) NAME="GBA" ;;
+    gb)  NAME="Game Boy" ;;
+    *)   cfw_phone_text "Error" "Unknown system."; exit 0 ;;
+esac
+
+case "$QUERY_STRING" in
+*"&url="*) ;;
+*)
+    printf 'Content-type: text/xml\r\n\r\n'
+    cat <<EOT
+<?xml version="1.0" encoding="UTF-8"?>
+<IPPhoneInput dtmf="off">
+  <Title>$NAME ROM URL</Title>
+  <Url input_required="yes">http://127.0.0.1:8081/cgi-bin/phone-retro?sys=$SYS&amp;url=__U__</Url>
+  <CancelUrl>phone://mb_nop#go_back</CancelUrl>
+  <InputItem>
+    <DisplayName>$NAME ROM URL</DisplayName>
+    <InputToken>__U__</InputToken>
+    <InputFlags>a</InputFlags>
+    <DefaultValue>https://</DefaultValue>
+  </InputItem>
+</IPPhoneInput>
+EOT
+    exit 0 ;;
+esac
+
+URL=$(printf '%s' "${QUERY_STRING#*&url=}" | cfw_urldecode)
+case "$URL" in http://*|https://*) ;; *) cfw_phone_text "Invalid URL" "Enter an http:// or https:// link."; exit 0 ;; esac
+if cfw_game_running; then cfw_phone_text "$NAME" "A game is already running."; exit 0; fi
+
+STATUS=/tmp/$SYS.status
+rm -f "$STATUS"
+nohup /snom/cfw/$SYS/boot-$SYS.sh "$URL" </dev/null >/dev/null 2>&1 &
+# Wait for the download + header check (at most 15 s) so errors show here.
+i=0
+while [ $i -lt 15 ]; do
+    sleep 1; i=$((i + 1))
+    st=$(cat "$STATUS" 2>/dev/null)
+    case "$st" in error*|running|done) break ;; esac
+done
+case "$st" in
+    error*) cfw_phone_text "$NAME: not started" "${st#error }" ;;
+    *)      cfw_phone_text "Starting $NAME" "The emulator takes over the screen when the ROM is downloaded. Red hangup key quits." ;;
+esac

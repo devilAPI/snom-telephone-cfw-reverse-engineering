@@ -24,9 +24,14 @@ git clone --depth 1 https://github.com/jay-kumogata/InfoNES.git /src >/dev/null 
 cp /port/InfoNES_System_snom.cpp /src/src/
 cp /snd/snd_hal.h /snd/snd_hal.c /src/src/
 cd /src/src
-FLAGS="-O2 -march=armv4t -fomit-frame-pointer -fsigned-char -Wno-write-strings -I."
+# APU at 22050 Hz instead of 44100: half the per-sample APU work; the codec runs
+# at 16 kHz anyway (snd_hal box-filters down).
+sed -i "s/^#define pAPU_QUALITY 3/#define pAPU_QUALITY 2/" InfoNES_pAPU.h
+grep -q "^#define pAPU_QUALITY 2" InfoNES_pAPU.h
+# ARM1176 = armv6, ARM mode, no VFP (soft-float).
+FLAGS="-O2 -march=armv6 -marm -fomit-frame-pointer -fsigned-char -Wno-write-strings -I."
 # snd_hal.c is C; compile it with the C compiler, link everything with g++.
-arm-linux-musleabi-gcc -O2 -march=armv4t -fomit-frame-pointer -I. -c snd_hal.c -o snd_hal.o
+arm-linux-musleabi-gcc -O2 -march=armv6 -marm -fomit-frame-pointer -I. -c snd_hal.c -o snd_hal.o
 arm-linux-musleabi-g++ $FLAGS -static -o /out/infones \
     K6502.cpp InfoNES.cpp InfoNES_Mapper.cpp InfoNES_pAPU.cpp InfoNES_System_snom.cpp \
     snd_hal.o -lm -lpthread

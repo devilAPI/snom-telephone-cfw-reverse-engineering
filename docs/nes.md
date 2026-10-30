@@ -49,6 +49,31 @@ Under `/snom`, so the first-boot `cleanUpRootfs` pass leaves it alone.
 
 ## Known limitations
 
-- **No sound** (stubbed), same as Doom.
+- (Sound now works, see below.)
 - Save-RAM (battery saves) isn't persisted anywhere.
 - Phone can't take calls while the emulator runs; quitting restores the phone app (~30 s, no reboot).
+
+## Sound and pacing (2026-10-30)
+
+InfoNES's APU hands over five unsigned 8-bit channel buffers per frame. The
+port mixes them with the 2A03's relative weights (integer, Q4), removes the DC
+offset with a one-pole high-pass, and `snd_hal_push_rate()` box-filters the
+result down to the codec's 16 kHz (see [sound.md](sound.md)).
+
+- **APU at 22050 Hz** (`tools/build-nes.sh` patches `pAPU_QUALITY` 3 -> 2):
+  half the per-sample APU work of 44.1 kHz, still above the 16 kHz output.
+- **The audio queue is the clock.** `paceFrame()` runs once per emulated frame
+  from `InfoNES_SoundOutput()` (InfoNES calls it every frame, while
+  `InfoNES_LoadFrame()` is skipped on frameskipped frames) and sleeps off
+  anything above 100 ms queued. Below 50 ms it sets `FrameSkip = 1` for one
+  frame (never two in a row).
+- **RGB555 lookup table** for the 256x240 frame copy, `-march=armv6 -marm`.
+- **lcsD375 is SIGSTOPped** after the takeover (as Doom does): it survives the
+  kill of its parent lid and painted "MediaStack restarting" around the game.
+
+Measured with `tests/roms/tone.nes` (hand-made: pulse arpeggio + 220 Hz
+triangle, `tests/roms/mkroms.py`), `NES_STATS=1`: before **55–57 fps, 10–30
+underruns per 5 s** (CPU-bound, 0 % idle); after **60.0 fps, 0 underruns, ~45 %
+CPU**. The FFT (`tests/fftcheck.py`) finds the triangle in every window and
+all arpeggio notes; InfoNES's pulse pitch is ~0.5–1 % sharp (its own
+frequency constants), inaudible.
