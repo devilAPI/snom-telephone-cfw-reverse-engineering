@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<IPPhoneMenu xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../schemas/minibrowser.xsd" has_phone_state="yes" dtmf="on" icon_xoffset="$(math_eval:$(gui_display_xsize)/20-5)" text_xoffset="$(math_eval:$(gui_display_xsize)/20-7)" speedselect="off" id="units" state="relevant" line_height="$(math_eval:$(gui_display_ysize)/4 + $(gui_display_xsize)/40)">
+  <!-- TODO SAP-4024: add condition for turning off highlights: more than 1 identity visible -->
+  <HighlightSelectedLine>off</HighlightSelectedLine>
+  <Fetch mil="1000">phone://mb_nop</Fetch>
+  <If condition="$(show_feature:BW_BDF_DISP)">
+    <ShowScreenOverImages>1</ShowScreenOverImages>
+    <If condition="$(is_set:$(status_message_immediately_shown))">
+      <Title>$(status_message_immediately_shown)</Title>
+    </If>
+    <ElIf condition="$(set:show_clock)==on">
+      <Title>$(date)</Title>
+    </ElIf>
+  </If>
+  <!-- TODO SAP-4023: show current identity in title when screen is covered by smart labels -->
+  <ElIf condition="$(set:show_clock)==on">
+    <Title>$(date)</Title>
+  </ElIf>
+  <If condition="$(show_feature:FEATURE_PUI_STYLE_SIO)">
+    <RoundRec line_x_gap="$(math_eval:$(gui_display_xsize)/80)" line_y_gap="$(math_eval:$(gui_display_xsize)/80)">On</RoundRec>
+    <If condition="$(gui_display_xsize)&gt;320">
+      <IconSize>M</IconSize>
+    </If>
+    <Else>
+      <IconSize>S</IconSize>
+    </Else>
+    <If condition="$(show_feature:HAS_LARGER_PIXEL_SIZE)">
+      <FontSize>L</FontSize>
+      <FontSize2>S</FontSize2>
+    </If>
+    <Else>
+      <FontSize>XL</FontSize>
+      <FontSize2>M</FontSize2>
+    </Else>
+    <SelectedTextHighlight>off</SelectedTextHighlight>
+    <If condition="$(is_set:$(status_message_immediately_shown))">
+      <InfoBox>
+        <Line>
+          <!--TODO at some point: optional icon for status messages eg: Icon>$(status_msg_shown_directly:icon)</Icon-->
+          <Text>$(status_message_immediately_shown)</Text>
+        </Line>
+      </InfoBox>
+    </If>
+  </If>
+  <repeat values="$(enum:$(max_registrations))" token="|__REG__|">
+    <If condition="$(bool_eval:$(set:user_active[__REG__]) &amp; $(is_set:$(set:user_name[__REG__])) &amp; $(is_set:$(set:user_host[__REG__])) &amp; !$(set:hide_identity[__REG__]))">
+      <MenuItem name="$(user_displayname:__REG__)" sel="$(condition:$(set:outgoing_identity)==__REG__)">
+        <If condition="$(show_feature:FEATURE_PUI_STYLE_SIO)">
+          <Icontype>$(identity_icon_type:__REG__)</Icontype>
+          <If condition="$(is_set:$(identity_icon_url:__REG__))">
+            <IconUrl>$(identity_icon_url:__REG__)</IconUrl>
+          </If>
+          <Subtext>$(identity_subtext:__REG__)</Subtext>
+        </If>
+        <Else>
+          <Icon>$(identity_icon:__REG__)</Icon>
+        </Else>
+        <Url>phone://mb_nop</Url>
+      </MenuItem>
+    </If>
+  </repeat>
+  <repeat values="$(enum:4)" token="|__KEYNUM__|">
+    <SoftKeyItem>
+      <Name>F__KEYNUM__</Name>
+      <If condition="$(bool_eval:$(is_show_status_msg_fkey) &amp; $(condition:__KEYNUM__==$(set:idle_status_btn_index)))">
+        <Softkey>F_STATUS</Softkey>
+        <If condition="!$(unread_status_message_count)==0">
+          <Icon>kIconTypeFkeyStatusUnread</Icon>
+        </If>
+      </If>
+      <Else>
+        <!-- configured via context_key_mapping -->
+        <If condition="$(is_set:$(set:context_key_mapping[$math_eval:__KEYNUM__-1)]))">
+          <Softkey>$(set:context_key_mapping[$(math_eval:__KEYNUM__-1)])</Softkey>
+          <If condition="$(get_cmd:$(set:context_key[$(math_eval:__KEYNUM__-1)]))==keyevent">
+            <Label>$(remove_cmd:$(set:context_key[$(math_eval:__KEYNUM__-1)]))</Label>
+          </If>
+          <Else>
+            <Label>$(set:context_key_label$(math_eval:__KEYNUM__-1))</Label>
+          </Else>
+        </If>
+        <!-- custom xml defintions and replacement plans like ACD -->
+        <ElIf condition="$(is_configured_xml_definition:DKEY_F__KEYNUM__)">
+          <Softkey>DKEY_F__KEYNUM__</Softkey>
+          <Label></Label><!-- actually required to clear dkey_fX default label -->
+        </ElIf>
+        <!-- speed dial -->
+        <ElIf condition="$(bool_eval:$(condition:$(get_cmd:$(set:context_key[$(math_eval:__KEYNUM__-1)]))==speed) || $(condition:$(get_cmd:$(set:context_key[$(math_eval:__KEYNUM__-1)]))==transfer))">
+          <If condition="$(empty:$(set:context_key_icon_type[$(math_eval:__KEYNUM__-1)]))">
+            <If condition="$(get_cmd:$(set:context_key[$(math_eval:__KEYNUM__-1)]))==speed">
+              <Icon>kIconTypeFkeySpeedDial</Icon>
+            </If>
+            <Else>
+              <Icon>kIconTypeFkeyTransfer</Icon>
+            </Else>
+          </If>
+          <Url>phone://mb_nop#action_ifc:CallInterface=make_call,remote=$(remove_cmd:$(set:context_key[$(math_eval:__KEYNUM__-1)])),identity=$(set:outgoing_identity)</Url>
+          <If condition="$(is_set:$(set:context_key_label$(math_eval:__KEYNUM__-1)))">
+            <Label>$(set:context_key_label$(math_eval:__KEYNUM__-1))</Label>
+          </If>
+          <Else>
+            <Label>$(remove_cmd:$(set:context_key[$(math_eval:__KEYNUM__-1)]))</Label>
+          </Else>
+        </ElIf>
+        <!-- default: keyevent key_event_name -->
+        <Else>
+          <Softkey>$(remove_cmd:$(set:context_key[$(math_eval:__KEYNUM__-1)]))</Softkey>
+        </Else>
+        <If condition="$(is_set:$(set:context_key_icon_type[$(math_eval:__KEYNUM__-1)]))">
+          <Icon>$(set:context_key_icon_type[$(math_eval:__KEYNUM__-1)])</Icon>
+        </If>
+      </Else>
+    </SoftKeyItem>
+  </repeat>
+  <SoftKeyItem>
+    <Name>F_UP</Name>
+    <Softkey>$(remove_cmd:$(set:idle_up_key_action))</Softkey>
+  </SoftKeyItem>
+  <SoftKeyItem>
+    <Name>F_DOWN</Name>
+    <Softkey>$(remove_cmd:$(set:idle_down_key_action))</Softkey>
+  </SoftKeyItem>
+  <SoftKeyItem>
+    <Name>RIGHT</Name>
+    <Softkey>$(remove_cmd:$(set:idle_right_key_action))</Softkey>
+  </SoftKeyItem>
+  <SoftKeyItem>
+    <Name>LEFT</Name>
+    <Softkey>$(remove_cmd:$(set:idle_left_key_action))</Softkey>
+  </SoftKeyItem>
+  <SoftKeyItem>
+    <Name>ENTER</Name>
+    <Softkey>$(remove_cmd:$(set:idle_ok_key_action))</Softkey>
+  </SoftKeyItem>
+  <!-- TODO: cancel, long cancel and abort should not stop minibrowser -->
+  <SoftKeyItem>
+    <Name>CANCEL</Name>
+    <If condition="$(bool_eval:$(condition:$(has_current_instant_message)) &amp; !$(condition:$(is_current_instant_message_essential)))">
+      <Url consume_key_event="1">phone://mb_nop#action_ifc:pui=mark_current_instant_message_as_read</Url>
+    </If>
+    <Else>
+      <Softkey>$(remove_cmd:$(set:idle_cancel_key_action))</Softkey>
+    </Else>
+  </SoftKeyItem>
+  <repeat values="$(enum:10)" token="|__NUM__|">
+    <SoftKeyItem>
+      <Name>$(math_eval:__NUM__-1)</Name>
+      <Url>file:///xml/gui/state_edit_number.xml</Url>
+    </SoftKeyItem>
+  </repeat>
+  <SoftKeyItem>
+    <Name>*</Name>
+    <Url>file:///xml/gui/state_edit_number.xml#</Url>
+  </SoftKeyItem>
+  <SoftKeyItem>
+    <Name>#</Name>
+    <Url>file:///xml/gui/state_edit_number.xml#</Url>
+  </SoftKeyItem>
+</IPPhoneMenu>
