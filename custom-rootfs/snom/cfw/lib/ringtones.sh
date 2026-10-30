@@ -73,26 +73,46 @@ rt_duration() {
     awk -v r="$3" -v c="$2" -v b="$4" -v d="$5" 'BEGIN { if (r*c*b) printf "%.1f", d / (r * c * b / 8) }'
 }
 
-# rt_setting NAME: current value from /snom/snomconfig/config.xml ("" if at default).
-# config.xml has CRLF line ends and only lists non-default settings.
+# Current settings. lcsD375 applies a dummy.htm save at once but flushes
+# /snom/snomconfig/config.xml only later (minutes), so read the live values from the stock
+# settings.htm (one fetch per page view, kept in RT_SETTINGS) and fall back to config.xml
+# when the phone app is down. config.xml has CRLF line ends and lists only non-defaults.
+rt_load_settings() {
+    RT_SETTINGS=
+    if rt_stock_ok; then
+        RT_SETTINGS=$(curl -s -m 15 "$RT_STOCK/settings.htm" </dev/null | tr -d '\r' |
+            sed -n 's/.*>\(user_[a-z]*[0-9]*\)<\/a>=\(.*\)$/\1=\2/p' |
+            sed 's/&#x2F;/\//g; s/&#32;/ /g; s/&#x3A;/:/g; s/&quot;/"/g; s/&lt;/</g; s/&gt;/>/g; s/&amp;/\&/g')
+    fi
+    if [ -z "$RT_SETTINGS" ]; then
+        RT_SETTINGS=$(tr -d '\r' < /snom/snomconfig/config.xml 2>/dev/null |
+            sed -n 's/^<\(user_[a-z]*\) idx="\([0-9]*\)"[^>]*>\(.*\)<\/user_[a-z]*>$/\1\2=\3/p')
+    fi
+}
+
+# rt_setting NAME: value of NAME from RT_SETTINGS ("" if unset/default).
 rt_setting() {
     case "$1" in *[!a-z_0-9]*|'') return 1 ;; esac
-    tr -d '\r' < /snom/snomconfig/config.xml 2>/dev/null | sed -n "s/^<${1%%[0-9]*} idx=\"${1##*[!0-9]}\"[^>]*>\\(.*\\)<\\/${1%%[0-9]*}>\$/\\1/p" | head -n 1
+    printf '%s\n' "$RT_SETTINGS" | sed -n "s/^$1=//p" | head -n 1
 }
 
 # rt_lines: identity numbers to offer (active ones, else 1).
 rt_lines() {
-    _l=$(tr -d '\r' < /snom/snomconfig/config.xml 2>/dev/null |
-        sed -n 's/^<user_active idx="\([0-9]*\)"[^>]*>on<\/user_active>$/\1/p')
+    _l=$(printf '%s\n' "$RT_SETTINGS" | sed -n 's/^user_active\([0-9]*\)=on$/\1/p')
     [ -n "$_l" ] && printf '%s\n' $_l || echo 1
 }
 
-# rt_stock_ok: is the stock web server (lcsD375) answering? Fails fast when a game has
-# SIGSTOPped/killed the phone app (Review Focus 2).
+# rt_stock_ok: is the stock web server (lcsD375) usable? Fails fast when a game runs, when
+# lcsD375 is gone, or when it is SIGSTOPped (Doom stops it): state "T" in /proc/PID/stat.
+# No HTTP probe here: the stock server can take several seconds to answer while it is
+# busy (a settings save writes flash), so the real request below carries the timeout.
 rt_stock_ok() {
     cfw_game_running && return 1
-    pidof lcsD375 >/dev/null 2>&1 || return 1
-    curl -s -m 3 -o /dev/null "$RT_STOCK/dummy.htm" 2>/dev/null
+    _p=$(pidof lcsD375 2>/dev/null) || return 1
+    for _q in $_p; do
+        case "$(cut -d' ' -f3 "/proc/$_q/stat" 2>/dev/null)" in T|Z|'') return 1 ;; esac
+    done
+    return 0
 }
 
 # rt_set_settings NAME=VALUE...: write stock settings through dummy.htm?settings=save.
@@ -103,11 +123,12 @@ rt_set_settings() {
     _n=$#
     for _kv in settings=save "$@"; do set -- "$@" --data-urlencode "$_kv"; done
     shift "$_n"
-    _code=$(curl -s -m 8 -o /dev/null -w '%{http_code}' -G "$@" "$RT_STOCK/dummy.htm")
+    _code=$(curl -s -m 15 -o /dev/null -w '%{http_code}' -G "$@" "$RT_STOCK/dummy.htm" </dev/null)
     case "$_code" in
         200) return 0 ;;
         401) echo "the stock web UI asks for a password (http_user/http_pass set) - settings not changed"; return 1 ;;
-        *) echo "stock web UI answered HTTP ${_code:-none} - settings not changed"; return 1 ;;
+        000|'') echo "stock web UI did not answer within 15 s - settings may not be changed"; return 1 ;;
+        *) echo "stock web UI answered HTTP $_code - settings not changed"; return 1 ;;
     esac
 }
 
@@ -115,7 +136,9 @@ rt_set_settings() {
 rt_play_line() {
     case "$1" in ''|*[!0-9]*) return 1 ;; esac
     rt_stock_ok || { echo "phone app is not running (game active?)"; return 1; }
-    _code=$(curl -s -m 8 -o /dev/null -w '%{http_code}' -X POST \
-        --data "PLAY_RINGER:$1=Play" "$RT_STOCK/line_audio.htm?l=$1")
+    # GET, like the stock form's own submit: a POST of PLAY_RINGER:N is logged as
+    # "Ignore invalid parameter: PLAY_RINGER:1" and plays nothing.
+    _code=$(curl -s -m 15 -o /dev/null -w '%{http_code}' -G "$RT_STOCK/line_audio.htm" \
+        --data-urlencode "l=$1" --data-urlencode "PLAY_RINGER:$1=Play Ringer" </dev/null)
     [ "$_code" = 200 ] || { echo "stock web UI answered HTTP ${_code:-none}"; return 1; }
 }

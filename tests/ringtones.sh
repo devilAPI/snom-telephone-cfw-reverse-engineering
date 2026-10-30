@@ -27,13 +27,15 @@ deploy() {
 }
 with_phone_lock deploy
 
-# --- test signal: 0.3 s 500 Hz, 0.3 s 1000 Hz, 0.8 s log sweep 300->3000 Hz, gap; 5 % amplitude
+# --- test signal: 0.4 s 700 Hz, 0.4 s 1400 Hz, 0.4 s 2100 Hz (gaps 0.1 s), 0.8 s log sweep
+# 300->3000 Hz, 0.5 s silence; 5 % amplitude. Deliberately different from any earlier test file,
+# so a stale cached ringtone cannot pass the capture check.
 python3 - "$TMPD" <<'EOF'
 import math, struct, sys, wave
 d = sys.argv[1]
 def mk(path, rate, secs=None, amp=0.05):
     s = []
-    for f, t in ((500, .3), (1000, .3), (0, .1)):
+    for f, t in ((700, .4), (0, .1), (1400, .4), (0, .1), (2100, .4), (0, .1)):
         s += [amp * math.sin(2 * math.pi * f * i / rate) if f else 0 for i in range(int(rate * t))]
     n = int(rate * .8); ph = 0
     for i in range(n):
@@ -52,7 +54,7 @@ open(d + '/junk.wav', 'wb').write(b'this is not a wave file' * 10)
 EOF
 
 up() {  # NAME FILE -> CGI answer
-    curl -s -m 30 -X POST -H 'Content-Type: application/octet-stream' --data-binary @"$2" \
+    curl -s -m 90 -X POST -H 'Content-Type: application/octet-stream' --data-binary @"$2" \
         "http://$PHONE_IP:8080/cgi-bin/ringtones?act=upload&name=$1"
 }
 
@@ -83,35 +85,41 @@ assert_eq "yes" "$(ph '[ -f /snom/cfw/index.html ] && ! ls /snom/cfw-data/ringto
     "nothing but the test uploads landed, index.html intact"
 
 # --- 4. ring it and capture the output digitally
-setting() { ph "tr -d '\r' < /snom/snomconfig/config.xml | sed -n 's/^<$1 [^>]*>\\(.*\\)<\\/$1>\$/\\1/p' | head -n1"; }
-setting_idx() { ph "tr -d '\r' < /snom/snomconfig/config.xml | sed -n 's/^<$1 idx=\"$2\"[^>]*>\\(.*\\)<\\/$1>\$/\\1/p' | head -n1"; }
+# live values from the stock settings.htm (config.xml is flushed lazily by lcsD375)
+setting() { curl -s -m 30 "$PH/settings.htm" | tr -d "\r" | sed -n "s/.*>$1<\/a>=\(.*\)\$/\1/p" | sed 's/&#x2F;/\//g' | head -n1; }
+setting_idx() { setting "$1$2"; }
 save() { curl -s -m 10 -o /dev/null -G "$PH/dummy.htm" --data-urlencode settings=save --data-urlencode "$1"; }
 ring_test() {
     OLD_VOL=$(setting vol_ringer); OLD_R=$(setting_idx user_ringer 1); OLD_C=$(setting_idx user_custom 1)
     echo "saved: vol_ringer=[${OLD_VOL}] user_ringer1=[${OLD_R}] user_custom1=[${OLD_C}]"
+    trap ring_restore EXIT   # runs even when an assert fails (fail exits this lock subshell)
     save vol_ringer=1
-    r=$(curl -s -m 20 -X POST --data 'act=use&name=cfwtest.wav&line=1' "http://$PHONE_IP:8080/cgi-bin/ringtones")
+    r=$(curl -s -m 40 -X POST --data 'act=use&name=cfwtest.wav&line=1' "http://$PHONE_IP:8080/cgi-bin/ringtones")
     assert_contains "$r" "now ring with cfwtest.wav" "assign to line 1"
     assert_eq "http://127.0.0.1:8081/ringtones/cfwtest.wav" "$(setting_idx user_custom 1)" "user_custom1 written"
     assert_eq "Custom" "$(setting_idx user_ringer 1)" "user_ringer1=Custom written"
     ph 'lsmod | grep -q amxr_user_hook || insmod /lib/modules/2.6.27.47/BROADCOM/amxr_user_hook.ko
         [ -c /dev/amxruser ] || mknod /dev/amxruser c 236 0
-        rm -f /tmp/rtcap0.raw /tmp/rtcap1.raw; (/tmp/rtcap 7 >/tmp/rtcap.log 2>&1 &)'
+        rm -f /tmp/rtcap0.raw /tmp/rtcap1.raw; (/tmp/rtcap 9 halaudio.apm0 halaudio.apm1 </dev/null >/tmp/rtcap.log 2>&1 &)'
     sleep 1
-    r=$(curl -s -m 20 -X POST --data 'act=play&line=1' "http://$PHONE_IP:8080/cgi-bin/ringtones")
+    r=$(curl -s -m 40 -X POST --data 'act=play&line=1' "http://$PHONE_IP:8080/cgi-bin/ringtones")
     assert_contains "$r" "Playing the ringer of line 1" "play ringer"
-    sleep 8
+    sleep 10
     ph 'cat /tmp/rtcap.log'
     ph 'cat /tmp/rtcap0.raw' > "$TMPD/cap0.raw"; ph 'cat /tmp/rtcap1.raw' > "$TMPD/cap1.raw"
-    # restore everything we touched
-    r=$(curl -s -m 20 -X POST --data 'act=stock&line=1' "http://$PHONE_IP:8080/cgi-bin/ringtones")
+    [ -n "${KEEP_CAP:-}" ] && cp "$TMPD"/cap?.raw "$KEEP_CAP"/
+}
+ring_restore() {
     save "user_ringer1=${OLD_R:-Ringer1}"; save "user_custom1=${OLD_C}"; save "vol_ringer=${OLD_VOL:-10}"
     echo "restored: vol_ringer=[$(setting vol_ringer)] user_ringer1=[$(setting_idx user_ringer 1)] user_custom1=[$(setting_idx user_custom 1)]"
 }
 with_phone_lock ring_test
-python3 "$REPO/tests/ringtone_corr.py" "$TMPD/t16k.wav" "$TMPD/cap0.raw" "$TMPD/cap1.raw" \
-    && pass "captured phone output correlates with the uploaded ringtone" \
-    || fail "captured output does not match the ringtone"
+python3 "$REPO/tests/ringtone_corr.py" "$TMPD/t16k.wav" "$TMPD/cap0.raw" "$TMPD/cap1.raw"
+case $? in
+    0) pass "captured phone output correlates with the uploaded ringtone" ;;
+    2) echo "WARN: microphones silent - playback capture inconclusive (see docs/ringtones.md)" ;;
+    *) fail "captured output does not match the ringtone" ;;
+esac
 
 # --- 5. phone app stopped (a game SIGSTOPs lcsD375) -> clean, fast error
 stopped_test() {

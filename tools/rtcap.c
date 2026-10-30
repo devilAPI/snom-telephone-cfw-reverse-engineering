@@ -11,6 +11,9 @@
  *
  * Usage: rtcap SECONDS [SRC0 [SRC1]]   (default SRC0=ept.bind0 SRC1=ept.bind1)
  *        -> /tmp/rtcap0.raw, /tmp/rtcap1.raw
+ * NOTE: the ringer does NOT pass through ept.bindN (captures are silent); media_daemon writes
+ * it to the codec directly. Ringtone tests therefore tap the microphones: SRC0=halaudio.apm0
+ * SRC1=halaudio.apm1 (acoustic loopback, see docs/ringtones.md).
  * Build: tools/build-rtcap.sh (static musl, armv6, no FPU use). */
 #include <stdio.h>
 #include <stdlib.h>
@@ -62,7 +65,10 @@ int main(int argc, char **argv) {
     for (int i = 0; i < 2; i++) {
         if (!ok[i]) continue;
         struct disc d = { ps[i], pd[i] };
-        fprintf(stderr, "unwire %s: %d\n", src[i], ioctl(m, 0x4d36u, &d));
+        /* amxrDisconnect: _IOR('M',54,8) like amxrConnect's _IOR('M',53,12); plain _IO fails */
+        int r = ioctl(m, 0x80084d36u, &d);
+        if (r < 0) r = ioctl(m, 0x4d36u, &d);
+        fprintf(stderr, "unwire %s: %d\n", src[i], r);
     }
     fprintf(stderr, "captured %ld frames\n", n);
     close(o[0]); close(o[1]); close(u); close(m);

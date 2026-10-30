@@ -59,6 +59,7 @@ fi
 
 # ---- form actions -------------------------------------------------------------------------
 D=$(rt_dir); MSG=""
+rt_load_settings
 if [ -n "$ACT" ]; then
     case "$ACT" in delete|use)
         rt_name_ok "$NAME" || { MSG="ERROR: invalid ringtone name"; ACT=""; } ;;
@@ -97,6 +98,8 @@ play)
     else MSG="ERROR: $ERR"; fi ;;
 esac
 
+case "$ACT" in use|stock) rt_load_settings ;; esac   # show the values just written
+
 # ---- page ---------------------------------------------------------------------------------
 cfw_html_head "Ringtones"
 echo '<h1>Ringtones</h1><div class="sub"><a href="/cgi-bin/panel">&larr; back to the panel</a></div>'
@@ -118,7 +121,7 @@ for n in $(rt_lines); do
 done
 printf '<form method="post" action="/cgi-bin/ringtones"><select name="line">%s</select> ' "$OPTS"
 echo '<button name="act" value="play">Play ringer on phone</button> <button name="act" value="stock" style="background:#777">Back to stock ringer</button></form>'
-echo '<p class="warn">"Play" uses the line&#39;s ringer volume. The phone&#39;s own menu (Settings, Ringtone) also lists "Custom" once a line has one.</p></div>'
+echo '<p class="warn">"Play" uses the line&#39;s ringer volume. The phone&#39;s menu (Settings, Ringtone) also lists "Custom" once a line has one. The phone caches the custom melody: if a newly chosen file does not play, pick Custom again in that menu or reboot (wait a few minutes after "Use" so the setting is saved to flash).</p></div>'
 
 echo '<div class="card"><h2>Your ringtones</h2>'
 n=0
