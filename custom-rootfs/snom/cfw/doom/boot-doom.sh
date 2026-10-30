@@ -1,7 +1,7 @@
 #!/bin/sh
 # Boot Doom from a URL: download the WAD to RAM, take over the screen, run Doom,
-# then reboot to restore the phone. Nothing is stored (the WAD is in /tmp and
-# vanishes on the reboot). $1 = WAD URL. Progress/errors go to /tmp/doom.log
+# then bring the phone app back (phone-restore.sh; reboot only if that fails).
+# Nothing is stored (the WAD is in /tmp and is deleted after the run). $1 = WAD URL. Progress/errors go to /tmp/doom.log
 # (shown by /cgi-bin/doom-log on the CFW page).
 ENGINE=/snom/cfw/doom/doom
 LOG=/tmp/doom.log
@@ -104,11 +104,18 @@ touch /tmp/ssh_fast_update
 "$ENGINE" -iwad "$WAD" >> "$LOG" 2>&1 < /dev/null
 log "Doom exited with status $?"
 
-# /tmp is lost on the reboot: keep this run's log on flash so the CFW page can
-# still show why Doom quit (e.g. an engine I_Error).
-tail -n 60 "$LOG" > /snom/cfw/doom/last.log 2>/dev/null
-
 rm -f "$WAD"
-rm -f /tmp/ssh_fast_update
-sync
-reboot
+
+# Bring the stock phone app back without a reboot (docs/quit-without-reboot.md).
+# Fall back to the old, always-working reboot if it isn't healthy within 60 s.
+if /snom/cfw/lib/phone-restore.sh; then
+    log "phone app restored"
+else
+    log "phone restore failed, rebooting"
+    # /tmp is lost on the reboot: keep this run's log on flash so the CFW page
+    # can still show why Doom quit (e.g. an engine I_Error).
+    tail -n 60 "$LOG" > /snom/cfw/doom/last.log 2>/dev/null
+    rm -f /tmp/ssh_fast_update
+    sync
+    reboot
+fi

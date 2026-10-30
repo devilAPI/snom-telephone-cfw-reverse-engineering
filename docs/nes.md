@@ -10,7 +10,8 @@ takeover as [Doom](doom.md).
 
 - Video `/dev/fb0` (480x272, 32bpp); NES 256x240 is **centered**, no scaling.
 - Input `/dev/input/event0`, freed by killing `lid` + `media_daemon`.
-- Takeover via `/tmp/ssh_fast_update`; **quitting reboots the phone** to restore.
+- Takeover via `/tmp/ssh_fast_update`; quitting restores the phone app **without a reboot**
+  (`lib/phone-restore.sh`, ~30 s; see [quit-without-reboot.md](quit-without-reboot.md)).
 
 Controls: nav pad = D-pad, Fire = A, Use = B, OK = Start, Cancel = Select,
 red Hangup = quit.
@@ -50,4 +51,4 @@ Under `/snom`, so the first-boot `cleanUpRootfs` pass leaves it alone.
 
 - **No sound** (stubbed), same as Doom.
 - Save-RAM (battery saves) isn't persisted anywhere.
-- Phone can't take calls while the emulator runs; quitting reboots it.
+- Phone can't take calls while the emulator runs; quitting restores the phone app (~30 s, no reboot).

@@ -28,15 +28,17 @@ select, Cancel = menu/back, **red Hangup = quit Doom**.
    reads the keys — this is why early evdev and `/dev/keypad*` captures were all
    empty. The launcher kills both `lid` and `media_daemon`.
 
-`media_daemon` does not cleanly restart by hand, so **quitting Doom reboots the
-phone** to restore everything (UI + call audio). ~2 min; clean and reliable.
+Quitting Doom brings the phone app back **without a reboot** (~30 s):
+`lib/phone-restore.sh` kills the orphaned `lcsD375`/`bsa_server`/`dns-proxy`
+and removes the flag, so rcS restarts `lid`. If that isn't healthy within 60 s
+the launcher still reboots. See [quit-without-reboot.md](quit-without-reboot.md).
 
 ## Pieces
 
 | Path | In image? | What |
 |---|---|---|
 | `snom/cfw/doom/doom` | yes | the engine (static musl armv6, ~420 KB) |
-| `snom/cfw/doom/boot-doom.sh` | yes | launcher: hold rcS, kill `lid`+`media_daemon`, run Doom, reboot |
+| `snom/cfw/doom/boot-doom.sh` | yes | launcher: hold rcS, kill `lid`+`media_daemon`, run Doom, `phone-restore.sh` (reboot only as fallback) |
 | `snom/cfw/cgi-bin/boot-doom` | yes | CGI the button posts to; detaches the launcher with `nohup` |
 | `snom/cfw/index.html` | yes | has the **Boot Doom** button |
 | `/snom/doom/freedoom2.wad` | **no** | the IWAD — pushed separately (see below) |
@@ -84,5 +86,5 @@ first-boot `cleanUpRootfs` pass does not touch it (unlike `/usr/bin/nano`).
 ## Known limitations
 
 - **No sound** (deferred; the phone's audio path is a separate effort).
-- The phone can't take calls while Doom runs; quitting reboots it.
+- The phone can't take calls while Doom runs; quitting restores the phone app (~30 s, no reboot).
 - The keypad number keys (weapon select) are unmapped — only nav + fire/use/menu.
