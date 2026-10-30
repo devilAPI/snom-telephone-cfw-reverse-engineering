@@ -1,0 +1,3 @@
+#!/bin/sh
+# CFW panel: boot a GB/GBC ROM from a URL (same code as boot-gba).
+CFW_RETRO_SYS=gb exec /snom/cfw/cgi-bin/boot-gba

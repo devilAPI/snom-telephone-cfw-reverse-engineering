@@ -1,8 +1,10 @@
 #!/bin/sh
 # CFW: the "Games" menu shown on the phone's own screen (Settings -> Games).
 # lcsD375's minibrowser fetches this from 127.0.0.1:8081 and renders the
-# IPPhoneMenu XML. ?game=doom|nes shows that game's sources: recently used
-# URLs (saved by the launchers), presets, and "Enter URL...".
+# IPPhoneMenu XML. ?game=doom|nes|gba|gb shows that game's sources: recently
+# used URLs (saved by the launchers), presets, and "Enter URL...".
+# doom/nes start through phone-boot/phone-url; gba/gb through phone-retro
+# (history in /snom/cfw-data/<sys>/history, see lib/retro-boot.sh).
 echo "Content-type: text/xml"
 echo ""
 B=http://127.0.0.1:8081/cgi-bin
@@ -40,10 +42,24 @@ doom|nes)
     fi
     item "Enter URL..." "$B/phone-url?game=$GAME"
     ;;
+gba|gb)
+    if [ "$GAME" = gba ]; then echo '  <Title>Game Boy Advance</Title>'; else echo '  <Title>Game Boy / Color</Title>'; fi
+    HIST=/snom/cfw-data/$GAME/history
+    if [ -s "$HIST" ]; then
+        while read -r u; do
+            [ -n "$u" ] || continue
+            name=$(basename "$(echo "${u%%\?*}" | sed 's|%2[fF]|/|g')" | sed 's/%20/ /g; s/%2[bB]/+/g')
+            item "$name" "$B/phone-retro?sys=$GAME&url=$(urlenc "$u")"
+        done < "$HIST"
+    fi
+    item "Enter URL..." "$B/phone-retro?sys=$GAME"
+    ;;
 *)
     echo '  <Title>Games</Title>'
     item "DOOM" "$B/phone-games?game=doom"
     item "NES" "$B/phone-games?game=nes"
+    item "Game Boy / Color" "$B/phone-games?game=gb"
+    item "Game Boy Advance" "$B/phone-games?game=gba"
     ;;
 esac
 cat <<'EOF2'

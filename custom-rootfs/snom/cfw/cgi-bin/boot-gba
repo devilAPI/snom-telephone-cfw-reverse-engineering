@@ -1,0 +1,61 @@
+#!/bin/sh
+# CFW panel: boot a GBA (boot-gba) or GB/GBC (boot-gb, a wrapper) ROM from a URL.
+#   POST url=<http(s) URL>   start lib/retro-boot.sh, wait up to 20 s for its
+#                            verdict (error / running / still downloading)
+#   GET  ?log=1              show the launcher's status and log
+# The URL is only ever passed as one quoted argument; nothing is eval'ed.
+. /snom/cfw/lib/cfw.sh
+SYS=${CFW_RETRO_SYS:-gba}
+case "$SYS" in
+    gba) NAME="GBA" ;;
+    gb)  NAME="Game Boy" ;;
+    *)   SYS=gba; NAME="GBA" ;;
+esac
+STATUS=/tmp/$SYS.status
+LOG=/tmp/$SYS.log
+SELF=/cgi-bin/boot-$SYS
+
+cfw_html_head "Boot $NAME"
+printf '<div class="card"><h2>Boot %s</h2>\n' "$NAME"
+end() { printf '<p><a href="%s?log=1">Launcher log</a> &middot; <a href="/cgi-bin/panel">&larr; Back</a></p></div>\n' "$SELF"; cfw_html_foot; exit 0; }
+msg() { printf '<p class="%s">%s</p>\n' "$1" "$(printf '%s' "$2" | cfw_html_escape)"; }
+
+if [ "$(cfw_param log)" = 1 ]; then
+    msg ok "Status: $(cat "$STATUS" 2>/dev/null || echo 'no run yet')"
+    printf '<pre style="white-space:pre-wrap;font-size:12px">'
+    tail -n 40 "$LOG" 2>/dev/null | cfw_html_escape
+    printf '</pre>\n'
+    end
+fi
+
+URL=$(cfw_param url)
+case "$URL" in
+    http://*|https://*) ;;
+    *) msg err "Please enter a valid http:// or https:// URL to a ROM."; end ;;
+esac
+case "$URL" in
+    *"
+"*) msg err "The URL must be a single line."; end ;;
+esac
+if cfw_game_running; then msg err "A game is already running on the phone. Quit it first (red hangup key)."; end; fi
+
+rm -f "$STATUS"
+nohup /snom/cfw/$SYS/boot-$SYS.sh "$URL" </dev/null >/dev/null 2>&1 &
+
+# Wait for the launcher's verdict (download + header check), at most 20 s.
+i=0
+while [ $i -lt 20 ]; do
+    sleep 1; i=$((i + 1))
+    st=$(cat "$STATUS" 2>/dev/null)
+    case "$st" in error*|running|done) break ;; esac
+done
+case "$st" in
+    error*)  msg err "Not started: ${st#error }" ;;
+    running|done) msg ok "Running on the phone screen. Red hangup key quits; the phone app then comes back." ;;
+    *)       msg ok "Still downloading. The game starts on the phone screen when the download is done; check the launcher log if nothing happens." ;;
+esac
+cat <<'EOT'
+<p>Controls: nav pad = D-pad, Fire = A, Use = B, OK = Start, Cancel = Select,
+   digit 1 = L, digit 3 = R, <b>red hangup = quit</b>.</p>
+EOT
+end
