@@ -146,9 +146,44 @@ def gb():
     rom[0x14E:0x150] = bytes((s >> 8, s & 0xff))
     return bytes(rom), [131072 / (2048 - r) for r in regs], 131072 / (2048 - low)
 
+# ---------------------------------------------------------------- save-test ROMs
+# Boot counters for tests/saves.sh: every start increments the first byte of
+# battery RAM (NES $6000, GB cart RAM $A000) and then idles. Original code.
+def sav_nes():
+    code = bytes((0x78, 0xD8, 0xA2, 0xFF, 0x9A,        # SEI CLD LDX #$FF TXS
+                  0xEE, 0x00, 0x60,                    # INC $6000
+                  0x4C, 0x08, 0xC0))                   # JMP self
+    prg = bytearray(b'\xff' * 0x4000)
+    prg[:len(code)] = code
+    prg[0x3FFA:0x4000] = bytes((0x08, 0xC0, 0x00, 0xC0, 0x08, 0xC0))   # NMI RESET IRQ
+    hdr = b'NES\x1a' + bytes((1, 1, 2, 0)) + bytes(8)                  # byInfo1 bit1 = battery
+    return hdr + bytes(prg) + bytes(0x2000)
+
+def sav_gb():
+    code = bytes((0xF3, 0x31, 0xFE, 0xFF,              # DI; LD SP,$FFFE
+                  0x3E, 0x0A, 0xEA, 0x00, 0x00,        # LD A,$0A; LD ($0000),A  (enable cart RAM)
+                  0x21, 0x00, 0xA0, 0x7E,              # LD HL,$A000; LD A,(HL)
+                  0xFE, 0xFF, 0x20, 0x01, 0xAF,        # CP $FF (blank RAM); JR NZ,+1; XOR A
+                  0x3C, 0x77,                          # INC A; LD (HL),A
+                  0x18, 0xFE))                         # JR self
+    rom = bytearray(0x8000)
+    rom[0x100:0x104] = bytes((0x00, 0xC3, 0x50, 0x01))
+    rom[0x104:0x134] = LOGO
+    rom[0x134:0x13A] = b'SAVTST'
+    rom[0x147] = 0x03                                  # MBC1+RAM+BATTERY
+    rom[0x148] = 0x00; rom[0x149] = 0x02               # 32 KiB ROM, 8 KiB RAM
+    rom[0x150:0x150 + len(code)] = code
+    x = 0
+    for i in range(0x134, 0x14D): x = (x - rom[i] - 1) & 0xff
+    rom[0x14D] = x
+    return bytes(rom)
+
 if __name__ == '__main__':
     out = sys.argv[1] if len(sys.argv) > 1 else HERE
     for name, fn in (('tone.nes', nes), ('sndtest.gb', gb)):
         data, arp, bass = fn()
         open(os.path.join(out, name), 'wb').write(data)
         print('%s: arpeggio %s Hz, constant %.1f Hz' % (name, ' '.join('%.1f' % f for f in arp), bass))
+    open(os.path.join(out, 'sav.nes'), 'wb').write(sav_nes())
+    open(os.path.join(out, 'sav.gb'), 'wb').write(sav_gb())
+    print('sav.nes, sav.gb: boot-counter save test ROMs')

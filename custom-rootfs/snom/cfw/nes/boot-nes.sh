@@ -32,11 +32,14 @@ H=/snom/cfw/nes/history
 # Hold rcS's fast-update guard so killing the phone app doesn't reboot us. The
 # engine itself kills lid+media_daemon (after arming hands-free audio while the
 # daemon is still alive -- see snd/snd_hal.c).
+. /snom/cfw/lib/saves.sh
+saves_setup nes "$ROM"
 touch /tmp/ssh_fast_update
 
 "$ENGINE" "$ROM" >> "$LOG" 2>&1 < /dev/null
 
 echo "emulator exited with status $?" >> "$LOG"
+sync
 rm -f "$ROM"
 
 # Bring the stock phone app back without a reboot (docs/quit-without-reboot.md).

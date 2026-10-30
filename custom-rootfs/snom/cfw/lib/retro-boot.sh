@@ -69,12 +69,15 @@ else
 fi
 
 # Hold rcS's fast-update guard so killing the phone app doesn't reboot us.
+. /snom/cfw/lib/saves.sh
+saves_setup "$SYS" "$ROM"
 touch /tmp/ssh_fast_update
 status running
 "$ENGINE" "$ROM" >> "$LOG" 2>&1 < /dev/null
 RC=$?
 rm -f "$ROM"
 echo "engine exit $RC" >> "$LOG"
+sync
 
 if [ "$RC" = 2 ]; then
     # The core refused the ROM before the takeover: the phone app is untouched.

@@ -22,6 +22,8 @@
  */
 #include "libretro.h"
 #include "snd_hal.h"   /* copied next to this file at build time */
+#include "snom_save.h"  /* battery save helpers (snd/) */
+#include <signal.h>
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -147,6 +149,43 @@ struct ev16 { uint32_t sec, usec; uint16_t type, code; int32_t value; };
 
 static void clearScreen(void) {
     if (fbPtr) memset(fbPtr, 0, (long)fbStride * fbYres);
+}
+
+/* ---------------------------------------------------------------- battery saves
+ * RETRO_MEMORY_SAVE_RAM (GB/GBC cart RAM, GBA SRAM/Flash/EEPROM) lives in
+ * CFW_SAVE_FILE: loaded before the takeover, written every SV_INTERVAL s if
+ * changed, and on any exit (hangup key, SIGTERM). See docs/saves.md. */
+static const char *g_savepath;
+static uint8_t    *g_saved;      /* copy of what is on flash / last write attempt */
+static size_t      g_savesize;
+static volatile sig_atomic_t g_term;
+
+static void saveLoad(void) {
+    g_savepath = sv_path();
+    if (!g_savepath) return;
+    void *ram = retro_get_memory_data(RETRO_MEMORY_SAVE_RAM);
+    g_savesize = retro_get_memory_size(RETRO_MEMORY_SAVE_RAM);
+    if (!ram || !g_savesize) { g_savepath = NULL; return; }   /* no battery in this cart */
+    sv_load(g_savepath, ram, g_savesize);
+    g_saved = (uint8_t *)malloc(g_savesize);
+    if (g_saved) memcpy(g_saved, ram, g_savesize);
+}
+
+static void saveFlush(void) {
+    if (!g_savepath || !g_saved) return;
+    void *ram = retro_get_memory_data(RETRO_MEMORY_SAVE_RAM);
+    if (!ram || memcmp(ram, g_saved, g_savesize) == 0) return;
+    memcpy(g_saved, ram, g_savesize);   /* a failure is logged once per change */
+    sv_store(g_savepath, ram, g_savesize);
+}
+
+static void onTerm(int sig) { (void)sig; g_term = 1; }
+
+static void saveTick(void) {
+    static time_t next;
+    time_t now = time(NULL);
+    if (g_term) exit(0);               /* atexit flushes */
+    if (now >= next) { next = now + SV_INTERVAL; saveFlush(); }
 }
 
 static void quit(void) {
@@ -484,6 +523,9 @@ int main(int argc, char **argv) {
         return 2;
     }
 
+    saveLoad();
+    signal(SIGTERM, onTerm);
+
     struct retro_system_av_info av;
     memset(&av, 0, sizeof av);
     retro_get_system_av_info(&av);
@@ -497,11 +539,13 @@ int main(int argc, char **argv) {
      * daemon is still alive. Must precede fbInit()/event0. */
     snd_hal_init();
     atexit(snd_hal_shutdown);
+    atexit(saveFlush);   /* runs first on exit: the save must not wait for audio teardown */
     fbInit();
 
     for (;;) {
         pace();
         retro_run();
+        saveTick();
         if (g_stats) logStats();
     }
 }

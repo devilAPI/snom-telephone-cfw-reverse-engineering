@@ -56,9 +56,37 @@ WORD NesPalette[ 64 ] =
 #define PAD_LEFT   (1<<6)
 #define PAD_RIGHT  (1<<7)
 
+#include <signal.h>
+#include "snom_save.h"
+
 static DWORD dwKeyPad1;
 static const char *g_rompath;
 static int g_loaded;   /* load the ROM once; quit when the game resets out */
+
+/* ---- battery saves (docs/saves.md) ----
+ * Cartridges with the battery flag keep their 8 KiB SRAM ($6000-$7FFF) in
+ * CFW_SAVE_FILE. Loaded when the ROM is read; written every SV_INTERVAL s if
+ * changed, on quit (hangup key, game reset-out, SIGTERM). */
+static const char *g_savepath;
+static BYTE g_saved[SRAM_SIZE];      /* what is on flash (or what we last tried to write) */
+static int g_battery;
+static volatile sig_atomic_t g_term;
+
+static void saveFlush(void) {
+    if (!g_battery || !g_savepath) return;
+    if (memcmp(SRAM, g_saved, SRAM_SIZE) == 0) return;
+    memcpy(g_saved, SRAM, SRAM_SIZE);   /* a failure is logged once per change, not every 30 s */
+    sv_store(g_savepath, SRAM, SRAM_SIZE);
+}
+
+static void onTerm(int sig) { (void)sig; g_term = 1; }
+
+static void saveTick(void) {
+    static time_t next;
+    time_t now = time(NULL);
+    if (g_term) exit(0);                 /* atexit flushes the save */
+    if (now >= next) { next = now + SV_INTERVAL; saveFlush(); }
+}
 
 /* ---- framebuffer ---- */
 static uint8_t *fbPtr;
@@ -225,6 +253,11 @@ int InfoNES_ReadRom( const char *pszFileName ) {
     if ( memcmp( NesHeader.byID, "NES\x1a", 4 ) != 0 ) { fclose(fp); return -1; }
     memset( SRAM, 0, SRAM_SIZE );
     if ( NesHeader.byInfo1 & 4 ) fread( &SRAM[ 0x1000 ], 512, 1, fp );
+    g_battery = ( NesHeader.byInfo1 & 2 ) != 0;
+    if ( g_battery && g_savepath ) {
+        sv_load( g_savepath, SRAM, SRAM_SIZE );
+        memcpy( g_saved, SRAM, SRAM_SIZE );
+    }
     ROM = (BYTE *)malloc( NesHeader.byRomSize * 0x4000 );
     fread( ROM, 0x4000, NesHeader.byRomSize, fp );
     if ( NesHeader.byVRomSize > 0 ) {
@@ -289,6 +322,7 @@ static void logStats(void) {
 
 void InfoNES_SoundOutput(int s, BYTE *w1, BYTE *w2, BYTE *w3, BYTE *w4, BYTE *w5) {
     if (g_stats) logStats();
+    saveTick();
     paceFrame();
     if (!snd_hal_ok() || s <= 0) return;
     static int dcx, dcy;                  /* DC blocker state */
@@ -308,11 +342,14 @@ int main(int argc, char **argv) {
     if (argc < 2) { fprintf(stderr, "usage: %s game.nes\n", argv[0]); return 1; }
     g_rompath = argv[1];
     g_stats = getenv("NES_STATS") != NULL;
+    g_savepath = sv_path();
+    signal(SIGTERM, onTerm);
     /* Arm audio + hands-free, then take over (kill lid+media_daemon) while the
      * daemon is still alive. Must precede fbInit()/event0. The boot script no
      * longer kills the daemon itself. */
     snd_hal_init();
     atexit(snd_hal_shutdown);
+    atexit(saveFlush);                    /* runs first on exit: the save must not wait for audio teardown */
     fbInit();
     InfoNES_Main();   /* InfoNES_Menu() loads the ROM; InfoNES_Cycle() plays it */
     return 0;

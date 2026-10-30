@@ -99,10 +99,13 @@ log "starting Doom with $WAD"
 # Hold rcS's fast-update guard so killing the phone app doesn't reboot us. The
 # engine itself kills lid+media_daemon (after arming hands-free audio while the
 # daemon is still alive -- see snd/snd_hal.c).
+. /snom/cfw/lib/saves.sh
+SAVEDIR=$(saves_dir_doom "${NAME%.wad}")
 touch /tmp/ssh_fast_update
 
-"$ENGINE" -iwad "$WAD" >> "$LOG" 2>&1 < /dev/null
+"$ENGINE" -iwad "$WAD" -savedir "$SAVEDIR" >> "$LOG" 2>&1 < /dev/null
 log "Doom exited with status $?"
+sync
 
 rm -f "$WAD"
 
