@@ -1,18 +1,6 @@
 <div class="card">
-  <h2>Idle screen widgets</h2>
-  <p>Clock (live), stats line (uptime/load/free RAM, frozen at apply time) and a custom PNG on the standby screen. Applying restarts the phone UI (~20 s).</p>
-  <form method="post" action="/cgi-bin/idle">
-    <input type="hidden" name="action" value="apply">
-    <label><input type="checkbox" name="clock" value="on"> Clock</label>
-    <label><input type="checkbox" name="stats" value="on"> Stats</label>
-    <label><input type="checkbox" name="picture" value="on"> Picture</label>
-    <button type="submit">Apply</button>
-  </form>
-  <form method="post" action="/cgi-bin/idle">
-    <input type="hidden" name="action" value="picture">
-    <input type="text" name="url" placeholder="http://host/pic.png">
-    <button type="submit">Fetch picture</button>
-  </form>
+  <h2>Idle screen widgets (not working)</h2>
+  <p>Clock/stats/picture widgets are disabled: on the D375 edits of <code>state_idle.xml</code> have no visible effect (see docs/idle-screen.md). Only the restore button is kept, in case an experiment left a modified file.</p>
   <form method="post" action="/cgi-bin/idle">
     <input type="hidden" name="action" value="restore">
     <button type="submit" style="background:#555">Restore stock idle screen</button>
