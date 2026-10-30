@@ -168,3 +168,6 @@ at 57–60 fps with 4–30 underruns per 5 s.
   it "auto" never skips.
 - **`STATIC_LINKING=1` with other cores** drops libretro-common from the
   archive (RetroArch would provide it); see gb.md. gpSP links fine.
+
+## Zip files
+The URL may point to a `.zip`; the launcher unpacks it and runs a `.gba` inside (several: a choice list). Details, limits and tests: [zip.md](zip.md).

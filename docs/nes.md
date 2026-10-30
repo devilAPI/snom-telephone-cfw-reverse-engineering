@@ -77,3 +77,6 @@ underruns per 5 s** (CPU-bound, 0 % idle); after **60.0 fps, 0 underruns, ~45 %
 CPU**. The FFT (`tests/fftcheck.py`) finds the triangle in every window and
 all arpeggio notes; InfoNES's pulse pitch is ~0.5–1 % sharp (its own
 frequency constants), inaudible.
+
+## Zip files
+The URL may point to a `.zip`; the launcher unpacks it and runs a `.nes` inside (several: a choice list). Details, limits and tests: [zip.md](zip.md).

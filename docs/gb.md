@@ -85,3 +85,6 @@ fps, the unmapped-key log and the tones in the `SND_DUMP` PCM.
 
 - Battery saves live in `/tmp` and are lost on quit (Task K persists them).
 - No link cable, rumble, or Super Game Boy borders.
+
+## Zip files
+The URL may point to a `.zip`; the launcher unpacks it and runs a `.gb`/`.gbc` inside (several: a choice list). Details, limits and tests: [zip.md](zip.md).

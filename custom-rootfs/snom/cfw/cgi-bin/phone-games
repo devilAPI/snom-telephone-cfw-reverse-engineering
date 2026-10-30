@@ -22,6 +22,7 @@ echo '<?xml version="1.0" encoding="UTF-8"?>'
 echo '<IPPhoneMenu state="others_except_mb" dtmf="off">'
 case "$GAME" in
 doom|nes)
+    [ -f "/tmp/zip-$GAME/sid" ] && item "Choose file from last zip..." "$B/phone-pick?sys=$GAME"
     if [ "$GAME" = doom ]; then echo '  <Title>DOOM</Title>'; else echo '  <Title>NES</Title>'; fi
     HIST=/snom/cfw/$GAME/history
     if [ -s "$HIST" ]; then
@@ -43,6 +44,7 @@ doom|nes)
     item "Enter URL..." "$B/phone-url?game=$GAME"
     ;;
 gba|gb)
+    [ -f "/tmp/zip-$GAME/sid" ] && item "Choose file from last zip..." "$B/phone-pick?sys=$GAME"
     if [ "$GAME" = gba ]; then echo '  <Title>Game Boy Advance</Title>'; else echo '  <Title>Game Boy / Color</Title>'; fi
     HIST=/snom/cfw-data/$GAME/history
     if [ -s "$HIST" ]; then

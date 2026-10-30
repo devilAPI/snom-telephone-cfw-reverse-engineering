@@ -1,14 +1,14 @@
 #!/bin/sh
-# CFW: start Doom/NES from the phone's own menu. ?game=doom|nes&url=<url>
+# CFW: start Doom/NES from the phone's own menu (a .zip works; several games
+# inside -> phone-pick shows a list). ?game=doom|nes&url=<url>
 # (url last: a typed URL may arrive unencoded and contain '&'). Answers with a
 # minibrowser text screen; the launcher downloads, then takes over the screen.
-echo "Content-type: text/xml"
-echo ""
 GAME=$(echo "$QUERY_STRING" | sed -n 's/^game=\([a-z]*\)&.*/\1/p')
 RAW=${QUERY_STRING#*url=}
 URL=$(printf '%b' "$(echo "$RAW" | sed 's/%\(..\)/\\x\1/g')")
 
 msg() {
+printf 'Content-type: text/xml\r\n\r\n'
 cat <<EOF2
 <?xml version="1.0" encoding="UTF-8"?>
 <IPPhoneText dtmf="off">
@@ -24,9 +24,8 @@ EOF2
 
 case "$URL" in http://*|https://*) ;; *) msg "Invalid URL" "Enter an http:// or https:// link."; exit 0 ;; esac
 case "$GAME" in
-    doom) nohup /snom/cfw/doom/boot-doom.sh "$URL" >/dev/null 2>&1 &
-          msg "Starting DOOM" "Downloading the WAD, then DOOM takes over the screen. Red hangup key quits (the phone then restarts). If nothing happens within a minute or two, the download failed." ;;
-    nes)  nohup /snom/cfw/nes/boot-nes.sh "$URL" >/dev/null 2>&1 &
-          msg "Starting NES" "Downloading the ROM, then the emulator takes over the screen. Red hangup key quits (the phone then restarts)." ;;
+    doom|nes) rm -f "/tmp/$GAME.status"
+          nohup /snom/cfw/$GAME/boot-$GAME.sh "$URL" </dev/null >/dev/null 2>&1 &
+          QUERY_STRING="sys=$GAME&wait=1" exec /snom/cfw/cgi-bin/phone-pick ;;
     *)    msg "Error" "Unknown game." ;;
 esac

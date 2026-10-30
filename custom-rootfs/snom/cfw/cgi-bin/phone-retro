@@ -1,7 +1,7 @@
 #!/bin/sh
 # CFW: GB / GBA from the phone's own Games menu (minibrowser XML, loopback :8081).
 #   ?sys=gba|gb            IPPhoneInput: type a ROM URL
-#   ?sys=gba|gb&url=<url>  start it (url last: a typed URL may arrive
+#   ?sys=gba|gb&url=<url>  start it (a .zip works: several ROMs -> a list) (url last: a typed URL may arrive
 #                          unencoded and contain '&'), answer with IPPhoneText
 . /snom/cfw/lib/cfw.sh
 SYS=$(printf '%s' "$QUERY_STRING" | sed -n 's/^sys=\([a-z]*\).*/\1/p')
@@ -39,14 +39,6 @@ if cfw_game_running; then cfw_phone_text "$NAME" "A game is already running."; e
 STATUS=/tmp/$SYS.status
 rm -f "$STATUS"
 nohup /snom/cfw/$SYS/boot-$SYS.sh "$URL" </dev/null >/dev/null 2>&1 &
-# Wait for the download + header check (at most 15 s) so errors show here.
-i=0
-while [ $i -lt 15 ]; do
-    sleep 1; i=$((i + 1))
-    st=$(cat "$STATUS" 2>/dev/null)
-    case "$st" in error*|running|done) break ;; esac
-done
-case "$st" in
-    error*) cfw_phone_text "$NAME: not started" "${st#error }" ;;
-    *)      cfw_phone_text "Starting $NAME" "The emulator takes over the screen when the ROM is downloaded. Red hangup key quits." ;;
-esac
+# Wait for the download + header check (at most 15 s) so errors, and the file
+# list of a multi-ROM zip, show here (phone-pick turns the status into XML).
+QUERY_STRING="sys=$SYS&wait=1" exec /snom/cfw/cgi-bin/phone-pick

@@ -68,7 +68,7 @@ and keeps it if it is a known IWAD name (`doom2.wad`, `freedoom2.wad`,
 | `archive.org/details/<item>/<file>` | rewrites to `/download/` (a `/details/` link is an HTML viewer page; this was why archive.org links "didn't load") |
 | `archive.org/details/<item>` or `/download/<item>` | reads `archive.org/metadata/<item>/files` and picks a known IWAD name, else any `.wad`, else a `.zip` |
 | `archive.org/download/<item>/<file>.zip` | the phone has no `unzip`, so it uses archive.org's server-side zip view (`<zip>/<member>`) and picks the IWAD inside |
-| `.zip` from other hosts | rejected (no unzip) |
+| any other URL serving a `.zip` | unpacked on the phone (`/snom/cfw/bin/unzip`), the `.wad` inside is used; several WADs give a choice list. See [zip.md](zip.md) |
 
 PWADs (add-on map packs) and HTML pages are rejected with a clear message.
 Every step and error goes to `/tmp/doom.log`, which the CFW page shows at

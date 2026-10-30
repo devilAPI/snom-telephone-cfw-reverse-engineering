@@ -1,14 +1,23 @@
 #!/bin/sh
-# CFW panel: boot a GBA (boot-gba) or GB/GBC (boot-gb, a wrapper) ROM from a URL.
-#   POST url=<http(s) URL>   start lib/retro-boot.sh, wait up to 20 s for its
-#                            verdict (error / running / still downloading)
-#   GET  ?log=1              show the launcher's status and log
+# CFW panel: boot a GBA (boot-gba), GB/GBC (boot-gb), NES (boot-nes) or Doom
+# (boot-doom) game from a URL. boot-gb/-nes/-doom are wrappers that set
+# CFW_RETRO_SYS and exec this file. Zip files are supported (docs/zip.md).
+#   POST url=<http(s) URL>   start the launcher, wait up to 20 s for its
+#                            verdict (error / running / choose / still downloading)
+#   POST sid=..&pick=N       start entry N of a multi-game zip the launcher
+#                            unpacked (sid and N are checked by lib/zip.sh and
+#                            only ever select by index into its own list)
+#   GET  ?log=1              show the launcher's status and log (and the
+#                            pending zip choice, if any)
 # The URL is only ever passed as one quoted argument; nothing is eval'ed.
 . /snom/cfw/lib/cfw.sh
+. /snom/cfw/lib/zip.sh
 SYS=${CFW_RETRO_SYS:-gba}
 case "$SYS" in
     gba) NAME="GBA" ;;
     gb)  NAME="Game Boy" ;;
+    nes) NAME="NES" ;;
+    doom) NAME="Doom" ;;
     *)   SYS=gba; NAME="GBA" ;;
 esac
 STATUS=/tmp/$SYS.status
@@ -20,18 +29,41 @@ printf '<div class="card"><h2>Boot %s</h2>\n' "$NAME"
 end() { printf '<p><a href="%s?log=1">Launcher log</a> &middot; <a href="/cgi-bin/panel">&larr; Back</a></p></div>\n' "$SELF"; cfw_html_foot; exit 0; }
 msg() { printf '<p class="%s">%s</p>\n' "$1" "$(printf '%s' "$2" | cfw_html_escape)"; }
 
+# choose_list: the files of a multi-game zip, one button each.
+choose_list() {
+    _sid=$(printf '%s' "$st" | cut -d' ' -f2)
+    case "$_sid" in ''|*[!0-9-]*) msg err "Bad zip session."; return ;; esac
+    msg ok "The zip holds several games. Choose one to start:"
+    _i=0
+    while IFS= read -r _f; do
+        _i=$((_i + 1))
+        printf '<form method="post" action="%s" style="margin:0 0 6px"><input type="hidden" name="sid" value="%s"><button name="pick" value="%s">%s</button></form>\n' \
+            "$SELF" "$_sid" "$_i" "$(printf '%s' "$_f" | cfw_html_escape)"
+    done < "/tmp/zip-$SYS/list"
+}
+
 if [ "$(cfw_param log)" = 1 ]; then
-    msg ok "Status: $(cat "$STATUS" 2>/dev/null || echo 'no run yet')"
+    st=$(cat "$STATUS" 2>/dev/null)
+    msg ok "Status: ${st:-no run yet}"
+    case "$st" in choose*) choose_list ;; esac
     printf '<pre style="white-space:pre-wrap;font-size:12px">'
     tail -n 40 "$LOG" 2>/dev/null | cfw_html_escape
     printf '</pre>\n'
     end
 fi
 
+PICK=$(cfw_param pick)
+if [ -n "$PICK" ]; then
+    SID=$(cfw_param sid)
+    case "$SID$PICK" in *[!0-9-]*) msg err "Bad choice."; end ;; esac
+    if cfw_game_running; then msg err "A game is already running on the phone. Quit it first (red hangup key)."; end; fi
+    rm -f "$STATUS"
+    nohup /snom/cfw/$SYS/boot-$SYS.sh --pick "$SID" "$PICK" </dev/null >/dev/null 2>&1 &
+else
 URL=$(cfw_param url)
 case "$URL" in
     http://*|https://*) ;;
-    *) msg err "Please enter a valid http:// or https:// URL to a ROM."; end ;;
+    *) msg err "Please enter a valid http:// or https:// URL to a ROM/WAD (a .zip works too)."; end ;;
 esac
 case "$URL" in
     *"
@@ -41,21 +73,22 @@ if cfw_game_running; then msg err "A game is already running on the phone. Quit 
 
 rm -f "$STATUS"
 nohup /snom/cfw/$SYS/boot-$SYS.sh "$URL" </dev/null >/dev/null 2>&1 &
+fi
 
 # Wait for the launcher's verdict (download + header check), at most 20 s.
-i=0
-while [ $i -lt 20 ]; do
-    sleep 1; i=$((i + 1))
-    st=$(cat "$STATUS" 2>/dev/null)
-    case "$st" in error*|running|done) break ;; esac
-done
+zip_wait "$SYS" 20
 case "$st" in
+    choose*) choose_list; end ;;
     error*)  msg err "Not started: ${st#error }" ;;
     running|done) msg ok "Running on the phone screen. Red hangup key quits; the phone app then comes back." ;;
     *)       msg ok "Still downloading. The game starts on the phone screen when the download is done; check the launcher log if nothing happens." ;;
 esac
-cat <<'EOT'
+case "$SYS" in
+    doom) echo '<p>Controls: nav pad = move/turn, Fire = shoot, Use = open doors, OK = menu, <b>red hangup = quit</b>.</p>' ;;
+    *) cat <<'EOT'
 <p>Controls: nav pad = D-pad, Fire = A, Use = B, OK = Start, Cancel = Select,
    digit 1 = L, digit 3 = R, <b>red hangup = quit</b>.</p>
 EOT
+    ;;
+esac
 end

@@ -40,6 +40,9 @@ Adding a feature never needs an edit of `index.html`, `state_settings.xml` or `p
 * Settings menus: `state_settings.xml` is read when the Settings menu opens, a copy to `/snom/html/xml/gui/` takes effect immediately (original backed up by the tests' author at `/tmp/state_settings.xml.bak` on the phone, lost at reboot). The new item sits after Games, scroll down in Settings to see it.
 * The minibrowser only takes built-in icon enums for menus; CFW Tools reuses `kIconSettingsInformation`.
 
+## Zip support
+`lib/zip.sh` + `/snom/cfw/bin/unzip` (built by `tools/build-unzip.sh`), see [zip.md](zip.md). `cgi-bin/boot-gba` serves all four systems (`CFW_RETRO_SYS`).
+
 ## Tests
 
 `tests/lib.sh` helpers: `ph`, `ph_put`, `with_phone_lock`, `http`, `assert_eq`, `assert_contains`, `pass`, `fail`. `tests/foundation.sh` deploys Task 0 files under the phone lock and checks panel cards, `phone-tools` on :8081 and `cfw_param` decoding.

@@ -38,3 +38,5 @@ Not saved (ruling): GB real-time-clock data (`RETRO_MEMORY_RTC`) and emulator sa
 ## Tests
 
 `tests/saves.sh` (deploy and run under the phone lock, ~8 min): test ROMs `tests/roms/sav.{nes,gb,gba}` (made by `mkroms.py` / `build.sh`) increment byte 0 of battery RAM on every start. Checks: counter 1 after the first run, 2 after the second (proves load), SIGTERM flush, a blocked `.tmp` path logs `save: cannot write` and keeps the old save, plus the CGI (list, download, hostile names, delete).
+
+A ROM that came out of a zip is moved to the normal ROM path before `saves_setup` hashes it, so it gets the same save as the bare ROM (see zip.md).
