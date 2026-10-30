@@ -1,7 +1,7 @@
 #!/bin/sh
 # CFW: intercom / baby monitor (see docs/intercom.md). Streams the phone's
 # microphone as http://<phone>:8090/stream.wav?k=<token> while the phone UI runs.
-#   ?a=status|start|stop   [&g=0..6 digital gain, start only]
+#   ?a=status|start|stop   [&g=0..6 digital gain, &m=speaker|handset|headset|both mic; start only]
 #   &fmt=txt   key=value lines (tools/intercom-listen.sh, tests)
 #   &fmt=json  JSON (panel card 90-intercom.html)
 #   (none)     small HTML page with an <audio> player
@@ -15,14 +15,16 @@ A=$(cfw_param a)
 FMT=$(cfw_param fmt)
 G=$(cfw_param g)
 DO=$(cfw_param do)
+M=$(cfw_param m)
 case "$A" in start|stop|status|phone) ;; *) A=status ;; esac
 case "$FMT" in txt|json|html) ;; *) FMT=html ;; esac
 case "$G" in [0-6]) ;; *) G=2 ;; esac
 case "$DO" in start|stop) ;; *) DO= ;; esac
+case "$M" in speaker|handset|headset|both) ;; *) M=speaker ;; esac
 
 run_ctl() {
     case "$1" in
-        start) "$CTL" start "$G" 2>&1 ;;
+        start) "$CTL" start "$G" "$M" 2>&1 ;;
         stop)  "$CTL" stop 2>&1 ;;
         *)     "$CTL" status 2>&1 ;;
     esac
@@ -57,9 +59,15 @@ if [ "$A" = phone ]; then
     if [ "$RUNNING" = 1 ]; then
         item "Stop intercom" "$B&do=stop"
         item "Level: $(value level | cut -d' ' -f1) (refresh)" "$B"
+        if [ "$(value mic)" = handset ]; then
+            item "Mic: handset - switch to speakerphone" "$B&do=start&m=speaker"
+        else
+            item "Mic: $(value mic | tr -cd 'a-z') - switch to handset" "$B&do=start&m=handset"
+        fi
         item "PC: $(phone_ip):8090 (token in web panel)" "$B"
     else
-        item "Start intercom (mic to LAN)" "$B&do=start"
+        item "Start intercom (speakerphone mic)" "$B&do=start&m=speaker"
+        item "Start intercom (handset mic)" "$B&do=start&m=handset"
     fi
     cat <<'EOT'
   <SoftKeyItem>
@@ -82,11 +90,12 @@ json)
     printf 'Content-type: application/json\r\nCache-Control: no-store\r\n\r\n'
     # values: running/port digits, token hex, level digits; error is free text -> escape
     jesc() { sed 's/\\/\\\\/g; s/"/\\"/g' | tr -d '\000-\037'; }
-    printf '{"running":%s,"port":%s,"token":"%s","level":"%s","error":"%s"}\n' \
+    printf '{"running":%s,"port":%s,"token":"%s","level":"%s","mic":"%s","error":"%s"}\n' \
         "$( [ "$(value running)" = 1 ] && echo 1 || echo 0)" \
         "$(value port | tr -cd '0-9' | grep . || echo 0)" \
         "$(value token | tr -cd '0-9a-f')" \
         "$(value level | tr -cd '0-9 ')" \
+        "$(value mic | tr -cd 'a-z')" \
         "$(value error | jesc)"
     ;;
 *)

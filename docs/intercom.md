@@ -97,9 +97,10 @@ it. Block ids are `(cid << 8) | type`; media_daemon's "mute everything" routine 
 
 | type | range | meaning (inferred) |
 |---|---|---|
-| `0x04` | -50..0 dB | digital ADC / ingress gain |
-| `0x08`.. | -50..18 dB | digital DAC / egress gain |
-| `0x10`, `0x20` | 0..42 dB, 3 dB steps | analog mic preamps (two inputs) |
+| `0x04` | -50..0 dB | **sidetone** (mic looped back into the speaker). Earlier micstream versions unmuted this by mistake |
+| `0x08` | -50..18 dB | **digital mic gain** (APM reg `0x40`/`0x70`). While it is muted the ADC delivers exact zeros |
+| `0x09` | -50..18 dB | the other digital stage (APM reg `0x2c`/`0x5c`), not needed for capture |
+| `0x10`, `0x20` | 0..42 dB, 3 dB steps | analog preamp of mic input A / B (one shared PGA). Writing either also switches the channel's input mux (`ApmHW_SetTxMux`) to that input; muting either powers the PGA down |
 | `0x11`, `0x21` | -21..0 dB | analog output stage |
 
 Observed values (cid 0 = APM CH0, cid 1 = CH1; "forced" = what micstream sets):
@@ -128,6 +129,26 @@ call is active media_daemon owns them). Blocks that are not muted are left alone
 `micstream -x` (used by `intercom.sh stop` after a `kill -9`) only removes the amxr
 connections: after a crash we can't tell our gain values from media_daemon's, and an
 unmuted ADC on an idle phone is harmless (media_daemon resets it on the next call).
+
+### Which microphone (2026-10-30)
+
+Decoded from `halaudio.ko` (`halAudioSetGain`: bit 3 = digital gain, bit 2 = sidetone, otherwise analog with
+`(type >> 4)` = input and `type & 3` = stage) and `halaudio_apm.ko` (`apmAnaGainSet` calls `ApmHw_PGAGainSet`,
+`ApmHw_AmpSetPowerDown` and `ApmHW_SetTxMux`), then verified on the phone by reading the APM registers through
+`/dev/mem` at physical `0x30600000` (kernel virtual `0xf3600000`).
+
+I measured the room-noise rms of each input at a 24 dB preamp and a 0 dB digital gain:
+
+| `micstream` | APM channel / input | rms | microphone |
+|---|---|---|---|
+| `-c 0 -m 0` | CH0 / A (`0x010`) | 17 | handset |
+| `-c 0 -m 1` | CH0 / B (`0x020`) | 2 | headset jack (empty) |
+| `-c 1 -m 0` | CH1 / A (`0x110`) | 4 | unused |
+| `-c 1 -m 1` | CH1 / B (`0x120`) | 40 | speakerphone (base), the input media_daemon uses in speaker mode |
+
+`intercom.sh start GAIN MIC` maps `speaker` (default), `handset`, `headset` and `both` (`-c 2 -m 2`) to these. The panel
+card and the phone menu offer the choice. Switching while running restarts micstream, which gives a new token, and the
+panel player follows. micstream re-points the input mux once a second while the phone is idle, and never during a call.
 
 ### During a call
 

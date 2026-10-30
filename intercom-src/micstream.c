@@ -62,8 +62,8 @@ static void on_sig(int s) { (void)s; g_run = 0; }
 
 /* sources: halaudio.apm0 and/or apm1, both into amxruser.bind<g_uport>; amxr sums
  * all sources connected to one destination, so "-c 2" (default) mixes both mic paths.
- * Which APM channel carries the live mic depends on media_daemon's last route
- * (fresh boot: CH1; after a call / off-hook: CH0); the muted one adds exact zeros. */
+ * CH0 carries the handset (input A) / headset (input B) mics, CH1 the speakerphone mic
+ * (input B); intercom.sh picks "-c 1 -m 1", "-c 0 -m 0", ... from the panel's mic choice. */
 static void *g_src[2], *g_dst;
 static int g_amxr = -1, g_wired[2];
 static int g_uport = 2; /* amxruser.bind2: bind0/1 are used by other test tools */
@@ -116,12 +116,19 @@ static void unwire(void) {
 /* ---- codec gains ----
  * While the phone is idle media_daemon mutes the codec gain blocks (-1000 dB); the
  * mic samples arriving at the amxr tap are then exact zeros. Block id = (cid << 8) |
- * type; for an APM channel: 0x04 = digital ADC gain (-50..0 dB), 0x10 / 0x20 = analog
- * mic preamps (0..42 dB). Every block that reads "muted" is set to our value
+ * type; for an APM channel (decoded from halaudio.ko / halaudio_apm.ko, docs/intercom.md):
+ *   0x08        = digital mic gain (-50..18 dB, APM reg 0x40 / 0x70); while it is muted
+ *                 the ADC delivers exact zeros whatever the analog side does
+ *   0x09        = the other digital stage (speaker side, 0x2c / 0x5c), not needed here
+ *   0x04        = sidetone (mic -> speaker loop), never touched here
+ *   0x10 / 0x20 = analog preamp of mic input A / B (0..42 dB); writing either also points
+ *                 the channel's input mux (ApmHW_SetTxMux) at that input, so the selected
+ *                 input (-m) is written last. Muting either powers the shared preamp down.
+ * Every block that reads "muted" is set to our value
  * (re-checked once a second, media_daemon mutes again after every call), and on exit
  * put back to mute if it still holds our value. During a call media_daemon owns them. */
-static int g_hal = -1, g_adc_db = 0, g_pre_db = 24;
-static int g_blk[6], g_val[6], g_mine[6], g_nblk;
+static int g_hal = -1, g_adc_db = 0, g_pre_db = 24, g_mux = -1;
+static int g_blk[8], g_val[8], g_mine[8], g_nblk, g_muxblk[2] = { -1, -1 }, g_digblk[2] = { -1, -1 };
 
 static int gain_get(int blk) {
     /* the kernel copies a whole HALAUDIO_GAIN_INFO incl. its dB table (several hundred
@@ -139,9 +146,14 @@ static void adc_open(int chmask) {
     g_nblk = 0;
     for (int ch = 0; ch < 2; ch++) {
         if (!(chmask & (1 << ch))) continue;
-        g_blk[g_nblk] = (ch << 8) | 0x04; g_val[g_nblk++] = g_adc_db;
-        g_blk[g_nblk] = (ch << 8) | 0x10; g_val[g_nblk++] = g_pre_db;
-        g_blk[g_nblk] = (ch << 8) | 0x20; g_val[g_nblk++] = g_pre_db;
+        g_digblk[ch] = g_nblk;
+        g_blk[g_nblk] = (ch << 8) | 0x08; g_val[g_nblk++] = g_adc_db;
+        /* selected input last: its write leaves the mux pointing at it */
+        /* -m 2: each channel's own mic (CH0 input A = handset, CH1 input B = speakerphone) */
+        int mux = g_mux == 2 ? ch : g_mux;
+        g_blk[g_nblk] = (ch << 8) | (mux == 0 ? 0x20 : 0x10); g_val[g_nblk++] = g_pre_db;
+        g_blk[g_nblk] = (ch << 8) | (mux == 0 ? 0x10 : 0x20); g_val[g_nblk++] = g_pre_db;
+        if (mux >= 0) g_muxblk[ch] = g_nblk - 1;
     }
     g_hal = open("/dev/halaudio", O_RDWR);
     if (g_hal < 0) perror("micstream: /dev/halaudio (gain control disabled)");
@@ -152,6 +164,14 @@ static void adc_check(void) {
             if (!g_mine[i]) fprintf(stderr, "micstream: unmuted gain block %#x -> %d dB\n", g_blk[i], g_val[i]);
             g_mine[i] = 1;
         }
+    /* Re-point the input mux while the phone is idle (our ingress gain still in place);
+     * during a call media_daemon owns the route and is left alone. */
+    for (int ch = 0; ch < 2; ch++) {
+        int m = g_muxblk[ch], d = g_digblk[ch];
+        if (m < 0 || d < 0 || !g_mine[d] || gain_get(g_blk[d]) != g_val[d]) continue;
+        int v = gain_get(g_blk[m]);
+        if (v > GAIN_MUTE) gain_set(g_blk[m], v);
+    }
 }
 static void adc_restore(int force) {
     if (g_hal < 0) return;
@@ -302,8 +322,10 @@ static void usage(void) {
         "  -c CH      APM channel 0, 1 or 2 = both mixed (default 2)\n"
         "  -u N       amxruser port 0..2 to use (default 2)\n"
         "  -P DB      analog mic preamp used while muted (0..42, default 24)\n"
+        "  -m IN      mic input: 0 = A (block 0x10), 1 = B (0x20), 2 = CH0 A + CH1 B; default: leave\n"
+        "             measured: CH0 A = handset, CH0 B = headset jack, CH1 B = speakerphone mic\n"
         "  -g SHIFT   digital gain, left shift 0..6 with saturation (default 0)\n"
-        "  -A DB      ADC digital gain used while the phone has it muted (-50..0, default 0)\n"
+        "  -A DB      digital mic gain used while the phone has it muted (-50..18, default 0)\n"
         "  -L FILE    write 'rms peak' of the last second to FILE once per second\n"
         "  -l FILE    append log messages to FILE (stderr otherwise)\n"
         "  -x         cleanup only: remove leftover amxr connections, then exit\n");
@@ -312,7 +334,7 @@ static void usage(void) {
 int main(int argc, char **argv) {
     int ch = 2, gain = 0, port = 8090, secs = 0, opt, cleanup = 0;
     const char *bindaddr = "0.0.0.0", *outfile = NULL, *levelfile = NULL;
-    while ((opt = getopt(argc, argv, "c:g:p:b:k:o:t:L:l:A:P:u:xh")) != -1) {
+    while ((opt = getopt(argc, argv, "c:g:p:b:k:o:t:L:l:A:P:u:m:xh")) != -1) {
         switch (opt) {
         case 'c': ch = atoi(optarg); break;
         case 'g': gain = atoi(optarg); break;
@@ -326,6 +348,7 @@ int main(int argc, char **argv) {
         case 'x': cleanup = 1; break;
         case 'P': g_pre_db = atoi(optarg); break;
         case 'u': g_uport = atoi(optarg); break;
+        case 'm': g_mux = atoi(optarg); break;
         case 'l': {
             int lf = open(optarg, O_WRONLY | O_CREAT | O_APPEND, 0644);
             if (lf >= 0) { dup2(lf, 2); close(lf); }
@@ -334,7 +357,7 @@ int main(int argc, char **argv) {
         default: usage(); return 2;
         }
     }
-    if (ch < 0 || ch > 2 || gain < 0 || gain > 6 || g_adc_db < -50 || g_adc_db > 0 || g_pre_db < 0 || g_pre_db > 42 || g_uport < 0 || g_uport > 2 || port <= 0 || port > 65535) { usage(); return 2; }
+    if (ch < 0 || ch > 2 || gain < 0 || gain > 6 || g_adc_db < -50 || g_adc_db > 18 || g_pre_db < 0 || g_pre_db > 42 || g_uport < 0 || g_uport > 2 || g_mux < -1 || g_mux > 2 || port <= 0 || port > 65535) { usage(); return 2; }
 
     struct sigaction sa; memset(&sa, 0, sizeof sa); sa.sa_handler = on_sig;
     sigaction(SIGTERM, &sa, NULL); sigaction(SIGINT, &sa, NULL); sigaction(SIGHUP, &sa, NULL);

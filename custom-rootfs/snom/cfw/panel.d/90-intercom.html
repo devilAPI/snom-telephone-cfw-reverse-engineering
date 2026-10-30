@@ -10,13 +10,18 @@
     <option value="0">x1</option><option value="1">x2</option><option value="2" selected>x4</option>
     <option value="3">x8</option><option value="4">x16</option><option value="5">x32</option><option value="6">x64</option>
   </select></label>
+  <label style="font-size:13px">Mic <select id="ic-m">
+    <option value="speaker" selected>Speakerphone (base)</option><option value="handset">Handset</option>
+    <option value="headset">Headset jack</option><option value="both">Handset + speakerphone</option>
+  </select></label>
   <button type="button" id="ic-on">Start</button>
   <button type="button" id="ic-l">Listen</button>
   <button type="button" id="ic-off" style="background:#a40">Stop</button>
   <script>
   (function () {
     var st = document.getElementById('ic-st'), ps = document.getElementById('ic-p'),
-        ue = document.getElementById('ic-u'), g = document.getElementById('ic-g'), cur = null;
+        ue = document.getElementById('ic-u'), g = document.getElementById('ic-g'),
+        mic = document.getElementById('ic-m'), cur = null;
     /* Player status lives in its own line: the 5 s status poll rewrites #ic-st,
        which used to wipe playback errors before anyone could read them. */
     function pstat(t) { ps.textContent = 'Player: ' + t; }
@@ -79,6 +84,7 @@
       if (j.running) {
         var u = 'http://' + location.hostname + ':' + j.port + '/stream.wav?k=' + j.token;
         st.innerHTML = '<b style="color:#a40">ON - mic is live</b> (level ' + (j.level.split(' ')[0] || '?') + ')';
+        if (j.mic) { st.appendChild(document.createTextNode(' - ' + mic.querySelector('option[value="' + j.mic + '"]').textContent)); mic.value = j.mic; }
         cur = u;
         playStart(u);
         ue.innerHTML = '';
@@ -93,7 +99,7 @@
       if (j.running && j.error) st.textContent += ' - ' + j.error;
     }
     function call(a) {
-      var body = 'a=' + a + '&fmt=json' + (a === 'start' ? '&g=' + g.value : '');
+      var body = 'a=' + a + '&fmt=json' + (a === 'start' ? '&g=' + g.value + '&m=' + mic.value : '');
       return fetch('/cgi-bin/intercom', { method: 'POST', body: body,
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' } })
         .then(function (r) { return r.json(); }).then(function (j) {
@@ -123,6 +129,8 @@
       if (cur) playStart(cur); else pstat('intercom is off - press Start');
     };
     document.getElementById('ic-off').onclick = function () { call('stop'); };
+    /* switching the mic while on restarts the stream (new token); the player follows */
+    mic.onchange = function () { if (cur) { unlock(); player.url = null; call('start'); } };
     call('status');
     setInterval(function () { if (!document.hidden) call('status'); }, 5000);
   })();

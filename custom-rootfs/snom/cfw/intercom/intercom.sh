@@ -1,8 +1,10 @@
 #!/bin/sh
 # CFW intercom / baby monitor control (see docs/intercom.md).
-#   intercom.sh start [GAIN]   GAIN = digital gain shift 0..6 (default 2 = x4)
+#   intercom.sh start [GAIN] [MIC]   GAIN = digital gain shift 0..6 (default 2 = x4)
+#                                    MIC  = speaker (default) | handset | headset | both
+#                                    (running with another MIC: restarts with the new one)
 #   intercom.sh stop
-#   intercom.sh status         key=value lines: running, port, token, level, error
+#   intercom.sh status         key=value lines: running, port, token, level, mic, error
 # Used by cgi-bin/intercom (panel + phone menu) and tests/intercom.sh; also fine over ssh.
 #
 # start: insmod the stock amxr_user_hook.ko (gives /dev/amxruser), then run micstream,
@@ -15,6 +17,7 @@ D=/snom/cfw/intercom
 RUN=/tmp/intercom
 PIDF=$RUN/pid
 TOKF=$RUN/token
+MICF=$RUN/mic
 LVL=$RUN/level
 LOG=$RUN/log
 KO=/lib/modules/2.6.27.47/BROADCOM/amxr_user_hook.ko
@@ -56,6 +59,7 @@ status() {
         echo "port=$PORT"
         echo "token=$(cat "$TOKF" 2>/dev/null)"
         echo "level=$(cat "$LVL" 2>/dev/null)"
+        echo "mic=$(cat "$MICF" 2>/dev/null)"
     else
         echo "running=0"
     fi
@@ -86,7 +90,7 @@ do_stop() {
             "$D/micstream" -c "$CH" -x >>"$LOG" 2>&1
         fi
     fi
-    rm -f "$PIDF" "$TOKF" "$LVL"
+    rm -f "$PIDF" "$TOKF" "$LVL" "$MICF"
     module_unload || { echo "error=rmmod amxr_user_hook failed"; return 1; }
     return 0
 }
@@ -94,7 +98,19 @@ do_stop() {
 do_start() {
     _g=${1:-2}
     case "$_g" in [0-6]) ;; *) echo "error=gain must be 0..6"; return 2 ;; esac
-    if running; then status; return 0; fi
+    _m=${2:-speaker}
+    # APM channel + mic input per microphone, measured on the D375 (docs/intercom.md)
+    case "$_m" in
+        speaker) _sel="-c 1 -m 1" ;;
+        handset) _sel="-c 0 -m 0" ;;
+        headset) _sel="-c 0 -m 1" ;;
+        both)    _sel="-c 2 -m 2" ;;
+        *) echo "error=mic must be speaker, handset, headset or both"; return 2 ;;
+    esac
+    if running; then
+        [ "$(cat "$MICF" 2>/dev/null)" = "$_m" ] && { status; return 0; }
+        do_stop >/dev/null || { echo "error=could not stop the running intercom"; return 1; }
+    fi
     if game_running; then
         echo "error=a game owns the audio hardware; quit it first"
         return 3
@@ -114,8 +130,10 @@ do_start() {
     case "$_tok" in [0-9a-f][0-9a-f][0-9a-f][0-9a-f]*) ;; *) echo "error=could not make a token"; return 1 ;; esac
     printf '%s\n' "$_tok" > "$TOKF"
     chmod 600 "$TOKF"
+    printf '%s\n' "$_m" > "$MICF"
+    # $_sel is one of the fixed strings above: word splitting intended
     start-stop-daemon -S -b -m -p "$PIDF" -x "$D/micstream" -- \
-        -c "$CH" -g "$_g" -p "$PORT" -k "$_tok" -L "$LVL" -l "$LOG"
+        $_sel -g "$_g" -p "$PORT" -k "$_tok" -L "$LVL" -l "$LOG"
     _i=0
     while [ $_i -lt 15 ]; do
         usleep 100000
@@ -133,8 +151,8 @@ do_start() {
 }
 
 case "$1" in
-    start)  lock; do_start "$2"; r=$?; unlock; exit $r ;;
+    start)  lock; do_start "$2" "$3"; r=$?; unlock; exit $r ;;
     stop)   lock; do_stop; r=$?; unlock; [ $r = 0 ] && status; exit $r ;;
     status) status ;;
-    *) echo "usage: $0 start [GAIN 0..6] | stop | status" >&2; exit 2 ;;
+    *) echo "usage: $0 start [GAIN 0..6] [speaker|handset|headset|both] | stop | status" >&2; exit 2 ;;
 esac
