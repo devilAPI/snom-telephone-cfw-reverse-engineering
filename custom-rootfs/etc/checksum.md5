@@ -9,7 +9,7 @@ dfd694647fdb057e8dcba4043dff5324  etc/udev/rules.d/00-init.rules
 76c5f666daa7668d3175e5bf73f84daa  etc/udev/rules.d/05-options.rules
 da1babf69e50f048ed29a548ac9a6a98  etc/udev/rules.d/50-firmware.rules
 fed7289b8c469066e8f8ff5591e32253  etc/udev/udev.conf
-b517fbb9c3ce93345f6b59b768606b5b  etc/init.d/rcS
+2323c4687d06afe6546fe9a6dda25d56  etc/init.d/rcS
 448df333d5c22293da216303d89ca9de  etc/fstab
 33946f99bcf2de9f27f245f8dda97330  etc/Wireless/RT2870STA/RT2870STA.dat
 f444c259e53fc3ac483efa3b226ce37f  etc/hostapd_event.sh
@@ -300,7 +300,7 @@ aeb9bebca395fbaefcd9f78f1a67182a  snom/html/xml/gui/multicast_zones.xml
 36c52bf2e2a0649c03ee058ddf827dc5  snom/html/xml/gui/pkeys_debug.xml
 5e2b01cafd8d2b80902cd046ac7008f6  snom/html/xml/gui/voicemail_info.xml
 b8d25be1ca316cbe78249b4d40889368  snom/html/xml/gui/conference.xml
-d26f9c4ebada43da5ae9c10d278bc5ed  snom/html/xml/gui/state_settings.xml
+04f15641d96f7e5905b109b08db31b31  snom/html/xml/gui/state_settings.xml
 3c27acf602b4c1c9717993d29a0333ab  snom/html/xml/gui/call_lists.xml
 d4370909dfe52e2a60005beb8f2da49c  snom/html/xml/gui/contact_pool.xml
 fe0fbce39d641988ad1497ba23b99d32  snom/html/xml/gui/contact_details_edit.xml
