@@ -1,0 +1,45 @@
+<div class="card" id="ic">
+  <h2>Intercom / baby monitor</h2>
+  <p>Streams the phone's microphone (16 kHz mono) to this browser.
+     The phone UI keeps running. While it is on, <b>the mic is live</b> for anyone with the stream link.</p>
+  <p id="ic-st">Status: ?</p>
+  <audio id="ic-a" controls preload="none" style="width:100%;margin:0 0 10px"></audio>
+  <p id="ic-u" style="font-size:11px;word-break:break-all"></p>
+  <label style="font-size:13px">Gain <select id="ic-g">
+    <option value="0">x1</option><option value="1">x2</option><option value="2" selected>x4</option>
+    <option value="3">x8</option><option value="4">x16</option><option value="5">x32</option><option value="6">x64</option>
+  </select></label>
+  <button type="button" id="ic-on">Start</button>
+  <button type="button" id="ic-off" style="background:#a40">Stop</button>
+  <script>
+  (function () {
+    var st = document.getElementById('ic-st'), au = document.getElementById('ic-a'),
+        ue = document.getElementById('ic-u'), g = document.getElementById('ic-g');
+    function show(j) {
+      if (j.running) {
+        var u = 'http://' + location.hostname + ':' + j.port + '/stream.wav?k=' + j.token;
+        st.innerHTML = '<b style="color:#a40">ON - mic is live</b> (level ' + (j.level.split(' ')[0] || '?') + ')';
+        if (au.getAttribute('data-u') !== u) { au.setAttribute('data-u', u); au.src = u; }
+        ue.textContent = u;
+      } else {
+        st.textContent = 'Off' + (j.error ? ' - ' + j.error : '');
+        au.removeAttribute('data-u'); au.pause(); au.removeAttribute('src'); au.load();
+        ue.textContent = '';
+      }
+      if (j.running && j.error) st.textContent += ' - ' + j.error;
+    }
+    function call(a) {
+      var body = 'a=' + a + '&fmt=json' + (a === 'start' ? '&g=' + g.value : '');
+      return fetch('/cgi-bin/intercom', { method: 'POST', body: body,
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' } })
+        .then(function (r) { return r.json(); }).then(function (j) {
+          show(j); if (a === 'start' && j.running) au.play().catch(function () {});
+        }).catch(function (e) { st.textContent = 'Error: ' + e; });
+    }
+    document.getElementById('ic-on').onclick = function () { call('start'); };
+    document.getElementById('ic-off').onclick = function () { call('stop'); };
+    call('status');
+    setInterval(function () { if (!document.hidden) call('status'); }, 5000);
+  })();
+  </script>
+</div>
