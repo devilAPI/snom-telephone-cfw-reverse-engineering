@@ -1,0 +1,112 @@
+#!/bin/sh
+# CFW: intercom / baby monitor (see docs/intercom.md). Streams the phone's
+# microphone as http://<phone>:8090/stream.wav?k=<token> while the phone UI runs.
+#   ?a=status|start|stop   [&g=0..6 digital gain, start only]
+#   &fmt=txt   key=value lines (tools/intercom-listen.sh, tests)
+#   &fmt=json  JSON (panel card 90-intercom.html)
+#   (none)     small HTML page with an <audio> player
+#   ?a=phone[&do=start|stop]  minibrowser menu for the phone (phone-menu.d/30-intercom)
+# All parameters are whitelisted; nothing from the request reaches a shell command
+# except the validated gain digit.
+. /snom/cfw/lib/cfw.sh
+CTL=/snom/cfw/intercom/intercom.sh
+
+A=$(cfw_param a)
+FMT=$(cfw_param fmt)
+G=$(cfw_param g)
+DO=$(cfw_param do)
+case "$A" in start|stop|status|phone) ;; *) A=status ;; esac
+case "$FMT" in txt|json|html) ;; *) FMT=html ;; esac
+case "$G" in [0-6]) ;; *) G=2 ;; esac
+case "$DO" in start|stop) ;; *) DO= ;; esac
+
+run_ctl() {
+    case "$1" in
+        start) "$CTL" start "$G" 2>&1 ;;
+        stop)  "$CTL" stop 2>&1 ;;
+        *)     "$CTL" status 2>&1 ;;
+    esac
+}
+
+# value KEY: read KEY=... from $OUT
+value() { printf '%s\n' "$OUT" | sed -n "s/^$1=//p" | head -n 1; }
+
+phone_ip() {
+    ifconfig 2>/dev/null | sed -n 's/.*inet addr:\([0-9.]*\).*/\1/p' | grep -v '^127\.' | head -n 1
+}
+
+if [ "$A" = phone ]; then
+    [ -n "$DO" ] && OUT=$(run_ctl "$DO") || OUT=$(run_ctl status)
+    RUNNING=$(value running)
+    ERR=$(value error)
+    if [ "$RUNNING" = 1 ]; then
+        TITLE="Intercom: ON - mic is live"
+    else
+        TITLE="Intercom: off"
+    fi
+    B="http://127.0.0.1:8081/cgi-bin/intercom?a=phone"
+    printf 'Content-type: text/xml\r\n\r\n'
+    echo '<?xml version="1.0" encoding="UTF-8"?>'
+    echo '<IPPhoneMenu state="others_except_mb" dtmf="off">'
+    printf '  <Title>%s</Title>\n' "$(printf '%s' "$TITLE" | cfw_xml_escape)"
+    item() {
+        printf '  <MenuItem name="%s">\n    <Url>%s</Url>\n  </MenuItem>\n' \
+            "$(printf '%s' "$1" | cfw_xml_escape)" "$(printf '%s' "$2" | cfw_xml_escape)"
+    }
+    [ -n "$ERR" ] && item "Error: $ERR" "$B"
+    if [ "$RUNNING" = 1 ]; then
+        item "Stop intercom" "$B&do=stop"
+        item "Level: $(value level | cut -d' ' -f1) (refresh)" "$B"
+        item "PC: $(phone_ip):8090 (token in web panel)" "$B"
+    else
+        item "Start intercom (mic to LAN)" "$B&do=start"
+    fi
+    cat <<'EOT'
+  <SoftKeyItem>
+    <Name>CANCEL</Name>
+    <Url track="no">phone://mb_nop#go_back</Url>
+  </SoftKeyItem>
+</IPPhoneMenu>
+EOT
+    exit 0
+fi
+
+OUT=$(run_ctl "$A")
+
+case "$FMT" in
+txt)
+    printf 'Content-type: text/plain\r\n\r\n'
+    printf '%s\n' "$OUT"
+    ;;
+json)
+    printf 'Content-type: application/json\r\nCache-Control: no-store\r\n\r\n'
+    # values: running/port digits, token hex, level digits; error is free text -> escape
+    jesc() { sed 's/\\/\\\\/g; s/"/\\"/g' | tr -d '\000-\037'; }
+    printf '{"running":%s,"port":%s,"token":"%s","level":"%s","error":"%s"}\n' \
+        "$( [ "$(value running)" = 1 ] && echo 1 || echo 0)" \
+        "$(value port | tr -cd '0-9' | grep . || echo 0)" \
+        "$(value token | tr -cd '0-9a-f')" \
+        "$(value level | tr -cd '0-9 ')" \
+        "$(value error | jesc)"
+    ;;
+*)
+    cfw_html_head "Intercom"
+    echo '<h1>Intercom / baby monitor</h1><div class="sub"><a href="/cgi-bin/panel">back to the panel</a></div>'
+    echo '<div class="card">'
+    ERR=$(value error)
+    [ -n "$ERR" ] && printf '<p class="err">%s</p>\n' "$(printf '%s' "$ERR" | cfw_html_escape)"
+    if [ "$(value running)" = 1 ]; then
+        TOK=$(value token | tr -cd '0-9a-f')
+        echo '<p class="warn"><b>The microphone is live.</b> Anyone with the link below can listen.</p>'
+        echo "<audio id=\"a\" controls autoplay></audio>"
+        echo "<p><code id=\"u\"></code></p>"
+        echo "<script>var u='http://'+location.hostname+':8090/stream.wav?k=$TOK';document.getElementById('a').src=u;document.getElementById('u').textContent=u;</script>"
+        echo '<form method="post" action="/cgi-bin/intercom"><input type="hidden" name="a" value="stop"><button style="background:#a40">Stop</button></form>'
+    else
+        echo '<p>Intercom is off.</p>'
+        echo '<form method="post" action="/cgi-bin/intercom"><input type="hidden" name="a" value="start"><button>Start</button></form>'
+    fi
+    echo '</div>'
+    cfw_html_foot
+    ;;
+esac
