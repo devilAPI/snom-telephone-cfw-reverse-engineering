@@ -114,7 +114,8 @@ cfw_ro() {
 cfw_game_running() {
     for _p in /proc/[0-9]*; do
         _e=$(readlink "$_p/exe" 2>/dev/null) || continue
-        case "$_e" in /snom/cfw/*/*) return 0 ;; esac
+        # only the emulators/Doom count; helpers (intercom/micstream, bin/*) do not
+        case "$_e" in /snom/cfw/doom/*|/snom/cfw/nes/*|/snom/cfw/gb/*|/snom/cfw/gba/*) return 0 ;; esac
     done
     return 1
 }
