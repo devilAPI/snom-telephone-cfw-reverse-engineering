@@ -46,7 +46,7 @@
       <!-- menus only take built-in icon enums: kIconTypeDect is unused on the
            D375, its dect*.png are replaced by a gamepad (tools/make-games-icon.py) -->
       <IconType>$(icon_type_enum:kIconTypeDect)</IconType>
-      <SubText>DOOM, NES</SubText>
+      <SubText>DOOM, NES, GB, GBA</SubText>
     </If>
     <Url>http://127.0.0.1:8081/cgi-bin/phone-games</Url>
   </Menu>
