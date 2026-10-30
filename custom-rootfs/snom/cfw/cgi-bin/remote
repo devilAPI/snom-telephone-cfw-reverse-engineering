@@ -1,0 +1,115 @@
+#!/bin/sh
+# CFW: remote screen + keypad page. Static HTML; the JS polls /cgi-bin/remote-frame
+# and posts keys to /cgi-bin/remote-key. Same-origin relative URLs, so HTTP Basic
+# credentials (once the panel login exists) are re-sent by the browser automatically.
+printf 'Content-type: text/html\r\nCache-Control: no-store\r\n\r\n'
+cat <<'EOT'
+<!DOCTYPE html>
+<html><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Phone remote</title>
+<style>
+ body{font-family:sans-serif;background:#222;color:#ddd;margin:0;padding:12px}
+ #wrap{display:flex;flex-wrap:wrap;gap:16px;align-items:flex-start}
+ #scr{background:#000;border:6px solid #444;border-radius:6px;width:960px;max-width:100%;image-rendering:pixelated;display:block}
+ #stat{font-size:12px;color:#9a9;margin:6px 0;font-family:monospace}
+ .pad{display:grid;gap:5px}
+ .pad button,.ctl button{background:#444;color:#eee;border:1px solid #666;border-radius:5px;padding:9px 0;min-width:52px;font-size:13px;cursor:pointer}
+ .pad button:active{background:#2a6}
+ .grp{margin-bottom:10px}
+ .nav{grid-template-columns:repeat(3,56px)}
+ .num{grid-template-columns:repeat(3,56px)}
+ .soft{grid-template-columns:repeat(4,56px)}
+ .lines{grid-template-columns:repeat(2,56px)}
+ .fn{grid-template-columns:repeat(4,56px)}
+ .ctl{font-size:12px} .ctl select{background:#333;color:#eee}
+ a{color:#6c9}
+ small{color:#888}
+</style></head><body>
+<div id="wrap">
+ <div>
+  <canvas id="scr" width="480" height="272"></canvas>
+  <div id="stat">starting...</div>
+  <div class="ctl">
+   Quality <select id="q"><option value="4">low (120x68)</option><option value="2" selected>medium (240x136)</option><option value="1">full (480x272)</option></select>
+   <label><input type="checkbox" id="run" checked> live</label>
+   <a href="/cgi-bin/screenshot" target="_blank">BMP screenshot</a>
+   <br><small>Keyboard: arrows, Enter = OK, Esc = Cancel, 0-9 * #, F1-F4 softkeys, + / - volume, S speaker, M mute, H headset, Del = Cancel</small>
+  </div>
+ </div>
+ <div>
+  <div class="grp"><div class="pad soft" id="soft"></div></div>
+  <div class="grp"><div class="pad nav" id="nav"></div></div>
+  <div class="grp"><div class="pad num" id="num"></div></div>
+  <div class="grp"><div class="pad fn" id="fn"></div></div>
+  <div class="grp"><div class="pad lines" id="lines"></div></div>
+ </div>
+</div>
+<script>
+(function(){
+ var KEYS={
+  soft:[['F1','F1'],['F2','F2'],['F3','F3'],['F4','F4']],
+  nav:[['Menu','MENU'],['Up','UP'],['Set','SETTINGS'],['Left','LEFT'],['OK','ENTER'],['Right','RIGHT'],['Cancel','CANCEL'],['Down','DOWN']],
+  num:[['1','1'],['2','2'],['3','3'],['4','4'],['5','5'],['6','6'],['7','7'],['8','8'],['9','9'],['*','STAR'],['0','0'],['#','POUND']],
+  fn:[['Vol-','VOLUME_DOWN'],['Vol+','VOLUME_UP'],['Mute','MUTE'],['Spkr','SPEAKER'],['Head','HEADSET'],['Redial','REDIAL'],['Hold','RETRIEVE'],['Xfer','TRANSFER'],['Conf','CONFERENCE'],['DND','DND'],['Msgs','REC'],['Help','HELP']],
+  lines:[['P1','P1'],['P2','P2'],['P3','P3'],['P4','P4'],['P5','P5'],['P6','P6'],['P7','P7'],['P8','P8'],['P9','P9'],['P10','P10'],['P11','P11'],['P12','P12']]
+ };
+ var scr=document.getElementById('scr'),ctx=scr.getContext('2d'),stat=document.getElementById('stat');
+ var qsel=document.getElementById('q'),run=document.getElementById('run');
+ var times=[],kb=0,lastErr='',busy=false,want=true,bumped=false;
+
+ function press(name){
+  fetch('/cgi-bin/remote-key?key='+encodeURIComponent(name),{cache:'no-store'})
+   .then(function(r){if(!r.ok)lastErr='key '+name+': '+r.status;else lastErr='';})
+   .catch(function(e){lastErr='key '+name+': '+e;});
+  bumped=true; // refresh soon so the result shows
+ }
+ Object.keys(KEYS).forEach(function(g){
+  var el=document.getElementById(g);
+  KEYS[g].forEach(function(k){
+   var b=document.createElement('button');b.textContent=k[0];b.title=k[1];
+   b.addEventListener('click',function(){press(k[1]);});el.appendChild(b);
+  });
+ });
+ var MAP={ArrowUp:'UP',ArrowDown:'DOWN',ArrowLeft:'LEFT',ArrowRight:'RIGHT',Enter:'ENTER',Escape:'CANCEL',
+  Delete:'CANCEL',F1:'F1',F2:'F2',F3:'F3',F4:'F4','*':'STAR','#':'POUND','+':'VOLUME_UP','=':'VOLUME_UP','-':'VOLUME_DOWN',
+  s:'SPEAKER',m:'MUTE',h:'HEADSET'};
+ document.addEventListener('keydown',function(e){
+  if(e.ctrlKey||e.altKey||e.metaKey||e.target.tagName==='SELECT')return;
+  var k=MAP[e.key]; if(!k&&/^[0-9]$/.test(e.key))k=e.key;
+  if(k){e.preventDefault();if(!e.repeat)press(k);}
+ });
+
+ function draw(buf){
+  var dv=new DataView(buf);
+  if(buf.byteLength<8||dv.getUint8(0)!==83||dv.getUint8(1)!==70)throw new Error('bad frame');
+  var w=dv.getUint16(4,true),h=dv.getUint16(6,true);
+  if(buf.byteLength<8+w*h*2)throw new Error('short frame');
+  var img=ctx.createImageData(w,h),d=img.data,p=8,o=0,n=w*h;
+  for(var i=0;i<n;i++,p+=2,o+=4){
+   var v=dv.getUint16(p,true),r=(v>>11)&31,g=(v>>5)&63,b=v&31;
+   d[o]=(r<<3)|(r>>2);d[o+1]=(g<<2)|(g>>4);d[o+2]=(b<<3)|(b>>2);d[o+3]=255;
+  }
+  if(scr.width!==w||scr.height!==h){scr.width=w;scr.height=h;}
+  ctx.putImageData(img,0,0);
+  return buf.byteLength;
+ }
+ function tick(){
+  if(!run.checked||document.hidden||busy){setTimeout(tick,200);return;}
+  busy=true;var t0=performance.now();
+  fetch('/cgi-bin/remote-frame?scale='+qsel.value,{cache:'no-store'})
+   .then(function(r){if(!r.ok)throw new Error('HTTP '+r.status);return r.arrayBuffer();})
+   .then(function(buf){
+     kb=Math.round(draw(buf)/1024);var t=performance.now();times.push(t);
+     while(times.length>10||(times.length>1&&t-times[0]>5000))times.shift();
+     var fps=times.length>1?(times.length-1)*1000/(t-times[0]):0;
+     stat.textContent=fps.toFixed(1)+' fps, '+kb+' KB/frame, '+Math.round(t-t0)+' ms/frame'+(lastErr?'  ['+lastErr+']':'');
+     window.__fps=fps;
+   })
+   .catch(function(e){stat.textContent='error: '+e;})
+   .then(function(){busy=false;setTimeout(tick,bumped?0:30);bumped=false;});
+ }
+ tick();
+})();
+</script></body></html>
+EOT

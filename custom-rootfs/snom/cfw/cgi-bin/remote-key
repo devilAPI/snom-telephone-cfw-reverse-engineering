@@ -1,0 +1,29 @@
+#!/bin/sh
+# CFW: press one phone key. ?key=NAME[&ms=HOLD]  (NAME from the whitelist = `keyinject -l`)
+# Why keyinject and not command.htm: it writes straight to /dev/input/event0, so it works
+# with the phone UI *and* while a game owns the keypad (lcsD375 is stopped then, and
+# command.htm answers nothing). command.htm is only a fallback if the helper is missing.
+. /snom/cfw/lib/cfw.sh
+KI=/snom/cfw/bin/keyinject
+reply() { printf 'Status: %s\r\nContent-type: text/plain\r\nCache-Control: no-store\r\n\r\n%s\n' "$1" "$2"; exit 0; }
+
+KEY=$(cfw_param key)
+MS=$(cfw_param ms)
+# The whitelist is a pattern first (so nothing odd reaches any command line), then a lookup.
+case "$KEY" in ''|*[!A-Za-z0-9_]*) reply "400 Bad Request" "bad key" ;; esac
+[ "${#KEY}" -le 16 ] || reply "400 Bad Request" "bad key"
+case "$MS" in '') MS=60 ;; *[!0-9]*) reply "400 Bad Request" "bad ms" ;; esac
+[ "$MS" -le 3000 ] 2>/dev/null || reply "400 Bad Request" "bad ms"
+
+if [ -x "$KI" ]; then
+    "$KI" -l | awk -v k="$KEY" 'toupper($1)==toupper(k){f=1} END{exit !f}' || reply "400 Bad Request" "unknown key"
+    "$KI" -d "$MS" "$KEY" || reply "500 Internal Server Error" "inject failed"
+    reply "200 OK" "ok $KEY"
+fi
+# fallback: lid's own key names via command.htm (needs lcsD375/lid running)
+case "$KEY" in
+    UP|DOWN|LEFT|RIGHT|ENTER|CANCEL|MENU|SETTINGS|F1|F2|F3|F4|VOLUME_UP|VOLUME_DOWN|MUTE|SPEAKER|HEADSET) ;;
+    *) reply "400 Bad Request" "unknown key" ;;
+esac
+wget -q -T 3 -O /dev/null "http://127.0.0.1/command.htm?key=$KEY" || reply "502 Bad Gateway" "command.htm failed"
+reply "200 OK" "ok $KEY (command.htm)"
