@@ -142,6 +142,9 @@ connection is gone afterwards.
   before calling the script — the launchers call it after the engine returns.
 - `phone-restore.sh` exits 1 rather than hanging; the launchers then reboot as
   before, so the worst case is the old behaviour.
-- Kernel log after a restore shows the same `ept:endpoint_init` / "Booting TL3
-  processor" lines as a cold boot: the DSP firmware is reloaded each time
-  `media_daemon` starts. Harmless.
+- The kernel log shows nothing new on a restore (`Booting TL3 processor` stays
+  at one occurrence from boot): the EPT/DSP kernel drivers stay loaded and just
+  get a new client; only user space restarts.
+- Doom `SIGSTOP`s `lcsD375`; the script `SIGCONT`s and `SIGKILL`s it (a stopped
+  process dies on SIGKILL anyway; verified with a stopped `lcsD375`, restored in
+  27 s).

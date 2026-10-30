@@ -73,7 +73,7 @@ game_cycle() {
 # loudspeaker feed. Leaves the phone on-hook and the volume as it was.
 audio_check() {
     local vol had_hook rms
-    vol=$(curl -s -m 20 "http://$PHONE_IP/settings.htm" | grep -o "updateSetting('vol_speaker', '[0-9]*')" | grep -o "[0-9]*'" | tr -d "'")
+    vol=$(curl -s -m 20 "http://$PHONE_IP/settings.htm" | grep -o "updateSetting('vol_speaker', '[0-9]*')" | sed "s/.*, '\([0-9]*\)')/\1/" | head -n 1)
     had_hook=$(ph 'grep -c "^amxr_user_hook " /proc/modules')
     ph '[ -c /dev/amxruser ] && grep -q "^amxr_user_hook " /proc/modules || insmod /lib/modules/2.6.27.47/BROADCOM/amxr_user_hook.ko'
     curl -s -m 10 -o /dev/null "http://$PHONE_IP/dummy.htm?settings=save&vol_speaker=1"
