@@ -1,13 +1,16 @@
 <div class="card">
   <h2>Boot splash</h2>
-  <p>Replace the picture shown while the phone boots (480&times;272). Any image works: it is scaled and cropped in your browser. Takes effect on the next boot; if the file is ever invalid the stock splash is used.</p>
+  <p>Replace the picture shown while the phone boots (480&times;272). Pick any image your browser can open (PNG, JPEG, WebP, GIF, BMP, SVG, AVIF, HEIC in Safari, &hellip;), at any size: your browser resizes it to the phone's screen and converts it to PNG before uploading. Takes effect on the next boot; if the file is ever invalid the stock splash is used.</p>
   <img id="splash-prev" src="/cgi-bin/splash?act=preview" width="240" height="136" alt="current splash" style="display:block;margin:6px 0;border:1px solid #ccc">
-  <input type="file" id="splash-file" accept="image/*">
+  <input type="file" id="splash-file" accept="image/*,.heic,.heif,.avif,.webp,.svg,.bmp,.gif,.tif,.tiff,.ico">
+  <label><input type="radio" name="splash-mode" value="fill" checked> Fill (crop)</label>
+  <label><input type="radio" name="splash-mode" value="fit"> Fit (black bars)</label>
   <button type="button" id="splash-up">Upload</button>
   <button type="button" id="splash-rm">Restore stock</button>
   <p id="splash-msg"></p>
   <script>
   (function () {
+    var W = 480, H = 272, MAXB = 600 * 1024;   /* must match MAXB in cgi-bin/splash */
     var msg = document.getElementById('splash-msg'), prev = document.getElementById('splash-prev');
     function reload() { prev.src = '/cgi-bin/splash?act=preview&t=' + Date.now(); }
     function post(act, body) {
@@ -15,20 +18,56 @@
         .then(function (r) { return r.text().then(function (t) { msg.textContent = t.trim(); reload(); }); })
         .catch(function (e) { msg.textContent = 'error: ' + e; });
     }
+    /* Decode with createImageBitmap (applies EXIF rotation, copes with big photos),
+       falling back to <img> for formats only it decodes (e.g. SVG). */
+    function decode(f) {
+      var viaImg = function () {
+        return new Promise(function (ok, bad) {
+          var img = new Image();
+          img.onload = function () { ok(img); };
+          img.onerror = function () { bad(new Error('this browser cannot open that file type')); };
+          img.src = URL.createObjectURL(f);
+        });
+      };
+      if (!window.createImageBitmap) return viaImg();
+      return createImageBitmap(f, {imageOrientation: 'from-image'}).catch(viaImg);
+    }
+    function toPng(c) { return new Promise(function (ok) { c.toBlob(ok, 'image/png'); }); }
+    /* A noisy photo can exceed the upload limit even at 480x272: drop low
+       bits per channel until it fits (about RGB565 at worst). */
+    function shrink(c, bits) {
+      var x = c.getContext('2d'), d = x.getImageData(0, 0, W, H), p = d.data, m = 0xff & (0xff << bits);
+      for (var i = 0; i < p.length; i += 4) { p[i] &= m; p[i + 1] &= m; p[i + 2] &= m; }
+      x.putImageData(d, 0, 0);
+    }
     document.getElementById('splash-rm').onclick = function () { post('remove', ''); };
     document.getElementById('splash-up').onclick = function () {
       var f = document.getElementById('splash-file').files[0];
       if (!f) { msg.textContent = 'choose an image first'; return; }
-      var img = new Image();
-      img.onload = function () {
-        var c = document.createElement('canvas'); c.width = 480; c.height = 272;
-        var s = Math.max(480 / img.width, 272 / img.height), w = img.width * s, h = img.height * s;
-        var x = c.getContext('2d'); x.fillStyle = '#000'; x.fillRect(0, 0, 480, 272);
-        x.drawImage(img, (480 - w) / 2, (272 - h) / 2, w, h);
-        c.toBlob(function (b) { post('upload', b); }, 'image/png');
-      };
-      img.onerror = function () { msg.textContent = 'cannot read that image'; };
-      img.src = URL.createObjectURL(f);
+      var fit = document.querySelector('input[name=splash-mode]:checked').value === 'fit';
+      msg.textContent = 'converting ' + f.name + ' (' + Math.round(f.size / 1024) + ' KB)...';
+      decode(f).then(function (img) {
+        var iw = img.naturalWidth || img.width, ih = img.naturalHeight || img.height;
+        if (!iw || !ih) throw new Error('image has no size');
+        var c = document.createElement('canvas'); c.width = W; c.height = H;
+        var s = (fit ? Math.min : Math.max)(W / iw, H / ih), w = iw * s, h = ih * s;
+        var x = c.getContext('2d'); x.fillStyle = '#000'; x.fillRect(0, 0, W, H);
+        x.imageSmoothingQuality = 'high';
+        x.drawImage(img, (W - w) / 2, (H - h) / 2, w, h);
+        var bits = 0;
+        var attempt = function () {
+          return toPng(c).then(function (b) {
+            if (b.size <= MAXB) return b;
+            if (++bits > 3) throw new Error('image too detailed to fit ' + MAXB + ' bytes');
+            shrink(c, bits);
+            return attempt();
+          });
+        };
+        return attempt();
+      }).then(function (b) {
+        msg.textContent = 'uploading ' + Math.round(b.size / 1024) + ' KB...';
+        return post('upload', b);
+      }).catch(function (e) { msg.textContent = 'error: ' + e.message; });
     };
   })();
   </script>

@@ -3,7 +3,7 @@
   <p>Streams the phone's microphone (16 kHz mono) to this browser.
      The phone UI keeps running. While it is on, <b>the mic is live</b> for anyone with the stream link.</p>
   <p id="ic-st">Status: ?</p>
-  <audio id="ic-a" controls preload="none" style="width:100%;margin:0 0 10px"></audio>
+  <p style="font-size:12px;margin:0 0 6px">Playback runs in the page (Web Audio), so it works in Safari too. On iPhone, the ring/silent switch must be off to hear it.</p>
   <p id="ic-u" style="font-size:11px;word-break:break-all"></p>
   <label style="font-size:13px">Gain <select id="ic-g">
     <option value="0">x1</option><option value="1">x2</option><option value="2" selected>x4</option>
@@ -13,17 +13,66 @@
   <button type="button" id="ic-off" style="background:#a40">Stop</button>
   <script>
   (function () {
-    var st = document.getElementById('ic-st'), au = document.getElementById('ic-a'),
+    var st = document.getElementById('ic-st'),
         ue = document.getElementById('ic-u'), g = document.getElementById('ic-g');
+
+    /* Web Audio player. Safari's <audio> rejects an endless WAV (RIFF size
+       0xFFFFFFFF), so fetch the stream, skip the 44-byte header, convert
+       16 kHz S16LE to float, upsample linearly to the context rate and
+       schedule the chunks back to back with ~150 ms of slack. */
+    var player = { ctx: null, url: null, abort: null, next: 0 };
+    function playStop() {
+      if (player.abort) player.abort.abort();
+      player.abort = null; player.url = null;
+    }
+    function playStart(u) {
+      if (player.url === u) return;
+      playStop();
+      if (!player.ctx) return;                 /* needs a tap on Start first (iOS) */
+      var ctx = player.ctx, ac = new AbortController(), skip = 44, carry = null, prev = 0;
+      player.abort = ac; player.url = u; player.next = 0;
+      fetch(u, { signal: ac.signal, cache: 'no-store' }).then(function (r) {
+        if (!r.ok || !r.body) throw new Error('stream HTTP ' + r.status);
+        var rd = r.body.getReader();
+        function pump() {
+          return rd.read().then(function (x) {
+            if (x.done) { if (player.url === u) player.url = null; return; }
+            var b = x.value;
+            if (skip) { var k = Math.min(skip, b.length); skip -= k; b = b.subarray(k); }
+            if (carry) { var m = new Uint8Array(carry.length + b.length); m.set(carry); m.set(b, carry.length); b = m; carry = null; }
+            if (b.length & 1) { carry = b.slice(b.length - 1); b = b.subarray(0, b.length - 1); }
+            var n = b.length >> 1;
+            if (n) {
+              var dv = new DataView(b.buffer, b.byteOffset, b.length), ratio = ctx.sampleRate / 16000,
+                  out = Math.floor(n * ratio), buf = ctx.createBuffer(1, out, ctx.sampleRate), d = buf.getChannelData(0);
+              for (var i = 0; i < out; i++) {
+                var p = i / ratio, j = Math.floor(p), f = p - j,
+                    a = j ? dv.getInt16((j - 1) * 2, true) : prev, c = dv.getInt16(Math.min(j, n - 1) * 2, true);
+                d[i] = (a + (c - a) * f) / 32768;
+              }
+              prev = dv.getInt16((n - 1) * 2, true);
+              var src = ctx.createBufferSource(); src.buffer = buf; src.connect(ctx.destination);
+              if (player.next < ctx.currentTime + 0.05) player.next = ctx.currentTime + 0.15;
+              src.start(player.next); player.next += out / ctx.sampleRate;
+            }
+            return pump();
+          });
+        }
+        return pump();
+      }).catch(function (e) {
+        if (e.name !== 'AbortError') st.textContent += ' - playback error: ' + e.message;
+        if (player.url === u) player.url = null;
+      });
+    }
     function show(j) {
       if (j.running) {
         var u = 'http://' + location.hostname + ':' + j.port + '/stream.wav?k=' + j.token;
         st.innerHTML = '<b style="color:#a40">ON - mic is live</b> (level ' + (j.level.split(' ')[0] || '?') + ')';
-        if (au.getAttribute('data-u') !== u) { au.setAttribute('data-u', u); au.src = u; }
+        playStart(u);
         ue.textContent = u;
       } else {
         st.textContent = 'Off' + (j.error ? ' - ' + j.error : '');
-        au.removeAttribute('data-u'); au.pause(); au.removeAttribute('src'); au.load();
+        playStop();
         ue.textContent = '';
       }
       if (j.running && j.error) st.textContent += ' - ' + j.error;
@@ -33,10 +82,18 @@
       return fetch('/cgi-bin/intercom', { method: 'POST', body: body,
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' } })
         .then(function (r) { return r.json(); }).then(function (j) {
-          show(j); if (a === 'start' && j.running) au.play().catch(function () {});
+          show(j);
         }).catch(function (e) { st.textContent = 'Error: ' + e; });
     }
-    document.getElementById('ic-on').onclick = function () { call('start'); };
+    document.getElementById('ic-on').onclick = function () {
+      /* Create/resume the AudioContext inside the tap: iOS only allows audio
+         to start from a user gesture. */
+      var AC = window.AudioContext || window.webkitAudioContext;
+      if (!player.ctx && AC) player.ctx = new AC();
+      if (player.ctx && player.ctx.resume) player.ctx.resume();
+      player.url = null;
+      call('start');
+    };
     document.getElementById('ic-off').onclick = function () { call('stop'); };
     call('status');
     setInterval(function () { if (!document.hidden) call('status'); }, 5000);

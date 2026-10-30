@@ -3,13 +3,13 @@
 # stock splash_screen.png (rcS falls back to stock if it is missing or fbApp rejects it).
 #   GET  ?act=status    -> "custom" or "stock"
 #   GET  ?act=preview   -> the PNG in use (custom if present, else stock)
-#   POST ?act=upload    -> raw PNG body (480x272, <= 300 KB); the panel card converts in the browser
+#   POST ?act=upload    -> raw PNG body (480x272, <= 600 KB); the panel card converts in the browser
 #   POST ?act=remove    -> delete the custom splash
 # No client-supplied name is ever used as a path: the target is a fixed file.
 . /snom/cfw/lib/cfw.sh
 SP=/snom/cfw-data/splash.png
 STOCK=/snom/bmp/colored/splash_screen.png
-MAXB=307200
+MAXB=614400   # 600 KB; matches MAXB in panel.d/80-splash.html (480x272 RGBA PNG worst case ~525 KB)
 
 reply() {  # STATUS-CODE TEXT
     echo "Status: $1"; echo "Content-type: text/plain"; echo ""; echo "$2"; exit 0

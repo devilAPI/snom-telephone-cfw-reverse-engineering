@@ -15,7 +15,13 @@ cfw_urldecode() {
 # Read the POST body once, in the sourcing (main) shell. cfw_param is usually
 # called as $(cfw_param x), i.e. in a subshell, so caching there would be lost
 # and a second call would block on the already-consumed stdin.
+# Only form-style bodies are read: raw uploads (image/png, audio/wav,
+# application/octet-stream) are left on stdin for the CGI to stream to a file.
 _cfw_read_body() {
+    case "${CONTENT_TYPE:-}" in
+        ''|application/x-www-form-urlencoded*|text/plain*) ;;
+        *) return 0 ;;
+    esac
     if [ "$REQUEST_METHOD" = POST ] && [ -z "${CFW_BODY_READ:-}" ]; then
         CFW_BODY_READ=1
         CFW_BODY=

@@ -37,7 +37,7 @@ Output is always 480x272 mode P (256 colours, Floyd-Steinberg). Options: `--fit 
 ### Web panel upload
 Panel card "Boot splash" (`panel.d/80-splash.html`, CGI `cgi-bin/splash`). The browser scales/crops the chosen image on a canvas and POSTs a 480x272 PNG as the raw body. Multipart parsing in busybox sh is not worth it, so the browser does the conversion. The CGI:
 
-* accepts only POST with a Content-Length of 33..300000 bytes, writes to `splash.png.tmp`, checks the PNG signature and that IHDR says 480x272, then `mv`s into place. Anything else is rejected and the temp file removed, so the old splash survives;
+* accepts only POST with a Content-Length of 33..614400 bytes, writes to `splash.png.tmp`, checks the PNG signature and that IHDR says 480x272, then `mv`s into place. Anything else is rejected and the temp file removed, so the old splash survives;
 * never uses a client-supplied name, so there is no path to traverse; `act` must match `[a-z]*` and is only used in a `case`;
 * reports a readable error when the write fails (flash full or read-only) and checks for a short write;
 * `act=remove` deletes the custom file, `act=preview` serves the PNG in use, `act=status` prints `custom` or `stock`.
