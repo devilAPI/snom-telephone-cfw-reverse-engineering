@@ -11,7 +11,7 @@ gen() {
     B=$(mktemp /tmp/idle.XXXXXX)
     echo '    <InfoBox>' > $B
     [ "$clock" = on ] && echo '      <Line><Text>$(time)</Text></Line>' >> $B
-    [ "$stats" = on ] && echo "      <Line><Text>$(/snom/cfw/cgi-bin/idle-widget | cfw_xml_escape)</Text></Line>" >> $B
+    [ "$stats" = on ] && echo "      <Line><Text>$(/snom/cfw/cgi-bin/idle-widget -q | cfw_xml_escape)</Text></Line>" >> $B
     if [ "$pic" = on ] && [ -f $D/picture.png ]; then
         ln -sf $D/picture.png /snom/html/bmp/cfw-idle.png
         echo '      <Line><Image>File:///bmp/cfw-idle.png</Image></Line>' >> $B
@@ -20,7 +20,7 @@ gen() {
     awk -v f=$B '{print} /<SelectedTextHighlight>off/{while((getline l < f)>0)print l}' $ORIG > $GUI/state_idle.xml.new && mv $GUI/state_idle.xml.new $GUI/state_idle.xml
     rm -f $B
 }
-restart_ui() { kill $(ps | awk '/[l]csD375/{print $1}') 2>/dev/null; }
+restart_ui() { kill -9 $(ps | awk '/[l]csD375/{print $1}') 2>/dev/null; }
 act=$(cfw_param action)
 cfw_rw
 case "$act" in

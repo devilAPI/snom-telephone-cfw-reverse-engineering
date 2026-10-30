@@ -22,3 +22,7 @@ Panel card "Idle screen widgets" (`panel.d/70-idle.html`) -> `cgi-bin/idle`. Con
 ## Tests
 
 `tests/idle.sh`: deploys, applies all three widgets, screenshots to `/tmp/idle-test/widgets.png`, restores stock, screenshots `stock.png`.
+
+## Result on the device (honest status)
+
+The pipeline works (config, generated XML correct, lcsD375 killed with `kill -9` and respawned by `lid`, stock restore byte-identical), but **the minibrowser did not render the inserted `<InfoBox>` (clock, stats, picture) on the idle screen**, in screenshots after the UI restart. In the stock file `<InfoBox>` is only used for status messages and is probably only shown for those. So the widgets are currently *not visible*; this is unresolved. Untried alternatives: put the text in `<Title>` (live macros work there; stock already shows `$(date)` and the time), or in the identity `<Subtext>`; an `<Image>` inside a `MenuItem`. Plain `kill` (SIGTERM) does not restart lcsD375; `kill -9` does.

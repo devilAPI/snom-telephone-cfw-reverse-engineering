@@ -19,8 +19,8 @@ run() {
     assert_contains "$W" "load" "idle-widget prints stats"
     curl -s -m 20 -d 'action=apply&clock=on&stats=on&picture=on' http://$PHONE_IP:8080/cgi-bin/idle >/dev/null
     assert_contains "$(ph 'cat /snom/cfw-data/idle/config')" "clock=on" "config written"
-    assert_contains "$(ph 'cat /snom/html/xml/gui/state_idle.xml')" 'cfw-idle.png' "xml has picture"
     wait_ui; shot widgets
+    assert_contains "$(ph 'cat /snom/html/xml/gui/state_idle.xml')" 'cfw-idle.png' "xml has picture"
     curl -s -m 20 -d 'action=restore' http://$PHONE_IP:8080/cgi-bin/idle >/dev/null
     assert_eq "$(md5sum < $C/html/xml/gui/state_idle.xml.orig)" "$(ph 'md5sum < /snom/html/xml/gui/state_idle.xml')" "stock restored"
     wait_ui; shot stock
