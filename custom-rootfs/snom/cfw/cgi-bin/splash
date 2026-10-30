@@ -1,0 +1,53 @@
+#!/bin/sh
+# CFW: custom boot splash. The file /snom/cfw-data/splash.png is painted by rcS instead of the
+# stock splash_screen.png (rcS falls back to stock if it is missing or fbApp rejects it).
+#   GET  ?act=status    -> "custom" or "stock"
+#   GET  ?act=preview   -> the PNG in use (custom if present, else stock)
+#   POST ?act=upload    -> raw PNG body (480x272, <= 300 KB); the panel card converts in the browser
+#   POST ?act=remove    -> delete the custom splash
+# No client-supplied name is ever used as a path: the target is a fixed file.
+. /snom/cfw/lib/cfw.sh
+SP=/snom/cfw-data/splash.png
+STOCK=/snom/bmp/colored/splash_screen.png
+MAXB=307200
+
+reply() {  # STATUS-CODE TEXT
+    echo "Status: $1"; echo "Content-type: text/plain"; echo ""; echo "$2"; exit 0
+}
+
+ACT=$(printf '&%s' "$QUERY_STRING" | tr '&' '\n' | sed -n 's/^act=\([a-z]*\)$/\1/p' | head -n 1)
+case "$ACT" in
+status)
+    echo "Content-type: text/plain"; echo ""
+    [ -s "$SP" ] && echo custom || echo stock ;;
+preview)
+    F=$STOCK; [ -s "$SP" ] && F=$SP
+    echo "Content-type: image/png"; echo "Cache-Control: no-store"; echo ""
+    cat "$F" ;;
+upload)
+    [ "$REQUEST_METHOD" = POST ] || reply "405 Method Not Allowed" "POST required"
+    N=${CONTENT_LENGTH:-0}
+    case "$N" in ''|*[!0-9]*) reply "400 Bad Request" "bad Content-Length" ;; esac
+    [ "$N" -ge 33 ] && [ "$N" -le "$MAXB" ] || reply "413 Request Entity Too Large" "size must be 33..$MAXB bytes (got $N)"
+    D=/snom/cfw-data; cfw_rw
+    mkdir -p "$D" 2>/dev/null
+    TMP=$D/splash.png.tmp
+    head -c "$N" > "$TMP" 2>/dev/null || { rm -f "$TMP"; reply "500 Internal Server Error" "cannot write $D (flash full or read-only?)"; }
+    # PNG signature + IHDR width/height (bytes 16..23, big endian) must be 480x272
+    # busybox od on the phone only has -b (octal bytes): 89 50 4e 47 0d 0a 1a 0a and 480,272 big endian
+    ob() { dd if="$TMP" bs=1 skip="$1" count=8 2>/dev/null | od -b | sed -n 's/^[0-9]* *//p' | tr -s ' 
+' ' ' | sed 's/ *$//'; }
+    SIG=$(ob 0)
+    DIM=$(ob 16)
+    if [ "$SIG" != "211 120 116 107 015 012 032 012" ]; then rm -f "$TMP"; reply "400 Bad Request" "not a PNG file"; fi
+    if [ "$DIM" != "000 000 001 340 000 000 001 020" ]; then rm -f "$TMP"; reply "400 Bad Request" "PNG must be exactly 480x272"; fi
+    [ "$(wc -c < "$TMP")" -eq "$N" ] || { rm -f "$TMP"; reply "500 Internal Server Error" "short write (flash full?)"; }
+    mv "$TMP" "$SP" && sync || { rm -f "$TMP"; reply "500 Internal Server Error" "cannot install splash"; }
+    reply "200 OK" "ok: custom splash installed ($N bytes); shown on the next boot" ;;
+remove)
+    [ "$REQUEST_METHOD" = POST ] || reply "405 Method Not Allowed" "POST required"
+    cfw_rw; rm -f "$SP" /snom/cfw-data/splash.png.tmp && sync
+    reply "200 OK" "ok: stock splash restored" ;;
+*)
+    reply "400 Bad Request" "unknown act" ;;
+esac

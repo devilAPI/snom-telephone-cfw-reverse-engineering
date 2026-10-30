@@ -1,0 +1,35 @@
+<div class="card">
+  <h2>Boot splash</h2>
+  <p>Replace the picture shown while the phone boots (480&times;272). Any image works: it is scaled and cropped in your browser. Takes effect on the next boot; if the file is ever invalid the stock splash is used.</p>
+  <img id="splash-prev" src="/cgi-bin/splash?act=preview" width="240" height="136" alt="current splash" style="display:block;margin:6px 0;border:1px solid #ccc">
+  <input type="file" id="splash-file" accept="image/*">
+  <button type="button" id="splash-up">Upload</button>
+  <button type="button" id="splash-rm">Restore stock</button>
+  <p id="splash-msg"></p>
+  <script>
+  (function () {
+    var msg = document.getElementById('splash-msg'), prev = document.getElementById('splash-prev');
+    function reload() { prev.src = '/cgi-bin/splash?act=preview&t=' + Date.now(); }
+    function post(act, body) {
+      return fetch('/cgi-bin/splash?act=' + act, {method: 'POST', body: body})
+        .then(function (r) { return r.text().then(function (t) { msg.textContent = t.trim(); reload(); }); })
+        .catch(function (e) { msg.textContent = 'error: ' + e; });
+    }
+    document.getElementById('splash-rm').onclick = function () { post('remove', ''); };
+    document.getElementById('splash-up').onclick = function () {
+      var f = document.getElementById('splash-file').files[0];
+      if (!f) { msg.textContent = 'choose an image first'; return; }
+      var img = new Image();
+      img.onload = function () {
+        var c = document.createElement('canvas'); c.width = 480; c.height = 272;
+        var s = Math.max(480 / img.width, 272 / img.height), w = img.width * s, h = img.height * s;
+        var x = c.getContext('2d'); x.fillStyle = '#000'; x.fillRect(0, 0, 480, 272);
+        x.drawImage(img, (480 - w) / 2, (272 - h) / 2, w, h);
+        c.toBlob(function (b) { post('upload', b); }, 'image/png');
+      };
+      img.onerror = function () { msg.textContent = 'cannot read that image'; };
+      img.src = URL.createObjectURL(f);
+    };
+  })();
+  </script>
+</div>

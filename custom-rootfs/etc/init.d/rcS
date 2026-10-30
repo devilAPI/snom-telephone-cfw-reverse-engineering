@@ -28,7 +28,14 @@ function display () {
                 if [ ! -z "$2" ]; then
                     rm -f "$fbTmpFile"
 
-                    fbApp showFb 0 0 "$2" >/dev/null 2>&1
+                    # CFW: a user splash (web panel upload) replaces the stock one; if it is
+                    # missing or fbApp rejects it (non-zero exit) paint the stock image.
+                    if [ "$2" = "/snom/bmp/colored/splash_screen.png" ] && [ -s /snom/cfw-data/splash.png ] \
+                       && fbApp showFb 0 0 /snom/cfw-data/splash.png >/dev/null 2>&1; then
+                        :
+                    else
+                        fbApp showFb 0 0 "$2" >/dev/null 2>&1
+                    fi
                 fi
                 ;;
         esac
