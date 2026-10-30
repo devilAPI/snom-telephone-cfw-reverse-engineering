@@ -4,7 +4,7 @@
 #   tests/retro.sh            deploy + launcher/CGI checks (bad URL, non-ROM,
 #                             hostile input, phone menu) - no screen takeover
 #   RETRO_RUN=1 tests/retro.sh  additionally boots each test ROM end to end
-#                             (launcher downloads it from a host http server),
+#                             (launcher downloads it from a loopback httpd on the phone),
 #                             checks the screenshot, *_STATS fps >= 55,
 #                             underruns, the SND_DUMP tones (FFT), the L/R
 #                             keys, then quits with the hangup key and waits
@@ -31,6 +31,8 @@ deploy() {
              cgi-bin/phone-retro cgi-bin/phone-games panel.d/45-gba.html panel.d/46-gb.html; do
         ph_put "$SRC/$f" "/snom/cfw/$f"
     done
+    # Images older than Task 0's rcS have no loopback httpd for the phone menus.
+    ph "netstat -ltn | grep -q '127.0.0.1:8081 ' || busybox httpd -p 127.0.0.1:8081 -h /snom/cfw; true"
 }
 echo "== deploy"
 with_phone_lock deploy
@@ -75,12 +77,19 @@ assert_contains "$log" "Status: error" "launcher log page shows the last error"
 [ "${RETRO_RUN:-}" = 1 ] || { echo "ALL PASS (set RETRO_RUN=1 for the on-screen runs)"; exit 0; }
 
 # ---------------------------------------------------------------- end to end
-HOSTIP=$(ip -4 route get "$PHONE_IP" | sed -n 's/.* src \([0-9.]*\).*/\1/p')
+# Serve the test ROMs from the phone itself (a throw-away busybox httpd on
+# loopback), so no host firewall is in the way.
 PORT=${RETRO_PORT:-18765}
-python3 -m http.server "$PORT" --bind "$HOSTIP" --directory "$ROMS" >/dev/null 2>&1 &
-SRV=$!
-trap 'kill $SRV 2>/dev/null; rm -f "$_askpass"' EXIT
-sleep 1
+HOSTIP=127.0.0.1
+serve_roms() {  # (again after a reboot: /tmp is RAM)
+    ph "netstat -ltn | grep -q '127.0.0.1:$PORT '" && return 0
+    ph 'mkdir -p /tmp/retro-roms'
+    ph_put "$ROMS/sndtest.gba" /tmp/retro-roms/sndtest.gba
+    ph_put "$ROMS/sndtest.gb" /tmp/retro-roms/sndtest.gb
+    ph "busybox httpd -p 127.0.0.1:$PORT -h /tmp/retro-roms"
+}
+kill_srv() { ph "for p in \$(ps | grep '[h]ttpd -p 127.0.0.1:$PORT' | awk '{print \$1}'); do kill \$p; done"; rm -f "$_askpass"; }
+trap kill_srv EXIT
 
 wait_phone() {  # until lid + lcsD375 run again (restore or reboot), then settle
     local i
@@ -95,6 +104,7 @@ wait_phone() {  # until lid + lcsD375 run again (restore or reboot), then settle
 run_one() {
     local sys=$1 rom=$2 env=$3
     ph "rm -f /tmp/snd_dump.raw /tmp/$sys.log"
+    serve_roms
     ph "$env=1 SND_VOL=5 SND_DUMP=1 nohup /snom/cfw/$sys/boot-$sys.sh 'http://$HOSTIP:$PORT/$rom' </dev/null >/dev/null 2>&1 &"
     sleep 22
     curl -s -m 20 "http://$PHONE_IP:8080/cgi-bin/screenshot" -u "root:$PHONE_PW" > "$OUTD/$sys.bmp"
@@ -102,7 +112,9 @@ run_one() {
     ph 'for c in 51 48 49; do o=$(printf %03o $c); for v in 001 0; do printf "\0\0\0\0\0\0\0\0\001\0\\$o\0\\$v\0\0\0" > /dev/input/event0; usleep 80000; done; done'
     sleep 10
     ph "cat /tmp/snd_dump.raw" > "$OUTD/$sys.raw"
-    ph 'printf "\0\0\0\0\0\0\0\0\001\0\162\0\001\0\0\0" > /dev/input/event0'   # hangup (114) quits
+    # hangup (114) quits. Release first: the kernel drops a press for a key it
+    # already thinks is down (a stale injected press without release).
+    ph 'for v in 0 001 0; do printf "\0\0\0\0\0\0\0\0\001\0\162\0\\$v\0\0\0" > /dev/input/event0; usleep 100000; done'
     sleep 3
     ph "cat /tmp/$sys.log" > "$OUTD/$sys.log"
 }

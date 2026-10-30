@@ -15,8 +15,8 @@ times that. gpSP recompiles GBA ARM/Thumb code into native ARM code, which is
 the only realistic way to full speed on this class of CPU (it was written for
 the 333 MHz PSP and runs on the Raspberry Pi 1, the same ARM1176 core).
 
-Measured on the device with the test ROM (mode 3 colour bars + PSG):
-see [Measurements](#measurements).
+Measured on the device with the test ROM: a steady 59.6–59.7 fps (the GBA's
+59.73 Hz) at ~54 % CPU, no audio underruns, see [Measurements](#measurements).
 
 ## How it fits together
 
@@ -135,7 +135,26 @@ channel 1 over a constant 220 Hz square on channel 2.
 
 ## Measurements
 
-(see below, filled in from the device runs)
+2026-10-30, `tests/roms/sndtest.gba`, `GBA_STATS=1 SND_VOL=5 SND_DUMP=1`,
+5 s stats windows, lid/media_daemon killed, lcsD375 stopped:
+
+```
+gba: gpSP v1.1.0-5819380 loaded ..., 240x160, audio 32768 Hz
+gba: 240x160 -> 408x272 at 36,0
+gba: 61.2 fps, queued 1839, underruns 0, blits 296, skipped 2   <- start-up catch-up
+gba: 59.6 fps, queued 1724, underruns 0, blits 300, skipped 0
+gba: 59.7 fps, queued 1769, underruns 0, blits 300, skipped 0
+gba: 59.6 fps, queued 1654, underruns 0, blits 300, skipped 0
+gba: 59.7 fps, queued 1699, underruns 0, blits 294, skipped 2   <- screenshot CGI running
+```
+
+`top`: gpsp 54 % CPU, 36 % idle, RSS ~14 MB. The FFT of the dump finds the
+220 Hz tone in every 100 ms window and all five arpeggio notes within 1 %.
+The test ROM is light; real games cost more CPU in the core, and gpSP's
+auto-frameskip plus our blit skip absorb that before the audio underruns.
+
+Before the frontend paced from the audio queue (first WIP), the same ROM ran
+at 57–60 fps with 4–30 underruns per 5 s.
 
 ## Gotchas
 
