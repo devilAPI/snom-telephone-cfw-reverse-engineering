@@ -1,6 +1,7 @@
 #!/bin/sh
 # Boot NES from a URL: download the ROM to RAM, take over the screen, run the
-# emulator, then reboot to restore. Nothing is stored. $1 = ROM URL.
+# emulator, then bring the phone app back (phone-restore.sh; reboot only if
+# that fails). Nothing is stored. $1 = ROM URL.
 ENGINE=/snom/cfw/nes/infones
 ROM=/tmp/game.nes
 LOG=/tmp/nes.log
@@ -35,7 +36,16 @@ touch /tmp/ssh_fast_update
 
 "$ENGINE" "$ROM" >> "$LOG" 2>&1 < /dev/null
 
+echo "emulator exited with status $?" >> "$LOG"
 rm -f "$ROM"
-rm -f /tmp/ssh_fast_update
-sync
-reboot
+
+# Bring the stock phone app back without a reboot (docs/quit-without-reboot.md).
+# Fall back to the old, always-working reboot if it isn't healthy within 60 s.
+if /snom/cfw/lib/phone-restore.sh; then
+    echo "phone app restored" >> "$LOG"
+else
+    echo "phone restore failed, rebooting" >> "$LOG"
+    rm -f /tmp/ssh_fast_update
+    sync
+    reboot
+fi

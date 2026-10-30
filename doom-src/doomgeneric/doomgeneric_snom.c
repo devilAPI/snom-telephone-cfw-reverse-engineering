@@ -3,8 +3,10 @@
 //           it fits without changing its aspect ratio (435x272), centered
 //   input : /dev/input/event0  ("keypad" evdev device)
 // snd_hal_init() kills lid + media_daemon; the orphaned UI (lcsD375) is
-// SIGSTOP'd in DG_Init so it stops drawing over us. The phone reboots when Doom
-// quits, so nothing needs to be resumed. No VT/console handling is needed.
+// SIGSTOP'd in DG_Init so it stops drawing over us. When Doom quits, the
+// launcher's phone-restore.sh kills that stopped lcsD375 (never resumed: a new
+// one is started with lid) -- see docs/quit-without-reboot.md. No VT/console
+// handling is needed.
 #include "doomkeys.h"
 #include "doomgeneric.h"
 

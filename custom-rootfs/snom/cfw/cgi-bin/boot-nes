@@ -36,6 +36,6 @@ h1{color:#69f}a{color:#9cf}</style></head><body>
 <p>Fetching the ROM to RAM, then it runs on the phone screen. If the screen
    doesn't change within a minute, the download failed — check the URL.</p>
 <p>Controls: nav pad = D-pad, Fire = A, Use = B, OK = Start, Cancel = Select,
-   <b>red hangup = quit</b> (the phone then reboots back to normal).</p>
+   <b>red hangup = quit</b> (the phone UI then comes back in about 30 s).</p>
 <p><a href="/">&larr; Back to CFW Settings</a></p></div></body></html>
 EOF

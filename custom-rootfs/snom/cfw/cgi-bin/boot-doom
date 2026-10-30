@@ -41,6 +41,6 @@ h1{color:#c33}a{color:#f66}code{background:#222;padding:1px 4px}</style></head><
    archive.org <code>/details/</code> or <code>/download/</code> links and archive.org
    .zip files all work; the WAD must fit in the ~40&nbsp;MB RAM disk.</p>
 <p>Controls: nav pad = move/turn, Fire = shoot, Use = open doors, OK = menu,
-   <b>red hangup = quit</b> (the phone then reboots back to normal).</p>
+   <b>red hangup = quit</b> (the phone UI then comes back in about 30 s).</p>
 <p><a href="/">&larr; Back to CFW Settings</a></p></div></body></html>
 EOF
