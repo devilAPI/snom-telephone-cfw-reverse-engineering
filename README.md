@@ -90,6 +90,7 @@ verification uses RSA-2048 (`/firmware1.pub`). See
 | `decrypted/` | no | Stock rootfs unpacked by the unpack tools |
 | `custom-rootfs/` | no | The rootfs that becomes the custom image (D375) |
 | `custom-key/` | no | **Private** signing key: back it up outside git |
+| `.github/workflows/dev-image.yml` | yes | Builds and publishes signed D375 dev images as GitHub pre-releases |
 | `custom-firmware/` | no | Built images |
 | `backups/` | no | Dumps pulled from phones |
 | `vpn-server/` | no | OpenVPN server for initial root |
@@ -116,6 +117,7 @@ verification uses RSA-2048 (`/firmware1.pub`). See
 18. [docs/intercom.md](docs/intercom.md): microphone streaming and mic selection
 19. [docs/ringtones.md](docs/ringtones.md), [docs/scripts.md](docs/scripts.md), [docs/theming.md](docs/theming.md): ringtones, scripts menu, splash and icons
 20. [docs/remote.md](docs/remote.md), [docs/sysinfo.md](docs/sysinfo.md): remote screen/keypad and system info
+21. [docs/ci-releases.md](docs/ci-releases.md): dev images built and released by GitHub Actions
 
 ## Quick start
 

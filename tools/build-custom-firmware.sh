@@ -59,10 +59,12 @@ if command -v fakeroot >/dev/null 2>&1 && [ -f "$ROOTFS/.fakeroot" ]; then
         tar -czf "$tmp/rootfs.tar.gz" -C "$ROOTFS" --numeric-owner \
         --no-recursion -T -
 else
+    # Everything in the tracked rootfs is root:root (checked for the CI build,
+    # see docs/ci-releases.md), so forcing that is exact unless dev nodes are added.
     echo "$TARLIST" | \
         tar -czf "$tmp/rootfs.tar.gz" -C "$ROOTFS" --numeric-owner \
-        --no-recursion -T -
-    echo "  (warning: no fakeroot — dev nodes and ownership may not be exact)"
+        --owner=0 --group=0 --no-recursion -T -
+    echo "  (warning: no fakeroot db — all files packed as root:root, no dev nodes)"
 fi
 echo "  rootfs.tar.gz: $(stat -c%s "$tmp/rootfs.tar.gz") bytes"
 # The phone extracts with `tar ... update/` to decide system vs application
