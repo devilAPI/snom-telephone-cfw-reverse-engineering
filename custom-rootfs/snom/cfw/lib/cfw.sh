@@ -86,8 +86,10 @@ cfw_html_foot() { printf '</body>\n</html>\n'; }
 cfw_phone_text() {
     printf 'Content-type: text/xml\r\n\r\n'
     printf '<?xml version="1.0" encoding="UTF-8"?>\n<IPPhoneText state="others_except_mb" dtmf="off">\n'
+    # the minibrowser ignores raw newlines in <Text>; &#10; (or <br/>) breaks the line
     printf '  <Title>%s</Title>\n  <Text>%s</Text>\n' \
-        "$(printf '%s' "$1" | cfw_xml_escape)" "$(printf '%s' "$2" | cfw_xml_escape)"
+        "$(printf '%s' "$1" | cfw_xml_escape)" \
+        "$(printf '%s' "$2" | cfw_xml_escape | awk 'NR > 1 { printf "&#10;" } { printf "%s", $0 }')"
     printf '  <SoftKeyItem>\n    <Name>CANCEL</Name>\n    <Url track="no">phone://mb_nop#go_back</Url>\n  </SoftKeyItem>\n</IPPhoneText>\n'
 }
 
