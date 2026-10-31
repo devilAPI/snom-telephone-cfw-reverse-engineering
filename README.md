@@ -14,10 +14,34 @@ Currently covers:
 > flashing anything.
 
 # CFW Features (D375)
-### Not production ready, not secure.
-- Persistent SSH access (default root pw is snom375)
-- CFW Web UI (port 8080) (currently NO PASSWORD)
-- DOOM (no sound)
+### Alpha: not production ready, not hardened. Use on a trusted LAN only.
+
+The phone app keeps working: calls, the stock web UI and provisioning are
+untouched. Everything below is added on top.
+
+**Access and administration**
+- Persistent root SSH (default password `snom375`)
+- CFW web panel on port 8080, login `root` + the SSH password ([cfw-login](docs/cfw-login.md), [cfw-settings](docs/cfw-settings.md))
+- Recovery buttons: reset the root password, restore the default `sshd_config`
+- System info page: uptime, CPU, memory, flash, processes, logs ([sysinfo](docs/sysinfo.md))
+- Screenshot button, plus a live remote screen and keypad in the browser ([remote](docs/remote.md))
+- *Settings → CFW Tools* menu on the phone itself
+
+**Games** (start them from the panel or from *Settings → Games* on the phone)
+- DOOM with sound, Freedoom presets or your own WAD ([doom](docs/doom.md))
+- NES (InfoNES) with sound ([nes](docs/nes.md))
+- Game Boy / Game Boy Color (Gambatte) ([gb](docs/gb.md))
+- Game Boy Advance (gpSP, ARM dynarec) ([gba](docs/gba.md))
+- ROMs and WADs load from a URL, bare or inside a `.zip` ([zip](docs/zip.md))
+- Saves persist on flash and survive reboots ([saves](docs/saves.md))
+- Key maps you can edit per game; volume keys work in game ([keymap](docs/keymap.md))
+- Quitting (red hangup key) returns to the phone in about 30 s, no reboot ([quit-without-reboot](docs/quit-without-reboot.md))
+
+**Phone features**
+- Intercom / baby monitor: streams the microphone to a browser (works in Safari) or a PC while the phone stays usable. You pick the mic: speakerphone, handset, headset jack or both ([intercom](docs/intercom.md))
+- Custom ringtones: upload, preview and assign per line ([ringtones](docs/ringtones.md))
+- Scripts menu: run your own shell scripts from the phone, such as wake-on-LAN ([scripts](docs/scripts.md))
+- Custom boot splash: any image, resized in the browser, plus theme icons ([theming](docs/theming.md))
 
 ## How it works
 
@@ -58,6 +82,8 @@ verification uses RSA-2048 (`/firmware1.pub`). See
 | `tools/rootfs-diff.sh` | yes | Show what a custom rootfs changes compared with stock |
 | `tools/snom-webpass.sh` | yes | Change the web UI password via SSH (works after Webex provisioning) |
 | `tools/setup-ovpn.sh` | yes | Generate OpenVPN PKI + client tarball for initial root |
+| `tools/build-*.sh` | yes | Cross-build the phone binaries (Doom, NES, GB/GBA, intercom, nano, ...) with docker + musl |
+| `doom-src/`, `nes-src/`, `retro-src/`, `intercom-src/`, `remote-src/`, `snd/` | yes | Ports, the shared audio/keymap layer and helpers built by the scripts above |
 | `keys/` | yes | **Public** firmware keys and AES key files (see [keys/README.md](keys/README.md)) |
 | `docs/` | yes | Documentation (start here) |
 | `original_firmware/` | no | Stock firmware images from snom |
@@ -83,6 +109,13 @@ verification uses RSA-2048 (`/firmware1.pub`). See
 11. [docs/nes.md](docs/nes.md): running a NES emulator on the phone screen (Boot NES button)
 12. [docs/roadmap.md](docs/roadmap.md): planned features and project workflow
 13. [docs/sound.md](docs/sound.md): audio architecture and game sound
+14. [docs/cfw-dev.md](docs/cfw-dev.md): how panel cards and phone menus are assembled (start here to add a feature)
+15. [docs/cfw-login.md](docs/cfw-login.md): panel login with the SSH password
+16. [docs/gb.md](docs/gb.md) and [docs/gba.md](docs/gba.md): Game Boy / Color and GBA emulators
+17. [docs/zip.md](docs/zip.md), [docs/saves.md](docs/saves.md), [docs/keymap.md](docs/keymap.md), [docs/quit-without-reboot.md](docs/quit-without-reboot.md): shared game infrastructure
+18. [docs/intercom.md](docs/intercom.md): microphone streaming and mic selection
+19. [docs/ringtones.md](docs/ringtones.md), [docs/scripts.md](docs/scripts.md), [docs/theming.md](docs/theming.md): ringtones, scripts menu, splash and icons
+20. [docs/remote.md](docs/remote.md), [docs/sysinfo.md](docs/sysinfo.md): remote screen/keypad and system info
 
 ## Quick start
 
