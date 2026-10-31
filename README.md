@@ -1,4 +1,4 @@
-# snom firmware tools
+# snom firmware tools and alpha Custom Firmware for D375
 
 Tools and notes for building custom firmware for **snom v10 desk phones**.
 Currently covers:
