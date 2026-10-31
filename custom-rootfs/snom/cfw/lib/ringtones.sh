@@ -136,9 +136,10 @@ rt_set_settings() {
 rt_play_line() {
     case "$1" in ''|*[!0-9]*) return 1 ;; esac
     rt_stock_ok || { echo "phone app is not running (game active?)"; return 1; }
-    # GET, like the stock form's own submit: a POST of PLAY_RINGER:N is logged as
-    # "Ignore invalid parameter: PLAY_RINGER:1" and plays nothing.
-    _code=$(curl -s -m 15 -o /dev/null -w '%{http_code}' -G "$RT_STOCK/line_audio.htm" \
-        --data-urlencode "l=$1" --data-urlencode "PLAY_RINGER:$1=Play Ringer" </dev/null)
+    # POST, like the stock form (method=post to line_audio.htm?l=N). The phone logs
+    # "Ignore invalid parameter: PLAY_RINGER:1" for it but still plays
+    # (play_web_ringer in the log, log_level 9). A GET only renders the page.
+    _code=$(curl -s -m 15 -o /dev/null -w '%{http_code}' "$RT_STOCK/line_audio.htm?l=$1" \
+        --data-urlencode "Settings=Apply" --data-urlencode "PLAY_RINGER:$1=Play Ringer" </dev/null)
     [ "$_code" = 200 ] || { echo "stock web UI answered HTTP ${_code:-none}"; return 1; }
 }

@@ -1335,6 +1335,12 @@ function startUpProductionMode () {
 
 # Starts up the Application
 function startUpApplication () {
+    # CFW: the phone app paints "splash_screen" from /snom/bmp/colored at startup too;
+    # show the user splash there as well. The CGI only accepts 480x272 PNGs; the bind
+    # mount is RAM-only, so deleting the upload gives the stock image on the next boot.
+    if [ -s /snom/cfw-data/splash.png ]; then
+        /snom/cfw/bin/bindmount /snom/cfw-data/splash.png /snom/bmp/colored/splash_screen.png >/dev/null 2>&1
+    fi
     while true; do
         display "" "    "
 

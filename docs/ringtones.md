@@ -72,8 +72,16 @@ they were not verified on the phone (the browser never produces them).
   current values from config.xml is therefore wrong; the CGI reads the live
   `http://127.0.0.1/settings.htm` and only falls back to config.xml when lcsD375 is down.
   Rebooting right after a save can lose the save.
-* `POST line_audio.htm` with `PLAY_RINGER:1=...` is logged as
-  `Ignore invalid parameter: PLAY_RINGER:1`; the CGI uses GET.
+* **Play needs a POST** (corrected 2026-10-31). A GET of `line_audio.htm?...PLAY_RINGER:1=...`
+  only renders the page. The stock form POSTs to `line_audio.htm?l=N`; that logs
+  `Ignore invalid parameter: PLAY_RINGER:1` but still runs `play_web_ringer` (visible with
+  `log_level=9` in `/log.htm`). The phone then stays in the "Ringtone" state until a real key
+  press; an injected CANCEL does not leave it, and further Play requests are ignored meanwhile.
+* **Open (2026-10-31):** after Play the app fetches and parses the file
+  (`GUI: Loaded wav file: format 1 channels 1 chunk size 160000 ...`, for 8 kHz and 16 kHz,
+  5 s and 30 s alike), then logs `MediaIpc::setRingMelody ` with an empty name and media_daemon
+  answers `NOT_FOUND`. Not yet known whether that means silence; the user reports no sound on
+  Play or for an incoming call.
 * **The ringer does not pass through the amxr graph:** an amxr tap on `ept.bind0/1` (the DSP
   output, which carries call audio) records pure zeros while ringing; media_daemon writes the
   ringer straight to the codec. The only capture point is the microphones (acoustic), and

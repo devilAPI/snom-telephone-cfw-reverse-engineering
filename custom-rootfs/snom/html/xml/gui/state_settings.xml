@@ -54,7 +54,7 @@
   <Menu name="CFW Tools" id="cfw_tools">
     <If condition="$(show_feature:FEATURE_PUI_STYLE_SIO)">
       <IconType>$(icon_type_enum:kIconSettingsInformation)</IconType>
-      <SubText>Games, scripts, ...</SubText>
+      <SubText>Info, scripts, intercom</SubText>
     </If>
     <Url>http://127.0.0.1:8081/cgi-bin/phone-tools</Url>
   </Menu>

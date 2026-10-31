@@ -1,0 +1,14 @@
+#!/bin/sh
+# CFW: "Info" screen in Settings -> CFW Tools: where the web panel is and how to log in.
+. /snom/cfw/lib/cfw.sh
+IP=$(ifconfig 2>/dev/null | sed -n 's/.*inet addr:\([0-9.]*\).*/\1/p' | grep -v '^127\.' | head -n 1)
+IP=${IP:-<no IP>}
+cfw_phone_text "CFW Info" "CFW web panel: http://$IP:8080
+Login: root + SSH password
+
+Stock web UI: http://$IP
+
+SSH: ssh root@$IP
+Default user: root
+Default password: snom375
+(changed it? use yours; reset in the panel)"

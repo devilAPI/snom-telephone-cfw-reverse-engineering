@@ -27,6 +27,17 @@ Why a data file and not an image replacement: `/snom/cfw-data` is writable at ru
 
 A reboot is needed to see a change: nothing repaints the splash at runtime.
 
+### Where the logo appears during boot (three times)
+1. **Bootloader logo** (before Linux starts): painted by u-boot from the `uboot`/`bootloader`
+   flash partitions. Not replaceable without reflashing the bootloader, which is the one
+   thing that can hard-brick the phone (no rescue path), so the CFW leaves it alone.
+2. **rcS splash**: the `display()` hook above.
+3. **Phone app start**: lcsD375 paints the image named `splash_screen` from
+   `/snom/bmp/colored/`. `startUpApplication` in rcS bind-mounts the user file over
+   `splash_screen.png` (`/snom/cfw/bin/bindmount`, `cfw-src/bindmount.c`, because busybox
+   `mount` cannot bind: "can't setup loop device"). The mount is RAM-only; after
+   "Restore stock" the stock file is back on the next boot.
+
 ### Making an image
 ```sh
 tools/make-splash.py photo.jpg out.png                  # crop to fill (default)
