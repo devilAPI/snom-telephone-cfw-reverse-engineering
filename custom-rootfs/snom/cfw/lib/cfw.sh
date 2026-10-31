@@ -64,6 +64,9 @@ cfw_html_head() {
   h1 { font-size:20px; margin:0 0 4px; }
   .sub { color:#777; font-size:12px; margin-bottom:20px; }
   .card { background:#fff; border:1px solid #ccc; border-radius:6px; padding:16px 18px; max-width:460px; margin:0 0 14px; }
+  /* panel: cards side by side, as many columns as fit, one column on a phone */
+  .cards { display:grid; grid-template-columns:repeat(auto-fill, minmax(min(100%, 380px), 1fr)); gap:14px; align-items:start; margin:0 0 14px; }
+  .cards .card { max-width:none; margin:0; min-width:0; }
   .card h2 { font-size:15px; margin:0 0 4px; }
   .card p { font-size:13px; color:#555; margin:0 0 12px; }
   input[type=url], input[type=text] { width:100%; box-sizing:border-box; padding:7px; margin:0 0 10px; border:1px solid #bbb; border-radius:4px; font-size:13px; }
