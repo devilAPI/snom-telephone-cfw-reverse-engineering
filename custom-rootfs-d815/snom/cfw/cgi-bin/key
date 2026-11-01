@@ -1,0 +1,13 @@
+#!/bin/sh
+# CFW: press a phone key through the phone's own command.htm. POST ?k=NAME.
+echo "Content-type: text/plain"
+echo ""
+[ "$REQUEST_METHOD" = POST ] || { echo "POST only"; exit 0; }
+K=$(echo "$QUERY_STRING" | sed -n 's/^k=\([A-Z0-9_]*\)$/\1/p')
+[ -n "$K" ] || { echo "bad key"; exit 0; }
+# A phone without a web admin password redirects this to security.htm.
+case "$(wget -S -T 5 -O /dev/null "http://127.0.0.1/command.htm?key=$K" 2>&1)" in
+    *security.htm*) echo "finish phone setup first" ;;
+    *" 200 "*) echo ok ;;
+    *) echo failed ;;
+esac

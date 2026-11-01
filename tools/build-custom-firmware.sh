@@ -24,6 +24,8 @@ echo "=== Step 1b: Embed our public key as the rootfs /firmware1.pub ==="
 # follow-up image signed with $KEYDIR. Write in place (cat >) so fakeroot keeps
 # the recorded ownership of the existing inode.
 [ -d "$ROOTFS" ] || { echo "FAIL: $ROOTFS/ missing (see docs/recover-from-device.md)"; exit 1; }
+# Shared panel and startup hook (cfw/).
+tools/cfw-sync.sh d375 "$ROOTFS"
 if ! cmp -s "$KEYDIR/firmware.pub" "$ROOTFS/firmware1.pub"; then
     cat "$KEYDIR/firmware.pub" > "$ROOTFS/firmware1.pub"
     echo "  updated $ROOTFS/firmware1.pub"
@@ -52,17 +54,22 @@ fi
 echo "=== Step 2: Create rootfs tarball ==="
 tmp=$(mktemp -d); trap 'rm -rf "$tmp"' EXIT
 
-# Use fakeroot if available (preserves dev nodes / ownership)
-TARLIST=$(cd "$ROOTFS" && find . -mindepth 1 ! -name .fakeroot -print | sed 's|^\./||' | LC_ALL=C sort)
-if command -v fakeroot >/dev/null 2>&1 && [ -f "$ROOTFS/.fakeroot" ]; then
-    echo "$TARLIST" | fakeroot -i "$ROOTFS/.fakeroot" \
-        tar -czf "$tmp/rootfs.tar.gz" -C "$ROOTFS" --numeric-owner \
-        --no-recursion -T -
-else
-    echo "$TARLIST" | \
-        tar -czf "$tmp/rootfs.tar.gz" -C "$ROOTFS" --numeric-owner \
-        --no-recursion -T -
-    echo "  (warning: no fakeroot — dev nodes and ownership may not be exact)"
+# Owners, modes and device nodes come from a path-based manifest; see the tool.
+# The phone app is the D815's; see docs/backport-guide.md.
+STAGE=emu/backport/stage
+[ -f emu/backport/d8.tar ] || python3 tools/backport/pack.py decrypted/D815-10.1.226.16 emu/backport/d8.tar
+[ -f tools/out/fb24shim.so ] || tools/build-fb24shim.sh
+python3 tools/backport/stage.py emu/backport/d8.tar tools/out/fb24shim.so "$ROOTFS" "$STAGE"
+python3 tools/rootfs-tar.py build "$ROOTFS" custom-rootfs.manifest "$tmp/rootfs.tar.gz" \
+    cfw/models/d375.exclude "$STAGE/d815=snom/d815" "$STAGE/bmp=snom/bmp"
+# FINAL=1: recompress with zopfli. Slower by minutes, about 4% smaller, and still
+# plain gzip for the phone.
+if [ "${FINAL:-}" = 1 ]; then
+    docker run --rm -v "$tmp":/w debian:bookworm-slim bash -c \
+        "apt-get update -qq >/dev/null; apt-get install -y -qq pigz >/dev/null 2>&1
+         gzip -dc /w/rootfs.tar.gz | pigz -11 -p \$(nproc) > /w/z.gz
+         chown $(id -u):$(id -g) /w/z.gz"
+    mv "$tmp/z.gz" "$tmp/rootfs.tar.gz"
 fi
 echo "  rootfs.tar.gz: $(stat -c%s "$tmp/rootfs.tar.gz") bytes"
 # The phone extracts with `tar ... update/` to decide system vs application
@@ -131,3 +138,6 @@ echo ""
 echo " Then flash via the phone web UI: Software Update → URL → $OUT"
 echo " Or serve it over HTTP and point the phone to it."
 echo "========================================="
+
+# Keep the emulator on the newest build (docs/qemu.md).
+tools/vm-update.sh d375 || echo "warning: emulator image not updated" >&2

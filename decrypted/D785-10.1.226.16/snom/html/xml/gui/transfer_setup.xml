@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<IPPhoneBatch xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../schemas/minibrowser.xsd">
+  <IPPhoneInput track="no" dtmf="off" id="transfer_setup" document_id="transfer_setup">
+    <Url>File:///xml/gui/transfer_setup.xml#sub=*[@id="STconfirmation"]&amp;var:smarttransferval=__Y__</Url>
+    <InputItem>
+      <DisplayName>$(lang:SmartTransfer) $(lang:menu_red_target)</DisplayName>
+      <InputToken>__Y__</InputToken>
+      <InputFlags>AN</InputFlags>
+      <InputMask></InputMask>
+      <DefaultValue>$(var:smarttransferval)</DefaultValue>
+      <ContactPoolInEdit>1</ContactPoolInEdit>
+      <ExitAfterContactPool>1</ExitAfterContactPool>
+      <InputDescription>$(lang:SmartTransferEditDescription)</InputDescription>
+      <If condition="$(show_feature:FEATURE_PUI_STYLE_SIO)">
+        <Image>File:///bmp/colored/input_info_images/smarttransfer_setup.png</Image>
+      </If>
+    </InputItem>
+  </IPPhoneInput>
+  <IPPhoneText id="STconfirmation" name="$(lang:SmartTransfer)">
+    <Fetch mil="3000">phone://mb_exit#set:fkey$(var:key)=transfer%20$(var:smarttransferval)&amp;set:fkey_label$(var:key)=&amp;set:fkey_short_label$(var:key)=</Fetch>
+    <If condition="$(show_feature:FEATURE_PUI_STYLE_SIO)">
+      <Image>
+        <If condition="$(is_gui_showing_right_to_left)">
+          <LocationX>$(math_eval:$(gui_display_xsize)-74-$(gui_display_xsize)/20)</LocationX>
+        </If>
+        <Else>
+          <LocationX>$(math_eval:$(gui_display_xsize)/20)</LocationX>
+        </Else>
+        <LocationY>$(math_eval:$(gui_display_ysize)/2 - $(gui_display_defines:FKEY_TOTAL_H)/2 + $(gui_display_defines:TITLEBAR_THICKNESS)/2 - 60)</LocationY>
+        <Url>File:///bmp/colored/input_info_images/smarttransfer_ready.png</Url>
+      </Image>
+      <LocationX>$(math_eval:$(gui_display_xsize)/10+74)</LocationX>
+      <LocationY>90</LocationY>
+    </If>
+    <Text>$(var:smarttransferval)<br/>$(lang:SmartTransfer_ready)</Text>
+    <SoftKeyItem>
+      <Name>F4</Name>
+      <Label>F_OK</Label>
+      <Url>phone://mb_exit#set:fkey$(var:key)=transfer%20$(var:smarttransferval)&amp;set:fkey_label$(var:key)=&amp;set:fkey_short_label$(var:key)=</Url>
+    </SoftKeyItem>
+    <SoftKeyItem>
+      <Name>ENTER</Name>
+      <Url>phone://mb_exit#set:fkey$(var:key)=transfer%20$(var:smarttransferval)&amp;set:fkey_label$(var:key)=&amp;set:fkey_short_label$(var:key)=</Url>
+    </SoftKeyItem>
+    <SoftKeyItem>
+      <Name>Cancel</Name>
+      <Url>phone://mb_exit#set:fkey$(var:key)=transfer%20$(var:smarttransferval)&amp;set:fkey_label$(var:key)=&amp;set:fkey_short_label$(var:key)=</Url>
+    </SoftKeyItem>
+    <SoftKeyItem>
+      <Name>F1</Name>
+      <Label>F_GO_BACK</Label>
+      <Url>File:///xml/gui/transfer_setup.xml#sub=*[@id="transfer_setup"]</Url>
+    </SoftKeyItem>
+  </IPPhoneText>
+</IPPhoneBatch>

@@ -13,6 +13,9 @@
  *   3. take over: kill lid + media_daemon (freeing /dev/fb0 and the keypad),
  *   4. run a background pump thread that streams 16 kHz mono S16 to the codec.
  *
+ * SND_VOL=<percent> (env) scales all output, e.g. SND_VOL=5 for bench tests;
+ * SND_DUMP=1 dumps the exact PCM sent to /tmp/snd_dump.raw.
+ *
  * See docs/sound.md for the full reverse-engineering writeup.
  */
 #ifndef SND_HAL_H
@@ -35,6 +38,13 @@ void snd_hal_push16k(const short *samples, int n);
 /* Push mono signed-16-bit samples at an arbitrary rate; linearly resampled to
  * 16 kHz on the way in. State is carried across calls for click-free joins. */
 void snd_hal_push_rate(const short *samples, int n, int srcrate);
+
+/* Samples (16 kHz) queued but not yet sent to the codec. Lets a game pace
+ * itself off the codec clock instead of the wall clock. 0 when audio is off. */
+int  snd_hal_queued(void);
+
+/* Number of 10 ms codec chunks that ran dry (padded with silence) so far. */
+int  snd_hal_underruns(void);
 
 /* 1 if the audio pump is running, 0 otherwise. */
 int  snd_hal_ok(void);

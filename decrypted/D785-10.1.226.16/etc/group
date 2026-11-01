@@ -1,0 +1,4 @@
+root:x:0:
+snom:x:1000:
+www:x:1001:
+dbus:x:107:

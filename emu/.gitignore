@@ -1,0 +1,6 @@
+qemu-*/
+build/
+work/
+run/
+vm/
+backport/

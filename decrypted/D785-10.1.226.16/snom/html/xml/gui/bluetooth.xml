@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<IPPhoneBatch xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../schemas/minibrowser.xsd">
+  <IPPhoneMenu id="starter">
+    <Fetch mil="1">file:///xml/gui/bluetooth.xml#sub=*[@id="on_board_bt_menu"]&amp;action_ifc:BluetoothManager=InView&amp;var:animationcounter=0</Fetch>
+  </IPPhoneMenu>
+  <!-- Menu for on board bluetooth -->
+  <IPPhoneMenu track="no" speedselect="off" id="on_board_bt_menu">
+  <If condition="$(show_feature:FEATURE_PUI_STYLE_SIO)">
+      <If condition="$(var_ifc:BluetoothManager::state)==Discovering">
+        <Title>$(lang:bluetooth)</Title>
+        <MenuItem name="$(lang:bluetooth_discovering). $(lang:please_wait)">
+          <ExtraIconType>$(math_eval:$(icon_type_enum:kIconTypeMenuConnectzero)+$(var:animationcounter))</ExtraIconType>
+          <Url>phone://mb_nop</Url>
+        </MenuItem>
+        <If condition="$(var:animationcounter)==3">
+          <Fetch mil="200">phone://mb_nop#var:animationcounter=0</Fetch>
+        </If>
+        <Else>
+          <Fetch mil="200">phone://mb_nop#var:animationcounter=$(math_eval:$(var:animationcounter)+1)</Fetch>
+        </Else>
+      </If>
+      <Elif condition="$(var_ifc:BluetoothManager::state)==Pairing">
+        <Title>$(lang:bluetooth)</Title>
+        <MenuItem name="$(var_ifc:$(var:pairingtoname)$(var:pairingtonameindex))">
+          <SubText>$(lang:bluetooth_pairing). $(lang:please_wait)</SubText>
+          <ExtraIconType>$(math_eval:$(icon_type_enum:kIconTypeMenuConnectzero)+$(var:animationcounter))</ExtraIconType>
+          <ExtraIconType2>$(icon_type_enum:kIconTypeMenuHeadset)</ExtraIconType2>
+          <!-- TODO: Needs custom icon depending on device type -->
+          <Url>phone://mb_nop</Url>
+        </MenuItem>
+        <If condition="$(var:animationcounter)==3">
+          <Fetch mil="200">phone://mb_nop#var:animationcounter=0</Fetch>
+        </If>
+        <Else>
+          <Fetch mil="200">phone://mb_nop#var:animationcounter=$(math_eval:$(var:animationcounter)+1)</Fetch>
+        </Else>
+      </Elif>
+      <Elif condition="$(var_ifc:BluetoothManager::state)==Unpairing">
+        <Title>$(lang:bluetooth)</Title>
+        <MenuItem name="$(var_ifc:BluetoothManager::connected_device)">
+          <Subtext>$(lang:bluetooth_unpairing). $(lang:please_wait)</Subtext>
+          <ExtraIconType>$(math_eval:$(icon_type_enum:kIconTypeMenuConnectzero)+$(var:animationcounter))</ExtraIconType>
+          <ExtraIconType2>$(icon_type_enum:kIconTypeMenuHeadset)</ExtraIconType2>
+          <!-- TODO: Needs custom icon depending on device type -->
+          <Url>phone://mb_nop</Url>
+        </MenuItem>
+        <If condition="$(var:animationcounter)==3">
+          <Fetch mil="200">phone://mb_nop#var:animationcounter=0</Fetch>
+        </If>
+        <Else>
+          <Fetch mil="200">phone://mb_nop#var:animationcounter=$(math_eval:$(var:animationcounter)+1)</Fetch>
+        </Else>
+      </Elif>
+      <Elif condition="$(var_ifc:BluetoothManager::state)==Connecting">
+        <Title>$(lang:bluetooth)</Title>
+        <MenuItem name="$(var_ifc:BluetoothManager::paired_device)">
+          <Subtext>$(lang:bluetooth_connecting). $(lang:please_wait)</Subtext>
+          <ExtraIconType>$(math_eval:$(icon_type_enum:kIconTypeMenuConnectzero)+$(var:animationcounter))</ExtraIconType>
+          <ExtraIconType2>$(icon_type_enum:kIconTypeMenuHeadset)</ExtraIconType2>
+          <!-- TODO: Needs custom icon depending on device type -->
+          <Url>phone://mb_nop</Url>
+        </MenuItem>
+        <If condition="$(var:animationcounter)==3">
+          <Fetch mil="200">phone://mb_nop#var:animationcounter=0</Fetch>
+        </If>
+        <Else>
+          <Fetch mil="200">phone://mb_nop#var:animationcounter=$(math_eval:$(var:animationcounter)+1)</Fetch>
+        </Else>
+      </Elif>
+      <Elif condition="$(var_ifc:BluetoothManager::state)==Disconnecting">
+        <Title>$(lang:bluetooth)</Title>
+        <MenuItem name="$(var_ifc:BluetoothManager::connected_device)">
+          <Subtext>$(lang:bluetooth_disconnecting). $(lang:please_wait)</Subtext>
+          <ExtraIconType>$(math_eval:$(icon_type_enum:kIconTypeMenuConnectzero)+$(var:animationcounter))</ExtraIconType>
+          <ExtraIconType2>$(icon_type_enum:kIconTypeMenuHeadset)</ExtraIconType2>
+          <!-- TODO: Needs custom icon depending on device type -->
+          <Url>phone://mb_nop</Url>
+        </MenuItem>
+        <If condition="$(var:animationcounter)==3">
+          <Fetch mil="200">phone://mb_nop#var:animationcounter=0</Fetch>
+        </If>
+        <Else>
+          <Fetch mil="200">phone://mb_nop#var:animationcounter=$(math_eval:$(var:animationcounter)+1)</Fetch>
+        </Else>
+      </Elif>
+      <Elif condition="$(var_ifc:BluetoothManager::state)==Error">
+        <Fetch mil="1">file:///xml/gui/bluetooth.xml#sub=*[@id="on_board_bt_error"]&amp;action_ifc:BluetoothManager=InView</Fetch>
+      </Elif>
+      <Elif condition="$(bool_eval:$(var_ifc:BluetoothManager::has_discovered_list))">
+        <SoftKeyItem>
+          <Name>F2</Name>
+          <Label>F_PAIR</Label>
+          <Url>file:///xml/gui/bluetooth.xml#action_ifc:BluetoothManager=Bonding,index=$[sel]&amp;var:pairingtoname=BluetoothManager::discovered_device.&amp;var:pairingtonameindex=$[sel]</Url>
+        </SoftKeyItem>
+        <Title>$(lang:bluetooth)</Title>
+          <Repeat values="$(enum:$(var_ifc:BluetoothManager::discovered_number))" token="|__INDEX__|">
+            <MenuItem name="$(var_ifc:BluetoothManager::discovered_device.__INDEX__)" id="__INDEX__">
+              <ExtraIconType>$(icon_type_enum:kIconTypeMenuHeadset)</ExtraIconType>
+              <!-- TODO: Needs custom icon depending on device type -->
+              <Url>file:///xml/gui/bluetooth.xml#action_ifc:BluetoothManager=Bonding,index=__INDEX__&amp;var:pairingtoname=BluetoothManager::discovered_device.__INDEX__&amp;var:pairingtonameindex=</Url>
+            </MenuItem>
+          </Repeat>
+      </Elif>
+      <Elif condition="$(bool_eval:$(var_ifc:BluetoothManager::has_connected_device))">
+        <Title>$(lang:bluetooth)</Title>
+          <MenuItem name="$(var_ifc:BluetoothManager::connected_device)">
+            <ExtraIconType>$(icon_type_enum:kIconTypeMenuPaired)</ExtraIconType>
+            <ExtraIconType2>$(icon_type_enum:kIconTypeMenuHeadset)</ExtraIconType2>
+            <!-- TODO: Needs custom icon depending on device type -->
+            <SubText>$(lang:bluetooth_connected_title)</SubText>
+            <Url>phone://mb_nop</Url>
+          </MenuItem>
+      </Elif>
+      <Elif condition="$(bool_eval:$(var_ifc:BluetoothManager::has_paired_list))">
+        <Title>$(lang:bluetooth)</Title>
+          <Repeat values="$(enum:$(var_ifc:BluetoothManager::paired_number))" token="|__INDEX__|">
+            <MenuItem name="$(var_ifc:BluetoothManager::paired_device.__INDEX__)" id="paired_device.__INDEX__">
+              <Subtext>$(lang:query_pending)</Subtext>
+              <!-- Temporary "Searching..."" text -->
+              <ExtraIconType>$(math_eval:$(icon_type_enum:kIconTypeMenuConnectzero)+$(var:animationcounter))</ExtraIconType>
+              <ExtraIconType2>$(icon_type_enum:kIconTypeMenuHeadset)</ExtraIconType2>
+              <!-- TODO: Needs custom icon depending on device type -->
+              <Url>file:///xml/gui/bluetooth.xml#action_ifc:BluetoothManager=Connect,index=__INDEX__</Url>
+            </MenuItem>
+          </Repeat>
+        <If condition="$(var:animationcounter)==3">
+          <Fetch mil="200">phone://mb_nop#var:animationcounter=0</Fetch>
+        </If>
+        <Else>
+          <Fetch mil="200">phone://mb_nop#var:animationcounter=$(math_eval:$(var:animationcounter)+1)</Fetch>
+        </Else>
+      </Elif>
+      <Else>
+        <Title>$(lang:bluetooth)</Title>
+        <MenuItem name="$(lang:list_no_devices)">
+          <URL>phone://mb_nop</URL>
+        </MenuItem>
+      </Else>
+      <If condition="$(bool_eval:$(condition:!$(var_ifc:BluetoothManager::has_connected_device)) &amp; $(condition:!$(var_ifc:BluetoothManager::has_paired_list)))">
+        <SoftKeyItem>
+          <Name>F1</Name>
+          <Label>F_SEARCH</Label>
+          <Url>file:///xml/gui/bluetooth.xml#action_ifc:BluetoothManager=Discover</Url>
+        </SoftKeyItem>
+      </If>
+      <If condition="$(bool_eval:$(condition:$(var_ifc:BluetoothManager::has_connected_device)) | $(condition:$(var_ifc:BluetoothManager::has_paired_list)))">
+        <SoftKeyItem>
+          <Name>F2</Name>
+          <Label>F_UNPAIR</Label>
+          <Url>file:///xml/gui/bluetooth.xml#action_ifc:BluetoothManager=Unpair</Url>
+        </SoftKeyItem>
+      </If>
+    <IPPhoneText id="on_board_bt_error">
+      <Title>$(lang:bluetooth) $(lang:title_error)</Title>
+      <If condition="$(var_ifc:BluetoothManager::error)==Connecting">
+        <Text>Connection...</Text>
+      </If>
+      <Else>
+        <Text>Error...</Text>
+      </Else>
+      <SoftKeyItem>
+        <Name>ENTER</Name>
+        <Url>file:///xml/gui/bluetooth.xml#action_ifc:BluetoothManager=ClearError</Url>
+      </SoftKeyItem>
+      <SoftKeyItem>
+        <Name>F1</Name>
+        <Label>$(lang:ok)</Label>
+        <Url>file:///xml/gui/bluetooth.xml#action_ifc:BluetoothManager=ClearError</Url>
+      </SoftKeyItem>
+    </IPPhoneText>
+    </If>
+    <Else>
+      <If condition="$(var_ifc:BluetoothManager::state)==Discovering">
+        <Title>$(lang:bluetooth)</Title>
+        <MenuItem name="$(lang:bluetooth_discovering). $(lang:please_wait)">
+          <Url>phone://mb_nop</Url>
+        </MenuItem>
+      </If>
+      <Elif condition="$(var_ifc:BluetoothManager::state)==Pairing">
+        <Title>$(lang:bluetooth)</Title>
+        <MenuItem name="$(lang:bluetooth_pairing). $(lang:please_wait)">
+          <Url>phone://mb_nop</Url>
+        </MenuItem>
+      </Elif>
+      <Elif condition="$(var_ifc:BluetoothManager::state)==Unpairing">
+        <Title>$(lang:bluetooth)</Title>
+        <MenuItem name="$(lang:bluetooth_unpairing). $(lang:please_wait)">
+          <Url>phone://mb_nop</Url>
+        </MenuItem>
+      </Elif>
+      <Elif condition="$(var_ifc:BluetoothManager::state)==Connecting">
+        <Title>$(lang:bluetooth)</Title>
+        <MenuItem name="$(lang:bluetooth_connecting). $(lang:please_wait)">
+          <Url>phone://mb_nop</Url>
+        </MenuItem>
+      </Elif>
+      <Elif condition="$(var_ifc:BluetoothManager::state)==Disconnecting">
+        <Title>$(lang:bluetooth)</Title>
+        <MenuItem name="$(lang:bluetooth_disconnecting). $(lang:please_wait)">
+          <Url>phone://mb_nop</Url>
+        </MenuItem>
+      </Elif>
+      <Elif condition="$(var_ifc:BluetoothManager::state)==Error">
+        <Fetch mil="1">file:///xml/gui/bluetooth.xml#sub=*[@id="on_board_bt_error"]&amp;action_ifc:BluetoothManager=InView</Fetch>
+      </Elif>
+    <Elif condition="$(bool_eval:$(var_ifc:BluetoothManager::has_discovered_list))">
+      <SoftKeyItem>
+        <Name>F2</Name>
+        <Label>$(lang:ok)</Label>
+        <SoftKey>F_OK</SoftKey>
+      </SoftKeyItem>
+      <Title>$(lang:bluetooth)</Title>
+      <MenuSubTitle name="$(lang:bluetooth_discovered_list_title)"></MenuSubTitle>
+      <Repeat values="$(enum:$(var_ifc:BluetoothManager::discovered_number))" token="|__INDEX__|">
+        <MenuItem name="$(var_ifc:BluetoothManager::discovered_device.__INDEX__)" id="discovered_device.__INDEX__">
+            <Image default="file:///bmp/colored/snom_headset.png"></Image>
+            <Url>file:///xml/gui/bluetooth.xml#action_ifc:BluetoothManager=Bonding,index=__INDEX__</Url>
+        </MenuItem>
+      </Repeat>
+    </Elif>
+    <Elif condition="$(bool_eval:$(var_ifc:BluetoothManager::has_connected_device))">
+      <Title>$(lang:bluetooth)</Title>
+      <MenuItem name="$(var_ifc:BluetoothManager::connected_device)">
+          <MenuSubTitle name="$(lang:bluetooth_connected_title):"></MenuSubTitle>
+          <Image default="file:///bmp/colored/snom_headset.png"></Image>
+        <Url>phone://mb_nop</Url>
+      </MenuItem>
+    </Elif>
+    <Elif condition="$(bool_eval:$(var_ifc:BluetoothManager::has_paired_list))">
+      <Title>$(lang:bluetooth)</Title>
+      <MenuSubTitle name="$(lang:bluetooth_paired_list_title)"></MenuSubTitle>
+      <Repeat values="$(enum:$(var_ifc:BluetoothManager::paired_number))" token="|__INDEX__|">
+        <MenuItem name="$(var_ifc:BluetoothManager::paired_device.__INDEX__)" id="paired_device.__INDEX__">
+            <Image default="file:///bmp/colored/snom_headset.png"></Image>
+            <Url>file:///xml/gui/bluetooth.xml#action_ifc:BluetoothManager=Connect,index=__INDEX__</Url>
+        </MenuItem>
+      </Repeat>
+    </Elif>
+    <Else>
+      <Title>$(lang:bluetooth)</Title>
+      <MenuItem name="$(lang:list_no_devices)">
+        <Url>phone://mb_nop</Url>
+      </MenuItem>
+    </Else>
+    <If condition="$(bool_eval:$(condition:!$(var_ifc:BluetoothManager::has_connected_device)) &amp; $(condition:!$(var_ifc:BluetoothManager::has_paired_list)))">
+      <SoftKeyItem>
+        <Name>F1</Name>
+        <Label>F_SEARCH</Label>
+        <Url>file:///xml/gui/bluetooth.xml#action_ifc:BluetoothManager=Discover</Url>
+      </SoftKeyItem>
+    </If>
+    <If condition="$(bool_eval:$(condition:$(var_ifc:BluetoothManager::has_connected_device)) | $(condition:$(var_ifc:BluetoothManager::has_paired_list)))">
+      <SoftKeyItem>
+        <Name>F2</Name>
+        <Label>F_UNPAIR</Label>
+        <Url>file:///xml/gui/bluetooth.xml#action_ifc:BluetoothManager=Unpair</Url>
+      </SoftKeyItem>
+    </If>
+  <IPPhoneText id="on_board_bt_error">
+    <Title>$(lang:bluetooth) $(lang:title_error)</Title>
+    <If condition="$(var_ifc:BluetoothManager::error)==Connecting">
+      <Text>Connection...</Text>
+    </If>
+    <Else>
+      <Text>Error...</Text>
+    </Else>
+    <SoftKeyItem>
+      <Name>ENTER</Name>
+      <Url>file:///xml/gui/bluetooth.xml#action_ifc:BluetoothManager=ClearError</Url>
+    </SoftKeyItem>
+      <SoftKeyItem>
+        <Name>F1</Name>
+        <Label>$(lang:ok)</Label>
+        <Url>file:///xml/gui/bluetooth.xml#action_ifc:BluetoothManager=ClearError</Url>
+      </SoftKeyItem>
+    </IPPhoneText>
+  </Else>
+</IPPhoneMenu>
+</IPPhoneBatch>

@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<IPPhoneBatch xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../schemas/minibrowser.xsd">
+  <IPPhoneMenu dtmf="off" id="list" state="others_except_mb">
+    <SoftKeyItem>
+      <Name>F1</Name>
+        <Label>F_ADD_NUMBER</Label>
+        <Url track="yes">file:///xml/gui/broadsoft_simul_ring.xml#sub=*[@id="add_location"]&amp;var:add_number=</Url>
+    </SoftKeyItem>
+    <Title>$(lang:xsi_simul_ring)</Title>
+    <!-- Simultaneous ring feature enable toggle -->
+    <MenuItem name="$(lang:xsi_simul_ring)" id="simul_ring">
+      <If condition="$(show_feature:FEATURE_PUI_STYLE_SIO)">
+        <SubText>$(yes_no:$(condition:$(var_ifc:identity.$(set:active_line).simul_ring::simul_ring)==enabled))</SubText>
+      </If>
+      <If condition="$(var_ifc:identity.$(set:active_line).simul_ring::locationEntry_number)==0">
+        <!-- Location list doesn't have any entry. -->
+        <!-- If there is no location stored and feature is disabled, ask for a new location to add-->
+        <Url track="yes">file:///xml/gui/broadsoft_simul_ring.xml#sub=*[@id="add_location"]&amp;var:add_number=</Url>
+      </If>
+      <Else>
+        <Url>phone://mb_nop#action_ifc:identity.$(set:active_line).simul_ring=simul_ring</Url>
+      </Else>
+      <If condition="$(bool_eval:$(condition:$(var_ifc:identity.$(set:active_line).simul_ring::simul_ring)==enabled))">
+        <ExtraIconType>$(icon_type_enum:kIconTypeMenuSliderOn)</ExtraIconType>
+      </If>
+      <Else>
+        <ExtraIconType>$(icon_type_enum:kIconTypeMenuSliderOff)</ExtraIconType>
+      </Else>
+    </MenuItem>
+    <!-- Menuitem shows when feature is enabled -->
+    <If condition="$(var_ifc:identity.$(set:active_line).simul_ring::simul_ring)==enabled">
+      <!-- Do not ring when -->
+      <MenuItem name="$(lang:xsi_simul_ring_on_call)" id="simul_ring_incoming_call">
+        <If condition="$(show_feature:FEATURE_PUI_STYLE_SIO)">
+          <SubText>$(yes_no:$(condition:$(var_ifc:identity.$(set:active_line).simul_ring::simul_ring_incoming_call)!=enabled))</SubText>
+        </If>
+        <If condition="$(bool_eval:$(condition:$(var_ifc:identity.$(set:active_line).simul_ring::simul_ring_incoming_call)!=enabled))">
+          <ExtraIconType>$(icon_type_enum:kIconTypeMenuSliderOn)</ExtraIconType>
+        </If>
+        <Else>
+          <ExtraIconType>$(icon_type_enum:kIconTypeMenuSliderOff)</ExtraIconType>
+        </Else>
+        <Url>phone://mb_nop#action_ifc:identity.$(set:active_line).simul_ring=simul_ring_incoming_call</Url>
+      </MenuItem>
+      <!-- Simultaneous ring phone entries-->
+      <If condition="$(var_ifc:identity.$(set:active_line).simul_ring::locationEntry_number)!=0">
+        <Repeat values="$(var_ifc:identity.$(set:active_line).simul_ring::simul_ring_locations)" token="|__INDEX__|__PHONENUMBER__|__ANSWERCONF__|">
+          <MenuItem id="__INDEX__">
+            <If condition="$(show_feature:FEATURE_PUI_STYLE_SIO)">
+              <Name>__PHONENUMBER__</Name>
+              <SubText>$(lang:xsi_simul_ring_ans_confirm) $(lang:__ANSWERCONF__)</SubText>
+            </If>
+            <Else>
+              <Name>$(lang:number_str) __PHONENUMBER__</Name>
+            </Else>
+            <ExtraIconType>$(icon_type_enum:kIconTypeMenuArrowRight)</ExtraIconType>
+            <Url>file:///xml/gui/broadsoft_simul_ring.xml#sub=*[@id="edit_location"]&amp;var:edit_index=__INDEX__&amp;var:edit_number=__PHONENUMBER__</Url>
+            <SoftKeyItem>
+              <Name>F1</Name>
+              <Label>F_ADD_NUMBER</Label>
+              <Url>file:///xml/gui/broadsoft_simul_ring.xml#sub=*[@id="add_location"]&amp;var:add_number=</Url>
+            </SoftKeyItem>
+            <SoftKeyItem>
+              <Name>F2</Name>
+              <Label>F_EDIT</Label>
+              <Url track="yes">file:///xml/gui/broadsoft_simul_ring.xml#sub=*[@id="edit_location"]&amp;var:edit_index=__INDEX__&amp;var:edit_number=__PHONENUMBER__</Url>
+            </SoftKeyItem>
+            <SoftKeyItem>
+              <Name>F4</Name>
+              <Label>F_DELETE</Label>
+              <Url>file:///xml/gui/broadsoft_simul_ring.xml#action_ifc:identity.$(set:active_line).simul_ring=simul_ring_delete_entry,index=__INDEX__</Url>
+            </SoftKeyItem>
+          </MenuItem>
+        </Repeat>
+      </If>
+    </If>
+  </IPPhoneMenu>
+  <!-- Menu for adding a new simultaneous ring entry-->
+  <IPPhoneMenu dtmf="off" id="add_location" state="others_except_mb">
+    <Title>$(lang:xsi_simul_ring_add_entry)</Title>
+      <MenuItem name="$(lang:xsi_simul_ring_ans_confirm)" id="answer_confirmation">
+        <If condition="$(show_feature:FEATURE_PUI_STYLE_SIO)">
+          <SubText>$(yes_no:$(condition:$(var_ifc:identity.$(set:active_line).simul_ring::toggle_ans_confirm)==enabled))</SubText>
+        </If>
+        <Url>phone://mb_nop#action_ifc:identity.$(set:active_line).simul_ring=simul_ring_add_entry&amp;var:add_number=$(var:add_number)</Url>
+        <If condition="$(bool_eval:$(condition:$(var_ifc:identity.$(set:active_line).simul_ring::toggle_ans_confirm)==enabled))">
+          <ExtraIconType>$(icon_type_enum:kIconTypeMenuSliderOn)</ExtraIconType>
+        </If>
+        <Else>
+          <ExtraIconType>$(icon_type_enum:kIconTypeMenuSliderOff)</ExtraIconType>
+        </Else>
+    </MenuItem>
+    <MenuItem>
+      <If condition="$(show_feature:FEATURE_PUI_STYLE_SIO)">
+        <Name>$(lang:number_str)</Name>
+        <SubText>$(var:add_number)</SubText>
+      </If>
+      <Else>
+        <Name>$(lang:number_str) $(var:add_number)</Name>
+      </Else>
+      <ExtraIconType>$(icon_type_enum:kIconTypeMenuArrowRight)</ExtraIconType>
+      <Url>file:///xml/gui/templates.xml#sub=*[@id="input_template"]&amp;var:input_pool_key=1&amp;var:input_displayname=$(lang:xsi_simul_ring_enter_phone_number)&amp;var:input_token=__Y__&amp;var:input_flags=t&amp;var:input_default=$(var:add_number)&amp;var:input_mask=&amp;var:input_url=$(urlencode:"mb_nop#go_back&amp;var:add_number=__Y__")</Url>
+    </MenuItem>
+    <If condition="!$(empty:$(var:add_number))">
+      <SoftKeyItem>
+        <Name>F1</Name>
+        <Label>F_SAVE_XSI_CONTACT</Label>
+        <Url track="no">phone://mb_nop#action_ifc:identity.$(set:active_line).simul_ring=simul_ring_add_entry,phoneNumber=$(var:add_number)&amp;go_back</Url>
+      </SoftKeyItem>
+    </If>
+  </IPPhoneMenu>
+  <!-- Menu for editing every Simultaneous ring entry-->
+  <IPPhoneMenu dtmf="off" id="edit_location" state="others_except_mb">
+    <Title>$(lang:xsi_simul_ring_edit) $(var:edit_number)</Title>
+    <MenuItem name="$(lang:xsi_simul_ring_ans_confirm)" id="edit_answer_confirmation">
+      <If condition="$(show_feature:FEATURE_PUI_STYLE_SIO)">
+        <SubText>$(yes_no:$(condition:$(var_ifc:identity.$(set:active_line).simul_ring::ansConfirm.$(var:edit_index)==ON)))</SubText>
+      </If>
+      <If condition="$(bool_eval:$(condition:$(var_ifc:identity.$(set:active_line).simul_ring::ansConfirm.$(var:edit_index)==ON)))">
+        <ExtraIconType>$(icon_type_enum:kIconTypeMenuSliderOn)</ExtraIconType>
+      </If>
+      <Else>
+        <ExtraIconType>$(icon_type_enum:kIconTypeMenuSliderOff)</ExtraIconType>
+      </Else>
+      <Url>phone://mb_nop#action_ifc:identity.$(set:active_line).simul_ring=simul_ring_edit_entry,index=$(var:edit_index)--request_var</Url>
+    </MenuItem>
+    <MenuItem>
+      <If condition="$(show_feature:FEATURE_PUI_STYLE_SIO)">
+        <Name>$(lang:number_str)</Name>
+        <SubText>$(var:edit_number)</SubText>
+      </If>
+      <Else>
+        <Name>$(lang:number_str) $(var:add_number)</Name>
+      </Else>
+      <ExtraIconType>$(icon_type_enum:kIconTypeMenuArrowRight)</ExtraIconType>
+      <Url>file:///xml/gui/templates.xml#sub=*[@id="input_template"]&amp;var:input_pool_key=1&amp;var:input_displayname=$(lang:xsi_simul_ring_enter_phone_number)&amp;var:input_token=__Y__&amp;var:input_flags=t&amp;var:input_default=$(var:edit_number)&amp;var:input_mask=&amp;var:input_url=$(urlencode:"mb_nop#go_back&amp;var:edit_number=__Y__")</Url>
+    </MenuItem>
+    <SoftKeyItem>
+      <Name>F1</Name>
+      <Label>F_SAVE_XSI_CONTACT</Label>
+      <Url track="no">phone://mb_nop#action_ifc:identity.$(set:active_line).simul_ring=simul_ring_edit_entry,index=$(var:edit_index),phoneNumberChanged=$(var:edit_number)--request_var&amp;go_back</Url>
+    </SoftKeyItem>
+  </IPPhoneMenu>
+</IPPhoneBatch>

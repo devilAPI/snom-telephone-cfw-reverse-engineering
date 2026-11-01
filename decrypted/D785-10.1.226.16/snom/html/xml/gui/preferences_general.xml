@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<IPPhoneMenu state="others_except_mb" dtmf="off" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../schemas/minibrowser.xsd">
+  <Title>$(lang:preferences_general)</Title>
+  <MenuItem name="$(lang:quick_dial_contacts)">
+    <If condition="$(set:user_default_contact_uri[$(current_line)])==main">
+      <Url>phone://mb_nop#set:user_default_contact_uri[$(current_line)]=none</Url>
+      <ExtraIconType>$(icon_type_enum:kIconTypeMenuSliderOn)</ExtraIconType>
+    </If>
+    <Else>
+      <Url>phone://mb_nop#set:user_default_contact_uri[$(current_line)]=main</Url>
+      <ExtraIconType>$(icon_type_enum:kIconTypeMenuSliderOff)</ExtraIconType>
+    </Else>
+    <If condition="$(show_feature:FEATURE_PUI_STYLE_SIO)">
+      <SubText>$(on_off:$(condition:$(set:user_default_contact_uri[$(current_line)])==main))</SubText>
+    </If>
+  </MenuItem>
+  <MenuItem id="guess_number" name="$(lang:guess_number)">
+    <If condition="$(show_feature:FEATURE_PUI_STYLE_SIO)">
+      <SubText>$(on_off:$(set:guess_number))</SubText>
+    </If>
+    <If condition="$(bool_eval:$(set:guess_number))">
+      <ExtraIconType>$(icon_type_enum:kIconTypeMenuSliderOn)</ExtraIconType>
+    </If>
+    <Else>
+      <ExtraIconType>$(icon_type_enum:kIconTypeMenuSliderOff)</ExtraIconType>
+    </Else>
+    <Url>phone://mb_nop#toggleset:guess_number</Url>
+  </MenuItem>
+  <If condition="$(bool_eval:$(set:guess_number))">
+    <MenuItem name="$(lang:guess_number_len)">
+      <If condition="$(show_feature:FEATURE_PUI_STYLE_SIO)">
+        <SubText>$(set:guess_start_length)</SubText>
+      </If>
+      <Url>file:///xml/gui/templates.xml#sub=*[@id="input_template"]&amp;var:input_pool_key=0&amp;var:input_displayname=$(lang:guess_number_len)&amp;var:input_token=__Y__&amp;var:input_required=yes&amp;var:input_flags=N&amp;var:input_default=$(set:guess_start_length)&amp;var:input_url=$(urlencode:"phone://mb_nop%23go_back%26set:guess_start_length=__Y__%26var:input_required=")</Url>
+      <ExtraIconType>$(icon_type_enum:kIconTypeMenuArrowRight)</ExtraIconType>
+    </MenuItem>
+    <MenuItem name="$(lang:guess_max_hits)">
+      <If condition="$(show_feature:FEATURE_PUI_STYLE_SIO)">
+        <SubText>$(set:guess_max_hits)</SubText>
+      </If>
+      <Url>file:///xml/gui/templates.xml#sub=*[@id="input_template"]&amp;var:input_pool_key=0&amp;var:input_displayname=$(lang:guess_max_hits)&amp;var:input_token=__Y__&amp;var:input_required=yes&amp;var:input_flags=N&amp;var:input_default=$(set:guess_max_hits)&amp;var:input_url=$(urlencode:"phone://mb_nop%23go_back%26set:guess_max_hits=__Y__%26var:input_required=")</Url>
+      <ExtraIconType>$(icon_type_enum:kIconTypeMenuArrowRight)</ExtraIconType>
+    </MenuItem>
+  </If>
+  <Menu name="$(lang:menu100_phone_book)" id="directory">
+    <Menu name="$(lang:sort_order)" id="sort_order">
+      <SubText>$(lang:$(set:sort_server_dir_result_by_last_name))</SubText>
+      <Repeat values="|on|off|" token="|__VALUE__|">
+        <MenuItem name="$(lang:__VALUE__)" id="directory_sort_order___VALUE__" sel="$(condition:__VALUE__==$(set:sort_server_dir_result_by_last_name))">
+          <Url>phone://mb_nop#go_back&amp;set:sort_server_dir_result_by_last_name=__VALUE__</Url>
+          <If condition="__VALUE__==$(set:sort_server_dir_result_by_last_name)">
+            <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOn)</ExtraIconType>
+          </If>
+          <Else>
+            <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOff)</ExtraIconType>
+          </Else>
+        </MenuItem>
+      </Repeat>
+    </Menu>
+    <Menu name="$(lang:directory_display_order)" id="directory_display_order">
+      <SubText>$(lang:display_order_$(set:directory_display_order))</SubText>
+      <Repeat values="|first_name_last_name|last_name_first_name|" token="|__KEY__|">
+        <MenuItem name="$(lang:display_order___KEY__)" id="directory_display_order___KEY__" sel="$(condition:__KEY__==$(set:directory_display_order))">
+          <Url>phone://mb_nop#go_back&amp;set:directory_display_order=__KEY__</Url>
+          <If condition="__KEY__==$(set:directory_display_order)">
+            <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOn)</ExtraIconType>
+          </If>
+          <Else>
+            <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOff)</ExtraIconType>
+          </Else>
+        </MenuItem>
+      </Repeat>
+    </Menu>
+  </Menu>
+  <Menu name="$(lang:visual_options)" id="visual_options">
+    <Menu name="$(lang:display_method)" id="display_method">
+      <If condition="$(show_feature:FEATURE_PUI_STYLE_SIO)">
+        <SubText>$(lang:display_method_$(set:display_method))</SubText>
+      </If>
+      <Repeat values="|full_contact|display_name|display_number|display_name_number|display_number_name|" token="|__VALUE__|">
+        <MenuItem name="$(lang:display_method___VALUE__)" id="display_method___VALUE__" sel="$(condition:__VALUE__==$(set:display_method))">
+          <Url>phone://mb_nop#go_back&amp;set:display_method=__VALUE__</Url>
+          <If condition="__VALUE__==$(set:display_method)">
+            <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOn)</ExtraIconType>
+          </If>
+          <Else>
+            <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOff)</ExtraIconType>
+          </Else>
+        </MenuItem>
+      </Repeat>
+    </Menu>
+    <If condition="$(show_feature:FEATURE_PUI_STYLE_SIO)">
+      <MenuItem name="$(lang:prefer_saved_over_received_photo)" id="prefer_saved_over_received_photo">
+        <Url>phone://mb_nop#toggleset:prefer_saved_over_received_photo</Url>
+        <SubText>$(on_off:$(set:prefer_saved_over_received_photo))</SubText>
+        <If condition="$(set:prefer_saved_over_received_photo)">
+          <ExtraIconType>$(icon_type_enum:kIconTypeMenuSliderOn)</ExtraIconType>
+        </If>
+        <Else>
+          <ExtraIconType>$(icon_type_enum:kIconTypeMenuSliderOff)</ExtraIconType>
+        </Else>
+      </MenuItem>
+      <If condition="!$(show_feature:CENTER_ALIGN_CALL_CARD)">
+        <Menu name="$(lang:call_screen_photo_size)" id="call_screen_photo_size">
+          <SubText>$(lang:size_$(set:call_screen_photo_size))</SubText>
+          <Repeat values="|S|M|L|XL|XXL|XXXL|" token="|__SIZE__|">
+            <MenuItem name="$(lang:size___SIZE__)" id="call_screen_photo_size__SIZE__" sel="$(condition:__SIZE__==$(set:call_screen_photo_size))">
+              <Url>phone://mb_nop#go_back&amp;set:call_screen_photo_size=__SIZE__</Url>
+              <If condition="__SIZE__==$(set:call_screen_photo_size)">
+                <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOn)</ExtraIconType>
+              </If>
+              <Else>
+                <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOff)</ExtraIconType>
+              </Else>
+            </MenuItem>
+          </Repeat>
+        </Menu>
+      </If>
+    </If>
+  </Menu>
+</IPPhoneMenu>

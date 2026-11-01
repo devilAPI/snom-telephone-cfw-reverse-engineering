@@ -1,0 +1,16 @@
+
+<?ssi title h323_trace_ssi_title?>
+<?ssi title sip_trace_ssi_title?>
+<?ssi file common1.htm?>
+	<TR><TD vAlign="top" height="16"><IMG height="16" src="img/clr.gif" width="16"></TD></TR>
+<form method="post" ID="Form1">
+<?ssi hidden_tag?>
+	<tr>
+<td><input type="submit" hidefocus value="<?lng trace_clearbutton?>" name="cleartrace">
+<input type="submit" hidefocus value="<?lng trace_reloadbutton?>" name="reloadtrace"></td>
+</tr>
+</form>
+	<TR><TD>&nbsp;</TD></TR>
+	<TR><TD vAlign="top" height="5"><IMG height="5" src="img/clr.gif" width="12"></TD></TR>
+	<tr><td><?ssi stacktrace?></td></tr>
+	<?ssi file common9.htm?></HTML>

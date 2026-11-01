@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<IPPhoneText dtmf="off" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../schemas/minibrowser.xsd" state="others_except_mb">
+  <Title>$(lang:lang_list_details): $(lang:$(var:calllist_title))</Title>
+  <If condition="$(var:calllist_type)!=Rejected">
+    <SoftKeyItem>
+      <Name>F1</Name>
+      <Label>F_ADD_PHONEBOOK</Label>
+      <If condition="$(set:user_server_type[$(current_line)])==broadsoft">
+        <!-- Skip contact_details_menu.xml if tbook_download_interval is set to a valid value > 0 -->
+        <If condition="$(int_eval:$(set:tbook_download_interval[$(set:active_line)]):-1) > 0">
+          <Url track="yes" consume_key_event="1">file:///xml/gui/contact_details_xsi_edit.xml#calllist_type=$(var:calllist_type)&amp;calllist_title=$(var:calllist_title)&amp;var:contact_name=$(call_list_caller_name:$(var:calllist_id))&amp;var:contact_number=$(call_list_caller_number:$(var:calllist_id))&amp;calllist_id=$(var:calllist_id)</Url>
+        </If>
+        <Else>
+          <Url track="yes" consume_key_event="1">file:///xml/gui/contact_details_menu.xml#calllist_type=$(var:calllist_type)&amp;calllist_title=$(var:calllist_title)&amp;var:contact_name=$(call_list_caller_name:$(var:calllist_id))&amp;var:contact_number=$(call_list_caller_number:$(var:calllist_id))&amp;calllist_id=$(var:calllist_id)</Url>
+        </Else>
+      </If>
+      <Else>
+        <If condition="$(status_active:TbookFull)">
+          <Url consume_key_event="1">phone://mb_nop#go_back&amp;var:tbook_full=1</Url>
+        </If>
+        <Else>
+          <Url consume_key_event="1">file:///xml/gui/state_addressbook.xml#sub=*[@id="local_directory_input"]&amp;var:selection=__IDX__&amp;var:field_to_edit=tb_number&amp;var:add_contact=add_number&amp;var:tbook_input_default=$(call_list_caller_number:$(var:calllist_id))&amp;var:contact_name=$(call_list_caller_name:$(var:calllist_id))&amp;var:from_call_list=1</Url>
+        </Else>
+      </Else>
+    </SoftKeyItem>
+  </If>
+  <!-- Show edit and dial soft key -->
+  <SoftKeyItem>
+    <Name>F2</Name>
+    <Label>F_EDIT_AND_DIAL</Label>
+    <Url consume_key_event="1">file:///xml/gui/templates.xml#sub=*[@id="input_template"]&amp;var:custom_f4=F_DIAL_CURRENT&amp;var:input_pool_key=0&amp;var:input_displayname=$(lang:edit_dial)&amp;var:input_token=__Y__&amp;var:input_flags=an&amp;var:input_default=$(call_list_caller_number:$(var:calllist_id))&amp;var:input_mask=&amp;var:input_url=$(urlencode:"phone://mb_exit#contact_transfer_or_dial=-1;"__Y__";F_DIAL")</Url>
+  </SoftKeyItem>
+  <If condition="$(bool_eval:$(condition:$(set:user_server_type[$(current_line)])!=metaswitch)|$(condition:$(set:call_logs[$(current_line)])!=server))">
+    <SoftKeyItem>
+      <Name>F4</Name>
+      <Label>F_DELETE</Label>
+      <If condition="$(var:calllist_type)==Rejected">
+        <Url consume_key_event="1">file:///xml/gui/decision.xml#sub=*[@id="dsc_url"]&amp;var:dsc_title=$(lang:lang_confirm_del_deny_list_item_title)&amp;var:dsc_text=$(lang:lang_confirm_del_number_from_deny_list)&amp;var:number=$(var:phone_no)&amp;calllistdelete=$(var:calllist_id)&amp;var:dsc_yes=1&amp;var:dsc_no=1&amp;var:dsc_yes_url=phone://mb_exit%23denied_list_delete%3Dyes&amp;var:dsc_no_url=phone://mb_nop%23go_back&amp;var:xml_yes_fkey=F2&amp;var:xml_no_fkey=F1&amp;var:xml_abort_fkey=F3</Url>
+      </If>
+      <Else>
+        <Url consume_key_event="1">file:///xml/gui/call_lists_list.xml#calllistdelete=$(var:calllist_id)</Url>
+      </Else>
+    </SoftKeyItem>
+  </If>
+  <SoftKeyItem>
+    <Name>ENTER</Name>
+    <Url consume_key_event="1">phone://mb_exit#calllistdial=$(var:calllist_id)</Url>
+  </SoftKeyItem>
+  <SoftKeyItem>
+    <Name>OFFHOOK</Name>
+    <Url consume_key_event="1">phone://mb_exit#calllistdial=$(var:calllist_id)</Url>
+  </SoftKeyItem>
+  <SoftKeyItem>
+    <Name>HEADSET_OFFHOOK</Name>
+    <Url consume_key_event="1">phone://mb_exit#calllistdial=$(var:calllist_id)</Url>
+  </SoftKeyItem>
+  <SoftKeyItem>
+    <Name>SPEAKER</Name>
+    <Url consume_key_event="1">phone://mb_exit#calllistdial=$(var:calllist_id)</Url>
+  </SoftKeyItem>
+  <Text>$(call_list_details:$(var:calllist_id))</Text>
+</IPPhoneText>

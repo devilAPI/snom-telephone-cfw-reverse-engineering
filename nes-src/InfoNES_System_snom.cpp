@@ -1,7 +1,7 @@
 /* InfoNES system port for the snom D375:
  *   video : /dev/fb0 (480x272, 32bpp), NES 256x240 centered, no scaling
  *   input : /dev/input/event0 keypad (freed by the launcher killing lid+media_daemon)
- *   sound : none (stubbed)
+ *   sound : APU -> snd_hal (16 kHz loudspeaker); the codec clock paces the game
  * ROM path is argv[1]; red hangup key quits.
  */
 #include "InfoNES.h"
@@ -119,15 +119,30 @@ static void fbInit(void) {
 
 /* ---- InfoNES system interface ---- */
 
-void InfoNES_LoadFrame() {
-    /* Frame pacing lives here (once per displayed frame). InfoNES_Wait() is
-       called per-scanline, so pacing there would multiply by ~262. */
+/* Audio-clocked pacing: keep ~SND_LEAD samples queued for the codec. The pump
+ * drains the ring at exactly 16 kHz, so sleeping off the excess locks the game
+ * to the audio clock (no drift -> no periodic underrun clicks or overflow). */
+#define SND_LEAD 1600   /* 100 ms at 16 kHz */
+
+static void paceFrame(void) {
+    if (snd_hal_ok()) {
+        int q = snd_hal_queued();
+        if (q > SND_LEAD) usleep((q - SND_LEAD) * 125 / 2);   /* 62.5 us/sample */
+        return;
+    }
+    /* No audio: fall back to the wall clock. */
     static struct timeval last;
     struct timeval now; gettimeofday(&now, NULL);
     long us = (now.tv_sec - last.tv_sec) * 1000000L + (now.tv_usec - last.tv_usec);
     long target = 1000000L / 60;
     if (us > 0 && us < target) usleep(target - us);
     gettimeofday(&last, NULL);
+}
+
+void InfoNES_LoadFrame() {
+    /* Frame pacing lives here (once per displayed frame). InfoNES_Wait() is
+       called per-scanline, so pacing there would multiply by ~262. */
+    paceFrame();
 
     for (int y = 0; y < NES_DISP_HEIGHT; y++) {
         const WORD *s = &WorkFrame[y * NES_DISP_WIDTH];
@@ -200,13 +215,20 @@ void InfoNES_MessageBox( char *pszMsg, ... ) { fprintf(stderr, "%s\n", pszMsg); 
 
 /* ---- sound ----
  * InfoNES hands us 5 unsigned-8-bit channel buffers per video frame at the APU
- * sample rate (44100 Hz with pAPU_QUALITY=3). We mix them like the reference
- * ports ((c1+..+c5)/5), run a one-pole DC blocker to recentre the unsigned
- * levels, apply gain, and hand the result to snd_hal which resamples to the
- * codec's 16 kHz and streams it to the loudspeaker. */
-#define NES_SND_GAIN 400
+ * rate (44100 Hz with pAPU_QUALITY=3). Their scales differ: pulse = 0x11*vol
+ * (0..255), triangle 0..255, noise 0..15, DPCM 0..127. We mix them with the
+ * NES's own relative levels (linear approximation of the 2A03 mixer, Q4), run
+ * a one-pole DC blocker to recentre the unsigned levels, and hand the result to
+ * snd_hal, which box-filters it down to the codec's 16 kHz. Integer only: the
+ * CPU has no FPU. One full-volume pulse comes out at about +-2000. */
+#define W_PULSE  16
+#define W_TRI    18
+#define W_NOISE  179
+#define W_DPCM   121
+#define DC_R     32604   /* 0.995 in Q15: ~35 Hz high-pass at 44.1 kHz */
 
 static int g_apu_rate = 44100;
+static int g_stats;      /* NES_STATS=1: log fps/queue/underruns to stderr */
 
 void InfoNES_SoundInit( void ) {}
 
@@ -218,18 +240,31 @@ int InfoNES_SoundOpen( int samples_per_sync, int sample_rate ) {
 
 void InfoNES_SoundClose( void ) {}
 
+static void logStats(void) {
+    static int frames;
+    static struct timeval t0;
+    struct timeval now;
+    if (frames++ == 0) { gettimeofday(&t0, NULL); return; }
+    if (frames % 300) return;
+    gettimeofday(&now, NULL);
+    long ms = (now.tv_sec - t0.tv_sec) * 1000L + (now.tv_usec - t0.tv_usec) / 1000;
+    fprintf(stderr, "nes: %ld.%ld fps, queued %d, underruns %d, frameskip %d\n",
+            300000L / ms, (3000000L / ms) % 10, snd_hal_queued(), snd_hal_underruns(), FrameSkip);
+    t0 = now;
+}
+
 void InfoNES_SoundOutput(int s, BYTE *w1, BYTE *w2, BYTE *w3, BYTE *w4, BYTE *w5) {
+    if (g_stats) logStats();
     if (!snd_hal_ok() || s <= 0) return;
-    static double dcx = 0.0, dcy = 0.0;   /* DC blocker state */
+    static int dcx, dcy;                  /* DC blocker state */
     static short buf[1024];
     int n = s > 1024 ? 1024 : s;
     for (int i = 0; i < n; i++) {
-        double x = (double)(w1[i] + w2[i] + w3[i] + w4[i] + w5[i]) / 5.0;
-        double y = x - dcx + 0.995 * dcy;   /* high-pass to kill the DC offset */
+        int x = (w1[i] + w2[i]) * W_PULSE + w3[i] * W_TRI + w4[i] * W_NOISE + w5[i] * W_DPCM;
+        int y = x - dcx + ((dcy * DC_R) >> 15);   /* high-pass to kill the DC offset */
         dcx = x; dcy = y;
-        int v = (int)(y * NES_SND_GAIN);
-        if (v > 32767) v = 32767; else if (v < -32768) v = -32768;
-        buf[i] = (short)v;
+        if (y > 32767) y = 32767; else if (y < -32768) y = -32768;
+        buf[i] = (short)y;
     }
     snd_hal_push_rate(buf, n, g_apu_rate);
 }
@@ -237,6 +272,7 @@ void InfoNES_SoundOutput(int s, BYTE *w1, BYTE *w2, BYTE *w3, BYTE *w4, BYTE *w5
 int main(int argc, char **argv) {
     if (argc < 2) { fprintf(stderr, "usage: %s game.nes\n", argv[0]); return 1; }
     g_rompath = argv[1];
+    g_stats = getenv("NES_STATS") != NULL;
     /* Arm audio + hands-free, then take over (kill lid+media_daemon) while the
      * daemon is still alive. Must precede fbInit()/event0. The boot script no
      * longer kills the daemon itself. */

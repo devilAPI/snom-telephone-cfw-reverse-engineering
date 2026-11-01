@@ -1,0 +1,143 @@
+<?ssi title line$l_ssi_title?>
+<?ssi file common1.htm?>
+<TR><TD vAlign="top" height="16"><IMG height="16" src="img/clr.gif" width="16"></TD></TR>
+<TR>
+  <TD vAlign="top">
+    <FORM enctype="multipart/form-data" method="post">
+    <?ssi hidden_tag?>
+    <?ssi skipon VTECH?>
+    <TABLE class="bubbleTable" cellSpacing="0" cellPadding="0" width="100%" border="0">
+    <?ssi skipoff VTECH?>
+    <?ssi skipon SNOM?>
+    <TABLE cellSpacing="4" cellPadding="0" width="100%" border="0">
+    <?ssi skipoff SNOM?>
+    <TBODY>
+    <?ssi file tab_line.htm?>
+    <TR>
+      <TD width="12" height="5"><IMG height="12" src="img/clr.gif" width="12"></TD>
+      <TD width="12" height="5"><IMG height="5" src="img/clr.gif" width="12"></TD>
+      <TD width="12" height="5"><IMG height="5" src="img/clr.gif" width="12"></TD>
+      <TD class="background" width="12" height="5">
+        <?ssi skipon VTECH?>
+        <IMG height="12" src=<?ssi img-corner-gif ur?> width="12">
+        <?ssi skipoff VTECH?>
+      </TD>
+    </TR>
+    <TR><TD></TD>
+      <?ssi skipon VTECH?>
+      <TD width="50%"><B>
+      <?ssi skipoff VTECH?>
+      <?ssi skipon SNOM?>
+      <TD class="titleText" width="50%">
+      <?ssi skipoff SNOM?>
+      <?lng line_logininfo?></B></TD>
+      <TD width="50%"></TD>
+    </TR>
+    <TR><TD></TD><?ssi radio line_ssi_active user_active$l advanced_ssi_on advanced_ssi_off?></TR>
+    <TR><TD></TD><TD><?ssi input line_ssi_name user_realname$l?></TD></TR>
+    <TR><TD></TD><TD><?ssi input line_ssi_account user_name$l?></TD></TR>
+    <TR><TD></TD><TD><?ssi inpass line_ssi_password user_pass$l?></TD></TR>
+    <TR><TD></TD><TD><?ssi input line_ssi_registrar user_host$l?></TD></TR>
+    <TR><TD></TD><TD><?ssi input line_ssi_outboundproxy user_outbound$l?></TD></TR>
+    <TR><TD></TD><TD><?ssi input line_ssi_secondary_registrar user_secondary_host$l?></TD></TR>
+    <TR><TD></TD><TD><?ssi input line_ssi_secondary_outboundproxy user_secondary_outbound$l?></TD></TR>
+    <TR>
+      <TD></TD><TD><?lng line_failover_identity?></TD>
+      <TD>
+        <select name="user_failover_identity<?ssi line?>" ID="Select1" <?ssi disabled user_failover_identity$l?>size="1" <?ssi tabindex?>>
+          <option value="none"<?ssi selected user_failover_identity$l none?>><?lng line_none?></option>
+          <option value="1"<?ssi selected user_failover_identity$l 1?>><?lng adr_lineid1?></option>
+          <option value="2"<?ssi selected user_failover_identity$l 2?>><?lng adr_lineid2?></option>
+          <?ssi skipon TWO_IDENTITIES?>
+          <option value="3"<?ssi selected user_failover_identity$l 3?>><?lng adr_lineid3?></option>
+          <option value="4"<?ssi selected user_failover_identity$l 4?>><?lng adr_lineid4?></option>
+          <?ssi skipon FOUR_IDENTITIES?>
+          <option value="5"<?ssi selected user_failover_identity$l 5?>><?lng adr_lineid5?></option>
+          <option value="6"<?ssi selected user_failover_identity$l 6?>><?lng adr_lineid6?></option>
+          <?ssi skipon SIX_IDENTITIES?>
+          <option value="7"<?ssi selected user_failover_identity$l 7?>><?lng adr_lineid7?></option>
+          <option value="8"<?ssi selected user_failover_identity$l 8?>><?lng adr_lineid8?></option>
+          <?ssi skipon EIGHT_IDENTITIES?>
+          <option value="9"<?ssi selected user_failover_identity$l 9?>><?lng adr_lineid9?></option>
+          <option value="10"<?ssi selected user_failover_identity$l 10?>><?lng adr_lineid10?></option>
+          <option value="11"<?ssi selected user_failover_identity$l 11?>><?lng adr_lineid11?></option>
+          <option value="12"<?ssi selected user_failover_identity$l 12?>><?lng adr_lineid12?></option>
+          <?ssi skipon TWELVE_IDENTITIES?>
+          <option value="13"<?ssi selected user_failover_identity$l 13?>><?lng adr_lineid13?></option>
+          <option value="14"<?ssi selected user_failover_identity$l 14?>><?lng adr_lineid14?></option>
+          <option value="15"<?ssi selected user_failover_identity$l 15?>><?lng adr_lineid15?></option>
+          <option value="16"<?ssi selected user_failover_identity$l 16?>><?lng adr_lineid16?></option>
+          <?ssi skipoff TWELVE_IDENTITIES?>
+          <?ssi skipoff EIGHT_IDENTITIES?>
+          <?ssi skipoff SIX_IDENTITIES?>
+          <?ssi skipoff FOUR_IDENTITIES?>
+          <?ssi skipoff TWO_IDENTITIES?>
+        </select><?ssi help user_failover_identity?>
+      </TD>
+      <TD></TD>
+    </TR>
+    <TR><TD></TD><?ssi radio line_ssi_hide_identity hide_identity$l advanced_ssi_on advanced_ssi_off?></TR>
+    <TR><TD></TD><TD><?ssi input line_ssi_pname user_pname$l?></TD></TR>
+    <TR><TD></TD><TD><?ssi input line_ssi_mailbox user_mailbox$l?></TD></TR>
+    <TR><TD></TD><TD><?ssi input line_ssi_mailbox_retrieve user_mailbox_retrieve$l?></TD></TR>
+    <TR><TD></TD><TD><?ssi input line_conference_server conferencing$l?></TD></TR>
+    <TR><TD></TD><TD><?ssi input line_ssi_idle_text user_idle_text$l?></TD></TR>
+    <?ssi skipon MONOCHROME_BDF?>
+    <TR><TD></TD><TD><?ssi input line_ssi_idle_number user_idle_number$l?></TD></TR>
+    <?ssi skipoff MONOCHROME_BDF?>
+    <TR><TD></TD><TD><?ssi input line_ssi_idle_cfwd user_idle_cfwd$l?></TD></TR>
+    <?ssi skipon MONOCHROME_BDF?>
+    <TR><TD></TD>
+    <TD class="regularline"><?lng adr_photo?></TD>
+    <TD></TD>
+    </TR>
+    <TR>
+      <TD></TD>
+      <TD padding="2"><IMG height="100" style="margin: 4px" src="<?ssi identity_photo_url?>"></TD>
+      <TD>
+        <noscript><div class="linespace"><input type="file" id="save_identity_photo" name="save_identity_photo"></div></noscript>
+        <div class="regularline linespace"><input type="file" class="inputfile" id="save_identity_photo" name="save_identity_photo">
+        <label for="save_identity_photo"><span><?lng choose_file?></span></label></div>
+        <div class="regularline buttonalign"><button type="submit" name="delete_identity_photo" value="1"><?lng advanced_resetbutton?></button></div>
+      </TD>
+      <TD></TD>
+    </TR>
+    <TR><TD></TD><TD>&nbsp;</TD><TD></TD></TR>
+    <?ssi skipoff MONOCHROME_BDF?>
+    <TR><TD></TD><TD></TD></TR>
+    <TR>
+      <TD></TD>
+      <TD colspan="2">
+        <input type="hidden" value="<?lng apply_button?>" name="Settings">
+        <!--Hidden input is used to allow onchange event to apply settings automatically-->
+        <input type="submit" value="<?lng apply_button?>" name="Settings" <?ssi tabindex?> id="apply">
+        <input type="submit" value="<?lng line_reregister?>" name="REREGISTER:<?ssi line?>" <?ssi tabindex?>  id="reregister">
+      </TD>
+    </TR>
+    <TR><TD></TD><TD>&nbsp;</TD></TR>
+    <TR><TD></TD><TD colspan="2">
+    <input type="submit" value="<?lng advanced_logoffline?>" name="LOGOFFLINE:<?ssi line?>" <?ssi tabindex?>  id="logoffline">
+    <input type="submit" value="<?lng advanced_logoffall?>" name="CONFIRM_LOGOFFALL:<?ssi line?>" <?ssi tabindex?>  id="logoffall">
+    </TD></TR>
+    </TR>
+    <TR>
+      <TD class="background" vAlign="bottom" align="left" width="12" height="5">
+        <?ssi skipon VTECH?>
+        <IMG height="12" src=<?ssi img-corner-gif ll?> width="12">
+        <?ssi skipoff VTECH?>
+      </TD>
+      <TD width="12" height="5"><IMG height="5" src="img/clr.gif" width="12"></TD>
+      <TD width="12" height="5"><IMG height="5" src="img/clr.gif" width="12"></TD>
+      <TD class="background" vAlign="bottom" align="right" width="12" height="5">
+        <?ssi skipon VTECH?>
+        <IMG height="12" src=<?ssi img-corner-gif lr?> width="12">
+        <?ssi skipoff VTECH?>
+      </TD>
+    </TR>
+    </TBODY>
+    </TABLE>
+    </FORM>
+  </TD>
+</TR>
+<script type="text/javascript" src="fox.js" charset="utf-8"></script>
+<?ssi file common9.htm?></HTML>

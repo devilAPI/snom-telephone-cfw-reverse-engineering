@@ -1,0 +1,134 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+<?ssi skipon VTECH?>
+<TITLE><?ssi snom_type?></TITLE>
+<?ssi skipoff VTECH?>
+<META http-equiv=Content-Type content="text/html; charset=utf-8">
+<META http-equiv=Pragma content=no-cache>
+
+<?ssi skipon HTTP_CREDENTIALS_NOT_CONFIGURED?>
+<LINK href="fox_body.css" type="text/css" rel="stylesheet">
+<LINK href="fox.css" type="text/css" rel="stylesheet">
+<?ssi skipoff HTTP_CREDENTIALS_NOT_CONFIGURED?>
+<?ssi skipon HTTP_CREDENTIALS_CONFIGURED?>
+<style>
+<?ssi file fox_body_security.css?>
+<?ssi file fox.css?>
+</style>
+<?ssi skipoff HTTP_CREDENTIALS_CONFIGURED?>
+
+<?ssi skipon VTECH?>
+<LINK href="<?ssi img-favicon-ico?>" rel="shortcut icon" />
+<?ssi skipoff VTECH?>
+<noscript><style>.inputfile + label{ display:none !important}</style></noscript>
+</HEAD>
+<BODY>
+<?ssi skipon PAGE_IS_PROTECTED?>
+<a href="advanced_qos_security.htm"><div class="redwarning"><?ssi password_not_set?></div></a>
+<?ssi skipoff PAGE_IS_PROTECTED?>
+<?ssi skipon TBOOK_IS_NOT_FULL?>
+<a href="adr.htm"><div class="redwarning"><?ssi tbook_is_full?></div></a>
+<?ssi skipoff TBOOK_IS_NOT_FULL?>
+<TABLE cellspacing="0" cellpadding="0" width="100%" border="0" <?ssi text_direction?>>
+<TR>
+  <?ssi skipon VTECH?>
+  <TD height="120" valign="bottom">
+    <TABLE width="100%" border="0" cellspacing="0" cellpadding="0">
+    <TR>
+      <TD width="95"><IMG height=16 src="<?ssi img-clr-gif?>" width="16"></TD>
+      <TD class="headerText" width="705"><?ssi readtitle?></TD>
+    </TR>
+    <TR>
+      <TD height="60" width="16"><IMG height=16 src="<?ssi img-clr-gif?>" width="16"></TD>
+      <TD height="60" width="600"><IMG height=16 src="<?ssi img-clr-gif?>" width="16"></TD>
+      <TD height="60">&nbsp;</TD>
+    </TR>
+    </TABLE>
+  </TD>
+  <?ssi skipoff VTECH?>
+  <?ssi skipon SNOM?>
+  <TD height="120" valign="center">
+    <TABLE width="100%" border="0" cellspacing="0" cellpadding="0">
+    <TR>
+      <TD width="5"><IMG height=16 src="<?ssi img-clr-gif?>" width="16"></TD>
+      <TD class="headerText" width="705"><?ssi readtitle?></TD> </TR>
+    </TABLE>
+  </TD>
+  <?ssi skipoff SNOM?>
+</TR>
+<TR>
+  <TD>
+    <TABLE cellSpacing="0" cellPadding="0" border="0">
+    <TR valign=top>
+      <TD valign="top" width="175" bgcolor="#ffffff">
+        <TABLE cellspacing="0" cellpadding="0" width="175" border="0">
+        <TR>
+          <TD valign="top">
+            <TABLE cellspacing="0" cellpadding="0" width="100%" border="0">
+            <TR>
+              <TD valign="top">
+              <?ssi file leftnav.htm?>
+              </TD>
+            </TR>
+            </TABLE>
+          </TD>
+        </TR>
+        </TABLE>
+      </TD>
+      <?ssi skipon VTECH?>
+      <TD width="1">
+        <IMG src="<?ssi img-separator-png?>">
+      </TD>
+      <?ssi skipoff VTECH?>
+      <TD class=background width="100%" height="1000">
+        <TABLE cellspacing=0 cellpadding=0 width=588 border=0>
+        <TR>
+          <TD width=16><IMG height=16 src="<?ssi img-clr-gif?>" width="16"></TD>
+          <TD>
+            <TABLE cellspacing=0 cellpadding=0 width="100%" border=0>
+            <?ssi skipon NO_REBOOT_DESIRED?>
+            <FORM method="post">
+            <?ssi hidden_tag?>
+            <TR><TD>&nbsp;</TD></TR>
+            <TR>
+              <TD>
+                <DIV class="topwarning">
+                  <DIV class="warning"></DIV>
+                  <DIV class="normaltextbold">
+                    <?lng web_confirm_apply_set_change?>
+                  </DIV>
+                  <DIV>
+                    <INPUT type="submit" value="<?lng advanced_rebootbutton?>" name="CONFIRM_REBOOT">
+                  </DIV>
+                </DIV>
+              </TD>
+            </TD>
+            </TR>
+            </FORM>
+            <?ssi skipoff NO_REBOOT_DESIRED?>
+            <?ssi skipon EVERYTHING_STORED?>
+            <FORM method="post">
+            <?ssi hidden_tag?>
+            <TR><TD>&nbsp;</TD></TR>
+            <TR>
+              <TD>
+                <DIV class="topwarning">
+                  <DIV class="warning"></DIV>
+                  <DIV class="normaltextbold">
+                    <?lng unsaved_settings?>
+                  </DIV>
+                  <DIV>
+                  <INPUT type="submit" value="<?lng advanced_savebutton?>" name="STORE_SETTINGS">
+                  </DIV>
+                  <DIV>
+                    <INPUT type="submit" value="<?lng view_changes_button?>" name="SHOW_CHANGED_SETTINGS">
+                  </DIV>
+                  <?ssi skipon NO_WUI_HELP_LINKS?>
+                  <?ssi help How+do+snom+phones+handle+setting+changes?>
+                  <?ssi skipoff NO_WUI_HELP_LINKS?>
+                </DIV>
+              </TD>
+            </TR>
+            </FORM>
+            <?ssi skipoff EVERYTHING_STORED?>

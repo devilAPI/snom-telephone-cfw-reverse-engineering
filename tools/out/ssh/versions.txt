@@ -1,0 +1,15 @@
+bin/openssl 548876 GLIBC_2.7
+bin/scp 181968 GLIBC_2.17
+bin/sftp 186044 GLIBC_2.17
+bin/sftp-server 124480 GLIBC_2.17
+bin/ssh 837528 GLIBC_2.17
+bin/ssh-add 345676 GLIBC_2.17
+bin/ssh-agent 333380 GLIBC_2.17
+bin/ssh-keygen 452240 GLIBC_2.17
+bin/ssh-keyscan 489204 GLIBC_2.17
+bin/ssh-keysign 390812 GLIBC_2.17
+bin/sshd 444184 GLIBC_2.17
+bin/sshd-auth 845760 GLIBC_2.17
+bin/sshd-session 882864 GLIBC_2.17
+lib/libcrypto.so.1.1 1935672 GLIBC_2.17
+lib/libssl.so.1.1 416064 GLIBC_2.4

@@ -5,7 +5,7 @@ set -euo pipefail
 
 ROOTFS="custom-rootfs-d815"
 KEYDIR="custom-key-d815"
-OUT="custom-firmware/snomD815-10.1.226.16-cfw1-SIP-r.swu"
+OUT="$PWD/custom-firmware/snomD815-10.1.226.16-cfw1-SIP-r.swu"
 VERSION="10.1.226.16-cfw1"
 
 # UBI parameters (from D815W device)
@@ -31,6 +31,9 @@ else
     echo "  Using existing AES key in $KEYDIR/"
 fi
 
+echo "=== Step 1a: Install the shared CFW ==="
+tools/cfw-sync.sh d815 "$ROOTFS"
+
 echo "=== Step 1b: Embed our keys in the rootfs ==="
 [ -d "$ROOTFS" ] || { echo "FAIL: $ROOTFS/ missing"; exit 1; }
 cp "$KEYDIR/firmware.pub" "$ROOTFS/firmware1.pub"
@@ -39,8 +42,9 @@ echo "  Updated firmware1.pub and firmware1.aes in rootfs"
 
 echo "=== Step 2: Build UBIFS image ==="
 tmp=$(mktemp -d); trap 'rm -rf "$tmp"' EXIT
-mkfs.ubifs -r "$ROOTFS" -m $MIN_IO -e $LEB_SIZE -c $MAX_LEB_CNT \
-    -o "$tmp/snomD815-rootfs2.ubifs" 2>&1
+# Not mkfs.ubifs on $ROOTFS directly: that tree has no modes, see the script.
+tools/build-d815-ubifs.sh
+cp custom-firmware/snomD815-rootfs2.ubifs "$tmp/snomD815-rootfs2.ubifs"
 DECRYPTED_SIZE=$(stat -c%s "$tmp/snomD815-rootfs2.ubifs")
 echo "  UBIFS image: $DECRYPTED_SIZE bytes"
 
@@ -55,7 +59,8 @@ echo "  Encrypted: $(stat -c%s "$tmp/snomD815-rootfs2.ubifs.enc") bytes"
 echo "=== Step 4: Prepare u-boot ==="
 STOCK_SWU="${STOCK_SWU:-orig_firm/snomD815-10.1.226.16-SIP-r.swu}"
 if [ -f "$STOCK_SWU" ]; then
-    (cd "$tmp" && cpio -id u-boot.bin < "$(realpath "$STOCK_SWU")" 2>/dev/null)
+    STOCK_SWU=$(realpath "$STOCK_SWU")     # before the cd below
+    (cd "$tmp" && cpio -id u-boot.bin < "$STOCK_SWU" 2>/dev/null)
     echo "  Extracted u-boot.bin from stock SWU"
 elif [ -f "$tmp/u-boot.bin" ]; then
     echo "  Using existing u-boot.bin"
@@ -160,3 +165,6 @@ echo ""
 echo " Or serve it and let the phone pull:"
 echo "   cd custom-firmware && python3 -m http.server 8081"
 echo "========================================="
+
+# Keep the emulator on the newest build (docs/qemu.md).
+tools/vm-update.sh d815 || echo "warning: emulator image not updated" >&2

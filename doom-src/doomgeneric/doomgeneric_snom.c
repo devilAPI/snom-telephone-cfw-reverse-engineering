@@ -130,7 +130,7 @@ void DG_Init(void) {
 
     // The phone UI survives the takeover (only its parent lid is killed) and
     // would keep painting status bars over the game: freeze it.
-    if (system("kill -STOP $(pidof lcsD375) 2>/dev/null") == -1)
+    if (system("kill -STOP $(pidof lcsD375 lcsD815) 2>/dev/null") == -1)
         perror("stop lcsD375");
 
     inFd = open("/dev/input/event0", O_RDONLY | O_NONBLOCK);

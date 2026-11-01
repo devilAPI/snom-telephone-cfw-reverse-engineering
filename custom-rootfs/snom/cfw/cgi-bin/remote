@@ -1,0 +1,28 @@
+#!/bin/sh
+# CFW: control the phone from a browser: live screen and keypad.
+. /snom/cfw/model.conf
+echo "Content-type: text/html"
+echo ""
+cat <<H
+<!doctype html><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Remote</title><style>
+body{font:15px system-ui,sans-serif;max-width:520px;margin:auto;padding:12px;text-align:center}
+img{width:100%;max-width:480px;background:#000;image-rendering:pixelated}
+.k{display:grid;gap:6px;margin:10px auto;max-width:300px;grid-template-columns:repeat(3,1fr)}
+button{padding:12px 0;font-size:16px;border:0;border-radius:6px;background:#555;color:#fff}
+.ok{background:#36c}.x{background:#c33}
+</style><h1>snom $CFW_MODEL</h1><img id=s alt="phone screen">
+<div class=k id=n></div><div class=k id=d></div><p><a href="/">Back</a></p><script>
+function press(k){fetch('/cgi-bin/key?k='+k,{method:'POST'}).then(function(){setTimeout(next,300)})}
+function add(id,label,key,cls){var b=document.createElement('button');b.textContent=label;if(cls)b.className=cls;
+ b.onclick=function(){press(key)};document.getElementById(id).appendChild(b)}
+[['Cancel','CANCEL','x'],['Up','UP'],['Menu','SETTINGS'],['Left','LEFT'],['OK','ENTER','ok'],['Right','RIGHT'],
+ ['','',''],['Down','DOWN'],['','','']].forEach(function(a){if(a[0])add('n',a[0],a[1],a[2]);
+ else document.getElementById('n').appendChild(document.createElement('span'))});
+'123456789'.split('').concat(['*','0','#']).forEach(function(c){
+ add('d',c,c=='*'?'DTMF_ASTERISK':c=='#'?'DTMF_HASH':c)});
+var i=document.getElementById('s');
+function next(){i.src='/cgi-bin/screenshot?'+Date.now()}
+i.onload=function(){setTimeout(next,1500)};i.onerror=function(){setTimeout(next,3000)};next();
+</script>
+H

@@ -48,7 +48,7 @@
       <IconType>$(icon_type_enum:kIconTypeDect)</IconType>
       <SubText>DOOM, NES</SubText>
     </If>
-    <Url>http://127.0.0.1:8080/cgi-bin/phone-games</Url>
+    <Url>http://127.0.0.1:8081/cgi-bin/phone-games</Url>
   </Menu>
   <Menu name="$(lang:information_settings)" id="information">
     <If condition="$(show_feature:FEATURE_PUI_STYLE_SIO)">

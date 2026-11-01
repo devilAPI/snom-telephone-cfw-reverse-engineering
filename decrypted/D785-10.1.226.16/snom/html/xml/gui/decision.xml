@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<IPPhoneBatch>
+  <IPPhoneText id="dsc_std" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../schemas/minibrowser.xsd">
+    <Title>$(var:dsc_title)</Title>
+    <Text>$(var:dsc_text)</Text>
+    <If condition="$(var:dsc_yes)">
+      <SoftKeyItem>
+        <Name>ENTER</Name>
+        <Url>phone://mb_exit#$(var:action)=yes,$(var:pass_params)</Url>
+      </SoftKeyItem>
+      <SoftKeyItem>
+        <If condition="!$(empty:$(var:xml_yes_fkey))">
+          <Name>$(var:xml_yes_fkey)</Name>
+        </If>
+        <Else>
+          <Name>F1</Name>
+        </Else>
+        <Label>F_OK</Label>
+        <Url>phone://mb_exit#$(var:action)=yes,$(var:pass_params)</Url>
+      </SoftKeyItem>
+    </If>
+    <If condition="$(var:dsc_no)">
+      <SoftKeyItem>
+        <Name>CANCEL</Name>
+        <Url>phone://mb_exit#$(var:action)=no,$(var:pass_params)</Url>
+      </SoftKeyItem>
+      <SoftKeyItem>
+        <If condition="!$(empty:$(var:xml_no_fkey))">
+          <Name>$(var:xml_no_fkey)</Name>
+        </If>
+        <Else>
+          <Name>F2</Name>
+        </Else>
+        <Label>F_CANCEL</Label>
+        <Url>phone://mb_exit#$(var:action)=no,$(var:pass_params)</Url>
+      </SoftKeyItem>
+    </If>
+    <If condition="$(var:dsc_abort)">
+      <SoftKeyItem>
+        <Name>F_ABORT</Name>
+        <Url>phone://mb_exit#$(var:action)=abort,$(var:pass_params)</Url>
+      </SoftKeyItem>
+      <SoftKeyItem>
+        <If condition="!$(empty:$(var:xml_abort_fkey))">
+          <Name>$(var:xml_abort_fkey)</Name>
+        </If>
+        <Else>
+          <Name>F3</Name>
+        </Else>
+        <Label>F_ABORT</Label>
+        <Url>phone://mb_exit#$(var:action)=abort,$(var:pass_params)</Url>
+      </SoftKeyItem>
+    </If>
+  </IPPhoneText>
+  <IPPhoneText track="no" id="dsc_url" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../schemas/minibrowser.xsd">
+    <Title>$(var:dsc_title)</Title>
+    <If condition="!$(empty:$(var:text_x))">
+      <LocationX>$(var:text_x)</LocationX>
+    </If>
+    <If condition="!$(empty:$(var:text_y))">
+      <LocationY>$(var:text_y)</LocationY>
+    </If>
+    <If condition="!$(empty:$(var:number))">
+      <Text>$(var:number)<br/>$(var:dsc_text)</Text>
+    </If>
+    <Else>
+      <Text>$(var:dsc_text)</Text>
+    </Else>
+    <If condition="$(var:dsc_yes)">
+      <SoftKeyItem>
+        <Name>ENTER</Name>
+        <Url track="no">$(var:dsc_yes_url)</Url>
+      </SoftKeyItem>
+      <SoftKeyItem>
+        <If condition="!$(empty:$(var:xml_yes_fkey))">
+          <Name>$(var:xml_yes_fkey)</Name>
+        </If>
+        <Else>
+          <Name>F1</Name>
+        </Else>
+        <Label>F_OK</Label>
+        <Url track="no">$(var:dsc_yes_url)</Url>
+      </SoftKeyItem>
+    </If>
+    <If condition="$(var:dsc_no)">
+      <SoftKeyItem>
+        <Name>CANCEL</Name>
+        <Url track="no">$(var:dsc_no_url)</Url>
+      </SoftKeyItem>
+      <SoftKeyItem>
+        <If condition="!$(empty:$(var:xml_no_fkey))">
+          <Name>$(var:xml_no_fkey)</Name>
+        </If>
+        <Else>
+          <Name>F2</Name>
+        </Else>
+        <Label>F_CANCEL</Label>
+        <Url track="no">$(var:dsc_no_url)</Url>
+      </SoftKeyItem>
+    </If>
+    <If condition="$(var:dsc_abort)">
+      <SoftKeyItem>
+        <Name>F_ABORT</Name>
+        <Url>$(var:dsc_abort_url)</Url>
+      </SoftKeyItem>
+      <SoftKeyItem>
+        <If condition="!$(empty:$(var:xml_abort_fkey))">
+          <Name>$(var:xml_abort_fkey)</Name>
+        </If>
+        <Else>
+          <Name>F3</Name>
+        </Else>
+        <Label>F_ABORT</Label>
+        <Url>$(var:dsc_abort_url)</Url>
+      </SoftKeyItem>
+    </If>
+  </IPPhoneText>
+  <IPPhoneText track="no"  state="$(var:dsc_state)" id="dsc_key" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../schemas/minibrowser.xsd">
+    <Title>$(var:dsc_title)</Title>
+    <Text>$(var:dsc_text)</Text>
+    <If condition="$(var:dsc_yes)">
+      <SoftKeyItem>
+        <Name>ENTER</Name>
+        <SoftKey>F_OK</SoftKey>
+      </SoftKeyItem>
+      <SoftKeyItem>
+        <If condition="!$(empty:$(var:xml_yes_fkey))">
+          <Name>$(var:xml_yes_fkey)</Name>
+        </If>
+        <Else>
+          <Name>F1</Name>
+        </Else>
+        <Label>F_OK</Label>
+        <SoftKey>F_OK</SoftKey>
+      </SoftKeyItem>
+    </If>
+    <If condition="$(var:dsc_no)">
+      <SoftKeyItem>
+        <Name>CANCEL</Name>
+        <SoftKey>F_CANCEL</SoftKey>
+      </SoftKeyItem>
+      <SoftKeyItem>
+        <If condition="!$(empty:$(var:xml_no_fkey))">
+          <Name>$(var:xml_no_fkey)</Name>
+        </If>
+        <Else>
+          <Name>F2</Name>
+        </Else>
+        <Label>F_CANCEL</Label>
+        <SoftKey>F_CANCEL</SoftKey>
+      </SoftKeyItem>
+    </If>
+    <If condition="$(var:dsc_abort)">
+      <SoftKeyItem>
+        <Name>F_ABORT</Name>
+        <SoftKey>F_ABORT</SoftKey>
+      </SoftKeyItem>
+      <SoftKeyItem>
+        <If condition="!$(empty:$(var:xml_abort_fkey))">
+          <Name>$(var:xml_abort_fkey)</Name>
+        </If>
+        <Else>
+          <Name>F3</Name>
+        </Else>
+        <Label>F_ABORT</Label>
+        <SoftKey>F_ABORT</SoftKey>
+      </SoftKeyItem>
+    </If>
+  </IPPhoneText>
+</IPPhoneBatch>

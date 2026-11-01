@@ -1,0 +1,1447 @@
+<?xml version="1.0" encoding="utf-8"?>
+<w_phrases>
+	<language t="Українська"/>
+	<w_phrase n="wlang_iso_code" t="UK-UA"/>
+	<w_phrase n="wlang_web_language_name" t="Українська"/>
+	<w_phrase n="wlang_index_infotext" t="Цей веб-інтерфейс полегшує вам правильні налаштування телефону та доступ до розширених функцій. Щоб набрати номер, просто введіть номер у поле нижче. Ви можете ввести простий номер телефону (наприклад, 0114930398330) або URI, наприклад info@example.com."/>
+	<w_phrase n="wlang_index_dialnumber" t="Наберіть номер"/>
+	<w_phrase n="wlang_index_dialnumberbutton" t="Циферблат"/>
+	<w_phrase n="wlang_index_hangupbutton" t="Зависання"/>
+	<w_phrase n="wlang_index_outgoingident" t="Вихідна ідентифікація"/>
+	<w_phrase n="wlang_index_setbutton" t="встановити"/>
+	<w_phrase n="wlang_index_dialednumbers" t="Набрані номери"/>
+	<w_phrase n="wlang_index_dialed" t="Набраний номер"/>
+	<w_phrase n="wlang_index_missedcalls" t="Пропущені дзвінки"/>
+	<w_phrase n="wlang_index_missed" t="Пропущений"/>
+	<w_phrase n="wlang_index_rejectedcalls" t="Відхилені дзвінки"/>
+	<w_phrase n="wlang_index_rejected" t="Відхилено"/>
+	<w_phrase n="wlang_index_receivedcalls" t="Отримані дзвінки"/>
+	<w_phrase n="wlang_index_received" t="Отримано"/>
+	<w_phrase n="wlang_index_date" t="Дата"/>
+	<w_phrase n="wlang_index_number" t="Номер"/>
+	<w_phrase n="wlang_leftnav_operation" t="Операція"/>
+	<w_phrase n="wlang_leftnav_home" t="додому"/>
+	<w_phrase n="wlang_leftnav_addressbook" t="Довідник"/>
+	<w_phrase n="wlang_leftnav_setup" t="Налаштування"/>
+	<w_phrase n="wlang_leftnav_preferences" t="Уподобання"/>
+	<w_phrase n="wlang_leftnav_speeddial" t="Швидкий набір"/>
+	<w_phrase n="wlang_leftnav_functionkeys" t="Функціональні клавіші"/>
+	<w_phrase n="wlang_leftnav_lineone" t="Ідентичність 1"/>
+	<w_phrase n="wlang_leftnav_linetwo" t="Ідентичність 2"/>
+	<w_phrase n="wlang_leftnav_linethree" t="Ідентичність 3"/>
+	<w_phrase n="wlang_leftnav_linefour" t="Ідентичність 4"/>
+	<w_phrase n="wlang_leftnav_linefive" t="Ідентичність 5"/>
+	<w_phrase n="wlang_leftnav_linesix" t="Ідентичність 6"/>
+	<w_phrase n="wlang_leftnav_lineseven" t="Ідентичність 7"/>
+	<w_phrase n="wlang_leftnav_lineeight" t="Ідентичність 8"/>
+	<w_phrase n="wlang_leftnav_linenine" t="Ідентичність 9"/>
+	<w_phrase n="wlang_leftnav_lineten" t="Ідентичність 10"/>
+	<w_phrase n="wlang_leftnav_lineeleven" t="Ідентичність 11"/>
+	<w_phrase n="wlang_leftnav_linetwelve" t="Ідентичність 12"/>
+	<w_phrase n="wlang_leftnav_linethirteen" t="Ідентичність 13"/>
+	<w_phrase n="wlang_leftnav_linefourteen" t="Ідентичність 14"/>
+	<w_phrase n="wlang_leftnav_linefifteen" t="Ідентичність 15"/>
+	<w_phrase n="wlang_leftnav_linesixteen" t="Ідентичність 16"/>
+	<w_phrase n="wlang_leftnav_advanced" t="Просунутий"/>
+	<w_phrase n="wlang_leftnav_softupdate" t="Оновлення програмного забезпечення"/>
+	<w_phrase n="wlang_leftnav_status" t="Статус"/>
+	<w_phrase n="wlang_leftnav_sysinfo" t="Інформація про систему"/>
+	<w_phrase n="wlang_leftnav_siptrace" t="SIP Trace"/>
+	<w_phrase n="wlang_leftnav_httptrace" t="Трасування HTTP"/>
+	<w_phrase n="wlang_leftnav_upnptrace" t="Трасування UPnP"/>
+	<w_phrase n="wlang_leftnav_dnscache" t="Кеш DNS"/>
+	<w_phrase n="wlang_leftnav_pcaptrace" t="Відстеження PCAP"/>
+	<w_phrase n="wlang_leftnav_log" t="Журнал"/>
+	<w_phrase n="wlang_leftnav_memory" t="Пам'ять"/>
+	<w_phrase n="wlang_leftnav_settings" t="Налаштування"/>
+	<w_phrase n="wlang_leftnav_manual" t="Вручну"/>
+	<w_phrase n="wlang_adr_name" t="Ім'я"/>
+	<w_phrase n="wlang_adr_number" t="Номер"/>
+	<w_phrase n="wlang_adr_contacttype" t="Тип контакту"/>
+	<w_phrase n="wlang_adr_edit" t="Редагувати"/>
+	<w_phrase n="wlang_adr_delete" t="Видалити"/>
+	<w_phrase n="wlang_adr_addeditentry" t="Додати або відредагувати запис"/>
+	<w_phrase n="wlang_adr_ctnone" t="Жодного"/>
+	<w_phrase n="wlang_adr_ctfriends" t="друзі"/>
+	<w_phrase n="wlang_adr_ctfamily" t="Сім'я"/>
+	<w_phrase n="wlang_adr_ctcolleagues" t="Колеги"/>
+	<w_phrase n="wlang_adr_ctvip" t="VIP"/>
+	<w_phrase n="wlang_adr_ctdeny" t="Список заборонених"/>
+	<w_phrase n="wlang_adr_ctserver" t="Сервер"/>
+	<w_phrase n="wlang_adr_searchbutton" t="Пошук"/>
+	<w_phrase n="wlang_adr_addeditbutton" t="додати"/>
+	<w_phrase n="wlang_adr_importadrbook" t="Каталог імпорту (CSV)"/>
+	<w_phrase n="wlang_adr_filename" t="Ім'я файлу"/>
+	<w_phrase n="wlang_adr_loadbutton" t="навантаження"/>
+	<w_phrase n="wlang_prefs_generalinfo" t="Загальна інформація"/>
+	<w_phrase n="wlang_prefs_language" t="Мову"/>
+	<w_phrase n="wlang_prefs_web_language" t="Мова веб-інтерфейсу"/>
+	<w_phrase n="wlang_prefs_displaystyle" t="Стиль відображення чисел"/>
+	<w_phrase n="wlang_prefs_dsfullcontact" t="Повний контакт"/>
+	<w_phrase n="wlang_prefs_dsname" t="Ім'я"/>
+	<w_phrase n="wlang_prefs_dsnumber" t="Номер"/>
+	<w_phrase n="wlang_prefs_dsnamenumber" t="Ім'я + номер"/>
+	<w_phrase n="wlang_prefs_tonescheme" t="Тонова схема"/>
+	<w_phrase n="wlang_prefs_tsaustralia" t="Австралія"/>
+	<w_phrase n="wlang_prefs_tschina" t="Китай"/>
+	<w_phrase n="wlang_prefs_tsdenmark" t="Данія"/>
+	<w_phrase n="wlang_prefs_tsgermany" t="Німеччина"/>
+	<w_phrase n="wlang_prefs_tsindia" t="Індія"/>
+	<w_phrase n="wlang_prefs_tsjapan" t="Японія"/>
+	<w_phrase n="wlang_prefs_tsmexico" t="Мексика"/>
+	<w_phrase n="wlang_prefs_tsuk" t="Об'єднане Королівство"/>
+	<w_phrase n="wlang_prefs_tsus" t="Сполучені Штати"/>
+	<w_phrase n="wlang_prefs_tsgreece" t="Греція"/>
+	<w_phrase n="wlang_prefs_mwinotifi" t="Повідомлення MWI"/>
+	<w_phrase n="wlang_prefs_mwisilent" t="Мовчазний"/>
+	<w_phrase n="wlang_prefs_mwibeep" t="Звуковий сигнал"/>
+	<w_phrase n="wlang_prefs_mwireminder" t="Нагадування"/>
+	<w_phrase n="wlang_prefs_mwidialtone" t="Тональний сигнал MWI"/>
+	<w_phrase n="wlang_prefs_mwidialnormal" t="нормальний"/>
+	<w_phrase n="wlang_prefs_mwidialstutter" t="Заїкатися"/>
+	<w_phrase n="wlang_prefs_on" t="на"/>
+	<w_phrase n="wlang_prefs_off" t="вимкнено"/>
+	<w_phrase n="wlang_prefs_redirection" t="Переадресація викликів"/>
+	<w_phrase n="wlang_prefs_timeout" t="Тайм-аут (с)"/>
+	<w_phrase n="wlang_prefs_ringtones" t="Рінгтони"/>
+	<w_phrase n="wlang_prefs_friends" t="друзі"/>
+	<w_phrase n="wlang_prefs_ringer1" t="Дзвінок 1"/>
+	<w_phrase n="wlang_prefs_ringer2" t="Дзвінок 2"/>
+	<w_phrase n="wlang_prefs_ringer3" t="Дзвінок 3"/>
+	<w_phrase n="wlang_prefs_ringer4" t="Дзвінок 4"/>
+	<w_phrase n="wlang_prefs_ringer5" t="Дзвінок 5"/>
+	<w_phrase n="wlang_prefs_ringer6" t="Дзвінок 6"/>
+	<w_phrase n="wlang_prefs_ringer7" t="Дзвінок 7"/>
+	<w_phrase n="wlang_prefs_ringer8" t="Дзвінок 8"/>
+	<w_phrase n="wlang_prefs_ringersilent" t="Мовчазний"/>
+	<w_phrase n="wlang_prefs_family" t="Сім'я"/>
+	<w_phrase n="wlang_prefs_colleagues" t="Колеги"/>
+	<w_phrase n="wlang_prefs_ringdeviceheadset" t="Пристрій дзвінка для гарнітури"/>
+	<w_phrase n="wlang_prefs_ringvolume_amplification" t="Вища гучність дзвінка"/>
+	<w_phrase n="wlang_prefs_ringspeaker" t="Використовуйте динамік"/>
+	<w_phrase n="wlang_prefs_ringheadset" t="Використовуйте гарнітуру"/>
+	<w_phrase n="wlang_prefs_ringspeaker_and_headset" t="Використовуйте гарнітуру та динамік"/>
+	<w_phrase n="wlang_prefs_ssi_custommelody" t="URL-адреса спеціальної мелодії"/>
+	<w_phrase n="wlang_prefs_autoanswer" t="Автовідповідач"/>
+	<w_phrase n="wlang_prefs_ssi_aaautoanswer" t="Автовідповідач"/>
+	<w_phrase n="wlang_prefs_ssi_aaindication" t="Індикація автоматичної відповіді"/>
+	<w_phrase n="wlang_prefs_ssi_aaindicationtone" t="Тон індикації автоматичної відповіді"/>
+	<w_phrase n="wlang_prefs_privacysetting" t="Налаштування конфіденційності"/>
+	<w_phrase n="wlang_prefs_ssi_privclip" t="Показати/приховати ідентифікатор вихідного дзвінка (CLIP/CLIR)"/>
+	<w_phrase n="wlang_prefs_ssi_privclir" t="Показати/приховати ідентифікатор вихідного дзвінка (CLIP/CLIR)"/>
+	<w_phrase n="wlang_prefs_original" t="Оригінал"/>
+	<w_phrase n="wlang_prefs_new" t="новий"/>
+	<w_phrase n="wlang_prefs_dimension" t="Розмір"/>
+	<w_phrase n="wlang_prefs_hide" t="Сховати"/>
+	<w_phrase n="wlang_prefs_show" t="Показати"/>
+	<w_phrase n="wlang_prefs_reject" t="Відхиляти"/>
+	<w_phrase n="wlang_prefs_accept" t="прийняти"/>
+	<w_phrase n="wlang_prefs_savebutton" t="зберегти"/>
+	<w_phrase n="wlang_hcilog_download" t="Збережіть hcilog"/>
+	<w_phrase n="wlang_hcipcap_download" t="Збережіть hcitrace.pcap"/>
+	<w_phrase n="wlang_connectivityd_log_download" t="Зберегти журнал Connectivityd"/>
+	<w_phrase n="wlang_speed_speeddialtable" t="Таблиця швидкого набору"/>
+	<w_phrase n="wlang_fkeys_keysettings" t="Ключові налаштування"/>
+	<w_phrase n="wlang_fkeys_ssi_number" t="Номер"/>
+	<w_phrase n="wlang_fkeys_ssi_line" t="лінія"/>
+	<w_phrase n="wlang_fkeys_ssi_dest" t="Розширення"/>
+	<w_phrase n="wlang_fkeys_ssi_intercom" t="Домофон"/>
+	<w_phrase n="wlang_fkeys_ssi_parkorbit" t="Парк"/>
+	<w_phrase n="wlang_fkeys_ssi_voicerecorder" t="запис"/>
+	<w_phrase n="wlang_fkeys_ssi_dtmf" t="DTMF"/>
+	<w_phrase n="wlang_line_logininfo" t="Інформація для входу"/>
+	<w_phrase n="wlang_line_ssi_name" t="Відображуване ім'я"/>
+	<w_phrase n="wlang_line_ssi_account" t="Обліковий запис"/>
+	<w_phrase n="wlang_line_ssi_password" t="Пароль"/>
+	<w_phrase n="wlang_line_ssi_registrar" t="Реєстратор"/>
+	<w_phrase n="wlang_line_ssi_secondary_registrar" t="Secondary Registrar"/>
+	<w_phrase n="wlang_line_status" t="Статус"/>
+	<w_phrase n="wlang_line_ssi_mailbox" t="Поштова скринька"/>
+	<w_phrase n="wlang_line_ssi_mailbox_retrieve" t="Телефонне підключення до поштової скриньки (якщо відрізняється від поштової скриньки)"/>
+	<w_phrase n="wlang_line_ringtone" t="Рінгтон"/>
+	<w_phrase n="wlang_line_ringer1" t="Дзвінок 1"/>
+	<w_phrase n="wlang_line_ringer2" t="Дзвінок 2"/>
+	<w_phrase n="wlang_line_ringer3" t="Дзвінок 3"/>
+	<w_phrase n="wlang_line_ringer4" t="Дзвінок 4"/>
+	<w_phrase n="wlang_line_ringer5" t="Дзвінок 5"/>
+	<w_phrase n="wlang_line_ringer6" t="Дзвінок 6"/>
+	<w_phrase n="wlang_line_ringer7" t="Дзвінок 7"/>
+	<w_phrase n="wlang_line_ringer8" t="Дзвінок 8"/>
+	<w_phrase n="wlang_line_ringer9" t="Дзвінок 9"/>
+	<w_phrase n="wlang_line_ringer10" t="Дзвінок 10"/>
+	<w_phrase n="wlang_line_silent" t="Мовчазний"/>
+	<w_phrase n="wlang_line_splash" t="Сплеск"/>
+	<w_phrase n="wlang_line_ssi_outboundproxy" t="Вихідний проксі"/>
+	<w_phrase n="wlang_line_ssi_secondary_outboundproxy" t="Secondary Outbound Proxy"/>
+	<w_phrase n="wlang_line_ssi_dialplan" t="Рядок плану номерів"/>
+	<w_phrase n="wlang_line_qvalue" t="Q-значення"/>
+	<w_phrase n="wlang_line_expire" t="Пропонований термін дії"/>
+	<w_phrase n="wlang_line_codec" t="Кодек"/>
+	<w_phrase n="wlang_current_codeclist" t="Відфільтрований список кодеків"/>
+	<w_phrase n="wlang_line_packetsize" t="Розмір пакета"/>
+	<w_phrase n="wlang_line_ssi_rtpencryption" t="Шифрування RTP"/>
+	<w_phrase n="wlang_update_info" t="Ви можете явно вказати, яку версію програмного забезпечення ви хочете використовувати на цьому телефоні. Заповніть URL-адресу http, яка вказує на вбудоване програмне забезпечення, яке ви хочете використовувати. Використовуйте лише повну URL-адресу http (наприклад, http://www.example.com/firmware.bin). Телефон перезавантажиться після натискання кнопки завантаження."/>
+	<w_phrase n="wlang_update_manualsoftup" t="Ручне оновлення програмного забезпечення"/>
+	<w_phrase n="wlang_update_manualsoftup_uxm" t="Оновлення програмного забезпечення модуля розширення вручну"/>
+	<w_phrase n="wlang_update_info_uxm" t="Будь ласка, підключайте до телефону лише 1 модуль розширення одночасно, щоб розпочати процес оновлення"/>
+	<w_phrase n="wlang_update_ssi_firmware" t="Прошивка"/>
+	<w_phrase n="wlang_update_loadbutton" t="навантаження"/>
+	<w_phrase n="wlang_info_phonetype" t="Тип телефону"/>
+	<w_phrase n="wlang_info_macaddress" t="MAC-адреса"/>
+	<w_phrase n="wlang_info_wifi_mac_address" t="MAC-адреса Wi-Fi"/>
+	<w_phrase n="wlang_info_ipaddress" t="IP-адреса"/>
+	<w_phrase n="wlang_info_l2tp_ipaddress" t="IP-адреса L2TP"/>
+	<w_phrase n="wlang_info_firmware_url" t="URL мікропрограми"/>
+	<w_phrase n="wlang_trace_clearbutton" t="ясно"/>
+	<w_phrase n="wlang_trace_reloadbutton" t="Перезавантажити"/>
+	<w_phrase n="wlang_trace_downloadbutton" t="Завантажити"/>
+	<w_phrase n="wlang_log_level" t="Рівень журналу"/>
+	<w_phrase n="wlang_log_level_type" t="Тип рівня журналу"/>
+	<w_phrase n="wlang_log_ssi_overall" t="Загалом"/>
+	<w_phrase n="wlang_module_log_level" t="Модульні рівні"/>
+	<w_phrase n="wlang_log_ssi_module" t="Модулі"/>
+	<w_phrase n="wlang_log_clearbutton" t="ясно"/>
+	<w_phrase n="wlang_advanced_network" t="Мережа"/>
+	<w_phrase n="wlang_advanced_ssi_dhcp" t="DHCP"/>
+	<w_phrase n="wlang_advanced_ssi_on" t="на"/>
+	<w_phrase n="wlang_advanced_ssi_off" t="вимкнено"/>
+	<w_phrase n="wlang_advanced_ssi_ipaddress" t="IP-адреса"/>
+	<w_phrase n="wlang_advanced_ssi_netmask" t="Маска мережі"/>
+	<w_phrase n="wlang_advanced_ssi_phonename" t="Ім'я хоста"/>
+	<w_phrase n="wlang_advanced_ssi_ipgateway" t="IP-шлюз"/>
+	<w_phrase n="wlang_advanced_dns" t="DNS"/>
+	<w_phrase n="wlang_advanced_ssi_domain" t="Домен"/>
+	<w_phrase n="wlang_advanced_ssi_dnsserver1" t="DNS-сервер 1"/>
+	<w_phrase n="wlang_advanced_ssi_dnsserver2" t="DNS-сервер 2"/>
+	<w_phrase n="wlang_advanced_time" t="час"/>
+	<w_phrase n="wlang_advanced_ssi_ntptimeserver" t="Сервер NTP"/>
+	<w_phrase n="wlang_advanced_timezone" t="Часовий пояс"/>
+	<w_phrase n="wlang_advanced_http" t="HTTP"/>
+	<w_phrase n="wlang_advanced_ssi_user" t="Користувач"/>
+	<w_phrase n="wlang_advanced_ssi_password" t="Пароль"/>
+	<w_phrase n="wlang_not_default" t="Not Default"/>
+	<w_phrase n="wlang_advanced_ssi_httpproxy" t="Проксі HTTP"/>
+	<w_phrase n="wlang_advanced_ssi_httpport" t="Порт HTTP"/>
+	<w_phrase n="wlang_advanced_ssi_httpsport" t="Порт HTTPS"/>
+	<w_phrase n="wlang_advanced_webservercon" t="Тип підключення до веб-сервера"/>
+	<w_phrase n="wlang_advanced_httponly" t="Лише HTTP"/>
+	<w_phrase n="wlang_advanced_httpsonly" t="Тільки HTTPS"/>
+	<w_phrase n="wlang_advanced_httphttps" t="HTTP або HTTPS"/>
+	<w_phrase n="wlang_advanced_off" t="Вимкнено"/>
+	<w_phrase n="wlang_advanced_phonebehavior" t="Поведінка телефону"/>
+	<w_phrase n="wlang_advanced_ssi_callcompletion" t="Завершення виклику"/>
+	<w_phrase n="wlang_advanced_ssi_lldp" t="LLDP"/>
+	<w_phrase n="wlang_advanced_ssi_lldp_network_policy_timeout" t="Тайм-аут політики мережі LLDP"/>
+	<w_phrase n="wlang_advanced_ssi_idnasupport" t="Підтримка IDNA (RFC 3490)."/>
+	<w_phrase n="wlang_advanced_actionethernet" t="Дія щодо підключення кабелю Ethernet"/>
+	<w_phrase n="wlang_advanced_reboot" t="Перезавантаження"/>
+	<w_phrase n="wlang_advanced_donothing" t="Ігнорувати"/>
+	<w_phrase n="wlang_advanced_ssi_numberguessing" t="Швидкий пошук"/>
+	<w_phrase n="wlang_advanced_ssi_blockurldialing" t="Блокувати URL-адресу"/>
+	<w_phrase n="wlang_advanced_ssi_challengeresponse" t="Відповідь на виклик по телефону"/>
+	<w_phrase n="wlang_advanced_ssi_callwaitingindi" t="Індикація очікування виклику"/>
+	<w_phrase n="wlang_advanced_ssi_dialtonehold" t="Тон під час утримання"/>
+	<w_phrase n="wlang_advanced_ssi_disconnectonhook" t="Відключити Покладіть слухавку"/>
+	<w_phrase n="wlang_advanced_keys" t="Ключі"/>
+	<w_phrase n="wlang_advanced_ssi_transferonhook" t="Передача Покладена трубка"/>
+	<w_phrase n="wlang_advanced_ssi_blockdnd" t="Блокувати DND"/>
+	<w_phrase n="wlang_advanced_ssi_logonwizard" t="Майстер входу в систему"/>
+	<w_phrase n="wlang_advanced_preselection" t="Попередній відбір"/>
+	<w_phrase n="wlang_advanced_ssi_prefix" t="Префікс"/>
+	<w_phrase n="wlang_advanced_audio" t="Аудіо"/>
+	<w_phrase n="wlang_advanced_ssi_disablecasingspeaker" t="Вимкнути корпусний динамік"/>
+	<w_phrase n="wlang_advanced_ssi_dtmfechospeaker" t="Відлуння DTMF на гучномовному телефоні"/>
+	<w_phrase n="wlang_advanced_ssi_dtmf_payload_type" t="Тип корисного навантаження DTMF"/>
+	<w_phrase n="wlang_advanced_ssi_callreleasednotify" t="Сповіщення про звільнення"/>
+	<w_phrase n="wlang_line_ssi_stunserver" t="Сервер STUN (IP-адреса:Порт)"/>
+	<w_phrase n="wlang_line_ssi_keepaliveint" t="Інтервал підтримки активності (с)"/>
+	<w_phrase n="wlang_advanced_ssi_dynamicrtpstart" t="Динамічний початковий порт RTP"/>
+	<w_phrase n="wlang_advanced_ssi_dynamicrtpstop" t="Динамічний кінцевий порт RTP"/>
+	<w_phrase n="wlang_advanced_ssi_typeofservice" t="Тип служби RTP (TOS/Diffserv)"/>
+	<w_phrase n="wlang_advanced_ssi_payloadtype" t="Тип корисного навантаження DTMF"/>
+	<w_phrase n="wlang_advanced_ssi_networkidentport" t="Ідентифікація мережі (порт)"/>
+	<w_phrase n="wlang_advanced_ssi_sipt1" t="SIP T1 (мс)"/>
+	<w_phrase n="wlang_advanced_ssi_sipsessiontimer" t="Таймер сесії SIP (s)"/>
+	<w_phrase n="wlang_advanced_ssi_sipdirtyhostttl" t="SIP Dirty Host TTL (s)"/>
+	<w_phrase n="wlang_advanced_ssi_sipmaxforward" t="SIP Max Forwards"/>
+	<w_phrase n="wlang_advanced_ssi_enumsuffix" t="Суфікс ENUM"/>
+	<w_phrase n="wlang_advanced_ssi_musiconholdserver" t="Музика на сервері утримання"/>
+	<w_phrase n="wlang_advanced_ssi_useuserphone" t="Використовуйте user=phone"/>
+	<w_phrase n="wlang_advanced_ssi_publishpresence" t="Опублікувати присутність"/>
+	<w_phrase n="wlang_advanced_ssi_refertobrackets" t="Посилання на дужки"/>
+	<w_phrase n="wlang_advanced_ssi_requireprack" t="Вимагати PRACK"/>
+	<w_phrase n="wlang_advanced_ssi_symmetricrtp" t="Симетричний RTP"/>
+	<w_phrase n="wlang_advanced_update" t="оновлення"/>
+	<w_phrase n="wlang_advanced_updatepolicy" t="Політика оновлення"/>
+	<w_phrase n="wlang_advanced_upautomatically" t="Автоматичне оновлення"/>
+	<w_phrase n="wlang_advanced_upaskupdate" t="Попросити оновлення"/>
+	<w_phrase n="wlang_advanced_upneverupdatesetting" t="Ніколи не оновлювати, лише завантажувати налаштування"/>
+	<w_phrase n="wlang_advanced_upneverupdatenosetting" t="Ніколи не оновлювати, не завантажувати налаштування"/>
+	<w_phrase n="wlang_advanced_ssi_settingurl" t="Налаштування URL-адреси"/>
+	<w_phrase n="wlang_advanced_debug" t="Відлагоджувати"/>
+	<w_phrase n="wlang_advanced_ssi_lcserver" t="LCServer"/>
+	<w_phrase n="wlang_advanced_resetbutton" t="Скинути"/>
+	<w_phrase n="wlang_advanced_rebootbutton" t="Перезавантаження"/>
+	<w_phrase n="wlang_advanced_security" t="Безпека"/>
+	<w_phrase n="wlang_advanced_ssi_adminmode" t="Режим адміністратора"/>
+	<w_phrase n="wlang_advanced_ssi_adminpassword" t="Пароль адміністратора"/>
+	<w_phrase n="wlang_advanced_ssi_adminpassconf" t="Пароль адміністратора (підтвердження)"/>
+	<w_phrase n="wlang_advanced_ssi_adminlogin" t="Логін адміністратора"/>
+	<w_phrase n="wlang_advanced_savebutton" t="зберегти"/>
+	<w_phrase n="wlang_advanced_tmz_USAm10" t="-10 США - Гавайсько-Алеутські острови"/>
+	<w_phrase n="wlang_advanced_tmz_USAm9" t="-9 Сполучені Штати - Час Аляски"/>
+	<w_phrase n="wlang_advanced_tmz_CANm8" t="-8 Канада (Ванкувер, Вайтхорс)"/>
+	<w_phrase n="wlang_advanced_tmz_MEXm8" t="-8 Мексика (Тіхуана, Мехікалі)"/>
+	<w_phrase n="wlang_advanced_tmz_USAm8" t="-8 США - тихоокеанський час"/>
+	<w_phrase n="wlang_advanced_tmz_CANm7" t="-7 Канада (Едмонтон, Калгарі)"/>
+	<w_phrase n="wlang_advanced_tmz_MEXm7" t="-7 Мексика (Мазатлан, Чіуауа)"/>
+	<w_phrase n="wlang_advanced_tmz_USAm7" t="-7 США - гірський час"/>
+	<w_phrase n="wlang_advanced_tmz_CANm6" t="-6 Канада - Манітоба (Вінніпег)"/>
+	<w_phrase n="wlang_advanced_tmz_CAN2m6" t="-6 Canada - Saskatchewan (Regina)"/>
+	<w_phrase n="wlang_advanced_tmz_CAMm6" t="-6 Central America (No DST)"/>
+	<w_phrase n="wlang_advanced_tmz_CHLm6" t="-6 Чилі (Острови Пасхи)"/>
+	<w_phrase n="wlang_advanced_tmz_MEXm6" t="-6 Мексика (Мехіко, Акапулько)"/>
+	<w_phrase n="wlang_advanced_tmz_USAm6" t="-6 США - Центральний час"/>
+	<w_phrase n="wlang_advanced_tmz_BHSm5" t="-5 Багами (Нассау)"/>
+	<w_phrase n="wlang_advanced_tmz_CANm5" t="-5 Канада (Монреаль, Оттава, Квебек)"/>
+	<w_phrase n="wlang_advanced_tmz_COLm5" t="-5 Колумбія (Богота)"/>
+	<w_phrase n="wlang_advanced_tmz_CUBm5" t="-5 Куба (Гавана)"/>
+	<w_phrase n="wlang_advanced_tmz_ECUm5" t="-5 Еквадор (Кіто)"/>
+	<w_phrase n="wlang_advanced_tmz_USAm5" t="-5 США - східний час"/>
+	<w_phrase n="wlang_advanced_tmz_CANm4" t="-4 Канада (Галіфакс, Сент-Джон)"/>
+	<w_phrase n="wlang_advanced_tmz_CHLm4" t="-4 Чилі (Сантьяго)"/>
+	<w_phrase n="wlang_advanced_tmz_PRYm4" t="-4 Парагвай (Асунсьон)"/>
+	<w_phrase n="wlang_advanced_tmz_BMUm4" t="-4 Великобританія - Бермудські острови (Bermuda)"/>
+	<w_phrase n="wlang_advanced_tmz_FLKm4" t="-4 Велика Британія (Фолклендські острови)"/>
+	<w_phrase n="wlang_advanced_tmz_CANm35" t="-3,5 Канада - Нью-Фаундленд (Сент-Джонс)"/>
+	<w_phrase n="wlang_advanced_tmz_GRLm2" t="-2 Denmark - Greenland (Nuuk)"/>
+	<w_phrase n="wlang_advanced_tmz_PRTm1" t="-1 Португалія (Азорські острови)"/>
+	<w_phrase n="wlang_advanced_tmz_FROm0" t="0 Данія - Фарерські острови (Торсхавн)"/>
+	<w_phrase n="wlang_advanced_tmz_IRLm0" t="0 Ірландія (Дублін)"/>
+	<w_phrase n="wlang_advanced_tmz_PRTm0" t="0 Португалія (Лісабон, Порту, Фуншал)"/>
+	<w_phrase n="wlang_advanced_tmz_ESPm0" t="0 Іспанія - Канарські острови (Лас-Пальмас)"/>
+	<w_phrase n="wlang_advanced_tmz_GBRm0" t="0 Велика Британія (Лондон)"/>
+	<w_phrase n="wlang_advanced_tmz_ALBp1" t="+1 Албанія (Тирана)"/>
+	<w_phrase n="wlang_advanced_tmz_AUTp1" t="+1 Австрія (Відень)"/>
+	<w_phrase n="wlang_advanced_tmz_BELp1" t="+1 Бельгія (Брюссель)"/>
+	<w_phrase n="wlang_advanced_tmz_CAIm4" t="-4 Кайкос"/>
+	<w_phrase n="wlang_advanced_tmz_HRVp1" t="+1 Хорватія (Загреб)"/>
+	<w_phrase n="wlang_advanced_tmz_CZEp1" t="+1 Чехія (Прага)"/>
+	<w_phrase n="wlang_advanced_tmz_DNKp1" t="+1 Данія (Копенгаген)"/>
+	<w_phrase n="wlang_advanced_tmz_FRAp1" t="+1 Франція (Ніцца)"/>
+	<w_phrase n="wlang_advanced_tmz_GERp1" t="+1 Німеччина (Берлін)"/>
+	<w_phrase n="wlang_advanced_tmz_HUNp1" t="+1 Угорщина (Будапешт)"/>
+	<w_phrase n="wlang_advanced_tmz_ITAp1" t="+1 Італія (Рим)"/>
+	<w_phrase n="wlang_advanced_tmz_LUXp1" t="+1 Люксембург (Люксембург)"/>
+	<w_phrase n="wlang_advanced_tmz_MAKp1" t="+1 Македонія (Скоп'є)"/>
+	<w_phrase n="wlang_advanced_tmz_NLDp1" t="+1 Нідерланди (Амстердам)"/>
+	<w_phrase n="wlang_advanced_tmz_NAMp1" t="+1 Намібія (Віндгук)"/>
+	<w_phrase n="wlang_advanced_tmz_NORp1" t="+1 Норвегія (Осло)"/>
+	<w_phrase n="wlang_advanced_tmz_POLp1" t="+1 Польща (Варшава)"/>
+	<w_phrase n="wlang_advanced_tmz_SVKp1" t="+1 Словаччина (Братислава)"/>
+	<w_phrase n="wlang_advanced_tmz_ESPp1" t="+1 Іспанія (Мадрид, Пальма)"/>
+	<w_phrase n="wlang_advanced_tmz_SWEp1" t="+1 Швеція (Стокгольм)"/>
+	<w_phrase n="wlang_advanced_tmz_CHEp1" t="+1 Швейцарія (Берн)"/>
+	<w_phrase n="wlang_advanced_tmz_GIBp1" t="+1 Велика Британія (Гібралтар)"/>
+	<w_phrase n="wlang_advanced_tmz_YUGp1" t="+1 Сербія (Белград)"/>
+	<w_phrase n="wlang_advanced_tmz_BLRp3" t="+3 Білорусь (Мінськ)"/>
+	<w_phrase n="wlang_advanced_tmz_BGRp2" t="+2 Болгарія (Софія)"/>
+	<w_phrase n="wlang_advanced_tmz_CYPp2" t="+2 Кіпр (Нікосія)"/>
+	<w_phrase n="wlang_advanced_tmz_EGYp2" t="+2 Єгипет (Каїр)"/>
+	<w_phrase n="wlang_advanced_tmz_ESTp2" t="+2 Естонія (Таллінн)"/>
+	<w_phrase n="wlang_advanced_tmz_FINp2" t="+2 Фінляндія (Гельсінкі)"/>
+	<w_phrase n="wlang_advanced_tmz_GAZp2" t="+2 Сектор Газа (Газа)"/>
+	<w_phrase n="wlang_advanced_tmz_GRCp2" t="+2 Греція (Афіни)"/>
+	<w_phrase n="wlang_advanced_tmz_ISRp2" t="+2 Ізраїль (Тель-Авів)"/>
+	<w_phrase n="wlang_advanced_tmz_JORp2" t="+2 Йорданія (Амман)"/>
+	<w_phrase n="wlang_advanced_tmz_LVAp2" t="+2 Латвія (Рига)"/>
+	<w_phrase n="wlang_advanced_tmz_LTUp2" t="+2 Литва (Вільнюс)"/>
+	<w_phrase n="wlang_advanced_tmz_LBNp2" t="+2 Ліван (Бейрут)"/>
+	<w_phrase n="wlang_advanced_tmz_MDAp2" t="+2 Молдова (Кишинів)"/>
+	<w_phrase n="wlang_advanced_tmz_RUSp2" t="+2 Росія (Калінінград)"/>
+	<w_phrase n="wlang_advanced_tmz_ROUp2" t="+2 Румунія (Бухарест)"/>
+	<w_phrase n="wlang_advanced_tmz_SYRp2" t="+2 Сирія (Дамаск)"/>
+	<w_phrase n="wlang_advanced_tmz_TURp3" t="+3 Туреччина (Анкара)"/>
+	<w_phrase n="wlang_advanced_tmz_UKRp2" t="+2 Україна (Київ, Одеса)"/>
+	<w_phrase n="wlang_advanced_tmz_IRQp3" t="+3 Ірак (Багдад)"/>
+	<w_phrase n="wlang_advanced_tmz_RUSp3" t="+3 Росія (Москва)"/>
+	<w_phrase n="wlang_advanced_tmz_IRNp35" t="+3,5 Іран (Тегеран)"/>
+	<w_phrase n="wlang_advanced_tmz_ARMp4" t="+4 Вірменія (Єреван)"/>
+	<w_phrase n="wlang_advanced_tmz_AZEp4" t="+4 Азербайджан (Баку)"/>
+	<w_phrase n="wlang_advanced_tmz_GEOp4" t="+4 Грузія (Тбілісі)"/>
+	<w_phrase n="wlang_advanced_tmz_KAZp4" t="+4 Казахстан (Актау)"/>
+	<w_phrase n="wlang_advanced_tmz_RUSp4" t="+4 Росія (Самара)"/>
+	<w_phrase n="wlang_advanced_tmz_KAZp5" t="+5 Казахстан (Актобе)"/>
+	<w_phrase n="wlang_advanced_tmz_KGZp5" t="+5 Киргизстан (Бішкек)"/>
+	<w_phrase n="wlang_advanced_tmz_PAKp5" t="+5 Пакистан (Ісламабад)"/>
+	<w_phrase n="wlang_advanced_tmz_RUSp5" t="+5 Росія (Челябінськ)"/>
+	<w_phrase n="wlang_advanced_tmz_INDp55" t="+5,5 Індія (Калькутта)"/>
+	<w_phrase n="wlang_advanced_tmz_KAZp6" t="+6 Казахстан (Астана, Алмати)"/>
+	<w_phrase n="wlang_advanced_tmz_RUSp6" t="+6 Росія (Новосибірськ, Омськ)"/>
+	<w_phrase n="wlang_advanced_tmz_CHNp7" t="+8 Китай (Пекін)"/>
+	<w_phrase n="wlang_advanced_tmz_RUSp7" t="+7 Росія (Красноярськ)"/>
+	<w_phrase n="wlang_advanced_tmz_THAp7" t="+7 Таїланд (Бангкок)"/>
+	<w_phrase n="wlang_advanced_tmz_SGPp8" t="+8 Сінгапур (Сінгапур)"/>
+	<w_phrase n="wlang_advanced_tmz_KORp8" t="+9 Корея (Сеул)"/>
+	<w_phrase n="wlang_advanced_tmz_JPNp9" t="+9 Японія (Токіо)"/>
+	<w_phrase n="wlang_advanced_tmz_AUSp95" t="+9,5 Австралія (Аделаїда)"/>
+	<w_phrase n="wlang_advanced_tmz_AUSp10" t="+10 Австралія (Сідней, Мельбурн, Канберра)"/>
+	<w_phrase n="wlang_advanced_tmz_AUS2p10" t="+10 Австралія (Брісбен)"/>
+	<w_phrase n="wlang_advanced_tmz_RUSp10" t="+10 Росія (Владивосток)"/>
+	<w_phrase n="wlang_advanced_tmz_AUSp105" t="+10,5 Австралія (острів Лорд Хоу)"/>
+	<w_phrase n="wlang_advanced_tmz_NZLp12" t="+12 Нова Зеландія (Веллінгтон, Окленд)"/>
+	<w_phrase n="wlang_advanced_tmz_RUSp12" t="+12 Росія (Анадир, Камчатка)"/>
+	<w_phrase n="wlang_advanced_tmz_NZLp1275" t="+12,75 Нова Зеландія (о-ви Чатем)"/>
+	<w_phrase n="wlang_advanced_tmz_TONp13" t="+13 Тонга (Нукуалофа)"/>
+	<w_phrase n="wlang_adr_ssi_title" t="Довідник"/>
+	<w_phrase n="wlang_advanced_ssi_title" t="Розширені налаштування"/>
+	<w_phrase n="wlang_fkeys_ssi_title" t="Функціональні клавіші"/>
+	<w_phrase n="wlang_index_ssi_title" t="Ласкаво просимо до вашого телефону!"/>
+	<w_phrase n="wlang_info_ssi_title" t="Інформація про систему"/>
+	<w_phrase n="wlang_line1_ssi_title" t="Ідентифікація конфігурації 1"/>
+	<w_phrase n="wlang_line2_ssi_title" t="Ідентифікація конфігурації 2"/>
+	<w_phrase n="wlang_line3_ssi_title" t="Ідентифікація конфігурації 3"/>
+	<w_phrase n="wlang_line4_ssi_title" t="Ідентифікація конфігурації 4"/>
+	<w_phrase n="wlang_line5_ssi_title" t="Ідентифікація конфігурації 5"/>
+	<w_phrase n="wlang_line6_ssi_title" t="Ідентифікація конфігурації 6"/>
+	<w_phrase n="wlang_line7_ssi_title" t="Ідентифікація конфігурації 7"/>
+	<w_phrase n="wlang_line8_ssi_title" t="Ідентифікація конфігурації 8"/>
+	<w_phrase n="wlang_line9_ssi_title" t="Ідентифікація конфігурації 9"/>
+	<w_phrase n="wlang_line10_ssi_title" t="Ідентифікація конфігурації 10"/>
+	<w_phrase n="wlang_line11_ssi_title" t="Ідентифікація конфігурації 11"/>
+	<w_phrase n="wlang_line12_ssi_title" t="Ідентифікація конфігурації 12"/>
+	<w_phrase n="wlang_log_ssi_title" t="Системний журнал"/>
+	<w_phrase n="wlang_memstat_ssi_title" t="Інформація про пам'ять"/>
+	<w_phrase n="wlang_prefs_ssi_title" t="Уподобання"/>
+	<w_phrase n="wlang_settings_ssi_title" t="Налаштування"/>
+	<w_phrase n="wlang_speed_ssi_title" t="Швидкий набір"/>
+	<w_phrase n="wlang_sip_trace_ssi_title" t="SIP Trace"/>
+	<w_phrase n="wlang_http_trace_ssi_title" t="Трасування HTTP"/>
+	<w_phrase n="wlang_update_ssi_title" t="Ручне оновлення програмного забезпечення"/>
+	<w_phrase n="wlang_adr_preview_name" t="Ім'я"/>
+	<w_phrase n="wlang_adr_preview_number" t="Номер"/>
+	<w_phrase n="wlang_adr_preview_reading" t="Читання"/>
+	<w_phrase n="wlang_adr_preview_contact_type" t="Тип контакту"/>
+	<w_phrase n="wlang_adr_preview_ignore" t="Ігнорувати"/>
+	<w_phrase n="wlang_adr_file_type" t="Тип файлу"/>
+	<w_phrase n="wlang_adr_file_csv" t="Файл CSV"/>
+	<w_phrase n="wlang_adr_file_unicode" t="Юнікод із розділенням табуляцією"/>
+	<w_phrase n="wlang_adr_prev_ssi_title" t="Попередній перегляд імпорту"/>
+	<w_phrase n="wlang_adr_prev_description" t="Будь ласка, перевірте призначення стовпців полям телефонної книги та, коли закінчите, натисніть кнопку зберегти."/>
+	<w_phrase n="wlang_adr_prev_apply" t="зберегти"/>
+	<w_phrase n="wlang_advanced_ssi_http_register" t="Зареєструйте HTTP-контакт"/>
+	<w_phrase n="wlang_advanced_ssi_auth_scheme" t="Схема автентифікації"/>
+	<w_phrase n="wlang_advanced_ssi_digest" t="Дайджест"/>
+	<w_phrase n="wlang_advanced_ssi_basic" t="Базовий"/>
+	<w_phrase n="wlang_advanced_ssi_offer_gruu" t="Пропозиція GRUU"/>
+	<w_phrase n="wlang_line_none" t="Жодного"/>
+	<w_phrase n="wlang_advanced_ssi_offer_mpo" t="Пропозиція МПО"/>
+	<w_phrase n="wlang_h323_trace_ssi_title" t="H323 Слід"/>
+	<w_phrase n="wlang_advanced_ssi_challenge_reboot" t="Автентифікація для перезавантаження SIP"/>
+	<w_phrase n="wlang_advanced_ssi_challenge_checksync" t="Автентифікація для SIP Check-Sync"/>
+	<w_phrase n="wlang_dns_ssi_title" t="Кеш DNS"/>
+	<w_phrase n="wlang_pcap_trace_ssi_title" t="Відстеження PCAP"/>
+	<w_phrase n="wlang_pcap_text" t="Щоб побачити, що відбувається на рівні мережі, ви можете створити файли PCAP на цій сторінці. Ці файли можна читати різними мережевими інструментами, наприклад wireshark. Щоб почати запис, натисніть кнопку «Пуск»; щоб зупинити запис, натисніть кнопку зупинки. Пам’ятайте, що дані зберігаються в циклічному буфері, щоб уникнути переповнення (тобто, коли буфер заповнений, найстаріші дані перезаписуються), і що запис може мати негативний вплив на продуктивність телефону."/>
+	<w_phrase n="wlang_leftnav_action" t="Параметри URL-адреси дії"/>
+	<w_phrase n="wlang_action_ssi_title" t="URL дії"/>
+	<w_phrase n="wlang_action_settings" t="URL дії"/>
+	<w_phrase n="wlang_action_ssi_dnd_on" t="DND увімкнено"/>
+	<w_phrase n="wlang_action_ssi_dnd_off" t="DND вимкнено"/>
+	<w_phrase n="wlang_action_ssi_redirection_on" t="Переадресація викликів увімкнена"/>
+	<w_phrase n="wlang_action_ssi_redirection_off" t="Переадресацію виклику вимкнено"/>
+	<w_phrase n="wlang_action_ssi_incoming" t="Вхідний виклик"/>
+	<w_phrase n="wlang_action_ssi_blacklist" t="Перевірте наявність чорного списку"/>
+	<w_phrase n="wlang_action_ssi_outgoing" t="Вихідний дзвінок"/>
+	<w_phrase n="wlang_action_ssi_setup" t="Налаштування завершено"/>
+	<w_phrase n="wlang_action_ssi_offhook" t="Зняти слухавку"/>
+	<w_phrase n="wlang_action_ssi_onhook" t="Покладено слухавку"/>
+	<w_phrase n="wlang_radcom_ssi_title" t="Автовідтворення/планування"/>
+	<w_phrase n="wlang_playback_ssi_settings" t="Налаштування автоматичного відтворення"/>
+	<w_phrase n="wlang_playback_ssi_feature" t="Автоматичне відтворення"/>
+	<w_phrase n="wlang_playback_ssi_url" t="URL-адреса файлу WAV"/>
+	<w_phrase n="wlang_scheduling_ssi_settings" t="Налаштування планування"/>
+	<w_phrase n="wlang_scheduling_ssi_feature" t="Планування"/>
+	<w_phrase n="wlang_scheduling_ssi_frequency" t="Телефонуйте кожному"/>
+	<w_phrase n="wlang_scheduling_ssi_day" t="день (дні)"/>
+	<w_phrase n="wlang_scheduling_ssi_hour" t="година(и)"/>
+	<w_phrase n="wlang_scheduling_ssi_minute" t="хвилина(и)"/>
+	<w_phrase n="wlang_scheduling_ssi_number" t="Номер для виклику"/>
+	<w_phrase n="wlang_scheduling_ssi_start" t="Початок о (дд.мм.рррр ччхм)"/>
+	<w_phrase n="wlang_scheduling_ssi_end" t="Кінець о (дд.мм.рррр ччхм)"/>
+	<w_phrase n="wlang_scheduling_ssi_call_duration" t="Автоматично завершувати виклик через (s)"/>
+	<w_phrase n="wlang_index_time" t="час"/>
+	<w_phrase n="wlang_index_duration" t="Тривалість"/>
+	<w_phrase n="wlang_advanced_ssi_user_pic" t="URL зображення користувача"/>
+	<w_phrase n="wlang_line_custom" t="Спеціальна мелодія"/>
+	<w_phrase n="wlang_prefs_vip" t="VIP"/>
+	<w_phrase n="wlang_prefs_ssi_date_us_format" t="Формат дати США (мм/дд)"/>
+	<w_phrase n="wlang_prefs_ssi_time_24_format" t="24-годинний формат  "/>
+	<w_phrase n="wlang_advanced_ssi_call_join_xfer" t="Виклик Приєднатися до передачі"/>
+	<w_phrase n="wlang_prefs_tssweden" t="Швеція"/>
+	<w_phrase n="wlang_prefs_tsswitzerland" t="Швейцарія"/>
+	<w_phrase n="wlang_advanced_ssi_client" t="Клієнт"/>
+	<w_phrase n="wlang_advanced_ssi_server" t="Сервер"/>
+	<w_phrase n="wlang_line_ssi_idle_text" t="Відображення тексту для екрана режиму очікування"/>
+	<w_phrase n="wlang_line_ssi_idle_cfwd" t="Відображення тексту для цілі переадресації викликів"/>
+	<w_phrase n="wlang_line_ssi_idle_number" t="Номер дисплея для екрана в режимі очікування"/>
+	<w_phrase n="wlang_line_ssi_alert_info" t="URL-адреса інформації про сповіщення"/>
+	<w_phrase n="wlang_advanced_ssi_alert_info_playback" t="Відтворення інформації про сповіщення"/>
+	<w_phrase n="wlang_advanced_ssi_syslog_server" t="Сервер Syslog"/>
+	<w_phrase n="wlang_advanced_ssi_aoc_pulse_currency" t="AOC Pulse Валюта"/>
+	<w_phrase n="wlang_advanced_ssi_aoc_cost_pulse" t="AOC Вартість/Пульс"/>
+	<w_phrase n="wlang_advanced_aoc_amount_display" t="Відображення суми AOC"/>
+	<w_phrase n="wlang_advanced_aoc_amount_charged" t="Заряджений"/>
+	<w_phrase n="wlang_advanced_aoc_amount_balance" t="Баланс"/>
+	<w_phrase n="wlang_advanced_audio_device_indicator" t="Індикатор аудіопристрою"/>
+	<w_phrase n="wlang_prefs_ringtone_defaults" t="Стандартні мелодії дзвінка"/>
+	<w_phrase n="wlang_prefs_ringtone_addressbook" t="Каталог мелодій"/>
+	<w_phrase n="wlang_leftnav_trusted_cert" t="Сертифікати"/>
+	<w_phrase n="wlang_advanced_on" t="на"/>
+	<w_phrase n="wlang_advanced_call_waiting_visual" t="тільки візуально"/>
+	<w_phrase n="wlang_line_ssi_pname" t="Ім'я користувача для автентифікації"/>
+	<w_phrase n="wlang_adr_deletebutton" t="Видалити"/>
+	<w_phrase n="wlang_adr_prev_del_before" t="Видалити каталог раніше"/>
+	<w_phrase n="wlang_advanced_ssi_filter_registrar" t="Фільтрувати пакети від реєстратора"/>
+	<w_phrase n="wlang_line_sipsettings" t="Налаштування ідентифікації SIP"/>
+	<w_phrase n="wlang_line_rtpsettings" t="Налаштування ідентифікації RTP"/>
+	<w_phrase n="wlang_line_natsettings" t="Параметри ідентифікації NAT"/>
+	<w_phrase n="wlang_line_ssi_descr_contact" t="Довгий SIP-контакт (RFC3840)"/>
+	<w_phrase n="wlang_line_ssi_sipusername_as_line" t="Підтримка зламаного реєстратора"/>
+	<w_phrase n="wlang_advanced_snmp" t="SNMP"/>
+	<w_phrase n="wlang_advanced_ssi_snmp_port" t="Порт"/>
+	<w_phrase n="wlang_advanced_ssi_snmp_trusted" t="Довірена адреса"/>
+	<w_phrase n="wlang_advanced_ssi_sip_short_form" t="Використовуйте SIP Compact Headers"/>
+	<w_phrase n="wlang_sysinfo_siplinestatus" t="Статус ідентифікації SIP"/>
+	<w_phrase n="wlang_sysinfo_sysinfo" t="Інформація про систему"/>
+	<w_phrase n="wlang_adr_outgoingid" t="Вихідна ідентифікація"/>
+	<w_phrase n="wlang_adr_lineid_active" t="Активний"/>
+	<w_phrase n="wlang_adr_lineid1" t="Ідентичність 1"/>
+	<w_phrase n="wlang_adr_lineid2" t="Ідентичність 2"/>
+	<w_phrase n="wlang_adr_lineid3" t="Ідентичність 3"/>
+	<w_phrase n="wlang_adr_lineid4" t="Ідентичність 4"/>
+	<w_phrase n="wlang_adr_lineid5" t="Ідентичність 5"/>
+	<w_phrase n="wlang_adr_lineid6" t="Ідентичність 6"/>
+	<w_phrase n="wlang_adr_lineid7" t="Ідентичність 7"/>
+	<w_phrase n="wlang_adr_lineid8" t="Ідентичність 8"/>
+	<w_phrase n="wlang_adr_lineid9" t="Ідентичність 9"/>
+	<w_phrase n="wlang_adr_lineid10" t="Ідентичність 10"/>
+	<w_phrase n="wlang_adr_lineid11" t="Ідентичність 11"/>
+	<w_phrase n="wlang_adr_lineid12" t="Ідентичність 12"/>
+	<w_phrase n="wlang_adr_lineid13" t="Ідентичність 13"/>
+	<w_phrase n="wlang_adr_lineid14" t="Ідентичність 14"/>
+	<w_phrase n="wlang_adr_lineid15" t="Ідентичність 15"/>
+	<w_phrase n="wlang_adr_lineid16" t="Ідентичність 16"/>
+	<w_phrase n="wlang_adr_preview_outgoing_id" t="Вихідна ідентифікація"/>
+	<w_phrase n="wlang_line_ssi_record_missed_calls" t="Запис пропущених дзвінків"/>
+	<w_phrase n="wlang_line_ssi_user_send_diversion_header" t="Надіслати заголовок переадресації"/>
+	<w_phrase n="wlang_index_local_identity" t="Місцева ідентичність"/>
+	<w_phrase n="wlang_advanced_ssi_holding_reminder" t="Тримання нагадування"/>
+	<w_phrase n="wlang_info_production_info" t="Інформація про виробництво"/>
+	<w_phrase n="wlang_line_reregister" t="Перереєструватися"/>
+	<w_phrase n="wlang_confirm_head" t="Увага!"/>
+	<w_phrase n="wlang_confirm_button_yes" t="Так"/>
+	<w_phrase n="wlang_confirm_button_no" t="Ні"/>
+	<w_phrase n="wlang_confirm_ssi_title" t="Підтвердження"/>
+	<w_phrase n="wlang_conf_text_del_adrbook" t="Майте на увазі, що ваш каталог буде повністю втрачено! Ви справді хочете видалити всі записи свого каталогу?"/>
+	<w_phrase n="wlang_conf_text_reset" t="Майте на увазі, що всі налаштування, включаючи списки викликів, каталог тощо, будуть втрачені, якщо ви підтвердите, натиснувши Так. Ви справді впевнені, що бажаєте повернути телефон до заводських налаштувань?"/>
+	<w_phrase n="wlang_conf_text_reboot" t="Ви впевнені, що бажаєте перезавантажити телефон?"/>
+	<w_phrase n="wlang_line_ssi_active" t="Ідентичність активна"/>
+	<w_phrase n="wlang_line_play" t="Грати в Ringer"/>
+	<w_phrase n="wlang_line_ssi_proxyrequire" t="Потрібен проксі"/>
+	<w_phrase n="wlang_advanced_detectethernet" t="Виявлення від’єднання кабелю Ethernet"/>
+	<w_phrase n="wlang_advanced_ssi_rtcp_support" t="Підтримка RTCP"/>
+	<w_phrase n="wlang_update_manuallicense" t="Завантаження ліцензії вручну"/>
+	<w_phrase n="wlang_update_licensefile" t="Файл ліцензії"/>
+	<w_phrase n="wlang_advanced_ssi_high_mic_gain" t="Вищий коефіцієнт посилення мікрофона (вище норми TIA)"/>
+	<w_phrase n="wlang_advanced_handset_agc" t="Слухавка AGC"/>
+	<w_phrase n="wlang_advanced_headset_agc" t="Гарнітура AGC"/>
+	<w_phrase n="wlang_advanced_ssi_partial_lookup" t="Частковий пошук номера"/>
+	<w_phrase n="wlang_ssi_number_lookup" t="Пошук контактів"/>
+	<w_phrase n="wlang_fkeys_ssi_url" t="URL дії"/>
+	<w_phrase n="wlang_advanced_ssi_sig_tos" t="Тип служби SIP (TOS/Diffserv)"/>
+	<w_phrase n="wlang_advanced_ssi_guess_start_length" t="Початкова довжина швидкого пошуку"/>
+	<w_phrase n="wlang_advanced_ethernet" t="Порти Ethernet"/>
+	<w_phrase n="wlang_advanced_ssi_eth_net_port" t="Мережевий порт"/>
+	<w_phrase n="wlang_advanced_ssi_eth_pc_port" t="Порт ПК"/>
+	<w_phrase n="wlang_advanced_autoneg" t="Автопереговор"/>
+	<w_phrase n="wlang_advanced_10full" t="Повний дуплекс 10 Мбіт"/>
+	<w_phrase n="wlang_advanced_10half" t="10 Мбіт напівдуплекс"/>
+	<w_phrase n="wlang_advanced_100full" t="Повний дуплекс 100 Мбіт"/>
+	<w_phrase n="wlang_advanced_100half" t="100 Мбіт напівдуплекс"/>
+	<w_phrase n="wlang_sysinfo_ethernet_status" t="Статус Ethernet"/>
+	<w_phrase n="wlang_sysinfo_ethernet_status2" t="Статус"/>
+	<w_phrase n="wlang_connected" t="підключений"/>
+	<w_phrase n="wlang_disconnected" t="не з'єднано"/>
+	<w_phrase n="wlang_sysinfo_ethernet_connection_type" t="Тип підключення"/>
+	<w_phrase n="wlang_index_costs" t="Витрати"/>
+	<w_phrase n="wlang_action_ssi_missed" t="Пропущений виклик"/>
+	<w_phrase n="wlang_line_ssi_stunbindint" t="Інтервал STUN (с)"/>
+	<w_phrase n="wlang_action_info" t="URL-адреси дій — це в основному запити HTTP GET, які надсилаються, коли на телефоні відбувається певна подія."/>
+	<w_phrase n="wlang_fkeys_ssi_p2t" t="Натисніть щоб говорити"/>
+	<w_phrase n="wlang_advanced_load_certs" t="Завантажте сертифікат сервера"/>
+	<w_phrase n="wlang_advanced_load_sets_manually" t="Завантажте файл налаштувань вручну"/>
+	<w_phrase n="wlang_advanced_load_warning" t="Натиснувши кнопку «Завантажити» нижче, телефон скине налаштування, завантажить нові параметри з указаного файлу та перезавантажиться. Тому всі поточні налаштування будуть втрачені!"/>
+	<w_phrase n="wlang_advanced_answer_after_policy" t="Політика внутрішнього зв'язку"/>
+	<w_phrase n="wlang_advanced_answer_after_idle" t="тільки в режимі холостого ходу"/>
+	<w_phrase n="wlang_advanced_answer_after_always" t="завжди"/>
+	<w_phrase n="wlang_ldap_server_name" t="Server Name"/>
+	<w_phrase n="wlang_ldap_server" t="Адреса сервера"/>
+	<w_phrase n="wlang_ldap_port" t="Порт"/>
+	<w_phrase n="wlang_ldap_base" t="База"/>
+	<w_phrase n="wlang_ldap_username" t="Ім'я користувача"/>
+	<w_phrase n="wlang_ldap_password" t="Пароль"/>
+	<w_phrase n="wlang_guess_max_hits" t="Макс. Хіти"/>
+	<w_phrase n="wlang_ldap_prefs" t="LDAP"/>
+	<w_phrase n="wlang_prefs_ssi_keyboard_lock" t="Блокування клавіатури"/>
+	<w_phrase n="wlang_prefs_ssi_keyboard_lock_pw" t="PIN для розблокування"/>
+	<w_phrase n="wlang_line_ssi_country" t="Код країни"/>
+	<w_phrase n="wlang_line_ssi_area" t="Код зони"/>
+	<w_phrase n="wlang_advanced_ssi_enum" t="Підтримка ENUM"/>
+	<w_phrase n="wlang_advanced_ssi_tcp_listen" t="Слухайте через порт SIP TCP"/>
+	<w_phrase n="wlang_advanced_tmz_AUSp8" t="+8 Австралія (Перт)"/>
+	<w_phrase n="wlang_advanced_tmz_AUS2p95" t="+9,5 Австралія (Дарвін)"/>
+	<w_phrase n="wlang_advanced_tmz_AUS3p10" t="+10 Австралія (Хобарт)"/>
+	<w_phrase n="wlang_advanced_tmz_BRA1m3" t="-3 Бразилія (DST)"/>
+	<w_phrase n="wlang_advanced_tmz_BRA2m3" t="-3 Бразилія (без літнього часу)"/>
+	<w_phrase n="wlang_advanced_tmz_BRAm2" t="-2 Бразилія (без літнього часу)"/>
+	<w_phrase n="wlang_advanced_tmz_ARGm3" t="-3 Аргентина (Буенос-Айрес)"/>
+	<w_phrase n="wlang_advanced_tmz_EATp3" t="+3 за східноафриканським часом"/>
+	<w_phrase n="wlang_advanced_tmz_CATp2" t="+2 за центральноафриканським часом"/>
+	<w_phrase n="wlang_advanced_tmz_WATp1" t="+1 за західноафриканським часом"/>
+	<w_phrase n="wlang_fkeys_ssi_context" t="Контекст"/>
+	<w_phrase n="wlang_fkeys_ssi_type" t="Тип"/>
+	<w_phrase n="wlang_fkeys_ssi_keyevent" t="Ключова подія"/>
+	<w_phrase n="wlang_advanced_ssi_peer_to_peer_cc" t="Завершення однорангового виклику"/>
+	<w_phrase n="wlang_advanced_logon_logoff" t="Вхід/Вихід"/>
+	<w_phrase n="wlang_advanced_ssi_auto_logoff_time" t="Вийти з усіх рядків після бездіяльності (хв.)"/>
+	<w_phrase n="wlang_advanced_logoffall" t="Видалити всі особи"/>
+	<w_phrase n="wlang_advanced_logoffline" t="Видалити ідентифікатор"/>
+	<w_phrase n="wlang_conf_text_logoff_all" t="Майте на увазі, що всі налаштування ідентифікації SIP буде втрачено. Ви справді хочете видалити всі особи?"/>
+	<w_phrase n="wlang_fkey_info" t="На цій сторінці ви можете задати налаштування програмованих клавіш на телефоні. Використовуйте «Контекст», щоб указати контекст ідентичності для цього ключа, наприклад, цей ідентифікатор використовуватиметься для підписки на певне розширення. Тип вибере фактичну функціональність певної клавіші. В останньому полі аргументу Number можна зберегти фактичний номер телефону, URL-адресу sip, послідовність dtmf, URL-адресу дії або тип ключа. Щоб отримати докладніші відомості, зверніться до посібника користувача телефону."/>
+	<w_phrase n="wlang_advanced_tmz_TTBm4" t="-4 Trinidad &amp; Tobago (Port of Spain)"/>
+	<w_phrase n="wlang_line_ssi_shared_line" t="Спільна лінія"/>
+	<w_phrase n="wlang_advanced_ssi_text_softkey" t="Відображення лише тексту на програмних клавішах"/>
+	<w_phrase n="wlang_advanced_ssi_softkey_and_text" t="Відображення тексту на додаток до піктограм програмних клавіш"/>
+	<w_phrase n="wlang_line_ssi_dtmf_info" t="DTMF через SIP INFO"/>
+	<w_phrase n="wlang_line_ssi_xml_screen_url" t="URL-адреса екрана очікування XML"/>
+	<w_phrase n="wlang_prefs_ssi_ringer_animation" t="Анімація дзвінка"/>
+	<w_phrase n="wlang_advanced_ssi_speaker_dialer" t="Використовуйте клавішу динаміка для набору номера"/>
+	<w_phrase n="wlang_action_ssi_connected" t="На зв’язку"/>
+	<w_phrase n="wlang_action_ssi_disconnected" t="На Відключено"/>
+	<w_phrase n="wlang_advanced_ssi_overlap_dialing" t="Набір номера з перекриттям"/>
+	<w_phrase n="wlang_fkeys_ssi_speed" t="Швидкий набір"/>
+	<w_phrase n="wlang_fkeys_ssi_none" t="Жодного"/>
+	<w_phrase n="wlang_prefs_ssi_redundant_softkeys" t="Надлишкові програмні клавіші"/>
+	<w_phrase n="wlang_advanced_ssi_web_logout" t="Автоматичний вихід (хв.)"/>
+	<w_phrase n="wlang_prefs_ringer9" t="Дзвінок 9"/>
+	<w_phrase n="wlang_prefs_ringer10" t="Дзвінок 10"/>
+	<w_phrase n="wlang_advanced_ssi_cancel_on_hold" t="Клавіша скасування виклику на утриманні"/>
+	<w_phrase n="wlang_advanced_call_waiting_ringer" t="Дзвоник"/>
+	<w_phrase n="wlang_advanced_ssi_ntp_refresh" t="Час оновлення NTP (с)"/>
+	<w_phrase n="wlang_line_ssi_ring_after_delay" t="Дзвінок після затримки (с)"/>
+	<w_phrase n="wlang_prefs_ssi_redirect_on_code" t="За кодом"/>
+	<w_phrase n="wlang_prefs_ssi_redirect_off_code" t="Код вимкнення"/>
+	<w_phrase n="wlang_prefs_redirection_always" t="Unconditional"/>
+	<w_phrase n="wlang_prefs_redirection_busy" t="Коли зайнято"/>
+	<w_phrase n="wlang_prefs_redirection_time" t="When no reply"/>
+	<w_phrase n="wlang_prefs_dnd" t="DND"/>
+	<w_phrase n="wlang_prefs_redirect_number" t="Forward to"/>
+	<w_phrase n="wlang_advanced_ssi_pnp_config" t="Конфігурація PnP"/>
+	<w_phrase n="wlang_advanced_ssi_flood_tracing" t="Відстеження SIP для РЕЄСТРАЦІЇ/ПІДПИСКИ/ПОВІДОМЛЕННЯ"/>
+	<w_phrase n="wlang_reboot_ssi_title" t="Перезавантаження…"/>
+	<w_phrase n="wlang_text_reboot_info" t="Телефон перезавантажиться за мить. Будь ласка, потерпіть, поки він повністю не запуститься знову. Коли на дисплеї знову з’явиться знайомий екран очікування, телефон із веб-інтерфейсом можна знову використовувати."/>
+	<w_phrase n="wlang_advanced_ssi_xml_notify" t="Підтримка XML NOTIFY"/>
+	<w_phrase n="wlang_minibrowser_pref" t="Мінібраузер"/>
+	<w_phrase n="wlang_advanced_ssi_enable_timer_support" t="Підтримка таймера (RFC4028)"/>
+	<w_phrase n="wlang_prefs_dsnumbername" t="Номер + Ім'я"/>
+	<w_phrase n="wlang_prefs_ssi_keyboard_lock_dp" t="Номери екстрених служб"/>
+	<w_phrase n="wlang_prefs_alert_internal_text" t="Внутрішній текст сповіщення"/>
+	<w_phrase n="wlang_prefs_ssi_alert_internal_sound" t="Внутрішній дзвінок сповіщення"/>
+	<w_phrase n="wlang_prefs_alert_external_text" t="Зовнішній текст сповіщення"/>
+	<w_phrase n="wlang_prefs_ssi_alert_external_sound" t="Оповіщення зовнішнього дзвінка"/>
+	<w_phrase n="wlang_prefs_alert_group_text" t="Текст групи сповіщень"/>
+	<w_phrase n="wlang_prefs_ssi_alert_group_sound" t="Дзвінок групи оповіщення"/>
+	<w_phrase n="wlang_prefs_alert_info_ringer" t="Дзвінок оповіщення-інформації"/>
+	<w_phrase n="wlang_prefs_ssi_scroll_outgoing" t="Прокручування активної ідентифікації"/>
+	<w_phrase n="wlang_advanced_tmz_USA2m7" t="-7 США - MST немає літнього часу "/>
+	<w_phrase n="wlang_prefs_ssi_show_local_line" t="Показати ідентифікаційний індекс"/>
+	<w_phrase n="wlang_advanced_ssi_pickup_indication" t="Звукова індикація для отримання інформації з діалогового вікна"/>
+	<w_phrase n="wlang_advanced_multicast" t="Багатоадресна розсилка"/>
+	<w_phrase n="wlang_advanced_ssi_multicast_listen" t="Підтримка багатоадресної передачі"/>
+	<w_phrase n="wlang_advanced_ssi_multicast_address" t="IP-адреса"/>
+	<w_phrase n="wlang_advanced_ssi_multicast_port" t="Порт"/>
+	<w_phrase n="wlang_language_name" t="англійська"/>
+	<w_phrase n="wlang_advanced_qos" t="Якість обслуговування"/>
+	<w_phrase n="wlang_advanced_rtp" t="RTP/RTCP"/>
+	<w_phrase n="wlang_advanced_sip" t="SIP"/>
+	<w_phrase n="wlang_advtab_network" t="Мережа"/>
+	<w_phrase n="wlang_advtab_behavior" t="Поведінка"/>
+	<w_phrase n="wlang_advtab_audio" t="Аудіо"/>
+	<w_phrase n="wlang_advtab_sip" t="SIP/RTP"/>
+	<w_phrase n="wlang_advtab_update" t="оновлення"/>
+	<w_phrase n="wlang_advtab_security" t="QoS/Безпека"/>
+	<w_phrase n="wlang_linetab_login" t="Логін"/>
+	<w_phrase n="wlang_linetab_feat" t="особливості"/>
+	<w_phrase n="wlang_linetab_sip" t="SIP"/>
+	<w_phrase n="wlang_linetab_nat" t="NAT"/>
+	<w_phrase n="wlang_linetab_rtp" t="RTP"/>
+	<w_phrase n="wlang_line_ssi_server_type" t="Підтримка типу сервера"/>
+	<w_phrase n="wlang_line_broadsoft" t="Broadsoft"/>
+	<w_phrase n="wlang_line_sylantro" t="Sylantro"/>
+	<w_phrase n="wlang_line_pbxnsip" t="PBXnSIP"/>
+	<w_phrase n="wlang_line_default" t="За замовчуванням"/>
+	<w_phrase n="wlang_line_ssi_event_list_uri" t="Extension Monitoring &amp; Call Pickup List URI"/>
+	<w_phrase n="wlang_web_confirm_apply_set_change" t="Застосувати зміни налаштувань?"/>
+	<w_phrase n="wlang_line_ssi_presence_subscription" t="Список контактів"/>
+	<w_phrase n="wlang_line_ssi_presence_buddy_list_uri" t="URI списку контактів"/>
+	<w_phrase n="wlang_line_ssi_full_sdp_answer" t="Повна відповідь SDP"/>
+	<w_phrase n="wlang_info_firmware_version" t="Версія мікропрограми"/>
+	<w_phrase n="wlang_advanced_ssi_redirect_ringing" t="Дозволити перенаправлення вхідних викликів за допомогою програмованих клавіш"/>
+	<w_phrase n="wlang_advanced_ssi_auto_redial" t="Автоматичний повторний набір у разі зайнятості"/>
+	<w_phrase n="wlang_advanced_ssi_auto_redial_value" t="Повторний набір через (s)"/>
+	<w_phrase n="wlang_advanced_ssi_disable_blind_transfer" t="Вимкнути сліпу передачу (ЗВ.)"/>
+	<w_phrase n="wlang_advanced_ssi_disable_deflection" t="Вимкнути відхилення (код 302)"/>
+	<w_phrase n="wlang_action_ssi_log_on" t="Залогінитися"/>
+	<w_phrase n="wlang_action_ssi_log_off" t="Вийти"/>
+	<w_phrase n="wlang_prefs_ssi_show_call_status" t="Показати інформацію про стан виклику"/>
+	<w_phrase n="wlang_action_ssi_reg_failed" t="Помилка реєстрації"/>
+	<w_phrase n="wlang_subscriptions_ssi_title" t="Статус підписки"/>
+	<w_phrase n="wlang_leftnav_subscriptions" t="Підписки"/>
+	<w_phrase n="wlang_advanced_ssi_max_boot_delay" t="Макс. Затримка завантаження (с)"/>
+	<w_phrase n="wlang_advanced_http_server" t="Сервер HTTP"/>
+	<w_phrase n="wlang_advanced_http_client" t="Клієнт HTTP"/>
+	<w_phrase n="wlang_advanced_ssi_mailbox_active" t="Обробляти лише поштову скриньку Active Identity"/>
+	<w_phrase n="wlang_line_ssi_remove_all_bindings" t="Видалити всі прив’язки під час скасування реєстрації"/>
+	<w_phrase n="wlang_line_ssi_include_listeners" t="Включіть слухачів у РЕЄСТРАЦІЮ"/>
+	<w_phrase n="wlang_vpn_ssi_vpn_on" t="VPN"/>
+	<w_phrase n="wlang_vpn_ssi_tarball_url" t="Розпакований архів конфігурації VPN"/>
+	<w_phrase n="wlang_ssi_l2tp_on" t="L2TP"/>
+	<w_phrase n="wlang_ssi_l2tp_tarball_url" t="Розпакований архів конфігурації L2TP"/>
+	<w_phrase n="wlang_ssi_sbc_on" t="SBC"/>
+	<w_phrase n="wlang_ssi_sbc_prov_url" t="URL-адреса конфігураційного файлу SBC"/>
+	<w_phrase n="wlang_advanced_ssi_idle_offhook" t="Повернутися до екрану очікування після підняття трубки"/>
+	<w_phrase n="wlang_prefs_ssi_enable_keyboard_lock" t="Дозволити блокування клавіатури"/>
+	<w_phrase n="wlang_advanced_ssi_vlan_port_tagging" t="Скасувати/позначити трафік VLAN на певних портах комутатора"/>
+	<w_phrase n="wlang_advanced_ssi_vlan_id" t="Ідентифікатор VLAN (1-4094)"/>
+	<w_phrase n="wlang_advanced_ssi_vlan_priority" t="Пріоритет VLAN (0-7)"/>
+	<w_phrase n="wlang_advanced_vlan" t="VLAN"/>
+	<w_phrase n="wlang_line_failover_identity" t="Ідентифікація відмов"/>
+	<w_phrase n="wlang_fkeys_sidecar" t="Модуль розширення"/>
+	<w_phrase n="wlang_usb_expansion_module" t="Модуль розширення USB"/>
+	<w_phrase n="wlang_sidecar_layout_lines" t="Розкладка лінії"/>
+	<w_phrase n="wlang_sidecar_layout_tiles" t="Розкладка плитки"/>
+	<w_phrase n="wlang_line_ssi_record_dialed_calls" t="Запис набраних дзвінків"/>
+	<w_phrase n="wlang_line_ssi_record_received_calls" t="Запис отриманих дзвінків"/>
+	<w_phrase n="wlang_prefs_ssi_emergency_proxy" t="Вихідний проксі для екстрених номерів"/>
+	<w_phrase n="wlang_line_telepo" t="Телепо"/>
+	<w_phrase n="wlang_fkeys_ssi_button" t="Кнопка"/>
+	<w_phrase n="wlang_advanced_ssi_retryafterfailedregister" t="Інтервал повторних спроб після невдалої реєстрації (и)"/>
+	<w_phrase n="wlang_line_ssi_subscription_expiry" t="Термін дії підписки (s)"/>
+	<w_phrase n="wlang_line_metaswitch" t="MetaSwitch"/>
+	<w_phrase n="wlang_advanced_ssi_sendprack" t="Надіслати PRACK"/>
+	<w_phrase n="wlang_watchdog" t="Сторожовий пес"/>
+	<w_phrase n="wlang_advanced_ssi_rtp_keepalive" t="RTP Keepalive"/>
+	<w_phrase n="wlang_ldap_search_filter" t="Фільтр імен LDAP"/>
+	<w_phrase n="wlang_ldap_number_filter" t="Фільтр номерів LDAP"/>
+	<w_phrase n="wlang_ldap_name_attributes" t="Атрибути імені LDAP"/>
+	<w_phrase n="wlang_ldap_number_attributes" t="Атрибути номера LDAP"/>
+	<w_phrase n="wlang_ldap_display_name" t="Відображуване ім’я LDAP"/>
+	<w_phrase n="wlang_advanced_ssi_ldap_over_tls" t="LDAP через TLS"/>
+	<w_phrase n="wlang_prefs_tsaustria" t="Австрія"/>
+	<w_phrase n="wlang_prefs_tsfrance" t="Франція"/>
+	<w_phrase n="wlang_prefs_tsitaly" t="Італія"/>
+	<w_phrase n="wlang_prefs_tsnetherlands" t="Нідерланди"/>
+	<w_phrase n="wlang_prefs_tsnorway" t="Норвегія"/>
+	<w_phrase n="wlang_prefs_tsnewzealand" t="Нова Зеландія"/>
+	<w_phrase n="wlang_prefs_tsspain" t="Іспанія"/>
+	<w_phrase n="wlang_prefs_tsgreatbritain" t="Велика Британія"/>
+	<w_phrase n="wlang_advanced_tmz_VENm4" t="-4 Венесуела (Каракас)"/>
+	<w_phrase n="wlang_advanced_tmz_NCLp11" t="+11 Нова Каледонія (Нумеа)"/>
+	<w_phrase n="wlang_line_ssi_enable_hookflash" t="Хук Флеш"/>
+	<w_phrase n="wlang_vpn_netcat_server" t="Сервер Netcat (наприклад, 192.168.0.188 5000)"/>
+	<w_phrase n="wlang_fkeys_ssi_presence" t="Присутність"/>
+	<w_phrase n="wlang_fkeys_ssi_disp_code" t="Кодекс розпорядження"/>
+	<w_phrase n="wlang_prefs_custom_internal_alert_info" t="Налаштована Alert-Info за допомогою вбудованих мелодій"/>
+	<w_phrase n="wlang_prefs_ca_ringer_text" t="Внутрішній текст дзвінка"/>
+	<w_phrase n="wlang_prefs_ssi_ca_ringer_file" t="Внутрішній файл дзвінка"/>
+	<w_phrase n="wlang_line_nortel" t="Nortel"/>
+	<w_phrase n="wlang_action_ssi_hold" t="Утримувати виклик"/>
+	<w_phrase n="wlang_action_ssi_unhold" t="Розблокувати дзвінок"/>
+	<w_phrase n="wlang_action_ssi_transfer" t="Перевести виклик"/>
+	<w_phrase n="wlang_action_ssi_blind_transfer" t="Сліпий трансфер"/>
+	<w_phrase n="wlang_action_ssi_attended_transfer" t="Відвідав трансфер"/>
+	<w_phrase n="wlang_action_ssi_longpress_url" t="Тривале натискання клавіші лінії"/>
+	<w_phrase n="wlang_advanced_ssi_csta_control" t="Дозволити контроль CSTA"/>
+	<w_phrase n="wlang_line_ssi_dtmf_info_sip_info_only" t="Лише SIP INFO"/>
+	<w_phrase n="wlang_advanced_ssi_speaker_receive_call" t="Використовуйте клавішу динаміка/гарнітури для прийому викликів"/>
+	<w_phrase n="wlang_prefs_ssi_global_missed_counter" t="Глобальний лічильник пропущених дзвінків"/>
+	<w_phrase n="wlang_advanced_ssi_http_password_not_set" t="Пароль HTTP не встановлено!"/>
+	<w_phrase n="wlang_text_login_failed_info1" t="Після кількох невдалих спроб входу з IP-адреси"/>
+	<w_phrase n="wlang_text_login_failed_info2" t="Він знову буде доступний у"/>
+	<w_phrase n="wlang_text_login_failed_info3" t="хвилина(и). Подальші невдалі спроби входу подвоїть час, який вам доведеться чекати для розблокування веб-інтерфейсу відповідно."/>
+	<w_phrase n="wlang_text_login_failed_info4" t=", веб-інтерфейс заблоковано!"/>
+	<w_phrase n="wlang_login_failed_ssi_title" t="Помилка логіну!"/>
+	<w_phrase n="wlang_web_confirm_logout" t="Вийти користувача з веб-сторінки?"/>
+	<w_phrase n="wlang_advanced_logoutbutton" t="Вийти"/>
+	<w_phrase n="wlang_line_ssi_savp" t="RTP/SAVP"/>
+	<w_phrase n="wlang_advanced_ssi_use_hidden_tags" t="Використовуйте приховані теги"/>
+	<w_phrase n="wlang_fkeys_ssi_blf" t="BLF"/>
+	<w_phrase n="wlang_advanced_ssi_show_history_info" t="Показати інформацію про історію"/>
+	<w_phrase n="wlang_security_warning_ssi_title" t="Попередження безпеки!"/>
+	<w_phrase n="wlang_text_security_warning_info1" t="Ви чи інший віддалений користувач надіслали на цей телефон неавторизований запит HTTP POST."/>
+	<w_phrase n="wlang_text_security_warning_info2" t="Цей запит пропущено, а автентифікований сеанс закрито."/>
+	<w_phrase n="wlang_text_security_warning_info3" t="Щоб знову користуватися веб-інтерфейсом, потрібно пройти повторну автентифікацію."/>
+	<w_phrase n="wlang_security_advice" t="Поради щодо безпеки"/>
+	<w_phrase n="wlang_security_settings_state" t="Security Settings State"/>
+	<w_phrase n="wlang_Recommended" t="Recommended"/>
+	<w_phrase n="wlang_Mandatory" t="Mandatory"/>
+	<w_phrase n="wlang_security_text_advice1" t="We strongly recommend that you secure the web interface in order to protect your phone against remote attacks. Therefore the HTTP User as well as the   Administrator Password should be changed from the default value. Changing   the HTTP Password is mandatory."/>
+	<w_phrase n="wlang_security_text_advice2" t="Крім того, ви повинні захистити веб-інтерфейс за допомогою прихованих тегів безпеки від віддалених зловмисників, які намагаються змінити налаштування телефону за допомогою підроблених запитів HTTP POST."/>
+	<w_phrase n="wlang_security_apply_button_ignore" t="Apply and ignore the warning until reboot."/>
+	<w_phrase n="wlang_security_apply_button_ignore_forever" t="Apply and ignore the warning forever."/>
+	<w_phrase n="wlang_security_ssi_title" t="Безпека"/>
+	<w_phrase n="wlang_advanced_ssi_ignore_warning" t="Ігноруйте поради щодо безпеки"/>
+	<w_phrase n="wlang_advanced_ssi_naptr_sip_uri" t="Використовуйте NAPTR для SIP URI"/>
+	<w_phrase n="wlang_line_ssi_optional" t="необов'язковий"/>
+	<w_phrase n="wlang_line_ssi_mandatory" t="обов'язковий"/>
+	<w_phrase n="wlang_prefs_backlight_dim" t="тьмяний"/>
+	<w_phrase n="wlang_advanced_ssi_show_diversion" t="Показати Диверсію"/>
+	<w_phrase n="wlang_advanced_ssi_offhook_dial_prompt" t="Підказка набору номера під час підняття трубки"/>
+	<w_phrase n="wlang_fkeys_ssi_ivr" t="IVR"/>
+	<w_phrase n="wlang_info_uptime_info" t="Час роботи"/>
+	<w_phrase n="wlang_info_memfree_info" t="Memfree"/>
+	<w_phrase n="wlang_info_uboot_version_info" t="Версія завантажувача"/>
+	<w_phrase n="wlang_line_ssi_authtag" t="Тег автентифікації SRTP"/>
+	<w_phrase n="wlang_line_ssi_aes32" t="AES-32"/>
+	<w_phrase n="wlang_line_ssi_aes80" t="AES-80"/>
+	<w_phrase n="wlang_prefs_ssi_show_ivr_digits" t="Show IVR Digits in Connected Call"/>
+	<w_phrase n="wlang_line_ssi_dynamic_payload" t="Динамічне корисне навантаження G.726"/>
+	<w_phrase n="wlang_advanced_ssi_show" t="шоу"/>
+	<w_phrase n="wlang_fkeyname_retrieve" t="Голосова пошта"/>
+	<w_phrase n="wlang_fkeyname_dnd" t="DND"/>
+	<w_phrase n="wlang_fkeyname_menu" t="Налаштування"/>
+	<w_phrase n="wlang_fkeyname_exec_assist_config" t="Конфігурація виконавчого помічника"/>
+	<w_phrase n="wlang_fkeyname_exec_assist_callon_behalfof" t="Виконавчий помічник імені"/>
+	<w_phrase n="wlang_fkeyname_transfer" t="Трансфер"/>
+	<w_phrase n="wlang_fkeyname_hold" t="Тримайте"/>
+	<w_phrase n="wlang_fkeyname_missed" t="Пропущені дзвінки"/>
+	<w_phrase n="wlang_fkeyname_accepted" t="Прийняті дзвінки"/>
+	<w_phrase n="wlang_fkeyname_dailed" t="Набрані дзвінки"/>
+	<w_phrase n="wlang_advanced_tmz_USA2m10" t="-10 США - Аляска-Алеут"/>
+	<w_phrase n="wlang_fkeyname_call_lists" t="Історія викликів"/>
+	<w_phrase n="wlang_fkeyname_support" t="Допомога"/>
+	<w_phrase n="wlang_fkeyname_headset" t="Гарнітура"/>
+	<w_phrase n="wlang_fkeyname_presence" t="Присутність"/>
+	<w_phrase n="wlang_fkeyname_buddies" t="Контакти"/>
+	<w_phrase n="wlang_fkeyname_redial" t="Повторний набір"/>
+	<w_phrase n="wlang_fkeyname_instant_redial" t="Миттєвий повторний набір"/>
+	<w_phrase n="wlang_fkeyname_denyall" t="Блокувати абонента"/>
+	<w_phrase n="wlang_fkeyname_contactpool" t="Басейн"/>
+	<w_phrase n="wlang_fkeyname_addr" t="Довідник"/>
+	<w_phrase n="wlang_ocip_prefs" t="OCI-P (Broadsoft)"/>
+	<w_phrase n="wlang_advanced_dfks" t="Синхронізація ключа функцій пристрою"/>
+	<w_phrase n="wlang_line_ssi_publish_presence_bootup" t="Публікація присутності на Bootup"/>
+	<w_phrase n="wlang_fkeyname_record" t="запис"/>
+	<w_phrase n="wlang_fkeyname_conference" t="Конференція"/>
+	<w_phrase n="wlang_fkeyname_id_next" t="Наступна ідентичність"/>
+	<w_phrase n="wlang_fkeyname_id_prev" t="Попередня особистість"/>
+	<w_phrase n="wlang_fkeyname_mobility" t="Запис/Мобільність"/>
+	<w_phrase n="wlang_ocs_outbound_proxy" t="Вихідний проксі"/>
+	<w_phrase n="wlang_prefs_ssi_advertisement" t="Оголошення"/>
+	<w_phrase n="wlang_fkeyname_monitored_calls" t="Монітор дзвінків"/>
+	<w_phrase n="wlang_fkeys_ssi_transfer" t="Трансфер"/>
+	<w_phrase n="wlang_fkeys_ssi_redirect" t="Переадресація виклику"/>
+	<w_phrase n="wlang_fkeys_ssi_auto_answer" t="Автовідповідач"/>
+	<w_phrase n="wlang_wifi_auth_mode" t="Security"/>
+	<w_phrase n="wlang_wifi_scanning" t="Scanning"/>
+	<w_phrase n="wlang_wifi_wpa2" t="WPA2"/>
+	<w_phrase n="wlang_wifi_wpa" t="WPA"/>
+	<w_phrase n="wlang_wifi_wep" t="WEP"/>
+	<w_phrase n="wlang_wifi_open" t="OPEN"/>
+	<w_phrase n="wlang_wifi_wpapsk" t="Password"/>
+	<w_phrase n="wlang_wifi_wpa_encryptype" t="EncrypType"/>
+	<w_phrase n="wlang_wifi_tkip" t="TKIP"/>
+	<w_phrase n="wlang_wifi_aes" t="AES"/>
+	<w_phrase n="wlang_wifi_essid" t="Network Name"/>
+	<w_phrase n="wlang_advanced_wifi" t="WLAN"/>
+	<w_phrase n="wlang_bt_enabled" t="Bluetooth Enabled"/>
+	<w_phrase n="wlang_advanced_tr069" t="TR-069"/>
+	<w_phrase n="wlang_wifi_wep_key1" t="Password"/>
+	<w_phrase n="wlang_line_asterisk" t="Зірочка"/>
+	<w_phrase n="wlang_line_ccm" t="СКК"/>
+	<w_phrase n="wlang_advanced_ssi_typeanswering" t="Відповідь на інтерком для отримання інформації про сповіщення"/>
+	<w_phrase n="wlang_advanced_ssi_call_info_audio_device" t="Відповідь на домофон для отримання інформації про виклик"/>
+	<w_phrase n="wlang_advanced_ssi_tahandsfree" t="Handsfree"/>
+	<w_phrase n="wlang_advanced_ssi_tahandset" t="Слухавка"/>
+	<w_phrase n="wlang_advanced_ssi_taheadset" t="Гарнітура"/>
+	<w_phrase n="wlang_advanced_ssi_taactivedevice" t="Активний пристрій"/>
+	<w_phrase n="wlang_line_ssi_additional_supported_headers" t="Додаткові підтримувані заголовки"/>
+	<w_phrase n="wlang_prefs_ssi_dim_timer" t="Згаснути після (s)"/>
+	<w_phrase n="wlang_prefs_character_settings" t="Параметри персонажа"/>
+	<w_phrase n="wlang_fkeyname_mute" t="Вимкнути звук"/>
+	<w_phrase n="wlang_advanced_ssi_empty_tls_client_cert" t="Порожній сертифікат клієнта"/>
+	<w_phrase n="wlang_advanced_vq_report_collector" t="Збірник звітів про якість голосу"/>
+	<w_phrase n="wlang_fkeyname_reboot" t="Перезавантаження"/>
+	<w_phrase n="wlang_fkeyname_logoff_all" t="Вийти з усіх"/>
+	<w_phrase n="wlang_fkeyname_auto_answer" t="Автовідповідач"/>
+	<w_phrase n="wlang_fkeyname_reset" t="Скинути"/>
+	<w_phrase n="wlang_prefs_keyboard_lock_timeout" t="Блокувати клавіатуру через (с)"/>
+	<w_phrase n="wlang_logged_out_info" t="Ви вийшли зі свого телефону. Щоб увійти знову, натисніть кнопку входу."/>
+	<w_phrase n="wlang_logged_out_title" t="Вийти"/>
+	<w_phrase n="wlang_advanced_loginbutton" t="Логін"/>
+	<w_phrase n="wlang_advanced_ssi_sip_tracing" t="SIP Trace"/>
+	<w_phrase n="wlang_advanced_ssi_http_tracing" t="Трасування HTTP"/>
+	<w_phrase n="wlang_line_ssi_g726_packing_order" t="Порядок байтів G.726"/>
+	<w_phrase n="wlang_line_ssi_rfc3551" t="RFC3551"/>
+	<w_phrase n="wlang_line_ssi_aal2" t="AAL2"/>
+	<w_phrase n="wlang_adr_first_name" t="Ім'я"/>
+	<w_phrase n="wlang_adr_last_name" t="Прізвище"/>
+	<w_phrase n="wlang_adr_group" t="Група"/>
+	<w_phrase n="wlang_adr_title" t="Назва"/>
+	<w_phrase n="wlang_adr_organization" t="організація"/>
+	<w_phrase n="wlang_adr_email" t="Електронна пошта"/>
+	<w_phrase n="wlang_adr_note" t="Примітка"/>
+	<w_phrase n="wlang_adr_favorite" t="улюблений"/>
+	<w_phrase n="wlang_adr_work" t="Робота"/>
+	<w_phrase n="wlang_adr_addsub_button" t="Додати суб"/>
+	<w_phrase n="wlang_adr_change_button" t="Зміна"/>
+	<w_phrase n="wlang_advanced_goto_monitor_state_on_line_activity" t="Перейдіть до Call-Monitor on Activity"/>
+	<w_phrase n="wlang_adr_skip_first_line" t="Пропустити перший рядок"/>
+	<w_phrase n="wlang_advanced_prefer_saved_over_received_photo" t="Віддавайте перевагу місцевим фотографіям"/>
+	<w_phrase n="wlang_adr_photo" t="Фотографія"/>
+	<w_phrase n="wlang_line_use_photo_from_tbook" t="Отримати з телефонної адресної книги"/>
+	<w_phrase n="wlang_line_teles" t="Телес"/>
+	<w_phrase n="wlang_fkeys_ssi_replacement_label_header" t="Мітка"/>
+	<w_phrase n="wlang_fkeys_ssi_short_label" t="Коротка етикетка"/>
+	<w_phrase n="wlang_fkeys_ssi_full_label" t="Повна етикетка"/>
+	<w_phrase n="wlang_fkeys_ssi_short_label_mode" t="Режим коротких міток"/>
+	<w_phrase n="wlang_fkeyname_favorites" t="Вибране"/>
+	<w_phrase n="wlang_advanced_load_param_map" t="Завантажте карту параметрів TR-069 вручну"/>
+	<w_phrase n="wlang_line_default_contact_uri" t="Стандартний контактний номер"/>
+	<w_phrase n="wlang_contact_none" t="Жодного"/>
+	<w_phrase n="wlang_contact_mobile" t="мобільний"/>
+	<w_phrase n="wlang_contact_home" t="додому"/>
+	<w_phrase n="wlang_contact_main" t="Головна"/>
+	<w_phrase n="wlang_advanced_ssi_suppress_ringing_during_hold" t="Вимкнути мелодію під час утримання"/>
+	<w_phrase n="wlang_advanced_ssi_play_music_during_hold" t="Відтворення музики під час утримання"/>
+	<w_phrase n="wlang_advanced_ssi_offer_outbound" t="Використовуйте Outbound"/>
+	<w_phrase n="wlang_advanced_tmz_UAEp4" t="+4 Об'єднані Арабські Емірати (Дубай)"/>
+	<w_phrase n="wlang_prefs_ssi_dialnumber_us_format" t="Формат набору номера США"/>
+	<w_phrase n="wlang_advanced_ssi_transferonhookstarcode" t="Передача прийнятих дзвінків Starcode"/>
+	<w_phrase n="wlang_advanced_load_dialplan" t="Завантажте XML плану номеру вручну"/>
+	<w_phrase n="wlang_jb" t="Покращений JB"/>
+	<w_phrase n="wlang_jb_adaptive" t="Адаптивне відтворення"/>
+	<w_phrase n="wlang_jb_adjust_silence" t="Налаштувати під час тиші"/>
+	<w_phrase n="wlang_jb_adjust_immediately" t="Відрегулюйте негайно"/>
+	<w_phrase n="wlang_jb_max" t="JB_Max"/>
+	<w_phrase n="wlang_jb_min" t="JB_Мін"/>
+	<w_phrase n="wlang_jb_average" t="JB_Average"/>
+	<w_phrase n="wlang_adr_nrtype_sip" t="ковток"/>
+	<w_phrase n="wlang_adr_nrtype_business" t="бізнес"/>
+	<w_phrase n="wlang_adr_nrtype_landline" t="Стаціонарний"/>
+	<w_phrase n="wlang_adr_nrtype_extension" t="розширення"/>
+	<w_phrase n="wlang_adr_number_type" t="Тип номера"/>
+	<w_phrase n="wlang_adr_nickname" t="псевдонім"/>
+	<w_phrase n="wlang_fkeys_ssi_multicast" t="Багатоадресна розсилка"/>
+	<w_phrase n="wlang_fkeys_ssi_xml" t="Визначення XML"/>
+	<w_phrase n="wlang_fkeys_ssi_conference_server" t="Конференція"/>
+	<w_phrase n="wlang_action_ssi_received_attended_transfer" t="Отримано SIP INVITE"/>
+	<w_phrase n="wlang_line_ssi_mediatransportoffer" t="Пропозиція медіатранспорту"/>
+	<w_phrase n="wlang_line_ssi_mediatransportoffersetup" t="Налаштування пропозиції транспортування медіа"/>
+	<w_phrase n="wlang_line_ssi_mto_active" t="активний"/>
+	<w_phrase n="wlang_line_ssi_mto_passive" t="пасивний"/>
+	<w_phrase n="wlang_line_ssi_mto_any" t="будь-який"/>
+	<w_phrase n="wlang_line_ssi_hold_inactive" t="Надіслати утримання як неактивне"/>
+	<w_phrase n="wlang_prefs_ssi_upper_chars_0" t="Ключ послідовності символів у верхньому регістрі 0"/>
+	<w_phrase n="wlang_prefs_ssi_upper_chars_1" t="Ключ послідовності символів у верхньому регістрі 1"/>
+	<w_phrase n="wlang_prefs_ssi_upper_chars_2" t="Ключ послідовності символів у верхньому регістрі 2"/>
+	<w_phrase n="wlang_prefs_ssi_upper_chars_3" t="Ключ послідовності символів у верхньому регістрі 3"/>
+	<w_phrase n="wlang_prefs_ssi_upper_chars_4" t="Ключ послідовності символів у верхньому регістрі 4"/>
+	<w_phrase n="wlang_prefs_ssi_upper_chars_5" t="Ключ послідовності символів у верхньому регістрі 5"/>
+	<w_phrase n="wlang_prefs_ssi_upper_chars_6" t="Ключ послідовності символів у верхньому регістрі 6"/>
+	<w_phrase n="wlang_prefs_ssi_upper_chars_7" t="Ключ послідовності символів у верхньому регістрі 7"/>
+	<w_phrase n="wlang_prefs_ssi_upper_chars_8" t="Ключ послідовності символів у верхньому регістрі 8"/>
+	<w_phrase n="wlang_prefs_ssi_upper_chars_9" t="Ключ послідовності символів у верхньому регістрі 9"/>
+	<w_phrase n="wlang_prefs_ssi_lower_chars_0" t="Ключ послідовності символів нижнього регістру 0"/>
+	<w_phrase n="wlang_prefs_ssi_lower_chars_1" t="Клавіша послідовності символів у нижньому регістрі 1"/>
+	<w_phrase n="wlang_prefs_ssi_lower_chars_2" t="Ключ послідовності символів у нижньому регістрі 2"/>
+	<w_phrase n="wlang_prefs_ssi_lower_chars_3" t="Ключ послідовності символів у нижньому регістрі 3"/>
+	<w_phrase n="wlang_prefs_ssi_lower_chars_4" t="Ключ послідовності символів у нижньому регістрі 4"/>
+	<w_phrase n="wlang_prefs_ssi_lower_chars_5" t="Клавіша послідовності символів у нижньому регістрі 5"/>
+	<w_phrase n="wlang_prefs_ssi_lower_chars_6" t="Клавіша послідовності символів у нижньому регістрі 6"/>
+	<w_phrase n="wlang_prefs_ssi_lower_chars_7" t="Клавіша послідовності символів у нижньому регістрі 7"/>
+	<w_phrase n="wlang_prefs_ssi_lower_chars_8" t="Клавіша послідовності символів у нижньому регістрі 8"/>
+	<w_phrase n="wlang_prefs_ssi_lower_chars_9" t="Клавіша послідовності символів у нижньому регістрі 9"/>
+	<w_phrase n="wlang_line_ssi_subscription_expiry_after_failed" t="Час повторної спроби невдалої підписки (с)"/>
+	<w_phrase n="wlang_advanced_ssi_transferonhooknonpots" t="Незалежне передавання при покладеній трубці"/>
+	<w_phrase n="wlang_advanced_ssi_check_sdp_version" t="Перевірте версію SDP"/>
+	<w_phrase n="wlang_prefs_ssi_show_clock" t="Показати годинник"/>
+	<w_phrase n="wlang_ldap_perform_initial_query" t="Початковий запит"/>
+	<w_phrase n="wlang_cert_tab_unknown_certs" t="Невідомі сертифікати"/>
+	<w_phrase n="wlang_cert_tab_tlsdsk_certs" t="TLS DSK"/>
+	<w_phrase n="wlang_cert_add_trusted_cert" t="Додати спеціальний сертифікат (формат DER)"/>
+	<w_phrase n="wlang_tls_server_authentication_notification" t="За замовчуванням телефони не автентифікують ідентифікатори сервера в безпечних з’єднаннях (TLS). Ці з’єднання вразливі до атак типу «людина посередині». Ви можете ввімкнути цю функцію, але майте на увазі, що з міркувань безпеки ви можете вимкнути цю функцію, лише скинувши заводські налаштування. Будь ласка, зверніться до WIKI для отримання додаткової інформації."/>
+	<w_phrase n="wlang_tls_server_authentication_title" t="Аутентифікація сервера TLS"/>
+	<w_phrase n="wlang_tls_server_authentication_activate" t="активувати"/>
+	<w_phrase n="wlang_read_more" t="Читати далі"/>
+	<w_phrase n="wlang_advanced_1000full" t="Повний дуплекс 1000 Мбіт"/>
+	<w_phrase n="wlang_advanced_1000half" t="1000 Мбіт напівдуплекс"/>
+	<w_phrase n="wlang_advanced_rtcp_xr" t="Формат звіту RTCP-XR"/>
+	<w_phrase n="wlang_dialplan_count_failed_match_groups" t="Підрахувати всі групи в плані номеру"/>
+	<w_phrase n="wlang_advanced_ssi_allow_rtp_on_mute" t="Надсилати мовчазні пакети RTP під час вимкнення звуку"/>
+	<w_phrase n="wlang_line_ssi_is_voice_identity" t="Identity може приймати дзвінки"/>
+	<w_phrase n="wlang_line_ssi_hide_identity" t="Прихована особистість"/>
+	<w_phrase n="wlang_fkeyname_status_messages" t="Інформація"/>
+	<w_phrase n="wlang_advanced_ssi_min_pin_length" t="Мінімальна довжина PIN-коду"/>
+	<w_phrase n="wlang_advanced_ssi_max_pin_retry" t="Максимальна кількість повторів PIN-коду"/>
+	<w_phrase n="wlang_line_ssi_allow_inc_dialog_subscribe" t="Дозволити моніторинг вхідних розширень"/>
+	<w_phrase n="wlang_prefs_scroll_text_interval" t="Інтервал кроку прокрутки"/>
+	<w_phrase n="wlang_prefs_scroll_text_step_count" t="Підрахунок кроків прокрутки"/>
+	<w_phrase n="wlang_prefs_scroll_text_wait_multiplier" t="Крок прокручування Пауза"/>
+	<w_phrase n="wlang_apply_button" t="Застосувати"/>
+	<w_phrase n="wlang_unsaved_settings" t="Деякі налаштування ще не зберігаються постійно."/>
+	<w_phrase n="wlang_view_changes_button" t="Переглянути зміни"/>
+	<w_phrase n="wlang_changed_dialplan_msg" t="План номеру xml змінено."/>
+	<w_phrase n="wlang_changed_settings_header" t="Змінено наступні налаштування"/>
+	<w_phrase n="wlang_no_changed_settings_msg" t="Усі налаштування збережено."/>
+	<w_phrase n="wlang_line_ssi_extension_monitoring_group" t="Ідентифікатор групи моніторингу розширення"/>
+	<w_phrase n="wlang_soundcard_event_map" t="Параметри звуку"/>
+	<w_phrase n="wlang_license_info" t="Ваш телефон постачається з попередньо встановленою дійсною ліцензією. Можна інсталювати новий файл ліцензії за допомогою ручного завантаження ліцензії, щоб увімкнути додаткові функції програмного забезпечення, або повторно інсталювати попередньо встановлену ліцензію, якщо вона відсутня або пошкоджена. Якщо завантажений файл ліцензії недійсний (наприклад, не відповідає MAC-адресі телефону), він буде проігнорований, а існуюча ліцензія збережеться."/>
+	<w_phrase n="wlang_advanced_ssi_restrict_uri_queries" t="Обмежити запити URI"/>
+	<w_phrase n="wlang_advanced_ssi_release_xfer_on" t="Відпустіть передану сторону"/>
+	<w_phrase n="wlang_advanced_ssi_retrieve_xfer_on" t="Отримати передану сторону"/>
+	<w_phrase n="wlang_fkeyname_hold_private" t="Приватне володіння"/>
+	<w_phrase n="wlang_fkey_contact_list_buddy" t="BLF (Сервер)"/>
+	<w_phrase n="wlang_advanced_ssi_allow_sip_settings" t="Дозволити налаштування SIP"/>
+	<w_phrase n="wlang_prefs_tsczech" t="чеська"/>
+	<w_phrase n="wlang_advanced_ssi_dhcp_options_on_ip_aquire" t="Параметри DHCP=увімкнено"/>
+	<w_phrase n="wlang_advanced_ssi_dhcp_options_on_inform" t="Параметри DHCP=вимкнено"/>
+	<w_phrase n="wlang_advanced_ssi_headset_rings_once" t="Гарнітура дзвонить лише один раз"/>
+	<w_phrase n="wlang_F_ACD" t="ACD"/>
+	<w_phrase n="wlang_disabled" t="вимкнено"/>
+	<w_phrase n="wlang_unknown" t="невідомий"/>
+	<w_phrase n="wlang_sysinfo_ssi_status" t="Держава"/>
+	<w_phrase n="wlang_sysinfo_ssi_paired_with" t="У парі з"/>
+	<w_phrase n="wlang_sysinfo_ssi_vision_status" t="Стан підключення"/>
+	<w_phrase n="wlang_line_snomone" t="snomONE"/>
+	<w_phrase n="wlang_line_sutus" t="СУТУС до н.е"/>
+	<w_phrase n="wlang_prefs_redirection_fwd_always" t="Переадресація безумовна (CFU)"/>
+	<w_phrase n="wlang_prefs_redirection_fwd_busy" t="Переадресація зайнята (CFB)"/>
+	<w_phrase n="wlang_prefs_redirection_fwd_time" t="Переадресація без відповіді (CFNR)"/>
+	<w_phrase n="wlang_line_server_managed" t="Керується сервером"/>
+	<w_phrase n="wlang_fkeys_ssi_starcode" t="Зоряний код"/>
+	<w_phrase n="wlang_prio_asserted" t="Пріоритет стверджується"/>
+	<w_phrase n="wlang_replacement_dialp" t="Змінено xml-шаблони"/>
+	<w_phrase n="wlang_adr_action_url" t="URL-адреса дії"/>
+	<w_phrase n="wlang_sip_force_sendrecv_no_sdp" t="Примусово відправляти команду INVITE без SDP"/>
+	<w_phrase n="wlang_advanced_ssi_dnsserver1_v6" t="DNS-сервер 1 (v6)"/>
+	<w_phrase n="wlang_advanced_ssi_dnsserver2_v6" t="DNS-сервер 2 (v6)"/>
+	<w_phrase n="wlang_advanced_ssi_dnsserver3_v6" t="DNS-сервер 3 (v6)"/>
+	<w_phrase n="wlang_advanced_ssi_dnsserver4_v6" t="DNS-сервер 4 (v6)"/>
+	<w_phrase n="wlang_advanced_ssi_ntptimeserver_v6" t="Сервер часу NTP (v6)"/>
+	<w_phrase n="wlang_info_ipaddress_v6" t="Адреса IPv6"/>
+	<w_phrase n="wlang_advanced_ssi_domain_v6" t="Домен (v6)"/>
+	<w_phrase n="wlang_advanced_ssi_ipaddress_v6" t="IP-адреса (v6)"/>
+	<w_phrase n="wlang_advanced_ssi_ipv6_over_ipv4" t="Віддавайте перевагу IPv6"/>
+	<w_phrase n="wlang_advanced_ssi_dhcp_v6" t="DHCP(v6)"/>
+	<w_phrase n="wlang_advanced_ssi_dhcp_v6_autoconf" t="Автоконфігурація"/>
+	<w_phrase n="wlang_advanced_ssi_ipv6" t="IPv6"/>
+	<w_phrase n="wlang_advanced_ssi_more_control" t="Більше елементів керування"/>
+	<w_phrase n="wlang_cert_tab_8021x_certs" t="Сертифікати 802.1X"/>
+	<w_phrase n="wlang_cert_add_8021x_cert" t="Додати сертифікат 802.1X (архів TAR)"/>
+	<w_phrase n="wlang_cert_8021x_config" t="Конфігурація 802.1X"/>
+	<w_phrase n="wlang_ieee8021x_eap_auth_method_choice" t="IEEE 802.1X Authentication"/>
+	<w_phrase n="wlang_ieee8021x_eap_auth_method_choice_eap_md5" t="EAP Credentials"/>
+	<w_phrase n="wlang_ieee8021x_eap_auth_method_choice_eap_tls" t="EAP Certificate"/>
+	<w_phrase n="wlang_usb_storage_text" t="USB накопичувач"/>
+	<w_phrase n="wlang_usb_storage_allow_swupdate_text" t="Дозволити оновлення ПЗ"/>
+	<w_phrase n="wlang_usb_storage_allow_syslog_text" t="Дозволити трасування системного журналу"/>
+	<w_phrase n="wlang_usb_storage_allow_siptrace_text" t="Дозволити трасування SIP"/>
+	<w_phrase n="wlang_usb_storage_allow_httptrace_text" t="Дозволити трасування HTTP"/>
+	<w_phrase n="wlang_usb_storage_allow_pcap_text" t="Дозволити трасування PCAP"/>
+	<w_phrase n="wlang_usb_storage_passphrase_text" t="Пароль AES"/>
+	<w_phrase n="wlang_check_cseq_dlginfo_notify" t="Перевірте CSeq у Dlg Info Notify"/>
+	<w_phrase n="wlang_line_xsi_server" t="Сервер XSI"/>
+	<w_phrase n="wlang_line_xsi_user" t="Користувач XSI"/>
+	<w_phrase n="wlang_line_xsi_password" t="Пароль XSI"/>
+	<w_phrase n="wlang_line_xsi_retry_timer" t="Таймер повторних спроб XSI (с)"/>
+	<w_phrase n="wlang_line_xsi_events" t="Події XSI"/>
+	<w_phrase n="wlang_line_xsi_polling" t="Інтервал опитування дії XSI (с)"/>
+	<w_phrase n="wlang_line_tbook_download_interval" t="Інтервал завантаження телефонної книги (с)"/>
+	<w_phrase n="wlang_line_xsi_conf_updating" t="Інтервал оновлення дій конференції XSI (с)"/>
+	<w_phrase n="wlang_line_xsi_anywhere" t="Де завгодно"/>
+	<w_phrase n="wlang_line_server_directories_search" t="Каталоги серверів (пошук)"/>
+	<w_phrase n="wlang_line_server_directories_download" t="Каталоги серверів (завантажити)"/>
+	<w_phrase n="wlang_line_blf_park_pick_up_code" t="Код отримання BLF Park"/>
+	<w_phrase n="wlang_line_blf_directed_call_pickup_code" t="Направлений код перехоплення виклику BLF"/>
+	<w_phrase n="wlang_line_xsi_visual_voicemail" t="Візуальна голосова пошта"/>
+	<w_phrase n="wlang_line_xsi_callcenter_list" t="Список кол-центру"/>
+	<w_phrase n="wlang_line_xmpp_jid" t="Ідентифікатор XMPP"/>
+	<w_phrase n="wlang_line_xmpp_password" t="Пароль XMPP"/>
+	<w_phrase n="wlang_fkey_xmpp_presence" t="Контакт (XMPP)"/>
+	<w_phrase n="wlang_F_STARCODE" t="Зоряний код"/>
+	<w_phrase n="wlang_line_conference_server" t="Конференц-сервер"/>
+	<w_phrase n="wlang_line_call_logs" t="Журнали викликів"/>
+	<w_phrase n="wlang_line_ssi_local" t="Local"/>
+	<w_phrase n="wlang_line_tbook_download" t="Завантажити каталог"/>
+	<w_phrase n="wlang_line_broadsoft_features" t="Функції Broadsoft"/>
+	<w_phrase n="wlang_number_sign_encoding" t="Кодування цифрових знаків"/>
+	<w_phrase n="wlang_fkeyname_label_page_prev" t="Мітки назад"/>
+	<w_phrase n="wlang_fkeyname_label_page_next" t="Ярлики вперед"/>
+	<w_phrase n="wlang_fkeyname_smartlabel_page_prev" t="Попередня сторінка"/>
+	<w_phrase n="wlang_fkeyname_smartlabel_page_next" t="Наступна сторінка"/>
+	<w_phrase n="wlang_first_page" t="Перша сторінка"/>
+	<w_phrase n="wlang_last_page" t="Остання сторінка"/>
+	<w_phrase n="wlang_fkeyname_alternate_mode" t="Чергувати"/>
+	<w_phrase n="wlang_monitor_notify_for_subscription_refresh" t="Монітор сповіщення про підписки"/>
+	<w_phrase n="wlang_fkey_page_text" t="Сторінка"/>
+	<w_phrase n="wlang_prefs_label_font_size" t="Розмір шрифту мітки"/>
+	<w_phrase n="wlang_prefs_context_key_font_size" t="Розмір шрифту мітки контекстного ключа"/>
+	<w_phrase n="wlang_prefs_label_scroll_timeout" t="Повернутися до сторінки етикетки 1 через (s)"/>
+	<w_phrase n="wlang_prefs_ssi_large_edit_font" t="Великий редагований шрифт"/>
+	<w_phrase n="wlang_prefs_custom_bg_image_url" t="Користувацька URL-адреса фонового зображення"/>
+	<w_phrase n="wlang_prefs_custom_images" t="Користувацькі зображення"/>
+	<w_phrase n="wlang_prefs_custom_images_Light" t="Тема світлих зображень"/>
+	<w_phrase n="wlang_prefs_custom_images_Dark" t="Тема Темні зображення"/>
+	<w_phrase n="wlang_prefs_custom_images_Colorful" t="Тема Барвисті зображення"/>
+	<w_phrase n="wlang_prefs_custom_images_Industrial" t="Тема промислових зображень"/>
+	<w_phrase n="wlang_prefs_custom_images_Contrast" t="Theme Contrast Images"/>
+	<w_phrase n="wlang_prefs_fkey_icons" t="Fkey"/>
+	<w_phrase n="wlang_prefs_call_icons" t="Телефонуйте"/>
+	<w_phrase n="wlang_prefs_call_overlay_icons" t="Накладання виклику"/>
+	<w_phrase n="wlang_prefs_circle_overlay_icons" t="Накладення кола"/>
+	<w_phrase n="wlang_prefs_identity_state_icons" t="Держава ідентифікації"/>
+	<w_phrase n="wlang_prefs_contact_state_icons" t="Контактний стан"/>
+	<w_phrase n="wlang_prefs_contact_state_overlay_icons" t="Накладення стану контакту"/>
+	<w_phrase n="wlang_prefs_contact_type_icons" t="Тип контакту"/>
+	<w_phrase n="wlang_prefs_icon_type_icons" t="Тип значка"/>
+	<w_phrase n="wlang_prefs_titlebar_icons" t="Рядок заголовка"/>
+	<w_phrase n="wlang_prefs_error_icons" t="Помилка"/>
+	<w_phrase n="wlang_prefs_settings_window_icons" t="Вікно налаштувань"/>
+	<w_phrase n="wlang_prefs_system_icons" t="система"/>
+	<w_phrase n="wlang_prefs_other_icons" t="Інший"/>
+	<w_phrase n="wlang_prefs_background_icons" t="Фон"/>
+	<w_phrase n="wlang_prefs_extra_icons" t="Екстра"/>
+	<w_phrase n="wlang_prefs_upload" t="Завантажити"/>
+	<w_phrase n="wlang_accept_event_talk_without_sdp" t="Прийняти Event Talk без SDP"/>
+	<w_phrase n="wlang_fkeyname_snom" t="сном/Хмара"/>
+	<w_phrase n="wlang_prefs_ssi_sort_server_dir_result_by_last_name" t="Сортувати результати каталогу сервера за прізвищем"/>
+	<w_phrase n="wlang_directory_display_order" t="Порядок відображення каталогу"/>
+	<w_phrase n="wlang_display_order_first_name_last_name" t="Ім'я прізвище"/>
+	<w_phrase n="wlang_display_order_last_name_first_name" t="Прізвище Ім'я"/>
+	<w_phrase n="wlang_prefs_uxm_line_font_size" t="Розмір шрифту UXM (розкладка рядків)"/>
+	<w_phrase n="wlang_prefs_label_text_alignment" t="Другий дисплей вирівнювання тексту"/>
+	<w_phrase n="wlang_prefs_left" t="Ліворуч"/>
+	<w_phrase n="wlang_prefs_right" t="правильно"/>
+	<w_phrase n="wlang_prefs_center" t="центр"/>
+	<w_phrase n="wlang_prefs_alternate" t="Чергувати"/>
+	<w_phrase n="wlang_prefs_uxm_tile_font_size" t="Розмір шрифту UXM (макет мозаїки)"/>
+	<w_phrase n="wlang_line_ssi_initial_rtp_keep_alives" t="Кількість початкових підтримок на порту RTP"/>
+	<w_phrase n="wlang_line_msw_directory_number" t="Номер довідника"/>
+	<w_phrase n="wlang_line_msw_password" t="Пароль"/>
+	<w_phrase n="wlang_line_msw_web_url" t="Веб-адреса"/>
+	<w_phrase n="wlang_line_msw_services" t="Послуги Metaswitch"/>
+	<w_phrase n="wlang_line_ssi_server" t="Сервер"/>
+	<w_phrase n="wlang_cert_tab_custom_certs" t="Спеціальні сертифікати"/>
+	<w_phrase n="wlang_cert_tab_preinstalled_certs" t="Попередньо встановлені сертифікати"/>
+	<w_phrase n="wlang_advanced_ssi_http_trace_size" t="Розмір трасування HTTP (кількість повідомлень)"/>
+	<w_phrase n="wlang_advanced_ssi_http_body_trace_size" t="Обрізати тіло HTTP до цього розміру (у байтах)"/>
+	<w_phrase n="wlang_advanced_ssi_sip_trace_size" t="Розмір трасування SIP (кількість повідомлень)"/>
+	<w_phrase n="wlang_advanced_ssi_sip_body_trace_size" t="Обрізати тіло SIP до цього розміру (у байтах)"/>
+	<w_phrase n="wlang_user_default_blf_direction" t="Напрямок BLF за замовчуванням"/>
+	<w_phrase n="wlang_user_direction_none" t="немає"/>
+	<w_phrase n="wlang_xsi_anywhere" t="Де завгодно"/>
+	<w_phrase n="wlang_ssi_status" t="Держава"/>
+	<w_phrase n="wlang_adr_del_photo" t="Видалити фото"/>
+	<w_phrase n="wlang_caller_id_blocking" t="Блокування ідентифікатора абонента"/>
+	<w_phrase n="wlang_line_xsi_remote_office" t="Віддалений офіс"/>
+	<w_phrase n="wlang_line_xsi_simultaneous_ring" t="Одночасний дзвінок"/>
+	<w_phrase n="wlang_line_xsi_directoryfullsearch" t="Пошук повного імені"/>
+	<w_phrase n="wlang_advanced_ssi_xfer_dest_order_lifo" t="За замовчуванням ціль передачі останнього утримуваного виклику"/>
+	<w_phrase n="wlang_silent_alerting" t="Безшумне сповіщення"/>
+	<w_phrase n="wlang_advanced_ssi_call_join_1_held" t="коли утримується лише 1 виклик"/>
+	<w_phrase n="wlang_advanced_ssi_call_join_always" t="завжди"/>
+	<w_phrase n="wlang_fkeyname_ringer_silent" t="Режим тиші"/>
+	<w_phrase n="wlang_fkeyname_delete_msg" t="Видалити повідомлення"/>
+	<w_phrase n="wlang_line_xmpp_display_profile_image" t="Показати зображення профілю"/>
+	<w_phrase n="wlang_advanced_ssi_prov_polling_enabled" t="Пров опитування"/>
+	<w_phrase n="wlang_advanced_ssi_prov_polling_mode" t="Режим опитування"/>
+	<w_phrase n="wlang_advanced_ssi_prov_polling_mode_rel" t="Відносна"/>
+	<w_phrase n="wlang_advanced_ssi_prov_polling_mode_abs" t="Абсолютний"/>
+	<w_phrase n="wlang_advanced_ssi_prov_polling_mode_random" t="Випадковий"/>
+	<w_phrase n="wlang_advanced_ssi_prov_polling_period" t="Період голосування"/>
+	<w_phrase n="wlang_advanced_ssi_prov_polling_time" t="Час голосування"/>
+	<w_phrase n="wlang_advanced_ssi_prov_polling_time_random_end" t="Випадковий кінець часу опитування"/>
+	<w_phrase n="wlang_advanced_ssi_show_desktop_msg_in_call_screens" t="Показувати повідомлення на робочому столі на екранах викликів"/>
+	<w_phrase n="wlang_str_zone" t="зона"/>
+	<w_phrase n="wlang_F_REMOTE_OFFICE" t="Віддалений офіс"/>
+	<w_phrase n="wlang_fkeyname_zones" t="Багатоадресні зони"/>
+	<w_phrase n="wlang_fkeys_xml_label" t="Мітка XML"/>
+	<w_phrase n="wlang_advanced_ssi_type_quick_xfer_spd_dial_and_ext" t="Швидкий перехід до швидкого набору/розширення"/>
+	<w_phrase n="wlang_advanced_ssi_new_call" t="Новий виклик"/>
+	<w_phrase n="wlang_advanced_ssi_blind_transfer" t="Сліпий трансфер"/>
+	<w_phrase n="wlang_advanced_ssi_attended_transfer" t="Відвідав трансфер"/>
+	<w_phrase n="wlang_fkeyname_pgm" t="Програмований"/>
+	<w_phrase n="wlang_ssi_text" t="текст"/>
+	<w_phrase n="wlang_ssi_icon" t="значок"/>
+	<w_phrase n="wlang_ssi_icon_text" t="Значок і текст"/>
+	<w_phrase n="wlang_fkeys_ssi_header_smartlabel" t="Ключі SmartLabel"/>
+	<w_phrase n="wlang_fkeys_ssi_header_soft" t="Контекстно-залежні клавіші"/>
+	<w_phrase n="wlang_fkeys_ssi_header_nav" t="Клавіші навігації"/>
+	<w_phrase n="wlang_fkeys_ssi_header_hard" t="Виділені ключі"/>
+	<w_phrase n="wlang_fkeys_ssi_header_line" t="Лінійні клавіші"/>
+	<w_phrase n="wlang_fkeys_ssi_header_uxm" t="Ключі розширення"/>
+	<w_phrase n="wlang_fkeys_key_assignment" t="Призначення клавіш"/>
+	<w_phrase n="wlang_fkeys_smartlabel" t="SmartLabel"/>
+	<w_phrase n="wlang_line_idle_screen" t="Екран очікування"/>
+	<w_phrase n="wlang_line_default_smartlabel_display_mode" t="Типовий режим відображення"/>
+	<w_phrase n="wlang_line_expanded_smartlable_display_mode" t="Альтернативний режим відображення"/>
+	<w_phrase n="wlang_line_short" t="Короткий"/>
+	<w_phrase n="wlang_line_half" t="половина"/>
+	<w_phrase n="wlang_line_full" t="Повний"/>
+	<w_phrase n="wlang_line_call_screens" t="Екрани викликів"/>
+	<w_phrase n="wlang_line_other_screens" t="Інші екрани"/>
+	<w_phrase n="wlang_line_smartlabel_options" t="Параметри"/>
+	<w_phrase n="wlang_line_smartlabel_dismissal_time" t="Відновити режим відображення за замовчуванням через (сек.)"/>
+	<w_phrase n="wlang_fkeyname_cancel" t="Скасувати"/>
+	<w_phrase n="wlang_fkeyname_ok" t="в порядку"/>
+	<w_phrase n="wlang_fkeyname_left" t="Ліворуч"/>
+	<w_phrase n="wlang_fkeyname_right" t="правильно"/>
+	<w_phrase n="wlang_fkeyname_up" t="вгору"/>
+	<w_phrase n="wlang_fkeyname_down" t="вниз"/>
+	<w_phrase n="wlang_hoteling" t="Готель"/>
+	<w_phrase n="wlang_fkeyname_hoteling" t="Готель"/>
+	<w_phrase n="wlang_advanced_listen_in_on_handset" t="Слухайте на трубці"/>
+	<w_phrase n="wlang_prefs_auto_dial_target" t="Автоматичний набір цілі"/>
+	<w_phrase n="wlang_prefs_auto_dial_timeout" t="Час очікування автоматичного набору"/>
+	<w_phrase n="wlang_smartlabel_trigger_proximity" t="Датчик наближення"/>
+	<w_phrase n="wlang_smartlabel_trigger_shortpress" t="Коротке натискання клавіші Page"/>
+	<w_phrase n="wlang_smartlabel_trigger_longpress" t="Тривале натискання клавіші Page"/>
+	<w_phrase n="wlang_smartlabel_trigger_smartlabel_key_2_short_press" t="Коротко натисніть P2"/>
+	<w_phrase n="wlang_smartlabel_trigger_smartlabel_key_2_long_press" t="Тривале натискання P2"/>
+	<w_phrase n="wlang_smartlabel_trigger_smartlabel_key_3_short_press" t="Коротко натисніть P3"/>
+	<w_phrase n="wlang_smartlabel_trigger_smartlabel_key_3_long_press" t="Тривале натискання P3"/>
+	<w_phrase n="wlang_smartlabel_trigger_smartlabel_key_4_short_press" t="Коротко натисніть P4"/>
+	<w_phrase n="wlang_smartlabel_trigger_smartlabel_key_4_long_press" t="Тривале натискання P4"/>
+	<w_phrase n="wlang_smartlabel_trigger_smartlabel_key_8_short_press" t="Коротко натисніть P8"/>
+	<w_phrase n="wlang_smartlabel_trigger_smartlabel_key_8_long_press" t="Тривале натискання P8"/>
+	<w_phrase n="wlang_smartlabel_trigger_smartlabel_key_10_short_press" t="Коротко натисніть P10"/>
+	<w_phrase n="wlang_smartlabel_trigger_smartlabel_key_10_long_press" t="Тривале натискання P10"/>
+	<w_phrase n="wlang_smartlabel_trigger" t="Тригер альтернативного відображення"/>
+	<w_phrase n="wlang_smart_transfer" t="SmartTransfer"/>
+	<w_phrase n="wlang_preferences_appearance" t="Зовнішній вигляд"/>
+	<w_phrase n="wlang_preferences_general" t="Загальний"/>
+	<w_phrase n="wlang_preferences_ui_elements" t="Елементи інтерфейсу"/>
+	<w_phrase n="wlang_preferences_expansion_module_ui_elements" t="Елементи інтерфейсу модуля розширення"/>
+	<w_phrase n="wlang_preferences_font" t="Параметри шрифту"/>
+	<w_phrase n="wlang_preferences_expansion_module_font" t="Параметри шрифту модуля розширення"/>
+	<w_phrase n="wlang_preferences_ui_colors" t="Кольори інтерфейсу"/>
+	<w_phrase n="wlang_preferences_ui_smartlabel_colors" t="Кольори Smartlabel"/>
+	<w_phrase n="wlang_ui_theme" t="Кольорова тема інтерфейсу"/>
+	<w_phrase n="wlang_theme_Light" t="Світла тема"/>
+	<w_phrase n="wlang_theme_Dark" t="Темна тема"/>
+	<w_phrase n="wlang_theme_Colorful" t="Барвиста тема"/>
+	<w_phrase n="wlang_theme_Industrial" t="Індустріальна тема"/>
+	<w_phrase n="wlang_theme_Contrast" t="Contrast Theme"/>
+	<w_phrase n="wlang_text_color" t="Колір тексту"/>
+	<w_phrase n="wlang_titlebar_text_color" t="Колір тексту рядка заголовка"/>
+	<w_phrase n="wlang_titlebar_background_color" t="Колір фону рядка заголовка"/>
+	<w_phrase n="wlang_subtext_color" t="Колір підтексту"/>
+	<w_phrase n="wlang_extratext_color" t="Колір додаткового тексту"/>
+	<w_phrase n="wlang_extratext2_color" t="Extratext2 Color"/>
+	<w_phrase n="wlang_background_color" t="Колір фону"/>
+	<w_phrase n="wlang_fkey_background_color" t="Fkey Колір фону"/>
+	<w_phrase n="wlang_fkey_pressed_background_color" t="Колір тла натиснутої клавіші F"/>
+	<w_phrase n="wlang_fkey_separator_color" t="Колір роздільника клавіш F"/>
+	<w_phrase n="wlang_fkey_label_color" t="Колір мітки клавіші"/>
+	<w_phrase n="wlang_fkey_pressed_label_color" t="Fkey Pressed Label Color"/>
+	<w_phrase n="wlang_line_background_color" t="Колір тла лінії"/>
+	<w_phrase n="wlang_selected_line_background_color" t="Вибраний колір тла лінії"/>
+	<w_phrase n="wlang_selected_line_indicator_color" t="Вибраний колір індикатора лінії"/>
+	<w_phrase n="wlang_selected_line_text_color" t="Колір тексту виділеного рядка"/>
+	<w_phrase n="wlang_line_separator_color" t="Колір розділювача лінії"/>
+	<w_phrase n="wlang_scrollbar_color" t="Колір смуги прокрутки"/>
+	<w_phrase n="wlang_cursor_color" t="Колір курсору"/>
+	<w_phrase n="wlang_status_msgs_background_color" t="Колір фону повідомлень про стан"/>
+	<w_phrase n="wlang_status_msgs_border_color" t="Колір рамки повідомлень про стан"/>
+	<w_phrase n="wlang_regular_font_min_font_size" t="Мінімальний звичайний розмір шрифту"/>
+	<w_phrase n="wlang_fkeys_ssi_full_label_mode" t="Повний режим етикетки"/>
+	<w_phrase n="wlang_fkeys_ssi_label_mode" t="Режим етикетки"/>
+	<w_phrase n="wlang_fkeys_ssi_unknown" t="Невідомий"/>
+	<w_phrase n="wlang_advanced_ssi_settings_refresh" t="Налаштування Таймер оновлення"/>
+	<w_phrase n="wlang_advanced_tmz_unused" t="Невикористаний"/>
+	<w_phrase n="wlang_ldap_search_filter_during_call" t="Фільтр імен LDAP під час виклику"/>
+	<w_phrase n="wlang_ldap_number_filter_during_call" t="Фільтр номерів LDAP під час виклику"/>
+	<w_phrase n="wlang_fkeyname_lock" t="Замок"/>
+	<w_phrase n="wlang_fkeyname_voicemail_info" t="Інформація про голосову пошту"/>
+	<w_phrase n="wlang_advanced_ssi_xmpp_refresh_timer" t="Час очікування оновлення XMPP"/>
+	<w_phrase n="wlang_advanced_xmpp" t="XMPP"/>
+	<w_phrase n="wlang_advanced_ssi_xsi_heartbeat_interval" t="Інтервал серцевих скорочень XSI"/>
+	<w_phrase n="wlang_advanced_xsi" t="XSI"/>
+	<w_phrase n="wlang_fkeyname_caller_id_blocking" t="Блокування ідентифікатора абонента"/>
+	<w_phrase n="wlang_fkeyname_hide_outgoing_id" t="Приховати вихідний ID"/>
+	<w_phrase n="wlang_outgoing" t="Outgoing"/>
+	<w_phrase n="wlang_skip_welcome" t="Пропустити вітання"/>
+	<w_phrase n="wlang_general_file" t="Файл"/>
+	<w_phrase n="wlang_lcs" t="LCS"/>
+	<w_phrase n="wlang_cpu" t="ЦП"/>
+	<w_phrase n="wlang_advanced_ssi_als" t="Навколишнє світло"/>
+	<w_phrase n="wlang_advanced_ssi_active" t="Активний"/>
+	<w_phrase n="wlang_fkeyname_consultconf" t="Консультаційна конференція"/>
+	<w_phrase n="wlang_use_outbound_proxy_for_callback" t="Використовуйте вихідний проксі для зворотного виклику"/>
+	<w_phrase n="wlang_advanced_ssi_optimize_infobox" t="Оптимізований Infobox"/>
+	<w_phrase n="wlang_action_ssi_poll_settings" t="Параметри опитування URL-адреси дії"/>
+	<w_phrase n="wlang_action_ssi_poll" t="URL-адреса опитування"/>
+	<w_phrase n="wlang_advanced_ssi_sip_header_warning" t="Попередження заголовка SIP"/>
+	<w_phrase n="wlang_advanced_ssi_sip_header_warning_codes" t="Коди попереджень заголовка SIP"/>
+	<w_phrase n="wlang_prefs_tscanada" t="Канада"/>
+	<w_phrase n="wlang_prefs_tsrussia" t="Росія"/>
+	<w_phrase n="wlang_advanced_contact_src_prio" t="Пріоритет джерела контактів"/>
+	<w_phrase n="wlang_user_contact_src_sip_prio" t="Пріоритет джерела контактів (SIP)"/>
+	<w_phrase n="wlang_adr_ssi_tbook_is_full" t="Адресна книга повна"/>
+	<w_phrase n="wlang_phoneui_short" t="PUI"/>
+	<w_phrase n="wlang_advanced_ssi_ldap_sort_parameters" t="Параметри сортування LDAP"/>
+	<w_phrase n="wlang_advanced_ssi_ldap_sort_mode" t="Режим сортування LDAP"/>
+	<w_phrase n="wlang_advanced_ssi_none" t="Жодного"/>
+	<w_phrase n="wlang_adr_file_xml" t="Файл XML"/>
+	<w_phrase n="wlang_choose_file" t="Виберіть файл"/>
+	<w_phrase n="wlang_all_settings_cfg" t="Усі налаштування (.cfg)"/>
+	<w_phrase n="wlang_all_settings_xml" t="Усі налаштування (.xml)"/>
+	<w_phrase n="wlang_changed_settings_xml" t="Змінені налаштування (.xml)"/>
+	<w_phrase n="wlang_param_map" t="Карта параметрів TR-069"/>
+	<w_phrase n="wlang_call_screen_photo_size" t="Розмір фото на екранах викликів"/>
+	<w_phrase n="wlang_size_S" t="S"/>
+	<w_phrase n="wlang_size_M" t="M"/>
+	<w_phrase n="wlang_size_L" t="L"/>
+	<w_phrase n="wlang_size_XL" t="XL"/>
+	<w_phrase n="wlang_size_XXL" t="XXL"/>
+	<w_phrase n="wlang_size_XXXL" t="XXXL"/>
+	<w_phrase n="wlang_prompt_new_value" t="Введіть нове значення"/>
+	<w_phrase n="wlang_fkey_ssi_call_center_status" t="Статус кол-центру"/>
+	<w_phrase n="wlang_line_ssi_enable_mediasec" t="Увімкніть Mediasec"/>
+	<w_phrase n="wlang_callpark_notify" t="Сповіщення про паркування виклику"/>
+	<w_phrase n="wlang_call_park" t="Дзвінок Парк"/>
+	<w_phrase n="wlang_callpark_park_fac" t="Код паркування виклику"/>
+	<w_phrase n="wlang_smartlabel_trigger_any_smartlabel_key_short_press" t="Коротке натискання SmartLabel"/>
+	<w_phrase n="wlang_fkeyname_ocip" t="Каталог OCI-P"/>
+	<w_phrase n="wlang_fkeyname_ldap" t="Каталог LDAP"/>
+	<w_phrase n="wlang_fkeyname_serverdirectory" t="Каталог сервера"/>
+	<w_phrase n="wlang_handset_volume" t="Гучність слухавки"/>
+	<w_phrase n="wlang_headset_volume" t="Гучність гарнітури"/>
+	<w_phrase n="wlang_ringer_volume" t="Гучність дзвінка"/>
+	<w_phrase n="wlang_speaker_volume" t="Гучність динаміка"/>
+	<w_phrase n="wlang_max_speaker_volume" t="Максимальна гучність динаміка"/>
+	<w_phrase n="wlang_dtmf_volume" t="Гучність DTMF"/>
+	<w_phrase n="wlang_disconnect_on_onhook" t="Роз’єднати дзвінок при покладеній трубці"/>
+	<w_phrase n="wlang_long_cancel_is_blocking_caller" t="Додайте абонента до списку блокування за допомогою тривалого натискання «Скасувати»."/>
+	<w_phrase n="wlang_cancel_conference" t="Закінчити конференцію на Cancel Press"/>
+	<w_phrase n="wlang_short_cancel_denies_call" t="Скасувати відхиляє вхідний дзвінок під час підключення"/>
+	<w_phrase n="wlang_offhook_accept_calls" t="Прийняти вхідний дзвінок, коли слухавка піднята"/>
+	<w_phrase n="wlang_keyboard_lock_accepted_keys" t="Приймаються ключі, коли телефон заблоковано"/>
+	<w_phrase n="wlang_emergency_accepted_callkeys" t="Приймаються ключі, коли телефон знаходиться в режимі екстреного виклику"/>
+	<w_phrase n="wlang_pui_icon_override_xml_icon" t="Приховати значок XML на контекстно-залежних клавішах"/>
+	<w_phrase n="wlang_idle_status_btn_index" t="Розташування інформаційної кнопки на контекстно-залежних клавішах"/>
+	<w_phrase n="wlang_ringing_time" t="Час дзвінка до відхилення (с)"/>
+	<w_phrase n="wlang_always_show_active_call" t="Завжди показувати активний виклик"/>
+	<w_phrase n="wlang_mute_is_dnd_in_idle" t="Вимкнення звуку діє як DND на екрані очікування"/>
+	<w_phrase n="wlang_transfer_dialing_on_transfer" t="Поведінка ключа передачі під час передачі"/>
+	<w_phrase n="wlang_transfer_dialing_on_other" t="Поведінка інших ключів під час передачі"/>
+	<w_phrase n="wlang_advtab_display" t="Дисплей"/>
+	<w_phrase n="wlang_backlight_on_activity" t="Підсвічування активності"/>
+	<w_phrase n="wlang_backlight_when_idle" t="Підсвічування в режимі очікування"/>
+	<w_phrase n="wlang_contrast" t="Контраст"/>
+	<w_phrase n="wlang_primary_display" t="Основний дисплей"/>
+	<w_phrase n="wlang_label_display" t="Додатковий дисплей"/>
+	<w_phrase n="wlang_fkeys_ssi_usb_call_record" t="USB-запис викликів"/>
+	<w_phrase n="wlang_fkeys_ssi_usb_call_record_pause" t="Призупинення запису викликів USB"/>
+	<w_phrase n="wlang_subtext_pressed_color" t="Підтекст натиснутий колір"/>
+	<w_phrase n="wlang_page_indicator_color" t="Колір індикатора сторінки"/>
+	<w_phrase n="wlang_preferences_ui_expansion_module_colors" t="Кольори модуля розширення"/>
+	<w_phrase n="wlang_prefs_expansion_module_text_alignment" t="Вирівнювання тексту модуля розширення"/>
+	<w_phrase n="wlang_expansion_module_maintext_size" t="Розмір основного тексту модуля розширення"/>
+	<w_phrase n="wlang_expansion_module_subtext_size" t="Розмір підтексту модуля розширення"/>
+	<w_phrase n="wlang_size_XS" t="XS"/>
+	<w_phrase n="wlang_prefs_expansion_module_background_image" t="Фонове зображення модуля розширення"/>
+	<w_phrase n="wlang_fkeyname_context_in_idle_page_left" t="Сторінка зліва"/>
+	<w_phrase n="wlang_fkeyname_context_in_idle_page_right" t="Сторінка справа"/>
+	<w_phrase n="wlang_reciprocal_hold" t="Взаємне утримання"/>
+	<w_phrase n="wlang_provisioning_order" t="Наказ про забезпечення"/>
+	<w_phrase n="wlang_remote_3264_hold" t="RFC 3264 Утримувати"/>
+	<w_phrase n="wlang_use_contact_in_refer_to_hdr" t="Використовуйте заголовок контакту в Refer-To"/>
+	<w_phrase n="wlang_ack_before_reinvite_when_holding" t="ACK перед повторним запрошенням під час утримання"/>
+	<w_phrase n="wlang_F_CALL_PARK_DIAL" t="Виклик паркування"/>
+	<w_phrase n="wlang_F_CALL_PARK_DIAL_RETRIEVE" t="Паркування виклику"/>
+	<w_phrase n="wlang_tr69_use_acs" t="TR-069"/>
+	<w_phrase n="wlang_tr69_bootstrap" t="Надішліть BOOTSTRAP до ACS"/>
+	<w_phrase n="wlang_tr69_acs_url" t="ACS URL"/>
+	<w_phrase n="wlang_tr69_acs_user" t="Ім'я користувача ACS"/>
+	<w_phrase n="wlang_tr69_acs_passwd" t="Пароль ACS"/>
+	<w_phrase n="wlang_tr69_cnr_user" t="Ім'я користувача CNR"/>
+	<w_phrase n="wlang_tr69_cnr_pass" t="Пароль CNR"/>
+	<w_phrase n="wlang_tr69_p_inform_supervision_timeout" t="Час очікування періодичного інформування"/>
+	<w_phrase n="wlang_tr69_log" t="ТР-069 Журнал"/>
+	<w_phrase n="wlang_extend_context_key_in_idle" t="Розширте кількість контекстно-залежних клавіш до 12 у режимі очікування"/>
+	<w_phrase n="wlang_edit_mode_for_directory_search" t="Стандартні каталоги режиму редагування"/>
+	<w_phrase n="wlang_edit_mode_for_passwords" t="Екрани пароля режиму редагування за замовчуванням"/>
+	<w_phrase n="wlang_edit_mode_numbers" t="123"/>
+	<w_phrase n="wlang_edit_mode_lower_case" t="абв"/>
+	<w_phrase n="wlang_edit_mode_upper_case" t="ABC"/>
+	<w_phrase n="wlang_call_states_with_local_party" t="Держави виклику, що показують локальну ідентифікацію"/>
+	<w_phrase n="wlang_redirected_call_states_with_local_party" t="Стани перенаправленого виклику, що показують локальну ідентифікацію"/>
+	<w_phrase n="wlang_call_states_when_knocking" t="Call States грає Knocking Tone"/>
+	<w_phrase n="wlang_advanced_ssi_sip_tls_listen_port" t="Порт слухача TLS"/>
+	<w_phrase n="wlang_advanced_ssi_tls_listen" t="Слухайте через порт SIP TLS"/>
+	<w_phrase n="wlang_results" t="Результати"/>
+	<w_phrase n="wlang_ocip_max_hits" t="Максимальна кількість звернень"/>
+	<w_phrase n="wlang_suppress_sip_messages" t="Приховати повідомлення на робочому столі"/>
+	<w_phrase n="wlang_reject_calls_with_603" t="Відхилення дзвінків із відхиленим номером 603"/>
+	<w_phrase n="wlang_action_received_subscr_notify_url" t="Отримано підписку NOTIFY"/>
+	<w_phrase n="wlang_action_firewall_test" t="Отримано повідомлення CSTA Firetest"/>
+	<w_phrase n="wlang_adr_entry_id" t="ID запису"/>
+	<w_phrase n="wlang_advanced_customized_ssi_mtu_size" t="розмір MTU"/>
+	<w_phrase n="wlang_line_ssi_unsaf_via_received_rport" t="Визначте публічну адресу з відповіді REGISTER через заголовок"/>
+	<w_phrase n="wlang_info_branding_name" t="брендинг"/>
+	<w_phrase n="wlang_info_branding_version" t="Branding Version"/>
+	<w_phrase n="wlang_info_hardware_version" t="Апаратна версія"/>
+	<w_phrase n="wlang_prefs_pa1p_controls" t="Елементи керування PA1+"/>
+	<w_phrase n="wlang_prefs_ssi_pa1p_reset_button_for_dialing" t="Використовуйте кнопку скидання для набору номера:"/>
+	<w_phrase n="wlang_prefs_ssi_pa1p_nr_to_dial" t="Кнопка скидання набирає номер:"/>
+	<w_phrase n="wlang_prefs_ssi_pa1p_call_timeout" t="Телефон завершує розмову через встановлені секунди:"/>
+	<w_phrase n="wlang_prefs_ssi_pa1p_speaker_volume" t="Гучність динаміка (1-15):"/>
+	<w_phrase n="wlang_prefs_ssi_pa1p_amp_gain" t="Amplifier Gain (0-3):"/>
+	<w_phrase n="wlang_prefs_ssi_pa1p_spkr" t="Доповідач:"/>
+	<w_phrase n="wlang_prefs_ssi_pa1p_pin1" t="Pin 1:"/>
+	<w_phrase n="wlang_prefs_ssi_pa1p_pin2" t="Pin 2:"/>
+	<w_phrase n="wlang_prefs_ssi_pa1p_pin3" t="Pin 3:"/>
+	<w_phrase n="wlang_prefs_ssi_pa1p_pin4" t="Pin 4:"/>
+	<w_phrase n="wlang_prefs_ssi_pa1p_pin1_time" t="Таймер вимкнення Pin1 (секунди):"/>
+	<w_phrase n="wlang_prefs_ssi_pa1p_pin2_time" t="Таймер вимкнення Pin2 (секунди):"/>
+	<w_phrase n="wlang_prefs_ssi_pa1p_pin3_time" t="Таймер вимкнення Pin3 (секунди):"/>
+	<w_phrase n="wlang_prefs_ssi_pa1p_pin4_time" t="Таймер вимкнення Pin4 (секунди):"/>
+	<w_phrase n="wlang_line_ssi_multicast_relay_address" t="Адреса багатоадресної ретрансляції:"/>
+	<w_phrase n="wlang_advanced_ssi_eth_port_1" t="Порт 1:"/>
+	<w_phrase n="wlang_advanced_ssi_eth_port_2" t="Порт 2:"/>
+	<w_phrase n="wlang_line_ssi_rtcpencryption" t="Шифрування RTCP"/>
+	<w_phrase n="wlang_advanced_ssi_headset_mic" t="Гучність мікрофона гарнітури (1 - 8):"/>
+	<w_phrase n="wlang_advanced_ssi_blf_pickup_audio_indication" t="Аудіоіндикація звукознімача BLF"/>
+	<w_phrase n="wlang_advanced_ssi_dkey_dnd_behavior" t="Поведінка виділених ключів у DND"/>
+	<w_phrase n="wlang_advanced_ssi_dkey_dnd_behavior_normal" t="нормально"/>
+	<w_phrase n="wlang_advanced_ssi_dkey_dnd_behavior_reverse" t="зворотний"/>
+	<w_phrase n="wlang_advanced_early_media" t="Ранні медіа"/>
+	<w_phrase n="wlang_advanced_early_media_playback" t="Режим відтворення"/>
+	<w_phrase n="wlang_advanced_early_media_playback_never" t="Ніколи"/>
+	<w_phrase n="wlang_advanced_early_media_playback_preferred" t="Бажано"/>
+	<w_phrase n="wlang_advanced_early_media_playback_enforced" t="Примусово"/>
+	<w_phrase n="wlang_advanced_early_media_ring_fallback" t="Запасний тон дзвінка"/>
+	<w_phrase n="wlang_advanced_ssi_user_ringer_once" t="Ringtone is played only once"/>
+	<w_phrase n="wlang_fkeyname_identities" t="Identities"/>
+	<w_phrase n="wlang_action_ssi_received_sip_update" t="Received SIP UPDATE"/>
+	<w_phrase n="wlang_fkeyname_answer" t="Answer"/>
+	<w_phrase n="wlang_fkeyname_forward" t="Forward"/>
+	<w_phrase n="wlang_fkeyname_reject" t="Reject"/>
+	<w_phrase n="wlang_fkeyname_end_call" t="End call"/>
+	<w_phrase n="wlang_fkeyname_group_park" t="Group Park"/>
+	<w_phrase n="wlang_fkeyname_new_call" t="New Call"/>
+	<w_phrase n="wlang_fkeyname_resume" t="Resume"/>
+	<w_phrase n="wlang_fkeyname_back_space" t="Backspace"/>
+</w_phrases>

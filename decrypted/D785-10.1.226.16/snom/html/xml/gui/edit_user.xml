@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<IPPhoneBatch xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../schemas/minibrowser.xsd">
+  <IPPhoneMenu dtmf="off" id="properties">
+    <Title>Login</Title>
+    <MenuItem>
+      <If condition="$(show_feature:FEATURE_PUI_STYLE_SIO)">
+        <Name>$(lang:active)</Name>
+        <SubText>$(yes_no:$(set:user_active[$(var:identity)]))</SubText>
+      </If>
+      <Else>
+        <Name>$(lang:active) [$(yes_no:$(set:user_active[$(var:identity)]))]</Name>
+      </Else>
+      <Url>phone://mb_nop#toggleset:user_active[$(var:identity)]</Url>
+      <If condition="$(bool_eval:$(set:user_active[$(var:identity)]))">
+        <ExtraIconType>$(icon_type_enum:kIconTypeMenuSliderOn)</ExtraIconType>
+      </If>
+      <Else>
+        <ExtraIconType>$(icon_type_enum:kIconTypeMenuSliderOff)</ExtraIconType>
+      </Else>
+    </MenuItem>
+    <MenuItem name="$(lang:user_realname)">
+      <If condition="$(show_feature:FEATURE_PUI_STYLE_SIO)">
+        <SubText>$(set:user_realname[$(var:identity)])</SubText>
+      </If>
+      <ExtraIconType>$(icon_type_enum:kIconTypeMenuArrowRight)</ExtraIconType>
+      <Url>file:///xml/gui/templates.xml#sub=*[@id="input_template"]&amp;var:input_pool_key=0&amp;var:input_displayname=$(lang:user_realname)&amp;var:input_token=__Y__&amp;var:input_flags=a&amp;var:input_default=$(set:user_realname[$(var:identity)])&amp;var:input_mask=&amp;var:input_url=$(urlencode:"phone://mb_nop%23go_back%26set:user_realname[$(var:identity)]=__Y__")</Url>
+    </MenuItem>
+    <If condition="$(show_feature:FEATURE_PUI_STYLE_SIO)">
+      <MenuItem name="$(lang:user_idle_number)">
+        <SubText>$(set:user_idle_number[$(var:identity)])</SubText>
+        <ExtraIconType>$(icon_type_enum:kIconTypeMenuArrowRight)</ExtraIconType>
+      <Url>file:///xml/gui/templates.xml#sub=*[@id="input_template"]&amp;var:input_pool_key=0&amp;var:input_displayname=$(lang:user_idle_number)&amp;var:input_token=__Y__&amp;var:input_flags=a&amp;var:input_default=$(set:user_idle_number[$(var:identity)])&amp;var:input_mask=&amp;var:input_url=$(urlencode:"phone://mb_nop%23go_back%26set:user_idle_number[$(var:identity)]=__Y__")</Url>
+      </MenuItem>
+    </If>
+    <MenuItem name="$(lang:user_name)">
+      <If condition="$(show_feature:FEATURE_PUI_STYLE_SIO)">
+        <SubText>$(set:user_name[$(var:identity)])</SubText>
+      </If>
+      <ExtraIconType>$(icon_type_enum:kIconTypeMenuArrowRight)</ExtraIconType>
+      <Url>file:///xml/gui/templates.xml#sub=*[@id="input_template"]&amp;var:input_pool_key=0&amp;var:input_displayname=$(lang:user_name)&amp;var:input_token=__Y__&amp;var:input_flags=an&amp;var:input_default=$(set:user_name[$(var:identity)])&amp;var:input_mask=&amp;var:input_url=$(urlencode:"phone://mb_nop%23go_back%26set:user_name[$(var:identity)]=__Y__")</Url>
+    </MenuItem>
+    <MenuItem name="$(lang:user_pass)">
+      <ExtraIconType>$(icon_type_enum:kIconTypeMenuArrowRight)</ExtraIconType>
+      <Url>file:///xml/gui/templates.xml#sub=*[@id="input_template"]&amp;var:input_pool_key=0&amp;var:input_displayname=$(lang:user_pass)&amp;var:input_token=__Y__&amp;var:input_flags=p&amp;var:input_default=$(set:user_pass[$(var:identity)])&amp;var:input_mask=&amp;var:input_url=$(urlencode:"phone://mb_nop%23go_back%26set:user_pass[$(var:identity)]=__Y__")</Url>
+    </MenuItem>
+    <MenuItem name="$(lang:user_host)">
+      <If condition="$(show_feature:FEATURE_PUI_STYLE_SIO)">
+        <SubText>$(set:user_host[$(var:identity)])</SubText>
+      </If>
+      <ExtraIconType>$(icon_type_enum:kIconTypeMenuArrowRight)</ExtraIconType>
+      <Url>file:///xml/gui/templates.xml#sub=*[@id="input_template"]&amp;var:input_pool_key=0&amp;var:input_displayname=$(lang:user_host)&amp;var:input_token=__Y__&amp;var:input_flags=a&amp;var:input_default=$(set:user_host[$(var:identity)])&amp;var:input_mask=&amp;var:input_url=$(urlencode:"phone://mb_nop%23go_back%26set:user_host[$(var:identity)]=__Y__")</Url>
+    </MenuItem>
+    <MenuItem name="$(lang:user_outbound)">
+      <If condition="$(show_feature:FEATURE_PUI_STYLE_SIO)">
+        <SubText>$(set:user_outbound[$(var:identity)])</SubText>
+      </If>
+      <ExtraIconType>$(icon_type_enum:kIconTypeMenuArrowRight)</ExtraIconType>
+      <Url>file:///xml/gui/templates.xml#sub=*[@id="input_template"]&amp;var:input_pool_key=0&amp;var:input_displayname=$(lang:user_outbound)&amp;var:input_token=__Y__&amp;var:input_flags=a&amp;var:input_default=$(set:user_outbound[$(var:identity)])&amp;var:input_mask=&amp;var:input_url=$(urlencode:"phone://mb_nop%23go_back%26set:user_outbound[$(var:identity)]=__Y__")</Url>
+    </MenuItem>
+    <MenuItem name="$(lang:user_pname)">
+      <If condition="$(show_feature:FEATURE_PUI_STYLE_SIO)">
+        <SubText>$(set:user_pname[$(var:identity)])</SubText>
+      </If>
+      <ExtraIconType>$(icon_type_enum:kIconTypeMenuArrowRight)</ExtraIconType>
+      <Url>file:///xml/gui/templates.xml#sub=*[@id="input_template"]&amp;var:input_pool_key=0&amp;var:input_displayname=$(lang:user_pname)&amp;var:input_token=__Y__&amp;var:input_flags=a&amp;var:input_default=$(set:user_pname[$(var:identity)])&amp;var:input_mask=&amp;var:input_url=$(urlencode:"phone://mb_nop%23go_back%26set:user_pname[$(var:identity)]=__Y__")</Url>
+    </MenuItem>
+    <MenuItem name="$(lang:user_mailbox)">
+      <If condition="$(show_feature:FEATURE_PUI_STYLE_SIO)">
+        <SubText>$(set:user_mailbox[$(var:identity)])</SubText>
+      </If>
+      <ExtraIconType>$(icon_type_enum:kIconTypeMenuArrowRight)</ExtraIconType>
+      <Url>file:///xml/gui/templates.xml#sub=*[@id="input_template"]&amp;var:input_pool_key=0&amp;var:input_displayname=$(lang:user_mailbox)&amp;var:input_token=__Y__&amp;var:input_flags=a&amp;var:input_default=$(set:user_mailbox[$(var:identity)])&amp;var:input_mask=&amp;var:input_url=$(urlencode:"phone://mb_nop%23go_back%26set:user_mailbox[$(var:identity)]=__Y__")</Url>
+    </MenuItem>
+    <MenuItem name="$(lang:user_mailbox_retrieve)">
+      <If condition="$(show_feature:FEATURE_PUI_STYLE_SIO)">
+        <SubText>$(set:user_mailbox_retrieve[$(var:identity)])</SubText>
+      </If>
+      <ExtraIconType>$(icon_type_enum:kIconTypeMenuArrowRight)</ExtraIconType>
+      <Url>file:///xml/gui/templates.xml#sub=*[@id="input_template"]&amp;var:input_pool_key=0&amp;var:input_displayname=$(lang:user_mailbox_retrieve)&amp;var:input_token=__Y__&amp;var:input_flags=a&amp;var:input_default=$(set:user_mailbox_retrieve[$(var:identity)])&amp;var:input_mask=&amp;var:input_url=$(urlencode:"phone://mb_nop%23go_back%26set:user_mailbox_retrieve[$(var:identity)]=__Y__")</Url>
+    </MenuItem>
+    <SoftKeyItem>
+      <Name>CANCEL</Name>
+      <Url track="no">file:///xml/gui/identity.xml#reregister=$(math_eval:$(var:identity)-1)&amp;go_back</Url>
+    </SoftKeyItem>
+  </IPPhoneMenu>
+</IPPhoneBatch>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<IPPhoneBatch xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../schemas/minibrowser.xsd">
+  <IPPhoneInput track="off" id="hoteling_user_id" document_id="hotel_login">
+    <Url input_required="yes">phone://mb_nop#sub=*[@id="hoteling_user_pw"]&amp;var:userid=__Y__</Url>
+    <CancelUrl>phone://mb_nop#go_back</CancelUrl>
+    <InputItem>
+      <DisplayName>$(lang:username)</DisplayName>
+      <InputToken>__Y__</InputToken>
+      <InputFlags>AN</InputFlags>
+      <DefaultValue></DefaultValue>
+    </InputItem>
+    <SoftKeyItem>
+      <Name>F4</Name>
+      <SoftKey>F_GO_NEXT</SoftKey>
+    </SoftKeyItem>
+  </IPPhoneInput>
+  <IPPhoneInput track="off" id="hoteling_user_pw" document_id="hotel_login">
+    <Url>phone://mb_exit#action_ifc:Hoteling=guest_login,identity=$(current_line),user_id=$(var:userid),password=__X__</Url>
+    <CancelUrl>phone://mb_nop#go_back</CancelUrl>
+    <InputItem>
+      <DisplayName>$(lang:password)</DisplayName>
+      <InputToken>__X__</InputToken>
+      <InputFlags>pn</InputFlags>
+      <DefaultValue></DefaultValue>
+    </InputItem>
+    <SoftKeyItem>
+      <Name>F4</Name>
+      <SoftKey>F_GO_NEXT</SoftKey>
+    </SoftKeyItem>
+  </IPPhoneInput>
+</IPPhoneBatch>

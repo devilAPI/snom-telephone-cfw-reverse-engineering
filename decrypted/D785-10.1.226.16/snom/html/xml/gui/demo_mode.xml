@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<IPPhoneBatch xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../schemas/minibrowser.xsd">
+  <IPPhoneText id="demo_mode_on" name="$(lang:demo_mode)" stop_auto_leave="yes">
+    <Text>Loading...</Text>
+    <If condition="$(var:start_demo)=ON">
+      <If condition="$(bool_eval:$(is_set:$(var:demoscreen)) &amp; $(condition:$(var:demoscreen) != 7))">
+        <Fetch mil="15000">phone://mb_nop#var:demoscreen=$(math_eval:$(var:demoscreen)+1)</Fetch>
+      </If>
+      <ElIf condition="$(var:demoscreen) == 7">
+        <Fetch mil="15000">phone://mb_nop#var:demoscreen=1</Fetch>
+      </ElIf>
+      <Else>
+        <Fetch mil="15000">phone://mb_nop#var:demoscreen=2</Fetch>
+      </Else>
+    </If>
+    <Image>
+      <LocationX>0</LocationX>
+      <LocationY>0</LocationY>
+      <If condition="$(is_set:$(var:demoscreen))">
+        <Url>file:///bmp/colored/demo_bg_0$(var:demoscreen).png</Url>
+      </If>
+      <Else>
+        <Url>file:///bmp/colored/demo_bg_01.png</Url>
+      </Else>
+    </Image>
+    <If condition="$(set:phone_type)==snomD140">
+      <Led number="0" color="red">on</Led>
+      <Led number="1" color="red">on</Led>
+      <Led number="2" color="Green">on</Led>
+    </If>
+    <ElIf condition="$(set:phone_type)==snomD150">
+      <Led number="0" color="red">on</Led>
+      <Led number="1" color="red">on</Led>
+      <Led number="2" color="Green">on</Led>
+    </ElIf>
+    <ElIf condition="$(set:phone_type)==snomD717">
+      <Led number="0" color="red">on</Led>
+      <Led number="1" color="red">on</Led>
+      <Led number="2" color="red">on</Led>
+      <Led number="3" color="red">on</Led>
+      <Led number="4" color="red">on</Led>
+      <Led number="5" color="red">on</Led>
+      <Led number="6" color="Yellow">on</Led>
+      <Led number="7" color="Green">on</Led>
+    </ElIf>
+    <ElIf condition="$(set:phone_type)==snomD735">
+      <Led number="0" color="red">on</Led>
+      <Led number="1" color="red">on</Led>
+      <Led number="2" color="red">on</Led>
+      <Led number="3" color="red">on</Led>
+      <Led number="4" color="red">on</Led>
+      <Led number="5" color="red">on</Led>
+      <Led number="7" color="Yellow">on</Led>
+      <Led number="10" color="Yellow">on</Led>
+      <Led number="12" color="Green">on</Led>
+    </ElIf>
+    <ElIf condition="$(set:phone_type)==snomD335">
+      <Led number="0" color="red">on</Led>
+      <Led number="1" color="red">on</Led>
+      <Led number="2" color="red">on</Led>
+      <Led number="4" color="Yellow">on</Led>
+      <Led number="7" color="Yellow">on</Led>
+      <Led number="9" color="Green">on</Led>
+    </ElIf>
+    <ElIf condition="$(set:phone_type)==snomD785">
+      <Led number="0" color="red">on</Led>
+      <Led number="1" color="red">on</Led>
+      <Led number="2" color="red">on</Led>
+      <Led number="3" color="red">on</Led>
+      <Led number="4" color="red">on</Led>
+      <Led number="5" color="red">on</Led>
+      <Led number="7" color="Yellow">on</Led>
+      <Led number="9" color="Green">on</Led>
+    </ElIf>
+    <ElIf condition="$(set:phone_type)==snomD385">
+      <Led number="0" color="red">on</Led>
+      <Led number="1" color="red">on</Led>
+      <Led number="2" color="red">on</Led>
+      <Led number="4" color="Yellow">on</Led>
+      <Led number="6" color="Green">on</Led>
+    </ElIf>
+    <ElIf condition="$(set:phone_type)==snomD787">
+      <Led number="0" color="red">on</Led>
+      <Led number="1" color="red">on</Led>
+      <Led number="2" color="red">on</Led>
+      <Led number="3" color="red">on</Led>
+      <Led number="4" color="red">on</Led>
+      <Led number="5" color="red">on</Led>
+      <Led number="7" color="Yellow">on</Led>
+      <Led number="9" color="Green">on</Led>
+    </ElIf>
+    <If condition="$(bool_eval:$(condition:$(set:phone_type)==snomD810) | $(condition:$(set:phone_type)==GigasetP810))">
+      <Led number="0" color="red">on</Led>
+      <Led number="1" color="red">on</Led>
+      <Led number="3" color="Yellow">on</Led>
+      <Led number="4" color="Green">on</Led>
+    </If>
+    <ElIf condition="$(bool_eval:$(condition:$(set:phone_type)==snomD812) | $(condition:$(set:phone_type)==GigasetP82x))">
+      <Led number="0" color="red">on</Led>
+      <Led number="1" color="red">on</Led>
+      <Led number="2" color="red">on</Led>
+      <Led number="3" color="red">on</Led>
+      <Led number="4" color="red">on</Led>
+      <Led number="5" color="red">on</Led>
+      <Led number="7" color="Yellow">on</Led>
+      <Led number="10" color="Yellow">on</Led>
+      <Led number="12" color="Green">on</Led>
+    </ElIf>
+    <ElIf condition="$(bool_eval:$(condition:$(set:phone_type)==snomD815) | $(condition:$(set:phone_type)==GigasetP85x))">
+      <Led number="0" color="red">on</Led>
+      <Led number="1" color="red">on</Led>
+      <Led number="2" color="red">on</Led>
+      <Led number="3" color="red">on</Led>
+      <Led number="4" color="red">on</Led>
+      <Led number="5" color="red">on</Led>
+      <Led number="7" color="Yellow">on</Led>
+      <Led number="9" color="Green">on</Led>
+      <Led number="10" color="Yellow">on</Led>
+      <Led number="12" color="Green">on</Led>
+    </ElIf>
+    <SoftKeyItem>
+      <Name>Right</Name>
+      <If condition="$(bool_eval:$(is_set:$(var:demoscreen)) &amp; $(condition:$(var:demoscreen) != 7))">
+        <Url>phone://mb_nop#var:demoscreen=$(math_eval:$(var:demoscreen)+1)&amp;var:start_demo=ON</Url>
+      </If>
+      <ElIf condition="$(var:demoscreen) == 7">
+        <Url>phone://mb_nop#var:demoscreen=1&amp;var:start_demo=ON</Url>
+      </ElIf>
+      <Else>
+        <Url>phone://mb_nop#var:demoscreen=2&amp;var:start_demo=ON</Url>
+      </Else>
+    </SoftKeyItem>
+    <SoftKeyItem>
+      <Name>Left</Name>
+      <If condition="$(bool_eval:$(is_set:$(var:demoscreen)) &amp; $(condition:$(var:demoscreen) != 1))">
+        <Url>phone://mb_nop#var:demoscreen=$(math_eval:$(var:demoscreen)-1)&amp;var:start_demo=ON</Url>
+      </If>
+      <ElIf condition="$(var:demoscreen) == 1">
+        <Url>phone://mb_nop#var:demoscreen=7&amp;var:start_demo=ON</Url>
+      </ElIf>
+      <Else>
+        <Url>phone://mb_nop#var:demoscreen=6&amp;var:start_demo=ON</Url>
+      </Else>
+    </SoftKeyItem>
+    <SoftKeyItem>
+      <Name>Cancel</Name>
+      <Url>file:///xml/gui/demo_mode.xml#sub=*[@id="demo_mode_off"]&amp;var:start_demo=OFF</Url>
+    </SoftKeyItem>
+    <SoftKeyItem>
+      <Name>Enter</Name>
+      <Url>phone://mb_nop</Url>
+    </SoftKeyItem>
+    <SoftKeyItem>
+      <Name>onhook</Name>
+      <Url>phone://mb_nop</Url>
+    </SoftKeyItem>
+    <SoftKeyItem>
+      <Name>F_UP</Name>
+      <Url>phone://mb_nop</Url>
+    </SoftKeyItem>
+    <SoftKeyItem>
+      <Name>F_DOWN</Name>
+      <Url>phone://mb_nop</Url>
+    </SoftKeyItem>
+  </IPPhoneText>
+  <IPPhoneText id="demo_mode_off" name="$(lang:demo_mode)">
+    <Fetch mil="1">phone://mb_exit</Fetch>
+    <Led number="0" color="red">off</Led>
+    <Led number="1" color="red">off</Led>
+    <Led number="2" color="red">off</Led>
+    <Led number="3" color="red">off</Led>
+    <Led number="4" color="Yellow">off</Led>
+    <Led number="5" color="Yellow">off</Led>
+    <Led number="6" color="Green">off</Led>
+    <Led number="7" color="Yellow">off</Led>
+    <Led number="9" color="Yellow">off</Led>
+    <Led number="10" color="Yellow">off</Led>
+    <Led number="12" color="Green">off</Led>
+  </IPPhoneText>
+</IPPhoneBatch>

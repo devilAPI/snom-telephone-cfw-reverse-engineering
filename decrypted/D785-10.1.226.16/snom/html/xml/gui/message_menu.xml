@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<IPPhoneBatch  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../schemas/minibrowser.xsd">
+  <IPPhoneMenu has_phone_state="on" selectable="no" line_separator="no" track="no" icon_xoffset="$(msg_icon_x_offset)" text_xoffset="$(msg_text_x_offset)" extra_text_max_width="$(msg_extra_text_max_width)" line_height="$(msg_line_height)" line_yoffset="$(msg_line_y_offset)" dtmf="off" speedselect="off" id="call_state" state="relevant" document_id="Minibrowser_Message">
+    <fetch mil="$(msg_timeout)">phone://mb_exit</fetch>
+    <Title>$(msg_title)</Title>
+    <If condition="$(bool_eval:$(condition:$(gui_display_xsize)>320))">
+      <IconSize>M</IconSize>
+    </If>
+    <!-- Use smaller icons for 320x240 phones to preserve space -->
+    <Else>
+      <IconSize>S</IconSize>
+    </Else>
+    <If condition="$(bool_eval:$(show_feature:HAS_LARGER_PIXEL_SIZE))">
+      <FontSize>L</FontSize>
+      <FontSize2>S</FontSize2>
+    </If>
+    <Else>
+      <FontSize>XL</FontSize>
+      <FontSize2>M</FontSize2>
+    </Else>
+    <MenuItem name="$(msg_text)" custom_line_height="$(math_eval:$(gui_display_ysize)/5 + 1)" id="disconnected">
+      <PreText>$(msg_pretext)</PreText>
+      <SubText>$(msg_subtext)</SubText>
+      <ExtraText text_yalign="yalign_top" text_xoffset="$(msg_extra_text_offset)">$(msg_extra)</ExtraText>
+      <ExtraText2 text_yalign="yalign_top" text_xoffset="$(msg_extra_text_offset)">$(msg_extra2)</ExtraText2>
+      <If condition="$(msg_show_busy_icon)==yes">
+        <IconType>$(icon_type_enum:kIconTypeSymbolBusy)</IconType>
+      </If>
+      <Else>
+        <IconType>$(icon_type_enum:kIconTypeSymbolDisconnected)</IconType>
+      </Else>
+    </MenuItem>
+    <MenuItem name="$(msg_aoc)" id="disconnected_aoc">
+    </MenuItem>
+    <If condition="$(msg_show_fkey_background)==yes">
+      <SoftKeyItem><Name>F1</Name><SoftKey>F_NONE2</SoftKey></SoftKeyItem>
+    </If>
+    <SoftKeyItem>
+      <Name>ONHOOK</Name>
+      <Url>phone://mb_exit</Url>
+    </SoftKeyItem>
+    <SoftKeyItem>
+      <Name>SPEAKER</Name>
+      <Url>phone://mb_exit</Url>
+    </SoftKeyItem>
+  </IPPhoneMenu>
+</IPPhoneBatch>

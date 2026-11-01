@@ -1,0 +1,1882 @@
+<?xml version="1.0" encoding="utf-8"?>
+<phrases>
+	<language t="Suomi"/>
+	<phrase n="lang_none" t=""/>
+	<phrase n="lang_language_name" t="Suomi"/>
+	<phrase n="lang_cntry_CHN" t="Kiina"/>
+	<phrase n="lang_cntry_FIN" t="Suomi"/>
+	<phrase n="lang_cntry_GER" t="Saksa"/>
+	<phrase n="lang_cntry_IND" t="Intia"/>
+	<phrase n="lang_cntry_IDN" t="Indonesia"/>
+	<phrase n="lang_cntry_MYS" t="Malesia"/>
+	<phrase n="lang_cntry_MEX" t="Meksiko"/>
+	<phrase n="lang_cntry_NLD" t="Alankomaat"/>
+	<phrase n="lang_cntry_PRT" t="Portugali"/>
+	<phrase n="lang_cntry_ZAF" t="Etelä-Afrikka"/>
+	<phrase n="lang_cntry_GBR" t="Iso-Britannia"/>
+	<phrase n="lang_cntry_USA" t="Yhdysvallat"/>
+	<phrase n="lang_cntry_CAM" t="Central America"/>
+	<phrase n="lang_cntry_CAN" t="Kanada"/>
+	<phrase n="lang_cntry_CHL" t="Chile"/>
+	<phrase n="lang_cntry_BHS" t="Bahama"/>
+	<phrase n="lang_cntry_CUB" t="Kuuba"/>
+	<phrase n="lang_cntry_PRY" t="Paraguay"/>
+	<phrase n="lang_cntry_BMU" t="Bermuda"/>
+	<phrase n="lang_cntry_FLK" t="Falklandinsaaret"/>
+	<phrase n="lang_cntry_GRL" t="Grönlanti"/>
+	<phrase n="lang_cntry_FRO" t="Färsaaret"/>
+	<phrase n="lang_cntry_IRL" t="Irlanti"/>
+	<phrase n="lang_cntry_ESP" t="Espanja"/>
+	<phrase n="lang_cntry_ALB" t="Albania"/>
+	<phrase n="lang_cntry_AUT" t="Itävalta"/>
+	<phrase n="lang_cntry_BEL" t="Belgia"/>
+	<phrase n="lang_cntry_BRA" t="Brasilia"/>
+	<phrase n="lang_cntry_CAI" t="Caicossaaret"/>
+	<phrase n="lang_cntry_CHA" t="Khatam"/>
+	<phrase n="lang_cntry_HRV" t="Kroatia"/>
+	<phrase n="lang_cntry_CZE" t="Tšekki"/>
+	<phrase n="lang_cntry_DNK" t="Tanska"/>
+	<phrase n="lang_cntry_FRA" t="Ranska"/>
+	<phrase n="lang_cntry_HUN" t="Unkari"/>
+	<phrase n="lang_cntry_ITA" t="Italia"/>
+	<phrase n="lang_cntry_LUX" t="Luxemburg"/>
+	<phrase n="lang_cntry_MAK" t="Makedonia"/>
+	<phrase n="lang_cntry_NAM" t="Namibia"/>
+	<phrase n="lang_cntry_NOR" t="Norja"/>
+	<phrase n="lang_cntry_POL" t="Puola"/>
+	<phrase n="lang_cntry_SVK" t="Slovakia"/>
+	<phrase n="lang_cntry_SWD" t="Ruotsi"/>
+	<phrase n="lang_cntry_CHE" t="Sveitsi"/>
+	<phrase n="lang_cntry_GIB" t="Gibraltar"/>
+	<phrase n="lang_cntry_YUG" t="Serbia"/>
+	<phrase n="lang_cntry_BLR" t="Valko-Venäjä"/>
+	<phrase n="lang_cntry_BGR" t="Bulgaria"/>
+	<phrase n="lang_cntry_CYP" t="Kypros"/>
+	<phrase n="lang_cntry_EGY" t="Egypti"/>
+	<phrase n="lang_cntry_EST" t="Viro"/>
+	<phrase n="lang_cntry_GAZ" t="Gaza"/>
+	<phrase n="lang_cntry_GRC" t="Kreikka"/>
+	<phrase n="lang_cntry_ISR" t="Israel"/>
+	<phrase n="lang_cntry_JOR" t="Jordania"/>
+	<phrase n="lang_cntry_LVA" t="Latvia"/>
+	<phrase n="lang_cntry_LTU" t="Liettua"/>
+	<phrase n="lang_cntry_LBN" t="Libanon"/>
+	<phrase n="lang_cntry_MDA" t="Moldova"/>
+	<phrase n="lang_cntry_RUS" t="Venäjä"/>
+	<phrase n="lang_cntry_ROU" t="Romania"/>
+	<phrase n="lang_cntry_SYR" t="Syyria"/>
+	<phrase n="lang_cntry_TUR" t="Turkki"/>
+	<phrase n="lang_cntry_UKR" t="Ukraina"/>
+	<phrase n="lang_cntry_IRQ" t="Irak"/>
+	<phrase n="lang_cntry_IRN" t="Iran"/>
+	<phrase n="lang_cntry_ARM" t="Armenia"/>
+	<phrase n="lang_cntry_AZE" t="Azerbaidžan"/>
+	<phrase n="lang_cntry_GEO" t="Georgia"/>
+	<phrase n="lang_cntry_KAZ" t="Kazakstan"/>
+	<phrase n="lang_cntry_KGZ" t="Kirgisia"/>
+	<phrase n="lang_cntry_PAK" t="Pakistan"/>
+	<phrase n="lang_cntry_SGP" t="Singapore"/>
+	<phrase n="lang_cntry_KOR" t="Korea"/>
+	<phrase n="lang_cntry_JPN" t="Japani"/>
+	<phrase n="lang_cntry_AUS" t="Australia"/>
+	<phrase n="lang_cntry_NZL" t="Uusi-Seelanti"/>
+	<phrase n="lang_cntry_TON" t="Tonga"/>
+	<phrase n="lang_cntry_COL" t="Kolumbia"/>
+	<phrase n="lang_cntry_ECU" t="Ecuador"/>
+	<phrase n="lang_cntry_TTB" t="Trinidad &amp; Tobago"/>
+	<phrase n="lang_cntry_ARG" t="Argentiina"/>
+	<phrase n="lang_cntry_WAT" t="Länsi-Afrikka"/>
+	<phrase n="lang_cntry_CAT" t="Keski-Afrikka"/>
+	<phrase n="lang_cntry_EAT" t="Itä-Afrikka"/>
+	<phrase n="lang_cntry_VEN" t="Venezuela"/>
+	<phrase n="lang_cntry_NCL" t="Uusi-Kaledonia"/>
+	<phrase n="lang_cntry_UAE" t="Arabiemiirikunnat"/>
+	<phrase n="lang_cntry_THA" t="Thaimaa"/>
+	<phrase n="lang_F_SEARCH" t="Hae"/>
+	<phrase n="lang_F_SEARCH_typeSio" t="Hae"/>
+	<phrase n="lang_F_REBOOT" t="KäyUud"/>
+	<phrase n="lang_F_REBOOT_typeSio" t="Käynn uudelleen"/>
+	<phrase n="lang_F_REBOOT_smartlabel" t="Käyn uud"/>
+	<phrase n="lang_F_PAIR" t="Pariliitä"/>
+	<phrase n="lang_F_UNPAIR" t="Poista pariliit"/>
+	<phrase n="lang_F_JOIN" t="Liity"/>
+	<phrase n="lang_F_JOIN_typeSio" t="Liity"/>
+	<phrase n="lang_F_JOIN_WITH" t="Liity"/>
+	<phrase n="lang_F_LEAVE" t="Poistu"/>
+	<phrase n="lang_F_LEAVE_typeSio" t="Poistu"/>
+	<phrase n="lang_F_OK" t="OK"/>
+	<phrase n="lang_F_ACCEPT_CALL" t="Hyväks"/>
+	<phrase n="lang_F_ACCEPT_CALL_typeSio" t="Hyväksy"/>
+	<phrase n="lang_F_CANCEL" t="Peruut"/>
+	<phrase n="lang_F_CANCEL_typeSio" t="Peruuta"/>
+	<phrase n="lang_F_YES" t="Kyllä"/>
+	<phrase n="lang_F_NO" t="Ei"/>
+	<phrase n="lang_F_ADD_SPEAKER" t="+Kaiut"/>
+	<phrase n="lang_F_ADD_SPEAKER_typeSio" t="+Kaiutin"/>
+	<phrase n="lang_F_REMOVE_SPEAKER" t="-Kaiut"/>
+	<phrase n="lang_F_REMOVE_SPEAKER_typeSio" t="-Kaiutin"/>
+	<phrase n="lang_F_ADD_HANDSET" t="+Luuri"/>
+	<phrase n="lang_F_ADD_HANDSET_typeSio" t="+Luuri"/>
+	<phrase n="lang_F_REMOVE_HANDSET" t="-Luuri"/>
+	<phrase n="lang_F_REMOVE_HANDSET_typeSio" t="-Luuri"/>
+	<phrase n="lang_F_DELETE" t="Pyyhi"/>
+	<phrase n="lang_F_DELETE_typeSio" t="Pyyhi"/>
+	<phrase n="lang_F_ADR_BOOK" t="Puh.lu"/>
+	<phrase n="lang_F_ADR_BOOK_typeSio" t="Puhelinluettelo"/>
+	<phrase n="lang_F_ADR_BOOK_smartlabel" t="Puh.luet"/>
+	<phrase n="lang_F_DENYALL" t="Estä"/>
+	<phrase n="lang_F_DENYALL_typeSio" t="Estä soittaja"/>
+	<phrase n="lang_F_DENYALL_smartlabel" t="Estä"/>
+	<phrase n="lang_F_CALL_LIST" t="Loki"/>
+	<phrase n="lang_F_CALL_LIST_typeSio" t="Puheluloki"/>
+	<phrase n="lang_F_CALL_LIST_smartlabel" t="Puh.Loki"/>
+	<phrase n="lang_F_PLAY" t="Toista"/>
+	<phrase n="lang_F_STOP" t="Pysäytä"/>
+	<phrase n="lang_F_RESCAN" t="Skannaa uud"/>
+	<phrase n="lang_F_INCREASE" t="Lisää"/>
+	<phrase n="lang_F_DECREASE" t="Vähennä"/>
+	<phrase n="lang_F_BACK" t="⌫"/>
+	<phrase n="lang_F_BACK_typeSio" t="Askelpalautin"/>
+	<phrase n="lang_F_REDIAL" t="UudVal"/>
+	<phrase n="lang_F_REDIAL_typeSio" t="Uudelleenvalint"/>
+	<phrase n="lang_F_REDIAL_smartlabel" t="Uud. val"/>
+	<phrase n="lang_F_INSTANT_REDIAL" t="UudVal"/>
+	<phrase n="lang_F_INSTANT_REDIAL_typeSio" t="Väl. uudValint"/>
+	<phrase n="lang_F_INSTANT_REDIAL_smartlabel" t="Uud. val"/>
+	<phrase n="lang_F_ADD_NUMBER" t="Lisää"/>
+	<phrase n="lang_F_ADD_NUMBER_typeSio" t="Lisää numero"/>
+	<phrase n="lang_F_CONTACTS" t="Yhteyshenkilöt"/>
+	<phrase n="lang_F_PRESENCE" t="Tila"/>
+	<phrase n="lang_F_PRESENCE_typeSio" t="Näkyvyys"/>
+	<phrase n="lang_F_PRESENCE_smartlabel" t="Näkyvyys"/>
+	<phrase n="lang_F_SPEED_DIAL" t="Pika"/>
+	<phrase n="lang_F_SPEED_DIAL_typeSio" t="Pikavalinta"/>
+	<phrase n="lang_F_SPEED_DIAL_smartlabel" t="Pika"/>
+	<phrase n="lang_F_SAFE_TRANSFER" t="Turv."/>
+	<phrase n="lang_F_SAFE_TRANSFER_typeSio" t="Turv. siirto"/>
+	<phrase n="lang_F_MENUS_USERINPUT_SENDSIPINFO" t="UserInputAndSendSipInfo"/>
+	<phrase n="lang_F_MENUS_SENDSIPINFO" t="SendSipInfo"/>
+	<phrase n="lang_F_USERINPUT_SENDSIPINFO" t="SIP"/>
+	<phrase n="lang_F_SENDSIPINFO" t="SIP"/>
+	<phrase n="lang_F_SENDSIPINFO_typeSio" t="SIP-TIEDOT"/>
+	<phrase n="lang_F_SENDSIPINFO_smartlabel" t="SIP-&lt;br&gt;TIEDOT"/>
+	<phrase n="lang_F_REC_START" t="Nauh."/>
+	<phrase n="lang_F_REC_STOP" t="Pys na"/>
+	<phrase n="lang_F_RECORDER_START" t="Nauhoita"/>
+	<phrase n="lang_F_RECORDER_STOP" t="Pys nauh"/>
+	<phrase n="lang_F_RECORD_ON" t="Nauhoita"/>
+	<phrase n="lang_F_RECORD_OFF" t="Pysäytä nauhoit"/>
+	<phrase n="lang_F_RECORDING" t="nauhoittaa"/>
+	<phrase n="lang_F_LOGOFF_ALL" t="Kirjaa ulos"/>
+	<phrase n="lang_F_LOGOFF_ALL_typeSio" t="Kirjaa kaikki ulos"/>
+	<phrase n="lang_F_LOGOFF_ALL_smartlabel" t="Kirjaa ulos"/>
+	<phrase n="lang_F_STARCODE_short" t="TKoodi"/>
+	<phrase n="lang_F_STARCODE" t="Tähtikoodi"/>
+	<phrase n="lang_F_RELOAD_SERVER_AB" t="Lataa uudelleen"/>
+	<phrase n="lang_F_SERVER_AB" t="Palvelinluettelo"/>
+	<phrase n="lang_F_ANONYMOUS" t="An. ID"/>
+	<phrase n="lang_F_ANONYMOUS_long" t="Anonyymi tunnus"/>
+	<phrase n="lang_F_ANONYMOUS_smartlabel" t="Anon ID"/>
+	<phrase n="lang_F_VOICEMAIL_INFO_NEW_MSG" t="Vastaajatiedot"/>
+	<phrase n="lang_F_VOICEMAIL_INFO_short" t="Vast. viesti"/>
+	<phrase n="lang_F_VOICEMAIL_INFO" t="Vastaajatiedot"/>
+	<phrase n="lang_F_NO_NEW_MESSAGE" t="Ei uusia viestejä"/>
+	<phrase n="lang_F_NEW_MESSAGE" t="Uudet viestit"/>
+	<phrase n="lang_F_GUEST_LOCK" t="Lukitse"/>
+	<phrase n="lang_F_GUEST_UNLOCK" t="Avaa"/>
+	<phrase n="lang_F_IVR" t="IVR"/>
+	<phrase n="lang_F_DTMF" t="DTMF"/>
+	<phrase n="lang_F_ACTION_URL" t="URL"/>
+	<phrase n="lang_F_ACTION_URL_typeSio" t="Action URL"/>
+	<phrase n="lang_F_ACTION_URL_smartlabel" t="URL"/>
+	<phrase n="lang_F_AUTO_ANSWER" t="AutomV"/>
+	<phrase n="lang_F_AUTO_ANSWER_typeSio" t="Autom. vastaus"/>
+	<phrase n="lang_F_AUTO_ANSWER_smartlabel" t="Aut. vas"/>
+	<phrase n="lang_F_AUTO_ANSWER_ON" t="Automaattinen vastaus"/>
+	<phrase n="lang_F_BLF_short" t="BLF"/>
+	<phrase n="lang_F_BLF" t="Varattu lamppukenttä"/>
+	<phrase n="lang_F_LINE" t="Linja"/>
+	<phrase n="lang_F_LINE_short" t="Linja"/>
+	<phrase n="lang_F_LINE_RINGING" t="soi"/>
+	<phrase n="lang_F_LINE_OUTGOING" t="Soittaa"/>
+	<phrase n="lang_F_LINE_OFFHOOK" t="off-hook"/>
+	<phrase n="lang_F_LINE_IDLE" t="toimeton"/>
+	<phrase n="lang_F_LINE_HOLD" t="pidossa"/>
+	<phrase n="lang_F_LINE_FAILED" t="Offline"/>
+	<phrase n="lang_F_LINE_DISCONNECTED" t="katkaistu"/>
+	<phrase n="lang_F_LINE_DISCONNECTED_typeSio" t="katkaistu"/>
+	<phrase n="lang_F_LINE_CONNECTED" t="yhdistetty"/>
+	<phrase n="lang_F_LINE_BUSY" t="Varattu"/>
+	<phrase n="lang_F_LINE_HELD" t="Pidossa"/>
+	<phrase n="lang_F_LINE_CALLING" t="soittaa"/>
+	<phrase n="lang_F_LINE_RINGBACK" t="takaisinsoitto"/>
+	<phrase n="lang_F_LINE_HOLDING" t="pidossa"/>
+	<phrase n="lang_F_LINE_UNREGISTERED" t="Rekisteröimätön"/>
+	<phrase n="lang_F_LINE_IN_USE" t="Käytössä"/>
+	<phrase n="lang_F_LINE_FREE" t="vapaa"/>
+	<phrase n="lang_F_LINE_UNKNOWN" t="tuntematon"/>
+	<phrase n="lang_F_LINE_TALKING" t="puhuu"/>
+	<phrase n="lang_F_LINE_SEIZED" t="varattu"/>
+	<phrase n="lang_F_LINE_UNVAILABLE" t="ei saatavilla"/>
+	<phrase n="lang_F_LINE_ACTIVE" t="Aktiivinen"/>
+	<phrase n="lang_F_LINE_AVAILABLE" t="saatavilla"/>
+	<phrase n="lang_F_LINE_CLOSED" t="suljettu"/>
+	<phrase n="lang_F_LINE_AUTO_REDIAL" t="autom. uudelleenv"/>
+	<phrase n="lang_F_LINE_AUTO_REDIAL_typeSio" t="automaattinen uudelleenvalinta"/>
+	<phrase n="lang_F_LINE_CONFERENCING" t="konferenssissa"/>
+	<phrase n="lang_F_LINE_PARKED" t="pysäköity"/>
+	<phrase n="lang_F_LINE_NO_BUDDY" t="määrittämätön"/>
+	<phrase n="lang_F_LINE_DISABLED" t="Pois käytöstä"/>
+	<phrase n="lang_F_LINE_MSG_WAITING" t="viestejä odottaa"/>
+	<phrase n="lang_F_SHARED_LINE" t="JLinj"/>
+	<phrase n="lang_F_SHARED_LINE_typeSio" t="Jaettu linja"/>
+	<phrase n="lang_F_SHARED_LINE_smartlabel" t="JaetLinj"/>
+	<phrase n="lang_F_SHARED_LINE_REMOTE_SEIZED" t="Jaettu linja"/>
+	<phrase n="lang_F_SHARED_LINE_REMOTE_HOLD" t="Jaettu linja"/>
+	<phrase n="lang_F_SHARED_LINE_REMOTE_ALERT" t="Jaettu linja"/>
+	<phrase n="lang_F_SHARED_LINE_REMOTE_ACTIVE" t="Jaettu linja"/>
+	<phrase n="lang_F_SHARED_LINE_BRIDGE_ACTIVE" t="Jaettu linja"/>
+	<phrase n="lang_F_SHARED_LINE_BRIDGE_HOLD" t="Jaettu linja"/>
+	<phrase n="lang_F_SHARED_LINE_LOCAL_SEIZED" t="Jaettu linja"/>
+	<phrase n="lang_F_SHARED_LINE_LOCAL_HOLD" t="Jaettu linja"/>
+	<phrase n="lang_F_SHARED_LINE_LOCAL_ALERT" t="Jaettu linja"/>
+	<phrase n="lang_F_SHARED_LINE_LOCAL_ACTIVE" t="Jaettu linja"/>
+	<phrase n="lang_F_MULTICAST" t="Monil"/>
+	<phrase n="lang_F_MULTICAST_typeSio" t="Monilähetys"/>
+	<phrase n="lang_F_MULTICAST_smartlabel" t="ML-sivu"/>
+	<phrase n="lang_F_MULTICAST_ON" t="Monilähetys"/>
+	<phrase n="lang_F_MULTICAST_ZONE" t="MLalue"/>
+	<phrase n="lang_F_MULTICAST_ZONE_typeSio" t="Monilähetysalue"/>
+	<phrase n="lang_F_MULTICAST_ZONE_smartlabel" t="ML-alue"/>
+	<phrase n="lang_F_BUTTON_typeSio" t="PBX-painike"/>
+	<phrase n="lang_F_BUTTON" t="Pain"/>
+	<phrase n="lang_F_BUTTON_smartlabel" t="Pain"/>
+	<phrase n="lang_F_PUSH_TO_TALK" t="PTT"/>
+	<phrase n="lang_F_PUSH_TO_TALK_typeSio" t="Pikayhteys"/>
+	<phrase n="lang_F_PUSH_TO_TALK_smartlabel" t="PTT"/>
+	<phrase n="lang_F_INTERCOM_ON" t="Sisäpuhelu"/>
+	<phrase n="lang_F_INTERCOM" t="Sisäp"/>
+	<phrase n="lang_F_INTERCOM_typeSio" t="Sisäpuhelu"/>
+	<phrase n="lang_F_INTERCOM_smartlabel" t="Sisäp"/>
+	<phrase n="lang_F_PICKUP" t="Vastaa"/>
+	<phrase n="lang_F_CALL_CENTER_LIST" t="Puhelinkeskusluettelo"/>
+	<phrase n="lang_F_REMOTE_OFFICE" t="Toimis"/>
+	<phrase n="lang_F_REMOTE_OFFICE_typeSio" t="Etätoimisto"/>
+	<phrase n="lang_F_REMOTE_OFFICE_smartlabel" t="Etätoim"/>
+	<phrase n="lang_F_REMOTE_OFFICE_ON" t="Päällä"/>
+	<phrase n="lang_F_REMOTE_OFFICE_OFF" t="Pois päältä"/>
+	<phrase n="lang_F_ACD" t="ACD"/>
+	<phrase n="lang_F_ACD_WRAPUP" t="Lopeta"/>
+	<phrase n="lang_F_ACD_UNAVAILABLE" t="Ei saatavilla"/>
+	<phrase n="lang_F_ACD_AVAILABLE" t="Saatavilla"/>
+	<phrase n="lang_F_ACD_SIGN_OUT" t="Uloskirjautuminen"/>
+	<phrase n="lang_F_ACD_SIGN_IN" t="Sisäänkirjautuminen"/>
+	<phrase n="lang_F_ACD_LOGOUT" t="Uloskirjautuminen"/>
+	<phrase n="lang_F_ACD_LOGIN" t="Sisäänkirjautuminen"/>
+	<phrase n="lang_F_ZONES" t="ML-sivu"/>
+	<phrase n="lang_F_SMART_TRANSFER" t="SmartTransfer"/>
+	<phrase n="lang_F_SMART_TRANSFER_short" t="SmartTr"/>
+	<phrase n="lang_F_ALTERNATE_MODE" t="Vaihda"/>
+	<phrase n="lang_F_LABEL_PAGE_NEXT_typeSio" t="Seuraava"/>
+	<phrase n="lang_F_LABEL_PAGE_NEXT" t="Seuraava"/>
+	<phrase n="lang_F_LABEL_PAGE_NEXT_SMART_long" t="Seuraava sivu"/>
+	<phrase n="lang_F_LABEL_PAGE_NEXT_SMART_short" t="Sivu&gt;&gt;"/>
+	<phrase n="lang_F_LABEL_PAGE_PREV_typeSio" t="Edellinen"/>
+	<phrase n="lang_F_LABEL_PAGE_PREV" t="Edell"/>
+	<phrase n="lang_F_LABEL_PAGE_PREV_SMART_long" t="Edellinen sivu"/>
+	<phrase n="lang_F_LABEL_PAGE_PREV_SMART_short" t="&lt;&lt;Sivu"/>
+	<phrase n="lang_F_ADD_REJECTED_CONTACT" t="Lisää"/>
+	<phrase n="lang_F_SAVE_XSI_CONTACT" t="Tallenna"/>
+	<phrase n="lang_F_REFRESH" t="Päivitä"/>
+	<phrase n="lang_F_ADD_CONTACT" t="Lisää"/>
+	<phrase n="lang_F_ADD_CONTACT_typeSio" t="Lisää yhteystieto"/>
+	<phrase n="lang_F_SAVE_DIRECTORY_EDIT" t="Tallenna"/>
+	<phrase n="lang_F_GO_NEXT" t="Seuraava"/>
+	<phrase n="lang_F_GO_BACK" t="Edellinen"/>
+	<phrase n="lang_F_MENU_BACK" t="Back"/>
+	<phrase n="lang_F_SAVE" t="Tallenna"/>
+	<phrase n="lang_F_SAVE_CONTACT" t="Tallenna"/>
+	<phrase n="lang_F_SAFE_TRANSFER_OFF" t="Siirt"/>
+	<phrase n="lang_F_SAFE_TRANSFER_OFF_typeSio" t="Siirto"/>
+	<phrase n="lang_F_PARK" t="Pysäk"/>
+	<phrase n="lang_F_CALL_PARK_GROUP_DIAL" t="Group Park"/>
+	<phrase n="lang_F_PARK_typeSio" t="Pysäköi"/>
+	<phrase n="lang_F_PARK_smartlabel" t="Pysäköi"/>
+	<phrase n="lang_F_CALLRECORD_PAUSE" t="Keskeytä nauh"/>
+	<phrase n="lang_F_CALLRECORD_RESUME" t="Jatka nauh"/>
+	<phrase n="lang_F_CALLRECORD_CONTROL_ON" t="Nauhoita"/>
+	<phrase n="lang_F_CALLRECORD_CONTROL_OFF" t="Nauhoita"/>
+	<phrase n="lang_F_STATUS_UNREAD" t="Tiedot"/>
+	<phrase n="lang_F_STATUS" t="Tiedot"/>
+	<phrase n="lang_F_STATUS_long" t="Tiedotusviestit"/>
+	<phrase n="lang_F_STATUS_NOTIFICATIONS" t="Notifications"/>
+	<phrase n="lang_F_FAVORITES" t="Suosik"/>
+	<phrase n="lang_F_FAVORITES_typeSio" t="Suosikit"/>
+	<phrase n="lang_F_FAVORITES_smartlabel" t="Suosikit"/>
+	<phrase n="lang_F_SORT" t="Lajit"/>
+	<phrase n="lang_F_SORT_typeSio" t="Lajittele"/>
+	<phrase n="lang_F_CONTACTPOOL" t="Loki"/>
+	<phrase n="lang_F_CONTACTPOOL_typeSio" t="Yhteystietoloki"/>
+	<phrase n="lang_F_CONTACTPOOL_smartlabel" t="Loki"/>
+	<phrase n="lang_F_NEXT" t="Seuraava"/>
+	<phrase n="lang_F_DIRECTORY_SEARCH" t="LDAP"/>
+	<phrase n="lang_F_MISSED_LIST" t="Vas:tt"/>
+	<phrase n="lang_F_MISSED_LIST_typeSio" t="Vastaam. puhel"/>
+	<phrase n="lang_F_MISSED_LIST_smartlabel" t="Vas:tta"/>
+	<phrase n="lang_F_DIALED_LIST" t="Dialed"/>
+	<phrase n="lang_F_DIALED_LIST_typeSio" t="Dialed Calls"/>
+	<phrase n="lang_F_DIALED_LIST_smartlabel" t="Dialed"/>
+	<phrase n="lang_F_ACCEPTED_LIST" t="HyvPuh"/>
+	<phrase n="lang_F_ACCEPTED_LIST_typeSio" t="Hyväks. puhelut"/>
+	<phrase n="lang_F_ACCEPTED_LIST_smartlabel" t="Hyväks"/>
+	<phrase n="lang_F_DIALED" t="Valittu"/>
+	<phrase n="lang_F_RETRIEVE" t="Vast. viesti"/>
+	<phrase n="lang_F_RETRIEVE_smartlabel" t="Vast. viesti"/>
+	<phrase n="lang_F_RETRIEVE_typeSio" t="Vastaaja"/>
+	<phrase n="lang_F_RETRIEVE_ON" t="Vast. viesti"/>
+	<phrase n="lang_F_REDIRECT_OFF" t="eiSii"/>
+	<phrase n="lang_F_REDIRECT_OFF_smartlabel" t="eiSii"/>
+	<phrase n="lang_F_REDIRECT_OFF_typeSio" t="Siirto pois päältä"/>
+	<phrase n="lang_F_REDIRECT_ON" t="Soitonsiirto"/>
+	<phrase n="lang_F_REDIRECT_ON_typeSio" t="Soitonsiirto"/>
+	<phrase n="lang_F_REDIRECT_smartlabel" t="Soitonsiirto"/>
+	<phrase n="lang_F_RINGER_SILENT" t="Äänetön"/>
+	<phrase n="lang_F_RINGER_SILENT_typeSio" t="Äänetön tila"/>
+	<phrase n="lang_F_RINGER_SILENT_smartlabel" t="Äänetön"/>
+	<phrase n="lang_F_ABORT" t="ESC"/>
+	<phrase n="lang_F_ABORT_typeSio" t="Poistu"/>
+	<phrase n="lang_F_SUPPORT" t="Ohje"/>
+	<phrase n="lang_F_JUMP_BACK" t="Siirry"/>
+	<phrase n="lang_F_JUMP" t="Siirry"/>
+	<phrase n="lang_F_REDUCED" t="Supista"/>
+	<phrase n="lang_F_ALL" t="Enemmän"/>
+	<phrase n="lang_F_DIALOG" t="Puhel"/>
+	<phrase n="lang_F_DIALOG_typeSio" t="Seuraa puheluja"/>
+	<phrase n="lang_F_DIALOG_smartlabel" t="Puhelut"/>
+	<phrase n="lang_F_HEADSET" t="Kuulok"/>
+	<phrase n="lang_F_HEADSET_typeSio" t="Kuuloke"/>
+	<phrase n="lang_F_HEADSET_smartlabel" t="Kuuloke"/>
+	<phrase n="lang_F_HEADSET_ON" t="Kuulok"/>
+	<phrase n="lang_F_HEADSET_ON_typeSio" t="Kuuloke"/>
+	<phrase n="lang_F_HEADSET_ON_smartlabel" t="Kuuloke"/>
+	<phrase n="lang_F_SOFTWARE_UPDATE" t="Ohjelmistopäivitys"/>
+	<phrase n="lang_F_UPDATE" t="Päivitä"/>
+	<phrase n="lang_F_SMS" t="Tekstiviesti"/>
+	<phrase n="lang_F_CMC" t="CMC"/>
+	<phrase n="lang_F_CALL_COMPLETION" t="CC"/>
+	<phrase n="lang_F_UNMUTE" t="PoisMy"/>
+	<phrase n="lang_F_UNMUTE_typeSio" t="Poista mykistys"/>
+	<phrase n="lang_F_UNMUTE_smartlabel" t="PoistMyk"/>
+	<phrase n="lang_F_MUTE" t="Mykist"/>
+	<phrase n="lang_F_MUTE_typeSio" t="Mykistä"/>
+	<phrase n="lang_F_MUTE_smartlabel" t="Mykistä"/>
+	<phrase n="lang_F_REG_ACTIVATE" t="Aktivoi"/>
+	<phrase n="lang_F_ADD_PHONEBOOK" t="Lisää"/>
+	<phrase n="lang_F_ADD_PHONEBOOK_typeSio" t="Lisää yhteyshenkilö"/>
+	<phrase n="lang_F_LIST_MISSED" t="Vastaamaton"/>
+	<phrase n="lang_F_LIST_TAKEN" t="Vastaanotettu"/>
+	<phrase n="lang_F_LIST_TAKEN_typeSio" t="Received Calls"/>
+	<phrase n="lang_F_LIST_TAKEN_smartlabel" t="Received"/>
+	<phrase n="lang_F_DETAILS" t="Lisätiedot"/>
+	<phrase n="lang_F_DND_OFF" t="ÄläH"/>
+	<phrase n="lang_F_DND_OFF_typeSio" t="Älä häiritse"/>
+	<phrase n="lang_F_DND_OFF_smartlabel" t="ÄläHäi"/>
+	<phrase n="lang_F_DND" t="ÄläHäi"/>
+	<phrase n="lang_F_DND_typeSio" t="Älä häiritse"/>
+	<phrase n="lang_F_DND_smartlabel" t="ÄläHäi"/>
+	<phrase n="lang_F_DEF_ON" t="*Päällä"/>
+	<phrase n="lang_F_DEF_OFF" t="*Pois päältä"/>
+	<phrase n="lang_F_ON" t="Päällä"/>
+	<phrase n="lang_F_OFF" t="Pois päältä"/>
+	<phrase n="lang_F_START" t="Aloita"/>
+	<phrase n="lang_F_END" t="Lopeta"/>
+	<phrase n="lang_F_IDENTITY" t="Identiteetti"/>
+	<phrase n="lang_F_SETTINGS_typeSio" t="Asetukset"/>
+	<phrase n="lang_F_SETTINGS" t="Asetukset"/>
+	<phrase n="lang_F_EXECUTIVE_ASSISTANT_CONFIG" t="Johtavan assistentin konfig"/>
+	<phrase n="lang_F_EXECUTIVE_CONFIG" t="Joht.&lt;br&gt;Konfig"/>
+	<phrase n="lang_F_EXECUTIVE_CONFIG_typeSio" t="Johtajan konfig"/>
+	<phrase n="lang_F_ASSISTANT_CONFIG" t="Assist.&lt;br&gt;Konfig"/>
+	<phrase n="lang_F_ASSISTANT_CONFIG_typeSio" t="Assistentin konfig"/>
+	<phrase n="lang_F_EXEC_ASSIST_BEHALF_PUI_LISTING" t="Johtajan assistentti henkilön puolesta"/>
+	<phrase n="lang_F_EXEC_ASSIST_BEHALF" t="Puolesta"/>
+	<phrase n="lang_F_NEW" t="Uusi"/>
+	<phrase n="lang_F_URLU" t="a»A"/>
+	<phrase n="lang_F_URLU_typeSio" t="Muokkaustila"/>
+	<phrase n="lang_F_URLL" t="1»a"/>
+	<phrase n="lang_F_URLL_typeSio" t="Muokkaustila"/>
+	<phrase n="lang_F_123" t="A»1"/>
+	<phrase n="lang_F_123_typeSio" t="Muokkaustila"/>
+	<phrase n="lang_F_REDIRECT" t="Soitonsiirto"/>
+	<phrase n="lang_F_REDIRECT_typeSio" t="Soitonsiirto"/>
+	<phrase n="lang_F_HOLD_typeSio" t="Pito"/>
+	<phrase n="lang_F_HOLD" t="Pito"/>
+	<phrase n="lang_F_CONSULTCONF_ADD" t="Lisää"/>
+	<phrase n="lang_F_CONSULTCONF_ADD_typeSio" t="Konf. lisää"/>
+	<phrase n="lang_F_CONSULTCONF_ADD_smartlabel" t="Lisää"/>
+	<phrase n="lang_F_CONSULTCONF_JOIN" t="Liity"/>
+	<phrase n="lang_F_CONSULTCONF_JOIN_typeSio" t="Konf. liity"/>
+	<phrase n="lang_F_CONSULTCONF_JOIN_smartlabel" t="Liity"/>
+	<phrase n="lang_F_CONSULTCONF" t="Konferenssi"/>
+	<phrase n="lang_F_CONFERENCE" t="Konf."/>
+	<phrase n="lang_F_CONFERENCE_smartlabel" t="Konf."/>
+	<phrase n="lang_F_CONFERENCE_typeSio" t="Konferenssi"/>
+	<phrase n="lang_F_CONFERENCE_ON" t="Konferenssin pito"/>
+	<phrase n="lang_F_NO_CONFERENCE" t="ei konf."/>
+	<phrase n="lang_F_DEFLECT" t="Ohjaa"/>
+	<phrase n="lang_F_BLIND_TRANSFER" t="Sokea"/>
+	<phrase n="lang_F_BLIND_TRANSFER_typeSio" t="Sokea siirto"/>
+	<phrase n="lang_F_TRANSFER" t="Siirt"/>
+	<phrase n="lang_F_TRANSFER_typeSio" t="Siirrä"/>
+	<phrase n="lang_F_TRANSFER_smartlabel" t="Siirt"/>
+	<phrase n="lang_F_TRANSFER_CALL" t="Siirrä tämä puhelu"/>
+	<phrase n="lang_F_TRANSFER_SELECTED" t="Siirto valittu"/>
+	<phrase n="lang_F_DENY" t="Hylkää"/>
+	<phrase n="lang_F_DIAL" t="Valitse"/>
+	<phrase n="lang_F_EDIT" t="Muokkaa"/>
+	<phrase n="lang_F_CLEAR" t="Tyhjennä"/>
+	<phrase n="lang_F_DOWN" t="Alas"/>
+	<phrase n="lang_F_UP" t="Ylös"/>
+	<phrase n="lang_F_LEFT" t="Vasen"/>
+	<phrase n="lang_F_RIGHT" t="Oikea"/>
+	<phrase n="lang_F_EXTENSION" t="Alan."/>
+	<phrase n="lang_F_EXTENSION_typeSio" t="Alanumero"/>
+	<phrase n="lang_F_EXTENSION_smartlabel" t="Alanum."/>
+	<phrase n="lang_F_MESSAGE" t="Viesti"/>
+	<phrase n="lang_F_CONTACT_STATE_UNKNOWN" t="Tuntematon"/>
+	<phrase n="lang_F_CONTACT_STATE_AVAILABLE" t="Saatavilla"/>
+	<phrase n="lang_F_CONTACT_STATE_AVAILABLE_ON_MOBILE" t="Saatavilla (mobiili)"/>
+	<phrase n="lang_F_CONTACT_STATE_AVAILABLE_AT_DESK" t="Saatavilla (työpöytä)"/>
+	<phrase n="lang_F_CONTACT_STATE_INACTIVE" t="Inaktiivinen"/>
+	<phrase n="lang_F_CONTACT_STATE_BUSY" t="Varattu"/>
+	<phrase n="lang_F_CONTACT_STATE_URGENT_INTERRUPTIONS_ONLY" t="Vain kiireelliset asiat"/>
+	<phrase n="lang_F_CONTACT_STATE_IN_A_CALL" t="Puhelimessa"/>
+	<phrase n="lang_F_CONTACT_STATE_IN_A_CONFERENCE" t="In a Conference"/>
+	<phrase n="lang_F_CONTACT_STATE_IN_A_MEETING" t="Tapaamisessa"/>
+	<phrase n="lang_F_CONTACT_STATE_MEETING" t="Tapaaminen"/>
+	<phrase n="lang_F_CONTACT_STATE_HOLDING" t="Pidossa"/>
+	<phrase n="lang_F_CONTACT_STATE_DND" t="Älä häiritse"/>
+	<phrase n="lang_F_CONTACT_STATE_DND_ALL" t="Älä häiritse (kaikki)"/>
+	<phrase n="lang_F_CONTACT_STATE_DND_SELF" t="Älä häiritse (oma)"/>
+	<phrase n="lang_F_CONTACT_STATE_BE_RIGHT_BACK" t="Palaan pian"/>
+	<phrase n="lang_F_CONTACT_STATE_AWAY" t="Poissa"/>
+	<phrase n="lang_F_CONTACT_STATE_OFFLINE" t="Offline"/>
+	<phrase n="lang_F_CONTACT_STATE_INVISIBLE" t="Invisible"/>
+	<phrase n="lang_F_CONTACT_STATE_GROUP" t="Group"/>
+	<phrase n="lang_F_KEYEVENT" t="Pain."/>
+	<phrase n="lang_F_KEYEVENT_typeSio" t="Painiketapaht"/>
+	<phrase n="lang_F_KEYEVENT_short" t="Painike"/>
+	<phrase n="lang_F_XML" t="XML"/>
+	<phrase n="lang_continuous_text_speed_dial" t="Pikavalinta"/>
+	<phrase n="lang_continuous_text_reboot" t="Käynnistä uudelleen"/>
+	<phrase n="lang_continuous_text_network_restart" t="Network restart"/>
+	<phrase n="lang_continuous_text_search" t="Hae"/>
+	<phrase n="lang_continuous_text_cancel" t="Peruuta"/>
+	<phrase n="lang_continuous_text_yes" t="Kyllä"/>
+	<phrase n="lang_continuous_text_no" t="Ei"/>
+	<phrase n="lang_confirm_reboot" t="Käynnistetäänkö uudelleen?"/>
+	<phrase n="lang_on" t="Päällä"/>
+	<phrase n="lang_off" t="Pois päältä"/>
+	<phrase n="lang_busy" t="Varattu"/>
+	<phrase n="lang_short" t="Lyhyt"/>
+	<phrase n="lang_full" t="Täysi"/>
+	<phrase n="lang_half" t="Puolikas"/>
+	<phrase n="lang_F_HOLD_PRIVATE" t="YPito"/>
+	<phrase n="lang_F_HOLD_PRIVATE_typeSio" t="Yksityinen pito"/>
+	<phrase n="lang_F_HOLD_PRIVATE_smartlabel" t="YksPito"/>
+	<phrase n="lang_conference_off" t="Knf.Pito"/>
+	<phrase n="lang_conference_off_typeSio" t="Konferenssi pois päältä"/>
+	<phrase n="lang_edit_cmc" t="Asiakasasiakoodi:"/>
+	<phrase n="lang_dnd" t="ÄläH"/>
+	<phrase n="lang_red" t="Soitonsiirto"/>
+	<phrase n="lang_red_typeSio" t="Soitonsiirto"/>
+	<phrase n="lang_missed" t="Vastaamatta: "/>
+	<phrase n="lang_missed_typeSio" t="Vastaamatta: "/>
+	<phrase n="lang_edit" t="Muokkaa"/>
+	<phrase n="lang_F_EDIT_AND_DIAL" t="Muokkaa"/>
+	<phrase n="lang_F_EDIT_AND_DIAL_typeSio" t="Muokkaa &amp; valitse"/>
+	<phrase n="lang_edit_dial" t="Muokkaa ja valitse"/>
+	<phrase n="lang_dhcp" t="DHCP"/>
+	<phrase n="lang_enum" t="ENUM"/>
+	<phrase n="lang_mwi_mailbox1" t="Puheposti:"/>
+	<phrase n="lang_mwi_mailbox2" t="Sinulla on"/>
+	<phrase n="lang_mwi_mailbox3" t="Sinulla on viestejä."/>
+	<phrase n="lang_mwi_urgent" t="kiireellinen"/>
+	<phrase n="lang_mwi_goto_mailbox" t="Siirry puhepostiin?"/>
+	<phrase n="lang_challenge_user" t="Kirjaa käyttäjä"/>
+	<phrase n="lang_challenge_pw" t="Salasana"/>
+	<phrase n="lang_use_enum" t="Käytä ENUM:ia?"/>
+	<phrase n="lang_wiz_dhcp" t="Käytätkö DHCP:tä?"/>
+	<phrase n="lang_wiz_l2tp_ip_adr" t="L2TP IP -osoite:"/>
+	<phrase n="lang_wiz_ip_adr" t="IP-osoite:"/>
+	<phrase n="lang_wiz_mac" t="MAC:"/>
+	<phrase n="lang_wiz_wifi_mac" t="Wi-Fi MAC:"/>
+	<phrase n="lang_wiz_version" t="Versio:"/>
+	<phrase n="lang_wiz_netmask" t="Verkon maski:"/>
+	<phrase n="lang_wiz_gateway" t="IP-yhdyskäytävä:"/>
+	<phrase n="lang_wiz_dns_server" t="DNS-palvelin:"/>
+	<phrase n="lang_wiz_welcome" t="Tervetuloa! Paina painiketta kirjautuaksesi."/>
+	<phrase n="lang_wiz_http_user" t="Enter new HTTP username"/>
+	<phrase n="lang_wiz_http_pass" t="Enter new HTTP password"/>
+	<phrase n="lang_wiz_short_pass" t="Password too short"/>
+	<phrase n="lang_terminated_finished" t="Päättynyt"/>
+	<phrase n="lang_try_parking" t="Pysäköidään puhelua"/>
+	<phrase n="lang_try_parking_typeSio" t="Pysäköidään puhelua"/>
+	<phrase n="lang_holding" t="Puhelut pidossa: "/>
+	<phrase n="lang_select_list" t="Puheluloki"/>
+	<phrase n="lang_list_all" t="Kaikki"/>
+	<phrase n="lang_list_new" t="Uusi"/>
+	<phrase n="lang_list_old" t="Vanha"/>
+	<phrase n="lang_list_missed" t="Vastaamaton"/>
+	<phrase n="lang_list_taken" t="Vastaanotettu"/>
+	<phrase n="lang_list_dialed" t="Valittu"/>
+	<phrase n="lang_list_no_data" t="(Ei tietoja)"/>
+	<phrase n="lang_list_details" t="Lisätiedot"/>
+	<phrase n="lang_list_details_time" t="Aika:"/>
+	<phrase n="lang_list_details_duration" t="Kesto:"/>
+	<phrase n="lang_list_details_costs" t="Hinnat:"/>
+	<phrase n="lang_list_details_missed" t="Vastaamatta:"/>
+	<phrase n="lang_list_details_to" t="Kohde:"/>
+	<phrase n="lang_list_details_from" t="Soittaja:"/>
+	<phrase n="lang_reg_activate" t="Aktivoi"/>
+	<phrase n="lang_reg_account" t="Tili:"/>
+	<phrase n="lang_reg_registrar" t="Rekisteröijä:"/>
+	<phrase n="lang_reg_explanation_failed" t="Rekisteröinti epäonnistui"/>
+	<phrase n="lang_reg_explanation_registering" t="Rekisteröidään"/>
+	<phrase n="lang_reg_explanation_registered" t="Rekisteröity"/>
+	<phrase n="lang_menu_info_320" t="Tiedot"/>
+	<phrase n="lang_menu_conf_reset" t="Nollaa"/>
+	<phrase n="lang_menu_gen_contrast" t="Kontrasti"/>
+	<phrase n="lang_menu_gen_ringtone" t="Soittoääni"/>
+	<phrase n="lang_menu_web_webserver_type" t="Palvelin"/>
+	<phrase n="lang_menu_function_key" t="Funktionäppäimet"/>
+	<phrase n="lang_menu_tser_timer" t="Ajastin"/>
+	<phrase n="lang_menu_red_target" t="Kohde"/>
+	<phrase n="lang_menu_ringer1" t="Soittoääni 1"/>
+	<phrase n="lang_menu_ringer2" t="Soittoääni 2"/>
+	<phrase n="lang_menu_ringer3" t="Soittoääni 3"/>
+	<phrase n="lang_menu_ringer4" t="Soittoääni 4"/>
+	<phrase n="lang_menu_ringer5" t="Soittoääni 5"/>
+	<phrase n="lang_menu_ringer6" t="Soittoääni 6"/>
+	<phrase n="lang_menu_ringer7" t="Soittoääni 7"/>
+	<phrase n="lang_menu_ringer8" t="Soittoääni 8"/>
+	<phrase n="lang_menu_ringer9" t="Soittoääni 9"/>
+	<phrase n="lang_menu_ringer10" t="Soittoääni 10"/>
+	<phrase n="lang_vol_headset" t="Kuulokkeen äänenvoimakkuus"/>
+	<phrase n="lang_vol_handset" t="Luurin äänenvoimakkuus"/>
+	<phrase n="lang_vol_speaker" t="Kaiuttimen äänenvoimakkuus"/>
+	<phrase n="lang_audio_speaker" t="Kaiutin"/>
+	<phrase n="lang_audio_handset" t="Luuri"/>
+	<phrase n="lang_audio_headset" t="Kuuloke"/>
+	<phrase n="lang_vol_contrast" t="Näytön kontrasti"/>
+	<phrase n="lang_confirm_factory" t="Tehdasasetukset?"/>
+	<phrase n="lang_confirm_logoff_all" t="Kirjataanko kaikki käyttäjät ulos?"/>
+	<phrase n="lang_calling" t="Soittaa"/>
+	<phrase n="lang_connected" t="Yhdistetty"/>
+	<phrase n="lang_connected_typeSio" t="Yhdistetty"/>
+	<phrase n="lang_ringing" t="Soi"/>
+	<phrase n="lang_enter_number" t="Syötä numero"/>
+	<phrase n="lang_held_by" t="Pitää: "/>
+	<phrase n="lang_ok" t="[Ok?]"/>
+	<phrase n="lang_menu100_phone_book" t="Puhelinluettelo"/>
+	<phrase n="lang_menu100_ldap_book" t="LDAP-käyttöoikeus"/>
+	<phrase n="lang_menu100_call_lists" t="Puheluloki"/>
+	<phrase n="lang_menu100_settings" t="Asetukset"/>
+	<phrase n="lang_sel100_logoff_all" t="Kirjaa kaikki identiteetit ulos"/>
+	<phrase n="lang_sel100_logoff_one" t="Kirjaa identiteetti ulos"/>
+	<phrase n="lang_sel100_activeline" t="Valitse lähtevä identiteetti"/>
+	<phrase n="lang_sel100_admin_mode" t="Pääkäyttäjän tila"/>
+	<phrase n="lang_sel100_user_mode" t="Käyttäjän tila"/>
+	<phrase n="lang_sel100_net_info" t="Tietoa verkosta"/>
+	<phrase n="lang_sel100_mem_info" t="Muistin tiedot"/>
+	<phrase n="lang_menu_ringtone" t="Soittoääni"/>
+	<phrase n="lang_dnd_active" t="ÄläH aktiivinen"/>
+	<phrase n="lang_update" t="Ohjelmistopäivitys"/>
+	<phrase n="lang_update_a" t="Toteutetaanko?"/>
+	<phrase n="lang_update_reboot" t="Käynnistetään uudelleen ohjelmiston päivittämiseksi"/>
+	<phrase n="lang_unplugged" t="Kytketty irti"/>
+	<phrase n="lang_ethernet_cable" t="Ethernet-kaapeli irti"/>
+	<phrase n="lang_hid_plug" t="HID-laitetta yhdistetään"/>
+	<phrase n="lang_hid_connected" t="HID-laite yhdistetty"/>
+	<phrase n="lang_hid_disconnected" t="HID-laite kytketty irti"/>
+	<phrase n="lang_temperature" t="Temperature"/>
+	<phrase n="lang_temperature_connected" t="Temperature sensor connected"/>
+	<phrase n="lang_language" t="Kieli"/>
+	<phrase n="lang_current_date" t="Päivä"/>
+	<phrase n="lang_current_time" t="Aika"/>
+	<phrase n="lang_network_settings" t="Verkko"/>
+	<phrase n="lang_dns_domain" t="DNS-verkkotunnus"/>
+	<phrase n="lang_dns_server1" t="DNS-palvelin1"/>
+	<phrase n="lang_dns_server2" t="DNS-palvelin2"/>
+	<phrase n="lang_ntp_server" t="NTP-palvelin"/>
+	<phrase n="lang_no_ip_adr" t="Virheellinen IP-osoite"/>
+	<phrase n="lang_password" t="Salasana"/>
+	<phrase n="lang_username" t="Käyttäjä"/>
+	<phrase n="lang_reset_settings" t="Nollaa arvot"/>
+	<phrase n="lang_networkadvanced_settings" t="Lisäasetukset"/>
+	<phrase n="lang_admin_mode_password" t="Pääkäyttäjän tilan salasana"/>
+	<phrase n="lang_guess_number" t="Pikahaku"/>
+	<phrase n="lang_guess_number_len" t="Pikahaun aloituspituus"/>
+	<phrase n="lang_admin_mode_pwd" t="Pääk. salas"/>
+	<phrase n="lang_call_waiting" t="Puhelu odottaa"/>
+	<phrase n="lang_menu100_red_time" t="Siirtoaika"/>
+	<phrase n="lang_menu100_red_time_typeSio" t="Siirtoaika"/>
+	<phrase n="lang_menu100_timezone" t="Aikavyöhyke"/>
+	<phrase n="lang_menu100_dialtone" t="Valintaääni"/>
+	<phrase n="lang_menu100_call_completion" t="Puhelun lopetus"/>
+	<phrase n="lang_menu100_cc_waiting" t="Odottaa: "/>
+	<phrase n="lang_menu100_cc_dial" t="Valitse: "/>
+	<phrase n="lang_menu100_netmask" t="Verkon maski"/>
+	<phrase n="lang_menu100_gateway" t="IP-yhdyskäytävä"/>
+	<phrase n="lang_menu100_webserver_type" t="Verkkopalvelimen tyyppi"/>
+	<phrase n="lang_enum100_disp_always" t="Aina"/>
+	<phrase n="lang_enum100_disp_on" t="Päällä"/>
+	<phrase n="lang_enum100_disp_off" t="Pois päältä"/>
+	<phrase n="lang_enum_disp_webserver_off" t="Pois päältä"/>
+	<phrase n="lang_enum_disp_webserver_http" t="Vain HTTP"/>
+	<phrase n="lang_enum_disp_webserver_https" t="Vain HTTPS"/>
+	<phrase n="lang_enum_disp_webserver_http_https" t="HTTP &amp; HTTPS"/>
+	<phrase n="lang_enum_disp_func_key_destination" t="Alanumero"/>
+	<phrase n="lang_enum_disp_func_key" t="Painike"/>
+	<phrase n="lang_xsi_silent_alert" t="Äänetön hälytys"/>
+	<phrase n="lang_privacy_out" t="Piilota lähtevä tunnus"/>
+	<phrase n="lang_quick_transfer" t="Quick transfer"/>
+	<phrase n="lang_quick_transfer_newcall" t="Make new call"/>
+	<phrase n="lang_quick_transfer_blind" t="Blind xfer"/>
+	<phrase n="lang_quick_transfer_attended" t="Attended xfer"/>
+	<phrase n="lang_privacy_in" t="Estä tuntemattomat"/>
+	<phrase n="lang_privacy_in_typeSio" t="Estä tuntemattomat"/>
+	<phrase n="lang_auto_dial" t="Automaattinen valinta"/>
+	<phrase n="lang_call_completion" t="Puhelun lopetus"/>
+	<phrase n="lang_vlan_id" t="VLAN-tunnus (1-4094)"/>
+	<phrase n="lang_vlan_qos" t="VLAN-prioriteetti (0-7)"/>
+	<phrase n="lang_vlan_reset" t="Nollaa VLAN"/>
+	<phrase n="lang_vlan_port_tagging" t="VLAN tagging on LAN"/>
+	<phrase n="lang_vlan_pc_id" t="VLAN ID on LAN port"/>
+	<phrase n="lang_identity_settings" t="Identiteetti"/>
+	<phrase n="lang_preferences_settings" t="Asetukset"/>
+	<phrase n="lang_maintenance_settings" t="Ylläpito"/>
+	<phrase n="lang_auto_connect_indication" t="Automaattisen vast. indikaatio"/>
+	<phrase n="lang_sel100_reregister_line" t="Rekisteröi identiteetti uudelleen"/>
+	<phrase n="lang_sel100_edit_line" t="Editoi identiteettiä"/>
+	<phrase n="lang_enum_disp_cw_visual" t="Vain visuaalinen"/>
+	<phrase n="lang_enum_disp_cw_visual_short" t="Visuaalinen"/>
+	<phrase n="lang_enum_disp_cw_ringer" t="Koputtaa"/>
+	<phrase n="lang_confirm_del_adr_item" t="Oletko varma?"/>
+	<phrase n="lang_confirm_del_adr_item_title" t="Poista puhelinluettelon kohde"/>
+	<phrase n="lang_confirm_del_adr_item_title_typeSio" t="Poista puhelinluettelon kohde"/>
+	<phrase n="lang_confirm_del_adr_title" t="Poista puhelinluettelo"/>
+	<phrase n="lang_confirm_del_adr_item_title_short" t="Poista puhelinluettelon kohde"/>
+	<phrase n="lang_vol_ringer" t="Soittoäänen voimakkuus"/>
+	<phrase n="lang_keybd_unlock_PIN" t="Näppäimistön PIN-lukitus"/>
+	<phrase n="lang_enum_disp_func_key_mult" t="Jaettu linja"/>
+	<phrase n="lang_enum_disp_func_key_keyevent" t="Painiketapahtuma"/>
+	<phrase n="lang_menu_ringer_silent" t="Äänetön"/>
+	<phrase n="lang_menu_ringer_custom" t="Mukautettu"/>
+	<phrase n="lang_enum_disp_func_key_none" t="Ei mitään"/>
+	<phrase n="lang_presence_online" t="Verkossa"/>
+	<phrase n="lang_presence_busy" t="Varattu"/>
+	<phrase n="lang_presence_invisible" t="Näkymätön"/>
+	<phrase n="lang_presence_title" t="Näkyvyystila"/>
+	<phrase n="lang_dialog_title" t="Puhelut"/>
+	<phrase n="lang_buddies_title" t="Yhteyshenkilöt"/>
+	<phrase n="lang_use_backlight" t="Taustavalo"/>
+	<phrase n="lang_backlight_on_activity" t="Taustavalo toiminnassa"/>
+	<phrase n="lang_backlight_when_idle" t="Taustavalo tyhjäkäynnillä"/>
+	<phrase n="lang_activity" t="Aktiviteetti"/>
+	<phrase n="lang_display_settings" t="Näyttö"/>
+	<phrase n="lang_audio_settings" t="Ääni"/>
+	<phrase n="lang_redirect_settings" t="Soitonsiirto"/>
+	<phrase n="lang_redirect_settings_typeSio" t="Soitonsiirto"/>
+	<phrase n="lang_reboot_required" t="Uudelleenkäynnistys vaaditaan"/>
+	<phrase n="lang_network_restart_required" t="Network restart required"/>
+	<phrase n="lang_auto_redialing" t="Valitaan uudelleen"/>
+	<phrase n="lang_conference" t="Konferenssi"/>
+	<phrase n="lang_directory_search" t="Puhelinluettelohaku"/>
+	<phrase n="lang_wrong_pw" t="Väärä salasana"/>
+	<phrase n="lang_http_password_not_set" t="HTTP-salasanaa ei asetettu"/>
+	<phrase n="lang_start_auto_redial" t="Automaattinen uudelleenvalinta?"/>
+	<phrase n="lang_call_features_settings" t="Puhelun ominaisuudet"/>
+	<phrase n="lang_all" t="All"/>
+	<phrase n="lang_outgoing_calls_settings" t="Lähtevät puhelut"/>
+	<phrase n="lang_incoming_calls_settings" t="Saapuvat puhelut"/>
+	<phrase n="lang_ip_settings_wizzard" t="IP-asetukset"/>
+	<phrase n="lang_webserver_settings" t="Verkkopalvelin"/>
+	<phrase n="lang_vlan_settings" t="VLAN"/>
+	<phrase n="lang_wlan_settings" t="WLAN"/>
+	<phrase n="lang_wifi_reboot_to_connect_to" t="Käynnistä uudelleen yhdistääksesi kohteeseen"/>
+	<phrase n="lang_system_information_menu" t="Järjestelmätiedot"/>
+	<phrase n="lang_its_a_caller_info" t="Soittaja"/>
+	<phrase n="lang_its_a_callee_info" t="Vastaanottaja"/>
+	<phrase n="lang_redirect_all" t="Siirrä kaikki"/>
+	<phrase n="lang_redirect_all_typeSio" t="Siirrä kaikki"/>
+	<phrase n="lang_redirect_busy" t="Siirrä, kun varattu"/>
+	<phrase n="lang_redirect_busy_typeSio" t="Siirrä, kun varattu"/>
+	<phrase n="lang_redirect_time" t="Siirrä aikakatkaisun jälkeen"/>
+	<phrase n="lang_redirect_time_typeSio" t="Siirrä aikakatkaisun jälkeen"/>
+	<phrase n="lang_do_redirect" t="Ota siirto käyttöön"/>
+	<phrase n="lang_do_redirect_typeSio" t="Ota siirto käyttöön"/>
+	<phrase n="lang_redirect_target" t="Kohde siirrettäessä"/>
+	<phrase n="lang_redirect_target_typeSio" t="Kohde siirrettäessä"/>
+	<phrase n="lang_help_label" t="Ohje"/>
+	<phrase n="lang_sysinfo_mem1" t="RAM:"/>
+	<phrase n="lang_sysinfo_mem2" t="/"/>
+	<phrase n="lang_sysinfo_mem3" t="vapaa"/>
+	<phrase n="lang_goto_phonepage_msg" t="Puhelimesi määrittämiseksi siirry verkkoselaimellasi osoitteeseen:"/>
+	<phrase n="lang_goto_phonepage_msg_typeSio" t="Puhelimesi määrittämiseksi siirry verkkoselaimellasi osoitteeseen:"/>
+	<phrase n="lang_goto_help_msg" t="Lisäohjeita löytyy osoitteesta:"/>
+	<phrase n="lang_linestate_connected" t="yhdistetty"/>
+	<phrase n="lang_linestate_on_hold" t="pidossa"/>
+	<phrase n="lang_linestate_ringing" t="soi"/>
+	<phrase n="lang_linename_message" t="Viesti"/>
+	<phrase n="lang_linename_redial" t="Uudelleenvalinta"/>
+	<phrase n="lang_linename_transfer" t="Siirrä"/>
+	<phrase n="lang_linename_rec_on" t="Aloita nauhoitus"/>
+	<phrase n="lang_linename_rec_off" t="Pysäytä nauhoitus"/>
+	<phrase n="lang_linetype_auto_answer" t="Automaattinen vastaus"/>
+	<phrase n="lang_linetype_blf" t="BLF"/>
+	<phrase n="lang_connecting" t="Yhdistetään"/>
+	<phrase n="lang_fkey_add_contact_typeSio" t="Lisää yhteyshenkilö"/>
+	<phrase n="lang_cancelconference" t="Peruuta konferenssi"/>
+	<phrase n="lang_confirm_cancelconference" t="Lopetetaanko konferenssi?"/>
+	<phrase n="lang_xmlgui_dialnumber" t="Valitse numero"/>
+	<phrase n="lang_xmlgui_contactlist" t="Yhteystietoluettelo"/>
+	<phrase n="lang_xmlgui_dial" t="Valit"/>
+	<phrase n="lang_menu_equalizer" t="Taajuuskorjain"/>
+	<phrase n="lang_equalizer_soft" t="Pehmeä ääni"/>
+	<phrase n="lang_equalizer_normal" t="Normaali ääni"/>
+	<phrase n="lang_equalizer_bright" t="Kirkas ääni"/>
+	<phrase n="lang_contactpool" t="Loki"/>
+	<phrase n="lang_tb_nickname" t="Lempinimi"/>
+	<phrase n="lang_tb_number" t="Puhelinnumero"/>
+	<phrase n="lang_tb_contact" t="Yhteystiedon tyyppi"/>
+	<phrase n="lang_tb_outgoing_id" t="Lähtevä identiteetti"/>
+	<phrase n="lang_tb_firstname" t="Etunimi"/>
+	<phrase n="lang_tb_lastname" t="Sukunimi"/>
+	<phrase n="lang_tb_group" t="Ryhmä"/>
+	<phrase n="lang_day" t="Päivä"/>
+	<phrase n="lang_month" t="Kuukausi"/>
+	<phrase n="lang_year" t="Vuosi"/>
+	<phrase n="lang_tb_title" t="Otsikko"/>
+	<phrase n="lang_tb_organization" t="Organisaatio"/>
+	<phrase n="lang_tb_email" t="Sähköposti"/>
+	<phrase n="lang_tb_note" t="Huomio"/>
+	<phrase n="lang_tb_photo" t="Kuva"/>
+	<phrase n="lang_tb_favorite" t="Suosikki"/>
+	<phrase n="lang_linename_transfer_short" t="Siirt"/>
+	<phrase n="lang_linetype_key_event_short" t="Pain."/>
+	<phrase n="lang_linetype_url_short" t="URL"/>
+	<phrase n="lang_grouptype_family" t="Perhe"/>
+	<phrase n="lang_grouptype_friend" t="Ystävä"/>
+	<phrase n="lang_grouptype_collegue" t="Kollega"/>
+	<phrase n="lang_grouptype_work" t="Työ"/>
+	<phrase n="lang_title_sort" t="Lajitteluperuste"/>
+	<phrase n="lang_title_select_entry" t="Valitse merkintä"/>
+	<phrase n="lang_entry_general" t="Yleiset tiedot"/>
+	<phrase n="lang_title_entry_general" t="Yleiset tiedot henkilölle"/>
+	<phrase n="lang_fav_add_from_tbook" t="Lisää puhelinluettelosta"/>
+	<phrase n="lang_redirect_on_timeout" t="uudelleenohjaus aikakatkaisussa:"/>
+	<phrase n="lang_redirect_on_timeout_typeSio" t="uudelleenohjaus aikakatkaisussa:"/>
+	<phrase n="lang_redirect_when_busy" t="uudelleenohjaa, kun varattu:"/>
+	<phrase n="lang_redirect_when_busy_typeSio" t="uudelleenohjaa, kun varattu:"/>
+	<phrase n="lang_sip_disabled" t="SIP poistettu käytöstä"/>
+	<phrase n="lang_low_memory" t="Muisti vähissä"/>
+	<phrase n="lang_title_error" t="Virhe"/>
+	<phrase n="lang_error_code" t="virhekoodi:"/>
+	<phrase n="lang_bad_server_response" t="huono palvelimen vastaus"/>
+	<phrase n="lang_bad_xml_response" t="huono XML-vastaus..."/>
+	<phrase n="lang_title_loading" t="Ladataan"/>
+	<phrase n="lang_active_id" t="Aktiivinen identiteetti"/>
+	<phrase n="lang_1st_id" t="1. identiteetti"/>
+	<phrase n="lang_2nd_id" t="2. identiteetti"/>
+	<phrase n="lang_3rd_id" t="3. identiteetti"/>
+	<phrase n="lang_4th_id" t="4. identiteetti"/>
+	<phrase n="lang_5th_id" t="5. identiteetti"/>
+	<phrase n="lang_6th_id" t="6. identiteetti"/>
+	<phrase n="lang_7th_id" t="7. identiteetti"/>
+	<phrase n="lang_8th_id" t="8. identiteetti"/>
+	<phrase n="lang_9th_id" t="9. identiteetti"/>
+	<phrase n="lang_10th_id" t="10. identiteetti"/>
+	<phrase n="lang_11th_id" t="11. identiteetti"/>
+	<phrase n="lang_12th_id" t="12. identiteetti"/>
+	<phrase n="lang_contacttype_vip" t="VIP"/>
+	<phrase n="lang_contacttype_deny" t="estä"/>
+	<phrase n="lang_unknown" t="Tuntematon"/>
+	<phrase n="lang_month_01" t="Tammikuu"/>
+	<phrase n="lang_month_02" t="Helmikuu"/>
+	<phrase n="lang_month_03" t="Maaliskuu"/>
+	<phrase n="lang_month_04" t="Huhtikuu"/>
+	<phrase n="lang_month_05" t="Toukokuu"/>
+	<phrase n="lang_month_06" t="Kesäkuu"/>
+	<phrase n="lang_month_07" t="Heinäkuu"/>
+	<phrase n="lang_month_08" t="Elokuu"/>
+	<phrase n="lang_month_09" t="Syyskuu"/>
+	<phrase n="lang_month_10" t="Lokakuu"/>
+	<phrase n="lang_month_11" t="Marraskuu"/>
+	<phrase n="lang_month_12" t="Joulukuu"/>
+	<phrase n="lang_tb_name_label" t="Nimi"/>
+	<phrase n="lang_tb_number_label" t="Puh"/>
+	<phrase n="lang_title_transfer" t="Siirrä osapuoli"/>
+	<phrase n="lang_linestate_label" t="Tila"/>
+	<phrase n="lang_reboot_uploads" t="Käynnistetään latausten aktivoimiseksi."/>
+	<phrase n="lang_cc_dial_now" t="Soita nyt?"/>
+	<phrase n="lang_cc_complete_now" t="Voit lopettaa puhelusi henkilölle"/>
+	<phrase n="lang_cc_waiting_for" t="Odotetaan puhelun lopetusta henkilölle"/>
+	<phrase n="lang_cc_set_warning" t="puhelun lopetus on jo asetettu, mutta voit korvata sen."/>
+	<phrase n="lang_cc_change_title" t="Muutetaanko puhelun lopetuskohde?"/>
+	<phrase n="lang_cc_change_message" t="Korvaa nykyinen CC-kohde"/>
+	<phrase n="lang_cc_status_waiting_on" t="Odotetaan %dst saatavuutta."/>
+	<phrase n="lang_cc_activate" t="odottaa puhelun lopettamista."/>
+	<phrase n="lang_cc_activated" t="odottaa edelleen puhelun lopettamista."/>
+	<phrase n="lang_call_contact" t="Soita yhteyshenkilölle"/>
+	<phrase n="lang_call_work" t="Soita töihin"/>
+	<phrase n="lang_call_work_typeSio" t="Soita töihin"/>
+	<phrase n="lang_call_mobile" t="Soita matkapuhelimeen"/>
+	<phrase n="lang_call_home" t="Soita kotiin"/>
+	<phrase n="lang_call_home_typeSio" t="Soita kotiin"/>
+	<phrase n="lang_call_other" t="Soita toiselle"/>
+	<phrase n="lang_call_voicemail" t="Soita vastaajaan"/>
+	<phrase n="lang_xfer_to_contact" t="Siirrä yhteyshenkilölle"/>
+	<phrase n="lang_xfer_to_work" t="Siirrä töihin"/>
+	<phrase n="lang_xfer_to_work_typeSio" t="Siirrä töihin"/>
+	<phrase n="lang_xfer_to_mobile" t="Siirrä matkapuhelimeen"/>
+	<phrase n="lang_xfer_to_home" t="Siirrä kotiin"/>
+	<phrase n="lang_xfer_to_home_typeSio" t="Siirrä kotiin"/>
+	<phrase n="lang_xfer_to_other" t="Siirrä toiselle"/>
+	<phrase n="lang_xfer_to_voicemail" t="Siirrä vastaajaan"/>
+	<phrase n="lang_cfw_to_contact" t="Ohjaa yhteyshenkilölle"/>
+	<phrase n="lang_cfw_to_contact_typeSio" t="Ohjaa yhteyshenkilölle"/>
+	<phrase n="lang_cfw_to_voicemail_typeSio" t="Ohjaa vastaajaan"/>
+	<phrase n="lang_cfw_to_work" t="Ohjaa töihin"/>
+	<phrase n="lang_cfw_to_work_typeSio" t="Ohjaa töihin"/>
+	<phrase n="lang_cfw_to_mobile" t="Ohjaa matkapuhelimeen"/>
+	<phrase n="lang_cfw_to_mobile_typeSio" t="Ohjaa matkapuhelimeen"/>
+	<phrase n="lang_cfw_to_home" t="Ohjaa kotiin"/>
+	<phrase n="lang_cfw_to_home_typeSio" t="Ohjaa kotiin"/>
+	<phrase n="lang_cfw_to_other" t="Ohjaa muualle"/>
+	<phrase n="lang_cfw_to_other_typeSio" t="Ohjaa muualle"/>
+	<phrase n="lang_cfw_to_voicemail" t="Ohjaa vastaajaan"/>
+	<phrase n="lang_assign_to_key" t="Määrää painikkeelle"/>
+	<phrase n="lang_contact_state_unknown" t="Tuntematon"/>
+	<phrase n="lang_contact_state_available" t="Saatavilla"/>
+	<phrase n="lang_contact_state_available_on_mobile" t="Saatavilla (mobiili)"/>
+	<phrase n="lang_contact_state_available_at_desk" t="Saatavilla (työpöytä)"/>
+	<phrase n="lang_contact_state_inactive" t="Inaktiivinen"/>
+	<phrase n="lang_contact_state_busy" t="Varattu"/>
+	<phrase n="lang_contact_state_urgent_interruptions_only" t="Vain kiireelliset asiat"/>
+	<phrase n="lang_contact_state_in_a_call" t="Puhelimessa"/>
+	<phrase n="lang_contact_state_in_a_meeting" t="Tapaamisessa"/>
+	<phrase n="lang_contact_state_meeting" t="Tapaaminen"/>
+	<phrase n="lang_contact_state_holding" t="Pidossa"/>
+	<phrase n="lang_contact_state_dnd" t="Älä häiritse"/>
+	<phrase n="lang_contact_state_dnd_all" t="Älä häiritse (kaikki)"/>
+	<phrase n="lang_contact_state_dnd_self" t="Älä häiritse (oma)"/>
+	<phrase n="lang_contact_state_be_right_back" t="Palaan pian"/>
+	<phrase n="lang_contact_state_away" t="Poissa"/>
+	<phrase n="lang_contact_state_offline" t="Offline"/>
+	<phrase n="lang_contact_state_reset" t="Nollaa tila"/>
+	<phrase n="lang_remote_book_name_ldap" t="LDAP-puhelinluettelo"/>
+	<phrase n="lang_remote_book_choose_title" t="Valitse osoitekirja"/>
+	<phrase n="lang_title_add_to_favorites" t="Lisää suosikkeihin"/>
+	<phrase n="lang_title_add_to_favorites_typeSio" t="Lisää suosikkeihin"/>
+	<phrase n="lang_title_favorites" t="Suosikit"/>
+	<phrase n="lang_unknown_partner" t="Tuntematon"/>
+	<phrase n="lang_nrtype_sip" t="SIP"/>
+	<phrase n="lang_nrtype_business" t="Yritys"/>
+	<phrase n="lang_nrtype_fixed" t="Lankalinja"/>
+	<phrase n="lang_nrtype_extension" t="Alanumero"/>
+	<phrase n="lang_tb_number_type" t="Numeron tyyppi"/>
+	<phrase n="lang_tb_number_type_label" t="Tyyppi"/>
+	<phrase n="lang_title_no_permission" t="Ei oikeutta"/>
+	<phrase n="lang_target_office" t="Toimisto"/>
+	<phrase n="lang_target_replyto" t="Vastaa henkilölle"/>
+	<phrase n="lang_target_unqualified" t="Pätemätön"/>
+	<phrase n="lang_target_work" t="Työ"/>
+	<phrase n="lang_target_work_typeSio" t="Työ"/>
+	<phrase n="lang_target_mobile" t="Mobiili"/>
+	<phrase n="lang_target_home" t="Koti"/>
+	<phrase n="lang_target_home_typeSio" t="Koti"/>
+	<phrase n="lang_target_other" t="Muu"/>
+	<phrase n="lang_target_voicemail" t="Vastaaja"/>
+	<phrase n="lang_target_new_number" t="Uusi numero"/>
+	<phrase n="lang_target_contact" t="Yhteystieto"/>
+	<phrase n="lang_directory_too_big_to_import__long" t="Etäluettelo on liian suuri"/>
+	<phrase n="lang_target_cancel" t="Älä siirrä puheluja"/>
+	<phrase n="lang_target_cancel_typeSio" t="Älä siirrä puheluja"/>
+	<phrase n="lang_target_forward" t="Siirrä puhelut henkilölle"/>
+	<phrase n="lang_target_forward_typeSio" t="Siirrä puhelut henkilölle"/>
+	<phrase n="lang_tls_unknown_certificate_alert" t="Turvalllinen yhteys on hylätty, koska se antoi tuntemattoman sertifikaatin. Voit nimenomaisesti antaa käyttöoikeuden tähän yhteyteen kohdassa Webliittymä ja Sertifikaatit."/>
+	<phrase n="lang_tls_unknown_certificate_alert_title" t="Turvallinen yhteys epäonnistui"/>
+	<phrase n="lang_tls_properties_changed" t="Käynnistä uudelleen. Muutettuja turvaominaisuuksia ei voida soveltaa meneillään oleviin istuntoihin."/>
+	<phrase n="lang_call_completed_by_part1" t="Puhelun lopettanut"/>
+	<phrase n="lang_call_completed_by_part2" t="toisessa päätteessä."/>
+	<phrase n="lang_call_completed_by_part2_typeSio" t="toisessa päätteessä."/>
+	<phrase n="lang_challenge_sip_pw" t="SIP-salasana"/>
+	<phrase n="lang_line_ocs_wz_user" t="Verkkotunnus/käyttäjä"/>
+	<phrase n="lang_line_ocs_wz_pwd" t="Salasana"/>
+	<phrase n="lang_unregistered_ids_title" t="ei rekisteröit:"/>
+	<phrase n="lang_message_label" t="Tiedot"/>
+	<phrase n="lang_status_messages" t="Tilan tiedot"/>
+	<phrase n="lang_information_settings" t="Tietoa"/>
+	<phrase n="lang_user_realname" t="Näytettävä nimi"/>
+	<phrase n="lang_user_idle_number" t="Näytettävä numero"/>
+	<phrase n="lang_user_name" t="Tili"/>
+	<phrase n="lang_user_pass" t="Salasana"/>
+	<phrase n="lang_user_host" t="Rekisteröijä"/>
+	<phrase n="lang_user_outbound" t="Lähtevän liikenteen välityspalvelin"/>
+	<phrase n="lang_user_pname" t="Todennuksen käyttäjänimi"/>
+	<phrase n="lang_user_mailbox" t="Postilaatikko"/>
+	<phrase n="lang_user_mailbox_retrieve" t="Puhepostin soitto"/>
+	<phrase n="lang_hotdesking" t="Hotdesking"/>
+	<phrase n="lang_keyb_enter_current_pin" t="Syötä nykyinen PIN"/>
+	<phrase n="lang_keyb_enter_new_pin" t="Syötä uusi PIN"/>
+	<phrase n="lang_keyb_reenter_new_pin" t="Syötä uusi PIN uudelleen"/>
+	<phrase n="lang_keyb_enter_password" t="Syötä salasana PIN:n nollaamiseksi"/>
+	<phrase n="lang_keyb_locked" t="Pidä * painettuna avataksesi."/>
+	<phrase n="lang_keyb_permanently_locked" t="Pidä * painettuna PIN:n nollaamiseksi."/>
+	<phrase n="lang_title_unlock" t="Näppäimistö lukittu"/>
+	<phrase n="lang_confirm_unlock" t="Avaa? Paina OK."/>
+	<phrase n="lang_transfer_failed_msg" t="Siirto epäonnistui"/>
+	<phrase n="lang_action_failed_msg" t="Toimi epäonnistui"/>
+	<phrase n="lang_vpn_fetch" t="Haetaan VPN-tervapalloa kohteesta:"/>
+	<phrase n="lang_vpn_fetch_failed" t="VPN-tervapallon hakeminen epäonnistui"/>
+	<phrase n="lang_vpn_flash" t="Puretaan VPN-tiedostoja..."/>
+	<phrase n="lang_vpn_reboot" t="Käynnistetään järjestelmää uudelleen VPN:n aktivoimiseksi..."/>
+	<phrase n="lang_l2tp_fetch" t="Haetaan L2TP-tervapalloa kohteesta:"/>
+	<phrase n="lang_l2tp_fetch_failed" t="L2TP-tervapallon hakeminen epäonnistui"/>
+	<phrase n="lang_l2tp_flash" t="Puretaan L2TP-tiedostoja..."/>
+	<phrase n="lang_l2tp_reboot" t="Käynnistetään järjestelmää uudelleen L2TP:n aktivoimiseksi..."/>
+	<phrase n="lang_sbc_fetch" t="Fetching sbc config file from:"/>
+	<phrase n="lang_sbc_fetch_failed" t="Fetching sbc config file failed"/>
+	<phrase n="lang_sbc_flash" t="Copy sbc config file..."/>
+	<phrase n="lang_sbc_reboot" t="Rebooting System to activate sbc..."/>
+	<phrase n="lang_sbc_active" t="SBC is active"/>
+	<phrase n="lang_keyb_min_digits" t="(min. # numeroa)"/>
+	<phrase n="lang_empty_dir_search_list" t="Syötä nimi! * on välilyönti."/>
+	<phrase n="lang_key_unassigned" t="Painiketta ei määritetty"/>
+	<phrase n="lang_key_unassigned_typeSio" t="Painiketta ei määritetty"/>
+	<phrase n="lang_label_conference_partner" t="Osapuoli"/>
+	<phrase n="lang_incoming_call_title_while_connected" t="Puhelu odottaa"/>
+	<phrase n="lang_active" t="Aktiivinen"/>
+	<phrase n="lang_emergency_call" t="hätäpuhelu"/>
+	<phrase n="lang_ntp_pending" t="Otetaan yhteyttä NTP-palvelimeen"/>
+	<phrase n="lang_ntp_unreachable" t="NTP-palvelimeen ei saatu yhteyttä"/>
+	<phrase n="lang_download_server_unreachable" t="Server unreachable"/>
+	<phrase n="lang_network_busy" t="Verkko varattu"/>
+	<phrase n="lang_pstn_reroute_attempt" t="Tämän puhelun lopettaminen voi kestää kauemmin. Verkko voi olla varattu."/>
+	<phrase n="lang_menu_location" t="Sijainti"/>
+	<phrase n="lang_linestate_holding_upper_case" t="Pidossa"/>
+	<phrase n="lang_linestate_on_hold_upper_case" t="Pidossa"/>
+	<phrase n="lang_location_retrieval_failed" t="Sijaintia ei voitu hakea"/>
+	<phrase n="lang_route_private_line" t="Yksityinen linja"/>
+	<phrase n="lang_route_forwarded" t="Siirretty"/>
+	<phrase n="lang_route_forwarded_typeSio" t="Siirretty"/>
+	<phrase n="lang_route_delegated" t="Delegoitu"/>
+	<phrase n="lang_route_team_call" t="Tiimipuhelu"/>
+	<phrase n="lang_route_acd" t="Ryhmäpuhelu"/>
+	<phrase n="lang_route_cccp_conference" t="Konferenssipuhelu"/>
+	<phrase n="lang_route_cccp_conference_typeSio" t="Konferenssipuhelu"/>
+	<phrase n="lang_dfks_failed" t="Ominaisuuden synkronointi epäonnistui"/>
+	<phrase n="lang_no_shared_key" t="Jaettua linjapainiketta ei saatavilla"/>
+	<phrase n="lang_shared_seize_active" t="Linjan varaus on edelleen aktiivinen"/>
+	<phrase n="lang_not_a_shared_key" t="Valittu painike ei ole jaettu linjapainike"/>
+	<phrase n="lang_active_key_not_a_shared_key" t='Jaettu linjapainike ei toimi "aktiivisen" kontekstimäärityksen kanssa.'/>
+	<phrase n="lang_ipv4_conflict" t="IPv4: konflikti"/>
+	<phrase n="lang_contact_saved" t="Yhteystieto tallennettu"/>
+	<phrase n="lang_query_pending" t="Etsitään..."/>
+	<phrase n="lang_no_conference" t="Prosessorin kuormituksen vuoksi %Aconference ei ole sallittu"/>
+	<phrase n="lang_no_conference_with_codec" t="Prosessorin kuormituksen vuoksi %Aconference ei ole sallittu, jos yksi osapuoli käyttää koodekkia %B"/>
+	<phrase n="lang_no_conference_with_encrypted_codec" t="Prosessorin kuormituksen vuoksi %Aconference ei ole sallittu, jos yksi osapuoli käyttää koodekkia %B salauksella"/>
+	<phrase n="lang_no_conference_without_unencrypted_codec" t="Prosessorin kuormituksen vuoksi %Aconference ei ole sallittu, jos yksi osapuoli ei käytä koodekkia %B ilman salausta"/>
+	<phrase n="lang_setup_language" t="Asetuskieli"/>
+	<phrase n="lang_please_wait" t="Odota..."/>
+	<phrase n="lang_download_failed" t="Lataus epäonnistui"/>
+	<phrase n="lang_function_blocked" t="Estetty"/>
+	<phrase n="lang_activating_uploads" t="Aktivoidaan latauksia"/>
+	<phrase n="lang_provisioning" t="Provisiointi"/>
+	<phrase n="lang_provisioning_failed" t="Provisiointi epäonnistui"/>
+	<phrase n="lang_tr69_provisioning" t="TR-069 Prov. kesken"/>
+	<phrase n="lang_start_provisioning" t="Provisiointi kesken"/>
+	<phrase n="lang_waitTime" t="Jonotusaika"/>
+	<phrase n="lang_ccUserId" t="Käyttäjätunnus"/>
+	<phrase n="lang_callCenterName" t="Nimi"/>
+	<phrase n="lang_numCallsInQueue" t="Jonottavat puhelut"/>
+	<phrase n="lang_acd_ready" t="Saatavilla"/>
+	<phrase n="lang_acd_not_ready" t="Ei saatavilla"/>
+	<phrase n="lang_acd_working_after_call" t="Lopeta"/>
+	<phrase n="lang_acd_log_on" t="Sisäänkirjautuminen"/>
+	<phrase n="lang_acd_log_off" t="Uloskirjautuminen"/>
+	<phrase n="lang_acd_unkown_state" t="Tuntematon tila"/>
+	<phrase n="lang_change_state_to" t="Muuta tilaa"/>
+	<phrase n="lang_call_parked" t="Puhelu pysäköity"/>
+	<phrase n="lang_call_unparked" t="Puhelu poistettu parkista"/>
+	<phrase n="lang_firmware_update_failed" t="Ohjelmistopäivitys epäonnistui"/>
+	<phrase n="lang_firmware_update_restart" t="Käynnistä ohjelmistopäivitys uudelleen?"/>
+	<phrase n="lang_temp_unavail" t="Tilapäisesti ei saatavilla"/>
+	<phrase n="lang_limited_func" t="Rajoitettu toiminnallisuus katkon vuoksi"/>
+	<phrase n="lang_limited_func_exp" t="Verkko-ongelma rajoittaa tilapäisesti toimintoja, kuten näkyvyytä tai CF:ää"/>
+	<phrase n="lang_limited_func_exp_typeSio" t="Verkko-ongelma rajoittaa tilapäisesti toimintoja, kuten näkyvyytä tai CF:ää"/>
+	<phrase n="lang_call_park_failed" t="Pysäköinti epäonnistui"/>
+	<phrase n="lang_park_failed_reason" t="Orbitia ei saatavilla"/>
+	<phrase n="lang_list_parked" t="Pysäköity"/>
+	<phrase n="lang_vision" t="Vision"/>
+	<phrase n="lang_unpair_vision" t="Poista Vision-pariliitos"/>
+	<phrase n="lang_scan_for_visions" t="Skannataan Visioneja"/>
+	<phrase n="lang_paired_with_vision" t="Pariliitetty Visioniin:"/>
+	<phrase n="lang_vision_connection_lost" t="Vision-yhteys katkesi"/>
+	<phrase n="lang_unpair_vision_question" t="Poistetaanko Vision-pariliitos?"/>
+	<phrase n="lang_isconnected" t="yhdistetty"/>
+	<phrase n="lang_isdisconnected" t="katkaistu"/>
+	<phrase n="lang_isdisconnected_typeSio" t="katkaistu"/>
+	<phrase n="lang_hotdesking_ntlm" t="Tilitunnus"/>
+	<phrase n="lang_hotdesking_pin" t="PIN"/>
+	<phrase n="lang_prompt_phone_num" t="Alanumerosi"/>
+	<phrase n="lang_prompt_pin" t="PIN:isi"/>
+	<phrase n="lang_pin_signin_active" t="kirjaudutaan sisään..."/>
+	<phrase n="lang_pin_signin_failure" t="Kirjautuminen puhelinnumerolla ja PIN:llä ei mahdollinen"/>
+	<phrase n="lang_firmware_update_in" t="Ohjelmistopäivitys"/>
+	<phrase n="lang_firmware_update_available" t="Ohjelmistopäivitys saatavilla"/>
+	<phrase n="lang_call_for" t="Puhelu henkilölle"/>
+	<phrase n="lang_linetype_bossadmin" t="Johtaja/pääkäyttäjä"/>
+	<phrase n="lang_linetype_bossadmin_short" t="J/P"/>
+	<phrase n="lang_success_msg_transferred_to" t="%A siirretty henkilölle %B"/>
+	<phrase n="lang_pickup_call" t="Vastaa puheluun"/>
+	<phrase n="lang_call_on_behalf_of" t="Puhelu henkilön puolesta"/>
+	<phrase n="lang_boss_group" t="Henkilöt, joiden puolesta hallinnoin puheluja"/>
+	<phrase n="lang_delegate_group" t="Edustajat"/>
+	<phrase n="lang_all_delegates" t="Nimitä kaikki edustajat painikkeeseen"/>
+	<phrase n="lang_call_failed_network_issue" t="Puhelu epäonnistui verkko-ongelmien vuoksi"/>
+	<phrase n="lang_call_failed_network_issue_typeSio" t="Puhelu epäonnistui verkko-ongelmien vuoksi"/>
+	<phrase n="lang_ethernet_detection" t="Ethernet-tunnistus"/>
+	<phrase n="lang_firmware_update_not_available" t="Ohjelmistopäivitystä ei saatavilla"/>
+	<phrase n="lang_check_sw_update" t="Tarkista ohjelmistopäivitys"/>
+	<phrase n="lang_continuous_text_label" t="Merkintä"/>
+	<phrase n="lang_short_text" t="Lyhyt teksti"/>
+	<phrase n="lang_headline_admins" t="Pääkäyttäjät"/>
+	<phrase n="lang_always_delegate_forward" t="Delegoi aina eteenpäin"/>
+	<phrase n="lang_always_deleg_sim" t="Soi aina samanaikaisesti"/>
+	<phrase n="lang_always_deleg_forw" t="Siirrä aina"/>
+	<phrase n="lang_always_deleg_forw_typeSio" t="Siirrä aina"/>
+	<phrase n="lang_tb_action_url" t="action url"/>
+	<phrase n="lang_clear_call_history" t="Tyhjennä puheluloki"/>
+	<phrase n="lang_headset_volume_only" t="USB-kuulokkeiden äänenvoimakkuutta voi muuttaa vain itse kuulokkeessa."/>
+	<phrase n="lang_hold_error" t="Hold failure, call has been muted. Press hold again to retry."/>
+	<phrase n="lang_retr_by" t="Tehnyt"/>
+	<phrase n="lang_ipv4" t="IPv4"/>
+	<phrase n="lang_ipv6" t="IPv6"/>
+	<phrase n="lang_ipv6_autoconf" t="SLAAC"/>
+	<phrase n="lang_refresh" t="Päivitä"/>
+	<phrase n="lang_may_take_some_time" t="Päivitys voi kestää jonkin aikaa. Jatketaanko silti?"/>
+	<phrase n="lang_ip_address_not_available" t="Ei saatavilla"/>
+	<phrase n="lang_menu_unlock" t="Avaa"/>
+	<phrase n="lang_menu_security" t="Turvallisuus"/>
+	<phrase n="lang_route_team_call_for" t="Tiimipuhelu kohteelle"/>
+	<phrase n="lang_route_acd_for" t="Ryhmäpuhelu kohteelle"/>
+	<phrase n="lang_route_anonymous_acd" t="Anonyymi ryhmäpuhelu"/>
+	<phrase n="lang_route_anonymous_acd_for" t="Anonyymi ryhmäpuhelu kohteelle"/>
+	<phrase n="lang_anonymous" t="Anonyymi"/>
+	<phrase n="lang_wish_barge_in" t="Haluatko tuppaantua sisään?"/>
+	<phrase n="lang_location" t="Sijainti:"/>
+	<phrase n="lang_subject" t="Aihe"/>
+	<phrase n="lang_dates" t="Tapaamiset"/>
+	<phrase n="lang_menu_dates_today" t="Tämän päivän tapaamiset"/>
+	<phrase n="lang_label_conference_organizer" t="Järjestäjä:"/>
+	<phrase n="lang_date_ongoing" t="NYT:"/>
+	<phrase n="lang_date_remind_me_later" t="Muistuta minua myöhemmin"/>
+	<phrase n="lang_date_remind_later" t="Myöhemmin"/>
+	<phrase n="lang_date_set_reminder_to" t="Päivämäärä"/>
+	<phrase n="lang_minutes" t="Minuutit"/>
+	<phrase n="lang_date_reset_reminder" t="Nollaa muistutus"/>
+	<phrase n="lang_cannot_access_exchange" t="Exchange-palvelinta ei voitu käyttää."/>
+	<phrase n="lang_no_dates_today" t="Tälle päivälle ei ole tapahtumia"/>
+	<phrase n="lang_participants" t="Osallistujat:"/>
+	<phrase n="lang_expansion_modules" t="Laajennusmoduulit"/>
+	<phrase n="lang_wiz_vlan" t="Käytätkö VLAN:ia?"/>
+	<phrase n="lang_wiz_ip4" t="Haluatko määrittää IPv4:n?"/>
+	<phrase n="lang_wiz_ip6" t="Määritä IPv6"/>
+	<phrase n="lang_sxm_connected" t="Sarjalaajennusmoduuli kytketty"/>
+	<phrase n="lang_uxm_connected" t="USB-laajennusmoduuli kytketty"/>
+	<phrase n="lang_uxm_cabeling_broken" t="Virheellinen laajennusmoduulin kaapelointi"/>
+	<phrase n="lang_uxm_limit_exceeded" t="Liian monta USB-laajennusmoduulia kytketty"/>
+	<phrase n="lang_vpn_active" t="VPN on aktiivinen"/>
+	<phrase n="lang_wlan_active" t="WLAN on aktiivinen"/>
+	<phrase n="lang_list_no_devices" t="(Ei laitteita saatavilla)"/>
+	<phrase n="lang_bluetooth" t="Bluetooth"/>
+	<phrase n="lang_bluetooth_connected_title" t="Liitetty laite"/>
+	<phrase n="lang_bluetooth_paired_list_title" t="Pariliitettyjen laitteiden luettelo"/>
+	<phrase n="lang_bluetooth_active_connection" t="Bluetooth-yhteys aktiivinen"/>
+	<phrase n="lang_bluetooth_discovered_list_title" t="Löydettyjen laitteiden luettelo"/>
+	<phrase n="lang_bluetooth_discovering" t="Etsitään"/>
+	<phrase n="lang_bluetooth_unpairing" t="Poistetaan pariliitosta"/>
+	<phrase n="lang_bluetooth_pairing" t="Luodaan pariliitosta"/>
+	<phrase n="lang_bluetooth_connecting" t="Yhdistetään"/>
+	<phrase n="lang_bluetooth_disconnecting" t="Katkaistaan"/>
+	<phrase n="lang_callback_on_busy" t="Takaisinsoitto varattuna"/>
+	<phrase n="lang_auto_busy_redial" t="Automaattinen varattu-uudelleenvalinta"/>
+	<phrase n="lang_decision_cob" t="on tällä hetkellä varattu. Jos haluat ilmoituksen, kun hän on saatavilla, paina 'Vahvista'. Jos haluat jättää viestin, paina 'X'."/>
+	<phrase n="lang_decision_cob_withoutvm" t="on tällä hetkellä varattu. Jos haluat ilmoituksen, kun hän on saatavilla, paina 'Vahvista'."/>
+	<phrase n="lang_callback" t="Takaisinsoitto"/>
+	<phrase n="lang_callback_available" t="Takaisinsoitto saatavilla"/>
+	<phrase n="lang_linetype_callback" t="Takaisinsoitto"/>
+	<phrase n="lang_linetype_callback_short" t="CoB"/>
+	<phrase n="lang_ringback_callpark_service" t="Laitettu puhelun pysäköintipalveluun"/>
+	<phrase n="lang_callpark_service" t="Puhelun pysäköintipalvelu"/>
+	<phrase n="lang_storage_mounted" t="USB-levy yhdistetty"/>
+	<phrase n="lang_storage_mounted_typeSio" t="USB-levy yhdistetty"/>
+	<phrase n="lang_storage_tomany" t="Voit yhdistää vain yhden USB-levyn"/>
+	<phrase n="lang_storage_umount" t="Irrota USB-levy"/>
+	<phrase n="lang_no_participants_detected" t="osallistujia ei löytynyt"/>
+	<phrase n="lang_ieee8021_method" t="Tila"/>
+	<phrase n="lang_menu_fkey_functions" t="Funktio"/>
+	<phrase n="lang_uxm_appearance" t="Ulkonäkö"/>
+	<phrase n="lang_put_through_by" t="Siirtänyt"/>
+	<phrase n="lang_contact_not_in_list" t="ei löytynyt yhteystietoluettelosta"/>
+	<phrase n="lang_msg_speaker_active" t="Handsfree aktivoitu"/>
+	<phrase n="lang_msg_headset_active" t="Kuuloketila on aktivoitu"/>
+	<phrase n="lang_msg_handset_active" t="Luuritila on aktivoitu"/>
+	<phrase n="lang_msg_ringing_disabled" t="Hälytys poistettu käytöstä"/>
+	<phrase n="lang_msg_mute_active" t="Puhelin on mykistetty"/>
+	<phrase n="lang_wiz_aborted" t="Asennustoiminto keskeytetty."/>
+	<phrase n="lang_menu_set_kbd_lock_pin" t="Aseta näppäimistön PIN-lukitus"/>
+	<phrase n="lang_menu_change_kbd_lock_pin" t="Muuta näppäimistön PIN-lukitus"/>
+	<phrase n="lang_no_valid_dsearch_config" t="Ei kelvollista luettelon hakukonfiguraatiota"/>
+	<phrase n="lang_title_conferences" t="Konferenssit"/>
+	<phrase n="lang_no_conferences_found" t="konferensseja ei löytynyt"/>
+	<phrase n="lang_conference_type" t="Tyyppi"/>
+	<phrase n="lang_conference_status" t="Tila"/>
+	<phrase n="lang_join_conference_long" t="liity konferenssiin"/>
+	<phrase n="lang_join_conference_as_moderator" t="Liity moderaattorina"/>
+	<phrase n="lang_choose_menu" t="Valitse valikko"/>
+	<phrase n="lang_menu_shortcut" t="Valikkopikakuvake"/>
+	<phrase n="lang_using_time" t="käyttöaika"/>
+	<phrase n="lang_waiting_for_pnp" t="Odotetaan PnP:tä"/>
+	<phrase n="lang_fkey_contact_list_buddy" t="BLF (palvelin)"/>
+	<phrase n="lang_fkey_xmpp_presence" t="Yhteyshenkilön näkyvyys (XMPP)"/>
+	<phrase n="lang_csta_prompt_title" t="Soita nyt?"/>
+	<phrase n="lang_contact_is_favorite" t="Onko tämä yhteyshenkilö yksi suosikeistasi?"/>
+	<phrase n="lang_currently_set_to" t="Tällä hetkellä asetettu:"/>
+	<phrase n="lang_vol_label_contrast" t="Toissijaisen näytön kontrasti"/>
+	<phrase n="lang_menu_fkeys_phone" t="Linjapainikkeet"/>
+	<phrase n="lang_menu_dkeys_phone" t="Erityispainikkeet"/>
+	<phrase n="lang_menu_context_sensitive_keys_phone" t="Kontekstiherkät painikkeet"/>
+	<phrase n="lang_menu_smartlabel_fkeys" t="SmartLabel-painikkeet"/>
+	<phrase n="lang_menu_smartlabel_page" t="Sivu"/>
+	<phrase n="lang_menu_fkeys_page" t="Linjapainikkeet-sivu"/>
+	<phrase n="lang_menu_fkeys_sxm" t="SXM-painikkeet"/>
+	<phrase n="lang_menu_fkeys_uxm" t="Laajennuspainikkeet"/>
+	<phrase n="lang_server_directory_search" t="Palvelimen puhelinluettelohaku"/>
+	<phrase n="lang_menu_fontsize" t="Fonttikoko"/>
+	<phrase n="lang_uxm_fontsize_lines" t="Fonttikoko (linjan asettelu)"/>
+	<phrase n="lang_uxm_fontsize_tiles" t="Fonttikoko (ruutujen asettelu)"/>
+	<phrase n="lang_menu_text_alignment" t="Tekstin tasaus"/>
+	<phrase n="lang_left" t="Vasen"/>
+	<phrase n="lang_right" t="Oikea"/>
+	<phrase n="lang_center" t="Keskelle"/>
+	<phrase n="lang_alternate" t="Vaihda"/>
+	<phrase n="lang_menu_return_to_first_page" t="Palaa ensimmäiselle sivulle"/>
+	<phrase n="lang_automatic_return" t="Automaattinen paluu"/>
+	<phrase n="lang_warning" t="Varoitus"/>
+	<phrase n="lang_public_address" t="Julkinen osoite"/>
+	<phrase n="lang_menu_volume" t="Äänenvoimakkuuden asetukset   "/>
+	<phrase n="lang_vol_ringer_text" t="Soittoäänen äänenvoimakkuus"/>
+	<phrase n="lang_vol_headset_text" t="Kuulokkeen äänenvoimakkuus"/>
+	<phrase n="lang_vol_handset_text" t="Luurin äänenvoimakkuus"/>
+	<phrase n="lang_vol_speaker_text" t="Kaiuttimen äänenvoimakkuus"/>
+	<phrase n="lang_list_rejected" t="Hylätty"/>
+	<phrase n="lang_enum_disp_func_key_conference" t="Konferenssi"/>
+	<phrase n="lang_enum_disp_func_key_ivr" t="IVR"/>
+	<phrase n="lang_enum_disp_func_key_callback_on_busy" t="Takaisinsoitto"/>
+	<phrase n="lang_fkeys_ssi_context" t="Asiayhteys"/>
+	<phrase n="lang_fkeys_ssi_type" t="Tyyppi"/>
+	<phrase n="lang_fkeys_ssi_active" t="Aktiivinen"/>
+	<phrase n="lang_fkeys_ssi_icon" t="Kuvake"/>
+	<phrase n="lang_default_icon" t="Oletuskuvake"/>
+	<phrase n="lang_custom_icon" t="Mukautettu kuvake"/>
+	<phrase n="lang_FirstName" t="Etunimi"/>
+	<phrase n="lang_LastName" t="Sukunimi"/>
+	<phrase n="lang_Home" t="Kotinumero"/>
+	<phrase n="lang_Office" t="Toimistonumero"/>
+	<phrase n="lang_Mobile" t="Matkapuhelinnumero"/>
+	<phrase n="lang_Unqualified" t="Pätemätön numero"/>
+	<phrase n="lang_edit_contact" t="Muokkaa yhteystietoa"/>
+	<phrase n="lang_msw_query" t="Yhteystietojen lähettäminen palvelimelle epäonnistui:"/>
+	<phrase n="lang_indicator" t="Indikaattori"/>
+	<phrase n="lang_protocol" t="Protokolla"/>
+	<phrase n="lang_target_forward_busy" t="Varattuna ohjaa puhelut henkilölle"/>
+	<phrase n="lang_target_forward_timeout" t="Ohjaa puhelut jälkeen"/>
+	<phrase n="lang_target_forward_timeout_typeSio" t="Ohjaa puhelut jälkeen"/>
+	<phrase n="lang_WIFI_SSID" t="Verkon nimi"/>
+	<phrase n="lang_WIFI_auth_mode" t="Salaus"/>
+	<phrase n="lang_WIFI_WPA_Encryption" t="WPA-salaus"/>
+	<phrase n="lang_WIFI_WPA" t="WPA"/>
+	<phrase n="lang_WIFI_WPA2PSK" t="WPA2"/>
+	<phrase n="lang_WIFI_WEP" t="WEP"/>
+	<phrase n="lang_WIFI_OPEN" t="Avoin"/>
+	<phrase n="lang_WIFI_AES" t="AES"/>
+	<phrase n="lang_WIFI_TKIP" t="TKIP"/>
+	<phrase n="lang_WIFI_SCAN_NETWORKS" t="Skannaa WLAN"/>
+	<phrase n="lang_WIFI_MANUAL_SETUP" t="Manuaalinen asetus"/>
+	<phrase n="lang_contact_details" t="Yhteystiedot"/>
+	<phrase n="lang_WIFI_CONNECTED_TO" t="Yhdistetty kohteeseen"/>
+	<phrase n="lang_WIFI_NOT_CONNECTED" t="Ei yhdistetty"/>
+	<phrase n="lang_unhold" t="Nouda"/>
+	<phrase n="lang_empty" t="tyhjä"/>
+	<phrase n="lang_F_SNOM" t="snom/Cloud"/>
+	<phrase n="lang_prefs_ssi_date_us_format" t="Päivämäärämuoto"/>
+	<phrase n="lang_prefs_ssi_time_24_format" t="24 tunnin kello"/>
+	<phrase n="lang_time_symbol_second" t="s"/>
+	<phrase n="lang_all_accounts" t="Kaikki identiteetit"/>
+	<phrase n="lang_reboot_to_apply_new_settings" t="Käynnistetäänkö uudelleen nyt, jotta uudet asetukset tulevat voimaan?"/>
+	<phrase n="lang_TLS" t="TLS"/>
+	<phrase n="lang_MD5" t="MD5"/>
+	<phrase n="lang_WIFI_SWITCH_OFF_WLAN" t="Sammuta WLAN"/>
+	<phrase n="lang_ErrorNotSupportedByManager" t="Ei tuettu"/>
+	<phrase n="lang_ErrorContactNotFound" t="Yhteystietoa ei löytynyt"/>
+	<phrase n="lang_ErrorInvalidCredentials" t="Virheelliset tunnukset"/>
+	<phrase n="lang_ErrorInvalidArgument" t="Virheellinen argumentti"/>
+	<phrase n="lang_ErrorRequestPending" t="Pyyntö odottaa"/>
+	<phrase n="lang_ErrorNotInitialized" t="Ei alustettu"/>
+	<phrase n="lang_ErrorInComplete" t="Puutteellinen"/>
+	<phrase n="lang_ErrorOutOfMemory" t="Muisti loppu"/>
+	<phrase n="lang_Contact_pool" t="Yhteystietoloki"/>
+	<phrase n="lang_advanced_autoneg" t="Automaattinen neuvottelu"/>
+	<phrase n="lang_advanced_10full" t="10 Mbit kaksisuuntainen duplex"/>
+	<phrase n="lang_advanced_10half" t="10 Mbit vuorosuuntainen duplex"/>
+	<phrase n="lang_advanced_100full" t="100 Mbit kaksisuuntainen duplex"/>
+	<phrase n="lang_advanced_100half" t="100 Mbit vuorosuuntainen duplex"/>
+	<phrase n="lang_advanced_1000full" t="1 000 Mbit kaksisuuntainen duplex"/>
+	<phrase n="lang_Hardware" t="Laitteisto"/>
+	<phrase n="lang_NET_port_speed" t="Verkkoportin nopeus/duplex"/>
+	<phrase n="lang_PC_port_speed" t="PC-portin nopeus/duplex"/>
+	<phrase n="lang_Action_on_eth_replug" t="Ethernet-kaapelin uudelleenkytkeminen"/>
+	<phrase n="lang_advanced_donothing" t="Ohita"/>
+	<phrase n="lang_line_reregister" t="Rekisteröi uudelleen"/>
+	<phrase n="lang_NTP" t="NTP"/>
+	<phrase n="lang_DNS" t="DNS"/>
+	<phrase n="lang_LLDP" t="LLDP"/>
+	<phrase n="lang_NTP_refresh_timer" t="NTP-päivitysajastin"/>
+	<phrase n="lang_8021x" t="802.1X"/>
+	<phrase n="lang_Expansion" t="Laajennus"/>
+	<phrase n="lang_expansion_layout" t="Laajennuksen asettelu"/>
+	<phrase n="lang_Expansion_module" t="Laajennusmoduuli"/>
+	<phrase n="lang_Please_reboot" t="Käynnistä uudelleen!"/>
+	<phrase n="lang_All_settings_saved" t="Kaikki asetukset tallennettu"/>
+	<phrase n="lang_WIFI_SCAN_RUNNING" t="Skannataan..."/>
+	<phrase n="lang_WIFI_CONNECTING" t="Yhdistetään..."/>
+	<phrase n="lang_wifi_connect_success_reboot_to_continue_msg1" t="Käynnistä uudelleen jatkaaksesi"/>
+	<phrase n="lang_wifi_connect_success_password_ok_msg2" t="Salasana OK"/>
+	<phrase n="lang_wifi_connect_fail_invalid_settings_msg1" t="Virheelliset asetukset"/>
+	<phrase n="lang_wifi_connect_fail_please_retry_msg2" t="Yritä uudelleen"/>
+	<phrase n="lang_usb_wifi_unavailable" t="USB WiFi ei saatavilla"/>
+	<phrase n="lang_usb_wifi_connected" t="USB WiFi yhdistetty"/>
+	<phrase n="lang_usb_wifi_disconnected" t="USB WiFi katkaistu"/>
+	<phrase n="lang_is_a_favorite" t="on suosikki"/>
+	<phrase n="lang_Lines" t="Linjan asettelu"/>
+	<phrase n="lang_Tiles" t="Ruutujen asettelu"/>
+	<phrase n="lang_tbook_emtpy" t="&lt;Tyhjä&gt;"/>
+	<phrase n="lang_enter_starting_uppercase" t="Syötä"/>
+	<phrase n="lang_characters_starting_lowercase" t="merkit"/>
+	<phrase n="lang_user_server_type" t="Tuettu palvelintyyppi"/>
+	<phrase n="lang_broadsoft_features" t="Broadsoft-ominaisuudet"/>
+	<phrase n="lang_xsi_server" t="XSI-palvelin"/>
+	<phrase n="lang_xsi_user" t="XSI-käyttäjä"/>
+	<phrase n="lang_xsi_password" t="XSI-salasana"/>
+	<phrase n="lang_xsi_retry_timer" t="XSI-uudelleenyritysajastin"/>
+	<phrase n="lang_xsi_events" t="XSI-tapahtumat"/>
+	<phrase n="lang_xmpp_jid" t="XMPP-tunnus"/>
+	<phrase n="lang_xmpp_password" t="XMPP-salasana"/>
+	<phrase n="lang_no_headset_present" t="Ei kuulokkeita läsnä"/>
+	<phrase n="lang_headset_detection" t="Kuulokkeiden tunnistus"/>
+	<phrase n="lang_msw_services" t="Metaswitch-palvelut"/>
+	<phrase n="lang_msw_directory_number" t="Metaswitch-puhelinluettelonumero"/>
+	<phrase n="lang_msw_password" t="Metaswitch-salasana"/>
+	<phrase n="lang_msw_web_url" t="Metaswitch-palvelimen URL"/>
+	<phrase n="lang_xsi_dir_enterprise" t="Yritysluettelo"/>
+	<phrase n="lang_xsi_dir_enterprise_common" t="Yrityksen yleinen puhelinluettelo"/>
+	<phrase n="lang_xsi_dir_group" t="Ryhmäluettelo"/>
+	<phrase n="lang_xsi_dir_group_common" t="Ryhmän yleinen puhelinluettelo"/>
+	<phrase n="lang_xsi_dir_personal" t="Henkilökohtainen puhelinluettelo"/>
+	<phrase n="lang_xsi_anywhere" t="Anywhere"/>
+	<phrase n="lang_xsi_location_new_entry" t="&lt;Uusi merkintä&gt;"/>
+	<phrase n="lang_xsi_location_edit_description" t="Muokkaa sijainnin kuvausta"/>
+	<phrase n="lang_xsi_location_description" t="Kuvaus"/>
+	<phrase n="lang_xsi_location_edit_number" t="Muokkaa sijainnin numeroa"/>
+	<phrase n="lang_number_str" t="Numero "/>
+	<phrase n="lang_xsi_location_status_creating" t="luodaan"/>
+	<phrase n="lang_xsi_location_status_modifying" t="muokataan"/>
+	<phrase n="lang_xsi_location_status_deleting" t="poistetaan"/>
+	<phrase n="lang_xsi_location_error_empty_number" t="Puhelinnumero ei voi olla tyhjä"/>
+	<phrase n="lang_xsi_location_error_number_exists" t="Puhelinnumero on jo olemassa"/>
+	<phrase n="lang_xsi_location_error_empty_description" t="Kuvaus ei voi olla tyhjä"/>
+	<phrase n="lang_visual_voicemail" t="Visuaalinen vastaaja"/>
+	<phrase n="lang_feature_works" t="Feature Works"/>
+	<phrase n="lang_voicemail_name" t="Nimi"/>
+	<phrase n="lang_voicemail_call_number" t="Soita numeroon"/>
+	<phrase n="lang_voicemail_date_time" t="Päivämäärä &amp; aika"/>
+	<phrase n="lang_voicemail_duration" t="Kesto"/>
+	<phrase n="lang_xsi_anywhere_clicktodial" t="Napsauta soittaaksesi"/>
+	<phrase n="lang_xsi_anywhere_grouppaging" t="Ryhmäkuulutus"/>
+	<phrase n="lang_xsi_anywhere_settings" t="Asetukset"/>
+	<phrase n="lang_remote_office" t="Etätoimisto"/>
+	<phrase n="lang_xsi_anywhereportal" t="Anywhere Portal"/>
+	<phrase n="lang_xsi_anywhereportal_number" t="Puhelinnumero"/>
+	<phrase n="lang_menu_primary_display" t="Ensisijainen näyttö"/>
+	<phrase n="lang_menu_secondary_display" t="Toissijainen näyttö"/>
+	<phrase n="lang_enable_remote_office" t="Ota etätoimisto käyttöön"/>
+	<phrase n="lang_call_center_list" t="Puhelinkeskusluettelo"/>
+	<phrase n="lang_call_center_status" t="Puhelinkeskuksen tila"/>
+	<phrase n="lang_call_center_joined" t="Liittynyt"/>
+	<phrase n="lang_call_center_unable_to_join" t="Ei voitu liittyä puhelinkeskukseen"/>
+	<phrase n="lang_call_center_join_not_allowed" t="Liittyminen ei sallittua"/>
+	<phrase n="lang_call_center_unjoin_not_allowed" t="Poistuminen ei sallittua"/>
+	<phrase n="lang_call_center_joining" t="Liitytään"/>
+	<phrase n="lang_call_recording_control" t="Puhelun nauhoituksen hallinta"/>
+	<phrase n="lang_pause_recording" t="Keskeytä nauhoitus"/>
+	<phrase n="lang_resume_recording" t="Jatka nauhoitusta"/>
+	<phrase n="lang_xsi_simul_ring" t="Samanaikainen hälytys"/>
+	<phrase n="lang_xsi_simul_ring_on_call" t="Älä hälytä, kun puhelimessa"/>
+	<phrase n="lang_xsi_simul_ring_edit_phone_number" t="Puhelinnumero"/>
+	<phrase n="lang_xsi_simul_ring_enter_phone_number" t="Syötä puhelinnumero"/>
+	<phrase n="lang_xsi_simul_ring_edit" t="Muokkaa"/>
+	<phrase n="lang_xsi_simul_ring_number" t="Puhelinnumero"/>
+	<phrase n="lang_xsi_simul_ring_add_entry" t="Lisää uusi merkintä"/>
+	<phrase n="lang_xsi_simul_ring_ans_confirm" t="Vastauksen vahvistaminen"/>
+	<phrase n="lang_xsi_simul_ring_number_exists_error" t="Puhelinnumero on jo olemassa"/>
+	<phrase n="lang_xsi_simul_ring_number_empty_error" t="Puhelinnumero on tyhjä."/>
+	<phrase n="lang_xsi_executive" t="Johtaja"/>
+	<phrase n="lang_xsi_executive_assistant" t="Johtajan assistentti"/>
+	<phrase n="lang_xsi_call_filtering" t="Puhelun suodatus"/>
+	<phrase n="lang_xsi_call_filtering_enable" t="Puhelun suodatus"/>
+	<phrase n="lang_xsi_call_filtering_mode" t="Suodatustila"/>
+	<phrase n="lang_xsi_call_filtering_type" t="Suodatustyyppi"/>
+	<phrase n="lang_xsi_call_filtering_simple" t="Yksinkertainen"/>
+	<phrase n="lang_xsi_call_filtering_advanced" t="Lisäasetukset"/>
+	<phrase n="lang_xsi_call_filtering_all" t="Kaikki puhelut"/>
+	<phrase n="lang_xsi_call_filtering_internal" t="Kaikki sisäiset puhelut"/>
+	<phrase n="lang_xsi_call_filtering_external" t="Kaikki ulkoiset puhelut"/>
+	<phrase n="lang_xsi_call_screening" t="Puhelujen seulonta"/>
+	<phrase n="lang_xsi_call_screening_type" t="Hälytystyyppi"/>
+	<phrase n="lang_xsi_call_screening_alert_mobile" t="Matkapuhelinsijaintien hälytykset"/>
+	<phrase n="lang_xsi_call_screening_alert_anywhere" t="Hälytä kaikki sijainnit"/>
+	<phrase n="lang_xsi_call_screening_alert_sca" t="SCA-sijaintien hälytys"/>
+	<phrase n="lang_xsi_call_screening_silent" t="Äänetön"/>
+	<phrase n="lang_xsi_call_screening_ringsplash" t="Ring Splash"/>
+	<phrase n="lang_xsi_executive_view_assistants" t="Näytä assistentit"/>
+	<phrase n="lang_xsi_executive_allow_optin" t="Salli assistenttien osallistuminen/kieltäytyminen"/>
+	<phrase n="lang_xsi_opt_in_out_to_executive" t="Johtajan osallistuminen/kieltäytyminen"/>
+	<phrase n="lang_xsi_opt_in_to_executive" t="Osallistuminen"/>
+	<phrase n="lang_xsi_opt_out_to_executive" t="Kieltäytyminen"/>
+	<phrase n="lang_xsi_assistant_call_divert" t="Ohjaa"/>
+	<phrase n="lang_xsi_assistant_call_divert_number" t="Ohjaa numero"/>
+	<phrase n="lang_xsi_call_alerting" t="Puhelu hälyttää"/>
+	<phrase n="lang_xsi_call_alerting_mode" t="Hälytystila"/>
+	<phrase n="lang_xsi_call_alerting_mode_simu" t="Samanaikainen"/>
+	<phrase n="lang_xsi_call_alerting_mode_seq" t="Peräkkäinen"/>
+	<phrase n="lang_xsi_call_alerting_id_name" t="Soittajalinjan tunnuksen nimi"/>
+	<phrase n="lang_xsi_call_alerting_id_exec_name" t="Johtajan nimi"/>
+	<phrase n="lang_xsi_call_alerting_id_origin_name" t="Aloittajan nimi"/>
+	<phrase n="lang_xsi_call_alerting_id_exec_origin_name" t="Johtajan/aloittajan nimet"/>
+	<phrase n="lang_xsi_call_alerting_id_origin_exec_name" t="Aloittajan/johtajan nimet"/>
+	<phrase n="lang_xsi_call_custom_name" t="Mukautettu"/>
+	<phrase n="lang_xsi_call_alerting_custom_id_name" t="Mukautettu soittolinjan tunnuksen nimi"/>
+	<phrase n="lang_xsi_call_alerting_id_number" t="Soittolinjan tunnuksen numero"/>
+	<phrase n="lang_xsi_call_alerting_id_exec_number" t="Johtajan numero"/>
+	<phrase n="lang_xsi_call_alerting_id_origin_number" t="Aloittajan numero"/>
+	<phrase n="lang_xsi_call_alerting_custom_id_number" t="Mukautettu soittolinjan tunnuksen numero"/>
+	<phrase n="lang_xsi_call_alerting_recall_after" t="Puhelun push recall jälkeen"/>
+	<phrase n="lang_xsi_call_alerting_recall_after_range" t="Syötä hälytysten määrä (2-20)"/>
+	<phrase n="lang_xsi_call_alerting_next_assistant" t="Siirretty seuraavalle assistentille jälkeen"/>
+	<phrase n="lang_xsi_call_alerting_next_assistant_range" t="Syötä hälytysten määrä (1-20)"/>
+	<phrase n="lang_xsi_call_alerting_rollover_after" t="Rollover odotuksen jälkeen"/>
+	<phrase n="lang_xsi_call_alerting_rollover_after_time" t="Rollover-odotusaika"/>
+	<phrase n="lang_xsi_call_alerting_rollover_after_time_range" t="Syötä aika sekunteina (0-60)"/>
+	<phrase n="lang_xsi_call_alerting_rollover_action" t="Rollover-toimi"/>
+	<phrase n="lang_xsi_call_alerting_rollover_action_vm" t="Ääniviesti"/>
+	<phrase n="lang_xsi_call_alerting_rollover_action_fwd" t="Ohjaa"/>
+	<phrase n="lang_xsi_call_alerting_rollover_action_na" t="Ei vastauksen käsittelyä"/>
+	<phrase n="lang_xsi_call_alerting_rollover_fwd_number" t="Rollover-siirtonumero"/>
+	<phrase n="lang_value_out_of_range" t="Syötetty arvo rajan ulkopuolella"/>
+	<phrase n="lang_xsi_callon_behalfof_select_executive" t="Valitse johtaja"/>
+	<phrase n="lang_collaborate_room_details" t="Yhteistyöhuoneen tiedot"/>
+	<phrase n="lang_collaborate_room_name" t="Huoneen nimi"/>
+	<phrase n="lang_collaborate_room_type" t="Huoneen tyyppi"/>
+	<phrase n="lang_collaborate_join_room" t="Liity huoneeseen"/>
+	<phrase n="lang_unavailable_state" t="Syötä ei saatavilla -koodi"/>
+	<phrase n="lang_enter_unavailable_code" t="Syötä ei saatavilla -koodi"/>
+	<phrase n="lang_ringer_is_off" t="Soittoääni on pois päältä"/>
+	<phrase n="lang_uxm_update" t="Laajennusmoduulin päivitys"/>
+	<phrase n="lang_uxm_update_infotext_progress" t="Päivitys kesken. Älä irrota puhelinta tai laajennusmoduulia päivitettäessä."/>
+	<phrase n="lang_uxm_update_infotext_prepare" t="Valmistellaan päivitystä. Älä irrota puhelinta tai moduulia päivitettäessä."/>
+	<phrase n="lang_F_DELETE_MSG" t="Poista V"/>
+	<phrase n="lang_F_DELETE_MSG_typeSio" t="Poista viesti"/>
+	<phrase n="lang_F_DELETE_MSG_smartlabel" t="Poist viesti"/>
+	<phrase n="lang_F_DELETE_MSG_full" t="Poista viesti"/>
+	<phrase n="lang_F_NEXT_ID" t="ID↓"/>
+	<phrase n="lang_F_NEXT_ID_typeSio" t="Seuraava ident"/>
+	<phrase n="lang_F_NEXT_ID_smartlabel" t="Seur. ID"/>
+	<phrase n="lang_F_PREV_ID" t="ID↑"/>
+	<phrase n="lang_F_PREV_ID_typeSio" t="Ed. ident"/>
+	<phrase n="lang_F_PREV_ID_smartlabel" t="Ed. ID"/>
+	<phrase n="lang_F_OCIP" t="OCI-P"/>
+	<phrase n="lang_F_SAB" t="PalLue"/>
+	<phrase n="lang_F_SAB_typeSio" t="Palvelinluettel"/>
+	<phrase n="lang_F_SAB_smartlabel" t="Luettelo"/>
+	<phrase n="lang_F_ABS" t="ABS"/>
+	<phrase n="lang_F_ABS_typeSio" t="Osoitekirjahaku"/>
+	<phrase n="lang_addressbook_menu" t="Valitse osoitekirja"/>
+	<phrase n="lang_addressbook_menu_local" t="Paikallinen"/>
+	<phrase n="lang_multicast_zones_title" t="Monilähetysalueet"/>
+	<phrase n="lang_no_multicast_zones" t="Monilähetysalueita ei saatavilla"/>
+	<phrase n="lang_acd_state" t="ACD-tila"/>
+	<phrase n="lang_please_sign_into_set_acd_state" t="Kirjaudu sisään asettaaksesi ACD-tilan"/>
+	<phrase n="lang_fkey_longpress_support" t="LP-toiminto"/>
+	<phrase n="lang_important" t="Tärkeä"/>
+	<phrase n="lang_SmartTransferEditDescription" t="Syötä SmartTransfer-kohde"/>
+	<phrase n="lang_SmartTransfer" t="SmartTransfer"/>
+	<phrase n="lang_SmartTransfer_ready" t="Softkey valmiina siirtämään puheluja."/>
+	<phrase n="lang_department" t="Osasto"/>
+	<phrase n="lang_extensions" t="Laajennukset"/>
+	<phrase n="lang_menu_title_text_options" t="Tekstivaihtoehdot"/>
+	<phrase n="lang_F_ADD_LOCATION" t="Lisää sijainti"/>
+	<phrase n="lang_gk_mode_none" t="Ei mitään"/>
+	<phrase n="lang_demo_mode" t="Demotila"/>
+	<phrase n="lang_transfer_or" t="Siirrä tai"/>
+	<phrase n="lang_call_pickup" t="Vastaa puheluun?"/>
+	<phrase n="lang_choose_an_action" t="Valitse toimi"/>
+	<phrase n="lang_Conference_Setup" t="Konferenssin määritys"/>
+	<phrase n="lang_Conference_First_Participant" t="Konferenssin osallistuja 1"/>
+	<phrase n="lang_Conference_Second_Participant" t="Konferenssin osallistuja 2"/>
+	<phrase n="lang_menu_smart_label" t="SmartLabel-asetukset"/>
+	<phrase n="lang_menu_idle_screen" t="Toimettoman näytön käytös"/>
+	<phrase n="lang_menu_call_screen" t="Puhelunäyttöjen käytös"/>
+	<phrase n="lang_menu_other_screen" t="Muiden näyttöjen käytös"/>
+	<phrase n="lang_menu_label_default_mode" t="Oletusnäyttötila"/>
+	<phrase n="lang_menu_label_expanded_mode" t="Vaihtoehtoisen näytön tila"/>
+	<phrase n="lang_menu_label_expansion_triggers" t="Vaihtoehtoisen näytön aktivointi"/>
+	<phrase n="lang_menu_short_label" t="Lyhyt merkintä"/>
+	<phrase n="lang_menu_full_label" t="Täysi merkintä"/>
+	<phrase n="lang_menu_short_label_mode" t="Lyhyt merkintä -tila"/>
+	<phrase n="lang_menu_short_press" t="Paina sivupainiketta lyhyesti"/>
+	<phrase n="lang_menu_long_press" t="Pidä sivupainiketta painettuna"/>
+	<phrase n="lang_menu_proximity_sensor" t="Etäisyysanturi"/>
+	<phrase n="lang_menu_P2_short_press" t="Short Press P2"/>
+	<phrase n="lang_menu_P2_long_press" t="Pidä painettuna P2"/>
+	<phrase n="lang_menu_P3_short_press" t="Paina lyhyesti P3"/>
+	<phrase n="lang_menu_P3_long_press" t="Pidä painettuna P3"/>
+	<phrase n="lang_menu_P4_short_press" t="Paina lyhyesti P4"/>
+	<phrase n="lang_menu_P4_long_press" t="Pidä painettuna P4"/>
+	<phrase n="lang_menu_P8_short_press" t="Paina lyhyesti P8"/>
+	<phrase n="lang_menu_P8_long_press" t="Pidä painettuna P8"/>
+	<phrase n="lang_menu_P10_short_press" t="Short Press P10"/>
+	<phrase n="lang_menu_P10_long_press" t="Long Press P10"/>
+	<phrase n="lang_short_press" t="Paina lyhyesti"/>
+	<phrase n="lang_fkey_press" t="Paina Fkey-painiketta"/>
+	<phrase n="lang_long_press" t="Pidä painettuna"/>
+	<phrase n="lang_short_label_mode_icon" t="Vain kuvake"/>
+	<phrase n="lang_smartlabel_mode_text" t="Vain teksti"/>
+	<phrase n="lang_smartlabel_mode_icon_text" t="Kuvake ja teksti"/>
+	<phrase n="lang_status_msg_uxm_update_required" t=" vaatii päivityksen"/>
+	<phrase n="lang_status_detail_uxm_update_required" t="Päivitä laajennusmoduuli viimeisimpään versioon toiminnon käyttöön ottamiseksi."/>
+	<phrase n="lang_status_detail_uxm_update_required2" t="Varmista, että puhelimeen on kytketty vain yksi laajennus eikä laajennusta ole kytketty erilliseen virtalähteeseen."/>
+	<phrase n="lang_unhandled_item" t="Käsittelemätön kohde:"/>
+	<phrase n="lang_preferences_general" t="Yleinen"/>
+	<phrase n="lang_quick_dial_contacts" t="Pikavalintayhteystiedot"/>
+	<phrase n="lang_start_tbook_download" t="Aloitetaanko luettelon lataus?"/>
+	<phrase n="lang_tbook_download" t="Puhelinluettelon lataus"/>
+	<phrase n="lang_tbook_download_started" t="Puhelinluettelon lataus aloitettu identiteetille"/>
+	<phrase n="lang_tbook_download_finished" t="Puhelinluettelon lataus valmistunut identiteetille"/>
+	<phrase n="lang_tbook_download_failed" t="Puhelinluettelon lataus epäonnistunut identiteetille"/>
+	<phrase n="lang_tbook_download_not_possible" t="Puhelinluettelon lataus ei mahdollinen identiteetille"/>
+	<phrase n="lang_tbook_download_overflowed" t="Puhelinluettelon lataus ei valmis (sisäinen raja ylittynyt)."/>
+	<phrase n="lang_tbook_is_full" t="Osoitekirja täynnä"/>
+	<phrase n="lang_F_HOTELING" t="Hotel"/>
+	<phrase n="lang_F_HOTELING_typeSio" t="Hoteling"/>
+	<phrase n="lang_F_HOTELING_smartlabel" t="Hoteling"/>
+	<phrase n="lang_F_GUEST_LOGIN" t="Vieraan sisäänkirjautuminen"/>
+	<phrase n="lang_F_GUEST_LOGOUT" t="Vieraan uloskirjautuminen"/>
+	<phrase n="lang_F_GUEST_LOGIN_smartlabel" t="Vieras sisään"/>
+	<phrase n="lang_F_GUEST_LOGOUT_smartlabel" t="Vieras ulos"/>
+	<phrase n="lang_F_LOGIN" t="Kirjaudu sisään"/>
+	<phrase n="lang_F_LOGOUT" t="Kirjaudu ulos"/>
+	<phrase n="lang_smartlabel_id" t="ID"/>
+	<phrase n="lang_title_guest_logout" t="Vieraan uloskirjautuminen"/>
+	<phrase n="lang_confirm_guest_logout" t="Haluatko varmasti kirjautua ulos?"/>
+	<phrase n="lang_no_contacts" t="Ei yhteystietoja"/>
+	<phrase n="lang_hoteling_guest" t="Hoteling-vieras"/>
+	<phrase n="lang_logging_out" t="Kirjaudutaan ulos..."/>
+	<phrase n="lang_logging_in" t="Kirjaudutaan sisään..."/>
+	<phrase n="lang_login_failed" t="Sisäänkirjautuminen epäonnistui"/>
+	<phrase n="lang_acd_signout_message" t="Sinut kirjataan ulos ACD:stä. Jatketaanko vieraan sisäänkirjautumisella?"/>
+	<phrase n="lang_title_guest_login" t="Vieraan sisäänkirjautuminen"/>
+	<phrase n="lang_F_MARK_READ" t="Merkitse luetuksi"/>
+	<phrase n="lang_F_MARK_UNREAD" t="Merkitse lukemattomaksi"/>
+	<phrase n="lang_call_recording_mode_never" t="Ei koskaan"/>
+	<phrase n="lang_call_recording_mode_always" t="Aina"/>
+	<phrase n="lang_call_recording_mode_always_pause_resume" t="Keskeytä/jatka aina"/>
+	<phrase n="lang_call_recording_mode_on_demand" t="Pyynnöstä"/>
+	<phrase n="lang_call_recording_mode_on_demand_user_start" t="On-demand-user-start"/>
+	<phrase n="lang_smartlabel_dismiss_timeout" t="Palaa oletustilaan"/>
+	<phrase n="lang_call_recording_mode" t="Puhelun nauhoitustila"/>
+	<phrase n="lang_menu_full_label_mode" t="Täysi merkintä -tila"/>
+	<phrase n="lang_menu_label_mode" t="Merkintätila"/>
+	<phrase n="lang_guest_pin" t="Vieraan PIN"/>
+	<phrase n="lang_incorrect_pin" t="Virheellinen PIN"/>
+	<phrase n="lang_voicemail_info" t="Vastaajatiedot"/>
+	<phrase n="lang_confirm_del_deny_list_item_title" t="Poista estolistan kohde"/>
+	<phrase n="lang_confirm_del_number_from_deny_list" t="Poistetaanko estoluettelosta?"/>
+	<phrase n="lang_confirm_del_menu_configuration" t="Poista asetuspainikkeen konfiguraatio"/>
+	<phrase n="lang_confirm_message" t="Haluatko varmasti tehdä tämän?"/>
+	<phrase n="lang_caller_id_blocking" t="Soittajan tunnuksen esto"/>
+	<phrase n="lang_screen_items_color_and_opacity_title" t="Väri ja peittävyys"/>
+	<phrase n="lang_ui_themes" t="Teemat"/>
+	<phrase n="lang_theme_light" t="Vaalea"/>
+	<phrase n="lang_theme_dark" t="Tumma"/>
+	<phrase n="lang_theme_colorful" t="Värikäs"/>
+	<phrase n="lang_theme_industrial" t="Teollisuus"/>
+	<phrase n="lang_theme_contrast" t="Contrast"/>
+	<phrase n="lang_screen_items_color_title" t="Väri"/>
+	<phrase n="lang_screen_items_opacity_title" t="Peittävyys"/>
+	<phrase n="lang_screen_items_enter_custom_color_title" t="Syötä mukautettuja arvoja"/>
+	<phrase n="lang_screen_item_titlebar_text" t="Otsikkorivin teksti"/>
+	<phrase n="lang_screen_item_text" t="Teksti"/>
+	<phrase n="lang_screen_item_subtext" t="Alateksti"/>
+	<phrase n="lang_screen_item_extratext" t="Ylimääräinen teksti"/>
+	<phrase n="lang_screen_item_extratext2" t="Ylimääräinen teksti 2"/>
+	<phrase n="lang_screen_item_titlebar_background" t="Otsikkorivin tausta"/>
+	<phrase n="lang_screen_item_background" t="Tausta"/>
+	<phrase n="lang_screen_item_fkey_background" t="Fkey-tausta"/>
+	<phrase n="lang_screen_item_fkey_pressed_background" t="Fkey painettuna -tausta"/>
+	<phrase n="lang_screen_item_fkey_separator" t="Fkey-erotin"/>
+	<phrase n="lang_screen_item_fkey_label" t="Fkey-merkintä"/>
+	<phrase n="lang_screen_item_fkey_pressed_label" t="Fkey painettuna -merkintä"/>
+	<phrase n="lang_screen_item_line_background" t="Linjan tausta"/>
+	<phrase n="lang_screen_item_selected_line_background" t="Valitun linjan tausta"/>
+	<phrase n="lang_screen_item_selected_line_indicator" t="Valitun linjan indikaattori"/>
+	<phrase n="lang_screen_item_selected_line_text" t="Valitun linjan teksti"/>
+	<phrase n="lang_screen_item_line_separator" t="Linjan erotin"/>
+	<phrase n="lang_screen_item_scrollbar" t="Vierityspalkki"/>
+	<phrase n="lang_screen_item_cursor" t="Kursori"/>
+	<phrase n="lang_screen_item_status_msgs_background" t="Tilaviestien tausta"/>
+	<phrase n="lang_screen_item_status_msgs_border" t="Tilaviestien reunus"/>
+	<phrase n="lang_screen_item_smartlabel_background" t="SmartLabel-tausta"/>
+	<phrase n="lang_screen_item_smartlabel_pressed_background" t="SmartLabel painettuna -tausta"/>
+	<phrase n="lang_screen_item_smartlabel_separator" t="SmartLabel-erotin"/>
+	<phrase n="lang_screen_item_smartlabel_label" t="SmartLabel-merkintä"/>
+	<phrase n="lang_screen_item_smartlabel_pressed_label" t="SmartLabel painettuna -merkintä"/>
+	<phrase n="lang_screen_item_expansion_module_background" t="Laajennusmoduulin tausta"/>
+	<phrase n="lang_screen_item_expansion_module_pressed_background" t="Laajennusmoduuli painettuna -tausta"/>
+	<phrase n="lang_screen_item_expansion_module_separator" t="Laajennusmoduulin erotin"/>
+	<phrase n="lang_screen_item_expansion_module_maintext" t="Laajennusmoduulin pääteksti"/>
+	<phrase n="lang_screen_item_expansion_module_pressed_maintext" t="Laajennusmoduuli painettuna -pääteksti"/>
+	<phrase n="lang_screen_item_expansion_module_subtext" t="Laajennusmoduulin aliteksti"/>
+	<phrase n="lang_screen_item_expansion_module_pressed_subtext" t="Laajennusmoduuli painettuna -alateksti"/>
+	<phrase n="lang_screen_item_expansion_module_page_indicator" t="Laajennusmoduulin sivuindikaattori"/>
+	<phrase n="lang_screen_items_color_name_onyx_black" t="Musta onyksi"/>
+	<phrase n="lang_screen_items_color_name_midnight_black" t="Keskiyön musta"/>
+	<phrase n="lang_screen_items_color_name_obsidian_black" t="Obsidiaanin musta"/>
+	<phrase n="lang_screen_items_color_name_dark_grey" t="Tummanharmaa"/>
+	<phrase n="lang_screen_items_color_name_grey" t="Harmaa"/>
+	<phrase n="lang_screen_items_color_name_light_grey" t="Vaaleanharmaa"/>
+	<phrase n="lang_screen_items_color_name_grey_white" t="Harmaanvalkoinen"/>
+	<phrase n="lang_screen_items_color_name_white" t="Valkoinen"/>
+	<phrase n="lang_screen_items_color_name_light_yellow" t="Vaaleankeltainen"/>
+	<phrase n="lang_screen_items_color_name_yellow" t="Keltainen"/>
+	<phrase n="lang_screen_items_color_name_light_red" t="Vaaleanpunainen"/>
+	<phrase n="lang_screen_items_color_name_red" t="Punainen"/>
+	<phrase n="lang_screen_items_color_name_light_blue" t="Vaaleansininen"/>
+	<phrase n="lang_screen_items_color_name_blue" t="Sininen"/>
+	<phrase n="lang_screen_items_color_name_light_green" t="Vaaleanvihreä"/>
+	<phrase n="lang_screen_items_color_name_green" t="Vihreä"/>
+	<phrase n="lang_screen_items_color_name_black" t="Black"/>
+	<phrase n="lang_screen_items_color_name_carbon" t="Carbon"/>
+	<phrase n="lang_screen_items_color_name_dim_grey" t="Dim Grey"/>
+	<phrase n="lang_screen_items_color_name_silver" t="Silver"/>
+	<phrase n="lang_screen_items_color_name_gainsboro" t="Gainsboro"/>
+	<phrase n="lang_screen_items_color_name_snowflake" t="Snowflake"/>
+	<phrase n="lang_screen_items_color_name_white_smoke" t="White Smoke"/>
+	<phrase n="lang_screen_items_color_name_custom" t="Mukautettu väri"/>
+	<phrase n="lang_monitored_extensions" t="Valvotut laajennukset"/>
+	<phrase n="lang_ALS" t="Taustavaloanturi"/>
+	<phrase n="lang_all_available_calls" t="Kaikki saatavilla olevat puhelut"/>
+	<phrase n="lang_new_call" t="Uusi puhelu"/>
+	<phrase n="lang_select_conf_participant" t="Valitse konferenssin osallistuja"/>
+	<phrase n="lang_consult_conference" t="Konsultointikonferenssi"/>
+	<phrase n="lang_guess_max_hits" t="max. osumat"/>
+	<phrase n="lang_guess_results" t="Tulokset"/>
+	<phrase n="lang_new_network_policy" t="Uusi verkkokäytäntö"/>
+	<phrase n="lang_wrong_lldp_policy" t="Virheellinen LLDP-käytäntö"/>
+	<phrase n="lang_F_MODERATE" t="Valvo"/>
+	<phrase n="lang_sip_warning" t="SIP-varoitus"/>
+	<phrase n="lang_sync_settings" t="Synkronoi asetukset"/>
+	<phrase n="lang_confirm_sync_settings" t="Synkronoi asetukset palvelin konfiguroinnin kanssa?"/>
+	<phrase n="lang_no_configured_extensions" t="Ei konfiguroituja alanumeroita"/>
+	<phrase n="lang_no_active_calls_on_extensions" t="Alanumeroissa ei aktiivisia puheluja"/>
+	<phrase n="lang_sip_response_code_400" t="Huono pyyntö"/>
+	<phrase n="lang_sip_response_code_402" t="Maksu vaaditaan"/>
+	<phrase n="lang_sip_response_code_403" t="Kielletty"/>
+	<phrase n="lang_sip_response_code_404" t="Ei löytynyt"/>
+	<phrase n="lang_sip_response_code_405" t="Tapa ei sallittu"/>
+	<phrase n="lang_sip_response_code_406" t="Ei hyväksytä"/>
+	<phrase n="lang_sip_response_code_407" t="Välitypalvelimen vahvistus vaaditaan"/>
+	<phrase n="lang_sip_response_code_408" t="Pyynnön aikakatkaisu"/>
+	<phrase n="lang_sip_response_code_410" t="Poissa"/>
+	<phrase n="lang_sip_response_code_413" t="Pyyntökokonaisuus liian suuri"/>
+	<phrase n="lang_sip_response_code_414" t="Pyynnön URI liian pitkä"/>
+	<phrase n="lang_sip_response_code_415" t="Tukematon mediatyyppi"/>
+	<phrase n="lang_sip_response_code_416" t="Tukematon URI-suunnitelma"/>
+	<phrase n="lang_sip_response_code_420" t="Huono alanumero"/>
+	<phrase n="lang_sip_response_code_421" t="Alanumero vaaditaan"/>
+	<phrase n="lang_sip_response_code_422" t="Istunnon aikaväli liian pieni"/>
+	<phrase n="lang_sip_response_code_423" t="Aikaväli liian lyhyt"/>
+	<phrase n="lang_sip_response_code_480" t="Tilapäisesti ei saatavilla"/>
+	<phrase n="lang_sip_response_code_481" t="Puhelua/tapahtumaa ei ole olemassa"/>
+	<phrase n="lang_sip_response_code_482" t="Silmukka havaittu"/>
+	<phrase n="lang_sip_response_code_483" t="Liian monta hyppyä"/>
+	<phrase n="lang_sip_response_code_484" t="Osoite epätäydellinen"/>
+	<phrase n="lang_sip_response_code_485" t="Epäselvä"/>
+	<phrase n="lang_sip_response_code_486" t="Varattu"/>
+	<phrase n="lang_sip_response_code_487" t="Pyyntö lopetettu"/>
+	<phrase n="lang_sip_response_code_488" t="Ei hyväksytty"/>
+	<phrase n="lang_sip_response_code_491" t="Pyyntö odottaa"/>
+	<phrase n="lang_sip_response_code_493" t="Lukukelvoton"/>
+	<phrase n="lang_sip_response_code_500" t="Sisäinen palvelinvirhe"/>
+	<phrase n="lang_sip_response_code_501" t="Ei toteutettu"/>
+	<phrase n="lang_sip_response_code_502" t="Huono yhdyskäytävä"/>
+	<phrase n="lang_sip_response_code_503" t="Palvelu ei saatavilla"/>
+	<phrase n="lang_sip_response_code_504" t="Palvelimen aikakatkaisu"/>
+	<phrase n="lang_sip_response_code_505" t="Versiota ei tueta"/>
+	<phrase n="lang_sip_response_code_513" t="Viesti liian pitkä"/>
+	<phrase n="lang_sip_response_code_599" t="Verkon yhdistämisen aikakatkaisuvirhe"/>
+	<phrase n="lang_sip_response_code_600" t="Varattu kaikkialla"/>
+	<phrase n="lang_sip_response_code_603" t="Hylkää"/>
+	<phrase n="lang_sip_response_code_604" t="Ei ole olemassa missään"/>
+	<phrase n="lang_sip_response_code_606" t="Ei hyväksyttävä"/>
+	<phrase n="lang_sort_order" t="Lajittelujärjestys"/>
+	<phrase n="lang_directory_display_order" t="Esitysjärjestys"/>
+	<phrase n="lang_display_order_first_name_last_name" t="Etunimi, sukunimi"/>
+	<phrase n="lang_display_order_last_name_first_name" t="Sukunimi, etunimi"/>
+	<phrase n="lang_visual_options" t="Visuaaliset asetukset"/>
+	<phrase n="lang_call_screen_photo_size" t="Kuvan koko puhelunäytöissä"/>
+	<phrase n="lang_size_XS" t="XS"/>
+	<phrase n="lang_size_S" t="S"/>
+	<phrase n="lang_size_M" t="M"/>
+	<phrase n="lang_size_L" t="L"/>
+	<phrase n="lang_size_XL" t="XL"/>
+	<phrase n="lang_size_XXL" t="XXL"/>
+	<phrase n="lang_size_XXXL" t="XXXL"/>
+	<phrase n="lang_prefer_saved_over_received_photo" t="Suosi paikallisia kuvia"/>
+	<phrase n="lang_display_method" t="Numeroiden näyttötyyli"/>
+	<phrase n="lang_display_method_full_contact" t="Täysi yhteystieto"/>
+	<phrase n="lang_display_method_display_name" t="Nimi"/>
+	<phrase n="lang_display_method_display_number" t="Numero"/>
+	<phrase n="lang_display_method_display_name_number" t="Nimi + numero"/>
+	<phrase n="lang_display_method_display_number_name" t="Numero + nimi"/>
+	<phrase n="lang_no_calls_for_transfer" t="Ei siirrettäviä puheluja"/>
+	<phrase n="lang_brand_variant_select_title" t="Valitse brändivariantti"/>
+	<phrase n="lang_brand_variant_default" t="Oletus"/>
+	<phrase n="lang_brand_variant_updated_title" t="Variantti päivitetty"/>
+	<phrase n="lang_brand_variant_selected" t="Variantti valittu"/>
+	<phrase n="lang_system_reboot_now" t="Järjestelmä käynnistyy nyt uudelleen"/>
+	<phrase n="lang_select_identity" t="Valitse identiteetti"/>
+	<phrase n="lang_F_CALL_CENTER_STATUS" t="Puhelinkeskuksen tila"/>
+	<phrase n="lang_F_ATTENDED_TRANSFER" t="Käsitelty"/>
+	<phrase n="lang_disposition_code_sent" t="lähetetty"/>
+	<phrase n="lang_disposition_code_selection" t="Valitse käsittelykoodi"/>
+	<phrase n="lang_disposition_code_entry" t="Syötä käsittelykoodi"/>
+	<phrase n="lang_F_DISP_CODE" t="KäsKoo"/>
+	<phrase n="lang_F_DISP_CODE_typeSio" t="Käsittelykoodi"/>
+	<phrase n="lang_F_DISP_CODE_smartlabel" t="Käs.kood"/>
+	<phrase n="lang_disposition_code_display_text_list" t="Luettelo"/>
+	<phrase n="lang_parked_calls_settings" t="Pysäköidyt puhelut"/>
+	<phrase n="lang_call_parked_on" t="Pysäköity"/>
+	<phrase n="lang_no_parked_call" t="Pysäköityä puhelua ei saatavilla."/>
+	<phrase n="lang_F_CALL_PARK_IDLE" t="Pysäköinti toimettomana"/>
+	<phrase n="lang_F_CALL_PARK_typeSio" t="Puhelun pysäköinti"/>
+	<phrase n="lang_menu_any_smartlabel_key_short_press" t="Paina SmartLabel lyhyesti"/>
+	<phrase n="lang_monitored_extension_is_ringing" t="Valvottu alanumero soi"/>
+	<phrase n="lang_disposition_code_not_sent" t="Koodia ei lähetetty."/>
+	<phrase n="lang_disposition_code_identity_mismatch" t="Identiteetin yhteensopimattomuus."/>
+	<phrase n="lang_F_EXEC_ASSIST_CALL_PUSH" t="Puhelun siirto"/>
+	<phrase n="lang_usb_mass_storage_plug" t="USB-levy havaittu"/>
+	<phrase n="lang_usb_mass_storage_unplug" t="USB-levy poistettu"/>
+	<phrase n="lang_information_menu_usb_info" t="USB-tiedot"/>
+	<phrase n="lang_usb_mass_storage_title" t="USB-massamuisti"/>
+	<phrase n="lang_F_USB_EJECT" t="Poista USB"/>
+	<phrase n="lang_usb_mass_storage_safe_to_remove" t="USB-levy on nyt turvallinen irrottaa"/>
+	<phrase n="lang_F_USBREC_START" t="Aloita USB-nauh."/>
+	<phrase n="lang_F_USBREC_START_typeSio" t="Aloita USB-nauhoitus"/>
+	<phrase n="lang_F_USBREC_START_smartlabel" t="Aloita&lt;br&gt;USB-nauh."/>
+	<phrase n="lang_F_USBREC_STOP" t="Pysäytä USB-nauh."/>
+	<phrase n="lang_F_USBREC_STOP_typeSio" t="Pysäytä USB-nauhoitus"/>
+	<phrase n="lang_F_USBREC_STOP_smartlabel" t="Pysäytä&lt;br&gt;USB-nauh."/>
+	<phrase n="lang_F_USBREC_PAUSE" t="Keskeytä USB-nauh."/>
+	<phrase n="lang_F_USBREC_PAUSE_typeSio" t="Keskeytä USB-nauhoitus"/>
+	<phrase n="lang_F_USBREC_PAUSE_smartlabel" t="Keskeytä&lt;br&gt;USB-nauh."/>
+	<phrase n="lang_F_USBREC_RESUME" t="Jatka USB-nauh."/>
+	<phrase n="lang_F_USBREC_RESUME_typeSio" t="Jatka USB-nauhoitusta"/>
+	<phrase n="lang_F_USBREC_RESUME_smartlabel" t="Jatka&lt;br&gt;USB-nauh."/>
+	<phrase n="lang_F_PAUSE" t="Keskeytä"/>
+	<phrase n="lang_F_RESUME" t="Jatka"/>
+	<phrase n="lang_usb_recording_processing_wait" t="Odota nauhoitusprosessin päättymistä!"/>
+	<phrase n="lang_usb_recording_processing_completed" t="Nauhoitusprosessi valmis!"/>
+	<phrase n="lang_usb_recording_call_terminated" t="Puhelun nauhoitus keskeytetty"/>
+	<phrase n="lang_usb_recording_terminated_drive_full" t="Nauhoitus keskeytetty, USB-levy on täynnä"/>
+	<phrase n="lang_usb_recording_terminated_max_file_size" t="Nauhoitus keskeytetty, nauhoituksen enimmäiskesto"/>
+	<phrase n="lang_usb_recording_no_usb_drive_detected" t="USB-levyä ei havaittu"/>
+	<phrase n="lang_usb_recording_terminated_errno" t="Nauhoitus keskeytetty, virhenro: "/>
+	<phrase n="lang_usb_playback_browse_recordings" t="Selaa tallenteita"/>
+	<phrase n="lang_usb_playback_browse_recordings_title" t="Puhelutallenteet"/>
+	<phrase n="lang_usb_playback_play_recording_title" t="Tallenteen toisto"/>
+	<phrase n="lang_usb_playback_invalid_header_or_encrypted_file" t="Virheellinen wav-otsikko tai salattu tiedosto:"/>
+	<phrase n="lang_usb_playback_recording_information_title" t="Tallennetiedot"/>
+	<phrase n="lang_usb_playback_delete_recording_title" t="Poista tallenne"/>
+	<phrase n="lang_label_rewind" t="Siirry taaksepäin"/>
+	<phrase n="lang_label_fast_forward" t="Pikakelaus"/>
+	<phrase n="lang_text_size" t="Koko"/>
+	<phrase n="lang_usb_playback_no_recordings" t="Ei tallenteita"/>
+	<phrase n="lang_usb_recording_aborted_by_conference" t="Konferenssi keskeytti USB-tallenteen"/>
+	<phrase n="lang_usb_recording_cannot_record_conference" t="Ei voida nauhoittaa konferenssia USB:hen"/>
+	<phrase n="lang_date_and_time" t="Päivämäärä &amp; aika"/>
+	<phrase n="lang_label_context_key_page_left" t="Sivutus vasen"/>
+	<phrase n="lang_label_context_key_page_right" t="Sivutus oikea"/>
+	<phrase n="lang_expansion_module_text_alignment" t="Tekstin tasaus"/>
+	<phrase n="lang_expansion_module_color_font_sizes_XXL_XS" t="Pääteksti XXL &amp; alateksti XS"/>
+	<phrase n="lang_expansion_module_color_font_sizes_XL_XS" t="Pääteksti XL &amp; alateksti XS"/>
+	<phrase n="lang_expansion_module_color_font_sizes_XL_S" t="Pääteksti XL &amp; alateksti S"/>
+	<phrase n="lang_expansion_module_color_font_sizes_L_XS" t="Pääteksti L &amp; alateksti XS"/>
+	<phrase n="lang_expansion_module_color_font_sizes_L_S" t="Pääteksti L &amp; alateksti S"/>
+	<phrase n="lang_expansion_module_color_font_sizes_L_M" t="Pääteksti L &amp; alateksti M"/>
+	<phrase n="lang_expansion_module_color_font_sizes_M_XS" t="Pääteksti M &amp; alateksti XS"/>
+	<phrase n="lang_expansion_module_color_font_sizes_M_S" t="Pääteksti M &amp; alateksti S"/>
+	<phrase n="lang_expansion_module_color_font_sizes_M_M" t="Pääteksti M &amp; alateksti M"/>
+	<phrase n="lang_expansion_module_color_font_sizes_S_XS" t="Pääteksti S &amp; alateksti XS"/>
+	<phrase n="lang_expansion_module_color_font_sizes_S_S" t="Pääteksti S &amp; alateksti S"/>
+	<phrase n="lang_expansion_module_color_font_sizes_XS_XS" t="Pääteksti XS &amp; alateksti XS"/>
+	<phrase n="lang_edit_mode_upper_case" t="ABC"/>
+	<phrase n="lang_edit_mode_lower_case" t="abc"/>
+	<phrase n="lang_edit_mode_numbers" t="123"/>
+	<phrase n="lang_F_IDLE_CONTEXT_PAGE_LEFT" t="Vasen"/>
+	<phrase n="lang_F_IDLE_CONTEXT_PAGE_LEFT_typeSio" t="Sivutus vasen"/>
+	<phrase n="lang_F_IDLE_CONTEXT_PAGE_RIGHT" t="Oikea"/>
+	<phrase n="lang_F_IDLE_CONTEXT_PAGE_RIGHT_typeSio" t="Sivutus oikea"/>
+	<phrase n="lang_F_NONE" t=""/>
+	<phrase n="lang_branding_name" t="Brändäys:"/>
+	<phrase n="lang_hardware_version" t="Laitteiston versio:"/>
+	<phrase n="lang_branding_version" t="Branding Version:"/>
+	<phrase n="lang_NickName" t="Lempinimi"/>
+	<phrase n="lang_FirstShortCode" t="1. koodi"/>
+	<phrase n="lang_LastShortCode" t="Viim. koodi"/>
+	<phrase n="lang_FirstExternalDirectoryNumber" t="1. numero"/>
+	<phrase n="lang_LastExternalDirectoryNumber" t="Viim. numero"/>
+	<phrase n="lang_DialingPlanCode" t="Suunnitelma"/>
+	<phrase n="lang_DialingPlanCodeDetail" t="Soittosuunnitelmakoodi"/>
+	<phrase n="lang_FirstShortCodeDetail" t="1. lyhyt koodi"/>
+	<phrase n="lang_FirstExternalDirectoryDetail" t="Ensimmäinen ulkoinen luettelo"/>
+	<phrase n="lang_LastExternalDirectoryDetail" t="Viimeinen ulkoinen puhelinluettelo"/>
+	<phrase n="lang_Department" t="Osasto"/>
+	<phrase n="lang_shortcodes" t="Lyhyet koodit"/>
+	<phrase n="lang_emergency_call_number_is_misconfigured" t="Hätänumerot määritetty väärin"/>
+	<phrase n="lang_tb_alias" t="Alias"/>
+	<phrase n="lang_web_user_credentials_not_set" t="No credentials set for the web user"/>
+	<phrase n="lang_web_admin_credentials_not_set" t="No credentials set for the web admin"/>
+	<phrase n="lang_not_registered" t=" not registered"/>
+	<phrase n="lang_fake_number" t="Fake Number"/>
+	<phrase n="lang_BLF_DND_on" t="DND on"/>
+	<phrase n="lang_BLF_On_a_call" t="On a call"/>
+	<phrase n="lang_BLF_Idle" t="Idle"/>
+	<phrase n="lang_MediaStack_restarting_All_lines_will_be_closed" t="MediaStack restarting. All lines will be closed."/>
+	<phrase n="lang_Firmware_update_starting" t="Firmware update: starting"/>
+	<phrase n="lang_Firmware_update_sent_install_request" t="Firmware update: waiting for file server response"/>
+	<phrase n="lang_Firmware_update_download" t="Firmware update: downloading"/>
+	<phrase n="lang_Firmware_update_transfer_to_swupdate" t="Firmware update: processing"/>
+	<phrase n="lang_Firmware_update_verification_and_install" t="Firmware update: installing"/>
+	<phrase n="lang_File_server_response" t="Server response: "/>
+	<phrase n="lang_File_server_unreachable" t="File server unreachable."/>
+	<phrase n="lang_File_not_found" t="File not found."/>
+	<phrase n="lang_Firmware_invalid" t="Firmware invalid."/>
+	<phrase n="lang_firmware_update" t="Firmware Update"/>
+	<phrase n="lang_menu_ringer_once" t="Only once"/>
+	<phrase n="lang_voicemail_no_access_code" t="Number or feature access code is not programmed"/>
+	<phrase n="lang_F_WIFI" t="Wi-Fi"/>
+	<phrase n="lang_parties" t="parties"/>
+	<phrase n="lang_fwd_by" t="Fwd by:"/>
+	<phrase n="lang_firmware_update_completed_pending_reboot" t="Phone is about to reboot to complete the firmware update. Rebooting in %d seconds..."/>
+	<phrase n="lang_F_CLOSE" t="Sulje"/>
+	<phrase n="lang_ip_assigment" t="IP Assignment"/>
+	<phrase n="lang_disable" t="Disable"/>
+	<phrase n="lang_enable" t="Enable"/>
+	<phrase n="lang_reregister" t="Re-register"/>
+	<phrase n="lang_phonemanager" t="Phone Manager (Web UI)"/>
+	<phrase n="lang_locale" t="Date &amp; Time format"/>
+	<phrase n="lang_webserver_admin_name" t="Admin name"/>
+	<phrase n="lang_webserver_admin_password" t="Admin password"/>
+	<phrase n="lang_webserver_user_name" t="User name"/>
+	<phrase n="lang_webserver_user_password" t="User password"/>
+	<phrase n="lang_startup_wizard" t="Startup Wizard"/>
+	<phrase n="lang_no_voicemail" t="No voicemail"/>
+	<phrase n="lang_new_voicemail" t="New voicemail"/>
+	<phrase n="lang_old_voicemail" t="Old voicemail"/>
+	<phrase n="lang_phonemanager_credentials" t="Phone Manager (Web UI) login credentials"/>
+	<phrase n="lang_static_ip" t="Static IP"/>
+	<phrase n="lang_dhcp_or_static_ip" t="DHCP or Static IP"/>
+	<phrase n="lang_locale_ar_AE" t="Arabic (United Arab Emirates)"/>
+	<phrase n="lang_locale_az_AZ" t="Azərbaycanca (Azerbaijan)"/>
+	<phrase n="lang_locale_bs_BA" t="Bosanki (Bosnia)"/>
+	<phrase n="lang_locale_ca_ES" t="Català (Spain)"/>
+	<phrase n="lang_locale_cs_CZ" t="Čeština (Czech Republic)"/>
+	<phrase n="lang_locale_da_DK" t="Dansk (Denmark)"/>
+	<phrase n="lang_locale_de_DE" t="Deutsch (Germany)"/>
+	<phrase n="lang_locale_el_GR" t="Ελληνικά (Greece)"/>
+	<phrase n="lang_locale_en_DE" t="English (Germany)"/>
+	<phrase n="lang_locale_en_GB" t="English (UK)"/>
+	<phrase n="lang_locale_en_US" t="English (US)"/>
+	<phrase n="lang_locale_es_ES" t="Español (Spain)"/>
+	<phrase n="lang_locale_et_EE" t="Eesti (Estonia)"/>
+	<phrase n="lang_locale_eu_ES" t="Euskara (Spain)"/>
+	<phrase n="lang_locale_fi_FI" t="Suomi (Finland)"/>
+	<phrase n="lang_locale_fr_FR" t="Français (France)"/>
+	<phrase n="lang_locale_he_IL" t="Hebrew (Israel)"/>
+	<phrase n="lang_locale_hr_HR" t="Hrvatski (Croatia)"/>
+	<phrase n="lang_locale_hu_HU" t="Magyar (Hungary)"/>
+	<phrase n="lang_locale_it_IT" t="Italiano (Italy)"/>
+	<phrase n="lang_locale_ja_JP" t="Japanese (Japan)"/>
+	<phrase n="lang_locale_kk_KZ" t="қазақша (Kazakhstan)"/>
+	<phrase n="lang_locale_lt_LT" t="Lietuvių (Lithuania)"/>
+	<phrase n="lang_locale_lv_LV" t="Latviešu (Latvia)"/>
+	<phrase n="lang_locale_nl_NL" t="Nederlands (Netherlands)"/>
+	<phrase n="lang_locale_nb_NO" t="Norsk (Norway)"/>
+	<phrase n="lang_locale_pl_PL" t="Polski (Poland)"/>
+	<phrase n="lang_locale_pt_PT" t="Português (Portugal)"/>
+	<phrase n="lang_locale_ro_RO" t="Română (Romania)"/>
+	<phrase n="lang_locale_ru_RU" t="Русский (Russia)"/>
+	<phrase n="lang_locale_sl_SI" t="Slovenščina (Slovenia)"/>
+	<phrase n="lang_locale_sv_SE" t="Svenska (Sweden)"/>
+	<phrase n="lang_locale_tr_TR" t="Türkçe (Turkey)"/>
+	<phrase n="lang_locale_uk_UA" t="Українська (Ukraine)"/>
+	<phrase n="lang_locale_zh_CN" t="Simplified Chinese (China)"/>
+	<phrase n="lang_locale_zh_TW" t="Traditional Chinese (Taiwan)"/>
+	<phrase n="lang_no_error" t="no error"/>
+	<phrase n="lang_unknown_command" t="unknown command"/>
+	<phrase n="lang_invalid_missing_params" t="invalid or missing parameter(s)"/>
+	<phrase n="lang_not_implemented" t="not implemented"/>
+	<phrase n="lang_failed" t="failed"/>
+	<phrase n="lang_refer_to_logs" t="Refer to the system logs for details"/>
+	<phrase n="lang_software_update_confirmation" t="The software update takes a few minutes and will reboot your phone. If you are on call(s), the update will start when all calls are terminated. Do not turn off your phone during the update. Update now?"/>
+	<phrase n="lang_firmware_field_is_empty" t="Firmware field is empty."/>
+	<phrase n="lang_software_update_in_progress" t="Software update in progress. Please wait for your phone to reboot. Once it restarts, refresh your browser to regain access to the WUI."/>
+	<phrase n="lang_edit_mode" t="Edit Mode"/>
+	<phrase n="lang_vlan_pc_qos" t="VLAN Priority on LAN port (0-7)"/>
+	<phrase n="lang_bluetooth_devices" t="Devices"/>
+	<phrase n="lang_bluetooth_not_ready" t="Bluetooth is not ready"/>
+	<phrase n="lang_F_ACCEPT_CALL_ext_ui" t="Answer"/>
+	<phrase n="lang_F_DEFLECT_ext_ui" t="Forward"/>
+	<phrase n="lang_F_DENY_ext_ui" t="Reject"/>
+	<phrase n="lang_F_END_ext_ui" t="End call"/>
+	<phrase n="lang_F_CALL_PARK_DIAL" t="Call Park Dial"/>
+	<phrase n="lang_F_NEW_CALL" t="New Call"/>
+	<phrase n="lang_device_management_service" t="Device Management Service"/>
+	<phrase n="lang_manage_dms" t="Manage DMS"/>
+	<phrase n="lang_3_days" t="3 Days"/>
+	<phrase n="lang_dms_enabled" t="DMS is enabled until"/>
+	<phrase n="lang_dms" t="DMS"/>
+</phrases>

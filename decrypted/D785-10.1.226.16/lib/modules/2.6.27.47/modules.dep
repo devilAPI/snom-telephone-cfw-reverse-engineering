@@ -1,0 +1,81 @@
+/lib/modules/2.6.27.47/kernel/drivers/char/bcmring/mmdma.ko: 
+/lib/modules/2.6.27.47/kernel/drivers/usb/host/ohci-hcd.ko: 
+/lib/modules/2.6.27.47/kernel/net/sunrpc/sunrpc.ko: 
+/lib/modules/2.6.27.47/BROADCOM/bcmring_eth_sla.ko: /lib/modules/2.6.27.47/kernel/drivers/char/bcmring/bcmring_esw.ko
+/lib/modules/2.6.27.47/kernel/drivers/char/broadcom/csx/csx_framework/csx.ko: 
+/lib/modules/2.6.27.47/kernel/drivers/char/broadcom/halaudio_drivers/usb/halaudio_usbcore.ko: 
+/lib/modules/2.6.27.47/kernel/drivers/net/bcmring_net.ko: 
+/lib/modules/2.6.27.47/kernel/drivers/hid/usbhid/usbhid.ko: 
+/lib/modules/2.6.27.47/kernel/drivers/char/broadcom/halaudio_drivers/bcmring/apm/halaudio_apm.ko: 
+/lib/modules/2.6.27.47/kernel/net/ipv4/netfilter/ipt_ULOG.ko: 
+/lib/modules/2.6.27.47/BROADCOM/af_rdx.ko: 
+/lib/modules/2.6.27.47/kernel/drivers/mmc/host/sdhci.ko: 
+/lib/modules/2.6.27.47/kernel/drivers/mmc/host/sdhci-platform-bcmring.ko: /lib/modules/2.6.27.47/kernel/drivers/mmc/host/sdhci.ko
+/lib/modules/2.6.27.47/kernel/drivers/char/broadcom/sigmorph.ko: 
+/lib/modules/2.6.27.47/kernel/sound/usb/snd-usb-lib.ko: /lib/modules/2.6.27.47/kernel/sound/core/snd-rawmidi.ko
+/lib/modules/2.6.27.47/kernel/net/ipv4/netfilter/ipt_LOG.ko: 
+/lib/modules/2.6.27.47/BROADCOM/ept_driver.ko: 
+/lib/modules/2.6.27.47/kernel/sound/core/snd-page-alloc.ko: 
+/lib/modules/2.6.27.47/kernel/drivers/input/touchscreen/bcmring_ts.ko: 
+/lib/modules/2.6.27.47/BROADCOM/pxcLdxSupport.ko: 
+/lib/modules/2.6.27.47/kernel/drivers/char/bcmring/bcmring_esw.ko: 
+/lib/modules/2.6.27.47/BROADCOM/pka_core.ko: 
+/lib/modules/2.6.27.47/kernel/sound/usb/snd-usb-audio.ko: /lib/modules/2.6.27.47/kernel/sound/core/snd-pcm.ko /lib/modules/2.6.27.47/kernel/sound/core/snd-hwdep.ko /lib/modules/2.6.27.47/kernel/sound/usb/snd-usb-lib.ko /lib/modules/2.6.27.47/kernel/sound/core/snd.ko
+/lib/modules/2.6.27.47/kernel/sound/core/snd-timer.ko: /lib/modules/2.6.27.47/kernel/sound/core/snd.ko
+/lib/modules/2.6.27.47/kernel/drivers/usb/gadget/bcm_udc_dwc.ko: 
+/lib/modules/2.6.27.47/kernel/drivers/char/broadcom/halaudio_drivers/bcmring/pcm/halaudio_pcm.ko: 
+/lib/modules/2.6.27.47/kernel/sound/core/snd.ko: /lib/modules/2.6.27.47/kernel/sound/soundcore.ko
+/lib/modules/2.6.27.47/kernel/net/ipv4/netfilter/ipt_ah.ko: 
+/lib/modules/2.6.27.47/kernel/drivers/scsi/scsi_mod.ko: 
+/lib/modules/2.6.27.47/kernel/drivers/video/output.ko: 
+/lib/modules/2.6.27.47/kernel/net/ipv4/netfilter/ipt_recent.ko: 
+/lib/modules/2.6.27.47/kernel/drivers/scsi/sd_mod.ko: /lib/modules/2.6.27.47/kernel/drivers/scsi/scsi_mod.ko
+/lib/modules/2.6.27.47/kernel/net/ipv4/netfilter/ipt_IDLETIMER.ko: 
+/lib/modules/2.6.27.47/kernel/net/ipv4/netfilter/ipt_REJECT.ko: 
+/lib/modules/2.6.27.47/kernel/net/ipv4/netfilter/iptable_nat.ko: /lib/modules/2.6.27.47/kernel/net/ipv4/netfilter/ip_tables.ko /lib/modules/2.6.27.47/kernel/net/ipv4/netfilter/nf_nat.ko
+/lib/modules/2.6.27.47/kernel/sound/core/snd-rawmidi.ko: /lib/modules/2.6.27.47/kernel/sound/core/snd.ko
+/lib/modules/2.6.27.47/kernel/drivers/usb/host/ehci-hcd.ko: 
+/lib/modules/2.6.27.47/kernel/drivers/input/evdev.ko: 
+/lib/modules/2.6.27.47/kernel/net/ipv4/netfilter/ipt_ecn.ko: 
+/lib/modules/2.6.27.47/kernel/fs/nfs/nfs.ko: /lib/modules/2.6.27.47/kernel/fs/lockd/lockd.ko /lib/modules/2.6.27.47/kernel/net/sunrpc/sunrpc.ko
+/lib/modules/2.6.27.47/BROADCOM/ept_core.ko: /lib/modules/2.6.27.47/BROADCOM/ept_driver.ko /lib/modules/2.6.27.47/BROADCOM/pxcLdxHausware.ko /lib/modules/2.6.27.47/BROADCOM/pxcLdxSupport.ko
+/lib/modules/2.6.27.47/BROADCOM/csx_af.ko: /lib/modules/2.6.27.47/kernel/drivers/char/broadcom/csx/csx_framework/csx.ko /lib/modules/2.6.27.47/BROADCOM/af_server.ko
+/lib/modules/2.6.27.47/kernel/drivers/usb/gadget/g_ether.ko: /lib/modules/2.6.27.47/kernel/drivers/usb/gadget/bcm_udc_dwc.ko
+/lib/modules/2.6.27.47/kernel/fs/lockd/lockd.ko: /lib/modules/2.6.27.47/kernel/net/sunrpc/sunrpc.ko
+/lib/modules/2.6.27.47/kernel/drivers/input/evbug.ko: 
+/lib/modules/2.6.27.47/kernel/net/ipv4/netfilter/ip_tables.ko: 
+/lib/modules/2.6.27.47/kernel/drivers/char/broadcom/gist.ko: 
+/lib/modules/2.6.27.47/BROADCOM/pxcLdxHausware.ko: /lib/modules/2.6.27.47/BROADCOM/pxcLdxSupport.ko
+/lib/modules/2.6.27.47/kernel/net/ipv4/netfilter/nf_nat.ko: 
+/lib/modules/2.6.27.47/kernel/drivers/usb/storage/usb-storage.ko: /lib/modules/2.6.27.47/kernel/drivers/scsi/scsi_mod.ko
+/lib/modules/2.6.27.47/kernel/drivers/video/cfbimgblt.ko: 
+/lib/modules/2.6.27.47/kernel/sound/soundcore.ko: 
+/lib/modules/2.6.27.47/kernel/drivers/video/display/display.ko: 
+/lib/modules/2.6.27.47/BROADCOM/csx_hausware.ko: /lib/modules/2.6.27.47/kernel/drivers/char/broadcom/csx/csx_framework/csx.ko /lib/modules/2.6.27.47/BROADCOM/pxcLdxSupport.ko
+/lib/modules/2.6.27.47/kernel/net/ipv4/netfilter/iptable_filter.ko: /lib/modules/2.6.27.47/kernel/net/ipv4/netfilter/ip_tables.ko
+/lib/modules/2.6.27.47/BROADCOM/amxr_user_hook.ko: 
+/lib/modules/2.6.27.47/kernel/drivers/video/bcmring_fb.ko: /lib/modules/2.6.27.47/kernel/drivers/char/bcmring/bcmring_lcd.ko /lib/modules/2.6.27.47/kernel/drivers/video/cfbimgblt.ko /lib/modules/2.6.27.47/kernel/drivers/char/bcmring/bcmring_gev3.ko
+/lib/modules/2.6.27.47/kernel/drivers/usb/gadget/g_serial.ko: /lib/modules/2.6.27.47/kernel/drivers/usb/gadget/bcm_udc_dwc.ko
+/lib/modules/2.6.27.47/kernel/net/ipv4/netfilter/ipt_ttl.ko: 
+/lib/modules/2.6.27.47/kernel/drivers/char/broadcom/csx/csx_halaudio/csx_halaudio.ko: /lib/modules/2.6.27.47/kernel/drivers/char/broadcom/csx/csx_framework/csx.ko
+/lib/modules/2.6.27.47/BROADCOM/amxr.ko: 
+/lib/modules/2.6.27.47/kernel/drivers/scsi/scsi_wait_scan.ko: /lib/modules/2.6.27.47/kernel/drivers/scsi/scsi_mod.ko
+/lib/modules/2.6.27.47/BROADCOM/af_server.ko: /lib/modules/2.6.27.47/BROADCOM/af_rdx.ko
+/lib/modules/2.6.27.47/kernel/drivers/video/cfbcopyarea.ko: 
+/lib/modules/2.6.27.47/BROADCOM/halaudio.ko: /lib/modules/2.6.27.47/BROADCOM/amxr.ko
+/lib/modules/2.6.27.47/kernel/drivers/char/bcmring/bcmring_lcd.ko: /lib/modules/2.6.27.47/kernel/drivers/video/display/display-bcmring-generic.ko
+/lib/modules/2.6.27.47/kernel/drivers/video/display/display-bcmring-generic.ko: 
+/lib/modules/2.6.27.47/kernel/drivers/char/broadcom/halaudio_drivers/bcmring/i2s/halaudio_i2s.ko: 
+/lib/modules/2.6.27.47/kernel/drivers/char/broadcom/halaudio_drivers/usb/halaudio_usb.ko: /lib/modules/2.6.27.47/kernel/drivers/char/broadcom/halaudio_drivers/usb/halaudio_usbcore.ko
+/lib/modules/2.6.27.47/kernel/net/ipv4/netfilter/ipt_addrtype.ko: 
+/lib/modules/2.6.27.47/BROADCOM/halCodecRdxServer.ko: /lib/modules/2.6.27.47/BROADCOM/af_rdx.ko
+/lib/modules/2.6.27.47/kernel/drivers/scsi/sg.ko: /lib/modules/2.6.27.47/kernel/drivers/scsi/scsi_mod.ko
+/lib/modules/2.6.27.47/kernel/drivers/char/broadcom/csx/csx_gist/csx_gist.ko: /lib/modules/2.6.27.47/kernel/drivers/char/broadcom/csx/csx_framework/csx.ko /lib/modules/2.6.27.47/kernel/drivers/char/broadcom/gist.ko
+/lib/modules/2.6.27.47/kernel/sound/core/snd-pcm.ko: /lib/modules/2.6.27.47/kernel/sound/core/snd-page-alloc.ko /lib/modules/2.6.27.47/kernel/sound/core/snd-timer.ko /lib/modules/2.6.27.47/kernel/sound/core/snd.ko
+/lib/modules/2.6.27.47/kernel/drivers/video/cfbfillrect.ko: 
+/lib/modules/2.6.27.47/kernel/drivers/char/broadcom/halaudio_drivers/alsa/snd_halaudio.ko: /lib/modules/2.6.27.47/kernel/sound/core/snd-pcm.ko /lib/modules/2.6.27.47/kernel/sound/core/snd.ko
+/lib/modules/2.6.27.47/kernel/net/ipv4/netfilter/ipt_MASQUERADE.ko: /lib/modules/2.6.27.47/kernel/net/ipv4/netfilter/nf_nat.ko
+/lib/modules/2.6.27.47/kernel/drivers/char/broadcom/bcm_alsa/bcm_alsa.ko: /lib/modules/2.6.27.47/kernel/sound/core/snd-pcm.ko /lib/modules/2.6.27.47/kernel/sound/core/snd.ko
+/lib/modules/2.6.27.47/kernel/drivers/char/bcmring/bcmring_gev3.ko: /lib/modules/2.6.27.47/kernel/drivers/char/bcmring/mmdma.ko
+/lib/modules/2.6.27.47/kernel/sound/core/snd-hwdep.ko: /lib/modules/2.6.27.47/kernel/sound/core/snd.ko
+/lib/modules/2.6.27.47/kernel/drivers/char/broadcom/csx/csx_sigmorph/csx_sigmorph.ko: /lib/modules/2.6.27.47/kernel/drivers/char/broadcom/csx/csx_framework/csx.ko /lib/modules/2.6.27.47/kernel/drivers/char/broadcom/sigmorph.ko /lib/modules/2.6.27.47/kernel/drivers/char/broadcom/gist.ko

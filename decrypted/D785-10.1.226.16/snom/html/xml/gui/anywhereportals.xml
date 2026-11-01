@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<IPPhoneBatch xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../schemas/minibrowser.xsd">
+  <IPPhoneMenu dtmf="off" id="anywhereportal_menu">
+    <Title>$(lang:xsi_anywhereportal_number)</Title>
+    <If condition="!$(empty:$(var_ifc:identity.$(set:active_line).anywhereportals_xsi::retrieve_records))">
+      <Repeat values="$(var_ifc:identity.$(set:active_line).anywhereportals_xsi::retrieve_records)" token="|__NUMBER__|">
+        <MenuItem name="__NUMBER__"/>
+      </Repeat>
+    </If>
+    <Else>
+      <MenuItem name="No records"/>
+    </Else>
+  </IPPhoneMenu>
+</IPPhoneBatch>

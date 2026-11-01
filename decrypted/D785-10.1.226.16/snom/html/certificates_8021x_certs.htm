@@ -1,0 +1,128 @@
+<?ssi title leftnav_trusted_cert?>
+<?ssi file common1.htm?>
+<TR>
+  <TD valign="top" height="16">
+    <IMG height="16" src="img/clr.gif" width="16"/>
+  </TD>
+</TR>
+<TR> <!-- LIST OF CERTIFICATE FILES -->
+<TD valign="top">
+  <?ssi skipon VTECH?>
+  <TABLE class="bubbleTable" cellSpacing="0" cellPadding="0" width="100%" border="0">
+  <?ssi skipoff VTECH?>
+  <?ssi skipon SNOM?>
+  <TABLE cellSpacing="4" cellPadding="0" width="100%" border="0">
+  <?ssi skipoff SNOM?>
+  <?ssi file tab_certificates.htm?>
+    <TR>
+      <TD/>
+      <?ssi skipon VTECH?>
+      <TD><B>
+      <?ssi skipoff VTECH?>
+      <?ssi skipon SNOM?>
+      <TD class="titleText">
+      <?ssi skipoff SNOM?>
+        <br><?lng cert_8021x_config?></b><BR>
+        <HR>
+      </TD>
+      <TD/>
+    </TR>
+    <TR>
+      <TD/>
+      <TD colspan="2">
+        <?ssi 8021x_certs?>
+      </TD>
+      <TD/>
+    </TR>
+    <TR>
+      <TD/>
+       <TD colspan="2" />
+        <BR>
+        <FORM method="post">
+          <?ssi hidden_tag?>
+          <INPUT type="submit" value="<?lng log_clearbutton?>" name="CLEAR_8021X_CERTS" />
+        </FORM>
+      <TD/>
+    </TR>
+    <TR>
+      <TD class="background" valign="bottom" align="left" width="12" height="12">
+        <?ssi skipon VTECH?>
+        <IMG src=<?ssi img-corner-gif ll?> width="12" height="12">
+        <?ssi skipoff VTECH?>
+      </TD>
+      <TD/><TD/>
+      <TD class="background" valign="bottom" align="right" width="12" height="12">
+        <?ssi skipon VTECH?>
+        <IMG src=<?ssi img-corner-gif lr?> width="12" height="12">
+        <?ssi skipoff VTECH?>
+      </TD>
+    </TR>
+  </TABLE>
+</TD>
+</TR>
+<?ssi skipon NOT_IN_ADMIN_MODE?>
+<TR> <!-- UPLOAD FORM -->
+<TD valign="top">
+  <BR>
+  <FORM enctype="multipart/form-data" method="post">
+    <?ssi skipon VTECH?>
+    <TABLE class="bubbleTable" cellSpacing="0" cellPadding="0" width="100%" border="0" id="Table1">
+    <?ssi skipoff VTECH?>
+    <?ssi skipon SNOM?>
+    <TABLE cellSpacing="4" cellPadding="0" width="100%" border="0" id="Table1">
+    <?ssi skipoff SNOM?>
+    <TR>
+      <TD class="background" width="12" height="12">
+        <?ssi skipon VTECH?>
+        <IMG src=<?ssi img-corner-gif ul?> width="12" height="12">
+        <?ssi skipoff VTECH?>
+      </TD>
+      <TD/><TD/>
+      <TD class="background" width="12" height="12">
+        <?ssi skipon VTECH?>
+        <IMG src=<?ssi img-corner-gif ur?> width="12" height="12">
+        <?ssi skipoff VTECH?>
+      </TD>
+    </TR>
+    <?ssi hidden_tag?>
+    <TR><TD/><TD width="50%"/><TD width="50%"/></TR>
+    <TR>
+      <TD/>
+      <TD class="normaltextbold"><?lng cert_add_8021x_cert?></TD>
+      <TD></TD>
+    </TR>
+    <TR>
+      <TD>&nbsp;</TD>
+      <TD><?lng general_file?></TD>
+      <TD>
+        <noscript><div class="linespace"><input type="file" id="8021x_cert_file" name="8021x_cert_file" <?ssi tabindex?>></div></noscript>
+        <input type="file" class="inputfile" id="8021x_cert_file" name="8021x_cert_file" <?ssi tabindex?>>
+        <label for="8021x_cert_file"><span><?lng choose_file?></span></label>
+      </TD>
+    </TR>
+    <TR>
+      <TD/>
+      <TD>
+        <INPUT type="submit" value="<?lng adr_loadbutton?>" <?ssi tabindex?> >
+      </TD>
+    </TR>
+    <TR>
+      <TD class="background" valign="bottom" align="left" width="12" height="12">
+        <?ssi skipon VTECH?>
+        <IMG src=<?ssi img-corner-gif ll?> width="12" height="12">
+        <?ssi skipoff VTECH?>
+      </TD>
+      <TD/><TD/>
+      <TD class="background" valign="bottom" align="right" width="12" height="12">
+        <?ssi skipon VTECH?>
+        <IMG src=<?ssi img-corner-gif lr?> width="12" height="12">
+        <?ssi skipoff VTECH?>
+      </TD>
+    </TR>
+  </TABLE>
+  </FORM>
+</TD>
+</TR>
+<?ssi skipoff NOT_IN_ADMIN_MODE?>
+<?ssi file common9.htm?>
+</HTML>

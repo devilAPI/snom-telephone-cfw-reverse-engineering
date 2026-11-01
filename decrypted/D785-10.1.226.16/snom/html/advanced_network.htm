@@ -1,0 +1,557 @@
+<?ssi title advanced_ssi_title?>
+<?ssi file common1.htm?>
+  <TR><TD valign="top" height="16"><IMG height="16" src="img/clr.gif" width="16"></TD></TR>
+  <TR>
+    <TD valign="top">
+    <FORM method="post">
+    <?ssi skipon VTECH?>
+    <TABLE class="bubbleTable" cellSpacing="0" cellPadding="0" width="100%" border="0">
+    <?ssi skipoff VTECH?>
+    <?ssi skipon SNOM?>
+    <TABLE cellSpacing="4" cellPadding="0" width="100%" border="0">
+    <?ssi skipoff SNOM?>
+    <?ssi file tab_advanced.htm?>
+    <TR>
+      <TD width="12" height="12"><IMG src="img/clr.gif" width="12" height="12"></TD>
+      <TD width="12" height="5"><IMG src="img/clr.gif" width="12" height="5"></TD>
+      <TD width="12" height="5"><IMG src="img/clr.gif" width="12" height="5"></TD>
+      <TD class="background" width="12" height="12">
+        <?ssi skipon VTECH?>
+        <IMG src=<?ssi img-corner-gif ur?> width="12" height="12">
+        <?ssi skipoff VTECH?>
+      </TD>
+    </TR>
+    <?ssi hidden_tag?>
+    <TR><TD></TD><TD width="50%"/><TD width="50%"/></TR>
+    <?ssi skipon NOT_IN_ADMIN_MODE?>
+    <?ssi skipon NO_IPV6_SUPPORT?>
+    <TR><TD></TD>
+      <?ssi skipon VTECH?>
+      <TD width="50%"><B>
+      <?ssi skipoff VTECH?>
+      <?ssi skipon SNOM?>
+      <TD class="titleText" width="50%">
+      <?ssi skipoff SNOM?>
+      <?lng advanced_network?></B>
+      </TD>
+    </TR>
+    <TR><TD/><TD><?lng advanced_ssi_ipv6?></TD><TD>
+      <a href="advanced_ipv6.htm"><?lng advanced_ssi_more_control?></a>
+      <?ssi skipon NO_WUI_HELP_LINKS?>
+      <?ssi help HowTo+-+Networking+-+IPv6?>
+      <?ssi skipoff NO_WUI_HELP_LINKS?>
+    </TD></TR>
+    <?ssi skipoff NO_IPV6_SUPPORT?>
+    <TR><TD></TD><?ssi radio advanced_ssi_lldp lldp_enable advanced_ssi_on advanced_ssi_off?></TR>
+    <TR><TD></TD><TD><?ssi input advanced_ssi_lldp_network_policy_timeout lldp_network_policy_timeout?></TD></TR>
+    <TR><TD></TD><?ssi radio advanced_ssi_dhcp dhcp advanced_ssi_on advanced_ssi_off?></TR>
+    <TR><TD></TD><TD><?ssi input advanced_ssi_dhcp_options_on_ip_aquire dhcp_options_on_ip_aquire?></TD></TR>
+    <TR><TD></TD><TD><?ssi input advanced_ssi_dhcp_options_on_inform dhcp_options_on_inform?></TD></TR>
+    <TR><TD></TD><TD><?ssi input advanced_ssi_ipaddress ip_adr?></TD></TR>
+    <TR><TD></TD><TD><?ssi input advanced_ssi_netmask netmask?></TD></TR>
+    <TR><TD></TD><TD><?ssi input advanced_ssi_phonename phone_name?></TD></TR>
+    <TR><TD></TD><TD><?ssi input advanced_ssi_ipgateway gateway?></TD></TR>
+    <TR><TD></TD><TD><?ssi input advanced_customized_ssi_mtu_size mtu_size?></TD></TR>
+    <TR><TD></TD><TD>&nbsp;</TD></TR>
+    <?ssi skipon NOT_WIFI?>
+    <TR><TD></TD>
+      <?ssi skipon VTECH?>
+      <TD><B>
+      <?ssi skipoff VTECH?>
+      <?ssi skipon SNOM?>
+      <TD class="titleText">
+      <?ssi skipoff SNOM?>
+      <?lng advanced_wifi?></B>
+      </TD>
+    </TR>
+    <TR><TD></TD><TD><?lng wifi_auth_mode?></TD><TD>
+      <select name="wifi_auth_mode" ID="SelectAuthMode" <?ssi disabled wifi_auth_mode?>size="1" <?ssi tabindex?>>
+      <option value="off"<?ssi selected wifi_auth_mode off?>><?lng advanced_off?></option>
+      <option value="scanning"<?ssi selected wifi_auth_mode scanning?>><?lng wifi_scanning?></option>
+      <option value="WPA2PSK"<?ssi selected wifi_auth_mode WPA2PSK?>><?lng wifi_wpa2?></option>
+      <option value="WPAPSK"<?ssi selected wifi_auth_mode WPAPSK?>><?lng wifi_wpa?></option>
+      <option value="WEPAUTO"<?ssi selected wifi_auth_mode WEPAUTO?>><?lng wifi_wep?></option>
+      <option value="OPEN"<?ssi selected wifi_auth_mode OPEN?>><?lng wifi_open?></option>
+      </select><?ssi help wifi_auth_mode?>
+    </TD></TR>
+    <?ssi skipon WIFI_OFF_ON?>
+    <?ssi skipon WIFI_SCAN_OFF?>
+    <TR><TD></TD><TD><?lng wifi_essid?></TD><TD>
+      <select name="wifi_essid" ID="SelectEssid" onchange="onEssidChange(this)" <?ssi disabled wifi_essid?>size="1" <?ssi tabindex?>>
+      <?ssi scanWifi?>
+      </select><?ssi help wifi_essid?>
+      <script type="text/javascript">
+        function onEssidChange(element){
+          const wifi_info_array = element.options[element.selectedIndex].text.split("|");
+          const security = wifi_info_array[3].substring(wifi_info_array[3].indexOf(":")+1);
+          document.getElementById("SelectAuthMode").value = security;
+         };
+      </script>
+    </TD></TR>
+    <?ssi skipoff WIFI_SCAN_OFF?>
+    <?ssi skipon WIFI_SCAN_ON?>
+    <TR><TD></TD><TD><?ssi input wifi_essid wifi_essid?></TD></TR>
+    <?ssi skipoff WIFI_SCAN_ON?>
+    <?ssi skipon WIFI_WPA2PSK_OFF?>
+    <TR><TD></TD><TD><?lng wifi_wpa_encryptype?></TD><TD>
+      <select name="wifi_wpa_encryptype" ID="Select1" <?ssi disabled wifi_wpa_encryptype?>size="1" <?ssi tabindex?>>
+      <option value="TKIP"<?ssi selected wifi_wpa_encryptype TKIP?>><?lng wifi_tkip?></option>
+      <option value="AES"<?ssi selected wifi_wpa_encryptype AES?>><?lng wifi_aes?></option>
+      </select><?ssi help wifi_wpa_encryptype?>
+    </TD></TR>
+    <TR><TD></TD><TD><?ssi inpass wifi_wpapsk wifi_wpapsk?></TD></TR>
+    <?ssi skipoff WIFI_WPA2PSK_OFF?>
+    <?ssi skipon WIFI_WPAPSK_OFF?>
+    <TR><TD></TD><TD><?lng wifi_wpa_encryptype?></TD><TD>
+      <select name="wifi_wpa_encryptype" ID="Select1" <?ssi disabled wifi_wpa_encryptype?>size="1" <?ssi tabindex?>>
+      <option value="TKIP"<?ssi selected wifi_wpa_encryptype TKIP?>><?lng wifi_tkip?></option>
+      <option value="AES"<?ssi selected wifi_wpa_encryptype AES?>><?lng wifi_aes?></option>
+      </select><?ssi help wifi_wpa_encryptype?>
+    </TD></TR>
+    <TR><TD></TD><TD><?ssi inpass wifi_wpapsk wifi_wpapsk?></TD></TR>
+    <TR><TD></TD><TD>&nbsp;</TD></TR>
+    <?ssi skipoff WIFI_WPAPSK_OFF?>
+    <?ssi skipon WIFI_WEPAUTO_OFF?>
+    <TR><TD></TD><TD><?ssi inpass wifi_wep_key1 wifi_wep_key1?></TD></TR>
+    <?ssi skipoff WIFI_WEPAUTO_OFF?>
+    <?ssi skipoff WIFI_OFF_ON?>
+    <TR><TD></TD><TD>&nbsp;</TD></TR>
+    <?ssi skipoff NOT_WIFI?>
+    <TR><TD></TD>
+      <?ssi skipon VTECH?>
+      <TD><B>
+      <?ssi skipoff VTECH?>
+      <?ssi skipon SNOM?>
+      <TD class="titleText">
+      <?ssi skipoff SNOM?>
+      <?lng advanced_dns?></B>
+      </TD>
+    </TR>
+    <TR><TD></TD><TD><?ssi input advanced_ssi_domain dns_domain?></TD></TR>
+    <TR><TD></TD><TD><?ssi input advanced_ssi_dnsserver1 dns_server1?></TD></TR>
+    <TR><TD></TD><TD><?ssi input advanced_ssi_dnsserver2 dns_server2?></TD></TR>
+    <TR><TD></TD><TD>&nbsp;</TD></TR>
+    <TR><TD></TD>
+      <?ssi skipon VTECH?>
+      <TD><B>
+      <?ssi skipoff VTECH?>
+      <?ssi skipon SNOM?>
+      <TD class="titleText">
+      <?ssi skipoff SNOM?>
+      <?lng advanced_time?></B>
+      </TD>
+    </TR>
+    <TR><TD></TD><TD><?ssi input advanced_ssi_ntptimeserver ntp_server?></TD></TR>
+    <TR><TD></TD><TD><?ssi input advanced_ssi_ntp_refresh ntp_refresh_timer?></TD></TR>
+    <TR><TD></TD><TD><?lng advanced_timezone?></TD><TD>
+      <select name="timezone" <?ssi disabled timezone?>size="1" <?ssi tabindex?> class="select6">
+      <option value=""<?ssi selected timezone ?>><?lng advanced_tmz_unused?></option>
+      <option value="USA-10"<?ssi selected timezone USA-10?>><?lng advanced_tmz_USAm10?></option>
+      <option value="USA2-10"<?ssi selected timezone USA2-10?>><?lng advanced_tmz_USA2m10?></option>
+      <option value="USA-9"<?ssi selected timezone USA-9?>><?lng advanced_tmz_USAm9?></option>
+      <option value="CAN-8"<?ssi selected timezone CAN-8?>><?lng advanced_tmz_CANm8?></option>
+      <option value="MEX-8"<?ssi selected timezone MEX-8?>><?lng advanced_tmz_MEXm8?></option>
+      <option value="USA-8"<?ssi selected timezone USA-8?>><?lng advanced_tmz_USAm8?></option>
+      <option value="CAN-7"<?ssi selected timezone CAN-7?>><?lng advanced_tmz_CANm7?></option>
+      <option value="MEX-7"<?ssi selected timezone MEX-7?>><?lng advanced_tmz_MEXm7?></option>
+      <option value="USA-7"<?ssi selected timezone USA-7?>><?lng advanced_tmz_USAm7?></option>
+      <option value="USA2-7"<?ssi selected timezone USA2-7?>><?lng advanced_tmz_USA2m7?></option>
+      <option value="CAN-6"<?ssi selected timezone CAN-6?>><?lng advanced_tmz_CANm6?></option>
+      <option value="CAN2-6"<?ssi selected timezone CAN2-6?>><?lng advanced_tmz_CAN2m6?></option>
+      <option value="CAM-6"<?ssi selected timezone CAM-6?>><?lng advanced_tmz_CAMm6?></option>
+      <option value="CHL-6"<?ssi selected timezone CHL-6?>><?lng advanced_tmz_CHLm6?></option>
+      <option value="MEX-6"<?ssi selected timezone MEX-6?>><?lng advanced_tmz_MEXm6?></option>
+      <option value="USA-6"<?ssi selected timezone USA-6?>><?lng advanced_tmz_USAm6?></option>
+      <option value="BHS-5"<?ssi selected timezone BHS-5?>><?lng advanced_tmz_BHSm5?></option>
+      <option value="CAN-5"<?ssi selected timezone CAN-5?>><?lng advanced_tmz_CANm5?></option>
+      <option value="COL-5"<?ssi selected timezone COL-5?>><?lng advanced_tmz_COLm5?></option>
+      <option value="CUB-5"<?ssi selected timezone CUB-5?>><?lng advanced_tmz_CUBm5?></option>
+      <option value="ECU-5"<?ssi selected timezone ECU-5?>><?lng advanced_tmz_ECUm5?></option>
+      <option value="USA-5"<?ssi selected timezone USA-5?>><?lng advanced_tmz_USAm5?></option>
+      <option value="VEN-4"<?ssi selected timezone VEN-4?>><?lng advanced_tmz_VENm4?></option>
+      <option value="CAI-4"<?ssi selected timezone CAI-4?>><?lng advanced_tmz_CAIm4?></option>
+      <option value="CAN-4"<?ssi selected timezone CAN-4?>><?lng advanced_tmz_CANm4?></option>
+      <option value="CHL-4"<?ssi selected timezone CHL-4?>><?lng advanced_tmz_CHLm4?></option>
+      <option value="PRY-4"<?ssi selected timezone PRY-4?>><?lng advanced_tmz_PRYm4?></option>
+      <option value="BMU-4"<?ssi selected timezone BMU-4?>><?lng advanced_tmz_BMUm4?></option>
+      <option value="FLK-4"<?ssi selected timezone FLK-4?>><?lng advanced_tmz_FLKm4?></option>
+      <option value="TTB-4"<?ssi selected timezone TTB-4?>><?lng advanced_tmz_TTBm4?></option>
+      <option value="CAN-3.5"<?ssi selected timezone CAN-3.5?>><?lng advanced_tmz_CANm35?></option>
+      <option value="ARG-3"<?ssi selected timezone ARG-3?>><?lng advanced_tmz_ARGm3?></option>
+      <option value="BRA2-3"<?ssi selected timezone BRA2-3?>><?lng advanced_tmz_BRA2m3?></option>
+      <option value="BRA1-3"<?ssi selected timezone BRA1-3?>><?lng advanced_tmz_BRA1m3?></option>
+      <option value="BRA-2"<?ssi selected timezone BRA-2?>><?lng advanced_tmz_BRAm2?></option>
+      <option value="GRL-2"<?ssi selected timezone GRL-2?>><?lng advanced_tmz_GRLm2?></option>
+      <option value="PRT-1"<?ssi selected timezone PRT-1?>><?lng advanced_tmz_PRTm1?></option>
+      <option value="FRO-0"<?ssi selected timezone FRO-0?>><?lng advanced_tmz_FROm0?></option>
+      <option value="IRL-0"<?ssi selected timezone IRL-0?>><?lng advanced_tmz_IRLm0?></option>
+      <option value="PRT-0"<?ssi selected timezone PRT-0?>><?lng advanced_tmz_PRTm0?></option>
+      <option value="ESP-0"<?ssi selected timezone ESP-0?>><?lng advanced_tmz_ESPm0?></option>
+      <option value="GBR-0"<?ssi selected timezone GBR-0?>><?lng advanced_tmz_GBRm0?></option>
+      <option value="ALB+1"<?ssi selected timezone ALB+1?>><?lng advanced_tmz_ALBp1?></option>
+      <option value="AUT+1"<?ssi selected timezone AUT+1?>><?lng advanced_tmz_AUTp1?></option>
+      <option value="BEL+1"<?ssi selected timezone BEL+1?>><?lng advanced_tmz_BELp1?></option>
+      <option value="HRV+1"<?ssi selected timezone HRV+1?>><?lng advanced_tmz_HRVp1?></option>
+      <option value="CZE+1"<?ssi selected timezone CZE+1?>><?lng advanced_tmz_CZEp1?></option>
+      <option value="DNK+1"<?ssi selected timezone DNK+1?>><?lng advanced_tmz_DNKp1?></option>
+      <option value="FRA+1"<?ssi selected timezone FRA+1?>><?lng advanced_tmz_FRAp1?></option>
+      <option value="GER+1"<?ssi selected timezone GER+1?>><?lng advanced_tmz_GERp1?></option>
+      <option value="HUN+1"<?ssi selected timezone HUN+1?>><?lng advanced_tmz_HUNp1?></option>
+      <option value="ITA+1"<?ssi selected timezone ITA+1?>><?lng advanced_tmz_ITAp1?></option>
+      <option value="LUX+1"<?ssi selected timezone LUX+1?>><?lng advanced_tmz_LUXp1?></option>
+      <option value="MAK+1"<?ssi selected timezone MAK+1?>><?lng advanced_tmz_MAKp1?></option>
+      <option value="NLD+1"<?ssi selected timezone NLD+1?>><?lng advanced_tmz_NLDp1?></option>
+      <option value="NAM+1"<?ssi selected timezone NAM+1?>><?lng advanced_tmz_NAMp1?></option>
+      <option value="NOR+1"<?ssi selected timezone NOR+1?>><?lng advanced_tmz_NORp1?></option>
+      <option value="POL+1"<?ssi selected timezone POL+1?>><?lng advanced_tmz_POLp1?></option>
+      <option value="SVK+1"<?ssi selected timezone SVK+1?>><?lng advanced_tmz_SVKp1?></option>
+      <option value="ESP+1"<?ssi selected timezone ESP+1?>><?lng advanced_tmz_ESPp1?></option>
+      <option value="SWE+1"<?ssi selected timezone SWE+1?>><?lng advanced_tmz_SWEp1?></option>
+      <option value="CHE+1"<?ssi selected timezone CHE+1?>><?lng advanced_tmz_CHEp1?></option>
+      <option value="GIB+1"<?ssi selected timezone GIB+1?>><?lng advanced_tmz_GIBp1?></option>
+      <option value="YUG+1"<?ssi selected timezone YUG+1?>><?lng advanced_tmz_YUGp1?></option>
+      <option value="WAT+1"<?ssi selected timezone WAT+1?>><?lng advanced_tmz_WATp1?></option>
+      <option value="BGR+2"<?ssi selected timezone BGR+2?>><?lng advanced_tmz_BGRp2?></option>
+      <option value="CYP+2"<?ssi selected timezone CYP+2?>><?lng advanced_tmz_CYPp2?></option>
+      <option value="CAT+2"<?ssi selected timezone CAT+2?>><?lng advanced_tmz_CATp2?></option>
+      <option value="EGY+2"<?ssi selected timezone EGY+2?>><?lng advanced_tmz_EGYp2?></option>
+      <option value="EST+2"<?ssi selected timezone EST+2?>><?lng advanced_tmz_ESTp2?></option>
+      <option value="FIN+2"<?ssi selected timezone FIN+2?>><?lng advanced_tmz_FINp2?></option>
+      <option value="GAZ+2"<?ssi selected timezone GAZ+2?>><?lng advanced_tmz_GAZp2?></option>
+      <option value="GRC+2"<?ssi selected timezone GRC+2?>><?lng advanced_tmz_GRCp2?></option>
+      <option value="ISR+2"<?ssi selected timezone ISR+2?>><?lng advanced_tmz_ISRp2?></option>
+      <option value="JOR+2"<?ssi selected timezone JOR+2?>><?lng advanced_tmz_JORp2?></option>
+      <option value="LVA+2"<?ssi selected timezone LVA+2?>><?lng advanced_tmz_LVAp2?></option>
+      <option value="LTU+2"<?ssi selected timezone LTU+2?>><?lng advanced_tmz_LTUp2?></option>
+      <option value="LBN+2"<?ssi selected timezone LBN+2?>><?lng advanced_tmz_LBNp2?></option>
+      <option value="MDA+2"<?ssi selected timezone MDA+2?>><?lng advanced_tmz_MDAp2?></option>
+      <option value="RUS+2"<?ssi selected timezone RUS+2?>><?lng advanced_tmz_RUSp2?></option>
+      <option value="ROU+2"<?ssi selected timezone ROU+2?>><?lng advanced_tmz_ROUp2?></option>
+      <option value="SYR+2"<?ssi selected timezone SYR+2?>><?lng advanced_tmz_SYRp2?></option>
+      <option value="UKR+2"<?ssi selected timezone UKR+2?>><?lng advanced_tmz_UKRp2?></option>
+      <option value="BLR+3"<?ssi selected timezone BLR+3?>><?lng advanced_tmz_BLRp3?></option>
+      <option value="EAT+3"<?ssi selected timezone EAT+3?>><?lng advanced_tmz_EATp3?></option>
+      <option value="IRQ+3"<?ssi selected timezone IRQ+3?>><?lng advanced_tmz_IRQp3?></option>
+      <option value="RUS+3"<?ssi selected timezone RUS+3?>><?lng advanced_tmz_RUSp3?></option>
+      <option value="TUR+3"<?ssi selected timezone TUR+3?>><?lng advanced_tmz_TURp3?></option>
+      <option value="IRN+3.5"<?ssi selected timezone IRN+3.5?>><?lng advanced_tmz_IRNp35?></option>
+      <option value="ARM+4"<?ssi selected timezone ARM+4?>><?lng advanced_tmz_ARMp4?></option>
+      <option value="AZE+4"<?ssi selected timezone AZE+4?>><?lng advanced_tmz_AZEp4?></option>
+      <option value="GEO+4"<?ssi selected timezone GEO+4?>><?lng advanced_tmz_GEOp4?></option>
+      <option value="KAZ+4"<?ssi selected timezone KAZ+4?>><?lng advanced_tmz_KAZp4?></option>
+      <option value="RUS+4"<?ssi selected timezone RUS+4?>><?lng advanced_tmz_RUSp4?></option>
+      <option value="UAE+4"<?ssi selected timezone UAE+4?>><?lng advanced_tmz_UAEp4?></option>
+      <option value="KAZ+5"<?ssi selected timezone KAZ+5?>><?lng advanced_tmz_KAZp5?></option>
+      <option value="KGZ+5"<?ssi selected timezone KGZ+5?>><?lng advanced_tmz_KGZp5?></option>
+      <option value="PAK+5"<?ssi selected timezone PAK+5?>><?lng advanced_tmz_PAKp5?></option>
+      <option value="RUS+5"<?ssi selected timezone RUS+5?>><?lng advanced_tmz_RUSp5?></option>
+      <option value="IND+5.5"<?ssi selected timezone IND+5.5?>><?lng advanced_tmz_INDp55?></option>
+      <option value="KAZ+6"<?ssi selected timezone KAZ+6?>><?lng advanced_tmz_KAZp6?></option>
+      <option value="RUS+6"<?ssi selected timezone RUS+6?>><?lng advanced_tmz_RUSp6?></option>
+      <option value="RUS+7"<?ssi selected timezone RUS+7?>><?lng advanced_tmz_RUSp7?></option>
+      <option value="THA+7"<?ssi selected timezone THA+7?>><?lng advanced_tmz_THAp7?></option>
+      <option value="CHN+8"<?ssi selected timezone CHN+8?>><?lng advanced_tmz_CHNp7?></option>
+      <option value="SGP+8"<?ssi selected timezone SGP+8?>><?lng advanced_tmz_SGPp8?></option>
+      <option value="AUS+8"<?ssi selected timezone AUS+8?>><?lng advanced_tmz_AUSp8?></option>
+      <option value="KOR+9"<?ssi selected timezone KOR+9?>><?lng advanced_tmz_KORp8?></option>
+      <option value="JPN+9"<?ssi selected timezone JPN+9?>><?lng advanced_tmz_JPNp9?></option>
+      <option value="AUS+9.5"<?ssi selected timezone AUS+9.5?>><?lng advanced_tmz_AUSp95?></option>
+      <option value="AUS2+9.5"<?ssi selected timezone AUS2+9.5?>><?lng advanced_tmz_AUS2p95?></option>
+      <option value="AUS+10"<?ssi selected timezone AUS+10?>><?lng advanced_tmz_AUSp10?></option>
+      <option value="AUS2+10"<?ssi selected timezone AUS2+10?>><?lng advanced_tmz_AUS2p10?></option>
+      <option value="AUS3+10"<?ssi selected timezone AUS3+10?>><?lng advanced_tmz_AUS3p10?></option>
+      <option value="RUS+10"<?ssi selected timezone RUS+10?>><?lng advanced_tmz_RUSp10?></option>
+      <option value="AUS+10.5"<?ssi selected timezone AUS+10.5?>><?lng advanced_tmz_AUSp105?></option>
+      <option value="NCL+11"<?ssi selected timezone NCL+11?>><?lng advanced_tmz_NCLp11?></option>
+      <option value="NZL+12"<?ssi selected timezone NZL+12?>><?lng advanced_tmz_NZLp12?></option>
+      <option value="RUS+12"<?ssi selected timezone RUS+12?>><?lng advanced_tmz_RUSp12?></option>
+      <option value="NZL+12.75"<?ssi selected timezone NZL+12.75?>><?lng advanced_tmz_NZLp1275?></option>
+      <option value="TON+13"<?ssi selected timezone TON+13?>><?lng advanced_tmz_TONp13?></option>
+      </select><?ssi help timezone?>
+    </TD></TR>
+    <TR><TD></TD><TD>&nbsp;</TD></TR>
+    <TR><TD></TD>
+      <?ssi skipon VTECH?>
+      <TD><B>
+      <?ssi skipoff VTECH?>
+      <?ssi skipon SNOM?>
+      <TD class="titleText">
+      <?ssi skipoff SNOM?>
+      <?lng advanced_http?></B>
+      </TD>
+    </TR>
+    <TR><TD></TD><TD><?ssi input advanced_ssi_httpproxy http_proxy?></TD></TR>
+    <TR><TD></TD><TD><?ssi input advanced_ssi_httpport http_port?></TD></TR>
+    <TR><TD></TD><TD><?ssi input advanced_ssi_httpsport https_port?></TD></TR>
+    <TR><TD></TD><TD><?lng advanced_webservercon?></TD><TD width="150">
+      <select <?ssi disabled webserver_type?> name="webserver_type" size="1" <?ssi tabindex?>>
+      <option value="http"<?ssi selected webserver_type http?>><?lng advanced_httponly?></option>
+      <option value="https"<?ssi selected webserver_type https?>><?lng advanced_httpsonly?></option>
+      <option value="http_https"<?ssi selected webserver_type http_https?>><?lng advanced_httphttps?></option>
+      <option value="off"<?ssi selected webserver_type off?>><?lng advanced_off?></option>
+      </select><?ssi help webserver_type?>
+    </TD></TR>
+    <TR><TD></TD><TD><?ssi input advanced_ssi_web_logout web_logout_timer?></TD></TR>
+    <TR><TD></TD><TD>&nbsp;</TD></TR>
+    <TR><TD></TD>
+      <?ssi skipon VTECH?>
+      <TD><B>
+      <?ssi skipoff VTECH?>
+      <?ssi skipon SNOM?>
+      <TD class="titleText">
+      <?ssi skipoff SNOM?>
+      <?lng ldap_prefs?>&nbsp;1</B>
+      </TD>
+    </TR>
+    <TR><TD></TD><TD><?ssi input_array_nr ldap_search_filter ldap_search_filter1?></TD></TR>
+    <TR><TD></TD><TD><?ssi input_array_nr ldap_number_filter ldap_number_filter1?></TD></TR>
+    <TR><TD></TD><TD><?ssi input_array_nr ldap_search_filter_during_call ldap_search_filter_during_call1?></TD></TR>
+    <TR><TD></TD><TD><?ssi input_array_nr ldap_number_filter_during_call ldap_number_filter_during_call1?></TD></TR>
+    <TR><TD></TD><TD><?ssi input_array_nr ldap_server ldap_server1?></TD></TR>
+    <TR><TD></TD><TD><?ssi input_array_nr ldap_port ldap_port1?></TD></TR>
+    <TR><TD></TD><TD><?ssi input_array_nr ldap_base ldap_base1?></TD></TR>
+    <TR><TD></TD><TD><?ssi input_array_nr ldap_username ldap_username1?></TD></TR>
+    <TR><TD></TD><TD><?ssi inpass_array_nr ldap_password ldap_password1?></TD></TR>
+    <TR><TD></TD><TD><?ssi input_array_nr ldap_name_attributes ldap_name_attributes1?></TD></TR>
+    <TR><TD></TD><TD><?ssi input_array_nr ldap_number_attributes ldap_number_attributes1?></TD></TR>
+    <TR><TD></TD><TD><?ssi input_array_nr ldap_display_name ldap_display_name1?></TD></TR>
+    <TR><TD></TD><?ssi radio_array_nr advanced_ssi_ldap_over_tls ldap_over_tls1 advanced_ssi_on advanced_ssi_off?></TR>
+    <TR><TD></TD><TD><?ssi input_array_nr advanced_ssi_ldap_sort_parameters ldap_sort_parameters1?></TD></TR>
+    <TR><TD></TD><TD>&nbsp;</TD></TR>
+    <TR><TD></TD>
+      <?ssi skipon VTECH?>
+      <TD><B>
+      <?ssi skipoff VTECH?>
+      <?ssi skipon SNOM?>
+      <TD class="titleText">
+      <?ssi skipoff SNOM?>
+      <?lng ldap_prefs?>&nbsp;<?lng preferences_general?></B>
+      </TD>
+    </TR>
+    <TR><TD></TD><?ssi radio ldap_perform_initial_query perform_initial_query_in_ldap_state advanced_ssi_on advanced_ssi_off?></TR>
+    <TR><TD></TD><TD><?lng advanced_ssi_ldap_sort_mode?></TD><TD>
+      <select name="ldap_sort_mode" ID="SelectLdap1" <?ssi disabled ldap_sort_mode?>size="1" <?ssi tabindex?>>
+      <option value="client"<?ssi selected ldap_sort_mode client?>><?lng advanced_ssi_client?></option>
+      <option value="server"<?ssi selected ldap_sort_mode server?>><?lng advanced_ssi_server?></option>
+      <option value="none"<?ssi selected ldap_sort_mode none?>><?lng advanced_ssi_none?></option>
+      </select><?ssi help ldap_sort_mode?>
+    </TD></TR>
+    <TR><TD></TD><TD><?ssi input line_ssi_country country_code?></TD></TR>
+    <TR><TD></TD><TD><?ssi input line_ssi_area area_code?></TD></TR>
+    <TR><TD></TD><TD>&nbsp;</TD></TR>
+    <TR><TD></TD>
+      <?ssi skipon VTECH?>
+      <TD><B>
+      <?ssi skipoff VTECH?>
+      <?ssi skipon SNOM?>
+      <TD class="titleText">
+      <?ssi skipoff SNOM?>
+      <?lng advanced_tr069?></B>
+      </TD>
+    </TR>
+    <TR><TD></TD><?ssi radio tr69_use_acs tr69_use_acs advanced_ssi_on advanced_ssi_off?></TR>
+    <TR><TD></TD><?ssi radio tr69_bootstrap tr69_bootstrap advanced_ssi_on advanced_ssi_off?></TR>
+    <TR><TD></TD><TD><?ssi input tr69_acs_url tr69_acs_url?></TD></TR>
+    <TR><TD></TD><TD><?ssi input tr69_acs_user tr69_acs_user?></TD></TR>
+    <TR><TD></TD><TD><?ssi inpass tr69_acs_passwd tr69_acs_passwd?></TD></TR>
+    <TR><TD></TD><TD><?ssi input tr69_cnr_user tr69_cnr_user?></TD></TR>
+    <TR><TD></TD><TD><?ssi inpass tr69_cnr_pass tr69_cnr_pass?></TD></TR>
+    <TR><TD></TD><TD><?ssi input tr69_p_inform_supervision_timeout tr69_p_inform_supervision_timeout?></TD></TR>
+    <TR><TD></TD><?ssi radio tr69_log tr69_log advanced_ssi_on advanced_ssi_off?></TR>
+    <TR><TD></TD><TD>&nbsp;</TD></TR>
+    <?ssi skipoff NOT_IN_ADMIN_MODE?>
+    <?ssi skipon IN_USER_MODE?>
+    <?ssi skipon NOT_OCIP?>
+    <TR><TD></TD>
+      <?ssi skipon VTECH?>
+      <TD><B>
+      <?ssi skipoff VTECH?>
+      <?ssi skipon SNOM?>
+      <TD class="titleText">
+      <?ssi skipoff SNOM?>
+      <?lng ocip_prefs?></B>
+      </TD>
+    </TR>
+    <?ssi skipon IN_ENHANCED_USER_MODE?>
+    <TR><TD></TD><TD><?ssi input ldap_server ocip_server?></TD></TR>
+    <TR><TD></TD><TD><?ssi input ldap_port ocip_port?></TD></TR>
+    <TR><TD></TD><TD><?ssi input ocip_max_hits ocip_max_hits?></TD></TR>
+    <?ssi skipoff IN_ENHANCED_USER_MODE?>
+    <TR><TD></TD><TD><?ssi input ldap_username ocip_username?></TD></TR>
+    <TR><TD></TD><TD><?ssi inpass ldap_password ocip_password?></TD></TR>
+    <TR><TD></TD><TD>&nbsp;</TD></TR>
+    <?ssi skipoff NOT_OCIP?>
+    <?ssi skipoff IN_USER_MODE?>
+    <?ssi skipon NOT_IN_ADMIN_MODE?>
+    <?ssi skipon NOT_ETH_SWITCH_DEVICE?>
+    <TR><TD></TD>
+      <?ssi skipon VTECH?>
+      <TD><B>
+      <?ssi skipoff VTECH?>
+      <?ssi skipon SNOM?>
+      <TD class="titleText">
+      <?ssi skipoff SNOM?>
+      <?lng advanced_ethernet?></B>
+      </TD>
+    </TR>
+    <TR><TD></TD><TD><?lng advanced_ssi_eth_net_port?></TD><TD>
+      <select name="eth_net" ID="Select1" <?ssi disabled eth_net?>size="1" <?ssi tabindex?>>
+      <option value="10half"<?ssi selected eth_net 10half?>><?lng advanced_10half?></option>
+      <option value="10full"<?ssi selected eth_net 10full?>><?lng advanced_10full?></option>
+      <option value="100half"<?ssi selected eth_net 100half?>><?lng advanced_100half?></option>
+      <option value="100full"<?ssi selected eth_net 100full?>><?lng advanced_100full?></option>
+      <?ssi skipon NO_GIGABIT?>
+      <?ssi skipon NO_HALF_DUPLEX_GIGABIT?>
+      <option value="1000half"<?ssi selected eth_net 1000half?>><?lng advanced_1000half?></option>
+      <?ssi skipoff NO_HALF_DUPLEX_GIGABIT?>
+      <option value="1000full"<?ssi selected eth_net 1000full?>><?lng advanced_1000full?></option>
+      <?ssi skipoff NO_GIGABIT?>
+      <option value="auto"<?ssi selected eth_net auto?>><?lng advanced_autoneg?></option>
+      </select><?ssi help eth_net?>
+    </TD></TR>
+    <TR><TD></TD><TD><?lng advanced_ssi_eth_pc_port?></TD><TD>
+      <select name="eth_pc" ID="Select1" <?ssi disabled eth_pc?>size="1" <?ssi tabindex?>>
+      <option value="10half"<?ssi selected eth_pc 10half?>><?lng advanced_10half?></option>
+      <option value="10full"<?ssi selected eth_pc 10full?>><?lng advanced_10full?></option>
+      <option value="100half"<?ssi selected eth_pc 100half?>><?lng advanced_100half?></option>
+      <option value="100full"<?ssi selected eth_pc 100full?>><?lng advanced_100full?></option>
+      <?ssi skipon NO_GIGABIT?>
+      <?ssi skipon NO_HALF_DUPLEX_GIGABIT?>
+      <option value="1000half"<?ssi selected eth_pc 1000half?>><?lng advanced_1000half?></option>
+      <?ssi skipoff NO_HALF_DUPLEX_GIGABIT?>
+      <option value="1000full"<?ssi selected eth_pc 1000full?>><?lng advanced_1000full?></option>
+      <?ssi skipoff NO_GIGABIT?>
+      <option value="auto"<?ssi selected eth_pc auto?>><?lng advanced_autoneg?></option>
+      <option value="off"<?ssi selected eth_pc off?>><?lng advanced_off?></option>
+      </select><?ssi help eth_pc?>
+    </TD></TR>
+    <TR><TD></TD><?ssi radio advanced_detectethernet ethernet_detect advanced_ssi_on advanced_ssi_off?></TR>
+    <TR><TD></TD><TD><?lng advanced_actionethernet?></TD><TD>
+      <select <?ssi disabled ethernet_replug?>name="ethernet_replug" size="1" <?ssi tabindex?>>
+      <option value="reregister"<?ssi selected ethernet_replug reregister?>><?lng line_reregister?></option>
+      <option value="reboot"<?ssi selected ethernet_replug reboot?>><?lng advanced_reboot?></option>
+      <option value="nothing"<?ssi selected ethernet_replug nothing?>><?lng advanced_donothing?></option>
+      </select><?ssi help ethernet_replug?>
+    </TD></TR>
+    <?ssi skipoff NOT_ETH_SWITCH_DEVICE?>
+    <TR><TD></TD><TD>&nbsp;</TD></TR>
+    <TR><TD></TD>
+      <?ssi skipon VTECH?>
+      <TD><B>
+      <?ssi skipoff VTECH?>
+      <?ssi skipon SNOM?>
+      <TD class="titleText">
+      <?ssi skipoff SNOM?>
+      <?lng advanced_debug?></B>
+      </TD>
+    </TR>
+    <TR><TD></TD><TD><?ssi input advanced_ssi_syslog_server syslog_server?></TD></TR>
+    <TR><TD></TD><TD><?ssi input advanced_ssi_lcserver lcserver1?></TD></TR>
+    <TR><TD></TD><?ssi radio advanced_ssi_sip_tracing sip_tracing advanced_ssi_on advanced_ssi_off?></TR>
+    <TR><TD></TD><?ssi radio advanced_ssi_flood_tracing flood_tracing advanced_ssi_on advanced_ssi_off?></TR>
+    <TR><TD></TD><TD><?ssi input advanced_ssi_sip_trace_size sip_trace_size?></TD></TR>
+    <TR><TD></TD><TD><?ssi input advanced_ssi_sip_body_trace_size sip_body_trace_size?></TD></TR>
+    <?ssi skipon NO_FEATURE_HTTP_TRACE?>
+    <TR><TD></TD><?ssi radio advanced_ssi_http_tracing http_tracing advanced_ssi_on advanced_ssi_off?></TR>
+    <TR><TD></TD><TD><?ssi input advanced_ssi_http_trace_size http_trace_size?></TD></TR>
+    <TR><TD></TD><TD><?ssi input advanced_ssi_http_body_trace_size http_body_trace_size?></TD></TR>
+    <?ssi skipoff NO_FEATURE_HTTP_TRACE?>
+    <TR><TD></TD><TD>&nbsp;</TD></TR>
+    <TR><TD></TD>
+      <?ssi skipon VTECH?>
+      <TD><B>
+      <?ssi skipoff VTECH?>
+      <?ssi skipon SNOM?>
+      <TD class="titleText">
+      <?ssi skipoff SNOM?>
+      <?lng advanced_snmp?></B>
+      </TD>
+    </TR>
+    <TR><TD></TD><TD><?ssi input advanced_ssi_snmp_port snmp_port?></TD></TR>
+    <TR><TD></TD><TD><?ssi input advanced_ssi_snmp_trusted snmp_trusted_addresses?></TD></TR>
+    <?ssi skipon NO_FEATURE_XMPP?>
+    <TR><TD></TD><TD>&nbsp;</TD></TR>
+    <TR><TD></TD>
+      <?ssi skipon VTECH?>
+      <TD><B>
+      <?ssi skipoff VTECH?>
+      <?ssi skipon SNOM?>
+      <TD class="titleText">
+      <?ssi skipoff SNOM?>
+      <?lng advanced_xmpp?></B>
+      </TD>
+    </TR>
+    <TR><TD></TD><TD><?ssi input advanced_ssi_xmpp_refresh_timer xmpp_refresh_timer?></TD></TR>
+    <?ssi skipoff NO_FEATURE_XMPP?>
+    <TR><TD></TD><TD>&nbsp;</TD></TR>
+    <TR><TD></TD>
+      <?ssi skipon VTECH?>
+      <TD><B>
+      <?ssi skipoff VTECH?>
+      <?ssi skipon SNOM?>
+      <TD class="titleText">
+      <?ssi skipoff SNOM?>
+      <?lng advanced_xsi?></B>
+      </TD>
+    </TR>
+    <TR><TD></TD><TD><?ssi input advanced_ssi_xsi_heartbeat_interval xsi_heartbeat_interval?></TD></TR>
+    <?ssi skipoff NOT_IN_ADMIN_MODE?>
+    <?ssi skipon NOT_IN_ENHANCED_USER_MODE?>
+    <TR><TD/><TD>&nbsp;</TD></TR>
+    <TR><TD/>
+      <?ssi skipon VTECH?>
+      <TD><B>
+      <?ssi skipoff VTECH?>
+      <?ssi skipon SNOM?>
+      <TD class="titleText">
+      <?ssi skipoff SNOM?>
+      <?lng advanced_http_server?></B>
+      </TD>
+    </TR>
+    <TR><TD/><TD><?ssi input advanced_ssi_user http_user?></TD></TR>
+    <TR><TD/><TD><?ssi inpass advanced_ssi_password http_pass?></TD></TR>
+    <TR><TD/><?ssi radio advanced_ssi_auth_scheme http_scheme advanced_ssi_digest advanced_ssi_basic?></TR>
+    <TR><TD/><TD>&nbsp;</TD></TR>
+    <?ssi skipoff NOT_IN_ENHANCED_USER_MODE?>
+    <?ssi skipon IN_ADMIN_MODE?>
+    <TR>
+      <TD/>
+        <?ssi skipon VTECH?>
+        <TD style="font-weight:bold;">
+        <?ssi skipoff VTECH?>
+        <?ssi skipon SNOM?>
+        <TD class="titleText">
+        <?ssi skipoff SNOM?>
+        <?ssi inpass advanced_ssi_adminlogin admin_mode_login?></TD>
+    </TR>
+    <?ssi skipoff IN_ADMIN_MODE?>
+    <TR><TD/><TD>&nbsp;</TD></TR>
+    <TR>
+      <TD/>
+      <TD>
+        <input type="hidden" value="<?lng apply_button?>" name="Settings">
+        <!--Hidden input is used to allow onchange event to apply settings automatically-->
+        <input type="submit" value="<?lng apply_button?>" name="Settings" <?ssi tabindex?> >
+      </TD>
+    </TR>
+    <TR>
+      <TD class="background" valign="bottom" align="left" width="12" height="12">
+        <?ssi skipon VTECH?>
+        <IMG src=<?ssi img-corner-gif ll?> width="12" height="12">
+        <?ssi skipoff VTECH?>
+      </TD>
+      <TD width="12" height="5"><IMG src="img/clr.gif" width="12" height="5"></TD>
+      <TD width="12" height="5"><IMG src="img/clr.gif" width="12" height="5"></TD>
+      <TD class="background" valign="bottom" align="right" width="12" height="12">
+        <?ssi skipon VTECH?>
+        <IMG src=<?ssi img-corner-gif lr?> width="12" height="12">
+        <?ssi skipoff VTECH?>
+      </TD>
+    </TR>
+    </TABLE>
+    </FORM>
+    </TD>
+  </TR>
+  <script type="text/javascript" src="fox.js" charset="utf-8"></script>
+<?ssi file common9.htm?>
+</HTML>

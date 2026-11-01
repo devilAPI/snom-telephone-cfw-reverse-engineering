@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<IPPhoneBatch xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../schemas/minibrowser.xsd">
+  <IPPhoneText state="others_except_mb">
+    <Title>$(lang:title_conferences)</Title>
+    <If condition="$(bool_eval:$(condition:$(var_ifc:identity.$(set:active_line).collaborate::number_of_rooms)>0) | $(condition:$(var_ifc:identity.$(set:active_line).appointments::count)>0))">
+      <Fetch mil="1">file:///xml/gui/broadsoft_conferences.xml#sub=*[@id="list"]</Fetch>
+    </If>
+    <Else>
+      <SoftKeyItem>
+        <Name>ENTER</Name>
+        <Label></Label>
+        <Url>phone://mb_exit</Url>
+      </SoftKeyItem>
+      <Text>$(lang:no_conferences_found)</Text>
+    </Else>
+  </IPPhoneText>
+  <IPPhoneMenu id="list" track="yes" dtmf="off" speedselect="off" sort="yes" state="others_except_mb">
+    <Title>$(lang:title_conferences)</Title>
+    <Repeat values="$(var_ifc:identity.$(set:active_line).collaborate::list_of_rooms)"
+        token="|__BRIDGE_ID__|__PHONE__|__EXT__|__ROOM_NAME__|__ROOM_TYPE__|__ROOM_ID__|">
+      <MenuItem name="__ROOM_NAME__" id="__ROOM_ID__">
+        <Url>file:///xml/gui/broadsoft_conferences.xml#sub=*[@id="rooms"]&amp;action_ifc:identity.$(set:active_line).collaborate=room_participants, roomId=__ROOM_ID__--request_var&amp;var:room_name="__ROOM_NAME__"&amp;var:room_type="__ROOM_TYPE__"&amp;var:room_id="__ROOM_ID__"&amp;var:phone_number="__PHONE__"&amp;var:extension="__EXT__"&amp;var:bridge_id="__BRIDGE_ID__"</Url>
+        <ExtraIconType>$(icon_type_enum:kIconTypeMenuArrowRight)</ExtraIconType>
+      </MenuItem>
+    </Repeat>
+    <Repeat var_ifc="identity.$(set:active_line).appointments.*"
+            token="|__EVENT_TIME__|__SUBJECT__|__CTYPE__|__STATUS__|__BRIDGE_ID__|__CONFERENCE_ID__|__MODERATOR_PIN__|__SECURITY_PIN__|__PHONE_NUMBER__|__EXTENSION__|">
+      <!--implicit: __MID__==current Module id -->
+      <!--implicit: __IDX__==current index 0..? -->
+      <MenuItem sel="$(bool_eval:$(condition:$(var_ifc:__MID__::state)==ongoing)|$(condition:$(var_ifc:__MID__::state)==reminding))" name="$(local_time:get_HM;$(period:get_start_point;__EVENT_TIME__)) __SUBJECT__" id="__MID__" sort_key="$(period:get_start_point;__EVENT_TIME__)">
+        <Url>file:///xml/gui/broadsoft_conferences.xml#sub=*[@id="details"]&amp;var:mid="__MID__"&amp;var:bridge_id="__BRIDGE_ID__"&amp;var:conference_id="__CONFERENCE_ID__"&amp;var:moderator_id="__MODERATOR_PIN__"&amp;var:s_pin="__SECURITY_PIN__"&amp;var:ph_nr="__PHONE_NUMBER__"&amp;var:ext="__EXTENSION__"&amp;var:subject="__SUBJECT__"&amp;var:ctype="__CTYPE__"&amp;var:status="__STATUS__"&amp;var:start="$(local_time:get_HM;$(period:get_start_point;__EVENT_TIME__))"&amp;var:start_date="$(local_time:get_date;$(period:get_start_point;__EVENT_TIME__))"&amp;var:todays_date="$(local_time:get_date)"&amp;var:duration="$(period:get_duration;__EVENT_TIME__;hour;min)"</Url>
+        <ExtraIconType>$(icon_type_enum:kIconTypeMenuArrowRight)</ExtraIconType>
+      </MenuItem>
+    </Repeat>
+  </IPPhoneMenu>
+  <IPPhoneMenu id="details" state="others_except_mb" speedselect="off" icon_xoffset="$(math_eval:$(gui_display_xsize)/20-5)" text_xoffset="$(math_eval:$(gui_display_xsize)/20-7)">
+    <Title>$(lang:list_details)</Title>
+    <If condition="$(bool_eval:$(condition：$((var_ifc:$(var:mid)::state)==reminding)|$(condition:$(var_ifc:$(var:mid)::state)==pending))">
+      <SoftKeyItem>
+        <Name>F2</Name>
+        <Label>$(lang:date_remind_later)</Label>
+        <Url>file:///xml/gui/broadsoft_conferences.xml#sub=*[@id="delay"]&amp;var:mid=$(var:mid)</Url>
+      </SoftKeyItem>
+    </If>
+    <If condition="$(show_feature:FEATURE_PUI_STYLE_SIO)">
+      <MenuItem name="$(lang:subject)">
+        <SubText>$(var:subject)</SubText>
+      </MenuItem>
+      <MenuItem name="$(lang:conference_type)">
+        <SubText>$(var:ctype)</SubText>
+      </MenuItem>
+      <MenuItem name="$(lang:conference_status)">
+        <SubText>$(var:status)</SubText>
+      </MenuItem>
+      <MenuItem name="$(lang:current_time)">
+        <SubText>$(var:start)</SubText>
+      </MenuItem>
+      <If condition="$(var:start_date)!=$(var:todays_date)">
+        <MenuItem name="$(lang:current_date)">
+          <SubText>$(var:start_date)</SubText>
+        </MenuItem>
+      </If>
+      <If condition="$(var:duration)!=00:00">
+        <MenuItem name="$(lang:list_details_duration)">
+          <SubText>$(var:duration)</SubText>
+        </MenuItem>
+      </If>
+    </If>
+    <Else>
+      <MenuItem name="$(var:subject)">
+        <Icon>$(lang:subject):</Icon>
+      </MenuItem>
+      <MenuItem name="$(var:ctype)">
+        <Icon>$(lang:conference_type):</Icon>
+      </MenuItem>
+      <MenuItem name="$(var:status)">
+        <Icon>$(lang:conference_status):</Icon>
+      </MenuItem>
+      <MenuItem name="$(var:start)">
+        <Icon>$(lang:list_details_time)</Icon>
+      </MenuItem>
+      <If condition="$(var:start_date)!=$(var:todays_date)">
+        <MenuItem name="$(var:start_date)">
+          <Icon>$(lang:current_date):</Icon>
+        </MenuItem>
+      </If>
+      <If condition="$(var:duration)!=00:00">
+        <MenuItem name="$(var:duration)">
+          <Icon>$(lang:list_details_duration)</Icon>
+        </MenuItem>
+      </If>
+    </Else>
+    <If condition="$(var_ifc:identity.$(set:active_line).appointments::number_of_participants&amp;$(var:bridge_id)&amp;$(var:conference_id))!=0">
+      <Repeat value_key="$(var_ifc:identity.$(set:active_line).appointments::mbcb_conference_participants&amp;$(var:bridge_id)&amp;$(var:conference_id))"
+          token="|__NAME__|__USERID__|__PRESENCE__|__NOTE__|__ICONURL__|">
+        <MenuItem name="__NAME__">
+          <If condition="$(bool_eval: $(is_set:$(presence_state_text:__PRESENCE__)) &amp; $(condition:$(presence_state_text:__PRESENCE__)!=$(lang:contact_state_unknown)))">
+            <If condition="$(is_set:__NOTE__)">
+              <SubText>$(presence_state_text:__PRESENCE__) - __NOTE__</SubText>
+            </If>
+            <Else>
+              <SubText>$(presence_state_text:__PRESENCE__)</SubText>
+            </Else>
+          </If>
+          <Else>
+            <SubText>__USERID__</SubText>
+          </Else>
+          <Icon>$(presence_icon:__PRESENCE__)</Icon>
+          <IconType>$(icon_type_enum:kIconTypeNone)</IconType>
+          <IconUrl>__ICONURL__</IconUrl>
+          <Url>phone://mb_nop</Url>
+        </MenuItem>
+      </Repeat>
+    </If>
+    <If condition="!$(empty:$(var:ext))">
+      <SoftKeyItem>
+        <Name>F3</Name>
+        <Label>F_CONSULTCONF_JOIN</Label>
+        <If condition="!$(empty:$(var:s_pin))">
+          <Url>phone://mb_exit#action_ifc:identity.$(set:active_line).XSI.client=POST,type="actions",add_user=true,path=calls/new,query="address=tel:$(var:ext)&amp;conferenceId=$(var:conference_id)&amp;pin=$(var:s_pin)"</Url>
+        </If>
+        <Else>
+          <Url>phone://mb_exit#action_ifc:identity.$(set:active_line).XSI.client=POST,type="actions",add_user=true,path=calls/new,query="address=tel:$(var:ext)&amp;conferenceId=$(var:conference_id)"</Url>
+        </Else>
+      </SoftKeyItem>
+      <If condition="!$(empty:$(var:moderator_id))">
+        <SoftKeyItem>
+          <Name>F4</Name>
+          <Label>F_MODERATE</Label>
+          <If condition="!$(empty:$(var:s_pin))">
+            <Url>phone://mb_exit#action_ifc:identity.$(set:active_line).XSI.client=POST,type="actions",add_user=true,path=calls/new,query="address=tel:$(var:ext)&amp;conferenceId=$(var:moderator_id)&amp;pin=$(var:s_pin)"</Url>
+          </If>
+          <Else>
+            <Url>phone://mb_exit#action_ifc:identity.$(set:active_line).XSI.client=POST,type="actions",add_user=true,path=calls/new,query="address=tel:$(var:ext)&amp;conferenceId=$(var:moderator_id)"</Url>
+          </Else>
+        </SoftKeyItem>
+      </If>
+    </If>
+    <Elif condition="!$(empty:$(var:ph_nr))">
+      <SoftKeyItem>
+        <Name>F3</Name>
+        <Label>F_CONSULTCONF_JOIN</Label>
+        <If condition="!$(empty:$(var:s_pin))">
+          <Url>phone://mb_exit#action_ifc:identity.$(set:active_line).XSI.client=POST,type="actions",add_user=true,path=calls/new,query="address=tel:$(var:ph_nr)&amp;conferenceId=$(var:conference_id)&amp;pin=$(var:s_pin)"</Url>
+        </If>
+        <Else>
+          <Url>phone://mb_exit#action_ifc:identity.$(set:active_line).XSI.client=POST,type="actions",add_user=true,path=calls/new,query="address=tel:$(var:ph_nr)&amp;conferenceId=$(var:conference_id)"</Url>
+        </Else>
+      </SoftKeyItem>
+      <If condition="!$(empty:$(var:moderator_id))">
+        <SoftKeyItem>
+          <Name>F4</Name>
+          <Label>F_MODERATE</Label>
+          <If condition="!$(empty:$(var:s_pin))">
+            <Url>phone://mb_exit#action_ifc:identity.$(set:active_line).XSI.client=POST,type="actions",add_user=true,path=calls/new,query="address=tel:$(var:ph_nr)&amp;conferenceId=$(var:moderator_id)&amp;pin=$(var:s_pin)"</Url>
+          </If>
+          <Else>
+            <Url>phone://mb_exit#action_ifc:identity.$(set:active_line).XSI.client=POST,type="actions",add_user=true,path=calls/new,query="address=tel:$(var:ph_nr)&amp;conferenceId=$(var:moderator_id)"</Url>
+          </Else>
+        </SoftKeyItem>
+      </If>
+    </Elif>
+  </IPPhoneMenu>
+  <IPPhoneMenu id="delay" track="yes" dtmf="off" speedselect="select" state="others_except_mb">
+    <Title>$(lang:date_reset_reminder)</Title>
+    <MenuItem name="$(lang:date_remind_me_later)" id="$(var:mid)">
+      <Url>phone://mb_exit#action_ifc:$(var:mid)=reschedule_reminder,delay=0--request_var</Url>
+    </MenuItem>
+    <Repeat values="|5|PT5M|10|PT10M|30|PT30M|60|PT1H|" token="|__TEXT__|__VALUE__|">
+      <MenuItem name="$(lang:date_set_reminder_to) __TEXT__ $(lang:minutes)" id="__VALUE__">
+        <Url>phone://mb_exit#action_ifc:$(var:mid)=reschedule_reminder,delay=__VALUE__--request_var</Url>
+      </MenuItem>
+    </Repeat>
+  </IPPhoneMenu>
+  <IPPhoneMenu id="rooms" speedselect="off" state="others_except_mb" icon_xoffset="$(math_eval:$(gui_display_xsize)/20-5)" text_xoffset="$(math_eval:$(gui_display_xsize)/20-7)">
+    <Title>$(var:room_name)</Title>
+    <If condition="$(show_feature:FEATURE_PUI_STYLE_SIO)">
+      <MenuItem name="$(lang:collaborate_room_name)">
+        <SubText>$(var:room_name)</SubText>
+        <Url>phone://mb_nop</Url>
+      </MenuItem>
+      <MenuItem name="$(lang:collaborate_room_type)">
+        <SubText>$(var:room_type)</SubText>
+        <Url>phone://mb_nop</Url>
+      </MenuItem>
+    </If>
+    <Else>
+      <MenuItem name="$(var:room_name)">
+        <Url>phone://mb_nop</Url>
+      </MenuItem>
+      <MenuItem name="$(var:room_type)">
+        <Url>phone://mb_nop</Url>
+      </MenuItem>
+    </Else>
+    <Repeat value_key="$(var_ifc:identity.$(set:active_line).collaborate::mbcb_room_participants)"
+        token="|__NAME__|__USERID__|__PRESENCE__|__NOTE__|__ICONURL__|">
+      <MenuItem name="__NAME__">
+        <If condition="$(bool_eval: $(is_set:$(presence_state_text:__PRESENCE__)) &amp; $(condition:$(presence_state_text:__PRESENCE__)!=$(lang:contact_state_unknown)))">
+          <If condition="$(is_set:__NOTE__)">
+            <SubText>$(presence_state_text:__PRESENCE__) - __NOTE__</SubText>
+          </If>
+          <Else>
+            <SubText>$(presence_state_text:__PRESENCE__)</SubText>
+          </Else>
+        </If>
+        <Else>
+          <SubText>__USERID__</SubText>
+        </Else>
+        <Icon>$(presence_icon:__PRESENCE__)</Icon>
+        <IconType>$(icon_type_enum:kIconTypeNone)</IconType>
+        <IconUrl>__ICONURL__</IconUrl>
+        <Url>phone://mb_nop</Url>
+      </MenuItem>
+    </Repeat>
+    <If condition="$(is_set:$(var:room_id))">
+      <If condition="$(is_set:$(var:extension))">
+        <SoftKeyItem>
+          <Name>F3</Name>
+          <Label>F_CONSULTCONF_JOIN</Label>
+          <Url>phone://mb_exit#action_ifc:identity.$(set:active_line).XSI.client=POST,type="actions",add_user=true,path=calls/new,query="address=tel:$(var:extension)&amp;roomId=$(var:room_id)"</Url>
+        </SoftKeyItem>
+      </If>
+      <Elif condition="$(is_set:$(var:phone_number))">
+        <SoftKeyItem>
+          <Name>F3</Name>
+          <Label>F_CONSULTCONF_JOIN</Label>
+          <Url>phone://mb_exit#action_ifc:identity.$(set:active_line).XSI.client=POST,type="actions",add_user=true,path=calls/new,query="address=tel:$(var:phone_number)&amp;roomId=$(var:room_id)"</Url>
+        </SoftKeyItem>
+      </Elif>
+    </If>
+  </IPPhoneMenu>
+</IPPhoneBatch>

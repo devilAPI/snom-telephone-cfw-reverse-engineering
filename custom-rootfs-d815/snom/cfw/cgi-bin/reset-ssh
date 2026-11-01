@@ -1,0 +1,32 @@
+#!/bin/sh
+# CFW: restore the default sshd_config and reload sshd.
+echo "Content-type: text/html"
+echo ""
+
+DEFAULT="/snom/cfw/defaults/sshd_config"
+TARGET="/etc/ssh/sshd_config"
+
+status="error"
+msg="Default sshd_config not found; nothing changed."
+if [ -f "$DEFAULT" ]; then
+  if cat "$DEFAULT" > "$TARGET"; then
+    sync
+    # Reload only the listening sshd master (started from rcS as /usr/sbin/sshd),
+    # so active sessions and this CGI's own connection are not dropped.
+    MASTER=$(ps | grep '[u]sr/sbin/sshd' | awk '{print $1}' | head -1)
+    [ -n "$MASTER" ] && kill -HUP "$MASTER" 2>/dev/null
+    status="ok"
+    msg="Default sshd_config restored and sshd reloaded."
+  else
+    msg="Could not write $TARGET."
+  fi
+fi
+
+cat <<EOF
+<!DOCTYPE html><html><head><meta charset="utf-8"><title>CFW Settings</title>
+<style>body{font-family:sans-serif;background:#f0f0f0;padding:24px}
+.box{background:#fff;border:1px solid #ccc;border-radius:6px;padding:16px 18px;max-width:460px}
+.ok{color:#176}.err{color:#a40}a{color:#2a6}</style></head><body>
+<div class="box"><p class="$([ "$status" = ok ] && echo ok || echo err)">$msg</p>
+<p><a href="/">&larr; Back to CFW Settings</a></p></div></body></html>
+EOF

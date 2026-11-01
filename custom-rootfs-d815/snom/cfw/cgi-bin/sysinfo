@@ -1,0 +1,23 @@
+#!/bin/sh
+# CFW: read-only system status.
+. /snom/cfw/model.conf
+echo "Content-type: text/html"
+echo ""
+esc() { sed 's/&/\&amp;/g; s/</\&lt;/g; s/>/\&gt;/g'; }
+row() { printf '<tr><th align=left>%s</th><td>%s</td></tr>\n' "$1" "$(printf '%s' "$2" | esc)"; }
+section() { printf '<h2>%s</h2><pre>' "$1"; esc; echo '</pre>'; }
+echo '<!doctype html><meta charset="utf-8"><title>System status</title>'
+echo '<style>body{font:15px system-ui,sans-serif;max-width:720px;margin:auto;padding:16px}pre{background:#eee;padding:8px;overflow-x:auto}th{padding-right:16px}</style>'
+echo "<h1>snom $CFW_MODEL status</h1><table>"
+row Firmware "$(cat /snom/version 2>/dev/null)"
+row Kernel "$(uname -r)"
+row Uptime "$(uptime)"
+row OpenSSH "$(ssh -V 2>&1)"
+row OpenSSL "$(openssl version)"
+row Address "$(ifconfig eth0 2>/dev/null | sed -n 's/.*inet addr:\([0-9.]*\).*/\1/p')"
+echo '</table>'
+free | section Memory
+df -h 2>/dev/null | section Storage
+ps | grep -v '\[' | section Processes
+netstat -ltn 2>/dev/null | section 'Listening ports'
+echo '<p><a href="/">Back</a></p>'

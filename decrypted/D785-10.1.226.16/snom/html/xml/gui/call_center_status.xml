@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<IPPhoneBatch xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../schemas/minibrowser.xsd">
+  <!-- If call center status feature is enabled on several accounts, display thoses account first-->
+  <IPPhoneMenu id="identity_list" track="yes" state="others_except_mb">
+     <Title>$(lang:select_identity)</Title>
+      <Repeat values="$(var_ifc:CallCenterStatus::get_identities_list)" token="|__IDENTITITY__|">
+        <If condition="!$(empty:$(var_ifc:CallCenterStatus::get_display_name.__IDENTITITY__))">
+          <MenuItem name="$(var_ifc:CallCenterStatus::get_display_name.__IDENTITITY__)">
+            <!-- Display name and number -->
+            <SubText>$(var_ifc:CallCenterStatus::get_number.__IDENTITITY__)</SubText>
+            <ExtraIconType>$(icon_type_enum:kIconTypeMenuArrowRight)</ExtraIconType>
+            <Url>file:///xml/gui/call_center_status.xml#sub=*[@id="call_center_status"]&amp;var:identity=__IDENTITITY__</Url>
+          </MenuItem>
+        </If>
+        <Else>
+          <MenuItem name="$(var_ifc:CallCenterStatus::get_number.__IDENTITITY__)">
+            <ExtraIconType>$(icon_type_enum:kIconTypeMenuArrowRight)</ExtraIconType>
+            <Url>file:///xml/gui/call_center_status.xml#sub=*[@id="call_center_status"]&amp;var:identity=__IDENTITITY__</Url>
+          </MenuItem>
+        </Else>
+      </Repeat>
+  </IPPhoneMenu>
+
+  <IPPhoneMenu id="call_center_status" track="no" state="others_except_mb">
+    <Title>$(lang:F_CALL_CENTER_STATUS)</Title>
+      <Repeat values="$(var_ifc:CallCenterStatus::get_status.$(var:identity))" token="|__CALL_CENTER_NAME__|__STATUS__|">
+        <If condition="$(show_feature:FEATURE_PUI_STYLE_SIO)">
+          <MenuItem name="__CALL_CENTER_NAME__">
+            <ExtraText>__STATUS__</ExtraText>
+            <Url>phone://mb_nop</Url>
+          </MenuItem>
+        </If>
+        <Else>
+          <MenuItem name="__CALL_CENTER_NAME__: __STATUS__">
+            <Url>phone://mb_nop</Url>
+          </MenuItem>
+        </Else>
+      </Repeat>
+  </IPPhoneMenu>
+
+</IPPhoneBatch>

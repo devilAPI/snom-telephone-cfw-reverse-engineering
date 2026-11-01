@@ -1,0 +1,309 @@
+<?ssi title advanced_ssi_title?>
+<?ssi file common1.htm?>
+  <TR><TD valign="top" height="16"><IMG src="img/clr.gif" width="16" height="16"></TD></TR>
+  <TR>
+    <TD valign="top">
+    <FORM method="post">
+      <?ssi skipon VTECH?>
+      <TABLE class="bubbleTable" cellSpacing="0" cellPadding="0" width="100%" border="0">
+      <?ssi skipoff VTECH?>
+      <?ssi skipon SNOM?>
+      <TABLE cellSpacing="4" cellPadding="0" width="100%" border="0">
+      <?ssi skipoff SNOM?>
+      <?ssi file tab_advanced.htm?>
+    <TR>
+      <TD width="12" height="5"><IMG src="img/clr.gif" width="12" height="12"></TD>
+      <TD colspan="2" />
+      <TD class="background" width="12" height="5">
+        <?ssi skipon VTECH?>
+        <IMG src=<?ssi img-corner-gif ur?> width="12" height="12">
+        <?ssi skipoff VTECH?>
+      </TD>
+    </TR>
+    <?ssi hidden_tag?>
+    <TR><TD/><TD width="50%"/><TD width="50%"/></TR>
+    <?ssi skipon NOT_IN_ADMIN_MODE?>
+    <TR><TD/>
+      <?ssi skipon VTECH?>
+      <TD width="50%"><B>
+      <?ssi skipoff VTECH?>
+      <?ssi skipon SNOM?>
+      <TD class="titleText" width="50%">
+      <?ssi skipoff SNOM?>
+      <?lng advanced_qos?></B>
+      </TD>
+      <TD width="50%"></TD>
+    </TR>
+    <TR><TD/><TD><?ssi input advanced_ssi_typeofservice codec_tos?></TD></TR>
+    <TR><TD/><TD><?ssi input advanced_ssi_sig_tos signaling_tos?></TD></TR>
+    <TR><TD/><TD>&nbsp;</TD></TR>
+    <TR><TD/>
+      <?ssi skipon VTECH?>
+      <TD><B>
+      <?ssi skipoff VTECH?>
+      <?ssi skipon SNOM?>
+      <TD class="titleText">
+      <?ssi skipoff SNOM?>
+      <?lng advanced_vlan?></B>
+      </TD>
+    </TR>
+    <TR><TD/><TD><?ssi input advanced_ssi_vlan_id vlan_id?></TD></TR>
+    <TR><TD/><TD><?ssi input advanced_ssi_vlan_priority vlan_qos?></TD></TR>
+    <?ssi skipon NOT_ETH_SWITCH_DEVICE?>
+    <TR><TD/><?ssi radio advanced_ssi_vlan_port_tagging vlan_port_tagging advanced_ssi_on advanced_ssi_off?></TR>
+    <TR><TD/><TD>&nbsp;</TD></TR>
+    <TR><TD/>
+      <?ssi skipon VTECH?>
+      <TD><B>
+      <?ssi skipoff VTECH?>
+      <?ssi skipon SNOM?>
+      <TD class="titleText">
+      <?ssi skipoff SNOM?>
+      <?lng advanced_ssi_eth_pc_port?></B>
+      </TD>
+    </TR>
+    <TR><TD/><TD><?ssi input advanced_ssi_vlan_id vlan_pc_id?></TD></TR>
+    <TR><TD/><TD><?ssi input advanced_ssi_vlan_priority vlan_pc_priority?></TD></TR>
+    <?ssi skipoff NOT_ETH_SWITCH_DEVICE?>
+    <TR><TD colspan="2"/><TD>&nbsp;</TD></TR>
+    <TR><TD/>
+      <?ssi skipon VTECH?>
+      <TD><B>
+      <?ssi skipoff VTECH?>
+      <?ssi skipon SNOM?>
+      <TD class="titleText">
+      <?ssi skipoff SNOM?>
+        <?lng ieee8021x_eap_auth_method_choice?></B>
+      </TD>
+      <TD>
+        <select name="ieee8021x_eap_auth_method" ID="Select3" <?ssi disabled ieee8021x_eap_auth_method?>size="1" <?ssi tabindex?>>
+        <option value="off"<?ssi selected ieee8021x_eap_auth_method off?>><?lng advanced_off?></option>
+        <option value="EAP-MD5"<?ssi selected ieee8021x_eap_auth_method EAP-MD5?>><?lng ieee8021x_eap_auth_method_choice_eap_md5?></option>
+        <?ssi skipon NOT_EAP_TLS?>
+        <option value="EAP-TLS"<?ssi selected ieee8021x_eap_auth_method EAP-TLS?>><?lng ieee8021x_eap_auth_method_choice_eap_tls?></option>
+        <?ssi skipoff NOT_EAP_TLS?>
+        </select><?ssi help ieee8021x_eap_auth_method?>
+      </TD>
+    </TR>
+    <TR><TD/><TD><?ssi input advanced_ssi_user ieee8021x_eap_md5_username?></TD></TR>
+    <TR><TD/><TD><?ssi inpass advanced_ssi_password ieee8021x_eap_md5_password?></TD></TR>
+    <TR><TD colspan="2"/><TD>&nbsp;</TD></TR>
+    <TR><TD/>
+      <?ssi skipon VTECH?>
+      <TD><B>
+      <?ssi skipoff VTECH?>
+      <?ssi skipon SNOM?>
+      <TD class="titleText">
+      <?ssi skipoff SNOM?>
+      <?lng advanced_security?></B>
+      </TD>
+    </TR>
+    <?ssi skipon NOT_VPN?>
+    <TR><TD/><?ssi radio vpn_ssi_vpn_on vpn_on advanced_ssi_on advanced_ssi_off?></TR>
+    <?ssi skipon VPN_ON?>
+    <TR><TD/><TD><?ssi input vpn_ssi_tarball_url vpn_tarball_url?></TD></TR>
+    <TR><TD/><TD><?ssi input vpn_netcat_server vpn_netcatserver?></TD></TR>
+    <?ssi skipoff VPN_ON?>
+    <?ssi skipoff NOT_VPN?>
+    <?ssi skipon NOT_L2TP?>
+    <TR><TD/><?ssi radio ssi_l2tp_on l2tp_on advanced_ssi_on advanced_ssi_off?></TR>
+    <?ssi skipon L2TP_ON?>
+    <TR><TD/><TD><?ssi input ssi_l2tp_tarball_url l2tp_tarball_url?></TD></TR>
+    <?ssi skipoff L2TP_ON?>
+    <?ssi skipoff NOT_L2TP?>
+    <?ssi skipon NOT_SBC?>
+    <TR><TD/><?ssi radio ssi_sbc_on prov_3cxsbc_enabled advanced_ssi_on advanced_ssi_off?></TR>
+    <?ssi skipon SBC_ON?>
+    <TR><TD/><TD><?ssi input ssi_sbc_prov_url prov_3cxsbc_url?></TD></TR>
+    <?ssi skipoff SBC_ON?>
+    <?ssi skipoff NOT_SBC?>
+    <TR><TD/><?ssi radio advanced_ssi_ignore_warning ignore_security_warning advanced_ssi_on advanced_ssi_off?></TR>
+    <TR><TD/><?ssi radio advanced_ssi_use_hidden_tags use_hidden_tags advanced_ssi_on advanced_ssi_off?></TR>
+    <TR><TD/><?ssi radio advanced_ssi_restrict_uri_queries restrict_uri_queries advanced_ssi_on advanced_ssi_off?></TR>
+    <TR><TD/><?ssi radio advanced_ssi_csta_control csta_control advanced_ssi_on advanced_ssi_off?></TR>
+    <TR><TD/><?ssi radio advanced_ssi_empty_tls_client_cert empty_tls_client_cert advanced_ssi_on advanced_ssi_off?></TR>
+    <TR><TD/><?ssi radio advanced_ssi_filter_registrar filter_registrar advanced_ssi_on advanced_ssi_off?></TR>
+    <TR><TD/><?ssi radio advanced_ssi_challenge_reboot challenge_reboot advanced_ssi_on advanced_ssi_off?></TR>
+    <TR><TD/><?ssi radio advanced_ssi_challenge_checksync challenge_checksync advanced_ssi_on advanced_ssi_off?></TR>
+    <TR><TD/><?ssi radio advanced_ssi_adminmode admin_mode advanced_ssi_on advanced_ssi_off?></TR>
+    <TR><TD/><TD><?ssi inpass advanced_ssi_adminpassword admin_mode_password?></TD></TR>
+    <TR><TD/><TD><?ssi inpass advanced_ssi_adminpassconf admin_mode_password_confirm?></TD></TR>
+    <TR><TD/><TD><?ssi input advanced_ssi_min_pin_length min_pin_length?></TD></TR>
+    <TR><TD/><TD><?ssi input advanced_ssi_max_pin_retry max_pin_retry?></TD></TR>
+    <TR><TD/><TD>&nbsp;</TD></TR>
+    <?ssi skipoff NOT_IN_ADMIN_MODE?>
+    <?ssi skipon IN_USER_MODE?>
+    <TR><TD/>
+      <?ssi skipon VTECH?>
+      <TD><B>
+      <?ssi skipoff VTECH?>
+      <?ssi skipon SNOM?>
+      <TD class="titleText">
+      <?ssi skipoff SNOM?>
+      <?lng advanced_http_server?></B>
+      </TD>
+    </TR>
+    <TR><TD/><TD><?ssi input advanced_ssi_user http_user?></TD></TR>
+    <TR><TD/><TD><?ssi inpass advanced_ssi_password http_pass?></TD></TR>
+    <TR><TD/><?ssi radio advanced_ssi_auth_scheme http_scheme advanced_ssi_digest advanced_ssi_basic?></TR>
+    <TR><TD/><TD>&nbsp;</TD></TR>
+    <?ssi skipoff IN_USER_MODE?>
+    <?ssi skipon NOT_IN_ADMIN_MODE?>
+    <TR><TD/>
+      <?ssi skipon VTECH?>
+      <TD><B>
+      <?ssi skipoff VTECH?>
+      <?ssi skipon SNOM?>
+      <TD class="titleText">
+      <?ssi skipoff SNOM?>
+      <?lng advanced_http_client?></B>
+      </TD>
+    </TR>
+    <TR><TD/><TD><?ssi input advanced_ssi_user http_client_user?></TD></TR>
+    <TR><TD/><TD><?ssi inpass advanced_ssi_password http_client_pass?></TD></TR>
+    <TR><TD/><TD>&nbsp;</TD></TR>
+    <TR><TD/>
+      <?ssi skipon VTECH?>
+      <TD><B>
+      <?ssi skipoff VTECH?>
+      <?ssi skipon SNOM?>
+      <TD class="titleText">
+      <?ssi skipoff SNOM?>
+      <?lng advanced_ssi_httpproxy?></B>
+      </TD>
+    </TR>
+    <TR><TD/><TD><?ssi input advanced_ssi_user http_proxy_user?></TD></TR>
+    <TR><TD/><TD><?ssi inpass advanced_ssi_password http_proxy_pass?></TD></TR>
+    <?ssi skipon NOT_USB_STORAGE?>
+    <TR><TD/><TD>&nbsp;</TD></TR>
+    <TR><TD/>
+      <?ssi skipon VTECH?>
+      <TD><B>
+      <?ssi skipoff VTECH?>
+      <?ssi skipon SNOM?>
+      <TD class="titleText">
+      <?ssi skipoff SNOM?>
+      <?lng usb_storage_text?></B>
+      </TD>
+    </TR>
+    <TR><TD/><?ssi radio usb_storage_allow_swupdate_text usb_storage_swupdate advanced_ssi_on advanced_ssi_off?></TR>
+    <TR><TD/><?ssi radio usb_storage_allow_syslog_text usb_storage_syslog advanced_ssi_on advanced_ssi_off?></TR>
+    <TR><TD/><?ssi radio usb_storage_allow_siptrace_text usb_storage_siptrace advanced_ssi_on advanced_ssi_off?></TR>
+    <?ssi skipon NO_FEATURE_HTTP_TRACE?>
+    <TR><TD/><?ssi radio usb_storage_allow_httptrace_text usb_storage_httptrace advanced_ssi_on advanced_ssi_off?></TR>
+    <?ssi skipoff NO_FEATURE_HTTP_TRACE?>
+    <TR><TD/><?ssi radio usb_storage_allow_pcap_text usb_storage_pcap advanced_ssi_on advanced_ssi_off?></TR>
+    <TR><TD/><TD><?ssi input usb_storage_passphrase_text usb_storage_passphrase?></TD></TR>
+    <?ssi skipoff NOT_USB_STORAGE?>
+    <?ssi skipoff NOT_IN_ADMIN_MODE?>
+    <?ssi skipon IN_ADMIN_MODE?>
+    <TR><TD/>
+      <?ssi skipon VTECH?>
+      <TD><B>
+      <?ssi skipoff VTECH?>
+      <?ssi skipon SNOM?>
+      <TD class="titleText">
+      <?ssi skipoff SNOM?>
+      <?ssi inpass advanced_ssi_adminlogin admin_mode_login?></B>
+      </TD>
+    </TR>
+    <?ssi skipoff IN_ADMIN_MODE?>
+    <TR><TD/><TD>&nbsp;</TD></TR>
+    <TR>
+      <TD/>
+      <TD>
+        <input type="hidden" value="<?lng apply_button?>" name="Settings">
+        <!--Hidden input is used to allow onchange event to apply settings automatically-->
+        <input type="submit" value="<?lng apply_button?>" name="Settings" <?ssi tabindex?> >
+      </TD>
+    </TR>
+    <TR>
+      <TD class="background" valign="bottom" align="left" width="12" height="5">
+        <?ssi skipon VTECH?>
+        <IMG height="12" src=<?ssi img-corner-gif ll?> width="12">
+        <?ssi skipoff VTECH?>
+      </TD>
+      <TD colspan="2" />
+      <TD class="background" valign="bottom" align="right" width="12" height="5">
+        <?ssi skipon VTECH?>
+        <IMG height="12" src=<?ssi img-corner-gif lr?> width="12">
+        <?ssi skipoff VTECH?>
+      </TD>
+    </TR>
+    </TABLE>
+    </FORM>
+    </TD>
+  </TR>
+  <?ssi skipon NOT_IN_ADMIN_MODE?>
+  <TR><TD valign="top" height="16"><IMG src="img/clr.gif" width="16" height="16"></TD></TR>
+  <TR>
+    <TD valign="top">
+    <FORM enctype="multipart/form-data" method="post">
+    <?ssi skipon VTECH?>
+    <TABLE class="bubbleTable" cellSpacing="0" cellPadding="0" width="100%" border="0" ID="Table1">
+    <?ssi skipoff VTECH?>
+    <?ssi skipon SNOM?>
+    <TABLE cellSpacing="4" cellPadding="0" width="100%" border="0" ID="Table1">
+    <?ssi skipoff SNOM?>
+    <TR>
+      <TD class="background" width="12" height="5">
+        <?ssi skipon VTECH?>
+        <IMG src=<?ssi img-corner-gif ul?> width="12" height="12">
+        <?ssi skipoff VTECH?>
+      </TD>
+      <TD colspan="2" />
+      <TD class="background" width="12" height="5">
+        <?ssi skipon VTECH?>
+        <IMG src=<?ssi img-corner-gif ur?> width="12" height="12">
+        <?ssi skipoff VTECH?>
+      </TD>
+    </TR>
+    <?ssi hidden_tag?>
+    <TR><TD/><TD width="50%"/><TD width="50%"/><TD/></TR>
+    <TR>
+      <TD/>
+      <TD class="normaltextbold"><?lng advanced_load_certs?></TD>
+      <TD>
+        <noscript><div class="linespace"><input type="file" id="cert_file" name="cert_file" <?ssi tabindex?>></div></noscript>
+        <div class="regularline linespace"><input type="file" class="inputfile" id="cert_file" name="cert_file" <?ssi tabindex?>>
+        <label for="cert_file"><span><?lng choose_file?></span></label></div>
+      </TD>
+      <TD/>
+    </TR>
+    <TR>
+      <TD>&nbsp;</TD>
+      <TD></TD>
+      <TD></TD>
+      <TD></TD>
+    </TR>
+    <TR>
+      <TD/>
+      <TD colspan="2">
+        <INPUT type="submit" value="<?lng adr_loadbutton?>" name="load_cert" <?ssi tabindex?> >
+      </TD>
+      <TD/>
+    </TR>
+    <TR>
+      <TD class="background" valign="bottom" align="left" width="12" height="5">
+        <?ssi skipon VTECH?>
+        <IMG src=<?ssi img-corner-gif ll?> width="12" height="12">
+        <?ssi skipoff VTECH?>
+        <?ssi skipon SNOM?>
+        <IMG src="img/clr.gif" width="12" height="12">
+        <?ssi skipoff SNOM?>
+      </TD>
+      <TD colspan="2" />
+      <TD class="background" valign="bottom" align="right" width="12" height="5">
+        <?ssi skipon VTECH?>
+        <IMG src=<?ssi img-corner-gif lr?> width="12" height="12">
+        <?ssi skipoff VTECH?>
+      </TD>
+    </TR>
+    </TABLE>
+    </FORM>
+    </TD>
+  </TR>
+<?ssi skipoff NOT_IN_ADMIN_MODE?>
+<script type="text/javascript" src="fox.js" charset="utf-8"></script>
+<?ssi file common9.htm?>
+</HTML>

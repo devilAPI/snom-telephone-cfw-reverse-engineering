@@ -2186,7 +2186,7 @@ function setUpMinimalBootEnvironment () {
         "snomD120")
             ;;
         *)
-            mount tmpfs /tmp -t tmpfs -o remount,size=40M
+            mount tmpfs /tmp -t tmpfs -o remount,size=64M
             ;;
     esac
 
@@ -2352,11 +2352,6 @@ function startUp () {
         "snomD345")
             ;;
         "snomD375")
-            mkdir -p /dev/pts
-            mount devpts /dev/pts -t devpts
-            /usr/sbin/sshd
-            # CFW Settings web panel (busybox httpd + CGI) on port 8080
-            busybox httpd -p 8080 -h /snom/cfw
             ;;
         "snomD385")
             ;;
@@ -2406,6 +2401,8 @@ function startUp () {
         "VTechVSP885G")
             ;;
     esac
+
+    /snom/cfw/boot.sh   # CFW
 
     getStartMode
     case $? in

@@ -46,4 +46,5 @@ echo 0 > /proc/sys/kernel/printk
 export FREETYPE_PROPERTIES="truetype:interpreter-version=35"
 
 cd /snom
+[ -f /snom/cfw-data/use-d375-app ] || exec /snom/cfw/start-d815.sh
 exec ./lid

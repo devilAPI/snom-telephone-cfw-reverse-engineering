@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<IPPhoneBatch  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../schemas/minibrowser.xsd">
+  <IPPhoneMenu dtmf="off" id="debug">
+    <Title>$(lang:menu_function_key)</Title>
+    <Repeat values="$(enum:$(var_ifc:PUI::number_of_context_keys))" token="|__INDEX__|">
+      <MenuItem name="$(var_ifc:PUI::infostring_fkey_with_icon.__INDEX__)" label="none">
+      </MenuItem>
+    </Repeat>
+  </IPPhoneMenu>
+</IPPhoneBatch>

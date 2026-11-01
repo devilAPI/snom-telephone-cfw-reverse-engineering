@@ -15,8 +15,8 @@ Currently covers:
 
 # CFW Features (D375)
 ### Not production ready, not secure.
-- Persistent SSH access (default root pw is snom375)
-- CFW Web UI (port 8080) (currently NO PASSWORD)
+- OpenSSH 10.2, OpenSSL 1.1.1w, htop and nano (default root pw is snom375)
+- CFW Web UI (port 8080): login as root; status, logs, backup, reboot, remote control
 - DOOM (no sound)
 
 ## How it works
@@ -55,6 +55,13 @@ verification uses RSA-2048 (`/firmware1.pub`). See
 | `tools/build-custom-firmware.sh` | yes | Pack, encrypt and sign `custom-rootfs/` into a `.bin` (D3xx) |
 | `tools/fw-pull-from-device.sh` | yes | Back up a running phone over SSH (rootfs, key, raw flash) |
 | `tools/prepare-pulled-rootfs.sh` | yes | Make a pulled rootfs buildable again |
+| `tools/qemu-run.sh` | yes | Boot a model in QEMU (see docs/qemu.md) |
+| `tools/vm-define.sh` | yes | Register both phones in virt-manager |
+| `tools/vm-update.sh` | yes | Put a firmware build into the emulator |
+| `tools/build-qemu.sh` | yes | Build QEMU with both phone machines |
+| `tools/build-d815-ubifs.sh` | yes | Build a D815 rootfs with correct permissions |
+| `tools/qemu-mkflash.py`, `tools/qemu-mkubi.py` | yes | Turn a rootfs into a raw NAND image |
+| `emu/board/`, `emu/d815-overlay/` | yes | The QEMU machine models and D815 emulator overlay |
 | `tools/rootfs-diff.sh` | yes | Show what a custom rootfs changes compared with stock |
 | `tools/snom-webpass.sh` | yes | Change the web UI password via SSH (works after Webex provisioning) |
 | `tools/setup-ovpn.sh` | yes | Generate OpenVPN PKI + client tarball for initial root |
@@ -83,6 +90,11 @@ verification uses RSA-2048 (`/firmware1.pub`). See
 11. [docs/nes.md](docs/nes.md): running a NES emulator on the phone screen (Boot NES button)
 12. [docs/roadmap.md](docs/roadmap.md): planned features and project workflow
 13. [docs/sound.md](docs/sound.md): audio architecture and game sound
+14. [docs/qemu.md](docs/qemu.md): running D375 and D815 builds in QEMU and virt-manager
+15. [docs/multi-model.md](docs/multi-model.md): design for one CFW codebase across models
+16. [docs/ssh-update.md](docs/ssh-update.md): OpenSSH and OpenSSL update, and how images are built
+17. [docs/backport.md](docs/backport.md): running D815 10.1.226.16 on the D375 (experiment)
+18. [docs/backport-guide.md](docs/backport-guide.md): how to run a newer app on an older phone, with every fix and the steps for other models.
 
 ## Quick start
 

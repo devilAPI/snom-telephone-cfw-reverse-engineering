@@ -1,0 +1,39 @@
+<?ssi title log_ssi_title?>
+<?ssi file common1.htm?>
+<TR>
+  <TD vAlign="top" height="16"><IMG height="16" src="img/clr.gif" width="16"></TD>
+</TR>
+<FORM method="post" ID="Form1">
+<?ssi hidden_tag?>
+<TR>
+  <TD><?lng log_level?>
+    <select <?ssi disabled log_level?>name="log_level" size="1">
+      <option value="-1"<?ssi selected log_level -1?>>-1 OFF</option>
+      <option value="0"<?ssi selected log_level 0?>>0 FATAL</option>
+      <option value="1"<?ssi selected log_level 1?>>1 ALERT</option>
+      <option value="2"<?ssi selected log_level 2?>>2 CRITIC</option>
+      <option value="3"<?ssi selected log_level 3?>>3 ERROR</option>
+      <option value="4"<?ssi selected log_level 4?>>4 WARN</option>
+      <option value="5"<?ssi selected log_level 5?>>5 NOTICE</option>
+      <option value="6"<?ssi selected log_level 6?>>6 INFO</option>
+      <option value="7"<?ssi selected log_level 7?>>7 DEBUG0</option>
+      <option value="8"<?ssi selected log_level 8?>>8 DEBUG1</option>
+      <option value="9"<?ssi selected log_level 9?>>9 DEBUG2</option>
+    </select>
+    <input type="hidden" value="<?lng apply_button?>" name="Settings">
+    <!--Hidden input is used to allow onchange event to apply settings automatically-->
+    <input type="submit" hidefocus value="<?lng apply_button?>" name="Settings"  ID="Submit1">
+    <input type="submit" hidefocus value="<?lng log_clearbutton?>" name="clearlog">
+    <input type="submit" hidefocus value="<?lng trace_reloadbutton?>" name="reloadlog">
+  </TD>
+</TR>
+</form>
+<TR><TD>&nbsp;</TD></TR>
+<TR><TD vAlign="top" height="5"><IMG height="5" src="img/clr.gif" width="12"></TD></TR>
+<TR>
+  <TD class="logText">
+    <?ssi log?>
+  </TD>
+</TR>
+<script type="text/javascript" src="fox.js" charset="utf-8"></script>
+<?ssi file common9.htm?></HTML>

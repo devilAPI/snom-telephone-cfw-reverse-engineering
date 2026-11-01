@@ -1,0 +1,253 @@
+<?ssi title security_ssi_title?>
+<?ssi file common1.htm?>
+<?ssi skipon NOT_IN_ADMIN_MODE?>
+<TR><TD vAlign="top" height="16"><IMG height="16" src="<?ssi img-clr-gif?>" width="16"></TD></TR>
+<TR><TD>
+  <?ssi skipon VTECH?>
+  <TABLE cellSpacing="0" cellPadding="0" width="100%" border="0" ID="Table1">
+  <?ssi skipoff VTECH?>
+  <?ssi skipon SNOM?>
+  <TABLE cellSpacing="4" cellPadding="0" width="100%" border="0" ID="Table1">
+  <?ssi skipoff SNOM?>
+  <TBODY>
+  <TR>
+    <?ssi skipon VTECH?>
+    <TD><B>
+    <?ssi skipoff VTECH?>
+    <?ssi skipon SNOM?>
+    <TD class="titleText">
+    <?ssi skipoff SNOM?>
+  		<?lng security_advice?></B><br><br>
+      <span>
+  	  <?lng security_text_advice1?><br>
+      </span>
+	  </TD>
+  </TR>
+  </TBODY>
+  </TABLE>
+</TD></TR>
+
+<TR><TD></TD><TD>&nbsp;</TD></TR>
+<TR><TD>
+  <?ssi skipon VTECH?>
+  <TABLE cellSpacing="0" cellPadding="0" width="60%" border="0">
+  <?ssi skipoff VTECH?>
+  <?ssi skipon SNOM?>
+  <TABLE cellSpacing="4" cellPadding="0" width="60%" border="0">
+  <?ssi skipoff SNOM?>
+  <TBODY>
+    <TR><TD colspan="3"><B><?lng security_settings_state?></B></TD></TR>
+    <TR><TD colspan="3">&nbsp;</TD></TR>
+    <TR>
+      <TD><?lng advanced_ssi_adminpassword?></TD>
+      <TD width="30"><?ssi secure_icon_admin_password?></TD>
+      <TD><?lng Recommended?></TD>
+    </TR>
+    <TR>
+      <TD><?lng advanced_http_server?> <?lng advanced_ssi_user?> (<?lng not_default?>)</TD>
+      <TD width="30"><?ssi secure_icon_http_user?></TD>
+      <TD><?lng Mandatory?></TD>
+    </TR>
+    <TR>
+      <TD><?lng advanced_http_server?> <?lng advanced_ssi_password?></TD>
+      <TD width="30"><?ssi secure_icon_http_password?></TD>
+      <TD><?lng Recommended?></TD>
+    </TR>
+    <TR>
+      <TD><?lng advanced_http_server?> <?lng advanced_ssi_password?> (<?lng not_default?>)</TD>
+      <TD width="30"><?ssi secure_icon_http_password_default?></TD>
+      <TD><?lng Mandatory?></TD>
+    </TR>
+    <TR>
+      <TD><?lng advanced_ssi_use_hidden_tags?></TD>
+      <TD width="30"><?ssi secure_icon_hidden_tags?></TD>
+      <TD><?lng Recommended?></TD>
+    </TR>
+  </TBODY></TABLE>
+</TD></TR>
+<TR><TD></TD><TD>&nbsp;</TD></TR>
+
+<?ssi skipoff NOT_IN_ADMIN_MODE?>
+<TR><TD vAlign=top height=5><IMG height=5 src="<?ssi img-clr-gif?>" width=12></TD></TR>
+<TR>
+  <TD vAlign="top">
+    <FORM method="post">
+      <?ssi skipon VTECH?>
+      <TABLE class="bubbleTable" cellSpacing="0" cellPadding="0" width="100%" border="0">
+      <?ssi skipoff VTECH?>
+      <?ssi skipon SNOM?>
+      <TABLE cellSpacing="4" cellPadding="0" width="100%" border="0">
+      <?ssi skipoff SNOM?>
+	<TBODY>
+	  <?ssi skipon NOT_IN_ADMIN_MODE?>
+	  <TR>
+	    <TD class="background" width="12" height="5">
+        <?ssi skipon VTECH?>
+        <IMG height="12" src="<?ssi img-corner-gif ul?>" width="12">
+        <?ssi skipoff VTECH?>
+      </TD>
+        <TD></TD>
+        <TD></TD>
+	    <TD class="background" width="12" height="5">
+        <?ssi skipon VTECH?>
+        <IMG height="12" src="<?ssi img-corner-gif ur?>" width="12">
+        <?ssi skipoff VTECH?>
+      </TD>
+	  </TR>
+	  <?ssi hidden_tag?>
+	  <TR><TD></TD>
+      <?ssi skipon VTECH?>
+      <TD><B>
+      <?ssi skipoff VTECH?>
+      <?ssi skipon SNOM?>
+      <TD class="titleText">
+      <?ssi skipoff SNOM?>
+      <?lng advanced_security?></B>
+      </TD>
+    </TR>
+	  <TR><TD></TD><TD><?ssi inpass advanced_ssi_adminpassword admin_mode_password?></td></TR>
+	  <TR><TD></TD><TD><?ssi inpass advanced_ssi_adminpassconf admin_mode_password_confirm?></td></TR>
+	  <TR><TD></TD><TD>&nbsp;</TD></TR>
+	  <TR><TD></TD>
+      <?ssi skipon VTECH?>
+      <TD><B>
+      <?ssi skipoff VTECH?>
+      <?ssi skipon SNOM?>
+      <TD class="titleText">
+      <?ssi skipoff SNOM?>
+      <?lng advanced_http_server?></B>
+      </TD>
+    </TR>
+	  <TR><TD></TD><TD><?ssi input_default advanced_ssi_user http_user admin?></td></TR>
+	  <TR><TD></TD><TD><?ssi inpass advanced_ssi_password http_pass?></td></TR>
+	  <TR>
+	    <TD class="background" vAlign="bottom" align="left" width="12" height="5">
+        <?ssi skipon VTECH?>
+        <IMG height="12" src="<?ssi img-corner-gif ll?>" width="12">
+        <?ssi skipon VTECH?>
+      </TD>
+        <TD></TD>
+        <TD></TD>
+	    <TD class="background" vAlign="bottom" align="right" width="12" height="5">
+        <?ssi skipon VTECH?>
+        <IMG height="12" src="<?ssi img-corner-gif lr?>" width="12">
+        <?ssi skipoff VTECH?>
+      </TD>
+	  </TR>
+      </TBODY></TABLE>
+
+      <TR><TD>
+        <?ssi skipon VTECH?>
+        <TABLE cellSpacing="0" cellPadding="0" width="100%" border="0" ID="Table2">
+        <?ssi skipoff VTECH?>
+        <?ssi skipon SNOM?>
+        <TABLE cellSpacing="4" cellPadding="0" width="100%" border="0" ID="Table2">
+        <?ssi skipoff SNOM?>
+	    <TBODY>
+	      <TR><TD>
+		  <SPAN class=pageInfoText>
+		    <?lng security_text_advice2?><br>
+		  </SPAN>
+	      </TD></TR>
+	    </TBODY>
+	  </TABLE>
+      </TD></TR>
+    <?ssi skipon VTECH?>
+    <TABLE class="bubbleTable" cellSpacing="0" cellPadding="0" width="100%" border="0">
+    <?ssi skipoff VTECH?>
+    <?ssi skipon SNOM?>
+    <TABLE cellSpacing="4" cellPadding="0" width="100%" border="0">
+    <?ssi skipoff SNOM?>
+	<TBODY>
+	  <TR>
+	    <TD class="background" width="12" height="5">
+        <?ssi skipon VTECH?>
+        <IMG height="12" src="<?ssi img-corner-gif ul?>" width="12">
+        <?ssi skipoff VTECH?>
+      </TD>
+        <TD></TD>
+        <TD></TD>
+	    <TD class="background" width="12" height="5">
+        <?ssi skipon VTECH?>
+        <IMG height="12" src="<?ssi img-corner-gif ur?>" width="12">
+        <?ssi skipoff VTECH?>
+      </TD>
+	  </TR>
+	  <TR><TD></TD><?ssi radio advanced_ssi_use_hidden_tags use_hidden_tags advanced_ssi_on advanced_ssi_off?></TR>
+	  <TR>
+	    <TD class="background" vAlign="bottom" align="left" width="12" height="5">
+        <?ssi skipon VTECH?>
+        <IMG height="12" src="<?ssi img-corner-gif ll?>" width="12">
+        <?ssi skipoff VTECH?>
+      </TD>
+        <TD></TD>
+        <TD></TD>
+	    <TD class="background" vAlign="bottom" align="right" width="12" height="5">
+        <?ssi skipon VTECH?>
+        <IMG height="12" src="<?ssi img-corner-gif lr?>" width="12">
+        <?ssi skipoff VTECH?>
+      </TD>
+	  </TR>
+      </TBODY></TABLE>
+
+      <?ssi skipon VTECH?>
+      <TABLE cellSpacing="0" cellPadding="0" width="100%" border="0" ID="Table3">
+      <?ssi skipoff VTECH?>
+      <?ssi skipon SNOM?>
+      <TABLE cellSpacing="4" cellPadding="0" width="100%" border="0" ID="Table3">
+      <?ssi skipoff SNOM?>
+	<TBODY>
+	  <TR><TD>
+	      <SPAN class=pageInfoText>
+		<br>
+	      </SPAN>
+	  </TD></TR>
+	</TBODY>
+      </TABLE>
+
+      <?ssi skipon VTECH?>
+      <TABLE class="bubbleTable" cellSpacing="0" cellPadding="0" width="100%" border="0" ID="Table1">
+      <?ssi skipoff VTECH?>
+      <?ssi skipon SNOM?>
+      <TABLE cellSpacing="4" cellPadding="0" width="100%" border="0" ID="Table1">
+      <?ssi skipoff SNOM?>
+	<TBODY>
+	  <TR>
+	    <TD class="background" width="12" height="5">
+        <?ssi skipon VTECH?>
+        <IMG height="12" src="<?ssi img-corner-gif ul?>" width="12">
+        <?ssi skipoff VTECH?>
+      </TD>
+        <TD></TD>
+        <TD></TD>
+	    <TD class="background" width="12" height="5">
+        <?ssi skipon VTECH?>
+        <IMG height="12" src="<?ssi img-corner-gif ur?>" width="12">
+        <?ssi skipoff VTECH?>
+      </TD>
+	  </TR>
+	  <TR><TD></TD><TD><input type="submit" value="<?lng apply_button?>" name="Security_Settings" <?ssi tabindex?> ></TD></TR>
+	  <TR><TD></TD><TD>&nbsp;</TD></TR>
+	  <TR><TD></TD><TD><input type="submit" value="<?lng security_apply_button_ignore?>" name="CONFIRM_IGNORE" <?ssi tabindex?> ></TD></TR>
+	  <TR><TD></TD><TD>&nbsp;</TD></TR>
+	  <TR><TD></TD><TD><input type="submit" value="<?lng security_apply_button_ignore_forever?>" name="CONFIRM_IGNORE_AND_SAVE" <?ssi tabindex?> ></TD></TR>
+	  <TR>
+	    <TD class="background" vAlign="bottom" align="left" width="12" height="5">
+        <?ssi skipon VTECH?>
+        <IMG height="12" src="<?ssi img-corner-gif ll?>" width="12">
+        <?ssi skipoff VTECH?>
+      </TD>
+        <TD></TD>
+        <TD></TD>
+	    <TD class="background" vAlign="bottom" align="right" width="12" height="5">
+        <?ssi skipon VTECH?>
+        <IMG height="12" src="<?ssi img-corner-gif lr?>" width="12">
+        <?ssi skipoff VTECH?>
+      </TD>
+	  </TR>
+	  <?ssi skipoff NOT_IN_ADMIN_MODE?>
+      </TBODY></TABLE>
+    </FORM>
+  </TD>
+</TR>
+<?ssi file common9.htm?></HTML>

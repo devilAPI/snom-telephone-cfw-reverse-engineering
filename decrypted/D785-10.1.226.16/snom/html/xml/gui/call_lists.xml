@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<IPPhoneMenu dtmf="off" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../schemas/minibrowser.xsd" state="others_except_mb">
+  <Title>$(lang:lang_menu100_call_lists)</Title>
+  <Fetch mil="120000">phone://mb_exit</Fetch>
+  <MenuItem name="$(lang:lang_list_all)">
+    <Url>file:///xml/gui/call_lists_list.xml#var:calllist_type=All&amp;var:calllist_title=lang_list_all</Url>
+    <ExtraIconType>$(icon_type_enum:kIconTypeMenuArrowRight)</ExtraIconType>
+  </MenuItem>
+  <MenuItem name="$(lang:lang_list_missed)">
+    <Url>file:///xml/gui/call_lists_list.xml#var:calllist_type=Missed&amp;var:calllist_title=lang_list_missed</Url>
+    <ExtraIconType>$(icon_type_enum:kIconTypeMenuArrowRight)</ExtraIconType>
+  </MenuItem>
+  <MenuItem name="$(lang:lang_list_taken)">
+    <Url>file:///xml/gui/call_lists_list.xml#var:calllist_type=Received&amp;var:calllist_title=lang_list_taken</Url>
+    <ExtraIconType>$(icon_type_enum:kIconTypeMenuArrowRight)</ExtraIconType>
+  </MenuItem>
+  <MenuItem name="$(lang:lang_list_dialed)">
+    <Url>file:///xml/gui/call_lists_list.xml#var:calllist_type=Dialed&amp;var:calllist_title=lang_list_dialed</Url>
+    <ExtraIconType>$(icon_type_enum:kIconTypeMenuArrowRight)</ExtraIconType>
+  </MenuItem>
+  <If condition="$(bool_eval:$(condition:$(set:user_server_type[$(current_line)])==metaswitch)|!$(empty:$(number_of_rejected_calls)))">
+    <MenuItem name="$(lang:lang_list_rejected)">
+      <Url>file:///xml/gui/call_lists_list.xml#var:calllist_type=Rejected&amp;var:calllist_title=lang_list_rejected</Url>
+      <ExtraIconType>$(icon_type_enum:kIconTypeMenuArrowRight)</ExtraIconType>
+    </MenuItem>
+  </If>
+  <If condition="$(bool_eval:$(condition:$(set:user_server_type[$(current_line)])!=metaswitch)|$(condition:$(set:call_logs[$(current_line)])!=server))">
+    <MenuItem name="$(lang:clear_call_history)">
+      <Url>file:///xml/gui/call_lists_list.xml#calllistclear=MaxCallLists&amp;var:calllist_title=clear_call_history</Url>
+      <ExtraIconType>$(icon_type_enum:kIconTypeMenuArrowRight)</ExtraIconType>
+    </MenuItem>
+  </If>
+</IPPhoneMenu>

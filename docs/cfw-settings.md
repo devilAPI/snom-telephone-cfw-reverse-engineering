@@ -1,5 +1,31 @@
 # CFW Settings web panel
 
+> **Update:** the panel source now lives in `cfw/panel/` and is shared between
+> models. It requires a login: user `root` with the system password. The sections
+> below that describe an unauthenticated panel, `index.html` or an inline `rcS`
+> entry are history. Files in `custom-rootfs/snom/cfw/` are overwritten by
+> `tools/cfw-sync.sh`, so edit `cfw/panel/`.
+
+## Panel features
+
+| Feature | D375 | D815 |
+|---|---|---|
+| Login | Yes | Yes |
+| Status, logs, settings backup (`.tar`) | Yes | Yes |
+| Screenshot | Yes | Yes |
+| Remote control: live screen | Yes | Yes |
+| Remote control: keys | Yes | Not working yet. `command.htm` redirects to `security.htm` on an unconfigured phone; working after setup is untested |
+| Reboot | Yes | Yes, but the VM hangs on reset |
+| Doom, NES | Yes | Hidden until ported |
+
+The phone's own menus use a second, password-free instance on `127.0.0.1:8081`,
+because the minibrowser cannot log in. It serves only the `phone-*` CGIs.
+Settings > Games also has a "Phone info" page.
+
+Logins are sent unencrypted, as busybox httpd has no TLS. Anyone who can sniff the
+LAN can read the root password, so use the panel on a trusted network only.
+
+
 A small admin page the custom firmware adds, separate from the stock snom web
 UI, with buttons for common recovery actions. First two actions: reset the root
 password to the firmware default, and restore the default `sshd_config`.

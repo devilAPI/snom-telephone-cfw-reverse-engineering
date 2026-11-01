@@ -1,0 +1,1882 @@
+<?xml version="1.0" encoding="utf-8"?>
+<phrases>
+	<language t="Hebrew"/>
+	<phrase n="lang_none" t=""/>
+	<phrase n="lang_language_name" t="Hebrew"/>
+	<phrase n="lang_cntry_CHN" t="סין"/>
+	<phrase n="lang_cntry_FIN" t="פינלנד"/>
+	<phrase n="lang_cntry_GER" t="גרמניה"/>
+	<phrase n="lang_cntry_IND" t="הודו"/>
+	<phrase n="lang_cntry_IDN" t="אינדונסיה"/>
+	<phrase n="lang_cntry_MYS" t="מלזיה"/>
+	<phrase n="lang_cntry_MEX" t="מקסיקו"/>
+	<phrase n="lang_cntry_NLD" t="הולנד"/>
+	<phrase n="lang_cntry_PRT" t="פורטוגל"/>
+	<phrase n="lang_cntry_ZAF" t="דרום אפריקה"/>
+	<phrase n="lang_cntry_GBR" t="בריטניה"/>
+	<phrase n="lang_cntry_USA" t="ארה'ב"/>
+	<phrase n="lang_cntry_CAM" t="Central America"/>
+	<phrase n="lang_cntry_CAN" t="קנדה"/>
+	<phrase n="lang_cntry_CHL" t="צ'ילי"/>
+	<phrase n="lang_cntry_BHS" t="בהמס"/>
+	<phrase n="lang_cntry_CUB" t="קובה"/>
+	<phrase n="lang_cntry_PRY" t="פרגוואי"/>
+	<phrase n="lang_cntry_BMU" t="ברמודה"/>
+	<phrase n="lang_cntry_FLK" t="איי פוקלנד"/>
+	<phrase n="lang_cntry_GRL" t="גרינלנד"/>
+	<phrase n="lang_cntry_FRO" t="איי פארו"/>
+	<phrase n="lang_cntry_IRL" t="אירלנד"/>
+	<phrase n="lang_cntry_ESP" t="ספרד"/>
+	<phrase n="lang_cntry_ALB" t="אלבניה"/>
+	<phrase n="lang_cntry_AUT" t="אוסטריה"/>
+	<phrase n="lang_cntry_BEL" t="בלגיה"/>
+	<phrase n="lang_cntry_BRA" t="ברזיל"/>
+	<phrase n="lang_cntry_CAI" t="קאיקוס"/>
+	<phrase n="lang_cntry_CHA" t="צ'אטאם"/>
+	<phrase n="lang_cntry_HRV" t="קארואטיה"/>
+	<phrase n="lang_cntry_CZE" t="צ'כיה"/>
+	<phrase n="lang_cntry_DNK" t="דנמרק"/>
+	<phrase n="lang_cntry_FRA" t="צרפת"/>
+	<phrase n="lang_cntry_HUN" t="הונגריה"/>
+	<phrase n="lang_cntry_ITA" t="איטליה"/>
+	<phrase n="lang_cntry_LUX" t="לוקסמבורג"/>
+	<phrase n="lang_cntry_MAK" t="מקדוניה"/>
+	<phrase n="lang_cntry_NAM" t="נמיביה"/>
+	<phrase n="lang_cntry_NOR" t="נורווגיה"/>
+	<phrase n="lang_cntry_POL" t="פולין"/>
+	<phrase n="lang_cntry_SVK" t="סלובקיה"/>
+	<phrase n="lang_cntry_SWD" t="שבדיה"/>
+	<phrase n="lang_cntry_CHE" t="שוויץ"/>
+	<phrase n="lang_cntry_GIB" t="גיברלטר"/>
+	<phrase n="lang_cntry_YUG" t="סרביה מונטנגרו"/>
+	<phrase n="lang_cntry_BLR" t="בלארוס"/>
+	<phrase n="lang_cntry_BGR" t="בולגריה"/>
+	<phrase n="lang_cntry_CYP" t="קפריסין"/>
+	<phrase n="lang_cntry_EGY" t="מצרים"/>
+	<phrase n="lang_cntry_EST" t="אסטוניה"/>
+	<phrase n="lang_cntry_GAZ" t="עזה"/>
+	<phrase n="lang_cntry_GRC" t="יוון"/>
+	<phrase n="lang_cntry_ISR" t="ישראל"/>
+	<phrase n="lang_cntry_JOR" t="ירדן"/>
+	<phrase n="lang_cntry_LVA" t="לטוויה"/>
+	<phrase n="lang_cntry_LTU" t="ליטא"/>
+	<phrase n="lang_cntry_LBN" t="לבנון"/>
+	<phrase n="lang_cntry_MDA" t="מולדבה"/>
+	<phrase n="lang_cntry_RUS" t="רוסיה"/>
+	<phrase n="lang_cntry_ROU" t="רומניה"/>
+	<phrase n="lang_cntry_SYR" t="סוריה"/>
+	<phrase n="lang_cntry_TUR" t="טורקיה"/>
+	<phrase n="lang_cntry_UKR" t="אוקראינה"/>
+	<phrase n="lang_cntry_IRQ" t="עיראק"/>
+	<phrase n="lang_cntry_IRN" t="אירן"/>
+	<phrase n="lang_cntry_ARM" t="ארמניה"/>
+	<phrase n="lang_cntry_AZE" t="אזרביז'אן"/>
+	<phrase n="lang_cntry_GEO" t="גיאורגיה"/>
+	<phrase n="lang_cntry_KAZ" t="קזחסטאן"/>
+	<phrase n="lang_cntry_KGZ" t="קירגיזיה"/>
+	<phrase n="lang_cntry_PAK" t="פקיסטאן"/>
+	<phrase n="lang_cntry_SGP" t="סינגאפור"/>
+	<phrase n="lang_cntry_KOR" t="קוריאה"/>
+	<phrase n="lang_cntry_JPN" t="יפן"/>
+	<phrase n="lang_cntry_AUS" t="אוסטראליה"/>
+	<phrase n="lang_cntry_NZL" t="ניו זילנד"/>
+	<phrase n="lang_cntry_TON" t="טונגה"/>
+	<phrase n="lang_cntry_COL" t="קולומביה"/>
+	<phrase n="lang_cntry_ECU" t="אקוודור"/>
+	<phrase n="lang_cntry_TTB" t="טרינידד וטובגו"/>
+	<phrase n="lang_cntry_ARG" t="ארגנטינה"/>
+	<phrase n="lang_cntry_WAT" t="אפריקה המערבית"/>
+	<phrase n="lang_cntry_CAT" t="אפריקה המרכזית"/>
+	<phrase n="lang_cntry_EAT" t="אפריקה המזרחית"/>
+	<phrase n="lang_cntry_VEN" t="ונצואלה"/>
+	<phrase n="lang_cntry_NCL" t="קלדוניה החדשה"/>
+	<phrase n="lang_cntry_UAE" t="איחוד האמירויות הערביות"/>
+	<phrase n="lang_cntry_THA" t="תאילנד"/>
+	<phrase n="lang_F_SEARCH" t="לחפש"/>
+	<phrase n="lang_F_SEARCH_typeSio" t="לחפש"/>
+	<phrase n="lang_F_REBOOT" t="א.מחדש"/>
+	<phrase n="lang_F_REBOOT_typeSio" t="א.מחדש"/>
+	<phrase n="lang_F_REBOOT_smartlabel" t="לְאַתחֵל"/>
+	<phrase n="lang_F_PAIR" t="זוג"/>
+	<phrase n="lang_F_UNPAIR" t="בטל התאמה"/>
+	<phrase n="lang_F_JOIN" t="לְהִצְטַרֵף"/>
+	<phrase n="lang_F_JOIN_typeSio" t="לְהִצְטַרֵף"/>
+	<phrase n="lang_F_JOIN_WITH" t="צרף"/>
+	<phrase n="lang_F_LEAVE" t="לעזוב"/>
+	<phrase n="lang_F_LEAVE_typeSio" t="לעזוב"/>
+	<phrase n="lang_F_OK" t="אישור"/>
+	<phrase n="lang_F_ACCEPT_CALL" t="לְקַבֵּל"/>
+	<phrase n="lang_F_ACCEPT_CALL_typeSio" t="לְקַבֵּל"/>
+	<phrase n="lang_F_CANCEL" t="ביטול"/>
+	<phrase n="lang_F_CANCEL_typeSio" t="ביטול"/>
+	<phrase n="lang_F_YES" t="כן"/>
+	<phrase n="lang_F_NO" t="לא"/>
+	<phrase n="lang_F_ADD_SPEAKER" t="+רמקול"/>
+	<phrase n="lang_F_ADD_SPEAKER_typeSio" t="+רמקול"/>
+	<phrase n="lang_F_REMOVE_SPEAKER" t="-רמקול"/>
+	<phrase n="lang_F_REMOVE_SPEAKER_typeSio" t="-רמקול"/>
+	<phrase n="lang_F_ADD_HANDSET" t="+אפרכסת"/>
+	<phrase n="lang_F_ADD_HANDSET_typeSio" t="+אפרכסת"/>
+	<phrase n="lang_F_REMOVE_HANDSET" t="-אפרכסת"/>
+	<phrase n="lang_F_REMOVE_HANDSET_typeSio" t="-אפרכסת"/>
+	<phrase n="lang_F_DELETE" t="מחק"/>
+	<phrase n="lang_F_DELETE_typeSio" t="מחק"/>
+	<phrase n="lang_F_ADR_BOOK" t="ס.טל."/>
+	<phrase n="lang_F_ADR_BOOK_typeSio" t="ס.טל."/>
+	<phrase n="lang_F_ADR_BOOK_smartlabel" t="מַדרִיך"/>
+	<phrase n="lang_F_DENYALL" t="דחה הכל"/>
+	<phrase n="lang_F_DENYALL_typeSio" t="חסום את המתקשר"/>
+	<phrase n="lang_F_DENYALL_smartlabel" t="לַחסוֹם"/>
+	<phrase n="lang_F_CALL_LIST" t="יומן"/>
+	<phrase n="lang_F_CALL_LIST_typeSio" t="יומן"/>
+	<phrase n="lang_F_CALL_LIST_smartlabel" t="התקשר להיסט"/>
+	<phrase n="lang_F_PLAY" t="לְשַׂחֵק"/>
+	<phrase n="lang_F_STOP" t="תפסיק"/>
+	<phrase n="lang_F_RESCAN" t="סרוק מחדש"/>
+	<phrase n="lang_F_INCREASE" t="להגביר"/>
+	<phrase n="lang_F_DECREASE" t="לְהַקְטִין"/>
+	<phrase n="lang_F_BACK" t="⌫"/>
+	<phrase n="lang_F_BACK_typeSio" t="מקש לחזור אחורה"/>
+	<phrase n="lang_F_REDIAL" t="חיוג חוזר"/>
+	<phrase n="lang_F_REDIAL_typeSio" t="חיוג חוזר"/>
+	<phrase n="lang_F_REDIAL_smartlabel" t="חיוג חוזר"/>
+	<phrase n="lang_F_INSTANT_REDIAL" t="חיוג חוזר"/>
+	<phrase n="lang_F_INSTANT_REDIAL_typeSio" t="חיוג חוזר מיידי"/>
+	<phrase n="lang_F_INSTANT_REDIAL_smartlabel" t="חיוג חוזר"/>
+	<phrase n="lang_F_ADD_NUMBER" t="לְהוֹסִיף"/>
+	<phrase n="lang_F_ADD_NUMBER_typeSio" t="הוסף מספר"/>
+	<phrase n="lang_F_CONTACTS" t="אנשי קשר"/>
+	<phrase n="lang_F_PRESENCE" t="מדינה"/>
+	<phrase n="lang_F_PRESENCE_typeSio" t="נוכחות"/>
+	<phrase n="lang_F_PRESENCE_smartlabel" t="נוכחות"/>
+	<phrase n="lang_F_SPEED_DIAL" t="ח מהיר"/>
+	<phrase n="lang_F_SPEED_DIAL_typeSio" t="חיוג מקוצר"/>
+	<phrase n="lang_F_SPEED_DIAL_smartlabel" t="מְהִירוּת"/>
+	<phrase n="lang_F_SAFE_TRANSFER" t="בטוח"/>
+	<phrase n="lang_F_SAFE_TRANSFER_typeSio" t="העברה בטוחה"/>
+	<phrase n="lang_F_MENUS_USERINPUT_SENDSIPINFO" t="UserInputAndSendSipInfo"/>
+	<phrase n="lang_F_MENUS_SENDSIPINFO" t="SendSipInfo"/>
+	<phrase n="lang_F_USERINPUT_SENDSIPINFO" t="לגימה"/>
+	<phrase n="lang_F_SENDSIPINFO" t="לגימה"/>
+	<phrase n="lang_F_SENDSIPINFO_typeSio" t="ללגום מידע"/>
+	<phrase n="lang_F_SENDSIPINFO_smartlabel" t="SIP&lt;br&gt;INFO"/>
+	<phrase n="lang_F_REC_START" t="הקלטה"/>
+	<phrase n="lang_F_REC_STOP" t="עצור את ר"/>
+	<phrase n="lang_F_RECORDER_START" t="הקלטה"/>
+	<phrase n="lang_F_RECORDER_STOP" t="עצור Rec"/>
+	<phrase n="lang_F_RECORD_ON" t="תקליט"/>
+	<phrase n="lang_F_RECORD_OFF" t="עצור הקלטה"/>
+	<phrase n="lang_F_RECORDING" t="בהקלטה"/>
+	<phrase n="lang_F_LOGOFF_ALL" t="להתנתק"/>
+	<phrase n="lang_F_LOGOFF_ALL_typeSio" t="צא מהכל"/>
+	<phrase n="lang_F_LOGOFF_ALL_smartlabel" t="להתנתק"/>
+	<phrase n="lang_F_STARCODE_short" t="קוד S"/>
+	<phrase n="lang_F_STARCODE" t="קוד כוכב"/>
+	<phrase n="lang_F_RELOAD_SERVER_AB" t="לִטעוֹן מִחָדָשׁ"/>
+	<phrase n="lang_F_SERVER_AB" t="שרת דיר"/>
+	<phrase n="lang_F_ANONYMOUS" t="אנון מזהה"/>
+	<phrase n="lang_F_ANONYMOUS_long" t="זיהוי אנונימי"/>
+	<phrase n="lang_F_ANONYMOUS_smartlabel" t="אנון מזהה"/>
+	<phrase n="lang_F_VOICEMAIL_INFO_NEW_MSG" t="מידע על דואר קולי"/>
+	<phrase n="lang_F_VOICEMAIL_INFO_short" t="VMail"/>
+	<phrase n="lang_F_VOICEMAIL_INFO" t="מידע על דואר קולי"/>
+	<phrase n="lang_F_NO_NEW_MESSAGE" t="אין הודעות חדשות"/>
+	<phrase n="lang_F_NEW_MESSAGE" t="הודעות חדשות"/>
+	<phrase n="lang_F_GUEST_LOCK" t="לנעול"/>
+	<phrase n="lang_F_GUEST_UNLOCK" t="לבטל נעילה"/>
+	<phrase n="lang_F_IVR" t="IVR"/>
+	<phrase n="lang_F_DTMF" t="DTMF"/>
+	<phrase n="lang_F_ACTION_URL" t="כתובת אתר"/>
+	<phrase n="lang_F_ACTION_URL_typeSio" t="כתובת אתר לפעולה"/>
+	<phrase n="lang_F_ACTION_URL_smartlabel" t="כתובת אתר"/>
+	<phrase n="lang_F_AUTO_ANSWER" t="AutoA"/>
+	<phrase n="lang_F_AUTO_ANSWER_typeSio" t="תשובה אוטומטית"/>
+	<phrase n="lang_F_AUTO_ANSWER_smartlabel" t="Auto Ans"/>
+	<phrase n="lang_F_AUTO_ANSWER_ON" t="מענה אוטומטי"/>
+	<phrase n="lang_F_BLF_short" t="BLF"/>
+	<phrase n="lang_F_BLF" t="חיווי"/>
+	<phrase n="lang_F_LINE" t="קו"/>
+	<phrase n="lang_F_LINE_short" t="קו"/>
+	<phrase n="lang_F_LINE_RINGING" t="מצלצל"/>
+	<phrase n="lang_F_LINE_OUTGOING" t="יִעוּד"/>
+	<phrase n="lang_F_LINE_OFFHOOK" t="שפופרת מורמת"/>
+	<phrase n="lang_F_LINE_IDLE" t="לא פעיל"/>
+	<phrase n="lang_F_LINE_HOLD" t="בהחזק"/>
+	<phrase n="lang_F_LINE_FAILED" t="לא מחובר"/>
+	<phrase n="lang_F_LINE_DISCONNECTED" t="מְנוּתָק"/>
+	<phrase n="lang_F_LINE_DISCONNECTED_typeSio" t="מְנוּתָק"/>
+	<phrase n="lang_F_LINE_CONNECTED" t="מחובר"/>
+	<phrase n="lang_F_LINE_BUSY" t="תפוס"/>
+	<phrase n="lang_F_LINE_HELD" t="להיות מוחזק"/>
+	<phrase n="lang_F_LINE_CALLING" t="מחייג"/>
+	<phrase n="lang_F_LINE_RINGBACK" t="צליל חוזר"/>
+	<phrase n="lang_F_LINE_HOLDING" t="בהחזק"/>
+	<phrase n="lang_F_LINE_UNREGISTERED" t="לא רשום"/>
+	<phrase n="lang_F_LINE_IN_USE" t="בשימוש"/>
+	<phrase n="lang_F_LINE_FREE" t="חופשי"/>
+	<phrase n="lang_F_LINE_UNKNOWN" t="לא ידוע"/>
+	<phrase n="lang_F_LINE_TALKING" t="מדברים"/>
+	<phrase n="lang_F_LINE_SEIZED" t="לקיחת קו"/>
+	<phrase n="lang_F_LINE_UNVAILABLE" t="לא זמין"/>
+	<phrase n="lang_F_LINE_ACTIVE" t="פעיל"/>
+	<phrase n="lang_F_LINE_AVAILABLE" t="זמין"/>
+	<phrase n="lang_F_LINE_CLOSED" t="סגור"/>
+	<phrase n="lang_F_LINE_AUTO_REDIAL" t="חיוג חוזר"/>
+	<phrase n="lang_F_LINE_AUTO_REDIAL_typeSio" t="חיוג חוזר"/>
+	<phrase n="lang_F_LINE_CONFERENCING" t="בועידה"/>
+	<phrase n="lang_F_LINE_PARKED" t="חונה"/>
+	<phrase n="lang_F_LINE_NO_BUDDY" t="לא הוקצה"/>
+	<phrase n="lang_F_LINE_DISABLED" t="מבוטל"/>
+	<phrase n="lang_F_LINE_MSG_WAITING" t="הודעה ממתינה"/>
+	<phrase n="lang_F_SHARED_LINE" t="קו אס"/>
+	<phrase n="lang_F_SHARED_LINE_typeSio" t="קו משותף"/>
+	<phrase n="lang_F_SHARED_LINE_smartlabel" t="קו אס"/>
+	<phrase n="lang_F_SHARED_LINE_REMOTE_SEIZED" t="קו משותף"/>
+	<phrase n="lang_F_SHARED_LINE_REMOTE_HOLD" t="קו משותף"/>
+	<phrase n="lang_F_SHARED_LINE_REMOTE_ALERT" t="קו משותף"/>
+	<phrase n="lang_F_SHARED_LINE_REMOTE_ACTIVE" t="קו משותף"/>
+	<phrase n="lang_F_SHARED_LINE_BRIDGE_ACTIVE" t="קו משותף"/>
+	<phrase n="lang_F_SHARED_LINE_BRIDGE_HOLD" t="קו משותף"/>
+	<phrase n="lang_F_SHARED_LINE_LOCAL_SEIZED" t="קו משותף"/>
+	<phrase n="lang_F_SHARED_LINE_LOCAL_HOLD" t="קו משותף"/>
+	<phrase n="lang_F_SHARED_LINE_LOCAL_ALERT" t="קו משותף"/>
+	<phrase n="lang_F_SHARED_LINE_LOCAL_ACTIVE" t="קו משותף"/>
+	<phrase n="lang_F_MULTICAST" t="MCast"/>
+	<phrase n="lang_F_MULTICAST_typeSio" t="שידור רב"/>
+	<phrase n="lang_F_MULTICAST_smartlabel" t="עמוד MC"/>
+	<phrase n="lang_F_MULTICAST_ON" t="שידור רב"/>
+	<phrase n="lang_F_MULTICAST_ZONE" t="MZone"/>
+	<phrase n="lang_F_MULTICAST_ZONE_typeSio" t="אזור מולטי שידור"/>
+	<phrase n="lang_F_MULTICAST_ZONE_smartlabel" t="אזור MC"/>
+	<phrase n="lang_F_BUTTON_typeSio" t="כפתור מרכזיה"/>
+	<phrase n="lang_F_BUTTON" t="מקש"/>
+	<phrase n="lang_F_BUTTON_smartlabel" t="מקש"/>
+	<phrase n="lang_F_PUSH_TO_TALK" t="PTT"/>
+	<phrase n="lang_F_PUSH_TO_TALK_typeSio" t="לחץ לדיבור"/>
+	<phrase n="lang_F_PUSH_TO_TALK_smartlabel" t="PTT"/>
+	<phrase n="lang_F_INTERCOM_ON" t="אינטרקום"/>
+	<phrase n="lang_F_INTERCOM" t="Icom"/>
+	<phrase n="lang_F_INTERCOM_typeSio" t="אינטרקום"/>
+	<phrase n="lang_F_INTERCOM_smartlabel" t="Icom"/>
+	<phrase n="lang_F_PICKUP" t="חטיפה"/>
+	<phrase n="lang_F_CALL_CENTER_LIST" t="רשימת מוקדי טלפון"/>
+	<phrase n="lang_F_REMOTE_OFFICE" t="מִשׂרָד"/>
+	<phrase n="lang_F_REMOTE_OFFICE_typeSio" t="משרד מרוחק"/>
+	<phrase n="lang_F_REMOTE_OFFICE_smartlabel" t="R Office"/>
+	<phrase n="lang_F_REMOTE_OFFICE_ON" t="מופעל"/>
+	<phrase n="lang_F_REMOTE_OFFICE_OFF" t="מופסק"/>
+	<phrase n="lang_F_ACD" t="ACD"/>
+	<phrase n="lang_F_ACD_WRAPUP" t="לעטוף"/>
+	<phrase n="lang_F_ACD_UNAVAILABLE" t="אינו זמין"/>
+	<phrase n="lang_F_ACD_AVAILABLE" t="זמין"/>
+	<phrase n="lang_F_ACD_SIGN_OUT" t="התנתק"/>
+	<phrase n="lang_F_ACD_SIGN_IN" t="להתחבר"/>
+	<phrase n="lang_F_ACD_LOGOUT" t="התנתק"/>
+	<phrase n="lang_F_ACD_LOGIN" t="להתחבר"/>
+	<phrase n="lang_F_ZONES" t="M-Page"/>
+	<phrase n="lang_F_SMART_TRANSFER" t="SmartTransfer"/>
+	<phrase n="lang_F_SMART_TRANSFER_short" t="SmartTr"/>
+	<phrase n="lang_F_ALTERNATE_MODE" t="לְהַחלִיף"/>
+	<phrase n="lang_F_LABEL_PAGE_NEXT_typeSio" t="הַבָּא"/>
+	<phrase n="lang_F_LABEL_PAGE_NEXT" t="הַבָּא"/>
+	<phrase n="lang_F_LABEL_PAGE_NEXT_SMART_long" t="עמוד הבא"/>
+	<phrase n="lang_F_LABEL_PAGE_NEXT_SMART_short" t="Page&gt;&gt;"/>
+	<phrase n="lang_F_LABEL_PAGE_PREV_typeSio" t="הקודם"/>
+	<phrase n="lang_F_LABEL_PAGE_PREV" t="הקודם"/>
+	<phrase n="lang_F_LABEL_PAGE_PREV_SMART_long" t="עמוד קודם"/>
+	<phrase n="lang_F_LABEL_PAGE_PREV_SMART_short" t="&lt;&lt;Page"/>
+	<phrase n="lang_F_ADD_REJECTED_CONTACT" t="לְהוֹסִיף"/>
+	<phrase n="lang_F_SAVE_XSI_CONTACT" t="שמור"/>
+	<phrase n="lang_F_REFRESH" t="לְרַעֲנֵן"/>
+	<phrase n="lang_F_ADD_CONTACT" t="לְהוֹסִיף"/>
+	<phrase n="lang_F_ADD_CONTACT_typeSio" t="הוסף איש קשר"/>
+	<phrase n="lang_F_SAVE_DIRECTORY_EDIT" t="שמור"/>
+	<phrase n="lang_F_GO_NEXT" t="הבא"/>
+	<phrase n="lang_F_GO_BACK" t="קודם"/>
+	<phrase n="lang_F_MENU_BACK" t="Back"/>
+	<phrase n="lang_F_SAVE" t="שמור"/>
+	<phrase n="lang_F_SAVE_CONTACT" t="שמור"/>
+	<phrase n="lang_F_SAFE_TRANSFER_OFF" t="העבר"/>
+	<phrase n="lang_F_SAFE_TRANSFER_OFF_typeSio" t="העבר"/>
+	<phrase n="lang_F_PARK" t="חניה"/>
+	<phrase n="lang_F_CALL_PARK_GROUP_DIAL" t="Group Park"/>
+	<phrase n="lang_F_PARK_typeSio" t="פַּארק"/>
+	<phrase n="lang_F_PARK_smartlabel" t="פַּארק"/>
+	<phrase n="lang_F_CALLRECORD_PAUSE" t="השהה Rec"/>
+	<phrase n="lang_F_CALLRECORD_RESUME" t="המשך קריאה"/>
+	<phrase n="lang_F_CALLRECORD_CONTROL_ON" t="הקלטה"/>
+	<phrase n="lang_F_CALLRECORD_CONTROL_OFF" t="הקלטה"/>
+	<phrase n="lang_F_STATUS_UNREAD" t="מידע"/>
+	<phrase n="lang_F_STATUS" t="מידע"/>
+	<phrase n="lang_F_STATUS_long" t="מידע"/>
+	<phrase n="lang_F_STATUS_NOTIFICATIONS" t="Notifications"/>
+	<phrase n="lang_F_FAVORITES" t="Fav"/>
+	<phrase n="lang_F_FAVORITES_typeSio" t="מועדפים"/>
+	<phrase n="lang_F_FAVORITES_smartlabel" t="מועדפים"/>
+	<phrase n="lang_F_SORT" t="מיין"/>
+	<phrase n="lang_F_SORT_typeSio" t="מיין"/>
+	<phrase n="lang_F_CONTACTPOOL" t="מאגר"/>
+	<phrase n="lang_F_CONTACTPOOL_typeSio" t="צור קשר עם פול"/>
+	<phrase n="lang_F_CONTACTPOOL_smartlabel" t="בריכה"/>
+	<phrase n="lang_F_NEXT" t="הבא"/>
+	<phrase n="lang_F_DIRECTORY_SEARCH" t="LDAP"/>
+	<phrase n="lang_F_MISSED_LIST" t="M שיחות"/>
+	<phrase n="lang_F_MISSED_LIST_typeSio" t="שיחות שלא נענו"/>
+	<phrase n="lang_F_MISSED_LIST_smartlabel" t="החמצה"/>
+	<phrase n="lang_F_DIALED_LIST" t="חייג"/>
+	<phrase n="lang_F_DIALED_LIST_typeSio" t="שיחות חייגו"/>
+	<phrase n="lang_F_DIALED_LIST_smartlabel" t="חייג"/>
+	<phrase n="lang_F_ACCEPTED_LIST" t="א קורא"/>
+	<phrase n="lang_F_ACCEPTED_LIST_typeSio" t="שיחות מקובלות"/>
+	<phrase n="lang_F_ACCEPTED_LIST_smartlabel" t="מְקוּבָּל"/>
+	<phrase n="lang_F_DIALED" t="חויגו"/>
+	<phrase n="lang_F_RETRIEVE" t="דואר קולי"/>
+	<phrase n="lang_F_RETRIEVE_smartlabel" t="דואר קולי"/>
+	<phrase n="lang_F_RETRIEVE_typeSio" t="Voice Mail"/>
+	<phrase n="lang_F_RETRIEVE_ON" t="דואר קולי"/>
+	<phrase n="lang_F_REDIRECT_OFF" t="ב.הפנייה"/>
+	<phrase n="lang_F_REDIRECT_OFF_smartlabel" t="noFwd"/>
+	<phrase n="lang_F_REDIRECT_OFF_typeSio" t="קדימה כבוי"/>
+	<phrase n="lang_F_REDIRECT_ON" t="CFwd"/>
+	<phrase n="lang_F_REDIRECT_ON_typeSio" t="העבר שיחה"/>
+	<phrase n="lang_F_REDIRECT_smartlabel" t="CFwd"/>
+	<phrase n="lang_F_RINGER_SILENT" t="שקט"/>
+	<phrase n="lang_F_RINGER_SILENT_typeSio" t="מצב שקט"/>
+	<phrase n="lang_F_RINGER_SILENT_smartlabel" t="שקט"/>
+	<phrase n="lang_F_ABORT" t="יציאה"/>
+	<phrase n="lang_F_ABORT_typeSio" t="יְצִיאָה"/>
+	<phrase n="lang_F_SUPPORT" t="עזרה"/>
+	<phrase n="lang_F_JUMP_BACK" t="קְפִיצָה"/>
+	<phrase n="lang_F_JUMP" t="קְפִיצָה"/>
+	<phrase n="lang_F_REDUCED" t="צמצום"/>
+	<phrase n="lang_F_ALL" t="עוד"/>
+	<phrase n="lang_F_DIALOG" t="שיחות"/>
+	<phrase n="lang_F_DIALOG_typeSio" t="מעקב אחר שיחות"/>
+	<phrase n="lang_F_DIALOG_smartlabel" t="שיחות"/>
+	<phrase n="lang_F_HEADSET" t="HS"/>
+	<phrase n="lang_F_HEADSET_typeSio" t="מ. ראש"/>
+	<phrase n="lang_F_HEADSET_smartlabel" t="אוזניות"/>
+	<phrase n="lang_F_HEADSET_ON" t="HS"/>
+	<phrase n="lang_F_HEADSET_ON_typeSio" t="מ. ראש"/>
+	<phrase n="lang_F_HEADSET_ON_smartlabel" t="אוזניות"/>
+	<phrase n="lang_F_SOFTWARE_UPDATE" t="תוכנה"/>
+	<phrase n="lang_F_UPDATE" t="עדכון"/>
+	<phrase n="lang_F_SMS" t="סמס"/>
+	<phrase n="lang_F_CMC" t="קוד משתמש"/>
+	<phrase n="lang_F_CALL_COMPLETION" t="סיום שיחה"/>
+	<phrase n="lang_F_UNMUTE" t="ב.השתק"/>
+	<phrase n="lang_F_UNMUTE_typeSio" t="בטל השתקה"/>
+	<phrase n="lang_F_UNMUTE_smartlabel" t="בטל השתקה"/>
+	<phrase n="lang_F_MUTE" t="השתק"/>
+	<phrase n="lang_F_MUTE_typeSio" t="לְהַשְׁתִיק"/>
+	<phrase n="lang_F_MUTE_smartlabel" t="לְהַשְׁתִיק"/>
+	<phrase n="lang_F_REG_ACTIVATE" t="הפעל"/>
+	<phrase n="lang_F_ADD_PHONEBOOK" t="לְהוֹסִיף"/>
+	<phrase n="lang_F_ADD_PHONEBOOK_typeSio" t="הוסף איש קשר"/>
+	<phrase n="lang_F_LIST_MISSED" t="לא נענו"/>
+	<phrase n="lang_F_LIST_TAKEN" t="התקבלו"/>
+	<phrase n="lang_F_LIST_TAKEN_typeSio" t="Received Calls"/>
+	<phrase n="lang_F_LIST_TAKEN_smartlabel" t="Received"/>
+	<phrase n="lang_F_DETAILS" t="פרטים"/>
+	<phrase n="lang_F_DND_OFF" t="DND"/>
+	<phrase n="lang_F_DND_OFF_typeSio" t="אל תפריע"/>
+	<phrase n="lang_F_DND_OFF_smartlabel" t="DND"/>
+	<phrase n="lang_F_DND" t="DND"/>
+	<phrase n="lang_F_DND_typeSio" t="אל תפריע"/>
+	<phrase n="lang_F_DND_smartlabel" t="DND"/>
+	<phrase n="lang_F_DEF_ON" t="*מופעל"/>
+	<phrase n="lang_F_DEF_OFF" t="מופסק*"/>
+	<phrase n="lang_F_ON" t="מופעל"/>
+	<phrase n="lang_F_OFF" t="מופסק"/>
+	<phrase n="lang_F_START" t="הַתחָלָה"/>
+	<phrase n="lang_F_END" t="סוֹף"/>
+	<phrase n="lang_F_IDENTITY" t="זיהוי"/>
+	<phrase n="lang_F_SETTINGS_typeSio" t="הגדרות"/>
+	<phrase n="lang_F_SETTINGS" t="הגדרות"/>
+	<phrase n="lang_F_EXECUTIVE_ASSISTANT_CONFIG" t="תצורת מנהל-עוזר"/>
+	<phrase n="lang_F_EXECUTIVE_CONFIG" t="Exec.&lt;br&gt;Config"/>
+	<phrase n="lang_F_EXECUTIVE_CONFIG_typeSio" t="תצורת מנהלים"/>
+	<phrase n="lang_F_ASSISTANT_CONFIG" t="Assist.&lt;br&gt;Config"/>
+	<phrase n="lang_F_ASSISTANT_CONFIG_typeSio" t="תצורת עוזר"/>
+	<phrase n="lang_F_EXEC_ASSIST_BEHALF_PUI_LISTING" t="מנהל-עוזר מטעם"/>
+	<phrase n="lang_F_EXEC_ASSIST_BEHALF" t="מטעם"/>
+	<phrase n="lang_F_NEW" t="חדש"/>
+	<phrase n="lang_F_URLU" t="א» א"/>
+	<phrase n="lang_F_URLU_typeSio" t="מצב עריכה"/>
+	<phrase n="lang_F_URLL" t="1»א"/>
+	<phrase n="lang_F_URLL_typeSio" t="מצב עריכה"/>
+	<phrase n="lang_F_123" t="א»1"/>
+	<phrase n="lang_F_123_typeSio" t="מצב עריכה"/>
+	<phrase n="lang_F_REDIRECT" t="CFwd"/>
+	<phrase n="lang_F_REDIRECT_typeSio" t="העבר שיחה"/>
+	<phrase n="lang_F_HOLD_typeSio" t="החזק"/>
+	<phrase n="lang_F_HOLD" t="החזק"/>
+	<phrase n="lang_F_CONSULTCONF_ADD" t="לְהוֹסִיף"/>
+	<phrase n="lang_F_CONSULTCONF_ADD_typeSio" t="הוסף ועידה"/>
+	<phrase n="lang_F_CONSULTCONF_ADD_smartlabel" t="לְהוֹסִיף"/>
+	<phrase n="lang_F_CONSULTCONF_JOIN" t="לְהִצְטַרֵף"/>
+	<phrase n="lang_F_CONSULTCONF_JOIN_typeSio" t="הצטרפו לכנס"/>
+	<phrase n="lang_F_CONSULTCONF_JOIN_smartlabel" t="לְהִצְטַרֵף"/>
+	<phrase n="lang_F_CONSULTCONF" t="שיחת ועידה "/>
+	<phrase n="lang_F_CONFERENCE" t="Conf"/>
+	<phrase n="lang_F_CONFERENCE_smartlabel" t="Conf"/>
+	<phrase n="lang_F_CONFERENCE_typeSio" t="שיחת ועידה "/>
+	<phrase n="lang_F_CONFERENCE_ON" t="הפסק ועידה"/>
+	<phrase n="lang_F_NO_CONFERENCE" t="לא בועידה"/>
+	<phrase n="lang_F_DEFLECT" t="דחיה"/>
+	<phrase n="lang_F_BLIND_TRANSFER" t="סומא"/>
+	<phrase n="lang_F_BLIND_TRANSFER_typeSio" t="העברה עיוורת"/>
+	<phrase n="lang_F_TRANSFER" t="העבר"/>
+	<phrase n="lang_F_TRANSFER_typeSio" t="העבר"/>
+	<phrase n="lang_F_TRANSFER_smartlabel" t="לְהַעֲבִיר"/>
+	<phrase n="lang_F_TRANSFER_CALL" t="העבר שיחה"/>
+	<phrase n="lang_F_TRANSFER_SELECTED" t="העבר שיחה"/>
+	<phrase n="lang_F_DENY" t="דחה"/>
+	<phrase n="lang_F_DIAL" t="חייג"/>
+	<phrase n="lang_F_EDIT" t="עריכה"/>
+	<phrase n="lang_F_CLEAR" t="מחיקה"/>
+	<phrase n="lang_F_DOWN" t="למטה"/>
+	<phrase n="lang_F_UP" t="למעלה"/>
+	<phrase n="lang_F_LEFT" t="שמאלה"/>
+	<phrase n="lang_F_RIGHT" t="ימין"/>
+	<phrase n="lang_F_EXTENSION" t="שלוחה"/>
+	<phrase n="lang_F_EXTENSION_typeSio" t="שלוחה"/>
+	<phrase n="lang_F_EXTENSION_smartlabel" t="שלוחה"/>
+	<phrase n="lang_F_MESSAGE" t="הודעה"/>
+	<phrase n="lang_F_CONTACT_STATE_UNKNOWN" t="לא ידוע"/>
+	<phrase n="lang_F_CONTACT_STATE_AVAILABLE" t="זמין"/>
+	<phrase n="lang_F_CONTACT_STATE_AVAILABLE_ON_MOBILE" t="זמין (נייד)"/>
+	<phrase n="lang_F_CONTACT_STATE_AVAILABLE_AT_DESK" t="זמין (שולחן עבודה)"/>
+	<phrase n="lang_F_CONTACT_STATE_INACTIVE" t="לֹא פָּעִיל"/>
+	<phrase n="lang_F_CONTACT_STATE_BUSY" t="עסוק"/>
+	<phrase n="lang_F_CONTACT_STATE_URGENT_INTERRUPTIONS_ONLY" t="הפרעות דחופות בלבד"/>
+	<phrase n="lang_F_CONTACT_STATE_IN_A_CALL" t="בשיחה"/>
+	<phrase n="lang_F_CONTACT_STATE_IN_A_CONFERENCE" t="בכנס"/>
+	<phrase n="lang_F_CONTACT_STATE_IN_A_MEETING" t="בפגישה"/>
+	<phrase n="lang_F_CONTACT_STATE_MEETING" t="פְּגִישָׁה"/>
+	<phrase n="lang_F_CONTACT_STATE_HOLDING" t="הַחזָקָה"/>
+	<phrase n="lang_F_CONTACT_STATE_DND" t="נא לא להפריע"/>
+	<phrase n="lang_F_CONTACT_STATE_DND_ALL" t="נא לא להפריע (הכל)"/>
+	<phrase n="lang_F_CONTACT_STATE_DND_SELF" t="אל תפריע (עצמי)"/>
+	<phrase n="lang_F_CONTACT_STATE_BE_RIGHT_BACK" t="אשוב בקרוב"/>
+	<phrase n="lang_F_CONTACT_STATE_AWAY" t="רָחוֹק"/>
+	<phrase n="lang_F_CONTACT_STATE_OFFLINE" t="לא מקוון"/>
+	<phrase n="lang_F_CONTACT_STATE_INVISIBLE" t="בלתי נראה"/>
+	<phrase n="lang_F_CONTACT_STATE_GROUP" t="קְבוּצָה"/>
+	<phrase n="lang_F_KEYEVENT" t="מַפְתֵחַ"/>
+	<phrase n="lang_F_KEYEVENT_typeSio" t="אירוע מפתח"/>
+	<phrase n="lang_F_KEYEVENT_short" t="מַפְתֵחַ"/>
+	<phrase n="lang_F_XML" t="XML"/>
+	<phrase n="lang_continuous_text_speed_dial" t="חיוג מקוצר"/>
+	<phrase n="lang_continuous_text_reboot" t="הפעל מחדש"/>
+	<phrase n="lang_continuous_text_network_restart" t="Network restart"/>
+	<phrase n="lang_continuous_text_search" t="לחפש"/>
+	<phrase n="lang_continuous_text_cancel" t="ביטול"/>
+	<phrase n="lang_continuous_text_yes" t="כן"/>
+	<phrase n="lang_continuous_text_no" t="לא"/>
+	<phrase n="lang_confirm_reboot" t="אתחול מחדש?"/>
+	<phrase n="lang_on" t="מופעל"/>
+	<phrase n="lang_off" t="מופסק"/>
+	<phrase n="lang_busy" t="תפוס"/>
+	<phrase n="lang_short" t="קצר"/>
+	<phrase n="lang_full" t="מלא"/>
+	<phrase n="lang_half" t="חֲצִי"/>
+	<phrase n="lang_F_HOLD_PRIVATE" t="P החזק"/>
+	<phrase n="lang_F_HOLD_PRIVATE_typeSio" t="החזקה פרטית"/>
+	<phrase n="lang_F_HOLD_PRIVATE_smartlabel" t="Priv Hold"/>
+	<phrase n="lang_conference_off" t="ועידה-הפסק"/>
+	<phrase n="lang_conference_off_typeSio" t="ועידה-הפסק"/>
+	<phrase n="lang_edit_cmc" t="עריכת קוד משתמש"/>
+	<phrase n="lang_dnd" t="DND"/>
+	<phrase n="lang_red" t="הפנית שיחות"/>
+	<phrase n="lang_red_typeSio" t="הפנית שיחות"/>
+	<phrase n="lang_missed" t="שיחות שלא נענו: "/>
+	<phrase n="lang_missed_typeSio" t="שיחות שלא נענו: "/>
+	<phrase n="lang_edit" t="עריכה"/>
+	<phrase n="lang_F_EDIT_AND_DIAL" t="קנה סוף"/>
+	<phrase n="lang_F_EDIT_AND_DIAL_typeSio" t="Edit &amp; Dial"/>
+	<phrase n="lang_edit_dial" t="ערוך וחייג"/>
+	<phrase n="lang_dhcp" t="DHCP"/>
+	<phrase n="lang_enum" t="ENUM"/>
+	<phrase n="lang_mwi_mailbox1" t="תיבה קולית:"/>
+	<phrase n="lang_mwi_mailbox2" t="יש לך"/>
+	<phrase n="lang_mwi_mailbox3" t="יש לך הודעה"/>
+	<phrase n="lang_mwi_urgent" t="דחוף"/>
+	<phrase n="lang_mwi_goto_mailbox" t="הפניה לתיבה קולית?"/>
+	<phrase n="lang_challenge_user" t="משתמש"/>
+	<phrase n="lang_challenge_pw" t="סיסמא"/>
+	<phrase n="lang_use_enum" t="ENUM?"/>
+	<phrase n="lang_wiz_dhcp" t="Using DHCP?"/>
+	<phrase n="lang_wiz_l2tp_ip_adr" t="כתובת IP L2TP:"/>
+	<phrase n="lang_wiz_ip_adr" t="IP Address:"/>
+	<phrase n="lang_wiz_mac" t="MAC Address:"/>
+	<phrase n="lang_wiz_wifi_mac" t="Wi-Fi MAC:"/>
+	<phrase n="lang_wiz_version" t="גירסה"/>
+	<phrase n="lang_wiz_netmask" t="מסיכת רשת:"/>
+	<phrase n="lang_wiz_gateway" t="שער IP:"/>
+	<phrase n="lang_wiz_dns_server" t="שרת DNS:"/>
+	<phrase n="lang_wiz_welcome" t="שלום, לחץ על לחיץ"/>
+	<phrase n="lang_wiz_http_user" t="Enter new HTTP username"/>
+	<phrase n="lang_wiz_http_pass" t="Enter new HTTP password"/>
+	<phrase n="lang_wiz_short_pass" t="Password too short"/>
+	<phrase n="lang_terminated_finished" t="מנותק"/>
+	<phrase n="lang_try_parking" t="הכנסת שיחה לחניה"/>
+	<phrase n="lang_try_parking_typeSio" t="הכנסת שיחה לחניה"/>
+	<phrase n="lang_holding" t="שיחות בהחזק"/>
+	<phrase n="lang_select_list" t="יומן"/>
+	<phrase n="lang_list_all" t="כל"/>
+	<phrase n="lang_list_new" t="חדשה"/>
+	<phrase n="lang_list_old" t="הודעות ישנות"/>
+	<phrase n="lang_list_missed" t="לא נענו"/>
+	<phrase n="lang_list_taken" t="התקבלו"/>
+	<phrase n="lang_list_dialed" t="חויגו"/>
+	<phrase n="lang_list_no_data" t="(אין נתונים)"/>
+	<phrase n="lang_list_details" t="פרטים"/>
+	<phrase n="lang_list_details_time" t="זמן:"/>
+	<phrase n="lang_list_details_duration" t="משך:"/>
+	<phrase n="lang_list_details_costs" t="עלויות:"/>
+	<phrase n="lang_list_details_missed" t="שלא נענו:"/>
+	<phrase n="lang_list_details_to" t="אל:"/>
+	<phrase n="lang_list_details_from" t="מאת:"/>
+	<phrase n="lang_reg_activate" t="הפעל"/>
+	<phrase n="lang_reg_account" t="חשבון:"/>
+	<phrase n="lang_reg_registrar" t="רשם:"/>
+	<phrase n="lang_reg_explanation_failed" t="רישום נכשל"/>
+	<phrase n="lang_reg_explanation_registering" t="רשום"/>
+	<phrase n="lang_reg_explanation_registered" t="רשום"/>
+	<phrase n="lang_menu_info_320" t="מידע"/>
+	<phrase n="lang_menu_conf_reset" t="אתחול"/>
+	<phrase n="lang_menu_gen_contrast" t="ניגודיות"/>
+	<phrase n="lang_menu_gen_ringtone" t="צליל צלצול"/>
+	<phrase n="lang_menu_web_webserver_type" t="שרת"/>
+	<phrase n="lang_menu_function_key" t="לחיצים"/>
+	<phrase n="lang_menu_tser_timer" t="מודד זמן"/>
+	<phrase n="lang_menu_red_target" t="יעד"/>
+	<phrase n="lang_menu_ringer1" t="צלצול 1"/>
+	<phrase n="lang_menu_ringer2" t="צלצול 2"/>
+	<phrase n="lang_menu_ringer3" t="צלצול 3"/>
+	<phrase n="lang_menu_ringer4" t="צלצול 4"/>
+	<phrase n="lang_menu_ringer5" t="צלצול 5"/>
+	<phrase n="lang_menu_ringer6" t="צלצול 6"/>
+	<phrase n="lang_menu_ringer7" t="צלצול 7"/>
+	<phrase n="lang_menu_ringer8" t="צלצול 8"/>
+	<phrase n="lang_menu_ringer9" t="צלצול 9"/>
+	<phrase n="lang_menu_ringer10" t="צלצול 10"/>
+	<phrase n="lang_vol_headset" t="עוצמת אוזנייה"/>
+	<phrase n="lang_vol_handset" t="עוצמת אפרכסת"/>
+	<phrase n="lang_vol_speaker" t="עוצמת רמקול"/>
+	<phrase n="lang_audio_speaker" t="רמקול"/>
+	<phrase n="lang_audio_handset" t="אפרכסת"/>
+	<phrase n="lang_audio_headset" t="מ. ראש"/>
+	<phrase n="lang_vol_contrast" t="ניגודיות תצוגה"/>
+	<phrase n="lang_confirm_factory" t="אתחול להגדרות יצרן?"/>
+	<phrase n="lang_confirm_logoff_all" t="יציאת כל המשתמשים"/>
+	<phrase n="lang_calling" t="מתקשר"/>
+	<phrase n="lang_connected" t="מחובר"/>
+	<phrase n="lang_connected_typeSio" t="מחובר"/>
+	<phrase n="lang_ringing" t="מצלצל"/>
+	<phrase n="lang_enter_number" t="חייג מספר"/>
+	<phrase n="lang_held_by" t='מוחזק ע"י'/>
+	<phrase n="lang_ok" t="אישור?"/>
+	<phrase n="lang_menu100_phone_book" t="ספר טלפונים"/>
+	<phrase n="lang_menu100_ldap_book" t="גישת LDAP"/>
+	<phrase n="lang_menu100_call_lists" t="יומן"/>
+	<phrase n="lang_menu100_settings" t="הגדרות"/>
+	<phrase n="lang_sel100_logoff_all" t="יציאת כולם"/>
+	<phrase n="lang_sel100_logoff_one" t="יציאת משתמש"/>
+	<phrase n="lang_sel100_activeline" t="זיהוי לשיחה יוצאת"/>
+	<phrase n="lang_sel100_admin_mode" t="אופן פעולת ניהול"/>
+	<phrase n="lang_sel100_user_mode" t="אופן פעולת משתמש"/>
+	<phrase n="lang_sel100_net_info" t="מידע רשת"/>
+	<phrase n="lang_sel100_mem_info" t="מידע זכרון"/>
+	<phrase n="lang_menu_ringtone" t="צליל צלצול"/>
+	<phrase n="lang_dnd_active" t="נא לא להפריע"/>
+	<phrase n="lang_update" t="תוכנה"/>
+	<phrase n="lang_update_a" t="ביצוע?"/>
+	<phrase n="lang_update_reboot" t="אתחול לעדכון גירסה"/>
+	<phrase n="lang_unplugged" t="מנותק מהחשמל"/>
+	<phrase n="lang_ethernet_cable" t="כבל רשת מנותק"/>
+	<phrase n="lang_hid_plug" t="חיבור מכשיר HID"/>
+	<phrase n="lang_hid_connected" t="מכשיר HID מחובר"/>
+	<phrase n="lang_hid_disconnected" t="מכשיר HID מנותק"/>
+	<phrase n="lang_temperature" t="טֶמפֶּרָטוּרָה"/>
+	<phrase n="lang_temperature_connected" t="חיישן טמפרטורה מחובר"/>
+	<phrase n="lang_language" t="שפה"/>
+	<phrase n="lang_current_date" t="תאריך"/>
+	<phrase n="lang_current_time" t="זמן"/>
+	<phrase n="lang_network_settings" t="רשת"/>
+	<phrase n="lang_dns_domain" t="דומיין DNS"/>
+	<phrase n="lang_dns_server1" t="שרת DNS1"/>
+	<phrase n="lang_dns_server2" t="שרת DNS2"/>
+	<phrase n="lang_ntp_server" t="שרת NTP"/>
+	<phrase n="lang_no_ip_adr" t="כתובת לא חוקית"/>
+	<phrase n="lang_password" t="סיסמה"/>
+	<phrase n="lang_username" t="משתמש"/>
+	<phrase n="lang_reset_settings" t="אפוס ערכים"/>
+	<phrase n="lang_networkadvanced_settings" t="מתקדם"/>
+	<phrase n="lang_admin_mode_password" t="סיסמת מוד ניהול"/>
+	<phrase n="lang_guess_number" t="חיפוש מהיר"/>
+	<phrase n="lang_guess_number_len" t="אורך התחלה של QuickLookup"/>
+	<phrase n="lang_admin_mode_pwd" t="סיסמת ניהול"/>
+	<phrase n="lang_call_waiting" t="ממתינה"/>
+	<phrase n="lang_menu100_red_time" t="זמן להפניית שיחות"/>
+	<phrase n="lang_menu100_red_time_typeSio" t="זמן להפניית שיחות"/>
+	<phrase n="lang_menu100_timezone" t="אזור זמן"/>
+	<phrase n="lang_menu100_dialtone" t="סוג צליל חיוג"/>
+	<phrase n="lang_menu100_call_completion" t="השלמת שיחה"/>
+	<phrase n="lang_menu100_cc_waiting" t="ממתין"/>
+	<phrase n="lang_menu100_cc_dial" t="חייג"/>
+	<phrase n="lang_menu100_netmask" t="מסיכת רשת"/>
+	<phrase n="lang_menu100_gateway" t="שער IP"/>
+	<phrase n="lang_menu100_webserver_type" t="WEB Server Type"/>
+	<phrase n="lang_enum100_disp_always" t="תמיד"/>
+	<phrase n="lang_enum100_disp_on" t="פעיל"/>
+	<phrase n="lang_enum100_disp_off" t="מנותק"/>
+	<phrase n="lang_enum_disp_webserver_off" t="מופסק"/>
+	<phrase n="lang_enum_disp_webserver_http" t="HTTP בלבד"/>
+	<phrase n="lang_enum_disp_webserver_https" t="HTTPS בלבד"/>
+	<phrase n="lang_enum_disp_webserver_http_https" t="HTTP &amp; HTTPS"/>
+	<phrase n="lang_enum_disp_func_key_destination" t="שלוחה"/>
+	<phrase n="lang_enum_disp_func_key" t="לחיץ"/>
+	<phrase n="lang_xsi_silent_alert" t="התראה שקטה"/>
+	<phrase n="lang_privacy_out" t="הסתר זיהוי שיחה יוצאת"/>
+	<phrase n="lang_quick_transfer" t="Quick transfer"/>
+	<phrase n="lang_quick_transfer_newcall" t="Make new call"/>
+	<phrase n="lang_quick_transfer_blind" t="Blind xfer"/>
+	<phrase n="lang_quick_transfer_attended" t="Attended xfer"/>
+	<phrase n="lang_privacy_in" t="חסום שיחה לא מזוהה"/>
+	<phrase n="lang_privacy_in_typeSio" t="חסום שיחה לא מזוהה"/>
+	<phrase n="lang_auto_dial" t="חיוג אוטומטי"/>
+	<phrase n="lang_call_completion" t="השלמת חיוג"/>
+	<phrase n="lang_vlan_id" t="מזהה VLAN (1-4094)"/>
+	<phrase n="lang_vlan_qos" t="עדיפות VLAN (0-7)"/>
+	<phrase n="lang_vlan_reset" t="אפס את ה-VLAN"/>
+	<phrase n="lang_vlan_port_tagging" t="VLAN tagging on LAN"/>
+	<phrase n="lang_vlan_pc_id" t="VLAN ID on LAN port"/>
+	<phrase n="lang_identity_settings" t="זיהוי"/>
+	<phrase n="lang_preferences_settings" t="עדיפויות"/>
+	<phrase n="lang_maintenance_settings" t="תחזוקה"/>
+	<phrase n="lang_auto_connect_indication" t="חיווי למענה אוטומטי"/>
+	<phrase n="lang_sel100_reregister_line" t="משתמש רשום"/>
+	<phrase n="lang_sel100_edit_line" t="עריכת משתמש"/>
+	<phrase n="lang_enum_disp_cw_visual" t="ויזואלי בלבד"/>
+	<phrase n="lang_enum_disp_cw_visual_short" t="ויזואלי"/>
+	<phrase n="lang_enum_disp_cw_ringer" t="צלצלן"/>
+	<phrase n="lang_confirm_del_adr_item" t="האם אתה בטוח?"/>
+	<phrase n="lang_confirm_del_adr_item_title" t="מחק רשומה בספר טלפונים"/>
+	<phrase n="lang_confirm_del_adr_item_title_typeSio" t="מחק רשומה בספר טלפונים"/>
+	<phrase n="lang_confirm_del_adr_title" t="מחק ספר טלפונים"/>
+	<phrase n="lang_confirm_del_adr_item_title_short" t="מחק רשומה בספר טלפונים"/>
+	<phrase n="lang_vol_ringer" t="עוצמת צלצול"/>
+	<phrase n="lang_keybd_unlock_PIN" t="קוד לפתיחת המקלדת"/>
+	<phrase n="lang_enum_disp_func_key_mult" t="קו משותף"/>
+	<phrase n="lang_enum_disp_func_key_keyevent" t="מקש אירוע"/>
+	<phrase n="lang_menu_ringer_silent" t="השתקה"/>
+	<phrase n="lang_menu_ringer_custom" t="התאמה"/>
+	<phrase n="lang_enum_disp_func_key_none" t="ריק"/>
+	<phrase n="lang_presence_online" t="מחובר"/>
+	<phrase n="lang_presence_busy" t="עסוק"/>
+	<phrase n="lang_presence_invisible" t="בלתי נראה"/>
+	<phrase n="lang_presence_title" t="מצב נוכחות"/>
+	<phrase n="lang_dialog_title" t="שיחות"/>
+	<phrase n="lang_buddies_title" t="אנשי קשר"/>
+	<phrase n="lang_use_backlight" t="תאורת רקע"/>
+	<phrase n="lang_backlight_on_activity" t="Backlight on Activity"/>
+	<phrase n="lang_backlight_when_idle" t="Backlight when Idle"/>
+	<phrase n="lang_activity" t="תאורת רקע במצב פעיל"/>
+	<phrase n="lang_display_settings" t="תצוגה"/>
+	<phrase n="lang_audio_settings" t="שמע"/>
+	<phrase n="lang_redirect_settings" t="עקוב אחריי"/>
+	<phrase n="lang_redirect_settings_typeSio" t="עקוב אחריי"/>
+	<phrase n="lang_reboot_required" t="נדרש אתחול"/>
+	<phrase n="lang_network_restart_required" t="Network restart required"/>
+	<phrase n="lang_auto_redialing" t="מחייג שוב"/>
+	<phrase n="lang_conference" t="שיחת ועידה "/>
+	<phrase n="lang_directory_search" t="חפש ברשומות"/>
+	<phrase n="lang_wrong_pw" t="ססמא שגוייה"/>
+	<phrase n="lang_http_password_not_set" t="סיסמא לא מוגדרת"/>
+	<phrase n="lang_start_auto_redial" t="הפעל חיוג אוטומטי?"/>
+	<phrase n="lang_call_features_settings" t="תכונות שיחות"/>
+	<phrase n="lang_all" t="All"/>
+	<phrase n="lang_outgoing_calls_settings" t="שיחות יוצאות"/>
+	<phrase n="lang_incoming_calls_settings" t="שיחות נכנסות"/>
+	<phrase n="lang_ip_settings_wizzard" t="הגדרות IP"/>
+	<phrase n="lang_webserver_settings" t="שרת אינטרנט"/>
+	<phrase n="lang_vlan_settings" t="VLAN"/>
+	<phrase n="lang_wlan_settings" t="WLAN"/>
+	<phrase n="lang_wifi_reboot_to_connect_to" t="הפעל מחדש כדי להתחבר אליו"/>
+	<phrase n="lang_system_information_menu" t="נתוני מערכת"/>
+	<phrase n="lang_its_a_caller_info" t="מתקשר"/>
+	<phrase n="lang_its_a_callee_info" t="נמען"/>
+	<phrase n="lang_redirect_all" t="הפניית שיחות"/>
+	<phrase n="lang_redirect_all_typeSio" t="הפניית שיחות"/>
+	<phrase n="lang_redirect_busy" t="הפניית שיחות בתפוס"/>
+	<phrase n="lang_redirect_busy_typeSio" t="הפניית שיחות בתפוס"/>
+	<phrase n="lang_redirect_time" t="הפניית שיחות בזמן"/>
+	<phrase n="lang_redirect_time_typeSio" t="הפניית שיחות בזמן"/>
+	<phrase n="lang_do_redirect" t="אפשר הפניית שיחות"/>
+	<phrase n="lang_do_redirect_typeSio" t="אפשר הפניית שיחות"/>
+	<phrase n="lang_redirect_target" t="יעד להפנייה"/>
+	<phrase n="lang_redirect_target_typeSio" t="יעד להפנייה"/>
+	<phrase n="lang_help_label" t="עזרה"/>
+	<phrase n="lang_sysinfo_mem1" t="RAM:"/>
+	<phrase n="lang_sysinfo_mem2" t="שֶׁל"/>
+	<phrase n="lang_sysinfo_mem3" t="חינם"/>
+	<phrase n="lang_goto_phonepage_msg" t="כדי להגדיר את הטלפון שלך, נא לנווט בדפדפן האינטרנט שלך אל:"/>
+	<phrase n="lang_goto_phonepage_msg_typeSio" t="כדי להגדיר את הטלפון שלך, נא לנווט בדפדפן האינטרנט שלך אל:"/>
+	<phrase n="lang_goto_help_msg" t="לקבלת עזרה נוספת בקר:"/>
+	<phrase n="lang_linestate_connected" t="מחובר"/>
+	<phrase n="lang_linestate_on_hold" t="בהחזק"/>
+	<phrase n="lang_linestate_ringing" t="מצלצל"/>
+	<phrase n="lang_linename_message" t="הודעה"/>
+	<phrase n="lang_linename_redial" t="חיוג חוזר"/>
+	<phrase n="lang_linename_transfer" t="העבר"/>
+	<phrase n="lang_linename_rec_on" t="התחל הקלטה"/>
+	<phrase n="lang_linename_rec_off" t="הפסק הקלטה"/>
+	<phrase n="lang_linetype_auto_answer" t="מענה אוטומטי"/>
+	<phrase n="lang_linetype_blf" t="BLF"/>
+	<phrase n="lang_connecting" t="מתחבר"/>
+	<phrase n="lang_fkey_add_contact_typeSio" t="הוסף איש קשר"/>
+	<phrase n="lang_cancelconference" t="בטל ועידה"/>
+	<phrase n="lang_confirm_cancelconference" t="עזיבת ועידה?"/>
+	<phrase n="lang_xmlgui_dialnumber" t="חייג מספר"/>
+	<phrase n="lang_xmlgui_contactlist" t="רשימת אנשי קשר"/>
+	<phrase n="lang_xmlgui_dial" t="חוּגָה"/>
+	<phrase n="lang_menu_equalizer" t="שַׁויָן"/>
+	<phrase n="lang_equalizer_soft" t="צליל רך"/>
+	<phrase n="lang_equalizer_normal" t="צליל רגיל"/>
+	<phrase n="lang_equalizer_bright" t="צליל בהיר"/>
+	<phrase n="lang_contactpool" t="מאגר"/>
+	<phrase n="lang_tb_nickname" t="כינוי"/>
+	<phrase n="lang_tb_number" t="מספר טלפון"/>
+	<phrase n="lang_tb_contact" t="סוג איש קשר"/>
+	<phrase n="lang_tb_outgoing_id" t="זהות שיחה יוצאת"/>
+	<phrase n="lang_tb_firstname" t="שם פרטי"/>
+	<phrase n="lang_tb_lastname" t="שם משפחה"/>
+	<phrase n="lang_tb_group" t="קבוצה"/>
+	<phrase n="lang_day" t="יום"/>
+	<phrase n="lang_month" t="חודש"/>
+	<phrase n="lang_year" t="שנה"/>
+	<phrase n="lang_tb_title" t="תואר"/>
+	<phrase n="lang_tb_organization" t="ארגון"/>
+	<phrase n="lang_tb_email" t="אימייל"/>
+	<phrase n="lang_tb_note" t="הערה"/>
+	<phrase n="lang_tb_photo" t="תְמוּנָה"/>
+	<phrase n="lang_tb_favorite" t="אהוב"/>
+	<phrase n="lang_linename_transfer_short" t="העברה"/>
+	<phrase n="lang_linetype_key_event_short" t="מַפְתֵחַ"/>
+	<phrase n="lang_linetype_url_short" t="כתובת אתר"/>
+	<phrase n="lang_grouptype_family" t="משפחה"/>
+	<phrase n="lang_grouptype_friend" t="חבר"/>
+	<phrase n="lang_grouptype_collegue" t="עמית"/>
+	<phrase n="lang_grouptype_work" t="עבודה"/>
+	<phrase n="lang_title_sort" t="מיין לפי"/>
+	<phrase n="lang_title_select_entry" t="בחר ערך"/>
+	<phrase n="lang_entry_general" t="פרטים כלליים"/>
+	<phrase n="lang_title_entry_general" t="פרטים כלליים על"/>
+	<phrase n="lang_fav_add_from_tbook" t="הוסף מספר טלפונים"/>
+	<phrase n="lang_redirect_on_timeout" t="עקוב אחרי בזמן"/>
+	<phrase n="lang_redirect_on_timeout_typeSio" t="עקוב אחרי בזמן"/>
+	<phrase n="lang_redirect_when_busy" t="עקוב אחרי בתפוס"/>
+	<phrase n="lang_redirect_when_busy_typeSio" t="עקוב אחרי בתפוס"/>
+	<phrase n="lang_sip_disabled" t="SIP מושבת"/>
+	<phrase n="lang_low_memory" t="זיכרון נמוך"/>
+	<phrase n="lang_title_error" t="שְׁגִיאָה"/>
+	<phrase n="lang_error_code" t="קוד שגיאה:"/>
+	<phrase n="lang_bad_server_response" t="תגובת שרת גרועה"/>
+	<phrase n="lang_bad_xml_response" t="תגובת XML גרועה..."/>
+	<phrase n="lang_title_loading" t="טוען"/>
+	<phrase n="lang_active_id" t="זהות פעילה"/>
+	<phrase n="lang_1st_id" t="זהות 1"/>
+	<phrase n="lang_2nd_id" t="זהות 2"/>
+	<phrase n="lang_3rd_id" t="זהות 3"/>
+	<phrase n="lang_4th_id" t="זהות רביעית"/>
+	<phrase n="lang_5th_id" t="זהות 5"/>
+	<phrase n="lang_6th_id" t="זהות 6"/>
+	<phrase n="lang_7th_id" t="זהות 7"/>
+	<phrase n="lang_8th_id" t="זהות 8"/>
+	<phrase n="lang_9th_id" t="זהות 9"/>
+	<phrase n="lang_10th_id" t="זהות 10"/>
+	<phrase n="lang_11th_id" t="זהות 11"/>
+	<phrase n="lang_12th_id" t="זהות 12"/>
+	<phrase n="lang_contacttype_vip" t="אחמ"/>
+	<phrase n="lang_contacttype_deny" t="לַחסוֹם"/>
+	<phrase n="lang_unknown" t="לא ידוע"/>
+	<phrase n="lang_month_01" t="יָנוּאָר"/>
+	<phrase n="lang_month_02" t="פברואר"/>
+	<phrase n="lang_month_03" t="מרץ"/>
+	<phrase n="lang_month_04" t="אַפּרִיל"/>
+	<phrase n="lang_month_05" t="מאי"/>
+	<phrase n="lang_month_06" t="יוני"/>
+	<phrase n="lang_month_07" t="יולי"/>
+	<phrase n="lang_month_08" t="אוגוסט"/>
+	<phrase n="lang_month_09" t="סֶפּטֶמבֶּר"/>
+	<phrase n="lang_month_10" t="אוֹקְטוֹבֶּר"/>
+	<phrase n="lang_month_11" t="נוֹבֶמבֶּר"/>
+	<phrase n="lang_month_12" t="דֵצֶמבֶּר"/>
+	<phrase n="lang_tb_name_label" t="שם"/>
+	<phrase n="lang_tb_number_label" t="טלפון"/>
+	<phrase n="lang_title_transfer" t="מסיבת העברה"/>
+	<phrase n="lang_linestate_label" t="מדינה"/>
+	<phrase n="lang_reboot_uploads" t="אתחול כדי להפעיל העלאות."/>
+	<phrase n="lang_cc_dial_now" t="התקשר עכשיו?"/>
+	<phrase n="lang_cc_complete_now" t="אתה יכול להשלים את השיחה שלך אל"/>
+	<phrase n="lang_cc_waiting_for" t="ממתין להשלמת השיחה אל"/>
+	<phrase n="lang_cc_set_warning" t="כרגע השלמת שיחה כבר מוגדרת, אבל אתה יכול להחליף את זה."/>
+	<phrase n="lang_cc_change_title" t="לשנות את יעד השלמת השיחה?"/>
+	<phrase n="lang_cc_change_message" t="החלפת CC-Target הנוכחי עם"/>
+	<phrase n="lang_cc_status_waiting_on" t="ממתין ש-%dst יהיה זמין."/>
+	<phrase n="lang_cc_activate" t="ימתין להשלמת השיחה."/>
+	<phrase n="lang_cc_activated" t="עדיין מחכה להשלמת השיחה."/>
+	<phrase n="lang_call_contact" t="התקשר ליצירת קשר"/>
+	<phrase n="lang_call_work" t="התקשר לעבודה"/>
+	<phrase n="lang_call_work_typeSio" t="התקשר לעבודה"/>
+	<phrase n="lang_call_mobile" t="התקשר לנייד"/>
+	<phrase n="lang_call_home" t="להתקשר הביתה"/>
+	<phrase n="lang_call_home_typeSio" t="להתקשר הביתה"/>
+	<phrase n="lang_call_other" t="התקשר אחר"/>
+	<phrase n="lang_call_voicemail" t="Call Voice Mail"/>
+	<phrase n="lang_xfer_to_contact" t="העבר ליצירת קשר"/>
+	<phrase n="lang_xfer_to_work" t="העברה לעבודה"/>
+	<phrase n="lang_xfer_to_work_typeSio" t="העברה לעבודה"/>
+	<phrase n="lang_xfer_to_mobile" t="העבר לנייד"/>
+	<phrase n="lang_xfer_to_home" t="העברה לבית"/>
+	<phrase n="lang_xfer_to_home_typeSio" t="העברה לבית"/>
+	<phrase n="lang_xfer_to_other" t="העברה לאחר"/>
+	<phrase n="lang_xfer_to_voicemail" t="העבר לתא קולי"/>
+	<phrase n="lang_cfw_to_contact" t="העבר ליצירת קשר"/>
+	<phrase n="lang_cfw_to_contact_typeSio" t="העבר ליצירת קשר"/>
+	<phrase n="lang_cfw_to_voicemail_typeSio" t="העבר לתא קולי"/>
+	<phrase n="lang_cfw_to_work" t="קדימה לעבודה"/>
+	<phrase n="lang_cfw_to_work_typeSio" t="קדימה לעבודה"/>
+	<phrase n="lang_cfw_to_mobile" t="העבר לנייד"/>
+	<phrase n="lang_cfw_to_mobile_typeSio" t="העבר לנייד"/>
+	<phrase n="lang_cfw_to_home" t="קדימה לבית"/>
+	<phrase n="lang_cfw_to_home_typeSio" t="קדימה לבית"/>
+	<phrase n="lang_cfw_to_other" t="העבר לאחר"/>
+	<phrase n="lang_cfw_to_other_typeSio" t="העבר לאחר"/>
+	<phrase n="lang_cfw_to_voicemail" t="העבר לתא קולי"/>
+	<phrase n="lang_assign_to_key" t="הקצה למפתח"/>
+	<phrase n="lang_contact_state_unknown" t="לא ידוע"/>
+	<phrase n="lang_contact_state_available" t="זמין"/>
+	<phrase n="lang_contact_state_available_on_mobile" t="זמין (נייד)"/>
+	<phrase n="lang_contact_state_available_at_desk" t="זמין (שולחן עבודה)"/>
+	<phrase n="lang_contact_state_inactive" t="לֹא פָּעִיל"/>
+	<phrase n="lang_contact_state_busy" t="עסוק"/>
+	<phrase n="lang_contact_state_urgent_interruptions_only" t="הפרעות דחופות בלבד"/>
+	<phrase n="lang_contact_state_in_a_call" t="בשיחה"/>
+	<phrase n="lang_contact_state_in_a_meeting" t="בפגישה"/>
+	<phrase n="lang_contact_state_meeting" t="פְּגִישָׁה"/>
+	<phrase n="lang_contact_state_holding" t="הַחזָקָה"/>
+	<phrase n="lang_contact_state_dnd" t="נא לא להפריע"/>
+	<phrase n="lang_contact_state_dnd_all" t="נא לא להפריע (הכל)"/>
+	<phrase n="lang_contact_state_dnd_self" t="אל תפריע (עצמי)"/>
+	<phrase n="lang_contact_state_be_right_back" t="אשוב בקרוב"/>
+	<phrase n="lang_contact_state_away" t="רָחוֹק"/>
+	<phrase n="lang_contact_state_offline" t="לא מקוון"/>
+	<phrase n="lang_contact_state_reset" t="אפס סטטוס"/>
+	<phrase n="lang_remote_book_name_ldap" t="LDAP ספר טלפונים"/>
+	<phrase n="lang_remote_book_choose_title" t="בחר פנקס כתובות"/>
+	<phrase n="lang_title_add_to_favorites" t="הוסף למועדפים"/>
+	<phrase n="lang_title_add_to_favorites_typeSio" t="הוסף למועדפים"/>
+	<phrase n="lang_title_favorites" t="מועדפים"/>
+	<phrase n="lang_unknown_partner" t="שיחה  פרטית"/>
+	<phrase n="lang_nrtype_sip" t="לגימה"/>
+	<phrase n="lang_nrtype_business" t="עסקי"/>
+	<phrase n="lang_nrtype_fixed" t="קבוע"/>
+	<phrase n="lang_nrtype_extension" t="שלוחה"/>
+	<phrase n="lang_tb_number_type" t="סוג מספר"/>
+	<phrase n="lang_tb_number_type_label" t="סוג"/>
+	<phrase n="lang_title_no_permission" t="אין רשות"/>
+	<phrase n="lang_target_office" t="מִשׂרָד"/>
+	<phrase n="lang_target_replyto" t="להגיב ל"/>
+	<phrase n="lang_target_unqualified" t="לֹא מוּסמָך"/>
+	<phrase n="lang_target_work" t="עֲבוֹדָה"/>
+	<phrase n="lang_target_work_typeSio" t="עֲבוֹדָה"/>
+	<phrase n="lang_target_mobile" t="נייד"/>
+	<phrase n="lang_target_home" t="בית"/>
+	<phrase n="lang_target_home_typeSio" t="בית"/>
+	<phrase n="lang_target_other" t="אַחֵר"/>
+	<phrase n="lang_target_voicemail" t="תא קולי"/>
+	<phrase n="lang_target_new_number" t="מספר חדש"/>
+	<phrase n="lang_target_contact" t="איש קשר"/>
+	<phrase n="lang_directory_too_big_to_import__long" t="המדריך המרוחק גדול מדי"/>
+	<phrase n="lang_target_cancel" t="אל תעביר שיחות"/>
+	<phrase n="lang_target_cancel_typeSio" t="אל תעביר שיחות"/>
+	<phrase n="lang_target_forward" t="העברת שיחות אל"/>
+	<phrase n="lang_target_forward_typeSio" t="העברת שיחות אל"/>
+	<phrase n="lang_tls_unknown_certificate_alert" t="חיבור מאובטח נדחה שהציע אישור לא ידוע. אתה יכול לתת הרשאה מפורשת לתת אמון בחיבור זה דרך ממשק האינטרנט בקטע אישורים."/>
+	<phrase n="lang_tls_unknown_certificate_alert_title" t="חיבור מאובטח נכשל"/>
+	<phrase n="lang_tls_properties_changed" t="אנא לאתחל. לא ניתן להחיל מאפייני אבטחה שהשתנו על הפעלות מתמשכות."/>
+	<phrase n="lang_call_completed_by_part1" t="השיחה הושלמה על ידי"/>
+	<phrase n="lang_call_completed_by_part2" t="בטרמינל אחר."/>
+	<phrase n="lang_call_completed_by_part2_typeSio" t="בטרמינל אחר."/>
+	<phrase n="lang_challenge_sip_pw" t="סיסמא"/>
+	<phrase n="lang_line_ocs_wz_user" t="דומיין\משתמש"/>
+	<phrase n="lang_line_ocs_wz_pwd" t="סיסמא"/>
+	<phrase n="lang_unregistered_ids_title" t="לא נרשם"/>
+	<phrase n="lang_message_label" t="מידע"/>
+	<phrase n="lang_status_messages" t="מידע סטאטוס"/>
+	<phrase n="lang_information_settings" t="מידע"/>
+	<phrase n="lang_user_realname" t="שם שיוצג"/>
+	<phrase n="lang_user_idle_number" t="מספר תצוגה"/>
+	<phrase n="lang_user_name" t="חשבון"/>
+	<phrase n="lang_user_pass" t="סיסמא"/>
+	<phrase n="lang_user_host" t="רשם"/>
+	<phrase n="lang_user_outbound" t="פרוקסי יוצא"/>
+	<phrase n="lang_user_pname" t="שם משתמש לאימות"/>
+	<phrase n="lang_user_mailbox" t="תא דואר"/>
+	<phrase n="lang_user_mailbox_retrieve" t="תיבת דואר חיוג"/>
+	<phrase n="lang_hotdesking" t="Hotdesking"/>
+	<phrase n="lang_keyb_enter_current_pin" t="הזן PIN נוכחי"/>
+	<phrase n="lang_keyb_enter_new_pin" t="הזן PIN חדש"/>
+	<phrase n="lang_keyb_reenter_new_pin" t="הזן שוב PIN חדש"/>
+	<phrase n="lang_keyb_enter_password" t="הזן סיסמה כדי לאפס את ה-PIN"/>
+	<phrase n="lang_keyb_locked" t="לחץ והחזק את * כדי לבטל את הנעילה."/>
+	<phrase n="lang_keyb_permanently_locked" t="לחץ והחזק את * כדי לאפס את ה-PIN."/>
+	<phrase n="lang_title_unlock" t="לוח מקשים נעול"/>
+	<phrase n="lang_confirm_unlock" t="שחרר מקשים?"/>
+	<phrase n="lang_transfer_failed_msg" t="העברה נכשלה"/>
+	<phrase n="lang_action_failed_msg" t="פעולה: נכשל"/>
+	<phrase n="lang_vpn_fetch" t="שליפת VPN Tarball מ:"/>
+	<phrase n="lang_vpn_fetch_failed" t="שליפת ה-VPN Tarball נכשלה"/>
+	<phrase n="lang_vpn_flash" t="מחלץ קבצי VPN..."/>
+	<phrase n="lang_vpn_reboot" t="מאתחל את המערכת כדי להפעיל VPN..."/>
+	<phrase n="lang_l2tp_fetch" t="שליפת Tarball L2TP מ:"/>
+	<phrase n="lang_l2tp_fetch_failed" t="שליפת Tarball L2TP נכשלה"/>
+	<phrase n="lang_l2tp_flash" t="מחלץ קבצי L2TP..."/>
+	<phrase n="lang_l2tp_reboot" t="מאתחל את המערכת כדי להפעיל את L2TP..."/>
+	<phrase n="lang_sbc_fetch" t="מביא קובץ תצורה sbc מ:"/>
+	<phrase n="lang_sbc_fetch_failed" t="אחזור קובץ התצורה של sbc נכשל"/>
+	<phrase n="lang_sbc_flash" t="העתק את קובץ התצורה של sbc..."/>
+	<phrase n="lang_sbc_reboot" t="מאתחל את המערכת כדי להפעיל sbc..."/>
+	<phrase n="lang_sbc_active" t="SBC פעיל"/>
+	<phrase n="lang_keyb_min_digits" t="(מינימום # ספרות)"/>
+	<phrase n="lang_empty_dir_search_list" t="הכנס שם! השתמש ב* עבור שטח."/>
+	<phrase n="lang_key_unassigned" t="המפתח בוטל"/>
+	<phrase n="lang_key_unassigned_typeSio" t="המפתח בוטל"/>
+	<phrase n="lang_label_conference_partner" t="מפלגה"/>
+	<phrase n="lang_incoming_call_title_while_connected" t="שיחה ממתינה"/>
+	<phrase n="lang_active" t="פָּעִיל"/>
+	<phrase n="lang_emergency_call" t="שיחת חירום"/>
+	<phrase n="lang_ntp_pending" t="יצירת קשר עם שרת NTP"/>
+	<phrase n="lang_ntp_unreachable" t="לא ניתן להגיע לשרת NTP"/>
+	<phrase n="lang_download_server_unreachable" t="לא ניתן להגיע לשרת"/>
+	<phrase n="lang_network_busy" t="הרשת עמוסה"/>
+	<phrase n="lang_pstn_reroute_attempt" t="השיחה הזו עשויה להימשך זמן רב יותר. ייתכן שהרשת תפוסה."/>
+	<phrase n="lang_menu_location" t="מקום"/>
+	<phrase n="lang_linestate_holding_upper_case" t="בהחזק"/>
+	<phrase n="lang_linestate_on_hold_upper_case" t="בהחזק"/>
+	<phrase n="lang_location_retrieval_failed" t="לא ניתן לאחזר מיקום"/>
+	<phrase n="lang_route_private_line" t="קו פרטי"/>
+	<phrase n="lang_route_forwarded" t="הועבר"/>
+	<phrase n="lang_route_forwarded_typeSio" t="הועבר"/>
+	<phrase n="lang_route_delegated" t="האצלה"/>
+	<phrase n="lang_route_team_call" t="שיחת צוות"/>
+	<phrase n="lang_route_acd" t="שיחה קבוצתית"/>
+	<phrase n="lang_route_cccp_conference" t="שיחת ועידה"/>
+	<phrase n="lang_route_cccp_conference_typeSio" t="שיחת ועידה"/>
+	<phrase n="lang_dfks_failed" t="סנכרון התכונות נכשל"/>
+	<phrase n="lang_no_shared_key" t="אין מפתח קו משותף זמין"/>
+	<phrase n="lang_shared_seize_active" t="תפיסת הקו עדיין פעילה"/>
+	<phrase n="lang_not_a_shared_key" t="המפתח שנבחר אינו מפתח קו משותף"/>
+	<phrase n="lang_active_key_not_a_shared_key" t='מקש קו משותף אינו פועל עם הקצאת הקשר "פעיל".'/>
+	<phrase n="lang_ipv4_conflict" t="IPv4: התנגשות"/>
+	<phrase n="lang_contact_saved" t="איש הקשר נשמר"/>
+	<phrase n="lang_query_pending" t="מחפש..."/>
+	<phrase n="lang_no_conference" t="בגלל עומס מעבד, %Aconference אינה מותרת"/>
+	<phrase n="lang_no_conference_with_codec" t="בגלל עומס מעבד, ועידה %A אינה מותרת אם צד אחד משתמש ב-codec %B"/>
+	<phrase n="lang_no_conference_with_encrypted_codec" t="בגלל עומס מעבד, ועידה %A אינה מותרת אם צד אחד משתמש ב-codec %B עם הצפנה"/>
+	<phrase n="lang_no_conference_without_unencrypted_codec" t="בגלל עומס מעבד, ועידה %A אינה מותרת אם צד אחד אינו משתמש ב-codec %B ללא הצפנה"/>
+	<phrase n="lang_setup_language" t="שפת הגדרה"/>
+	<phrase n="lang_please_wait" t="המתן בבקשה..."/>
+	<phrase n="lang_download_failed" t="הורדה נכשלה"/>
+	<phrase n="lang_function_blocked" t="חָסוּם"/>
+	<phrase n="lang_activating_uploads" t="הפעלת העלאות"/>
+	<phrase n="lang_provisioning" t="אספקה"/>
+	<phrase n="lang_provisioning_failed" t="האספקה נכשלה"/>
+	<phrase n="lang_tr69_provisioning" t="TR-069 פרו. בתהליך"/>
+	<phrase n="lang_start_provisioning" t="ההקצאה מתבצעת"/>
+	<phrase n="lang_waitTime" t="זמן המתנה"/>
+	<phrase n="lang_ccUserId" t="זהות המשתמש"/>
+	<phrase n="lang_callCenterName" t="שֵׁם"/>
+	<phrase n="lang_numCallsInQueue" t="שיחות בתור"/>
+	<phrase n="lang_acd_ready" t="זמין"/>
+	<phrase n="lang_acd_not_ready" t="אינו זמין"/>
+	<phrase n="lang_acd_working_after_call" t="לעטוף"/>
+	<phrase n="lang_acd_log_on" t="להתחבר"/>
+	<phrase n="lang_acd_log_off" t="התנתק"/>
+	<phrase n="lang_acd_unkown_state" t="מדינה לא ידועה"/>
+	<phrase n="lang_change_state_to" t="שנה מצב"/>
+	<phrase n="lang_call_parked" t="השיחה חנתה"/>
+	<phrase n="lang_call_unparked" t="שיחה ללא חנייה"/>
+	<phrase n="lang_firmware_update_failed" t="עדכון SW נכשל"/>
+	<phrase n="lang_firmware_update_restart" t="להפעיל מחדש את SW-Update?"/>
+	<phrase n="lang_temp_unavail" t="לא זמין באופן זמני"/>
+	<phrase n="lang_limited_func" t="פונקציונליות מוגבלת עקב הפסקה"/>
+	<phrase n="lang_limited_func_exp" t="בעיית רשת מגבילה זמנית תכונות כמו נוכחות או CF"/>
+	<phrase n="lang_limited_func_exp_typeSio" t="בעיית רשת מגבילה זמנית תכונות כמו נוכחות או CF"/>
+	<phrase n="lang_call_park_failed" t="החניה נכשלה"/>
+	<phrase n="lang_park_failed_reason" t="אין מסלול זמין"/>
+	<phrase n="lang_list_parked" t="חונה"/>
+	<phrase n="lang_vision" t="חָזוֹן"/>
+	<phrase n="lang_unpair_vision" t="בטל התאמה של Vision"/>
+	<phrase n="lang_scan_for_visions" t="סריקה לאיתור חזונות"/>
+	<phrase n="lang_paired_with_vision" t="בשילוב עם חזון:"/>
+	<phrase n="lang_vision_connection_lost" t="חיבור הראייה אבד"/>
+	<phrase n="lang_unpair_vision_question" t="לבטל התאמה של Vision?"/>
+	<phrase n="lang_isconnected" t="מְחוּבָּר"/>
+	<phrase n="lang_isdisconnected" t="מְנוּתָק"/>
+	<phrase n="lang_isdisconnected_typeSio" t="מְנוּתָק"/>
+	<phrase n="lang_hotdesking_ntlm" t="אישורי חשבון"/>
+	<phrase n="lang_hotdesking_pin" t="פִּין"/>
+	<phrase n="lang_prompt_phone_num" t="ההרחבה שלך"/>
+	<phrase n="lang_prompt_pin" t="ה-PIN שלך"/>
+	<phrase n="lang_pin_signin_active" t="כניסה..."/>
+	<phrase n="lang_pin_signin_failure" t="לא ניתן להיכנס עם מספר טלפון ו-PIN"/>
+	<phrase n="lang_firmware_update_in" t="SW-עדכון ב"/>
+	<phrase n="lang_firmware_update_available" t="SW-עדכון זמין"/>
+	<phrase n="lang_call_for" t="התקשר ל"/>
+	<phrase n="lang_linetype_bossadmin" t="בוס/מנהל"/>
+	<phrase n="lang_linetype_bossadmin_short" t="תוֹאַר רִאשׁוֹן"/>
+	<phrase n="lang_success_msg_transferred_to" t="%A הועבר ל-%B"/>
+	<phrase n="lang_pickup_call" t="השיחה"/>
+	<phrase n="lang_call_on_behalf_of" t="התקשר מטעם"/>
+	<phrase n="lang_boss_group" t="אנשים שאני מנהל עבורם שיחות"/>
+	<phrase n="lang_delegate_group" t="נציגים"/>
+	<phrase n="lang_all_delegates" t="הקצה את כל הנציגים למפתח"/>
+	<phrase n="lang_call_failed_network_issue" t="השיחה נכשלה עקב בעיות ברשת"/>
+	<phrase n="lang_call_failed_network_issue_typeSio" t="השיחה נכשלה עקב בעיות ברשת"/>
+	<phrase n="lang_ethernet_detection" t="זיהוי אתרנט"/>
+	<phrase n="lang_firmware_update_not_available" t="אין עדכון SW זמין"/>
+	<phrase n="lang_check_sw_update" t="בדוק SW-Update"/>
+	<phrase n="lang_continuous_text_label" t="תווית"/>
+	<phrase n="lang_short_text" t="טקסט קצר"/>
+	<phrase n="lang_headline_admins" t="מנהלי מערכת"/>
+	<phrase n="lang_always_delegate_forward" t="תמיד האצל קדימה"/>
+	<phrase n="lang_always_deleg_sim" t="תמיד צלצל בו זמנית"/>
+	<phrase n="lang_always_deleg_forw" t="תמיד קדימה"/>
+	<phrase n="lang_always_deleg_forw_typeSio" t="תמיד קדימה"/>
+	<phrase n="lang_tb_action_url" t="כתובת אתר פעולה"/>
+	<phrase n="lang_clear_call_history" t="נקה היסטוריית שיחות"/>
+	<phrase n="lang_headset_volume_only" t="שינוי עוצמת הקול של אוזניות USB אפשרי רק בדיבורית עצמה."/>
+	<phrase n="lang_hold_error" t="Hold failure, call has been muted. Press hold again to retry."/>
+	<phrase n="lang_retr_by" t="על ידי"/>
+	<phrase n="lang_ipv4" t="IPv4"/>
+	<phrase n="lang_ipv6" t="IPv6"/>
+	<phrase n="lang_ipv6_autoconf" t="SLAAC"/>
+	<phrase n="lang_refresh" t="לְרַעֲנֵן"/>
+	<phrase n="lang_may_take_some_time" t="הרענון עשוי להימשך זמן מה. המשך בכל זאת?"/>
+	<phrase n="lang_ip_address_not_available" t="לא זמין"/>
+	<phrase n="lang_menu_unlock" t="לבטל נעילה"/>
+	<phrase n="lang_menu_security" t="בִּטָחוֹן"/>
+	<phrase n="lang_route_team_call_for" t="קריאת צוות עבור"/>
+	<phrase n="lang_route_acd_for" t="שיחה קבוצתית ל"/>
+	<phrase n="lang_route_anonymous_acd" t="שיחת קבוצה אנונימית"/>
+	<phrase n="lang_route_anonymous_acd_for" t="שיחה קבוצתית אנונימית עבור"/>
+	<phrase n="lang_anonymous" t="בעילום שם"/>
+	<phrase n="lang_wish_barge_in" t="האם אתה רוצה להתפרץ?"/>
+	<phrase n="lang_location" t="מקום:"/>
+	<phrase n="lang_subject" t="נושא"/>
+	<phrase n="lang_dates" t="פגישות"/>
+	<phrase n="lang_menu_dates_today" t="פגישות היום"/>
+	<phrase n="lang_label_conference_organizer" t="מְאַרגֵן:"/>
+	<phrase n="lang_date_ongoing" t="עַכשָׁיו:"/>
+	<phrase n="lang_date_remind_me_later" t="תזכיר לי אחר כך"/>
+	<phrase n="lang_date_remind_later" t="יותר מאוחר"/>
+	<phrase n="lang_date_set_reminder_to" t="ל"/>
+	<phrase n="lang_minutes" t="דקות"/>
+	<phrase n="lang_date_reset_reminder" t="אפס את התזכורת"/>
+	<phrase n="lang_cannot_access_exchange" t="אין אפשרות לגשת לשרת Exchange."/>
+	<phrase n="lang_no_dates_today" t="שום דבר לא מתוכנן להיום"/>
+	<phrase n="lang_participants" t="משתתפים:"/>
+	<phrase n="lang_expansion_modules" t="מודולי הרחבה"/>
+	<phrase n="lang_wiz_vlan" t="האם אתה משתמש ב-VLAN?"/>
+	<phrase n="lang_wiz_ip4" t="האם אתה רוצה להגדיר IPv4?"/>
+	<phrase n="lang_wiz_ip6" t="הגדר IPv6"/>
+	<phrase n="lang_sxm_connected" t="מודול הרחבה טורית מחובר"/>
+	<phrase n="lang_uxm_connected" t="מודול הרחבת USB מחובר"/>
+	<phrase n="lang_uxm_cabeling_broken" t="כבל שגוי של מודול הרחבה"/>
+	<phrase n="lang_uxm_limit_exceeded" t="יותר מדי מודולי הרחבת USB מחוברים"/>
+	<phrase n="lang_vpn_active" t="VPN פעיל"/>
+	<phrase n="lang_wlan_active" t="Wlan פעיל"/>
+	<phrase n="lang_list_no_devices" t="(אין מכשירים זמינים)"/>
+	<phrase n="lang_bluetooth" t="בלוטות"/>
+	<phrase n="lang_bluetooth_connected_title" t="מכשיר מחובר"/>
+	<phrase n="lang_bluetooth_paired_list_title" t="רשימת התקנים מותאמים"/>
+	<phrase n="lang_bluetooth_active_connection" t="חיבור בלוטות' פעיל"/>
+	<phrase n="lang_bluetooth_discovered_list_title" t="רשימה של מכשירים שהתגלו"/>
+	<phrase n="lang_bluetooth_discovering" t="מגלים"/>
+	<phrase n="lang_bluetooth_unpairing" t="ביטול ההתאמה"/>
+	<phrase n="lang_bluetooth_pairing" t="צִמוּד"/>
+	<phrase n="lang_bluetooth_connecting" t="מְקַשֵׁר"/>
+	<phrase n="lang_bluetooth_disconnecting" t="מתנתק"/>
+	<phrase n="lang_callback_on_busy" t="התקשרות חוזרת על תפוס"/>
+	<phrase n="lang_auto_busy_redial" t="חיוג חוזר אוטומטי תפוס"/>
+	<phrase n="lang_decision_cob" t="כרגע עסוק. לקבלת הודעה כאשר היא זמינה, לחץ על 'אשר'. להשארת הודעה לחץ על 'X'."/>
+	<phrase n="lang_decision_cob_withoutvm" t="כרגע עסוק. לקבלת הודעה כאשר היא זמינה, לחץ על 'אשר'."/>
+	<phrase n="lang_callback" t="התקשר חזרה"/>
+	<phrase n="lang_callback_available" t="התקשרות חוזרת זמינה"/>
+	<phrase n="lang_linetype_callback" t="התקשר חזרה"/>
+	<phrase n="lang_linetype_callback_short" t="לְבֵנַת פֶּחַם"/>
+	<phrase n="lang_ringback_callpark_service" t="הועבר על ידי שירות החנייה"/>
+	<phrase n="lang_callpark_service" t="התקשר לשירות החניה"/>
+	<phrase n="lang_storage_mounted" t="דיסק USB מחובר"/>
+	<phrase n="lang_storage_mounted_typeSio" t="דיסק USB מחובר"/>
+	<phrase n="lang_storage_tomany" t="אתה יכול לחבר רק דיסק USB אחד"/>
+	<phrase n="lang_storage_umount" t="בטל את טעינת דיסק USB"/>
+	<phrase n="lang_no_participants_detected" t="לא זוהו משתתפים"/>
+	<phrase n="lang_ieee8021_method" t="מצב"/>
+	<phrase n="lang_menu_fkey_functions" t="פוּנקצִיָה"/>
+	<phrase n="lang_uxm_appearance" t="מראה חיצוני"/>
+	<phrase n="lang_put_through_by" t="הועבר על ידי"/>
+	<phrase n="lang_contact_not_in_list" t="לא נמצא ברשימת אנשי הקשר"/>
+	<phrase n="lang_msg_speaker_active" t="דיבורית מופעלת"/>
+	<phrase n="lang_msg_headset_active" t="מצב אוזניות מופעל"/>
+	<phrase n="lang_msg_handset_active" t="מצב השפופרת מופעל"/>
+	<phrase n="lang_msg_ringing_disabled" t="צלצול מושבת"/>
+	<phrase n="lang_msg_mute_active" t="הטלפון מושתק"/>
+	<phrase n="lang_wiz_aborted" t="אשף הופסק."/>
+	<phrase n="lang_menu_set_kbd_lock_pin" t="Change keyboard-lock PIN"/>
+	<phrase n="lang_menu_change_kbd_lock_pin" t="שנה את ה-PIN של נעילת המקלדת"/>
+	<phrase n="lang_no_valid_dsearch_config" t="אין תצורת חיפוש ספרייה חוקית"/>
+	<phrase n="lang_title_conferences" t="ועידות"/>
+	<phrase n="lang_no_conferences_found" t="לא נמצאו ועידות"/>
+	<phrase n="lang_conference_type" t="סוּג"/>
+	<phrase n="lang_conference_status" t="סטָטוּס"/>
+	<phrase n="lang_join_conference_long" t="להצטרף לוועידה"/>
+	<phrase n="lang_join_conference_as_moderator" t="הצטרף כמנחה"/>
+	<phrase n="lang_choose_menu" t="בחר תפריט"/>
+	<phrase n="lang_menu_shortcut" t="קיצור דרך לתפריט"/>
+	<phrase n="lang_using_time" t="שימוש בזמן"/>
+	<phrase n="lang_waiting_for_pnp" t="מחכה ל-PnP"/>
+	<phrase n="lang_fkey_contact_list_buddy" t="BLF (Server)"/>
+	<phrase n="lang_fkey_xmpp_presence" t="נוכחות אנשי קשר (XMPP)"/>
+	<phrase n="lang_csta_prompt_title" t="חייג עכשיו?"/>
+	<phrase n="lang_contact_is_favorite" t="האם איש הקשר הזה הוא אחד המועדפים עליך?"/>
+	<phrase n="lang_currently_set_to" t="כרגע מוגדר ל:"/>
+	<phrase n="lang_vol_label_contrast" t="ניגודיות תצוגה משנית"/>
+	<phrase n="lang_menu_fkeys_phone" t="מקשי קו"/>
+	<phrase n="lang_menu_dkeys_phone" t="מפתחות ייעודיים"/>
+	<phrase n="lang_menu_context_sensitive_keys_phone" t="מפתחות רגישים להקשר"/>
+	<phrase n="lang_menu_smartlabel_fkeys" t="מפתחות SmartLabel"/>
+	<phrase n="lang_menu_smartlabel_page" t="עמוד"/>
+	<phrase n="lang_menu_fkeys_page" t="עמוד מפתחות שורה"/>
+	<phrase n="lang_menu_fkeys_sxm" t="מקשים ב-SXM"/>
+	<phrase n="lang_menu_fkeys_uxm" t="מפתחות הרחבה"/>
+	<phrase n="lang_server_directory_search" t="חיפוש ספריית שרת"/>
+	<phrase n="lang_menu_fontsize" t="גודל גופן"/>
+	<phrase n="lang_uxm_fontsize_lines" t="גודל גופן (פריסת קו)"/>
+	<phrase n="lang_uxm_fontsize_tiles" t="גודל גופן (פריסת אריחים)"/>
+	<phrase n="lang_menu_text_alignment" t="יישור טקסט"/>
+	<phrase n="lang_left" t="שמאלה"/>
+	<phrase n="lang_right" t="ימין"/>
+	<phrase n="lang_center" t="מֶרְכָּז"/>
+	<phrase n="lang_alternate" t="לְהַחלִיף"/>
+	<phrase n="lang_menu_return_to_first_page" t="חזור לעמוד הראשון"/>
+	<phrase n="lang_automatic_return" t="החזרה אוטומטית"/>
+	<phrase n="lang_warning" t="אַזהָרָה"/>
+	<phrase n="lang_public_address" t="כתובת ציבורית"/>
+	<phrase n="lang_menu_volume" t="בקר עוצמת שמע"/>
+	<phrase n="lang_vol_ringer_text" t="עוצמת צלצול"/>
+	<phrase n="lang_vol_headset_text" t="עוצמת אוזנייה"/>
+	<phrase n="lang_vol_handset_text" t="עוצמת אפרכסת"/>
+	<phrase n="lang_vol_speaker_text" t="עוצמת רמקול"/>
+	<phrase n="lang_list_rejected" t="נִדחֶה"/>
+	<phrase n="lang_enum_disp_func_key_conference" t="וְעִידָה"/>
+	<phrase n="lang_enum_disp_func_key_ivr" t="IVR"/>
+	<phrase n="lang_enum_disp_func_key_callback_on_busy" t="התקשר חזרה"/>
+	<phrase n="lang_fkeys_ssi_context" t="הֶקשֵׁר"/>
+	<phrase n="lang_fkeys_ssi_type" t="סוּג"/>
+	<phrase n="lang_fkeys_ssi_active" t="פָּעִיל"/>
+	<phrase n="lang_fkeys_ssi_icon" t="סמל"/>
+	<phrase n="lang_default_icon" t="סמל ברירת מחדל"/>
+	<phrase n="lang_custom_icon" t="סמל מותאם אישית"/>
+	<phrase n="lang_FirstName" t="שם פרטי"/>
+	<phrase n="lang_LastName" t="שם משפחה"/>
+	<phrase n="lang_Home" t="מספר בית"/>
+	<phrase n="lang_Office" t="מספר משרד"/>
+	<phrase n="lang_Mobile" t="מספר טלפון נייד"/>
+	<phrase n="lang_Unqualified" t="מספר לא מוסמך"/>
+	<phrase n="lang_edit_contact" t="ערוך איש קשר"/>
+	<phrase n="lang_msw_query" t="שליחת נתוני איש קשר לשרת נכשלה:"/>
+	<phrase n="lang_indicator" t="אינדיקטור"/>
+	<phrase n="lang_protocol" t="נוהל"/>
+	<phrase n="lang_target_forward_busy" t="העבר שיחות כשעמוס ל"/>
+	<phrase n="lang_target_forward_timeout" t="העבר שיחות לאחר"/>
+	<phrase n="lang_target_forward_timeout_typeSio" t="העבר שיחות לאחר"/>
+	<phrase n="lang_WIFI_SSID" t="שם רשת"/>
+	<phrase n="lang_WIFI_auth_mode" t="הצפנה"/>
+	<phrase n="lang_WIFI_WPA_Encryption" t="הצפנת WPA"/>
+	<phrase n="lang_WIFI_WPA" t="WPA"/>
+	<phrase n="lang_WIFI_WPA2PSK" t="WPA2"/>
+	<phrase n="lang_WIFI_WEP" t="WEP"/>
+	<phrase n="lang_WIFI_OPEN" t="לִפְתוֹחַ"/>
+	<phrase n="lang_WIFI_AES" t="AES"/>
+	<phrase n="lang_WIFI_TKIP" t="TKIP"/>
+	<phrase n="lang_WIFI_SCAN_NETWORKS" t="סרוק WLAN"/>
+	<phrase n="lang_WIFI_MANUAL_SETUP" t="התקנה ידנית"/>
+	<phrase n="lang_contact_details" t="פרטי יצירת קשר"/>
+	<phrase n="lang_WIFI_CONNECTED_TO" t="מחובר ל"/>
+	<phrase n="lang_WIFI_NOT_CONNECTED" t="לא מחובר"/>
+	<phrase n="lang_unhold" t="להחזיר"/>
+	<phrase n="lang_empty" t="ריק"/>
+	<phrase n="lang_F_SNOM" t="סנום/ענן"/>
+	<phrase n="lang_prefs_ssi_date_us_format" t="פורמט תאריך"/>
+	<phrase n="lang_prefs_ssi_time_24_format" t="שעון 24 שעות"/>
+	<phrase n="lang_time_symbol_second" t="s"/>
+	<phrase n="lang_all_accounts" t="כל הזהויות"/>
+	<phrase n="lang_reboot_to_apply_new_settings" t="לאתחל עכשיו כדי שהגדרות חדשות ייכנסו לתוקף?"/>
+	<phrase n="lang_TLS" t="TLS"/>
+	<phrase n="lang_MD5" t="MD5"/>
+	<phrase n="lang_WIFI_SWITCH_OFF_WLAN" t="כבה את ה-WLAN"/>
+	<phrase n="lang_ErrorNotSupportedByManager" t="אינו נתמך"/>
+	<phrase n="lang_ErrorContactNotFound" t="איש קשר לא נמצא"/>
+	<phrase n="lang_ErrorInvalidCredentials" t="אישורים לא חוקיים"/>
+	<phrase n="lang_ErrorInvalidArgument" t="טיעון לא חוקי"/>
+	<phrase n="lang_ErrorRequestPending" t="בקשה בהמתנה"/>
+	<phrase n="lang_ErrorNotInitialized" t="לא אתחול"/>
+	<phrase n="lang_ErrorInComplete" t="לא שלם"/>
+	<phrase n="lang_ErrorOutOfMemory" t="חסר הזיכרון"/>
+	<phrase n="lang_Contact_pool" t="צור קשר עם פול"/>
+	<phrase n="lang_advanced_autoneg" t="משא ומתן אוטומטי"/>
+	<phrase n="lang_advanced_10full" t="10 Mbit Full Duplex"/>
+	<phrase n="lang_advanced_10half" t="10 Mbit Half Duplex"/>
+	<phrase n="lang_advanced_100full" t="100 Mbit Full Duplex"/>
+	<phrase n="lang_advanced_100half" t="100 Mbit Half Duplex"/>
+	<phrase n="lang_advanced_1000full" t="1000 Mbit Full Duplex"/>
+	<phrase n="lang_Hardware" t="חוּמרָה"/>
+	<phrase n="lang_NET_port_speed" t="מהירות יציאה נטו/דופלקס"/>
+	<phrase n="lang_PC_port_speed" t="מהירות יציאת מחשב/דופלקס"/>
+	<phrase n="lang_Action_on_eth_replug" t="פעולה בחיבור מחדש של כבל Ethernet"/>
+	<phrase n="lang_advanced_donothing" t="להתעלם"/>
+	<phrase n="lang_line_reregister" t="הירשם מחדש"/>
+	<phrase n="lang_NTP" t="NTP"/>
+	<phrase n="lang_DNS" t="DNS"/>
+	<phrase n="lang_LLDP" t="LLDP"/>
+	<phrase n="lang_NTP_refresh_timer" t="טיימר רענון NTP"/>
+	<phrase n="lang_8021x" t="802.1X"/>
+	<phrase n="lang_Expansion" t="הַרחָבָה"/>
+	<phrase n="lang_expansion_layout" t="פריסת הרחבה"/>
+	<phrase n="lang_Expansion_module" t="מודול הרחבה"/>
+	<phrase n="lang_Please_reboot" t="אנא לאתחל!"/>
+	<phrase n="lang_All_settings_saved" t="כל ההגדרות נשמרו"/>
+	<phrase n="lang_WIFI_SCAN_RUNNING" t="סורק..."/>
+	<phrase n="lang_WIFI_CONNECTING" t="מְקַשֵׁר..."/>
+	<phrase n="lang_wifi_connect_success_reboot_to_continue_msg1" t="הפעל מחדש כדי להמשיך"/>
+	<phrase n="lang_wifi_connect_success_password_ok_msg2" t="הסיסמה בסדר"/>
+	<phrase n="lang_wifi_connect_fail_invalid_settings_msg1" t="הגדרות לא חוקיות"/>
+	<phrase n="lang_wifi_connect_fail_please_retry_msg2" t="אנא נסה שוב"/>
+	<phrase n="lang_usb_wifi_unavailable" t="USB WiFi לא זמין"/>
+	<phrase n="lang_usb_wifi_connected" t="USB WiFi מחובר"/>
+	<phrase n="lang_usb_wifi_disconnected" t="USB WiFi מנותק"/>
+	<phrase n="lang_is_a_favorite" t="הוא מועדף"/>
+	<phrase n="lang_Lines" t="פריסת קו"/>
+	<phrase n="lang_Tiles" t="פריסת אריחים"/>
+	<phrase n="lang_tbook_emtpy" t="&lt;Empty&gt;"/>
+	<phrase n="lang_enter_starting_uppercase" t="להיכנס"/>
+	<phrase n="lang_characters_starting_lowercase" t="דמויות"/>
+	<phrase n="lang_user_server_type" t="סוג שרת נתמך"/>
+	<phrase n="lang_broadsoft_features" t="תכונות Broadsoft"/>
+	<phrase n="lang_xsi_server" t="שרת XSI"/>
+	<phrase n="lang_xsi_user" t="משתמש XSI"/>
+	<phrase n="lang_xsi_password" t="סיסמת XSI"/>
+	<phrase n="lang_xsi_retry_timer" t="XSI נסה שוב טיימר"/>
+	<phrase n="lang_xsi_events" t="אירועי XSI"/>
+	<phrase n="lang_xmpp_jid" t="מזהה XMPP"/>
+	<phrase n="lang_xmpp_password" t="סיסמת XMPP"/>
+	<phrase n="lang_no_headset_present" t="אין אוזניות נוכחות"/>
+	<phrase n="lang_headset_detection" t="זיהוי אוזניות"/>
+	<phrase n="lang_msw_services" t="שירותי Metaswitch"/>
+	<phrase n="lang_msw_directory_number" t="מספר מדריך Metaswitch"/>
+	<phrase n="lang_msw_password" t="סיסמת Metaswitch"/>
+	<phrase n="lang_msw_web_url" t="כתובת האתר של שרת Metaswitch"/>
+	<phrase n="lang_xsi_dir_enterprise" t="מדריך ארגוני"/>
+	<phrase n="lang_xsi_dir_enterprise_common" t="רשימת טלפונים משותפת של Enterprise"/>
+	<phrase n="lang_xsi_dir_group" t="ספריית קבוצות"/>
+	<phrase n="lang_xsi_dir_group_common" t="רשימת טלפונים משותפת לקבוצה"/>
+	<phrase n="lang_xsi_dir_personal" t="רשימת טלפונים אישית"/>
+	<phrase n="lang_xsi_anywhere" t="Anywhere"/>
+	<phrase n="lang_xsi_location_new_entry" t="&lt;New Entry&gt;"/>
+	<phrase n="lang_xsi_location_edit_description" t="ערוך תיאור מיקום"/>
+	<phrase n="lang_xsi_location_description" t="תיאור"/>
+	<phrase n="lang_xsi_location_edit_number" t="ערוך מספר מיקום"/>
+	<phrase n="lang_number_str" t="מספר "/>
+	<phrase n="lang_xsi_location_status_creating" t="יצירה"/>
+	<phrase n="lang_xsi_location_status_modifying" t="שינוי"/>
+	<phrase n="lang_xsi_location_status_deleting" t="מחיקה"/>
+	<phrase n="lang_xsi_location_error_empty_number" t="מספר הטלפון לא חייב להיות ריק"/>
+	<phrase n="lang_xsi_location_error_number_exists" t="מספר הטלפון כבר קיים"/>
+	<phrase n="lang_xsi_location_error_empty_description" t="התיאור לא יכול להיות ריק"/>
+	<phrase n="lang_visual_voicemail" t="דואר קולי ויזואלי"/>
+	<phrase n="lang_feature_works" t="תכונה עובדת"/>
+	<phrase n="lang_voicemail_name" t="שֵׁם"/>
+	<phrase n="lang_voicemail_call_number" t="מספר שיחה"/>
+	<phrase n="lang_voicemail_date_time" t="Date &amp; Time"/>
+	<phrase n="lang_voicemail_duration" t="מֶשֶׁך"/>
+	<phrase n="lang_xsi_anywhere_clicktodial" t="לחץ כדי לחייג"/>
+	<phrase n="lang_xsi_anywhere_grouppaging" t="זימון קבוצתי"/>
+	<phrase n="lang_xsi_anywhere_settings" t="הגדרות"/>
+	<phrase n="lang_remote_office" t="משרד מרוחק"/>
+	<phrase n="lang_xsi_anywhereportal" t="פורטל בכל מקום"/>
+	<phrase n="lang_xsi_anywhereportal_number" t="מספר טלפון"/>
+	<phrase n="lang_menu_primary_display" t="תצוגה ראשית"/>
+	<phrase n="lang_menu_secondary_display" t="תצוגה משנית"/>
+	<phrase n="lang_enable_remote_office" t="הפעל משרד מרוחק"/>
+	<phrase n="lang_call_center_list" t="רשימת מוקדי טלפון"/>
+	<phrase n="lang_call_center_status" t="סטטוס מוקד טלפוני"/>
+	<phrase n="lang_call_center_joined" t="הצטרף"/>
+	<phrase n="lang_call_center_unable_to_join" t="לא ניתן להצטרף למרכז הטלפוני"/>
+	<phrase n="lang_call_center_join_not_allowed" t="אסור להצטרף"/>
+	<phrase n="lang_call_center_unjoin_not_allowed" t="אסור לבטל את ההצטרפות"/>
+	<phrase n="lang_call_center_joining" t="הִצטָרְפוּת"/>
+	<phrase n="lang_call_recording_control" t="בקרת הקלטת שיחות"/>
+	<phrase n="lang_pause_recording" t="השהה את ההקלטה"/>
+	<phrase n="lang_resume_recording" t="המשך הקלטה"/>
+	<phrase n="lang_xsi_simul_ring" t="צלצול סימולטני"/>
+	<phrase n="lang_xsi_simul_ring_on_call" t="אל תצלצל בזמן שיחה"/>
+	<phrase n="lang_xsi_simul_ring_edit_phone_number" t="מספר טלפון"/>
+	<phrase n="lang_xsi_simul_ring_enter_phone_number" t="הכנס מספר טלפון"/>
+	<phrase n="lang_xsi_simul_ring_edit" t="לַעֲרוֹך"/>
+	<phrase n="lang_xsi_simul_ring_number" t="מספר טלפון"/>
+	<phrase n="lang_xsi_simul_ring_add_entry" t="הוסף ערך חדש"/>
+	<phrase n="lang_xsi_simul_ring_ans_confirm" t="אישור תשובה"/>
+	<phrase n="lang_xsi_simul_ring_number_exists_error" t="מספר הטלפון כבר קיים"/>
+	<phrase n="lang_xsi_simul_ring_number_empty_error" t="מספר הטלפון ריק."/>
+	<phrase n="lang_xsi_executive" t="מְנַהֵל"/>
+	<phrase n="lang_xsi_executive_assistant" t="עוזר מנהלי"/>
+	<phrase n="lang_xsi_call_filtering" t="סינון שיחות"/>
+	<phrase n="lang_xsi_call_filtering_enable" t="סינון שיחות"/>
+	<phrase n="lang_xsi_call_filtering_mode" t="מצב סינון"/>
+	<phrase n="lang_xsi_call_filtering_type" t="סוג סינון"/>
+	<phrase n="lang_xsi_call_filtering_simple" t="פָּשׁוּט"/>
+	<phrase n="lang_xsi_call_filtering_advanced" t="מִתקַדֵם"/>
+	<phrase n="lang_xsi_call_filtering_all" t="כל השיחות"/>
+	<phrase n="lang_xsi_call_filtering_internal" t="כל השיחות הפנימיות"/>
+	<phrase n="lang_xsi_call_filtering_external" t="כל השיחות החיצוניות"/>
+	<phrase n="lang_xsi_call_screening" t="סינון שיחות"/>
+	<phrase n="lang_xsi_call_screening_type" t="סוג התראה"/>
+	<phrase n="lang_xsi_call_screening_alert_mobile" t="התראה על מיקומים ניידים"/>
+	<phrase n="lang_xsi_call_screening_alert_anywhere" t="התראה על מיקומים בכל מקום"/>
+	<phrase n="lang_xsi_call_screening_alert_sca" t="התראה על מיקומי SCA"/>
+	<phrase n="lang_xsi_call_screening_silent" t="שקט"/>
+	<phrase n="lang_xsi_call_screening_ringsplash" t="Ring Splash"/>
+	<phrase n="lang_xsi_executive_view_assistants" t="הצג עוזרים"/>
+	<phrase n="lang_xsi_executive_allow_optin" t="אפשר השתתפות/ביטול של עוזרים"/>
+	<phrase n="lang_xsi_opt_in_out_to_executive" t="מנהל הסכמה/יציאה"/>
+	<phrase n="lang_xsi_opt_in_to_executive" t="לבחור ב"/>
+	<phrase n="lang_xsi_opt_out_to_executive" t="ביטול הסכמה"/>
+	<phrase n="lang_xsi_assistant_call_divert" t="להפנות"/>
+	<phrase n="lang_xsi_assistant_call_divert_number" t="מספר הפנייה"/>
+	<phrase n="lang_xsi_call_alerting" t="התראה על שיחות"/>
+	<phrase n="lang_xsi_call_alerting_mode" t="מצב התראה"/>
+	<phrase n="lang_xsi_call_alerting_mode_simu" t="סִימוּלטָנִי"/>
+	<phrase n="lang_xsi_call_alerting_mode_seq" t="סִדרָתִי"/>
+	<phrase n="lang_xsi_call_alerting_id_name" t="שם קו קורא"/>
+	<phrase n="lang_xsi_call_alerting_id_exec_name" t="שם ההנהלה"/>
+	<phrase n="lang_xsi_call_alerting_id_origin_name" t="שם המוצא"/>
+	<phrase n="lang_xsi_call_alerting_id_exec_origin_name" t="שמות מנהלים-מקוריים"/>
+	<phrase n="lang_xsi_call_alerting_id_origin_exec_name" t="שמות יזם-מנהלים"/>
+	<phrase n="lang_xsi_call_custom_name" t="המותאם אישית"/>
+	<phrase n="lang_xsi_call_alerting_custom_id_name" t="שם זיהוי קו שיחות מותאם אישית"/>
+	<phrase n="lang_xsi_call_alerting_id_number" t="מספר זיהוי קו שיחות"/>
+	<phrase n="lang_xsi_call_alerting_id_exec_number" t="מספר מנהלים"/>
+	<phrase n="lang_xsi_call_alerting_id_origin_number" t="מספר המוצא"/>
+	<phrase n="lang_xsi_call_alerting_custom_id_number" t="מספר זיהוי קו שיחות מותאם אישית"/>
+	<phrase n="lang_xsi_call_alerting_recall_after" t="Call Push Recall After"/>
+	<phrase n="lang_xsi_call_alerting_recall_after_range" t="הזן מספר טבעות (2-20)"/>
+	<phrase n="lang_xsi_call_alerting_next_assistant" t="מתקדם לעוזר הבא אחרי"/>
+	<phrase n="lang_xsi_call_alerting_next_assistant_range" t="הזן מספר טבעות (1-20)"/>
+	<phrase n="lang_xsi_call_alerting_rollover_after" t="גלגול לאחר המתנה"/>
+	<phrase n="lang_xsi_call_alerting_rollover_after_time" t="זמן המתנה לגלגול"/>
+	<phrase n="lang_xsi_call_alerting_rollover_after_time_range" t="הזן זמן בשניות (0-60)"/>
+	<phrase n="lang_xsi_call_alerting_rollover_action" t="פעולת גלגול"/>
+	<phrase n="lang_xsi_call_alerting_rollover_action_vm" t="הודעות קוליות"/>
+	<phrase n="lang_xsi_call_alerting_rollover_action_fwd" t="קָדִימָה"/>
+	<phrase n="lang_xsi_call_alerting_rollover_action_na" t="אין עיבוד תשובה"/>
+	<phrase n="lang_xsi_call_alerting_rollover_fwd_number" t="מספר גלגול קדימה"/>
+	<phrase n="lang_value_out_of_range" t="ערך שהוזן מחוץ לטווח"/>
+	<phrase n="lang_xsi_callon_behalfof_select_executive" t="בחר מנהל"/>
+	<phrase n="lang_collaborate_room_details" t="שיתוף פעולה עם פרטי החדר"/>
+	<phrase n="lang_collaborate_room_name" t="שם חדר"/>
+	<phrase n="lang_collaborate_room_type" t="סוג חדר"/>
+	<phrase n="lang_collaborate_join_room" t="הצטרף לחדר"/>
+	<phrase n="lang_unavailable_state" t="הזן Unavail. קוד"/>
+	<phrase n="lang_enter_unavailable_code" t="הזן Unavail. קוד"/>
+	<phrase n="lang_ringer_is_off" t="הצלצול כבוי"/>
+	<phrase n="lang_uxm_update" t="עדכון מודול הרחבה"/>
+	<phrase n="lang_uxm_update_infotext_progress" t="עדכון בתהליך. אל תנתק את הטלפון או מודול ההרחבה במהלך העדכון."/>
+	<phrase n="lang_uxm_update_infotext_prepare" t="מתכוננים לעדכון. אל תנתק את הטלפון או הרחבה במהלך העדכון."/>
+	<phrase n="lang_F_DELETE_MSG" t="דל מ"/>
+	<phrase n="lang_F_DELETE_MSG_typeSio" t="Del Message"/>
+	<phrase n="lang_F_DELETE_MSG_smartlabel" t="Del Msg"/>
+	<phrase n="lang_F_DELETE_MSG_full" t="למחוק הודעה"/>
+	<phrase n="lang_F_NEXT_ID" t="ID↓"/>
+	<phrase n="lang_F_NEXT_ID_typeSio" t="זהות הבאה"/>
+	<phrase n="lang_F_NEXT_ID_smartlabel" t="תעודת זהות הבאה"/>
+	<phrase n="lang_F_PREV_ID" t="ID↑"/>
+	<phrase n="lang_F_PREV_ID_typeSio" t="זהות קודמת"/>
+	<phrase n="lang_F_PREV_ID_smartlabel" t="תעודת זהות קודמת"/>
+	<phrase n="lang_F_OCIP" t="OCI-P"/>
+	<phrase n="lang_F_SAB" t="S Dir"/>
+	<phrase n="lang_F_SAB_typeSio" t="S Directory"/>
+	<phrase n="lang_F_SAB_smartlabel" t="מַדרִיך"/>
+	<phrase n="lang_F_ABS" t="שרירי בטן"/>
+	<phrase n="lang_F_ABS_typeSio" t="AB חיפוש"/>
+	<phrase n="lang_addressbook_menu" t="בחר פנקס כתובות"/>
+	<phrase n="lang_addressbook_menu_local" t="מְקוֹמִי"/>
+	<phrase n="lang_multicast_zones_title" t="אזורי ריבוי שידורים"/>
+	<phrase n="lang_no_multicast_zones" t="אין אזורי שידור ריבוי זמינים"/>
+	<phrase n="lang_acd_state" t="מצב ACD"/>
+	<phrase n="lang_please_sign_into_set_acd_state" t="אנא היכנס כדי להגדיר מצב ACD"/>
+	<phrase n="lang_fkey_longpress_support" t="תכונת LP"/>
+	<phrase n="lang_important" t="חָשׁוּב"/>
+	<phrase n="lang_SmartTransferEditDescription" t="הזן יעד העברה חכמה"/>
+	<phrase n="lang_SmartTransfer" t="SmartTransfer"/>
+	<phrase n="lang_SmartTransfer_ready" t="מקש בחירה מוכן להעברת שיחות."/>
+	<phrase n="lang_department" t="מַחלָקָה"/>
+	<phrase n="lang_extensions" t="הרחבות"/>
+	<phrase n="lang_menu_title_text_options" t="אפשרויות טקסט"/>
+	<phrase n="lang_F_ADD_LOCATION" t="הוסף מיקום"/>
+	<phrase n="lang_gk_mode_none" t="ריק"/>
+	<phrase n="lang_demo_mode" t="במצב הדגמה"/>
+	<phrase n="lang_transfer_or" t="העבר או"/>
+	<phrase n="lang_call_pickup" t="איסוף שיחות?"/>
+	<phrase n="lang_choose_an_action" t="בחר פעולה"/>
+	<phrase n="lang_Conference_Setup" t="הגדרת ועידה"/>
+	<phrase n="lang_Conference_First_Participant" t="משתתף אחד בכנס"/>
+	<phrase n="lang_Conference_Second_Participant" t="משתתף בכנס שני"/>
+	<phrase n="lang_menu_smart_label" t="אפשרויות SmartLabel"/>
+	<phrase n="lang_menu_idle_screen" t="התנהגות מסך סרק"/>
+	<phrase n="lang_menu_call_screen" t="התנהגות מסכי שיחה"/>
+	<phrase n="lang_menu_other_screen" t="התנהגות מסכים אחרים"/>
+	<phrase n="lang_menu_label_default_mode" t="מצב תצוגה ברירת מחדל"/>
+	<phrase n="lang_menu_label_expanded_mode" t="מצב תצוגה חלופי"/>
+	<phrase n="lang_menu_label_expansion_triggers" t="טריגר תצוגה חלופי"/>
+	<phrase n="lang_menu_short_label" t="תווית קצרה"/>
+	<phrase n="lang_menu_full_label" t="תווית מלאה"/>
+	<phrase n="lang_menu_short_label_mode" t="מצב תווית קצרה"/>
+	<phrase n="lang_menu_short_press" t="לחיצה קצרה על מקש עמוד"/>
+	<phrase n="lang_menu_long_press" t="לחץ לחיצה ארוכה על מקש עמוד"/>
+	<phrase n="lang_menu_proximity_sensor" t="חיישן קרבה"/>
+	<phrase n="lang_menu_P2_short_press" t="לחיצה קצרה על P2"/>
+	<phrase n="lang_menu_P2_long_press" t="לחיצה ארוכה על P2"/>
+	<phrase n="lang_menu_P3_short_press" t="לחיצה קצרה על P3"/>
+	<phrase n="lang_menu_P3_long_press" t="לחץ לחיצה ארוכה על P3"/>
+	<phrase n="lang_menu_P4_short_press" t="לחיצה קצרה על P4"/>
+	<phrase n="lang_menu_P4_long_press" t="לחץ לחיצה ארוכה על P4"/>
+	<phrase n="lang_menu_P8_short_press" t="לחיצה קצרה על P8"/>
+	<phrase n="lang_menu_P8_long_press" t="לחיצה ארוכה על P8"/>
+	<phrase n="lang_menu_P10_short_press" t="לחיצה קצרה P10"/>
+	<phrase n="lang_menu_P10_long_press" t="לחיצה ארוכה על P10"/>
+	<phrase n="lang_short_press" t="לחיצה קצרה"/>
+	<phrase n="lang_fkey_press" t="הקש Fkey"/>
+	<phrase n="lang_long_press" t="לחיצה ארוכה"/>
+	<phrase n="lang_short_label_mode_icon" t="סמל בלבד"/>
+	<phrase n="lang_smartlabel_mode_text" t="רק טקסט"/>
+	<phrase n="lang_smartlabel_mode_icon_text" t="סמל וטקסט"/>
+	<phrase n="lang_status_msg_uxm_update_required" t=" צריך עדכון"/>
+	<phrase n="lang_status_detail_uxm_update_required" t="עדכן את מודול ההרחבה לגרסה העדכנית ביותר כדי להפעיל אותו."/>
+	<phrase n="lang_status_detail_uxm_update_required2" t="אנא ודא שיש רק הרחבה אחת המחוברת לטלפון ושההרחבה אינה מחוברת לאספקת חשמל נפרדת."/>
+	<phrase n="lang_unhandled_item" t="פריט לא מטופל:"/>
+	<phrase n="lang_preferences_general" t="General"/>
+	<phrase n="lang_quick_dial_contacts" t="אנשי קשר בחיוג מהיר"/>
+	<phrase n="lang_start_tbook_download" t="להתחיל להוריד ספרייה?"/>
+	<phrase n="lang_tbook_download" t="הורדת ספרייה"/>
+	<phrase n="lang_tbook_download_started" t="הורדת הספרייה החלה עבור זהות"/>
+	<phrase n="lang_tbook_download_finished" t="הורדת הספרייה הושלמה עבור זהות"/>
+	<phrase n="lang_tbook_download_failed" t="הורדת הספרייה נכשלה עבור זהות"/>
+	<phrase n="lang_tbook_download_not_possible" t="לא ניתן להוריד ספרייה על זהות"/>
+	<phrase n="lang_tbook_download_overflowed" t="הורדת הספרייה לא הושלמה (חרגת מהמגבלה הפנימית)."/>
+	<phrase n="lang_tbook_is_full" t="ספר הכתובות מלא"/>
+	<phrase n="lang_F_HOTELING" t="מלון"/>
+	<phrase n="lang_F_HOTELING_typeSio" t="מלונאות"/>
+	<phrase n="lang_F_HOTELING_smartlabel" t="מלונאות"/>
+	<phrase n="lang_F_GUEST_LOGIN" t="התחברות אורח"/>
+	<phrase n="lang_F_GUEST_LOGOUT" t="התנתק אורח"/>
+	<phrase n="lang_F_GUEST_LOGIN_smartlabel" t="אורח פנימה"/>
+	<phrase n="lang_F_GUEST_LOGOUT_smartlabel" t="אורח בחוץ"/>
+	<phrase n="lang_F_LOGIN" t="התחברות"/>
+	<phrase n="lang_F_LOGOUT" t="להתנתק"/>
+	<phrase n="lang_smartlabel_id" t="תְעוּדַת זֶהוּת"/>
+	<phrase n="lang_title_guest_logout" t="התנתק אורח"/>
+	<phrase n="lang_confirm_guest_logout" t="האם אתה בטוח שברצונך להתנתק?"/>
+	<phrase n="lang_no_contacts" t="אין אנשי קשר"/>
+	<phrase n="lang_hoteling_guest" t="אורח מלונאות"/>
+	<phrase n="lang_logging_out" t="מתנתק..."/>
+	<phrase n="lang_logging_in" t="מתחבר..."/>
+	<phrase n="lang_login_failed" t="ההתחברות נכשלה"/>
+	<phrase n="lang_acd_signout_message" t="תצא מ-ACD. האם להמשיך עם התחברות אורח?"/>
+	<phrase n="lang_title_guest_login" t="התחברות אורח"/>
+	<phrase n="lang_F_MARK_READ" t="סמן קרא"/>
+	<phrase n="lang_F_MARK_UNREAD" t="סמן כלא נקרא"/>
+	<phrase n="lang_call_recording_mode_never" t="לעולם לא"/>
+	<phrase n="lang_call_recording_mode_always" t="תמיד"/>
+	<phrase n="lang_call_recording_mode_always_pause_resume" t="תמיד עם השהייה/המשך"/>
+	<phrase n="lang_call_recording_mode_on_demand" t="לפי דרישה"/>
+	<phrase n="lang_call_recording_mode_on_demand_user_start" t="לפי דרישה-התחלת משתמש"/>
+	<phrase n="lang_smartlabel_dismiss_timeout" t="חזור למצב ברירת מחדל"/>
+	<phrase n="lang_call_recording_mode" t="מצב הקלטת שיחות"/>
+	<phrase n="lang_menu_full_label_mode" t="מצב תווית מלאה"/>
+	<phrase n="lang_menu_label_mode" t="מצב תווית"/>
+	<phrase n="lang_guest_pin" t="PIN של אורח"/>
+	<phrase n="lang_incorrect_pin" t="PIN שגוי"/>
+	<phrase n="lang_voicemail_info" t="מידע על דואר קולי"/>
+	<phrase n="lang_confirm_del_deny_list_item_title" t="מחק פריט רשימת חסימות"/>
+	<phrase n="lang_confirm_del_number_from_deny_list" t="להסיר מרשימת החסומים?"/>
+	<phrase n="lang_confirm_del_menu_configuration" t="הסר את תצורת מפתח הגדרות"/>
+	<phrase n="lang_confirm_message" t="האם אתה באמת רוצה לעשות את זה?"/>
+	<phrase n="lang_caller_id_blocking" t="Caller ID Blocking"/>
+	<phrase n="lang_screen_items_color_and_opacity_title" t="צבע ואטימות"/>
+	<phrase n="lang_ui_themes" t="ערכות נושא"/>
+	<phrase n="lang_theme_light" t="אוֹר"/>
+	<phrase n="lang_theme_dark" t="אפל"/>
+	<phrase n="lang_theme_colorful" t="צִבעוֹנִי"/>
+	<phrase n="lang_theme_industrial" t="תַעֲשִׂיָתִי"/>
+	<phrase n="lang_theme_contrast" t="Contrast"/>
+	<phrase n="lang_screen_items_color_title" t="צֶבַע"/>
+	<phrase n="lang_screen_items_opacity_title" t="אֲטִימוּת"/>
+	<phrase n="lang_screen_items_enter_custom_color_title" t="הזן ערכים מותאמים אישית"/>
+	<phrase n="lang_screen_item_titlebar_text" t="טקסט שורת הכותרת"/>
+	<phrase n="lang_screen_item_text" t="טֶקסט"/>
+	<phrase n="lang_screen_item_subtext" t="סאבטקסט"/>
+	<phrase n="lang_screen_item_extratext" t="טקסט נוסף"/>
+	<phrase n="lang_screen_item_extratext2" t="טקסט נוסף 2"/>
+	<phrase n="lang_screen_item_titlebar_background" t="רקע שורת הכותרת"/>
+	<phrase n="lang_screen_item_background" t="רקע כללי"/>
+	<phrase n="lang_screen_item_fkey_background" t="רקע Fkey"/>
+	<phrase n="lang_screen_item_fkey_pressed_background" t="Fkey לחוץ רקע"/>
+	<phrase n="lang_screen_item_fkey_separator" t="מפריד Fkey"/>
+	<phrase n="lang_screen_item_fkey_label" t="תווית Fkey"/>
+	<phrase n="lang_screen_item_fkey_pressed_label" t="Fkey לחוץ תווית"/>
+	<phrase n="lang_screen_item_line_background" t="רקע קו"/>
+	<phrase n="lang_screen_item_selected_line_background" t="רקע שורה נבחר"/>
+	<phrase n="lang_screen_item_selected_line_indicator" t="מחוון קו נבחר"/>
+	<phrase n="lang_screen_item_selected_line_text" t="טקסט שורה שנבחר"/>
+	<phrase n="lang_screen_item_line_separator" t="מפריד קווים"/>
+	<phrase n="lang_screen_item_scrollbar" t="בר גלילה"/>
+	<phrase n="lang_screen_item_cursor" t="סַמָן"/>
+	<phrase n="lang_screen_item_status_msgs_background" t="רקע הודעות סטטוס"/>
+	<phrase n="lang_screen_item_status_msgs_border" t="גבול הודעות סטטוס"/>
+	<phrase n="lang_screen_item_smartlabel_background" t="רקע SmartLabel"/>
+	<phrase n="lang_screen_item_smartlabel_pressed_background" t="SmartLabel לחוץ רקע"/>
+	<phrase n="lang_screen_item_smartlabel_separator" t="מפריד SmartLabel"/>
+	<phrase n="lang_screen_item_smartlabel_label" t="תווית SmartLabel"/>
+	<phrase n="lang_screen_item_smartlabel_pressed_label" t="SmartLabel לחוץ תווית"/>
+	<phrase n="lang_screen_item_expansion_module_background" t="רקע מודול הרחבה"/>
+	<phrase n="lang_screen_item_expansion_module_pressed_background" t="מודול הרחבה לחוץ רקע"/>
+	<phrase n="lang_screen_item_expansion_module_separator" t="מפריד מודול הרחבה"/>
+	<phrase n="lang_screen_item_expansion_module_maintext" t="טקסט ראשי של מודול הרחבה"/>
+	<phrase n="lang_screen_item_expansion_module_pressed_maintext" t="מודול הרחבה לחוץ Maintext"/>
+	<phrase n="lang_screen_item_expansion_module_subtext" t="סאבטקסט של מודול הרחבה"/>
+	<phrase n="lang_screen_item_expansion_module_pressed_subtext" t="מודול הרחבה לחוץ סאבטקסט"/>
+	<phrase n="lang_screen_item_expansion_module_page_indicator" t="מחוון עמוד של מודול הרחבה"/>
+	<phrase n="lang_screen_items_color_name_onyx_black" t="אוניקס שחור"/>
+	<phrase n="lang_screen_items_color_name_midnight_black" t="שחור חצות"/>
+	<phrase n="lang_screen_items_color_name_obsidian_black" t="אובסידיאן שחור"/>
+	<phrase n="lang_screen_items_color_name_dark_grey" t="אפור כהה"/>
+	<phrase n="lang_screen_items_color_name_grey" t="אפור"/>
+	<phrase n="lang_screen_items_color_name_light_grey" t="אפור בהיר"/>
+	<phrase n="lang_screen_items_color_name_grey_white" t="אפור לבן"/>
+	<phrase n="lang_screen_items_color_name_white" t="לבן"/>
+	<phrase n="lang_screen_items_color_name_light_yellow" t="צהוב בהיר"/>
+	<phrase n="lang_screen_items_color_name_yellow" t="צהוב"/>
+	<phrase n="lang_screen_items_color_name_light_red" t="אדום בהיר"/>
+	<phrase n="lang_screen_items_color_name_red" t="אָדוֹם"/>
+	<phrase n="lang_screen_items_color_name_light_blue" t="כחול בהיר"/>
+	<phrase n="lang_screen_items_color_name_blue" t="כְּחוֹל"/>
+	<phrase n="lang_screen_items_color_name_light_green" t="ירוק בהיר"/>
+	<phrase n="lang_screen_items_color_name_green" t="ירוק"/>
+	<phrase n="lang_screen_items_color_name_black" t="שָׁחוֹר"/>
+	<phrase n="lang_screen_items_color_name_carbon" t="פַּחמָן"/>
+	<phrase n="lang_screen_items_color_name_dim_grey" t="אפור עמום"/>
+	<phrase n="lang_screen_items_color_name_silver" t="כסף"/>
+	<phrase n="lang_screen_items_color_name_gainsboro" t="גיינסבורו"/>
+	<phrase n="lang_screen_items_color_name_snowflake" t="פְּתִית שֶׁלֶג"/>
+	<phrase n="lang_screen_items_color_name_white_smoke" t="עשן לבן"/>
+	<phrase n="lang_screen_items_color_name_custom" t="צבע מותאם אישית"/>
+	<phrase n="lang_monitored_extensions" t="הרחבות מפוקחות"/>
+	<phrase n="lang_ALS" t="חיישן אור סביבתי"/>
+	<phrase n="lang_all_available_calls" t="כל השיחות הזמינות"/>
+	<phrase n="lang_new_call" t="שיחה חדשה"/>
+	<phrase n="lang_select_conf_participant" t="בחר משתתף בוועידה"/>
+	<phrase n="lang_consult_conference" t="התייעצו בכנס"/>
+	<phrase n="lang_guess_max_hits" t="מקסימום להיטים"/>
+	<phrase n="lang_guess_results" t="תוצאות"/>
+	<phrase n="lang_new_network_policy" t="מדיניות רשת חדשה"/>
+	<phrase n="lang_wrong_lldp_policy" t="מדיניות LLDP שגויה"/>
+	<phrase n="lang_F_MODERATE" t="לְמַתֵן"/>
+	<phrase n="lang_sip_warning" t="אזהרת SIP"/>
+	<phrase n="lang_sync_settings" t="סנכרן הגדרות"/>
+	<phrase n="lang_confirm_sync_settings" t="לסנכרן הגדרות עם תצורת השרת?"/>
+	<phrase n="lang_no_configured_extensions" t="אין הרחבות מוגדרות"/>
+	<phrase n="lang_no_active_calls_on_extensions" t="אין שיחות פעילות בשלוחות"/>
+	<phrase n="lang_sip_response_code_400" t="בקשה גרועה"/>
+	<phrase n="lang_sip_response_code_402" t="נדרש תשלום"/>
+	<phrase n="lang_sip_response_code_403" t="אסור"/>
+	<phrase n="lang_sip_response_code_404" t="לא נמצא"/>
+	<phrase n="lang_sip_response_code_405" t="השיטה אינה מותרת"/>
+	<phrase n="lang_sip_response_code_406" t="לא מתקבל"/>
+	<phrase n="lang_sip_response_code_407" t="נדרש אימות פרוקסי"/>
+	<phrase n="lang_sip_response_code_408" t="בקש פסק זמן"/>
+	<phrase n="lang_sip_response_code_410" t="נעלם"/>
+	<phrase n="lang_sip_response_code_413" t="הישות המבוקשת גדולה מדי"/>
+	<phrase n="lang_sip_response_code_414" t="Request-URI ארוך מדי"/>
+	<phrase n="lang_sip_response_code_415" t="סוג מדיה לא נתמך"/>
+	<phrase n="lang_sip_response_code_416" t="תוכנית URI לא נתמכת"/>
+	<phrase n="lang_sip_response_code_420" t="הרחבה גרועה"/>
+	<phrase n="lang_sip_response_code_421" t="נדרשת הרחבה"/>
+	<phrase n="lang_sip_response_code_422" t="מרווח הפעלות קטן מדי"/>
+	<phrase n="lang_sip_response_code_423" t="מרווח קצר מדי"/>
+	<phrase n="lang_sip_response_code_480" t="לא זמין באופן זמני"/>
+	<phrase n="lang_sip_response_code_481" t="שיחה/עסקה לא קיימת"/>
+	<phrase n="lang_sip_response_code_482" t="זוהתה לולאה"/>
+	<phrase n="lang_sip_response_code_483" t="יותר מדי כשות"/>
+	<phrase n="lang_sip_response_code_484" t="כתובת לא שלמה"/>
+	<phrase n="lang_sip_response_code_485" t="דו - משמעי"/>
+	<phrase n="lang_sip_response_code_486" t="עסוק כאן"/>
+	<phrase n="lang_sip_response_code_487" t="הבקשה הסתיימה"/>
+	<phrase n="lang_sip_response_code_488" t="לא מקובל כאן"/>
+	<phrase n="lang_sip_response_code_491" t="בקשה בהמתנה"/>
+	<phrase n="lang_sip_response_code_493" t="בלתי ניתן לפענוח"/>
+	<phrase n="lang_sip_response_code_500" t="שגיאה פנימית בשרת"/>
+	<phrase n="lang_sip_response_code_501" t="לא מיושם"/>
+	<phrase n="lang_sip_response_code_502" t="שער רע"/>
+	<phrase n="lang_sip_response_code_503" t="שירותים לא זמינים"/>
+	<phrase n="lang_sip_response_code_504" t="פסק זמן לשרת"/>
+	<phrase n="lang_sip_response_code_505" t="גרסה לא נתמכת"/>
+	<phrase n="lang_sip_response_code_513" t="הודעה גדולה מדי"/>
+	<phrase n="lang_sip_response_code_599" t="שגיאת זמן קצוב חיבור לרשת"/>
+	<phrase n="lang_sip_response_code_600" t="עסוק בכל מקום"/>
+	<phrase n="lang_sip_response_code_603" t="יְרִידָה"/>
+	<phrase n="lang_sip_response_code_604" t="לא קיים בשום מקום"/>
+	<phrase n="lang_sip_response_code_606" t="לא מתקבל"/>
+	<phrase n="lang_sort_order" t="סדר המיון"/>
+	<phrase n="lang_directory_display_order" t="הצג סדר"/>
+	<phrase n="lang_display_order_first_name_last_name" t="First Name, Last Name"/>
+	<phrase n="lang_display_order_last_name_first_name" t="Last Name, First Name"/>
+	<phrase n="lang_visual_options" t="אפשרויות חזותיות"/>
+	<phrase n="lang_call_screen_photo_size" t="Photo Size in Call Screens"/>
+	<phrase n="lang_size_XS" t="XS"/>
+	<phrase n="lang_size_S" t="S"/>
+	<phrase n="lang_size_M" t="M"/>
+	<phrase n="lang_size_L" t="L"/>
+	<phrase n="lang_size_XL" t="XL"/>
+	<phrase n="lang_size_XXL" t="XXL"/>
+	<phrase n="lang_size_XXXL" t="XXXL"/>
+	<phrase n="lang_prefer_saved_over_received_photo" t="העדיפו תמונות מקומיות"/>
+	<phrase n="lang_display_method" t="סגנון תצוגת מספרים"/>
+	<phrase n="lang_display_method_full_contact" t="מגע מלא"/>
+	<phrase n="lang_display_method_display_name" t="שֵׁם"/>
+	<phrase n="lang_display_method_display_number" t="מספר"/>
+	<phrase n="lang_display_method_display_name_number" t="שם + מספר"/>
+	<phrase n="lang_display_method_display_number_name" t="מספר + שם"/>
+	<phrase n="lang_no_calls_for_transfer" t="אין שיחות זמינות להעברה"/>
+	<phrase n="lang_brand_variant_select_title" t="בחר וריאנט מותג"/>
+	<phrase n="lang_brand_variant_default" t="בְּרִירַת מֶחדָל"/>
+	<phrase n="lang_brand_variant_updated_title" t="הגרסה עודכנה"/>
+	<phrase n="lang_brand_variant_selected" t="וריאנט נבחר"/>
+	<phrase n="lang_system_reboot_now" t="המערכת תאתחל כעת"/>
+	<phrase n="lang_select_identity" t="בחר זהות"/>
+	<phrase n="lang_F_CALL_CENTER_STATUS" t="סטטוס מוקד טלפוני"/>
+	<phrase n="lang_F_ATTENDED_TRANSFER" t="השתתפו"/>
+	<phrase n="lang_disposition_code_sent" t="נשלח"/>
+	<phrase n="lang_disposition_code_selection" t="בחר Disp. קוד"/>
+	<phrase n="lang_disposition_code_entry" t="הכנס ל-Disp. קוד"/>
+	<phrase n="lang_F_DISP_CODE" t="קוד D"/>
+	<phrase n="lang_F_DISP_CODE_typeSio" t="קוד דיספוזיציה"/>
+	<phrase n="lang_F_DISP_CODE_smartlabel" t="קוד D"/>
+	<phrase n="lang_disposition_code_display_text_list" t="רשימה"/>
+	<phrase n="lang_parked_calls_settings" t="שיחות חונות"/>
+	<phrase n="lang_call_parked_on" t="חונה על"/>
+	<phrase n="lang_no_parked_call" t="אין שיחה חונה זמינה."/>
+	<phrase n="lang_F_CALL_PARK_IDLE" t="פארק סרק"/>
+	<phrase n="lang_F_CALL_PARK_typeSio" t="התקשר לפארק"/>
+	<phrase n="lang_menu_any_smartlabel_key_short_press" t="לחיצה קצרה על SmartLabel"/>
+	<phrase n="lang_monitored_extension_is_ringing" t="שלוחה מפוקחת מצלצלת"/>
+	<phrase n="lang_disposition_code_not_sent" t="הקוד לא נשלח."/>
+	<phrase n="lang_disposition_code_identity_mismatch" t="אי התאמה של זהות."/>
+	<phrase n="lang_F_EXEC_ASSIST_CALL_PUSH" t="התקשר ל-Push"/>
+	<phrase n="lang_usb_mass_storage_plug" t="זוהה כונן USB"/>
+	<phrase n="lang_usb_mass_storage_unplug" t="כונן USB הוסר"/>
+	<phrase n="lang_information_menu_usb_info" t="מידע USB"/>
+	<phrase n="lang_usb_mass_storage_title" t="אחסון המוני USB"/>
+	<phrase n="lang_F_USB_EJECT" t="הוצא USB"/>
+	<phrase n="lang_usb_mass_storage_safe_to_remove" t="כעת בטוח להסיר כונן USB"/>
+	<phrase n="lang_F_USBREC_START" t="הפעל USB Rec."/>
+	<phrase n="lang_F_USBREC_START_typeSio" t="התחל הקלטת USB"/>
+	<phrase n="lang_F_USBREC_START_smartlabel" t="Start&lt;br&gt;USB Rec."/>
+	<phrase n="lang_F_USBREC_STOP" t="עצור קלט USB."/>
+	<phrase n="lang_F_USBREC_STOP_typeSio" t="עצור הקלטת USB"/>
+	<phrase n="lang_F_USBREC_STOP_smartlabel" t="Stop&lt;br&gt;USB Rec."/>
+	<phrase n="lang_F_USBREC_PAUSE" t="השהה קלט USB."/>
+	<phrase n="lang_F_USBREC_PAUSE_typeSio" t="השהה הקלטת USB"/>
+	<phrase n="lang_F_USBREC_PAUSE_smartlabel" t="Pause&lt;br&gt;USB Rec."/>
+	<phrase n="lang_F_USBREC_RESUME" t="המשך הקלטה ב-USB."/>
+	<phrase n="lang_F_USBREC_RESUME_typeSio" t="המשך הקלטת USB"/>
+	<phrase n="lang_F_USBREC_RESUME_smartlabel" t="Resume&lt;br&gt;USB Rec."/>
+	<phrase n="lang_F_PAUSE" t="הַפסָקָה"/>
+	<phrase n="lang_F_RESUME" t="קורות חיים"/>
+	<phrase n="lang_usb_recording_processing_wait" t="אנא המתן לסיום תהליך ההקלטה!"/>
+	<phrase n="lang_usb_recording_processing_completed" t="תהליך ההקלטה הושלם!"/>
+	<phrase n="lang_usb_recording_call_terminated" t="הקלטת השיחה הופסקה"/>
+	<phrase n="lang_usb_recording_terminated_drive_full" t="ההקלטה הופסקה, כונן ה-USB מלא"/>
+	<phrase n="lang_usb_recording_terminated_max_file_size" t="ההקלטה הופסקה, אורך הקלטה מקסימלי"/>
+	<phrase n="lang_usb_recording_no_usb_drive_detected" t="לא זוהה כונן USB"/>
+	<phrase n="lang_usb_recording_terminated_errno" t="ההקלטה הופסקה, שגיאה: "/>
+	<phrase n="lang_usb_playback_browse_recordings" t="עיין בהקלטות"/>
+	<phrase n="lang_usb_playback_browse_recordings_title" t="הקלטות שיחות"/>
+	<phrase n="lang_usb_playback_play_recording_title" t="השמעת הקלטה"/>
+	<phrase n="lang_usb_playback_invalid_header_or_encrypted_file" t="כותרת wav לא חוקית או קובץ מוצפן:"/>
+	<phrase n="lang_usb_playback_recording_information_title" t="הקלטת מידע"/>
+	<phrase n="lang_usb_playback_delete_recording_title" t="מחק הקלטה"/>
+	<phrase n="lang_label_rewind" t="הרצה אחורה"/>
+	<phrase n="lang_label_fast_forward" t="Fast Forward"/>
+	<phrase n="lang_text_size" t="גודל"/>
+	<phrase n="lang_usb_playback_no_recordings" t="אין הקלטות"/>
+	<phrase n="lang_usb_recording_aborted_by_conference" t="הקלטת USB בוטלה על ידי ועידה"/>
+	<phrase n="lang_usb_recording_cannot_record_conference" t="לא ניתן להקליט ועידה ל-USB"/>
+	<phrase n="lang_date_and_time" t="Date &amp; Time"/>
+	<phrase n="lang_label_context_key_page_left" t="עמוד שמאל"/>
+	<phrase n="lang_label_context_key_page_right" t="עמוד ימין"/>
+	<phrase n="lang_expansion_module_text_alignment" t="יישור טקסט"/>
+	<phrase n="lang_expansion_module_color_font_sizes_XXL_XS" t="Maintext XXL &amp; Subtext XS"/>
+	<phrase n="lang_expansion_module_color_font_sizes_XL_XS" t="Maintext XL &amp; Subtext XS"/>
+	<phrase n="lang_expansion_module_color_font_sizes_XL_S" t="Maintext XL &amp; Subtext S"/>
+	<phrase n="lang_expansion_module_color_font_sizes_L_XS" t="Maintext L &amp; Subtext XS"/>
+	<phrase n="lang_expansion_module_color_font_sizes_L_S" t="Maintext L &amp; Subtext S"/>
+	<phrase n="lang_expansion_module_color_font_sizes_L_M" t="Maintext L &amp; Subtext M"/>
+	<phrase n="lang_expansion_module_color_font_sizes_M_XS" t="Maintext M &amp; Subtext XS"/>
+	<phrase n="lang_expansion_module_color_font_sizes_M_S" t="Maintext M &amp; Subtext S"/>
+	<phrase n="lang_expansion_module_color_font_sizes_M_M" t="Maintext M &amp; Subtext M"/>
+	<phrase n="lang_expansion_module_color_font_sizes_S_XS" t="Maintext S &amp; Subtext XS"/>
+	<phrase n="lang_expansion_module_color_font_sizes_S_S" t="Maintext S &amp; Subtext S"/>
+	<phrase n="lang_expansion_module_color_font_sizes_XS_XS" t="Maintext XS &amp; Subtext XS"/>
+	<phrase n="lang_edit_mode_upper_case" t="ABC"/>
+	<phrase n="lang_edit_mode_lower_case" t="abc"/>
+	<phrase n="lang_edit_mode_numbers" t="123"/>
+	<phrase n="lang_F_IDLE_CONTEXT_PAGE_LEFT" t="שמאלה"/>
+	<phrase n="lang_F_IDLE_CONTEXT_PAGE_LEFT_typeSio" t="עמוד שמאל"/>
+	<phrase n="lang_F_IDLE_CONTEXT_PAGE_RIGHT" t="ימין"/>
+	<phrase n="lang_F_IDLE_CONTEXT_PAGE_RIGHT_typeSio" t="עמוד ימין"/>
+	<phrase n="lang_F_NONE" t=""/>
+	<phrase n="lang_branding_name" t="מיתוג:"/>
+	<phrase n="lang_hardware_version" t="גרסת חומרה:"/>
+	<phrase n="lang_branding_version" t="Branding Version:"/>
+	<phrase n="lang_NickName" t="כינוי"/>
+	<phrase n="lang_FirstShortCode" t="קוד ראשון"/>
+	<phrase n="lang_LastShortCode" t="קוד אחרון"/>
+	<phrase n="lang_FirstExternalDirectoryNumber" t="מספר ראשון"/>
+	<phrase n="lang_LastExternalDirectoryNumber" t="מספר אחרון"/>
+	<phrase n="lang_DialingPlanCode" t="לְתַכְנֵן"/>
+	<phrase n="lang_DialingPlanCodeDetail" t="קוד תוכנית חיוג"/>
+	<phrase n="lang_FirstShortCodeDetail" t="קוד קצר ראשון"/>
+	<phrase n="lang_FirstExternalDirectoryDetail" t="ספרייה חיצונית ראשונה"/>
+	<phrase n="lang_LastExternalDirectoryDetail" t="ספרייה חיצונית אחרונה"/>
+	<phrase n="lang_Department" t="מַחלָקָה"/>
+	<phrase n="lang_shortcodes" t="קודים קצרים"/>
+	<phrase n="lang_emergency_call_number_is_misconfigured" t="מספרי חירום לא הוגדרו בצורה שגויה"/>
+	<phrase n="lang_tb_alias" t="כינוי"/>
+	<phrase n="lang_web_user_credentials_not_set" t="לא הוגדרו אישורים עבור משתמש האינטרנט"/>
+	<phrase n="lang_web_admin_credentials_not_set" t="לא הוגדרו אישורים עבור מנהל האינטרנט"/>
+	<phrase n="lang_not_registered" t=" לא רשום"/>
+	<phrase n="lang_fake_number" t="מספר מזוייף"/>
+	<phrase n="lang_BLF_DND_on" t="DND פועל"/>
+	<phrase n="lang_BLF_On_a_call" t="בשיחה"/>
+	<phrase n="lang_BLF_Idle" t="לְהִתְבַּטֵל"/>
+	<phrase n="lang_MediaStack_restarting_All_lines_will_be_closed" t="MediaStack מופעל מחדש. כל הקווים ייסגרו."/>
+	<phrase n="lang_Firmware_update_starting" t="עדכון קושחה: מתחיל"/>
+	<phrase n="lang_Firmware_update_sent_install_request" t="עדכון קושחה: ממתין לתגובת שרת הקבצים"/>
+	<phrase n="lang_Firmware_update_download" t="עדכון קושחה: הורדה"/>
+	<phrase n="lang_Firmware_update_transfer_to_swupdate" t="עדכון קושחה: עיבוד"/>
+	<phrase n="lang_Firmware_update_verification_and_install" t="עדכון קושחה: התקנה"/>
+	<phrase n="lang_File_server_response" t="תגובת השרת: "/>
+	<phrase n="lang_File_server_unreachable" t="לא ניתן להגיע לשרת הקבצים."/>
+	<phrase n="lang_File_not_found" t="הקובץ לא נמצא."/>
+	<phrase n="lang_Firmware_invalid" t="הקושחה לא חוקית."/>
+	<phrase n="lang_firmware_update" t="עדכון קושחה"/>
+	<phrase n="lang_menu_ringer_once" t="רק פעם אחת"/>
+	<phrase n="lang_voicemail_no_access_code" t="Number or feature access code is not programmed"/>
+	<phrase n="lang_F_WIFI" t="Wi-Fi"/>
+	<phrase n="lang_parties" t="parties"/>
+	<phrase n="lang_fwd_by" t="Fwd by:"/>
+	<phrase n="lang_firmware_update_completed_pending_reboot" t="Phone is about to reboot to complete the firmware update. Rebooting in %d seconds..."/>
+	<phrase n="lang_F_CLOSE" t="סגור"/>
+	<phrase n="lang_ip_assigment" t="IP Assignment"/>
+	<phrase n="lang_disable" t="Disable"/>
+	<phrase n="lang_enable" t="Enable"/>
+	<phrase n="lang_reregister" t="Re-register"/>
+	<phrase n="lang_phonemanager" t="Phone Manager (Web UI)"/>
+	<phrase n="lang_locale" t="Date &amp; Time format"/>
+	<phrase n="lang_webserver_admin_name" t="Admin name"/>
+	<phrase n="lang_webserver_admin_password" t="Admin password"/>
+	<phrase n="lang_webserver_user_name" t="User name"/>
+	<phrase n="lang_webserver_user_password" t="User password"/>
+	<phrase n="lang_startup_wizard" t="Startup Wizard"/>
+	<phrase n="lang_no_voicemail" t="No voicemail"/>
+	<phrase n="lang_new_voicemail" t="New voicemail"/>
+	<phrase n="lang_old_voicemail" t="Old voicemail"/>
+	<phrase n="lang_phonemanager_credentials" t="Phone Manager (Web UI) login credentials"/>
+	<phrase n="lang_static_ip" t="Static IP"/>
+	<phrase n="lang_dhcp_or_static_ip" t="DHCP or Static IP"/>
+	<phrase n="lang_locale_ar_AE" t="Arabic (United Arab Emirates)"/>
+	<phrase n="lang_locale_az_AZ" t="Azərbaycanca (Azerbaijan)"/>
+	<phrase n="lang_locale_bs_BA" t="Bosanki (Bosnia)"/>
+	<phrase n="lang_locale_ca_ES" t="Català (Spain)"/>
+	<phrase n="lang_locale_cs_CZ" t="Čeština (Czech Republic)"/>
+	<phrase n="lang_locale_da_DK" t="Dansk (Denmark)"/>
+	<phrase n="lang_locale_de_DE" t="Deutsch (Germany)"/>
+	<phrase n="lang_locale_el_GR" t="Ελληνικά (Greece)"/>
+	<phrase n="lang_locale_en_DE" t="English (Germany)"/>
+	<phrase n="lang_locale_en_GB" t="English (UK)"/>
+	<phrase n="lang_locale_en_US" t="English (US)"/>
+	<phrase n="lang_locale_es_ES" t="Español (Spain)"/>
+	<phrase n="lang_locale_et_EE" t="Eesti (Estonia)"/>
+	<phrase n="lang_locale_eu_ES" t="Euskara (Spain)"/>
+	<phrase n="lang_locale_fi_FI" t="Suomi (Finland)"/>
+	<phrase n="lang_locale_fr_FR" t="Français (France)"/>
+	<phrase n="lang_locale_he_IL" t="Hebrew (Israel)"/>
+	<phrase n="lang_locale_hr_HR" t="Hrvatski (Croatia)"/>
+	<phrase n="lang_locale_hu_HU" t="Magyar (Hungary)"/>
+	<phrase n="lang_locale_it_IT" t="Italiano (Italy)"/>
+	<phrase n="lang_locale_ja_JP" t="Japanese (Japan)"/>
+	<phrase n="lang_locale_kk_KZ" t="қазақша (Kazakhstan)"/>
+	<phrase n="lang_locale_lt_LT" t="Lietuvių (Lithuania)"/>
+	<phrase n="lang_locale_lv_LV" t="Latviešu (Latvia)"/>
+	<phrase n="lang_locale_nl_NL" t="Nederlands (Netherlands)"/>
+	<phrase n="lang_locale_nb_NO" t="Norsk (Norway)"/>
+	<phrase n="lang_locale_pl_PL" t="Polski (Poland)"/>
+	<phrase n="lang_locale_pt_PT" t="Português (Portugal)"/>
+	<phrase n="lang_locale_ro_RO" t="Română (Romania)"/>
+	<phrase n="lang_locale_ru_RU" t="Русский (Russia)"/>
+	<phrase n="lang_locale_sl_SI" t="Slovenščina (Slovenia)"/>
+	<phrase n="lang_locale_sv_SE" t="Svenska (Sweden)"/>
+	<phrase n="lang_locale_tr_TR" t="Türkçe (Turkey)"/>
+	<phrase n="lang_locale_uk_UA" t="Українська (Ukraine)"/>
+	<phrase n="lang_locale_zh_CN" t="Simplified Chinese (China)"/>
+	<phrase n="lang_locale_zh_TW" t="Traditional Chinese (Taiwan)"/>
+	<phrase n="lang_no_error" t="no error"/>
+	<phrase n="lang_unknown_command" t="unknown command"/>
+	<phrase n="lang_invalid_missing_params" t="invalid or missing parameter(s)"/>
+	<phrase n="lang_not_implemented" t="not implemented"/>
+	<phrase n="lang_failed" t="failed"/>
+	<phrase n="lang_refer_to_logs" t="Refer to the system logs for details"/>
+	<phrase n="lang_software_update_confirmation" t="The software update takes a few minutes and will reboot your phone. If you are on call(s), the update will start when all calls are terminated. Do not turn off your phone during the update. Update now?"/>
+	<phrase n="lang_firmware_field_is_empty" t="Firmware field is empty."/>
+	<phrase n="lang_software_update_in_progress" t="Software update in progress. Please wait for your phone to reboot. Once it restarts, refresh your browser to regain access to the WUI."/>
+	<phrase n="lang_edit_mode" t="Edit Mode"/>
+	<phrase n="lang_vlan_pc_qos" t="VLAN Priority on LAN port (0-7)"/>
+	<phrase n="lang_bluetooth_devices" t="Devices"/>
+	<phrase n="lang_bluetooth_not_ready" t="Bluetooth is not ready"/>
+	<phrase n="lang_F_ACCEPT_CALL_ext_ui" t="Answer"/>
+	<phrase n="lang_F_DEFLECT_ext_ui" t="Forward"/>
+	<phrase n="lang_F_DENY_ext_ui" t="Reject"/>
+	<phrase n="lang_F_END_ext_ui" t="End call"/>
+	<phrase n="lang_F_CALL_PARK_DIAL" t="Call Park Dial"/>
+	<phrase n="lang_F_NEW_CALL" t="New Call"/>
+	<phrase n="lang_device_management_service" t="Device Management Service"/>
+	<phrase n="lang_manage_dms" t="Manage DMS"/>
+	<phrase n="lang_3_days" t="3 Days"/>
+	<phrase n="lang_dms_enabled" t="DMS is enabled until"/>
+	<phrase n="lang_dms" t="DMS"/>
+</phrases>

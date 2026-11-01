@@ -1,0 +1,115 @@
+#!/bin/sh
+#
+
+SYSLOG_SPOOL_DIR=/var/spool/rsyslog
+SYSLOG_CONF_TEMPLATE=/etc/rsyslog.conf
+SYSLOG_CONF_FILE=/tmp/rsyslog.conf
+
+is_syslogd_running() {
+  # Check whether syslogd is running
+  pgrep syslogd >/dev/null
+  return $?
+}
+
+wait_for_syslog_stop() {
+  # Wait until syslog is stopped but not longer than 3 seconds.
+  local attempts=0
+  until [ $attempts -gt 2 ] || ! is_syslogd_running; do
+    sleep 1
+    let attempts=$attempts+1
+  done
+}
+
+export_ip_settings() {
+  local target=$(echo $1 | awk -F":" '{print $1}')
+  export REMOTE_SYSLOG_SERVER_TARGET=$target
+  local port=$(echo $1 | awk -F":" '{print $2}')
+  if [ "$port" != "" ]; then
+    export REMOTE_SYSLOG_SERVER_PORT=$port
+  else
+    export REMOTE_SYSLOG_SERVER_PORT=514
+  fi
+}
+
+get_net_interface() {
+  local target=$(echo $REMOTE_SYSLOG_SERVER_TARGET)
+  local iface=$(ip route get $target | grep -o "dev.*" | cut -d " " -f 2)
+  if [ "$iface" == "" ]; then
+    # No route to host? Could be a DNS problem. Use interface with the default route for IPv4
+    iface=$(ip route get 1.1.1.1 | cut -d " " -f 5)
+    if [ "$iface" == "" ]; then
+      # No default route. Use first interface with a valid IPv4 address
+      iface=$(ip addr show | grep "inet .* scope global" | grep -o "[^ ]*$" | head -n1)
+    fi
+  fi
+  echo $iface
+}
+
+
+start() {
+  # Start rsyslogd to log it per default to a local network port so that lcs2 could read from it.
+  # It's also possible to send the logs to a remote syslog server or to a local file. This is
+  # already prepared in the rsyslogd configuration file in /etc/rsyslog.conf using the following
+  # environment variables:
+  #
+  # LOCAL_SYSLOG_FILE           - if this is not empty the logs are also written to the local file /var/log/messages
+  # REMOTE_SYSLOG_SERVER_TARGET - if set enable remote logging to the given IP address
+  # REMOTE_SYSLOG_SERVER_PORT   - the port of the remote syslog server
+  # LOCAL_SYSLOG_MAC            - the MAC address of the phone that is used in the message template for remote logging
+
+  echo "Start rsyslogd"
+
+  if is_syslogd_running; then
+    echo "rsyslogd is already running"
+    exit 1
+  fi
+
+  if [ "$1" == "local_only" ]; then
+    # Clear the server variable
+    export REMOTE_SYSLOG_SERVER_TARGET=
+  elif [ "$1" != "" ]; then
+    # Use given IP address from command line parameter. This happens if syslog_server
+    # setting is changed and phone software is running.
+    export_ip_settings $1
+  else
+    # Read IP address from config file. This happens on system start.
+    result=$(grep "syslog_server" /snom/snomconfig/config.xml 2>/dev/null)
+    if [ $? -eq 0 ]; then
+      remote_server=$(echo $result|awk -F">" '{printf $2}'|awk -F"<" '{print $1}')
+      if [ $? -eq 0 ]; then
+        export_ip_settings $remote_server
+      fi
+    fi
+  fi
+
+  mkdir -p $SYSLOG_SPOOL_DIR
+
+  iface=$(get_net_interface)
+  export LOCAL_SYSLOG_MAC=`cat /sys/class/net/$iface/address|sed 's/://g'`
+  cat $SYSLOG_CONF_TEMPLATE | sed "s/^\$LocalHostIPIF.*$/\$LocalHostIPIF $iface/" > $SYSLOG_CONF_FILE
+
+  /usr/sbin/rsyslogd -f $SYSLOG_CONF_FILE
+}
+
+stop() {
+  echo "Stop rsyslogd"
+  if is_syslogd_running; then
+    killall -SIGTERM rsyslogd
+  fi
+}
+
+restart() {
+  stop
+  wait_for_syslog_stop
+  start $1
+}
+
+case "$1" in
+   start|stop|restart)
+     "$1" "$2";;
+   *)
+     echo "Usage: $0 {start|stop|restart} [IP]"
+     exit 1;;
+esac
+
+exit 0

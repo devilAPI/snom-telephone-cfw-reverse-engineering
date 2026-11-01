@@ -1,0 +1,6 @@
+#!/bin/sh
+# qemu: stand-in for media_daemon, see docs/qemu.md
+while :; do
+    sleep 100000 | busybox nc -l -p 1299 >>/tmp/mediaipc.log 2>&1
+    sleep 1
+done

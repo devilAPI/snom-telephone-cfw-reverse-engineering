@@ -1,0 +1,284 @@
+<?ssi title info_ssi_title?>
+<?ssi file common1.htm?>
+<TR>
+ <TD vAlign="top" height="16"><IMG height="16" src="img/clr.gif"
+  width="16"></TD>
+</TR>
+<TR>
+  <TD vAlign="top">
+    <?ssi skipon VTECH?>
+    <TABLE class="bubbleTable" cellSpacing="0" cellPadding="0" width="100%" border="0">
+    <?ssi skipoff VTECH?>
+    <?ssi skipon SNOM?>
+    <TABLE cellSpacing="4" cellPadding="0" width="100%" border="0">
+    <?ssi skipoff SNOM?>
+    <TBODY>
+      <TR>
+        <TD class="background" width="12" height="5">
+          <?ssi skipon VTECH?>
+          <IMG height="12" src=<?ssi img-corner-gif ul?> width="12">
+          <?ssi skipoff VTECH?>
+        </TD>
+        <TD width="30%"></TD>
+        <TD width="70%"></TD>
+        <TD class="background" width="12" height="5">
+          <?ssi skipon VTECH?>
+          <IMG height="12" src=<?ssi img-corner-gif ur?> width="12">
+          <?ssi skipoff VTECH?>
+        </TD>
+      </TR>
+      <TR>
+        <TD></TD>
+        <TD class="regularline"><?lng info_ipaddress?></TD>
+        <TD><?ssi variable ip_adr?></TD>
+        <TD></TD>
+      </TR>
+       <?ssi skipon NO_IPV6_SUPPORT?>
+      <TR>
+        <TD></TD>
+        <TD class="regularline"><?lng info_ipaddress_v6?></TD>
+        <TD><?ssi variable ip_adr_v6?></TD>
+        <TD></TD>
+      </TR>
+      <?ssi skipoff NO_IPV6_SUPPORT?>
+      <TR>
+        <TD></TD>
+        <TD class="regularline"><?lng info_firmware_version?></TD>
+        <TD><?ssi snom_type_version?></TD>
+        <TD></TD>
+      </TR>
+      <TR>
+        <TD></TD>
+        <TD class="regularline"><?lng info_uptime_info?></TD>
+        <TD><?ssi uptime?></TD>
+        <TD></TD>
+      </TR>
+      <TR>
+        <TD></TD>
+        <TD class="regularline">LCS uptime</TD>
+        <TD><?ssi lcsuptime?></TD>
+        <TD></TD>
+      </TR>
+      <TR>
+        <TD></TD>
+        <TD class="regularline">LCS exit</TD>
+        <TD><?ssi lcsexit?></TD>
+        <TD></TD>
+      </TR>
+      <TR>
+        <TD></TD>
+        <TD class="regularline">LCS state</TD>
+        <TD><?ssi lcsstate?></TD>
+        <TD></TD>
+       </TR>
+      <TR>
+      <TD></TD>
+        <TD class="regularline">LCS method</TD>
+        <TD><?ssi lcsmethod?></TD>
+        <TD></TD>
+       </TR>
+      <TR>
+        <TD></TD>
+        <TD class="regularline">Last key</TD>
+        <TD><?ssi lastkey?></TD>
+        <TD></TD>
+      </TR>
+      <TR>
+        <TD></TD>
+        <TD class="regularline">Last signal</TD>
+        <TD><?ssi lastsignal?></TD>
+        <TD></TD>
+      </TR>
+      <TR>
+        <TD></TD>
+        <TD class="regularline"><?lng info_memfree_info?></TD>
+        <TD><?ssi memfree?>&nbsp;K</TD>
+        <TD></TD>
+      </TR>
+      <TR>
+        <TD></TD>
+        <TD class="regularline"><?lng cpu?></TD>
+        <TD><?ssi loadavg?></TD>
+        <TD></TD>
+      </TR>
+      <TR>
+        <TD></TD>
+        <TD class="regularline"><?lng info_uboot_version_info?></TD>
+        <TD><?ssi variable uboot_version?></TD>
+        <TD></TD>
+      </TR>
+      <?ssi skipon NO_UARTSIDECAR_SUPPORT?>
+      <TR>
+        <TD></TD>
+        <TD class="regularline"><?lng fkeys_sidecar?></TD>
+        <TD><?ssi variable extension_board?></TD>
+        <TD></TD>
+      </TR>
+      <?ssi skipoff NO_UARTSIDECAR_SUPPORT?>
+      <?ssi skipon NOT_UXM ?>
+      <TR>
+        <TD></TD>
+        <TD class="regularline"><?lng usb_expansion_module?></TD>
+        <TD><?ssi uxm_info?></TD>
+        <TD></TD>
+      </TR>
+      <?ssi skipoff NOT_UXM ?>
+      <?ssi skipon PROVIDE_CORE?>
+        <?ssi core?>
+      <TR>
+        <TD></TD><TD>&nbsp;</TD><TD></TD><TD></TD>
+      </TR>
+      <TR>
+        <TD></TD>
+        <TD class="regularline">
+          <FORM method="post">
+            <?ssi hidden_tag?>
+            <INPUT type="submit" value="remove core files" name="REMOVE_CORE"  <?ssi tabindex?> />
+          </FORM>
+        </TD>
+        <TD></TD>
+        <TD></TD>
+      </TR>
+      <?ssi skipoff PROVIDE_CORE?>
+      <TR>
+        <TD class="background" vAlign="bottom" align="left" width="12" height="5">
+          <?ssi skipon VTECH?>
+          <IMG height="12" src=<?ssi img-corner-gif ll?> width="12"/>
+          <?ssi skipoff VTECH?>
+        </TD>
+        <TD></TD>
+        <TD></TD>
+        <TD class="background" vAlign="bottom" align="right" width="12" height="5">
+          <?ssi skipon VTECH?>
+          <IMG height="12" src=<?ssi img-corner-gif lr?> width="12"/>
+          <?ssi skipoff VTECH?>
+        </TD>
+      </TR>
+    </TBODY>
+    </TABLE>
+    <br>
+    <!-- Log Files -->
+    <?ssi skipon NOT_IN_ADMIN_MODE?>
+    <?ssi skipon VTECH?>
+    <TABLE class="bubbleTable" cellSpacing="0" cellPadding="0" width="100%" border="0">
+    <?ssi skipoff VTECH?>
+    <?ssi skipon SNOM?>
+    <TABLE cellSpacing="4" cellPadding="0" width="100%" border="0">
+    <?ssi skipoff SNOM?>
+      <TR>
+        <TD class="background" width="12" height="5">
+          <?ssi skipon VTECH?>
+          <IMG height="12" src=<?ssi img-corner-gif ul?> width="12">
+          <?ssi skipoff VTECH?>
+        </TD>
+        <TD></TD>
+        <TD></TD>
+        <TD></TD>
+        <TD></TD>
+        <TD class="background" width="12" height="5">
+          <?ssi skipon VTECH?>
+          <IMG height="12" src=<?ssi img-corner-gif ur?> width="12">
+          <?ssi skipoff VTECH?>
+        </TD>
+      </TR>
+      <TR>
+        <TD/>
+        <TD class="regularline">lid-log-files <?ssi lid_log is_there_any_log?></TD>
+        <TD><?ssi lid_log 0?></TD>
+        <TD><?ssi lid_log 1?></TD>
+        <TD><?ssi lid_log 2?></TD>
+        <TD/>
+      </TR>
+      <TR>
+        <TD/>
+        <TD class="regularline">kmsg-log-files <?ssi kmsg_log is_there_any_log?></TD>
+        <TD><?ssi kmsg_log 0?></TD>
+        <TD><?ssi kmsg_log 1?></TD>
+        <TD><?ssi kmsg_log 2?></TD>
+        <TD/>
+      </TR>
+      <?ssi skipon NOT_EAP_TLS?>
+      <TR><TD>&nbsp;</TD></TR>
+      <TR>
+        <TD/>
+        <TD class="regularline">wpa_supplicant-log-files <?ssi wpasupp_log is_there_any_log?></TD>
+        <TD><?ssi wpasupp_log 0?></TD>
+        <TD><?ssi wpasupp_log 1?></TD>
+        <TD><?ssi wpasupp_log 2?></TD>
+        <TD/>
+      </TR>
+      <?ssi skipoff NOT_EAP_TLS?>
+      <TR><TD>&nbsp;</TD></TR>
+      <TR>
+        <TD/>
+          <TD colspan="4">
+          <FORM method="post">
+          <?ssi hidden_tag?>
+          <INPUT type="submit" value="remove early logs" name="REMOVE_EARLY_LOGS"  <?ssi tabindex?> />
+          </FORM>
+          </TD>
+        <TD/>
+      </TR>
+      <TR>
+      <?ssi skipon NO_CONNECTIVITYD?>
+      <TR><TD>&nbsp;</TD></TR>
+      <TR>
+        <TD/>
+        <TD><a href="connectivityd.htm" target="_blank">connectivitydlog.txt</a></TD>
+        <TD/>
+      </TR>
+      <?ssi skipoff NO_CONNECTIVITYD?>
+      <?ssi skipon NO_BTSTACK?>
+      <TR><TD>&nbsp;</TD></TR>
+      <TR>
+        <TD/>
+        <TD><a href="hcilog.htm" target="_blank">hcilog.txt</a></TD>
+        <TD/>
+      </TR>
+      <TR><TD>&nbsp;</TD></TR>
+      <TR>
+        <TD/>
+        <TD><a href="hcitrace.pcap" download="hcitrace.pcap"><div class="divbutton"><?lng hcipcap_download?></div></a></TD>
+        <TD/>
+      </TR>
+      <?ssi skipoff NO_BTSTACK?>
+        <TD class="background" vAlign="bottom" align="left" width="12" height="5">
+          <?ssi skipon VTECH?>
+          <IMG height="12" src=<?ssi img-corner-gif ll?> width="12">
+          <?ssi skipoff VTECH?>
+        </TD>
+        <TD></TD>
+        <TD></TD>
+        <TD></TD>
+        <TD></TD>
+        <TD class="background" vAlign="bottom" align="right" width="12" height="5">
+          <?ssi skipon VTECH?>
+          <IMG height="12" src=<?ssi img-corner-gif lr?> width="12">
+          <?ssi skipoff VTECH?>
+        </TD>
+      </TR>
+    </TABLE>
+    <?ssi skipoff NOT_IN_ADMIN_MODE?>
+  </TD>
+</TR>
+<TR>
+  <TD>&nbsp;</TD>
+</TR>
+<TR>
+  <TD vAlign="top" height="5"><IMG height="5" src="img/clr.gif" width="12"></TD>
+</TR>
+<TR>
+  <TD>
+    <FORM method="post">
+    <?ssi hidden_tag?>
+    <DIV class="normaltextbold">Debug log</DIV>
+    <DIV>&nbsp;</DIV>
+    <DIV class="regularline"><INPUT type="submit" value="remove debug file" name="REMOVE_DEBUG"  <?ssi tabindex?> /></DIV>
+    </FORM>
+  </TD>
+</TR>
+<TR>
+<TD><pre><?ssi debuglog?></pre></TD>
+</TR>
+<?ssi file common9.htm?>
+</HTML>

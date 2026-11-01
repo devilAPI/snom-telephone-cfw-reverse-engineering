@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<IPPhoneBatch xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../schemas/minibrowser.xsd">
+  <!-- Main Screen -->
+  <IPPhoneMenu track="yes" id="exec_assist" state="only_mb">
+    <Title>$(lang:xsi_executive_assistant)</Title>
+    <MenuItem name="$(lang:xsi_opt_in_out_to_executive)" id="opt_in_out_executive">
+      <ExtraIconType>$(icon_type_enum:kIconTypeMenuArrowRight)</ExtraIconType>
+      <Url>file:///xml/gui/broadsoft_exec_assist.xml#sub=*[@id="opt_in_out_executive_menu"]</Url>
+    </MenuItem>
+
+    <MenuItem name="$(lang:xsi_assistant_call_divert)" id="divert_on_off">
+      <If condition="$(bool_eval:$(condition:$(var_ifc:identity.$(set:exec_assistant_identity).exec_assist::is_call_divert_enabled)==true))">
+        <Url>phone://mb_nop_ignore_prev_frags#action_ifc:identity.$(set:exec_assistant_identity).exec_assist=update_call_divert_state,is_divert_enabled=true</Url>
+        <If condition="$(show_feature:FEATURE_PUI_STYLE_SIO)">
+          <SubText>$(lang:on)</SubText>
+        </If>
+        <ExtraIconType>$(icon_type_enum:kIconTypeMenuSliderOn)</ExtraIconType>
+      </If>
+      <Elif condition="$(bool_eval:$(condition:$(var_ifc:identity.$(set:exec_assistant_identity).exec_assist::is_call_divert_enabled)==false))">
+        <Repeat values="$(var_ifc:identity.$(set:exec_assistant_identity).exec_assist::get_divert_to_number)" token="|__DIVERT_TO_NUMBER__|">
+          <If condition="$(bool_eval:$(condition:__DIVERT_TO_NUMBER__==not_set))">
+            <Url>file:///xml/gui/templates.xml#sub=*[@id="input_template"]&amp;var:input_pool_key=1&amp;var:input_displayname="$(lang:xsi_assistant_call_divert_number)"&amp;var:input_token=__Y__&amp;var:input_flags=t&amp;var:input_mask=&amp;var:input_url=$(urlencode:"phone%3A//mb_nop%23var_ifc%3Aidentity.%24%28set%3Aactive_line%29.exec_assist%3Dset_call_divert_with_number%3D__Y__&amp;go_back")</Url>
+          </If>
+          <Else>
+            <Url>phone://mb_nop#action_ifc:identity.$(set:exec_assistant_identity).exec_assist=update_call_divert_state,is_divert_enabled=false</Url>
+          </Else>
+        </Repeat>
+        <If condition="$(show_feature:FEATURE_PUI_STYLE_SIO)">
+          <SubText>$(lang:off)</SubText>
+        </If>
+        <ExtraIconType>$(icon_type_enum:kIconTypeMenuSliderOff)</ExtraIconType>
+      </Elif>
+    </MenuItem>
+
+    <If condition="$(bool_eval:$(condition:$(var_ifc:identity.$(set:exec_assistant_identity).exec_assist::is_call_divert_enabled)==true))">
+      <MenuItem name="$(lang:xsi_assistant_call_divert_number)" id="divert_number_edit">
+        <ExtraIconType>$(icon_type_enum:kIconTypeMenuArrowRight)</ExtraIconType>
+        <Repeat values="$(var_ifc:identity.$(set:exec_assistant_identity).exec_assist::get_divert_to_number)" token="|__DIVERT_TO_NUMBER__|">
+          <SubText>__DIVERT_TO_NUMBER__</SubText>
+          <Url>file:///xml/gui/templates.xml#sub=*[@id="input_template"]&amp;var:input_pool_key=1&amp;var:input_displayname="$(lang:xsi_assistant_call_divert_number)"&amp;var:input_token=__Y__&amp;var:input_flags=t&amp;var:input_default=__DIVERT_TO_NUMBER__&amp;var:input_mask=&amp;var:input_url=$(urlencode:"phone%3A//mb_nop%23var_ifc%3Aidentity.%24%28set%3Aactive_line%29.exec_assist%3Dset_call_divert_with_number%3D__Y__&amp;go_back")</Url>
+        </Repeat>
+      </MenuItem>
+    </If>
+  </IPPhoneMenu>
+  <!-- EO Main Screen -->
+
+  <!-- Opt-In/Out Menu -->
+  <IPPhoneMenu track="yes" id="opt_in_out_executive_menu" state="only_mb">
+    <Title>$(lang:xsi_opt_in_out_to_executive)</Title>
+    <Repeat values="$(var_ifc:identity.$(set:exec_assistant_identity).exec_assist::assist_opt_in_out_info)" token="|__EXEC_USER_ID__|__EXEC_FULL_NAME__|__OPT_IN_OUT__|">
+      <MenuItem name="__EXEC_FULL_NAME__" id ="__EXEC_USER_ID__">
+        <If condition="$(bool_eval:$(condition:__OPT_IN_OUT__==true))">
+          <If condition="$(show_feature:FEATURE_PUI_STYLE_SIO)">
+            <SubText>$(lang:xsi_opt_in_to_executive)</SubText>
+          </If>
+          <ExtraIconType>$(icon_type_enum:kIconTypeMenuSliderOn)</ExtraIconType>
+        </If>
+        <Elif condition="$(bool_eval:$(condition:__OPT_IN_OUT__==false))">
+          <If condition="$(show_feature:FEATURE_PUI_STYLE_SIO)">
+            <SubText>$(lang:xsi_opt_out_to_executive)</SubText>
+          </If>
+          <ExtraIconType>$(icon_type_enum:kIconTypeMenuSliderOff)</ExtraIconType>
+        </Elif>
+        <Url>phone://mb_nop#action_ifc:identity.$(set:exec_assistant_identity).exec_assist=assist_opt_in_out_toggle,executive_user_id=__EXEC_USER_ID__--request_var</Url>
+      </MenuItem>
+    </Repeat>
+  </IPPhoneMenu>
+  <!-- EO Opt-In/Out Menu -->
+</IPPhoneBatch>

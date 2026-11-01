@@ -9,7 +9,7 @@ cat <<EOF2
 <?xml version="1.0" encoding="UTF-8"?>
 <IPPhoneInput dtmf="off">
   <Title>$WHAT URL</Title>
-  <Url input_required="yes">http://127.0.0.1:8080/cgi-bin/phone-boot?game=$GAME&amp;url=__U__</Url>
+  <Url input_required="yes">http://127.0.0.1:8081/cgi-bin/phone-boot?game=$GAME&amp;url=__U__</Url>
   <CancelUrl>phone://mb_nop#go_back</CancelUrl>
   <InputItem>
     <DisplayName>$WHAT URL</DisplayName>

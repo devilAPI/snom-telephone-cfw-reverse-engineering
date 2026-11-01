@@ -3,8 +3,8 @@
 echo "Content-type: text/html"
 echo ""
 
-DEFAULT_PW="snom375"
-H=$(openssl passwd -5 "$DEFAULT_PW" 2>/dev/null)
+. /snom/cfw/model.conf
+H=$(openssl passwd -5 "$CFW_DEFAULT_PW" 2>/dev/null)
 
 status="error"
 msg="openssl not available; password unchanged."

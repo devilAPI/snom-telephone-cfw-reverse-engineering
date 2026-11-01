@@ -1,0 +1,18 @@
+# Files left out of the D375 image. Paths are relative to the rootfs, and a path
+# ending in / covers everything below it. Each entry must be unused at run time:
+# nothing in rcS, lid or lcsD375 refers to these.
+
+# Bluetooth factory test tool, built with debug info.
+snom/btTestApp
+# Sample images and fonts shipped with the imlib2 library.
+usr/share/imlib2/data/
+# OpenSSH client tools a phone has no use for. ssh, scp, sftp and ssh-keygen stay.
+usr/bin/ssh-add
+usr/bin/ssh-agent
+usr/bin/ssh-keyscan
+usr/libexec/ssh-keysign
+usr/libexec/ssh-pkcs11-helper
+usr/bin/ssh-copy-id
+# Python helpers; the phone has no Python.
+usr/bin/event_rpcgen.py
+lib/libstdc++.so.6.0.24-gdb.py

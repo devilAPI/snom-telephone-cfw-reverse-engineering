@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<IPPhoneMenu title="$(lang:lang_contactpool)" dtmf="off" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../schemas/minibrowser.xsd" state="others_except_mb">
+  <If condition="$(bool_eval:$(condition:$(lines:offhook)==0)&amp;$(condition:$(var:purpose)!=select)&amp;$(condition:$(phone_state)!=Edit_number))">
+    <MenuItem name="$(lang:xmlgui_dialnumber)">
+      <Url>phone://mb_exit#action_ifc:pui=prompt2dial</Url>
+      <!--Url>file:///xml/gui/call_lists_list.xml#action_ifc:pui=prompt2dial,nr=7</Url-->
+      <ExtraIconType>$(icon_type_enum:kIconTypeMenuHandset)</ExtraIconType>
+    </MenuItem>
+  </If>
+  <!-- Directory MenuItem -->
+  <If condition="$(var:show_directory)==true">
+    <MenuItem name="$(lang:lang_menu100_phone_book)">
+      <Url>file:///xml/gui/state_addressbook.xml#sel=@line=0</Url>
+      <ExtraIconType>$(icon_type_enum:kIconTypeMenuArrowRight)</ExtraIconType>
+    </MenuItem>
+  </If>
+
+  <!-- Ldap MenuItem -->
+  <If condition="$(var:show_ldap)==true">
+    <MenuItem name="$(lang:lang_menu100_ldap_book)">
+      <Action>ldap</Action>
+      <ExtraIconType>$(icon_type_enum:kIconTypeMenuArrowRight)</ExtraIconType>
+    </MenuItem>
+  </If>
+
+  <!-- Broadsoft related MenuItem -->
+  <If condition="$(var:manager_name)==Xsi">
+    <MenuItem name="$(lang:lang_server_directory_search)">
+      <Action>xsi</Action>
+      <ExtraIconType>$(icon_type_enum:kIconTypeMenuArrowRight)</ExtraIconType>
+    </MenuItem>
+  </If>
+
+  <!-- Metaswitch related MenuItem -->
+  <If condition="$(var:manager_name)==Metaswitch">
+    <MenuItem name="$(lang:lang_server_directory_search)">
+      <Action>msw</Action>
+      <ExtraIconType>$(icon_type_enum:kIconTypeMenuArrowRight)</ExtraIconType>
+    </MenuItem>
+  </If>
+
+  <!-- Call list related MenuItem -->
+  <If condition="$(var:show_missed_calls)==true">
+     <MenuItem name="$(lang:lang_list_missed)">
+      <Url>file:///xml/gui/call_lists_list.xml#var:cancel=abort&amp;var:calllist_type=Missed&amp;var:calllist_title=lang_list_missed</Url>
+      <ExtraIconType>$(icon_type_enum:kIconTypeMenuArrowRight)</ExtraIconType>
+    </MenuItem>
+  </If>
+  <If condition="$(var:show_received_calls)==true">
+    <MenuItem name="$(lang:lang_list_taken)">
+      <Url>file:///xml/gui/call_lists_list.xml#var:cancel=abort&amp;var:calllist_type=Received&amp;var:calllist_title=lang_list_taken</Url>
+      <ExtraIconType>$(icon_type_enum:kIconTypeMenuArrowRight)</ExtraIconType>
+    </MenuItem>
+  </If>
+  <If condition="$(var:show_dialed_calls)==true">
+    <MenuItem name="$(lang:lang_list_dialed)">
+      <Url>file:///xml/gui/call_lists_list.xml#var:cancel=abort&amp;var:calllist_type=Dialed&amp;var:calllist_title=lang_list_dialed</Url>
+      <ExtraIconType>$(icon_type_enum:kIconTypeMenuArrowRight)</ExtraIconType>
+    </MenuItem>
+  </If>
+
+  <!-- Contacts MenuItem-->
+  <If condition="$(var:show_contacts)==true">
+    <MenuItem name="$(lang:lang_buddies_title)">
+      <Action>buddies</Action>
+      <ExtraIconType>$(icon_type_enum:kIconTypeMenuArrowRight)</ExtraIconType>
+    </MenuItem>
+  </If>
+
+  <!--  Busy Lamp Field -->
+  <If condition="$(var:show_busy_lamp_field)==true">
+    <If condition="$(show_feature:FEATURE_PUI_STYLE_SIO)">
+      <MenuItem name="$(lang:lang_monitored_extensions)">
+      <Url>file:///xml/gui/busy_lamp_field.xml</Url>
+        <ExtraIconType>$(icon_type_enum:kIconTypeMenuArrowRight)</ExtraIconType>
+      </MenuItem>
+    </If>
+    <Else>
+      <MenuItem name="$(lang:lang_linetype_blf)">
+      <Url>file:///xml/gui/busy_lamp_field.xml</Url>
+      </MenuItem>
+    </Else>
+  </If>
+</IPPhoneMenu>
