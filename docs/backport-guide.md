@@ -34,8 +34,9 @@ the phone with `tools/d815-try-flash.sh`.
 
 ## Build and test
 
-Build from the `cfw-features` branch, which holds the CFW. `main` lacks most CFW
-features, so an image built there drops them.
+`custom-rootfs` holds the full D375 CFW, so the D375 build does not use
+`tools/cfw-sync.sh`: it would replace the panel with the smaller `cfw/panel`.
+Packing uses `custom-rootfs.manifest`, not a fakeroot database.
 
 ```sh
 tools/build-custom-firmware.sh      # FINAL=1 for the smallest image
@@ -277,6 +278,8 @@ Work through these in order. Steps 2 to 6 need nothing from the phone.
   `/snom/cfw/bin/bindmount`.
 - `tools/d815-try-flash.sh` needs a way to get the SSH password. Without a terminal, set
   `SSH_ASKPASS` and `SSH_ASKPASS_REQUIRE=force`, or it exits with 255 and no message.
+- `busybox httpd` reads an `httpd.conf` it finds in its web root. Keep the panel login
+  in `/etc/cfw-httpd.conf`, or the loopback server on 8081 asks for a login too.
 - A killed `flock` wrapper can leave a child, such as `sleep`, holding the lock.
 - Use `busybox nslookup` to test DNS. If its query never reaches the server, suspect
   the client's libraries first.
