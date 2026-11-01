@@ -1,22 +1,40 @@
 #!/bin/sh
 # Boot Doom from a URL: download the WAD to RAM, take over the screen, run Doom,
-# then reboot to restore the phone. Nothing is stored (the WAD is in /tmp and
-# vanishes on the reboot). $1 = WAD URL. Progress/errors go to /tmp/doom.log
+# then bring the phone app back (phone-restore.sh; reboot only if that fails).
+# Nothing is stored (the WAD is in /tmp and is deleted after the run). $1 = WAD URL. Progress/errors go to /tmp/doom.log
 # (shown by /cgi-bin/doom-log on the CFW page).
 ENGINE=/snom/cfw/doom/doom
 LOG=/tmp/doom.log
 URL="$1"
+ORIGURL="$1"
+STATUS=/tmp/doom.status
+. /snom/cfw/lib/zip.sh
 CURL="curl -fksSL --connect-timeout 15"
 
 : > "$LOG"
 log() { echo "$*" >> "$LOG"; }
-fail() { log "ERROR: $*"; rm -f /tmp/doom-dl.wad; exit 1; }
+status() { printf '%s\n' "$*" > "$STATUS"; }
+fail() { log "ERROR: $*"; status "error $*"; rm -f /tmp/doom-dl.wad; exit 1; }
 urldecode() { printf '%b' "$(echo "$1" | sed 's/%\(..\)/\\x\1/g')"; }
 
+status downloading
 [ -x "$ENGINE" ] || fail "doom engine missing"
 [ -n "$URL" ]    || fail "no URL"
 log "URL: $URL"
+DL=/tmp/doom-dl.wad
+rm -f "$DL"
+PICKED=
+if [ "$URL" = --pick ]; then
+    # Second step of a multi-WAD zip (lib/zip.sh): entry $3 of the stored list.
+    zip_pick doom "$2" "$3" || fail "$ZIP_ERR"
+    ORIGURL=$ZIP_URL
+    PICKED=$(basename "$ZIP_ROM")
+    mv "$ZIP_ROM" "$DL" || fail "cannot move the chosen file"
+    zip_clear doom
+    log "chosen entry $3 of the zip from $ORIGURL: $PICKED"
+fi
 
+if [ -z "$PICKED" ]; then
 # archive.org: a /details/ link is the HTML viewer page; the file itself is
 # served under /download/ with the same path.
 case "$URL" in
@@ -38,8 +56,8 @@ if [ -n "$ITEM" ]; then
     log "archive.org item -> $URL"
 fi
 
-# The phone has no unzip, but archive.org extracts members of a .zip
-# server-side (<zip>/<member>). Pick the IWAD from the zip's listing page,
+# archive.org extracts members of a .zip server-side (<zip>/<member>), which
+# saves RAM; any other zip is unpacked on the phone below. Pick the IWAD from the zip's listing page,
 # preferring a known IWAD name, else the first .wad.
 case "$(echo "${URL%%\?*}" | tr A-Z a-z)" in
     *archive.org/download/*.zip|*archive.org/download/*.zip/)
@@ -57,16 +75,25 @@ case "$(echo "${URL%%\?*}" | tr A-Z a-z)" in
         case "$PICK" in //*) PICK="https:$PICK" ;; /*) PICK="https://archive.org$PICK" ;; esac
         URL="$PICK"
         log "zip member -> $URL" ;;
-    *.zip) fail "zip files are only supported from archive.org (no unzip on the phone); link the .wad directly" ;;
 esac
 
 # Download FIRST, while the phone app is still up (so a bad URL leaves the phone
 # usable and never blanks the screen).
-DL=/tmp/doom-dl.wad
-rm -f "$DL"
 log "downloading..."
 $CURL --max-time 300 -o "$DL" "$URL" >>"$LOG" 2>&1 || fail "download failed (check the URL is a direct file link)"
 log "downloaded $(wc -c < "$DL") bytes"
+if zip_is_zip "$DL"; then
+    log "zip archive, unpacking"
+    zip_clear doom
+    zip_extract doom "$DL" "$(zip_ext doom)" "$ORIGURL"
+    case $? in
+        0) PICKED=$(basename "$ZIP_ROM"); mv "$ZIP_ROM" "$DL" && zip_clear doom || fail "cannot move the unpacked file" ;;
+        2) log "zip holds $ZIP_N WADs, waiting for a choice:"; cat /tmp/zip-doom/list >> "$LOG"
+           status "choose $ZIP_SID $ZIP_N"; exit 0 ;;
+        *) fail "$ZIP_ERR" ;;
+    esac
+fi
+fi
 
 case "$(dd if="$DL" bs=4 count=1 2>/dev/null)" in
     IWAD) ;;
@@ -78,7 +105,8 @@ esac
 # Doom picks the game (Doom 1 vs Doom 2, Freedoom Phase 1 vs 2) from the IWAD
 # *filename*: a wrong name makes it reject the WAD ("d_introa not found").
 # Keep a known IWAD name (lowercased); otherwise detect from the map lumps.
-NAME=$(basename "$(urldecode "${URL%%\?*}")" | tr A-Z a-z)
+if [ -n "$PICKED" ]; then NAME=$(echo "$PICKED" | tr A-Z a-z)
+else NAME=$(basename "$(urldecode "${URL%%\?*}")" | tr A-Z a-z); fi
 case "$NAME" in
     doom.wad|doom1.wad|doom2.wad|plutonia.wad|tnt.wad|freedoom1.wad|freedoom2.wad|freedm.wad|chex.wad|hacx.wad) ;;
     *) if grep -q MAP01 "$DL"; then NAME=doom2.wad
@@ -92,23 +120,36 @@ mv "$DL" "$WAD"
 # Remember this URL for the phone's Settings -> Games menu (newest first, no
 # duplicates, at most 8).
 H=/snom/cfw/doom/history
-{ echo "$1"; grep -vxF "$1" "$H" 2>/dev/null; } | head -n 8 > "$H.new" && mv "$H.new" "$H"
+{ echo "$ORIGURL"; grep -vxF "$ORIGURL" "$H" 2>/dev/null; } | head -n 8 > "$H.new" && mv "$H.new" "$H"
 
 log "starting Doom with $WAD"
 
 # Hold rcS's fast-update guard so killing the phone app doesn't reboot us. The
 # engine itself kills lid+media_daemon (after arming hands-free audio while the
 # daemon is still alive -- see snd/snd_hal.c).
+. /snom/cfw/lib/saves.sh
+SAVEDIR=$(saves_dir_doom "${NAME%.wad}")
+CFW_GAME_ID=${NAME%.wad}; export CFW_GAME_ID   # keymap id (docs/keymap.md)
 touch /tmp/ssh_fast_update
+status running
 
-"$ENGINE" -iwad "$WAD" >> "$LOG" 2>&1 < /dev/null
+"$ENGINE" -iwad "$WAD" -savedir "$SAVEDIR" >> "$LOG" 2>&1 < /dev/null
 log "Doom exited with status $?"
-
-# /tmp is lost on the reboot: keep this run's log on flash so the CFW page can
-# still show why Doom quit (e.g. an engine I_Error).
-tail -n 60 "$LOG" > /snom/cfw/doom/last.log 2>/dev/null
+status done
+sync
 
 rm -f "$WAD"
-rm -f /tmp/ssh_fast_update
-sync
-reboot
+
+# Bring the stock phone app back without a reboot (docs/quit-without-reboot.md).
+# Fall back to the old, always-working reboot if it isn't healthy within 60 s.
+if /snom/cfw/lib/phone-restore.sh; then
+    log "phone app restored"
+else
+    log "phone restore failed, rebooting"
+    # /tmp is lost on the reboot: keep this run's log on flash so the CFW page
+    # can still show why Doom quit (e.g. an engine I_Error).
+    tail -n 60 "$LOG" > /snom/cfw/doom/last.log 2>/dev/null
+    rm -f /tmp/ssh_fast_update
+    sync
+    reboot
+fi

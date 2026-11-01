@@ -60,10 +60,24 @@ table = [0] * 256
 miss = []
 # Keys the D815 lacks: use the nearest one it has.
 NEAREST = {ord('v'): ord('r')}      # second call history key
+# Keys the D815 lid can name but has no code for. They go through lid as P10, and
+# the shim changes the name in its message to lcs. See docs/backport-guide.md.
+CARRIER = ord('J'), 'P10'
+RENAME = {ord('F'): 'P11', ord('L'): 'P12'}
+# The app shows five keys per side and the D375 has six. Its P6 is the top right
+# row, so the D375's right column moves up by one and its left row 6 becomes P11.
+MOVE = {ord('G'): ord('F'), ord('H'): ord('G'), ord('I'): ord('H'),
+        ord('J'): ord('I'), ord('K'): ord('J')}
+rename = {}
 for code, kid in src.items():
     kid = NEAREST.get(kid, kid)
     if not kid:
         continue
+    if kid in RENAME:
+        table[code] = to_code[CARRIER[0]]
+        rename[code] = RENAME[kid]
+        continue
+    kid = MOVE.get(kid, kid)
     if kid in to_code:
         table[code] = to_code[kid]
     else:
@@ -76,4 +90,10 @@ with open(sys.argv[3], 'w') as f:
     for c in range(256):
         if table[c]:
             f.write(f'    [{c}] = {table[c]},\n')
+    f.write('};\n')
+    f.write(f'\n/* These keys reach lid as {CARRIER[1]}; the shim renames them in send(). */\n')
+    f.write(f'#define KEY_CARRIER "{CARRIER[1]}"\n')
+    f.write('static const char *const key_rename[256] = {\n')
+    for c in sorted(rename):
+        f.write(f'    [{c}] = "{rename[c]}",\n')
     f.write('};\n')

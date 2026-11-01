@@ -1,0 +1,50 @@
+#!/bin/sh
+# CFW: zip file chooser on the phone's own screen (minibrowser XML, loopback :8081).
+#   ?sys=nes|gb|gba|doom              IPPhoneMenu listing the files of the zip
+#                                     the launcher unpacked (status "choose")
+#   ?sys=..&sid=<id>&i=<n>            start entry n (checked by lib/zip.sh;
+#                                     only an index into our own list is used)
+# phone-boot and phone-retro call this file (QUERY_STRING=sys=X&wait=1) after
+# starting a launcher, to turn its status into a reply. See docs/zip.md.
+. /snom/cfw/lib/cfw.sh
+. /snom/cfw/lib/zip.sh
+SYS=$(printf '%s' "$QUERY_STRING" | sed -n 's/^sys=\([a-z]*\).*/\1/p')
+case "$SYS" in
+    nes) NAME="NES" ;;  gb) NAME="Game Boy" ;;  gba) NAME="GBA" ;;  doom) NAME="DOOM" ;;
+    *) cfw_phone_text "Error" "Unknown system."; exit 0 ;;
+esac
+SID=$(printf '%s' "$QUERY_STRING" | sed -n 's/.*&sid=\([0-9-]*\)\(&.*\)\{0,1\}$/\1/p')
+IDX=$(printf '%s' "$QUERY_STRING" | sed -n 's/.*&i=\([0-9]*\)\(&.*\)\{0,1\}$/\1/p')
+
+verdict() {  # turn /tmp/SYS.status into a reply
+    case "$st" in
+    error*) cfw_phone_text "$NAME: not started" "${st#error }" ;;
+    choose*)
+        _sid=$(printf '%s' "$st" | cut -d' ' -f2)
+        case "$_sid" in ''|*[!0-9-]*) cfw_phone_text "Error" "Bad zip session."; return ;; esac
+        printf 'Content-type: text/xml\r\n\r\n'
+        printf '<?xml version="1.0" encoding="UTF-8"?>\n<IPPhoneMenu state="others_except_mb" dtmf="off">\n  <Title>%s: choose a file</Title>\n' "$NAME"
+        _i=0
+        while IFS= read -r _f; do
+            _i=$((_i + 1))
+            printf '  <MenuItem name="%s">\n    <Url>http://127.0.0.1:8081/cgi-bin/phone-pick?sys=%s&amp;sid=%s&amp;i=%s</Url>\n  </MenuItem>\n' \
+                "$(printf '%s' "$_f" | cfw_xml_escape)" "$SYS" "$_sid" "$_i"
+        done < "/tmp/zip-$SYS/list"
+        printf '  <SoftKeyItem>\n    <Name>CANCEL</Name>\n    <Url track="no">phone://mb_nop#go_back</Url>\n  </SoftKeyItem>\n</IPPhoneMenu>\n' ;;
+    *) cfw_phone_text "Starting $NAME" "The game takes over the screen when it is ready. Red hangup key quits; the phone app then comes back." ;;
+    esac
+}
+
+case "$QUERY_STRING" in
+*"&wait=1"*) zip_wait "$SYS" 15; verdict; exit 0 ;;
+*"&sid="*)
+    if cfw_game_running; then cfw_phone_text "$NAME" "A game is already running."; exit 0; fi
+    # Validate here too (the launcher re-checks) so a bad request never launches.
+    zip_pick "$SYS" "$SID" "$IDX" || { cfw_phone_text "$NAME: not started" "$ZIP_ERR"; exit 0; }
+    rm -f "/tmp/$SYS.status"
+    nohup /snom/cfw/$SYS/boot-$SYS.sh --pick "$SID" "$IDX" </dev/null >/dev/null 2>&1 &
+    zip_wait "$SYS" 15; verdict ;;
+*)
+    st=$(cat "/tmp/$SYS.status" 2>/dev/null)
+    case "$st" in choose*) verdict ;; *) cfw_phone_text "$NAME" "No zip is waiting for a choice." ;; esac ;;
+esac

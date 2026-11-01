@@ -11,7 +11,9 @@ mkdir -p /var/empty
     /usr/bin/ssh-keygen -q -t ed25519 -N "" -f /etc/ssh/ssh_host_ed25519_key
 pidof sshd >/dev/null 2>&1 || /usr/sbin/sshd
 
-# LAN panel: root's system password. Phone's own menus: loopback only, because
-# the minibrowser cannot send credentials.
-busybox httpd -p 8080 -h /snom/cfw -c /snom/cfw/httpd.conf -r "snom CFW"
-busybox httpd -p 127.0.0.1:8081 -h /snom/cfw/local
+# LAN panel: root's system password. Phone's own menus and keys: loopback only,
+# with no login, because the minibrowser cannot send credentials.
+# The login file stays outside the web root: httpd reads an httpd.conf found there,
+# and the loopback server would then ask for a login too.
+busybox httpd -p 8080 -h /snom/cfw -c /etc/cfw-httpd.conf -r "snom CFW"
+busybox httpd -p 127.0.0.1:8081 -h /snom/cfw

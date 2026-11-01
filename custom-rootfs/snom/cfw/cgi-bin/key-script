@@ -1,0 +1,11 @@
+#!/bin/sh
+# CFW: what a phone key opens to run a script: ?run=NAME.sh. Starts it and returns at
+# once, because the phone waits for this answer. The last output is in
+# /tmp/key-script.log. See lib/key-scripts.sh.
+. /snom/cfw/lib/cfw.sh
+. /snom/cfw/lib/scripts-run.sh
+NAME=$(cfw_param run)
+printf 'Content-type: text/plain\r\n\r\n'
+scripts_name_ok "$NAME" || { echo "invalid name"; exit 0; }
+(scripts_run "$NAME" > /tmp/key-script.log 2>&1) </dev/null >/dev/null 2>&1 &
+echo started

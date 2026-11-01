@@ -1,0 +1,188 @@
+#!/bin/sh
+# CFW web panel: per-game key map editor. See docs/keymap.md.
+#   GET  /cgi-bin/keymap?eng=nes&game=default   editor page
+#   GET  /cgi-bin/keymap?act=capture            "press a key": prints the scancode (text/plain, <= 8 s)
+#   POST act=save&eng=&game=&k<code>=<ACTION>   write the map file (empty action = key unused)
+#   POST act=reset&eng=&game=                   delete the map file (back to default.map / built-in)
+# Maps live in /snom/cfw-data/keymaps/<eng>/<game>.map ("<scancode> <ACTION>" per line).
+. /snom/cfw/lib/cfw.sh
+ROOT=${CFW_KEYMAP_DIR:-/snom/cfw-data/keymaps}
+ACT=$(cfw_param act); ENG=$(cfw_param eng); GAME=$(cfw_param game)
+[ -n "$ENG" ] || ENG=nes
+[ -n "$GAME" ] || GAME=default
+
+# Phone keys (scancode|label), all verified in docs/remote.md.
+KEYS='84|Up
+67|Down
+101|Left
+50|Right
+120|Enter / OK
+97|Cancel
+116|F1
+115|F2
+114|F3 (red hangup)
+113|F4
+16|Volume -
+119|Volume +
+51|1
+49|2
+48|3
+38|4
+37|5
+36|6
+22|7
+21|8
+20|9
+5|0
+6|*
+4|#
+3|Mute
+18|Headset
+19|Menu
+32|Recall
+33|Phone book
+34|Transfer
+35|DND
+52|Retrieve
+53|Rec
+54|Snom
+64|Help
+65|Settings
+66|Redial
+96|Conference
+99|Line P1
+86|Line P2
+83|Line P3
+81|Line P4
+70|Line P5
+68|Line P6
+100|Line P7
+98|Line P8
+85|Line P9
+82|Line P10
+80|Line P11
+69|Line P12'
+
+case "$ENG" in
+    nes) ACTIONS='A B SELECT START UP DOWN LEFT RIGHT QUIT VOLUP VOLDOWN' ;;
+    gb|gba) ACTIONS='A B SELECT START UP DOWN LEFT RIGHT L R QUIT VOLUP VOLDOWN' ;;
+    doom) ACTIONS='UP DOWN LEFT RIGHT FIRE USE ENTER ESCAPE STRAFE RUN QUIT VOLUP VOLDOWN' ;;
+    *) ENG=; ;;
+esac
+case "$GAME" in default) ;; ''|.*|*[!A-Za-z0-9._-]*) GAME= ;; esac
+
+# Built-in defaults (must match kDefs in the engines).
+defaults() {
+    case "$ENG" in
+        nes) echo '84 UP;67 DOWN;101 LEFT;50 RIGHT;120 A;116 B;97 START;115 SELECT;114 QUIT;16 VOLDOWN;119 VOLUP' ;;
+        gb|gba) echo '84 UP;67 DOWN;101 LEFT;50 RIGHT;120 A;116 B;97 START;115 SELECT;51 L;48 R;114 QUIT;16 VOLDOWN;119 VOLUP' ;;
+        doom) echo '84 UP;67 DOWN;101 LEFT;50 RIGHT;97 ENTER;120 FIRE;116 USE;115 ESCAPE;114 QUIT;16 VOLDOWN;119 VOLUP' ;;
+    esac | tr ';' '\n'
+}
+
+if [ "$ACT" = capture ]; then
+    printf 'Content-type: text/plain\r\n\r\n'
+    if cfw_game_running; then
+        rm -f /tmp/cfw-lastkey
+        i=0
+        while [ $i -lt 80 ] && [ ! -s /tmp/cfw-lastkey ]; do usleep 100000; i=$((i + 1)); done
+        head -n 1 /tmp/cfw-lastkey 2>/dev/null
+    else
+        rm -f /tmp/cfw-cap
+        dd if=/dev/input/event0 of=/tmp/cfw-cap bs=16 count=64 2>/dev/null &
+        DDP=$!
+        i=0; C=
+        while [ $i -lt 80 ] && [ -z "$C" ]; do
+            usleep 100000; i=$((i + 1))
+            C=$(od -d -v /tmp/cfw-cap 2>/dev/null | awk '$6==1 && $8==1 {print $7+0; exit}')
+        done
+        kill "$DDP" 2>/dev/null
+        rm -f /tmp/cfw-cap
+        echo "$C"
+    fi
+    exit 0
+fi
+
+MSG=""
+FILE="$ROOT/$ENG/$GAME.map"
+if [ "$REQUEST_METHOD" = POST ] && [ -n "$ENG" ] && [ -n "$GAME" ]; then
+    if [ "$ACT" = reset ]; then
+        rm -f "$FILE" && MSG="Map $ENG/$GAME removed." || MSG="Could not remove the map."
+    elif [ "$ACT" = save ]; then
+        mkdir -p "$ROOT/$ENG" 2>/dev/null
+        T="$FILE.tmp"; : > "$T" || MSG="Cannot write $T (flash read-only?)."
+        echo "# $ENG / $GAME - written by the CFW panel" >> "$T"
+        echo "$KEYS" | while IFS='|' read -r code label; do
+            a=$(cfw_param "k$code")
+            for ok in $ACTIONS; do [ "$a" = "$ok" ] && echo "$code $a" >> "$T"; done
+        done
+        if [ -z "$MSG" ]; then
+            if [ "$(grep -vc '^#' "$T")" -eq 0 ]; then rm -f "$T"; rm -f "$FILE"; MSG="No keys assigned: map removed (default.map / built-in applies)."
+            else mv "$T" "$FILE" && MSG="Saved $ENG/$GAME. Takes effect the next time the game starts."; fi
+        fi
+    fi
+fi
+
+cfw_html_head "Key maps"
+echo '<h1>Key maps</h1><p><a href="/cgi-bin/panel">back to the panel</a></p>'
+[ -n "$MSG" ] && printf '<p><b>%s</b></p>\n' "$(printf '%s' "$MSG" | cfw_html_escape)"
+echo '<p>Pick an engine and a game (or <i>default</i> = every game of that engine), assign phone keys to actions, save. A map for one game wins over <i>default</i>, which wins over the built-in layout. The volume keys default to VOLUP/VOLDOWN.</p>'
+echo '<p>'
+for e in nes gb gba doom; do
+    if [ "$e" = "$ENG" ]; then printf '<b>[%s]</b> ' "$e"; else printf '<a href="/cgi-bin/keymap?eng=%s">%s</a> ' "$e" "$e"; fi
+done
+echo '</p>'
+if [ -z "$ENG" ]; then cfw_html_foot; exit 0; fi
+# games known for this engine: saves + existing maps (id = ROM sha1, doom: IWAD name)
+GAMES="default"
+for f in "$ROOT/$ENG"/*.map "/snom/cfw-data/saves/$ENG"/*.srm; do
+    [ -f "$f" ] || continue
+    b=$(basename "$f"); b=${b%.map}; b=${b%.srm}
+    case "$b" in *[!A-Za-z0-9._-]*|.*) continue ;; esac
+    GAMES="$GAMES $b"
+done
+[ "$ENG" = doom ] && for d in /snom/cfw-data/saves/doom/*; do [ -d "$d" ] && GAMES="$GAMES $(basename "$d")"; done
+GAMES=$(printf '%s\n' $GAMES doom doom2 freedoom1 freedoom2 | awk '!s[$0]++' | { [ "$ENG" = doom ] && cat || grep -v '^doom\|^freedoom'; })
+printf '<form method="get" action="/cgi-bin/keymap"><input type="hidden" name="eng" value="%s">Game: <select name="game" onchange="this.form.submit()">' "$ENG"
+for g in $GAMES; do
+    sel=""; [ "$g" = "$GAME" ] && sel=" selected"
+    printf '<option%s>%s</option>' "$sel" "$(printf '%s' "$g" | cfw_html_escape)"
+done
+echo '</select> <noscript><button>Open</button></noscript></form>'
+if [ -z "$GAME" ]; then echo '<p>Invalid game id.</p>'; cfw_html_foot; exit 0; fi
+
+# current assignment for this map (the file, else what applies without it)
+CUR=/tmp/cfw-km-cur.$$
+if [ -f "$FILE" ]; then SRC="this map file"; sed 's/#.*//' "$FILE" > "$CUR"
+elif [ -f "$ROOT/$ENG/default.map" ]; then SRC="default.map (no map of its own yet)"; sed 's/#.*//' "$ROOT/$ENG/default.map" > "$CUR"
+else SRC="the built-in layout (no map file yet)"; defaults > "$CUR"; fi
+printf '<p>Showing %s. Saving writes <code>%s</code>.</p>\n' "$SRC" "$(printf '%s/%s.map' "$ENG" "$GAME" | cfw_html_escape)"
+echo '<p><button type="button" id="cap">Press a key...</button> <span id="capout"></span><br><small>Press a phone key within 8 s to jump to its row. While no game runs, the phone UI also sees that key.</small></p>'
+printf '<form method="post" action="/cgi-bin/keymap"><input type="hidden" name="eng" value="%s"><input type="hidden" name="game" value="%s"><input type="hidden" name="act" value="save">' "$ENG" "$GAME"
+echo '<table cellpadding="3"><tr><th align="left">Phone key</th><th align="left">Code</th><th align="left">Action</th></tr>'
+echo "$KEYS" | while IFS='|' read -r code label; do
+    cur=$(awk -v c="$code" '$1==c {print $2; exit}' "$CUR")
+    printf '<tr id="r%s"><td>%s</td><td>%s</td><td><select name="k%s"><option value="">-</option>' "$code" "$(printf '%s' "$label" | cfw_html_escape)" "$code" "$code"
+    for a in $ACTIONS; do
+        sel=""; [ "$a" = "$cur" ] && sel=" selected"
+        printf '<option%s>%s</option>' "$sel" "$a"
+    done
+    echo '</select></td></tr>'
+done
+rm -f "$CUR"
+echo '</table><p><button type="submit">Save map</button></p></form>'
+printf '<form method="post" action="/cgi-bin/keymap" onsubmit="return confirm(\x27Remove this map?\x27)"><input type="hidden" name="eng" value="%s"><input type="hidden" name="game" value="%s"><input type="hidden" name="act" value="reset"><button type="submit">Remove this map</button></form>\n' "$ENG" "$GAME"
+cat <<'JS'
+<script>
+document.getElementById('cap').onclick=function(){
+  var o=document.getElementById('capout'); o.textContent='waiting...';
+  fetch('/cgi-bin/keymap?act=capture').then(function(r){return r.text();}).then(function(t){
+    t=t.trim(); var r=document.getElementById('r'+t);
+    if(!t){o.textContent='no key seen';return;}
+    o.textContent='scancode '+t+(r?'':' (not in the table)');
+    if(r){r.scrollIntoView();r.style.background='#ffc';}
+  }).catch(function(){o.textContent='failed';});
+};
+</script>
+JS
+cfw_html_foot

@@ -30,7 +30,9 @@ Steps:
 
 For each feature, record here which files it touches and how it was tested on the device.
 
-## Plan: password protection for the CFW panel (same login as SSH)
+## Done: password protection for the CFW panel (same login as SSH)
+
+**Status: implemented** (see [cfw-login.md](cfw-login.md), test `tests/login.sh`). The plan below is kept for the reasoning.
 
 **Finding (tested on-device 2026-10-29):** the phone's busybox `httpd` can
 check Basic-auth logins against the system password database. With

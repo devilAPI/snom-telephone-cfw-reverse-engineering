@@ -24,12 +24,20 @@ echo auto > tmp/gsw120/net_port_speed_mode
 echo auto > tmp/gsw120/pc_port_speed_mode
 echo 0 > tmp/gsw120/net_port_ieee8023az_enable
 echo 0 > tmp/gsw120/pc_port_ieee8023az_enable
+mkdir -p tmp/gpio
+# The D375's two status LEDs: stay lit from boot unless something turns them off.
+for g in 32 18; do
+    [ -d "/sys/class/gpio/gpio$g" ] || echo "$g" > /sys/class/gpio/export
+    echo out > "/sys/class/gpio/gpio$g/direction"
+    echo 0 > "/sys/class/gpio/gpio$g/value"
+done
 echo 64 > tmp/backlight
 chmod 666 tmp/backlight
 
 # The app gets its own settings, so the D375 app's stay as they were. The first
 # boot copies them. Web credentials are needed or the app stops at its setup
-# wizard. setting_server is dropped because that URL serves D375 firmware.
+# wizard. setting_server is dropped because that URL serves D375 firmware. The
+# side panels show short labels, five per side: the app cannot do six.
 if [ ! -f "$CFG/config.xml" ]; then
     mkdir -p "$CFG"
     for f in /snom/snomconfig/*; do
@@ -37,15 +45,20 @@ if [ ! -f "$CFG/config.xml" ]; then
     done
     [ -f "$CFG/config.xml" ] || \
         printf '<?xml version="1.0" encoding="utf-8"?>\n<phone-settings e="2">\n</phone-settings>\n' > "$CFG/config.xml"
-    . /snom/cfw/model.conf
+    CFW_DEFAULT_PW=snom375
     sed -i '/^<setting_server/d' "$CFG/config.xml"
     sed -i "/^<phone-settings/a\\
-<smartlabel_idle_default perm=\"\" c=\"1\" trusted=\"true\">off</smartlabel_idle_default>\\
-<smartlabel_call_default perm=\"\" c=\"1\" trusted=\"true\">off</smartlabel_call_default>\\
+<smartlabel_idle_default perm=\"\" c=\"1\" trusted=\"true\">short</smartlabel_idle_default>\\
+<smartlabel_call_default perm=\"\" c=\"1\" trusted=\"true\">short</smartlabel_call_default>\\
 <http_user perm=\"\" c=\"1\" trusted=\"true\">admin</http_user>\\
 <http_pass perm=\"\" c=\"1\" trusted=\"true\">$CFW_DEFAULT_PW</http_pass>\\
 <admin_mode_password perm=\"\" c=\"1\" trusted=\"true\">$CFW_DEFAULT_PW</admin_mode_password>\\
 <admin_mode_password_confirm perm=\"\" c=\"1\" trusted=\"true\">$CFW_DEFAULT_PW</admin_mode_password_confirm>" "$CFG/config.xml"
+    # A name too wide for the identity tile scrolls, and every step redraws it as a
+    # PNG, which took a quarter of the CPU. Show the short user name instead.
+    NAME=$(sed -n 's/^<user_name idx="1"[^>]*>\([^<]*\)<.*/\1/p' "$CFG/config.xml" | tr -d '\r')
+    [ -z "$NAME" ] || sed -i "/^<phone-settings/a\\
+<user_idle_text idx=\"1\" perm=\"\" c=\"1\" trusted=\"true\">$NAME</user_idle_text>" "$CFG/config.xml"
     sync
 fi
 

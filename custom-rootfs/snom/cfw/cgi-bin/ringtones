@@ -1,0 +1,207 @@
+#!/bin/sh
+# CFW web panel: custom ringtones (upload / list / delete / assign to a line / preview).
+# See docs/ringtones.md.
+#   GET  /cgi-bin/ringtones                         page
+#   POST /cgi-bin/ringtones?act=upload&name=X.wav   raw WAV body (Content-Type application/octet-stream);
+#        the panel page converts any audio file to 16 kHz 16-bit mono PCM in the browser first.
+#   POST act=delete|use|stock|play (form fields)    use/stock/play take line=N or line=all
+# Answers to act=upload are plain text ("OK ..." / "ERROR ..."), for the page's fetch().
+
+# A raw upload must not be swallowed by cfw.sh's POST-body reader (it keeps the body in a
+# shell variable, which cannot hold binary data): mark the body as already read for that case.
+case "${CONTENT_TYPE:-}" in application/octet-stream*) CFW_BODY_READ=1 ;; esac
+. /snom/cfw/lib/cfw.sh
+. /snom/cfw/lib/ringtones.sh
+
+ACT=$(cfw_param act); NAME=$(cfw_param name); LINE=$(cfw_param line)
+
+# ---- raw upload ---------------------------------------------------------------------------
+if [ "$ACT" = upload ]; then
+    printf 'Content-type: text/plain\r\n\r\n'
+    if [ "$REQUEST_METHOD" != POST ] || [ "${CFW_BODY_READ:-}" != 1 ]; then
+        echo "ERROR upload must be a POST with Content-Type application/octet-stream"; exit 0
+    fi
+    if ! rt_name_ok "$NAME"; then
+        echo "ERROR invalid name (letters, digits, . _ - only, ending in .wav, max 64 chars)"; exit 0
+    fi
+    LEN=${CONTENT_LENGTH:-0}
+    case "$LEN" in ''|*[!0-9]*) LEN=0 ;; esac
+    if [ "$LEN" -le 44 ]; then echo "ERROR empty upload"; exit 0; fi
+    if [ "$LEN" -gt "$RT_MAX_BYTES" ]; then
+        head -c "$LEN" >/dev/null   # drain, so the browser gets the answer
+        echo "ERROR file is $LEN bytes, the limit is $RT_MAX_BYTES (shorten it or use 8 kHz)"; exit 0
+    fi
+    cfw_rw
+    D=$(rt_dir) || { head -c "$LEN" >/dev/null; echo "ERROR cannot create $RT_DIR (flash read-only?)"; exit 0; }
+    USED=$(du -s "$D" 2>/dev/null | awk '{print $1 * 1024}')
+    if [ $(( ${USED:-0} + LEN )) -gt "$RT_MAX_TOTAL" ]; then
+        head -c "$LEN" >/dev/null
+        echo "ERROR ringtone storage full ($RT_MAX_TOTAL bytes max) - delete some first"; exit 0
+    fi
+    TMP="$D/.upload.$$"
+    if ! head -c "$LEN" > "$TMP" 2>/dev/null; then
+        rm -f "$TMP"; echo "ERROR could not write to $D (flash full or read-only?)"; exit 0
+    fi
+    GOT=$(wc -c < "$TMP")
+    if [ "$GOT" != "$LEN" ]; then
+        rm -f "$TMP"; echo "ERROR short write ($GOT of $LEN bytes) - flash full?"; exit 0
+    fi
+    if ! WHY=$(rt_check "$TMP"); then
+        rm -f "$TMP"; echo "ERROR $WHY"; exit 0
+    fi
+    if ! mv "$TMP" "$D/$NAME" 2>/dev/null; then
+        rm -f "$TMP"; echo "ERROR could not store $NAME"; exit 0
+    fi
+    cfw_ro
+    echo "OK stored $NAME ($(rt_duration "$D/$NAME") s)"
+    exit 0
+fi
+
+# ---- form actions -------------------------------------------------------------------------
+D=$(rt_dir); MSG=""
+rt_load_settings
+if [ -n "$ACT" ]; then
+    case "$ACT" in delete|use)
+        rt_name_ok "$NAME" || { MSG="ERROR: invalid ringtone name"; ACT=""; } ;;
+    esac
+    case "$ACT" in use|stock|play)
+        case "$LINE" in
+            all) LINES=$(rt_lines) ;;
+            [1-9]|1[0-2]) LINES=$LINE ;;
+            *) MSG="ERROR: invalid line"; ACT="" ;;
+        esac ;;
+    esac
+fi
+case "$ACT" in
+delete)
+    cfw_rw
+    if rm -f "$D/$NAME" 2>/dev/null && [ ! -e "$D/$NAME" ]; then MSG="Deleted $NAME"
+    else MSG="ERROR: could not delete $NAME (flash read-only?)"; fi
+    cfw_ro ;;
+use)
+    if [ ! -f "$D/$NAME" ]; then MSG="ERROR: $NAME does not exist"
+    else
+        SET=""
+        for n in $LINES; do SET="$SET user_custom$n=$RT_URL_BASE/$NAME user_ringer$n=Custom"; done
+        # $SET only holds digits, fixed words and a checked file name: safe to split.
+        if ERR=$(rt_set_settings $SET); then MSG="Line(s) $(echo $LINES) now ring with $NAME"
+        else MSG="ERROR: $ERR"; fi
+    fi ;;
+stock)
+    SET=""
+    for n in $LINES; do SET="$SET user_ringer$n=Ringer1 user_custom$n="; done
+    if ERR=$(rt_set_settings $SET); then MSG="Line(s) $(echo $LINES) back to the stock ringer (Ringer1)"
+    else MSG="ERROR: $ERR"; fi ;;
+play)
+    set -- $LINES
+    if ERR=$(rt_play_line "$1"); then MSG="Playing the ringer of line $1 on the phone (at its ringer volume)"
+    else MSG="ERROR: $ERR"; fi ;;
+esac
+
+case "$ACT" in use|stock) rt_load_settings ;; esac   # show the values just written
+
+# ---- page ---------------------------------------------------------------------------------
+cfw_html_head "Ringtones"
+echo '<h1>Ringtones</h1><div class="sub"><a href="/cgi-bin/panel">&larr; back to the panel</a></div>'
+[ -z "$MSG" ] || printf '<div class="card"><b class="%s">%s</b></div>\n' \
+    "$(case "$MSG" in ERROR*) echo err ;; *) echo ok ;; esac)" "$(printf '%s' "$MSG" | cfw_html_escape)"
+
+# line selector options, reused by every form
+OPTS='<option value="all">all active lines</option>'
+for n in $(rt_lines); do
+    u=$(rt_setting "user_name$n" | cfw_html_escape)
+    OPTS="$OPTS<option value=\"$n\">line $n${u:+ ($u)}</option>"
+done
+
+echo '<div class="card"><h2>Lines</h2>'
+for n in $(rt_lines); do
+    r=$(rt_setting "user_ringer$n"); c=$(rt_setting "user_custom$n")
+    printf '<p>Line %s: <b>%s</b>%s</p>\n' "$n" "$(printf '%s' "${r:-Ringer1}" | cfw_html_escape)" \
+        "$( [ -n "$c" ] && printf ' &mdash; <code>%s</code>' "$(printf '%s' "$c" | cfw_html_escape)")"
+done
+printf '<form method="post" action="/cgi-bin/ringtones"><select name="line">%s</select> ' "$OPTS"
+echo '<button name="act" value="play">Play ringer on phone</button> <button name="act" value="stock" style="background:#777">Back to stock ringer</button></form>'
+echo '<p class="warn">"Play" uses the line&#39;s ringer volume. The phone&#39;s menu (Settings, Ringtone) also lists "Custom" once a line has one. The phone caches the custom melody: if a newly chosen file does not play, pick Custom again in that menu or reboot (wait a few minutes after "Use" so the setting is saved to flash).</p></div>'
+
+echo '<div class="card"><h2>Your ringtones</h2>'
+n=0
+for f in "$D"/*.wav; do
+    [ -f "$f" ] || continue
+    b=${f##*/}; rt_name_ok "$b" || continue
+    n=$((n+1)); e=$(printf '%s' "$b" | cfw_html_escape)
+    printf '<form method="post" action="/cgi-bin/ringtones" style="margin:8px 0"><input type="hidden" name="name" value="%s">' "$e"
+    printf '<b>%s</b> <span class="sub">%s s, %s KB</span><br><audio controls preload="none" src="/ringtones/%s"></audio><br>' \
+        "$e" "$(rt_duration "$f")" "$(( $(wc -c < "$f") / 1024 ))" "$e"
+    printf '<select name="line">%s</select> <button name="act" value="use">Use</button> ' "$OPTS"
+    printf '<button name="act" value="delete" style="background:#c33" onclick="return confirm(\x27Delete?\x27)">Delete</button></form>\n'
+done
+[ "$n" -gt 0 ] || echo '<p>No ringtones yet.</p>'
+echo '</div>'
+
+cat <<'EOT'
+<div class="card"><h2>Upload</h2>
+<p>Any audio file your browser can play (mp3, ogg, wav, m4a ...). It is converted here in the
+browser to 16 kHz 16-bit mono WAV (the format the phone plays), cut to the length below and
+normalised, then uploaded. Max 1 MB per file (about 32 s).</p>
+<input type="file" id="rtfile" accept="audio/*"><br>
+<input type="text" id="rtname" placeholder="name.wav" pattern="[A-Za-z0-9._-]+\.wav">
+<label style="font-size:13px">Length (s) <input type="number" id="rtlen" value="30" min="1" max="32" style="width:60px"></label>
+<label style="font-size:13px"><input type="checkbox" id="rtnorm" checked> normalise</label><br><br>
+<button type="button" id="rtgo">Convert and upload</button> <span id="rtmsg" style="font-size:13px"></span>
+</div>
+<script>
+(function () {
+  var RATE = 16000, MAXB = 1048576;
+  var f = document.getElementById('rtfile'), nm = document.getElementById('rtname'),
+      msg = document.getElementById('rtmsg');
+  function say(t, bad) { msg.textContent = t; msg.className = bad ? 'err' : 'ok'; }
+  f.onchange = function () {
+    if (!f.files[0]) return;
+    nm.value = f.files[0].name.replace(/\.[^.]*$/, '').replace(/[^A-Za-z0-9._-]+/g, '_')
+                 .replace(/^[._]+/, '').slice(0, 56) + '.wav';
+  };
+  function wav(s) {  /* Float32Array -> 16-bit PCM mono WAV */
+    var n = s.length, b = new ArrayBuffer(44 + 2 * n), v = new DataView(b), i;
+    function str(o, t) { for (var k = 0; k < 4; k++) v.setUint8(o + k, t.charCodeAt(k)); }
+    str(0, 'RIFF'); v.setUint32(4, 36 + 2 * n, true); str(8, 'WAVE'); str(12, 'fmt ');
+    v.setUint32(16, 16, true); v.setUint16(20, 1, true); v.setUint16(22, 1, true);
+    v.setUint32(24, RATE, true); v.setUint32(28, RATE * 2, true); v.setUint16(32, 2, true);
+    v.setUint16(34, 16, true); str(36, 'data'); v.setUint32(40, 2 * n, true);
+    for (i = 0; i < n; i++) v.setInt16(44 + 2 * i, Math.max(-32768, Math.min(32767, Math.round(s[i] * 32767))), true);
+    return new Blob([b], { type: 'application/octet-stream' });
+  }
+  document.getElementById('rtgo').onclick = function () {
+    var file = f.files[0], name = nm.value;
+    if (!file) return say('choose a file first', 1);
+    if (!/^[A-Za-z0-9_-][A-Za-z0-9._-]*\.wav$/.test(name) || name.length > 64) return say('bad name', 1);
+    var secs = Math.max(1, Math.min(32, +document.getElementById('rtlen').value || 30));
+    say('decoding ...');
+    file.arrayBuffer().then(function (ab) {
+      var AC = window.AudioContext || window.webkitAudioContext, ac = new AC();
+      return ac.decodeAudioData(ab).then(function (buf) { ac.close(); return buf; });
+    }).then(function (buf) {
+      var len = Math.min(Math.ceil(buf.duration * RATE), secs * RATE);
+      var oc = new OfflineAudioContext(1, len, RATE), src = oc.createBufferSource();
+      src.buffer = buf; src.connect(oc.destination); src.start();  /* down-mixes to mono */
+      return oc.startRendering();
+    }).then(function (out) {
+      var s = out.getChannelData(0), i, pk = 0, fade = Math.min(s.length, RATE / 50);
+      for (i = 0; i < fade; i++) s[s.length - 1 - i] *= i / fade;   /* no click at the end */
+      if (document.getElementById('rtnorm').checked) {
+        for (i = 0; i < s.length; i++) pk = Math.max(pk, Math.abs(s[i]));
+        if (pk > 0) for (i = 0; i < s.length; i++) s[i] *= 0.89 / pk;
+      }
+      var blob = wav(s);
+      if (blob.size > MAXB) throw new Error('still too big after conversion, shorten it');
+      say('uploading ' + Math.round(blob.size / 1024) + ' KB ...');
+      return fetch('/cgi-bin/ringtones?act=upload&name=' + encodeURIComponent(name),
+                   { method: 'POST', headers: { 'Content-Type': 'application/octet-stream' }, body: blob });
+    }).then(function (r) { return r.text(); }).then(function (t) {
+      if (/^OK/.test(t)) { say(t); setTimeout(function () { location.href = '/cgi-bin/ringtones'; }, 800); }
+      else say(t, 1);
+    }).catch(function (e) { say('failed: ' + e.message, 1); });
+  };
+})();
+</script>
+EOT
+cfw_html_foot

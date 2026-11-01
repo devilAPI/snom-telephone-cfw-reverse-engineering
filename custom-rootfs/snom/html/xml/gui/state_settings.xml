@@ -46,9 +46,17 @@
       <!-- menus only take built-in icon enums: kIconTypeDect is unused on the
            D375, its dect*.png are replaced by a gamepad (tools/make-games-icon.py) -->
       <IconType>$(icon_type_enum:kIconTypeDect)</IconType>
-      <SubText>DOOM, NES</SubText>
+      <SubText>DOOM, NES, GB, GBA</SubText>
     </If>
     <Url>http://127.0.0.1:8081/cgi-bin/phone-games</Url>
+  </Menu>
+  <!-- CFW: tools menu, rendered from snom/cfw/phone-menu.d by cgi-bin/phone-tools (loopback httpd :8081) -->
+  <Menu name="CFW Tools" id="cfw_tools">
+    <If condition="$(show_feature:FEATURE_PUI_STYLE_SIO)">
+      <IconType>$(icon_type_enum:kIconSettingsInformation)</IconType>
+      <SubText>Info, scripts, intercom</SubText>
+    </If>
+    <Url>http://127.0.0.1:8081/cgi-bin/phone-tools</Url>
   </Menu>
   <Menu name="$(lang:information_settings)" id="information">
     <If condition="$(show_feature:FEATURE_PUI_STYLE_SIO)">

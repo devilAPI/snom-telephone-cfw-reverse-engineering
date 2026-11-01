@@ -580,6 +580,6 @@ bin/find
 bin/renice
 sbin/openvpn
 usr/bin/nano
+usr/bin/htop
 usr/libexec/sshd-session
 usr/libexec/sshd-auth
-usr/bin/htop

@@ -46,5 +46,7 @@ echo 0 > /proc/sys/kernel/printk
 export FREETYPE_PROPERTIES="truetype:interpreter-version=35"
 
 cd /snom
+# CFW: the D815 phone app, see docs/backport-guide.md. Create the file below to
+# run the D375 app instead.
 [ -f /snom/cfw-data/use-d375-app ] || exec /snom/cfw/start-d815.sh
 exec ./lid

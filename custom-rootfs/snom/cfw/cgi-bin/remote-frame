@@ -1,0 +1,11 @@
+#!/bin/sh
+# CFW: raw RGB565 snapshot of the screen for the remote page. ?scale=1|2|4 (default 2).
+# Format: see remote-src/fbshot.c / docs/remote.md.
+. /snom/cfw/lib/cfw.sh
+S=$(cfw_param scale)
+case "$S" in 1|2|4) ;; *) S=2 ;; esac
+if [ ! -x /snom/cfw/bin/fbshot ]; then
+    printf 'Status: 500 Internal Server Error\r\nContent-type: text/plain\r\n\r\nfbshot missing\n'; exit 0
+fi
+printf 'Content-type: application/octet-stream\r\nCache-Control: no-store\r\n\r\n'
+exec /snom/cfw/bin/fbshot "$S"

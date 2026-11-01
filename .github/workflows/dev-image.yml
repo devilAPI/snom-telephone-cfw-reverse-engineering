@@ -1,0 +1,62 @@
+# Build a signed D375 dev image from custom-rootfs/ and publish it as a
+# rolling GitHub pre-release (tag dev-<branch>). See docs/ci-releases.md.
+name: D375 dev image
+
+on:
+  push:
+    branches: [main, cfw-features]
+    paths: [custom-rootfs/**, tools/build-custom-firmware.sh, .github/workflows/dev-image.yml]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: dev-image-${{ github.ref_name }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Signing key
+        env:
+          FIRMWARE_PRIV_PEM: ${{ secrets.FIRMWARE_PRIV_PEM }}
+        run: |
+          [ -n "$FIRMWARE_PRIV_PEM" ] || { echo "::error::secret FIRMWARE_PRIV_PEM is not set (docs/ci-releases.md)"; exit 1; }
+          mkdir -p custom-key
+          printf '%s\n' "$FIRMWARE_PRIV_PEM" > custom-key/firmware.priv.pem
+          chmod 600 custom-key/firmware.priv.pem
+          openssl rsa -in custom-key/firmware.priv.pem -pubout -out custom-key/firmware.pub 2>/dev/null
+          # The phone only accepts an image signed by the key in the image it runs.
+          # A different key would be written into firmware1.pub and lock out updates.
+          cmp -s custom-key/firmware.pub custom-rootfs/firmware1.pub \
+            || { echo "::error::FIRMWARE_PRIV_PEM does not match custom-rootfs/firmware1.pub"; exit 1; }
+
+      - name: Build image
+        run: |
+          # The fakeroot db is keyed by local inode numbers and means nothing here;
+          # without it the build packs everything as root:root (exact for this tree).
+          rm -f custom-rootfs/.fakeroot
+          ./tools/build-custom-firmware.sh
+          rm -rf custom-key
+          cd custom-firmware
+          sha256sum snomD375-10.1.64.17-SIP-r.bin > snomD375-10.1.64.17-SIP-r.bin.sha256
+          cat snomD375-10.1.64.17-SIP-r.bin.sha256
+
+      - name: Publish pre-release
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TAG: dev-${{ github.ref_name }}
+        run: |
+          short=$(git rev-parse --short HEAD)
+          notes="Untested dev build of \`${{ github.ref_name }}\` at ${short} ($(date -u +%F' '%H:%M) UTC).
+
+          Only flash it on a D375 that already runs this CFW (same signing key). Back up first: docs/recover-from-device.md.
+          sha256: \`$(cut -d' ' -f1 custom-firmware/*.sha256)\`"
+          gh release delete "$TAG" --yes --cleanup-tag 2>/dev/null || true
+          gh release create "$TAG" --prerelease --target "$GITHUB_SHA" \
+            --title "D375 dev image (${{ github.ref_name }} ${short})" --notes "$notes" \
+            custom-firmware/snomD375-10.1.64.17-SIP-r.bin custom-firmware/snomD375-10.1.64.17-SIP-r.bin.sha256

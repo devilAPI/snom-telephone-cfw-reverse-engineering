@@ -1,0 +1,12 @@
+<div class="card">
+  <h2>Boot Game Boy / Color</h2>
+  <p>Enter a URL to a Game Boy or Game Boy Color ROM (.gb/.gbc, up to 8 MiB).
+     It's downloaded to RAM, run on the phone screen with Gambatte, and
+     discarded on quit. Keys: nav = D-pad, Fire = A, Use = B, OK = Start,
+     Cancel = Select, red hangup = quit.</p>
+  <form method="post" action="/cgi-bin/boot-gb">
+    <input type="url" name="url" placeholder="http://host/game.gbc" required>
+    <button type="submit" style="background:#396">Boot Game Boy</button>
+  </form>
+  <p style="margin:8px 0 0"><a href="/cgi-bin/boot-gb?log=1">Last launcher log</a></p>
+</div>

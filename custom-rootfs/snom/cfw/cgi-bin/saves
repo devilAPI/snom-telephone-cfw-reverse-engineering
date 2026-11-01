@@ -1,0 +1,66 @@
+#!/bin/sh
+# CFW web panel: persistent game saves (list / download / delete). See docs/saves.md.
+#   GET  /cgi-bin/saves                  page
+#   GET  /cgi-bin/saves?act=get&f=nes/<sha1>.srm   download (attachment)
+#   POST act=delete&f=nes/<sha1>.srm     delete one save
+# f is "SYS/FILE" or "doom/IWAD/FILE"; every component must be [A-Za-z0-9_-][A-Za-z0-9._-]*
+# (no dot-leading names, so no "..", no hidden/tmp files).
+. /snom/cfw/lib/cfw.sh
+ROOT=/snom/cfw-data/saves
+ACT=$(cfw_param act); F=$(cfw_param f)
+
+# saves_valid REL: exit 0 if REL is a safe relative path of 2 or 3 clean components.
+saves_valid() {
+    case "$1" in ''|/*|*//*|*/|*[!A-Za-z0-9._/-]*) return 1 ;; esac
+    _n=0; _old=$IFS; IFS=/
+    for _c in $1; do
+        _n=$((_n + 1))
+        case "$_c" in ''|.*) IFS=$_old; return 1 ;; esac
+    done
+    IFS=$_old
+    [ "$_n" -ge 2 ] && [ "$_n" -le 3 ]
+}
+
+if [ "$ACT" = get ]; then
+    if saves_valid "$F" && [ -f "$ROOT/$F" ]; then
+        printf 'Content-type: application/octet-stream\r\nContent-Disposition: attachment; filename="%s"\r\nContent-Length: %s\r\n\r\n' \
+            "$(basename "$F")" "$(wc -c < "$ROOT/$F")"
+        cat "$ROOT/$F"
+    else
+        printf 'Status: 404 Not Found\r\nContent-type: text/plain\r\n\r\nno such save\n'
+    fi
+    exit 0
+fi
+
+MSG=""
+if [ "$ACT" = delete ]; then
+    if [ "$REQUEST_METHOD" != POST ]; then MSG="Delete needs a POST."
+    elif ! saves_valid "$F" || [ ! -f "$ROOT/$F" ]; then MSG="No such save."
+    elif cfw_game_running; then MSG="A game is running - quit it first."
+    elif rm -f "$ROOT/$F" 2>/dev/null; then MSG="Deleted $F."
+    else MSG="Could not delete $F (flash read-only?)."
+    fi
+fi
+
+cfw_html_head "Game saves"
+echo '<h1>Game saves</h1><p><a href="/cgi-bin/panel">back to the panel</a></p>'
+[ -n "$MSG" ] && printf '<p><b>%s</b></p>\n' "$(printf '%s' "$MSG" | cfw_html_escape)"
+echo '<p>Battery saves of NES, Game Boy and GBA games, and Doom savegames, kept on flash in /snom/cfw-data/saves.
+They survive reboots; a game is identified by the SHA-1 of its ROM (Doom: by IWAD).</p>'
+echo '<table border="0" cellpadding="4"><tr><th align="left">Save</th><th align="right">Bytes</th><th align="left">Modified</th><th></th></tr>'
+N=0
+for f in "$ROOT"/*/* "$ROOT"/*/*/*; do
+    [ -f "$f" ] || continue
+    rel=${f#$ROOT/}
+    saves_valid "$rel" || continue
+    N=$((N + 1))
+    sz=$(wc -c < "$f")
+    mt=$(ls -l "$f" | awk '{print $6, $7, $8}')
+    e=$(printf '%s' "$rel" | cfw_html_escape)
+    printf '<tr><td><code>%s</code></td><td align="right">%s</td><td>%s</td><td><a href="/cgi-bin/saves?act=get&amp;f=%s">download</a>
+ <form method="post" action="/cgi-bin/saves" style="display:inline" onsubmit="return confirm(\x27Delete this save?\x27)"><input type="hidden" name="act" value="delete"><input type="hidden" name="f" value="%s"><button type="submit">delete</button></form></td></tr>\n' \
+        "$e" "$sz" "$mt" "$e" "$e"
+done
+[ "$N" -gt 0 ] || echo '<tr><td colspan="4">No saves yet.</td></tr>'
+echo '</table>'
+cfw_html_foot

@@ -13,7 +13,7 @@
  *   3. take over: kill lid + media_daemon (freeing /dev/fb0 and the keypad),
  *   4. run a background pump thread that streams 16 kHz mono S16 to the codec.
  *
- * SND_VOL=<percent> (env) scales all output, e.g. SND_VOL=5 for bench tests;
+ * SND_VOL=<percent> (env) overrides the stored volume (see snd_hal_volume) for, e.g. SND_VOL=5 for bench tests;
  * SND_DUMP=1 dumps the exact PCM sent to /tmp/snd_dump.raw.
  *
  * See docs/sound.md for the full reverse-engineering writeup.
@@ -48,6 +48,14 @@ int  snd_hal_underruns(void);
 
 /* 1 if the audio pump is running, 0 otherwise. */
 int  snd_hal_ok(void);
+
+/* Master volume in percent (0..100). Stored in /snom/cfw-data/volume, read by
+ * snd_hal_init (default 50; SND_VOL=<percent> in the environment overrides it
+ * and is never persisted). snd_hal_volume_step changes it by delta_pct (the
+ * engines use +-10 for the phone's volume keys), clamps to 0..100, applies it
+ * immediately, persists it and logs "volume: N%" on stderr. */
+void snd_hal_volume_step(int delta_pct);
+int  snd_hal_volume(void);
 
 /* Stop the pump and release the codec (best-effort; the phone reboots after a
  * game exits anyway). */

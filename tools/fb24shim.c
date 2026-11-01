@@ -19,6 +19,7 @@
 #include <string.h>
 #include <sys/ioctl.h>
 #include <sys/mman.h>
+#include <sys/socket.h>
 #include <sys/stat.h>
 #include <sys/types.h>
 #include <time.h>
@@ -140,11 +141,12 @@ static void enable_sip_stack(void)
 static void *copier(void *unused)
 {
     static const struct timespec frame = { 0, FRAME_NS };
-    unsigned y;
+    struct timespec wait = frame;
+    unsigned y, idle = 0;
 
     (void)unused;
     for (;;) {
-        unsigned top = yoffset;
+        unsigned top = yoffset, changed = 0;
 
         for (y = 0; y < height; y++) {
             size_t off = (size_t)(top + y) * src_stride;
@@ -152,10 +154,14 @@ static void *copier(void *unused)
             if (memcmp(shadow + off, copy + off, width * SRC_BYTES)) {
                 memcpy(copy + off, shadow + off, width * SRC_BYTES);
                 convert_line(shadow + off, real + (size_t)y * dst_stride / 4);
+                changed = 1;
             }
         }
         enable_sip_stack();
-        nanosleep(&frame, NULL);
+        /* Comparing the screen costs CPU, so look less often while it stands still. */
+        idle = changed ? 0 : idle + 1;
+        wait.tv_nsec = idle > 10 ? FRAME_NS * 4 : FRAME_NS;
+        nanosleep(&wait, NULL);
     }
     return NULL;
 }
@@ -168,10 +174,36 @@ static void *copier(void *unused)
  */
 #define GSW_DIR "/sys/devices/gsw120.9/gsw120/"
 
+/*
+ * The D815 app drives five LEDs through GPIO numbers that mean something else on
+ * a D375. Two of its LEDs have a D375 equivalent, found by matching the LED types
+ * in both apps: 29 is the D375's 32 and 126 is its 18. Everything else, export and
+ * unexport included, goes to a scratch folder so no D375 pin is touched.
+ */
+#define GPIO_DIR "/sys/class/gpio/"
+
+static const char *redirect_gpio(const char *rest, char *buf, size_t len)
+{
+    const char *attr = strchr(rest, '/');
+
+    if (!strncmp(rest, "gpio29", 6) && (rest[6] == '/' || !rest[6])) {
+        snprintf(buf, len, GPIO_DIR "gpio32%s", attr ? attr : "");
+    } else if (!strncmp(rest, "gpio126", 7) && (rest[7] == '/' || !rest[7])) {
+        snprintf(buf, len, GPIO_DIR "gpio18%s", attr ? attr : "");
+    } else {
+        /* one flat file per pin and attribute, such as /tmp/gpio/gpio28-value */
+        snprintf(buf, len, "/tmp/gpio/%.*s%s%s", (int)(attr ? attr - rest : strlen(rest)),
+                 rest, attr ? "-" : "", attr ? attr + 1 : "");
+    }
+    return buf;
+}
+
 static const char *redirect(const char *path, char *buf, size_t len)
 {
     if (path && !strcmp(path, D815_BACKLIGHT))
         return BACKLIGHT_FILE;
+    if (path && !strncmp(path, GPIO_DIR, sizeof(GPIO_DIR) - 1))
+        return redirect_gpio(path + sizeof(GPIO_DIR) - 1, buf, len);
     if (!path || strncmp(path, GSW_DIR, sizeof(GSW_DIR) - 1))
         return path;
     path += sizeof(GSW_DIR) - 1;
@@ -212,6 +244,49 @@ int __xstat(int ver, const char *path, struct stat *st)
     return real(ver, redirect(path, buf, sizeof(buf)), st);
 }
 
+/*
+ * /dev/snomled takes {key, value, key in the second bank, value}. The app drives
+ * keys 1 to 10, and keymap.py moved its 6 to 10 to the D375's right column, so its
+ * LEDs move too. The left and right row 6 keys get no state from the app, so they
+ * stay off. Their LEDs would otherwise keep the state they had at boot.
+ */
+static int led_fd = -1;
+
+static unsigned char led_key(unsigned char key)
+{
+    return key >= 6 && key <= 10 ? key + 1 : key;
+}
+
+ssize_t write(int fd, const void *buf, size_t len)
+{
+    static ssize_t (*real)(int, const void *, size_t);
+    unsigned char led[4];
+
+    if (!real)
+        real = dlsym(RTLD_NEXT, "write");
+    if (fd != led_fd || len != sizeof(led))
+        return real(fd, buf, len);
+    memcpy(led, buf, sizeof(led));
+    led[0] = led_key(led[0]);
+    led[2] = led_key(led[2]);
+    return real(fd, led, sizeof(led));
+}
+
+static void clear_extra_leds(int fd)
+{
+    static const unsigned char off[][4] = {
+        { 6, 0, 0, 0 }, { 12, 0, 0, 0 }, { 0, 0, 6, 0 }, { 0, 0, 12, 0 }
+    };
+    unsigned i;
+
+    for (i = 0; i < sizeof(off) / sizeof(off[0]); i++) {
+        if (write(fd, off[i], sizeof(off[i])) < 0) {
+            /* nothing useful to do without the LEDs */
+        }
+    }
+    led_fd = fd;
+}
+
 int open(const char *path, int flags, ...)
 {
     va_list ap;
@@ -227,6 +302,8 @@ int open(const char *path, int flags, ...)
         fb_fd = fd;
     } else if (fd >= 0 && !strcmp(path, "/dev/input/event0")) {
         kbd_fd = fd;
+    } else if (fd >= 0 && !strcmp(path, "/dev/snomled")) {
+        clear_extra_leds(fd);
     }
     return fd;
 }
@@ -256,16 +333,34 @@ struct key_event {
     int32_t value;
 };
 
-static void press_settings(void)
-{
-    if (fork() == 0) {
-        static char *const argv[] = {
-            "/bin/phone-key", "SETTINGS", NULL
-        };
+/* D375 keys with no D815 code, pressed through phone-key instead. */
+static const struct {
+    unsigned code;
+    const char *name;
+} named_keys[] = {
+    { 35, "DND" }, { 53, "REC" }, { 65, "SETTINGS" },
+    /* The stock app gives these two no function by default, so they open menus. */
+    { 54, "http://127.0.0.1:8081/cgi-bin/phone-tools" },
+    { 64, "file:///xml/gui/information.xml" },
+};
 
-        setenv("LD_PRELOAD", "", 1);
-        execv(argv[0], argv);
-        _exit(1);
+static void press_named(unsigned code)
+{
+    size_t i;
+
+    for (i = 0; i < sizeof(named_keys) / sizeof(named_keys[0]); i++) {
+        if (named_keys[i].code == code) {
+            if (fork() == 0) {
+                char *const argv[] = {
+                    "/bin/phone-key", (char *)named_keys[i].name, NULL
+                };
+
+                setenv("LD_PRELOAD", "", 1);
+                execv(argv[0], argv);
+                _exit(1);
+            }
+            return;
+        }
     }
 }
 
@@ -280,6 +375,34 @@ static void log_unmapped(unsigned code, int value)
             fclose(f);
         }
     }
+}
+
+/*
+ * The D815 lid has names for P11 and P12 but no key codes, so those two keys go
+ * through it as P10. read() notes the real name, and this puts it in the message
+ * that lid then sends to lcsD815, for example "KEYS DOWN ... Key: P10".
+ */
+#define KEY_LINE "Key: "
+#define KEY_MSG_MAX 200
+
+static const char *volatile renamed_key;
+
+ssize_t send(int fd, const void *buf, size_t len, int flags)
+{
+    static ssize_t (*real)(int, const void *, size_t, int);
+    const char *key = renamed_key;
+    char msg[KEY_MSG_MAX], *at;
+
+    if (!real)
+        real = dlsym(RTLD_NEXT, "send");
+    if (!key || len >= sizeof(msg) || memcmp(buf, "KEYS ", 5))
+        return real(fd, buf, len, flags);
+    memcpy(msg, buf, len);
+    msg[len] = 0;
+    at = strstr(msg, KEY_LINE KEY_CARRIER "\r");
+    if (at)
+        memcpy(at + sizeof(KEY_LINE) - 1, key, sizeof(KEY_CARRIER) - 1);
+    return real(fd, msg, len, flags);
 }
 
 /* lid reads D375 key codes here and gets the D815 code of the same key. */
@@ -299,13 +422,14 @@ ssize_t read(int fd, void *buf, size_t len)
         struct key_event *e = (struct key_event *)((char *)buf + i);
 
         if (e->type == EV_KEY_TYPE) {
-            if (e->code == KEY_SETTINGS_375 && e->value == 1) {
-                press_settings();
+            if (e->value == 1) {
+                press_named(e->code);
             }
             if (e->code == KEY_HOOK && e->value <= 1) {
                 e->value = !e->value;
             }
             original = e->code;
+            renamed_key = e->code < 256 ? key_rename[e->code] : NULL;
             e->code = e->code < 256 ? key_map[e->code] : 0;
             if (!e->code) {
                 log_unmapped(original, e->value);
