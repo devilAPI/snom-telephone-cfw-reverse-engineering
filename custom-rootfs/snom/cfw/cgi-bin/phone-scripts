@@ -1,8 +1,72 @@
 #!/bin/sh
 # CFW: "Scripts" menu on the phone. No args: list /snom/cfw-data/scripts/*.sh.
 # ?run=NAME.sh: run it (20 s limit) and show the output as IPPhoneText.
+# ?pick=1: choose a script for a key. ?pick=NAME.sh (or none): choose the key.
+# ?pick=NAME.sh&key=N: save it.
 . /snom/cfw/lib/cfw.sh
 . /snom/cfw/lib/scripts-run.sh
+. /snom/cfw/lib/phone-web.sh
+. /snom/cfw/lib/key-scripts.sh
+U=http://127.0.0.1:8081/cgi-bin/phone-scripts
+
+menu_head() {
+    echo "Content-type: text/xml"
+    echo ""
+    echo '<?xml version="1.0" encoding="UTF-8"?>'
+    echo '<IPPhoneMenu state="others_except_mb" dtmf="off">'
+    printf '  <Title>%s</Title>\n' "$1"
+}
+menu_item() {
+    printf '  <MenuItem name="%s">\n    <Url>%s</Url>\n  </MenuItem>\n' \
+        "$(printf '%s' "$1" | cfw_xml_escape)" "$2"
+}
+menu_foot() {
+    cat <<'EOF2'
+  <SoftKeyItem>
+    <Name>CANCEL</Name>
+    <Url track="no">phone://mb_nop#go_back</Url>
+  </SoftKeyItem>
+</IPPhoneMenu>
+EOF2
+}
+
+PICK=$(cfw_param pick)
+KEY=$(cfw_param key)
+case "$PICK" in
+'') ;;
+1)
+    menu_head "Script for a key"
+    for f in $(scripts_dir)/*.sh; do
+        [ -f "$f" ] || continue
+        b=${f##*/}
+        scripts_name_ok "$b" && menu_item "$b" "$U?pick=$b"
+    done
+    menu_item "(remove a script from a key)" "$U?pick=none"
+    menu_foot
+    exit 0 ;;
+*)
+    { [ "$PICK" = none ] || scripts_name_ok "$PICK"; } || {
+        cfw_phone_text "Scripts" "Invalid script name"; exit 0; }
+    if [ -z "$KEY" ]; then
+        ks_load
+        menu_head "Choose a key"
+        for k in $KS_KEYS; do
+            c=$(ks_get "$k")
+            menu_item "Key $k${c:+: $c}" "$U?pick=$PICK&amp;key=$k"
+        done
+        menu_foot
+        exit 0
+    fi
+    case " $KS_KEYS " in *" $KEY "*) ;; *) cfw_phone_text "Scripts" "Invalid key"; exit 0 ;; esac
+    if [ "$PICK" = none ]; then
+        ks_clear "$KEY" && T="Key $KEY is a line key again" || T="The phone app did not save it"
+    else
+        ks_set "$KEY" "$PICK" && T="Key $KEY now runs $PICK" || T="The phone app did not save it"
+    fi
+    cfw_phone_text "Scripts" "$T"
+    exit 0 ;;
+esac
+
 NAME=$(cfw_param run)
 if [ -n "$NAME" ]; then
     if ! scripts_name_ok "$NAME"; then
@@ -26,6 +90,9 @@ for f in $(scripts_dir)/*.sh; do
     printf '  <MenuItem name="%s">\n    <Url>http://127.0.0.1:8081/cgi-bin/phone-scripts?run=%s</Url>\n  </MenuItem>\n' \
         "$(printf '%s' "$b" | cfw_xml_escape)" "$b"
 done
+if [ "$n" -gt 0 ]; then
+    printf '  <MenuItem name="Assign to a key">\n    <Url>http://127.0.0.1:8081/cgi-bin/phone-scripts?pick=1</Url>\n  </MenuItem>\n'
+fi
 if [ "$n" -eq 0 ]; then
     echo '  <MenuItem name="(no scripts - add in web panel)">'
     echo '    <Url track="no">phone://mb_nop#go_back</Url>'

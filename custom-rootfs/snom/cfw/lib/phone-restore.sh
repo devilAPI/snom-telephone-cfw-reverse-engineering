@@ -1,5 +1,5 @@
 #!/bin/sh
-# phone-restore.sh - bring the stock phone app (lid + media_daemon + lcsD375)
+# phone-restore.sh - bring the phone app (lid + media_daemon + lcs)
 # back after a game took over the screen, WITHOUT rebooting.
 #
 #   /snom/cfw/lib/phone-restore.sh        exit 0 = phone app healthy
@@ -17,13 +17,19 @@
 #   the processes' fds close; the stock media_daemon re-inits it fine.
 #   So: kill the orphans, drop the flag, wait for rcS to restart lid.
 #
+#   The phone app normally runs in the chroot /snom/d815 (docs/backport-guide.md).
+#   Everything in there is stopped and unmounted, and start-d815.sh sets it up again.
+#
 # Env: RESTORE_TIMEOUT (s, default 60), RESTORE_LOG (default /tmp/phone-restore.log)
 
 FLAG=/tmp/ssh_fast_update
 TIMEOUT=${RESTORE_TIMEOUT:-60}
 LOG=${RESTORE_LOG:-/tmp/phone-restore.log}
 # lid's children (and grandchild dns-proxy) that outlive a kill -9 of lid.
-ORPHANS="lcsD375 bsa_server dns-proxy bt_ag_server media_daemon"
+ORPHANS="lcsD375 lcsD815 bsa_server dns-proxy bt_ag_server media_daemon"
+APP=lcsD815
+[ -f /snom/cfw-data/use-d375-app ] && APP=lcsD375
+CHROOT=/snom/d815
 
 log() { echo "$(cut -d' ' -f1 /proc/uptime) phone-restore: $*" >> "$LOG"; }
 
@@ -31,16 +37,29 @@ log() { echo "$(cut -d' ' -f1 /proc/uptime) phone-restore: $*" >> "$LOG"; }
 listening() { grep -q "0100007F:$1 00000000:0000 0A" /proc/net/tcp; }
 
 healthy() {
-    pidof lid >/dev/null && pidof media_daemon >/dev/null && pidof lcsD375 >/dev/null &&
+    pidof lid >/dev/null && pidof media_daemon >/dev/null && pidof $APP >/dev/null &&
         listening 0513 && listening 0512
 }
 
 uptime_s() { cut -d. -f1 /proc/uptime; }
 
+# Stop whatever still runs in the chroot, then undo its mounts, deepest first.
+stop_chroot() {
+    for p in /proc/[0-9]*; do
+        [ "$(readlink "$p/root" 2>/dev/null)" = "$CHROOT" ] || continue
+        kill -CONT "${p#/proc/}" 2>/dev/null
+        kill -9 "${p#/proc/}" 2>/dev/null
+    done
+    usleep 300000
+    for m in $(grep " $CHROOT/" /proc/mounts | cut -d' ' -f2 | sort -r); do
+        umount "$m" 2>/dev/null || umount -l "$m" 2>/dev/null
+    done
+}
+
 # Case 1: the phone app was never taken over (e.g. the game failed before
 # snd_hal_init) - just undo a possible SIGSTOP and the flag.
 if pidof lid >/dev/null; then
-    kill -CONT $(pidof lcsD375) 2>/dev/null
+    kill -CONT $(pidof $APP) 2>/dev/null
     rm -f "$FLAG"
     if healthy; then log "lid still running, nothing to restore"; exit 0; fi
     # lid is up but not healthy (still starting?) - fall through to the wait.
@@ -67,6 +86,7 @@ else
         usleep 300000; i=$((i + 1))
     done
     [ -n "$alive" ] && log "still alive after kill -9:$alive (continuing)"
+    stop_chroot
     sync
     log "removing $FLAG, rcS restarts /snom/start.sh"
     rm -f "$FLAG"
@@ -79,7 +99,7 @@ while :; do
         exit 0
     fi
     if [ $(( $(uptime_s) - start )) -ge "$TIMEOUT" ]; then
-        log "phone app NOT healthy after ${TIMEOUT} s (lid=$(pidof lid) md=$(pidof media_daemon) lcs=$(pidof lcsD375))"
+        log "phone app NOT healthy after ${TIMEOUT} s (lid=$(pidof lid) md=$(pidof media_daemon) lcs=$(pidof $APP))"
         exit 1
     fi
     sleep 1

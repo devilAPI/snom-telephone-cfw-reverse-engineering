@@ -281,7 +281,7 @@ static void fbInit(void) {
     /* The phone UI (lcsD375) survives the takeover (only its parent lid is
      * killed) and would paint over us: freeze it, as Doom does. The phone
      * restore (or reboot) after we quit kills it anyway. */
-    if (system("kill -STOP $(pidof lcsD375) 2>/dev/null") == -1)
+    if (system("kill -STOP $(pidof lcsD375 lcsD815) 2>/dev/null") == -1)
         perror("stop lcsD375");
 
     fbPtr = (uint8_t *)mmap(NULL, (long)fbStride * v.yres, PROT_READ|PROT_WRITE, MAP_SHARED, fd, 0);

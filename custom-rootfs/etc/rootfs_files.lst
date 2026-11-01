@@ -580,3 +580,4 @@ bin/find
 bin/renice
 sbin/openvpn
 usr/bin/nano
+usr/bin/htop

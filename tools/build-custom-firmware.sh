@@ -67,6 +67,18 @@ else
     echo "  (warning: no fakeroot db — all files packed as root:root, no dev nodes)"
 fi
 echo "  rootfs.tar.gz: $(stat -c%s "$tmp/rootfs.tar.gz") bytes"
+# The phone app is the D815's; see docs/backport-guide.md. Added here because
+# these files are generated and are not part of the rootfs tree.
+STAGE=emu/backport/stage
+[ -f emu/backport/d8.tar ] || python3 tools/backport/pack.py decrypted/D815-10.1.226.16 emu/backport/d8.tar
+[ -f tools/out/fb24shim.so ] || tools/build-fb24shim.sh
+python3 tools/backport/stage.py emu/backport/d8.tar tools/out/fb24shim.so "$ROOTFS" "$STAGE"
+gzip -d "$tmp/rootfs.tar.gz"
+(cd "$STAGE" && find snom/d815 snom/bmp -mindepth 1 -print; echo snom/d815) | LC_ALL=C sort | \
+    tar -rf "$tmp/rootfs.tar" -C "$STAGE" --no-recursion --numeric-owner --owner=0 --group=0 -T -
+gzip -9 "$tmp/rootfs.tar"
+echo "  rootfs.tar.gz with the D815 app: $(stat -c%s "$tmp/rootfs.tar.gz") bytes"
+
 # The phone extracts with `tar ... update/` to decide system vs application
 # update. A "./" or "/" prefix makes that filter miss, and the image would be
 # unpacked into /snom (application update), breaking the phone.

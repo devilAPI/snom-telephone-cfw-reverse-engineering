@@ -20,10 +20,10 @@ if [ -x "$KI" ]; then
     "$KI" -d "$MS" "$KEY" || reply "500 Internal Server Error" "inject failed"
     reply "200 OK" "ok $KEY"
 fi
-# fallback: lid's own key names via command.htm (needs lcsD375/lid running)
+# fallback: lid's own key names via command.htm (needs lcsD875/lid running)
 case "$KEY" in
     UP|DOWN|LEFT|RIGHT|ENTER|CANCEL|MENU|SETTINGS|F1|F2|F3|F4|VOLUME_UP|VOLUME_DOWN|MUTE|SPEAKER|HEADSET) ;;
     *) reply "400 Bad Request" "unknown key" ;;
 esac
-wget -q -T 3 -O /dev/null "http://127.0.0.1/command.htm?key=$KEY" || reply "502 Bad Gateway" "command.htm failed"
+chroot /snom/d815 /bin/phone-key "$KEY" || reply "502 Bad Gateway" "command.htm failed"
 reply "200 OK" "ok $KEY (command.htm)"

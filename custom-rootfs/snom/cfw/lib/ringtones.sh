@@ -80,12 +80,12 @@ rt_duration() {
 rt_load_settings() {
     RT_SETTINGS=
     if rt_stock_ok; then
-        RT_SETTINGS=$(curl -s -m 15 "$RT_STOCK/settings.htm" </dev/null | tr -d '\r' |
+        RT_SETTINGS=$(rt_curl -s -m 15 "$RT_STOCK/settings.htm" </dev/null | tr -d '\r' |
             sed -n 's/.*>\(user_[a-z]*[0-9]*\)<\/a>=\(.*\)$/\1=\2/p' |
             sed 's/&#x2F;/\//g; s/&#32;/ /g; s/&#x3A;/:/g; s/&quot;/"/g; s/&lt;/</g; s/&gt;/>/g; s/&amp;/\&/g')
     fi
     if [ -z "$RT_SETTINGS" ]; then
-        RT_SETTINGS=$(tr -d '\r' < /snom/snomconfig/config.xml 2>/dev/null |
+        RT_SETTINGS=$(tr -d '\r' < "$RT_CONFIG" 2>/dev/null |
             sed -n 's/^<\(user_[a-z]*\) idx="\([0-9]*\)"[^>]*>\(.*\)<\/user_[a-z]*>$/\1\2=\3/p')
     fi
 }
@@ -102,13 +102,18 @@ rt_lines() {
     [ -n "$_l" ] && printf '%s\n' $_l || echo 1
 }
 
+# rt_curl ARGS: curl to the phone app's web server, with its login.
+. /snom/cfw/lib/phone-web.sh
+RT_CONFIG=$PHONE_CONFIG
+rt_curl() { phone_admin; phone_curl "$@"; }
+
 # rt_stock_ok: is the stock web server (lcsD375) usable? Fails fast when a game runs, when
 # lcsD375 is gone, or when it is SIGSTOPped (Doom stops it): state "T" in /proc/PID/stat.
 # No HTTP probe here: the stock server can take several seconds to answer while it is
 # busy (a settings save writes flash), so the real request below carries the timeout.
 rt_stock_ok() {
     cfw_game_running && return 1
-    _p=$(pidof lcsD375 2>/dev/null) || return 1
+    _p=$(pidof lcsD815 lcsD375 2>/dev/null) || return 1
     for _q in $_p; do
         case "$(cut -d' ' -f3 "/proc/$_q/stat" 2>/dev/null)" in T|Z|'') return 1 ;; esac
     done
@@ -121,9 +126,9 @@ rt_stock_ok() {
 rt_set_settings() {
     rt_stock_ok || { echo "phone app is not running (game active?) - try again from the phone UI"; return 1; }
     _n=$#
-    for _kv in settings=save "$@"; do set -- "$@" --data-urlencode "$_kv"; done
+    for _kv in settings=save store_settings=save "$@"; do set -- "$@" --data-urlencode "$_kv"; done
     shift "$_n"
-    _code=$(curl -s -m 15 -o /dev/null -w '%{http_code}' -G "$@" "$RT_STOCK/dummy.htm" </dev/null)
+    _code=$(rt_curl -s -m 15 -o /dev/null -w '%{http_code}' -G "$@" "$RT_STOCK/dummy.htm" </dev/null)
     case "$_code" in
         200) return 0 ;;
         401) echo "the stock web UI asks for a password (http_user/http_pass set) - settings not changed"; return 1 ;;
