@@ -303,8 +303,8 @@ Work through these in order. Steps 2 to 6 need nothing from the phone.
 
 ## Still to do
 
-2. Confirm the Settings key and find the remaining keys.
-3. Start each game, and test incoming calls and the headset.
-4. Find the real cause of the SIP stack byte, to replace the fixed address.
-5. Drop `lcsD375` and its fonts from the image once the D815 app has proven itself.
+1. Confirm the Settings key and find the remaining keys.
+2. Start each game, and test incoming calls and the headset.
+3. Find the real cause of the SIP stack byte, to replace the fixed address.
+4. Drop `lcsD375` and its fonts from the image once the D815 app has proven itself.
    That saves several MB.
