@@ -26,9 +26,82 @@ Steps:
 |---|---|
 | Root SSH on every boot | done (files need recovering into the overlay) |
 | Custom firmware signing key | done (rekeying documented) |
-| _ideas, e.g. extra tools (busybox applets, tcpdump), custom web UI pages, logging to syslog server, removing phone-home/provisioning_ | open |
+| Ideas | see the list below |
 
 For each feature, record here which files it touches and how it was tested on the device.
+
+## Ideas (to do)
+
+These aren't built yet. Each one has a rough size: S is an evening, M a few
+days, L a project. Things that already exist (games, intercom, ringtones,
+remote screen, scripts, idle widgets, keymap, saves, theming, splash, backup)
+aren't listed.
+
+### Phone and calls
+
+- [ ] **Call log export** (S): a panel page and CSV download of the call history.
+- [ ] **Call recording to flash or a network share** (M): the Record key
+      exists. Needs a capture path from halaudio, see
+      [sound.md](sound.md).
+- [ ] **Blocklist and caller rules** (S): reject or silence numbers by
+      pattern, with a panel editor.
+- [ ] **Do-not-disturb schedule** (S): DND on a timer, such as nights and
+      weekends.
+- [ ] **Caller lookup** (M): look up an incoming number in a CardDAV or
+      LDAP address book, or a reverse-search URL, and show the name.
+- [ ] **Voicemail as audio** (M): play messages from the Fritz!Box
+      answering machine on the phone.
+
+### Home and network
+
+- [ ] **MQTT client** (M): publish call and key events, and run a script from
+      an MQTT message. Home Assistant integration comes almost for free.
+- [ ] **Home Assistant widgets** (M): idle-screen tiles for sensor values, and
+      function keys that toggle entities ([idle-screen.md](idle-screen.md)).
+- [ ] **Webhook on events** (S): call a URL on ring, answer, hang-up and key
+      press. This is MQTT without a broker.
+- [ ] **Doorbell and intercom with a camera** (M): show a snapshot or MJPEG frame
+      when a door SIP call comes in ([intercom.md](intercom.md)).
+- [ ] **Wake-on-LAN key** (S): one script and a key preset.
+
+### Screen
+
+- [ ] **Clock and weather screensaver** (S): uses the idle-widget code.
+- [ ] **Photo frame mode** (S): cycle images from `/snom/cfw-data/photos` when
+      idle.
+- [ ] **Notifications** (M): a CGI or MQTT topic that shows a message popup
+      on the phone, from the server, a calendar or CI.
+- [ ] **Theme editor in the panel** (M): live colour and font preview
+      ([theming.md](theming.md)).
+
+### Games and fun
+
+- [ ] **More emulators** (M each): SMS/Game Gear, Atari 2600 and CHIP-8. They
+      are small and suit the screen.
+- [ ] **ScummVM or a small native game** (L): Tetris or Snake runs on the keypad.
+- [ ] **Music player** (M): MP3 or internet radio through the speaker or headset.
+      The audio path is solved ([sound.md](sound.md)).
+
+### System and dev
+
+- [ ] **OTA update from the panel** (M): upload a signed .bin in the panel, so
+      the web-page POST trick from
+      [backport-guide.md](backport-guide.md) isn't needed.
+- [ ] **Syslog forwarding** (S): send the app's and the kernel's logs to a
+      server.
+- [ ] **Extra tools** (S): tcpdump, strace, a fuller busybox, and nano is
+      already documented ([building-nano.md](building-nano.md)).
+- [ ] **Turn off phone-home and provisioning** (S): block snom's redirect or
+      provisioning servers by default.
+- [ ] **Watchdog for the phone app** (S): restart lcsD815 if it dies,
+      without rebooting the phone.
+- [ ] **Find the idle load average of 5** (M): profile it with `perf` or `top`
+      snapshots. It's also on [to-test.md](../to-test.md).
+- [ ] **Stock + overlay build** (M): the workflow at the top of this file.
+- [ ] **Panel over HTTPS** (M): a small TLS terminator, so the panel login
+      isn't sent in plaintext.
+- [ ] **One codebase for several models** (L): see
+      [multi-model.md](multi-model.md).
 
 ## Done: password protection for the CFW panel (same login as SSH)
 
