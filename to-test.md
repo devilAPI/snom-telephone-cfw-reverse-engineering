@@ -6,11 +6,12 @@ updates this file after every change.
 
 ## Calls
 
-- [ ] SIP is registered: the idle screen shows your identity with no error.
-- [ ] Outgoing call: audio both ways.
-- [ ] Incoming call: ringer, then pick up on the handset.
-- [ ] Speakerphone during a call.
-- [ ] Headset, if you have one.
+Calls worked before the install. The install replaced the whole rootfs and
+SIP registration isn't confirmed yet, so one quick round is enough:
+
+- [ ] Call the phone from another phone: it rings, pick up on the handset,
+      audio both ways. That confirms SIP registration as well.
+- [ ] Press the speaker key during that call.
 
 ## Keys
 
