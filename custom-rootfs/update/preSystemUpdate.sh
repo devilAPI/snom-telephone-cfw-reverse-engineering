@@ -43,6 +43,16 @@ function copyOpenVPNBinary() {
   fi
 }
 
+# CFW: tar cannot replace a mount point. rcS binds the custom splash over the
+# stock one, and the D815 app has bind mounts in its chroot. Rescuefs shares
+# these dentries, so one left here stops the extraction with EBUSY.
+function releaseCfwMounts() {
+  local m
+  for m in $(grep ' /snom/' /proc/mounts | cut -d' ' -f2 | sort -r); do
+    umount "$m" 2>/dev/null || umount -l "$m" 2>/dev/null
+  done
+}
+
 # Extract /usr/bin/bar which is attached uuencoded to this script
 function extractBarBinary () {
   tail -n +$[ `grep -n '^BINARY' $0|cut -d ':' -f 1` + 1 ] $0 | uudecode -o /usr/bin/bar
@@ -50,6 +60,7 @@ function extractBarBinary () {
 
 # The main function. Everything is started from here!
 function startUp () {
+  releaseCfwMounts
   checkForUCVersion
   removeCoredumps
   removeRootCAs

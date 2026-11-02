@@ -29,8 +29,8 @@ how that works, how to change it, and how to repeat it for another model.
 Keys with no D815 code are logged to `/snom/d815/tmp/unmapped-keys` with their D375
 key code. Press the keys that do nothing, then read that file.
 
-The installed `.bin` itself has not been flashed yet. The same files were tested on
-the phone with `tools/d815-try-flash.sh`.
+The `.bin` was installed on the real phone on 2026-11-02. `tools/d815-try-flash.sh`
+remains the fast way to test app changes.
 
 ## Build and test
 
@@ -56,14 +56,31 @@ installed firmware's `start.sh` again. The copied files stay on flash and take a
 
 ### Installing the image
 
-The image is 56 MB. Older CFW builds have a 40 MB `/tmp`, where the update has to
-fit, so make room once before installing:
+Use the phone's Software Update page. Writing `/snom/update` by hand does not work:
+rcS deletes it at boot and reads it only after the phone app exits. The update then
+takes about 6 minutes.
+
+The image is 55 MB, and the phone downloads it during boot into `/tmp`. Older CFW
+builds set that to 40 MB, so the download fails on them, and a `mount -o remount` does
+not survive that reboot. Change the size in rcS once, as root:
 
 ```sh
-mount -o remount,size=64M /tmp
+sed -i 's/-o remount,size=40M/-o remount,size=64M/' /etc/init.d/rcS
+reboot
 ```
 
-Then install it as usual. Images from now on set 64 MB themselves.
+Current images set 64 MB themselves.
+
+Extraction runs from the rescue filesystem, with its `tar` stderr going only to the
+serial console. `tar` cannot replace a mount point, and one on the same flash makes it
+stop with "Extracting Failed", leaving a mix of old and new files. `update/preSystemUpdate.sh`
+in the image therefore unmounts everything under `/snom`, including the custom splash
+bind from rcS. The phone is still reachable after a failed run: its web UI accepts
+another signed image, and a tiny one with `update/systemUpdate`, `update/updateHelper.sh`
+and the missing files repairs it.
+
+To rehearse an image, run the rescue `tar` from `/dev/mtdblock4` in the VM, over the
+extracted tree. JFFS2 shows up to 34 MB more used space until garbage collection runs.
 
 ### Going back to the D375 app
 
@@ -286,7 +303,6 @@ Work through these in order. Steps 2 to 6 need nothing from the phone.
 
 ## Still to do
 
-1. Install the `.bin` on the phone. The files are tested; the update itself is not.
 2. Confirm the Settings key and find the remaining keys.
 3. Start each game, and test incoming calls and the headset.
 4. Find the real cause of the SIP stack byte, to replace the fixed address.
