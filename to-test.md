@@ -43,12 +43,19 @@ Each one should start from the phone menu and return to the phone app when you q
 - [ ] Game Boy Advance
 - [ ] Game Boy
 - [ ] Game sound plays at a normal volume.
+- [ ] Games on keys (new): in the panel, Games tab, put a game on a key, then
+      press it on the phone. The game should start, and the key should be
+      labelled with the game's name.
 
 ## Tools
 
 - [ ] `htop` runs in an SSH session. Expect a host key warning on the first
       login after the install.
 - [ ] The CFW panel works in a browser: `http://192.168.178.72:8080/`.
+- [ ] Panel tabs (new): Phone, Screen, Games, System and Logs each show their
+      cards, and a reload stays on the same tab.
+- [ ] Logs tab (new): the system log shows entries from the phone app (`lid:`),
+      and "live" keeps it updating.
 
 ## Speed
 

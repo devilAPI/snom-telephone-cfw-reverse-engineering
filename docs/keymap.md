@@ -58,3 +58,30 @@ Rulings: steps of 10 points on a linear scale (the speaker is very loud, so 0..1
 ## Tests
 
 `tests/keymap.sh` (phone, ~6 min, holds the phone lock): idle and in-game key capture; NES test ROM runs with a game map (A/B swapped, three bad lines ignored with log lines), only `default.map`, and no map (built-in); volume: stored 5%, `VOLUME_UP` x2 gives 25 in the file and the PCM dump (`SND_DUMP=1`) gets about 5x louder, `VOLUME_DOWN` steps back; CGI save / reset / hostile ids. The effect of a mapping is checked through `CFW_KEYMAP_DEBUG=1`, which makes the engine log `keymap: key <code> -> <ACTION>` per press (the NES test ROMs draw nothing that distinguishes A from B). Only the NES engine is run on the phone for the mapping tests; the Game Boy / GBA frontend and Doom use the same header and the same few lines of glue and were built and booted for smoke checks only.
+
+## Games on keys
+
+The Games tab's "Games on keys" card opens `cgi-bin/game-keys`. Pick a system and
+a link per function key (1 to 12, as printed). It saves the key in the phone app
+as an ordinary `url` key:
+
+```
+url http://127.0.0.1:8081/cgi-bin/key-game?sys=nes&url=<percent-encoded link>
+```
+
+The label is the file name without its extension. Pressing the key makes the app
+fetch that URL. `cgi-bin/key-game` checks the system and link, starts
+`/snom/cfw/<sys>/boot-<sys>.sh`, the launcher the Games menu uses, and answers
+at once. It writes how it went to `/tmp/key-game.log` and the system log, under
+the tag `cfw-key-game`. A zip with several games inside would wait for a choice
+that a key can't make, so key-game stops it and logs an error.
+
+`lib/key-scripts.sh` reads and writes these keys (`ks_load` fills `KG_MAP`,
+`kg_set`, `kg_get`) next to the script keys. Each page leaves the other's keys
+alone: the scripts page ignores game keys, and the game-keys page changes a
+script key only when you pick a game for it.
+
+Tested 2026-11-03 on the phone: key 12 set to a NES link containing `&`, `?`
+and a space, pressed with `cgi-bin/key?k=P12`. The app fetched key-game, the
+launcher ran with the exact link and its download error reached the log, and
+the key went back to `line` when cleared.

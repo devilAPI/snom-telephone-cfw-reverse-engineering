@@ -1,0 +1,62 @@
+#!/bin/sh
+# CFW web panel: put a game on a phone key. Pressing the key opens cgi-bin/key-game,
+# which starts the game. See docs/keymap.md, section "Games on keys".
+. /snom/cfw/lib/cfw.sh
+. /snom/cfw/lib/scripts-run.sh
+. /snom/cfw/lib/phone-web.sh
+. /snom/cfw/lib/key-scripts.sh
+# Read the POST body in this shell, so the $(cfw_param) subshells find it.
+ACT=$(cfw_param act)
+MSG=
+if [ "$ACT" = save ]; then
+    if cfw_game_running; then
+        MSG="ERROR: quit the game first. The phone app isn't running while a game is."
+    else
+        ks_load; MSG="Game keys saved"
+        for k in $KS_KEYS; do
+            S=$(cfw_param "s$k"); U=$(cfw_param "u$k"); OLD=$(kg_get "$k")
+            [ -n "$S" ] && [ -n "$U" ] || { S=; U=; }
+            [ "$S $U" = "$OLD" ] && continue
+            [ -z "$S" ] && [ -z "$OLD" ] && continue   # not ours: a line key or a script
+            case "$S" in ''|doom|nes|gb|gba) ;; *) continue ;; esac
+            case "$U" in ''|http://*|https://*) ;; *) MSG="ERROR: key $k: the link must start with http:// or https://"; continue ;; esac
+            if [ -z "$S" ]; then
+                ks_clear "$k" || MSG="ERROR: the phone app did not save key $k"
+            else
+                kg_set "$k" "$S" "$U" || MSG="ERROR: the phone app did not save key $k"
+            fi
+        done
+    fi
+fi
+
+cfw_html_head "Games on keys"
+echo '<h1>Games on keys</h1><div class="sub"><a href="/cgi-bin/panel#games">Back to the panel</a></div>'
+[ -z "$MSG" ] || printf '<div class="card"><b>%s</b></div>\n' "$(printf '%s' "$MSG" | cfw_html_escape)"
+if cfw_game_running; then
+    echo '<div class="card"><p>A game is running, so the phone app is stopped and its keys cannot be read. Quit the game and reload this page.</p></div>'
+    cfw_html_foot; exit 0
+fi
+ks_load
+echo '<div class="card" style="max-width:720px"><p>Pick a system and paste a link to the game. Pressing the key on the phone downloads and starts it, as the Games menu does. Use a link to one game: a zip with several inside needs the Games menu to choose. Keys 1 to 12 are numbered as printed on the phone. A key that runs a script keeps it until you pick a game here.</p>'
+echo '<form method="post" action="/cgi-bin/game-keys"><input type="hidden" name="act" value="save">'
+echo '<table style="width:100%;border-collapse:collapse;font-size:13px">'
+for k in $KS_KEYS; do
+    cur=$(kg_get "$k"); cs=${cur%% *}; cu=${cur#* }; [ -n "$cur" ] || { cs=; cu=; }
+    note=; sc=$(ks_get "$k")
+    [ -n "$sc" ] && note=" <small>(now runs $(printf '%s' "$sc" | cfw_html_escape))</small>"
+    printf '<tr><td style="white-space:nowrap;padding:3px 6px 3px 0">Key %s%s</td><td><select name="s%s"><option value="">(none)</option>' "$k" "$note" "$k"
+    for s in $KG_SYSTEMS; do
+        sel=; [ "$s" = "$cs" ] && sel=' selected'
+        printf '<option value="%s"%s>%s</option>' "$s" "$sel" "$s"
+    done
+    printf '</select></td><td style="width:100%%"><input type="url" name="u%s" list="hist" value="%s" placeholder="https://host/game.nes" style="margin:0"></td></tr>\n' \
+        "$k" "$(printf '%s' "$cu" | cfw_html_escape)"
+done
+echo '</table>'
+# Links played before, from the Games menu histories, as suggestions.
+echo '<datalist id="hist">'
+for h in /snom/cfw/doom/history /snom/cfw/nes/history /snom/cfw-data/gb/history /snom/cfw-data/gba/history; do
+    [ -f "$h" ] && cfw_html_escape < "$h" | sed 's|.*|<option value="&">|'
+done
+echo '</datalist><p><button type="submit">Save keys</button></p></form></div>'
+cfw_html_foot

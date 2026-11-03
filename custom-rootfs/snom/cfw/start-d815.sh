@@ -67,6 +67,11 @@ mount --bind /snom/bmp snom/bmp
 mount -t proc proc proc
 mount -t sysfs sys sys
 mount --bind /dev/pts dev/pts
+# The app's syslog() goes to boot.sh's ring buffer: bind its socket into the chroot.
+# busybox mount refuses to bind a socket, so bindmount does it.
+mkdir /tmp/.cfw-syslogd 2>/dev/null && busybox syslogd -C512 -D
+for i in 1 2 3 4 5; do [ -S /var/log/.log ] && break; sleep 1; done
+[ -S /var/log/.log ] && : > dev/log && /snom/cfw/bin/bindmount /var/log/.log dev/log
 
 cd /
 exec chroot "$R" /bin/sh -c 'export PATH=/sbin:/bin:/usr/sbin:/usr/bin LD_LIBRARY_PATH=/lib:/usr/lib FREETYPE_PROPERTIES=truetype:interpreter-version=35; cd /snom && exec ./lid' > "$R/tmp/lid.log" 2>&1

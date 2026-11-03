@@ -8,7 +8,7 @@ How the CFW web panel and the on-phone menus are assembled, and the helpers ever
 |---|---|
 | `lib/cfw.sh` | shell helpers, `. /snom/cfw/lib/cfw.sh` |
 | `cgi-bin/panel` | the web panel: page chrome + every `panel.d/*.html`, in filename order |
-| `panel.d/NN-name.html` | one panel card each: a single `<div class="card">...</div>` |
+| `panel.d/NN-name.html` | one panel card each: a single `<div class="card">...</div>`. The first line, such as `<!-- tab: games -->`, puts it on a tab: `phone` (the default), `screen`, `games`, `system` or `logs`. Add `wide` to the class for a full-width card. |
 | `cgi-bin/phone-tools` | the on-phone "CFW Tools" menu (Settings -> CFW Tools) |
 | `phone-menu.d/NN-name` | one line `Label|/cgi-bin/<cgi>?<args>` per menu entry |
 | `index.html` | only a redirect to `/cgi-bin/panel` |

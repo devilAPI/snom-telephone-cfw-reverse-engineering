@@ -1,19 +1,52 @@
 #!/bin/sh
 # CFW: the web panel. Page chrome from lib/cfw.sh plus every panel.d/NN-*.html card
-# (one <div class="card"> each) in filename order.
+# (one <div class="card"> each) in filename order. A card's first line names its
+# tab, such as "<!-- tab: games -->"; a card without one goes to the Phone tab.
+# The tabs are plain sections, so without JavaScript every card shows on one page.
 . /snom/cfw/lib/cfw.sh
 cfw_html_head "CFW Settings"
+TABS="phone:Phone screen:Screen games:Games system:System logs:Logs"
 cat <<'EOT'
+<style>
+  .tabs { display:flex; flex-wrap:wrap; gap:4px; margin:0 0 14px; border-bottom:2px solid #2a6; }
+  .tabs a { padding:8px 16px; border-radius:6px 6px 0 0; background:#ddd; color:#333; text-decoration:none; font-size:14px; }
+  .tabs a.on { background:#2a6; color:#fff; }
+  .js .tab { display:none; } .js .tab.on { display:block; }
+  .cards .card.wide { grid-column:1 / -1; }
+</style>
 <h1>CFW Settings</h1>
 <div class="sub">snom D375 custom firmware</div>
-
 EOT
-echo '<div class="cards">'
-for f in /snom/cfw/panel.d/*.html; do
-    [ -f "$f" ] && cat "$f" && echo
+echo '<nav class="tabs">'
+for t in $TABS; do printf '<a href="#%s" data-tab="%s">%s</a>' "${t%%:*}" "${t%%:*}" "${t#*:}"; done
+echo '</nav>'
+for t in $TABS; do
+    id=${t%%:*}
+    printf '<section class="tab" id="tab-%s"><div class="cards">\n' "$id"
+    for f in /snom/cfw/panel.d/*.html; do
+        [ -f "$f" ] || continue
+        ft=$(sed -n '1s/^<!-- tab: \([a-z]*\) -->.*/\1/p' "$f")
+        [ "${ft:-phone}" = "$id" ] && cat "$f" && echo
+    done
+    echo '</div></section>'
 done
-echo '</div>'
 cat <<'EOT'
 <p class="warn">Logged in as root. The login uses the phone's system (SSH) password and is sent over plain HTTP, so use it only on a trusted network.</p>
+<script>
+// Tabs: show the one named in the URL's #, so reloads and links keep it.
+document.documentElement.className += ' js';
+function showTab() {
+  var id = (location.hash || '#phone').slice(1);
+  if (!document.getElementById('tab-' + id)) id = 'phone';
+  document.querySelectorAll('.tab').forEach(function (s) { s.classList.toggle('on', s.id == 'tab-' + id); });
+  document.querySelectorAll('.tabs a').forEach(function (a) { a.classList.toggle('on', a.dataset.tab == id); });
+  // Load an iframe (the Logs tab) only when its tab is first shown.
+  document.querySelectorAll('#tab-' + id + ' iframe[data-src]').forEach(function (f) {
+    if (!f.src) f.src = f.dataset.src;
+  });
+}
+window.addEventListener('hashchange', showTab);
+showTab();
+</script>
 EOT
 cfw_html_foot

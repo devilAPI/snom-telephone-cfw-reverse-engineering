@@ -1,11 +1,74 @@
 #!/bin/sh
-# CFW: recent kernel and CFW logs.
-echo "Content-type: text/html"
-echo ""
-esc() { sed 's/&/\&amp;/g; s/</\&lt;/g; s/>/\&gt;/g'; }
-echo '<!doctype html><meta charset="utf-8"><title>Logs</title><style>body{font:15px system-ui,sans-serif;max-width:900px;margin:auto;padding:16px}pre{background:#eee;padding:8px;overflow-x:auto;font-size:12px}</style><h1>Logs</h1>'
-echo '<h2>Kernel</h2><pre>'; dmesg 2>/dev/null | tail -n 150 | esc; echo '</pre>'
-for f in /tmp/doom.log /tmp/nes.log /tmp/cfw.log; do
-    [ -f "$f" ] && { echo "<h2>$f</h2><pre>"; tail -n 60 "$f" | esc; echo '</pre>'; }
+# CFW: debug log viewer. See docs/sysinfo.md, section "Logs".
+#   ?src=NAME   which log (the list is in src_list below), default syslog
+#   &n=LINES    how many of the newest lines, 20 to 2000, default 200
+#   &q=TEXT     only lines containing TEXT (plain text, case-insensitive)
+#   &raw=1      plain text only. The panel's Logs tab fetches this for live view.
+. /snom/cfw/lib/cfw.sh
+SRC=$(cfw_param src); N=$(cfw_param n); Q=$(cfw_param q); RAW=$(cfw_param raw)
+case "$N" in ''|*[!0-9]*) N=200 ;; esac
+[ "$N" -lt 20 ] && N=20; [ "$N" -gt 2000 ] && N=2000
+
+# src_list: "id|label|file" lines. A file of "-" means a command, see src_cat.
+src_list() {
+    echo "syslog|System log (syslog)|-"
+    echo "app|Phone app output|/snom/d815/tmp/lid.log"
+    echo "kernel|Kernel (dmesg)|-"
+    for g in doom nes gba gb; do echo "$g|Game: $g|/tmp/$g.log"; done
+    echo "keyscript|Last key script|/tmp/key-script.log"
+    echo "keygame|Last game key|/tmp/key-game.log"
+    echo "unmapped|Unmapped keys|/snom/d815/tmp/unmapped-keys"
+}
+src_cat() {
+    case "$1" in
+        syslog) logread 2>/dev/null || echo "(no syslog: syslogd is not running)" ;;
+        kernel) dmesg 2>/dev/null ;;
+        *) F=$(src_list | sed -n "s/^$1|[^|]*|//p")
+           if [ -n "$F" ] && [ -f "$F" ]; then cat "$F"; else echo "(empty: $F does not exist yet)"; fi ;;
+    esac
+}
+src_list | grep -q "^$SRC|" || SRC=syslog
+
+out() {
+    if [ -n "$Q" ]; then src_cat "$SRC" | grep -iF -- "$Q" | tail -n "$N"
+    else src_cat "$SRC" | tail -n "$N"; fi
+}
+
+if [ "$RAW" = 1 ]; then
+    printf 'Content-type: text/plain; charset=utf-8\r\nCache-Control: no-store\r\n\r\n'
+    out
+    exit 0
+fi
+
+cfw_html_head "Logs"
+QE=$(printf '%s' "$Q" | cfw_html_escape)
+echo '<h1>Logs</h1><div class="sub"><a href="/cgi-bin/panel#logs" target="_top">Back to the panel</a> · <a href="/cgi-bin/logs" target="_blank">Open in a new tab</a></div>'
+echo '<form method="get" action="/cgi-bin/logs" class="logbar">'
+echo '<select name="src">'
+src_list | while IFS='|' read -r id label f; do
+    sel=; [ "$id" = "$SRC" ] && sel=' selected'
+    printf '<option value="%s"%s>%s</option>' "$id" "$sel" "$label"
 done
-echo '<p><a href="/">Back</a></p>'
+printf '</select> <input type="text" name="q" value="%s" placeholder="filter" style="width:10em;margin:0">' "$QE"
+printf ' <input type="text" name="n" value="%s" style="width:4em;margin:0" title="lines">' "$N"
+echo ' <button type="submit">Show</button> <label><input type="checkbox" id="live"> live</label></form>'
+echo '<pre id="log" style="background:#111;color:#ddd;padding:8px;font-size:12px;white-space:pre-wrap;word-break:break-all;max-height:75vh;overflow:auto">'
+out | cfw_html_escape
+echo '</pre>'
+cat <<'EOT'
+<script>
+// Live view: refetch the same log every 3 s and keep scrolled to the bottom.
+var pre = document.getElementById('log'), live = document.getElementById('live'), t;
+pre.scrollTop = pre.scrollHeight;
+function tick() {
+  var u = location.pathname + (location.search ? location.search + '&' : '?') + 'raw=1';
+  fetch(u, {cache: 'no-store'}).then(function (r) { return r.text(); }).then(function (s) {
+    var end = pre.scrollTop + pre.clientHeight >= pre.scrollHeight - 20;
+    pre.textContent = s;
+    if (end) pre.scrollTop = pre.scrollHeight;
+  });
+}
+live.onchange = function () { clearInterval(t); if (live.checked) { tick(); t = setInterval(tick, 3000); } };
+</script>
+EOT
+cfw_html_foot
