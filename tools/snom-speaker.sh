@@ -31,18 +31,21 @@ need curl curl
 
 # --- panel CGI, with the login ---
 cgi() {
-    local a=(curl -s -m 20 -w '\n%{http_code}')
+    local a=(curl -s --connect-timeout 5 -m 20 -w '\n%{http_code}')
     [ -n "$AUTH" ] && a+=(-u "$AUTH")
     "${a[@]}" "http://$IP:8080/cgi-bin/speaker?a=$1&fmt=txt&v=$VOL"
 }
 call() {
     local out code
-    out=$(cgi "$1") || { echo "phone $IP does not answer on port 8080" >&2; return 1; }
+    # Only the status code counts: busybox httpd's 401 page is shorter than its
+    # Content-Length, so curl exits 18 although the phone answered.
+    out=$(cgi "$1") || true
     code=${out##*$'\n'}
+    [ "$code" = 000 ] && { echo "phone $IP does not answer on port 8080" >&2; return 1; }
     if [ "$code" = 401 ] && [ -z "$AUTH" ]; then
         read -rsp "Panel password for root@$IP: " pw; echo >&2
         AUTH="root:$pw"
-        out=$(cgi "$1"); code=${out##*$'\n'}
+        out=$(cgi "$1") || true; code=${out##*$'\n'}
     fi
     [ "$code" = 200 ] || { echo "panel answered HTTP $code (wrong password?)" >&2; return 1; }
     ST=${out%$'\n'*}
