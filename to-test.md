@@ -57,6 +57,22 @@ mic it works; what is left is how it sounds.
       `http://PHONE:8091/status?k=TOKEN` and note `missed_frames`, `underruns` and
       `dropped_ms`.
 
+## Navidrome player
+
+New on 2026-11-04, on the phone through SSH and in the next image. Tested against a
+throwaway Navidrome with test tones (`tests/navidrome.sh`); your own server and real
+music are left.
+
+- [ ] Panel, tab Phone, card Navidrome, Server settings: your server's http:// address,
+      user, password, "Save and test" says "saved, the server answers".
+- [ ] Phone: Menu, CFW Tools, Navidrome: Artists, an album, a track plays. Sound is
+      clean (it's 16 kHz mono, so like a good phone call, not hi-fi).
+- [ ] Pause / Resume continues at the same place; Next and Previous; Stop.
+- [ ] Search with the keypad finds an artist.
+- [ ] The menus feel fast enough (0.5 to 4 s per press on the test).
+- [ ] With `tools/snom-speaker.sh` running, the Navidrome music still plays (both are
+      mixed).
+
 ## Speed
 
 - [ ] Menus and key presses feel responsive.

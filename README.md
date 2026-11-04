@@ -41,6 +41,7 @@ original app stays in the image. See [backport-guide](docs/backport-guide.md).
 **Phone features**
 - Intercom / baby monitor: streams the microphone to a browser (works in Safari) or a PC while the phone stays usable. You pick the mic: speakerphone, handset, headset jack or both ([intercom](docs/intercom.md))
 - Network speaker / reverse intercom: play a file from the panel, or add a "snom D375" sound output to a Linux PC (PulseAudio or PipeWire) and hear the PC on the phone's loudspeaker. Works at the same time as the intercom ([speaker](docs/speaker.md))
+- Navidrome / Subsonic player: browse artists, albums, playlists and search on the phone, play on the loudspeaker; MP3 decoded on the phone with libmad ([navidrome](docs/navidrome.md))
 - Custom ringtones: upload, preview and assign per line ([ringtones](docs/ringtones.md))
 - Scripts menu: run your own shell scripts from the phone, such as wake-on-LAN ([scripts](docs/scripts.md))
 - Custom boot splash: any image, resized in the browser, plus theme icons ([theming](docs/theming.md))
@@ -92,7 +93,7 @@ verification uses RSA-2048 (`/firmware1.pub`). See
 | `tools/snom-webpass.sh` | yes | Change the web UI password via SSH (works after Webex provisioning) |
 | `tools/setup-ovpn.sh` | yes | Generate OpenVPN PKI + client tarball for initial root |
 | `tools/build-*.sh` | yes | Cross-build the phone binaries (Doom, NES, GB/GBA, intercom, nano, ...) with docker + musl |
-| `doom-src/`, `nes-src/`, `retro-src/`, `intercom-src/`, `remote-src/`, `snd/` | yes | Ports, the shared audio/keymap layer and helpers built by the scripts above |
+| `doom-src/`, `nes-src/`, `retro-src/`, `intercom-src/`, `navidrome-src/`, `remote-src/`, `snd/` | yes | Ports, the shared audio/keymap layer and helpers built by the scripts above |
 | `keys/` | yes | **Public** firmware keys and AES key files (see [keys/README.md](keys/README.md)) |
 | `docs/` | yes | Documentation (start here) |
 | `original_firmware/` | no | Stock firmware images from snom |
@@ -123,7 +124,7 @@ verification uses RSA-2048 (`/firmware1.pub`). See
 15. [docs/cfw-login.md](docs/cfw-login.md): panel login with the SSH password
 16. [docs/gb.md](docs/gb.md) and [docs/gba.md](docs/gba.md): Game Boy / Color and GBA emulators
 17. [docs/zip.md](docs/zip.md), [docs/saves.md](docs/saves.md), [docs/keymap.md](docs/keymap.md), [docs/quit-without-reboot.md](docs/quit-without-reboot.md): shared game infrastructure
-18. [docs/intercom.md](docs/intercom.md): microphone streaming and mic selection; [docs/speaker.md](docs/speaker.md): the reverse direction, sound to the loudspeaker
+18. [docs/intercom.md](docs/intercom.md): microphone streaming and mic selection; [docs/speaker.md](docs/speaker.md): the reverse direction, sound to the loudspeaker; [docs/navidrome.md](docs/navidrome.md): the music player built on it
 19. [docs/ringtones.md](docs/ringtones.md), [docs/scripts.md](docs/scripts.md), [docs/theming.md](docs/theming.md): ringtones, scripts menu, splash and icons
 20. [docs/remote.md](docs/remote.md), [docs/sysinfo.md](docs/sysinfo.md): remote screen/keypad and system info
 21. [docs/ci-releases.md](docs/ci-releases.md): dev images built and released by GitHub Actions

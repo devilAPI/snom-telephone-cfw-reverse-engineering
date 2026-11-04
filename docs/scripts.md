@@ -5,7 +5,7 @@ Run your own shell scripts from the phone (wake-on-LAN, toggle lights, reboot a 
 - Scripts live in `/snom/cfw-data/scripts/*.sh` (persistent, not part of the image).
 - Phone: Settings -> CFW Tools -> Scripts lists them by name; selecting one runs it and shows stdout+stderr (last 2000 bytes) as an IPPhoneText screen.
 - Web panel: the "Scripts" card -> `/cgi-bin/scripts` to create/edit (paste into textarea), delete and run.
-- Examples: `/snom/cfw/scripts-examples/wake-on-lan.sh` (uses `ether-wake`, falls back to a magic packet through `nc -u`) and `http-get.sh`. Copy them into the scripts dir and edit.
+- Examples: `/snom/cfw/scripts-examples/wake-on-lan.sh` (uses `ether-wake`, falls back to a magic packet through `nc -u`) and `http-get.sh`, and `navidrome-toggle.sh`, `-next`, `-prev`, `-stop` for the Navidrome player ([navidrome.md](navidrome.md)). Copy them into the scripts dir and edit.
 
 ## Files
 `cgi-bin/phone-scripts` (phone menu + runner, via the auth-free loopback httpd on :8081), `cgi-bin/scripts` (panel), `lib/scripts-run.sh` (shared runner), `panel.d/60-scripts.html`, `phone-menu.d/10-scripts`, `tests/scripts.sh`.

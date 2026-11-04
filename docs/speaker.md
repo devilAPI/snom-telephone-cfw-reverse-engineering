@@ -57,9 +57,15 @@ start. It is shown to whoever can open the panel, and stored in `/tmp/speaker/to
 | `POST` or `PUT /play?k=T` | Plays the body. Takes a WAV file (16-bit PCM, any rate, mono or stereo) or raw S16LE, 16000 Hz mono by default, or `rate=` and `ch=1\|2`. The length can come from `Content-Length` or chunked encoding, or the body runs until the sender closes. Answers when the sound has played: `played N ms`. A new `/play` replaces the one playing; the old one is answered with `stopped`. |
 | `&vol=0..100` | Volume for this and later sounds. |
 | `&live=1` | For endless streams (a PC's sound output). An adaptive buffer that keeps the delay low (see below). |
-| `GET /stop?k=T` | Stops the sound. |
-| `GET /vol?k=T&v=N` | Sets the volume, also while something plays. |
-| `GET /status?k=T` | `{"playing", "buffered_ms", "keep_ms", "underruns", "dropped_ms", "missed_frames", "max_gap_ms", "vol", "sessions"}`. `missed_frames` counts frames the pump woke up too late for; `max_gap_ms` should stay at 5. |
+| `GET /stop?k=T[&ch=player\|live]` | Stops the sound, in one channel or in both. |
+| `GET /vol?k=T&v=N[&ch=player\|live]` | Sets the volume, also while something plays. Without `ch`: the default for both. |
+| `GET /status?k=T` | `{"playing", "buffered_ms", "keep_ms", "underruns", "dropped_ms", "missed_frames", "max_gap_ms", "vol", "sessions", "player": {...}, "live": {...}}`. The top level covers both channels; `player` and `live` each have `playing`, `buffered_ms`, `underruns`, `dropped_ms` and `vol`. `missed_frames` counts frames the frame clock skipped; `max_gap_ms` should stay at 5. |
+
+**Two channels, mixed.** `live=1` senders (the PC script) play in the "live" channel,
+everything else (files, the panel, the [Navidrome player](navidrome.md)) in the
+"player" channel. A new `/play` replaces only the session in its own channel, and the two
+channels are added together, with clipping. Without this the PC script, which is always
+connected and reconnects within 2 s, cut off the Navidrome player 2 s after every start.
 
 The answers carry `Access-Control-Allow-Origin: *`, so the panel on port 8080 can send
 files. It sends them as `text/plain`, which keeps them simple requests without a CORS
@@ -203,6 +209,11 @@ PulseAudio resample into the 16 kHz output) and the ffmpeg example do.
   hardware. Stop the speaker before playing.
 * `pkill -f snom-speaker` in a shell whose own command line contains that text kills
   the shell too. Use the PID.
+* "frame clock stopped for N ms" in the log: no frame came at all for that long. Seen
+  for up to 6 s exactly when the phone app (`lid`, `media_daemon`) was restarted, for
+  example by a game or the Rockbox test. These stops also count in `missed_frames`.
+* The phone's wall clock jumps (seen: back 6 h, then forward again). The 2 s mute timer
+  uses `CLOCK_MONOTONIC`; an earlier version used `time()`.
 * `missed_frames` grows: the pump has no real-time priority (look for "no real-time
   priority" in `/tmp/speaker/log`) or something else runs at a higher priority.
 * `speaker.sh` and `intercom.sh` recognise their daemon by `/proc/PID/exe`. After the

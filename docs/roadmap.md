@@ -79,10 +79,12 @@ aren't listed.
 - [ ] **More emulators** (M each): SMS/Game Gear, Atari 2600 and CHIP-8. They
       are small and suit the screen.
 - [ ] **ScummVM or a small native game** (L): Tetris or Snake runs on the keypad.
-- [ ] **Music player** (M): MP3 or internet radio through the speaker or headset.
-      The audio path is solved ([sound.md](sound.md)), and the network speaker
-      already plays what a PC sends ([speaker.md](speaker.md)). Open: decoding on
-      the phone itself.
+- [x] **Music player** (M): a Navidrome / Subsonic player with MP3 decoding on the
+      phone ([navidrome.md](navidrome.md)). Open: internet radio (Icecast MP3
+      streams would only need a menu: navplay already decodes any MP3 stream).
+- [ ] **Navidrome inside Rockbox** (M to L, after the Rockbox port plays local files):
+      a virtual `/Navidrome` folder in the hosted target's file layer, tracks
+      downloaded to RAM when opened.
 
 ### System and dev
 

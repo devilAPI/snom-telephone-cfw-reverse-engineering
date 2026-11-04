@@ -1,0 +1,98 @@
+<!-- tab: phone -->
+<div class="card" id="nd">
+  <h2>Navidrome</h2>
+  <p>Plays music from your Navidrome (or another Subsonic) server on the phone's loudspeaker. On the phone:
+     Menu, CFW Tools, Navidrome, to browse artists, albums and playlists.</p>
+  <p id="nd-np" style="font-weight:bold;margin:4px 0">-</p>
+  <p id="nd-t" style="font-size:13px;margin:0 0 6px"></p>
+  <button type="button" data-do="prev">&#9198;</button>
+  <button type="button" data-do="toggle" id="nd-pp">&#9199;</button>
+  <button type="button" data-do="next">&#9197;</button>
+  <button type="button" data-do="stop" style="background:#a40">&#9209;</button>
+  <button type="button" id="nd-rnd">Random songs</button>
+  <p style="margin:8px 0 4px"><label style="font-size:13px">Volume <input type="range" id="nd-v" min="0" max="100" step="5" value="30" style="width:12em;vertical-align:middle">
+    <span id="nd-vn">30</span></label></p>
+  <form id="nd-sf" style="margin:8px 0 4px"><input type="text" id="nd-q" placeholder="search artist, album or song" style="width:16em;margin:0">
+    <button type="submit">Search</button></form>
+  <div id="nd-r" style="font-size:13px;max-height:22em;overflow:auto"></div>
+  <p id="nd-msg" style="font-size:13px;margin:4px 0"></p>
+  <details id="nd-cfg" style="font-size:13px"><summary>Server settings</summary>
+    <form id="nd-f">
+      <p style="margin:4px 0">Address <input type="text" name="url" placeholder="http://192.168.1.10:4533" style="width:18em;margin:0"></p>
+      <p style="margin:4px 0">User <input type="text" name="user" autocomplete="off" style="width:10em;margin:0">
+         Password <input type="password" name="pass" autocomplete="new-password" placeholder="(unchanged)" style="width:10em;margin:0"></p>
+      <p style="margin:4px 0">Quality <select name="bitrate">
+        <option value="64">64 kbit/s</option><option value="96" selected>96 kbit/s</option><option value="128">128 kbit/s</option>
+      </select> <button type="submit">Save and test</button></p>
+      <p style="margin:4px 0">Only <code>http://</code> works (the phone has no TLS), so use the server's address in your LAN.
+         The password is not stored on the phone, only a salted MD5 token as Subsonic uses it.
+         Navidrome converts the music to MP3 for the phone, which needs its ffmpeg (the official Docker image has it).</p>
+    </form>
+  </details>
+  <script>
+  (function () {
+    var $ = function (id) { return document.getElementById(id); }, f = $('nd-f'), busy = 0;
+    function t(s) { s = +s || 0; return Math.floor(s / 60) + ':' + ('0' + s % 60).slice(-2); }
+    function show(j) {
+      if (j.msg !== undefined) $('nd-msg').textContent = j.msg;
+      if (!j.configured) { $('nd-np').textContent = 'Not set up: open "Server settings" below.'; $('nd-cfg').open = true; }
+      else if (j.state === 'playing' || j.state === 'paused') {
+        $('nd-np').textContent = (j.state === 'paused' ? 'Paused: ' : '') + j.title + ' - ' + j.artist;
+        $('nd-t').textContent = (j.album ? j.album + ', ' : '') + t(j.pos) + ' / ' + t(j.duration) + ', track ' + (j.idx + 1) + ' of ' + j.count;
+      } else {
+        $('nd-np').textContent = j.state === 'error' ? 'Error: ' + j.error : 'Stopped';
+        $('nd-t').textContent = '';
+      }
+      if (document.activeElement !== $('nd-v')) { $('nd-v').value = j.vol; $('nd-vn').textContent = j.vol; }
+      if (!f.url.value && j.url) { f.url.value = j.url; f.user.value = j.user; f.bitrate.value = j.bitrate; }
+    }
+    function call(body) {
+      busy++;
+      return fetch('/cgi-bin/navidrome', { method: 'POST', body: body,
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' } })
+        .then(function (r) { return r.json(); })
+        .then(function (j) { busy--; return j; }, function (e) { busy--; throw e; });
+    }
+    function act(body) { return call(body).then(show).catch(function (e) { $('nd-msg').textContent = 'Error: ' + e; }); }
+    var bs = document.querySelectorAll('#nd button[data-do]');
+    for (var i = 0; i < bs.length; i++) bs[i].onclick = function () { act('a=ctl&do=' + this.getAttribute('data-do')); };
+    $('nd-rnd').onclick = function () { $('nd-msg').textContent = 'Starting...'; act('a=play&src=random'); };
+    $('nd-v').oninput = function () { $('nd-vn').textContent = this.value; };
+    $('nd-v').onchange = function () { act('a=ctl&do=vol&vol=' + this.value); };
+    f.onsubmit = function (e) {
+      e.preventDefault();
+      $('nd-msg').textContent = 'Saving...';
+      var b = 'a=save';
+      ['url', 'user', 'pass', 'bitrate'].forEach(function (k) { b += '&' + k + '=' + encodeURIComponent(f[k].value); });
+      b += '&vol=' + $('nd-v').value;
+      act(b).then(function () { f.pass.value = ''; });
+    };
+    function el(tag, text) { var x = document.createElement(tag); if (text) x.textContent = text; return x; }
+    $('nd-sf').onsubmit = function (e) {
+      e.preventDefault();
+      var q = $('nd-q').value.trim(), r = $('nd-r');
+      if (!q) return;
+      r.textContent = 'Searching...';
+      call('a=search&q=' + encodeURIComponent(q)).then(function (j) {
+        r.textContent = '';
+        if (j.msg) r.appendChild(el('p', j.msg));
+        if (!j.albums.length && !j.songs.length) { r.appendChild(el('p', 'Nothing found.')); return; }
+        j.albums.forEach(function (a) {
+          var b = el('button', 'Play'), p = el('div');
+          b.onclick = function () { act('a=play&src=album&id=' + encodeURIComponent(a.id)); };
+          p.appendChild(b); p.appendChild(document.createTextNode(' Album: ' + a.name + ' - ' + a.artist + (a.year ? ' (' + a.year + ')' : '')));
+          r.appendChild(p);
+        });
+        j.songs.forEach(function (s, n) {
+          var b = el('button', 'Play'), p = el('div');
+          b.onclick = function () { act('a=play&src=search&q=' + encodeURIComponent(q) + '&i=' + n); };
+          p.appendChild(b); p.appendChild(document.createTextNode(' ' + s.title + ' - ' + s.artist + ' (' + t(s.duration) + ')'));
+          r.appendChild(p);
+        });
+      }).catch(function (e) { r.textContent = 'Error: ' + e; });
+    };
+    act('a=status');
+    setInterval(function () { if (!busy && !document.hidden && $('nd').offsetParent) act('a=status'); }, 3000);
+  })();
+  </script>
+</div>

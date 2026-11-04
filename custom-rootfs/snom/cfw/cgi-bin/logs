@@ -19,6 +19,7 @@ src_list() {
     echo "keygame|Last game key|/tmp/key-game.log"
     echo "intercom|Intercom (micstream)|/tmp/intercom/log"
     echo "speaker|Speaker (spkstream)|/tmp/speaker/log"
+    echo "navidrome|Navidrome player|/tmp/navidrome/log"
     echo "unmapped|Unmapped keys|/snom/d815/tmp/unmapped-keys"
 }
 src_cat() {

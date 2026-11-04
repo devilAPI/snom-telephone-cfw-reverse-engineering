@@ -94,26 +94,37 @@ static FILE *g_log;
 static int g_amxr = -1, g_user = -1, g_hal = -1;
 static void *g_src, *g_dst;
 
-/* shared state, under g_mx */
+/* shared state, under g_mx. Two channels, mixed: one for the player (files, the
+   Navidrome player, the panel) and one for live streams (a PC's sound output). A new
+   /play replaces only the session in its own channel, so a PC that streams all the
+   time (mostly silence) doesn't cut off the music player, and both can be heard. */
 static pthread_mutex_t g_mx = PTHREAD_MUTEX_INITIALIZER;
 static pthread_cond_t g_space = PTHREAD_COND_INITIALIZER;
-static short g_rb[RB];
-static unsigned g_wr, g_rd;           /* free-running sample counters */
-static int g_started;                 /* prebuffer reached, samples flow */
-static unsigned g_gen;                /* session generation: a new /play or /stop bumps it */
-static int g_active;                  /* a /play body is being received */
-static int g_live;
-static int g_vol = 30;                /* 0..100 */
-static unsigned g_underruns, g_sessions, g_dropped;
-static unsigned g_missed, g_maxgap;   /* frames the pump was too late for; longest gap, ms */
-static unsigned g_keep = LIVE_KEEP;   /* live: buffer level kept, samples */
-static unsigned g_skip;               /* live: frames still to play 1.25 % faster */
+struct chan {
+    const char *name;
+    short rb[RB];
+    unsigned wr, rd;          /* free-running sample counters */
+    int started;              /* prebuffer reached, samples flow */
+    unsigned gen;             /* session generation: a new /play or /stop bumps it */
+    int active;               /* a /play body is being received */
+    int live, vol;            /* vol -1: the default g_vol */
+    unsigned keep, skip;      /* live: level kept; frames still to play 1.25 % faster */
+    unsigned minav, win;      /* live: lowest level in the current 2 s window */
+    unsigned underruns, dropped;
+};
+#define CH_PLAYER 0
+#define CH_LIVE   1
+static struct chan g_ch[2];          /* set up in main(): an initializer here would put
+                                         the 2 x 64 kB rings into the binary (.data) */
+static int g_vol = 30;                /* default volume 0..100, for senders that set none */
+static unsigned g_sessions;
+static unsigned g_missed, g_maxgap;   /* frames the frame clock skipped; longest gap, ms */
 /* under g_mx: the buffer ran dry while a sender is active */
-static void underrun(void) {
-    g_started = 0; g_underruns++;
-    if (g_live && g_keep < LIVE_MAXK) g_keep += LIVE_STEP;
+static void underrun(struct chan *c) {
+    c->started = 0; c->underruns++;
+    if (c->live && c->keep < LIVE_MAXK) c->keep += LIVE_STEP;
 }
-static time_t g_last_audio;           /* last time real samples went out */
+static long long g_last_audio;        /* monotonic us: last time real samples went out */
 
 static void logf_(const char *fmt, ...) __attribute__((format(printf, 1, 2)));
 static void logf_(const char *fmt, ...) {
@@ -173,6 +184,13 @@ static void gains_off(void) {
     logf_("speaker muted again");
 }
 
+/* monotonic clock: the phone's wall clock jumps (it was seen going back 6 h and forward
+   again), which must not decide when the speaker mutes */
+static long long now_us(void) {
+    struct timespec t; clock_gettime(CLOCK_MONOTONIC, &t);
+    return (long long)t.tv_sec * 1000000 + t.tv_nsec / 1000;
+}
+
 /* SIGTERM must reach the main thread, so that accept() returns */
 static void block_signals(void) {
     sigset_t m; sigemptyset(&m); sigaddset(&m, SIGTERM); sigaddset(&m, SIGINT);
@@ -180,10 +198,6 @@ static void block_signals(void) {
 }
 
 /* ---------- pump: one frame every 5 ms ---------- */
-static long long now_us(void) {
-    struct timespec t; clock_gettime(CLOCK_MONOTONIC, &t);
-    return (long long)t.tv_sec * 1000000 + t.tv_nsec / 1000;
-}
 
 /* Real-time priority. The module wakes a waiter only if it already waits when the frame
  * comes; a pump that is late (the phone app keeps the CPU busy) misses the frame. Then
@@ -197,12 +211,52 @@ static void go_realtime(const char *who) {
     if (e) logf_("%s: no real-time priority: %s", who, strerror(e));
 }
 
+/* under g_mx: add channel c's next frame to acc */
+static void chan_frame(struct chan *c, int *acc) {
+    unsigned avail = c->wr - c->rd;
+    /* live: the buffer must ride out WiFi bursts and the sender's clock drift. Every
+       underrun raises the kept level by 50 ms (up to 600 ms). Every 2 s the lowest
+       level seen is compared with it: the surplus is played away 1.25 % faster
+       (81 samples into 80, not audible), or skipped at once if it is over 1 s. */
+    if (c->live && c->started) {
+        if (avail < c->minav) c->minav = avail;
+        if (++c->win >= 400) {
+            unsigned ex = c->minav > c->keep ? c->minav - c->keep : 0;
+            if (ex > RATE) { c->rd += ex; c->dropped += ex; avail -= ex; c->skip = 0; }
+            else c->skip = ex > RATE / 50 ? ex : 0;
+            c->win = 0; c->minav = ~0u;
+        }
+    } else { c->win = 0; c->minav = ~0u; c->skip = 0; }
+    if (!c->started && (avail >= (c->live ? c->keep + LIVE_PRE : PREBUF) || (!c->active && avail))) c->started = 1;
+    if (!c->started || !avail) {
+        if (c->started) { c->started = 0; if (c->active) underrun(c); }
+        return;
+    }
+    int vv = c->vol >= 0 ? c->vol : g_vol;
+    int v = vv * vv * 32768 / 10000;   /* Q15, roughly even steps by ear */
+    unsigned i, n;
+    if (c->skip && avail >= FRAME + 1) {
+        /* 81 samples into 80, linear */
+        for (i = 0; i < FRAME; i++) {
+            unsigned pos = i * FRAME * 256 / (FRAME - 1);   /* 0 .. 80 in 1/256 */
+            unsigned k = pos >> 8, fr = pos & 255;
+            int a = c->rb[(c->rd + k) & (RB - 1)], b = k < FRAME ? c->rb[(c->rd + k + 1) & (RB - 1)] : a;
+            acc[i] += (((a * 256 + (b - a) * (int)fr) >> 8) * v) >> 15;
+        }
+        c->rd += FRAME + 1; c->skip--; c->dropped++;
+    } else {
+        n = avail < FRAME ? avail : FRAME;
+        for (i = 0; i < n; i++) acc[i] += (c->rb[(c->rd + i) & (RB - 1)] * v) >> 15;
+        c->rd += n;
+        if (n < FRAME && c->active) underrun(c);
+    }
+}
+
 static void *pump(void *arg) {
     (void)arg;
     short f[FRAME];
     unsigned tick = 0;
     int was_real = 0;
-    unsigned minav = ~0u, win = 0;
     int fifo = -1;
     long long last = 0, sec0 = now_us(), fifo_try = 0;
     unsigned in_sec = 0;
@@ -231,6 +285,9 @@ static void *pump(void *arg) {
                 long gap = (long)(t - last);
                 if (gap > 7500) g_missed += (unsigned)((gap + 2500) / 5000) - 1;
                 if (gap / 1000 > (long)g_maxgap) g_maxgap = (unsigned)(gap / 1000);
+                /* a long stop is the frame clock itself (the phone app reconfiguring the
+                   audio), not us being late: note when, to match it with phone events */
+                if (gap > 100000) logf_("frame clock stopped for %ld ms", gap / 1000);
             }
             last = t;
             /* guard: a real-time thread must never spin. More than 300 wakes in a second
@@ -238,59 +295,25 @@ static void *pump(void *arg) {
             if (t - sec0 >= 1000000) { sec0 = t; in_sec = 0; }
             else if (++in_sec > 300) usleep(4000);
         }
-        int real = 0;
+        int acc[FRAME] = { 0 };
         pthread_mutex_lock(&g_mx);
-        unsigned avail = g_wr - g_rd;
-        /* live: the buffer must ride out WiFi bursts and the sender's clock drift. Every
-           underrun raises the kept level by 50 ms (up to 600 ms). Every 2 s the lowest
-           level seen is compared with it: the surplus is played away 1.25 % faster
-           (81 samples into 80, not audible), or skipped at once if it is over 1 s. */
-        if (g_live && g_started) {
-            if (avail < minav) minav = avail;
-            if (++win >= 400) {
-                unsigned ex = minav > g_keep ? minav - g_keep : 0;
-                if (ex > RATE) { g_rd += ex; g_dropped += ex; avail -= ex; g_skip = 0; }
-                else g_skip = ex > RATE / 50 ? ex : 0;
-                win = 0; minav = ~0u;
-            }
-        } else { win = 0; minav = ~0u; g_skip = 0; }
-        if (!g_started && (avail >= (g_live ? g_keep + LIVE_PRE : PREBUF) || (!g_active && avail))) g_started = 1;
-        if (g_started && avail) {
-            int v = g_vol * g_vol * 32768 / 10000;   /* Q15, roughly even steps by ear */
-            unsigned i, n;
-            if (g_skip && avail >= FRAME + 1) {
-                /* 81 samples into 80, linear */
-                for (i = 0; i < FRAME; i++) {
-                    unsigned pos = i * FRAME * 256 / (FRAME - 1);   /* 0 .. 80 in 1/256 */
-                    unsigned k = pos >> 8, fr = pos & 255;
-                    int a = g_rb[(g_rd + k) & (RB - 1)], b = k < FRAME ? g_rb[(g_rd + k + 1) & (RB - 1)] : a;
-                    f[i] = (short)((((a * 256 + (b - a) * (int)fr) >> 8) * v) >> 15);
-                    if (f[i] > SILENT || f[i] < -SILENT) real = 1;
-                }
-                g_rd += FRAME + 1; g_skip--; g_dropped++;
-            } else {
-                n = avail < FRAME ? avail : FRAME;
-                for (i = 0; i < n; i++) {
-                    f[i] = (short)((g_rb[(g_rd + i) & (RB - 1)] * v) >> 15);
-                    if (f[i] > SILENT || f[i] < -SILENT) real = 1;
-                }
-                for (; i < FRAME; i++) f[i] = 0;
-                g_rd += n;
-                if (n < FRAME && g_active) underrun();
-            }
-            pthread_cond_broadcast(&g_space);
-        } else {
-            memset(f, 0, sizeof f);
-            if (g_started) { g_started = 0; if (g_active) underrun(); }
-        }
+        for (int k = 0; k < 2; k++) chan_frame(&g_ch[k], acc);
+        pthread_cond_broadcast(&g_space);
         pthread_mutex_unlock(&g_mx);
+        int real = 0;
+        for (int i = 0; i < FRAME; i++) {
+            int x = acc[i];
+            if (x > 32767) x = 32767; else if (x < -32768) x = -32768;
+            f[i] = (short)x;
+            if (x > SILENT || x < -SILENT) real = 1;
+        }
         tick++;
         /* unmute when sound starts, and once a second while it plays (a call that ended has
            muted again); mute after 2 s of silence, also while a PC streams silence */
         if (real) {
-            g_last_audio = time(NULL);
+            g_last_audio = now_us();
             if (!was_real || tick % 200 == 0) gains_on();
-        } else if (g_unmuted && tick % 200 == 0 && time(NULL) - g_last_audio >= 2) gains_off();
+        } else if (g_unmuted && tick % 200 == 0 && now_us() - g_last_audio >= 2000000) gains_off();
         was_real = real;
         if (fifo >= 0) {
             if (write(fifo, f, sizeof f) != (ssize_t)sizeof f) {   /* micstream stopped */
@@ -374,29 +397,31 @@ static int rd_exact(struct rd *r, char *out, int n) {
     return got;
 }
 
-/* put samples into the ring; waits for space; 0 when the session was replaced */
-static int push(const short *s, int n, unsigned gen) {
+/* put samples into channel ch's ring; waits for space; 0 when the session was replaced */
+static int push(struct chan *ch, const short *s, int n, unsigned gen) {
     pthread_mutex_lock(&g_mx);
     while (n > 0) {
-        if (gen != g_gen || !g_run) { pthread_mutex_unlock(&g_mx); return 0; }
-        unsigned space = RB - (g_wr - g_rd);
+        if (gen != ch->gen || !g_run) { pthread_mutex_unlock(&g_mx); return 0; }
+        unsigned space = RB - (ch->wr - ch->rd);
         if (!space) {
             struct timespec ts; clock_gettime(CLOCK_REALTIME, &ts); ts.tv_sec += 1;
             pthread_cond_timedwait(&g_space, &g_mx, &ts);
             continue;
         }
         int k = n < (int)space ? n : (int)space;
-        for (int i = 0; i < k; i++) g_rb[(g_wr + i) & (RB - 1)] = s[i];
-        g_wr += k; s += k; n -= k;
+        for (int i = 0; i < k; i++) ch->rb[(ch->wr + i) & (RB - 1)] = s[i];
+        ch->wr += k; s += k; n -= k;
     }
     pthread_mutex_unlock(&g_mx);
     return 1;
 }
 
-static unsigned new_session(int live, int active) {
+/* a new session in channel ch (or none: active 0 = stop); returns its generation */
+static unsigned new_session(struct chan *ch, int active, int vol) {
     pthread_mutex_lock(&g_mx);
-    unsigned gen = ++g_gen;
-    g_rd = g_wr; g_started = 0; g_active = active; g_live = live; g_keep = LIVE_KEEP; g_skip = 0;
+    unsigned gen = ++ch->gen;
+    ch->rd = ch->wr; ch->started = 0; ch->active = active; ch->keep = LIVE_KEEP; ch->skip = 0;
+    ch->minav = ~0u; ch->win = 0; ch->vol = vol;
     pthread_cond_broadcast(&g_space);
     pthread_mutex_unlock(&g_mx);
     return gen;
@@ -406,8 +431,8 @@ static void play(int c, const char *q, struct rd *r) {
     int replied = 0;
     long vol = qnum(q, "vol", -1), rate = qnum(q, "rate", RATE), ch = qnum(q, "ch", 1);
     int live = qnum(q, "live", 0) == 1;
-    if (vol >= 0 && vol <= 100) g_vol = (int)vol;
-    unsigned gen = new_session(live, 1);
+    struct chan *chn = &g_ch[live ? CH_LIVE : CH_PLAYER];
+    unsigned gen = new_session(chn, 1, vol >= 0 && vol <= 100 ? (int)vol : -1);
     g_sessions++;
     struct timeval tv = { 10, 0 };   /* a live sender that goes quiet for 10 s is dropped */
     setsockopt(c, SOL_SOCKET, SO_RCVTIMEO, &tv, sizeof tv);
@@ -434,7 +459,7 @@ static void play(int c, const char *q, struct rd *r) {
         }
     } else pre = hn;   /* raw: the 12 bytes are audio */
     if (rate < 4000 || rate > 96000 || ch < 1 || ch > 2) { reply(c, "400 Bad Request", "text/plain", "rate 4000..96000, ch 1..2\n"); replied = 1; goto out; }
-    logf_("play: %ld Hz, %ld ch, vol %d%s", rate, ch, g_vol, live ? ", live" : "");
+    logf_("play (%s): %ld Hz, %ld ch, vol %d", chn->name, rate, ch, chn->vol >= 0 ? chn->vol : g_vol);
 
     /* convert: downmix, linear resample to 16 kHz (16.16 fixed point step) */
     {
@@ -462,33 +487,33 @@ static void play(int c, const char *q, struct rd *r) {
                 while (pos < 0x10000) {
                     out[o++] = (short)(prev + (((s - prev) * (int)(pos >> 1)) >> 15));
                     pos += step;
-                    if (o == (int)(sizeof out / sizeof *out)) { if (!push(out, o, gen)) goto out; total += o; o = 0; }
+                    if (o == (int)(sizeof out / sizeof *out)) { if (!push(chn, out, o, gen)) goto out; total += o; o = 0; }
                 }
                 pos -= 0x10000; prev = s;
             }
-            if (o && !push(out, o, gen)) goto out;
+            if (o && !push(chn, out, o, gen)) goto out;
             total += o;
             if (carry) memmove(in, in + nf * fsz, carry);
             if (n - carry == 0 && carry) break;   /* stream ended mid-frame */
         }
         /* answer when it has been played, so that one /play after another doesn't cut the end */
         pthread_mutex_lock(&g_mx);
-        if (gen == g_gen) g_active = 0;
-        while (gen == g_gen && g_wr != g_rd && g_run) {
+        if (gen == chn->gen) chn->active = 0;
+        while (gen == chn->gen && chn->wr != chn->rd && g_run) {
             struct timespec ts; clock_gettime(CLOCK_REALTIME, &ts); ts.tv_sec += 1;
             pthread_cond_timedwait(&g_space, &g_mx, &ts);
         }
-        int cut = gen != g_gen;
+        int cut = gen != chn->gen;
         pthread_mutex_unlock(&g_mx);
         if (cut) goto out;
         char msg[64]; snprintf(msg, sizeof msg, "played %ld ms\n", total * 1000 / RATE);
-        logf_("play ended: %ld ms", total * 1000 / RATE);
+        logf_("play (%s) ended: %ld ms", chn->name, total * 1000 / RATE);
         reply(c, "200 OK", "text/plain", msg); replied = 1;
     }
 out:
     if (!replied) reply(c, "200 OK", "text/plain", "stopped\n");   /* replaced by /stop or a new /play */
     pthread_mutex_lock(&g_mx);
-    if (gen == g_gen) g_active = 0;    /* what is buffered still plays out */
+    if (gen == chn->gen) chn->active = 0;    /* what is buffered still plays out */
     pthread_mutex_unlock(&g_mx);
 }
 
@@ -538,19 +563,41 @@ static void *conn(void *arg) {
             send(c, "HTTP/1.1 100 Continue\r\n\r\n", 25, MSG_NOSIGNAL);
         play(c, q, r);
     } else if (!strcmp(meth, "GET") && !strcmp(path, "/stop")) {
-        new_session(0, 0); logf_("stop");
+        /* ?ch=player|live, default both */
+        int which = strstr(q, "ch=player") ? 1 : strstr(q, "ch=live") ? 2 : 3;
+        if (which & 1) new_session(&g_ch[CH_PLAYER], 0, -1);
+        if (which & 2) new_session(&g_ch[CH_LIVE], 0, -1);
+        logf_("stop (%s)", which == 1 ? "player" : which == 2 ? "live" : "all");
         reply(c, "200 OK", "text/plain", "stopped\n");
     } else if (!strcmp(meth, "GET") && !strcmp(path, "/vol")) {
         long v = qnum(q, "v", -1);
         if (v < 0 || v > 100) reply(c, "400 Bad Request", "text/plain", "v must be 0..100\n");
-        else { g_vol = (int)v; reply(c, "200 OK", "text/plain", "ok\n"); }
+        else {
+            /* ?ch=player|live sets that channel, default all */
+            pthread_mutex_lock(&g_mx);
+            if (strstr(q, "ch=player")) g_ch[CH_PLAYER].vol = (int)v;
+            else if (strstr(q, "ch=live")) g_ch[CH_LIVE].vol = (int)v;
+            else { g_vol = (int)v; g_ch[0].vol = g_ch[1].vol = -1; }
+            pthread_mutex_unlock(&g_mx);
+            reply(c, "200 OK", "text/plain", "ok\n");
+        }
     } else if (!strcmp(meth, "GET") && !strcmp(path, "/status")) {
-        char b[320];
+        char b[640], cj[2][160];
         pthread_mutex_lock(&g_mx);
+        struct chan *P = &g_ch[CH_PLAYER], *L = &g_ch[CH_LIVE];
+        for (int k = 0; k < 2; k++) {
+            struct chan *x = &g_ch[k];
+            snprintf(cj[k], sizeof cj[k], "{\"playing\":%d,\"buffered_ms\":%u,\"underruns\":%u,\"dropped_ms\":%u,\"vol\":%d}",
+                     x->active || x->wr != x->rd, (x->wr - x->rd) * 1000 / RATE, x->underruns,
+                     x->dropped * 1000 / RATE, x->vol >= 0 ? x->vol : g_vol);
+        }
+        /* top level: both channels together (the fields of the first version), then each */
+        unsigned bp = P->wr - P->rd, bl = L->wr - L->rd;
         snprintf(b, sizeof b, "{\"playing\":%d,\"buffered_ms\":%u,\"keep_ms\":%u,\"underruns\":%u,\"dropped_ms\":%u,"
-                 "\"missed_frames\":%u,\"max_gap_ms\":%u,\"vol\":%d,\"sessions\":%u}\n",
-                 g_active || g_wr != g_rd, (g_wr - g_rd) * 1000 / RATE, g_keep * 1000 / RATE, g_underruns,
-                 g_dropped * 1000 / RATE, g_missed, g_maxgap, g_vol, g_sessions);
+                 "\"missed_frames\":%u,\"max_gap_ms\":%u,\"vol\":%d,\"sessions\":%u,\"player\":%s,\"live\":%s}\n",
+                 P->active || bp || L->active || bl, (bp > bl ? bp : bl) * 1000 / RATE,
+                 L->keep * 1000 / RATE, P->underruns + L->underruns, (P->dropped + L->dropped) * 1000 / RATE,
+                 g_missed, g_maxgap, g_vol, g_sessions, cj[0], cj[1]);
         pthread_mutex_unlock(&g_mx);
         reply(c, "200 OK", "application/json", b);
     } else reply(c, "404 Not Found", "text/plain", "not found\n");
@@ -581,6 +628,10 @@ int main(int argc, char **argv) {
         }
     }
     g_log = logp ? fopen(logp, "a") : stderr;
+    for (int k = 0; k < 2; k++) {
+        g_ch[k].name = k == CH_LIVE ? "live" : "player"; g_ch[k].live = k == CH_LIVE;
+        g_ch[k].keep = LIVE_KEEP; g_ch[k].minav = ~0u; g_ch[k].vol = -1;
+    }
     g_amxr = open("/dev/amxr", O_RDWR);
     if (g_amxr < 0) { logf_("open /dev/amxr: %s", strerror(errno)); return 1; }
     g_src = port_by_name("amxruser.bind0");
@@ -620,7 +671,8 @@ int main(int argc, char **argv) {
         }
     }
     g_run = 0;
-    new_session(0, 0);
+    new_session(&g_ch[CH_PLAYER], 0, -1);
+    new_session(&g_ch[CH_LIVE], 0, -1);
     pthread_join(pt, NULL);
     amxr_link(0);
     gains_off();
