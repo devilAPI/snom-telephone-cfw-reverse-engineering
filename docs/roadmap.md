@@ -33,7 +33,7 @@ For each feature, record here which files it touches and how it was tested on th
 ## Ideas (to do)
 
 These aren't built yet. Each one has a rough size: S is an evening, M a few
-days, L a project. Things that already exist (games, intercom, ringtones,
+days, L a project. Things that already exist (games, intercom, network speaker, ringtones,
 remote screen, scripts, idle widgets, keymap, saves, theming, splash, backup)
 aren't listed.
 
@@ -80,7 +80,9 @@ aren't listed.
       are small and suit the screen.
 - [ ] **ScummVM or a small native game** (L): Tetris or Snake runs on the keypad.
 - [ ] **Music player** (M): MP3 or internet radio through the speaker or headset.
-      The audio path is solved ([sound.md](sound.md)).
+      The audio path is solved ([sound.md](sound.md)), and the network speaker
+      already plays what a PC sends ([speaker.md](speaker.md)). Open: decoding on
+      the phone itself.
 
 ### System and dev
 

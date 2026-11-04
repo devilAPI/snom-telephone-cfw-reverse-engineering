@@ -36,6 +36,8 @@
 #include <time.h>
 #include <poll.h>
 #include <sys/ioctl.h>
+#include <sys/stat.h>
+#include <sys/time.h>
 #include <sys/socket.h>
 #include <netinet/in.h>
 #include <netinet/tcp.h>
@@ -46,6 +48,12 @@
 #define AMXR_DISCONNECT   0x80084d36u /* _IOR('M',54,8)  {src, dst} */
 #define AMXRUSER_READ     0xc0044501u /* {int port; void *buf} -> 160 bytes */
 #define AMXRUSER_WAIT     0xc0044502u /* block until next frame sync */
+#define AMXRUSER_WRITE    0xc0044500u /* {int port; void *buf} <- 160 bytes */
+/* Speaker frames from spkstream (docs/speaker.md). The module wakes only one waiter per
+ * frame, so two processes waiting would each get every other frame. While micstream runs
+ * it owns the frame clock: spkstream writes its frames into this FIFO and we pass one per
+ * frame on to amxruser port 0, which spkstream has connected to the speaker. */
+#define PLAY_FIFO         "/tmp/amxr-play.fifo"
 #define AMXR_DESC_MONO    0x1010
 #define HAL_GET_GAIN      0x80084132u /* _IOR('A',50,8) {int block; int *info} info[0] = current dB */
 #define HAL_SET_GAIN      0x80084133u /* _IOR('A',51,8) {int block; int db} */
@@ -59,6 +67,13 @@
 
 static volatile sig_atomic_t g_run = 1;
 static void on_sig(int s) { (void)s; g_run = 0; }
+/* Frame-wait watchdog. The module wakes a waiter only while its "someone waits" flag is
+ * set, and the woken process clears it. If spkstream waited too and then stops (it hands
+ * its frames to us, see PLAY_FIFO), we can be left asleep with the flag clear: no frame
+ * ever wakes us. A 30 ms one-shot timer interrupts such a wait; waiting again sets the
+ * flag. (The ioctl returns 0 even when interrupted, hence the flag.) */
+static volatile sig_atomic_t g_alarm;
+static void on_alarm(int s) { (void)s; g_alarm = 1; }
 
 /* sources: halaudio.apm0 and/or apm1, both into amxruser.bind<g_uport>; amxr sums
  * all sources connected to one destination, so "-c 2" (default) mixes both mic paths.
@@ -362,6 +377,7 @@ int main(int argc, char **argv) {
     struct sigaction sa; memset(&sa, 0, sizeof sa); sa.sa_handler = on_sig;
     sigaction(SIGTERM, &sa, NULL); sigaction(SIGINT, &sa, NULL); sigaction(SIGHUP, &sa, NULL);
     signal(SIGPIPE, SIG_IGN);
+    sa.sa_handler = on_alarm; sigaction(SIGALRM, &sa, NULL);   /* no SA_RESTART */
     for (int i = 0; i < MAXCLI; i++) g_cli[i].fd = -1;
     setvbuf(stderr, NULL, _IONBF, 0);
 
@@ -383,16 +399,25 @@ int main(int argc, char **argv) {
     int u = open("/dev/amxruser", O_RDWR);
     if (u < 0) { perror("micstream: /dev/amxruser (insmod amxr_user_hook.ko)"); return 1; }
     if (wire(mask, 0) < 0) { unwire(); return 1; }
+    unlink(PLAY_FIFO);
+    int pf = mkfifo(PLAY_FIFO, 0600) == 0 ? open(PLAY_FIFO, O_RDONLY | O_NONBLOCK) : -1;
+    short pbuf[FRAME];
     adc_open(mask);
     adc_check();
     if (lfd >= 0) fprintf(stderr, "micstream: serving http://%s:%d/stream.wav\n", bindaddr, port);
 
     short buf[FRAME * BATCH];
     int nb = 0, rc = 0;
-    long frames = 0, limit = secs > 0 ? (long)secs * (RATE / FRAME) : -1;
+    long frames = 0, stalls = 0, limit = secs > 0 ? (long)secs * (RATE / FRAME) : -1;
     unsigned long long sq = 0; int peak = 0, lvn = 0, hp_x1 = 0; long long hp_y = 0;
     while (g_run && (limit < 0 || frames < limit)) {
-        if (ioctl(u, AMXRUSER_WAIT, 0) < 0) {
+        struct itimerval wd = { { 0, 0 }, { 0, 30000 } }, off = { { 0, 0 }, { 0, 0 } };
+        g_alarm = 0;
+        setitimer(ITIMER_REAL, &wd, NULL);
+        int wr = ioctl(u, AMXRUSER_WAIT, 0);
+        setitimer(ITIMER_REAL, &off, NULL);
+        if (g_alarm) { stalls++; continue; }
+        if (wr < 0) {
             if (errno == EINTR) continue;
             perror("micstream: wait"); rc = 1; break;
         }
@@ -400,6 +425,10 @@ int main(int argc, char **argv) {
         if (ioctl(u, AMXRUSER_READ, &d) < 0) {
             if (errno == EINTR) continue;
             perror("micstream: read"); rc = 1; break;
+        }
+        if (pf >= 0 && read(pf, pbuf, sizeof pbuf) == (ssize_t)sizeof pbuf) {
+            struct { int port; void *buf; } w = { 0, pbuf };
+            ioctl(u, AMXRUSER_WRITE, &w);
         }
         short *s = buf + nb * FRAME;
         for (int i = 0; i < FRAME; i++) {
@@ -436,11 +465,12 @@ int main(int argc, char **argv) {
     if (ofd >= 0 && nb && write(ofd, buf, nb * FRAME * 2) < 0) rc = 1;
     unwire();
     adc_restore(0);
+    if (pf >= 0) { close(pf); unlink(PLAY_FIFO); }
     close(u);
     for (int i = 0; i < MAXCLI; i++) cli_close(&g_cli[i]);
     if (lfd >= 0) close(lfd);
     if (ofd > 1) close(ofd);
     if (levelfile) unlink(levelfile);
-    fprintf(stderr, "micstream: %ld frames, exit %d\n", frames, rc);
+    fprintf(stderr, "micstream: %ld frames, %ld stalled waits, exit %d\n", frames, stalls, rc);
     return rc;
 }

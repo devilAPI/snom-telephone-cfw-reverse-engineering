@@ -35,6 +35,7 @@ to refetch it every 3 seconds.
 | Game: doom, nes, gba, gb | `/tmp/<game>.log` from the launchers |
 | Last key script / game key | `/tmp/key-script.log`, `/tmp/key-game.log` |
 | Unmapped keys | `/snom/d815/tmp/unmapped-keys` |
+| Intercom, Speaker | `/tmp/intercom/log` (micstream), `/tmp/speaker/log` (spkstream) |
 
 Parameters: `src`, `n` (lines, 20 to 2000), `q` (case-insensitive text filter)
 and `raw=1` for plain text, for example

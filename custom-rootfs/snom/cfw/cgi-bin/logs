@@ -17,6 +17,8 @@ src_list() {
     for g in doom nes gba gb; do echo "$g|Game: $g|/tmp/$g.log"; done
     echo "keyscript|Last key script|/tmp/key-script.log"
     echo "keygame|Last game key|/tmp/key-game.log"
+    echo "intercom|Intercom (micstream)|/tmp/intercom/log"
+    echo "speaker|Speaker (spkstream)|/tmp/speaker/log"
     echo "unmapped|Unmapped keys|/snom/d815/tmp/unmapped-keys"
 }
 src_cat() {

@@ -157,6 +157,27 @@ stream carries the call's microphone signal (the local side of the conversation)
 After the call it mutes again and micstream unmutes within a second. If that is not
 wanted, stop the intercom before calling.
 
+### Together with the speaker (spkstream)
+
+The network speaker ([speaker.md](speaker.md)) uses the same module. Two things had to
+be shared (2026-11-04):
+
+* **The module.** `intercom/amxr-mod.sh` loads it for both and unloads it only when
+  neither micstream nor spkstream runs and no `amxruser` port has a connection.
+* **The frame clock.** `amxr_user_hook.ko` has one semaphore. Each frame it calls `up()`
+  once, and only while a global "someone waits" flag is set; the woken process clears
+  the flag. Two processes waiting each got every other frame: the intercom stream ran
+  at half speed. So while micstream runs it is the only one that waits. It creates the
+  FIFO `/tmp/amxr-play.fifo`, and after every frame it reads one 160-byte speaker frame
+  from it, if there is one, and writes it to `amxruser` port 0 (`ioctl 0xc0044500`).
+  spkstream finds the FIFO within a second, stops waiting and keeps 8 frames queued in
+  it. When micstream exits, spkstream gets `EPIPE` and waits on the module again.
+* **The watchdog.** When spkstream stops waiting, micstream can be left asleep with the
+  flag clear, and no frame wakes it again. micstream arms a 30 ms one-shot timer
+  (`setitimer`) around every wait; if it fires, the wait is repeated, which sets the
+  flag again. The ioctl returns 0 even when interrupted, so a signal flag tells the two
+  apart. The count is in micstream's exit line ("stalled waits"), usually 0 or 1.
+
 ### Coexistence with games
 
 `intercom.sh start` refuses while a CFW game/emulator runs (they kill media_daemon and

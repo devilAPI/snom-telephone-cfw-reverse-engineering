@@ -37,6 +37,21 @@ reboot). Audio can't be checked remotely:
       nothing was audible.
 - [ ] A game feels playable with the real keys.
 
+## Speaker (sound from the PC to the phone)
+
+New on 2026-11-04, not in the installed firmware yet: it's on the phone through SSH, so
+it is there until the next flash, and in the next image. Recorded with the phone's own
+mic it works; what is left is how it sounds.
+
+- [ ] Panel, tab Phone, card "Speaker / reverse intercom": Start, pick a music file,
+      Play file. It plays on the phone's loudspeaker, clean and at a sensible volume
+      (start with volume 30).
+- [ ] On the PC, `tools/snom-speaker.sh` (asks for the panel password). Pick "snom
+      D375" as the output and play something. Is the delay OK (about 0.2 s)?
+- [ ] Speaker and intercom at the same time: talk through the phone from the PC and
+      listen to the phone in the panel.
+- [ ] After the sound stops there is no hiss from the speaker (it mutes after 2 s).
+
 ## Speed
 
 - [ ] Menus and key presses feel responsive.
@@ -68,5 +83,9 @@ Tested 2026-11-04 with injected key events (`keyinject`), framebuffer captures
   the audio driver (`hwthread`, `hausioctl`, `Cadence`, `EPTing_0`, `EPTing_2`)
   sleep in an uninterruptible wait, and this kernel counts those in the load.
   They use no CPU, and the CPU is 87% idle.
+- Speaker: a tone sent to the phone is played on the loudspeaker and found in a recording
+  by the intercom mic, 460 times above the noise; a 2 s sound takes 2 s; from the PC
+  script live with about 0.1 s buffered and no dropouts; the intercom keeps its full
+  speed while both run; stop cleans up (`tests/speaker.sh`).
 - Idle screen widgets are known not to work on this phone (see
   `docs/idle-screen.md`), so they are no longer on this list.

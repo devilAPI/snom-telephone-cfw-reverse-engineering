@@ -35,8 +35,9 @@ with_phone_lock() {
     ( flock 9; "$@" ) 9>"$PHONE_LOCK"
 }
 
-# http PATH: GET http://phone:8080PATH, body to stdout.
-http() { curl -s -m 20 "http://$PHONE_IP:8080$1"; }
+# http PATH: GET http://phone:8080PATH, body to stdout. The panel login is the
+# system password (docs/cfw-login.md).
+http() { curl -s -m 20 -u "root:$PHONE_PW" "http://$PHONE_IP:8080$1"; }
 
 FAILS=0
 pass() { echo "PASS: $*"; }

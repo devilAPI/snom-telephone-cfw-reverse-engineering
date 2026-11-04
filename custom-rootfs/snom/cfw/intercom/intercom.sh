@@ -20,7 +20,6 @@ TOKF=$RUN/token
 MICF=$RUN/mic
 LVL=$RUN/level
 LOG=$RUN/log
-KO=/lib/modules/2.6.27.47/BROADCOM/amxr_user_hook.ko
 PORT=8090
 CH=2
 
@@ -65,17 +64,8 @@ status() {
     fi
 }
 
-# Only unload the module if we loaded it and nobody else has a connection on its
-# ports (other tools, e.g. audio tests, use amxruser.bind0/1 too).
-module_unload() {
-    [ -f "$RUN/ko_loaded" ] || return 0
-    grep -q '^amxr_user_hook ' /proc/modules 2>/dev/null || { rm -f "$RUN/ko_loaded"; return 0; }
-    grep -q -- '-> amxruser' /proc/amxr 2>/dev/null && return 0
-    rm -f "$RUN/ko_loaded"
-    rmmod amxr_user_hook 2>/dev/null && return 0
-    sleep 1
-    rmmod amxr_user_hook
-}
+# Module load/unload is shared with speaker.sh (spkstream).
+. "$D/amxr-mod.sh"
 
 do_stop() {
     if running; then
@@ -91,7 +81,7 @@ do_stop() {
         fi
     fi
     rm -f "$PIDF" "$TOKF" "$LVL" "$MICF"
-    module_unload || { echo "error=rmmod amxr_user_hook failed"; return 1; }
+    amxr_mod_unload || { echo "error=rmmod amxr_user_hook failed"; return 1; }
     return 0
 }
 
@@ -120,11 +110,8 @@ do_start() {
         return 3
     fi
     [ -x "$D/micstream" ] || { echo "error=$D/micstream missing"; return 1; }
-    [ -c /dev/amxruser ] || mknod /dev/amxruser c 236 0
-    if ! grep -q '^amxr_user_hook ' /proc/modules 2>/dev/null; then
-        insmod "$KO" >"$LOG" 2>&1 || { echo "error=insmod amxr_user_hook failed: $(tail -n 1 "$LOG")"; return 1; }
-        touch "$RUN/ko_loaded"
-    fi
+    : > "$LOG"
+    amxr_mod_load "$LOG" || { echo "error=insmod amxr_user_hook failed: $(tail -n 1 "$LOG")"; return 1; }
     # busybox od here has no -A/-t; md5 of 32 random bytes, 96 bits kept
     _tok=$(head -c 32 /dev/urandom | md5sum | cut -c1-24)
     case "$_tok" in [0-9a-f][0-9a-f][0-9a-f][0-9a-f]*) ;; *) echo "error=could not make a token"; return 1 ;; esac
