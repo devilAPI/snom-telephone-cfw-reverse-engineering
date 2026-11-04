@@ -14,20 +14,29 @@ how that works, how to change it, and how to repeat it for another model.
 | SIP registration | Works | Web status says `Registriert` |
 | Calls, handset, speakerphone, sound | Works | Test call by hand |
 | Most keys | Work | By hand |
-| Settings key | Fixed | Command checked on the phone; press the key to confirm |
-| Backlight | Fixed | Setting 3 and 15 reach the hardware as 6 and 30 of 32 |
+| Settings, Help and snom keys | Work | Injected presses open Einstellungen, Informationen and CFW Tools (2026-11-04) |
+| Backlight | Works | 30 of 32 on a key press, dims to 6 after about 20 s (2026-11-04) |
 | Icons, background, Contrast theme | Works | 0 `ToImage` errors |
 | Side button panels | Native, five per side, with icons. Six per side is not possible: the layout is compiled in | Framebuffer capture |
 | CFW scripts on keys | Works, and survives a reboot | Key 12 assigned from the web panel, phone rebooted, key pressed, script ran |
 | Games menu | Works | Opens on the phone with its icon |
-| Quitting a game | Works in a simulated takeover: app back in 31 s, no reboot | Run a real game to confirm |
-| CFW panel on port 8080 | Partly tested | Key press helper works; the rest is unchanged |
+| Doom, NES, GB, GBA | Work: picture, quit with the red key, app back in about 30 s, no reboot | Test ROMs and Doom shareware, framebuffer captures (2026-11-04) |
+| Games on keys | Works | NES game on key 5 started from an injected press (2026-11-04) |
+| CFW panel on port 8080 | Works | Login, tabs and Logs tab in headless Chromium (2026-11-04) |
 | Keys 11 and 12 | Work, with no LEDs and no side panel labels | Injected key events; see [Keys 11 and 12](#keys-11-and-12) |
-| A few keys | Open | See below |
+| All other keys | Work | Every safe key code injected; none is unmapped (2026-11-04) |
 | Incoming calls, headset | Untested | |
 
 Keys with no D815 code are logged to `/snom/d815/tmp/unmapped-keys` with their D375
-key code. Press the keys that do nothing, then read that file.
+key code. Press the keys that do nothing, then read that file. The four keys the
+shim sends through `phone-key` (Settings, Help, Rec and snom) are not logged: before
+2026-11-04 they were, which made them look broken.
+
+The idle load average of about 5 is not CPU use. Five kernel threads of the audio
+driver (`hwthread`, `hausioctl`, `Cadence`, `EPTing_0`, `EPTing_2`, parent
+`kthreadd`) wait in `down()`, an uninterruptible sleep, and kernel 2.6.27 counts
+those in the load. The CPU is 87% idle. The `EPTing` threads get new PIDs each time
+the app starts, so the app's audio endpoints create them.
 
 The `.bin` was installed on the real phone on 2026-11-02. `tools/d815-try-flash.sh`
 remains the fast way to test app changes.

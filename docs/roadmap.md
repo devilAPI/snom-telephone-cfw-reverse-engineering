@@ -95,8 +95,8 @@ aren't listed.
       provisioning servers by default.
 - [ ] **Watchdog for the phone app** (S): restart lcsD815 if it dies,
       without rebooting the phone.
-- [ ] **Find the idle load average of 5** (M): profile it with `perf` or `top`
-      snapshots. It's also on [to-test.md](../to-test.md).
+- [x] **Find the idle load average of 5**: five audio-driver kernel threads in an
+      uninterruptible sleep, no CPU use. See [backport-guide.md](backport-guide.md).
 - [ ] **Stock + overlay build** (M): the workflow at the top of this file.
 - [ ] **Panel over HTTPS** (M): a small TLS terminator, so the panel login
       isn't sent in plaintext.

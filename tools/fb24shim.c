@@ -344,13 +344,14 @@ static const struct {
     { 64, "file:///xml/gui/information.xml" },
 };
 
-static void press_named(unsigned code)
+/* Returns 1 when CODE is one of named_keys, so it is not logged as unmapped. */
+static int press_named(unsigned code, int value)
 {
     size_t i;
 
     for (i = 0; i < sizeof(named_keys) / sizeof(named_keys[0]); i++) {
         if (named_keys[i].code == code) {
-            if (fork() == 0) {
+            if (value == 1 && fork() == 0) {
                 char *const argv[] = {
                     "/bin/phone-key", (char *)named_keys[i].name, NULL
                 };
@@ -359,9 +360,10 @@ static void press_named(unsigned code)
                 execv(argv[0], argv);
                 _exit(1);
             }
-            return;
+            return 1;
         }
     }
+    return 0;
 }
 
 /* D375 keys with no D815 code, for working out what is still missing. */
@@ -422,9 +424,8 @@ ssize_t read(int fd, void *buf, size_t len)
         struct key_event *e = (struct key_event *)((char *)buf + i);
 
         if (e->type == EV_KEY_TYPE) {
-            if (e->value == 1) {
-                press_named(e->code);
-            }
+            int named = press_named(e->code, e->value);
+
             if (e->code == KEY_HOOK && e->value <= 1) {
                 e->value = !e->value;
             }
@@ -432,7 +433,9 @@ ssize_t read(int fd, void *buf, size_t len)
             renamed_key = e->code < 256 ? key_rename[e->code] : NULL;
             e->code = e->code < 256 ? key_map[e->code] : 0;
             if (!e->code) {
-                log_unmapped(original, e->value);
+                if (!named) {
+                    log_unmapped(original, e->value);
+                }
                 e->type = 0;    /* no equivalent: harmless sync event */
             }
         }

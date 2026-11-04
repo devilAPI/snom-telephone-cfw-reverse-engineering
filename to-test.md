@@ -4,60 +4,69 @@ Things only a person at the D375 can check. Firmware installed 2026-11-02: the
 merged CFW with the D815 app. Tick an item or add what you saw, and Claude
 updates this file after every change.
 
+Everything Claude could check remotely was tested on 2026-11-04 and is listed
+under [Already checked remotely](#already-checked-remotely) at the end. What is
+left needs eyes, ears or hands.
+
 ## Calls
 
-Calls worked before the install. The install replaced the whole rootfs and
-SIP registration isn't confirmed yet, so one quick round is enough:
+SIP registration is confirmed ("Registriert", also after the game tests and a
+reboot). Audio can't be checked remotely:
 
 - [ ] Call the phone from another phone: it rings, pick up on the handset,
-      audio both ways. That confirms SIP registration as well.
+      audio both ways.
 - [ ] Press the speaker key during that call.
 
 ## Keys
 
-- [ ] Function keys: the left column is P1 to P5 and the right column is P6 to P10.
-      Row 6 is P11 on the left and P12 on the right.
-- [ ] Settings key opens the settings menu.
-- [ ] Help key does something useful.
-- [ ] The key with the download symbol (where "snom" used to be).
-- [ ] Record key.
-- [ ] Any key that does nothing: list it here.
-      The phone logs it to `/snom/d815/tmp/unmapped-keys`.
-- [ ] A script assigned to a key runs, and the key label shows the
-      script's name, not `key-script?run=...`.
+- [ ] Rec key during a call. At idle it does nothing, which is expected.
+- [ ] One real press of each special key: Settings, Help, and the key with the
+      download symbol. Injected presses work; this confirms the physical keys.
 
 ## Screen and LEDs
 
-- [ ] Your custom boot splash appears while booting.
+- [ ] Your custom boot splash appears while booting. The right file is in
+      place; only the boot screen itself can't be captured.
 - [ ] The two red LEDs that used to stay on are off when idle.
-- [ ] Each function key LED lights next to its own key.
-- [ ] Backlight dims when idle and brightens on a key press.
-- [ ] Idle screen widgets (new in this firmware) show and look right.
+- [ ] Each function key LED lights next to its own key. Press DND (right column,
+      top) to light one, and press it again to turn DND off.
 
 ## Games
 
-Each one should start from the phone menu and return to the phone app when you quit.
-
-- [ ] Doom
-- [ ] NES
-- [ ] Game Boy Advance
-- [ ] Game Boy
-- [ ] Game sound plays at a normal volume.
-- [ ] Games on keys (new): in the panel, Games tab, put a game on a key, then
-      press it on the phone. The game should start, and the key should be
-      labelled with the game's name.
-
-## Tools
-
-- [ ] `htop` runs in an SSH session. Expect a host key warning on the first
-      login after the install.
-- [ ] The CFW panel works in a browser: `http://192.168.178.72:8080/`.
-- [ ] Panel tabs (new): Phone, Screen, Games, System and Logs each show their
-      cards, and a reload stays on the same tab.
-- [ ] Logs tab (new): the system log shows entries from the phone app (`lid:`),
-      and "live" keeps it updating.
+- [ ] Game sound plays at a normal volume. The tests ran at volume 5 of 100, so
+      nothing was audible.
+- [ ] A game feels playable with the real keys.
 
 ## Speed
 
-- [ ] Menus and key presses feel responsive. The load average stays near 5 while
-      idle, which is still unexplained.
+- [ ] Menus and key presses feel responsive.
+
+## Already checked remotely
+
+Tested 2026-11-04 with injected key events (`keyinject`), framebuffer captures
+(`fbshot`) and the phone's own web pages.
+
+- SIP identity 1 registered.
+- Function keys: left P1 to P5, right P6 to P10, left row 6 P11, right row 6 P12.
+  Every key was given a test script and pressed. The right column triggers
+  keys 6 to 10 and its labels sit next to it.
+- A script on a key shows the script's name as its label.
+- Settings opens Einstellungen, Help opens Informationen, and the download-symbol
+  key opens CFW Tools.
+- No key is unmapped. The unmapped-keys log listed Settings, Help, Rec and the
+  snom key, which the shim handles itself; it no longer logs them.
+- The backlight goes to 30 of 32 on a key press and dims to 6 after about 20 s.
+- Doom, NES, Game Boy and GBA each start, draw their picture, quit with the red
+  key, and the phone app is back in about 30 s with no reboot.
+- Games on keys: a NES game on key 5 got the label "tone", started from the key,
+  and the key went back to a line key when cleared.
+- The panel answers 401 without the login and 200 with it. Its tabs and the Logs
+  tab work in a browser, with the live view and filter.
+- The system log has the phone app's messages.
+- `htop` runs over SSH.
+- The load average of about 5 is explained and harmless: five kernel threads of
+  the audio driver (`hwthread`, `hausioctl`, `Cadence`, `EPTing_0`, `EPTing_2`)
+  sleep in an uninterruptible wait, and this kernel counts those in the load.
+  They use no CPU, and the CPU is 87% idle.
+- Idle screen widgets are known not to work on this phone (see
+  `docs/idle-screen.md`), so they are no longer on this list.
