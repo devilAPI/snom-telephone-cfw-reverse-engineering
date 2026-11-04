@@ -84,7 +84,9 @@ if pactl list short sinks | grep -q "[[:space:]]${SINK}[[:space:]]"; then
     echo "output $SINK exists already (another snom-speaker.sh?), using it" >&2
 else
     MOD=$(pactl load-module module-null-sink sink_name=$SINK rate=16000 channels=1 channel_map=mono \
-          'sink_properties=device.description="snom D375"')
+          "sink_properties='device.description=\"snom D375\"'")
+    # The value needs its own quotes: without them PipeWire's pulse layer cuts the name
+    # at the space and the output shows up as just "snom".
     CLEAN+=("pactl unload-module $MOD")
 fi
 if [ "$DEF" = 1 ]; then
