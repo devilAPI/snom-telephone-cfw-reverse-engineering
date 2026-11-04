@@ -51,6 +51,11 @@ mic it works; what is left is how it sounds.
 - [ ] Speaker and intercom at the same time: talk through the phone from the PC and
       listen to the phone in the panel.
 - [ ] After the sound stops there is no hiss from the speaker (it mutes after 2 s).
+- [ ] Music from the PC plays without cracks or skips, also loud songs. You heard
+      cracks and skips on 2026-11-04; fixed the same day, see docs/speaker.md
+      "Real-time priority". If it still happens, open
+      `http://PHONE:8091/status?k=TOKEN` and note `missed_frames`, `underruns` and
+      `dropped_ms`.
 
 ## Speed
 

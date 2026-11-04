@@ -50,6 +50,7 @@
 #include <signal.h>
 #include <time.h>
 #include <pthread.h>
+#include <sched.h>
 #include <sys/ioctl.h>
 #include <sys/socket.h>
 #include <sys/time.h>
@@ -75,8 +76,11 @@
 #define FRAME     80                  /* samples per 5 ms frame */
 #define RB        32768               /* ring buffer, samples (2 s); power of two */
 #define PREBUF    (RATE / 10)         /* start after 100 ms */
-#define LIVE_PRE  (RATE / 4)          /* live: start after 250 ms, WiFi delivers in bursts */
-#define LIVE_KEEP (RATE / 10)         /* live: the least buffered over 2 s is trimmed to 100 ms */
+#define LIVE_PRE  (RATE / 10)         /* live: start at the kept level + 100 ms */
+#define LIVE_KEEP (RATE * 3 / 20)     /* live: kept level at the start, 150 ms */
+#define LIVE_STEP (RATE / 20)         /* + 50 ms after every underrun */
+#define LIVE_MAXK (RATE * 6 / 10)     /*   up to 600 ms */
+#define RT_PRIO   40                  /* SCHED_FIFO priority of the pump */
 #define HDRMAX    2048
 #define PLAY_FIFO "/tmp/amxr-play.fifo"   /* see micstream.c */
 #define FIFO_FILL 8                   /* frames kept queued in it (40 ms) */
@@ -101,6 +105,14 @@ static int g_active;                  /* a /play body is being received */
 static int g_live;
 static int g_vol = 30;                /* 0..100 */
 static unsigned g_underruns, g_sessions, g_dropped;
+static unsigned g_missed, g_maxgap;   /* frames the pump was too late for; longest gap, ms */
+static unsigned g_keep = LIVE_KEEP;   /* live: buffer level kept, samples */
+static unsigned g_skip;               /* live: frames still to play 1.25 % faster */
+/* under g_mx: the buffer ran dry while a sender is active */
+static void underrun(void) {
+    g_started = 0; g_underruns++;
+    if (g_live && g_keep < LIVE_MAXK) g_keep += LIVE_STEP;
+}
 static time_t g_last_audio;           /* last time real samples went out */
 
 static void logf_(const char *fmt, ...) __attribute__((format(printf, 1, 2)));
@@ -168,6 +180,23 @@ static void block_signals(void) {
 }
 
 /* ---------- pump: one frame every 5 ms ---------- */
+static long long now_us(void) {
+    struct timespec t; clock_gettime(CLOCK_MONOTONIC, &t);
+    return (long long)t.tv_sec * 1000000 + t.tv_nsec / 1000;
+}
+
+/* Real-time priority. The module wakes a waiter only if it already waits when the frame
+ * comes; a pump that is late (the phone app keeps the CPU busy) misses the frame. Then
+ * the module plays the last frame again (a crack), and the audio of the missed frame
+ * piles up in the buffer (later trimmed: a skip). SCHED_FIFO keeps the pump on time. */
+static int g_nort;   /* -N: no real-time priority (to compare) */
+static void go_realtime(const char *who) {
+    if (g_nort) return;
+    struct sched_param sp; memset(&sp, 0, sizeof sp); sp.sched_priority = RT_PRIO;
+    int e = pthread_setschedparam(pthread_self(), SCHED_FIFO, &sp);
+    if (e) logf_("%s: no real-time priority: %s", who, strerror(e));
+}
+
 static void *pump(void *arg) {
     (void)arg;
     short f[FRAME];
@@ -175,46 +204,84 @@ static void *pump(void *arg) {
     int was_real = 0;
     unsigned minav = ~0u, win = 0;
     int fifo = -1;
+    long long last = 0, sec0 = now_us(), fifo_try = 0;
+    unsigned in_sec = 0;
     block_signals();
+    go_realtime("pump");
     while (g_run) {
-        /* micstream running? Then it owns the frame clock (see PLAY_FIFO) */
-        if (fifo < 0 && tick % 200 == 0 && (fifo = open(PLAY_FIFO, O_WRONLY | O_NONBLOCK)) >= 0)
-            logf_("intercom is on: frames go through %s", PLAY_FIFO);
+        /* micstream running? Then it owns the frame clock (see PLAY_FIFO). Look every
+           100 ms: until we switch, both wait and each gets every other frame. */
+        if (fifo < 0 && now_us() - fifo_try >= 100000) {
+            fifo_try = now_us();
+            if ((fifo = open(PLAY_FIFO, O_WRONLY | O_NONBLOCK)) >= 0)
+                logf_("intercom is on: frames go through %s", PLAY_FIFO);
+        }
         if (fifo >= 0) {
             int q = 0;
             if (ioctl(fifo, FIONREAD, &q) == 0 && q >= FIFO_FILL * FRAME * 2) { usleep(5000); continue; }
-        } else if (ioctl(g_user, AMXRUSER_WAIT, 0) < 0) {
-            if (errno == EINTR) continue;
-            logf_("frame wait failed: %s", strerror(errno)); g_run = 0; break;
+            last = 0;
+        } else {
+            if (ioctl(g_user, AMXRUSER_WAIT, 0) < 0) {
+                if (errno == EINTR) continue;
+                logf_("frame wait failed: %s", strerror(errno)); g_run = 0; break;
+            }
+            /* missed frames: a gap of more than 1.5 frames since the last wake */
+            long long t = now_us();
+            if (last) {
+                long gap = (long)(t - last);
+                if (gap > 7500) g_missed += (unsigned)((gap + 2500) / 5000) - 1;
+                if (gap / 1000 > (long)g_maxgap) g_maxgap = (unsigned)(gap / 1000);
+            }
+            last = t;
+            /* guard: a real-time thread must never spin. More than 300 wakes in a second
+               means the wait returns without frames: slow down. */
+            if (t - sec0 >= 1000000) { sec0 = t; in_sec = 0; }
+            else if (++in_sec > 300) usleep(4000);
         }
         int real = 0;
         pthread_mutex_lock(&g_mx);
         unsigned avail = g_wr - g_rd;
-        /* live: the sender's clock is a little faster than the phone's, so audio piles up.
-           Bursts are normal, so look at the lowest level of the last 2 s: what is always
-           there is surplus delay, and goes. */
+        /* live: the buffer must ride out WiFi bursts and the sender's clock drift. Every
+           underrun raises the kept level by 50 ms (up to 600 ms). Every 2 s the lowest
+           level seen is compared with it: the surplus is played away 1.25 % faster
+           (81 samples into 80, not audible), or skipped at once if it is over 1 s. */
         if (g_live && g_started) {
             if (avail < minav) minav = avail;
             if (++win >= 400) {
-                if (minav > LIVE_KEEP && minav != ~0u) { g_rd += minav - LIVE_KEEP; g_dropped += minav - LIVE_KEEP; avail -= minav - LIVE_KEEP; }
+                unsigned ex = minav > g_keep ? minav - g_keep : 0;
+                if (ex > RATE) { g_rd += ex; g_dropped += ex; avail -= ex; g_skip = 0; }
+                else g_skip = ex > RATE / 50 ? ex : 0;
                 win = 0; minav = ~0u;
             }
-        } else { win = 0; minav = ~0u; }
-        if (!g_started && (avail >= (g_live ? LIVE_PRE : PREBUF) || (!g_active && avail))) g_started = 1;
+        } else { win = 0; minav = ~0u; g_skip = 0; }
+        if (!g_started && (avail >= (g_live ? g_keep + LIVE_PRE : PREBUF) || (!g_active && avail))) g_started = 1;
         if (g_started && avail) {
-            unsigned n = avail < FRAME ? avail : FRAME, i;
             int v = g_vol * g_vol * 32768 / 10000;   /* Q15, roughly even steps by ear */
-            for (i = 0; i < n; i++) {
-                f[i] = (short)((g_rb[(g_rd + i) & (RB - 1)] * v) >> 15);
-                if (f[i] > SILENT || f[i] < -SILENT) real = 1;
+            unsigned i, n;
+            if (g_skip && avail >= FRAME + 1) {
+                /* 81 samples into 80, linear */
+                for (i = 0; i < FRAME; i++) {
+                    unsigned pos = i * FRAME * 256 / (FRAME - 1);   /* 0 .. 80 in 1/256 */
+                    unsigned k = pos >> 8, fr = pos & 255;
+                    int a = g_rb[(g_rd + k) & (RB - 1)], b = k < FRAME ? g_rb[(g_rd + k + 1) & (RB - 1)] : a;
+                    f[i] = (short)((((a * 256 + (b - a) * (int)fr) >> 8) * v) >> 15);
+                    if (f[i] > SILENT || f[i] < -SILENT) real = 1;
+                }
+                g_rd += FRAME + 1; g_skip--; g_dropped++;
+            } else {
+                n = avail < FRAME ? avail : FRAME;
+                for (i = 0; i < n; i++) {
+                    f[i] = (short)((g_rb[(g_rd + i) & (RB - 1)] * v) >> 15);
+                    if (f[i] > SILENT || f[i] < -SILENT) real = 1;
+                }
+                for (; i < FRAME; i++) f[i] = 0;
+                g_rd += n;
+                if (n < FRAME && g_active) underrun();
             }
-            for (; i < FRAME; i++) f[i] = 0;
-            g_rd += n;
-            if (n < FRAME && g_active) { g_started = 0; g_underruns++; }
             pthread_cond_broadcast(&g_space);
         } else {
             memset(f, 0, sizeof f);
-            if (g_started) { g_started = 0; if (g_active) g_underruns++; }
+            if (g_started) { g_started = 0; if (g_active) underrun(); }
         }
         pthread_mutex_unlock(&g_mx);
         tick++;
@@ -227,7 +294,7 @@ static void *pump(void *arg) {
         was_real = real;
         if (fifo >= 0) {
             if (write(fifo, f, sizeof f) != (ssize_t)sizeof f) {   /* micstream stopped */
-                close(fifo); fifo = -1; tick = 1;
+                close(fifo); fifo = -1; fifo_try = now_us();
                 logf_("intercom is off: back to the frame clock");
             }
         } else {
@@ -329,7 +396,7 @@ static int push(const short *s, int n, unsigned gen) {
 static unsigned new_session(int live, int active) {
     pthread_mutex_lock(&g_mx);
     unsigned gen = ++g_gen;
-    g_rd = g_wr; g_started = 0; g_active = active; g_live = live;
+    g_rd = g_wr; g_started = 0; g_active = active; g_live = live; g_keep = LIVE_KEEP; g_skip = 0;
     pthread_cond_broadcast(&g_space);
     pthread_mutex_unlock(&g_mx);
     return gen;
@@ -478,10 +545,12 @@ static void *conn(void *arg) {
         if (v < 0 || v > 100) reply(c, "400 Bad Request", "text/plain", "v must be 0..100\n");
         else { g_vol = (int)v; reply(c, "200 OK", "text/plain", "ok\n"); }
     } else if (!strcmp(meth, "GET") && !strcmp(path, "/status")) {
-        char b[224];
+        char b[320];
         pthread_mutex_lock(&g_mx);
-        snprintf(b, sizeof b, "{\"playing\":%d,\"buffered_ms\":%u,\"underruns\":%u,\"dropped_ms\":%u,\"vol\":%d,\"sessions\":%u}\n",
-                 g_active || g_wr != g_rd, (g_wr - g_rd) * 1000 / RATE, g_underruns, g_dropped * 1000 / RATE, g_vol, g_sessions);
+        snprintf(b, sizeof b, "{\"playing\":%d,\"buffered_ms\":%u,\"keep_ms\":%u,\"underruns\":%u,\"dropped_ms\":%u,"
+                 "\"missed_frames\":%u,\"max_gap_ms\":%u,\"vol\":%d,\"sessions\":%u}\n",
+                 g_active || g_wr != g_rd, (g_wr - g_rd) * 1000 / RATE, g_keep * 1000 / RATE, g_underruns,
+                 g_dropped * 1000 / RATE, g_missed, g_maxgap, g_vol, g_sessions);
         pthread_mutex_unlock(&g_mx);
         reply(c, "200 OK", "application/json", b);
     } else reply(c, "404 Not Found", "text/plain", "not found\n");
@@ -493,20 +562,21 @@ done:
 }
 
 static void usage(void) {
-    fprintf(stderr, "usage: spkstream [-p PORT] [-k TOKEN] [-v VOL] [-l LOGFILE] | -x\n");
+    fprintf(stderr, "usage: spkstream [-p PORT] [-k TOKEN] [-v VOL] [-l LOGFILE] [-N] | -x\n");
     exit(2);
 }
 
 int main(int argc, char **argv) {
     int port = 8091, opt, cleanup = 0;
     const char *logp = NULL;
-    while ((opt = getopt(argc, argv, "p:k:v:l:x")) != -1) {
+    while ((opt = getopt(argc, argv, "p:k:v:l:xN")) != -1) {
         switch (opt) {
         case 'p': port = atoi(optarg); break;
         case 'k': g_token = optarg; break;
         case 'v': g_vol = atoi(optarg); if (g_vol < 0 || g_vol > 100) usage(); break;
         case 'l': logp = optarg; break;
         case 'x': cleanup = 1; break;
+        case 'N': g_nort = 1; break;
         default: usage();
         }
     }

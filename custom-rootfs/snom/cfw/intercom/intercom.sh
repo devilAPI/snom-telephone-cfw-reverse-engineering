@@ -29,7 +29,8 @@ running() {
     [ -f "$PIDF" ] || return 1
     _p=$(cat "$PIDF" 2>/dev/null)
     [ -n "$_p" ] && [ -d "/proc/$_p" ] || return 1
-    case "$(readlink "/proc/$_p/exe" 2>/dev/null)" in */micstream) return 0 ;; esac
+    # "(deleted)" after the binary was replaced by an update
+    case "$(readlink "/proc/$_p/exe" 2>/dev/null)" in */micstream|*/micstream" (deleted)") return 0 ;; esac
     return 1
 }
 

@@ -80,7 +80,9 @@ m = sum(a) / len(a)
 rms = math.sqrt(sum((x - m) ** 2 for x in a) / len(a))
 print('wav: %.2f s, mean %.1f, rms %.1f, peak %d, distinct %d' % (secs, m, rms, max(map(abs, a)), len(set(a))))
 assert secs > 3.5, 'too short: %.2f s' % secs
-assert rms > 2 and len(set(a)) > 50, 'silent capture (mic muted?)'
+# gain x4 (shift 2) makes every sample a multiple of 4: a quiet room gives only ~40-80
+# distinct values. A muted mic gives exact zeros, so 30 still tells the two apart.
+assert rms > 2 and len(set(a)) > 30, 'silent capture (mic muted?)'
 assert abs(m) < 300, 'DC offset %.0f (DC blocker broken?)' % m
 b = open(sys.argv[2], 'rb').read()
 assert len(b) > 16000, 'second listener got only %d bytes' % len(b)

@@ -56,10 +56,10 @@ start. It is shown to whoever can open the panel, and stored in `/tmp/speaker/to
 |---|---|
 | `POST` or `PUT /play?k=T` | Plays the body. Takes a WAV file (16-bit PCM, any rate, mono or stereo) or raw S16LE, 16000 Hz mono by default, or `rate=` and `ch=1\|2`. The length can come from `Content-Length` or chunked encoding, or the body runs until the sender closes. Answers when the sound has played: `played N ms`. A new `/play` replaces the one playing; the old one is answered with `stopped`. |
 | `&vol=0..100` | Volume for this and later sounds. |
-| `&live=1` | For endless streams (a PC's sound output). It starts after 250 ms instead of 100 ms, and keeps the delay low (see below). |
+| `&live=1` | For endless streams (a PC's sound output). An adaptive buffer that keeps the delay low (see below). |
 | `GET /stop?k=T` | Stops the sound. |
 | `GET /vol?k=T&v=N` | Sets the volume, also while something plays. |
-| `GET /status?k=T` | `{"playing", "buffered_ms", "underruns", "dropped_ms", "vol", "sessions"}` |
+| `GET /status?k=T` | `{"playing", "buffered_ms", "keep_ms", "underruns", "dropped_ms", "missed_frames", "max_gap_ms", "vol", "sessions"}`. `missed_frames` counts frames the pump woke up too late for; `max_gap_ms` should stay at 5. |
 
 The answers carry `Access-Control-Allow-Origin: *`, so the panel on port 8080 can send
 files. It sends them as `text/plain`, which keeps them simple requests without a CORS
@@ -130,18 +130,48 @@ amplifier on.
 During a call the phone app owns the gains. The stream still plays into the
 speakerphone, mixed with the call. The caller does not hear it.
 
+### Real-time priority (the fix for cracks and skips)
+
+The first version cracked and skipped with music. The user's first session showed
+17 underruns and 4.2 s dropped in about 6 minutes, on a phone with load 8.9 where the
+phone app takes up to 35 % CPU. The cause was the pump being late.
+The module wakes a waiter only if it already waits when the frame comes (see
+[intercom.md](intercom.md#together-with-the-speaker-spkstream)). A pump that is late
+misses the frame: the module plays the last frame again (a crack) and the missed
+frame's audio piles up in the buffer, which was then trimmed (a skip).
+
+The pump thread now runs with `SCHED_FIFO` priority 40, and micstream does the same,
+since it owns the clock while the intercom runs. Measured with 40 s of loud test music
+streamed live (`spkstream -N` turns the priority off, for exactly this comparison):
+
+| | missed frames | longest gap between frames |
+|---|---|---|
+| normal priority | 28 | 10 ms |
+| `SCHED_FIFO` 40 | 0 | 5 ms |
+
+A real-time thread that spins would freeze the phone. Both pumps count their wakes and
+sleep 4 ms per wake once there are more than 300 in a second (200 is normal).
+
 ### Buffering and delay
 
 The ring buffer holds 2 s. A file is sent as fast as TCP allows. When the buffer is
 full, spkstream stops reading, so the sender is slowed down to the playback speed.
 
 A live stream from a PC runs on the PC's clock, which is a little faster or slower than
-the phone's 16 kHz. WiFi also delivers in bursts. So for `live=1`, spkstream looks at the
-lowest buffer level of every 2 seconds: whatever was buffered the whole time is surplus
-delay, and everything above 100 ms is dropped. Measured with the PC script: 110 to
-120 ms buffered, 0 underruns, 110 ms dropped in 15 s. An earlier version dropped
-whenever more than 300 ms were buffered. Because of the bursts that cut out half the
-audio.
+the phone's 16 kHz, and WiFi delivers in bursts. For `live=1`:
+
+* It keeps 150 ms buffered and starts playing at 250 ms.
+* Every underrun raises the kept level by 50 ms, up to 600 ms, so a bad WiFi link gets
+  a longer delay instead of repeated dropouts. It starts at 150 ms again for every new
+  stream.
+* Every 2 seconds it compares the lowest level it saw with the kept level. Whatever was
+  buffered the whole time is surplus delay. It is played away 1.25 % faster: 81 samples
+  are resampled into 80, which isn't audible. Only a surplus over 1 s is skipped at once.
+
+Measured with the PC script: about 110 to 210 ms buffered, no underruns. History: the
+first version dropped whenever more than 300 ms were buffered, which cut out half the
+audio because of the WiFi bursts. The second trimmed the surplus in one jump every
+2 seconds, which you hear as a skip.
 
 The PC script doesn't use curl for live streaming: curl reads 64 kB (2 s) of a pipe
 before it sends. It opens the TCP connection with bash's `/dev/tcp`, sends a request
@@ -173,6 +203,11 @@ PulseAudio resample into the 16 kHz output) and the ffmpeg example do.
   hardware. Stop the speaker before playing.
 * `pkill -f snom-speaker` in a shell whose own command line contains that text kills
   the shell too. Use the PID.
+* `missed_frames` grows: the pump has no real-time priority (look for "no real-time
+  priority" in `/tmp/speaker/log`) or something else runs at a higher priority.
+* `speaker.sh` and `intercom.sh` recognise their daemon by `/proc/PID/exe`. After the
+  binary was replaced that link reads `.../spkstream (deleted)`, and an earlier version
+  then didn't stop the old daemon.
 * Status says `buffered_ms` 2048 and nothing plays: no frame clock. Look for the
   `halaudio.apm1 -> amxruser.bind0` connection in `/proc/amxr`.
 

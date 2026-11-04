@@ -38,6 +38,7 @@
 #include <sys/ioctl.h>
 #include <sys/stat.h>
 #include <sys/time.h>
+#include <sched.h>
 #include <sys/socket.h>
 #include <netinet/in.h>
 #include <netinet/tcp.h>
@@ -404,6 +405,12 @@ int main(int argc, char **argv) {
     short pbuf[FRAME];
     adc_open(mask);
     adc_check();
+    /* Real-time priority: a late wait misses the frame (a gap in the stream, and a repeated
+     * frame on the speaker while spkstream sends through us). See docs/speaker.md. */
+    struct sched_param sp; memset(&sp, 0, sizeof sp); sp.sched_priority = 40;
+    if (sched_setscheduler(0, SCHED_FIFO, &sp) < 0) perror("micstream: no real-time priority");
+    struct timespec sec0; clock_gettime(CLOCK_MONOTONIC, &sec0);
+    int in_sec = 0;
     if (lfd >= 0) fprintf(stderr, "micstream: serving http://%s:%d/stream.wav\n", bindaddr, port);
 
     short buf[FRAME * BATCH];
@@ -417,6 +424,11 @@ int main(int argc, char **argv) {
         int wr = ioctl(u, AMXRUSER_WAIT, 0);
         setitimer(ITIMER_REAL, &off, NULL);
         if (g_alarm) { stalls++; continue; }
+        /* guard: a real-time process must never spin. More than 300 wakes in a second
+           means the wait returns without frames: slow down. */
+        struct timespec tn; clock_gettime(CLOCK_MONOTONIC, &tn);
+        if (tn.tv_sec != sec0.tv_sec) { sec0 = tn; in_sec = 0; }
+        else if (++in_sec > 300) usleep(4000);
         if (wr < 0) {
             if (errno == EINTR) continue;
             perror("micstream: wait"); rc = 1; break;

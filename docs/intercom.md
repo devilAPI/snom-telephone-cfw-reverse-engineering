@@ -170,13 +170,17 @@ be shared (2026-11-04):
   at half speed. So while micstream runs it is the only one that waits. It creates the
   FIFO `/tmp/amxr-play.fifo`, and after every frame it reads one 160-byte speaker frame
   from it, if there is one, and writes it to `amxruser` port 0 (`ioctl 0xc0044500`).
-  spkstream finds the FIFO within a second, stops waiting and keeps 8 frames queued in
+  spkstream looks for the FIFO every 100 ms, stops waiting and keeps 8 frames queued in
   it. When micstream exits, spkstream gets `EPIPE` and waits on the module again.
 * **The watchdog.** When spkstream stops waiting, micstream can be left asleep with the
   flag clear, and no frame wakes it again. micstream arms a 30 ms one-shot timer
   (`setitimer`) around every wait; if it fires, the wait is repeated, which sets the
   flag again. The ioctl returns 0 even when interrupted, so a signal flag tells the two
   apart. The count is in micstream's exit line ("stalled waits"), usually 0 or 1.
+* **Real-time priority.** micstream runs with `SCHED_FIFO` 40. A late wait misses a
+  frame: a gap in the mic stream, and a repeated frame on the speaker. It sleeps 4 ms per
+  wake if it ever wakes more than 300 times in a second, so it can't spin. Details in
+  [speaker.md](speaker.md#real-time-priority-the-fix-for-cracks-and-skips).
 
 ### Coexistence with games
 
