@@ -7,6 +7,7 @@
 #     -d          make "snom D375" the default output while this runs
 #     -f FILE     play one file instead (anything ffmpeg reads: mp3, ogg, wav, a URL, ...)
 #     -v VOL      volume 0..100 (default 30; the phone's speaker is loud)
+#     -o OUT      speaker (default: as set on the phone) or handset (the earpiece)
 #     -s          stop the speaker on the phone when done (default: leave it on)
 #     -u U:P      panel login; or CFW_AUTH=user:pass; asked for when needed
 #
@@ -15,17 +16,18 @@
 # Needs: curl, and for the virtual output pactl plus parec (pulseaudio-utils, also works
 # with pipewire-pulse) or pw-record. -f needs ffmpeg.
 set -euo pipefail
-IP=192.168.178.72 VOL=30 FILE="" DEF=0 STOP=0 AUTH=${CFW_AUTH:-}
+IP=192.168.178.72 VOL=30 FILE="" DEF=0 STOP=0 AUTH=${CFW_AUTH:-} OUT=""
 SINK=snom_d375
-while getopts "df:v:su:h" o; do
+while getopts "df:v:o:su:h" o; do
     case $o in
-        d) DEF=1 ;; f) FILE=$OPTARG ;; v) VOL=$OPTARG ;; s) STOP=1 ;; u) AUTH=$OPTARG ;;
+        d) DEF=1 ;; f) FILE=$OPTARG ;; v) VOL=$OPTARG ;; s) STOP=1 ;; u) AUTH=$OPTARG ;; o) OUT=$OPTARG ;;
         *) sed -n '2,16p' "$0"; exit 2 ;;
     esac
 done
 shift $((OPTIND - 1))
 [ $# -gt 0 ] && IP=$1
 case "$VOL" in [0-9]|[1-9][0-9]|100) ;; *) echo "volume must be 0..100" >&2; exit 2 ;; esac
+case "$OUT" in ''|speaker|handset) ;; *) echo "output must be speaker or handset" >&2; exit 2 ;; esac
 need() { command -v "$1" >/dev/null || { echo "missing: $1 ($2)" >&2; exit 1; }; }
 need curl curl
 
@@ -33,7 +35,7 @@ need curl curl
 cgi() {
     local a=(curl -s --connect-timeout 5 -m 20 -w '\n%{http_code}')
     [ -n "$AUTH" ] && a+=(-u "$AUTH")
-    "${a[@]}" "http://$IP:8080/cgi-bin/speaker?a=$1&fmt=txt&v=$VOL"
+    "${a[@]}" "http://$IP:8080/cgi-bin/speaker?a=$1&fmt=txt&v=$VOL${OUT:+&o=$OUT}"
 }
 call() {
     local out code
@@ -55,6 +57,7 @@ val() { sed -n "s/^$1=//p" <<<"$ST" | head -n 1; }
 call status || exit 1
 [ "$(val running)" = 1 ] || { echo "speaker is off, starting it ..." >&2; call start || exit 1; }
 [ "$(val running)" = 1 ] || { echo "could not start the speaker: $(val error)" >&2; exit 1; }
+[ -n "$OUT" ] && { call out || exit 1; echo "output: $(val out)" >&2; }
 PLAY="http://$IP:$(val port)/play?k=$(val token)&vol=$VOL"
 
 CLEAN=()

@@ -4,6 +4,7 @@
 #   ?a=phone[&v=VIEW][&id=ID][&o=OFFSET][&t=TYPE][&q=TEXT][&do=ACTION][&src=SRC&i=N]
 #   views: home artists artist album list playlists playlist search results
 #   do:    play pause resume next prev stop volup voldn  (then the home view)
+#          out&out=speaker|handset  (loudspeaker or handset earpiece, speaker.sh out)
 # Panel (JSON, :8080 behind the login):
 #   ?a=status | save (url user pass bitrate vol) | test | ctl&do=ACTION (vol: &vol=0..100)
 #     | search&q=TEXT | play&src=album|playlist|random|search|artist&id=ID&q=TEXT&i=N
@@ -16,21 +17,21 @@ P=/snom/cfw/navidrome/player.sh
 B="http://127.0.0.1:8081/cgi-bin/navidrome?a=phone"
 PAGE=20
 
-A=; V=; ID=; O=; T=; Q=; DO=; SRC=; I=; VOLN=; F_URL=; F_USER=; F_PASS=; F_BR=
+A=; V=; ID=; O=; T=; Q=; DO=; SRC=; I=; VOLN=; F_URL=; F_USER=; F_PASS=; F_BR=; OUTP=
 while IFS='	' read -r k v; do
     case "$k" in
         a) A=$v ;; v) V=$v ;; id) ID=$v ;; o) O=$v ;; t) T=$v ;; q) Q=$v ;; do) DO=$v ;;
         src) SRC=$v ;; i) I=$v ;; vol) VOLN=$v ;; url) F_URL=$v ;; user) F_USER=$v ;;
-        pass) F_PASS=$v ;; bitrate) F_BR=$v ;;
+        pass) F_PASS=$v ;; bitrate) F_BR=$v ;; out) OUTP=$v ;;
     esac
 done <<EOT
-$(printf '%s&%s' "${CFW_BODY:-}" "${QUERY_STRING:-}" | nd_params a v id o t q do src i vol url user pass bitrate)
+$(printf '%s&%s' "${CFW_BODY:-}" "${QUERY_STRING:-}" | nd_params a v id o t q do src i vol url user pass bitrate out)
 EOT
 case "$A" in phone|status|save|test|ctl|search|play) ;; *) A=status ;; esac
 case "$O" in ''|*[!0-9]*) O=0 ;; esac
 case "$I" in ''|*[!0-9]*) I=0 ;; esac
 case "$T" in newest|random|recent|frequent|alphabeticalByName|starred) ;; *) T=newest ;; esac
-case "$DO" in play|pause|resume|toggle|next|prev|stop|volup|voldn|vol) ;; *) DO= ;; esac
+case "$DO" in play|pause|resume|toggle|next|prev|stop|volup|voldn|vol|out) ;; *) DO= ;; esac
 case "$SRC" in album|playlist|random|search|artist) ;; *) SRC= ;; esac
 case "$VOLN" in [0-9]|[1-9][0-9]|100) ;; *) VOLN= ;; esac
 nd_id "$ID" || ID=
@@ -65,6 +66,8 @@ do_action() {
         vol) if [ -n "$VOLN" ]; then "$P" vol "$VOLN" | grep '^error='; else echo "error=volume must be 0..100"; fi ;;
         volup) "$P" vol up | grep '^error=' ;;
         voldn) "$P" vol down | grep '^error=' ;;
+        out) case "$OUTP" in speaker|handset) /snom/cfw/intercom/speaker.sh out "$OUTP" | grep '^error=' ;;
+             *) echo "error=output must be speaker or handset" ;; esac ;;
         *) "$P" "$1" | grep '^error=' ;;
     esac
 }
@@ -99,6 +102,8 @@ phone_home() {
     add "Albums: most played" "$B&v=list&t=frequent"
     add "Playlists" "$B&v=playlists"
     add "Search" "$B&v=search"
+    if [ "$(cat /snom/cfw-data/speaker/out 2>/dev/null)" = handset ]; then add "Output: handset - switch to speaker" "$B&do=out&out=speaker"
+    else add "Output: speaker - switch to handset" "$B&do=out&out=handset"; fi
     add "Volume $ND_VOL: up" "$B&do=volup"
     add "Volume $ND_VOL: down" "$B&do=voldn"
     nd_menu "Navidrome" < "$ITEMS"

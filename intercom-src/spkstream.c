@@ -32,6 +32,7 @@
  *        without it a file is played completely, the sender is slowed down by TCP.
  *   GET /stop?k=T        stop the current sound
  *   GET /vol?k=T&v=N     set the volume 0..100 (also for what is playing)
+ *   GET /out?k=T&o=speaker|handset   play on the loudspeaker or in the handset earpiece
  *   GET /status?k=T      JSON: playing, buffered_ms, underruns, dropped_ms, vol, sessions
  * Answers carry Access-Control-Allow-Origin: * so the web panel (port 8080) can send.
  *
@@ -67,8 +68,20 @@
 #define HAL_GET_GAIN      0x80084132u /* _IOR('A',50,8) {int block; int *info} info[0] = current dB */
 #define HAL_SET_GAIN      0x80084133u /* _IOR('A',51,8) {int block; int db} */
 #define GAIN_MUTE         (-1000)
-#define BLK_DIG           0x109       /* CH1 digital output gain, -50..18 dB, 1 dB steps */
-#define BLK_ANA           0x121       /* CH1 analog output stage, -21..0 dB, powers the amp */
+/* Outputs (measured with the phone's own mics, docs/speaker.md):
+ *   speaker: APM channel 1, halaudio.apm1, gain blocks 0x109 (digital, -50..18 dB,
+ *            1 dB steps) and 0x121 (analog output stage, -21..0 dB, powers the amp)
+ *   handset: APM channel 0, halaudio.apm0, blocks 0x009 and 0x021 (the earpiece; 0x011
+ *            gave nothing, probably the headset jack, untested) */
+struct outdef { const char *name, *port; int dig, ana; };
+static const struct outdef g_outs[] = {
+    { "speaker", "halaudio.apm1", 0x109, 0x121 },
+    { "handset", "halaudio.apm0", 0x009, 0x021 },
+};
+#define NOUTS (int)(sizeof g_outs / sizeof *g_outs)
+static volatile int g_out, g_out_req;   /* current output; the one asked for (/out) */
+#define BLK_DIG g_outs[g_out].dig
+#define BLK_ANA g_outs[g_out].ana
 #define OUR_DIG           1           /* +1 dB: marks the unmute as ours */
 #define OUR_ANA           0
 
@@ -294,6 +307,17 @@ static void *pump(void *arg) {
                means the wait returns without frames: slow down. */
             if (t - sec0 >= 1000000) { sec0 = t; in_sec = 0; }
             else if (++in_sec > 300) usleep(4000);
+        }
+        if (g_out_req != g_out) {
+            /* switch the output between two frames: mute the old one, move the amxr
+               connections, the new one is unmuted with the next real sound */
+            gains_off();
+            amxr_link(0);
+            void *nd = port_by_name(g_outs[g_out_req].port);
+            if (nd) { g_dst = nd; g_out = g_out_req; logf_("output: %s", g_outs[g_out].name); }
+            else { g_out_req = g_out; logf_("output %s: port missing", g_outs[g_out_req].name); }
+            if (amxr_link(1) < 0) logf_("amxrConnect: %s", strerror(errno));
+            was_real = 0;
         }
         int acc[FRAME] = { 0 };
         pthread_mutex_lock(&g_mx);
@@ -569,6 +593,16 @@ static void *conn(void *arg) {
         if (which & 2) new_session(&g_ch[CH_LIVE], 0, -1);
         logf_("stop (%s)", which == 1 ? "player" : which == 2 ? "live" : "all");
         reply(c, "200 OK", "text/plain", "stopped\n");
+    } else if (!strcmp(meth, "GET") && !strcmp(path, "/out")) {
+        /* ?o=speaker|handset */
+        int n = -1;
+        for (int k = 0; k < NOUTS; k++) {
+            char want[32]; snprintf(want, sizeof want, "o=%s", g_outs[k].name);
+            const char *m = strstr(q, want);
+            if (m && (m == q || m[-1] == '&') && (m[strlen(want)] == 0 || m[strlen(want)] == '&')) n = k;
+        }
+        if (n < 0) reply(c, "400 Bad Request", "text/plain", "o must be speaker or handset\n");
+        else { g_out_req = n; reply(c, "200 OK", "text/plain", "ok\n"); }
     } else if (!strcmp(meth, "GET") && !strcmp(path, "/vol")) {
         long v = qnum(q, "v", -1);
         if (v < 0 || v > 100) reply(c, "400 Bad Request", "text/plain", "v must be 0..100\n");
@@ -594,10 +628,10 @@ static void *conn(void *arg) {
         /* top level: both channels together (the fields of the first version), then each */
         unsigned bp = P->wr - P->rd, bl = L->wr - L->rd;
         snprintf(b, sizeof b, "{\"playing\":%d,\"buffered_ms\":%u,\"keep_ms\":%u,\"underruns\":%u,\"dropped_ms\":%u,"
-                 "\"missed_frames\":%u,\"max_gap_ms\":%u,\"vol\":%d,\"sessions\":%u,\"player\":%s,\"live\":%s}\n",
+                 "\"missed_frames\":%u,\"max_gap_ms\":%u,\"vol\":%d,\"sessions\":%u,\"out\":\"%s\",\"player\":%s,\"live\":%s}\n",
                  P->active || bp || L->active || bl, (bp > bl ? bp : bl) * 1000 / RATE,
                  L->keep * 1000 / RATE, P->underruns + L->underruns, (P->dropped + L->dropped) * 1000 / RATE,
-                 g_missed, g_maxgap, g_vol, g_sessions, cj[0], cj[1]);
+                 g_missed, g_maxgap, g_vol, g_sessions, g_outs[g_out].name, cj[0], cj[1]);
         pthread_mutex_unlock(&g_mx);
         reply(c, "200 OK", "application/json", b);
     } else reply(c, "404 Not Found", "text/plain", "not found\n");
@@ -609,14 +643,14 @@ done:
 }
 
 static void usage(void) {
-    fprintf(stderr, "usage: spkstream [-p PORT] [-k TOKEN] [-v VOL] [-l LOGFILE] [-N] | -x\n");
+    fprintf(stderr, "usage: spkstream [-p PORT] [-k TOKEN] [-v VOL] [-o speaker|handset] [-l LOGFILE] [-N] | -x\n");
     exit(2);
 }
 
 int main(int argc, char **argv) {
     int port = 8091, opt, cleanup = 0;
     const char *logp = NULL;
-    while ((opt = getopt(argc, argv, "p:k:v:l:xN")) != -1) {
+    while ((opt = getopt(argc, argv, "p:k:v:l:o:xN")) != -1) {
         switch (opt) {
         case 'p': port = atoi(optarg); break;
         case 'k': g_token = optarg; break;
@@ -624,6 +658,10 @@ int main(int argc, char **argv) {
         case 'l': logp = optarg; break;
         case 'x': cleanup = 1; break;
         case 'N': g_nort = 1; break;
+        case 'o': g_out = -1;
+                  for (int k = 0; k < NOUTS; k++) if (!strcmp(optarg, g_outs[k].name)) g_out = k;
+                  if (g_out < 0) usage();
+                  g_out_req = g_out; break;
         default: usage();
         }
     }
@@ -635,9 +673,12 @@ int main(int argc, char **argv) {
     g_amxr = open("/dev/amxr", O_RDWR);
     if (g_amxr < 0) { logf_("open /dev/amxr: %s", strerror(errno)); return 1; }
     g_src = port_by_name("amxruser.bind0");
-    g_dst = port_by_name("halaudio.apm1");
+    g_dst = port_by_name(g_outs[g_out].port);
     if (!g_src || !g_dst) { logf_("amxr ports missing (is amxr_user_hook loaded?)"); return 1; }
-    if (cleanup) { amxr_link(0); return 0; }
+    if (cleanup) {   /* after a kill -9: remove our connections, whichever output was on */
+        for (int k = 0; k < NOUTS; k++) { void *d = port_by_name(g_outs[k].port); if (d) { g_dst = d; amxr_link(0); } }
+        return 0;
+    }
     g_user = open("/dev/amxruser", O_RDWR);
     g_hal = open("/dev/halaudio", O_RDWR);
     if (g_user < 0 || g_hal < 0) { logf_("open /dev/amxruser or /dev/halaudio: %s", strerror(errno)); return 1; }

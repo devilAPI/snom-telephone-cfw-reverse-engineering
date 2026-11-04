@@ -2,6 +2,7 @@
 # CFW: network speaker / reverse intercom (see docs/speaker.md). Plays audio sent to
 # http://<phone>:8091/play?k=<token> on the loudspeaker while the phone UI runs.
 #   ?a=status|start|stop   [&v=0..100 default volume; start only]
+#   ?a=out&o=speaker|handset   loudspeaker or handset earpiece (saved)
 #   &fmt=txt   key=value lines (tools/snom-speaker.sh, tests)
 #   &fmt=json  JSON (panel card 91-speaker.html)
 #   ?a=phone[&do=start|stop]  minibrowser menu for the phone (phone-menu.d/31-speaker)
@@ -11,15 +12,18 @@ CTL=/snom/cfw/intercom/speaker.sh
 
 A=$(cfw_param a); FMT=$(cfw_param fmt); V=$(cfw_param v)
 DO=$(cfw_param "do")
-case "$A" in start|stop|status|phone) ;; *) A=status ;; esac
+OUTP=$(cfw_param o)
+case "$A" in start|stop|status|phone|out) ;; *) A=status ;; esac
+case "$OUTP" in speaker|handset) ;; *) OUTP= ;; esac
 case "$FMT" in txt|json) ;; *) FMT=json ;; esac
 case "$V" in [0-9]|[1-9][0-9]|100) ;; *) V=30 ;; esac
-case "$DO" in start|stop) ;; *) DO= ;; esac
+case "$DO" in start|stop|out) ;; *) DO= ;; esac
 
 run_ctl() {
     case "$1" in
         start) "$CTL" start "$V" 2>&1 ;;
         stop)  "$CTL" stop 2>&1 ;;
+        out)   if [ -n "$OUTP" ]; then "$CTL" out "$OUTP" 2>&1; else echo "error=o must be speaker or handset"; "$CTL" status; fi ;;
         *)     "$CTL" status 2>&1 ;;
     esac
 }
@@ -42,6 +46,8 @@ if [ "$A" = phone ]; then
     if [ "$(value running)" = 1 ]; then
         item "Stop speaker" "$B&do=stop"
         [ "$(value playing)" = 1 ] && item "Playing now (refresh)" "$B" || item "Waiting for sound (refresh)" "$B"
+        if [ "$(value out)" = handset ]; then item "Output: handset - switch to speaker" "$B&do=out&o=speaker"
+        else item "Output: speaker - switch to handset" "$B&do=out&o=handset"; fi
     else
         item "Start speaker" "$B&do=start"
     fi
@@ -62,10 +68,11 @@ if [ "$FMT" = txt ]; then
 fi
 printf 'Content-type: application/json\r\nCache-Control: no-store\r\n\r\n'
 jesc() { sed 's/\\/\\\\/g; s/"/\\"/g' | tr -d '\000-\037'; }
-printf '{"running":%s,"port":%s,"token":"%s","playing":%s,"vol":%s,"error":"%s"}\n' \
+printf '{"running":%s,"port":%s,"token":"%s","playing":%s,"vol":%s,"out":"%s","error":"%s"}\n' \
     "$( [ "$(value running)" = 1 ] && echo 1 || echo 0)" \
     "$(value port | tr -cd '0-9' | grep . || echo 0)" \
     "$(value token | tr -cd '0-9a-f')" \
     "$(value playing | tr -cd '0-9' | grep . || echo 0)" \
     "$(value vol | tr -cd '0-9' | grep . || echo 0)" \
+    "$(value out | tr -cd 'a-z')" \
     "$(value error | jesc)"

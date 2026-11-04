@@ -43,6 +43,7 @@ to MP3.
 | Albums: newest / random / recently played / most played | Navidrome's album lists |
 | Playlists | your playlists, "Play all" or from a track |
 | Search | text input on the keypad; the results list artists, albums and songs |
+| Output: speaker / handset | where the sound goes, shared with the speaker ([speaker.md](speaker.md), the handset is experimental) |
 | Volume up / down | in steps of 10, saved |
 
 Choosing a track in an album or playlist plays from there to the end of the list.

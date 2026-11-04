@@ -7,7 +7,10 @@
   <button type="button" id="sp-on">Start</button>
   <button type="button" id="sp-off" style="background:#a40">Stop</button>
   <p style="margin:8px 0 4px"><label style="font-size:13px">Volume <input type="range" id="sp-v" min="0" max="100" value="30" style="width:12em;vertical-align:middle">
-    <span id="sp-vn">30</span></label></p>
+    <span id="sp-vn">30</span></label>
+    <label style="font-size:13px;margin-left:8px">Output <select id="sp-o">
+      <option value="speaker">Loudspeaker</option><option value="handset">Handset earpiece</option>
+    </select></label></p>
   <p style="margin:4px 0"><input type="file" id="sp-f" accept="audio/*" style="max-width:100%">
     <button type="button" id="sp-play">Play file</button>
     <button type="button" id="sp-stop">Stop sound</button></p>
@@ -31,11 +34,13 @@
       if (j.running) {
         st.innerHTML = '<b style="color:#a40">ON</b> - ' + (j.playing ? 'playing' : 'waiting for sound') + ', port ' + j.port;
         if (j.vol !== undefined && document.activeElement !== v) { v.value = j.vol; vn.textContent = j.vol; }
+        if (j.out && document.activeElement !== document.getElementById('sp-o')) document.getElementById('sp-o').value = j.out;
       } else st.textContent = 'Off' + (j.error ? ' - ' + j.error : '');
       document.getElementById('sp-cmd').textContent = 'tools/snom-speaker.sh ' + location.hostname;
     }
     function call(a) {
-      var body = 'a=' + a + '&fmt=json' + (a === 'start' ? '&v=' + v.value : '');
+      var body = 'a=' + a + '&fmt=json' + (a === 'start' ? '&v=' + v.value : '') +
+                 (a === 'out' ? '&o=' + document.getElementById('sp-o').value : '');
       return fetch('/cgi-bin/speaker', { method: 'POST', body: body,
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' } })
         .then(function (r) { return r.json(); }).then(show)
@@ -46,6 +51,8 @@
       return call('start').then(function () { if (!cur) throw new Error('speaker did not start'); });
     }
     v.oninput = function () { vn.textContent = v.value; };
+    /* the choice is saved on the phone and also used by the next start */
+    document.getElementById('sp-o').onchange = function () { call('out'); };
     v.onchange = function () {
       if (cur) fetch(base() + '/vol?k=' + cur.token + '&v=' + v.value).catch(function () {});
     };

@@ -58,6 +58,7 @@ start. It is shown to whoever can open the panel, and stored in `/tmp/speaker/to
 | `&vol=0..100` | Volume for this and later sounds. |
 | `&live=1` | For endless streams (a PC's sound output). An adaptive buffer that keeps the delay low (see below). |
 | `GET /stop?k=T[&ch=player\|live]` | Stops the sound, in one channel or in both. |
+| `GET /out?k=T&o=speaker\|handset` | Plays on the loudspeaker or in the handset earpiece (experimental, see below). |
 | `GET /vol?k=T&v=N[&ch=player\|live]` | Sets the volume, also while something plays. Without `ch`: the default for both. |
 | `GET /status?k=T` | `{"playing", "buffered_ms", "keep_ms", "underruns", "dropped_ms", "missed_frames", "max_gap_ms", "vol", "sessions", "player": {...}, "live": {...}}`. The top level covers both channels; `player` and `live` each have `playing`, `buffered_ms`, `underruns`, `dropped_ms` and `vol`. `missed_frames` counts frames the frame clock skipped; `max_gap_ms` should stay at 5. |
 
@@ -135,6 +136,28 @@ amplifier on.
 
 During a call the phone app owns the gains. The stream still plays into the
 speakerphone, mixed with the call. The caller does not hear it.
+
+### Output: loudspeaker or handset (experimental)
+
+`speaker.sh out speaker|handset`, the panel card's "Output" choice, the phone menus
+(Speaker and Navidrome) and `tools/snom-speaker.sh -o handset` choose where the sound
+goes. The choice is saved in `/snom/cfw-data/speaker/out` and used by later starts too.
+spkstream switches between two frames (`GET /out?o=...`): it mutes the old output,
+moves both amxr connections and unmutes the new one when sound comes.
+
+| Output | amxr port | gain blocks |
+|---|---|---|
+| speaker | `halaudio.apm1` (APM channel 1) | `0x109` digital, `0x121` analog |
+| handset | `halaudio.apm0` (APM channel 0) | `0x009` digital, `0x021` analog |
+
+**The handset is not confirmed (2026-11-04).** A first probe found a 1 kHz tone in the
+handset microphone's signal with `0x009` + `0x021` unmuted (with `0x011` there was nothing,
+probably the headset jack). Two repeats with exactly the same gains and connections found
+nothing, with the handset on its cradle. The most likely reason is that the phone app powers
+the earpiece amplifier only while the handset is lifted, which a remote test can't do;
+the first hit came right after the phone app had been restarted, possibly in another
+audio state. Lifting the handset takes the phone off-hook, so you may also hear the dial
+tone, mixed with our sound. See [to-test.md](../to-test.md).
 
 ### Real-time priority (the fix for cracks and skips)
 
