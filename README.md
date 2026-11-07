@@ -20,13 +20,20 @@ The phone runs the newer D815 phone app (10.1.226.16) on the D375's own kernel,
 with your settings, calls and sound working. Everything below is added on top. The
 original app stays in the image. See [backport-guide](docs/backport-guide.md).
 
+**Phone app**
+- D815 phone app (10.1.226.16) in a chroot on the D375 kernel: SIP, calls, handset, speakerphone, backlight, themes and native side button panels work ([backport-guide](docs/backport-guide.md))
+- Keys 11 and 12 work, injected by a shim (they have no LEDs or side panel labels)
+
 **Access and administration**
-- Persistent root SSH (default password `snom375`)
-- CFW web panel on port 8080, login `root` + the SSH password ([cfw-login](docs/cfw-login.md), [cfw-settings](docs/cfw-settings.md))
+- Persistent root SSH (default password `snom375`), with OpenSSH 10.2p1 and OpenSSL 1.1.1w in place of the stock 8.1p1 / 1.1.1g ([ssh-update](docs/ssh-update.md))
+- Extra tools on the phone: `htop`, `nano`, `curl` ([building-nano](docs/building-nano.md))
+- CFW web panel on port 8080 with tabs (System, Games, Screen, Phone, Logs), login `root` + the SSH password ([cfw-login](docs/cfw-login.md), [cfw-settings](docs/cfw-settings.md))
+- Logs tab: the system log in the browser
+- Settings backup (download `snomconfig` as a tar) and a reboot button
 - Recovery buttons: reset the root password, restore the default `sshd_config`
 - System info page: uptime, CPU, memory, flash, processes, logs ([sysinfo](docs/sysinfo.md))
 - Screenshot button, plus a live remote screen and keypad in the browser ([remote](docs/remote.md))
-- *Settings → CFW Tools* menu on the phone itself
+- *Settings → CFW Tools* menu on the phone itself, with a CFW info screen
 
 **Games** (start them from the panel or from *Settings → Games* on the phone)
 - DOOM with sound, Freedoom presets or your own WAD ([doom](docs/doom.md))
@@ -36,15 +43,23 @@ original app stays in the image. See [backport-guide](docs/backport-guide.md).
 - ROMs and WADs load from a URL, bare or inside a `.zip` ([zip](docs/zip.md))
 - Saves persist on flash and survive reboots ([saves](docs/saves.md))
 - Key maps you can edit per game; volume keys work in game ([keymap](docs/keymap.md))
+- Games on keys: put a game on a function key; pressing it downloads and starts the game ([keymap](docs/keymap.md#games-on-keys))
 - Quitting (red hangup key) returns to the phone in about 30 s, no reboot ([quit-without-reboot](docs/quit-without-reboot.md))
 
 **Phone features**
 - Intercom / baby monitor: streams the microphone to a browser (works in Safari) or a PC while the phone stays usable. You pick the mic: speakerphone, handset, headset jack or both ([intercom](docs/intercom.md))
-- Network speaker / reverse intercom: play a file from the panel, or add a "snom D375" sound output to a Linux PC (PulseAudio or PipeWire) and hear the PC on the phone's loudspeaker. Works at the same time as the intercom ([speaker](docs/speaker.md))
+- Network speaker / reverse intercom: play a file from the panel, or add a "snom D375" sound output to a Linux PC (PulseAudio or PipeWire) and hear the PC on the phone's loudspeaker. Works at the same time as the intercom. You choose the output: loudspeaker, or the handset earpiece (experimental) ([speaker](docs/speaker.md))
 - Navidrome / Subsonic player: browse artists, albums, playlists and search on the phone, play on the loudspeaker; MP3 decoded on the phone with libmad ([navidrome](docs/navidrome.md))
 - Custom ringtones: upload, preview and assign per line ([ringtones](docs/ringtones.md))
 - Scripts menu: run your own shell scripts from the phone, such as wake-on-LAN ([scripts](docs/scripts.md))
-- Custom boot splash: any image, resized in the browser, plus theme icons ([theming](docs/theming.md))
+- Scripts on keys: assign a script to a function key from the panel; survives reboots ([backport-guide](docs/backport-guide.md#running-a-script-from-a-key))
+- Custom boot splash: any image, resized in the browser, shown at boot and in the phone app, plus theme icons ([theming](docs/theming.md))
+- Idle-screen widgets: panel card exists but does not work with the current app ([idle-screen](docs/idle-screen.md))
+
+**Development**
+- QEMU machines for the D375 and D815 that boot the real firmware images, registered in virt-manager ([qemu](docs/qemu.md))
+- One CFW tree that builds for several models (started) ([multi-model](docs/multi-model.md))
+- Signed D375 dev images built by GitHub Actions ([ci-releases](docs/ci-releases.md))
 
 ## How it works
 
@@ -128,6 +143,10 @@ verification uses RSA-2048 (`/firmware1.pub`). See
 19. [docs/ringtones.md](docs/ringtones.md), [docs/scripts.md](docs/scripts.md), [docs/theming.md](docs/theming.md): ringtones, scripts menu, splash and icons
 20. [docs/remote.md](docs/remote.md), [docs/sysinfo.md](docs/sysinfo.md): remote screen/keypad and system info
 21. [docs/ci-releases.md](docs/ci-releases.md): dev images built and released by GitHub Actions
+22. [docs/backport-guide.md](docs/backport-guide.md): the D815 phone app on the D375 ([backport.md](docs/backport.md) has the history)
+23. [docs/ssh-update.md](docs/ssh-update.md): newer OpenSSH, OpenSSL and htop
+24. [docs/qemu.md](docs/qemu.md), [docs/multi-model.md](docs/multi-model.md): the emulator and the multi-model codebase
+25. [docs/idle-screen.md](docs/idle-screen.md): idle-screen widget findings
 
 ## Quick start
 
