@@ -32,7 +32,7 @@ else
 fi
 
 echo "=== Step 1a: Install the shared CFW ==="
-tools/fw/cfw-sync.sh d815 "$ROOTFS"
+tools/fw/cfw-sync.sh "$ROOTFS"
 
 echo "=== Step 1b: Embed our keys in the rootfs ==="
 [ -d "$ROOTFS" ] || { echo "FAIL: $ROOTFS/ missing"; exit 1; }

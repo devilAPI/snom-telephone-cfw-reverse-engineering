@@ -24,7 +24,6 @@ echo "=== Step 1b: Embed our public key as the rootfs /firmware1.pub ==="
 # follow-up image signed with $KEYDIR. Write in place (cat >) so fakeroot keeps
 # the recorded ownership of the existing inode.
 [ -d "$ROOTFS" ] || { echo "FAIL: $ROOTFS/ missing (see docs/recover-from-device.md)"; exit 1; }
-# The D375 tree holds the full CFW, so cfw-sync would replace it with src/cfw/panel.
 python3 tools/fw/update-checksums.py "$ROOTFS"
 if ! cmp -s "$KEYDIR/firmware.pub" "$ROOTFS/firmware1.pub"; then
     cat "$KEYDIR/firmware.pub" > "$ROOTFS/firmware1.pub"
@@ -61,7 +60,7 @@ STAGE=emu/backport/stage
 [ -f out/fb24shim.so ] || tools/build/build-fb24shim.sh
 python3 tools/backport/stage.py emu/backport/d8.tar out/fb24shim.so "$ROOTFS" "$STAGE"
 python3 tools/fw/rootfs-tar.py build "$ROOTFS" rootfs/d375.manifest "$tmp/rootfs.tar.gz" \
-    src/cfw/models/d375.exclude "$STAGE/snom/d815=snom/d815" "$STAGE/snom/bmp=snom/bmp"
+    rootfs/d375.exclude "$STAGE/snom/d815=snom/d815" "$STAGE/snom/bmp=snom/bmp"
 # FINAL=1: recompress with zopfli. Slower by minutes, about 4% smaller, and still
 # plain gzip for the phone.
 if [ "${FINAL:-}" = 1 ]; then

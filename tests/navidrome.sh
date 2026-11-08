@@ -53,7 +53,7 @@ deploy() {
 ph 'cat /snom/cfw-data/navidrome/conf 2>/dev/null' > "$TMP/conf.bak"
 [ -n "${NODEPLOY:-}" ] || with_phone_lock deploy
 
-post() { curl -s -m 60 -u "root:$PHONE_PW" "http://$PHONE_IP:8080/cgi-bin/navidrome" "$@"; }
+post() { curl -s -m 60 -u "root:$PHONE_PW" "http://$PHONE_PANEL/cgi-bin/navidrome" "$@"; }
 menu() { ph "wget -q -O - 'http://127.0.0.1:8081/cgi-bin/navidrome?a=phone$1'"; }
 jv() { sed -n "s/.*\"$1\":\"\\{0,1\\}\\([^\",}]*\\).*/\\1/p" <<<"$2"; }
 

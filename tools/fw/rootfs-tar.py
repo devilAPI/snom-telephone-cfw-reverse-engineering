@@ -15,7 +15,7 @@ directories in the manifest are created even if absent from the directory.
 
 Identical image assets with the same owner and mode are stored once, as hard
 links, which saves space in the image and on flash. The exclude file lists paths
-to leave out; see src/cfw/models/. Each dir=prefix adds a tree of generated files
+to leave out; see rootfs/d375.exclude. Each dir=prefix adds a tree of generated files
 under that path, owned by root.
 A device-node check stops a build that would produce an unbootable image.
 """

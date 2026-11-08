@@ -1,7 +1,0 @@
-#!/bin/sh
-# CFW: reboot the phone.
-echo "Content-type: text/html"
-echo ""
-if [ "$REQUEST_METHOD" != POST ]; then echo "POST only"; exit 0; fi
-echo '<!doctype html><meta charset="utf-8"><meta http-equiv="refresh" content="120; url=/"><p>Rebooting. This page returns when the phone is back.</p>'
-(sync; sleep 1; reboot) >/dev/null 2>&1 &

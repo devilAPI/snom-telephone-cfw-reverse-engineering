@@ -23,7 +23,7 @@ ph_put "$REPO/rootfs/d375/etc/cfw-httpd.conf" /tmp/cfw-httpd.conf   # the shippe
 trap restore EXIT
 with_phone_lock restart_8080 -c /tmp/cfw-httpd.conf -r "'snom CFW'" >/dev/null
 
-B=http://$PHONE_IP:8080
+B=http://$PHONE_PANEL
 assert_eq 401 "$(code $B/)"                          "no credentials -> 401"
 assert_eq 401 "$(code $B/cgi-bin/reset-pw)"          "CGI without credentials -> 401"
 assert_eq 401 "$(code -u root:wrong $B/)"            "wrong password -> 401"

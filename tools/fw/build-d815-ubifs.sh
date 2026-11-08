@@ -36,10 +36,10 @@ pip install -q --break-system-packages ubi_reader >/dev/null 2>&1
 ubireader_extract_files -k -o /w/root /w/stock.ubifs >/dev/null
 cd /w/root
 while IFS= read -r f; do
-    if [ -f \"\$f\" ] && [ ! -L \"/src/cfw/\$f\" ]; then
-        cat \"/src/cfw/\$f\" > \"\$f\"
+    if [ -f \"\$f\" ] && [ ! -L \"/cfw/\$f\" ]; then
+        cat \"/cfw/\$f\" > \"\$f\"
     else
-        mkdir -p \"\$(dirname \"\$f\")\"; cp -a \"/src/cfw/\$f\" \"\$f\"; chown -h 0:0 \"\$f\"
+        mkdir -p \"\$(dirname \"\$f\")\"; cp -a \"/cfw/\$f\" \"\$f\"; chown -h 0:0 \"\$f\"
     fi
 done < /w/changed
 test -x bin/busybox

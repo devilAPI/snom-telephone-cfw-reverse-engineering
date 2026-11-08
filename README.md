@@ -95,8 +95,8 @@ purpose, so anyone can build images for a phone running this CFW).
 
 ```
 src/                 our code
-  cfw/               shared panel, CGIs, boot hook and per-model config (synced into rootfs/d815)
-  games/             doom/, nes/, gba/, retro/ (GB/GBC + GBA frontend)
+  cfw-d815/          the D815's own panel files; the rest is shared from rootfs/d375/snom/cfw
+  games/             doom/, nes/, retro/ (the GB/GBC and GBA frontend)
   audio/             snd/ (shared halaudio + keymap layer), intercom/, navidrome/
   remote/            screen capture and key injection
   native/            small C helpers: bindmount, fb24shim (+ keymap.h), rtcap
@@ -114,6 +114,7 @@ out/                 cross-built binaries
 rootfs/
   d375/              the D375 CFW rootfs; its snom/cfw/ holds the D375 CFW code
   d375.manifest      owners, modes and device nodes for d375/
+  d375.exclude       files left out of the D375 image
   d815/              the D815 CFW rootfs
   stock/             stock rootfs trees unpacked by the unpack tools
 firmware/

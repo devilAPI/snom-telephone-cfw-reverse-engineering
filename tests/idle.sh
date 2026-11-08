@@ -3,10 +3,10 @@
 . "$(dirname "$0")/lib.sh"
 C=$REPO/rootfs/d375/snom
 OUT=${OUT:-/tmp/idle-test}; mkdir -p $OUT
-shot() { curl -s -m 10 http://$PHONE_IP:8080/cgi-bin/screenshot > $OUT/$1.bmp
+shot() { curl -s -m 10 http://$PHONE_PANEL/cgi-bin/screenshot > $OUT/$1.bmp
          python3 -c "from PIL import Image; Image.open('$OUT/$1.bmp').save('$OUT/$1.png')"; }
 wait_ui() { sleep 10; for i in $(seq 1 60); do
-    [ -n "$(ph "ps | awk '/[l]csD375/'")" ] && curl -s -m 5 -o /dev/null http://$PHONE_IP:8080/ && { sleep 25; return; }
+    [ -n "$(ph "ps | awk '/[l]csD375/'")" ] && curl -s -m 5 -o /dev/null http://$PHONE_PANEL/ && { sleep 25; return; }
     sleep 3; done; }
 python3 -c "
 from PIL import Image,ImageDraw
@@ -17,11 +17,11 @@ run() {
     ph_put $C/html/xml/gui/state_idle.xml.orig /snom/html/xml/gui/state_idle.xml.orig
     W=$(ph /snom/cfw/cgi-bin/idle-widget); echo "widget: $W"
     assert_contains "$W" "load" "idle-widget prints stats"
-    curl -s -m 20 -d 'action=apply&clock=on&stats=on&picture=on' http://$PHONE_IP:8080/cgi-bin/idle >/dev/null
+    curl -s -m 20 -d 'action=apply&clock=on&stats=on&picture=on' http://$PHONE_PANEL/cgi-bin/idle >/dev/null
     assert_contains "$(ph 'cat /snom/cfw-data/idle/config')" "clock=on" "config written"
     wait_ui; shot widgets
     assert_contains "$(ph 'cat /snom/html/xml/gui/state_idle.xml')" 'cfw-idle.png' "xml has picture"
-    curl -s -m 20 -d 'action=restore' http://$PHONE_IP:8080/cgi-bin/idle >/dev/null
+    curl -s -m 20 -d 'action=restore' http://$PHONE_PANEL/cgi-bin/idle >/dev/null
     assert_eq "$(md5sum < $C/html/xml/gui/state_idle.xml.orig)" "$(ph 'md5sum < /snom/html/xml/gui/state_idle.xml')" "stock restored"
     wait_ui; shot stock
 }

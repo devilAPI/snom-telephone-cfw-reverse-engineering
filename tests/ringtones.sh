@@ -55,7 +55,7 @@ EOF
 
 up() {  # NAME FILE -> CGI answer
     curl -s -m 90 -X POST -H 'Content-Type: application/octet-stream' --data-binary @"$2" \
-        "http://$PHONE_IP:8080/cgi-bin/ringtones?act=upload&name=$1"
+        "http://$PHONE_PANEL/cgi-bin/ringtones?act=upload&name=$1"
 }
 
 # --- 2. panel / upload / serve
@@ -77,9 +77,9 @@ assert_contains "$(up junk.wav "$TMPD/junk.wav")" "ERROR not a WAV" "non-WAV rej
 assert_contains "$(up s.wav "$TMPD/stereo.wav")" "must be mono" "stereo rejected"
 assert_contains "$(up h.wav "$TMPD/t44k.wav")" "not supported" "44.1 kHz rejected"
 assert_contains "$(up big.wav "$TMPD/big.wav")" "the limit is" "oversize rejected"
-r=$(curl -s -m 10 -X POST --data 'act=delete&name=..%2F..%2Fcfw%2Findex.html' "http://$PHONE_IP:8080/cgi-bin/ringtones")
+r=$(curl -s -m 10 -X POST --data 'act=delete&name=..%2F..%2Fcfw%2Findex.html' "http://$PHONE_PANEL/cgi-bin/ringtones")
 assert_contains "$r" "invalid ringtone name" "hostile delete rejected"
-assert_contains "$(curl -s -m 10 -X POST --data 'act=use&name=cfwtest.wav&line=1%3Bid' "http://$PHONE_IP:8080/cgi-bin/ringtones")" \
+assert_contains "$(curl -s -m 10 -X POST --data 'act=use&name=cfwtest.wav&line=1%3Bid' "http://$PHONE_PANEL/cgi-bin/ringtones")" \
     "invalid line" "hostile line rejected"
 assert_eq "yes" "$(ph '[ -f /snom/cfw/index.html ] && ! ls /snom/cfw-data/ringtones | grep -q -v "^cfwtest" && echo yes')" \
     "nothing but the test uploads landed, index.html intact"
@@ -94,7 +94,7 @@ ring_test() {
     echo "saved: vol_ringer=[${OLD_VOL}] user_ringer1=[${OLD_R}] user_custom1=[${OLD_C}]"
     trap ring_restore EXIT   # runs even when an assert fails (fail exits this lock subshell)
     save vol_ringer=1
-    r=$(curl -s -m 40 -X POST --data 'act=use&name=cfwtest.wav&line=1' "http://$PHONE_IP:8080/cgi-bin/ringtones")
+    r=$(curl -s -m 40 -X POST --data 'act=use&name=cfwtest.wav&line=1' "http://$PHONE_PANEL/cgi-bin/ringtones")
     assert_contains "$r" "now ring with cfwtest.wav" "assign to line 1"
     assert_eq "http://127.0.0.1:8081/ringtones/cfwtest.wav" "$(setting_idx user_custom 1)" "user_custom1 written"
     assert_eq "Custom" "$(setting_idx user_ringer 1)" "user_ringer1=Custom written"
@@ -102,7 +102,7 @@ ring_test() {
         [ -c /dev/amxruser ] || mknod /dev/amxruser c 236 0
         rm -f /tmp/rtcap0.raw /tmp/rtcap1.raw; (/tmp/rtcap 9 halaudio.apm0 halaudio.apm1 </dev/null >/tmp/rtcap.log 2>&1 &)'
     sleep 1
-    r=$(curl -s -m 40 -X POST --data 'act=play&line=1' "http://$PHONE_IP:8080/cgi-bin/ringtones")
+    r=$(curl -s -m 40 -X POST --data 'act=play&line=1' "http://$PHONE_PANEL/cgi-bin/ringtones")
     assert_contains "$r" "Playing the ringer of line 1" "play ringer"
     sleep 10
     ph 'cat /tmp/rtcap.log'
@@ -125,7 +125,7 @@ esac
 stopped_test() {
     ph 'kill -STOP $(pidof lcsD375)'
     t0=$(date +%s)
-    r=$(curl -s -m 30 -X POST --data 'act=play&line=1' "http://$PHONE_IP:8080/cgi-bin/ringtones")
+    r=$(curl -s -m 30 -X POST --data 'act=play&line=1' "http://$PHONE_PANEL/cgi-bin/ringtones")
     t1=$(date +%s)
     ph 'kill -CONT $(pidof lcsD375)'
     assert_contains "$r" "ERROR" "play with the phone app stopped gives an error"
@@ -144,7 +144,7 @@ with_phone_lock ro_test
 
 # --- cleanup
 for n in cfwtest.wav cfwtest8k.wav; do
-    curl -s -m 10 -o /dev/null -X POST --data "act=delete&name=$n" "http://$PHONE_IP:8080/cgi-bin/ringtones"
+    curl -s -m 10 -o /dev/null -X POST --data "act=delete&name=$n" "http://$PHONE_PANEL/cgi-bin/ringtones"
 done
 assert_eq "" "$(ph 'ls /snom/cfw-data/ringtones | grep cfwtest')" "test files deleted"
 echo "ALL RINGTONE TESTS PASSED"

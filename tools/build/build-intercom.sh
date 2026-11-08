@@ -1,33 +1,12 @@
 #!/usr/bin/env bash
-# Cross-build micstream (intercom / baby monitor, see docs/intercom.md) and spkstream
-# (network speaker, see docs/speaker.md) as static musl armv6 soft-float binaries.
-# Needs docker. Output: out/micstream and out/spkstream, copied to
-# rootfs/d375/snom/cfw/intercom/.
-set -euo pipefail
-ROOT=$(cd "$(dirname "$0")/../.." && pwd)
-OUT="$ROOT/out"; mkdir -p "$OUT"
-
-docker run --rm \
-  -v "$ROOT/src/audio/intercom":/src:ro \
-  -v "$OUT":/out \
-  debian:bookworm-slim bash -euo pipefail -c '
-export DEBIAN_FRONTEND=noninteractive
-apt-get update -qq
-apt-get install -y -qq wget ca-certificates file >/dev/null
-cd /opt
-wget -q https://musl.cc/arm-linux-musleabi-cross.tgz
-tar xf arm-linux-musleabi-cross.tgz
-export PATH=/opt/arm-linux-musleabi-cross/bin:$PATH
-arm-linux-musleabi-gcc -O2 -Wall -march=armv6 -marm -msoft-float -static -no-pie \
-    -o /out/micstream /src/micstream.c
-arm-linux-musleabi-gcc -O2 -Wall -march=armv6 -marm -msoft-float -static -no-pie \
-    -o /out/spkstream /src/spkstream.c -lpthread
-arm-linux-musleabi-strip /out/micstream /out/spkstream
-file /out/micstream /out/spkstream
-'
-mkdir -p "$ROOT/rootfs/d375/snom/cfw/intercom"
-for b in micstream spkstream; do
-    cp "$OUT/$b" "$ROOT/rootfs/d375/snom/cfw/intercom/$b"
-    chmod 755 "$ROOT/rootfs/d375/snom/cfw/intercom/$b"
-done
-echo "built: $OUT/micstream $OUT/spkstream"
+# Cross-build micstream (intercom, docs/intercom.md) and spkstream (network speaker,
+# docs/speaker.md). Output: out/{micstream,spkstream}, shipped in /snom/cfw/intercom.
+# Needs docker.
+. "$(dirname "$0")/lib.sh"
+musl_run -v "$ROOT/src/audio/intercom":/src:ro '
+F="-O2 -Wall -march=armv6 -marm -msoft-float -static -no-pie"
+$X-gcc $F -o /out/micstream /src/micstream.c
+$X-gcc $F -o /out/spkstream /src/spkstream.c -lpthread
+$X-strip /out/micstream /out/spkstream
+file /out/micstream /out/spkstream'
+ship micstream spkstream "$CFW/intercom"

@@ -43,8 +43,7 @@ remains the fast way to test app changes.
 
 ## Build and test
 
-`rootfs/d375` holds the full D375 CFW, so the D375 build does not use
-`tools/fw/cfw-sync.sh`: it would replace the panel with the smaller `src/cfw/panel`.
+`rootfs/d375` holds the full D375 CFW; `tools/fw/cfw-sync.sh` is for the D815 only.
 Packing uses `rootfs/d375.manifest`, not a fakeroot database.
 
 ```sh
@@ -125,7 +124,7 @@ for a change to the file selection on a phone with little free flash.
 |---|---|---|
 | File selection | `tools/backport/pack.py` | Picks the app and its libraries, writes `d8.tar` |
 | Staging | `tools/backport/stage.py` | Lays out `/snom/d815` and the extra icons |
-| Boot | `src/cfw/app/start-d815.sh` | Sets up the chroot and config, starts `lid` |
+| Boot | `rootfs/d375/snom/cfw/start-d815.sh` | Sets up the chroot and config, starts `lid` |
 | Hook | `tools/fw/cfw-sync.sh` | Makes `start.sh` run the boot script |
 | Runtime shim | `src/native/fb24shim.c` | Loaded with `/etc/ld.so.preload`; adapts the hardware differences |
 | Key table | `tools/backport/keymap.py` | Generates `keymap.h` from both `lid` binaries |
@@ -150,7 +149,7 @@ Each row cost real time to find. Check all of them on any new port.
 | Handset reversed: dial tone on the cradle | Hook bit has opposite sense | Invert key 102 in events and `EVIOCGKEY` | shim |
 | Settings key does nothing | No D815 equivalent, and `command.htm` needs a login | Run `phone-key SETTINGS` | shim, `stage.py` |
 | Backlight setting does nothing | `dvf9a-bl` is absent; the app runs `stat` first, then writes 0 to 64 | Redirect `stat` and `open`; scale to 0 to 32 | shim |
-| Web panel keys fail | Same login | Use `phone-key` | `src/cfw/panel/cgi-bin/key` |
+| Web panel keys fail | Same login | Use `phone-key` | `rootfs/d375/snom/cfw/cgi-bin/key` |
 | Two apps on screen after quitting a game | Games and `phone-restore.sh` only knew `lcsD375` | Stop both names; stop and unmount the chroot; `start.sh` starts it again | game sources, `lib/phone-restore.sh` |
 | Ringtone page cannot save | Web login | `rt_curl` reads the login from the app's settings | `lib/ringtones.sh` |
 | Stuck on "Neuen HTTP-Benutzernamen eingeben" | No web credentials set | Add them to the app's config | `start-d815.sh` |

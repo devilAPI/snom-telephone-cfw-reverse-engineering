@@ -1,10 +1,10 @@
 # CFW Settings web panel
 
-> **Update:** the panel source now lives in `src/cfw/panel/` and is shared between
-> models. It requires a login: user `root` with the system password. The sections
-> below that describe an unauthenticated panel, `index.html` or an inline `rcS`
-> entry are history. Files in `rootfs/d375/snom/cfw/` are overwritten by
-> `tools/fw/cfw-sync.sh`, so edit `src/cfw/panel/`.
+> **Update:** the panel source is `rootfs/d375/snom/cfw/`. The D815 build copies the
+> CGIs that work there unchanged from it, plus its own versions in `src/cfw-d815/`
+> (`tools/fw/cfw-sync.sh`). The panel requires a login: user `root` with the system
+> password. The sections below that describe an unauthenticated panel,
+> `index.html` or an inline `rcS` entry are history.
 
 ## Panel features
 

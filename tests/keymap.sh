@@ -23,14 +23,6 @@ deploy() {
     ph 'mkdir -p /tmp/km-roms; netstat -ltn | grep -q "127.0.0.1:'$PORT' " || busybox httpd -p 127.0.0.1:'$PORT' -h /tmp/km-roms'
     for r in sav.nes tone.nes; do ph_put "$ROMS/$r" "/tmp/km-roms/$r"; done
 }
-wait_phone() {
-    local i
-    for i in $(seq 90); do
-        [ "$(ph 'pidof lid >/dev/null && pidof lcsD375 >/dev/null && echo up')" = up ] && { sleep 20; return 0; }
-        sleep 5
-    done
-    return 1
-}
 key() { ph "/snom/cfw/bin/keyinject $1 100"; }
 # run ROM ENVS: start the NES launcher, return once the engine is up
 start() { ph "$2 nohup /snom/cfw/nes/boot-nes.sh 'http://127.0.0.1:$PORT/$1' </dev/null >/dev/null 2>&1 &"; sleep 20; }
@@ -110,17 +102,17 @@ echo "== CGI"
 page=$(http "/cgi-bin/keymap?eng=nes&game=default")
 assert_contains "$page" "Volume +" "editor lists phone keys"
 assert_contains "$(http /cgi-bin/panel)" "<h2>Key maps</h2>" "panel has the key map card"
-r=$(curl -s -d act=save -d eng=gba -d game=default -d k51=A -d k48=BOGUS -d k119=VOLUP -d k16=VOLDOWN "http://$PHONE_IP:8080/cgi-bin/keymap")
+r=$(curl -s -d act=save -d eng=gba -d game=default -d k51=A -d k48=BOGUS -d k119=VOLUP -d k16=VOLDOWN "http://$PHONE_PANEL/cgi-bin/keymap")
 assert_contains "$r" "Saved gba/default" "save reports success"
 got=$(ph 'grep -v "^#" /snom/cfw-data/keymaps/gba/default.map' | tr -d '\r' | sort -n | tr '\n' '|')
 assert_eq "16 VOLDOWN|51 A|119 VOLUP|" "$got" "save writes only valid assignments (BOGUS dropped)"
 assert_contains "$(http '/cgi-bin/keymap?eng=gba&game=default')" '<option selected>A</option>' "editor shows the saved action"
-r=$(curl -s -d act=save -d eng=nes -d 'game=../../evil' -d k51=A "http://$PHONE_IP:8080/cgi-bin/keymap")
+r=$(curl -s -d act=save -d eng=nes -d 'game=../../evil' -d k51=A "http://$PHONE_PANEL/cgi-bin/keymap")
 assert_contains "$r" "Invalid game id" "hostile game id rejected"
 assert_eq "" "$(ph 'ls /snom/cfw-data/evil.map /snom/cfw-data/keymaps/nes/evil* 2>/dev/null')" "nothing written outside the keymap dir"
-r=$(curl -s -d act=save -d 'eng=../x' -d game=default -d k51=A "http://$PHONE_IP:8080/cgi-bin/keymap")
+r=$(curl -s -d act=save -d 'eng=../x' -d game=default -d k51=A "http://$PHONE_PANEL/cgi-bin/keymap")
 assert_eq "" "$(ph 'ls /snom/cfw-data/keymaps/../x* /snom/cfw-data/x* 2>/dev/null')" "hostile engine writes nothing"
-r=$(curl -s -d act=reset -d eng=gba -d game=default "http://$PHONE_IP:8080/cgi-bin/keymap")
+r=$(curl -s -d act=reset -d eng=gba -d game=default "http://$PHONE_PANEL/cgi-bin/keymap")
 assert_contains "$r" "removed" "reset removes the map"
 ph 'rm -rf /snom/cfw-data/keymaps; rm -rf /tmp/km-roms; for p in $(ps | grep "[h]ttpd -p 127.0.0.1:'$PORT'" | awk "{print \$1}"); do kill $p; done'
 echo "ALL PASS"

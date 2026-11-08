@@ -27,7 +27,7 @@ for n in '..%2Fx.sh' 'a%3Bb.sh' '%24(id).sh' 'a%20b.sh'; do
   assert_contains "$(L "/cgi-bin/phone-scripts?run=$n")" "Invalid script name"
 done
 assert_contains "$(http /cgi-bin/scripts)" "t-echo.sh" "list"
-U="http://$PHONE_IP:8080/cgi-bin/scripts"
+U="http://$PHONE_PANEL/cgi-bin/scripts"
 assert_contains "$(curl -s -m 20 -d 'act=save&name=t-web.sh&content=echo+web-ok%0Aecho+%24%28id%29' $U)" "Saved t-web.sh" "panel save"
 assert_contains "$(ph 'cat /snom/cfw-data/scripts/t-web.sh')" '$(id)' "content kept literal"
 assert_contains "$(curl -s -m 30 -d 'act=run&name=t-web.sh' $U)" "web-ok" "panel run"

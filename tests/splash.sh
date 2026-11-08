@@ -26,7 +26,7 @@ deploy() {
 with_phone_lock deploy
 
 post() {  # ACT FILE -> prints "status|body"
-    curl -s -m 20 -w '|%{http_code}' -X POST --data-binary @"$2" "http://$PHONE_IP:8080/cgi-bin/splash?act=$1"
+    curl -s -m 20 -w '|%{http_code}' -X POST --data-binary @"$2" "http://$PHONE_PANEL/cgi-bin/splash?act=$1"
 }
 python3 -c "
 from PIL import Image
@@ -41,16 +41,16 @@ assert_contains "$(post upload "$T/small.png")" "480x272" "wrong dimensions reje
 assert_contains "$(post upload "$T/big.png")" "413" "oversize rejected"
 assert_eq "stock" "$(http '/cgi-bin/splash?act=status')" "rejected uploads leave stock in place"
 assert_eq "" "$(ph 'ls /snom/cfw-data/splash.png.tmp 2>/dev/null')" "no temp file left behind"
-r=$(curl -s -m 20 -w '|%{http_code}' "http://$PHONE_IP:8080/cgi-bin/splash?act=upload")
+r=$(curl -s -m 20 -w '|%{http_code}' "http://$PHONE_PANEL/cgi-bin/splash?act=upload")
 assert_contains "$r" "405" "GET upload refused"
 # hostile act values must not execute or touch anything
 for a in '../x' '$(touch%20/tmp/pwn)' ';reboot' "a%27b"; do
-    r=$(curl -s -m 20 "http://$PHONE_IP:8080/cgi-bin/splash?act=$a"); assert_contains "$r" "unknown act" "hostile act '$a' rejected"
+    r=$(curl -s -m 20 "http://$PHONE_PANEL/cgi-bin/splash?act=$a"); assert_contains "$r" "unknown act" "hostile act '$a' rejected"
 done
 assert_eq "" "$(ph 'ls /tmp/pwn 2>/dev/null')" "no command injection"
 assert_contains "$(post upload "$T/good.png")" "installed" "valid splash accepted"
 assert_eq "custom" "$(http '/cgi-bin/splash?act=status')" "status is custom"
-curl -s "http://$PHONE_IP:8080/cgi-bin/splash?act=preview" -o "$T/prev.png"
+curl -s "http://$PHONE_PANEL/cgi-bin/splash?act=preview" -o "$T/prev.png"
 cmp -s "$T/prev.png" "$T/good.png" && pass "preview returns the uploaded PNG" || fail "preview differs"
 assert_contains "$(http /cgi-bin/panel)" "Boot splash" "panel shows the splash card"
 

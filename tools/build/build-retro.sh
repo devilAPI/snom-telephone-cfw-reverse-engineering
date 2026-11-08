@@ -9,9 +9,7 @@
 #                       measured against gambatte, not shipped (docs/gb.md)
 #
 # CORES="gpsp gambatte" (default) picks what to build. See docs/gba.md, docs/gb.md.
-set -euo pipefail
-ROOT=$(cd "$(dirname "$0")/../.." && pwd)
-OUT="$ROOT/out"; mkdir -p "$OUT"
+. "$(dirname "$0")/lib.sh"
 
 GPSP_COMMIT=5819380c2ffb0900219d700a382ee68c464ebb99       # libretro/gpsp, 2026-09-19
 GAMBATTE_COMMIT=7809bb68ee96c3e6c74e9d9c4c8bb09aa7c6801d   # libretro/gambatte-libretro, 2026-10-23
@@ -19,21 +17,11 @@ GEARBOY_COMMIT=af215bc8541709c03f7f95a9ebe1f036ecfc5f1a    # drhelius/Gearboy, 2
 ROM_BUFFER_MB=${ROM_BUFFER_MB:-8}   # gpSP: ROM kept in RAM; larger ROMs page in from the file
 CORES=${CORES:-gpsp gambatte}
 
-docker run --rm \
+musl_run \
   -e GPSP_COMMIT="$GPSP_COMMIT" -e GAMBATTE_COMMIT="$GAMBATTE_COMMIT" \
   -e GEARBOY_COMMIT="$GEARBOY_COMMIT" -e ROM_BUFFER_MB="$ROM_BUFFER_MB" -e CORES="$CORES" \
   -v "$ROOT/src/games/retro":/port:ro \
-  -v "$ROOT/src/audio/snd":/snd:ro \
-  -v "$OUT":/out \
-  debian:bookworm-slim bash -euo pipefail -c '
-export DEBIAN_FRONTEND=noninteractive
-apt-get update -qq
-apt-get install -y -qq git wget xz-utils ca-certificates file make >/dev/null
-cd /opt
-wget -q https://musl.cc/arm-linux-musleabi-cross.tgz
-tar xf arm-linux-musleabi-cross.tgz
-export PATH=/opt/arm-linux-musleabi-cross/bin:$PATH
-X=arm-linux-musleabi
+  -v "$ROOT/src/audio/snd":/snd:ro '
 # The D375 CPU is an ARM1176 (armv6, no VFP): soft-float, ARM mode.
 ARCH="-march=armv6 -marm"
 

@@ -5,10 +5,12 @@ are still per model.
 
 ## What exists now
 
-- `src/cfw/panel/`: panel, CGIs and `boot.sh`, shared by both models.
-- `src/cfw/models/<model>.conf`: name, default password, feature list.
-- `tools/fw/cfw-sync.sh <model> <rootfs>`: installs the above and the one `rcS` hook.
-  Both firmware build scripts call it.
+- `rootfs/d375/snom/cfw/`: the reference CFW. Its CGIs that run unchanged on the D815
+  are shared from there.
+- `src/cfw-d815/`: the D815's own `boot.sh`, `httpd.conf`, `model.conf` (name, default
+  password, feature list) and the CGIs that differ.
+- `tools/fw/cfw-sync.sh <rootfs>`: installs both into the D815 tree, plus the one
+  `rcS` hook. The D815 build script calls it.
 - The panel page is generated, so unsupported features are not shown.
 
 Tested on both VMs: login, status, logs, settings backup, screenshot at 24 and 32

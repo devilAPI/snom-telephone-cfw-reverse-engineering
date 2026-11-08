@@ -22,7 +22,7 @@ assert_contains "$H" "remote-key" "remote page references the key CGI"
 assert_contains "$(http /cgi-bin/panel)" "/cgi-bin/remote" "panel has the remote card"
 
 # --- frames: header + size, per scale
-frame() { curl -s -m 20 "http://$PHONE_IP:8080/cgi-bin/remote-frame?scale=$1" -o "$2"; }
+frame() { curl -s -m 20 "http://$PHONE_PANEL/cgi-bin/remote-frame?scale=$1" -o "$2"; }
 for s in 1 2 4; do
     frame $s $TMP/f$s.bin
     w=$((480/s)); h=$((272/s))
@@ -41,7 +41,7 @@ for s in 1 2 4; do
 done
 
 # --- whitelist / hostile input
-keycode() { curl -s -o /dev/null -w '%{http_code}' -m 10 "http://$PHONE_IP:8080/cgi-bin/remote-key?$1"; }
+keycode() { curl -s -o /dev/null -w '%{http_code}' -m 10 "http://$PHONE_PANEL/cgi-bin/remote-key?$1"; }
 assert_eq 400 "$(keycode 'key=%24%28touch%20/tmp/pwned%29')" 'key=$(touch) rejected'
 assert_eq 400 "$(keycode 'key=%24%28reboot%29')" 'key=$(reboot) rejected'
 assert_eq 400 "$(keycode 'key=UP%3Btouch%20/tmp/pwned')" 'key=UP;touch rejected'
@@ -57,14 +57,14 @@ assert_eq "gone" "$(ph '[ -e /tmp/pwned ] && echo exists || echo gone')" "no inj
 # --- a key press changes the screen (idle phone UI): SETTINGS opens a menu, CANCEL closes it
 press_test() {
     if ph 'for p in /proc/[0-9]*; do readlink $p/exe; done' | grep -q '^/snom/cfw/[a-z]*/'; then echo "SKIP: a game owns the screen"; return; fi
-    curl -s -m 10 "http://$PHONE_IP:8080/cgi-bin/remote-key?key=CANCEL" >/dev/null; sleep 1
-    curl -s -m 10 "http://$PHONE_IP:8080/cgi-bin/remote-key?key=CANCEL" >/dev/null; sleep 1
+    curl -s -m 10 "http://$PHONE_PANEL/cgi-bin/remote-key?key=CANCEL" >/dev/null; sleep 1
+    curl -s -m 10 "http://$PHONE_PANEL/cgi-bin/remote-key?key=CANCEL" >/dev/null; sleep 1
     frame 2 $TMP/before.bin
-    assert_eq "ok SETTINGS" "$(curl -s -m 10 "http://$PHONE_IP:8080/cgi-bin/remote-key?key=SETTINGS")" "SETTINGS accepted"
+    assert_eq "ok SETTINGS" "$(curl -s -m 10 "http://$PHONE_PANEL/cgi-bin/remote-key?key=SETTINGS")" "SETTINGS accepted"
     sleep 2; frame 2 $TMP/after.bin
     if cmp -s $TMP/before.bin $TMP/after.bin; then fail "screen unchanged after SETTINGS"; else pass "screen changed after SETTINGS key"; fi
     # restore the idle screen
-    for i in 1 2 3; do curl -s -m 10 "http://$PHONE_IP:8080/cgi-bin/remote-key?key=CANCEL" >/dev/null; sleep 1; done
+    for i in 1 2 3; do curl -s -m 10 "http://$PHONE_PANEL/cgi-bin/remote-key?key=CANCEL" >/dev/null; sleep 1; done
 }
 with_phone_lock press_test || exit 1
 echo "remote test done"

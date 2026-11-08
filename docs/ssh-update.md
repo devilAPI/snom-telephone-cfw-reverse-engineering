@@ -67,7 +67,7 @@ the next image must still fit in 40 MB.
 | Step | Image size |
 |---|---|
 | Before | 38.10 MB |
-| Unused files left out (`src/cfw/models/d375.exclude`), identical images hard-linked | 35.65 MB |
+| Unused files left out (`rootfs/d375.exclude`), identical images hard-linked | 35.65 MB |
 | `FINAL=1 tools/fw/build-custom-firmware.sh` (zopfli, about 5 minutes) | 34.11 MB |
 
 - Hard links apply only under `snom/bmp/`, because writing to a linked config file

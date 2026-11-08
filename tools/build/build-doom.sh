@@ -2,23 +2,12 @@
 # Cross-build doomgeneric (snom D375 fb/evdev port, with halaudio sound) as a
 # static musl armv6 binary. Needs docker. Output: out/doom.
 # See docs/doom.md and docs/sound.md.
-set -euo pipefail
-ROOT=$(cd "$(dirname "$0")/../.." && pwd)
-OUT="$ROOT/out"; mkdir -p "$OUT"
+. "$(dirname "$0")/lib.sh"
 
-docker run --rm \
+musl_run \
   -v "$ROOT/src/games/doom":/port \
-  -v "$ROOT/src/audio/snd":/snd \
-  -v "$OUT":/out \
-  debian:bookworm-slim bash -euo pipefail -c '
-export DEBIAN_FRONTEND=noninteractive
-apt-get update -qq
-apt-get install -y -qq git wget xz-utils ca-certificates file >/dev/null
-cd /opt
-wget -q https://musl.cc/arm-linux-musleabi-cross.tgz
-tar xf arm-linux-musleabi-cross.tgz
-export PATH=/opt/arm-linux-musleabi-cross/bin:$PATH
-CC=arm-linux-musleabi-gcc
+  -v "$ROOT/src/audio/snd":/snd '
+CC=$X-gcc
 
 git clone --depth 1 https://github.com/ozkl/doomgeneric.git /src >/dev/null 2>&1
 # Centre/clip widescreen patches instead of I_Error (2024 re-release IWADs).
@@ -50,8 +39,8 @@ for o in $SRC; do
   $CC $CFLAGS -c "${o%.o}.c" -o "build/$o"
 done
 $CC $CFLAGS -static -Wl,--gc-sections $(printf "build/%s " $SRC) -o /out/doom -lm -lpthread
-arm-linux-musleabi-strip /out/doom
+$X-strip /out/doom
 file /out/doom; ls -la /out/doom
-arm-linux-musleabi-readelf -d /out/doom 2>/dev/null | grep -i needed || echo "OK: fully static"
+$X-readelf -d /out/doom 2>/dev/null | grep -i needed || echo "OK: fully static"
 '
 echo "built: $OUT/doom"
