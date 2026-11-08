@@ -20,7 +20,7 @@ deploy() {
         ph_put "$REPO/out/${f#*/}" "/snom/cfw/$f.new"
         ph "mv /snom/cfw/$f.new /snom/cfw/$f"
     done
-    for f in lib/saves.sh lib/retro-boot.sh nes/boot-nes.sh doom/boot-doom.sh cgi-bin/saves panel.d/48-saves.html; do
+    for f in lib/saves.sh lib/game.sh lib/retro-boot.sh nes/boot-nes.sh doom/boot-doom.sh cgi-bin/saves panel.d/48-saves.html; do
         ph_put "$C/$f" "/snom/cfw/$f"
     done
     ph 'mkdir -p /tmp/sav-roms; netstat -ltn | grep -q "127.0.0.1:'$PORT' " || busybox httpd -p 127.0.0.1:'$PORT' -h /tmp/sav-roms'
@@ -28,15 +28,6 @@ deploy() {
     ph 'netstat -ltn | grep -q "127.0.0.1:8081 " || busybox httpd -p 127.0.0.1:8081 -h /snom/cfw; true'
 }
 
-wait_phone() {
-    local i
-    for i in $(seq 90); do
-        [ "$(ph 'pidof lid >/dev/null && pidof lcsD375 >/dev/null && echo up')" = up ] && { sleep 20; return 0; }
-        sleep 5
-    done
-    return 1
-}
-hangup() { ph 'for v in 0 001 0; do printf "\0\0\0\0\0\0\0\0\001\0\162\0\\$v\0\0\0" > /dev/input/event0; usleep 100000; done'; }
 sha() { ph "sha1sum /tmp/sav-roms/$1" | cut -d' ' -f1; }
 b0() { ph "dd if=/snom/cfw-data/saves/$1/$2.srm bs=1 count=1 2>/dev/null" | od -An -tu1 | tr -d ' '; }  # (busybox od has no -t)
 
@@ -92,12 +83,12 @@ assert_contains "$(http /cgi-bin/panel)" "<h2>Game saves</h2>" "panel has the sa
 http "/cgi-bin/saves?act=get&f=nes/$nsha.srm" | head -c 1 | od -An -tu1 | tr -d ' ' > "$TMPD/dl"
 assert_eq 2 "$(cat "$TMPD/dl")" "download returns the save"
 for bad in '../../etc/passwd' 'nes/../../../etc/passwd' '/etc/passwd' 'nes/.x' 'nes'; do
-    code=$(curl -s -o /dev/null -w '%{http_code}' -G --data-urlencode act=get --data-urlencode "f=$bad" "http://$PHONE_IP:8080/cgi-bin/saves")
+    code=$(curl -s -o /dev/null -w '%{http_code}' -G --data-urlencode act=get --data-urlencode "f=$bad" "http://$PHONE_PANEL/cgi-bin/saves")
     assert_eq 404 "$code" "hostile name rejected: $bad"
 done
-r=$(curl -s -d act=delete --data-urlencode "f=../../etc/passwd" "http://$PHONE_IP:8080/cgi-bin/saves")
+r=$(curl -s -d act=delete --data-urlencode "f=../../etc/passwd" "http://$PHONE_PANEL/cgi-bin/saves")
 assert_contains "$r" "No such save" "hostile delete rejected"
-r=$(curl -s -d act=delete --data-urlencode "f=nes/$nsha.srm" "http://$PHONE_IP:8080/cgi-bin/saves")
+r=$(curl -s -d act=delete --data-urlencode "f=nes/$nsha.srm" "http://$PHONE_PANEL/cgi-bin/saves")
 assert_contains "$r" "Deleted nes/$nsha.srm" "delete removes the save"
 assert_eq "" "$(ph "ls /snom/cfw-data/saves/nes/$nsha.srm 2>/dev/null")" "file is gone"
 ph "rm -rf /snom/cfw-data/saves/gb /snom/cfw-data/saves/gba /tmp/sav-roms; for p in \$(ps | grep '[h]ttpd -p 127.0.0.1:$PORT' | awk '{print \$1}'); do kill \$p; done"

@@ -33,6 +33,8 @@ key() {
 
 deploy() {
     ph_put "$C/lib/phone-restore.sh" /snom/cfw/lib/phone-restore.sh
+    ph_put "$C/lib/game.sh"          /snom/cfw/lib/game.sh
+    ph_put "$C/lib/retro-boot.sh"    /snom/cfw/lib/retro-boot.sh
     ph_put "$C/nes/boot-nes.sh"      /snom/cfw/nes/boot-nes.sh
     ph_put "$C/doom/boot-doom.sh"    /snom/cfw/doom/boot-doom.sh
     ph_put "$C/cgi-bin/boot-nes"     /snom/cfw/cgi-bin/boot-nes

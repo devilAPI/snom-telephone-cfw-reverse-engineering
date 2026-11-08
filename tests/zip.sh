@@ -15,11 +15,12 @@
 SRC=$REPO/rootfs/d375/snom/cfw
 ROMS=$REPO/tests/roms
 HOSTIP=${ZIP_HOSTIP:-192.168.178.49}
+BIND=${ZIP_BIND:-$HOSTIP}   # QEMU D375: ZIP_HOSTIP=192.0.2.2 ZIP_BIND=127.0.0.1
 PORT=${ZIP_PORT:-8000}   # the host firewall only lets the phone reach 8000 and 8080
 W=$(mktemp -d "${TMPDIR:-/tmp}/zip-test.XXXXXX")
 mkdir -p "$W/www"
 
-hget() { curl -s -m 60 -u "root:$PHONE_PW" "http://$PHONE_IP:8080$1"; }
+hget() { curl -s -m 60 -u "root:$PHONE_PW" "http://$PHONE_PANEL$1"; }
 post() { curl -s -m 60 -u "root:$PHONE_PW" "$@"; }
 pw()   { ph "wget -qO- '$1'"; }   # loopback phone menu CGIs
 sha()  { sha1sum "$1" | cut -d' ' -f1; }
@@ -43,7 +44,7 @@ z('evil.zip', [('../../tmp/zip-evil-escape.nes', rd('tone.nes')), ('/tmp/zip-evi
 open(os.path.join(w, 'tone.nes'), 'wb').write(rd('tone.nes'))
 open(os.path.join(w, 'fake.nes'), 'wb').write(b'PK\x03\x04 but not a zip')   # zip magic, broken body
 PY
-( cd "$W/www" && exec python3 -m http.server "$PORT" --bind "$HOSTIP" >/dev/null 2>&1 ) &
+( cd "$W/www" && exec python3 -m http.server "$PORT" --bind "$BIND" >/dev/null 2>&1 ) &
 SRV=$!
 trap 'kill $SRV 2>/dev/null; rm -f "$_askpass"; rm -rf "$W"' EXIT
 sleep 1
@@ -52,7 +53,7 @@ code=$(ph "curl -s -m 10 -o /dev/null -w \"%{http_code}\" $B/multi-nes.zip"); [ 
 
 # ------------------------------------------------------------------- deploy
 deploy() {
-    for f in bin/unzip lib/zip.sh lib/retro-boot.sh nes/boot-nes.sh doom/boot-doom.sh gb/boot-gb.sh gba/boot-gba.sh \
+    for f in bin/unzip lib/zip.sh lib/game.sh lib/retro-boot.sh nes/boot-nes.sh doom/boot-doom.sh gb/boot-gb.sh gba/boot-gba.sh \
              cgi-bin/boot-nes cgi-bin/boot-doom cgi-bin/boot-gb cgi-bin/boot-gba cgi-bin/phone-boot \
              cgi-bin/phone-retro cgi-bin/phone-pick cgi-bin/phone-games; do
         ph_put "$SRC/$f" "/snom/cfw/$f"
@@ -68,7 +69,7 @@ lid_before=$(ph 'pidof lid')
 ph 'rm -f /tmp/*.status /tmp/zip-evil-*'
 
 echo "== web panel: multi-ROM zip gives a list (GB/GBC share one launcher)"
-r=$(post --data-urlencode "url=$B/multi-gb.zip" "http://$PHONE_IP:8080/cgi-bin/boot-gb")
+r=$(post --data-urlencode "url=$B/multi-gb.zip" "http://$PHONE_PANEL/cgi-bin/boot-gb")
 assert_contains "$r" "several games" "gb: the panel asks which one"
 assert_contains "$r" ">a.GB</button>" "gb: .GB listed (case-insensitive)"
 assert_contains "$r" ">deep/b.gbc</button>" "gb: .gbc in a subfolder listed"
@@ -80,12 +81,12 @@ assert_eq "" "$(ph 'ls /tmp/*.zip /tmp/game.gb 2>/dev/null')" "gb: the zip was d
 
 echo "== hostile choice parameters (nothing may start or escape)"
 for bad in 0 3 99 -1 '1;touch /tmp/pwn' '1%0aid' '../../../etc/passwd' '' '1 2' '$(touch /tmp/pwn)' '`touch /tmp/pwn`' '/tmp/zip-gb/x/a.GB'; do
-    r=$(post --data-urlencode "sid=$sid" --data-urlencode "pick=$bad" "http://$PHONE_IP:8080/cgi-bin/boot-gb")
+    r=$(post --data-urlencode "sid=$sid" --data-urlencode "pick=$bad" "http://$PHONE_PANEL/cgi-bin/boot-gb")
     case "$r" in *"Running on the phone"*|*"Starting"*) fail "hostile pick [$bad] started something" ;; esac
 done
 pass "12 hostile pick values never start a game"
 for badsid in 1 "$sid;id" "$sid x" '../zip-gb/sid' ''; do
-    r=$(post --data-urlencode "sid=$badsid" --data-urlencode "pick=1" "http://$PHONE_IP:8080/cgi-bin/boot-gb")
+    r=$(post --data-urlencode "sid=$badsid" --data-urlencode "pick=1" "http://$PHONE_PANEL/cgi-bin/boot-gb")
     case "$r" in *"Running on the phone"*) fail "hostile sid [$badsid] started something" ;; esac
 done
 pass "hostile / stale session ids rejected"
@@ -100,27 +101,27 @@ assert_eq "$lid_before" "$(ph 'pidof lid')" "phone app untouched"
 assert_eq "2" "$(ph 'wc -l < /tmp/zip-gb/list')" "the stored list survives bad picks"
 
 echo "== a new download replaces the stored list"
-post --data-urlencode "url=$B/multi-gb.zip" "http://$PHONE_IP:8080/cgi-bin/boot-gb" >/dev/null
+post --data-urlencode "url=$B/multi-gb.zip" "http://$PHONE_PANEL/cgi-bin/boot-gb" >/dev/null
 sid2=$(ph 'cat /tmp/zip-gb/sid')
-[ "$sid" != "$sid2" ] || { sleep 1; post --data-urlencode "url=$B/multi-gb.zip" "http://$PHONE_IP:8080/cgi-bin/boot-gb" >/dev/null; sid2=$(ph 'cat /tmp/zip-gb/sid'); }
+[ "$sid" != "$sid2" ] || { sleep 1; post --data-urlencode "url=$B/multi-gb.zip" "http://$PHONE_PANEL/cgi-bin/boot-gb" >/dev/null; sid2=$(ph 'cat /tmp/zip-gb/sid'); }
 [ "$sid" != "$sid2" ] && pass "new session id" || fail "session id not renewed"
-r=$(post --data-urlencode "sid=$sid" --data-urlencode "pick=1" "http://$PHONE_IP:8080/cgi-bin/boot-gb")
+r=$(post --data-urlencode "sid=$sid" --data-urlencode "pick=1" "http://$PHONE_PANEL/cgi-bin/boot-gb")
 assert_contains "$r" "stale session" "the old session id is refused"
 
 echo "== zips with no matching file / broken zips fail cleanly"
-r=$(post --data-urlencode "url=$B/none.zip" "http://$PHONE_IP:8080/cgi-bin/boot-nes")
+r=$(post --data-urlencode "url=$B/none.zip" "http://$PHONE_PANEL/cgi-bin/boot-nes")
 assert_contains "$r" "Not started: no .nes file inside the zip" "nes: no match -> clear error"
 assert_contains "$(ph 'cat /tmp/nes.log')" "error: no .nes file inside the zip" "nes: error in the launcher log"
-r=$(post --data-urlencode "url=$B/gba-none.zip" "http://$PHONE_IP:8080/cgi-bin/boot-gba")
+r=$(post --data-urlencode "url=$B/gba-none.zip" "http://$PHONE_PANEL/cgi-bin/boot-gba")
 assert_contains "$r" "Not started: no .gba file inside the zip" "gba: a zip with only a .nes fails"
 r=$(pw "http://127.0.0.1:8081/cgi-bin/phone-retro?sys=gb&url=$(printf %s "$B/none.zip" | sed 's/:/%3A/g; s|/|%2F|g')")
 assert_contains "$r" "no .gb" "gb: error on the phone screen"
-r=$(post --data-urlencode "url=$B/fake.nes" "http://$PHONE_IP:8080/cgi-bin/boot-nes")
+r=$(post --data-urlencode "url=$B/fake.nes" "http://$PHONE_PANEL/cgi-bin/boot-nes")
 assert_contains "$r" "Not started" "broken zip: reported, not run"
 assert_eq "" "$(ph 'ls -d /tmp/zip-nes /tmp/game.nes 2>/dev/null')" "failed zips leave nothing in /tmp"
 
 echo "== doom: .wad in a zip (two entries -> list), phone menu"
-r=$(post --data-urlencode "url=$B/multi-doom.zip" "http://$PHONE_IP:8080/cgi-bin/boot-doom")
+r=$(post --data-urlencode "url=$B/multi-doom.zip" "http://$PHONE_PANEL/cgi-bin/boot-doom")
 assert_contains "$r" ">one.wad</button>" "doom: first wad listed"
 assert_contains "$r" ">d/TWO.WAD</button>" "doom: .WAD in a subfolder listed"
 r=$(pw "http://127.0.0.1:8081/cgi-bin/phone-games?game=doom")
@@ -130,21 +131,13 @@ assert_contains "$r" "<IPPhoneMenu" "phone-pick lists the files"
 ph 'rm -rf /tmp/zip-doom /tmp/doom.status'
 
 echo "== a malicious zip cannot write outside its folder"
-post --data-urlencode "url=$B/evil.zip" "http://$PHONE_IP:8080/cgi-bin/boot-nes" >/dev/null
+post --data-urlencode "url=$B/evil.zip" "http://$PHONE_PANEL/cgi-bin/boot-nes" >/dev/null
 assert_eq "" "$(ph 'ls /tmp/zip-evil-* /zip-evil* 2>/dev/null; find /tmp -maxdepth 2 -name "zip-evil*"')" "../ and absolute entry names did not escape"
 ph 'rm -rf /tmp/zip-nes /tmp/nes.status'
 
 # ------------------------------------------------------------ real runs (x3)
-wait_phone() {
-    local i
-    for i in $(seq 90); do
-        [ "$(ph 'pidof lid >/dev/null && pidof lcsD375 >/dev/null && echo up')" = up ] && { sleep 20; return 0; }
-        sleep 5
-    done
-    return 1
-}
 quit_game() {  # release first, then press hangup (114)
-    ph 'for v in 0 001 0; do printf "\0\0\0\0\0\0\0\0\001\0\162\0\\$v\0\0\0" > /dev/input/event0; usleep 100000; done'
+    hangup
     sleep 3
 }
 # started_log SYS: wait until the launcher status says running (<= 40 s)
@@ -166,14 +159,14 @@ run1() {  # multi-ROM NES zip: phone list, choice 2
     quit_game
 }
 run2() {  # nested single GB ROM in a zip (web panel)
-    post --data-urlencode "url=$B/nested-gb.zip" "http://$PHONE_IP:8080/cgi-bin/boot-gb" > "$W/r2.html"
+    post --data-urlencode "url=$B/nested-gb.zip" "http://$PHONE_PANEL/cgi-bin/boot-gb" > "$W/r2.html"
     wait_running gb || return 1
     sleep 6
     ph 'cat /tmp/gb.log' > "$W/r2.log"
     quit_game
 }
 run3() {  # plain NES ROM, not a zip
-    post --data-urlencode "url=$B/tone.nes" "http://$PHONE_IP:8080/cgi-bin/boot-nes" > "$W/r3.html"
+    post --data-urlencode "url=$B/tone.nes" "http://$PHONE_PANEL/cgi-bin/boot-nes" > "$W/r3.html"
     wait_running nes || return 1
     sleep 6
     ph 'cat /tmp/nes.log' > "$W/r3.log"

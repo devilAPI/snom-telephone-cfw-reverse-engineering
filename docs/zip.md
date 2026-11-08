@@ -26,7 +26,7 @@ Saves are keyed by the ROM's SHA-1 (NES/GB/GBA) or IWAD name (Doom), see saves.m
 Unchanged: `archive.org/download/<item>/x.zip` is still resolved server-side (`<zip>/<member>`, saves RAM). Any other zip is now unpacked on the phone instead of being rejected.
 
 ## Files
-`lib/zip.sh` (shared functions), `lib/retro-boot.sh`, `nes/boot-nes.sh`, `doom/boot-doom.sh` (`--pick SID IDX` second step; status in `/tmp/<sys>.status`), `cgi-bin/boot-gba` (one CGI for all four systems; `boot-gb/nes/doom` are wrappers), `cgi-bin/phone-pick`, `phone-boot`, `phone-retro`, `phone-games`.
+`lib/zip.sh` (shared functions), `lib/game.sh` (download, zip, history and run steps of every launcher), `lib/retro-boot.sh` (GB, GBA, NES), `doom/boot-doom.sh` (`--pick SID IDX` second step; status in `/tmp/<sys>.status`), `cgi-bin/boot-gba` (one CGI for all four systems; `boot-gb/nes/doom` are wrappers), `cgi-bin/phone-pick`, `phone-boot`, `phone-retro`, `phone-games`.
 
 ## Test
 `tests/zip.sh` (~6 min, host serves zips on 192.168.178.49:8000 - the host firewall lets the phone reach only 8000/8080): list/extract checks for every system, hostile parameters, no-match, broken and malicious zips, then three real runs (multi-ROM NES via the phone menu with choice 2, nested single GB ROM, plain NES ROM).

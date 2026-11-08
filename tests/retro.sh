@@ -18,8 +18,8 @@ OUTD=${RETRO_OUT:-$(mktemp -d "${TMPDIR:-/tmp}/retro-test.XXXXXX")}
 mkdir -p "$OUTD"
 
 # POST to the panel (Basic auth is ignored if the panel has no login).
-post() { curl -s -m 40 -u "root:$PHONE_PW" --data-urlencode "url=$2" "http://$PHONE_IP:8080$1"; }
-hget() { curl -s -m 40 -u "root:$PHONE_PW" "http://$PHONE_IP:8080$1"; }
+post() { curl -s -m 40 -u "root:$PHONE_PW" --data-urlencode "url=$2" "http://$PHONE_PANEL$1"; }
+hget() { curl -s -m 40 -u "root:$PHONE_PW" "http://$PHONE_PANEL$1"; }
 
 deploy() {
     for f in gba/gpsp gb/gambatte; do
@@ -27,7 +27,7 @@ deploy() {
         ph_put "$REPO/out/${f#*/}" "/snom/cfw/$f.new"
         ph "mv /snom/cfw/$f.new /snom/cfw/$f"
     done
-    for f in lib/retro-boot.sh gba/boot-gba.sh gb/boot-gb.sh cgi-bin/boot-gba cgi-bin/boot-gb \
+    for f in lib/game.sh lib/retro-boot.sh gba/boot-gba.sh gb/boot-gb.sh cgi-bin/boot-gba cgi-bin/boot-gb \
              cgi-bin/phone-retro cgi-bin/phone-games panel.d/45-gba.html panel.d/46-gb.html; do
         ph_put "$SRC/$f" "/snom/cfw/$f"
     done
@@ -91,14 +91,6 @@ serve_roms() {  # (again after a reboot: /tmp is RAM)
 kill_srv() { ph "for p in \$(ps | grep '[h]ttpd -p 127.0.0.1:$PORT' | awk '{print \$1}'); do kill \$p; done"; rm -f "$_askpass"; }
 trap kill_srv EXIT
 
-wait_phone() {  # until lid + lcsD375 run again (restore or reboot), then settle
-    local i
-    for i in $(seq 90); do
-        [ "$(ph 'pidof lid >/dev/null && pidof lcsD375 >/dev/null && echo up')" = up ] && { sleep 20; return 0; }
-        sleep 5
-    done
-    return 1
-}
 
 # run_one SYS ROM STATSVAR
 run_one() {
@@ -107,14 +99,14 @@ run_one() {
     serve_roms
     ph "$env=1 SND_VOL=5 SND_DUMP=1 nohup /snom/cfw/$sys/boot-$sys.sh 'http://$HOSTIP:$PORT/$rom' </dev/null >/dev/null 2>&1 &"
     sleep 22
-    curl -s -m 20 "http://$PHONE_IP:8080/cgi-bin/screenshot" -u "root:$PHONE_PW" > "$OUTD/$sys.bmp"
+    curl -s -m 20 "http://$PHONE_PANEL/cgi-bin/screenshot" -u "root:$PHONE_PW" > "$OUTD/$sys.bmp"
     # L (digit 1 = 51), R (digit 3 = 48) are mapped; digit 2 (49) must show up as unmapped.
     ph 'for c in 51 48 49; do o=$(printf %03o $c); for v in 001 0; do printf "\0\0\0\0\0\0\0\0\001\0\\$o\0\\$v\0\0\0" > /dev/input/event0; usleep 80000; done; done'
     sleep 10
     ph "cat /tmp/snd_dump.raw" > "$OUTD/$sys.raw"
     # hangup (114) quits. Release first: the kernel drops a press for a key it
     # already thinks is down (a stale injected press without release).
-    ph 'for v in 0 001 0; do printf "\0\0\0\0\0\0\0\0\001\0\162\0\\$v\0\0\0" > /dev/input/event0; usleep 100000; done'
+    hangup
     sleep 3
     ph "cat /tmp/$sys.log" > "$OUTD/$sys.log"
 }

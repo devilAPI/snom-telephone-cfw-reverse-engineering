@@ -8,7 +8,7 @@ in about **30 s** once a few orphaned processes from the takeover are gone.
     /snom/cfw/lib/phone-restore.sh     exit 0 = phone app healthy again
                                        exit 1 = not healthy in 60 s (caller reboots)
 
-The launchers (`doom/boot-doom.sh`, `nes/boot-nes.sh`) call it after the engine
+The launchers call it (`game_run` in `lib/game.sh`) after the engine
 exits and only fall back to `reboot` if it fails. Other launchers (GB/GBA,
 ringtones, …) should do the same:
 

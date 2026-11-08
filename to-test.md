@@ -36,6 +36,13 @@ reboot). Audio can't be checked remotely:
 - [ ] Game sound plays at a normal volume. The tests ran at volume 5 of 100, so
       nothing was audible.
 - [ ] A game feels playable with the real keys.
+- [ ] After the 2026-11-08 refactor (all launchers share `lib/game.sh`; NES now
+      runs through `lib/retro-boot.sh`): start one NES, one Game Boy and one Doom
+      game from the panel, quit each with the red key, and the phone app comes
+      back without a reboot. The emulator checked everything up to the screen
+      takeover; it has no audio, so the games themselves stall there.
+      Claude can also run `RETRO_RUN=1 tests/retro.sh`, `tests/zip.sh` and
+      `tests/restore.sh` once the phone is on the network again.
 
 ## Speaker (sound from the PC to the phone)
 

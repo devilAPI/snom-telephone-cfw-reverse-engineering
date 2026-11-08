@@ -14,7 +14,7 @@ Everything else about a game run is still RAM-only (ROM/WAD are downloaded to `/
 
 ## How it works
 
-* The launcher (`lib/saves.sh`, sourced by `nes/boot-nes.sh`, `lib/retro-boot.sh`, `doom/boot-doom.sh`) hashes the ROM, creates the directory and passes the path to the engine in the environment variable `CFW_SAVE_FILE` (Doom: `-savedir DIR`).
+* The launcher (`lib/saves.sh`, sourced by `lib/game.sh` for every launcher) hashes the ROM, creates the directory and passes the path to the engine in the environment variable `CFW_SAVE_FILE` (Doom: `-savedir DIR`).
 * The engines share `src/audio/snd/snom_save.h` (header only): `sv_load` reads the file into the emulator's battery RAM before the game starts; `sv_store` writes `<file>.tmp`, `fsync`s and `rename`s, so a power loss never leaves a half-written save.
 * A save is written **when the emulator quits** (hangup key, or the game resetting out), on **SIGTERM** (the signal handler only sets a flag; the frame loop then does a normal `exit(0)` so the `atexit` flush runs), and **every 30 s if the RAM changed** (compared against a copy of what is on flash, so an idle game does no flash writes and a failed write is retried only after the RAM changes again, not every 30 s). `SIGKILL` and power loss lose at most 30 s.
 * The exit flush is registered after `snd_hal_shutdown`, so it runs first: the save never waits for audio teardown.
