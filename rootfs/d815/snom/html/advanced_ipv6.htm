@@ -1,0 +1,109 @@
+<?ssi title advanced_ssi_title?>
+<?ssi file common1.htm?>
+  <TR><TD valign="top" height="16"><IMG height="16" src="img/clr.gif" width="16"></TD></TR>
+  <TR>
+    <TD valign="top">
+    <FORM method="post">
+      <?ssi skipon VTECH?>
+      <TABLE class="bubbleTable" cellSpacing="0" cellPadding="0" width="100%" border="0">
+      <?ssi skipoff VTECH?>
+      <?ssi skipon SNOM?>
+      <TABLE cellSpacing="4" cellPadding="0" width="100%" border="0">
+      <?ssi skipoff SNOM?>
+      <?ssi file tab_advanced.htm?>
+        <TR>
+          <TD/>
+          <TD colspan="3"/>
+          <TD class="background" width="12" height="12">
+            <?ssi skipon VTECH?>
+            <IMG src=<?ssi img-corner-gif ur?> width="12" height="12">
+            <?ssi skipoff VTECH?>
+          </TD>
+        </TR>
+    <?ssi hidden_tag?>
+    <TR><TD></TD><TD width="50%"/><TD width="50%"/></TR>
+    <?ssi skipon NOT_IN_ADMIN_MODE?>
+    <?ssi skipon NO_IPV6_SUPPORT?>
+    <TR><TD></TD>
+      <?ssi skipon VTECH?>
+      <TD width="50%"><B>
+      <?ssi skipoff VTECH?>
+      <?ssi skipon SNOM?>
+      <TD class="titleText" width="50%">
+      <?ssi skipoff SNOM?>
+      <?lng advanced_ssi_ipv6?></B>
+      </TD>
+    </TR>
+    <TR><TD></TD><TD><?lng advanced_ssi_ipv6_over_ipv4?></TD><TD>
+      <select name="ipv6_over_ipv4" ID="Select1" <?ssi disabled ipv6_over_ipv4?>size="1" <?ssi tabindex?>>
+      <option value="on"<?ssi selected ipv6_over_ipv4 on?>><?lng advanced_ssi_on?></option>
+      <option value="off"<?ssi selected ipv6_over_ipv4 off?>><?lng advanced_ssi_off?></option>
+      </select><?ssi help ipv6_over_ipv4?>
+    </TD></TR>
+    <TR><TD></TD><TD><?lng advanced_ssi_dhcp_v6?></TD><TD>
+      <select name="dhcp_v6" ID="Select1" <?ssi disabled dhcp_v6?>size="1" <?ssi tabindex?>>
+      <option value="on"<?ssi selected dhcp_v6 on?>><?lng advanced_ssi_on?></option>
+      <option value="autoconf"<?ssi selected dhcp_v6 autoconf?>><?lng advanced_ssi_dhcp_v6_autoconf?></option>
+      <option value="off"<?ssi selected dhcp_v6 off?>><?lng advanced_ssi_off?></option>
+      </select><?ssi help dhcp_v6?>
+    </TD></TR>
+    <TR><TD></TD><TD><?ssi input advanced_ssi_ipaddress_v6 ip_adr_v6?></TD></TR>
+    <TR><TD></TD><TD>&nbsp;</TD></TR>
+    <TR><TD></TD>
+      <?ssi skipon VTECH?>
+      <TD><B>
+      <?ssi skipoff VTECH?>
+      <?ssi skipon SNOM?>
+      <TD class="titleText">
+      <?ssi skipoff SNOM?>
+      <?lng advanced_dns?></B>
+      </TD>
+    </TR>
+    <TR><TD></TD><TD><?ssi input advanced_ssi_domain_v6 dns_domain_v6?></TD></TR>
+    <TR><TD></TD><TD><?ssi input advanced_ssi_dnsserver1_v6 dns_server1_v6?></TD></TR>
+    <TR><TD></TD><TD><?ssi input advanced_ssi_dnsserver2_v6 dns_server2_v6?></TD></TR>
+    <TR><TD></TD><TD><?ssi input advanced_ssi_dnsserver3_v6 dns_server3_v6?></TD></TR>
+    <TR><TD></TD><TD><?ssi input advanced_ssi_dnsserver4_v6 dns_server4_v6?></TD></TR>
+    <TR><TD></TD><TD>&nbsp;</TD></TR>
+    <TR><TD></TD>
+      <?ssi skipon VTECH?>
+      <TD><B>
+      <?ssi skipoff VTECH?>
+      <?ssi skipon SNOM?>
+      <TD class="titleText">
+      <?ssi skipoff SNOM?>
+      <?lng advanced_time?></B>
+      </TD>
+    </TR>
+    <TR><TD></TD><TD><?ssi input advanced_ssi_ntptimeserver_v6 ntp_server_v6?></TD></TR>
+    <TR>
+      <TD/>
+      <TD colspan="3">
+        <input type="hidden" value="<?lng apply_button?>" name="Settings">
+        <!--Hidden input is used to allow onchange event to apply settings automatically-->
+        <INPUT type="submit" value="<?lng apply_button?>" name="Settings" <?ssi tabindex?> >
+      </TD>
+      <TD/>
+    </TR>
+    <?ssi skipoff NO_IPV6_SUPPORT?>
+    <?ssi skipoff NOT_IN_ADMIN_MODE?>
+    <TR>
+      <TD class="background" valign="bottom" align="left" width="12" height="12">
+        <?ssi skipon VTECH?>
+        <IMG src=<?ssi img-corner-gif ll?> width="12" height="12">
+        <?ssi skipoff VTECH?>
+      </TD>
+      <TD colspan="3"/>
+      <TD class="background" valign="bottom" align="right" width="12" height="12">
+        <?ssi skipon VTECH?>
+        <IMG src=<?ssi img-corner-gif lr?> width="12" height="12">
+        <?ssi skipoff VTECH?>
+      </TD>
+    </TR>
+    </TABLE>
+    </FORM>
+    </TD>
+  </TR>
+  <script type="text/javascript" src="fox.js" charset="utf-8"></script>
+<?ssi file common9.htm?>
+</HTML>

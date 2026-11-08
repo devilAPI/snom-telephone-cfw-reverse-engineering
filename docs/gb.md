@@ -21,10 +21,10 @@ ROM (`tests/roms/sndtest.gb`, GBC mode, 20 s each, `GB_STATS=1`, 5 s windows):
 Gearboy is newer and has more features (SGB borders, sensors), but it cannot
 keep 60 fps on a 500 MHz ARM1176 even with the frontend dropping every second
 blit; Gambatte has half the load and room to spare. Gearboy stays buildable
-(`CORES=gearboy tools/build-retro.sh`) for future comparisons, it is not
+(`CORES=gearboy tools/build/build-retro.sh`) for future comparisons, it is not
 shipped.
 
-## Core options (`retro-src/snom_retro.c`, `CORE_GAMBATTE`)
+## Core options (`src/games/retro/snom_retro.c`, `CORE_GAMBATTE`)
 
 - `gambatte_gb_hwmode = Auto`: GBC games in colour, DMG games as DMG.
 - `gambatte_gb_colorization = auto`: DMG games get Gambatte's built-in
@@ -58,7 +58,7 @@ real boot ROM refuses to start without it). History: `/snom/cfw-data/gb/history`
 
 ## Building
 
-`tools/build-retro.sh` builds Gambatte with `make -f Makefile.libretro
+`tools/build/build-retro.sh` builds Gambatte with `make -f Makefile.libretro
 platform=unix HAVE_NETWORK=0` and then archives **every object** into
 `libcore.a`.
 
@@ -70,7 +70,7 @@ normal shared-library object set and archiving it ourselves avoids that
 (position-independent objects link fine into a static-pie binary). Gearboy
 needs the same treatment.
 
-Copy `tools/out/gambatte` to `custom-rootfs/snom/cfw/gb/gambatte`.
+Copy `out/gambatte` to `rootfs/d375/snom/cfw/gb/gambatte`.
 
 ## Test ROM
 

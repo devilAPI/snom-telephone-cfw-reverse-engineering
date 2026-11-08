@@ -56,7 +56,7 @@ and a search with Play buttons for albums and songs.
 `-stop.sh` call the player. Copy them to `/snom/cfw-data/scripts/` and put them on keys
 ([scripts.md](scripts.md), [keymap.md](keymap.md)).
 
-**Together with the PC:** `tools/snom-speaker.sh` streams into the speaker's "live"
+**Together with the PC:** `tools/device/snom-speaker.sh` streams into the speaker's "live"
 channel and the player uses the "player" channel. Both play at the same time, mixed. A
 PC that streams silence doesn't interrupt the music.
 
@@ -70,13 +70,13 @@ Navidrome --(HTTP, MP3)--> busybox wget --(pipe)--> navplay --(HTTP POST, WAV)--
 
 | File | Role |
 |---|---|
-| `navidrome-src/navplay.c` | MP3 from stdin, decoded, sent to spkstream. Built by `tools/build-navplay.sh` |
-| `custom-rootfs/snom/cfw/navidrome/player.sh` | The player: queue, the track loop, next / prev / pause / resume / stop / volume / status |
-| `custom-rootfs/snom/cfw/navidrome/nd-lib.sh` | Config, the Subsonic API call, XML parsing, request parsing, menu rendering |
-| `custom-rootfs/snom/cfw/cgi-bin/navidrome` | Phone menus (`a=phone`, loopback :8081) and the panel's JSON |
-| `custom-rootfs/snom/cfw/panel.d/92-navidrome.html` | Panel card |
-| `custom-rootfs/snom/cfw/phone-menu.d/32-navidrome` | Entry in CFW Tools |
-| `custom-rootfs/snom/cfw/scripts-examples/navidrome-*.sh` | Scripts for keys |
+| `src/audio/navidrome/navplay.c` | MP3 from stdin, decoded, sent to spkstream. Built by `tools/build/build-navplay.sh` |
+| `rootfs/d375/snom/cfw/navidrome/player.sh` | The player: queue, the track loop, next / prev / pause / resume / stop / volume / status |
+| `rootfs/d375/snom/cfw/navidrome/nd-lib.sh` | Config, the Subsonic API call, XML parsing, request parsing, menu rendering |
+| `rootfs/d375/snom/cfw/cgi-bin/navidrome` | Phone menus (`a=phone`, loopback :8081) and the panel's JSON |
+| `rootfs/d375/snom/cfw/panel.d/92-navidrome.html` | Panel card |
+| `rootfs/d375/snom/cfw/phone-menu.d/32-navidrome` | Entry in CFW Tools |
+| `rootfs/d375/snom/cfw/scripts-examples/navidrome-*.sh` | Scripts for keys |
 | `tests/navidrome.sh` | The test with a throwaway server |
 
 ### Decoding: navplay

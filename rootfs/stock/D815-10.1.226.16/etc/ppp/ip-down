@@ -1,0 +1,22 @@
+#!/bin/sh
+#
+# Change the routing to the defaults after pppd connection is down
+#
+# Given parameter (see pppd manual page description of /etc/ppp/ip-down in the script section):
+#
+# $1 - interface name that is used for pppd connection
+# $2 - tty device name
+# $3 - tty device speed
+# $4 - local IP address
+# $5 - remote IP address
+# $6 - value of 'ipparam' pppd option
+
+# Read the default values from the temporary file that was created by ip-up
+# If the file doesn't exist, then we can't do anything.
+test -f /tmp/net || exit 1
+ETH=$(cat /tmp/net | cut -d: -f 1)
+GW=$(cat /tmp/net | cut -d: -f 2)
+
+# Restore the routing
+ip route delete default
+ip route add default via ${GW} dev ${ETH}

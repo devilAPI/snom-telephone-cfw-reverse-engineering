@@ -9,7 +9,7 @@
 #  plus the CGI: capture (game running + idle), save, reset, hostile input.
 set -u
 . "$(dirname "$0")/lib.sh"
-C=$REPO/custom-rootfs/snom/cfw
+C=$REPO/rootfs/d375/snom/cfw
 ROMS=$REPO/tests/roms
 PORT=${KM_PORT:-18767}
 KM=/snom/cfw-data/keymaps/nes
@@ -17,7 +17,7 @@ TMPD=$(mktemp -d); trap 'rm -rf "$TMPD"; rm -f "$_askpass"' EXIT
 
 deploy() {
     ph "rm -f /snom/cfw/nes/infones.new"
-    ph_put "$REPO/tools/out/infones" /snom/cfw/nes/infones.new
+    ph_put "$REPO/out/infones" /snom/cfw/nes/infones.new
     ph "mv /snom/cfw/nes/infones.new /snom/cfw/nes/infones"
     for f in lib/saves.sh cgi-bin/keymap panel.d/47-keymap.html bin/keyinject; do ph_put "$C/$f" "/snom/cfw/$f"; done
     ph 'mkdir -p /tmp/km-roms; netstat -ltn | grep -q "127.0.0.1:'$PORT' " || busybox httpd -p 127.0.0.1:'$PORT' -h /tmp/km-roms'

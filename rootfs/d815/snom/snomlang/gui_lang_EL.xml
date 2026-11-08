@@ -1,0 +1,1882 @@
+<?xml version="1.0" encoding="utf-8"?>
+<phrases>
+	<language t="Ελληνικά"/>
+	<phrase n="lang_none" t=""/>
+	<phrase n="lang_language_name" t="Ελληνικά"/>
+	<phrase n="lang_cntry_CHN" t="Κίνα"/>
+	<phrase n="lang_cntry_FIN" t="Φιλανδία"/>
+	<phrase n="lang_cntry_GER" t="Γερμανία"/>
+	<phrase n="lang_cntry_IND" t="Ινδία"/>
+	<phrase n="lang_cntry_IDN" t="Ινδονησία"/>
+	<phrase n="lang_cntry_MYS" t="Μαλαισία"/>
+	<phrase n="lang_cntry_MEX" t="Μεξικό"/>
+	<phrase n="lang_cntry_NLD" t="Ολλανδία"/>
+	<phrase n="lang_cntry_PRT" t="Πορτογαλία"/>
+	<phrase n="lang_cntry_ZAF" t="Νότιος Αφρική"/>
+	<phrase n="lang_cntry_GBR" t="Μεγάλη Βρετανία"/>
+	<phrase n="lang_cntry_USA" t="Ηνωμένες Πολιτείες Αμερικής"/>
+	<phrase n="lang_cntry_CAM" t="Central America"/>
+	<phrase n="lang_cntry_CAN" t="Καναδάς"/>
+	<phrase n="lang_cntry_CHL" t="Χιλή"/>
+	<phrase n="lang_cntry_BHS" t="Μπαχάμες"/>
+	<phrase n="lang_cntry_CUB" t="Κούβα"/>
+	<phrase n="lang_cntry_PRY" t="Παραγουάη"/>
+	<phrase n="lang_cntry_BMU" t="Βερμούδες"/>
+	<phrase n="lang_cntry_FLK" t="Νησία Φώκλαντ"/>
+	<phrase n="lang_cntry_GRL" t="Γροιλανδία"/>
+	<phrase n="lang_cntry_FRO" t="Νησιά Φερόε"/>
+	<phrase n="lang_cntry_IRL" t="Ιρλανδία"/>
+	<phrase n="lang_cntry_ESP" t="Ισπανία"/>
+	<phrase n="lang_cntry_ALB" t="Αλβανία"/>
+	<phrase n="lang_cntry_AUT" t="Αυστρία"/>
+	<phrase n="lang_cntry_BEL" t="Βέλγιο"/>
+	<phrase n="lang_cntry_BRA" t="Βραζιλία"/>
+	<phrase n="lang_cntry_CAI" t="Κάικος"/>
+	<phrase n="lang_cntry_CHA" t="Κατάμ"/>
+	<phrase n="lang_cntry_HRV" t="Κροατία"/>
+	<phrase n="lang_cntry_CZE" t="Τσεχία"/>
+	<phrase n="lang_cntry_DNK" t="Δανία"/>
+	<phrase n="lang_cntry_FRA" t="Γαλλία"/>
+	<phrase n="lang_cntry_HUN" t="Ουγγαρία"/>
+	<phrase n="lang_cntry_ITA" t="Ιταλία"/>
+	<phrase n="lang_cntry_LUX" t="Λουξεμβούργο"/>
+	<phrase n="lang_cntry_MAK" t="Βόρεια Μακεδ."/>
+	<phrase n="lang_cntry_NAM" t="Ναμίμπια"/>
+	<phrase n="lang_cntry_NOR" t="Νορβηγία"/>
+	<phrase n="lang_cntry_POL" t="Πολωνία"/>
+	<phrase n="lang_cntry_SVK" t="Σλοβακία"/>
+	<phrase n="lang_cntry_SWD" t="Σουηδία"/>
+	<phrase n="lang_cntry_CHE" t="Ελβετία"/>
+	<phrase n="lang_cntry_GIB" t="Γιβραλτάρ"/>
+	<phrase n="lang_cntry_YUG" t="Σερβία"/>
+	<phrase n="lang_cntry_BLR" t="Λευκορωσία"/>
+	<phrase n="lang_cntry_BGR" t="Βουλγαρία"/>
+	<phrase n="lang_cntry_CYP" t="Κύπρος"/>
+	<phrase n="lang_cntry_EGY" t="Αίγυπτος"/>
+	<phrase n="lang_cntry_EST" t="Εσθονία"/>
+	<phrase n="lang_cntry_GAZ" t="Γάζα"/>
+	<phrase n="lang_cntry_GRC" t="Ελλάδα"/>
+	<phrase n="lang_cntry_ISR" t="Ισραήλ"/>
+	<phrase n="lang_cntry_JOR" t="Ιορδανία"/>
+	<phrase n="lang_cntry_LVA" t="Λετονία"/>
+	<phrase n="lang_cntry_LTU" t="Λιθουανία"/>
+	<phrase n="lang_cntry_LBN" t="Λίβανος"/>
+	<phrase n="lang_cntry_MDA" t="Μολδαβία"/>
+	<phrase n="lang_cntry_RUS" t="Ρωσία"/>
+	<phrase n="lang_cntry_ROU" t="Ρουμανία"/>
+	<phrase n="lang_cntry_SYR" t="Συρία"/>
+	<phrase n="lang_cntry_TUR" t="Τουρκία"/>
+	<phrase n="lang_cntry_UKR" t="Ουκρανία"/>
+	<phrase n="lang_cntry_IRQ" t="Ιράκ"/>
+	<phrase n="lang_cntry_IRN" t="Ιράν"/>
+	<phrase n="lang_cntry_ARM" t="Αρμενία"/>
+	<phrase n="lang_cntry_AZE" t="Αζερμπαιτζάν"/>
+	<phrase n="lang_cntry_GEO" t="Γεωργία"/>
+	<phrase n="lang_cntry_KAZ" t="Καζακστάν"/>
+	<phrase n="lang_cntry_KGZ" t="Δημοκρατία της Κιργιζίας"/>
+	<phrase n="lang_cntry_PAK" t="Πακιστάν"/>
+	<phrase n="lang_cntry_SGP" t="Σιγκαπούρη"/>
+	<phrase n="lang_cntry_KOR" t="Κορέα"/>
+	<phrase n="lang_cntry_JPN" t="Ιαπωνία"/>
+	<phrase n="lang_cntry_AUS" t="Αυστραλία"/>
+	<phrase n="lang_cntry_NZL" t="Νέα Ζηλανδία"/>
+	<phrase n="lang_cntry_TON" t="Τόνγκα"/>
+	<phrase n="lang_cntry_COL" t="Κολομβία"/>
+	<phrase n="lang_cntry_ECU" t="Εκουαδόρ"/>
+	<phrase n="lang_cntry_TTB" t="Τρινιντάντ &amp; Τομπάγκο"/>
+	<phrase n="lang_cntry_ARG" t="Αργεντινή"/>
+	<phrase n="lang_cntry_WAT" t="Δυτική Αφρική"/>
+	<phrase n="lang_cntry_CAT" t="Κεντρική Αφρική"/>
+	<phrase n="lang_cntry_EAT" t="Ανατολική Αφρική"/>
+	<phrase n="lang_cntry_VEN" t="Βενεζουέλα"/>
+	<phrase n="lang_cntry_NCL" t="Νέα Καληδονία"/>
+	<phrase n="lang_cntry_UAE" t="Ηνωμένα Αραβικά Εμιράτα"/>
+	<phrase n="lang_cntry_THA" t="Ταϊλάνδη"/>
+	<phrase n="lang_F_SEARCH" t="Αναζήτ"/>
+	<phrase n="lang_F_SEARCH_typeSio" t="Αναζήτηση"/>
+	<phrase n="lang_F_REBOOT" t="Επανεκ"/>
+	<phrase n="lang_F_REBOOT_typeSio" t="Επανεκκίνηση"/>
+	<phrase n="lang_F_REBOOT_smartlabel" t="Επανεκ"/>
+	<phrase n="lang_F_PAIR" t="Σύνδεση Bluetooth"/>
+	<phrase n="lang_F_UNPAIR" t="Αποσύνδεση BT"/>
+	<phrase n="lang_F_JOIN" t="Συμμετ"/>
+	<phrase n="lang_F_JOIN_typeSio" t="Συμμετοχή σε κλ"/>
+	<phrase n="lang_F_JOIN_WITH" t="Συμμετοχή με"/>
+	<phrase n="lang_F_LEAVE" t="Αποχώρ"/>
+	<phrase n="lang_F_LEAVE_typeSio" t="Αποχώρηση"/>
+	<phrase n="lang_F_OK" t="ΟΚ"/>
+	<phrase n="lang_F_ACCEPT_CALL" t="Αποδοχ"/>
+	<phrase n="lang_F_ACCEPT_CALL_typeSio" t="Αποδοχή"/>
+	<phrase n="lang_F_CANCEL" t="Άκυρο"/>
+	<phrase n="lang_F_CANCEL_typeSio" t="Άκυρο"/>
+	<phrase n="lang_F_YES" t="Ναι"/>
+	<phrase n="lang_F_NO" t="Όχι"/>
+	<phrase n="lang_F_ADD_SPEAKER" t="+Μεγαφ"/>
+	<phrase n="lang_F_ADD_SPEAKER_typeSio" t="+Μεγάφωνο"/>
+	<phrase n="lang_F_REMOVE_SPEAKER" t="-Μεγαφ"/>
+	<phrase n="lang_F_REMOVE_SPEAKER_typeSio" t="-Μεγάφωνο"/>
+	<phrase n="lang_F_ADD_HANDSET" t="+Ακουσ"/>
+	<phrase n="lang_F_ADD_HANDSET_typeSio" t="+Ακουστικό"/>
+	<phrase n="lang_F_REMOVE_HANDSET" t="-Ακουσ"/>
+	<phrase n="lang_F_REMOVE_HANDSET_typeSio" t="-Ακουστικό"/>
+	<phrase n="lang_F_DELETE" t="Διαγρ."/>
+	<phrase n="lang_F_DELETE_typeSio" t="Διαγραφή"/>
+	<phrase n="lang_F_ADR_BOOK" t="Κατάλ."/>
+	<phrase n="lang_F_ADR_BOOK_typeSio" t="Κατάλογος"/>
+	<phrase n="lang_F_ADR_BOOK_smartlabel" t="Κατάλoγος"/>
+	<phrase n="lang_F_DENYALL" t="Φραγή"/>
+	<phrase n="lang_F_DENYALL_typeSio" t="Φραγή αριθμού"/>
+	<phrase n="lang_F_DENYALL_smartlabel" t="Φραγή"/>
+	<phrase n="lang_F_CALL_LIST" t="ΛιστΚλ"/>
+	<phrase n="lang_F_CALL_LIST_typeSio" t="Λίστα Κλήσεων"/>
+	<phrase n="lang_F_CALL_LIST_smartlabel" t="ΛίστΚλ"/>
+	<phrase n="lang_F_PLAY" t="Αναπαραγωγή"/>
+	<phrase n="lang_F_STOP" t="Διακοπή"/>
+	<phrase n="lang_F_RESCAN" t="Αναζήτηση"/>
+	<phrase n="lang_F_INCREASE" t="Αύξηση έντασης"/>
+	<phrase n="lang_F_DECREASE" t="Μείωση έντασης"/>
+	<phrase n="lang_F_BACK" t="⌫"/>
+	<phrase n="lang_F_BACK_typeSio" t="Διαγραφή"/>
+	<phrase n="lang_F_REDIAL" t="ΕπανΚλ"/>
+	<phrase n="lang_F_REDIAL_typeSio" t="Επανάκληση"/>
+	<phrase n="lang_F_REDIAL_smartlabel" t="Επανάκλ"/>
+	<phrase n="lang_F_INSTANT_REDIAL" t="ΕπανΚλ"/>
+	<phrase n="lang_F_INSTANT_REDIAL_typeSio" t="Άμεση επανάκληση"/>
+	<phrase n="lang_F_INSTANT_REDIAL_smartlabel" t="ΕπανΚλ"/>
+	<phrase n="lang_F_ADD_NUMBER" t="Προσθ."/>
+	<phrase n="lang_F_ADD_NUMBER_typeSio" t="Προσθήκη Αριθ"/>
+	<phrase n="lang_F_CONTACTS" t="Επαφές"/>
+	<phrase n="lang_F_PRESENCE" t="Κατάστ"/>
+	<phrase n="lang_F_PRESENCE_typeSio" t="Παρουσία"/>
+	<phrase n="lang_F_PRESENCE_smartlabel" t="Παρουσία"/>
+	<phrase n="lang_F_SPEED_DIAL" t="Άμεση"/>
+	<phrase n="lang_F_SPEED_DIAL_typeSio" t="Ταχεία Κλήση"/>
+	<phrase n="lang_F_SPEED_DIAL_smartlabel" t="ΆμεσηΚλ"/>
+	<phrase n="lang_F_SAFE_TRANSFER" t="Ασφαλή"/>
+	<phrase n="lang_F_SAFE_TRANSFER_typeSio" t="Ασφαλής Μεταφορά"/>
+	<phrase n="lang_F_MENUS_USERINPUT_SENDSIPINFO" t="ΕισαγΧρήστΚαιΑποστΠληρSIP"/>
+	<phrase n="lang_F_MENUS_SENDSIPINFO" t="ΑποστΠληρSIP"/>
+	<phrase n="lang_F_USERINPUT_SENDSIPINFO" t="SIP"/>
+	<phrase n="lang_F_SENDSIPINFO" t="SIP"/>
+	<phrase n="lang_F_SENDSIPINFO_typeSio" t="SIP INFO"/>
+	<phrase n="lang_F_SENDSIPINFO_smartlabel" t="SIP&lt;br&gt;INFO"/>
+	<phrase n="lang_F_REC_START" t="Εγγραφ"/>
+	<phrase n="lang_F_REC_STOP" t="ΣΤΟΠ"/>
+	<phrase n="lang_F_RECORDER_START" t="Εγγραφή"/>
+	<phrase n="lang_F_RECORDER_STOP" t="ΣτοπΕγγ"/>
+	<phrase n="lang_F_RECORD_ON" t="Εγγραφή"/>
+	<phrase n="lang_F_RECORD_OFF" t="Διακοπή Εγγραφή"/>
+	<phrase n="lang_F_RECORDING" t="καταγράφει"/>
+	<phrase n="lang_F_LOGOFF_ALL" t="Αποσύνδεση"/>
+	<phrase n="lang_F_LOGOFF_ALL_typeSio" t="Αποσύνδεση όλων"/>
+	<phrase n="lang_F_LOGOFF_ALL_smartlabel" t="Αποσύνδεση"/>
+	<phrase n="lang_F_STARCODE_short" t="Κωδικός S"/>
+	<phrase n="lang_F_STARCODE" t="Κωδικός Αστέρι"/>
+	<phrase n="lang_F_RELOAD_SERVER_AB" t="Επαναφόρτωση"/>
+	<phrase n="lang_F_SERVER_AB" t="Server Dir"/>
+	<phrase n="lang_F_ANONYMOUS" t="ΑνώνΚλ"/>
+	<phrase n="lang_F_ANONYMOUS_long" t="Ανώνυμη Κλήση"/>
+	<phrase n="lang_F_ANONYMOUS_smartlabel" t="ΑνώνυμΚλ"/>
+	<phrase n="lang_F_VOICEMAIL_INFO_NEW_MSG" t="Νέο μήνυμα"/>
+	<phrase n="lang_F_VOICEMAIL_INFO_short" t="Τηλεφωνητής"/>
+	<phrase n="lang_F_VOICEMAIL_INFO" t="Πληροφορία Τηλεφωνητή"/>
+	<phrase n="lang_F_NO_NEW_MESSAGE" t="Κανένα Νέο Μήνυμα"/>
+	<phrase n="lang_F_NEW_MESSAGE" t="Νέα Μηνύματα"/>
+	<phrase n="lang_F_GUEST_LOCK" t="Κλείδωμα"/>
+	<phrase n="lang_F_GUEST_UNLOCK" t="Ξεκλείδωμα"/>
+	<phrase n="lang_F_IVR" t="IVR"/>
+	<phrase n="lang_F_DTMF" t="DTMF"/>
+	<phrase n="lang_F_ACTION_URL" t="URL"/>
+	<phrase n="lang_F_ACTION_URL_typeSio" t="Action URL"/>
+	<phrase n="lang_F_ACTION_URL_smartlabel" t="URL"/>
+	<phrase n="lang_F_AUTO_ANSWER" t="ΑυτόΑπ"/>
+	<phrase n="lang_F_AUTO_ANSWER_typeSio" t="Αυτόματη Απάντ"/>
+	<phrase n="lang_F_AUTO_ANSWER_smartlabel" t="Αυτόμ.Απ"/>
+	<phrase n="lang_F_AUTO_ANSWER_ON" t="Αυτόματη Απάντηση"/>
+	<phrase n="lang_F_BLF_short" t="BLF"/>
+	<phrase n="lang_F_BLF" t="Ένδειξη BLF"/>
+	<phrase n="lang_F_LINE" t="Γραμμή"/>
+	<phrase n="lang_F_LINE_short" t="Γραμμή"/>
+	<phrase n="lang_F_LINE_RINGING" t="κουδουνίζει"/>
+	<phrase n="lang_F_LINE_OUTGOING" t="Καλεί"/>
+	<phrase n="lang_F_LINE_OFFHOOK" t="ακουστικό εκτός"/>
+	<phrase n="lang_F_LINE_IDLE" t="αδρανής"/>
+	<phrase n="lang_F_LINE_HOLD" t="σε αναμονή"/>
+	<phrase n="lang_F_LINE_FAILED" t="Εκτός σύνδεσης"/>
+	<phrase n="lang_F_LINE_DISCONNECTED" t="αποσυνδεμένο"/>
+	<phrase n="lang_F_LINE_DISCONNECTED_typeSio" t="αποσυνδεμένο"/>
+	<phrase n="lang_F_LINE_CONNECTED" t="συνδεδεμένο"/>
+	<phrase n="lang_F_LINE_BUSY" t="Κατειλημμένο"/>
+	<phrase n="lang_F_LINE_HELD" t="Σε Κράτηση"/>
+	<phrase n="lang_F_LINE_CALLING" t="καλεί"/>
+	<phrase n="lang_F_LINE_RINGBACK" t="επιστροφή κλήσης"/>
+	<phrase n="lang_F_LINE_HOLDING" t="σε αναμονή"/>
+	<phrase n="lang_F_LINE_UNREGISTERED" t="Μη εγγεγραμμένη γραμμή"/>
+	<phrase n="lang_F_LINE_IN_USE" t="Σε Χρήση"/>
+	<phrase n="lang_F_LINE_FREE" t="ελεύθερη"/>
+	<phrase n="lang_F_LINE_UNKNOWN" t="άγνωστο"/>
+	<phrase n="lang_F_LINE_TALKING" t="κατειλημμένη"/>
+	<phrase n="lang_F_LINE_SEIZED" t="κατειλημμένη"/>
+	<phrase n="lang_F_LINE_UNVAILABLE" t="μη διαθέσιμη"/>
+	<phrase n="lang_F_LINE_ACTIVE" t="Ενεργή"/>
+	<phrase n="lang_F_LINE_AVAILABLE" t="διαθέσιμη"/>
+	<phrase n="lang_F_LINE_CLOSED" t="κλειστή"/>
+	<phrase n="lang_F_LINE_AUTO_REDIAL" t="ΑυτόμΚλ"/>
+	<phrase n="lang_F_LINE_AUTO_REDIAL_typeSio" t="ΑυτόμΕπανάκλ"/>
+	<phrase n="lang_F_LINE_CONFERENCING" t="συνδιάσκεψη"/>
+	<phrase n="lang_F_LINE_PARKED" t="σταθμευμένη"/>
+	<phrase n="lang_F_LINE_NO_BUDDY" t="μη αντιστοιχισμένη"/>
+	<phrase n="lang_F_LINE_DISABLED" t="απενεργοποιημένη"/>
+	<phrase n="lang_F_LINE_MSG_WAITING" t="ΜηνύμΣεΑναμον"/>
+	<phrase n="lang_F_SHARED_LINE" t="Γραμμ"/>
+	<phrase n="lang_F_SHARED_LINE_typeSio" t="ΚοινόχρηστηΓραμ"/>
+	<phrase n="lang_F_SHARED_LINE_smartlabel" t="Κοινχρησ"/>
+	<phrase n="lang_F_SHARED_LINE_REMOTE_SEIZED" t="Κοινόχρηστη Γραμμή"/>
+	<phrase n="lang_F_SHARED_LINE_REMOTE_HOLD" t="Κοινόχρηστη Γραμμή"/>
+	<phrase n="lang_F_SHARED_LINE_REMOTE_ALERT" t="Κοινόχρηστη Γραμμή"/>
+	<phrase n="lang_F_SHARED_LINE_REMOTE_ACTIVE" t="Κοινόχρηστη Γραμμή"/>
+	<phrase n="lang_F_SHARED_LINE_BRIDGE_ACTIVE" t="Shared Line"/>
+	<phrase n="lang_F_SHARED_LINE_BRIDGE_HOLD" t="Shared Line"/>
+	<phrase n="lang_F_SHARED_LINE_LOCAL_SEIZED" t="Κοινόχρηστη Γραμμή"/>
+	<phrase n="lang_F_SHARED_LINE_LOCAL_HOLD" t="Κοινόχρηστη Γραμμή"/>
+	<phrase n="lang_F_SHARED_LINE_LOCAL_ALERT" t="Κοινόχρηστη Γραμμή"/>
+	<phrase n="lang_F_SHARED_LINE_LOCAL_ACTIVE" t="Κοινόχρηστη Γραμμή"/>
+	<phrase n="lang_F_MULTICAST" t="MCast"/>
+	<phrase n="lang_F_MULTICAST_typeSio" t="Multicast"/>
+	<phrase n="lang_F_MULTICAST_smartlabel" t="Σελίδα MC"/>
+	<phrase n="lang_F_MULTICAST_ON" t="Multicast"/>
+	<phrase n="lang_F_MULTICAST_ZONE" t="ΖώνηΜ"/>
+	<phrase n="lang_F_MULTICAST_ZONE_typeSio" t="Ζώνη Multicast"/>
+	<phrase n="lang_F_MULTICAST_ZONE_smartlabel" t="Ζώνη MC"/>
+	<phrase n="lang_F_BUTTON_typeSio" t="Πλήκτρο PBX"/>
+	<phrase n="lang_F_BUTTON" t="Πλήκτ"/>
+	<phrase n="lang_F_BUTTON_smartlabel" t="Πλήκτρ"/>
+	<phrase n="lang_F_PUSH_TO_TALK" t="PTT"/>
+	<phrase n="lang_F_PUSH_TO_TALK_typeSio" t="Πίεσε για να Μιλήσεις"/>
+	<phrase n="lang_F_PUSH_TO_TALK_smartlabel" t="PTT"/>
+	<phrase n="lang_F_INTERCOM_ON" t="Ενδοεπικοινωνία"/>
+	<phrase n="lang_F_INTERCOM" t="ΕνδΕπ"/>
+	<phrase n="lang_F_INTERCOM_typeSio" t="Ενδοεπικοινωνία"/>
+	<phrase n="lang_F_INTERCOM_smartlabel" t="ΕνδΕπ"/>
+	<phrase n="lang_F_PICKUP" t="Απάντηση"/>
+	<phrase n="lang_F_CALL_CENTER_LIST" t="Λίστα Τηλεφωνικού Κέντρου"/>
+	<phrase n="lang_F_REMOTE_OFFICE" t="Γραφεί"/>
+	<phrase n="lang_F_REMOTE_OFFICE_typeSio" t="Απομακρυσμένο Γραφείο"/>
+	<phrase n="lang_F_REMOTE_OFFICE_smartlabel" t="ΑπομΓραφ"/>
+	<phrase n="lang_F_REMOTE_OFFICE_ON" t="Ενεργό"/>
+	<phrase n="lang_F_REMOTE_OFFICE_OFF" t="Ανενεργό"/>
+	<phrase n="lang_F_ACD" t="ACD"/>
+	<phrase n="lang_F_ACD_WRAPUP" t="Έναρξη"/>
+	<phrase n="lang_F_ACD_UNAVAILABLE" t="Μη διαθέσιμο"/>
+	<phrase n="lang_F_ACD_AVAILABLE" t="Διαθέσιμο"/>
+	<phrase n="lang_F_ACD_SIGN_OUT" t="Αποσύνδεση"/>
+	<phrase n="lang_F_ACD_SIGN_IN" t="Σύνδεση"/>
+	<phrase n="lang_F_ACD_LOGOUT" t="Αποσύνδεση"/>
+	<phrase n="lang_F_ACD_LOGIN" t="Σύνδεση"/>
+	<phrase n="lang_F_ZONES" t="Σελίδα-Μ"/>
+	<phrase n="lang_F_SMART_TRANSFER" t="ΈξυπνηΜεταφορά"/>
+	<phrase n="lang_F_SMART_TRANSFER_short" t="ΈξυπνΜετ"/>
+	<phrase n="lang_F_ALTERNATE_MODE" t="Εναλλακτικά"/>
+	<phrase n="lang_F_LABEL_PAGE_NEXT_typeSio" t="Επόμενο"/>
+	<phrase n="lang_F_LABEL_PAGE_NEXT" t="Επόμενο"/>
+	<phrase n="lang_F_LABEL_PAGE_NEXT_SMART_long" t="Επόμενη Σελίδα"/>
+	<phrase n="lang_F_LABEL_PAGE_NEXT_SMART_short" t="Σελίδα&gt;&gt;"/>
+	<phrase n="lang_F_LABEL_PAGE_PREV_typeSio" t="Προηγ"/>
+	<phrase n="lang_F_LABEL_PAGE_PREV" t="Προηγ"/>
+	<phrase n="lang_F_LABEL_PAGE_PREV_SMART_long" t="Προηγούμενη Σελ"/>
+	<phrase n="lang_F_LABEL_PAGE_PREV_SMART_short" t="&lt;&lt;Σελίδα"/>
+	<phrase n="lang_F_ADD_REJECTED_CONTACT" t="Προσθήκη"/>
+	<phrase n="lang_F_SAVE_XSI_CONTACT" t="Αποθήκευση"/>
+	<phrase n="lang_F_REFRESH" t="Ανανέωση"/>
+	<phrase n="lang_F_ADD_CONTACT" t="Προσθ"/>
+	<phrase n="lang_F_ADD_CONTACT_typeSio" t="Προσθήκη Επαφής"/>
+	<phrase n="lang_F_SAVE_DIRECTORY_EDIT" t="Αποθήκευση"/>
+	<phrase n="lang_F_GO_NEXT" t="Επόμενο"/>
+	<phrase n="lang_F_GO_BACK" t="Προηγούμενο"/>
+	<phrase n="lang_F_MENU_BACK" t="Back"/>
+	<phrase n="lang_F_SAVE" t="Αποθήκευση"/>
+	<phrase n="lang_F_SAVE_CONTACT" t="Αποθήκευση"/>
+	<phrase n="lang_F_SAFE_TRANSFER_OFF" t="Μεταφ"/>
+	<phrase n="lang_F_SAFE_TRANSFER_OFF_typeSio" t="Μεταφορά"/>
+	<phrase n="lang_F_PARK" t="Στάθμευση"/>
+	<phrase n="lang_F_CALL_PARK_GROUP_DIAL" t="Group Park"/>
+	<phrase n="lang_F_PARK_typeSio" t="Στάθμευση"/>
+	<phrase n="lang_F_PARK_smartlabel" t="Στάθμευση"/>
+	<phrase n="lang_F_CALLRECORD_PAUSE" t="Παύση Εγγ"/>
+	<phrase n="lang_F_CALLRECORD_RESUME" t="Έναρξη Εγγ"/>
+	<phrase n="lang_F_CALLRECORD_CONTROL_ON" t="Εγγραφή"/>
+	<phrase n="lang_F_CALLRECORD_CONTROL_OFF" t="Εγγραφή"/>
+	<phrase n="lang_F_STATUS_UNREAD" t="Πληροφορίες"/>
+	<phrase n="lang_F_STATUS" t="Πληροφορίες"/>
+	<phrase n="lang_F_STATUS_long" t="Ενημερωτικά Μηνύματα"/>
+	<phrase n="lang_F_STATUS_NOTIFICATIONS" t="Notifications"/>
+	<phrase n="lang_F_FAVORITES" t="Αγαπημ"/>
+	<phrase n="lang_F_FAVORITES_typeSio" t="Αγαπημένα"/>
+	<phrase n="lang_F_FAVORITES_smartlabel" t="Αγαπημέν"/>
+	<phrase n="lang_F_SORT" t="Ταξιν"/>
+	<phrase n="lang_F_SORT_typeSio" t="Ταξιν"/>
+	<phrase n="lang_F_CONTACTPOOL" t="Συλλογ"/>
+	<phrase n="lang_F_CONTACTPOOL_typeSio" t="Λίστα Επαφών"/>
+	<phrase n="lang_F_CONTACTPOOL_smartlabel" t="ΛίστεςΑρ"/>
+	<phrase n="lang_F_NEXT" t="Επόμενο"/>
+	<phrase n="lang_F_DIRECTORY_SEARCH" t="LDAP"/>
+	<phrase n="lang_F_MISSED_LIST" t="Αναπάν"/>
+	<phrase n="lang_F_MISSED_LIST_typeSio" t="Αναπάντητες Κλήσ"/>
+	<phrase n="lang_F_MISSED_LIST_smartlabel" t="Αναπάντητες"/>
+	<phrase n="lang_F_DIALED_LIST" t="Dialed"/>
+	<phrase n="lang_F_DIALED_LIST_typeSio" t="Dialed Calls"/>
+	<phrase n="lang_F_DIALED_LIST_smartlabel" t="Dialed"/>
+	<phrase n="lang_F_ACCEPTED_LIST" t="Εισερχ"/>
+	<phrase n="lang_F_ACCEPTED_LIST_typeSio" t="Εισερχόμενες Κλ"/>
+	<phrase n="lang_F_ACCEPTED_LIST_smartlabel" t="Εισερχόμ"/>
+	<phrase n="lang_F_DIALED" t="Εξερχόμενες"/>
+	<phrase n="lang_F_RETRIEVE" t="Τηλεφωνητής"/>
+	<phrase n="lang_F_RETRIEVE_smartlabel" t="Τηλεφωνητής"/>
+	<phrase n="lang_F_RETRIEVE_typeSio" t="Τηλεφωνητής"/>
+	<phrase n="lang_F_RETRIEVE_ON" t="Τηλεφωνητής"/>
+	<phrase n="lang_F_REDIRECT_OFF" t="όχιΠρθ"/>
+	<phrase n="lang_F_REDIRECT_OFF_smartlabel" t="όχιΠρθ"/>
+	<phrase n="lang_F_REDIRECT_OFF_typeSio" t="Προώθηση Off"/>
+	<phrase n="lang_F_REDIRECT_ON" t="Προώθ"/>
+	<phrase n="lang_F_REDIRECT_ON_typeSio" t="Εκτροπή Κλήσης"/>
+	<phrase n="lang_F_REDIRECT_smartlabel" t="Προώθηση Kλήσης"/>
+	<phrase n="lang_F_RINGER_SILENT" t="Σίγαση"/>
+	<phrase n="lang_F_RINGER_SILENT_typeSio" t="Σίγαση Κουδουν"/>
+	<phrase n="lang_F_RINGER_SILENT_smartlabel" t="Σίγαση"/>
+	<phrase n="lang_F_ABORT" t="ESC"/>
+	<phrase n="lang_F_ABORT_typeSio" t="Έξοδος"/>
+	<phrase n="lang_F_SUPPORT" t="Βοήθεια"/>
+	<phrase n="lang_F_JUMP_BACK" t="Πίσω"/>
+	<phrase n="lang_F_JUMP" t="Πίσω"/>
+	<phrase n="lang_F_REDUCED" t="Ελαχιστοποίηση"/>
+	<phrase n="lang_F_ALL" t="Μεγιστοποίηση"/>
+	<phrase n="lang_F_DIALOG" t="Κλήσεις"/>
+	<phrase n="lang_F_DIALOG_typeSio" t="Επίβλεψη Κλήσης"/>
+	<phrase n="lang_F_DIALOG_smartlabel" t="Κλήσεις"/>
+	<phrase n="lang_F_HEADSET" t="Ακουστ"/>
+	<phrase n="lang_F_HEADSET_typeSio" t="Κεγαλόφωνο"/>
+	<phrase n="lang_F_HEADSET_smartlabel" t="Κεφαλόφ"/>
+	<phrase n="lang_F_HEADSET_ON" t="Ακουστ"/>
+	<phrase n="lang_F_HEADSET_ON_typeSio" t="Κεγαλόφωνο"/>
+	<phrase n="lang_F_HEADSET_ON_smartlabel" t="Κεφαλόφ"/>
+	<phrase n="lang_F_SOFTWARE_UPDATE" t="Αναβαθ"/>
+	<phrase n="lang_F_UPDATE" t="Αναβάθ"/>
+	<phrase n="lang_F_SMS" t="SMS"/>
+	<phrase n="lang_F_CMC" t="CMC"/>
+	<phrase n="lang_F_CALL_COMPLETION" t="ΤερΚλ"/>
+	<phrase n="lang_F_UNMUTE" t="ΜηΣιγή"/>
+	<phrase n="lang_F_UNMUTE_typeSio" t="Άρση Σίγασης"/>
+	<phrase n="lang_F_UNMUTE_smartlabel" t="ΜηΣίγαση"/>
+	<phrase n="lang_F_MUTE" t="Σίγαση"/>
+	<phrase n="lang_F_MUTE_typeSio" t="Σίγαση"/>
+	<phrase n="lang_F_MUTE_smartlabel" t="Σίγαση"/>
+	<phrase n="lang_F_REG_ACTIVATE" t="Ενεργοποίηση"/>
+	<phrase n="lang_F_ADD_PHONEBOOK" t="Προσθ"/>
+	<phrase n="lang_F_ADD_PHONEBOOK_typeSio" t="Προσθήκη Επαφής"/>
+	<phrase n="lang_F_LIST_MISSED" t="Αναπάντ"/>
+	<phrase n="lang_F_LIST_TAKEN" t="Εισερχόμ"/>
+	<phrase n="lang_F_LIST_TAKEN_typeSio" t="Received Calls"/>
+	<phrase n="lang_F_LIST_TAKEN_smartlabel" t="Received"/>
+	<phrase n="lang_F_DETAILS" t="Λεπτομέρειες"/>
+	<phrase n="lang_F_DND_OFF" t="DND"/>
+	<phrase n="lang_F_DND_OFF_typeSio" t="Μην Ενοχλείτε"/>
+	<phrase n="lang_F_DND_OFF_smartlabel" t="ΜηνΕνοχλ"/>
+	<phrase n="lang_F_DND" t="DND"/>
+	<phrase n="lang_F_DND_typeSio" t="Μην Ενοχλείτε"/>
+	<phrase n="lang_F_DND_smartlabel" t="ΜηνΕνοχλ"/>
+	<phrase n="lang_F_DEF_ON" t="*Ενεργό"/>
+	<phrase n="lang_F_DEF_OFF" t="*Ανενεργό"/>
+	<phrase n="lang_F_ON" t="Ενεργό"/>
+	<phrase n="lang_F_OFF" t="Ανενερ"/>
+	<phrase n="lang_F_START" t="Έναρξη"/>
+	<phrase n="lang_F_END" t="Τερματισμός"/>
+	<phrase n="lang_F_IDENTITY" t="Ταυτότητα"/>
+	<phrase n="lang_F_SETTINGS_typeSio" t="Ρυθμίσεις"/>
+	<phrase n="lang_F_SETTINGS" t="Ρυθμίσεις"/>
+	<phrase n="lang_F_EXECUTIVE_ASSISTANT_CONFIG" t="Ρύθμιση Γραμματέα-Διευθυντή"/>
+	<phrase n="lang_F_EXECUTIVE_CONFIG" t="Ρυθμ.&lt;br&gt;Διευθ"/>
+	<phrase n="lang_F_EXECUTIVE_CONFIG_typeSio" t="Exececutive Config"/>
+	<phrase n="lang_F_ASSISTANT_CONFIG" t="Ρυθμ.&lt;br&gt;Γραμμ"/>
+	<phrase n="lang_F_ASSISTANT_CONFIG_typeSio" t="Assistant Config"/>
+	<phrase n="lang_F_EXEC_ASSIST_BEHALF_PUI_LISTING" t="Ρύθμιση Γραμματέα-Διευθυντή"/>
+	<phrase n="lang_F_EXEC_ASSIST_BEHALF" t="Κλήση εκ μέρους του"/>
+	<phrase n="lang_F_NEW" t="Νέο"/>
+	<phrase n="lang_F_URLU" t="a»A"/>
+	<phrase n="lang_F_URLU_typeSio" t="Μορφή Κειμένου"/>
+	<phrase n="lang_F_URLL" t="1»a"/>
+	<phrase n="lang_F_URLL_typeSio" t="Μορφή Κειμένου"/>
+	<phrase n="lang_F_123" t="A»1"/>
+	<phrase n="lang_F_123_typeSio" t="Μορφή Κειμένου"/>
+	<phrase n="lang_F_REDIRECT" t="Προώθ"/>
+	<phrase n="lang_F_REDIRECT_typeSio" t="Εκτροπή Κλήσης"/>
+	<phrase n="lang_F_HOLD_typeSio" t="Αναμονή"/>
+	<phrase n="lang_F_HOLD" t="Αναμονή"/>
+	<phrase n="lang_F_CONSULTCONF_ADD" t="Προσθ"/>
+	<phrase n="lang_F_CONSULTCONF_ADD_typeSio" t="Προσθ.σε Διάσκ"/>
+	<phrase n="lang_F_CONSULTCONF_ADD_smartlabel" t="Προσθήκη"/>
+	<phrase n="lang_F_CONSULTCONF_JOIN" t="Συμμετ"/>
+	<phrase n="lang_F_CONSULTCONF_JOIN_typeSio" t="Συμμετ.σε Διασκ"/>
+	<phrase n="lang_F_CONSULTCONF_JOIN_smartlabel" t="Συμμετοχ"/>
+	<phrase n="lang_F_CONSULTCONF" t="Συνδιάσκεψη"/>
+	<phrase n="lang_F_CONFERENCE" t="Συνδ"/>
+	<phrase n="lang_F_CONFERENCE_smartlabel" t="Συνδ"/>
+	<phrase n="lang_F_CONFERENCE_typeSio" t="Συνδιάσκεψη"/>
+	<phrase n="lang_F_CONFERENCE_ON" t="Συνδιάσκεψη σε Αναμονή"/>
+	<phrase n="lang_F_NO_CONFERENCE" t="καμ.Συνδ."/>
+	<phrase n="lang_F_DEFLECT" t="Εκτροπή"/>
+	<phrase n="lang_F_BLIND_TRANSFER" t="Άμεση"/>
+	<phrase n="lang_F_BLIND_TRANSFER_typeSio" t="Άμεση Μεταφορά"/>
+	<phrase n="lang_F_TRANSFER" t="Μεταφ"/>
+	<phrase n="lang_F_TRANSFER_typeSio" t="Μεταφορά"/>
+	<phrase n="lang_F_TRANSFER_smartlabel" t="Μεταφ"/>
+	<phrase n="lang_F_TRANSFER_CALL" t="Μεταφορά της Κλήσης"/>
+	<phrase n="lang_F_TRANSFER_SELECTED" t="Μεταφορά Επιλέχθηκε"/>
+	<phrase n="lang_F_DENY" t="Απόρριψη"/>
+	<phrase n="lang_F_DIAL" t="Κλήση"/>
+	<phrase n="lang_F_EDIT" t="Επεξεργασία"/>
+	<phrase n="lang_F_CLEAR" t="Διαγραφή"/>
+	<phrase n="lang_F_DOWN" t="Κάτω"/>
+	<phrase n="lang_F_UP" t="Επάνω"/>
+	<phrase n="lang_F_LEFT" t="Αριστερά"/>
+	<phrase n="lang_F_RIGHT" t="Δεξιά"/>
+	<phrase n="lang_F_EXTENSION" t="Έξοδος"/>
+	<phrase n="lang_F_EXTENSION_typeSio" t="Εσωτερικό"/>
+	<phrase n="lang_F_EXTENSION_smartlabel" t="Έξοδος"/>
+	<phrase n="lang_F_MESSAGE" t="Μήνυμα"/>
+	<phrase n="lang_F_CONTACT_STATE_UNKNOWN" t="Άγνωστο"/>
+	<phrase n="lang_F_CONTACT_STATE_AVAILABLE" t="Διαθέσιμος"/>
+	<phrase n="lang_F_CONTACT_STATE_AVAILABLE_ON_MOBILE" t="Διαθέσιμος(Κινητό)"/>
+	<phrase n="lang_F_CONTACT_STATE_AVAILABLE_AT_DESK" t="Διαθέσιμος(Γραφείο)"/>
+	<phrase n="lang_F_CONTACT_STATE_INACTIVE" t="Ανενεργό"/>
+	<phrase n="lang_F_CONTACT_STATE_BUSY" t="Κατειλημμένο"/>
+	<phrase n="lang_F_CONTACT_STATE_URGENT_INTERRUPTIONS_ONLY" t="Μόνο Επείγουσα Διακοπή"/>
+	<phrase n="lang_F_CONTACT_STATE_IN_A_CALL" t="Σε Κλήση"/>
+	<phrase n="lang_F_CONTACT_STATE_IN_A_CONFERENCE" t="In a Conference"/>
+	<phrase n="lang_F_CONTACT_STATE_IN_A_MEETING" t="Σε Συνάντηση"/>
+	<phrase n="lang_F_CONTACT_STATE_MEETING" t="Συνάντηση"/>
+	<phrase n="lang_F_CONTACT_STATE_HOLDING" t="Αναμονή"/>
+	<phrase n="lang_F_CONTACT_STATE_DND" t="Μην Ενοχλείτε"/>
+	<phrase n="lang_F_CONTACT_STATE_DND_ALL" t="Μην Ενοχλείτε(Όλες)"/>
+	<phrase n="lang_F_CONTACT_STATE_DND_SELF" t="Μην Ενοχλείτε"/>
+	<phrase n="lang_F_CONTACT_STATE_BE_RIGHT_BACK" t="Επιστρέφω σε Λίγο"/>
+	<phrase n="lang_F_CONTACT_STATE_AWAY" t="Εκτός"/>
+	<phrase n="lang_F_CONTACT_STATE_OFFLINE" t="Αποσυνδεμένος"/>
+	<phrase n="lang_F_CONTACT_STATE_INVISIBLE" t="Invisible"/>
+	<phrase n="lang_F_CONTACT_STATE_GROUP" t="Group"/>
+	<phrase n="lang_F_KEYEVENT" t="Πλήκ."/>
+	<phrase n="lang_F_KEYEVENT_typeSio" t="ΛειτουργΠλήκρου"/>
+	<phrase n="lang_F_KEYEVENT_short" t="Πλήκτρο"/>
+	<phrase n="lang_F_XML" t="XML"/>
+	<phrase n="lang_continuous_text_speed_dial" t="Ταχεία Κλήση"/>
+	<phrase n="lang_continuous_text_reboot" t="Επανεκκίνηση"/>
+	<phrase n="lang_continuous_text_network_restart" t="Network restart"/>
+	<phrase n="lang_continuous_text_search" t="Αναζήτηση"/>
+	<phrase n="lang_continuous_text_cancel" t="Άκυρο"/>
+	<phrase n="lang_continuous_text_yes" t="Ναι"/>
+	<phrase n="lang_continuous_text_no" t="Όχι"/>
+	<phrase n="lang_confirm_reboot" t="Επανεκκίνηση;"/>
+	<phrase n="lang_on" t="Ενεργό"/>
+	<phrase n="lang_off" t="Ανενεργό"/>
+	<phrase n="lang_busy" t="Κατειλημμένο"/>
+	<phrase n="lang_short" t="Σύντομο"/>
+	<phrase n="lang_full" t="Πλήρες"/>
+	<phrase n="lang_half" t="Μισό"/>
+	<phrase n="lang_F_HOLD_PRIVATE" t="Αναμον"/>
+	<phrase n="lang_F_HOLD_PRIVATE_typeSio" t="ΑναμονήΠροσωπικ"/>
+	<phrase n="lang_F_HOLD_PRIVATE_smartlabel" t="ΑναμΠροσ"/>
+	<phrase n="lang_conference_off" t="ΑνμΣνδ"/>
+	<phrase n="lang_conference_off_typeSio" t="ΣυνδιάσκεψηOff"/>
+	<phrase n="lang_edit_cmc" t="Κωδικός κατηγορίας πελάτη:"/>
+	<phrase n="lang_dnd" t="DND"/>
+	<phrase n="lang_red" t="Προώθ"/>
+	<phrase n="lang_red_typeSio" t="Εκτροπή Κλήσης"/>
+	<phrase n="lang_missed" t="Αναπάντητες: "/>
+	<phrase n="lang_missed_typeSio" t="Αναπάντητες: "/>
+	<phrase n="lang_edit" t="Επεξεργασία"/>
+	<phrase n="lang_F_EDIT_AND_DIAL" t="Επεξερ"/>
+	<phrase n="lang_F_EDIT_AND_DIAL_typeSio" t="Επεξ &amp; Κλήσ"/>
+	<phrase n="lang_edit_dial" t="Επεξ &amp; Κλήση"/>
+	<phrase n="lang_dhcp" t="DHCP"/>
+	<phrase n="lang_enum" t="ENUM"/>
+	<phrase n="lang_mwi_mailbox1" t="Θυρίδα του:"/>
+	<phrase n="lang_mwi_mailbox2" t="Έχετε"/>
+	<phrase n="lang_mwi_mailbox3" t="Έχετε μηνύματα."/>
+	<phrase n="lang_mwi_urgent" t="επείγων"/>
+	<phrase n="lang_mwi_goto_mailbox" t="Πηγαίνετε στη Θυρίδα;"/>
+	<phrase n="lang_challenge_user" t="Όνομα χρήστη"/>
+	<phrase n="lang_challenge_pw" t="Κωδικός χρήστη"/>
+	<phrase n="lang_use_enum" t="Χρήση ENUM;"/>
+	<phrase n="lang_wiz_dhcp" t="Χρησιμοποιείτε DHCP;"/>
+	<phrase n="lang_wiz_l2tp_ip_adr" t="L2TP IP Adr:"/>
+	<phrase n="lang_wiz_ip_adr" t="Διεύθ.IP:"/>
+	<phrase n="lang_wiz_mac" t="MAC:"/>
+	<phrase n="lang_wiz_wifi_mac" t="Wi-Fi MAC:"/>
+	<phrase n="lang_wiz_version" t="Έκδοση:"/>
+	<phrase n="lang_wiz_netmask" t="Netmask:"/>
+	<phrase n="lang_wiz_gateway" t="IP Gateway:"/>
+	<phrase n="lang_wiz_dns_server" t="DNS Server:"/>
+	<phrase n="lang_wiz_welcome" t="Καλώς ορίσατε! Πιέστε ένα πλήκτρο για να συνδεθείτε."/>
+	<phrase n="lang_wiz_http_user" t="Enter new HTTP username"/>
+	<phrase n="lang_wiz_http_pass" t="Enter new HTTP password"/>
+	<phrase n="lang_wiz_short_pass" t="Password too short"/>
+	<phrase n="lang_terminated_finished" t="Αποσυνδέθηκε"/>
+	<phrase n="lang_try_parking" t="Στάθμευση κλήσης"/>
+	<phrase n="lang_try_parking_typeSio" t="Στάθμευση κλήσης"/>
+	<phrase n="lang_holding" t="Κλήσεις σε Αναμονή: "/>
+	<phrase n="lang_select_list" t="Ιστορικό Κλήσεων"/>
+	<phrase n="lang_list_all" t="Όλα"/>
+	<phrase n="lang_list_new" t="Νέο"/>
+	<phrase n="lang_list_old" t="Παλία"/>
+	<phrase n="lang_list_missed" t="Αναπάντητες"/>
+	<phrase n="lang_list_taken" t="Εισερχόμενες"/>
+	<phrase n="lang_list_dialed" t="Εξερχόμενες"/>
+	<phrase n="lang_list_no_data" t="(Μη διαθέσιμα στοιχεία)"/>
+	<phrase n="lang_list_details" t="Λεπτομέρειες"/>
+	<phrase n="lang_list_details_time" t="Ώρα:"/>
+	<phrase n="lang_list_details_duration" t="Διάρκεια:"/>
+	<phrase n="lang_list_details_costs" t="Κοστίζει:"/>
+	<phrase n="lang_list_details_missed" t="Αναπάντητες:"/>
+	<phrase n="lang_list_details_to" t="Σε:"/>
+	<phrase n="lang_list_details_from" t="Από:"/>
+	<phrase n="lang_reg_activate" t="Ενεργοποίηση"/>
+	<phrase n="lang_reg_account" t="Λογαριασμός:"/>
+	<phrase n="lang_reg_registrar" t="Registrar:"/>
+	<phrase n="lang_reg_explanation_failed" t="Αποτυχία εγγραφής"/>
+	<phrase n="lang_reg_explanation_registering" t="Εγγραφή"/>
+	<phrase n="lang_reg_explanation_registered" t="Εγγεγραμμένος"/>
+	<phrase n="lang_menu_info_320" t="Πληροφορίες"/>
+	<phrase n="lang_menu_conf_reset" t="Επαναφορά"/>
+	<phrase n="lang_menu_gen_contrast" t="Αντίθεση"/>
+	<phrase n="lang_menu_gen_ringtone" t="Ήχος κλήσης"/>
+	<phrase n="lang_menu_web_webserver_type" t="Server"/>
+	<phrase n="lang_menu_function_key" t="Πλήκτρα Λειτουργιών"/>
+	<phrase n="lang_menu_tser_timer" t="Χρονόμετρο"/>
+	<phrase n="lang_menu_red_target" t="Προορισμός"/>
+	<phrase n="lang_menu_ringer1" t="Ήχος κλήσης 1"/>
+	<phrase n="lang_menu_ringer2" t="Ήχος κλήσης 2"/>
+	<phrase n="lang_menu_ringer3" t="Ήχος κλήσης 3"/>
+	<phrase n="lang_menu_ringer4" t="Ήχος κλήσης 4"/>
+	<phrase n="lang_menu_ringer5" t="Ήχος κλήσης 5"/>
+	<phrase n="lang_menu_ringer6" t="Ήχος κλήσης 6"/>
+	<phrase n="lang_menu_ringer7" t="Ήχος κλήσης 7"/>
+	<phrase n="lang_menu_ringer8" t="Ήχος κλήσης 8"/>
+	<phrase n="lang_menu_ringer9" t="Ήχος κλήσης 9"/>
+	<phrase n="lang_menu_ringer10" t="Ήχος κλήσης 10"/>
+	<phrase n="lang_vol_headset" t="Ένταση Κεφαλόφωνου"/>
+	<phrase n="lang_vol_handset" t="Ένταση Ακουστικού"/>
+	<phrase n="lang_vol_speaker" t="Ένταση Ηχείου"/>
+	<phrase n="lang_audio_speaker" t="Ηχείο"/>
+	<phrase n="lang_audio_handset" t="Ακουστικό"/>
+	<phrase n="lang_audio_headset" t="Κεγαλόφωνο"/>
+	<phrase n="lang_vol_contrast" t="Αντίθεση οθόνης"/>
+	<phrase n="lang_confirm_factory" t="Επαναφορά εργοστασιακών ρυθμίσεων;"/>
+	<phrase n="lang_confirm_logoff_all" t="Αποσύνδεση χρηστών;"/>
+	<phrase n="lang_calling" t="Καλεί"/>
+	<phrase n="lang_connected" t="Συνδεδεμένο"/>
+	<phrase n="lang_connected_typeSio" t="Συνδεδεμένο"/>
+	<phrase n="lang_ringing" t="Χτυπάει"/>
+	<phrase n="lang_enter_number" t="Εισάγετε αριθμό"/>
+	<phrase n="lang_held_by" t="Κρατημένη από: "/>
+	<phrase n="lang_ok" t="[Ok;]"/>
+	<phrase n="lang_menu100_phone_book" t="Κατάλογος"/>
+	<phrase n="lang_menu100_ldap_book" t="Πρόσβαση LDAP"/>
+	<phrase n="lang_menu100_call_lists" t="Ιστορικό κλήσεων"/>
+	<phrase n="lang_menu100_settings" t="Ρυθμίσεις"/>
+	<phrase n="lang_sel100_logoff_all" t="Αποσύνδεση όλων"/>
+	<phrase n="lang_sel100_logoff_one" t="Αποσύνδεση"/>
+	<phrase n="lang_sel100_activeline" t="Επιλογή Εξερχόμενης"/>
+	<phrase n="lang_sel100_admin_mode" t="Λειτουργία διαχειριστή"/>
+	<phrase n="lang_sel100_user_mode" t="Λειτουργία χρήστη"/>
+	<phrase n="lang_sel100_net_info" t="Πληροφορίες Net"/>
+	<phrase n="lang_sel100_mem_info" t="Πληροφορίες Mem"/>
+	<phrase n="lang_menu_ringtone" t="Ήχος κλήσης"/>
+	<phrase n="lang_dnd_active" t="DND ενεργό"/>
+	<phrase n="lang_update" t="SW"/>
+	<phrase n="lang_update_a" t="Αναβάθμιση;"/>
+	<phrase n="lang_update_reboot" t="Επανεκκίνηση για αναβάθμιση"/>
+	<phrase n="lang_unplugged" t="Αποσυνδεμένο"/>
+	<phrase n="lang_ethernet_cable" t="Ethernet αποσυνδεδεμένο"/>
+	<phrase n="lang_hid_plug" t="HID συσκευή συνδέεται"/>
+	<phrase n="lang_hid_connected" t="HID συσκευή συνδεδεμένη"/>
+	<phrase n="lang_hid_disconnected" t="HID συσκευή αποσυνδεμένη"/>
+	<phrase n="lang_temperature" t="Temperature"/>
+	<phrase n="lang_temperature_connected" t="Temperature sensor connected"/>
+	<phrase n="lang_language" t="Γλώσσα"/>
+	<phrase n="lang_current_date" t="Ημερομηνία"/>
+	<phrase n="lang_current_time" t="Ώρα"/>
+	<phrase n="lang_network_settings" t="Δίκτυο"/>
+	<phrase n="lang_dns_domain" t="DNS Domain"/>
+	<phrase n="lang_dns_server1" t="DNS Server1"/>
+	<phrase n="lang_dns_server2" t="DNS Server2"/>
+	<phrase n="lang_ntp_server" t="NTP Server"/>
+	<phrase n="lang_no_ip_adr" t="Μη έγκυρη IP"/>
+	<phrase n="lang_password" t="Κωδικός"/>
+	<phrase n="lang_username" t="Όνομα χρήστη"/>
+	<phrase n="lang_reset_settings" t="Επαναφορά"/>
+	<phrase n="lang_networkadvanced_settings" t="Προηγμένο"/>
+	<phrase n="lang_admin_mode_password" t="Κωδικός Λειτουργίας Διαχειριστή"/>
+	<phrase n="lang_guess_number" t="ΓρήγορηΑναγν"/>
+	<phrase n="lang_guess_number_len" t="ΓρήγορηΑνάγνωση 'Εναρξη"/>
+	<phrase n="lang_admin_mode_pwd" t="ΚωδΛειτΔιαχ"/>
+	<phrase n="lang_call_waiting" t="Αναμονή Κλήσης"/>
+	<phrase n="lang_menu100_red_time" t="Ώρα προώθησης κλήσης"/>
+	<phrase n="lang_menu100_red_time_typeSio" t="Ώρα προώθησης κλήσης"/>
+	<phrase n="lang_menu100_timezone" t="Ζώνη ώρας"/>
+	<phrase n="lang_menu100_dialtone" t="Tone Scheme"/>
+	<phrase n="lang_menu100_call_completion" t="Ολοκλήρωση Κλήσης"/>
+	<phrase n="lang_menu100_cc_waiting" t="Αναμονή: "/>
+	<phrase n="lang_menu100_cc_dial" t="Κλήση: "/>
+	<phrase n="lang_menu100_netmask" t="Netmask"/>
+	<phrase n="lang_menu100_gateway" t="IP Gateway"/>
+	<phrase n="lang_menu100_webserver_type" t="Τύπος Webserver"/>
+	<phrase n="lang_enum100_disp_always" t="Πάντα"/>
+	<phrase n="lang_enum100_disp_on" t="Ενεργό"/>
+	<phrase n="lang_enum100_disp_off" t="Ανενεργό"/>
+	<phrase n="lang_enum_disp_webserver_off" t="Ανενεργό"/>
+	<phrase n="lang_enum_disp_webserver_http" t="Μόνο HTTP"/>
+	<phrase n="lang_enum_disp_webserver_https" t="Μόνο HTTPS"/>
+	<phrase n="lang_enum_disp_webserver_http_https" t="HTTP &amp; HTTPS"/>
+	<phrase n="lang_enum_disp_func_key_destination" t="Εσωτερικό"/>
+	<phrase n="lang_enum_disp_func_key" t="Πλήκτρο"/>
+	<phrase n="lang_xsi_silent_alert" t="Σιωπηλή Ειδοποίηση"/>
+	<phrase n="lang_privacy_out" t="Απόκρυψη αριθμού"/>
+	<phrase n="lang_quick_transfer" t="Quick transfer"/>
+	<phrase n="lang_quick_transfer_newcall" t="Make new call"/>
+	<phrase n="lang_quick_transfer_blind" t="Blind xfer"/>
+	<phrase n="lang_quick_transfer_attended" t="Attended xfer"/>
+	<phrase n="lang_privacy_in" t="Απόρριψη ανώνυμων"/>
+	<phrase n="lang_privacy_in_typeSio" t="Απόρριψη ανώνυμων"/>
+	<phrase n="lang_auto_dial" t="Αυτόματη Κλήση"/>
+	<phrase n="lang_call_completion" t="Ολοκλήρωση Κλήσης"/>
+	<phrase n="lang_vlan_id" t="VLAN ID (1-4094)"/>
+	<phrase n="lang_vlan_qos" t="Προτεραιότητα VLAN (0-7)"/>
+	<phrase n="lang_vlan_reset" t="Επαναφορά VLAN"/>
+	<phrase n="lang_vlan_port_tagging" t="VLAN tagging on LAN"/>
+	<phrase n="lang_vlan_pc_id" t="VLAN ID on LAN port"/>
+	<phrase n="lang_identity_settings" t="Ταυτότητα"/>
+	<phrase n="lang_preferences_settings" t="Προτιμήσεις"/>
+	<phrase n="lang_maintenance_settings" t="Συντήρηση"/>
+	<phrase n="lang_auto_connect_indication" t="Ένδειξη Αυτόματης Απάντησης"/>
+	<phrase n="lang_sel100_reregister_line" t="Καταχωρήση εκ νέου"/>
+	<phrase n="lang_sel100_edit_line" t="Επεξεργασία Χρήστη"/>
+	<phrase n="lang_enum_disp_cw_visual" t="Μόνο Οπτικά"/>
+	<phrase n="lang_enum_disp_cw_visual_short" t="Οπτικά"/>
+	<phrase n="lang_enum_disp_cw_ringer" t="Ήχος κλήσης"/>
+	<phrase n="lang_confirm_del_adr_item" t="Σίγουρα;"/>
+	<phrase n="lang_confirm_del_adr_item_title" t="Διαγραφή στοιχείου καταλόγου"/>
+	<phrase n="lang_confirm_del_adr_item_title_typeSio" t="Διαγραφή στοιχείου καταλόγου"/>
+	<phrase n="lang_confirm_del_adr_title" t="Διαγραφή καταλόγου"/>
+	<phrase n="lang_confirm_del_adr_item_title_short" t="Διαγραφή στοιχείου καταλόγου"/>
+	<phrase n="lang_vol_ringer" t="Ένταση Ήχου"/>
+	<phrase n="lang_keybd_unlock_PIN" t="PIN ξεκλειδ.πληκτρ."/>
+	<phrase n="lang_enum_disp_func_key_mult" t="Κοινόχρηστη Γραμμή"/>
+	<phrase n="lang_enum_disp_func_key_keyevent" t="ΛειτουρΠλήκτρου"/>
+	<phrase n="lang_menu_ringer_silent" t="Ησυχία"/>
+	<phrase n="lang_menu_ringer_custom" t="Διαμόρφωση"/>
+	<phrase n="lang_enum_disp_func_key_none" t="Κανένα"/>
+	<phrase n="lang_presence_online" t="Συνδεδεμένος"/>
+	<phrase n="lang_presence_busy" t="Κατειλημμένος"/>
+	<phrase n="lang_presence_invisible" t="Αόρατο"/>
+	<phrase n="lang_presence_title" t="Κατάσταση Παρουσίας"/>
+	<phrase n="lang_dialog_title" t="Κλήσεις"/>
+	<phrase n="lang_buddies_title" t="Επαφές"/>
+	<phrase n="lang_use_backlight" t="Οπίσθιος φωτισμός"/>
+	<phrase n="lang_backlight_on_activity" t="Φως κατά τη Χρήση"/>
+	<phrase n="lang_backlight_when_idle" t="Φως σε Αδράνεια"/>
+	<phrase n="lang_activity" t="Χρήση"/>
+	<phrase n="lang_display_settings" t="Οθόνη"/>
+	<phrase n="lang_audio_settings" t="Ήχος"/>
+	<phrase n="lang_redirect_settings" t="Προώθηση κλήσεων"/>
+	<phrase n="lang_redirect_settings_typeSio" t="Προώθηση κλήσεων"/>
+	<phrase n="lang_reboot_required" t="Απαιτείται επανεκκίνηση"/>
+	<phrase n="lang_network_restart_required" t="Network restart required"/>
+	<phrase n="lang_auto_redialing" t="Επανάκληση"/>
+	<phrase n="lang_conference" t="Συνδιάσκεψη"/>
+	<phrase n="lang_directory_search" t="Αναζήτηση Καταλόγου"/>
+	<phrase n="lang_wrong_pw" t="Λάθος Κωδικός"/>
+	<phrase n="lang_http_password_not_set" t="ΟρίστεΚωδΠρόσβ HTTP"/>
+	<phrase n="lang_start_auto_redial" t="ΑυτόμΕπανάκλ;"/>
+	<phrase n="lang_call_features_settings" t="ΧαρακτΚλήσης"/>
+	<phrase n="lang_all" t="All"/>
+	<phrase n="lang_outgoing_calls_settings" t="Εξερχόμενες"/>
+	<phrase n="lang_incoming_calls_settings" t="Εισερχόμενες"/>
+	<phrase n="lang_ip_settings_wizzard" t="Ρυθμίσεις IP"/>
+	<phrase n="lang_webserver_settings" t="Webserver"/>
+	<phrase n="lang_vlan_settings" t="VLAN"/>
+	<phrase n="lang_wlan_settings" t="WLAN"/>
+	<phrase n="lang_wifi_reboot_to_connect_to" t="Reboot to connect to"/>
+	<phrase n="lang_system_information_menu" t="Πληροφορίες συστήματος"/>
+	<phrase n="lang_its_a_caller_info" t="Καλών"/>
+	<phrase n="lang_its_a_callee_info" t="Καλούμενος"/>
+	<phrase n="lang_redirect_all" t="Προώθηση Όλων"/>
+	<phrase n="lang_redirect_all_typeSio" t="Προώθηση Όλων"/>
+	<phrase n="lang_redirect_busy" t="Προώθηση όταν Κατειλημμένο"/>
+	<phrase n="lang_redirect_busy_typeSio" t="Προώθηση όταν Κατειλημμένο"/>
+	<phrase n="lang_redirect_time" t="Προώθηση Αναπάντητων"/>
+	<phrase n="lang_redirect_time_typeSio" t="Προώθηση Αναπάντητων"/>
+	<phrase n="lang_do_redirect" t="Ενεργοποίηση Προώθησης"/>
+	<phrase n="lang_do_redirect_typeSio" t="Ενεργοποίηση Προώθησης"/>
+	<phrase n="lang_redirect_target" t="Στόχος Εκτροπής"/>
+	<phrase n="lang_redirect_target_typeSio" t="Στόχος Εκτροπής"/>
+	<phrase n="lang_help_label" t="Βοήθεια"/>
+	<phrase n="lang_sysinfo_mem1" t="RAM:"/>
+	<phrase n="lang_sysinfo_mem2" t="του"/>
+	<phrase n="lang_sysinfo_mem3" t="διαθέσιμα"/>
+	<phrase n="lang_goto_phonepage_msg" t="Ρυθμίσετε το τηλέφωνό σας, μέσω του Web περιηγητή σας:"/>
+	<phrase n="lang_goto_phonepage_msg_typeSio" t="Ρυθμίσετε το τηλέφωνό σας, μέσω του Web περιηγητή σας:"/>
+	<phrase n="lang_goto_help_msg" t="Για βοήθεια επισκεφτείτε:"/>
+	<phrase n="lang_linestate_connected" t="κατειλημμένο"/>
+	<phrase n="lang_linestate_on_hold" t="σε αναμονή"/>
+	<phrase n="lang_linestate_ringing" t="κουδουνίζει"/>
+	<phrase n="lang_linename_message" t="Μήνυμα"/>
+	<phrase n="lang_linename_redial" t="Επανάκληση"/>
+	<phrase n="lang_linename_transfer" t="Μεταφορά"/>
+	<phrase n="lang_linename_rec_on" t="Έναρξη Εγγραφής"/>
+	<phrase n="lang_linename_rec_off" t="Διακοπή Εγγραφής"/>
+	<phrase n="lang_linetype_auto_answer" t="Αυτόματη Απάντηση"/>
+	<phrase n="lang_linetype_blf" t="BLF"/>
+	<phrase n="lang_connecting" t="Συνδέεται"/>
+	<phrase n="lang_fkey_add_contact_typeSio" t="Προσθήκη Επαφής"/>
+	<phrase n="lang_cancelconference" t="Ακύρωση Συνδιάσκεψης"/>
+	<phrase n="lang_confirm_cancelconference" t="Κλείσιμο συνδιάσκεψης;"/>
+	<phrase n="lang_xmlgui_dialnumber" t="Κλήση Αριθμού"/>
+	<phrase n="lang_xmlgui_contactlist" t="Λίστα Επαφών"/>
+	<phrase n="lang_xmlgui_dial" t="Κλήση"/>
+	<phrase n="lang_menu_equalizer" t="Ισοστάθμιστής"/>
+	<phrase n="lang_equalizer_soft" t="Απαλός ήχος"/>
+	<phrase n="lang_equalizer_normal" t="Κανονικός ήχος"/>
+	<phrase n="lang_equalizer_bright" t="Δυνατός ήχος"/>
+	<phrase n="lang_contactpool" t="Συλλογή"/>
+	<phrase n="lang_tb_nickname" t="Ψευδώνυμο"/>
+	<phrase n="lang_tb_number" t="Αριθμός Τηλεφώνου"/>
+	<phrase n="lang_tb_contact" t="Τύπος Επαφής"/>
+	<phrase n="lang_tb_outgoing_id" t="Εξερχόμενη Ταυτότητα"/>
+	<phrase n="lang_tb_firstname" t="Όνομα"/>
+	<phrase n="lang_tb_lastname" t="Επίθετο"/>
+	<phrase n="lang_tb_group" t="Ομάδα"/>
+	<phrase n="lang_day" t="Ημέρα"/>
+	<phrase n="lang_month" t="Μήνας"/>
+	<phrase n="lang_year" t="Έτος"/>
+	<phrase n="lang_tb_title" t="Τίτλος"/>
+	<phrase n="lang_tb_organization" t="Οργανισμός"/>
+	<phrase n="lang_tb_email" t="Email"/>
+	<phrase n="lang_tb_note" t="Σημείωση"/>
+	<phrase n="lang_tb_photo" t="Εικόνα"/>
+	<phrase n="lang_tb_favorite" t="Αγαπημένο"/>
+	<phrase n="lang_linename_transfer_short" t="Μεταφ"/>
+	<phrase n="lang_linetype_key_event_short" t="Πλήκτ"/>
+	<phrase n="lang_linetype_url_short" t="URL"/>
+	<phrase n="lang_grouptype_family" t="Οικογένεια"/>
+	<phrase n="lang_grouptype_friend" t="Φίλος"/>
+	<phrase n="lang_grouptype_collegue" t="Συνάδελφος"/>
+	<phrase n="lang_grouptype_work" t="Δουλειά"/>
+	<phrase n="lang_title_sort" t="Ταξινόμηση κατά"/>
+	<phrase n="lang_title_select_entry" t="Επιλογή Καταχώρησης"/>
+	<phrase n="lang_entry_general" t="Γενικά Στοιχεία"/>
+	<phrase n="lang_title_entry_general" t="Γενικά Στοιχεία του"/>
+	<phrase n="lang_fav_add_from_tbook" t="Προσθήκη από Τηλεφωνικό Κατάλογο"/>
+	<phrase n="lang_redirect_on_timeout" t="εκτροπή σε χρονικό όριο:"/>
+	<phrase n="lang_redirect_on_timeout_typeSio" t="εκτροπή σε χρονικό όριο:"/>
+	<phrase n="lang_redirect_when_busy" t="εκτροπή όταν κατειλημμένο:"/>
+	<phrase n="lang_redirect_when_busy_typeSio" t="εκτροπή όταν κατειλημμένο:"/>
+	<phrase n="lang_sip_disabled" t="SIP απενεργοποιημένο"/>
+	<phrase n="lang_low_memory" t="Λίγη Μνήμη"/>
+	<phrase n="lang_title_error" t="Λάθος"/>
+	<phrase n="lang_error_code" t="κωδικός λάθους:"/>
+	<phrase n="lang_bad_server_response" t="κακή ανταπόκριση server"/>
+	<phrase n="lang_bad_xml_response" t="κακή ανταπόκριση XML…"/>
+	<phrase n="lang_title_loading" t="Φόρτωση"/>
+	<phrase n="lang_active_id" t="Ενεργή Ταυτότητα"/>
+	<phrase n="lang_1st_id" t="1η ταυτότητα"/>
+	<phrase n="lang_2nd_id" t="2η ταυτότητα"/>
+	<phrase n="lang_3rd_id" t="3η ταυτότητα"/>
+	<phrase n="lang_4th_id" t="4η ταυτότητα"/>
+	<phrase n="lang_5th_id" t="5η ταυτότητα"/>
+	<phrase n="lang_6th_id" t="6η ταυτότητα"/>
+	<phrase n="lang_7th_id" t="7η ταυτότητα"/>
+	<phrase n="lang_8th_id" t="8η ταυτότητα"/>
+	<phrase n="lang_9th_id" t="9η ταυτότητα"/>
+	<phrase n="lang_10th_id" t="10η ταυτότητα"/>
+	<phrase n="lang_11th_id" t="11η ταυτότητα"/>
+	<phrase n="lang_12th_id" t="12η ταυτότητα"/>
+	<phrase n="lang_contacttype_vip" t="VIP"/>
+	<phrase n="lang_contacttype_deny" t="φραγή"/>
+	<phrase n="lang_unknown" t="Άγνωστο"/>
+	<phrase n="lang_month_01" t="Ιανουάριος"/>
+	<phrase n="lang_month_02" t="Φεβρουάριος"/>
+	<phrase n="lang_month_03" t="Μάρτιος"/>
+	<phrase n="lang_month_04" t="Απρίλιος"/>
+	<phrase n="lang_month_05" t="Μάιος"/>
+	<phrase n="lang_month_06" t="Ιούνιος"/>
+	<phrase n="lang_month_07" t="Ιούλιος"/>
+	<phrase n="lang_month_08" t="Αύγουστος"/>
+	<phrase n="lang_month_09" t="Σεπτέμβριος"/>
+	<phrase n="lang_month_10" t="Οκτώβριος"/>
+	<phrase n="lang_month_11" t="Νοέμβριος"/>
+	<phrase n="lang_month_12" t="Δεκέμβριος"/>
+	<phrase n="lang_tb_name_label" t="Όνομα"/>
+	<phrase n="lang_tb_number_label" t="Τηλέφωνο"/>
+	<phrase n="lang_title_transfer" t="Μεταφορά Μέρους"/>
+	<phrase n="lang_linestate_label" t="Κατάσταση"/>
+	<phrase n="lang_reboot_uploads" t="Επανεκ.για ενεργοπ.φόρτωσης"/>
+	<phrase n="lang_cc_dial_now" t="Κλήση τώρα;"/>
+	<phrase n="lang_cc_complete_now" t="Ολοκλήρωση κλήσης σε"/>
+	<phrase n="lang_cc_waiting_for" t="Αναμονή ολοκλήρωσης κλήσης σε"/>
+	<phrase n="lang_cc_set_warning" t="η ολοκλήρωση της κλήσης έχει ρυθμιστεί, έχετε δυνατότητα αλλαγής."/>
+	<phrase n="lang_cc_change_title" t="Αλλαγή στόχου ολοκλήρωσης κλήσης;"/>
+	<phrase n="lang_cc_change_message" t="Αλλαγή Στόχου Ολοκλήρωσης με"/>
+	<phrase n="lang_cc_status_waiting_on" t="Αναμονή διαθεσιμότητας %dst"/>
+	<phrase n="lang_cc_activate" t="αναμονή ολοκλήρωσης κλήσης."/>
+	<phrase n="lang_cc_activated" t="αναμονή ολοκλήρωσης κλήσης."/>
+	<phrase n="lang_call_contact" t="Κλήση Επαφής"/>
+	<phrase n="lang_call_work" t="Κλήση Δουλειά"/>
+	<phrase n="lang_call_work_typeSio" t="Κλήση Δουλειά"/>
+	<phrase n="lang_call_mobile" t="Κλήση Κινητό"/>
+	<phrase n="lang_call_home" t="Κλήση Σπίτι"/>
+	<phrase n="lang_call_home_typeSio" t="Κλήση Σπίτι"/>
+	<phrase n="lang_call_other" t="Κλήση Άλλο"/>
+	<phrase n="lang_call_voicemail" t="Κλήση Τηλεφωνητή"/>
+	<phrase n="lang_xfer_to_contact" t="Μεταφορά σε Επαφή"/>
+	<phrase n="lang_xfer_to_work" t="Μεταφορά σε Δουλειά"/>
+	<phrase n="lang_xfer_to_work_typeSio" t="Μεταφορά σε Δουλειά"/>
+	<phrase n="lang_xfer_to_mobile" t="Μεταφορά σε Κινητό"/>
+	<phrase n="lang_xfer_to_home" t="Μεταφορά σε Σπίτι"/>
+	<phrase n="lang_xfer_to_home_typeSio" t="Μεταφορά σε Σπίτι"/>
+	<phrase n="lang_xfer_to_other" t="Μεταφορά σε Άλλο"/>
+	<phrase n="lang_xfer_to_voicemail" t="Μεταφορά σε Τηλεφωνητή"/>
+	<phrase n="lang_cfw_to_contact" t="Προώθηση σε Επαφή"/>
+	<phrase n="lang_cfw_to_contact_typeSio" t="Προώθηση σε Επαφή"/>
+	<phrase n="lang_cfw_to_voicemail_typeSio" t="Προώθηση σε Τηλεφωνητή"/>
+	<phrase n="lang_cfw_to_work" t="Προώθηση στη Δουλειά"/>
+	<phrase n="lang_cfw_to_work_typeSio" t="Προώθηση στη Δουλειά"/>
+	<phrase n="lang_cfw_to_mobile" t="Προώθηση σε Κινητό"/>
+	<phrase n="lang_cfw_to_mobile_typeSio" t="Προώθηση σε Κινητό"/>
+	<phrase n="lang_cfw_to_home" t="Προώθηση σε Σπίτι"/>
+	<phrase n="lang_cfw_to_home_typeSio" t="Προώθηση σε Σπίτι"/>
+	<phrase n="lang_cfw_to_other" t="Προώθηση σε Άλλο"/>
+	<phrase n="lang_cfw_to_other_typeSio" t="Προώθηση σε Άλλο"/>
+	<phrase n="lang_cfw_to_voicemail" t="Προώθηση σε Τηλεφωνητή"/>
+	<phrase n="lang_assign_to_key" t="Αντιστοίχησε στο Πλήκτρο"/>
+	<phrase n="lang_contact_state_unknown" t="Άγνωστο"/>
+	<phrase n="lang_contact_state_available" t="Διαθέσιμος"/>
+	<phrase n="lang_contact_state_available_on_mobile" t="Διαθέσιμος (Κινητό)"/>
+	<phrase n="lang_contact_state_available_at_desk" t="Διαθέσιμος(Γραφείο)"/>
+	<phrase n="lang_contact_state_inactive" t="Ανενεργό"/>
+	<phrase n="lang_contact_state_busy" t="Κατειλημμένο"/>
+	<phrase n="lang_contact_state_urgent_interruptions_only" t="Μόνο Επείγουσα Διακοπή"/>
+	<phrase n="lang_contact_state_in_a_call" t="Σε κλήση"/>
+	<phrase n="lang_contact_state_in_a_meeting" t="Σε Συνάντηση"/>
+	<phrase n="lang_contact_state_meeting" t="Συνάντηση"/>
+	<phrase n="lang_contact_state_holding" t="Σε αναμονή"/>
+	<phrase n="lang_contact_state_dnd" t="Μην Ενοχλείτε"/>
+	<phrase n="lang_contact_state_dnd_all" t="Μην Ενοχλείτε(Όλες)"/>
+	<phrase n="lang_contact_state_dnd_self" t="Μην Ενοχλείτε"/>
+	<phrase n="lang_contact_state_be_right_back" t="Επιστρέφω σε Λίγο"/>
+	<phrase n="lang_contact_state_away" t="Εκτός"/>
+	<phrase n="lang_contact_state_offline" t="Εκτός σύνδεσης"/>
+	<phrase n="lang_contact_state_reset" t="Επαναφορά Κατάστασης"/>
+	<phrase n="lang_remote_book_name_ldap" t="LDAP Κατάλογος"/>
+	<phrase n="lang_remote_book_choose_title" t="Επιλογή Τηλεφωνικού καταλόγου"/>
+	<phrase n="lang_title_add_to_favorites" t="Προσθήκη στα Αγαπημένα"/>
+	<phrase n="lang_title_add_to_favorites_typeSio" t="Προσθήκη στα Αγαπημένα"/>
+	<phrase n="lang_title_favorites" t="Αγαπημένα"/>
+	<phrase n="lang_unknown_partner" t="Άγνωστο"/>
+	<phrase n="lang_nrtype_sip" t="SIP"/>
+	<phrase n="lang_nrtype_business" t="Εταιρικό"/>
+	<phrase n="lang_nrtype_fixed" t="Σταθερό"/>
+	<phrase n="lang_nrtype_extension" t="Εσωτερικό"/>
+	<phrase n="lang_tb_number_type" t="Τύπος Αριθμού"/>
+	<phrase n="lang_tb_number_type_label" t="Τύπος"/>
+	<phrase n="lang_title_no_permission" t="Χωρίς Έγκριση"/>
+	<phrase n="lang_target_office" t="Γραφείο"/>
+	<phrase n="lang_target_replyto" t="ΑπάντησηΣε"/>
+	<phrase n="lang_target_unqualified" t="Χωρίς έγκριση"/>
+	<phrase n="lang_target_work" t="Δουλειά"/>
+	<phrase n="lang_target_work_typeSio" t="Δουλειά"/>
+	<phrase n="lang_target_mobile" t="Κινητό"/>
+	<phrase n="lang_target_home" t="Σπίτι"/>
+	<phrase n="lang_target_home_typeSio" t="Σπίτι"/>
+	<phrase n="lang_target_other" t="Άλλο"/>
+	<phrase n="lang_target_voicemail" t="Τηλεφωνητής"/>
+	<phrase n="lang_target_new_number" t="Νέος αριθμός"/>
+	<phrase n="lang_target_contact" t="Επαφή"/>
+	<phrase n="lang_directory_too_big_to_import__long" t="Μεγάλος Απομακρυσμένος κατάλογος"/>
+	<phrase n="lang_target_cancel" t="Μην Προωθείς κλήσεις"/>
+	<phrase n="lang_target_cancel_typeSio" t="Μην Προωθείς κλήσεις"/>
+	<phrase n="lang_target_forward" t="Προώθηση Κλήσεων σε"/>
+	<phrase n="lang_target_forward_typeSio" t="Προώθηση Κλήσεων σε"/>
+	<phrase n="lang_tls_unknown_certificate_alert" t="Μια ασφαλής σύνδεση απορρίφθηκε γιατί προσέφερε ένα άγνωστο πιστοποιητικό. Μπορείτε να δώσετε άδεια ότι εμπιστεύεστε τη σύνδεση στο Web Interface στην ενότητα Πιστοποιητικά."/>
+	<phrase n="lang_tls_unknown_certificate_alert_title" t="Ασφαλής σύνδεση απέτυχε"/>
+	<phrase n="lang_tls_properties_changed" t="Επανεκκίνηση. Αδύνατη η εφαρμογή στις τρέχουσες συνδέσεις, των νέων κανόνων ασφάλειας."/>
+	<phrase n="lang_call_completed_by_part1" t="Ολοκλήρωση κλήσης από"/>
+	<phrase n="lang_call_completed_by_part2" t="σε άλλο τερματικό."/>
+	<phrase n="lang_call_completed_by_part2_typeSio" t="σε άλλο τερματικό."/>
+	<phrase n="lang_challenge_sip_pw" t="ΚωδSIP"/>
+	<phrase n="lang_line_ocs_wz_user" t="Dοmain\Χρήστης"/>
+	<phrase n="lang_line_ocs_wz_pwd" t="Κωδικός"/>
+	<phrase n="lang_unregistered_ids_title" t="μη εγγεγραμμένο:"/>
+	<phrase n="lang_message_label" t="Πληροφορίες"/>
+	<phrase n="lang_status_messages" t="Πληροφορίες Κατάστασης"/>
+	<phrase n="lang_information_settings" t="Πληροφορίες"/>
+	<phrase n="lang_user_realname" t="ΠροβολήΟνόματος"/>
+	<phrase n="lang_user_idle_number" t="ΠροβολήΑριθμού"/>
+	<phrase n="lang_user_name" t="Λογαριασμός"/>
+	<phrase n="lang_user_pass" t="Κωδικός"/>
+	<phrase n="lang_user_host" t="Registrar"/>
+	<phrase n="lang_user_outbound" t="Outbound Proxy"/>
+	<phrase n="lang_user_pname" t="Πιστοποίηση ονόματος χρήστη"/>
+	<phrase n="lang_user_mailbox" t="Θυρίδα"/>
+	<phrase n="lang_user_mailbox_retrieve" t="Κλήση Θυρίδας"/>
+	<phrase n="lang_hotdesking" t="ΕξυπΠελατών"/>
+	<phrase n="lang_keyb_enter_current_pin" t="Εισαγωγή PIN"/>
+	<phrase n="lang_keyb_enter_new_pin" t="Νέο PIN"/>
+	<phrase n="lang_keyb_reenter_new_pin" t="Επιβεβαίωση Νέου PIN"/>
+	<phrase n="lang_keyb_enter_password" t="Εισάγετε κωδικό πρόσβασης για επαναφορά PIN"/>
+	<phrase n="lang_keyb_locked" t="Πιέστε παρατεταμένα * για ξεκλείδωμα."/>
+	<phrase n="lang_keyb_permanently_locked" t="Πιέστε παρατεταμένα * για επαναφορά PIN."/>
+	<phrase n="lang_title_unlock" t="Πληκρολόγιο κλειδωμένο"/>
+	<phrase n="lang_confirm_unlock" t="Ξεκλείδωμα; Πιέστε OK."/>
+	<phrase n="lang_transfer_failed_msg" t="Αποτυχία μεταφοράς"/>
+	<phrase n="lang_action_failed_msg" t="Αποτυχία ενέργειας"/>
+	<phrase n="lang_vpn_fetch" t="Ανάκτηση VPN συμπιεσμένο από:"/>
+	<phrase n="lang_vpn_fetch_failed" t="Αποτυχία ανάκτησης VPN"/>
+	<phrase n="lang_vpn_flash" t="Εξαγωγή αρχείων VPN …"/>
+	<phrase n="lang_vpn_reboot" t="Επανεκκίνηση για ενεργοποίηση VPN ..."/>
+	<phrase n="lang_l2tp_fetch" t="Fetching L2TP tarball from:"/>
+	<phrase n="lang_l2tp_fetch_failed" t="Fetching L2TP tarball failed"/>
+	<phrase n="lang_l2tp_flash" t="Extracting L2TP files..."/>
+	<phrase n="lang_l2tp_reboot" t="Rebooting System to activate L2TP..."/>
+	<phrase n="lang_sbc_fetch" t="Fetching sbc config file from:"/>
+	<phrase n="lang_sbc_fetch_failed" t="Fetching sbc config file failed"/>
+	<phrase n="lang_sbc_flash" t="Copy sbc config file..."/>
+	<phrase n="lang_sbc_reboot" t="Rebooting System to activate sbc..."/>
+	<phrase n="lang_sbc_active" t="SBC is active"/>
+	<phrase n="lang_keyb_min_digits" t="(ελάχιστα # ψηφία)"/>
+	<phrase n="lang_empty_dir_search_list" t="Εισάγετε Όνομα! Χρησιμοποιήστε * για κενό."/>
+	<phrase n="lang_key_unassigned" t="ΜηΚαταχΠλήκτρο"/>
+	<phrase n="lang_key_unassigned_typeSio" t="ΜηΚαταχΠλήκτρο"/>
+	<phrase n="lang_label_conference_partner" t="Συμμετέχον"/>
+	<phrase n="lang_incoming_call_title_while_connected" t="Αναμονή Κλήσεων"/>
+	<phrase n="lang_active" t="Ενεργό"/>
+	<phrase n="lang_emergency_call" t="Κλήση έκτακτης ανάγκης"/>
+	<phrase n="lang_ntp_pending" t="Επικοινωνία με NTP server"/>
+	<phrase n="lang_ntp_unreachable" t="μη προσβάσιμος NTP server"/>
+	<phrase n="lang_download_server_unreachable" t="Server unreachable"/>
+	<phrase n="lang_network_busy" t="Δίκτυο απασχολημένο"/>
+	<phrase n="lang_pstn_reroute_attempt" t="Ίσως χρειαστεί περισσότερος χρόνος ολοκλήρωσης κλήσης. Δίκτυο απασχολημένο."/>
+	<phrase n="lang_menu_location" t="Τοποθεσία"/>
+	<phrase n="lang_linestate_holding_upper_case" t="Σε αναμονή"/>
+	<phrase n="lang_linestate_on_hold_upper_case" t="σε Αναμονή"/>
+	<phrase n="lang_location_retrieval_failed" t="Αδύνατη η ανάκτηση τοποθεσίας"/>
+	<phrase n="lang_route_private_line" t="Ιδιωτική Γραμμή"/>
+	<phrase n="lang_route_forwarded" t="Προωθήθηκε"/>
+	<phrase n="lang_route_forwarded_typeSio" t="Προωθήθηκε"/>
+	<phrase n="lang_route_delegated" t="Σε εξουσιοδοτημένο"/>
+	<phrase n="lang_route_team_call" t="Ομαδική Κλήση"/>
+	<phrase n="lang_route_acd" t="Ομαδική Κλήση"/>
+	<phrase n="lang_route_cccp_conference" t="Κλήση Συνδιάσκεψης"/>
+	<phrase n="lang_route_cccp_conference_typeSio" t="Κλήση Συνδιάσκεψης"/>
+	<phrase n="lang_dfks_failed" t="Αποτυχία συγχρονισμού"/>
+	<phrase n="lang_no_shared_key" t="Μη διαθέσιμο πλήκτρο κοινόχρηστης γραμμής"/>
+	<phrase n="lang_shared_seize_active" t="Η γραμμή είναι ενεργή"/>
+	<phrase n="lang_not_a_shared_key" t="Το επιλεγμένο δεν είναι ένα πλήκτρο κοινής γραμμής"/>
+	<phrase n="lang_active_key_not_a_shared_key" t="Το πλήκτρο κοινής γραμμής δεν λειτουργεί με μία ενεργή αντιστοίχηση."/>
+	<phrase n="lang_ipv4_conflict" t="IPv4: σύγκρουση"/>
+	<phrase n="lang_contact_saved" t="Επαφή αποθηκεύτηκε"/>
+	<phrase n="lang_query_pending" t="Αναζήτηση …"/>
+	<phrase n="lang_no_conference" t="Υπερφόρτιση CPU ένα %A δεν επιτρέπεται η συνδιάσκεψη"/>
+	<phrase n="lang_no_conference_with_codec" t="Υπερφόρτωση CPU  %A συνδιάσκεψη δεν επιτρέπεται αν μέλος χρησιμοποιεί codec %B"/>
+	<phrase n="lang_no_conference_with_encrypted_codec" t="Υπερφόρτωση CPU %A αδύνατη η συνδιάσκεψη αν μέλος χρησιμοποιεί codec %B με κρυπτογράφηση"/>
+	<phrase n="lang_no_conference_without_unencrypted_codec" t="Υπερφόρτωση CPU %A αδύνατη συνδιάσκεψη αν μέλος δεν χρησιμοποιεί codec %B χωρίς κρυπτογράφηση"/>
+	<phrase n="lang_setup_language" t="Ρύθμιση γλώσσας"/>
+	<phrase n="lang_please_wait" t="Παρακαλώ περιμένετε…"/>
+	<phrase n="lang_download_failed" t="Αποτυχία λήψης"/>
+	<phrase n="lang_function_blocked" t="Φραγμένο"/>
+	<phrase n="lang_activating_uploads" t="Ενεργοποίηση φορτώσεων"/>
+	<phrase n="lang_provisioning" t="Τροφοδότηση ρυθμίσεων"/>
+	<phrase n="lang_provisioning_failed" t="Αποτυχία τροφοδότησης"/>
+	<phrase n="lang_tr69_provisioning" t="TR-069 Τροφ.σε εξέλιξη"/>
+	<phrase n="lang_start_provisioning" t="Τροφοδότηση σε εξέλιξη"/>
+	<phrase n="lang_waitTime" t="Χρόνος αναμονής"/>
+	<phrase n="lang_ccUserId" t="Όνομα χρήστη"/>
+	<phrase n="lang_callCenterName" t="Όνομα"/>
+	<phrase n="lang_numCallsInQueue" t="Κλήσεις σε ουρά"/>
+	<phrase n="lang_acd_ready" t="Διαθέσιμο"/>
+	<phrase n="lang_acd_not_ready" t="Μη διαθέσιμο"/>
+	<phrase n="lang_acd_working_after_call" t="Έναρξη"/>
+	<phrase n="lang_acd_log_on" t="Σύνδεση"/>
+	<phrase n="lang_acd_log_off" t="Αποσύνδεση"/>
+	<phrase n="lang_acd_unkown_state" t="Άγνωστη Κατάσταση"/>
+	<phrase n="lang_change_state_to" t="Αλλαγή Κατάστασης"/>
+	<phrase n="lang_call_parked" t="Σταθμευμένη Κλήση"/>
+	<phrase n="lang_call_unparked" t="Κλήση μη σταθμευμένη"/>
+	<phrase n="lang_firmware_update_failed" t="Αποτυχία Ενημέρωσης Λογισμικού"/>
+	<phrase n="lang_firmware_update_restart" t="Επανεκκίνηση Ενημέρωσης Λογισμικού;"/>
+	<phrase n="lang_temp_unavail" t="Προσωρινά μη διαθέσιμο"/>
+	<phrase n="lang_limited_func" t="Βλάβη, περιορισμένη λειτουργικότητα"/>
+	<phrase n="lang_limited_func_exp" t="Ένα πρόβλημα δικτύου περιορίζει χαρακτηριστικά όπως η Παρουσία"/>
+	<phrase n="lang_limited_func_exp_typeSio" t="Ένα πρόβλημα δικτύου περιορίζει χαρακτηριστικά όπως η Παρουσία"/>
+	<phrase n="lang_call_park_failed" t="Αποτυχία Στάθμευσης"/>
+	<phrase n="lang_park_failed_reason" t="Μη διαθέσιμος προορισμός"/>
+	<phrase n="lang_list_parked" t="Σταθμευμένη"/>
+	<phrase n="lang_vision" t="Vision"/>
+	<phrase n="lang_unpair_vision" t="Αποσύνδεση Vision"/>
+	<phrase n="lang_scan_for_visions" t="Αναζήτηση Vision"/>
+	<phrase n="lang_paired_with_vision" t="Συνδεδεμένο με Vision:"/>
+	<phrase n="lang_vision_connection_lost" t="Η σύνδεση με το Vision χάθηκε"/>
+	<phrase n="lang_unpair_vision_question" t="Αποσύνδεση Vision;"/>
+	<phrase n="lang_isconnected" t="συνδεδεμένο"/>
+	<phrase n="lang_isdisconnected" t="αποσυνδεμένο"/>
+	<phrase n="lang_isdisconnected_typeSio" t="αποσυνδεμένο"/>
+	<phrase n="lang_hotdesking_ntlm" t="Κωδικοί Λογαριασμού"/>
+	<phrase n="lang_hotdesking_pin" t="ΡΙΝ"/>
+	<phrase n="lang_prompt_phone_num" t="Το Εσωτερικό σας"/>
+	<phrase n="lang_prompt_pin" t="Το PIN σας"/>
+	<phrase n="lang_pin_signin_active" t="συνδέεται…"/>
+	<phrase n="lang_pin_signin_failure" t="Αδύνατη σύνδεση με τον τηλεφωνικό αριθμό και το PIN"/>
+	<phrase n="lang_firmware_update_in" t="Ενημέρωση Λογισμικού σε"/>
+	<phrase n="lang_firmware_update_available" t="Ενημέρωση λογισμικού διαθέσιμη"/>
+	<phrase n="lang_call_for" t="Κλήση για"/>
+	<phrase n="lang_linetype_bossadmin" t="Διευθυντής/Διαχειριστής"/>
+	<phrase n="lang_linetype_bossadmin_short" t="Δ/Δ"/>
+	<phrase n="lang_success_msg_transferred_to" t="%A μεταφέρθηκε σε %B"/>
+	<phrase n="lang_pickup_call" t="Απάντηση Κλήσης"/>
+	<phrase n="lang_call_on_behalf_of" t="Κλήση εκ μέρους του"/>
+	<phrase n="lang_boss_group" t="Επαφές που Καλώ εκ μέρους"/>
+	<phrase n="lang_delegate_group" t="Εξουσιοδοτημένοι"/>
+	<phrase n="lang_all_delegates" t="Αντιστοίχηση όλων των εξουσιοδοτημένων σε πλήκτρο"/>
+	<phrase n="lang_call_failed_network_issue" t="Αποτυχία κλήσης λόγω προβλήματος δικτύου"/>
+	<phrase n="lang_call_failed_network_issue_typeSio" t="Αποτυχία κλήσης λόγω προβλήματος δικτύου"/>
+	<phrase n="lang_ethernet_detection" t="Ανίχνευση Ethernet"/>
+	<phrase n="lang_firmware_update_not_available" t="Μη διαθέσιμη ενημέρωση λογισμικού"/>
+	<phrase n="lang_check_sw_update" t="Έλεγχος για νέο λογισμικό"/>
+	<phrase n="lang_continuous_text_label" t="Ετικέτα"/>
+	<phrase n="lang_short_text" t="Σύντομο Κείμενο"/>
+	<phrase n="lang_headline_admins" t="Διαχειριστές"/>
+	<phrase n="lang_always_delegate_forward" t="Εξουσιοδοτημένος Πάντα σε Προώθηση"/>
+	<phrase n="lang_always_deleg_sim" t="Πάντα Ταυτόχρονος Κουδουνισμός"/>
+	<phrase n="lang_always_deleg_forw" t="Πάντα Προώθηση"/>
+	<phrase n="lang_always_deleg_forw_typeSio" t="Πάντα Προώθηση"/>
+	<phrase n="lang_tb_action_url" t="ενέργεια url"/>
+	<phrase n="lang_clear_call_history" t="Διαγραφή Ιστορικού Κλήσεων"/>
+	<phrase n="lang_headset_volume_only" t="Η αλλαγή της έντασης είναι δυνατή μόνο από τα USB ακουστικά."/>
+	<phrase n="lang_hold_error" t="Hold failure, call has been muted. Press hold again to retry."/>
+	<phrase n="lang_retr_by" t="Από"/>
+	<phrase n="lang_ipv4" t="IPv4"/>
+	<phrase n="lang_ipv6" t="IPv6"/>
+	<phrase n="lang_ipv6_autoconf" t="SLAAC"/>
+	<phrase n="lang_refresh" t="Ανανέωση"/>
+	<phrase n="lang_may_take_some_time" t="Η ανανέωση μπορεί να πάρει ώρα. Συνέχεια;"/>
+	<phrase n="lang_ip_address_not_available" t="Not Available"/>
+	<phrase n="lang_menu_unlock" t="Ξεκλείδωμα"/>
+	<phrase n="lang_menu_security" t="Ασφάλεια"/>
+	<phrase n="lang_route_team_call_for" t="Ομαδική Κλήση για"/>
+	<phrase n="lang_route_acd_for" t="Ομαδική Κλήση για"/>
+	<phrase n="lang_route_anonymous_acd" t="Ανώνυμη Ομαδική Κλήση"/>
+	<phrase n="lang_route_anonymous_acd_for" t="Ανώνυμη Ομαδική Κλήση για"/>
+	<phrase n="lang_anonymous" t="Ανώνυμοι"/>
+	<phrase n="lang_wish_barge_in" t="Επιθυμείτε φόρτωση;"/>
+	<phrase n="lang_location" t="Τοποθεσία:"/>
+	<phrase n="lang_subject" t="Θέμα"/>
+	<phrase n="lang_dates" t="Ραντεβού"/>
+	<phrase n="lang_menu_dates_today" t="Σημερινά Ραντεβού"/>
+	<phrase n="lang_label_conference_organizer" t="Διοργανωτής:"/>
+	<phrase n="lang_date_ongoing" t="ΤΩΡΑ:"/>
+	<phrase n="lang_date_remind_me_later" t="Υπενθύμιση αργότερα"/>
+	<phrase n="lang_date_remind_later" t="Αργότερα"/>
+	<phrase n="lang_date_set_reminder_to" t="Σε"/>
+	<phrase n="lang_minutes" t="Λεπτά"/>
+	<phrase n="lang_date_reset_reminder" t="Υπενθύμιση Επαναφοράς"/>
+	<phrase n="lang_cannot_access_exchange" t="Αδύνατη η πρόσβαση σε Exchange Server."/>
+	<phrase n="lang_no_dates_today" t="Κανένας προγραμματισμός για σήμερα"/>
+	<phrase n="lang_participants" t="Συμμετέχοντες:"/>
+	<phrase n="lang_expansion_modules" t="Μονάδα επέκτασης"/>
+	<phrase n="lang_wiz_vlan" t="Χρησιμοποιείς VLAN;"/>
+	<phrase n="lang_wiz_ip4" t="Ρύθμιση του IPv4;"/>
+	<phrase n="lang_wiz_ip6" t="Ρύθμιση IPv6"/>
+	<phrase n="lang_sxm_connected" t="Συνδέθηκε σειριακή μονάδα επέκτασης"/>
+	<phrase n="lang_uxm_connected" t="Συνδέθηκε USB μονάδα επέκτασης"/>
+	<phrase n="lang_uxm_cabeling_broken" t="Λάθος καλώδιο μονάδας επέκτασης"/>
+	<phrase n="lang_uxm_limit_exceeded" t="Πάρα πολλές συνδεδεμένες USB μονάδες επέκτασης"/>
+	<phrase n="lang_vpn_active" t="VPN Ενεργό"/>
+	<phrase n="lang_wlan_active" t="Wlan Ενεργό"/>
+	<phrase n="lang_list_no_devices" t="(Μη διαθέσιμες συσκευές)"/>
+	<phrase n="lang_bluetooth" t="Bluetooth"/>
+	<phrase n="lang_bluetooth_connected_title" t="Συνδεδεμένη Συσκευή"/>
+	<phrase n="lang_bluetooth_paired_list_title" t="Λίστα αξιόπιστων Συσκευών"/>
+	<phrase n="lang_bluetooth_active_connection" t="Σύνδεση Bluetooth Ενεργή"/>
+	<phrase n="lang_bluetooth_discovered_list_title" t="Λίστα συσκευών που βρέθηκαν"/>
+	<phrase n="lang_bluetooth_discovering" t="Αναζήτηση"/>
+	<phrase n="lang_bluetooth_unpairing" t="Διακοπή σύνδεσης"/>
+	<phrase n="lang_bluetooth_pairing" t="Συνδέεται"/>
+	<phrase n="lang_bluetooth_connecting" t="Συνδέεται"/>
+	<phrase n="lang_bluetooth_disconnecting" t="Αποσυνδέεται"/>
+	<phrase n="lang_callback_on_busy" t="ΕπιστροφήΚλ. αν Απασχολημένο"/>
+	<phrase n="lang_auto_busy_redial" t="Επανάκληση όταν Απασχολημένο"/>
+	<phrase n="lang_decision_cob" t="απασχολημένο. Πιέστε «Επιβεβαίωση», για ειδοποίηση όταν διαθέσιμο. Πιέστε «Χ», για να αφήσετε μήνυμα."/>
+	<phrase n="lang_decision_cob_withoutvm" t="απασχολημένο. Πιέστε «Επιβεβαίωση», για ειδοποίηση όταν είναι διαθέσιμο."/>
+	<phrase n="lang_callback" t="Επανάκληση"/>
+	<phrase n="lang_callback_available" t="ΕπιστροφήΚλ. διαθέσιμη"/>
+	<phrase n="lang_linetype_callback" t="ΕπιστροφήΚλήσης"/>
+	<phrase n="lang_linetype_callback_short" t="ΕπΚλ"/>
+	<phrase n="lang_ringback_callpark_service" t="Μέσω της Υπηρεσίας Στάθμευσης Κλήσεων"/>
+	<phrase n="lang_callpark_service" t="Υπηρεσία Στάθμευσης Κλήσεων"/>
+	<phrase n="lang_storage_mounted" t="Συνδεδεμένος Δίσκος USB"/>
+	<phrase n="lang_storage_mounted_typeSio" t="Συνδεδεμένος Δίσκος USB"/>
+	<phrase n="lang_storage_tomany" t="Δυνατή η σύνδεση μόνο ενός δίσκου USB"/>
+	<phrase n="lang_storage_umount" t="Αποσύνδεση δίσκου USB"/>
+	<phrase n="lang_no_participants_detected" t="δεν βρέθηκαν συμμετέχοντες"/>
+	<phrase n="lang_ieee8021_method" t="Λειτουργία"/>
+	<phrase n="lang_menu_fkey_functions" t="Λειτουργία"/>
+	<phrase n="lang_uxm_appearance" t="Εμφάνιση"/>
+	<phrase n="lang_put_through_by" t="Ακολουθείται από"/>
+	<phrase n="lang_contact_not_in_list" t="δεν βρέθηκε στη λίστα επαφών"/>
+	<phrase n="lang_msg_speaker_active" t="Handsfree ενεργοποιήθηκε"/>
+	<phrase n="lang_msg_headset_active" t="Κεφαλόφωνο ενεργοποιήθηκε"/>
+	<phrase n="lang_msg_handset_active" t="Ακουστικό ενεργοποιήθηκε"/>
+	<phrase n="lang_msg_ringing_disabled" t="Κουδουνισμός απενεργοποιήθηκε"/>
+	<phrase n="lang_msg_mute_active" t="Τηλέφωνο σε σίγαση"/>
+	<phrase n="lang_wiz_aborted" t="Ακύρωση Βοήθειας."/>
+	<phrase n="lang_menu_set_kbd_lock_pin" t="PIN κλειδώματος πληκτρολογίου"/>
+	<phrase n="lang_menu_change_kbd_lock_pin" t="Αλλαγή PIN κλειδ.πληκτρ."/>
+	<phrase n="lang_no_valid_dsearch_config" t="Μη έγκυρη ρύθμιση αναζήτησης καταλόγου"/>
+	<phrase n="lang_title_conferences" t="Συνδιασκέψεις"/>
+	<phrase n="lang_no_conferences_found" t="Δεν βρέθηκε Συνδιάσκεψη"/>
+	<phrase n="lang_conference_type" t="Τύπος"/>
+	<phrase n="lang_conference_status" t="Κατάσταση"/>
+	<phrase n="lang_join_conference_long" t="Συμμετοχή στη Συνδιάσκεψη"/>
+	<phrase n="lang_join_conference_as_moderator" t="Συμμετοχή ως Συντονιστής"/>
+	<phrase n="lang_choose_menu" t="Επιλογή μενού"/>
+	<phrase n="lang_menu_shortcut" t="Συντόμευση Μενού"/>
+	<phrase n="lang_using_time" t="ώρα χρήσης"/>
+	<phrase n="lang_waiting_for_pnp" t="Αναμονή για PnP"/>
+	<phrase n="lang_fkey_contact_list_buddy" t="BLF (Server)"/>
+	<phrase n="lang_fkey_xmpp_presence" t="Παρουσία Επαφής (XMPP)"/>
+	<phrase n="lang_csta_prompt_title" t="Κλήση τώρα;"/>
+	<phrase n="lang_contact_is_favorite" t="Είναι αυτή μία αγαπημένη επαφή;"/>
+	<phrase n="lang_currently_set_to" t="Τρέχουσα ρύθμιση σε:"/>
+	<phrase n="lang_vol_label_contrast" t="Αντίθεση Δευτερεύουσας Οθόνης"/>
+	<phrase n="lang_menu_fkeys_phone" t="Πλήκτρα Γραμμών"/>
+	<phrase n="lang_menu_dkeys_phone" t="Πλήκτρα Λειτουργιών"/>
+	<phrase n="lang_menu_context_sensitive_keys_phone" t="Προγραμματιζόμενα Πλήκτρα"/>
+	<phrase n="lang_menu_smartlabel_fkeys" t="ΠλήκτραΈξυπνηςΟνομασίας"/>
+	<phrase n="lang_menu_smartlabel_page" t="Σελίδα"/>
+	<phrase n="lang_menu_fkeys_page" t="ΣελίδαΠλήκτρωνΓραμμής"/>
+	<phrase n="lang_menu_fkeys_sxm" t="Πλήκτρα SXM"/>
+	<phrase n="lang_menu_fkeys_uxm" t="Πλήκτρα Επέκτασης"/>
+	<phrase n="lang_server_directory_search" t="Αναζήτηση Καταλόγου στο Server"/>
+	<phrase n="lang_menu_fontsize" t="Μέγεθος Χαρακτήρων"/>
+	<phrase n="lang_uxm_fontsize_lines" t="Μέγεθος Χαρακτήρων (Εμφάνιση Γραμμής)"/>
+	<phrase n="lang_uxm_fontsize_tiles" t="Μέγεθος Χαρακτήρων (Εμφάνιση Εικονιδίων)"/>
+	<phrase n="lang_menu_text_alignment" t="Στοίχιση Κειμένου"/>
+	<phrase n="lang_left" t="Αριστερά"/>
+	<phrase n="lang_right" t="Δεξιά"/>
+	<phrase n="lang_center" t="Κεντρικά"/>
+	<phrase n="lang_alternate" t="Εναλλακτικά"/>
+	<phrase n="lang_menu_return_to_first_page" t="Επιστροφή στην Αρχική Σελίδα"/>
+	<phrase n="lang_automatic_return" t="Αυτόματη Επιστροφή"/>
+	<phrase n="lang_warning" t="Προσοχή"/>
+	<phrase n="lang_public_address" t="Δημόσιες Επαφές"/>
+	<phrase n="lang_menu_volume" t="Ρυθμίσεις Έντασης   "/>
+	<phrase n="lang_vol_ringer_text" t="Ένταση ήχου"/>
+	<phrase n="lang_vol_headset_text" t="Ένταση Κεφαλόφωνου"/>
+	<phrase n="lang_vol_handset_text" t="Ένταση Ακουστικού"/>
+	<phrase n="lang_vol_speaker_text" t="Ένταση Ηχείου"/>
+	<phrase n="lang_list_rejected" t="Απορρίφθηκε"/>
+	<phrase n="lang_enum_disp_func_key_conference" t="Συνδιάσκεψη"/>
+	<phrase n="lang_enum_disp_func_key_ivr" t="Τηλεφωνητής"/>
+	<phrase n="lang_enum_disp_func_key_callback_on_busy" t="ΕπιστροφήΚλήσης"/>
+	<phrase n="lang_fkeys_ssi_context" t="Περιεχόμενα"/>
+	<phrase n="lang_fkeys_ssi_type" t="Τύπος"/>
+	<phrase n="lang_fkeys_ssi_active" t="Ενεργό"/>
+	<phrase n="lang_fkeys_ssi_icon" t="Εικονίδιο"/>
+	<phrase n="lang_default_icon" t="Προεπιλεγμένο Εικονίδιο"/>
+	<phrase n="lang_custom_icon" t="Προσαρμοσμένο Εικονίδιο"/>
+	<phrase n="lang_FirstName" t="Όνομα"/>
+	<phrase n="lang_LastName" t="Επίθετο"/>
+	<phrase n="lang_Home" t="Αριθμός Σπιτιού"/>
+	<phrase n="lang_Office" t="Αριθμός Γραφείου"/>
+	<phrase n="lang_Mobile" t="Αριθμός Κινητού"/>
+	<phrase n="lang_Unqualified" t="Άλλος Αριθμός"/>
+	<phrase n="lang_edit_contact" t="Επεξεργασία Επαφής"/>
+	<phrase n="lang_msw_query" t="Αποτυχία αποστολής επαφής στο Server:"/>
+	<phrase n="lang_indicator" t="Δείκτης"/>
+	<phrase n="lang_protocol" t="Πρωτόκολλο"/>
+	<phrase n="lang_target_forward_busy" t="Προώθηση Κλήσης όταν Κατειλημμένο σε"/>
+	<phrase n="lang_target_forward_timeout" t="Προώθηση Κλήσης Μετά"/>
+	<phrase n="lang_target_forward_timeout_typeSio" t="Προώθηση Κλήσης Μετά"/>
+	<phrase n="lang_WIFI_SSID" t="Όνομα Δικτύου"/>
+	<phrase n="lang_WIFI_auth_mode" t="Κρυπτογράφηση"/>
+	<phrase n="lang_WIFI_WPA_Encryption" t="Κρυπτογράφηση WPA"/>
+	<phrase n="lang_WIFI_WPA" t="WPA"/>
+	<phrase n="lang_WIFI_WPA2PSK" t="WPA2"/>
+	<phrase n="lang_WIFI_WEP" t="WEP"/>
+	<phrase n="lang_WIFI_OPEN" t="Ανοιχτό"/>
+	<phrase n="lang_WIFI_AES" t="AES"/>
+	<phrase n="lang_WIFI_TKIP" t="TKIP"/>
+	<phrase n="lang_WIFI_SCAN_NETWORKS" t="Αναζήτηση WLAN"/>
+	<phrase n="lang_WIFI_MANUAL_SETUP" t="Χειροκίνητη Ρύθμιση"/>
+	<phrase n="lang_contact_details" t="Λεπτομέρειες Επαφής"/>
+	<phrase n="lang_WIFI_CONNECTED_TO" t="Συνδέθηκε σε"/>
+	<phrase n="lang_WIFI_NOT_CONNECTED" t="Not Connected"/>
+	<phrase n="lang_unhold" t="Ανάκτηση"/>
+	<phrase n="lang_empty" t="κενό"/>
+	<phrase n="lang_F_SNOM" t="snom/Σύννεφο"/>
+	<phrase n="lang_prefs_ssi_date_us_format" t="Μορφή Ημερομηνίας"/>
+	<phrase n="lang_prefs_ssi_time_24_format" t="Ρολόι 24 Ωρών"/>
+	<phrase n="lang_time_symbol_second" t="s"/>
+	<phrase n="lang_all_accounts" t="Όλοι οι Λογαριασμοί"/>
+	<phrase n="lang_reboot_to_apply_new_settings" t="Επανεκκίνηση για άμεση εφαρμογή των ρυθμίσεων;"/>
+	<phrase n="lang_TLS" t="TLS"/>
+	<phrase n="lang_MD5" t="MD5"/>
+	<phrase n="lang_WIFI_SWITCH_OFF_WLAN" t="Απενεργοποίηση WLAN"/>
+	<phrase n="lang_ErrorNotSupportedByManager" t="Μη υποστηριζόμενο"/>
+	<phrase n="lang_ErrorContactNotFound" t="Δεν βρέθηκε Επαφή"/>
+	<phrase n="lang_ErrorInvalidCredentials" t="Λάθος Κωδικοί"/>
+	<phrase n="lang_ErrorInvalidArgument" t="Λάθος Ζητούμενο"/>
+	<phrase n="lang_ErrorRequestPending" t="Αναμονή Αιτήματος"/>
+	<phrase n="lang_ErrorNotInitialized" t="Δεν εκκινήθηκε"/>
+	<phrase n="lang_ErrorInComplete" t="Ελλιπές"/>
+	<phrase n="lang_ErrorOutOfMemory" t="Ελλιπής Μνήμη"/>
+	<phrase n="lang_Contact_pool" t="Λίστα Επαφών"/>
+	<phrase n="lang_advanced_autoneg" t="Αυτόματη Διαπραγμάτευση"/>
+	<phrase n="lang_advanced_10full" t="10 Mbit Full Duplex"/>
+	<phrase n="lang_advanced_10half" t="10 Mbit Half Duplex"/>
+	<phrase n="lang_advanced_100full" t="100 Mbit Full Duplex"/>
+	<phrase n="lang_advanced_100half" t="100 Mbit Half Duplex"/>
+	<phrase n="lang_advanced_1000full" t="1000 Mbit Full Duplex"/>
+	<phrase n="lang_Hardware" t="Υλικό"/>
+	<phrase n="lang_NET_port_speed" t="Ταχύτητα Θύρας Δικτύου/Duplex"/>
+	<phrase n="lang_PC_port_speed" t="Ταχύτητα Θύρας PC/Duplex"/>
+	<phrase n="lang_Action_on_eth_replug" t="Ενέργεια κατά την Επανασύνδεση Καλωδίου Ethernet"/>
+	<phrase n="lang_advanced_donothing" t="Παράβλεψη"/>
+	<phrase n="lang_line_reregister" t="Επανάληψη Εγγραφής"/>
+	<phrase n="lang_NTP" t="NTP"/>
+	<phrase n="lang_DNS" t="DNS"/>
+	<phrase n="lang_LLDP" t="LLDP"/>
+	<phrase n="lang_NTP_refresh_timer" t="NTP Refresh Timer"/>
+	<phrase n="lang_8021x" t="802.1X"/>
+	<phrase n="lang_Expansion" t="Επέκταση"/>
+	<phrase n="lang_expansion_layout" t="Εμφάνιση Επέκτασης"/>
+	<phrase n="lang_Expansion_module" t="Μονάδα Επέκτασης"/>
+	<phrase n="lang_Please_reboot" t="Επανεκκίνηση!"/>
+	<phrase n="lang_All_settings_saved" t="Ρυθμίσεις Αποθηκεύτηκαν"/>
+	<phrase n="lang_WIFI_SCAN_RUNNING" t="Scanning..."/>
+	<phrase n="lang_WIFI_CONNECTING" t="Connecting..."/>
+	<phrase n="lang_wifi_connect_success_reboot_to_continue_msg1" t="Reboot to continue"/>
+	<phrase n="lang_wifi_connect_success_password_ok_msg2" t="Password OK"/>
+	<phrase n="lang_wifi_connect_fail_invalid_settings_msg1" t="Invalid Settings"/>
+	<phrase n="lang_wifi_connect_fail_please_retry_msg2" t="Please Retry"/>
+	<phrase n="lang_usb_wifi_unavailable" t="USB WiFi not available"/>
+	<phrase n="lang_usb_wifi_connected" t="USB WiFi connected"/>
+	<phrase n="lang_usb_wifi_disconnected" t="USB WiFi disconnected"/>
+	<phrase n="lang_is_a_favorite" t="είναι αγαπημένη"/>
+	<phrase n="lang_Lines" t="Εμφάνιση Γραμμής"/>
+	<phrase n="lang_Tiles" t="Εμφάνιση Τίτλου"/>
+	<phrase n="lang_tbook_emtpy" t="&lt;Κενό&gt;"/>
+	<phrase n="lang_enter_starting_uppercase" t="Enter"/>
+	<phrase n="lang_characters_starting_lowercase" t="characters"/>
+	<phrase n="lang_user_server_type" t="Υποστηριζόμενος Τύπος Server"/>
+	<phrase n="lang_broadsoft_features" t="Χαρακτηριστικά Broadsoft"/>
+	<phrase n="lang_xsi_server" t="XSI Server"/>
+	<phrase n="lang_xsi_user" t="Χρήστης XSI"/>
+	<phrase n="lang_xsi_password" t="Κωδικός πρόσβασης XSI"/>
+	<phrase n="lang_xsi_retry_timer" t="XSI Retry Timer"/>
+	<phrase n="lang_xsi_events" t="XSI Events"/>
+	<phrase n="lang_xmpp_jid" t="XMPP ID"/>
+	<phrase n="lang_xmpp_password" t="Κωδικός πρόσβασης XMPP"/>
+	<phrase n="lang_no_headset_present" t="Δεν υπάρχει Κεφαλόφωνο"/>
+	<phrase n="lang_headset_detection" t="Αναγνωρίστηκε Κεφαλόφωνο"/>
+	<phrase n="lang_msw_services" t="Υπηρεσίες Metaswitch"/>
+	<phrase n="lang_msw_directory_number" t="Αριθμός Καταλόγου Metaswitch"/>
+	<phrase n="lang_msw_password" t="Κωδικός Πρόσβασης Metaswitch"/>
+	<phrase n="lang_msw_web_url" t="Metaswitch Server URL"/>
+	<phrase n="lang_xsi_dir_enterprise" t="Εταιρικός Κατάλογος"/>
+	<phrase n="lang_xsi_dir_enterprise_common" t="Κοινή Λίστα Τηλεφώνων Εταιρίας"/>
+	<phrase n="lang_xsi_dir_group" t="Κατάλογος Ομάδας"/>
+	<phrase n="lang_xsi_dir_group_common" t="Κοινή Τηλεφωνική Λίστα Ομάδας"/>
+	<phrase n="lang_xsi_dir_personal" t="Προσωπική Τηλεφωνική Λίστα"/>
+	<phrase n="lang_xsi_anywhere" t="Οπουδήποτε"/>
+	<phrase n="lang_xsi_location_new_entry" t="&lt;Νέα Καταχώρηση&gt;"/>
+	<phrase n="lang_xsi_location_edit_description" t="Επεξεργασία Περιγραφής Τοποθεσίας"/>
+	<phrase n="lang_xsi_location_description" t="Περιγραφή"/>
+	<phrase n="lang_xsi_location_edit_number" t="Επεξεργασία Αριθμού Τοποθεσίας"/>
+	<phrase n="lang_number_str" t="Αριθμός "/>
+	<phrase n="lang_xsi_location_status_creating" t="δημιουργία"/>
+	<phrase n="lang_xsi_location_status_modifying" t="διαμορφώνεται"/>
+	<phrase n="lang_xsi_location_status_deleting" t="διαγράφεται"/>
+	<phrase n="lang_xsi_location_error_empty_number" t="Δεν έχει καταχωρηθεί τηλεφωνικός αριθμός"/>
+	<phrase n="lang_xsi_location_error_number_exists" t="Ο αριθμός υπάρχει ήδη"/>
+	<phrase n="lang_xsi_location_error_empty_description" t="Πρέπει να υπάρχει περιγραφή"/>
+	<phrase n="lang_visual_voicemail" t="Οπτικός Τηλεφωνητής"/>
+	<phrase n="lang_feature_works" t="Χαρακτηριστικά Λειτουργούν"/>
+	<phrase n="lang_voicemail_name" t="Όνομα"/>
+	<phrase n="lang_voicemail_call_number" t="Αριθμός Κλήσης"/>
+	<phrase n="lang_voicemail_date_time" t="Ημέρα &amp; Ώρα"/>
+	<phrase n="lang_voicemail_duration" t="Διάρκεια"/>
+	<phrase n="lang_xsi_anywhere_clicktodial" t="Πιέστε για Κλήση"/>
+	<phrase n="lang_xsi_anywhere_grouppaging" t="Τηλεειδοποίηση Ομάδας"/>
+	<phrase n="lang_xsi_anywhere_settings" t="Ρυθμίσεις"/>
+	<phrase n="lang_remote_office" t="Απομακρυσμένο Γραφείο"/>
+	<phrase n="lang_xsi_anywhereportal" t="Anywhere Portal"/>
+	<phrase n="lang_xsi_anywhereportal_number" t="Τηλεφωνικός αριθμός"/>
+	<phrase n="lang_menu_primary_display" t="Κύρια Οθόνη"/>
+	<phrase n="lang_menu_secondary_display" t="Δευτερεύουσα Οθόνη"/>
+	<phrase n="lang_enable_remote_office" t="Ενεργοποίηση Απομακρυσμένου Γραφείου"/>
+	<phrase n="lang_call_center_list" t="Λίστα Τηλεφωνικού Κέντρου"/>
+	<phrase n="lang_call_center_status" t="Call Center Status"/>
+	<phrase n="lang_call_center_joined" t="Συμμετέχει"/>
+	<phrase n="lang_call_center_unable_to_join" t="Αδύνατη συμμετοχή στο Τηλεφωνικό Κέντρο"/>
+	<phrase n="lang_call_center_join_not_allowed" t="Δεν επιτρέπεται η συμμετοχή"/>
+	<phrase n="lang_call_center_unjoin_not_allowed" t="Δεν επιτρέπεται η αποσύνδεση"/>
+	<phrase n="lang_call_center_joining" t="Συμμετέχει"/>
+	<phrase n="lang_call_recording_control" t="Έλεγχος Εγγραφής Κλήσης"/>
+	<phrase n="lang_pause_recording" t="Παύση Εγγραφής"/>
+	<phrase n="lang_resume_recording" t="Επανέναρξη Εγγραφής"/>
+	<phrase n="lang_xsi_simul_ring" t="Ταυτόχρονος Κουδουνισμός"/>
+	<phrase n="lang_xsi_simul_ring_on_call" t="Χωρίς κουδουνισμό στη διάρκεια κλήσης"/>
+	<phrase n="lang_xsi_simul_ring_edit_phone_number" t="Τηλεφωνικός Αριθμός"/>
+	<phrase n="lang_xsi_simul_ring_enter_phone_number" t="Καταχώρηση Τηλεφωνικού Αριθμού"/>
+	<phrase n="lang_xsi_simul_ring_edit" t="Επεξεργασία"/>
+	<phrase n="lang_xsi_simul_ring_number" t="Τηλεφωνικός αριθμός"/>
+	<phrase n="lang_xsi_simul_ring_add_entry" t="Προσθήκη Νέας Καταχώρησης"/>
+	<phrase n="lang_xsi_simul_ring_ans_confirm" t="Επιβεβαίωση Απάντησης"/>
+	<phrase n="lang_xsi_simul_ring_number_exists_error" t="Ο Αριθμός υπάρχει ήδη"/>
+	<phrase n="lang_xsi_simul_ring_number_empty_error" t="Ο Αριθμός είναι κενός."/>
+	<phrase n="lang_xsi_executive" t="Διευθυντής"/>
+	<phrase n="lang_xsi_executive_assistant" t="Διευθυντής Γραμματέας"/>
+	<phrase n="lang_xsi_call_filtering" t="Φιλτράρισμα Κλήσεων"/>
+	<phrase n="lang_xsi_call_filtering_enable" t="Φιλτράρισμα Κλήσεων"/>
+	<phrase n="lang_xsi_call_filtering_mode" t="Λειτουργία Φιλτραρίσματος"/>
+	<phrase n="lang_xsi_call_filtering_type" t="Τύπος Φιλτραρίσματος"/>
+	<phrase n="lang_xsi_call_filtering_simple" t="Απλό"/>
+	<phrase n="lang_xsi_call_filtering_advanced" t="Προηγμένο"/>
+	<phrase n="lang_xsi_call_filtering_all" t="Όλες οι Κλήσεις"/>
+	<phrase n="lang_xsi_call_filtering_internal" t="Όλες οι Εσωτερικές"/>
+	<phrase n="lang_xsi_call_filtering_external" t="Όλες οι Εξωτερικές"/>
+	<phrase n="lang_xsi_call_screening" t="Έλεγχος Κλήσης"/>
+	<phrase n="lang_xsi_call_screening_type" t="Τύπος Ειδοποίησης"/>
+	<phrase n="lang_xsi_call_screening_alert_mobile" t="Ειδοποίηση Τοποθεσίας Κινητού"/>
+	<phrase n="lang_xsi_call_screening_alert_anywhere" t="Ειδοποίηση Οποιασδήποτε Τοποθεσίας"/>
+	<phrase n="lang_xsi_call_screening_alert_sca" t="Ειδοποίηση Τοποθεσίας SCA"/>
+	<phrase n="lang_xsi_call_screening_silent" t="Σίγαση"/>
+	<phrase n="lang_xsi_call_screening_ringsplash" t="ΈνδειξΚουδ"/>
+	<phrase n="lang_xsi_executive_view_assistants" t="Εμφάνιση Γραμματέων"/>
+	<phrase n="lang_xsi_executive_allow_optin" t="Άδεια Opt-in/out Γραμματέων"/>
+	<phrase n="lang_xsi_opt_in_out_to_executive" t="Opt-In/Out Διευθυντή"/>
+	<phrase n="lang_xsi_opt_in_to_executive" t="Οpt-In"/>
+	<phrase n="lang_xsi_opt_out_to_executive" t="Opt-Out"/>
+	<phrase n="lang_xsi_assistant_call_divert" t="Εκτροπή"/>
+	<phrase n="lang_xsi_assistant_call_divert_number" t="Εκτροπή Αριθμού"/>
+	<phrase n="lang_xsi_call_alerting" t="Ειδοποίηση Κλήσεων"/>
+	<phrase n="lang_xsi_call_alerting_mode" t="Λειτουργία Ειδοποίησης"/>
+	<phrase n="lang_xsi_call_alerting_mode_simu" t="Ταυτόχρονα"/>
+	<phrase n="lang_xsi_call_alerting_mode_seq" t="Διαδοχικά"/>
+	<phrase n="lang_xsi_call_alerting_id_name" t="Όνομα Γραμμής Κλήσης"/>
+	<phrase n="lang_xsi_call_alerting_id_exec_name" t="Όνομα Διευθυντή"/>
+	<phrase n="lang_xsi_call_alerting_id_origin_name" t="Όνομα Διοργανωτή"/>
+	<phrase n="lang_xsi_call_alerting_id_exec_origin_name" t="Ονόματα Διευθυντή-Διοργανωτή"/>
+	<phrase n="lang_xsi_call_alerting_id_origin_exec_name" t="Ονόματα Διοργανωτή-Διευθυντή"/>
+	<phrase n="lang_xsi_call_custom_name" t="Διαμόρφωση"/>
+	<phrase n="lang_xsi_call_alerting_custom_id_name" t="Διαμόρφωση Ονόματος Γραμμής Κλήσης"/>
+	<phrase n="lang_xsi_call_alerting_id_number" t="Αριθμός Γραμμής Κλήσης"/>
+	<phrase n="lang_xsi_call_alerting_id_exec_number" t="Αριθμός Διευθυντή"/>
+	<phrase n="lang_xsi_call_alerting_id_origin_number" t="Αριθμός Διοργανωτή"/>
+	<phrase n="lang_xsi_call_alerting_custom_id_number" t="Διαμόρφωση Γραμμής Κλήσης"/>
+	<phrase n="lang_xsi_call_alerting_recall_after" t="ΠροώθησηΚλ. ΕπΚληση Μετά"/>
+	<phrase n="lang_xsi_call_alerting_recall_after_range" t="Πλήθος Κουδουνισμών (2-20)"/>
+	<phrase n="lang_xsi_call_alerting_next_assistant" t="Προς Επόμενη Γραμματέα Μετά"/>
+	<phrase n="lang_xsi_call_alerting_next_assistant_range" t="Πλήθος Κουδουνισμών (1-20)"/>
+	<phrase n="lang_xsi_call_alerting_rollover_after" t="Επιστροφή από Αναμονή"/>
+	<phrase n="lang_xsi_call_alerting_rollover_after_time" t="Χρόνος για Επιστροφή"/>
+	<phrase n="lang_xsi_call_alerting_rollover_after_time_range" t="Χρόνος σε δευτ. (0-60)"/>
+	<phrase n="lang_xsi_call_alerting_rollover_action" t="Ενέργεια Επιστροφής"/>
+	<phrase n="lang_xsi_call_alerting_rollover_action_vm" t="Μήνυμα Τηλεφωνητή"/>
+	<phrase n="lang_xsi_call_alerting_rollover_action_fwd" t="Προώθηση"/>
+	<phrase n="lang_xsi_call_alerting_rollover_action_na" t="Ενέργεια Μη Απάντησης"/>
+	<phrase n="lang_xsi_call_alerting_rollover_fwd_number" t="Αριθμός Προώθησης"/>
+	<phrase n="lang_value_out_of_range" t="Τιμή εκτός Ορίων"/>
+	<phrase n="lang_xsi_callon_behalfof_select_executive" t="Επιλογή Διευθυντή"/>
+	<phrase n="lang_collaborate_room_details" t="Λεπτομ.Δωματίου Συνεργασίας"/>
+	<phrase n="lang_collaborate_room_name" t="Όνομα δωματίου"/>
+	<phrase n="lang_collaborate_room_type" t="Τύπος δωματίου"/>
+	<phrase n="lang_collaborate_join_room" t="Συμμετοχή σε δωμάτιο"/>
+	<phrase n="lang_unavailable_state" t="Εισαγωγή λάθος κωδικού"/>
+	<phrase n="lang_enter_unavailable_code" t="Εισαγωγή λάθος κωδικού"/>
+	<phrase n="lang_ringer_is_off" t="Ήχος Κλειστός"/>
+	<phrase n="lang_uxm_update" t="Αναβάθμιση Μονάδας Επέκτασης"/>
+	<phrase n="lang_uxm_update_infotext_progress" t="Αναβαθμίζεται. Μην αποσυνδέσετε το τηλέφωνο ή τη μονάδα από το ρεύμα."/>
+	<phrase n="lang_uxm_update_infotext_prepare" t="Προετοιμασία αναβάθμισης. Μην αποσυνδέσετε τηλέφωνο ή μονάδα από το ρεύμα."/>
+	<phrase n="lang_F_DELETE_MSG" t="Διαγ.Μ"/>
+	<phrase n="lang_F_DELETE_MSG_typeSio" t="Διαγ.Μηνύμ."/>
+	<phrase n="lang_F_DELETE_MSG_smartlabel" t="Διαγ.Μην."/>
+	<phrase n="lang_F_DELETE_MSG_full" t="Delete Message"/>
+	<phrase n="lang_F_NEXT_ID" t="ID↓"/>
+	<phrase n="lang_F_NEXT_ID_typeSio" t="Νέος Λογαριασμός"/>
+	<phrase n="lang_F_NEXT_ID_smartlabel" t="Επόμενο"/>
+	<phrase n="lang_F_PREV_ID" t="ID↑"/>
+	<phrase n="lang_F_PREV_ID_typeSio" t="Προηγούμενο"/>
+	<phrase n="lang_F_PREV_ID_smartlabel" t="Προηγ.ID"/>
+	<phrase n="lang_F_OCIP" t="OCI-P"/>
+	<phrase n="lang_F_SAB" t="Κατάλ.S"/>
+	<phrase n="lang_F_SAB_typeSio" t="Κατάλογος S"/>
+	<phrase n="lang_F_SAB_smartlabel" t="Κατάλογος"/>
+	<phrase n="lang_F_ABS" t="ΑνΚατ"/>
+	<phrase n="lang_F_ABS_typeSio" t="Αναζ.Καταλ."/>
+	<phrase n="lang_addressbook_menu" t="Επιλογή Τηλ.Καταλ."/>
+	<phrase n="lang_addressbook_menu_local" t="Τοπικός"/>
+	<phrase n="lang_multicast_zones_title" t="Ζώνες Multicast"/>
+	<phrase n="lang_no_multicast_zones" t="Μη διαθέσιμες ζώνες multicast"/>
+	<phrase n="lang_acd_state" t="Κατάσταση ACD"/>
+	<phrase n="lang_please_sign_into_set_acd_state" t="Συνδεθείτε για ρύθμιση Κατάστασης ACD"/>
+	<phrase n="lang_fkey_longpress_support" t="Χαρακτηριστικό-LP"/>
+	<phrase n="lang_important" t="Σημαντικό"/>
+	<phrase n="lang_SmartTransferEditDescription" t="Εισαγωγή Στόχου Έξυπνης Μεταφοράς"/>
+	<phrase n="lang_SmartTransfer" t="ΈξυπνηΜεταφορά"/>
+	<phrase n="lang_SmartTransfer_ready" t="Πλήκτρο έτοιμο για μεταφορά κλήσεων."/>
+	<phrase n="lang_department" t="Τμήμα"/>
+	<phrase n="lang_extensions" t="Εσωτερικά"/>
+	<phrase n="lang_menu_title_text_options" t="Επιλογές Κειμένου"/>
+	<phrase n="lang_F_ADD_LOCATION" t="Προσθήκη Τοποθεσίας"/>
+	<phrase n="lang_gk_mode_none" t="Κανένα"/>
+	<phrase n="lang_demo_mode" t="Δοκιμαστική Λειτουργία"/>
+	<phrase n="lang_transfer_or" t="Μεταφορά ή"/>
+	<phrase n="lang_call_pickup" t="Απάντηση Κλήσης;"/>
+	<phrase n="lang_choose_an_action" t="Επιλογή Ενέργειας"/>
+	<phrase n="lang_Conference_Setup" t="Ρύθμιση Συνδιάσκεψης"/>
+	<phrase n="lang_Conference_First_Participant" t="Πρώτος Συμμετέχων"/>
+	<phrase n="lang_Conference_Second_Participant" t="Δεύτερος Συμμετέχων"/>
+	<phrase n="lang_menu_smart_label" t="Επιλογές ΈξυπνηςΟνομασίας"/>
+	<phrase n="lang_menu_idle_screen" t="Λειτουργία Οθόνης Αναμονής"/>
+	<phrase n="lang_menu_call_screen" t="Λειτουργία Οθονών Κλήσης"/>
+	<phrase n="lang_menu_other_screen" t="Λειτουργία Άλλων Οθονών"/>
+	<phrase n="lang_menu_label_default_mode" t="Προεπιλεγμένη Λειτουργία Οθόνης"/>
+	<phrase n="lang_menu_label_expanded_mode" t="Εναλλακτική Λειτουργία Οθόνης"/>
+	<phrase n="lang_menu_label_expansion_triggers" t="Εναλλακτική Ενεργοποίηση Οθόνης"/>
+	<phrase n="lang_menu_short_label" t="Σύντομο Όνομα"/>
+	<phrase n="lang_menu_full_label" t="Πλήρες Όνομα"/>
+	<phrase n="lang_menu_short_label_mode" t="Λειτουργία Σύντομου Ονόματος"/>
+	<phrase n="lang_menu_short_press" t="Σύντομη Πίεση Πλήκτρου Αναζήτησης"/>
+	<phrase n="lang_menu_long_press" t="Παρατεταμένη Πίεση Πλήκτρου Αναζήτησης"/>
+	<phrase n="lang_menu_proximity_sensor" t="Αισθητήρας Εγγύτητας"/>
+	<phrase n="lang_menu_P2_short_press" t="Short Press P2"/>
+	<phrase n="lang_menu_P2_long_press" t="Παρατεταμένη Πίεση Ρ2"/>
+	<phrase n="lang_menu_P3_short_press" t="Σύντομη Πίεση Ρ3"/>
+	<phrase n="lang_menu_P3_long_press" t="Παρατεταμένη Πίεση Ρ3"/>
+	<phrase n="lang_menu_P4_short_press" t="Σύντομη Πίεση Ρ4"/>
+	<phrase n="lang_menu_P4_long_press" t="Παρατεταμένη Πίεση Ρ4"/>
+	<phrase n="lang_menu_P8_short_press" t="Σύντομη Πίεση Ρ8"/>
+	<phrase n="lang_menu_P8_long_press" t="Παρατεταμένη Πίεση Ρ8"/>
+	<phrase n="lang_menu_P10_short_press" t="Short Press P10"/>
+	<phrase n="lang_menu_P10_long_press" t="Long Press P10"/>
+	<phrase n="lang_short_press" t="Σύντομη Πίεση"/>
+	<phrase n="lang_fkey_press" t="Πιέστε Fkey"/>
+	<phrase n="lang_long_press" t="Παρατεταμένη Πίεση"/>
+	<phrase n="lang_short_label_mode_icon" t="Μόνο Εικονίδιο"/>
+	<phrase n="lang_smartlabel_mode_text" t="Μόνο Κείμενο"/>
+	<phrase n="lang_smartlabel_mode_icon_text" t="Εικονίδιο &amp; Κείμενο"/>
+	<phrase n="lang_status_msg_uxm_update_required" t=" -χρειάζεται Αναβάθμιση"/>
+	<phrase n="lang_status_detail_uxm_update_required" t="Αναβάθμιση Μονάδας Επέκτασης για την ενεργοποίηση της."/>
+	<phrase n="lang_status_detail_uxm_update_required2" t="Βεβαιωθείτε ότι υπάρχει μόνο μία μονάδα επέκτασης συνδεδεμένη στο τηλέφωνο και ότι αυτή δεν τροφοδοτείται από ξεχωριστό τροφοδοτικό."/>
+	<phrase n="lang_unhandled_item" t="Μη χρησιμοποιημένο τμήμα:"/>
+	<phrase n="lang_preferences_general" t="Γενικά"/>
+	<phrase n="lang_quick_dial_contacts" t="Επαφές Άμεσης Κλήσης"/>
+	<phrase n="lang_start_tbook_download" t="Λήψη Καταλόγου;"/>
+	<phrase n="lang_tbook_download" t="Λήψη Καταλόγου"/>
+	<phrase n="lang_tbook_download_started" t="Η λήψη του καταλόγου ξεκίνησε"/>
+	<phrase n="lang_tbook_download_finished" t="Η λήψη του καταλόγου ολοκληρώθηκε"/>
+	<phrase n="lang_tbook_download_failed" t="Η λήψη του καταλόγου απέτυχε"/>
+	<phrase n="lang_tbook_download_not_possible" t="Αδύνατη η λήψη του καταλόγου"/>
+	<phrase n="lang_tbook_download_overflowed" t="Μη ολοκληρωμένη λήψη καταλόγου (υπέρβαση εσωτερικού ορίου)."/>
+	<phrase n="lang_tbook_is_full" t="Πλήρης Τηλ.Κατάλογος"/>
+	<phrase n="lang_F_HOTELING" t="Ξενοδοχείο"/>
+	<phrase n="lang_F_HOTELING_typeSio" t="Ξενοδοχεία"/>
+	<phrase n="lang_F_HOTELING_smartlabel" t="Ξενοδοχεία"/>
+	<phrase n="lang_F_GUEST_LOGIN" t="Σύνδεση Πελάτη"/>
+	<phrase n="lang_F_GUEST_LOGOUT" t="Αποσύνδεση Πελάτη"/>
+	<phrase n="lang_F_GUEST_LOGIN_smartlabel" t="Πελάτης Εντός"/>
+	<phrase n="lang_F_GUEST_LOGOUT_smartlabel" t="Πελάτης Εκτός"/>
+	<phrase n="lang_F_LOGIN" t="Σύνδεση"/>
+	<phrase n="lang_F_LOGOUT" t="Αποσύνδεση"/>
+	<phrase n="lang_smartlabel_id" t="ID"/>
+	<phrase n="lang_title_guest_logout" t="Αποσύνδεση Πελάτη"/>
+	<phrase n="lang_confirm_guest_logout" t="Θέλετε να αποσυνδεθείτε;"/>
+	<phrase n="lang_no_contacts" t="Χωρίς Επαφές"/>
+	<phrase n="lang_hoteling_guest" t="Πελάτης Ξενοδοχείων"/>
+	<phrase n="lang_logging_out" t="Αποσυνδέεται..."/>
+	<phrase n="lang_logging_in" t="Συνδέεται..."/>
+	<phrase n="lang_login_failed" t="Αποτυχία Σύνδεσης"/>
+	<phrase n="lang_acd_signout_message" t="Θα αποσυνδεθείτε από το ACD. Σύνδεση ως πελάτης;"/>
+	<phrase n="lang_title_guest_login" t="Σύνδεση Πελάτη"/>
+	<phrase n="lang_F_MARK_READ" t="Διαβασμένο"/>
+	<phrase n="lang_F_MARK_UNREAD" t="Αδιάβαστο"/>
+	<phrase n="lang_call_recording_mode_never" t="Ποτέ"/>
+	<phrase n="lang_call_recording_mode_always" t="Πάντα"/>
+	<phrase n="lang_call_recording_mode_always_pause_resume" t="Πάντα με Παύση/Επανέναρξη"/>
+	<phrase n="lang_call_recording_mode_on_demand" t="Μετά από αίτημα"/>
+	<phrase n="lang_call_recording_mode_on_demand_user_start" t="Έναρξη με αίτημα χρήστη"/>
+	<phrase n="lang_smartlabel_dismiss_timeout" t="Επιστροφή σε Προεπιλογή"/>
+	<phrase n="lang_call_recording_mode" t="Λειτουργία Εγγραφής Κλήσης"/>
+	<phrase n="lang_menu_full_label_mode" t="Λειτουργία Πλήρους Ονόματος"/>
+	<phrase n="lang_menu_label_mode" t="Λειτουργία Ονόματος"/>
+	<phrase n="lang_guest_pin" t="ΡΙΝ Πελάτη"/>
+	<phrase n="lang_incorrect_pin" t="Λάθος ΡΙΝ"/>
+	<phrase n="lang_voicemail_info" t="Πληροφορία Τηλεφωνητή"/>
+	<phrase n="lang_confirm_del_deny_list_item_title" t="Διαγραφή Λίστας Φραγής"/>
+	<phrase n="lang_confirm_del_number_from_deny_list" t="Διαγραφή από λίστα φραγής;"/>
+	<phrase n="lang_confirm_del_menu_configuration" t="Διαγραφή Ρύθμισης Πλήκτρων"/>
+	<phrase n="lang_confirm_message" t="Επιβεβαιώστε την επιλογή σας;"/>
+	<phrase n="lang_caller_id_blocking" t="Φραγή Αριθμού"/>
+	<phrase n="lang_screen_items_color_and_opacity_title" t="Χρώμα και Διαφάνεια"/>
+	<phrase n="lang_ui_themes" t="Θέματα"/>
+	<phrase n="lang_theme_light" t="Φωτισμός"/>
+	<phrase n="lang_theme_dark" t="Σκούρο"/>
+	<phrase n="lang_theme_colorful" t="Χρωματιστό"/>
+	<phrase n="lang_theme_industrial" t="Βιομηχανικό"/>
+	<phrase n="lang_theme_contrast" t="Contrast"/>
+	<phrase n="lang_screen_items_color_title" t="Χρώμα"/>
+	<phrase n="lang_screen_items_opacity_title" t="Διαφάνεια"/>
+	<phrase n="lang_screen_items_enter_custom_color_title" t="Τιμές Προσαρμογής"/>
+	<phrase n="lang_screen_item_titlebar_text" t="Κείμενο Επικεφαλίδας"/>
+	<phrase n="lang_screen_item_text" t="Κείμενο"/>
+	<phrase n="lang_screen_item_subtext" t="Δευτερεύον Κείμενο"/>
+	<phrase n="lang_screen_item_extratext" t="Επιπλέον Κείμενο"/>
+	<phrase n="lang_screen_item_extratext2" t="Επιπλέον Κείμενο 2"/>
+	<phrase n="lang_screen_item_titlebar_background" t="Φόντο Τίτλων"/>
+	<phrase n="lang_screen_item_background" t="Φόντο"/>
+	<phrase n="lang_screen_item_fkey_background" t="Φόντο Fkey"/>
+	<phrase n="lang_screen_item_fkey_pressed_background" t="Φόντο Πίεσης Fkey"/>
+	<phrase n="lang_screen_item_fkey_separator" t="Διαχωριστής Fkey"/>
+	<phrase n="lang_screen_item_fkey_label" t="Όνομα Fkey"/>
+	<phrase n="lang_screen_item_fkey_pressed_label" t="Όνομα Πίεσης Fkey"/>
+	<phrase n="lang_screen_item_line_background" t="Φόντο Γραμμής"/>
+	<phrase n="lang_screen_item_selected_line_background" t="Φόντο Επιλογής Γραμμής"/>
+	<phrase n="lang_screen_item_selected_line_indicator" t="Δείκτης Επιλεγμένης Γραμμής"/>
+	<phrase n="lang_screen_item_selected_line_text" t="Κείμενο Επιλεγμένης Γραμμής"/>
+	<phrase n="lang_screen_item_line_separator" t="Διαχωριστής Γραμμής"/>
+	<phrase n="lang_screen_item_scrollbar" t="Μπάρα Κύλισης"/>
+	<phrase n="lang_screen_item_cursor" t="Δρομέας"/>
+	<phrase n="lang_screen_item_status_msgs_background" t="Φόντο Κατάστασης Μηνυμάτων"/>
+	<phrase n="lang_screen_item_status_msgs_border" t="Πλαίσιο Κατάστασης Μηνυμάτων"/>
+	<phrase n="lang_screen_item_smartlabel_background" t="Φόντο ΈξυπνηςΟνομασίας"/>
+	<phrase n="lang_screen_item_smartlabel_pressed_background" t="Φόντο Πίεσης ΈξυπνηςΟνομασίας"/>
+	<phrase n="lang_screen_item_smartlabel_separator" t="ΔιαχωριστήςΕξυπνηςΟνομασίας"/>
+	<phrase n="lang_screen_item_smartlabel_label" t="ΕτικέταΈξυπνηςΟνομασίας"/>
+	<phrase n="lang_screen_item_smartlabel_pressed_label" t="ΕτικέταΠίεσηςΈξυπνηςΟνομασίας"/>
+	<phrase n="lang_screen_item_expansion_module_background" t="Φόντο Μονάδας Επέκτασης"/>
+	<phrase n="lang_screen_item_expansion_module_pressed_background" t="Φόντο Πίεσης Μονάδας Επέκτασης"/>
+	<phrase n="lang_screen_item_expansion_module_separator" t="Διαχωριστής Μονάδας Επέκτασης"/>
+	<phrase n="lang_screen_item_expansion_module_maintext" t="Κείμενο Μονάδας Επέκτασης"/>
+	<phrase n="lang_screen_item_expansion_module_pressed_maintext" t="Κείμενο Πίεσης Μονάδας Επέκτασης"/>
+	<phrase n="lang_screen_item_expansion_module_subtext" t="ΔευτΚείμενο Μονάδας Επέκτασης"/>
+	<phrase n="lang_screen_item_expansion_module_pressed_subtext" t="ΔευτΚείμενο Πίεσης Μονάδας Επέκτασης"/>
+	<phrase n="lang_screen_item_expansion_module_page_indicator" t="Ένδειξη Σελίδας Μονάδας Επέκτασης"/>
+	<phrase n="lang_screen_items_color_name_onyx_black" t="Μαύρος Όνυχας"/>
+	<phrase n="lang_screen_items_color_name_midnight_black" t="Μαύρο Μεσονυχτίου"/>
+	<phrase n="lang_screen_items_color_name_obsidian_black" t="Μαύρο Οψιδιανού"/>
+	<phrase n="lang_screen_items_color_name_dark_grey" t="Σκούρο Γκρι"/>
+	<phrase n="lang_screen_items_color_name_grey" t="Γκρι"/>
+	<phrase n="lang_screen_items_color_name_light_grey" t="Ανοιχτό Γκρι"/>
+	<phrase n="lang_screen_items_color_name_grey_white" t="Λευκό Γκρι"/>
+	<phrase n="lang_screen_items_color_name_white" t="Λευκό"/>
+	<phrase n="lang_screen_items_color_name_light_yellow" t="Ανοιχτό Κίτρινο"/>
+	<phrase n="lang_screen_items_color_name_yellow" t="Κίτρινο"/>
+	<phrase n="lang_screen_items_color_name_light_red" t="Ανοιχτό Κόκκινο"/>
+	<phrase n="lang_screen_items_color_name_red" t="Κόκκινο"/>
+	<phrase n="lang_screen_items_color_name_light_blue" t="Ανοιχτό Μπλε"/>
+	<phrase n="lang_screen_items_color_name_blue" t="Μπλε"/>
+	<phrase n="lang_screen_items_color_name_light_green" t="Ανοιχτό Πράσινο"/>
+	<phrase n="lang_screen_items_color_name_green" t="Πράσινο"/>
+	<phrase n="lang_screen_items_color_name_black" t="Black"/>
+	<phrase n="lang_screen_items_color_name_carbon" t="Carbon"/>
+	<phrase n="lang_screen_items_color_name_dim_grey" t="Dim Grey"/>
+	<phrase n="lang_screen_items_color_name_silver" t="Silver"/>
+	<phrase n="lang_screen_items_color_name_gainsboro" t="Gainsboro"/>
+	<phrase n="lang_screen_items_color_name_snowflake" t="Snowflake"/>
+	<phrase n="lang_screen_items_color_name_white_smoke" t="White Smoke"/>
+	<phrase n="lang_screen_items_color_name_custom" t="Διαμόρφωση Χρώματος"/>
+	<phrase n="lang_monitored_extensions" t="Επίβλεψη Εσωτερικών"/>
+	<phrase n="lang_ALS" t="Αισθητήρας Φωτισμού"/>
+	<phrase n="lang_all_available_calls" t="Όλες οι Διαθέσιμες Κλήσεις"/>
+	<phrase n="lang_new_call" t="Νέες Κλήσεις"/>
+	<phrase n="lang_select_conf_participant" t="Επιλογή Συμμετεχόντων Συνδιάσκεψης"/>
+	<phrase n="lang_consult_conference" t="Συμβουλ.Συνδιάσκεψης"/>
+	<phrase n="lang_guess_max_hits" t="Μέγιστη Απήχηση"/>
+	<phrase n="lang_guess_results" t="Αποτελέσματα"/>
+	<phrase n="lang_new_network_policy" t="Νέα Πολιτική Δικτύου"/>
+	<phrase n="lang_wrong_lldp_policy" t="Λάθος Πολιτική LLDP"/>
+	<phrase n="lang_F_MODERATE" t="Συντονιστής"/>
+	<phrase n="lang_sip_warning" t="Ειδοποίηση SIP"/>
+	<phrase n="lang_sync_settings" t="Ρυθμίσεις Συγχρονισμού"/>
+	<phrase n="lang_confirm_sync_settings" t="Συγχρονισμός ρυθμίσεων με τον server διαμόρφωσης;"/>
+	<phrase n="lang_no_configured_extensions" t="Κανένα ρυθμισμένο εσωτερικό"/>
+	<phrase n="lang_no_active_calls_on_extensions" t="Καμία ενεργή κλήση στα εσωτερικά"/>
+	<phrase n="lang_sip_response_code_400" t="Λάθος Αίτημα"/>
+	<phrase n="lang_sip_response_code_402" t="Απαιτείται Πληρωμή"/>
+	<phrase n="lang_sip_response_code_403" t="Απαγορεύεται"/>
+	<phrase n="lang_sip_response_code_404" t="Δεν Βρέθηκε"/>
+	<phrase n="lang_sip_response_code_405" t="Μη Επιτρεπτή Μέθοδος"/>
+	<phrase n="lang_sip_response_code_406" t="Μη Αποδεκτό"/>
+	<phrase n="lang_sip_response_code_407" t="Απαιτείται Πιστοποίηση Proxy"/>
+	<phrase n="lang_sip_response_code_408" t="Λήξη Χρονικού Ορίου"/>
+	<phrase n="lang_sip_response_code_410" t="Χάθηκε"/>
+	<phrase n="lang_sip_response_code_413" t="Πολύ Μεγάλο Περιεχόμενο"/>
+	<phrase n="lang_sip_response_code_414" t="Πολύ Μακριά URI"/>
+	<phrase n="lang_sip_response_code_415" t="Μη υποστηριζόμενος τύπος αρχείου"/>
+	<phrase n="lang_sip_response_code_416" t="Μη υποστηριζόμενο Σχήμα URI"/>
+	<phrase n="lang_sip_response_code_420" t="Λάθος Εσωτερικό"/>
+	<phrase n="lang_sip_response_code_421" t="Απαιτείται Εσωτερικό"/>
+	<phrase n="lang_sip_response_code_422" t="Μικρό διάστημα συνδέσεων"/>
+	<phrase n="lang_sip_response_code_423" t="Πολύ σύντομο διάστημα"/>
+	<phrase n="lang_sip_response_code_480" t="Προσωρινά μη Διαθέσιμο"/>
+	<phrase n="lang_sip_response_code_481" t="Δεν υπάρχει Κλήση/Συναλλαγή"/>
+	<phrase n="lang_sip_response_code_482" t="Αναγνωρίστηκε Βρόγχος"/>
+	<phrase n="lang_sip_response_code_483" t="Πολλές Μεταπηδήσεις"/>
+	<phrase n="lang_sip_response_code_484" t="Μη πλήρης Διεύθυνση"/>
+	<phrase n="lang_sip_response_code_485" t="Ασαφής"/>
+	<phrase n="lang_sip_response_code_486" t="Κατειλημμένο"/>
+	<phrase n="lang_sip_response_code_487" t="Αίτημα Τερματίστηκε"/>
+	<phrase n="lang_sip_response_code_488" t="Μη Αποδεκτό Εδώ"/>
+	<phrase n="lang_sip_response_code_491" t="Αναμονή Αιτήματος"/>
+	<phrase n="lang_sip_response_code_493" t="Απροσδιόριστος"/>
+	<phrase n="lang_sip_response_code_500" t="Εσωτερικό Σφάλμα Server"/>
+	<phrase n="lang_sip_response_code_501" t="Δεν Εφαρμόστηκε"/>
+	<phrase n="lang_sip_response_code_502" t="Λάθος Gateway"/>
+	<phrase n="lang_sip_response_code_503" t="Μη διαθέσιμος Server"/>
+	<phrase n="lang_sip_response_code_504" t="Λήξη Χρονικού Ορίου Server"/>
+	<phrase n="lang_sip_response_code_505" t="Μη Υποστηριζόμενη Έκδοση"/>
+	<phrase n="lang_sip_response_code_513" t="Πολύ Μεγάλο Μήνυμα"/>
+	<phrase n="lang_sip_response_code_599" t="Σφάλμα Χρονικού Ορίου Σύνδεσης Δικτύου"/>
+	<phrase n="lang_sip_response_code_600" t="Κατειλημμένο Παντού"/>
+	<phrase n="lang_sip_response_code_603" t="Μείωση"/>
+	<phrase n="lang_sip_response_code_604" t="Δεν Υπάρχει Παντού"/>
+	<phrase n="lang_sip_response_code_606" t="Μη Αποδεκτό"/>
+	<phrase n="lang_sort_order" t="Σειρά Ταξινόμησης"/>
+	<phrase n="lang_directory_display_order" t="Σειρά Προβολής"/>
+	<phrase n="lang_display_order_first_name_last_name" t="Όνομα, Επώνυμο"/>
+	<phrase n="lang_display_order_last_name_first_name" t="Επώνυμο, Όνομα"/>
+	<phrase n="lang_visual_options" t="Επιλογές Προβολής"/>
+	<phrase n="lang_call_screen_photo_size" t="Μέγεθος Εικόνας στην Οθόνη Κλήσης"/>
+	<phrase n="lang_size_XS" t="XS"/>
+	<phrase n="lang_size_S" t="S"/>
+	<phrase n="lang_size_M" t="M"/>
+	<phrase n="lang_size_L" t="L"/>
+	<phrase n="lang_size_XL" t="XL"/>
+	<phrase n="lang_size_XXL" t="XXL"/>
+	<phrase n="lang_size_XXXL" t="XXXL"/>
+	<phrase n="lang_prefer_saved_over_received_photo" t="Προτίμηση Τοπικών Εικόνων"/>
+	<phrase n="lang_display_method" t="Μορφή Προβολής Αριθμού"/>
+	<phrase n="lang_display_method_full_contact" t="Πλήρης Επαφή"/>
+	<phrase n="lang_display_method_display_name" t="Όνομα"/>
+	<phrase n="lang_display_method_display_number" t="Αριθμός"/>
+	<phrase n="lang_display_method_display_name_number" t="Όνομα + Αριθμός"/>
+	<phrase n="lang_display_method_display_number_name" t="Αριθμός + Όνομα"/>
+	<phrase n="lang_no_calls_for_transfer" t="Δεν υπάρχουν κλήσεις προς Μεταφορά"/>
+	<phrase n="lang_brand_variant_select_title" t="Επιλέξτε Παραλλαγή Επωνυμίας"/>
+	<phrase n="lang_brand_variant_default" t="Προεπιλογή"/>
+	<phrase n="lang_brand_variant_updated_title" t="Παραλλαγή Ενημερώθηκε"/>
+	<phrase n="lang_brand_variant_selected" t="Επιλέχθηκε Παραλλαγή"/>
+	<phrase n="lang_system_reboot_now" t="Το Σύστημα θα Επανεκκινηθεί"/>
+	<phrase n="lang_select_identity" t="Επιλογή Ταυτότητας"/>
+	<phrase n="lang_F_CALL_CENTER_STATUS" t="Κατάσταση Τηλεφωνικού Κέντρου"/>
+	<phrase n="lang_F_ATTENDED_TRANSFER" t="Παρακολούθηση"/>
+	<phrase n="lang_disposition_code_sent" t="στάλθηκε"/>
+	<phrase n="lang_disposition_code_selection" t="Επιλογ.Κωδικ.Διαθ."/>
+	<phrase n="lang_disposition_code_entry" t="Εισαγ.Κωδικ.Διαθ."/>
+	<phrase n="lang_F_DISP_CODE" t="Κωδικός Δ"/>
+	<phrase n="lang_F_DISP_CODE_typeSio" t="Κωδικός Διάθεσιμότητας"/>
+	<phrase n="lang_F_DISP_CODE_smartlabel" t="Κωδικός Δ"/>
+	<phrase n="lang_disposition_code_display_text_list" t="Λίστα"/>
+	<phrase n="lang_parked_calls_settings" t="Κλήσεις σε Στάθμευση"/>
+	<phrase n="lang_call_parked_on" t="Σε στάθμευση"/>
+	<phrase n="lang_no_parked_call" t="Δεν υπάρχει κλήση σε Στάθμευση."/>
+	<phrase n="lang_F_CALL_PARK_IDLE" t="Σε Στάθμευση"/>
+	<phrase n="lang_F_CALL_PARK_typeSio" t="Στάθμευση Κλήσης"/>
+	<phrase n="lang_menu_any_smartlabel_key_short_press" t="Σύντομη Πίεση ΈξυπνηςΟνομασίας"/>
+	<phrase n="lang_monitored_extension_is_ringing" t="Επιβλ.εσωτερικό κουδουνίζει"/>
+	<phrase n="lang_disposition_code_not_sent" t="Ο Κωδικός δεν στάλθηκε."/>
+	<phrase n="lang_disposition_code_identity_mismatch" t="Δεν ταυτοποιήθηκε."/>
+	<phrase n="lang_F_EXEC_ASSIST_CALL_PUSH" t="Προώθηση Κλήσης"/>
+	<phrase n="lang_usb_mass_storage_plug" t="Αναγνωρίστηκε USB"/>
+	<phrase n="lang_usb_mass_storage_unplug" t="Αποσυνδέθηκε USB"/>
+	<phrase n="lang_information_menu_usb_info" t="Πληροφορίες USB"/>
+	<phrase n="lang_usb_mass_storage_title" t="Αποθηκευτικός Χώρος USB"/>
+	<phrase n="lang_F_USB_EJECT" t="Αποσύνδεση USB"/>
+	<phrase n="lang_usb_mass_storage_safe_to_remove" t="Είναι ασφαλής η αποσύνδεση USB"/>
+	<phrase n="lang_F_USBREC_START" t="Εγγραφή σε USB"/>
+	<phrase n="lang_F_USBREC_START_typeSio" t="Έναρξη εγγραφής"/>
+	<phrase n="lang_F_USBREC_START_smartlabel" t="Έναρξη&lt;br&gt;Εγγ.USB"/>
+	<phrase n="lang_F_USBREC_STOP" t="Τερματ.Εγγραφής"/>
+	<phrase n="lang_F_USBREC_STOP_typeSio" t="Τερματ.Εγγραφής"/>
+	<phrase n="lang_F_USBREC_STOP_smartlabel" t="Τερματ.&lt;br&gt;Εγγραφ."/>
+	<phrase n="lang_F_USBREC_PAUSE" t="Παύση Εγγρ.USB"/>
+	<phrase n="lang_F_USBREC_PAUSE_typeSio" t="Παύση εγγραφής"/>
+	<phrase n="lang_F_USBREC_PAUSE_smartlabel" t="Παύση&lt;br&gt;Εγγ.USB"/>
+	<phrase n="lang_F_USBREC_RESUME" t="Επανέναρξη Εγγρ."/>
+	<phrase n="lang_F_USBREC_RESUME_typeSio" t="Επανέναρξη Εγγραφής"/>
+	<phrase n="lang_F_USBREC_RESUME_smartlabel" t="Επανέναρξη&lt;br&gt;Εγγρ."/>
+	<phrase n="lang_F_PAUSE" t="Παύση"/>
+	<phrase n="lang_F_RESUME" t="Επανέναρξη"/>
+	<phrase n="lang_usb_recording_processing_wait" t="Περιμένετε για την ολοκλήρωση της εγγραφής!"/>
+	<phrase n="lang_usb_recording_processing_completed" t="Εγγραφή ολοκληρώθηκε!"/>
+	<phrase n="lang_usb_recording_call_terminated" t="Εγγραφή κλήσης ολοκληρώθηκε"/>
+	<phrase n="lang_usb_recording_terminated_drive_full" t="Recording terminated, USB drive is full"/>
+	<phrase n="lang_usb_recording_terminated_max_file_size" t="Eγγραφή τερματίστηκε, πολύ μεγάλο αρχείο"/>
+	<phrase n="lang_usb_recording_no_usb_drive_detected" t="Δεν βρέθηκε δίσκος USB"/>
+	<phrase n="lang_usb_recording_terminated_errno" t="Άλλη αιτία τερματισμού Εγγρ: "/>
+	<phrase n="lang_usb_playback_browse_recordings" t="Περιήγηση Εγγραφών"/>
+	<phrase n="lang_usb_playback_browse_recordings_title" t="Εγγραφές Κλήσης"/>
+	<phrase n="lang_usb_playback_play_recording_title" t="Αναπαραγωγή Εγγραφών"/>
+	<phrase n="lang_usb_playback_invalid_header_or_encrypted_file" t="Λάθος wav ή κωδικοποιημένο αρχείο:"/>
+	<phrase n="lang_usb_playback_recording_information_title" t="Πληροφορίες Εγγραφής"/>
+	<phrase n="lang_usb_playback_delete_recording_title" t="Διαγραφή Εγγραφής"/>
+	<phrase n="lang_label_rewind" t="Προς τα Πίσω"/>
+	<phrase n="lang_label_fast_forward" t="Γρήγορα Μπροστά"/>
+	<phrase n="lang_text_size" t="Μέγεθος"/>
+	<phrase n="lang_usb_playback_no_recordings" t="Χωρίς Εγγραφή"/>
+	<phrase n="lang_usb_recording_aborted_by_conference" t="Εγγραφή ματαιώθηκε από τη συνδιάσκεψη"/>
+	<phrase n="lang_usb_recording_cannot_record_conference" t="Αδύνατη εγγραφή συνδιάσκεψης"/>
+	<phrase n="lang_date_and_time" t="Ημέρα &amp; Ώρα"/>
+	<phrase n="lang_label_context_key_page_left" t="Αριστερά"/>
+	<phrase n="lang_label_context_key_page_right" t="Δεξιά"/>
+	<phrase n="lang_expansion_module_text_alignment" t="Στοίχιση Κειμένου"/>
+	<phrase n="lang_expansion_module_color_font_sizes_XXL_XS" t="Maintext XXL &amp; Subtext XS"/>
+	<phrase n="lang_expansion_module_color_font_sizes_XL_XS" t="Maintext XL &amp; Subtext XS"/>
+	<phrase n="lang_expansion_module_color_font_sizes_XL_S" t="Maintext XL &amp; Subtext S"/>
+	<phrase n="lang_expansion_module_color_font_sizes_L_XS" t="Maintext L &amp; Subtext XS"/>
+	<phrase n="lang_expansion_module_color_font_sizes_L_S" t="Maintext L &amp; Subtext S"/>
+	<phrase n="lang_expansion_module_color_font_sizes_L_M" t="Maintext L &amp; Subtext M"/>
+	<phrase n="lang_expansion_module_color_font_sizes_M_XS" t="Maintext M &amp; Subtext XS"/>
+	<phrase n="lang_expansion_module_color_font_sizes_M_S" t="Maintext M &amp; Subtext S"/>
+	<phrase n="lang_expansion_module_color_font_sizes_M_M" t="Maintext M &amp; Subtext M"/>
+	<phrase n="lang_expansion_module_color_font_sizes_S_XS" t="Maintext S &amp; Subtext XS"/>
+	<phrase n="lang_expansion_module_color_font_sizes_S_S" t="Maintext S &amp; Subtext S"/>
+	<phrase n="lang_expansion_module_color_font_sizes_XS_XS" t="Maintext XS &amp; Subtext XS"/>
+	<phrase n="lang_edit_mode_upper_case" t="ΑΒΓ"/>
+	<phrase n="lang_edit_mode_lower_case" t="αβγ"/>
+	<phrase n="lang_edit_mode_numbers" t="123"/>
+	<phrase n="lang_F_IDLE_CONTEXT_PAGE_LEFT" t="Left"/>
+	<phrase n="lang_F_IDLE_CONTEXT_PAGE_LEFT_typeSio" t="Page Left"/>
+	<phrase n="lang_F_IDLE_CONTEXT_PAGE_RIGHT" t="Right"/>
+	<phrase n="lang_F_IDLE_CONTEXT_PAGE_RIGHT_typeSio" t="Page Right"/>
+	<phrase n="lang_F_NONE" t=""/>
+	<phrase n="lang_branding_name" t="Branding:"/>
+	<phrase n="lang_hardware_version" t="Hardware Version:"/>
+	<phrase n="lang_branding_version" t="Branding Version:"/>
+	<phrase n="lang_NickName" t="Nickname"/>
+	<phrase n="lang_FirstShortCode" t="First Code"/>
+	<phrase n="lang_LastShortCode" t="Last Code"/>
+	<phrase n="lang_FirstExternalDirectoryNumber" t="First Number"/>
+	<phrase n="lang_LastExternalDirectoryNumber" t="Last Number"/>
+	<phrase n="lang_DialingPlanCode" t="Plan"/>
+	<phrase n="lang_DialingPlanCodeDetail" t="Dialing Plan Code"/>
+	<phrase n="lang_FirstShortCodeDetail" t="First Short Code"/>
+	<phrase n="lang_FirstExternalDirectoryDetail" t="First External Directory"/>
+	<phrase n="lang_LastExternalDirectoryDetail" t="Last External Directory"/>
+	<phrase n="lang_Department" t="Department"/>
+	<phrase n="lang_shortcodes" t="Short Codes"/>
+	<phrase n="lang_emergency_call_number_is_misconfigured" t="Emergency numbers misconfigured"/>
+	<phrase n="lang_tb_alias" t="Alias"/>
+	<phrase n="lang_web_user_credentials_not_set" t="No credentials set for the web user"/>
+	<phrase n="lang_web_admin_credentials_not_set" t="No credentials set for the web admin"/>
+	<phrase n="lang_not_registered" t=" not registered"/>
+	<phrase n="lang_fake_number" t="Fake Number"/>
+	<phrase n="lang_BLF_DND_on" t="DND on"/>
+	<phrase n="lang_BLF_On_a_call" t="On a call"/>
+	<phrase n="lang_BLF_Idle" t="Idle"/>
+	<phrase n="lang_MediaStack_restarting_All_lines_will_be_closed" t="MediaStack restarting. All lines will be closed."/>
+	<phrase n="lang_Firmware_update_starting" t="Firmware update: starting"/>
+	<phrase n="lang_Firmware_update_sent_install_request" t="Firmware update: waiting for file server response"/>
+	<phrase n="lang_Firmware_update_download" t="Firmware update: downloading"/>
+	<phrase n="lang_Firmware_update_transfer_to_swupdate" t="Firmware update: processing"/>
+	<phrase n="lang_Firmware_update_verification_and_install" t="Firmware update: installing"/>
+	<phrase n="lang_File_server_response" t="Server response: "/>
+	<phrase n="lang_File_server_unreachable" t="File server unreachable."/>
+	<phrase n="lang_File_not_found" t="File not found."/>
+	<phrase n="lang_Firmware_invalid" t="Firmware invalid."/>
+	<phrase n="lang_firmware_update" t="Firmware Update"/>
+	<phrase n="lang_menu_ringer_once" t="Only once"/>
+	<phrase n="lang_voicemail_no_access_code" t="Number or feature access code is not programmed"/>
+	<phrase n="lang_F_WIFI" t="Wi-Fi"/>
+	<phrase n="lang_parties" t="parties"/>
+	<phrase n="lang_fwd_by" t="Fwd by:"/>
+	<phrase n="lang_firmware_update_completed_pending_reboot" t="Phone is about to reboot to complete the firmware update. Rebooting in %d seconds..."/>
+	<phrase n="lang_F_CLOSE" t="Κλείσε"/>
+	<phrase n="lang_ip_assigment" t="IP Assignment"/>
+	<phrase n="lang_disable" t="Disable"/>
+	<phrase n="lang_enable" t="Enable"/>
+	<phrase n="lang_reregister" t="Re-register"/>
+	<phrase n="lang_phonemanager" t="Phone Manager (Web UI)"/>
+	<phrase n="lang_locale" t="Date &amp; Time format"/>
+	<phrase n="lang_webserver_admin_name" t="Admin name"/>
+	<phrase n="lang_webserver_admin_password" t="Admin password"/>
+	<phrase n="lang_webserver_user_name" t="User name"/>
+	<phrase n="lang_webserver_user_password" t="User password"/>
+	<phrase n="lang_startup_wizard" t="Startup Wizard"/>
+	<phrase n="lang_no_voicemail" t="No voicemail"/>
+	<phrase n="lang_new_voicemail" t="New voicemail"/>
+	<phrase n="lang_old_voicemail" t="Old voicemail"/>
+	<phrase n="lang_phonemanager_credentials" t="Phone Manager (Web UI) login credentials"/>
+	<phrase n="lang_static_ip" t="Static IP"/>
+	<phrase n="lang_dhcp_or_static_ip" t="DHCP or Static IP"/>
+	<phrase n="lang_locale_ar_AE" t="Arabic (United Arab Emirates)"/>
+	<phrase n="lang_locale_az_AZ" t="Azərbaycanca (Azerbaijan)"/>
+	<phrase n="lang_locale_bs_BA" t="Bosanki (Bosnia)"/>
+	<phrase n="lang_locale_ca_ES" t="Català (Spain)"/>
+	<phrase n="lang_locale_cs_CZ" t="Čeština (Czech Republic)"/>
+	<phrase n="lang_locale_da_DK" t="Dansk (Denmark)"/>
+	<phrase n="lang_locale_de_DE" t="Deutsch (Germany)"/>
+	<phrase n="lang_locale_el_GR" t="Ελληνικά (Greece)"/>
+	<phrase n="lang_locale_en_DE" t="English (Germany)"/>
+	<phrase n="lang_locale_en_GB" t="English (UK)"/>
+	<phrase n="lang_locale_en_US" t="English (US)"/>
+	<phrase n="lang_locale_es_ES" t="Español (Spain)"/>
+	<phrase n="lang_locale_et_EE" t="Eesti (Estonia)"/>
+	<phrase n="lang_locale_eu_ES" t="Euskara (Spain)"/>
+	<phrase n="lang_locale_fi_FI" t="Suomi (Finland)"/>
+	<phrase n="lang_locale_fr_FR" t="Français (France)"/>
+	<phrase n="lang_locale_he_IL" t="Hebrew (Israel)"/>
+	<phrase n="lang_locale_hr_HR" t="Hrvatski (Croatia)"/>
+	<phrase n="lang_locale_hu_HU" t="Magyar (Hungary)"/>
+	<phrase n="lang_locale_it_IT" t="Italiano (Italy)"/>
+	<phrase n="lang_locale_ja_JP" t="Japanese (Japan)"/>
+	<phrase n="lang_locale_kk_KZ" t="қазақша (Kazakhstan)"/>
+	<phrase n="lang_locale_lt_LT" t="Lietuvių (Lithuania)"/>
+	<phrase n="lang_locale_lv_LV" t="Latviešu (Latvia)"/>
+	<phrase n="lang_locale_nl_NL" t="Nederlands (Netherlands)"/>
+	<phrase n="lang_locale_nb_NO" t="Norsk (Norway)"/>
+	<phrase n="lang_locale_pl_PL" t="Polski (Poland)"/>
+	<phrase n="lang_locale_pt_PT" t="Português (Portugal)"/>
+	<phrase n="lang_locale_ro_RO" t="Română (Romania)"/>
+	<phrase n="lang_locale_ru_RU" t="Русский (Russia)"/>
+	<phrase n="lang_locale_sl_SI" t="Slovenščina (Slovenia)"/>
+	<phrase n="lang_locale_sv_SE" t="Svenska (Sweden)"/>
+	<phrase n="lang_locale_tr_TR" t="Türkçe (Turkey)"/>
+	<phrase n="lang_locale_uk_UA" t="Українська (Ukraine)"/>
+	<phrase n="lang_locale_zh_CN" t="Simplified Chinese (China)"/>
+	<phrase n="lang_locale_zh_TW" t="Traditional Chinese (Taiwan)"/>
+	<phrase n="lang_no_error" t="no error"/>
+	<phrase n="lang_unknown_command" t="unknown command"/>
+	<phrase n="lang_invalid_missing_params" t="invalid or missing parameter(s)"/>
+	<phrase n="lang_not_implemented" t="not implemented"/>
+	<phrase n="lang_failed" t="failed"/>
+	<phrase n="lang_refer_to_logs" t="Refer to the system logs for details"/>
+	<phrase n="lang_software_update_confirmation" t="The software update takes a few minutes and will reboot your phone. If you are on call(s), the update will start when all calls are terminated. Do not turn off your phone during the update. Update now?"/>
+	<phrase n="lang_firmware_field_is_empty" t="Firmware field is empty."/>
+	<phrase n="lang_software_update_in_progress" t="Software update in progress. Please wait for your phone to reboot. Once it restarts, refresh your browser to regain access to the WUI."/>
+	<phrase n="lang_edit_mode" t="Edit Mode"/>
+	<phrase n="lang_vlan_pc_qos" t="VLAN Priority on LAN port (0-7)"/>
+	<phrase n="lang_bluetooth_devices" t="Devices"/>
+	<phrase n="lang_bluetooth_not_ready" t="Bluetooth is not ready"/>
+	<phrase n="lang_F_ACCEPT_CALL_ext_ui" t="Answer"/>
+	<phrase n="lang_F_DEFLECT_ext_ui" t="Forward"/>
+	<phrase n="lang_F_DENY_ext_ui" t="Reject"/>
+	<phrase n="lang_F_END_ext_ui" t="End call"/>
+	<phrase n="lang_F_CALL_PARK_DIAL" t="Call Park Dial"/>
+	<phrase n="lang_F_NEW_CALL" t="New Call"/>
+	<phrase n="lang_device_management_service" t="Device Management Service"/>
+	<phrase n="lang_manage_dms" t="Manage DMS"/>
+	<phrase n="lang_3_days" t="3 Days"/>
+	<phrase n="lang_dms_enabled" t="DMS is enabled until"/>
+	<phrase n="lang_dms" t="DMS"/>
+</phrases>

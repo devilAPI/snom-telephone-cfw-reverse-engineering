@@ -26,10 +26,10 @@ whether the base change is needed at all.
 
 | | |
 |---|---|
-| Image | `orig_firm/snomD785-10.1.226.16-SIP-r.bin` (was already in the repo, untracked) |
+| Image | `firmware/stock/snomD785-10.1.226.16-SIP-r.bin` (was already in the repo, untracked) |
 | SHA-256 | `18de584de4fe39a4772fca6c57ff28d355c5a070f0f006f3922f328e3bbb7eac` |
-| Unpacked to | `decrypted/D785-10.1.226.16/` |
-| Method | `tools/fw-unpack.sh` with `keys/snomD785-firmware1.pub`, unchanged |
+| Unpacked to | `rootfs/stock/D785-10.1.226.16/` |
+| Method | `tools/fw/fw-unpack.sh` with `keys/stock/snomD785-firmware1.pub`, unchanged |
 | Signature | Verified with that key, so the image is genuine snom firmware |
 
 No download was needed, and no key was recovered or derived.

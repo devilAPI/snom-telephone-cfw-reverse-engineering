@@ -2,7 +2,7 @@
 """Check a capture of the phone's audio against a ringtone (tests/ringtones.sh).
 
 usage: ringtone_corr.py SOURCE.wav CAPTURE.raw [CAPTURE2.raw ...]
-CAPTURE*.raw: S16LE mono 16 kHz from tools/rtcap. SOURCE.wav: 16-bit mono PCM (any rate).
+CAPTURE*.raw: S16LE mono 16 kHz from out/rtcap. SOURCE.wav: 16-bit mono PCM (any rate).
 
 The ringer does not pass through the amxr graph, so the capture comes from the microphones
 (acoustic loopback at ringer volume 1 and a 5 % amplitude file): the waveform is buried in

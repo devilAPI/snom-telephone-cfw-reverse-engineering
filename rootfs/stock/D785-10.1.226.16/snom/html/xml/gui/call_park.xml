@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<IPPhoneBatch xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../schemas/minibrowser.xsd">
+  <IPPhoneText state="others_except_mb">
+    <Title>$(lang:parked_calls_settings)</Title>
+    <If condition="$(bool_eval:$(condition:$(var_ifc:CallPark::number_of_parked_calls)>0))">
+      <Fetch mil="1">file:///xml/gui/call_park.xml#sub=*[@id="parked_calls"]</Fetch>
+    </If>
+    <Else>
+      <SoftKeyItem>
+        <Name>ENTER</Name>
+        <Label></Label>
+        <URL>phone://mb_exit</URL>
+      </SoftKeyItem>
+      <Text>$(lang:no_parked_call)</Text>
+    </Else>
+  </IPPhoneText>
+  <!-- Display all parked calls if necessary -->
+  <IPPhoneMenu id="parked_calls" track="yes" dtmf="off" speedselect="off" state="others_except_mb">
+    <Title>$(lang:parked_calls_settings)</Title>
+    <Repeat value_key="$(var_ifc:CallPark::get_parked_calls)" token="|__NAME__|__PARKED_NUMBER__|__IDENTITY__|__PICKUP_NUMBER__|">
+      <!-- Display all parked calls -->
+      <MenuItem name="__NAME__">
+        <SoftKeyItem>
+          <Name>F1</Name>
+          <Label>$(lang:unhold)</Label>
+          <SoftKey>F_CALL_PARK_RETRIEVE</SoftKey>
+          <Url>phone://mb_exit#action_ifc:CallPark=retrieve_parked_call, pickup_number="__PICKUP_NUMBER__", identity="__IDENTITY__"</Url>
+        </SoftKeyItem>
+        <SoftKeyItem>
+          <Name>OFFHOOK</Name>
+          <Url>phone://mb_exit#action_ifc:CallPark=retrieve_parked_call, pickup_number="__PICKUP_NUMBER__", identity="__IDENTITY__"</Url>
+        </SoftKeyItem>
+        <If condition="__PARKED_NUMBER__">
+          <SubText>$(lang:call_parked_on) __PARKED_NUMBER__</SubText>
+        </If>
+        <Url>phone://mb_exit#action_ifc:CallPark=retrieve_parked_call, pickup_number="__PICKUP_NUMBER__", identity="__IDENTITY__"</Url>
+      </MenuItem>
+    </Repeat>
+  </IPPhoneMenu>
+</IPPhoneBatch>

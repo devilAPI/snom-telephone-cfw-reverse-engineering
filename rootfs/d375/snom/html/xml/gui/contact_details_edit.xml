@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<IPPhoneBatch xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../schemas/minibrowser.xsd">
+  <!-- show the contact details with the possiblity to edit afterwards -->
+  <IPPhoneMenu line_height="55" id="contact_details_edit" speedselect="off" state="others_except_mb">
+    <Fetch mil="120000">phone://mb_exit</Fetch>
+    <SoftKeyItem>
+      <Name>LEFT</Name>
+      <SoftKey>CANCEL</SoftKey>
+    </SoftKeyItem>
+    <If condition="$(var:adding)==1">
+      <Title>$(lang:fkey_add_contact_typeSio)</Title>
+    </If>
+    <Else>
+      <Title>$(lang:edit_contact)</Title>
+    </Else>
+    <Repeat values="$(contact_field_names:$(lastsel))" token="|__NAME__|__ID__|__CONTACT_ID__|__VALUE__|__LABEL__|">
+    <If condition="$(is_set:$(var:contact__LABEL__))">
+      <MenuItem id="__ID__">
+        <If condition="$(show_feature:FEATURE_PUI_STYLE_SIO)">
+          <Name>$(lang:__LABEL__)</Name>
+          <SubText>$(var:contact__LABEL__)</SubText>
+        </If>
+        <Else>
+          <Name>$(lang:__LABEL__): $(var:contact__LABEL__)</Name>
+        </Else>
+        <Url>file:///xml/gui/templates.xml#sub=*[@id="input_template"]&amp;var:input_pool_key=0&amp;var:input_displayname=$(lang:__LABEL__)&amp;var:input_token=__Y__&amp;var:input_flags=a&amp;var:input_default=$(var:contact__LABEL__)&amp;var:input_mask=&amp;var:input_url=$(urlencode:"phone://mb_nop%23go_back%26var:contact__LABEL__=__Y__")</Url>
+      </MenuItem>
+    </If>
+    <Else>
+      <MenuItem id="__ID__">
+        <If condition="$(show_feature:FEATURE_PUI_STYLE_SIO)">
+          <Name>$(lang:__LABEL__)</Name>
+          <SubText>__VALUE__</SubText>
+        </If>
+        <Else>
+            <Name>$(lang:__LABEL__): __VALUE__</Name>
+        </Else>
+        <Url>file:///xml/gui/templates.xml#sub=*[@id="input_template"]&amp;var:input_pool_key=0&amp;var:input_displayname=$(lang:__LABEL__)&amp;var:input_token=__Y__&amp;var:input_flags=a&amp;var:input_default=__VALUE__&amp;var:input_mask=&amp;var:input_url=$(urlencode:"phone://mb_nop%23go_back%26var:contact__LABEL__=__Y__")</Url>
+      </MenuItem>
+    </Else>
+    </Repeat>
+    <Repeat values="$(contact_field_numbers:$(lastsel))" token="|__ID__|__URL__|__CONTACT_ID__|__DIAL_NR__|__VALUE__|__ICON__|__IMAGE__|__LABEL__|">
+    <If condition="$(is_set:$(var:contact__LABEL__))">
+      <MenuItem id="__ID__">
+        <If condition="$(show_feature:FEATURE_PUI_STYLE_SIO)">
+          <If condition="$(is_set:__ICON__)">
+            <Name>$(lang:__LABEL__)</Name>
+            <SubText>$(var:contact__LABEL__)</SubText>
+            <ExtraIconType>__ICON__</ExtraIconType>
+          </If>
+        </If>
+        <Else>
+          <Name>$(lang:__LABEL__): $(var:contact__LABEL__)</Name>
+        </Else>
+        <Url>file:///xml/gui/templates.xml#sub=*[@id="input_template"]&amp;var:input_pool_key=0&amp;var:input_displayname=$(lang:__LABEL__)&amp;var:input_token=__Y__&amp;var:input_flags=n&amp;var:input_default=$(var:contact__LABEL__)&amp;var:input_mask=&amp;var:input_url=$(urlencode:"phone://mb_nop%23go_back%26var:contact__LABEL__=__Y__")</Url>
+      </MenuItem>
+    </If>
+    <Else>
+      <MenuItem id="__ID__">
+        <If condition="$(show_feature:FEATURE_PUI_STYLE_SIO)">
+          <If condition="$(is_set:__ICON__)">
+            <Name>$(lang:__LABEL__)</Name>
+            <SubText>__VALUE__</SubText>
+            <ExtraIconType>__ICON__</ExtraIconType>
+          </If>
+        </If>
+        <Else>
+          <Name>$(lang:__LABEL__): __VALUE__</Name>
+        </Else>
+        <Url>file:///xml/gui/templates.xml#sub=*[@id="input_template"]&amp;var:input_pool_key=0&amp;var:input_displayname=$(lang:__LABEL__)&amp;var:input_token=__Y__&amp;var:input_flags=n&amp;var:input_default=__VALUE__&amp;var:input_mask=&amp;var:input_url=$(urlencode:"phone://mb_nop%23go_back%26var:contact__LABEL__=__Y__")</Url>
+      </MenuItem>
+    </Else>
+    </Repeat>
+    <SoftKeyItem>
+      <Name>F1</Name>
+      <SoftKey>F_SAVE_CONTACT</SoftKey>
+      <Url>phone://mb_exit</Url>
+    </SoftKeyItem>
+    <If condition="$(is_set:$(var:contact_delete))">
+      <SoftKeyItem>
+        <Name>F2</Name>
+        <SoftKey>F_DELETE_CONTACT</SoftKey>
+        <Url>phone://mb_exit</Url>
+      </SoftKeyItem>
+    </If>
+  </IPPhoneMenu>
+</IPPhoneBatch>

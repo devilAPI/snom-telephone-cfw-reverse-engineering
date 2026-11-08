@@ -1,0 +1,1334 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<IPPhoneBatch xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../schemas/minibrowser.xsd">
+  <IPPhoneMenu track="yes" icon_xoffset="$(math_eval:$(gui_display_xsize)/20-5)" text_xoffset="$(math_eval:$(gui_display_xsize)/20-7)" line_height="$(math_eval:$(gui_display_ysize)/5)" dtmf="off" id="local_directory" speedselect="off" sort="no" state="only_mb" viewportcontrol="DontTouchViewPort">
+    <If condition="$(bool_eval:$(set:user_admin_mode) &amp; $(set:admin_mode))">
+      <Title>$(lang:title_no_permission)</Title>
+    </If>
+    <ElIf condition="$(bool_eval:!$(show_feature:FEATURE_PUI_STYLE_SIO) &amp; $(condition:$(tbook_data_size:none,vip,MASTER,:$(var:fav_filter))!=0))">
+      <Title>$(lang:guess_results): $(tbook_data_size:none,vip,MASTER,:$(var:fav_filter)) (↑↓ $(translate_tbook_sort:$(set:tbook_sort)))</Title>
+    </ElIf>
+    <ElIf condition="$(is_set:$(var:fav_filter))">
+      <Title>$(lang:title_favorites) (↑↓ $(translate_tbook_sort:$(set:tbook_sort)))</Title>
+    </ElIf>
+    <Else>
+      <Title>$(lang:menu100_phone_book) (↑↓ $(translate_tbook_sort:$(set:tbook_sort)))</Title>
+    </Else>
+    <If condition="$(is_set:$(var:tbook_full))">
+      <InfoBox>
+        <Line>
+          <Text>$(lang:tbook_is_full)</Text>
+        </Line>
+      </InfoBox>
+      <Fetch mil="2000">phone://mb_nop#var:tbook_full=</Fetch>
+    </If>
+    <If condition="$(bool_eval:$(set:user_admin_mode) &amp; $(set:admin_mode))">
+      <MenuItem name="$(lang:tbook_emtpy)" id="empty">
+        <Url>phone://mb_nop</Url>
+        <SoftKeyItem>
+          <Name>F_FAVORITES</Name>
+          <Url>phone://mb_nop</Url>
+        </SoftKeyItem>
+      </MenuItem>
+    </If>
+    <Else>
+      <If condition="!$(is_set:$(var:fav_filter))">
+        <If condition="$(bool_eval:$(condition:$(tbook_data_size:none,vip,MASTER,:$(var:fav_filter))!=0) | $(is_set:$(tbook_search_string)))">
+          <InputField>
+            <If condition="$(bool_eval:$(show_feature:FEATURE_PUI_STYLE_SIO))">
+              <IconType>$(icon_type_enum:kIconTypeDial)</IconType>
+              <ExtraText>$(lang:guess_results)</ExtraText>
+              <ExtraText2>$(tbook_data_size:none,vip,MASTER,:$(var:fav_filter))</ExtraText2>
+            </If>
+            <Else>
+              <Prompt>&#60213;</Prompt> <!-- CharFkeyDial -->
+            </Else>
+            <Handler event="timeout">phone://mb_nop</Handler>
+            <Timeout>500</Timeout>
+            <SoftKeyItem>
+              <Name>ENTER</Name>
+              <Url>phone://mb_nop</Url>
+            </SoftKeyItem>
+            <SoftKeyItem>
+              <Name>F1</Name>
+              <If condition="$(edit_mode)==0">
+                <Label>F_URLL</Label>
+              </If>
+              <Elif condition="$(edit_mode)==1">
+                <Label>F_URLU</Label>
+              </Elif>
+              <Else>
+                <Label>F_123</Label>
+              </Else>
+              <Url>phone://mb_nop#next_edit_mode</Url>
+            </SoftKeyItem>
+            <SoftKeyItem>
+              <Name>F2</Name>
+              <Label>F_BACK</Label>
+              <SoftKey>F_BACK</SoftKey>
+            </SoftKeyItem>
+            <SoftKeyItem>
+              <Name>F3</Name>
+              <Url>file:///xml/gui/state_addressbook.xml#sub=*[@id="local_directory_sort_type"]&amp;var:selection=__IDX__</Url>
+              <Label>TKEY_TB_SORT</Label>
+            </SoftKeyItem>
+            <SoftKeyItem>
+              <Name>F4</Name>
+              <Label>F_ADD_PHONEBOOK</Label>
+              <If condition="$(is_number:$(tbook_search_string))">
+                <Url>phone://mb_nop_ignore_prev_frags#sub=*[@id="local_directory_input"]&amp;var:selection=0&amp;var:field_to_edit=tb_number&amp;var:add_contact=add_number&amp;var:tbook_input_default=$(tbook_search_string)</Url>
+              </If>
+              <Else>
+                <Url>phone://mb_nop_ignore_prev_frags#sub=*[@id="local_directory_input"]&amp;var:selection=0&amp;var:field_to_edit=tb_number&amp;var:add_contact=add_number&amp;var:tbook_input_default=&amp;var:tbook_firstname_value=$(tbook_search_string)</Url>
+              </Else>
+            </SoftKeyItem>
+            <DefaultValue></DefaultValue>
+            <Pinned>1</Pinned>
+          </InputField>
+        </If>
+      </If>
+      <Repeat lazy="yes" value_key="$(tbook_data:none,vip,MASTER,:$(var:fav_filter))" token="|__FIRST_NAME__|__LAST_NAME__|__NICK_NAME__|__NUMBER__|__NUMBER_TYPE__|__MULTI_NUMBER_TYPE__|__SORT_KEY__|__DISPLAYED_SORT_KEY__|__IMAGE__|__CONTACT_TYPE__|__INDEX__|__ACTION_URL__|__EMAIL__|__GROUP__|__NOTE__|__ORGANIZATION__|__TITLE__|__OUTGOING_ID__|">
+        <If condition="REPEAT_RESULT_VALUE_IS_EMPTY==__FIRST_NAME__">
+          <MenuItem name="$(lang:tbook_emtpy)" id="empty">
+            <Url>phone://mb_nop</Url>
+            <SoftKeyItem>
+              <Name>F1</Name>
+              <Label>F_ADD_PHONEBOOK</Label>
+              <Url>phone://mb_nop_ignore_prev_frags#sub=*[@id="local_directory_input"]&amp;var:selection=__IDX__&amp;var:field_to_edit=tb_number&amp;var:add_contact=add_number&amp;var:tbook_input_default=</Url>
+            </SoftKeyItem>
+            <SoftKeyItem>
+              <Name>F_FAVORITES</Name>
+              <Url>file:///xml/gui/state_addressbook.xml#sub=*[@id="local_directory_convert_to_fav"]</Url>
+            </SoftKeyItem>
+            <If condition="1==$(var:fav_filter)">
+              <SoftKeyItem>
+                <Name>F2</Name>
+                <Label>F_ADR_BOOK</Label>
+                <Url>file:///xml/gui/state_addressbook.xml#sub=*[@id="local_directory_convert_to_fav"]</Url>
+              </SoftKeyItem>
+            </If>
+          </MenuItem>
+        </If>
+        <ElIf condition="$(bool_eval:$(condition:$(string_length:$(current_input))&lt;$(set:guess_start_length)) &amp; $(is_set:$(current_input)))">
+          <MenuItem name="<$(lang:enter_starting_uppercase) $(set:guess_start_length) $(lang:characters_starting_lowercase)>" id="search_string_too_short">
+            <Url>phone://mb_nop</Url>
+            <SoftKeyItem>
+              <Name>F1</Name>
+              <Label>F_ADD_PHONEBOOK</Label>
+              <Url>phone://mb_nop_ignore_prev_frags#sub=*[@id="local_directory_input"]&amp;var:selection=__IDX__&amp;var:field_to_edit=tb_number&amp;var:add_contact=add_number&amp;var:tbook_input_default=</Url>
+            </SoftKeyItem>
+            <SoftKeyItem>
+              <Name>F_FAVORITES</Name>
+              <Url>file:///xml/gui/state_addressbook.xml#sub=*[@id="local_directory_convert_to_fav"]</Url>
+            </SoftKeyItem>
+            <If condition="1==$(var:fav_filter)">
+              <SoftKeyItem>
+                <Name>F2</Name>
+                <Label>F_ADR_BOOK</Label>
+                <Url>file:///xml/gui/state_addressbook.xml#sub=*[@id="local_directory_convert_to_fav"]</Url>
+              </SoftKeyItem>
+            </If>
+          </MenuItem>
+        </ElIf>
+        <Else>
+          <MenuItem id="entry__IDX__" sort_key="__SORT_KEY__">
+            <if condition="$(is_set:__DISPLAYED_SORT_KEY__)">
+              <if condition="$(bool_eval:$(is_set:__FIRST_NAME__) || $(is_set:__LAST_NAME__))">
+                <if condition="$(bool_eval:$(is_set:__FIRST_NAME__) &amp; $(is_set:__LAST_NAME__))">
+                  <name>__FIRST_NAME__ __LAST_NAME__ (__DISPLAYED_SORT_KEY__)</name>
+                </if>
+                <elif condition="$(is_set:__FIRST_NAME__)">
+                  <name>__FIRST_NAME__ (__DISPLAYED_SORT_KEY__)</name>
+                </elif>
+                <else>
+                  <name>__LAST_NAME__ (__DISPLAYED_SORT_KEY__)</name>
+                </else>
+              </if>
+              <elif condition="$(is_set:__NICK_NAME__)">
+                <name>__NICK_NAME__ (__DISPLAYED_SORT_KEY__)</name>
+              </elif>
+              <else>
+                <name>__NUMBER__ (__DISPLAYED_SORT_KEY__)</name>
+              </else>
+            </if>
+            <else>
+              <if condition="$(bool_eval:$(is_set:__FIRST_NAME__) || $(is_set:__LAST_NAME__))">
+                <if condition="$(bool_eval:$(condition:$(set:tbook_sort)==2) &amp; $(is_set:__LAST_NAME__) &amp; $(is_set:__FIRST_NAME__))">
+                  <name>__LAST_NAME__, __FIRST_NAME__</name>
+                </if>
+                <else>
+                  <if condition="$(bool_eval:$(is_set:__FIRST_NAME__) &amp; $(is_set:__LAST_NAME__))">
+                    <name>__FIRST_NAME__ __LAST_NAME__</name>
+                  </if>
+                  <elif condition="$(is_set:__FIRST_NAME__)">
+                    <name>__FIRST_NAME__</name>
+                  </elif>
+                  <else>
+                    <name>__LAST_NAME__</name>
+                  </else>
+                </else>
+              </if>
+              <elif condition="$(is_set:__NICK_NAME__)">
+                <name>__NICK_NAME__</name>
+              </elif>
+              <else>
+                <name>__NUMBER__</name>
+              </else>
+            </else>
+            <If condition="$(show_feature:FEATURE_PUI_STYLE_SIO)">
+              <If condition="$(is_set:__MULTI_NUMBER_TYPE__)">
+                <SubText>__MULTI_NUMBER_TYPE__</SubText>
+              </If>
+              <Elif condition="$(is_set:__NUMBER_TYPE__)">
+                <If condition="mobile==__NUMBER_TYPE__">
+                  <SubText>$(lang:target_mobile): __NUMBER__</SubText>
+                </If>
+                <ElIf condition="home==__NUMBER_TYPE__">
+                  <SubText>$(lang:target_home): __NUMBER__</SubText>
+                </ElIf>
+                <Else>
+                  <SubText>$(lang:nrtype___NUMBER_TYPE__): __NUMBER__</SubText>
+                </Else>
+              </Elif>
+              <Else>
+                <SubText>__NUMBER__</SubText>
+              </Else>
+              <IconType>$(icon_type_enum:kIconTypeContactStateUnknown)</IconType>
+              <If condition="$(is_set:__IMAGE__)">
+                <IconUrl>__IMAGE__</IconUrl>
+              </If>
+            </If>
+            <If condition="$(set:user_default_contact_uri[$(current_line)])==main">
+              <If condition="$(bool_eval:$(empty:$(var:purpose)) | $(condition:dial==$(var:purpose)) | $(condition:transfer==$(var:purpose)))">
+                <Url>phone://mb_exit#action_ifc:CallInterface=make_call,remote=__NUMBER__,identity=__OUTGOING_ID__</Url>
+                <ExtraIconType>$(icon_type_enum:kIconTypeMenuHandset)</ExtraIconType>
+              </If>
+              <Else>
+                <Url>phone://mb_exit#contact_select=__NUMBER__</Url>
+              </Else>
+            </If>
+            <Else>
+              <ExtraIconType>$(icon_type_enum:kIconTypeMenuArrowRight)</ExtraIconType>
+              <If condition="MASTER==__CONTACT_TYPE__">
+                <Url>file:///xml/gui/state_addressbook.xml#sub=*[@id="local_directory_sub_entry_list"]&amp;var:selection=__IDX__&amp;var:tbook_master_index=__INDEX__</Url>
+              </If>
+              <Else>
+                <Url>file:///xml/gui/state_addressbook.xml#sub=*[@id="local_directory_contact_details"]&amp;var:selection=__IDX__&amp;var:tbook_detail_index=__INDEX__&amp;var:show_detail_by_index=1&amp;var:contact_blocked=</Url>
+              </Else>
+            </Else>
+            <SoftKeyItem>
+              <Name>F1</Name>
+              <Label>F_ADD_PHONEBOOK</Label>
+              <If condition="$(status_active:TbookFull)">
+                <Url>phone://mb_nop#var:tbook_full=1</Url>
+              </If>
+              <Else>
+                <Url>phone://mb_nop_ignore_prev_frags#sub=*[@id="local_directory_input"]&amp;var:selection=__IDX__&amp;var:field_to_edit=tb_number&amp;var:add_contact=add_number&amp;var:tbook_input_default=</Url>
+              </Else>
+            </SoftKeyItem>
+            <SoftKeyItem>
+              <Name>F2</Name>
+              <Url>file:///xml/gui/state_addressbook.xml#sub=*[@id="local_directory_sort_type"]&amp;var:selection=__IDX__</Url>
+              <Label>TKEY_TB_SORT</Label>
+            </SoftKeyItem>
+            <SoftKeyItem>
+              <Name>F3</Name>
+              <If condition="MASTER==__CONTACT_TYPE__">
+                <Url>file:///xml/gui/state_addressbook.xml#sub=*[@id="local_directory_sub_entry_list"]&amp;var:selection=__IDX__&amp;var:tbook_master_index=__INDEX__</Url>
+              </If>
+              <Else>
+                <Url>file:///xml/gui/state_addressbook.xml#sub=*[@id="local_directory_contact_details"]&amp;var:selection=__IDX__&amp;var:tbook_detail_index=__INDEX__&amp;var:show_detail_by_index=1&amp;var:contact_blocked=</Url>
+              </Else>
+              <Label>F_DETAILS</Label>
+            </SoftKeyItem>
+            <SoftKeyItem>
+              <Name>F4</Name>
+              <If condition="$(is_set:$(var:fav_filter))">
+                <Url>phone://mb_nop_ignore_prev_frags#edit_tbook_entry=__INDEX__|tb_favorite|false</Url>
+              </If>
+              <Else>
+                <Url>file:///xml/gui/state_addressbook.xml#sub=*[@id="local_directory_confirm_delete"]&amp;var:selection=__IDX__&amp;var:index_to_delete=__INDEX__</Url>
+              </Else>
+              <Label>F_DELETE</Label>
+            </SoftKeyItem>
+            <SoftKeyItem>
+              <Name>F_FAVORITES</Name>
+              <Url>file:///xml/gui/state_addressbook.xml#sub=*[@id="local_directory_convert_to_fav"]&amp;var:selection=__IDX__</Url>
+            </SoftKeyItem>
+            <If condition="$(bool_eval:$(empty:$(var:purpose)) | $(condition:dial==$(var:purpose)) | $(condition:transfer==$(var:purpose)))">
+              <SoftKeyItem>
+                <Name>OFFHOOK</Name>
+                <Url>phone://mb_exit#action_ifc:CallInterface=make_call,remote=__NUMBER__,identity=__OUTGOING_ID__</Url>
+              </SoftKeyItem>
+              <SoftKeyItem>
+                <Name>HEADSET_OFFHOOK</Name>
+                <Url>phone://mb_exit#action_ifc:CallInterface=make_call,remote=__NUMBER__,identity=__OUTGOING_ID__</Url>
+              </SoftKeyItem>
+              <SoftKeyItem>
+                <Name>SPEAKER</Name>
+                <Url>phone://mb_exit#action_ifc:CallInterface=make_call,remote=__NUMBER__,identity=__OUTGOING_ID__,device=SPEAKER</Url>
+              </SoftKeyItem>
+              <SoftKeyItem>
+                <Name>HEADSET</Name>
+                <Url>phone://mb_exit#action_ifc:CallInterface=make_call,remote=__NUMBER__,identity=__OUTGOING_ID__,device=HEADSET</Url>
+              </SoftKeyItem>
+            </If>
+          </MenuItem>
+        </Else>
+      </Repeat>
+    </Else>
+  </IPPhoneMenu>
+  <IPPhoneMenu icon_xoffset="$(math_eval:$(gui_display_xsize)/20-5)" text_xoffset="$(math_eval:$(gui_display_xsize)/20-7)" line_height="$(math_eval:$(gui_display_ysize)/5)" dtmf="off" id="local_directory_sub_entry_list" speedselect="on" scrollbar="false" sort="yes" state="only_mb">
+    <Title>$(lang:title_select_entry)</Title>
+    <If condition="$(is_set:$(var:tbook_full))">
+      <InfoBox>
+        <Line>
+          <Text>$(lang:tbook_is_full)</Text>
+        </Line>
+      </InfoBox>
+      <Fetch mil="2000">phone://mb_nop#var:tbook_full=</Fetch>
+    </If>
+    <Repeat value_key="$(tbook_sub_entry_data:$(var:tbook_master_index))" token="|__FIRST_NAME__|__LAST_NAME__|__NICK_NAME__|__NUMBER__|__NUMBER_TYPE__|__CONTACT_TYPE__|__NOTE__|__TITLE__|__INDEX__|__IMAGE__|__OUTGOING_ID__|">
+      <If condition="deny!=__CONTACT_TYPE__">
+        <MenuItem id="sub_entry__IDX__" sel="$(condition:__IDX__==1)">
+          <If condition="MASTER==__CONTACT_TYPE__">
+            <If condition="$(bool_eval:$(is_set:__NICK_NAME__) &amp; $(is_set:__FIRST_NAME__) &amp; $(is_set:__LAST_NAME__))">
+              <Name>__NICK_NAME__; __FIRST_NAME__ __LAST_NAME__</Name>
+            </If>
+            <ElIf condition="$(bool_eval:$(is_set:__NICK_NAME__) &amp; $(is_set:__FIRST_NAME__))">
+              <Name>__NICK_NAME__; __FIRST_NAME__</Name>
+            </ElIf>
+            <ElIf condition="$(bool_eval:$(is_set:__NICK_NAME__) &amp; $(is_set:__LAST_NAME__))">
+              <Name>__NICK_NAME__; __LAST_NAME__</Name>
+            </ElIf>
+            <ElIf condition="$(is_set:__NICK_NAME__)">
+              <Name>__NICK_NAME__</Name>
+            </ElIf>
+            <ElIf condition="$(bool_eval:$(is_set:__LAST_NAME__) &amp; $(is_set:__FIRST_NAME__))">
+              <Name>__FIRST_NAME__ __LAST_NAME__</Name>
+            </ElIf>
+            <ElIf condition="$(is_set:__LAST_NAME__)">
+              <Name>__LAST_NAME__</Name>
+            </ElIf>
+            <ElIf condition="$(is_set:__FIRST_NAME__)">
+              <Name>__FIRST_NAME__</Name>
+            </ElIf>
+            <Else>
+              <If condition="$(is_set:__NUMBER_TYPE__)">
+               <If condition="mobile==__NUMBER_TYPE__">
+                  <Name>$(lang:target_mobile) __NUMBER__</Name>
+                </If>
+                <ElIf condition="home==__NUMBER_TYPE__">
+                  <Name>$(lang:target_home) __NUMBER__</Name>
+                </ElIf>
+                <Else>
+                  <Name>$(lang:nrtype___NUMBER_TYPE__) __NUMBER__</Name>
+                </Else>
+              </If>
+              <Else>
+                <Name>__NUMBER__</Name>
+              </Else>
+            </Else>
+            <SoftKeyItem>
+              <Name>F4</Name>
+              <Url>file:///xml/gui/state_addressbook.xml#sub=*[@id="local_directory_confirm_delete"]&amp;var:selection=__IDX__&amp;var:index_to_delete=__INDEX__&amp;var:delete_master_of_sub_list=1</Url>
+              <Label>F_DELETE</Label>
+            </SoftKeyItem>
+          </If>
+          <Else>
+            <If condition="$(is_set:__NICK_NAME__)">
+              <If condition="$(show_feature:FEATURE_PUI_STYLE_SIO)">
+                <Name>__NICK_NAME__</Name>
+                <If condition="$(is_set:__NUMBER_TYPE__)">
+                  <If condition="mobile==__NUMBER_TYPE__">
+                    <SubText>$(lang:target_mobile) __NUMBER__</SubText>
+                  </If>
+                  <ElIf condition="home==__NUMBER_TYPE__">
+                    <SubText>$(lang:target_home) __NUMBER__</SubText>
+                  </ElIf>
+                  <Else>
+                    <SubText>$(lang:nrtype___NUMBER_TYPE__) __NUMBER__</SubText>
+                  </Else>
+                </If>
+                <Else>
+                  <SubText>__NUMBER__</SubText>
+                </Else>
+              </If>
+              <Else>
+                <Name>__NICK_NAME__ (__NUMBER__)</Name>
+              </Else>
+            </If>
+            <Else>
+              <If condition="$(is_set:__NUMBER_TYPE__)">
+                <If condition="mobile==__NUMBER_TYPE__">
+                  <Name>$(lang:target_mobile) __NUMBER__</Name>
+                </If>
+                <ElIf condition="home==__NUMBER_TYPE__">
+                  <Name>$(lang:target_home) __NUMBER__</Name>
+                </ElIf>
+                <Else>
+                  <Name>$(lang:nrtype___NUMBER_TYPE__) __NUMBER__</Name>
+                </Else>
+              </If>
+              <Else>
+                <Name>__NUMBER__</Name>
+              </Else>
+            </Else>
+            <SoftKeyItem>
+              <Name>F4</Name>
+              <Url>file:///xml/gui/state_addressbook.xml#sub=*[@id="local_directory_confirm_delete"]&amp;var:selection=__IDX__&amp;var:index_to_delete=__INDEX__</Url>
+              <Label>F_DELETE</Label>
+            </SoftKeyItem>
+          </Else>
+          <If condition="$(show_feature:FEATURE_PUI_STYLE_SIO)">
+            <IconType>$(icon_type_enum:kIconTypeContactStateUnknown)</IconType>
+            <If condition="$(is_set:__IMAGE__)">
+              <IconUrl>__IMAGE__</IconUrl>
+            </If>
+          </If>
+          <If condition="$(bool_eval:$(empty:$(var:purpose)) | $(condition:dial==$(var:purpose)) | $(condition:transfer==$(var:purpose)))">
+            <Url>phone://mb_exit#action_ifc:CallInterface=make_call,remote=__NUMBER__,identity=__OUTGOING_ID__</Url>
+            <ExtraIconType>$(icon_type_enum:kIconTypeMenuHandset)</ExtraIconType>
+          </If>
+          <Else>
+            <Url>phone://mb_exit#contact_select=__NUMBER__</Url>
+          </Else>
+          <SoftKeyItem>
+            <Name>CANCEL</Name>
+            <Url>phone://mb_nop_ignore_prev_frags#go_back&amp;sel=[@id="entry$(var:selection)"]</Url>
+          </SoftKeyItem>
+          <SoftKeyItem>
+            <Name>F1</Name>
+            <Label>F_ADD_PHONEBOOK</Label>
+            <If condition="$(status_active:TbookFull)">
+              <Url>phone://mb_nop#var:tbook_full=1</Url>
+            </If>
+            <Else>
+              <Url>phone://mb_nop_ignore_prev_frags#sub=*[@id="local_directory_input"]&amp;var:field_to_edit=tb_number&amp;var:add_contact=add_sub_number&amp;var:tbook_input_default=&amp;var:index_to_edit=$(var:tbook_master_index)</Url>
+            </Else>
+          </SoftKeyItem>
+          <!-- NYI SORT SUBCONTACTS
+          <SoftKeyItem>
+            <Name>F2</Name>
+            <Url>file:///xml/gui/state_addressbook.xml#sub=*[@id="local_directory_sort_type"]&amp;var:selection=__IDX__</Url>
+            <Label>TKEY_TB_SORT</Label>
+          </SoftKeyItem>
+          -->
+          <SoftKeyItem>
+            <Name>F3</Name>
+            <Url>file:///xml/gui/state_addressbook.xml#sub=*[@id="local_directory_contact_details"]&amp;var:tbook_detail_index=__INDEX__&amp;var:show_detail_by_index=1&amp;var:contact_blocked=</Url>
+            <Label>F_DETAILS</Label>
+          </SoftKeyItem>
+          <If condition="$(bool_eval:$(empty:$(var:purpose)) | $(condition:dial==$(var:purpose)) | $(condition:transfer==$(var:purpose)))">
+            <SoftKeyItem>
+              <Name>OFFHOOK</Name>
+              <Url>phone://mb_exit#action_ifc:CallInterface=make_call,remote=__NUMBER__,identity=__OUTGOING_ID__</Url>
+            </SoftKeyItem>
+            <SoftKeyItem>
+              <Name>HEADSET_OFFHOOK</Name>
+              <Url>phone://mb_exit#action_ifc:CallInterface=make_call,remote=__NUMBER__,identity=__OUTGOING_ID__</Url>
+            </SoftKeyItem>
+            <SoftKeyItem>
+              <Name>SPEAKER</Name>
+              <Url>phone://mb_exit#action_ifc:CallInterface=make_call,remote=__NUMBER__,identity=__OUTGOING_ID__,device=SPEAKER</Url>
+            </SoftKeyItem>
+            <SoftKeyItem>
+              <Name>HEADSET</Name>
+              <Url>phone://mb_exit#action_ifc:CallInterface=make_call,remote=__NUMBER__,identity=__OUTGOING_ID__,device=HEADSET</Url>
+            </SoftKeyItem>
+          </If>
+        </MenuItem>
+      </If>
+    </Repeat>
+  </IPPhoneMenu>
+  <IPPhoneMenu dtmf="off" id="local_directory_contact_details" speedselect="on" scrollbar="true" state="only_mb">
+    <Title>$(lang:contact_details)</Title>
+    <If condition="$(is_set:$(var:tbook_full))">
+      <InfoBox>
+        <Line>
+          <Text>$(lang:tbook_is_full)</Text>
+        </Line>
+      </InfoBox>
+      <Fetch mil="2000">phone://mb_nop#var:tbook_full=</Fetch>
+    </If>
+    <Repeat value_key="$(tbook_entry_data:$(var:tbook_detail_index):$(var:show_detail_by_index))" token="|__FIRST_NAME__|__LAST_NAME__|__NICK_NAME__|__NUMBER__|__NUMBER_TYPE__|__IMAGE__|__CONTACT_TYPE__|__INDEX__|__ACTION_URL__|__EMAIL__|__GROUP__|__NOTE__|__ORGANIZATION__|__OUTGOING_ID__|__TITLE__|__FAVORITE__|">
+      <If condition="Member_Alias!=__FIRST_NAME__">
+        <Menu id="name" name="$(lang:tb_name_label)">
+          <If condition="$(show_feature:FEATURE_PUI_STYLE_SIO)">
+            <SubText>__FIRST_NAME__ __LAST_NAME__</SubText>
+          </If>
+          <MenuItem id="first_name" name="$(lang:tb_firstname)">
+            <Url>file:///xml/gui/state_addressbook.xml#sub=*[@id="local_directory_input"]&amp;var:field_to_edit=tb_firstname&amp;var:tbook_input_default=__FIRST_NAME__&amp;var:index_to_edit=__INDEX__</Url>
+            <If condition="$(show_feature:FEATURE_PUI_STYLE_SIO)">
+              <SubText>__FIRST_NAME__</SubText>
+            </If>
+            <ExtraIconType>$(icon_type_enum:kIconTypeMenuArrowRight)</ExtraIconType>
+          </MenuItem>
+          <MenuItem id="last_name" name="$(lang:tb_lastname)">
+            <Url>file:///xml/gui/state_addressbook.xml#sub=*[@id="local_directory_input"]&amp;var:field_to_edit=tb_lastname&amp;var:tbook_input_default=__LAST_NAME__&amp;var:index_to_edit=__INDEX__</Url>
+            <If condition="$(show_feature:FEATURE_PUI_STYLE_SIO)">
+              <SubText>__LAST_NAME__</SubText>
+            </If>
+            <ExtraIconType>$(icon_type_enum:kIconTypeMenuArrowRight)</ExtraIconType>
+          </MenuItem>
+          <If condition="$(bool_eval:$(condition:MASTER!=__CONTACT_TYPE__) &amp; $(condition:Member_Alias!=__FIRST_NAME__))">
+            <SoftKeyItem>
+              <Name>CANCEL</Name>
+              <Url>phone://mb_nop_ignore_prev_frags#go_back&amp;sel=[@id="entry$(var:selection)"]</Url>
+            </SoftKeyItem>
+          </If>
+          <If condition="$(bool_eval:$(empty:$(var:purpose)) | $(condition:dial==$(var:purpose)) | $(condition:transfer==$(var:purpose)))">
+            <SoftKeyItem>
+              <Name>OFFHOOK</Name>
+              <Url>phone://mb_exit#action_ifc:CallInterface=make_call,remote=__NUMBER__,identity=__OUTGOING_ID__</Url>
+            </SoftKeyItem>
+            <SoftKeyItem>
+              <Name>HEADSET_OFFHOOK</Name>
+              <Url>phone://mb_exit#action_ifc:CallInterface=make_call,remote=__NUMBER__,identity=__OUTGOING_ID__</Url>
+            </SoftKeyItem>
+            <SoftKeyItem>
+              <Name>SPEAKER</Name>
+              <Url>phone://mb_exit#action_ifc:CallInterface=make_call,remote=__NUMBER__,identity=__OUTGOING_ID__,device=SPEAKER</Url>
+            </SoftKeyItem>
+            <SoftKeyItem>
+              <Name>HEADSET</Name>
+              <Url>phone://mb_exit#action_ifc:CallInterface=make_call,remote=__NUMBER__,identity=__OUTGOING_ID__,device=HEADSET</Url>
+            </SoftKeyItem>
+          </If>
+        </Menu>
+      </If>
+      <If condition="MASTER!=__CONTACT_TYPE__">
+        <MenuItem id="number" name="$(lang:tb_number)" sel="1">
+          <If condition="$(show_feature:FEATURE_PUI_STYLE_SIO)">
+            <SubText>__NUMBER__</SubText>
+          </If>
+          <ExtraIconType>$(icon_type_enum:kIconTypeMenuArrowRight)</ExtraIconType>
+          <If condition="$(bool_eval:$(condition:transfer==$(var:purpose)) | $(condition:dial==$(var:purpose)))">
+            <Url>phone://mb_exit#action_ifc:CallInterface=make_call,remote=__NUMBER__,identity=__OUTGOING_ID__</Url>
+            <SoftKeyItem>
+              <Name>F1</Name>
+              <Label>F_ADD_PHONEBOOK</Label>
+              <If condition="$(status_active:TbookFull)">
+                <Url>phone://mb_nop#var:tbook_full=1</Url>
+              </If>
+              <Else>
+                <Url>phone://mb_nop_ignore_prev_frags#sub=*[@id="local_directory_input"]&amp;var:field_to_edit=tb_number&amp;var:add_contact=add_sub_number_from_details&amp;var:tbook_input_default=&amp;var:index_to_edit=__INDEX__</Url>
+              </Else>
+            </SoftKeyItem>
+            <SoftKeyItem>
+              <Name>F2</Name>
+              <If condition="$(bool_eval:$(condition:MASTER!=__CONTACT_TYPE__) &amp; $(condition:Member_Alias!=__FIRST_NAME__))">
+                <Url>phone://mb_nop_ignore_prev_frags#go_back&amp;sel=[@id="entry$(var:selection)"]</Url>
+              </If>
+              <Else>
+                <Url>phone://mb_nop#go_back</Url>
+              </Else>
+              <Label>F_SAVE</Label>
+            </SoftKeyItem>
+            <SoftKeyItem>
+              <Name>F3</Name>
+              <Label>F_EDIT</Label>
+              <Url>phone://mb_nop_ignore_prev_frags#go_back&amp;sub=*[@id="local_directory_input"]&amp;var:field_to_edit=tb_number&amp;var:tbook_input_default=__NUMBER__&amp;var:index_to_edit=__INDEX__</Url>
+            </SoftKeyItem>
+            <SoftKeyItem>
+              <Name>F4</Name>
+              <Url>phone://mb_exit#action_ifc:CallInterface=make_call,remote=__NUMBER__,identity=__OUTGOING_ID__</Url>
+              <Label>F_TRANSFER</Label>
+            </SoftKeyItem>
+          </If>
+          <ElIf condition="select==$(var:purpose)">
+            <Url>phone://mb_exit#contact_select=__NUMBER__</Url>
+          </ElIf>
+          <Else>
+            <Url>phone://mb_nop_ignore_prev_frags#go_back&amp;sub=*[@id="local_directory_input"]&amp;var:field_to_edit=tb_number&amp;var:tbook_input_default=__NUMBER__&amp;var:index_to_edit=__INDEX__</Url>
+          </Else>
+          <If condition="$(bool_eval:$(condition:MASTER!=__CONTACT_TYPE__) &amp; $(condition:Member_Alias!=__FIRST_NAME__))">
+            <SoftKeyItem>
+              <Name>CANCEL</Name>
+              <Url>phone://mb_nop_ignore_prev_frags#go_back&amp;sel=[@id="entry$(var:selection)"]</Url>
+            </SoftKeyItem>
+          </If>
+          <If condition="$(bool_eval:$(empty:$(var:purpose)) | $(condition:dial==$(var:purpose)) | $(condition:transfer==$(var:purpose)))">
+            <SoftKeyItem>
+              <Name>OFFHOOK</Name>
+              <Url>phone://mb_exit#action_ifc:CallInterface=make_call,remote=__NUMBER__,identity=__OUTGOING_ID__</Url>
+            </SoftKeyItem>
+            <SoftKeyItem>
+              <Name>HEADSET_OFFHOOK</Name>
+              <Url>phone://mb_exit#action_ifc:CallInterface=make_call,remote=__NUMBER__,identity=__OUTGOING_ID__</Url>
+            </SoftKeyItem>
+            <SoftKeyItem>
+              <Name>ENTER</Name>
+              <Url>phone://mb_exit#action_ifc:CallInterface=make_call,remote=__NUMBER__,identity=__OUTGOING_ID__</Url>
+            </SoftKeyItem>
+            <SoftKeyItem>
+              <Name>SPEAKER</Name>
+              <Url>phone://mb_exit#action_ifc:CallInterface=make_call,remote=__NUMBER__,identity=__OUTGOING_ID__,device=SPEAKER</Url>
+            </SoftKeyItem>
+            <SoftKeyItem>
+              <Name>HEADSET</Name>
+              <Url>phone://mb_exit#action_ifc:CallInterface=make_call,remote=__NUMBER__,identity=__OUTGOING_ID__,device=HEADSET</Url>
+            </SoftKeyItem>
+          </If>
+        </MenuItem>
+      </If>
+      <Menu id="group" name="$(lang:tb_group)">
+        <If condition="$(bool_eval:$(condition:MASTER!=__CONTACT_TYPE__) &amp; $(condition:Member_Alias!=__FIRST_NAME__))">
+          <SoftKeyItem>
+            <Name>CANCEL</Name>
+            <Url>phone://mb_nop_ignore_prev_frags#go_back&amp;sel=[@id="entry$(var:selection)"]</Url>
+          </SoftKeyItem>
+        </If>
+        <If condition="$(show_feature:FEATURE_PUI_STYLE_SIO)">
+          <If condition="colleague==__GROUP__">
+            <SubText>$(lang:grouptype_collegue)</SubText>
+          </If>
+          <ElIf condition="$(is_set:__GROUP__)">
+            <SubText>$(lang:grouptype___GROUP__)</SubText>
+          </ElIf>
+          <Else>
+            <SubText>($(lang:enum_disp_func_key_none))</SubText>
+          </Else>
+        </If>
+        <MenuItem id="nogrp" name="$(lang:enum_disp_func_key_none)">
+          <SoftKeyItem>
+            <Name>CANCEL</Name>
+            <Url>phone://mb_nop_ignore_prev_frags#go_back</Url>
+          </SoftKeyItem>
+          <If condition="$(is_set:__GROUP__)">
+            <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOff)</ExtraIconType>
+          </If>
+          <Else>
+            <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOn)</ExtraIconType>
+          </Else>
+          <Url>phone://mb_nop_ignore_prev_frags#go_back&amp;edit_tbook_entry=__INDEX__|tb_group|</Url>
+        </MenuItem>
+        <MenuItem id="family" name="$(lang:grouptype_family)" sel="$(condition:family==__GROUP__)">
+          <SoftKeyItem>
+            <Name>CANCEL</Name>
+            <Url>phone://mb_nop_ignore_prev_frags#go_back</Url>
+          </SoftKeyItem>
+          <If condition="family==__GROUP__">
+            <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOn)</ExtraIconType>
+          </If>
+          <Else>
+            <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOff)</ExtraIconType>
+          </Else>
+          <Url>phone://mb_nop_ignore_prev_frags#go_back&amp;edit_tbook_entry=__INDEX__|tb_group|family</Url>
+        </MenuItem>
+        <MenuItem id="friend" name="$(lang:grouptype_friend)" sel="$(condition:friend==__GROUP__)">
+          <SoftKeyItem>
+            <Name>CANCEL</Name>
+            <Url>phone://mb_nop_ignore_prev_frags#go_back</Url>
+          </SoftKeyItem>
+          <If condition="friend==__GROUP__">
+            <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOn)</ExtraIconType>
+          </If>
+          <Else>
+            <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOff)</ExtraIconType>
+          </Else>
+          <Url>phone://mb_nop_ignore_prev_frags#go_back&amp;edit_tbook_entry=__INDEX__|tb_group|friend</Url>
+        </MenuItem>
+        <MenuItem id="colleague" name="$(lang:grouptype_collegue)" sel="$(condition:colleague==__GROUP__)">
+          <SoftKeyItem>
+            <Name>CANCEL</Name>
+            <Url>phone://mb_nop_ignore_prev_frags#go_back</Url>
+          </SoftKeyItem>
+          <If condition="colleague==__GROUP__">
+            <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOn)</ExtraIconType>
+          </If>
+          <Else>
+            <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOff)</ExtraIconType>
+          </Else>
+          <Url>phone://mb_nop_ignore_prev_frags#go_back&amp;edit_tbook_entry=__INDEX__|tb_group|colleague</Url>
+        </MenuItem>
+        <MenuItem id="work" name="$(lang:grouptype_work)" sel="$(condition:work==__GROUP__)">
+          <SoftKeyItem>
+            <Name>CANCEL</Name>
+            <Url>phone://mb_nop_ignore_prev_frags#go_back</Url>
+          </SoftKeyItem>
+          <If condition="work==__GROUP__">
+            <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOn)</ExtraIconType>
+          </If>
+          <Else>
+            <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOff)</ExtraIconType>
+          </Else>
+          <Url>phone://mb_nop_ignore_prev_frags#go_back&amp;edit_tbook_entry=__INDEX__|tb_group|work</Url>
+        </MenuItem>
+        <If condition="$(bool_eval:$(empty:$(var:purpose)) | $(condition:dial==$(var:purpose)) | $(condition:transfer==$(var:purpose)))">
+          <SoftKeyItem>
+            <Name>OFFHOOK</Name>
+            <Url>phone://mb_exit#action_ifc:CallInterface=make_call,remote=__NUMBER__,identity=__OUTGOING_ID__</Url>
+          </SoftKeyItem>
+          <SoftKeyItem>
+            <Name>HEADSET_OFFHOOK</Name>
+            <Url>phone://mb_exit#action_ifc:CallInterface=make_call,remote=__NUMBER__,identity=__OUTGOING_ID__</Url>
+          </SoftKeyItem>
+          <SoftKeyItem>
+            <Name>SPEAKER</Name>
+            <Url>phone://mb_exit#action_ifc:CallInterface=make_call,remote=__NUMBER__,identity=__OUTGOING_ID__,device=SPEAKER</Url>
+          </SoftKeyItem>
+          <SoftKeyItem>
+            <Name>HEADSET</Name>
+            <Url>phone://mb_exit#action_ifc:CallInterface=make_call,remote=__NUMBER__,identity=__OUTGOING_ID__,device=HEADSET</Url>
+          </SoftKeyItem>
+        </If>
+      </Menu>
+      <MenuItem id="orga" name="$(lang:tb_organization)">
+        <If condition="$(show_feature:FEATURE_PUI_STYLE_SIO)">
+          <If condition="$(is_set:__ORGANIZATION__)">
+            <SubText>__ORGANIZATION__</SubText>
+          </If>
+          <Else>
+            <SubText>($(lang:enum_disp_func_key_none))</SubText>
+          </Else>
+        </If>
+        <ExtraIconType>$(icon_type_enum:kIconTypeMenuArrowRight)</ExtraIconType>
+        <Url>file:///xml/gui/state_addressbook.xml#sub=*[@id="local_directory_input"]&amp;var:field_to_edit=tb_organization&amp;var:tbook_input_default=__ORGANIZATION__&amp;var:index_to_edit=__INDEX__</Url>
+        <If condition="$(bool_eval:$(condition:MASTER!=__CONTACT_TYPE__) &amp; $(condition:Member_Alias!=__FIRST_NAME__))">
+          <SoftKeyItem>
+            <Name>CANCEL</Name>
+            <Url>phone://mb_nop_ignore_prev_frags#go_back&amp;sel=[@id="entry$(var:selection)"]</Url>
+          </SoftKeyItem>
+        </If>
+        <If condition="$(bool_eval:$(empty:$(var:purpose)) | $(condition:dial==$(var:purpose)) | $(condition:transfer==$(var:purpose)))">
+          <SoftKeyItem>
+            <Name>OFFHOOK</Name>
+            <Url>phone://mb_exit#action_ifc:CallInterface=make_call,remote=__NUMBER__,identity=__OUTGOING_ID__</Url>
+          </SoftKeyItem>
+          <SoftKeyItem>
+            <Name>HEADSET_OFFHOOK</Name>
+            <Url>phone://mb_exit#action_ifc:CallInterface=make_call,remote=__NUMBER__,identity=__OUTGOING_ID__</Url>
+          </SoftKeyItem>
+          <SoftKeyItem>
+            <Name>SPEAKER</Name>
+            <Url>phone://mb_exit#action_ifc:CallInterface=make_call,remote=__NUMBER__,identity=__OUTGOING_ID__,device=SPEAKER</Url>
+          </SoftKeyItem>
+          <SoftKeyItem>
+            <Name>HEADSET</Name>
+            <Url>phone://mb_exit#action_ifc:CallInterface=make_call,remote=__NUMBER__,identity=__OUTGOING_ID__,device=HEADSET</Url>
+          </SoftKeyItem>
+        </If>
+      </MenuItem>
+      <If Condition="Member_Alias!=__FIRST_NAME__">
+        <MenuItem id="fav" name="$(lang:tb_favorite)">
+          <If condition="1==__FAVORITE__">
+            <If condition="$(show_feature:FEATURE_PUI_STYLE_SIO)">
+              <SubText>$(lang:continuous_text_yes)</SubText>
+            </If>
+            <ExtraIconType>$(icon_type_enum:kIconTypeMenuSliderOn)</ExtraIconType>
+            <Url>phone://mb_nop_ignore_prev_frags#edit_tbook_entry=__INDEX__|tb_favorite|false</Url>
+          </If>
+          <Else>
+            <If condition="$(show_feature:FEATURE_PUI_STYLE_SIO)">
+              <SubText>$(lang:continuous_text_no)</SubText>
+            </If>
+            <ExtraIconType>$(icon_type_enum:kIconTypeMenuSliderOff)</ExtraIconType>
+            <Url>phone://mb_nop_ignore_prev_frags#edit_tbook_entry=__INDEX__|tb_favorite|true</Url>
+          </Else>
+          <If condition="$(bool_eval:$(condition:MASTER!=__CONTACT_TYPE__) &amp; $(condition:Member_Alias!=__FIRST_NAME__))">
+            <SoftKeyItem>
+              <Name>CANCEL</Name>
+              <Url>phone://mb_nop_ignore_prev_frags#go_back&amp;sel=[@id="entry$(var:selection)"]</Url>
+            </SoftKeyItem>
+          </If>
+          <If condition="$(bool_eval:$(empty:$(var:purpose)) | $(condition:dial==$(var:purpose)) | $(condition:transfer==$(var:purpose)))">
+            <SoftKeyItem>
+              <Name>OFFHOOK</Name>
+              <Url>phone://mb_exit#action_ifc:CallInterface=make_call,remote=__NUMBER__,identity=__OUTGOING_ID__</Url>
+            </SoftKeyItem>
+            <SoftKeyItem>
+              <Name>HEADSET_OFFHOOK</Name>
+              <Url>phone://mb_exit#action_ifc:CallInterface=make_call,remote=__NUMBER__,identity=__OUTGOING_ID__</Url>
+            </SoftKeyItem>
+            <SoftKeyItem>
+              <Name>SPEAKER</Name>
+              <Url>phone://mb_exit#action_ifc:CallInterface=make_call,remote=__NUMBER__,identity=__OUTGOING_ID__,device=SPEAKER</Url>
+            </SoftKeyItem>
+            <SoftKeyItem>
+              <Name>HEADSET</Name>
+              <Url>phone://mb_exit#action_ifc:CallInterface=make_call,remote=__NUMBER__,identity=__OUTGOING_ID__,device=HEADSET</Url>
+            </SoftKeyItem>
+          </If>
+        </MenuItem>
+      </If>
+      <If condition="MASTER!=__CONTACT_TYPE__">
+        <If condition="$(bool_eval:$(condition:deny==__CONTACT_TYPE__) | $(is_set:$(var:contact_blocked)))">
+          <MenuItem id="ctype" name="$(lang:contacttype_deny)">
+            <If condition="deny==__CONTACT_TYPE__">
+              <SubText>$(lang:continuous_text_yes)</SubText>
+              <ExtraIconType>$(icon_type_enum:kIconTypeMenuSliderOn)</ExtraIconType>
+              <Url>phone://mb_nop_ignore_prev_frags#edit_tbook_entry=__INDEX__|tb_contact|none&amp;var:contact_blocked=show</Url>
+            </If>
+            <Else>
+              <SubText>$(lang:continuous_text_no)</SubText>
+              <ExtraIconType>$(icon_type_enum:kIconTypeMenuSliderOff)</ExtraIconType>
+              <Url>phone://mb_nop_ignore_prev_frags#edit_tbook_entry=__INDEX__|tb_contact|deny</Url>
+            </Else>
+            <If condition="$(bool_eval:$(condition:MASTER!=__CONTACT_TYPE__) &amp; $(condition:Member_Alias!=__FIRST_NAME__))">
+              <SoftKeyItem>
+                <Name>CANCEL</Name>
+                <Url>phone://mb_nop_ignore_prev_frags#go_back&amp;sel=[@id="entry$(var:selection)"]</Url>
+              </SoftKeyItem>
+            </If>
+          </MenuItem>
+        </If>
+        <Else>
+          <MenuItem id="ctype" name="$(lang:contacttype_vip)">
+            <If condition="vip==__CONTACT_TYPE__">
+              <If condition="$(show_feature:FEATURE_PUI_STYLE_SIO)">
+                <SubText>$(lang:continuous_text_yes)</SubText>
+              </If>
+              <ExtraIconType>$(icon_type_enum:kIconTypeMenuSliderOn)</ExtraIconType>
+              <Url>phone://mb_nop_ignore_prev_frags#edit_tbook_entry=__INDEX__|tb_contact|none</Url>
+            </If>
+            <Else>
+              <If condition="$(show_feature:FEATURE_PUI_STYLE_SIO)">
+                <SubText>$(lang:continuous_text_no)</SubText>
+              </If>
+              <ExtraIconType>$(icon_type_enum:kIconTypeMenuSliderOff)</ExtraIconType>
+              <Url>phone://mb_nop_ignore_prev_frags#edit_tbook_entry=__INDEX__|tb_contact|vip</Url>
+            </Else>
+            <If condition="$(bool_eval:$(condition:MASTER!=__CONTACT_TYPE__) &amp; $(condition:Member_Alias!=__FIRST_NAME__))">
+              <SoftKeyItem>
+                <Name>CANCEL</Name>
+                <Url>phone://mb_nop_ignore_prev_frags#go_back&amp;sel=[@id="entry$(var:selection)"]</Url>
+              </SoftKeyItem>
+            </If>
+          </MenuItem>
+        </Else>
+        <Menu id="ntype" name="$(lang:tb_number_type_label)">
+          <If condition="$(show_feature:FEATURE_PUI_STYLE_SIO)">
+            <If condition="$(is_set:__NUMBER_TYPE__)">
+              <If condition="mobile==__NUMBER_TYPE__">
+                <SubText>$(lang:target_mobile)</SubText>
+              </If>
+              <ElIf condition="home==__NUMBER_TYPE__">
+                <SubText>$(lang:target_home)</SubText>
+              </ElIf>
+              <Else>
+                <SubText>$(lang:nrtype___NUMBER_TYPE__)</SubText>
+              </Else>
+            </If>
+            <Else>
+              <SubText>($(lang:enum_disp_func_key_none))</SubText>
+            </Else>
+          </If>
+          <If condition="$(bool_eval:$(condition:MASTER!=__CONTACT_TYPE__) &amp; $(condition:Member_Alias!=__FIRST_NAME__))">
+            <SoftKeyItem>
+              <Name>CANCEL</Name>
+              <Url>phone://mb_nop_ignore_prev_frags#go_back&amp;sel=[@id="entry$(var:selection)"]</Url>
+            </SoftKeyItem>
+          </If>
+          <MenuItem id="sip" name="$(lang:nrtype_sip)" sel="$(condition:sip==__NUMBER_TYPE__)">
+            <SoftKeyItem>
+              <Name>CANCEL</Name>
+              <Url>phone://mb_nop_ignore_prev_frags#go_back</Url>
+            </SoftKeyItem>
+            <If condition="sip==__NUMBER_TYPE__">
+              <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOn)</ExtraIconType>
+            </If>
+            <Else>
+              <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOff)</ExtraIconType>
+            </Else>
+            <Url>phone://mb_nop_ignore_prev_frags#go_back&amp;edit_tbook_entry=__INDEX__|tb_number_type_label|sip</Url>
+          </MenuItem>
+          <MenuItem id="mobile" name="$(lang:target_mobile)" sel="$(condition:mobile==__NUMBER_TYPE__)">
+            <SoftKeyItem>
+              <Name>CANCEL</Name>
+              <Url>phone://mb_nop_ignore_prev_frags#go_back</Url>
+            </SoftKeyItem>
+            <If condition="mobile==__NUMBER_TYPE__">
+              <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOn)</ExtraIconType>
+            </If>
+            <Else>
+              <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOff)</ExtraIconType>
+            </Else>
+            <Url>phone://mb_nop_ignore_prev_frags#go_back&amp;edit_tbook_entry=__INDEX__|tb_number_type_label|mobile</Url>
+          </MenuItem>
+          <MenuItem id="fixed" name="$(lang:nrtype_fixed)" sel="$(condition:fixed==__NUMBER_TYPE__)">
+            <SoftKeyItem>
+              <Name>CANCEL</Name>
+              <Url>phone://mb_nop_ignore_prev_frags#go_back</Url>
+            </SoftKeyItem>
+            <If condition="fixed==__NUMBER_TYPE__">
+              <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOn)</ExtraIconType>
+            </If>
+            <Else>
+              <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOff)</ExtraIconType>
+            </Else>
+            <Url>phone://mb_nop_ignore_prev_frags#go_back&amp;edit_tbook_entry=__INDEX__|tb_number_type_label|fixed</Url>
+          </MenuItem>
+          <MenuItem id="home" name="$(lang:target_home)" sel="$(condition:home==__NUMBER_TYPE__)">
+            <SoftKeyItem>
+              <Name>CANCEL</Name>
+              <Url>phone://mb_nop_ignore_prev_frags#go_back</Url>
+            </SoftKeyItem>
+            <If condition="home==__NUMBER_TYPE__">
+              <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOn)</ExtraIconType>
+            </If>
+            <Else>
+              <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOff)</ExtraIconType>
+            </Else>
+            <Url>phone://mb_nop_ignore_prev_frags#go_back&amp;edit_tbook_entry=__INDEX__|tb_number_type_label|home</Url>
+          </MenuItem>
+          <MenuItem id="business" name="$(lang:nrtype_business)" sel="$(condition:business==__NUMBER_TYPE__)">
+            <SoftKeyItem>
+              <Name>CANCEL</Name>
+              <Url>phone://mb_nop_ignore_prev_frags#go_back</Url>
+            </SoftKeyItem>
+            <If condition="business==__NUMBER_TYPE__">
+              <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOn)</ExtraIconType>
+            </If>
+            <Else>
+              <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOff)</ExtraIconType>
+            </Else>
+            <Url>phone://mb_nop_ignore_prev_frags#go_back&amp;edit_tbook_entry=__INDEX__|tb_number_type_label|business</Url>
+          </MenuItem>
+          <MenuItem id="extension" name="$(lang:nrtype_extension)" sel="$(condition:extension==__NUMBER_TYPE__)">
+            <SoftKeyItem>
+              <Name>CANCEL</Name>
+              <Url>phone://mb_nop_ignore_prev_frags#go_back</Url>
+            </SoftKeyItem>
+            <If condition="extension==__NUMBER_TYPE__">
+              <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOn)</ExtraIconType>
+            </If>
+            <Else>
+              <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOff)</ExtraIconType>
+            </Else>
+            <Url>phone://mb_nop_ignore_prev_frags#go_back&amp;edit_tbook_entry=__INDEX__|tb_number_type_label|extension</Url>
+          </MenuItem>
+          <If condition="$(bool_eval:$(empty:$(var:purpose)) | $(condition:dial==$(var:purpose)) | $(condition:transfer==$(var:purpose)))">
+            <SoftKeyItem>
+              <Name>OFFHOOK</Name>
+              <Url>phone://mb_exit#action_ifc:CallInterface=make_call,remote=__NUMBER__,identity=__OUTGOING_ID__</Url>
+            </SoftKeyItem>
+            <SoftKeyItem>
+              <Name>HEADSET_OFFHOOK</Name>
+              <Url>phone://mb_exit#action_ifc:CallInterface=make_call,remote=__NUMBER__,identity=__OUTGOING_ID__</Url>
+            </SoftKeyItem>
+            <SoftKeyItem>
+              <Name>SPEAKER</Name>
+              <Url>phone://mb_exit#action_ifc:CallInterface=make_call,remote=__NUMBER__,identity=__OUTGOING_ID__,device=SPEAKER</Url>
+            </SoftKeyItem>
+            <SoftKeyItem>
+              <Name>HEADSET</Name>
+              <Url>phone://mb_exit#action_ifc:CallInterface=make_call,remote=__NUMBER__,identity=__OUTGOING_ID__,device=HEADSET</Url>
+            </SoftKeyItem>
+          </If>
+        </Menu>
+      </If>
+      <MenuItem id="nickname" name="$(lang:tb_nickname)">
+        <If condition="$(show_feature:FEATURE_PUI_STYLE_SIO)">
+          <If condition="$(is_set:__NICK_NAME__)">
+            <SubText>__NICK_NAME__</SubText>
+          </If>
+          <Else>
+            <SubText>($(lang:enum_disp_func_key_none))</SubText>
+          </Else>
+        </If>
+        <ExtraIconType>$(icon_type_enum:kIconTypeMenuArrowRight)</ExtraIconType>
+        <Url>file:///xml/gui/state_addressbook.xml#sub=*[@id="local_directory_input"]&amp;var:field_to_edit=tb_nickname&amp;var:tbook_input_default=__NICK_NAME__&amp;var:index_to_edit=__INDEX__</Url>
+        <If condition="$(bool_eval:$(condition:MASTER!=__CONTACT_TYPE__) &amp; $(condition:Member_Alias!=__FIRST_NAME__))">
+          <SoftKeyItem>
+            <Name>CANCEL</Name>
+            <Url>phone://mb_nop_ignore_prev_frags#go_back&amp;sel=[@id="entry$(var:selection)"]</Url>
+          </SoftKeyItem>
+        </If>
+        <If condition="$(bool_eval:$(empty:$(var:purpose)) | $(condition:dial==$(var:purpose)) | $(condition:transfer==$(var:purpose)))">
+          <SoftKeyItem>
+            <Name>OFFHOOK</Name>
+            <Url>phone://mb_exit#action_ifc:CallInterface=make_call,remote=__NUMBER__,identity=__OUTGOING_ID__</Url>
+          </SoftKeyItem>
+          <SoftKeyItem>
+            <Name>HEADSET_OFFHOOK</Name>
+            <Url>phone://mb_exit#action_ifc:CallInterface=make_call,remote=__NUMBER__,identity=__OUTGOING_ID__</Url>
+          </SoftKeyItem>
+          <SoftKeyItem>
+            <Name>SPEAKER</Name>
+            <Url>phone://mb_exit#action_ifc:CallInterface=make_call,remote=__NUMBER__,identity=__OUTGOING_ID__,device=SPEAKER</Url>
+          </SoftKeyItem>
+          <SoftKeyItem>
+            <Name>HEADSET</Name>
+            <Url>phone://mb_exit#action_ifc:CallInterface=make_call,remote=__NUMBER__,identity=__OUTGOING_ID__,device=HEADSET</Url>
+          </SoftKeyItem>
+        </If>
+      </MenuItem>
+      <MenuItem id="title" name="$(lang:tb_title)">
+        <If condition="$(show_feature:FEATURE_PUI_STYLE_SIO)">
+          <If condition="$(is_set:__TITLE__)">
+            <SubText>__TITLE__</SubText>
+          </If>
+          <Else>
+            <SubText>($(lang:enum_disp_func_key_none))</SubText>
+          </Else>
+        </If>
+        <ExtraIconType>$(icon_type_enum:kIconTypeMenuArrowRight)</ExtraIconType>
+        <Url>file:///xml/gui/state_addressbook.xml#sub=*[@id="local_directory_input"]&amp;var:field_to_edit=tb_title&amp;var:tbook_input_default=__TITLE__&amp;var:index_to_edit=__INDEX__</Url>
+        <If condition="$(bool_eval:$(condition:MASTER!=__CONTACT_TYPE__) &amp; $(condition:Member_Alias!=__FIRST_NAME__))">
+          <SoftKeyItem>
+            <Name>CANCEL</Name>
+            <Url>phone://mb_nop_ignore_prev_frags#go_back&amp;sel=[@id="entry$(var:selection)"]</Url>
+          </SoftKeyItem>
+        </If>
+        <If condition="$(bool_eval:$(empty:$(var:purpose)) | $(condition:dial==$(var:purpose)) | $(condition:transfer==$(var:purpose)))">
+          <SoftKeyItem>
+            <Name>OFFHOOK</Name>
+            <Url>phone://mb_exit#action_ifc:CallInterface=make_call,remote=__NUMBER__,identity=__OUTGOING_ID__</Url>
+          </SoftKeyItem>
+          <SoftKeyItem>
+            <Name>HEADSET_OFFHOOK</Name>
+            <Url>phone://mb_exit#action_ifc:CallInterface=make_call,remote=__NUMBER__,identity=__OUTGOING_ID__</Url>
+          </SoftKeyItem>
+          <SoftKeyItem>
+            <Name>SPEAKER</Name>
+            <Url>phone://mb_exit#action_ifc:CallInterface=make_call,remote=__NUMBER__,identity=__OUTGOING_ID__,device=SPEAKER</Url>
+          </SoftKeyItem>
+          <SoftKeyItem>
+            <Name>HEADSET</Name>
+            <Url>phone://mb_exit#action_ifc:CallInterface=make_call,remote=__NUMBER__,identity=__OUTGOING_ID__,device=HEADSET</Url>
+          </SoftKeyItem>
+        </If>
+      </MenuItem>
+      <MenuItem id="note" name="$(lang:tb_note)">
+        <If condition="$(show_feature:FEATURE_PUI_STYLE_SIO)">
+          <If condition="$(is_set:__NOTE__)">
+            <SubText>__NOTE__</SubText>
+          </If>
+          <Else>
+            <SubText>($(lang:enum_disp_func_key_none))</SubText>
+          </Else>
+        </If>
+        <ExtraIconType>$(icon_type_enum:kIconTypeMenuArrowRight)</ExtraIconType>
+        <Url>file:///xml/gui/state_addressbook.xml#sub=*[@id="local_directory_input"]&amp;var:field_to_edit=tb_note&amp;var:tbook_input_default=__NOTE__&amp;var:index_to_edit=__INDEX__</Url>
+        <If condition="$(bool_eval:$(condition:MASTER!=__CONTACT_TYPE__) &amp; $(condition:Member_Alias!=__FIRST_NAME__))">
+          <SoftKeyItem>
+            <Name>CANCEL</Name>
+            <Url>phone://mb_nop_ignore_prev_frags#go_back&amp;sel=[@id="entry$(var:selection)"]</Url>
+          </SoftKeyItem>
+        </If>
+        <If condition="$(bool_eval:$(empty:$(var:purpose)) | $(condition:dial==$(var:purpose)) | $(condition:transfer==$(var:purpose)))">
+          <SoftKeyItem>
+            <Name>OFFHOOK</Name>
+            <Url>phone://mb_exit#action_ifc:CallInterface=make_call,remote=__NUMBER__,identity=__OUTGOING_ID__</Url>
+          </SoftKeyItem>
+          <SoftKeyItem>
+            <Name>HEADSET_OFFHOOK</Name>
+            <Url>phone://mb_exit#action_ifc:CallInterface=make_call,remote=__NUMBER__,identity=__OUTGOING_ID__</Url>
+          </SoftKeyItem>
+          <SoftKeyItem>
+            <Name>SPEAKER</Name>
+            <Url>phone://mb_exit#action_ifc:CallInterface=make_call,remote=__NUMBER__,identity=__OUTGOING_ID__,device=SPEAKER</Url>
+          </SoftKeyItem>
+          <SoftKeyItem>
+            <Name>HEADSET</Name>
+            <Url>phone://mb_exit#action_ifc:CallInterface=make_call,remote=__NUMBER__,identity=__OUTGOING_ID__,device=HEADSET</Url>
+          </SoftKeyItem>
+        </If>
+      </MenuItem>
+      <MenuItem id="email" name="$(lang:tb_email)">
+        <If condition="$(show_feature:FEATURE_PUI_STYLE_SIO)">
+          <If condition="$(is_set:__EMAIL__)">
+            <SubText>__EMAIL__</SubText>
+          </If>
+          <Else>
+            <SubText>($(lang:enum_disp_func_key_none))</SubText>
+          </Else>
+        </If>
+        <ExtraIconType>$(icon_type_enum:kIconTypeMenuArrowRight)</ExtraIconType>
+        <Url>file:///xml/gui/state_addressbook.xml#sub=*[@id="local_directory_input"]&amp;var:field_to_edit=tb_email&amp;var:tbook_input_default=__EMAIL__&amp;var:index_to_edit=__INDEX__</Url>
+        <If condition="$(bool_eval:$(condition:MASTER!=__CONTACT_TYPE__) &amp; $(condition:Member_Alias!=__FIRST_NAME__))">
+          <SoftKeyItem>
+            <Name>CANCEL</Name>
+            <Url>phone://mb_nop_ignore_prev_frags#go_back&amp;sel=[@id="entry$(var:selection)"]</Url>
+          </SoftKeyItem>
+        </If>
+        <If condition="$(bool_eval:$(empty:$(var:purpose)) | $(condition:dial==$(var:purpose)) | $(condition:transfer==$(var:purpose)))">
+          <SoftKeyItem>
+            <Name>OFFHOOK</Name>
+            <Url>phone://mb_exit#action_ifc:CallInterface=make_call,remote=__NUMBER__,identity=__OUTGOING_ID__</Url>
+          </SoftKeyItem>
+          <SoftKeyItem>
+            <Name>HEADSET_OFFHOOK</Name>
+            <Url>phone://mb_exit#action_ifc:CallInterface=make_call,remote=__NUMBER__,identity=__OUTGOING_ID__</Url>
+          </SoftKeyItem>
+          <SoftKeyItem>
+            <Name>SPEAKER</Name>
+            <Url>phone://mb_exit#action_ifc:CallInterface=make_call,remote=__NUMBER__,identity=__OUTGOING_ID__,device=SPEAKER</Url>
+          </SoftKeyItem>
+          <SoftKeyItem>
+            <Name>HEADSET</Name>
+            <Url>phone://mb_exit#action_ifc:CallInterface=make_call,remote=__NUMBER__,identity=__OUTGOING_ID__,device=HEADSET</Url>
+          </SoftKeyItem>
+        </If>
+      </MenuItem>
+      <SoftKeyItem>
+        <Name>F1</Name>
+        <Label>F_ADD_PHONEBOOK</Label>
+        <If condition="$(status_active:TbookFull)">
+          <Url>phone://mb_nop#var:tbook_full=1</Url>
+        </If>
+        <Else>
+          <Url>phone://mb_nop_ignore_prev_frags#sub=*[@id="local_directory_input"]&amp;var:field_to_edit=tb_number&amp;var:add_contact=add_sub_number_from_details&amp;var:tbook_input_default=&amp;var:index_to_edit=__INDEX__</Url>
+        </Else>
+      </SoftKeyItem>
+      <SoftKeyItem>
+        <Name>F2</Name>
+        <If condition="$(var:from_call_list)==1">
+          <Url>phone://mb_exit#contact_saved</Url>
+        </If>
+        <ElIf condition="$(bool_eval:$(condition:MASTER!=__CONTACT_TYPE__) &amp; $(condition:Member_Alias!=__FIRST_NAME__))">
+          <Url>phone://mb_nop_ignore_prev_frags#go_back&amp;sel=[@id="entry$(var:selection)"]</Url>
+        </ElIf>
+        <Else>
+          <Url>phone://mb_nop#go_back</Url>
+        </Else>
+        <Label>F_SAVE</Label>
+      </SoftKeyItem>
+      <SoftKeyItem>
+        <Name>F3</Name>
+        <SoftKey>ENTER</SoftKey>
+        <Label>F_EDIT</Label>
+      </SoftKeyItem>
+      <SoftKeyItem>
+        <Name>F4</Name>
+        <If condition="$(bool_eval:$(empty:$(var:purpose)) | $(condition:dial==$(var:purpose)) | $(condition:transfer==$(var:purpose)))">
+          <Url>phone://mb_exit#action_ifc:CallInterface=make_call,remote=__NUMBER__,identity=__OUTGOING_ID__</Url>
+          <If condition="transfer==$(var:purpose)">
+            <Label>F_TRANSFER</Label>
+          </If>
+          <Else>
+            <Label>F_DIAL</Label>
+          </Else>
+        </If>
+        <Else>
+          <Url>phone://mb_exit#contact_select=__NUMBER__</Url>
+          <Label>F_OK</Label>
+        </Else>
+      </SoftKeyItem>
+    </Repeat>
+  </IPPhoneMenu>
+  <IPPhoneMenu track="yes" dtmf="off" id="local_directory_sort_type" scrollbar="true" sort="yes" state="mb_only">
+    <Title>$(lang:title_sort)</Title>
+    <MenuItem name="$(translate_tbook_sort:1)" id="tb_firstname" sel="$(condition:$(set:tbook_sort)==1)">
+      <Url>phone://mb_nop_ignore_prev_frags#go_back&amp;set:tbook_sort=1&amp;sel=@line=0</Url>
+    </MenuItem>
+    <MenuItem name="$(translate_tbook_sort:2)" id="tb_lastname" sel="$(condition:$(set:tbook_sort)==2)">
+      <Url>phone://mb_nop_ignore_prev_frags#go_back&amp;set:tbook_sort=2&amp;sel=@line=0</Url>
+    </MenuItem>
+    <!-- setting value 3 'member, number' is not an option via pui for unknown reasons and entries after 4 got randomized by history-->
+    <MenuItem name="$(translate_tbook_sort:4)" id="tb_nickname" sel="$(condition:$(set:tbook_sort)==4)">
+      <Url>phone://mb_nop_ignore_prev_frags#go_back&amp;set:tbook_sort=4&amp;sel=@line=0</Url>
+    </MenuItem>
+    <MenuItem name="$(translate_tbook_sort:6)" id="tb_title" sel="$(condition:$(set:tbook_sort)==6)">
+      <Url>phone://mb_nop_ignore_prev_frags#go_back&amp;set:tbook_sort=6&amp;sel=@line=0</Url>
+    </MenuItem>
+    <MenuItem name="$(translate_tbook_sort:8)" id="tb_organization" sel="$(condition:$(set:tbook_sort)==8)">
+      <Url>phone://mb_nop_ignore_prev_frags#go_back&amp;set:tbook_sort=8&amp;sel=@line=0</Url>
+    </MenuItem>
+    <MenuItem name="$(translate_tbook_sort:5)" id="tb_outgoing_id" sel="$(condition:$(set:tbook_sort)==5)">
+      <Url>phone://mb_nop_ignore_prev_frags#go_back&amp;set:tbook_sort=5&amp;sel=@line=0</Url>
+    </MenuItem>
+    <MenuItem name="$(translate_tbook_sort:7)" id="tb_group" sel="$(condition:$(set:tbook_sort)==7)">
+      <Url>phone://mb_nop_ignore_prev_frags#go_back&amp;set:tbook_sort=7&amp;sel=@line=0</Url>
+    </MenuItem>
+    <SoftKeyItem>
+      <Name>CANCEL</Name>
+      <Url>phone://mb_nop_ignore_prev_frags#go_back&amp;sel=[@id="entry$(var:selection)"]</Url>
+    </SoftKeyItem>
+  </IPPhoneMenu>
+  <IPPhoneText id="local_directory_confirm_delete" state="only_mb">
+    <Title>$(lang:confirm_del_adr_item_title_short)</Title>
+    <Text>$(lang:confirm_del_adr_item)</Text>
+    <If condition="$(is_set:$(var:delete_master_of_sub_list))">
+      <SoftKeyItem>
+        <Name>ENTER</Name>
+        <Url>phone://mb_nop_ignore_prev_frags#go_back&amp;go_back&amp;del_tbook_entry=$(var:index_to_delete)&amp;sel=@line=0&amp;var:index_to_delete=&amp;var:delete_master_of_sub_list=</Url>
+      </SoftKeyItem>
+      <SoftKeyItem>
+        <If condition="$(show_feature:ORDER_CANCEL_LEFT_OK_RIGHT)">
+          <Name>F4</Name>
+        </If>
+        <Else>
+          <Name>F1</Name>
+        </Else>
+        <Label>F_YES</Label>
+        <Url>phone://mb_nop_ignore_prev_frags#go_back&amp;go_back&amp;del_tbook_entry=$(var:index_to_delete)&amp;sel=@line=0&amp;var:index_to_delete=&amp;var:delete_master_of_sub_list=</Url>
+      </SoftKeyItem>
+      <SoftKeyItem>
+        <If condition="$(show_feature:ORDER_CANCEL_LEFT_OK_RIGHT)">
+          <Name>F1</Name>
+        </If>
+        <Else>
+          <Name>F4</Name>
+        </Else>
+        <Label>F_NO</Label>
+        <Url>phone://mb_nop_ignore_prev_frags#go_back&amp;sel=[@id="entry$(var:selection)"]&amp;var:delete_master_of_sub_list=</Url>
+      </SoftKeyItem>
+      <SoftKeyItem>
+        <Name>CANCEL</Name>
+        <Url>phone://mb_nop_ignore_prev_frags#go_back&amp;sel=[@id="entry$(var:selection)"]&amp;var:delete_master_of_sub_list=</Url>
+      </SoftKeyItem>
+    </If>
+    <Else>
+      <SoftKeyItem>
+        <Name>ENTER</Name>
+        <Url>phone://mb_nop_ignore_prev_frags#go_back&amp;del_tbook_entry=$(var:index_to_delete)&amp;sel=@line=0&amp;var:index_to_delete=</Url>
+      </SoftKeyItem>
+      <SoftKeyItem>
+        <If condition="$(show_feature:ORDER_CANCEL_LEFT_OK_RIGHT)">
+          <Name>F4</Name>
+        </If>
+        <Else>
+          <Name>F1</Name>
+        </Else>
+        <Label>F_YES</Label>
+        <Url>phone://mb_nop_ignore_prev_frags#go_back&amp;del_tbook_entry=$(var:index_to_delete)&amp;sel=@line=0&amp;var:index_to_delete=</Url>
+      </SoftKeyItem>
+      <SoftKeyItem>
+        <If condition="$(show_feature:ORDER_CANCEL_LEFT_OK_RIGHT)">
+          <Name>F1</Name>
+        </If>
+        <Else>
+          <Name>F4</Name>
+        </Else>
+        <Label>F_NO</Label>
+        <Url>phone://mb_nop_ignore_prev_frags#go_back&amp;sel=[@id="entry$(var:selection)"]</Url>
+      </SoftKeyItem>
+      <SoftKeyItem>
+        <Name>CANCEL</Name>
+        <Url>phone://mb_nop_ignore_prev_frags#go_back&amp;sel=[@id="entry$(var:selection)"]</Url>
+      </SoftKeyItem>
+    </Else>
+  </IPPhoneText>
+  <IPPhoneInput id="local_directory_input" state="only_mb">
+    <If condition="$(var:add_contact)==add_number">
+      <If condition="$(var:from_call_list)==1">
+        <Url input_required="yes">file:///xml/gui/state_addressbook.xml#sub=*[@id="local_directory_contact_details"]&amp;add_tbook_entry=__X__|$(var:contact_name)&amp;var:tbook_detail_index=__X__&amp;var:show_detail_by_index=0&amp;var:add_contact=&amp;var:contact_blocked=&amp;var:saved=1</Url>
+      </If>
+      <ElIf condition="$(is_set:$(var:tbook_firstname_value))">
+        <Url input_required="yes">file:///xml/gui/state_addressbook.xml#sub=*[@id="local_directory_contact_details"]&amp;add_tbook_entry=__X__|$(var:tbook_firstname_value)&amp;var:tbook_detail_index=__X__&amp;var:show_detail_by_index=0&amp;var:add_contact=&amp;var:contact_blocked=</Url>
+      </ElIf>
+      <Else>
+        <Url input_required="yes">file:///xml/gui/state_addressbook.xml#sub=*[@id="local_directory_contact_details"]&amp;add_tbook_entry=__X__&amp;var:tbook_detail_index=__X__&amp;var:show_detail_by_index=0&amp;var:add_contact=&amp;var:contact_blocked=</Url>
+      </Else>
+      <CancelUrl>phone://mb_nop_ignore_prev_frags#sub=*[@id="local_directory"]&amp;sel=[@id="entry$(var:selection)"]</CancelUrl>
+    </If>
+    <If condition="$(var:add_contact)==add_sub_number">
+      <Url input_required="yes">file:///xml/gui/state_addressbook.xml#sub=*[@id="local_directory_contact_details"]&amp;add_tbook_sub_entry=$(var:index_to_edit)|__X__&amp;var:tbook_detail_index=__X__&amp;var:show_detail_by_index=0&amp;var:add_contact=&amp;var:contact_blocked=</Url>
+      <CancelUrl>phone://mb_nop_ignore_prev_frags#sub=*[@id="local_directory_sub_entry_list"]</CancelUrl>
+    </If>
+    <If condition="$(var:add_contact)==add_sub_number_from_details">
+      <Url input_required="yes">phone://mb_nop_ignore_prev_frags#sub=*[@id="local_directory_contact_details"]&amp;add_tbook_sub_entry=$(var:index_to_edit)|__X__&amp;var:tbook_detail_index=__X__&amp;var:show_detail_by_index=0&amp;var:add_contact=&amp;var:contact_blocked=</Url>
+      <CancelUrl>phone://mb_nop_ignore_prev_frags#sub=*[@id="local_directory_contact_details"]&amp;var:contact_blocked=</CancelUrl>
+    </If>
+    <ElIf condition="tb_number==$(var:field_to_edit)">
+      <Url>file:///xml/gui/state_addressbook.xml#sub=*[@id="local_directory_contact_details"]&amp;edit_tbook_entry=$(var:index_to_edit)|$(var:field_to_edit)|__X__&amp;var:tbook_detail_index=$(var:index_to_edit)&amp;var:show_detail_by_index=1&amp;var:contact_blocked=</Url>
+      <CancelUrl>file:///xml/gui/state_addressbook.xml#sub=*[@id="local_directory_contact_details"]&amp;var:contact_blocked=</CancelUrl>
+    </ElIf>
+    <ElIf condition="1==$(var:from_call_list)">
+      <Url>file:///xml/gui/state_addressbook.xml#sub=*[@id="local_directory_contact_details"]&amp;edit_tbook_entry=$(var:index_to_edit)|$(var:field_to_edit)|__X__&amp;var:tbook_detail_index=$(var:index_to_edit)&amp;var:show_detail_by_index=1&amp;var:contact_blocked=</Url>
+      <CancelUrl>file:///xml/gui/state_addressbook.xml#sub=*[@id="local_directory_contact_details"]&amp;var:tbook_detail_index=$(var:index_to_edit)</CancelUrl>
+    </ElIf>
+    <Else>
+      <Url>phone://mb_nop_ignore_prev_frags#go_back&amp;edit_tbook_entry=$(var:index_to_edit)|$(var:field_to_edit)|__X__</Url>
+      <CancelUrl>phone://mb_nop_ignore_prev_frags#go_back</CancelUrl>
+    </Else>
+    <InputItem>
+      <DisplayName>$(lang:$(var:field_to_edit))</DisplayName>
+      <InputToken>__X__</InputToken>
+      <If condition="$(var:field_to_edit)==tb_number">
+        <InputFlags>AN</InputFlags>
+        <InputModeFixed>$(set:block_url_dialing)</InputModeFixed>
+        <ContactPoolInEdit>1</ContactPoolInEdit>
+      </If>
+      <Else>
+        <ContactPoolInEdit>0</ContactPoolInEdit>
+        <InputFlags>A</InputFlags>
+        <InputModeFixed>off</InputModeFixed>
+      </Else>
+      <DefaultValue>$(var:tbook_input_default)</DefaultValue>
+    </InputItem>
+    <If condition="$(var:field_to_edit)==tb_number">
+      <SoftKeyItem>
+        <Name>F4</Name>
+        <SoftKey>F_SAVE</SoftKey>
+      </SoftKeyItem>
+    </If>
+  </IPPhoneInput>
+  <IPPhoneMenu track="yes" icon_xoffset="$(math_eval:$(gui_display_xsize)/20-5)" text_xoffset="$(math_eval:$(gui_display_xsize)/20-7)" line_height="$(math_eval:$(gui_display_ysize)/5)" dtmf="off" id="local_directory_convert_to_fav" speedselect="off" sort="yes" state="only_mb" viewportcontrol="DontTouchViewPort">
+    <Title>$(lang:title_add_to_favorites)</Title>
+      <Repeat lazy="yes" value_key="$(tbook_data:none,vip,MASTER,:0)" token="|__FIRST_NAME__|__LAST_NAME__|__NICK_NAME__|__NUMBER__|__NUMBER_TYPE__|__MULTI_NUMBER_TYPE__|__SORT_KEY__|__DISPLAYED_SORT_KEY__|__IMAGE__|__CONTACT_TYPE__|__INDEX__|__ACTION_URL__|__EMAIL__|__GROUP__|__NOTE__|__ORGANIZATION__|__TITLE__|__OUTGOING_ID__|">
+        <If condition="REPEAT_RESULT_VALUE_IS_EMPTY==__FIRST_NAME__">
+          <MenuItem name="$(lang:tbook_emtpy)" id="empty">
+            <If condition="$(empty:$(var:selection))">
+              <Url>phone://mb_nop_ignore_prev_frags#go_back</Url>
+            </If>
+            <Else>
+              <Url>phone://mb_nop_ignore_prev_frags#go_back&amp;sel=[@id="entry$(var:selection)"]</Url>
+            </Else>
+          </MenuItem>
+        </If>
+        <Else>
+          <MenuItem id="convert__IDX__" sort_key="__SORT_KEY__">
+            <if condition="$(is_set:__DISPLAYED_SORT_KEY__)">
+              <if condition="$(bool_eval:$(is_set:__FIRST_NAME__) || $(is_set:__LAST_NAME__))">
+                <name>__FIRST_NAME__ __LAST_NAME__ (__DISPLAYED_SORT_KEY__)</name>
+              </if>
+              <elif condition="$(is_set:__NICK_NAME__)">
+                <name>__NICK_NAME__ (__DISPLAYED_SORT_KEY__)</name>
+              </elif>
+              <else>
+                <name>__NUMBER__ (__DISPLAYED_SORT_KEY__)</name>
+              </else>
+            </if>
+            <else>
+              <if condition="$(bool_eval:$(is_set:__FIRST_NAME__) || $(is_set:__LAST_NAME__))">
+                <if condition="$(bool_eval:$(condition:$(set:tbook_sort)==2) &amp; $(is_set:__LAST_NAME__) &amp; $(is_set:__FIRST_NAME__))">
+                  <name>__LAST_NAME__, __FIRST_NAME__</name>
+                </if>
+                <else>
+                  <name>__FIRST_NAME__ __LAST_NAME__</name>
+                </else>
+              </if>
+              <elif condition="$(is_set:__NICK_NAME__)">
+                <name>__NICK_NAME__</name>
+              </elif>
+              <else>
+                <name>__NUMBER__</name>
+              </else>
+            </else>
+            <If condition="$(show_feature:FEATURE_PUI_STYLE_SIO)">
+              <If condition="$(is_set:__NUMBER_TYPE__)">
+                <If condition="mobile==__NUMBER_TYPE__">
+                  <SubText>$(lang:target_mobile) __NUMBER__</SubText>
+                </If>
+                <ElIf condition="home==__NUMBER_TYPE__">
+                  <SubText>$(lang:target_home) __NUMBER__</SubText>
+                </ElIf>
+                <Else>
+                  <SubText>$(lang:nrtype___NUMBER_TYPE__) __NUMBER__</SubText>
+                </Else>
+              </If>
+              <Else>
+                <SubText>__NUMBER__</SubText>
+              </Else>
+              <IconType>$(icon_type_enum:kIconTypeContactStateUnknown)</IconType>
+              <If condition="$(is_set:__IMAGE__)">
+                <IconUrl>__IMAGE__</IconUrl>
+              </If>
+            </If>
+            <If condition="$(empty:$(var:selection))">
+              <Url>phone://mb_nop_ignore_prev_frags#go_back&amp;edit_tbook_entry=__INDEX__|tb_favorite|true</Url>
+            </If>
+            <Else>
+              <Url>phone://mb_nop_ignore_prev_frags#go_back&amp;edit_tbook_entry=__INDEX__|tb_favorite|true&amp;sel=[@id="entry$(var:selection)"]</Url>
+              <SoftKeyItem>
+                <Name>CANCEL</Name>
+                <Url>phone://mb_nop_ignore_prev_frags#go_back&amp;sel=[@id="entry$(var:selection)"]</Url>
+              </SoftKeyItem>
+            </Else>
+          </MenuItem>
+        </Else>
+      </Repeat>
+  </IPPhoneMenu>
+</IPPhoneBatch>

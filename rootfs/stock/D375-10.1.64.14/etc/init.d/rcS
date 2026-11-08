@@ -1,0 +1,2470 @@
+#!/bin/sh
+
+export PATH="/sbin:/bin:/usr/sbin:/usr/bin:/wifi/sbin:/usr/local/sbin:/usr/local/bin"
+export LD_LIBRARY_PATH="/lib:/usr/lib:/wifi/lib"
+
+# Write a text on the console and on the display
+# Parameters:
+# $1 = console text (if "&&" use $2 as image file name and paint image)
+# $2 = display text (if ".." use text from $1; if $1 = "&&" and $2 = "" use framebuffer)
+# $3 = x-coordinate of text
+# $4 = y-coordinate of text
+# $5 = x-coordinate of text for size limited displays
+# $6 = y-coordinate of text for size limited displays
+function display () {
+    local fbTmpFileCreated="n"
+    local fontSize=$defaultFontSize
+
+    # When the screen should be cleared and an image should painted
+    if [ ! -z "$1" ] && [ "$1" = "&&" ]; then
+        case $PHONE_TYPE in
+            "snomD712" | "snom715" | "snom720" | "snom725" | "snomD120" | "snomD305" | "snomD315" | "snomD345" | "snomD745" | "VTechET605" | "VTechVSP805" | "VTechVSP810" | "VTechVSP815G" | "VTechVSP845G" )
+                # The splash image is ignored. Only clear the screen.
+                if [ -z "$2" ]; then
+                    fbApp clearFb 0 0 999 999 dummy
+                fi
+                ;;
+            "snomD717" | "snomD735" | "snom760" | "snomD765" | "snomD785" | "snomD335" | "snomD375" | "snomD385" | "snomPA500" | "VTechET617" | "VTechET635"  | "VTechET685" | "VTechVSP875G"| "VTechVSP885G")
+                if [ ! -z "$2" ]; then
+                    rm -f "$fbTmpFile"
+
+                    fbApp showFb 0 0 "$2" >/dev/null 2>&1
+                fi
+                ;;
+        esac
+
+        return 0
+    fi
+
+    # When the frame buffer tmpfile doesn't exist, create it.
+    if [ ! -e "$fbTmpFile" ]; then
+        fbApp saveFb "$fbTmpFile" >/dev/null 2>&1
+        fbTmpFileCreated="y"
+    fi
+
+    # Console Ouptut
+    [ ! -z "$1" ] && echo "--- $1 ---"
+
+    # Screen Output
+    if [ ! -z "$2" ]; then
+        local text=""
+        local x=$(($defaultX*$defaultFontWidth))
+        local y=$(($defaultY*$defaultFontHeight))
+        local fontFile="$defaultFontDir/$fontSize"
+        local xpos=$3
+        local ypos=$4
+
+        # Same text on the screen as on the console
+        if [ "$2" = ".." ] || [ "$2" = "++" ]; then
+            text="$1"
+        else
+            text="$2"
+        fi
+
+        # Where to write the text?
+        if [ ! -z "$3" ] && [ ! -z "$4" ]; then
+            # New coordinates => don't clear screen
+            case $PHONE_TYPE in
+                "snomD717" | "snomD735" | "snom760" | "snomD765" | "snomD785" | "snomD335" | "snomD375" | "snomD385" | "snomPA500" | "VTechET617" | "VTechET635" | "VTechET685" | "VTechVSP875G" | "VTechVSP885G"  )
+                    ;;
+                "snomD712" |"snom715" | "snom720" | "snom725" | "snomD120" | "snomD305" | "snomD315" | "snomD345" | "snomD745" | "VTechET605" | "VTechVSP805" | "VTechVSP810" | "VTechVSP815G" | "VTechVSP845G")
+                    if [ ! -z "$5" ] && [ ! -z "$6" ]; then
+                        xpos=$5
+                        ypos=$6
+                    fi
+                    ;;
+            esac
+            x=$(($xpos*$defaultFontWidth))
+            y=$(($ypos*$defaultFontHeight))
+        else
+            # Same coordinates again => clear screen, so that we don't get a mess
+            # If we have not just written the image, write it
+            if [ "$fbTmpFileCreated" = "n" ]; then
+                fbApp showFb 0 0 "$fbTmpFile" >/dev/null 2>&1
+            fi
+        fi
+
+        # Write the text on the screen
+        fbApp printFb "$x" "$y" -f "$fontFile" "$text" >/dev/null 2>&1
+    fi
+
+    return 0
+}
+
+# Read a key press from the phone
+function getKey () {
+    local key
+    local result=""
+    local timeout=$1
+    local cmd="fbApp getKeyFb"
+
+    [ $timeout ] && cmd=$cmd" -t $timeout"
+
+    key=`$cmd`
+
+    case $key in
+        103) result="CANCEL";;
+        104) result="TICK";;
+        49)  result="1";;
+        50)  result="2";;
+        51)  result="3";;
+        R*)  result="TIMEOUT";;
+        *)   result="NOT_USED_YET";;
+    esac
+
+    echo $result
+}
+
+# Check if SHA256 client certificate must be used for downloads.
+function useSHA256ClientCertificate () {
+    if [[ ! -f "/protected/certificate.txt" ]]; then
+        # The phone has no SHA1 cert, we must use the SHA256 one.
+        return 0
+    else
+        # Evaluate setting phone_cert_type to determine, which cert to use.
+        phone_cert=`getConfigSetting phone_cert_type best`
+        if [[ $phone_cert == "best" ]]; then
+            # Best certificate is requested, use SHA256 certificate if available and SHA1 if not.
+            if [[ -f "/protected/certificate2.txt" ]]; then
+                return 0
+            else
+                return 1
+            fi
+        elif [[ $phone_cert == "sha256" ]]; then
+            return 0
+        else
+            return 1
+        fi
+    fi
+}
+
+# Set the values of the global variables.
+function setGlobalVariables () {
+    fbTmpFile="/tmp/fbContent.png"
+    checksumOutput="/tmp/md5check"
+    ffupdatefile="/tmp/ssh_fast_update"
+    cleanRootfsFlag="/clean.rootfs"
+    cleanRootfsList="/etc/rootfs_files.lst"
+
+    updateDir="/snom/update"
+    updateUrl="$updateDir/update_url"
+    updateOptions="$updateDir/update_options"
+    updateAsk="$updateDir/update_ask"
+
+    keyFile="/tmp/update.key"
+    pubFile="/firmware1.pub"
+    sanityChecks="n"
+
+    case $PHONE_TYPE in
+        "snomD712")
+            defaultFontWidth=10
+            defaultFontHeight=12
+            defaultFontSize=10
+            defaultFontDir="NONE"
+            defaultX=0
+            defaultY=1
+            updatePng="NONE"
+            updpgrPng="NONE"
+            updpgr100Png="NONE"
+            splashPng="NONE"
+            pgrBarX=0
+            pgrBarY=24
+            mtd_kernel="/dev/mtd6"
+            mtd_kernel_block="/dev/mtdblock6"
+            rescueFs="/dev/mtdblock4"
+            protectedFs="/dev/mtdblock5"
+            rootFs="/dev/mtdblock7"
+            kernel="/boot/uImage"
+            cur_kernel="/tmp/uImage"
+            tmp_kernel="/tmp/uImage.tmp"
+            mtd_uboot="/dev/mtd1"
+            mtd_uboot_block="/dev/mtdblock1"
+            uboot="/boot/u-boot.bin"
+            cur_uboot="/tmp/u-boot.bin"
+            tmp_uboot="/tmp/u-boot.tmp"
+            ;;
+        "snom715")
+            defaultFontWidth=10
+            defaultFontHeight=12
+            defaultFontSize=10
+            defaultFontDir="NONE"
+            defaultX=0
+            defaultY=1
+            updatePng="NONE"
+            updpgrPng="NONE"
+            updpgr100Png="NONE"
+            splashPng="NONE"
+            pgrBarX=0
+            pgrBarY=24
+            mtd_kernel="/dev/mtd6"
+            mtd_kernel_block="/dev/mtdblock6"
+            rescueFs="/dev/mtdblock4"
+            protectedFs="/dev/mtdblock5"
+            rootFs="/dev/mtdblock7"
+            kernel="/boot/uImage"
+            cur_kernel="/tmp/uImage"
+            tmp_kernel="/tmp/uImage.tmp"
+            mtd_uboot="/dev/mtd1"
+            mtd_uboot_block="/dev/mtdblock1"
+            uboot="/boot/u-boot.bin"
+            cur_uboot="/tmp/u-boot.bin"
+            tmp_uboot="/tmp/u-boot.tmp"
+            ;;
+        "snom720")
+            defaultFontWidth=10
+            defaultFontHeight=12
+            defaultFontSize=10
+            defaultFontDir="NONE"
+            defaultX=0
+            defaultY=1
+            updatePng="NONE"
+            updpgrPng="NONE"
+            updpgr100Png="NONE"
+            splashPng="NONE"
+            pgrBarX=0
+            pgrBarY=24
+            mtd_kernel="/dev/mtd6"
+            mtd_kernel_block="/dev/mtdblock6"
+            rescueFs="/dev/mtdblock4"
+            protectedFs="/dev/mtdblock5"
+            rootFs="/dev/mtdblock7"
+            kernel="/boot/uImage"
+            cur_kernel="/tmp/uImage"
+            tmp_kernel="/tmp/uImage.tmp"
+            mtd_uboot="/dev/mtd1"
+            mtd_uboot_block="/dev/mtdblock1"
+            uboot="/boot/u-boot.bin"
+            cur_uboot="/tmp/u-boot.bin"
+            tmp_uboot="/tmp/u-boot.tmp"
+            ;;
+        "snom760")
+            defaultFontWidth=10
+            defaultFontHeight=19
+            defaultFontSize=14
+            defaultFontDir="/snom/fonts/standard.ttf"
+            defaultX=3
+            defaultY=7
+            updatePng="/snom/bmp/colored/swupd.png"
+            updpgrPng="/snom/bmp/colored/swpgr.png"
+            updpgr100Png="/snom/bmp/colored/swpgr100.png"
+            splashPng="/snom/bmp/colored/splash_screen.png"
+            pgrBarX=50
+            pgrBarY=166
+            mtd_kernel="/dev/mtd6"
+            mtd_kernel_block="/dev/mtdblock6"
+            rescueFs="/dev/mtdblock4"
+            protectedFs="/dev/mtdblock5"
+            rootFs="/dev/mtdblock7"
+            kernel="/boot/uImage"
+            cur_kernel="/tmp/uImage"
+            tmp_kernel="/tmp/uImage.tmp"
+            mtd_uboot="/dev/mtd1"
+            mtd_uboot_block="/dev/mtdblock1"
+            uboot="/boot/u-boot.bin"
+            cur_uboot="/tmp/u-boot.bin"
+            tmp_uboot="/tmp/u-boot.tmp"
+            ;;
+        "snom725")
+            defaultFontWidth=10
+            defaultFontHeight=12
+            defaultFontSize=10
+            defaultFontDir="NONE"
+            defaultX=0
+            defaultY=1
+            updatePng="NONE"
+            updpgrPng="NONE"
+            updpgr100Png="NONE"
+            splashPng="NONE"
+            pgrBarX=0
+            pgrBarY=24
+            mtd_kernel="/dev/mtd6"
+            mtd_kernel_block="/dev/mtdblock6"
+            rescueFs="/dev/mtdblock4"
+            protectedFs="/dev/mtdblock5"
+            rootFs="/dev/mtdblock7"
+            kernel="/boot/uImage"
+            cur_kernel="/tmp/uImage"
+            tmp_kernel="/tmp/uImage.tmp"
+            mtd_uboot="/dev/mtd1"
+            mtd_uboot_block="/dev/mtdblock1"
+            uboot="/boot/u-boot.bin"
+            cur_uboot="/tmp/u-boot.bin"
+            tmp_uboot="/tmp/u-boot.tmp"
+            ;;
+        "snomD745")
+            defaultFontWidth=10
+            defaultFontHeight=20
+            defaultFontSize=10
+            defaultFontDir="NONE"
+            defaultX=0
+            defaultY=1
+            updatePng="NONE"
+            updpgrPng="NONE"
+            updpgr100Png="NONE"
+            splashPng="NONE"
+            pgrBarX=0
+            pgrBarY=40
+            mtd_kernel="/dev/mtd6"
+            mtd_kernel_block="/dev/mtdblock6"
+            rescueFs="/dev/mtdblock4"
+            protectedFs="/dev/mtdblock5"
+            rootFs="/dev/mtdblock7"
+            kernel="/boot/uImage"
+            cur_kernel="/tmp/uImage"
+            tmp_kernel="/tmp/uImage.tmp"
+            mtd_uboot="/dev/mtd1"
+            mtd_uboot_block="/dev/mtdblock1"
+            uboot="/boot/u-boot.bin"
+            cur_uboot="/tmp/u-boot.bin"
+            tmp_uboot="/tmp/u-boot.tmp"
+            ;;
+        "snomD765")
+            defaultFontWidth=10
+            defaultFontHeight=19
+            defaultFontSize=14
+            defaultFontDir="/snom/fonts/standard.ttf"
+            defaultX=3
+            defaultY=7
+            updatePng="/snom/bmp/colored/swupd.png"
+            updpgrPng="/snom/bmp/colored/swpgr.png"
+            updpgr100Png="/snom/bmp/colored/swpgr100.png"
+            splashPng="/snom/bmp/colored/splash_screen.png"
+            pgrBarX=50
+            pgrBarY=166
+            mtd_kernel="/dev/mtd6"
+            mtd_kernel_block="/dev/mtdblock6"
+            rescueFs="/dev/mtdblock4"
+            protectedFs="/dev/mtdblock5"
+            rootFs="/dev/mtdblock7"
+            kernel="/boot/uImage"
+            cur_kernel="/tmp/uImage"
+            tmp_kernel="/tmp/uImage.tmp"
+            mtd_uboot="/dev/mtd1"
+            mtd_uboot_block="/dev/mtdblock1"
+            uboot="/boot/u-boot.bin"
+            cur_uboot="/tmp/u-boot.bin"
+            tmp_uboot="/tmp/u-boot.tmp"
+            ;;
+        "snomD717" | "VTechET617")
+            defaultFontWidth=10
+            defaultFontHeight=19
+            defaultFontSize=8
+            defaultFontDir="/snom/fonts/standard.ttf"
+            defaultX=3
+            defaultY=7
+            updatePng="/snom/bmp/colored/swupd.png"
+            updpgrPng="/snom/bmp/colored/swpgr.png"
+            updpgr100Png="/snom/bmp/colored/swpgr100.png"
+            splashPng="/snom/bmp/colored/splash_screen.png"
+            pgrBarX=50
+            pgrBarY=166
+            mtd_kernel="/dev/mtd5"
+            mtd_kernel_block="/dev/mtdblock5"
+            rescueFs="/dev/mtdblock3"
+            protectedFs="/dev/mtdblock4"
+            rootFs="/dev/mtdblock6"
+            kernel="/boot/uImage"
+            cur_kernel="/tmp/uImage"
+            tmp_kernel="/tmp/uImage.tmp"
+            mtd_uboot="/dev/mtd0"
+            mtd_uboot_block="/dev/mtdblock0"
+            uboot="/boot/u-boot.bin"
+            cur_uboot="/tmp/u-boot.bin"
+            tmp_uboot="/tmp/u-boot.tmp"
+            ;;
+        "snomD735" | "snomPA500" | "VTechET635")
+            defaultFontWidth=10
+            defaultFontHeight=19
+            defaultFontSize=14
+            defaultFontDir="/snom/fonts/standard.ttf"
+            defaultX=3
+            defaultY=7
+            updatePng="/snom/bmp/colored/swupd.png"
+            updpgrPng="/snom/bmp/colored/swpgr.png"
+            updpgr100Png="/snom/bmp/colored/swpgr100.png"
+            splashPng="/snom/bmp/colored/splash_screen.png"
+            pgrBarX=50
+            pgrBarY=166
+            mtd_kernel="/dev/mtd5"
+            mtd_kernel_block="/dev/mtdblock5"
+            rescueFs="/dev/mtdblock3"
+            protectedFs="/dev/mtdblock4"
+            rootFs="/dev/mtdblock6"
+            kernel="/boot/uImage"
+            cur_kernel="/tmp/uImage"
+            tmp_kernel="/tmp/uImage.tmp"
+            mtd_uboot="/dev/mtd0"
+            mtd_uboot_block="/dev/mtdblock0"
+            uboot="/boot/u-boot.bin"
+            cur_uboot="/tmp/u-boot.bin"
+            tmp_uboot="/tmp/u-boot.tmp"
+            ;;
+        "snomD785" | "VTechET685")
+            defaultFontWidth=12
+            defaultFontHeight=30
+            defaultFontSize=18
+            defaultFontDir="/snom/fonts/standard.ttf"
+            defaultX=3
+            defaultY=7
+            updatePng="/snom/bmp/colored/swupd.png"
+            updpgrPng="/snom/bmp/colored/swpgr.png"
+            updpgr100Png="/snom/bmp/colored/swpgr100.png"
+            splashPng="/snom/bmp/colored/splash_screen.png"
+            pgrBarX=130
+            pgrBarY=182
+            mtd_kernel="/dev/mtd6"
+            mtd_kernel_block="/dev/mtdblock6"
+            rescueFs="/dev/mtdblock4"
+            protectedFs="/dev/mtdblock5"
+            rootFs="/dev/mtdblock7"
+            kernel="/boot/uImage"
+            cur_kernel="/tmp/uImage"
+            tmp_kernel="/tmp/uImage.tmp"
+            mtd_uboot="/dev/mtd1"
+            mtd_uboot_block="/dev/mtdblock1"
+            uboot="/boot/u-boot.bin"
+            cur_uboot="/tmp/u-boot.bin"
+            tmp_uboot="/tmp/u-boot.tmp"
+            ;;
+        "snomD305" | "VTechVSP810")
+            defaultFontWidth=10
+            defaultFontHeight=20
+            defaultFontSize=10
+            defaultFontDir="NONE"
+            defaultX=0
+            defaultY=1
+            updatePng="NONE"
+            updpgrPng="NONE"
+            updpgr100Png="NONE"
+            splashPng="NONE"
+            pgrBarX=0
+            pgrBarY=40
+            mtd_kernel="/dev/mtd6"
+            mtd_kernel_block="/dev/mtdblock6"
+            rescueFs="/dev/mtdblock4"
+            protectedFs="/dev/mtdblock5"
+            rootFs="/dev/mtdblock7"
+            kernel="/boot/uImage"
+            cur_kernel="/tmp/uImage"
+            tmp_kernel="/tmp/uImage.tmp"
+            mtd_uboot="/dev/mtd1"
+            mtd_uboot_block="/dev/mtdblock1"
+            uboot="/boot/u-boot.bin"
+            cur_uboot="/tmp/u-boot.bin"
+            tmp_uboot="/tmp/u-boot.tmp"
+            ;;
+        "snomD315" | "VTechVSP815G")
+            defaultFontWidth=10
+            defaultFontHeight=20
+            defaultFontSize=10
+            defaultFontDir="NONE"
+            defaultX=0
+            defaultY=1
+            updatePng="NONE"
+            updpgrPng="NONE"
+            updpgr100Png="NONE"
+            splashPng="NONE"
+            pgrBarX=0
+            pgrBarY=40
+            mtd_kernel="/dev/mtd6"
+            mtd_kernel_block="/dev/mtdblock6"
+            rescueFs="/dev/mtdblock4"
+            protectedFs="/dev/mtdblock5"
+            rootFs="/dev/mtdblock7"
+            kernel="/boot/uImage"
+            cur_kernel="/tmp/uImage"
+            tmp_kernel="/tmp/uImage.tmp"
+            mtd_uboot="/dev/mtd1"
+            mtd_uboot_block="/dev/mtdblock1"
+            uboot="/boot/u-boot.bin"
+            cur_uboot="/tmp/u-boot.bin"
+            tmp_uboot="/tmp/u-boot.tmp"
+            ;;
+        "snomD335")
+            defaultFontWidth=10
+            defaultFontHeight=19
+            defaultFontSize=14
+            defaultFontDir="/snom/fonts/standard.ttf"
+            defaultX=3
+            defaultY=7
+            updatePng="/snom/bmp/colored/swupd.png"
+            updpgrPng="/snom/bmp/colored/swpgr.png"
+            updpgr100Png="/snom/bmp/colored/swpgr100.png"
+            splashPng="/snom/bmp/colored/splash_screen.png"
+            pgrBarX=50
+            pgrBarY=166
+            mtd_kernel="/dev/mtd5"
+            mtd_kernel_block="/dev/mtdblock5"
+            rescueFs="/dev/mtdblock3"
+            protectedFs="/dev/mtdblock4"
+            rootFs="/dev/mtdblock6"
+            kernel="/boot/uImage"
+            cur_kernel="/tmp/uImage"
+            tmp_kernel="/tmp/uImage.tmp"
+            mtd_uboot="/dev/mtd0"
+            mtd_uboot_block="/dev/mtdblock0"
+            uboot="/boot/u-boot.bin"
+            cur_uboot="/tmp/u-boot.bin"
+            tmp_uboot="/tmp/u-boot.tmp"
+            ;;
+        "snomD345" | "VTechVSP845G")
+            defaultFontWidth=10
+            defaultFontHeight=20
+            defaultFontSize=10
+            defaultFontDir="NONE"
+            defaultX=0
+            defaultY=1
+            updatePng="NONE"
+            updpgrPng="NONE"
+            updpgr100Png="NONE"
+            splashPng="NONE"
+            pgrBarX=0
+            pgrBarY=40
+            mtd_kernel="/dev/mtd6"
+            mtd_kernel_block="/dev/mtdblock6"
+            rescueFs="/dev/mtdblock4"
+            protectedFs="/dev/mtdblock5"
+            rootFs="/dev/mtdblock7"
+            kernel="/boot/uImage"
+            cur_kernel="/tmp/uImage"
+            tmp_kernel="/tmp/uImage.tmp"
+            mtd_uboot="/dev/mtd1"
+            mtd_uboot_block="/dev/mtdblock1"
+            uboot="/boot/u-boot.bin"
+            cur_uboot="/tmp/u-boot.bin"
+            tmp_uboot="/tmp/u-boot.tmp"
+            ;;
+        "snomD375" | "VTechVSP875G")
+            defaultFontWidth=12
+            defaultFontHeight=30
+            defaultFontSize=18
+            defaultFontDir="/snom/fonts/standard.ttf"
+            defaultX=3
+            defaultY=7
+            updatePng="/snom/bmp/colored/swupd.png"
+            updpgrPng="/snom/bmp/colored/swpgr.png"
+            updpgr100Png="/snom/bmp/colored/swpgr100.png"
+            splashPng="/snom/bmp/colored/splash_screen.png"
+            pgrBarX=130
+            pgrBarY=182
+            mtd_kernel="/dev/mtd6"
+            mtd_kernel_block="/dev/mtdblock6"
+            rescueFs="/dev/mtdblock4"
+            protectedFs="/dev/mtdblock5"
+            rootFs="/dev/mtdblock7"
+            kernel="/boot/uImage"
+            cur_kernel="/tmp/uImage"
+            tmp_kernel="/tmp/uImage.tmp"
+            mtd_uboot="/dev/mtd1"
+            mtd_uboot_block="/dev/mtdblock1"
+            uboot="/boot/u-boot.bin"
+            cur_uboot="/tmp/u-boot.bin"
+            tmp_uboot="/tmp/u-boot.tmp"
+            ;;
+        "snomD385" | "VTechVSP885G")
+            defaultFontWidth=12
+            defaultFontHeight=30
+            defaultFontSize=18
+            defaultFontDir="/snom/fonts/standard.ttf"
+            defaultX=3
+            defaultY=7
+            updatePng="/snom/bmp/colored/swupd.png"
+            updpgrPng="/snom/bmp/colored/swpgr.png"
+            updpgr100Png="/snom/bmp/colored/swpgr100.png"
+            splashPng="/snom/bmp/colored/splash_screen.png"
+            pgrBarX=130
+            pgrBarY=182
+            mtd_kernel="/dev/mtd6"
+            mtd_kernel_block="/dev/mtdblock6"
+            rescueFs="/dev/mtdblock4"
+            protectedFs="/dev/mtdblock5"
+            rootFs="/dev/mtdblock7"
+            kernel="/boot/uImage"
+            cur_kernel="/tmp/uImage"
+            tmp_kernel="/tmp/uImage.tmp"
+            mtd_uboot="/dev/mtd1"
+            mtd_uboot_block="/dev/mtdblock1"
+            uboot="/boot/u-boot.bin"
+            cur_uboot="/tmp/u-boot.bin"
+            tmp_uboot="/tmp/u-boot.tmp"
+            ;;
+        "snomD120" | "VTechET605")
+            defaultFontWidth=10
+            defaultFontHeight=12
+            defaultFontSize=10
+            defaultFontDir="NONE"
+            defaultX=0
+            defaultY=1
+            updatePng="NONE"
+            updpgrPng="NONE"
+            updpgr100Png="NONE"
+            splashPng="NONE"
+            pgrBarX=0
+            pgrBarY=24
+            mtd_kernel="/dev/mtd5"
+            mtd_kernel_block="/dev/mtdblock5"
+            rescueFs="/dev/mtdblock3"
+            protectedFs="/dev/mtdblock4"
+            rootFs="/dev/mtdblock6"
+            kernel="/boot/uImage"
+            cur_kernel="/tmp/uImage"
+            tmp_kernel="/tmp/uImage.tmp"
+            mtd_uboot="/dev/mtd0"
+            mtd_uboot_block="/dev/mtdblock0"
+            uboot="/boot/u-boot.bin"
+            cur_uboot="/tmp/u-boot.bin"
+            tmp_uboot="/tmp/u-boot.tmp"
+            ;;
+        "VTechVSP805")
+            defaultFontWidth=10
+            defaultFontHeight=12
+            defaultFontSize=10
+            defaultFontDir="NONE"
+            defaultX=0
+            defaultY=1
+            updatePng="NONE"
+            updpgrPng="NONE"
+            updpgr100Png="NONE"
+            splashPng="NONE"
+            pgrBarX=0
+            pgrBarY=24
+            mtd_kernel="/dev/mtd5"
+            mtd_kernel_block="/dev/mtdblock5"
+            rescueFs="/dev/mtdblock3"
+            protectedFs="/dev/mtdblock4"
+            rootFs="/dev/mtdblock6"
+            kernel="/boot/uImage"
+            cur_kernel="/tmp/uImage"
+            tmp_kernel="/tmp/uImage.tmp"
+            mtd_uboot="/dev/mtd0"
+            mtd_uboot_block="/dev/mtdblock0"
+            uboot="/boot/u-boot.bin"
+            cur_uboot="/tmp/u-boot.bin"
+            tmp_uboot="/tmp/u-boot.tmp"
+            ;;
+        *)
+            echo "No configuration available for phone type $PHONE_TYPE"
+            ;;
+    esac
+}
+
+# Set the values of the global variables for certificates.
+# useSHA256ClientCertificate only works after mounting the filesystems, so this can't be done in setGlobalVariables
+function setCertificateGlobalVariables () {
+    if useSHA256ClientCertificate; then
+        display "Using SHA256 client certificate" ""
+        snomCrt="/protected/certificate2.txt"
+        snomKey="/protected/privatekey2.txt"
+    else
+        display "Using SHA1 client certificate" ""
+        snomCrt="/protected/certificate.txt"
+        snomKey="/protected/privatekey.txt"
+    fi
+}
+
+# Set up the file systems of the running system
+function setUpFileSystems () {
+    display "&&" "$splashPng"
+    display "Mounting File System" "++"
+
+    # Mount the protected partition
+    mkdir /protected >/dev/null 2>&1
+    mount -r -t jffs2 $protectedFs /protected
+
+    # cron stuff
+    mkdir -p /etc/cron.d
+
+    # Create a /var structure
+    rm -rf /var
+    mkdir -p /tmp/var/log
+    mkdir -p /tmp/var/run
+    mkdir -p /tmp/var/spool/cron/crontabs
+    mkdir -p /tmp/var/tmp /tmp/var/etc /tmp/var/lib /tmp/var/lib/misc /tmp/var/lock/subsys /tmp/var/empty
+    ln -s /tmp/var /var
+
+    # Initialize hotplug
+    echo /no/hotplug/support > /proc/sys/kernel/hotplug
+    mdev -s
+
+    # Clean Up leftovers from an interrupted software update
+    [ -d /snom_old ] && [ ! -d /snom ] && display "Recover /snom_old" "" && mv /snom_old /snom
+    rm -rf /snom_old /snom_new /snom/update /update /boot/* /update.bin
+
+    if [ "$sanityChecks" != "n" ]; then
+        # Set the owner/group to root for all files that should have it, but don't
+	find / \( ! -user root -o ! -group root \) ! -regex "^/\(\(snom\)\|\(proc\)\|\(tmp\)\|\(var\)\).*" 2>/dev/null | xargs chown root.root >/dev/null 2>&1
+
+        # Set the mode 0644 for all files under / that should have it, but don't
+	find / ! -perm -644 ! -regex "^/\(\(snom\)\|\(proc\)\|\(tmp\)\|\(var\)\).*" 2>/dev/null | xargs chmod a-w,u+w,a+r >/dev/null 2>&1
+
+        # Set the owner/group to snom for all files in /snom that should have it, but don't
+        find /snom \( ! -user snom -o ! -group snom \) 2>/dev/null | xargs chown snom.snom >/dev/null 2>&1
+
+        # Set the mode 0644 for all files under /snom that should have it, but don't
+        find /snom ! -perm -644 2>/dev/null | xargs chmod a-w,u+w,a+r >/dev/null 2>&1
+    fi
+
+    chmod a+x /snom/start.sh >/dev/null 2>&1
+}
+
+function cleanUpFile() {
+    bytes=$(stat -c%s "$1")
+    echo "Removing $i ($bytes bytes)"
+    rm -f $1
+}
+
+# Removes unnecessary files from rootfs using the file list
+function cleanUpRootfs () {
+    local files="/tmp/files.$$"
+    local links="/tmp/links.$$"
+    local check="/tmp/check.$$"
+
+    if [ -e $cleanRootfsFlag ] && [ -e $cleanRootfsList ]; then
+        display "Cleaning rootfs" ""
+
+        cd /
+        find bin lib sbin usr -type f >$files
+        find bin lib sbin usr -type l >$links
+        cat $files $links | sort >$check
+
+        while read -r i; do
+            fgrep -q -x $i $cleanRootfsList || cleanUpFile $i
+        done <$check
+
+        rm $files $links $check $cleanRootfsFlag
+    fi
+}
+
+# Sets up the Network
+function setUpNetwork () {
+    display "Setting up network" ""
+
+    ifconfig lo 127.0.0.1 netmask 255.0.0.0
+
+    # Reply on ICMP broadcast requests, so that our phones can be found.
+    echo 0 >/proc/sys/net/ipv4/icmp_echo_ignore_broadcasts 2>/dev/null
+
+    # ICMP replys should adhere the ratelimit to limit smurf attacks, since we enabled ICMP broadcasts.
+    echo 6169 >/proc/sys/net/ipv4/icmp_ratemask 2>/dev/null
+
+    # Workarround for CVE-2019-11477: SACK Panic (Linux >= 2.6.29)
+    # and CVE-2019-11478: SACK Slowness (Linux < 4.15) or Excess Resource Usage (all Linux versions)
+    echo 0 > /proc/sys/net/ipv4/tcp_sack
+}
+
+# Starts up some additional daemons
+function startUpDaemons () {
+    display "Starting up daemons" ""
+
+    case $PHONE_TYPE in
+        "snomD305" | "snomD315" | "snomD345" | "snomD375" | "snomD385" | "snomD712" | "snom715" | "snom725" | "snomD745" | "snomD765" | "snomD785" | "VTechET685")
+            # Broadcom phones require rngd to add entropy from /dev/hwrandom to /dev/random
+            echo "Start rngd"
+            /usr/sbin/rngd
+            ;;
+        "snomD120" | "VTechET605")
+            # dvf97 has no hw random generator (like the dvf99) and we can't use haveged as it uses too much RAM
+            # We are using the rngd daemon to create fake entropy for /dev/random from /dev/urandom. This fools
+            # OpenSSL 1.1, but the random data is expected to be as bad as before, where OpenSSL 1.0 just used
+            # /dev/urandom without checking /dev/random.
+            echo "Start rngd"
+            /usr/sbin/rngd -r /dev/urandom -o /dev/random -W 1000
+            ;;
+        *)
+            ;;
+    esac
+
+#    syslogd
+#    cron
+}
+
+# Terminate daemons before running software update
+function killDaemons () {
+    display "Kill daemons" ""
+    case $PHONE_TYPE in
+        "snomD335" | "snomD717" | "snomD735" | "snomPA500" | "VTechET617" | "VTechET635" | "VTechVSP805")
+            killall -9 cssd
+            ;;
+        "snomD120" | "VTechET605")
+            killall -9 cssd
+            killall -9 sshd
+            ;;
+        *)
+            ;;
+    esac
+}
+
+# Sets up the mic defaults for this specific device
+function setUpDspMic () {
+    local MICGAIN
+    local MICSHIFT
+
+    display "Setting up DSP mic" ""
+
+    for i in `cat /proc/cmdline`; do
+	echo $i | grep -q "micgain=" && MICGAIN=${i##*=}
+	echo $i | grep -q "micshift=" && MICSHIFT=${i##*=}
+    done
+
+    local GAINREG="0x0c"
+    local SHIFTREG="0x0d"
+
+    local DEFGAIN="7FFF"
+    local DEFSHIFT="0"
+
+    if [ ! $MICGAIN ]; then
+	MICGAIN="$DEFGAIN"
+    fi
+
+    if [ ! $MICSHIFT ]; then
+	MICSHIFT="$DEFSHIFT"
+    fi
+
+    echo "$GAINREG;0x$MICGAIN" >/proc/dsp_write
+    echo "$SHIFTREG;0x$MICSHIFT" >/proc/dsp_write
+}
+
+# Initialize the random device
+function setUpRandomDevice () {
+    display "Setting up random device" ""
+
+    test -f /etc/random-seed && dd if=/etc/random-seed of=/dev/urandom bs=1 count=512
+}
+
+# Save the state of the random device for the next boot
+function saveRandomSeed () {
+    display "Saving random device seed" ""
+
+    dd if=/dev/urandom of=/etc/random-seed bs=1 count=512
+}
+
+# Load USB EHCI kernel module only if setting enable_ehci is set to 'on'
+function optionallyLoadEHCIModule() {
+  # The default value for getConfigSetting must match the default value of stk_enable_ehci in settings.cpp!
+  if [ `getConfigSetting enable_ehci on` == "on" ]; then
+    echo "Load USB EHCI kernel module"
+    insmod /lib/modules/2.6.27.47/kernel/drivers/usb/host/ehci-hcd.ko bcmUsbHostSet=2
+  else
+    echo "Skip USB EHCI kernel module"
+  fi
+}
+
+# Load kernel modules
+function loadKernelModules () {
+    case $PHONE_TYPE in
+        "snomD712")
+            display "Loading snomD712 modules"
+            # network
+            insmod /lib/modules/2.6.27.47/BROADCOM/bcmring_eth_sla.ko
+
+            export IS_VIDEO=0
+            insmod /lib/modules/2.6.27.47/BROADCOM/amxr.ko
+            insmod /lib/modules/2.6.27.47/BROADCOM/halaudio.ko
+            insmod /lib/modules/2.6.27.47/kernel/drivers/char/broadcom/halaudio_drivers/bcmring/apm/halaudio_apm.ko
+            insmod /lib/modules/2.6.27.47/kernel/drivers/char/broadcom/halaudio_drivers/bcmring/pcm/halaudio_pcm.ko
+            insmod /lib/modules/2.6.27.47/BROADCOM/pxcLdxSupport.ko
+            insmod /lib/modules/2.6.27.47/BROADCOM/pxcLdxHausware.ko
+            insmod /lib/modules/2.6.27.47/BROADCOM/ept_driver.ko
+            insmod /lib/modules/2.6.27.47/BROADCOM/ept_core.ko
+
+            echo 0 > /proc/sys/halaudio/sleepdelay_msec
+            # loading modules changed the value to -1
+            echo 950000 > /proc/sys/kernel/sched_rt_runtime_us
+            ;;
+        "snom715")
+            display "Loading snom715 modules"
+            # network
+            insmod /lib/modules/2.6.27.47/BROADCOM/bcmring_eth_sla.ko
+
+            export IS_VIDEO=0
+            optionallyLoadEHCIModule
+            insmod /lib/modules/2.6.27.47/kernel/drivers/usb/host/ohci-hcd.ko bcmUsbHostSet=2
+            insmod /lib/modules/2.6.27.47/BROADCOM/amxr.ko
+            insmod /lib/modules/2.6.27.47/BROADCOM/halaudio.ko
+            insmod /lib/modules/2.6.27.47/kernel/drivers/char/broadcom/halaudio_drivers/bcmring/apm/halaudio_apm.ko
+            insmod /lib/modules/2.6.27.47/kernel/drivers/char/broadcom/halaudio_drivers/bcmring/pcm/halaudio_pcm.ko
+            insmod /lib/modules/2.6.27.47/kernel/drivers/char/broadcom/halaudio_drivers/usb/halaudio_usbcore.ko
+            insmod /lib/modules/2.6.27.47/kernel/drivers/char/broadcom/halaudio_drivers/usb/halaudio_usb.ko
+            insmod /lib/modules/2.6.27.47/BROADCOM/pxcLdxSupport.ko
+            insmod /lib/modules/2.6.27.47/BROADCOM/pxcLdxHausware.ko
+            insmod /lib/modules/2.6.27.47/BROADCOM/ept_driver.ko
+            insmod /lib/modules/2.6.27.47/BROADCOM/ept_core.ko
+
+            echo 0 > /proc/sys/halaudio/sleepdelay_msec
+            # loading modules changed the value to -1
+            echo 950000 > /proc/sys/kernel/sched_rt_runtime_us
+            ;;
+        "snom725")
+            display "Loading snom725 modules"
+            # network
+            insmod /lib/modules/2.6.27.47/BROADCOM/bcmring_eth_sla.ko
+
+            export IS_VIDEO=0
+            optionallyLoadEHCIModule
+            insmod /lib/modules/2.6.27.47/kernel/drivers/usb/host/ohci-hcd.ko bcmUsbHostSet=2
+            insmod /lib/modules/2.6.27.47/BROADCOM/amxr.ko
+            insmod /lib/modules/2.6.27.47/BROADCOM/halaudio.ko
+            insmod /lib/modules/2.6.27.47/kernel/drivers/char/broadcom/halaudio_drivers/bcmring/apm/halaudio_apm.ko
+            insmod /lib/modules/2.6.27.47/kernel/drivers/char/broadcom/halaudio_drivers/bcmring/pcm/halaudio_pcm.ko
+            insmod /lib/modules/2.6.27.47/kernel/drivers/char/broadcom/halaudio_drivers/usb/halaudio_usbcore.ko
+            insmod /lib/modules/2.6.27.47/kernel/drivers/char/broadcom/halaudio_drivers/usb/halaudio_usb.ko
+            insmod /lib/modules/2.6.27.47/BROADCOM/pxcLdxSupport.ko
+            insmod /lib/modules/2.6.27.47/BROADCOM/pxcLdxHausware.ko
+            insmod /lib/modules/2.6.27.47/BROADCOM/ept_driver.ko
+            insmod /lib/modules/2.6.27.47/BROADCOM/ept_core.ko
+
+            echo 0 > /proc/sys/halaudio/sleepdelay_msec
+            # loading modules changed the value to -1
+            echo 950000 > /proc/sys/kernel/sched_rt_runtime_us
+            ;;
+        "snomD745")
+            display "Loading snomD745 modules"
+            # network
+            insmod /lib/modules/2.6.27.47/BROADCOM/bcmring_eth_sla.ko
+
+            export IS_VIDEO=0
+            optionallyLoadEHCIModule
+            insmod /lib/modules/2.6.27.47/kernel/drivers/usb/host/ohci-hcd.ko bcmUsbHostSet=2
+            insmod /lib/modules/2.6.27.47/BROADCOM/amxr.ko
+            insmod /lib/modules/2.6.27.47/BROADCOM/halaudio.ko
+            insmod /lib/modules/2.6.27.47/kernel/drivers/char/broadcom/halaudio_drivers/bcmring/apm/halaudio_apm.ko
+            insmod /lib/modules/2.6.27.47/kernel/drivers/char/broadcom/halaudio_drivers/bcmring/pcm/halaudio_pcm.ko
+            insmod /lib/modules/2.6.27.47/kernel/drivers/char/broadcom/halaudio_drivers/usb/halaudio_usbcore.ko
+            insmod /lib/modules/2.6.27.47/kernel/drivers/char/broadcom/halaudio_drivers/usb/halaudio_usb.ko
+            insmod /lib/modules/2.6.27.47/BROADCOM/pxcLdxSupport.ko
+            insmod /lib/modules/2.6.27.47/BROADCOM/pxcLdxHausware.ko
+            insmod /lib/modules/2.6.27.47/BROADCOM/ept_driver.ko
+            insmod /lib/modules/2.6.27.47/BROADCOM/ept_core.ko
+
+            echo 0 > /proc/sys/halaudio/sleepdelay_msec
+            # loading modules changed the value to -1
+            echo 950000 > /proc/sys/kernel/sched_rt_runtime_us
+            ;;
+        "snomD765")
+            display "Loading snomD765 modules"
+            # network
+            insmod /lib/modules/2.6.27.47/BROADCOM/bcmring_eth_sla.ko
+
+            export IS_VIDEO=0
+            optionallyLoadEHCIModule
+            insmod /lib/modules/2.6.27.47/kernel/drivers/usb/host/ohci-hcd.ko bcmUsbHostSet=2
+            insmod /lib/modules/2.6.27.47/BROADCOM/amxr.ko
+            insmod /lib/modules/2.6.27.47/BROADCOM/halaudio.ko
+            insmod /lib/modules/2.6.27.47/kernel/drivers/char/broadcom/halaudio_drivers/bcmring/apm/halaudio_apm.ko
+            insmod /lib/modules/2.6.27.47/kernel/drivers/char/broadcom/halaudio_drivers/bcmring/pcm/halaudio_pcm.ko
+            insmod /lib/modules/2.6.27.47/kernel/drivers/char/broadcom/halaudio_drivers/usb/halaudio_usbcore.ko
+            insmod /lib/modules/2.6.27.47/kernel/drivers/char/broadcom/halaudio_drivers/usb/halaudio_usb.ko
+            insmod /lib/modules/2.6.27.47/BROADCOM/pxcLdxSupport.ko
+            insmod /lib/modules/2.6.27.47/BROADCOM/pxcLdxHausware.ko
+            insmod /lib/modules/2.6.27.47/BROADCOM/ept_driver.ko
+            insmod /lib/modules/2.6.27.47/BROADCOM/ept_core.ko
+
+            echo 0 > /proc/sys/halaudio/sleepdelay_msec
+            # loading modules changed the value to -1
+            echo 950000 > /proc/sys/kernel/sched_rt_runtime_us
+            ;;
+        "snomD785")
+            display "Loading snomD785 modules"
+            # network
+            insmod /lib/modules/2.6.27.47/BROADCOM/bcmring_eth_sla.ko
+
+            export IS_VIDEO=0
+            # Don't load ehci module for D785, as EHCI USB is broken on early D785 batches and can brick the D7!
+            insmod /lib/modules/2.6.27.47/kernel/drivers/usb/host/ohci-hcd.ko bcmUsbHostSet=2
+            insmod /lib/modules/2.6.27.47/BROADCOM/amxr.ko
+            insmod /lib/modules/2.6.27.47/BROADCOM/halaudio.ko
+            insmod /lib/modules/2.6.27.47/kernel/drivers/char/broadcom/halaudio_drivers/bcmring/apm/halaudio_apm.ko
+            insmod /lib/modules/2.6.27.47/kernel/drivers/char/broadcom/halaudio_drivers/bcmring/pcm/halaudio_pcm.ko
+            insmod /lib/modules/2.6.27.47/kernel/drivers/char/broadcom/halaudio_drivers/usb/halaudio_usbcore.ko
+            insmod /lib/modules/2.6.27.47/kernel/drivers/char/broadcom/halaudio_drivers/usb/halaudio_usb.ko
+            insmod /lib/modules/2.6.27.47/BROADCOM/pxcLdxSupport.ko
+            insmod /lib/modules/2.6.27.47/BROADCOM/pxcLdxHausware.ko
+            insmod /lib/modules/2.6.27.47/BROADCOM/ept_driver.ko
+            insmod /lib/modules/2.6.27.47/BROADCOM/ept_core.ko
+
+            echo 0 > /proc/sys/halaudio/sleepdelay_msec
+            # loading modules changed the value to -1
+            echo 950000 > /proc/sys/kernel/sched_rt_runtime_us
+            ;;
+        "snomD305")
+            display "Loading snomD305 modules"
+            # network
+            insmod /lib/modules/2.6.27.47/BROADCOM/bcmring_eth_sla.ko
+
+            export IS_VIDEO=0
+            insmod /lib/modules/2.6.27.47/BROADCOM/amxr.ko
+            insmod /lib/modules/2.6.27.47/BROADCOM/halaudio.ko
+            insmod /lib/modules/2.6.27.47/kernel/drivers/char/broadcom/halaudio_drivers/bcmring/apm/halaudio_apm.ko
+            insmod /lib/modules/2.6.27.47/BROADCOM/pxcLdxSupport.ko
+            insmod /lib/modules/2.6.27.47/BROADCOM/pxcLdxHausware.ko
+            insmod /lib/modules/2.6.27.47/BROADCOM/ept_driver.ko
+            insmod /lib/modules/2.6.27.47/BROADCOM/ept_core.ko
+
+            echo 0 > /proc/sys/halaudio/sleepdelay_msec
+            # loading modules changed the value to -1
+            echo 950000 > /proc/sys/kernel/sched_rt_runtime_us
+            ;;
+        "snomD315")
+            display "Loading snomD315 modules"
+            # network
+            insmod /lib/modules/2.6.27.47/BROADCOM/bcmring_eth_sla.ko
+
+            export IS_VIDEO=0
+            insmod /lib/modules/2.6.27.47/kernel/drivers/usb/host/ohci-hcd.ko bcmUsbHostSet=2
+            insmod /lib/modules/2.6.27.47/BROADCOM/amxr.ko
+            insmod /lib/modules/2.6.27.47/BROADCOM/halaudio.ko
+            insmod /lib/modules/2.6.27.47/kernel/drivers/char/broadcom/halaudio_drivers/bcmring/apm/halaudio_apm.ko
+            insmod /lib/modules/2.6.27.47/kernel/drivers/char/broadcom/halaudio_drivers/bcmring/pcm/halaudio_pcm.ko
+            insmod /lib/modules/2.6.27.47/kernel/drivers/char/broadcom/halaudio_drivers/usb/halaudio_usbcore.ko
+            insmod /lib/modules/2.6.27.47/kernel/drivers/char/broadcom/halaudio_drivers/usb/halaudio_usb.ko
+            insmod /lib/modules/2.6.27.47/BROADCOM/pxcLdxSupport.ko
+            insmod /lib/modules/2.6.27.47/BROADCOM/pxcLdxHausware.ko
+            insmod /lib/modules/2.6.27.47/BROADCOM/ept_driver.ko
+            insmod /lib/modules/2.6.27.47/BROADCOM/ept_core.ko
+
+            echo 0 > /proc/sys/halaudio/sleepdelay_msec
+            # loading modules changed the value to -1
+            echo 950000 > /proc/sys/kernel/sched_rt_runtime_us
+            ;;
+        "snomD335")
+            display "Loading snomD335 modules"
+            insmod /lib/modules/3.4.112-rt143-v1.3.6.1-rc1/drivers/usb/dwc2/dwc2.ko force_fullspeed
+            ;;
+        "snomD345")
+            display "Loading snomD345 modules"
+            # network
+            insmod /lib/modules/2.6.27.47/BROADCOM/bcmring_eth_sla.ko
+
+            export IS_VIDEO=0
+            insmod /lib/modules/2.6.27.47/kernel/drivers/usb/host/ohci-hcd.ko bcmUsbHostSet=2
+            insmod /lib/modules/2.6.27.47/BROADCOM/amxr.ko
+            insmod /lib/modules/2.6.27.47/BROADCOM/halaudio.ko
+            insmod /lib/modules/2.6.27.47/kernel/drivers/char/broadcom/halaudio_drivers/bcmring/apm/halaudio_apm.ko
+            insmod /lib/modules/2.6.27.47/kernel/drivers/char/broadcom/halaudio_drivers/bcmring/pcm/halaudio_pcm.ko
+            insmod /lib/modules/2.6.27.47/kernel/drivers/char/broadcom/halaudio_drivers/usb/halaudio_usbcore.ko
+            insmod /lib/modules/2.6.27.47/kernel/drivers/char/broadcom/halaudio_drivers/usb/halaudio_usb.ko
+            insmod /lib/modules/2.6.27.47/BROADCOM/pxcLdxSupport.ko
+            insmod /lib/modules/2.6.27.47/BROADCOM/pxcLdxHausware.ko
+            insmod /lib/modules/2.6.27.47/BROADCOM/ept_driver.ko
+            insmod /lib/modules/2.6.27.47/BROADCOM/ept_core.ko
+
+            echo 0 > /proc/sys/halaudio/sleepdelay_msec
+            # loading modules changed the value to -1
+            echo 950000 > /proc/sys/kernel/sched_rt_runtime_us
+            ;;
+        "snomD375")
+            display "Loading snomD375 modules"
+            # network
+            insmod /lib/modules/2.6.27.47/BROADCOM/bcmring_eth_sla.ko
+
+            export IS_VIDEO=0
+            insmod /lib/modules/2.6.27.47/kernel/drivers/usb/host/ohci-hcd.ko bcmUsbHostSet=2
+            insmod /lib/modules/2.6.27.47/BROADCOM/amxr.ko
+            insmod /lib/modules/2.6.27.47/BROADCOM/halaudio.ko
+            insmod /lib/modules/2.6.27.47/kernel/drivers/char/broadcom/halaudio_drivers/bcmring/apm/halaudio_apm.ko
+            insmod /lib/modules/2.6.27.47/kernel/drivers/char/broadcom/halaudio_drivers/bcmring/pcm/halaudio_pcm.ko
+            insmod /lib/modules/2.6.27.47/kernel/drivers/char/broadcom/halaudio_drivers/usb/halaudio_usbcore.ko
+            insmod /lib/modules/2.6.27.47/kernel/drivers/char/broadcom/halaudio_drivers/usb/halaudio_usb.ko
+            insmod /lib/modules/2.6.27.47/BROADCOM/pxcLdxSupport.ko
+            insmod /lib/modules/2.6.27.47/BROADCOM/pxcLdxHausware.ko
+            insmod /lib/modules/2.6.27.47/BROADCOM/ept_driver.ko
+            insmod /lib/modules/2.6.27.47/BROADCOM/ept_core.ko
+
+            echo 0 > /proc/sys/halaudio/sleepdelay_msec
+            # loading modules changed the value to -1
+            echo 950000 > /proc/sys/kernel/sched_rt_runtime_us
+            ;;
+        "snomD385")
+            display "Loading snomD385 modules"
+            # network
+            insmod /lib/modules/2.6.27.47/BROADCOM/bcmring_eth_sla.ko
+
+            export IS_VIDEO=0
+            insmod /lib/modules/2.6.27.47/kernel/drivers/usb/host/ohci-hcd.ko bcmUsbHostSet=2
+            insmod /lib/modules/2.6.27.47/BROADCOM/amxr.ko
+            insmod /lib/modules/2.6.27.47/BROADCOM/halaudio.ko
+            insmod /lib/modules/2.6.27.47/kernel/drivers/char/broadcom/halaudio_drivers/bcmring/apm/halaudio_apm.ko
+            insmod /lib/modules/2.6.27.47/kernel/drivers/char/broadcom/halaudio_drivers/bcmring/pcm/halaudio_pcm.ko
+            insmod /lib/modules/2.6.27.47/kernel/drivers/char/broadcom/halaudio_drivers/usb/halaudio_usbcore.ko
+            insmod /lib/modules/2.6.27.47/kernel/drivers/char/broadcom/halaudio_drivers/usb/halaudio_usb.ko
+            insmod /lib/modules/2.6.27.47/BROADCOM/pxcLdxSupport.ko
+            insmod /lib/modules/2.6.27.47/BROADCOM/pxcLdxHausware.ko
+            insmod /lib/modules/2.6.27.47/BROADCOM/ept_driver.ko
+            insmod /lib/modules/2.6.27.47/BROADCOM/ept_core.ko
+
+            echo 0 > /proc/sys/halaudio/sleepdelay_msec
+            # loading modules changed the value to -1
+            echo 950000 > /proc/sys/kernel/sched_rt_runtime_us
+            ;;
+        "snomD120")
+            display "Loading snomD120 modules"
+            ;;
+        "snom720")
+            display "Loading snom720 modules"
+            insmod /lib/modules/ti/cmemk.ko phys_start=0x84D00000 phys_end=0x85500000 pools=20x4096,10x131072,2x1048576
+            insmod /lib/modules/ti/dsplinkk.ko
+            ;;
+        "snom760")
+            display "Loading snom760 modules"
+            insmod /lib/modules/ti/cmemk.ko phys_start=0x8C800000 phys_end=0x8D000000 pools=20x4096,10x131072,2x1048576
+            insmod /lib/modules/ti/dsplinkk.ko
+            ;;
+        "VTechVSP805")
+            display "Loading VTechVSP805 modules"
+            ;;
+        "snomD717")
+            display "Loading snomD717 modules"
+            insmod /lib/modules/3.4.112-rt143-v1.3.6.1-rc1/drivers/usb/dwc2/dwc2.ko force_fullspeed
+            ;;
+        "snomD735")
+            display "Loading snomD735 modules"
+            insmod /lib/modules/3.4.112-rt143-v1.3.6.1-rc1/drivers/usb/dwc2/dwc2.ko force_fullspeed
+            ;;
+        "snomPA500")
+            display "Loading snomPA500 modules"
+            insmod /lib/modules/3.4.112-rt143-v1.3.6.1-rc1/drivers/usb/dwc2/dwc2.ko force_fullspeed
+            ;;
+        "VTechET605")
+            display "Loading VTechET605 modules"
+            ;;
+        "VTechET617")
+            display "Loading VTechET617 modules"
+            insmod /lib/modules/3.4.112-rt143-v1.3.6.1-rc1/drivers/usb/dwc2/dwc2.ko force_fullspeed
+            ;;
+        "VTechET635")
+            display "Loading VTechET635 modules"
+            insmod /lib/modules/3.4.112-rt143-v1.3.6.1-rc1/drivers/usb/dwc2/dwc2.ko force_fullspeed
+            ;;
+        "VTechET685")
+            display "Loading VTechET685 modules"
+            # network
+            insmod /lib/modules/2.6.27.47/BROADCOM/bcmring_eth_sla.ko
+
+            export IS_VIDEO=0
+            # Don't load ehci module for ET685, as EHCI USB is broken on early batches and can brick the UXM module!
+            insmod /lib/modules/2.6.27.47/kernel/drivers/usb/host/ohci-hcd.ko bcmUsbHostSet=2
+            insmod /lib/modules/2.6.27.47/BROADCOM/amxr.ko
+            insmod /lib/modules/2.6.27.47/BROADCOM/halaudio.ko
+            insmod /lib/modules/2.6.27.47/kernel/drivers/char/broadcom/halaudio_drivers/bcmring/apm/halaudio_apm.ko
+            insmod /lib/modules/2.6.27.47/kernel/drivers/char/broadcom/halaudio_drivers/bcmring/pcm/halaudio_pcm.ko
+            insmod /lib/modules/2.6.27.47/kernel/drivers/char/broadcom/halaudio_drivers/usb/halaudio_usbcore.ko
+            insmod /lib/modules/2.6.27.47/kernel/drivers/char/broadcom/halaudio_drivers/usb/halaudio_usb.ko
+            insmod /lib/modules/2.6.27.47/BROADCOM/pxcLdxSupport.ko
+            insmod /lib/modules/2.6.27.47/BROADCOM/pxcLdxHausware.ko
+            insmod /lib/modules/2.6.27.47/BROADCOM/ept_driver.ko
+            insmod /lib/modules/2.6.27.47/BROADCOM/ept_core.ko
+
+            echo 0 > /proc/sys/halaudio/sleepdelay_msec
+            # loading modules changed the value to -1
+            echo 950000 > /proc/sys/kernel/sched_rt_runtime_us
+            ;;
+        "VTechVSP810")
+            display "Loading VTechVSP810 modules"
+            # network
+            insmod /lib/modules/2.6.27.47/BROADCOM/bcmring_eth_sla.ko
+
+            export IS_VIDEO=0
+            insmod /lib/modules/2.6.27.47/BROADCOM/amxr.ko
+            insmod /lib/modules/2.6.27.47/BROADCOM/halaudio.ko
+            insmod /lib/modules/2.6.27.47/kernel/drivers/char/broadcom/halaudio_drivers/bcmring/apm/halaudio_apm.ko
+            insmod /lib/modules/2.6.27.47/BROADCOM/pxcLdxSupport.ko
+            insmod /lib/modules/2.6.27.47/BROADCOM/pxcLdxHausware.ko
+            insmod /lib/modules/2.6.27.47/BROADCOM/ept_driver.ko
+            insmod /lib/modules/2.6.27.47/BROADCOM/ept_core.ko
+
+            # loading modules changed the value to -1
+            echo 950000 > /proc/sys/kernel/sched_rt_runtime_us
+            ;;
+        "VTechVSP815G")
+            display "Loading VTechVSP815G modules"
+            # network
+            insmod /lib/modules/2.6.27.47/BROADCOM/bcmring_eth_sla.ko
+
+            export IS_VIDEO=0
+            insmod /lib/modules/2.6.27.47/kernel/drivers/usb/host/ohci-hcd.ko bcmUsbHostSet=2
+            insmod /lib/modules/2.6.27.47/BROADCOM/amxr.ko
+            insmod /lib/modules/2.6.27.47/BROADCOM/halaudio.ko
+            insmod /lib/modules/2.6.27.47/kernel/drivers/char/broadcom/halaudio_drivers/bcmring/apm/halaudio_apm.ko
+            insmod /lib/modules/2.6.27.47/kernel/drivers/char/broadcom/halaudio_drivers/bcmring/pcm/halaudio_pcm.ko
+            insmod /lib/modules/2.6.27.47/kernel/drivers/char/broadcom/halaudio_drivers/usb/halaudio_usbcore.ko
+            insmod /lib/modules/2.6.27.47/kernel/drivers/char/broadcom/halaudio_drivers/usb/halaudio_usb.ko
+            insmod /lib/modules/2.6.27.47/BROADCOM/pxcLdxSupport.ko
+            insmod /lib/modules/2.6.27.47/BROADCOM/pxcLdxHausware.ko
+            insmod /lib/modules/2.6.27.47/BROADCOM/ept_driver.ko
+            insmod /lib/modules/2.6.27.47/BROADCOM/ept_core.ko
+
+            # loading modules changed the value to -1
+            echo 950000 > /proc/sys/kernel/sched_rt_runtime_us
+            ;;
+        "VTechVSP845G")
+            display "Loading VTechVSP845G modules"
+            # network
+            insmod /lib/modules/2.6.27.47/BROADCOM/bcmring_eth_sla.ko
+
+            export IS_VIDEO=0
+            insmod /lib/modules/2.6.27.47/kernel/drivers/usb/host/ohci-hcd.ko bcmUsbHostSet=2
+            insmod /lib/modules/2.6.27.47/BROADCOM/amxr.ko
+            insmod /lib/modules/2.6.27.47/BROADCOM/halaudio.ko
+            insmod /lib/modules/2.6.27.47/kernel/drivers/char/broadcom/halaudio_drivers/bcmring/apm/halaudio_apm.ko
+            insmod /lib/modules/2.6.27.47/kernel/drivers/char/broadcom/halaudio_drivers/bcmring/pcm/halaudio_pcm.ko
+            insmod /lib/modules/2.6.27.47/kernel/drivers/char/broadcom/halaudio_drivers/usb/halaudio_usbcore.ko
+            insmod /lib/modules/2.6.27.47/kernel/drivers/char/broadcom/halaudio_drivers/usb/halaudio_usb.ko
+            insmod /lib/modules/2.6.27.47/BROADCOM/pxcLdxSupport.ko
+            insmod /lib/modules/2.6.27.47/BROADCOM/pxcLdxHausware.ko
+            insmod /lib/modules/2.6.27.47/BROADCOM/ept_driver.ko
+            insmod /lib/modules/2.6.27.47/BROADCOM/ept_core.ko
+
+            # loading modules changed the value to -1
+            echo 950000 > /proc/sys/kernel/sched_rt_runtime_us
+            ;;
+        "VTechVSP875G")
+            display "Loading VTechVSP875G modules"
+            # network
+            insmod /lib/modules/2.6.27.47/BROADCOM/bcmring_eth_sla.ko
+
+            export IS_VIDEO=0
+            insmod /lib/modules/2.6.27.47/kernel/drivers/usb/host/ohci-hcd.ko bcmUsbHostSet=2
+            insmod /lib/modules/2.6.27.47/BROADCOM/amxr.ko
+            insmod /lib/modules/2.6.27.47/BROADCOM/halaudio.ko
+            insmod /lib/modules/2.6.27.47/kernel/drivers/char/broadcom/halaudio_drivers/bcmring/apm/halaudio_apm.ko
+            insmod /lib/modules/2.6.27.47/kernel/drivers/char/broadcom/halaudio_drivers/bcmring/pcm/halaudio_pcm.ko
+            insmod /lib/modules/2.6.27.47/kernel/drivers/char/broadcom/halaudio_drivers/usb/halaudio_usbcore.ko
+            insmod /lib/modules/2.6.27.47/kernel/drivers/char/broadcom/halaudio_drivers/usb/halaudio_usb.ko
+            insmod /lib/modules/2.6.27.47/BROADCOM/pxcLdxSupport.ko
+            insmod /lib/modules/2.6.27.47/BROADCOM/pxcLdxHausware.ko
+            insmod /lib/modules/2.6.27.47/BROADCOM/ept_driver.ko
+            insmod /lib/modules/2.6.27.47/BROADCOM/ept_core.ko
+            # loading modules changed the value to -1
+            echo 950000 > /proc/sys/kernel/sched_rt_runtime_us
+            ;;
+        "VTechVSP885G")
+            display "Loading VTechVSP885G modules"
+            # network
+            insmod /lib/modules/2.6.27.47/BROADCOM/bcmring_eth_sla.ko
+
+            export IS_VIDEO=0
+            insmod /lib/modules/2.6.27.47/kernel/drivers/usb/host/ohci-hcd.ko bcmUsbHostSet=2
+            insmod /lib/modules/2.6.27.47/BROADCOM/amxr.ko
+            insmod /lib/modules/2.6.27.47/BROADCOM/halaudio.ko
+            insmod /lib/modules/2.6.27.47/kernel/drivers/char/broadcom/halaudio_drivers/bcmring/apm/halaudio_apm.ko
+            insmod /lib/modules/2.6.27.47/kernel/drivers/char/broadcom/halaudio_drivers/bcmring/pcm/halaudio_pcm.ko
+            insmod /lib/modules/2.6.27.47/kernel/drivers/char/broadcom/halaudio_drivers/usb/halaudio_usbcore.ko
+            insmod /lib/modules/2.6.27.47/kernel/drivers/char/broadcom/halaudio_drivers/usb/halaudio_usb.ko
+            insmod /lib/modules/2.6.27.47/BROADCOM/pxcLdxSupport.ko
+            insmod /lib/modules/2.6.27.47/BROADCOM/pxcLdxHausware.ko
+            insmod /lib/modules/2.6.27.47/BROADCOM/ept_driver.ko
+            insmod /lib/modules/2.6.27.47/BROADCOM/ept_core.ko
+
+            echo 0 > /proc/sys/halaudio/sleepdelay_msec
+            # loading modules changed the value to -1
+            echo 950000 > /proc/sys/kernel/sched_rt_runtime_us
+            ;;
+    esac
+}
+
+# Starts up the Production Mode
+function startUpProductionMode () {
+    display "Production Mode" ".."
+
+    case $PHONE_TYPE in
+        "snomD712")
+            /prod/SnomD712.py;;
+        "snom715")
+            /prod/Snom715.py;;
+        "snom720")
+            /prod/Snom720.py;;
+        "snom760")
+            /prod/Snom760.py;;
+        "snom725")
+            /prod/Snom725.py;;
+        "snomD717")
+            /prod/SnomD717.py;;
+        "snomD735")
+            /prod/SnomD735.py;;
+        "snomD745")
+            /prod/SnomD745.py;;
+        "snomD765")
+            /prod/SnomD765.py;;
+        "snomD785")
+            /prod/SnomD785.py;;
+        "snomD305")
+            /prod/SnomD305.py;;
+        "snomD315")
+            /prod/SnomD315.py;;
+        "snomD335")
+            /prod/SnomD335.py;;
+        "snomD345")
+            /prod/SnomD345.py;;
+        "snomD375")
+            /prod/SnomD375.py;;
+        "snomD385")
+            /prod/SnomD385.py;;
+        "snomPA500")
+            /prod/SnomPA500.py;;
+        "snomD120")
+            /prod/SnomD120.py;;
+        "VTechET605")
+            /prod/VTechET605.py;;
+        "VTechET617")
+            /prod/VTechET617.py;;
+        "VTechET635")
+            /prod/VTechET635.py;;
+        "VTechET685")
+            /prod/VTechET685.py;;
+        "VTechVSP805")
+            /prod/VTechVSP805.py;;
+        "VTechVSP810")
+            /prod/VTechVSP810.py;;
+        "VTechVSP815G")
+            /prod/VTechVSP815G.py;;
+        "VTechVSP845G")
+            /prod/VTechVSP845G.py;;
+        "VTechVSP875G")
+            /prod/VTechVSP875G.py;;
+        "VTechVSP885G")
+            /prod/VTechVSP885G.py;;
+    esac
+}
+
+# Starts up the Application
+function startUpApplication () {
+    while true; do
+        display "" "    "
+
+        case $PHONE_TYPE in
+            "snom720")
+                /bin/bash -i -c /snom/start.sh >/dev/null 2>&1
+                ;;
+            *)
+                /snom/start.sh
+                ;;
+        esac
+
+        if [ -f $ffupdatefile ]; then
+            while [ -f $ffupdatefile ]; do
+                sleep 1
+            done
+        else
+            break
+        fi
+    done
+
+    # Reset serial port speed so we can see the software update process
+    # on the serial console.
+    stty -F /dev/ttyS0 115200
+    # Enable output of kernel log messages to serial console again. This was disabled in start.sh.
+    echo 7 > /proc/sys/kernel/printk
+}
+
+function md5Check () {
+    if [ "`fw_printenv skipmd5 2>/dev/null`" != "skipmd5=yes" ]; then
+        display "Check rootfs" ".."
+        pushd /
+        if ! md5sum -c /etc/checksum.md5 >$checksumOutput 2>&1; then
+            # Root file system is not valid
+            grep "FAILED" $checksumOutput
+            rm -f $checksumOutput
+            /bin/bash -i
+        fi
+        popd
+    fi
+}
+
+
+# Maps the error codes of curl to texts that can be shown on the display
+function mapCurlErrorCodes () {
+    local errormsg=""
+
+    case "$1" in
+        0)  errormsg="OK!";;
+        1)  errormsg="Unsupported protocol";;
+        2)  errormsg="Failed to initialize";;
+        3)  errormsg="URL malformat";;
+        5)  errormsg="Could not resolve proxy";;
+        6)  errormsg="Could not resolve host";;
+        7)  errormsg="Failed to connect to host.";;
+        8)  errormsg="FTP weird server reply";;
+        9)  errormsg="FTP access denied";;
+        11) errormsg="FTP weird PASS reply";;
+        13) errormsg="FTP weird PASV reply";;
+        14) errormsg="FTP weird 227 format";;
+        15) errormsg="FTP cannot get host";;
+        17) errormsg="FTP could not set binary";;
+        18) errormsg="Partial file";;
+        19) errormsg="FTP could not download";;
+        21) errormsg="FTP quote error";;
+        22) errormsg="HTTP file not found";;
+        23) errormsg="Write error";;
+        25) errormsg="FTP could not STOR file";;
+        26) errormsg="Read error";;
+        27) errormsg="Out of memory";;
+        28) errormsg="Operation timeout";;
+        30) errormsg="FTP PORT failed";;
+        31) errormsg="FTP could not use REST";;
+        33) errormsg="HTTP range error";;
+        34) errormsg="HTTP post error";;
+        35) errormsg="SSL connect error";;
+        36) errormsg="FTP bad download resume";;
+        37) errormsg="FILE could not read file";;
+        38) errormsg="LDAP cannot bind";;
+        39) errormsg="LDAP search failed.";;
+        41) errormsg="Function not found";;
+        42) errormsg="Aborted by callback";;
+        43) errormsg="Internal error";;
+        45) errormsg="Interface error";;
+        47) errormsg="Too many redirects";;
+        48) errormsg="Unknown TELNET option specified";;
+        49) errormsg="Malformed telnet option";;
+        51) errormsg="The peer’s SSL certificate or SSH MD5 fingerprint was not ok";;
+        52) errormsg="The server didn’t reply anything, which here is considered an error";;
+        53) errormsg="SSL crypto engine not found";;
+        54) errormsg="Cannot set SSL crypto engine as default";;
+        55) errormsg="Failed sending network data";;
+        56) errormsg="Failure in receiving network data";;
+        58) errormsg="Problem with the local certificate";;
+        59) errormsg="Couldn’t use specified SSL cipher";;
+        60) errormsg="Peer certificate cannot be authenticated with known CA certificates";;
+        61) errormsg="Unrecognized transfer encoding";;
+        62) errormsg="Invalid LDAP URL";;
+        63) errormsg="Maximum file size exceeded";;
+        64) errormsg="Requested FTP SSL level failed";;
+        65) errormsg="Sending the data requires a rewind that failed";;
+        66) errormsg="Failed to initialise SSL Engine";;
+        67) errormsg="User, password or similar was not accepted and curl failed to login";;
+        68) errormsg="File not found on TFTP server";;
+        69) errormsg="Permission problem on TFTP server";;
+        70) errormsg="Out of disk space on TFTP server";;
+        71) errormsg="Illegal TFTP operation";;
+        72) errormsg="Unknown TFTP transfer ID";;
+        73) errormsg="File already exists (TFTP)";;
+        74) errormsg="No such user (TFTP)";;
+        75) errormsg="Character conversion failed";;
+        76) errormsg="Character conversion functions required";;
+        77) errormsg="Problem with reading the SSL CA cert (path? access rights?)";;
+        78) errormsg="The resource referenced in the URL does not exist";;
+        79) errormsg="An unspecified error occurred during the SSH session";;
+        80) errormsg="Failed to shut down the SSL connection";;
+        98) errormsg="Wrong or corrupt update";;
+        99) errormsg="File not found";;
+        *)  errormsg="unknown error";;
+    esac
+
+    echo "$errormsg"
+}
+
+# Get value of given setting from config.xml or default value if setting is not found.
+# NOTICE: Use this function only for regular settings, not for index settings!
+# NOTICE: Boolean values are not normalized!
+# $1 - setting name
+# $2 - default value
+function getConfigSetting() {
+    local settingName=$1
+    local settingDefault=$2
+    local configFile="/snom/snomconfig/config.xml"
+    local foundIt=0
+
+    if [ ! -e "$configFile" ]; then
+        # If no config.xml exists (yet), return default value.
+        echo "$settingDefault"
+        return
+    fi
+
+    while read -r i; do
+        # Try to remove '<$settingName' from the current line in $i.
+        # If this is successful (result no longer equals $i), we found a line with the setting we are looking for.
+        # See http://tldp.org/LDP/abs/html/string-manipulation.html for details on the syntax.
+        if [ "${i#<$settingName}" != "$i" ]; then
+            # Remove opening tag from the beginning...
+            value="${i#<$settingName*>}"
+            # ... and the closing tag from the end to extract the value.
+            value="${value%</$settingName>*}"
+            # We continue to process the remaining lines; if the same setting occurs several times, the will use
+            # the value of the last occurance.
+            foundIt=1
+        fi
+    done < $configFile
+
+    if [ $foundIt -eq 0 ]; then
+        # We didn't find the setting, use the default value.
+        echo "$settingDefault"
+    else
+        echo "$value"
+    fi
+}
+
+# set the given setting in config.xml to the given value
+function setConfigSetting () {
+    local settingName=$1
+    local settingValue=$2
+    local settingPerm=$3
+    local org="/snom/snomconfig/config.xml"
+    local tmp="/tmp/config.xml"
+    local didIt=0
+
+    while read -r i; do
+        if [ "${i#</phone-settings>}" != "$i" ] && [ $didIt -eq 0 ]; then
+            echo "<$settingName perm=\"$settingPerm\" c=\"1\">$settingValue</$settingName>"
+            echo "$i"
+            didIt=1
+        elif [ "${i#<$settingName}" != "$i" ]; then
+            echo "<$settingName perm=\"$settingPerm\" c=\"1\">$settingValue</$settingName>"
+            didIt=1
+        else
+            echo "$i"
+        fi
+    done < $org > $tmp
+    cp $tmp $org
+    rm -f $tmp
+}
+
+function updateFailed () {
+    setConfigSetting "swupd_failed" "true" "RW"
+    setConfigSetting "update_host_f" "" "RW"
+}
+
+function updateSuccessful () {
+    # Status was set to failed before, clear it here to signal success
+    setConfigSetting "swupd_failed" "" "RW"
+    setConfigSetting "update_host_f" "" "RW"
+}
+
+# flash uImage to kernel partition
+function installKernel () {
+    local uImgFile=$1
+    local uImgCur=$2
+    local uImgTemp=$3
+    local bytes
+
+    display "&&"
+    display "&&" "$updpgr100Png"
+    display "Check for kernel update" ".." 3 0 0 0
+
+    # Check wether current kernel is different to image contained in software update.
+    bytes=$(stat -c %s $uImgFile)
+    if [ $PHONE_TYPE == "VTechET605" ] || [ $PHONE_TYPE == "VTechVSP805" ] || [ $PHONE_TYPE == "snomD120" ]; then
+        dd if=$mtd_kernel of=$uImgCur count=1 bs=$bytes
+    else
+        nanddump --bb=skipbad $mtd_kernel | head -c $bytes > $uImgCur
+    fi
+    diff $uImgCur $uImgFile >/dev/null 2>&1
+    if [ $? -ne 0 ]; then
+        display "&&"
+        display "&&" "$updpgr100Png"
+        display "Kernel update" ".." 3 0 0 0
+        display "" "Erasing..." 3 1 0 1
+        if flash_eraseall -q $mtd_kernel >/dev/null 2>&1; then
+            display "" "Erasing...done" 3 1 0 1
+        else
+            display "" "Erasing...failed" 3 1 0 1
+            display "" "Press any key" 3 7 0 3
+            key=`getKey`
+            return 1
+        fi
+
+        sleep 2
+        display "&&"
+        display "&&" "$updpgr100Png"
+        display "Kernel update" ".." 3 0 0 0
+
+        # Write kernel file to the flash partition
+        display "" "Writing..." 3 1 0 1
+        if [ $PHONE_TYPE == "VTechET605" ] || [ $PHONE_TYPE == "VTechVSP805" ] || [ $PHONE_TYPE == "snomD120" ]; then
+            flashcp $uImgFile $mtd_kernel
+        else
+            nandwrite -p -q $mtd_kernel $uImgFile >/dev/null 2>&1
+        fi
+        if [ $? -eq 0 ]; then
+            display "" "Writing...done" 3 1 0 1
+        else
+            display "" "Writing...failed" 3 1 0 1
+            display "" "Press any key" 3 7 0 3
+            key=`getKey`
+            return 1
+        fi
+    else
+        display "Kernel is up to date" ".." 3 1 0 1
+        sleep 2
+    fi
+
+    rm -f $uImgCur
+
+    return 0
+}
+
+# flash u-boot.bin to uboot partition
+function installUboot () {
+    local ubootFile=$1
+    local ubootCur=$2
+    local ubootTemp=$3
+    local bytes
+
+    display "&&"
+    display "&&" "$updpgr100Png"
+    display "Check for U-Boot update" ".." 3 0 0 0
+
+    # Check wether current u-boot is different to image contained in software update.
+    bytes=$(stat -c %s $ubootFile)
+    if [ $PHONE_TYPE == "VTechET605" ] || [ $PHONE_TYPE == "VTechVSP805" ] || [ $PHONE_TYPE == "snomD120" ]; then
+        dd if=$mtd_uboot of=$ubootCur count=1 bs=$bytes
+    else
+        nanddump --bb=skipbad $mtd_uboot | head -c $bytes > $ubootCur
+    fi
+    diff $ubootCur $ubootFile >/dev/null 2>&1
+    if [ $? -ne 0 ]; then
+        display "&&"
+        display "&&" "$updpgr100Png"
+        display "U-Boot update" ".." 3 0 0 0
+        display "" "Erasing... " 3 1 0 1
+        if flash_eraseall -q $mtd_uboot >/dev/null 2>&1; then
+            display "" "Erasing...done" 3 1 0 1
+        else
+            display "" "Erasing...failed" 3 1 0 1
+            display "" "Press any key" 3 7 0 3
+            key=`getKey`
+            return 1
+        fi
+
+        sleep 2
+        display "&&"
+        display "&&" "$updpgr100Png"
+        display "U-Boot update" ".." 3 0 0 0
+
+        # Write uboot file to the flash partition
+        display "" "Writing..." 3 1 0 1
+        if [ $PHONE_TYPE == "VTechET605" ] || [ $PHONE_TYPE == "VTechVSP805" ] || [ $PHONE_TYPE == "snomD120" ]; then
+            flashcp $ubootFile $mtd_uboot
+        else
+            nandwrite -p -q $mtd_uboot $ubootFile >/dev/null 2>&1
+        fi
+        if [ $? -eq 0 ]; then
+            display "" "Writing...done" 3 1 0 1
+        else
+            display "" "Writing...failed" 3 1 0 1
+            display "" "Press any key" 3 7 0 3
+            key=`getKey`
+            return 1
+        fi
+    else
+        display "U-Boot is up to date" ".." 3 1 0 1
+        sleep 2
+    fi
+
+    rm -f $ubootCur
+
+    return 0
+}
+
+# Run the preSystemUpdate.sh script if it exists.
+function doSystemUpdatePre () {
+    local updateSystemPre="update/preSystemUpdate.sh"
+
+    if [ -e "$updateSystemPre" ]; then
+        display "&&"
+        display "&&" "$updatePng"
+        display "Running Pre Script" ".." 3 0 0 0
+        chmod a+x "$updateSystemPre"
+        if ! $updateSystemPre; then
+            display "Pre Script Failed" ".." 3 1 0 1
+            display "" "Press any key" 3 7 0 3
+            key=`getKey 300`
+            return 1
+        fi
+    fi
+}
+
+# Do the system update using rescue filesystem.
+function doAdvancedSystemUpdate () {
+    local updateFile="$1"
+    local updateHelperVariables="/tmp/updateHelperVariables.sh"
+    local key
+
+    # Run the pre script.
+    doSystemUpdatePre || return 1
+
+    # Create /tmp/updateHelperVariables.sh with some variable definitions required by rescuefs.
+    # Also copy some images and fonts used by rescuefs during update to /tmp
+    echo "setUpdateVariables() {" > $updateHelperVariables
+    if [ "$defaultFontDir" = "NONE" ]; then
+        echo "  defaultFontDir=\"NONE\"" >> $updateHelperVariables
+    else
+        cp "$defaultFontDir" /tmp
+        echo "  defaultFontDir=\"/tmp/$(basename $defaultFontDir)\"" >> $updateHelperVariables
+    fi
+    if [ "$updatePng" = "NONE" ]; then
+        echo "  updatePng=\"NONE\"" >> $updateHelperVariables
+    else
+        cp "$updatePng" /tmp
+        echo "  updatePng=\"/tmp/$(basename $updatePng)\"" >> $updateHelperVariables
+    fi
+    if [ "$updpgrPng" = "NONE" ]; then
+        echo "  updpgrPng=\"NONE\"" >> $updateHelperVariables
+    else
+        cp "$updpgrPng" /tmp
+        echo "  updpgrPng=\"/tmp/$(basename $updpgrPng)\"" >> $updateHelperVariables
+    fi
+    echo "  pgrBarX=$pgrBarX" >> $updateHelperVariables
+    echo "  pgrBarY=$pgrBarY" >> $updateHelperVariables
+    echo "}" >> $updateHelperVariables
+
+    # Switch to rescue filesystem to extract update.
+    display "&&"
+    display "&&" "$updatePng"
+    display "System Update+" ".." 3 0 0 0
+    display "Switch to rescuefs" ".." 3 1 0 1
+
+    umount /protected
+    # The rescuefs was already mounted read only to /newroot in handleSoftwareUpdate.
+    mount --move /proc /newroot/proc/
+    mount --move /sys  /newroot/sys/
+    mount --move /tmp  /newroot/tmp/
+
+    cd /newroot/
+    pivot_root . oldroot
+    # Send SIQQUIT to init process (PID 1), which will automatically restart but in rescuefs.
+    chroot . kill -SIGQUIT 1
+
+    # Remaining update steps will be done by continueAdvancedSystemUpdate
+    # after the rootfs has been updated via rescuefs.
+}
+
+# Continue the system update after returning from rescue filesystem.
+function continueAdvancedSystemUpdate () {
+    # We don't call setUpMinimalBootEnvironment, so we have to determine the phone type here.
+    phoneType=`grep "Hardware" /proc/cpuinfo`
+    phoneType=${phoneType##Hardware*: }
+    if [ "$phoneType" == "vtech vsp805" ]; then
+        phoneType="VTechVSP805"
+    fi
+
+    # FIXME As long as we use the VSP805 kernel we need this workaround.
+    overridePhoneType=`fw_printenv phonetypeoverride 2>/dev/null`
+    if [ "$overridePhoneType" != "" ]; then
+        phoneType="${overridePhoneType##*=}"
+        echo "Use phone type override '$phoneType'!"
+    fi
+
+    export PHONE_TYPE="$phoneType"
+
+    setGlobalVariables
+
+    # Unmount rescuefs.
+    umount /oldroot/proc/
+    umount /oldroot/sys/
+    umount /oldroot/tmp/
+    umount /oldroot/
+
+    # Rootfs is mounted read only, apparently because we mounted rescuefs read only before; so we have to remount it.
+    mount /dev/root / -o remount,rw
+
+    updFile="/tmp/update.bin"
+
+    if [ -e "$updFile" ]; then
+        # Update failed if update file still exists.
+        ret=1
+    else
+        doSystemUpdatePart2
+        ret=$?
+    fi
+
+    if [ $ret -eq 0 ]; then
+        updateSuccessful
+    else
+        updateFailed
+    fi
+}
+
+# Do the system update part 1 (execute preSystemUpdate and extract update tar file).
+function doSystemUpdate () {
+    local updateFile="$1"
+    local key
+
+    # Run the pre script.
+    doSystemUpdatePre || return 1
+
+    # Extract system update in place.
+    display "&&"
+    display "&&" "$updatePng"
+    display "System Update" ".." 3 0 0 0
+    display "Extracting Update" ".." 3 1 0 1
+
+    (bar $updateFile | \
+        dd bs=128 skip=2 2>/dev/null | \
+        openssl enc -aes128 -md md5 -d -kfile $keyFile 2>/dev/null | \
+        tar --exclude=proc/.hidden --exclude=sys/.hidden -xzmf - -C / 2>/dev/console) 2>&1 | \
+        fbApp streamProgressFb $pgrBarX $pgrBarY "$updpgrPng"
+    if [ ${PIPESTATUS[0]} -ne 0 ]; then
+        display "Extracting Failed" ".." 3 3
+        display "" "Press any key" 3 6
+        key=`getKey 300`
+        return 1
+    fi
+
+    display "&&" "$updpgr100Png"
+
+    doSystemUpdatePart2
+    return $?
+}
+
+# Do the system update part 2 (update U-Boot and Kernel if necessary, execute postSystemUpdate).
+function doSystemUpdatePart2() {
+    local updateSystemPost="update/postSystemUpdate.sh"
+
+    [ -e $kernel ] && ! installKernel $kernel $cur_kernel $tmp_kernel && return 2
+
+    [ -e $uboot ] && ! installUboot $uboot $cur_uboot $tmp_uboot && return 2
+
+    # Run the post script.
+    if [ -e "$updateSystemPost" ]; then
+        display "&&"
+        display "&&" "$updpgr100Png"
+        display "Running Post Script" ".." 3 0 0 0
+        chmod a+x "$updateSystemPost"
+        if ! $updateSystemPost; then
+            display "Post Script Failed" ".." 3 1 0 1
+            display "" "Press any key" 3 7 0 3
+            key=`getKey 300`
+            return 1
+        fi
+    fi
+
+    # Inform the user about the success.
+    display "Update Successful" ".." 3 7 0 3
+    sleep 1
+
+    # Clean things up.
+    rm -rf /update
+
+    # Report success
+    return 0
+}
+
+# Do the snom directory tree update.
+function doSnomUpdate () {
+    local updateFile="$1"
+    local transferState="/snom_new/update/snomUpdate.sh"
+    local updateSnomPre="/snom_new/update/preSnomUpdate.sh"
+    local updateSnomPost="/snom_new/update/postSnomUpdate.sh"
+
+    # extracts the archieve to the directory "/snom_new" of the flash file system.
+    display "&&"
+    display "&&" "$updatePng"
+    display "Application Update" ".." 3 0 0 0
+    display "Extracting Update" ".." 3 1 0 1
+    mkdir -p /snom_new
+
+    (bar $updateFile | \
+        dd bs=128 skip=2 2>/dev/null | \
+        openssl enc -aes128 -md md5 -d -kfile $keyFile 2>/dev/null | \
+        tar xzmf - -C /snom_new/ 2>/dev/null) 2>&1 | \
+        fbApp streamProgressFb $pgrBarX $pgrBarY "$updpgrPng"
+    if [ ${PIPESTATUS[0]} -ne 0 ]; then
+        display "Extracting Failed" ".." 3 3
+        display "" "Press any key" 3 6
+        key=`getKey 300`
+        return 1
+    fi
+
+    display "&&" "$updpgr100Png"
+
+    # moves the file "/snom/update/update_url" into "/snom/update/update_url.old" for later usage if needed.
+    [ -e $updateUrl ] && mv $updateUrl $updateUrl.old
+
+    # moves the file "/snom/update/update_options" into "/snom/update/update_options.old" for later usage if needed.
+    [ -e $updateOptions ] && mv $updateOptions $updateOptions.old
+
+    # moves the file "/snom/update/update_ask" into "/snom/update/update_ask.old" for later usage if needed.
+    [ -e $updateAsk ] && mv $updateAsk $updateAsk.old
+
+    # script calls function 'snomUpdatePre()'
+    if [ -e "$updateSnomPre" ]; then
+        display "Pre-Install Script" ".." 3 2 0 1
+        chmod a+x "$updateSnomPre"
+        if ! $updateSnomPre; then
+            display "Pre Script Failed" ".." 3 4 0 2
+            display "" "Press any key" 3 6 0 3
+            key=`getKey 300`
+            return 1
+        fi
+    fi
+
+    # script calls function 'transferState()' which copies the content of "/snom/snomconfig/" to "/snom_new/snomconfig/".
+    if [ -e "$transferState" ]; then
+        display "Transfering Settings" ".." 3 3 0 1
+        chmod a+x "$transferState"
+        if ! $transferState; then
+            display "Settings Script Failed" ".." 3 5 0 2
+            display "" "Press any key" 3 6 0 3
+            key=`getKey 300`
+            return 1
+        fi
+    fi
+
+    # script calls function 'snomUpdatePost()'
+    if [ -e "$updateSnomPost" ]; then
+        display "Post-Install Script" ".." 3 4 0 1
+        chmod a+x "$updateSnomPost"
+        if ! $updateSnomPost; then
+            display "Post Script Failed" ".." 3 6 0 2
+            display "" "Press any key" 3 7 0 3
+            key=`getKey 300`
+            return 1
+        fi
+    fi
+
+    # Activate the directory with the new software
+    mv /snom /snom_old
+    mv /snom_new /snom
+
+    # Inform the user about the success
+    display "Successful" ".." 3 7 0 3
+    sleep 1
+
+    # Clean things up
+    rm -rf /snom_old
+    rm -rf $updateDir
+    return 0
+}
+
+# Do the actual software update
+function doSoftwareUpdate () {
+    local imgFile="$1"
+    local forceRegularUpdate="$2"
+    local advancedUpdateVersionFile="/protected/advancedUpdateVersion"
+    local systemUpdateFlag="update/systemUpdate"
+    local updateHelper="update/updateHelper.sh"
+    local ret=0
+
+    display "&&"
+    display "Software Update" ".."  3 0 0 0
+    display "Checking Update Type" ".." 3 1 0 1
+
+    dd if=$imgFile bs=128 skip=2 | \
+        openssl enc -aes128 -md md5 -d -kfile $keyFile | \
+        tar -xzmf - -C / update/ >/dev/null 2>&1
+
+    if [ -e "$advancedUpdateVersionFile" ]; then
+        source "$advancedUpdateVersionFile"
+    else
+        advancedUpdateVersion=-1
+    fi
+
+    if [ -e "$systemUpdateFlag" ]; then
+        display "System Update" ".." 3 7 0 2
+        key=`getKey 2`
+        # advancedUpdateVersion 1 was broken as not all necessary directories were available in rootfs and rescuefs, so we require Version 2!
+        if [ "$forceRegularUpdate" -eq 0 ] && [ -e "$updateHelper" ] && [ "$advancedUpdateVersion" -eq 2 ] && [ -e "$rescueFs" ]; then
+            # If both update and rescuefs support advanced update and $rescueFs is properly defined do advanced system update.
+            doAdvancedSystemUpdate $imgFile
+            # Function doAdvancedSystemUpdate will return, so we must exit here.
+            exit
+        else
+            # Otherwise do regular system update.
+            doSystemUpdate $imgFile
+        fi
+        ret=$?
+    else
+        display "Application Update" ".." 3 7 0 2
+        key=`getKey 2`
+        doSnomUpdate $imgFile
+        ret=$?
+    fi
+
+    rm -rf $keyFile $imgFile
+    return $ret
+}
+
+# Verifies that the file we downloaded is a snom firmware file
+verifySoftwareUpdateFile () {
+    local imgFile="$1"
+    local sigFile="/tmp/update.sig"
+
+    display "&&"
+    display "&&" "$updpgr100Png"
+
+    display "Software Update" ".."  3 0 0 0
+    display "Verifying Firmware" ".." 3 1 0 1
+
+    # Check the Signature
+    dd if=$imgFile bs=128 count=1 >$sigFile 2>/dev/null
+    dd if=$imgFile bs=128 skip=1 2>/dev/null | openssl dgst -sha1 -verify "$pubFile" -signature $sigFile >/dev/null 2>&1
+    local sigErrorCode=$?
+
+    # Extract the encryption key
+    dd if=$imgFile bs=128 skip=1 count=1 2>/dev/null | openssl rsautl -verify -out $keyFile -inkey "$pubFile" -pubin >/dev/null 2>&1
+    local keyErrorCode=$?
+
+    if [ $sigErrorCode -eq 0 ] && [ $keyErrorCode -eq 0 ]; then
+        return 0
+    fi
+
+    return 1
+}
+
+# Check if a software update is available and start the software update
+function handleSoftwareUpdate () {
+    local ret=0
+    local key
+
+    display "Handling Software Updates" ""
+
+    # Default Result - Failure
+    updateFailed
+
+    if [ -d "$updateDir" ]; then
+        if [ -e "$updateUrl" ]; then
+            local doUpdate="y"
+
+            display "&&"
+            display "&&" "$updatePng"
+
+            # Is the user required to confirm
+            if [ -e "$updateAsk" ]; then
+                local txt=`cat $updateAsk`
+                [ -z "$txt" ] && txt="Install new Firmware?"
+                display "&&"
+                display "Software Update" ".."  3 0 0 0
+                display "$txt" ".." 3 2 0 1
+
+                while true; do
+                    case `getKey 300` in
+                        "CANCEL")  doUpdate="n"; break;;
+                        "TICK")    doUpdate="y"; break;;
+                        "TIMEOUT") doUpdate="n"; break;;
+                        *)         doUpdate="y";;
+                    esac
+                done
+
+                display "&&"
+                display "&&" "$updatePng"
+            fi
+
+            # OK, we do it
+            if [ "$doUpdate" = "y" ]; then
+                local url=`cat $updateUrl`
+                local updFile="/tmp/update.bin"
+                local version=`cat /snom/version 2>/dev/null`
+                local prx="/tmp/proxy"
+                local proxyOptions=""
+
+                # It is possible to disable the advanced update mode by changing
+                # the update file url to contain the string "-force-regular-update.bin"
+                if [[ $url == *"-force-regular-update.bin"* ]]; then
+                    local forceRegularUpdate=1
+                else
+                    local forceRegularUpdate=0
+                fi
+
+                if [ -e "$updateOptions" ]; then
+                    local timeoutOptions=`cat $updateOptions`
+                else
+                    local timeoutOptions="--retry 4 --connect-timeout 600 --max-time 600 --retry-max-time 3600"
+                fi
+
+                if [ -e "$prx" ]; then
+                    local proxy=`cat $prx`
+                    proxyOptions=" --proxy $proxy --proxy-anyauth"
+                    # remove the file, it may be recreated on the next update
+                    rm -rf "$prx"
+                fi
+
+                local curlOptions="-# $timeoutOptions --fail -S -k --cert $snomCrt --key $snomKey --cacert /tmp/intermediates.pem --anyauth$proxyOptions -g"
+
+                display "Software Update" ".."  3 0 0 0
+                # Even though we don't know yet if we will use the advanced firmware update mode, we already mount the
+                # rescuefs. This prevents the out of memory issues which were experienced under some conditions on a
+                # 715 phone when the mount was done after the firmware image download.
+                mount -r -t jffs2 $rescueFs /newroot
+
+                display "Downloading Firmware" ".." 3 1 0 1
+
+                case $PHONE_TYPE in
+                    "VTechET605" | "VTechVSP805" | "snomD120")
+                        curl --url "$url" -o "$updFile" -A "Mozilla/4.0 (compatible; $PHONE_TYPE $version)" $curlOptions 2>&1
+                        local curlError=$?
+                        ;;
+                    *)
+                        # We paint the first part of the progress bar to cover up the startup time of curl
+                        echo -ne "2%\r" | fbApp streamProgressFb $pgrBarX $pgrBarY "$updpgrPng"
+                        curl --url "$url" -o "$updFile" -A "Mozilla/4.0 (compatible; $PHONE_TYPE $version)" $curlOptions 2>&1 | \
+                            nice -20 fbApp streamProgressFb $pgrBarX $pgrBarY "$updpgrPng"
+                        local curlError=${PIPESTATUS[0]}
+                        ;;
+                esac
+
+                # No file and no error code => set possible error code
+                [ ! -e "$updFile" ] && [ $curlError -eq 0 ] && curlError=99
+
+                # Do we have a snom software update file
+                [ $curlError -eq 0 ] && ! verifySoftwareUpdateFile "$updFile" && curlError=98
+
+                if [ $curlError -ne 0 ]; then
+                    local errormsg=`mapCurlErrorCodes $curlError`
+
+                    rm -rf "$updateDir" "$updFile"
+                    display "$errormsg" ".." 3 5 0 2
+                    display "Error: $curlError" ".." 3 7 0 3
+                    getKey 300 >/dev/null 2>&1
+                    ret=1
+                else
+                    # Let the user see the result and give him time to read it
+                    display "Successful" ".." 3 7 0 3
+                    key=`getKey 2`
+                    display "&&" "$updpgr100Png"
+                    doSoftwareUpdate "$updFile" "$forceRegularUpdate"
+                    ret=$?
+                    if [ $ret -eq 0 ]; then
+                        setConfigSetting "upload_font" "" "RW"
+                        setConfigSetting "upload_gui" "" "RW"
+                        setConfigSetting "upload_web" "" "RW"
+                    fi
+                fi
+            else
+                rm -rf "$updateDir"
+                ret=0
+            fi
+        fi
+    fi
+    if [ $ret -eq 0 ]; then
+        updateSuccessful
+    fi
+}
+
+# Set up the tmp directory and mount proc. They are needed right from the beginning
+function setUpMinimalBootEnvironment () {
+    local phoneType
+    local boardType
+
+    rm -rf /tmp/* >/dev/null 2>&1
+    mkdir /tmp >/dev/null 2>&1
+    chmod 777 /tmp >/dev/null 2>&1
+
+    # /proc file system
+    #mount /proc
+    mount proc /proc -t proc
+    mount /sys
+
+    # Mount tmpfs early as /etc/fw_env.config might symlink to it.
+    mount tmpfs /tmp -t tmpfs -o size=24M
+
+    phoneType=`grep "Hardware" /proc/cpuinfo`
+    phoneType=${phoneType##Hardware*: }
+    if [ "$phoneType" == "vtech vsp805" ]; then
+        phoneType="VTechVSP805"
+    fi
+
+    # If kernel commandline contains a non-empty fwenv parameter, create /etc/fw_env.config from it.
+    # Extract fwenv parameter from kernel commandline and remove "fwenv=" prefix.
+    fwenv=`grep -o -E 'fwenv=[^[:space:]]+' /proc/cmdline | cut -d= -f2-`
+
+    if [ "$phoneType" = "snom715" ] && [ "$fwenv" = "" ]; then
+        # The first 715 production batch might not provide the required fwenv
+        # kernel parameter. Set fw_env.config to correct value for these phones.
+        fwenv="/dev/mtd2,0x0,0x4000,0x4000"
+    fi
+
+    if [ "$fwenv" != "" ]; then
+        # Replace commas by tabs and write the result to /etc/fw_env.config
+        echo $fwenv | tr ',' '\t' > /etc/fw_env.config
+    fi
+
+    # FIXME As long as we use the VSP805 kernel we need this workaround.
+    # This code must be executed after setting fw_env.config!
+    overridePhoneType=`fw_printenv phonetypeoverride 2>/dev/null`
+    if [ "$overridePhoneType" != "" ]; then
+        phoneType="${overridePhoneType##*=}"
+        echo "Use phone type override '$phoneType'!"
+    fi
+
+    export PHONE_TYPE="$phoneType"
+
+    # If the initial ramdisk size is too small, increase it via a remount.
+    case $PHONE_TYPE in
+        "VTechET605")
+            ;;
+        "VTechVSP805")
+            ;;
+        "snomD120")
+            ;;
+        *)
+            mount tmpfs /tmp -t tmpfs -o remount,size=40M
+            ;;
+    esac
+
+    # setup some var dirs
+    mkdir -p /tmp/var/log
+    mkdir -p /tmp/var/run
+}
+
+# Determine start mode: 0 = Phone application, 1 = Shell, 2 = Production mode
+function getStartMode () {
+    local startProduction
+    local startApplication
+
+    if [ "`fw_printenv killproductionmode 2>/dev/null`" = "killproductionmode=yes" ]; then
+        display "Remove Production Mode" ""
+        rm -rf /prod
+        rm -f /snom/snomconfig/config.xml
+        fw_setenv killproductionmode >/dev/null 2>&1
+    fi
+
+    forceshell=`fw_printenv forceshell 2>/dev/null`
+
+    if [ "$forceshell" = "forceshell=yes" ]; then
+        display "Forced Start Shell" ".."
+        return 1
+    fi
+
+    updateTestUrl=`fw_printenv updatetesturl 2>/dev/null`
+    if [ "$updateTestUrl" != "" ]; then
+        display "Forced Update Test" ".."
+        export UPDATE_TEST_URL="${updateTestUrl##*=}"
+        return 3
+    fi
+
+    development=`fw_printenv development 2>/dev/null`
+
+    if [ "$development" = "development=yes" ]; then
+        # Create flag file in tmpfs to signal lcs2 that development mode is enabled.
+        touch /tmp/development
+
+        display "&&"
+        display "&&" "$splashPng"
+        if [ -d /prod ]; then
+            display "Ok -> Production, X -> Skip" ".."
+            while true; do
+                case `getKey` in
+                    "CANCEL") startProduction="n"; break;;
+                    "TICK")   startProduction="y"; break;;
+                    *)        ;;
+                esac
+            done
+            if [ "$startProduction" = "y" ]; then
+                display "Start Production Mode" ".."
+                return 2
+            fi
+        fi
+
+        display "Ok -> Phone, X -> Shell" ".."
+        while true; do
+            case `getKey 15` in
+                "CANCEL")  startApplication="n"; break;;
+                "TICK")    startApplication="y"; break;;
+                "TIMEOUT") startApplication="y"; break;;
+                *)         ;;
+            esac
+        done
+
+        if [ "$startApplication" = "n" ]; then
+            display "Start Shell" ".."
+            return 1
+        fi
+
+        if [ ! -e "/etc/ssh/ssh_host_dsa_key" ]; then
+            display "Generating ssh keys" ".."
+
+            # rsa1 is no longer supported by openssh
+            /usr/bin/ssh-keygen -t dsa -f /etc/ssh/ssh_host_dsa_key -N ""
+            /usr/bin/ssh-keygen -t rsa -f /etc/ssh/ssh_host_rsa_key -N ""
+        fi
+
+        display "Start sshd" ".."
+        /usr/sbin/sshd
+
+        display "Start Phone" ".."
+        return 0
+    else
+        if [ -d /prod ]; then
+            return 2
+        else
+            return 0
+        fi
+    fi
+}
+
+function rebootPhone () {
+  # Reboot. Show something non-white so display is happy at reset
+  sync; sleep 1; sync
+  mount -t jffs2 -r -o remount $rootFs /
+
+  display "&&"
+  display "&&" "$splashPng"
+  display "Restarting" ".."  3 7 0 3
+
+  sync; sleep 1; sync
+  reboot -f
+}
+
+# The main function. Everything is started from here!
+function startUp () {
+    display "System $PHONE_TYPE is starting up" ""
+
+    setGlobalVariables
+    setUpFileSystems
+    setCertificateGlobalVariables
+    cleanUpRootfs
+    setUpNetwork
+    startUpDaemons
+    loadKernelModules
+
+    case $PHONE_TYPE in
+        "snomD712")
+            ;;
+        "snom715")
+            ;;
+        "snom720")
+            ;;
+        "snom760")
+            ;;
+        "snom725")
+            ;;
+        "snomD717" | "snomD735" | "snomPA500" | "VTechET617" | "VTechET635")
+            # Required for sshd
+            mkdir /dev/pts
+            mount devpts /dev/pts -t devpts
+            # enable multicast audio
+            ifconfig eth0 allmulti
+            # enable pc port
+            #/sbin/vlan_sandbox_ar8216.sh 1
+            # load audio firmware
+            /css/cssload.sh
+            ;;
+        "snomD745")
+            ;;
+        "snomD765")
+            ;;
+        "snomD785")
+            ;;
+        "snomD305")
+            ;;
+        "snomD315")
+            ;;
+        "snomD335")
+            # Required for sshd
+            mkdir /dev/pts
+            mount devpts /dev/pts -t devpts
+            # enable multicast audio
+            ifconfig eth0 allmulti
+            # enable pc port
+            #/sbin/vlan_sandbox_ar8216.sh 1
+            # load audio firmware
+            /css/cssload.sh
+            ;;
+        "snomD345")
+            ;;
+        "snomD375")
+            ;;
+        "snomD385")
+            ;;
+        "snomD120")
+            # Required for sshd
+            mkdir /dev/pts
+            mount devpts /dev/pts -t devpts
+            # enable multicast audio
+            ifconfig eth0 allmulti
+            # enable pc port
+            /sbin/vlan_sandbox_ar8216.sh 1
+            # load audio firmware
+            /css/cssload.sh
+            ;;
+        "VTechET605")
+            # Required for sshd
+            mkdir /dev/pts
+            mount devpts /dev/pts -t devpts
+            # enable multicast audio
+            ifconfig eth0 allmulti
+            # enable pc port
+            /sbin/vlan_sandbox_ar8216.sh 1
+            # load audio firmware
+            /css/cssload.sh
+            ;;
+        "VTechVSP805")
+            # Required for sshd
+            mkdir /dev/pts
+            mount devpts /dev/pts -t devpts
+            # enable multicast audio
+            ifconfig eth0 allmulti
+            # enable pc port
+            /sbin/vlan_sandbox_ar8216.sh 1
+            # load audio firmware
+            /css/cssload.sh
+            ;;
+        "VTechVSP810")
+            ;;
+        "VTechVSP815G")
+            ;;
+        "VTechVSP845G")
+            ;;
+        "VTechVSP875G")
+            ;;
+        "VTechET685")
+            ;;
+        "VTechVSP885G")
+            ;;
+    esac
+
+    getStartMode
+    case $? in
+        1)  # Shell
+            /bin/bash -i;;
+        2)  # Production
+
+            while true; do
+                # Remove restartProductionMode flag file
+                rm -f /tmp/restartProductionMode
+                # Perform production test
+                startUpProductionMode
+                # Terminate if restartProductionMode flag file wasn't created.
+                if [ ! -e "/tmp/restartProductionMode" ]; then
+                    break
+                fi
+            done
+
+            # Sync and halt the system
+            sync; sleep 1; sync
+            mount -t jffs2 -r -o remount $rootFs /
+            display "Wait for 'system halted',"  ".." 3 6 0 2
+            display "then switch off the phone." ".." 3 7 0 3
+            halt;;
+        3)  # Filesystem Test
+            display "Init eth0" ".."
+            udhcpc 2> /dev/null
+            ntpdate 10.110.23.254 2> /dev/null
+            startSecs=`/bin/date +"%s"`
+            /bin/date
+            md5Check
+            /bin/date
+            display "Create update request"
+            mkdir $updateDir
+            echo $UPDATE_TEST_URL > $updateUrl
+            display "Start software update"
+            handleSoftwareUpdate
+            /bin/date
+            endSecs=`/bin/date +"%s"`
+            echo "update lasted >>>>>>> " + $(($endSecs-$startSecs)) + "<<<<<<< secs"
+            rebootPhone;;
+        *)  # Phone
+            setUpRandomDevice
+            startUpApplication
+            killDaemons
+            handleSoftwareUpdate
+            saveRandomSeed
+            rebootPhone;;
+    esac
+}
+
+# Ignore SIGTERM, SIGQUIT, SIGINT, SIGHUP
+trap "" SIGTERM
+trap "" SIGQUIT
+trap "" SIGINT
+trap "" SIGHUP
+
+mountpoint -q /oldroot
+if [ $? == 0 ]; then
+  # /oldroot is mounted -> chrooted back from rescuefs: finish udpate.
+  continueAdvancedSystemUpdate
+  rebootPhone
+else
+  # /oldroot is not mounted -> normal boot.
+  setUpMinimalBootEnvironment
+  startUp
+fi

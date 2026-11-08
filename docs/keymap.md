@@ -1,6 +1,6 @@
 # Key maps and volume keys
 
-Every game engine (NES, Game Boy / Color, GBA, Doom) maps phone keys to game actions through one shared header, `snd/cfw_keymap.h`. The maps are plain files, editable in the panel (**Key maps** card, `/cgi-bin/keymap`) or by hand.
+Every game engine (NES, Game Boy / Color, GBA, Doom) maps phone keys to game actions through one shared header, `src/audio/snd/cfw_keymap.h`. The maps are plain files, editable in the panel (**Key maps** card, `/cgi-bin/keymap`) or by hand.
 
 ## Files
 
@@ -47,7 +47,7 @@ Maps are read when the game starts; editing one while a game runs takes effect o
 
 ## Volume keys
 
-The default maps bind key 16 (Volume -) to `VOLDOWN` and 119 (Volume +) to `VOLUP`. `snd/snd_hal.{c,h}` gained:
+The default maps bind key 16 (Volume -) to `VOLDOWN` and 119 (Volume +) to `VOLUP`. `src/audio/snd/snd_hal.{c,h}` gained:
 
 * `void snd_hal_volume_step(int delta_pct)`: the engines call it with +-10; it clamps to 0..100, applies the gain to the next audio chunk, logs `volume: N%` and writes the level to `/snom/cfw-data/volume` (`.tmp` + `rename`).
 * `int snd_hal_volume(void)`: current percent.

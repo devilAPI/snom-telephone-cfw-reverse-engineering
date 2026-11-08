@@ -19,7 +19,7 @@ SH
 restore() { with_phone_lock restart_8080 >/dev/null; echo "restored unauthenticated :8080"; }
 code() { curl -s -o /dev/null -m 20 -w '%{http_code}' "$@"; }
 
-ph_put "$REPO/custom-rootfs/etc/cfw-httpd.conf" /tmp/cfw-httpd.conf   # the shipped file, tested from /tmp
+ph_put "$REPO/rootfs/d375/etc/cfw-httpd.conf" /tmp/cfw-httpd.conf   # the shipped file, tested from /tmp
 trap restore EXIT
 with_phone_lock restart_8080 -c /tmp/cfw-httpd.conf -r "'snom CFW'" >/dev/null
 
@@ -43,7 +43,7 @@ for url in $(ph 'cat /snom/cfw/phone-menu.d/* 2>/dev/null' | cut -d'|' -f2) /cgi
 done
 echo "checked $n phone URLs"
 # state_settings.xml must not point the phone at the authenticated port.
-grep -q '127.0.0.1:8080' "$REPO/custom-rootfs/snom/html/xml/gui/state_settings.xml" && fail "state_settings.xml still references :8080"
+grep -q '127.0.0.1:8080' "$REPO/rootfs/d375/snom/html/xml/gui/state_settings.xml" && fail "state_settings.xml still references :8080"
 pass "state_settings.xml has no :8080 reference"
 
 # reset-pw works behind auth (it resets to snom375, the current password, so the login stays valid).

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<IPPhoneBatch xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../schemas/minibrowser.xsd">
+  <IPPhoneMenu id="wifiscanning" stop_auto_leave="yes">
+    <If condition="$(show_feature:FEATURE_PUI_STYLE_SIO)">
+      <Fetch mil="1">file:///xml/wifi/wifi_scanning.xml#sub=*[@id="on_board_wifi_scanning_menu"]&amp;var:animationcounter=0</Fetch>
+    </If>
+    <Else>
+      <Fetch mil="1">file:///xml/wifi/wifi_scanning.xml#sub=*[@id="on_board_wifi_scanning_menu"]</Fetch>
+    </Else>
+  </IPPhoneMenu>
+  <!-- Wifi scanning message display menu -->
+  <IPPhoneMenu track="no" speedselect="off" stop_auto_leave="yes" id="on_board_wifi_scanning_menu">
+    <If condition="$(var_ifc:PUI::get_is_wifi_scan_in_progress)==true">
+      <Title>$(lang:WIFI_SCAN_NETWORKS)</Title>
+      <If condition="$(show_feature:FEATURE_PUI_STYLE_SIO)">
+        <MenuItem name=$(lang:WIFI_SCAN_RUNNING)>
+          <ExtraIconType>$(math_eval:$(icon_type_enum:kIconTypeMenuConnectzero)+$(var:animationcounter))</ExtraIconType>
+          <Url>phone://mb_nop</Url>
+        </MenuItem>
+        <If condition="$(var:animationcounter)==3">
+          <Fetch mil="300">phone://mb_nop#var:animationcounter=0&amp;action_ifc:pui=check_if_wifi_scan_completed</Fetch>
+        </If>
+        <Else>
+          <Fetch mil="300">phone://mb_nop#var:animationcounter=$(math_eval:$(var:animationcounter)+1)&amp;action_ifc:pui=check_if_wifi_scan_completed</Fetch>
+        </Else>
+      </If>
+      <Else>
+        <MenuItem name=$(lang:WIFI_SCAN_RUNNING)>
+          <Url>phone://mb_nop</Url>
+        </MenuItem>
+        <Fetch mil="300">phone://mb_nop#action_ifc:pui=check_if_wifi_scan_completed</Fetch>
+      </Else>
+    </If>
+    <Elif condition="$(var_ifc:PUI::get_is_wifi_scan_in_progress)==false">
+      <If condition="$(show_feature:FEATURE_PUI_STYLE_SIO)">
+        <Fetch mil="1">file:///xml/wifi/scan.xml#sub=*[@id="SIOscan"]</Fetch>
+      </If>
+      <Else>
+        <Fetch mil="1">file:///xml/wifi/scan.xml#sub=*[@id="BWscan"]</Fetch>
+      </Else>
+    </Elif>
+  </IPPhoneMenu>
+</IPPhoneBatch>

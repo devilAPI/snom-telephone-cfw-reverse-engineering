@@ -4,12 +4,12 @@
 
 ## Pieces
 
-| Path (under `custom-rootfs/snom/cfw/`) | What |
+| Path (under `rootfs/d375/snom/cfw/`) | What |
 |---|---|
 | `cgi-bin/remote` | the page: canvas + keypad + keyboard shortcuts, plain JS, no libraries |
 | `cgi-bin/remote-frame?scale=1\|2\|4` | raw RGB565 frame from `bin/fbshot` |
 | `cgi-bin/remote-key?key=NAME[&ms=HOLD]` | presses a key through `bin/keyinject` (whitelist) |
-| `bin/fbshot`, `bin/keyinject` | static musl armv6 helpers; sources in `remote-src/`, built by `tools/build-keyinject.sh` (also copied to `tools/out/`) |
+| `bin/fbshot`, `bin/keyinject` | static musl armv6 helpers; sources in `src/remote/`, built by `tools/build/build-keyinject.sh` (also copied to `out/`) |
 | `panel.d/55-remote.html` | panel card |
 | `tests/remote.sh` | device test |
 

@@ -1,0 +1,7 @@
+#!/bin/sh
+# CFW: download the phone's settings as a tar file (the firmware has no gzip).
+. /snom/cfw/model.conf
+echo "Content-type: application/x-tar"
+echo "Content-Disposition: attachment; filename=\"snom-$CFW_MODEL-config-$(date +%Y%m%d-%H%M%S).tar\""
+echo ""
+cd /snom && tar cf - snomconfig 2>/dev/null

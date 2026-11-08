@@ -1,0 +1,254 @@
+<?ssi title fkeys_ssi_title?>
+<?ssi file common2.htm?>
+<TR>
+  <TD>
+  </TD>
+  <TD>
+    &nbsp;
+  </TD>
+</TR>
+<!--###################### -->
+<!--# fix size of boxes  # -->
+<!--###################### -->
+<!--ensure that whatever the language, the combo-boxes don't get too big and thus destroy our page design-->
+<style type="text/css">
+.select_std
+{
+width:140px;
+}
+.select_blue
+{
+width:140px;
+}
+</style>
+<!--###################### -->
+<!--# TITLE with helpBtn # -->
+<!--###################### -->
+<TR>
+  <?ssi skipon VTECH?>
+  <TD><B>
+  <?ssi skipoff VTECH?>
+  <?ssi skipon SNOM?>
+  <TD class="titleText">
+  <?ssi skipoff SNOM?>
+  <?ssi skipon NO_WUI_HELP_LINKS?>
+    <a href="https://service.snom.com/display/wiki/Function+keys"><div class="help"></div></a>
+  <?ssi skipoff NO_WUI_HELP_LINKS?>
+  <?lng fkeys_keysettings?>
+  </B>
+  </TD>
+</TR>
+<TR>
+  <TD vAlign="top" height="16">
+    <IMG height="16" src="img/clr.gif" width="16">
+  </TD>
+</TR>
+<!--###################### -->
+<!--# INFO TEXT          # -->
+<!--###################### -->
+<TR>
+  <TD>
+    <!-- pageInfoText table start -->
+    <TABLE cellSpacing=0 cellPadding=0 width="100%" border=0 ID="Table1">
+      <TBODY>
+        <TR><TD><SPAN class=pageInfoText><?lng fkey_info?><br></SPAN></TD></TR>
+      </TBODY>
+    </TABLE>
+    <!-- pageInfoText table end -->
+  </TD>
+</TR>
+<TR>
+  <TD vAlign="top">
+    <FORM method="post">
+      <?ssi hidden_tag?>
+      <!-- outermost table start -->
+      <?ssi skipon VTECH?>
+      <TABLE class="bubbleTable" cellSpacing="0" cellPadding="0" width="100%" border="0">
+      <?ssi skipoff VTECH?>
+      <?ssi skipon SNOM?>
+      <TABLE cellSpacing="2" cellPadding="0" width="100%" border="0">
+      <?ssi skipoff SNOM?>
+        <TBODY>
+          <?ssi skipon NO_SMARTLABEL?>
+          <?ssi file tab_fkeys.htm?>
+          <?ssi skipoff NO_SMARTLABEL?>
+          <!-- round corners -->
+          <TR>
+            <?ssi skipon SMARTLABEL?>
+            <TD class="background" vAlign="bottom" align="left" width="12" height="5">
+              <?ssi skipon VTECH?>
+              <IMG height="12" src="img/corul.gif" width="12">
+              <?ssi skipoff VTECH?>
+            </TD>
+            <?ssi skipoff SMARTLABEL?>
+            <?ssi skipon NO_SMARTLABEL?>
+            <TD height="5"><IMG height="12" src="img/clr.gif"></TD>
+            <?ssi skipoff NO_SMARTLABEL?>
+            <TD height="5"><IMG height="5" src="img/clr.gif"></TD>
+            <TD class="background" vAlign="bottom" align="right" width="12" height="5">
+              <?ssi skipon VTECH?>
+              <IMG height="12" src="img/corur.gif" width="12">
+              <?ssi skipoff VTECH?>
+            </TD>
+          </TR>
+          <!--###################### -->
+          <!--# KEYS ABOVE DISPLAY # -->
+          <!--###################### -->
+          <TR height="20"></TR>
+          <!-- smartlabel keys table start-->
+          <?ssi skipon NO_SMARTLABEL?>
+          <?ssi fkey_ssi_header smartkeys?>
+          <TR>
+            <TD></TD><TD>
+              <?ssi smartlabels ?>
+            </TD><TD></TD>
+          </TR>
+          <?ssi skipoff NO_SMARTLABEL?>
+          <!-- smartlabel keys table end-->
+          <!-- softkeys table start-->
+          <?ssi fkey_ssi_header softkeys?>
+          <TR>
+            <TD></TD><TD>
+              <?ssi softkey ?>
+            </TD><TD></TD>
+          </TR>
+          <!-- softkeys table end -->
+          <!--###################### -->
+          <!--# NAVI KEYS          # -->
+          <!--###################### -->
+          <!-- navigation keys start -->
+          <TR height="20"></TR>
+          <?ssi fkey_ssi_header navkeys?>
+          <TR>
+            <TD></TD><TD>
+              <TABLE cellSpacing="0" cellPadding="2" align="center" border="0" id="navikeyTable" name="navikeyTable">
+                <TBODY>
+                  <TR>
+                    <TD><?lng fkeys_ssi_type?></TD>
+                  </TR>
+                  <TR class="select_blue">
+                    <TD><?ssi upkey ?></TD><TD><?lng fkeyname_up?></TD><TD><img src="img/dedicated_key_up.png"></TD>
+                  </TR>
+                  <?ssi skipon SNOM1XX?>
+                  <TR>
+                    <TD><?ssi rightkey ?></TD><TD><?lng fkeyname_right?></TD><TD><img src="img/dedicated_key_right.png"></TD>
+                  </TR>
+                  <TR class="select_blue">
+                  <?ssi skipoff SNOM1XX?>
+                  <?ssi skipon NOT_SNOM1XX?>
+                  <TR>
+                  <?ssi skipoff NOT_SNOM1XX?>
+                    <TD><?ssi downkey ?></TD><TD><?lng fkeyname_down?></TD><TD><img src="img/dedicated_key_down.png"></TD>
+                  </TR>
+                  <?ssi skipon SNOM1XX?>
+                  <TR>
+                    <TD><?ssi leftkey ?></TD><TD><?lng fkeyname_left?></TD><TD><img src="img/dedicated_key_left.png"></TD>
+                  </TR>
+                  <?ssi skipoff SNOM1XX?>
+                  <TR class="select_blue">
+                    <TD><?ssi okkey ?></TD><TD><?lng fkeyname_ok?></TD><TD><img src="img/dedicated_key_ok.png"></TD>
+                  </TR>
+                  <TR>
+                    <TD><?ssi cancelkey ?></TD><TD><?lng fkeyname_cancel?></TD><TD><img src="img/dedicated_key_cancel.png"></TD>
+                  </TR>
+                </TBODY>
+              </TABLE>
+            </TD><TD></TD>
+          </TR>
+          <!--###################### -->
+          <!--# QUICK ACCESS KEYS  # -->
+          <!--###################### -->
+          <TR height="20"></TR>
+          <?ssi fkey_ssi_header hardkeys?>
+          <TR>
+            <TD></TD>
+            <TD>
+              <TABLE cellSpacing="0" cellPadding="2" align="center" border="0" id="fkey2Table" name="fkey2Table">
+                <TBODY>
+                  <TR>
+                    <TD vAlign="top" height="16"><IMG height="16" src="img/clr.gif" width="12"></TD>
+                  </TR>
+                  <TR>
+                    <TD><?lng fkeys_ssi_type?></TD>
+                    <TD><?lng fkeys_ssi_number?></TD>
+                  </TR>
+                  <?ssi dkey_table ?>
+                </TBODY>
+              </TABLE>
+            </TD>
+            <TD></TD>
+          </TR>
+          <!--###################### -->
+          <!--# LINE KEYS          # -->
+          <!--# pKeys, ekKeys      # -->
+          <!--###################### -->
+          <!-- ssi fkeys start -->
+          <?ssi fkey_ssi_header linekeys?>
+          <TR>
+            <TD></TD>
+            <TD>
+              <?ssi fkeys?>
+            </TD>
+            <TD></TD>
+          </TR>
+          <!-- ssi fkeys end -->
+          <?ssi skipon NOT_UXM ?>
+          <?ssi fkey_ssi_header uxmkeys?>
+          <TR>
+            <TD></TD>
+            <TD>
+              <!-- USB expansion modules start -->
+              <?ssi uxm_fkeys?>
+              <!-- USB expansion modules end -->
+            </TD>
+            <TD></TD>
+          </TR>
+          <?ssi skipoff NOT_UXM ?>
+          <?ssi skipon NOT_UXMC ?>
+          <?ssi fkey_ssi_header uxmckeys?>
+          <TR>
+            <TD></TD>
+            <TD>
+              <!-- USB expansion modules start -->
+              <?ssi uxmc_fkeys?>
+              <!-- USB expansion modules end -->
+            </TD>
+            <TD></TD>
+          </TR>
+          <?ssi skipoff NOT_UXMC ?>
+          <TR>
+            <TD></TD>
+            <TD height="30"></TD>
+            <TD></TD>
+          </TR>
+          <TR>
+            <TD></TD>
+            <input type="hidden" value="<?lng apply_button?>" name="Settings">
+            <!--Hidden input is used to allow onchange event to apply settings automatically-->
+            <TD><input type="submit" value="<?lng apply_button?>" name="Settings"></TD>
+            <TD></TD>
+          </TR>
+          <!-- round corners -->
+          <TR>
+            <TD class="background" vAlign="bottom" align="left" width="12" height="5">
+              <?ssi skipon VTECH?>
+              <IMG height="12" src="img/corll.gif" width="12">
+              <?ssi skipoff VTECH?>
+            </TD>
+            <TD height="5"><IMG height="5" src="img/clr.gif"></TD>
+            <TD class="background" vAlign="bottom" align="right" width="12" height="5">
+              <?ssi skipon VTECH?>
+              <IMG height="12" src="img/corlr.gif" width="12">
+              <?ssi skipoff VTECH?>
+            </TD>
+          </TR>
+          <!-- navigation keys end-->
+        </TBODY>
+      </TABLE>
+      <!-- outermost table end -->
+    </FORM>
+  </TD>
+</TR>
+<script type="text/javascript" src="fox.js" charset="utf-8"></script>
+<?ssi file common9.htm?>
+</HTML>

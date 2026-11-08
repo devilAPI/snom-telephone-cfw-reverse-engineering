@@ -1,0 +1,1882 @@
+<?xml version="1.0" encoding="utf-8"?>
+<phrases>
+	<language t="Türkçe"/>
+	<phrase n="lang_none" t=""/>
+	<phrase n="lang_language_name" t="Türkçe"/>
+	<phrase n="lang_cntry_CHN" t="Çin"/>
+	<phrase n="lang_cntry_FIN" t="Finlandiya"/>
+	<phrase n="lang_cntry_GER" t="Almanya"/>
+	<phrase n="lang_cntry_IND" t="Hindistan"/>
+	<phrase n="lang_cntry_IDN" t="Endonezya"/>
+	<phrase n="lang_cntry_MYS" t="Malezya"/>
+	<phrase n="lang_cntry_MEX" t="Meksika"/>
+	<phrase n="lang_cntry_NLD" t="Hollanda"/>
+	<phrase n="lang_cntry_PRT" t="Portekiz"/>
+	<phrase n="lang_cntry_ZAF" t="Güney Afrika"/>
+	<phrase n="lang_cntry_GBR" t="Büyük Britanya"/>
+	<phrase n="lang_cntry_USA" t="ABD"/>
+	<phrase n="lang_cntry_CAM" t="Central America"/>
+	<phrase n="lang_cntry_CAN" t="Kanada"/>
+	<phrase n="lang_cntry_CHL" t="Şili"/>
+	<phrase n="lang_cntry_BHS" t="Bahamalar"/>
+	<phrase n="lang_cntry_CUB" t="Kuba"/>
+	<phrase n="lang_cntry_PRY" t="Paraguay"/>
+	<phrase n="lang_cntry_BMU" t="Bermuda"/>
+	<phrase n="lang_cntry_FLK" t="Falkland Adaları"/>
+	<phrase n="lang_cntry_GRL" t="Grönland"/>
+	<phrase n="lang_cntry_FRO" t="Faroe Adaları"/>
+	<phrase n="lang_cntry_IRL" t="İrlanda"/>
+	<phrase n="lang_cntry_ESP" t="İspanya"/>
+	<phrase n="lang_cntry_ALB" t="Arnavutluk"/>
+	<phrase n="lang_cntry_AUT" t="Avusturya"/>
+	<phrase n="lang_cntry_BEL" t="Belçika"/>
+	<phrase n="lang_cntry_BRA" t="Brezilya"/>
+	<phrase n="lang_cntry_CAI" t="Kaikos"/>
+	<phrase n="lang_cntry_CHA" t="Chatam"/>
+	<phrase n="lang_cntry_HRV" t="Hırvatistan"/>
+	<phrase n="lang_cntry_CZE" t="Çek Cumhuriyeti"/>
+	<phrase n="lang_cntry_DNK" t="Danimarka"/>
+	<phrase n="lang_cntry_FRA" t="Fransa"/>
+	<phrase n="lang_cntry_HUN" t="Macaristan"/>
+	<phrase n="lang_cntry_ITA" t="İtalya"/>
+	<phrase n="lang_cntry_LUX" t="Lüksemburg"/>
+	<phrase n="lang_cntry_MAK" t="Makedonya"/>
+	<phrase n="lang_cntry_NAM" t="Namibya"/>
+	<phrase n="lang_cntry_NOR" t="Norveç"/>
+	<phrase n="lang_cntry_POL" t="Polonya"/>
+	<phrase n="lang_cntry_SVK" t="Slovak Cumhuriyeti"/>
+	<phrase n="lang_cntry_SWD" t="İsveç"/>
+	<phrase n="lang_cntry_CHE" t="İsviçre"/>
+	<phrase n="lang_cntry_GIB" t="Cebelitarık"/>
+	<phrase n="lang_cntry_YUG" t="Sırbistan"/>
+	<phrase n="lang_cntry_BLR" t="Belarus"/>
+	<phrase n="lang_cntry_BGR" t="Bulgaristan"/>
+	<phrase n="lang_cntry_CYP" t="Kıbrıs"/>
+	<phrase n="lang_cntry_EGY" t="Mısır"/>
+	<phrase n="lang_cntry_EST" t="Estonya"/>
+	<phrase n="lang_cntry_GAZ" t="Gazze"/>
+	<phrase n="lang_cntry_GRC" t="Yunanistan"/>
+	<phrase n="lang_cntry_ISR" t="İsrail"/>
+	<phrase n="lang_cntry_JOR" t="Ürdün"/>
+	<phrase n="lang_cntry_LVA" t="Letonya"/>
+	<phrase n="lang_cntry_LTU" t="Litvanya"/>
+	<phrase n="lang_cntry_LBN" t="Lübnan"/>
+	<phrase n="lang_cntry_MDA" t="Moldova"/>
+	<phrase n="lang_cntry_RUS" t="Rusya"/>
+	<phrase n="lang_cntry_ROU" t="Romanya"/>
+	<phrase n="lang_cntry_SYR" t="Suriye"/>
+	<phrase n="lang_cntry_TUR" t="Türkiye"/>
+	<phrase n="lang_cntry_UKR" t="Ukrayna"/>
+	<phrase n="lang_cntry_IRQ" t="Irak"/>
+	<phrase n="lang_cntry_IRN" t="İran"/>
+	<phrase n="lang_cntry_ARM" t="Ermenistan"/>
+	<phrase n="lang_cntry_AZE" t="Azerbaycan"/>
+	<phrase n="lang_cntry_GEO" t="Gürcistan"/>
+	<phrase n="lang_cntry_KAZ" t="Kazakistan"/>
+	<phrase n="lang_cntry_KGZ" t="Kırgız Cumhuriyeti"/>
+	<phrase n="lang_cntry_PAK" t="Pakistan"/>
+	<phrase n="lang_cntry_SGP" t="Singapur"/>
+	<phrase n="lang_cntry_KOR" t="Kore"/>
+	<phrase n="lang_cntry_JPN" t="Japonya"/>
+	<phrase n="lang_cntry_AUS" t="Avustralya"/>
+	<phrase n="lang_cntry_NZL" t="Yeni Zelanda"/>
+	<phrase n="lang_cntry_TON" t="Tonga"/>
+	<phrase n="lang_cntry_COL" t="Kolombiya"/>
+	<phrase n="lang_cntry_ECU" t="Ekvador"/>
+	<phrase n="lang_cntry_TTB" t="Trinidad ve Tobago"/>
+	<phrase n="lang_cntry_ARG" t="Arjantin"/>
+	<phrase n="lang_cntry_WAT" t="Batı Afrika"/>
+	<phrase n="lang_cntry_CAT" t="Orta Afrika"/>
+	<phrase n="lang_cntry_EAT" t="Doğu Afrika"/>
+	<phrase n="lang_cntry_VEN" t="Venezuela"/>
+	<phrase n="lang_cntry_NCL" t="Yeni Kaledonya"/>
+	<phrase n="lang_cntry_UAE" t="Birleşik Arap Emirlikleri"/>
+	<phrase n="lang_cntry_THA" t="Tayland"/>
+	<phrase n="lang_F_SEARCH" t="Ara"/>
+	<phrase n="lang_F_SEARCH_typeSio" t="Ara"/>
+	<phrase n="lang_F_REBOOT" t="Yeniden Başlat"/>
+	<phrase n="lang_F_REBOOT_typeSio" t="Yeniden Başlat"/>
+	<phrase n="lang_F_REBOOT_smartlabel" t="Yeniden Başlat"/>
+	<phrase n="lang_F_PAIR" t="Eşleştir"/>
+	<phrase n="lang_F_UNPAIR" t="Eşleştirmeyi durdur"/>
+	<phrase n="lang_F_JOIN" t="Katıl"/>
+	<phrase n="lang_F_JOIN_typeSio" t="Katıl"/>
+	<phrase n="lang_F_JOIN_WITH" t="Katıl"/>
+	<phrase n="lang_F_LEAVE" t="Ayrıl"/>
+	<phrase n="lang_F_LEAVE_typeSio" t="Ayrıl"/>
+	<phrase n="lang_F_OK" t="Tamam"/>
+	<phrase n="lang_F_ACCEPT_CALL" t="Kabul et"/>
+	<phrase n="lang_F_ACCEPT_CALL_typeSio" t="Kabul et"/>
+	<phrase n="lang_F_CANCEL" t="İptal"/>
+	<phrase n="lang_F_CANCEL_typeSio" t="İptal"/>
+	<phrase n="lang_F_YES" t="Evet"/>
+	<phrase n="lang_F_NO" t="Hayır"/>
+	<phrase n="lang_F_ADD_SPEAKER" t="+Hprlr"/>
+	<phrase n="lang_F_ADD_SPEAKER_typeSio" t="+Hoparlör"/>
+	<phrase n="lang_F_REMOVE_SPEAKER" t="-Hprlr"/>
+	<phrase n="lang_F_REMOVE_SPEAKER_typeSio" t="-Hoparlör"/>
+	<phrase n="lang_F_ADD_HANDSET" t="+Ahize"/>
+	<phrase n="lang_F_ADD_HANDSET_typeSio" t="+Ahize"/>
+	<phrase n="lang_F_REMOVE_HANDSET" t="-Ahize"/>
+	<phrase n="lang_F_REMOVE_HANDSET_typeSio" t="-Ahize"/>
+	<phrase n="lang_F_DELETE" t="Sil"/>
+	<phrase n="lang_F_DELETE_typeSio" t="Sil"/>
+	<phrase n="lang_F_ADR_BOOK" t="Reh"/>
+	<phrase n="lang_F_ADR_BOOK_typeSio" t="Dizin"/>
+	<phrase n="lang_F_ADR_BOOK_smartlabel" t="Dizin"/>
+	<phrase n="lang_F_DENYALL" t="Blok"/>
+	<phrase n="lang_F_DENYALL_typeSio" t="Arayanı Engelle"/>
+	<phrase n="lang_F_DENYALL_smartlabel" t="Bloke et"/>
+	<phrase n="lang_F_CALL_LIST" t="ÇGeçm"/>
+	<phrase n="lang_F_CALL_LIST_typeSio" t="Çağrı Geçmişi"/>
+	<phrase n="lang_F_CALL_LIST_smartlabel" t="Çağ Geçm"/>
+	<phrase n="lang_F_PLAY" t="Oynat"/>
+	<phrase n="lang_F_STOP" t="Durdurur"/>
+	<phrase n="lang_F_RESCAN" t="Yeniden Tara"/>
+	<phrase n="lang_F_INCREASE" t="Arttır"/>
+	<phrase n="lang_F_DECREASE" t="Azalt"/>
+	<phrase n="lang_F_BACK" t="⌫"/>
+	<phrase n="lang_F_BACK_typeSio" t="Geri al"/>
+	<phrase n="lang_F_REDIAL" t="Tekrar Ara"/>
+	<phrase n="lang_F_REDIAL_typeSio" t="Tekrar Ara"/>
+	<phrase n="lang_F_REDIAL_smartlabel" t="Tekrar Ara"/>
+	<phrase n="lang_F_INSTANT_REDIAL" t="Tekrar Ara"/>
+	<phrase n="lang_F_INSTANT_REDIAL_typeSio" t="Anında Tekrar Arama"/>
+	<phrase n="lang_F_INSTANT_REDIAL_smartlabel" t="Tekrar Ara"/>
+	<phrase n="lang_F_ADD_NUMBER" t="Ekle"/>
+	<phrase n="lang_F_ADD_NUMBER_typeSio" t="Numara Ekle"/>
+	<phrase n="lang_F_CONTACTS" t="Kişiler"/>
+	<phrase n="lang_F_PRESENCE" t="Durum"/>
+	<phrase n="lang_F_PRESENCE_typeSio" t="Durumu"/>
+	<phrase n="lang_F_PRESENCE_smartlabel" t="Durumu"/>
+	<phrase n="lang_F_SPEED_DIAL" t="Hızlı"/>
+	<phrase n="lang_F_SPEED_DIAL_typeSio" t="Hızlı Arama"/>
+	<phrase n="lang_F_SPEED_DIAL_smartlabel" t="Hızlı"/>
+	<phrase n="lang_F_SAFE_TRANSFER" t="Güvenli"/>
+	<phrase n="lang_F_SAFE_TRANSFER_typeSio" t="Güvenli Aktarma"/>
+	<phrase n="lang_F_MENUS_USERINPUT_SENDSIPINFO" t="KullanıcıGirdisiVeSipBilgisiGönder"/>
+	<phrase n="lang_F_MENUS_SENDSIPINFO" t="SipBilgisiGönder"/>
+	<phrase n="lang_F_USERINPUT_SENDSIPINFO" t="SIP"/>
+	<phrase n="lang_F_SENDSIPINFO" t="SIP"/>
+	<phrase n="lang_F_SENDSIPINFO_typeSio" t="SIP BİLGİSİ"/>
+	<phrase n="lang_F_SENDSIPINFO_smartlabel" t="SIP&lt;br&gt;BİLGİSİ"/>
+	<phrase n="lang_F_REC_START" t="Kayıt"/>
+	<phrase n="lang_F_REC_STOP" t="Kayıt Dur"/>
+	<phrase n="lang_F_RECORDER_START" t="Kayıt"/>
+	<phrase n="lang_F_RECORDER_STOP" t="Kayıt Dur"/>
+	<phrase n="lang_F_RECORD_ON" t="Kayıt"/>
+	<phrase n="lang_F_RECORD_OFF" t="Kaydı Durdur"/>
+	<phrase n="lang_F_RECORDING" t="kaydediyor"/>
+	<phrase n="lang_F_LOGOFF_ALL" t="Oturumu Kapat"/>
+	<phrase n="lang_F_LOGOFF_ALL_typeSio" t="Tüm Oturumları Kapat"/>
+	<phrase n="lang_F_LOGOFF_ALL_smartlabel" t="Oturumu Kapat"/>
+	<phrase n="lang_F_STARCODE_short" t="Y Kodu"/>
+	<phrase n="lang_F_STARCODE" t="Yıldız Kodu"/>
+	<phrase n="lang_F_RELOAD_SERVER_AB" t="Tekrar Yükle"/>
+	<phrase n="lang_F_SERVER_AB" t="Server Dir"/>
+	<phrase n="lang_F_ANONYMOUS" t="Anon Kimlik"/>
+	<phrase n="lang_F_ANONYMOUS_long" t="Anonim Kimlik"/>
+	<phrase n="lang_F_ANONYMOUS_smartlabel" t="Anon Kimlik"/>
+	<phrase n="lang_F_VOICEMAIL_INFO_NEW_MSG" t="Sesli Mesaj Bilgisi"/>
+	<phrase n="lang_F_VOICEMAIL_INFO_short" t="Sesli Mesaj"/>
+	<phrase n="lang_F_VOICEMAIL_INFO" t="Sesli Mesaj Bilgisi"/>
+	<phrase n="lang_F_NO_NEW_MESSAGE" t="Yeni Mesaj Yok"/>
+	<phrase n="lang_F_NEW_MESSAGE" t="Yeni Mesaj"/>
+	<phrase n="lang_F_GUEST_LOCK" t="Kilitle"/>
+	<phrase n="lang_F_GUEST_UNLOCK" t="Kilidi aç"/>
+	<phrase n="lang_F_IVR" t="Etkileşimli Sesli Yanıt (IVR)"/>
+	<phrase n="lang_F_DTMF" t="DTMF"/>
+	<phrase n="lang_F_ACTION_URL" t="URL"/>
+	<phrase n="lang_F_ACTION_URL_typeSio" t="Eylem URL"/>
+	<phrase n="lang_F_ACTION_URL_smartlabel" t="URL"/>
+	<phrase n="lang_F_AUTO_ANSWER" t="OtomatikC"/>
+	<phrase n="lang_F_AUTO_ANSWER_typeSio" t="Otomatik Cevap"/>
+	<phrase n="lang_F_AUTO_ANSWER_smartlabel" t="Otomatik Cev"/>
+	<phrase n="lang_F_AUTO_ANSWER_ON" t="Otomatik Cevap"/>
+	<phrase n="lang_F_BLF_short" t="BLF"/>
+	<phrase n="lang_F_BLF" t="Meşgul Lamba Alanı"/>
+	<phrase n="lang_F_LINE" t="Hat"/>
+	<phrase n="lang_F_LINE_short" t="Hat"/>
+	<phrase n="lang_F_LINE_RINGING" t="çalıyor"/>
+	<phrase n="lang_F_LINE_OUTGOING" t="Arıyor"/>
+	<phrase n="lang_F_LINE_OFFHOOK" t="açık telefon"/>
+	<phrase n="lang_F_LINE_IDLE" t="boş"/>
+	<phrase n="lang_F_LINE_HOLD" t="beklemede"/>
+	<phrase n="lang_F_LINE_FAILED" t="Çevrimdışı"/>
+	<phrase n="lang_F_LINE_DISCONNECTED" t="bağlantı kesildi"/>
+	<phrase n="lang_F_LINE_DISCONNECTED_typeSio" t="bağlantı kesildi"/>
+	<phrase n="lang_F_LINE_CONNECTED" t="bağlı"/>
+	<phrase n="lang_F_LINE_BUSY" t="Meşgul"/>
+	<phrase n="lang_F_LINE_HELD" t="Beklemede"/>
+	<phrase n="lang_F_LINE_CALLING" t="arıyor"/>
+	<phrase n="lang_F_LINE_RINGBACK" t="geri ara"/>
+	<phrase n="lang_F_LINE_HOLDING" t="beklemede"/>
+	<phrase n="lang_F_LINE_UNREGISTERED" t="Kayıtsız"/>
+	<phrase n="lang_F_LINE_IN_USE" t="Kullanımda"/>
+	<phrase n="lang_F_LINE_FREE" t="serbest"/>
+	<phrase n="lang_F_LINE_UNKNOWN" t="bilinmeyen"/>
+	<phrase n="lang_F_LINE_TALKING" t="konuşuyor"/>
+	<phrase n="lang_F_LINE_SEIZED" t="meşgul"/>
+	<phrase n="lang_F_LINE_UNVAILABLE" t="kullanılamıyor"/>
+	<phrase n="lang_F_LINE_ACTIVE" t="Etkin"/>
+	<phrase n="lang_F_LINE_AVAILABLE" t="kullanılabilir"/>
+	<phrase n="lang_F_LINE_CLOSED" t="kapalı"/>
+	<phrase n="lang_F_LINE_AUTO_REDIAL" t="otomatik tekrar arama"/>
+	<phrase n="lang_F_LINE_AUTO_REDIAL_typeSio" t="otomatik tekrar arama"/>
+	<phrase n="lang_F_LINE_CONFERENCING" t="konferansta"/>
+	<phrase n="lang_F_LINE_PARKED" t="park edildi"/>
+	<phrase n="lang_F_LINE_NO_BUDDY" t="atanmamış"/>
+	<phrase n="lang_F_LINE_DISABLED" t="devre dışı"/>
+	<phrase n="lang_F_LINE_MSG_WAITING" t="msj bekliyor"/>
+	<phrase n="lang_F_SHARED_LINE" t="P Hat"/>
+	<phrase n="lang_F_SHARED_LINE_typeSio" t="Paylaşılan Hat"/>
+	<phrase n="lang_F_SHARED_LINE_smartlabel" t="P Hat"/>
+	<phrase n="lang_F_SHARED_LINE_REMOTE_SEIZED" t="Paylaşılan Hat"/>
+	<phrase n="lang_F_SHARED_LINE_REMOTE_HOLD" t="Paylaşılan Hat"/>
+	<phrase n="lang_F_SHARED_LINE_REMOTE_ALERT" t="Paylaşılan Hat"/>
+	<phrase n="lang_F_SHARED_LINE_REMOTE_ACTIVE" t="Paylaşılan Hat"/>
+	<phrase n="lang_F_SHARED_LINE_BRIDGE_ACTIVE" t="Shared Line"/>
+	<phrase n="lang_F_SHARED_LINE_BRIDGE_HOLD" t="Shared Line"/>
+	<phrase n="lang_F_SHARED_LINE_LOCAL_SEIZED" t="Paylaşılan Hat"/>
+	<phrase n="lang_F_SHARED_LINE_LOCAL_HOLD" t="Paylaşılan Hat"/>
+	<phrase n="lang_F_SHARED_LINE_LOCAL_ALERT" t="Paylaşılan Hat"/>
+	<phrase n="lang_F_SHARED_LINE_LOCAL_ACTIVE" t="Paylaşılan Hat"/>
+	<phrase n="lang_F_MULTICAST" t="ÇGönderim"/>
+	<phrase n="lang_F_MULTICAST_typeSio" t="Çoğa gönderim"/>
+	<phrase n="lang_F_MULTICAST_smartlabel" t="ÇG Sayfası"/>
+	<phrase n="lang_F_MULTICAST_ON" t="Çoğa gönderim"/>
+	<phrase n="lang_F_MULTICAST_ZONE" t="ÇBölgesi"/>
+	<phrase n="lang_F_MULTICAST_ZONE_typeSio" t="Çoğa gönderim Bölgesi"/>
+	<phrase n="lang_F_MULTICAST_ZONE_smartlabel" t="ÇG Bölgesi"/>
+	<phrase n="lang_F_BUTTON_typeSio" t="PBX Tuşu"/>
+	<phrase n="lang_F_BUTTON" t="Tuş"/>
+	<phrase n="lang_F_BUTTON_smartlabel" t="Tuş"/>
+	<phrase n="lang_F_PUSH_TO_TALK" t="Bas Konuş"/>
+	<phrase n="lang_F_PUSH_TO_TALK_typeSio" t="Bas Konuş"/>
+	<phrase n="lang_F_PUSH_TO_TALK_smartlabel" t="Bas Konuş"/>
+	<phrase n="lang_F_INTERCOM_ON" t="İnterkom"/>
+	<phrase n="lang_F_INTERCOM" t="İkom"/>
+	<phrase n="lang_F_INTERCOM_typeSio" t="İnterkom"/>
+	<phrase n="lang_F_INTERCOM_smartlabel" t="İkom"/>
+	<phrase n="lang_F_PICKUP" t="Çağrı Al"/>
+	<phrase n="lang_F_CALL_CENTER_LIST" t="Çağrı Merkezi Listesi"/>
+	<phrase n="lang_F_REMOTE_OFFICE" t="Ofis"/>
+	<phrase n="lang_F_REMOTE_OFFICE_typeSio" t="Uzak Ofis"/>
+	<phrase n="lang_F_REMOTE_OFFICE_smartlabel" t="U Ofis"/>
+	<phrase n="lang_F_REMOTE_OFFICE_ON" t="Açık"/>
+	<phrase n="lang_F_REMOTE_OFFICE_OFF" t="Kapalı"/>
+	<phrase n="lang_F_ACD" t="ACD"/>
+	<phrase n="lang_F_ACD_WRAPUP" t="Toparla"/>
+	<phrase n="lang_F_ACD_UNAVAILABLE" t="Mevcut değil"/>
+	<phrase n="lang_F_ACD_AVAILABLE" t="Mevcut"/>
+	<phrase n="lang_F_ACD_SIGN_OUT" t="Oturumu Kapat"/>
+	<phrase n="lang_F_ACD_SIGN_IN" t="Oturum Aç"/>
+	<phrase n="lang_F_ACD_LOGOUT" t="Oturumu Kapat"/>
+	<phrase n="lang_F_ACD_LOGIN" t="Oturum Aç"/>
+	<phrase n="lang_F_ZONES" t="ÇG-Sayfası"/>
+	<phrase n="lang_F_SMART_TRANSFER" t="AkıllıAktarma"/>
+	<phrase n="lang_F_SMART_TRANSFER_short" t="AkıllıAkt"/>
+	<phrase n="lang_F_ALTERNATE_MODE" t="Alternatif"/>
+	<phrase n="lang_F_LABEL_PAGE_NEXT_typeSio" t="Sonraki"/>
+	<phrase n="lang_F_LABEL_PAGE_NEXT" t="Sonraki"/>
+	<phrase n="lang_F_LABEL_PAGE_NEXT_SMART_long" t="Sonraki Sayfa"/>
+	<phrase n="lang_F_LABEL_PAGE_NEXT_SMART_short" t="Sayfa&gt;&gt;"/>
+	<phrase n="lang_F_LABEL_PAGE_PREV_typeSio" t="Önc"/>
+	<phrase n="lang_F_LABEL_PAGE_PREV" t="Önc"/>
+	<phrase n="lang_F_LABEL_PAGE_PREV_SMART_long" t="Önceki Sayfa"/>
+	<phrase n="lang_F_LABEL_PAGE_PREV_SMART_short" t="&lt;&lt;Sayfa"/>
+	<phrase n="lang_F_ADD_REJECTED_CONTACT" t="Ekle"/>
+	<phrase n="lang_F_SAVE_XSI_CONTACT" t="Kaydet"/>
+	<phrase n="lang_F_REFRESH" t="Yenile"/>
+	<phrase n="lang_F_ADD_CONTACT" t="Ekle"/>
+	<phrase n="lang_F_ADD_CONTACT_typeSio" t="Kişi Ekle"/>
+	<phrase n="lang_F_SAVE_DIRECTORY_EDIT" t="Kaydet"/>
+	<phrase n="lang_F_GO_NEXT" t="Sonraki"/>
+	<phrase n="lang_F_GO_BACK" t="Önceki"/>
+	<phrase n="lang_F_MENU_BACK" t="Back"/>
+	<phrase n="lang_F_SAVE" t="Kaydet"/>
+	<phrase n="lang_F_SAVE_CONTACT" t="Kaydet"/>
+	<phrase n="lang_F_SAFE_TRANSFER_OFF" t="Trsfr"/>
+	<phrase n="lang_F_SAFE_TRANSFER_OFF_typeSio" t="Aktar"/>
+	<phrase n="lang_F_PARK" t="Park et"/>
+	<phrase n="lang_F_CALL_PARK_GROUP_DIAL" t="Group Park"/>
+	<phrase n="lang_F_PARK_typeSio" t="Park et"/>
+	<phrase n="lang_F_PARK_smartlabel" t="Park et"/>
+	<phrase n="lang_F_CALLRECORD_PAUSE" t="Kaydı Duraklat"/>
+	<phrase n="lang_F_CALLRECORD_RESUME" t="Kayda Devam"/>
+	<phrase n="lang_F_CALLRECORD_CONTROL_ON" t="Kayıt"/>
+	<phrase n="lang_F_CALLRECORD_CONTROL_OFF" t="Kayıt"/>
+	<phrase n="lang_F_STATUS_UNREAD" t="Bilgi"/>
+	<phrase n="lang_F_STATUS" t="Bilgi"/>
+	<phrase n="lang_F_STATUS_long" t="Bilgi Mesajları"/>
+	<phrase n="lang_F_STATUS_NOTIFICATIONS" t="Notifications"/>
+	<phrase n="lang_F_FAVORITES" t="Fav"/>
+	<phrase n="lang_F_FAVORITES_typeSio" t="Favoriler"/>
+	<phrase n="lang_F_FAVORITES_smartlabel" t="Favoriler"/>
+	<phrase n="lang_F_SORT" t="Sırala"/>
+	<phrase n="lang_F_SORT_typeSio" t="Sırala"/>
+	<phrase n="lang_F_CONTACTPOOL" t="Havuz"/>
+	<phrase n="lang_F_CONTACTPOOL_typeSio" t="İletişim Havuzu"/>
+	<phrase n="lang_F_CONTACTPOOL_smartlabel" t="Havuz"/>
+	<phrase n="lang_F_NEXT" t="Sonraki"/>
+	<phrase n="lang_F_DIRECTORY_SEARCH" t="LDAP"/>
+	<phrase n="lang_F_MISSED_LIST" t="C Çağrılar"/>
+	<phrase n="lang_F_MISSED_LIST_typeSio" t="Cevapsız Aramalar"/>
+	<phrase n="lang_F_MISSED_LIST_smartlabel" t="Cevapsız"/>
+	<phrase n="lang_F_DIALED_LIST" t="Dialed"/>
+	<phrase n="lang_F_DIALED_LIST_typeSio" t="Dialed Calls"/>
+	<phrase n="lang_F_DIALED_LIST_smartlabel" t="Dialed"/>
+	<phrase n="lang_F_ACCEPTED_LIST" t="K E Çağrılar"/>
+	<phrase n="lang_F_ACCEPTED_LIST_typeSio" t="Kabul Edilen Çağrılar"/>
+	<phrase n="lang_F_ACCEPTED_LIST_smartlabel" t="Kabul Edilen"/>
+	<phrase n="lang_F_DIALED" t="Aranan"/>
+	<phrase n="lang_F_RETRIEVE" t="Sesli Mesaj"/>
+	<phrase n="lang_F_RETRIEVE_smartlabel" t="Sesli Mesaj"/>
+	<phrase n="lang_F_RETRIEVE_typeSio" t="Sesli Mesaj"/>
+	<phrase n="lang_F_RETRIEVE_ON" t="Sesli Mesaj"/>
+	<phrase n="lang_F_REDIRECT_OFF" t="YönYok"/>
+	<phrase n="lang_F_REDIRECT_OFF_smartlabel" t="YönYok"/>
+	<phrase n="lang_F_REDIRECT_OFF_typeSio" t="Yönlendirme Kapalı"/>
+	<phrase n="lang_F_REDIRECT_ON" t="ÇYön"/>
+	<phrase n="lang_F_REDIRECT_ON_typeSio" t="Çağrıyı Yönlendir"/>
+	<phrase n="lang_F_REDIRECT_smartlabel" t="ÇYön"/>
+	<phrase n="lang_F_RINGER_SILENT" t="Sessiz"/>
+	<phrase n="lang_F_RINGER_SILENT_typeSio" t="Sessiz Mod"/>
+	<phrase n="lang_F_RINGER_SILENT_smartlabel" t="Sessiz"/>
+	<phrase n="lang_F_ABORT" t="ÇIK"/>
+	<phrase n="lang_F_ABORT_typeSio" t="Çıkış"/>
+	<phrase n="lang_F_SUPPORT" t="Yardım"/>
+	<phrase n="lang_F_JUMP_BACK" t="Atla"/>
+	<phrase n="lang_F_JUMP" t="Atla"/>
+	<phrase n="lang_F_REDUCED" t="Küçült"/>
+	<phrase n="lang_F_ALL" t="Daha fazla"/>
+	<phrase n="lang_F_DIALOG" t="Çağrılar"/>
+	<phrase n="lang_F_DIALOG_typeSio" t="Çağrıları İzle"/>
+	<phrase n="lang_F_DIALOG_smartlabel" t="Çağrılar"/>
+	<phrase n="lang_F_HEADSET" t="Klk"/>
+	<phrase n="lang_F_HEADSET_typeSio" t="Kulaklık"/>
+	<phrase n="lang_F_HEADSET_smartlabel" t="Kulaklık"/>
+	<phrase n="lang_F_HEADSET_ON" t="Klk"/>
+	<phrase n="lang_F_HEADSET_ON_typeSio" t="Kulaklık"/>
+	<phrase n="lang_F_HEADSET_ON_smartlabel" t="Kulaklık"/>
+	<phrase n="lang_F_SOFTWARE_UPDATE" t="Yazılım"/>
+	<phrase n="lang_F_UPDATE" t="Güncelleme"/>
+	<phrase n="lang_F_SMS" t="SMS"/>
+	<phrase n="lang_F_CMC" t="CMC"/>
+	<phrase n="lang_F_CALL_COMPLETION" t="CC"/>
+	<phrase n="lang_F_UNMUTE" t="Sessizden çıkar"/>
+	<phrase n="lang_F_UNMUTE_typeSio" t="Sessizden çıkar"/>
+	<phrase n="lang_F_UNMUTE_smartlabel" t="Sessizden çıkar"/>
+	<phrase n="lang_F_MUTE" t="Sessiz"/>
+	<phrase n="lang_F_MUTE_typeSio" t="Sessiz"/>
+	<phrase n="lang_F_MUTE_smartlabel" t="Sessiz"/>
+	<phrase n="lang_F_REG_ACTIVATE" t="Etkinleştir"/>
+	<phrase n="lang_F_ADD_PHONEBOOK" t="Ekle"/>
+	<phrase n="lang_F_ADD_PHONEBOOK_typeSio" t="Kişi Ekle"/>
+	<phrase n="lang_F_LIST_MISSED" t="Cevapsız"/>
+	<phrase n="lang_F_LIST_TAKEN" t="Gelen"/>
+	<phrase n="lang_F_LIST_TAKEN_typeSio" t="Received Calls"/>
+	<phrase n="lang_F_LIST_TAKEN_smartlabel" t="Received"/>
+	<phrase n="lang_F_DETAILS" t="Ayrıntılar"/>
+	<phrase n="lang_F_DND_OFF" t="DND"/>
+	<phrase n="lang_F_DND_OFF_typeSio" t="Rahatsız Etmeyin"/>
+	<phrase n="lang_F_DND_OFF_smartlabel" t="DND"/>
+	<phrase n="lang_F_DND" t="DND"/>
+	<phrase n="lang_F_DND_typeSio" t="Rahatsız Etmeyin"/>
+	<phrase n="lang_F_DND_smartlabel" t="DND"/>
+	<phrase n="lang_F_DEF_ON" t="*Açık"/>
+	<phrase n="lang_F_DEF_OFF" t="*Kapalı"/>
+	<phrase n="lang_F_ON" t="Açık"/>
+	<phrase n="lang_F_OFF" t="Kapalı"/>
+	<phrase n="lang_F_START" t="Başla"/>
+	<phrase n="lang_F_END" t="Bitir"/>
+	<phrase n="lang_F_IDENTITY" t="Kimlik"/>
+	<phrase n="lang_F_SETTINGS_typeSio" t="Ayarlar"/>
+	<phrase n="lang_F_SETTINGS" t="Ayarlar"/>
+	<phrase n="lang_F_EXECUTIVE_ASSISTANT_CONFIG" t="Yönetici-Asistan Yapıland"/>
+	<phrase n="lang_F_EXECUTIVE_CONFIG" t="Yönet.&lt;br&gt;Yapıland"/>
+	<phrase n="lang_F_EXECUTIVE_CONFIG_typeSio" t="Yönetici Yapıland"/>
+	<phrase n="lang_F_ASSISTANT_CONFIG" t="Asist.&lt;br&gt;Yapıland"/>
+	<phrase n="lang_F_ASSISTANT_CONFIG_typeSio" t="Asistan Yapıland"/>
+	<phrase n="lang_F_EXEC_ASSIST_BEHALF_PUI_LISTING" t="Yönetici-Asistan Tarafından"/>
+	<phrase n="lang_F_EXEC_ASSIST_BEHALF" t="Adına"/>
+	<phrase n="lang_F_NEW" t="Yeni"/>
+	<phrase n="lang_F_URLU" t="a»A"/>
+	<phrase n="lang_F_URLU_typeSio" t="Düzenleme Modu"/>
+	<phrase n="lang_F_URLL" t="1»a"/>
+	<phrase n="lang_F_URLL_typeSio" t="Düzenleme Modu"/>
+	<phrase n="lang_F_123" t="A»1"/>
+	<phrase n="lang_F_123_typeSio" t="Düzenleme Modu"/>
+	<phrase n="lang_F_REDIRECT" t="ÇYön"/>
+	<phrase n="lang_F_REDIRECT_typeSio" t="Çağrıyı Yönlendir"/>
+	<phrase n="lang_F_HOLD_typeSio" t="Beklet"/>
+	<phrase n="lang_F_HOLD" t="Beklet"/>
+	<phrase n="lang_F_CONSULTCONF_ADD" t="Ekle"/>
+	<phrase n="lang_F_CONSULTCONF_ADD_typeSio" t="Konferans Ekle"/>
+	<phrase n="lang_F_CONSULTCONF_ADD_smartlabel" t="Ekle"/>
+	<phrase n="lang_F_CONSULTCONF_JOIN" t="Katıl"/>
+	<phrase n="lang_F_CONSULTCONF_JOIN_typeSio" t="Konferansa Katıl"/>
+	<phrase n="lang_F_CONSULTCONF_JOIN_smartlabel" t="Katıl"/>
+	<phrase n="lang_F_CONSULTCONF" t="Konferans"/>
+	<phrase n="lang_F_CONFERENCE" t="Konf"/>
+	<phrase n="lang_F_CONFERENCE_smartlabel" t="Konf"/>
+	<phrase n="lang_F_CONFERENCE_typeSio" t="Konferans"/>
+	<phrase n="lang_F_CONFERENCE_ON" t="Konferans Bekletme"/>
+	<phrase n="lang_F_NO_CONFERENCE" t="konf yok."/>
+	<phrase n="lang_F_DEFLECT" t="Saptır"/>
+	<phrase n="lang_F_BLIND_TRANSFER" t="Kör"/>
+	<phrase n="lang_F_BLIND_TRANSFER_typeSio" t="Kör Aktarım"/>
+	<phrase n="lang_F_TRANSFER" t="Trsfr"/>
+	<phrase n="lang_F_TRANSFER_typeSio" t="Aktar"/>
+	<phrase n="lang_F_TRANSFER_smartlabel" t="Aktar"/>
+	<phrase n="lang_F_TRANSFER_CALL" t="Bu Aramayı Aktar"/>
+	<phrase n="lang_F_TRANSFER_SELECTED" t="Seçileni Aktar"/>
+	<phrase n="lang_F_DENY" t="Reddet"/>
+	<phrase n="lang_F_DIAL" t="Çevir"/>
+	<phrase n="lang_F_EDIT" t="Düzenle"/>
+	<phrase n="lang_F_CLEAR" t="Sil"/>
+	<phrase n="lang_F_DOWN" t="Aşağı"/>
+	<phrase n="lang_F_UP" t="Yukarı"/>
+	<phrase n="lang_F_LEFT" t="Sol"/>
+	<phrase n="lang_F_RIGHT" t="Sağ"/>
+	<phrase n="lang_F_EXTENSION" t="Dah"/>
+	<phrase n="lang_F_EXTENSION_typeSio" t="Dahili Numara"/>
+	<phrase n="lang_F_EXTENSION_smartlabel" t="Dah"/>
+	<phrase n="lang_F_MESSAGE" t="Mesaj"/>
+	<phrase n="lang_F_CONTACT_STATE_UNKNOWN" t="Bilinmeyen"/>
+	<phrase n="lang_F_CONTACT_STATE_AVAILABLE" t="Mevcut"/>
+	<phrase n="lang_F_CONTACT_STATE_AVAILABLE_ON_MOBILE" t="Mevcut (Mobil)"/>
+	<phrase n="lang_F_CONTACT_STATE_AVAILABLE_AT_DESK" t="Mevcut (Masa)"/>
+	<phrase n="lang_F_CONTACT_STATE_INACTIVE" t="Etkin Değil"/>
+	<phrase n="lang_F_CONTACT_STATE_BUSY" t="Meşgul"/>
+	<phrase n="lang_F_CONTACT_STATE_URGENT_INTERRUPTIONS_ONLY" t="Sadece acil kesintiler"/>
+	<phrase n="lang_F_CONTACT_STATE_IN_A_CALL" t="Görüşüyor"/>
+	<phrase n="lang_F_CONTACT_STATE_IN_A_CONFERENCE" t="In a Conference"/>
+	<phrase n="lang_F_CONTACT_STATE_IN_A_MEETING" t="Toplantıda"/>
+	<phrase n="lang_F_CONTACT_STATE_MEETING" t="Toplantı"/>
+	<phrase n="lang_F_CONTACT_STATE_HOLDING" t="Bekletiliyor"/>
+	<phrase n="lang_F_CONTACT_STATE_DND" t="Rahatsız Etmeyin"/>
+	<phrase n="lang_F_CONTACT_STATE_DND_ALL" t="Rahatsız Etmeyin (Tümü)"/>
+	<phrase n="lang_F_CONTACT_STATE_DND_SELF" t="Rahatsız Etmeyin (Öz)"/>
+	<phrase n="lang_F_CONTACT_STATE_BE_RIGHT_BACK" t="Hemen Dönecek"/>
+	<phrase n="lang_F_CONTACT_STATE_AWAY" t="Dışarıda"/>
+	<phrase n="lang_F_CONTACT_STATE_OFFLINE" t="Çevrimdışı"/>
+	<phrase n="lang_F_CONTACT_STATE_INVISIBLE" t="Invisible"/>
+	<phrase n="lang_F_CONTACT_STATE_GROUP" t="Group"/>
+	<phrase n="lang_F_KEYEVENT" t="Tuş"/>
+	<phrase n="lang_F_KEYEVENT_typeSio" t="Kilit Olay"/>
+	<phrase n="lang_F_KEYEVENT_short" t="Tuş"/>
+	<phrase n="lang_F_XML" t="XML"/>
+	<phrase n="lang_continuous_text_speed_dial" t="Hızlı Arama"/>
+	<phrase n="lang_continuous_text_reboot" t="Yeniden Başlat"/>
+	<phrase n="lang_continuous_text_network_restart" t="Network restart"/>
+	<phrase n="lang_continuous_text_search" t="Ara"/>
+	<phrase n="lang_continuous_text_cancel" t="İptal"/>
+	<phrase n="lang_continuous_text_yes" t="Evet"/>
+	<phrase n="lang_continuous_text_no" t="Hayır"/>
+	<phrase n="lang_confirm_reboot" t="Yeniden Başlat?"/>
+	<phrase n="lang_on" t="Açık"/>
+	<phrase n="lang_off" t="Kapalı"/>
+	<phrase n="lang_busy" t="Meşgul"/>
+	<phrase n="lang_short" t="Kısa"/>
+	<phrase n="lang_full" t="Dolu"/>
+	<phrase n="lang_half" t="Yarım"/>
+	<phrase n="lang_F_HOLD_PRIVATE" t="Ö Tut"/>
+	<phrase n="lang_F_HOLD_PRIVATE_typeSio" t="Özel Tut"/>
+	<phrase n="lang_F_HOLD_PRIVATE_smartlabel" t="Özl Tut"/>
+	<phrase n="lang_conference_off" t="Kon.Bek"/>
+	<phrase n="lang_conference_off_typeSio" t="Konferansı Kapat"/>
+	<phrase n="lang_edit_cmc" t="İstemci Kodu:"/>
+	<phrase n="lang_dnd" t="DND"/>
+	<phrase n="lang_red" t="ÇYön"/>
+	<phrase n="lang_red_typeSio" t="Çağrıyı Yönlendir"/>
+	<phrase n="lang_missed" t="Cevapsız: "/>
+	<phrase n="lang_missed_typeSio" t="Cevapsız: "/>
+	<phrase n="lang_edit" t="Düzenle"/>
+	<phrase n="lang_F_EDIT_AND_DIAL" t="Yeniden Düzenle"/>
+	<phrase n="lang_F_EDIT_AND_DIAL_typeSio" t="Düzenle ve Çevir"/>
+	<phrase n="lang_edit_dial" t="Düzenle ve Çevir"/>
+	<phrase n="lang_dhcp" t="DHCP"/>
+	<phrase n="lang_enum" t="ENUM"/>
+	<phrase n="lang_mwi_mailbox1" t="Posta Kutusu:"/>
+	<phrase n="lang_mwi_mailbox2" t="Var"/>
+	<phrase n="lang_mwi_mailbox3" t="Mesajınız var."/>
+	<phrase n="lang_mwi_urgent" t="acil"/>
+	<phrase n="lang_mwi_goto_mailbox" t="Posta Kutusuna Git?"/>
+	<phrase n="lang_challenge_user" t="Oturum aç"/>
+	<phrase n="lang_challenge_pw" t="Şifre"/>
+	<phrase n="lang_use_enum" t="ENUM Kullan?"/>
+	<phrase n="lang_wiz_dhcp" t="DHCP kullanıyor musunuz?"/>
+	<phrase n="lang_wiz_l2tp_ip_adr" t="L2TP IP Adr:"/>
+	<phrase n="lang_wiz_ip_adr" t="IP Adr:"/>
+	<phrase n="lang_wiz_mac" t="MAC:"/>
+	<phrase n="lang_wiz_wifi_mac" t="Wi-Fi MAC:"/>
+	<phrase n="lang_wiz_version" t="Versiyon:"/>
+	<phrase n="lang_wiz_netmask" t="Ağ Maskesi:"/>
+	<phrase n="lang_wiz_gateway" t="IP Ağ Geçidi:"/>
+	<phrase n="lang_wiz_dns_server" t="DNS Sunucu:"/>
+	<phrase n="lang_wiz_welcome" t="Hoşgeldiniz! Giriş yapmak için bir tuşa basın."/>
+	<phrase n="lang_wiz_http_user" t="Enter new HTTP username"/>
+	<phrase n="lang_wiz_http_pass" t="Enter new HTTP password"/>
+	<phrase n="lang_wiz_short_pass" t="Password too short"/>
+	<phrase n="lang_terminated_finished" t="Bitti"/>
+	<phrase n="lang_try_parking" t="Çağrı Park Ediliyor"/>
+	<phrase n="lang_try_parking_typeSio" t="Çağrı Park Ediliyor"/>
+	<phrase n="lang_holding" t="Beklemedeki Aramalar: "/>
+	<phrase n="lang_select_list" t="Çağrı Geçmişi"/>
+	<phrase n="lang_list_all" t="Hepsi"/>
+	<phrase n="lang_list_new" t="Yeni"/>
+	<phrase n="lang_list_old" t="Eski"/>
+	<phrase n="lang_list_missed" t="Cevapsız"/>
+	<phrase n="lang_list_taken" t="Gelen"/>
+	<phrase n="lang_list_dialed" t="Aranan"/>
+	<phrase n="lang_list_no_data" t="(Mevcut veri bulunmamaktadır)"/>
+	<phrase n="lang_list_details" t="Ayrıntılar"/>
+	<phrase n="lang_list_details_time" t="Zaman:"/>
+	<phrase n="lang_list_details_duration" t="Süre:"/>
+	<phrase n="lang_list_details_costs" t="Maliyet:"/>
+	<phrase n="lang_list_details_missed" t="Cevapsız:"/>
+	<phrase n="lang_list_details_to" t="Kime:"/>
+	<phrase n="lang_list_details_from" t="Kimden:"/>
+	<phrase n="lang_reg_activate" t="Etkinleştir"/>
+	<phrase n="lang_reg_account" t="Hesap:"/>
+	<phrase n="lang_reg_registrar" t="Alan Adı Yazmanı:"/>
+	<phrase n="lang_reg_explanation_failed" t="Başarısız kayıt"/>
+	<phrase n="lang_reg_explanation_registering" t="Kayıt oluyor"/>
+	<phrase n="lang_reg_explanation_registered" t="Kayıtlı"/>
+	<phrase n="lang_menu_info_320" t="Bilgi"/>
+	<phrase n="lang_menu_conf_reset" t="Ayarları sıfırla"/>
+	<phrase n="lang_menu_gen_contrast" t="Kontrast"/>
+	<phrase n="lang_menu_gen_ringtone" t="Zil"/>
+	<phrase n="lang_menu_web_webserver_type" t="Sunucu"/>
+	<phrase n="lang_menu_function_key" t="İşlev Tuşları"/>
+	<phrase n="lang_menu_tser_timer" t="Zamanlayıcı"/>
+	<phrase n="lang_menu_red_target" t="Hedef"/>
+	<phrase n="lang_menu_ringer1" t="Zil 1"/>
+	<phrase n="lang_menu_ringer2" t="Zil 2"/>
+	<phrase n="lang_menu_ringer3" t="Zil 3"/>
+	<phrase n="lang_menu_ringer4" t="Zil 4"/>
+	<phrase n="lang_menu_ringer5" t="Zil 5"/>
+	<phrase n="lang_menu_ringer6" t="Zil 6"/>
+	<phrase n="lang_menu_ringer7" t="Zil 7"/>
+	<phrase n="lang_menu_ringer8" t="Zil 8"/>
+	<phrase n="lang_menu_ringer9" t="Zil 9"/>
+	<phrase n="lang_menu_ringer10" t="Zil 10"/>
+	<phrase n="lang_vol_headset" t="Kulaklık Ses Ayarı"/>
+	<phrase n="lang_vol_handset" t="Ahize Ses Ayarı"/>
+	<phrase n="lang_vol_speaker" t="Hoparlör Ses Ayarı"/>
+	<phrase n="lang_audio_speaker" t="Hoparlör"/>
+	<phrase n="lang_audio_handset" t="Ahize"/>
+	<phrase n="lang_audio_headset" t="Kulaklık"/>
+	<phrase n="lang_vol_contrast" t="Ekran Kontrastı"/>
+	<phrase n="lang_confirm_factory" t="Fabrika Ayarları?"/>
+	<phrase n="lang_confirm_logoff_all" t="Tüm oturumları kapat?"/>
+	<phrase n="lang_calling" t="Arıyor"/>
+	<phrase n="lang_connected" t="Bağlandı"/>
+	<phrase n="lang_connected_typeSio" t="Bağlandı"/>
+	<phrase n="lang_ringing" t="Çalıyor"/>
+	<phrase n="lang_enter_number" t="Numarayı Girin"/>
+	<phrase n="lang_held_by" t="Beklemeye alındı: "/>
+	<phrase n="lang_ok" t="[Ok?]"/>
+	<phrase n="lang_menu100_phone_book" t="Dizin"/>
+	<phrase n="lang_menu100_ldap_book" t="LDAP Erişim"/>
+	<phrase n="lang_menu100_call_lists" t="Çağrı Geçmişi"/>
+	<phrase n="lang_menu100_settings" t="Ayarlar"/>
+	<phrase n="lang_sel100_logoff_all" t="Tüm Kimlik Oturumlarını Kapat"/>
+	<phrase n="lang_sel100_logoff_one" t="Kullanıcı Oturumunu Kapat"/>
+	<phrase n="lang_sel100_activeline" t="Giden Kimlik Seçin"/>
+	<phrase n="lang_sel100_admin_mode" t="Yönetici Modu"/>
+	<phrase n="lang_sel100_user_mode" t="Kullanıcı Modu"/>
+	<phrase n="lang_sel100_net_info" t="Ağ Bilgisi"/>
+	<phrase n="lang_sel100_mem_info" t="Bellek Bilgisi"/>
+	<phrase n="lang_menu_ringtone" t="Zil Tonu"/>
+	<phrase n="lang_dnd_active" t="Rahatsız Etmeyin Etkin"/>
+	<phrase n="lang_update" t="Yazılım"/>
+	<phrase n="lang_update_a" t="Çalıştır?"/>
+	<phrase n="lang_update_reboot" t="Yazılım Güncellemesi için Yeniden Başlat"/>
+	<phrase n="lang_unplugged" t="Bağlantısız"/>
+	<phrase n="lang_ethernet_cable" t="Ethernet Kablosu Takılı Değil"/>
+	<phrase n="lang_hid_plug" t="HID Cihaz Bağlanıyor"/>
+	<phrase n="lang_hid_connected" t="HID Cihazı Bağlandı"/>
+	<phrase n="lang_hid_disconnected" t="HID Cihazı Bağlantısı Kesildi"/>
+	<phrase n="lang_temperature" t="Temperature"/>
+	<phrase n="lang_temperature_connected" t="Temperature sensor connected"/>
+	<phrase n="lang_language" t="Dil"/>
+	<phrase n="lang_current_date" t="Tarih"/>
+	<phrase n="lang_current_time" t="Zaman"/>
+	<phrase n="lang_network_settings" t="Ağ"/>
+	<phrase n="lang_dns_domain" t="DNS Etki Alanı"/>
+	<phrase n="lang_dns_server1" t="DNS Sunucu1"/>
+	<phrase n="lang_dns_server2" t="DNS Sunucu2"/>
+	<phrase n="lang_ntp_server" t="NTP Sunucu"/>
+	<phrase n="lang_no_ip_adr" t="Geçersiz IP Adr"/>
+	<phrase n="lang_password" t="Şifre"/>
+	<phrase n="lang_username" t="Kullanıcı Adı"/>
+	<phrase n="lang_reset_settings" t="Değerleri Sıfırla"/>
+	<phrase n="lang_networkadvanced_settings" t="Gelişmiş ayarlar"/>
+	<phrase n="lang_admin_mode_password" t="Yönetici Modu Şifresi"/>
+	<phrase n="lang_guess_number" t="Hızlı Arama"/>
+	<phrase n="lang_guess_number_len" t="Hızlı Arama Başlatma Uzunluğu"/>
+	<phrase n="lang_admin_mode_pwd" t="Ynt Mod Şifr"/>
+	<phrase n="lang_call_waiting" t="Çağrı Bekletme"/>
+	<phrase n="lang_menu100_red_time" t="Çağrı Yönlendirme zamanı"/>
+	<phrase n="lang_menu100_red_time_typeSio" t="Çağrı Yönlendirme zamanı"/>
+	<phrase n="lang_menu100_timezone" t="Zaman Dilimi"/>
+	<phrase n="lang_menu100_dialtone" t="Ton Şeması"/>
+	<phrase n="lang_menu100_call_completion" t="Çağrı Sonlandırma"/>
+	<phrase n="lang_menu100_cc_waiting" t="Bekliyor: "/>
+	<phrase n="lang_menu100_cc_dial" t="Ara: "/>
+	<phrase n="lang_menu100_netmask" t="Ağ Maskesi"/>
+	<phrase n="lang_menu100_gateway" t="IP Ağ Geçidi"/>
+	<phrase n="lang_menu100_webserver_type" t="Web Sunucusu Türü"/>
+	<phrase n="lang_enum100_disp_always" t="Her zaman"/>
+	<phrase n="lang_enum100_disp_on" t="Açık"/>
+	<phrase n="lang_enum100_disp_off" t="Kapalı"/>
+	<phrase n="lang_enum_disp_webserver_off" t="Kapalı"/>
+	<phrase n="lang_enum_disp_webserver_http" t="Sadece HTTP"/>
+	<phrase n="lang_enum_disp_webserver_https" t="Sadece HTTPS"/>
+	<phrase n="lang_enum_disp_webserver_http_https" t="HTTP ve HTTPS"/>
+	<phrase n="lang_enum_disp_func_key_destination" t="Dahili Numara"/>
+	<phrase n="lang_enum_disp_func_key" t="Tuş"/>
+	<phrase n="lang_xsi_silent_alert" t="Sessiz Uyarı"/>
+	<phrase n="lang_privacy_out" t="Giden Kimliği Gizle"/>
+	<phrase n="lang_quick_transfer" t="Quick transfer"/>
+	<phrase n="lang_quick_transfer_newcall" t="Make new call"/>
+	<phrase n="lang_quick_transfer_blind" t="Blind xfer"/>
+	<phrase n="lang_quick_transfer_attended" t="Attended xfer"/>
+	<phrase n="lang_privacy_in" t="Anonim Olanı Reddet"/>
+	<phrase n="lang_privacy_in_typeSio" t="Anonim Olanı Reddet"/>
+	<phrase n="lang_auto_dial" t="Otomatik Çevir"/>
+	<phrase n="lang_call_completion" t="Çağrı Sonlandırma"/>
+	<phrase n="lang_vlan_id" t="VLAN ID (1-4094)"/>
+	<phrase n="lang_vlan_qos" t="VLAN Önceliği (0-7)"/>
+	<phrase n="lang_vlan_reset" t="VLAN’ı sıfırla"/>
+	<phrase n="lang_vlan_port_tagging" t="VLAN tagging on LAN"/>
+	<phrase n="lang_vlan_pc_id" t="VLAN ID on LAN port"/>
+	<phrase n="lang_identity_settings" t="Kimlik"/>
+	<phrase n="lang_preferences_settings" t="Tercihler"/>
+	<phrase n="lang_maintenance_settings" t="Bakım"/>
+	<phrase n="lang_auto_connect_indication" t="Otomatik Cevap Göstergesi"/>
+	<phrase n="lang_sel100_reregister_line" t="Kimliği Yeniden Kaydet"/>
+	<phrase n="lang_sel100_edit_line" t="Kimliği Düzenle"/>
+	<phrase n="lang_enum_disp_cw_visual" t="Sadece Görsel"/>
+	<phrase n="lang_enum_disp_cw_visual_short" t="Görsel"/>
+	<phrase n="lang_enum_disp_cw_ringer" t="Zil"/>
+	<phrase n="lang_confirm_del_adr_item" t="Emin misiniz?"/>
+	<phrase n="lang_confirm_del_adr_item_title" t="Dizin öğesini sil"/>
+	<phrase n="lang_confirm_del_adr_item_title_typeSio" t="Dizin öğesini sil"/>
+	<phrase n="lang_confirm_del_adr_title" t="Dizini sil"/>
+	<phrase n="lang_confirm_del_adr_item_title_short" t="Dizin öğesini sil"/>
+	<phrase n="lang_vol_ringer" t="Zil Sesi Ayarı"/>
+	<phrase n="lang_keybd_unlock_PIN" t="Klavye kilidini açma PIN"/>
+	<phrase n="lang_enum_disp_func_key_mult" t="Paylaşımlı Hat"/>
+	<phrase n="lang_enum_disp_func_key_keyevent" t="Kilit Olay"/>
+	<phrase n="lang_menu_ringer_silent" t="Sessiz"/>
+	<phrase n="lang_menu_ringer_custom" t="Özel"/>
+	<phrase n="lang_enum_disp_func_key_none" t="Hiçbiri"/>
+	<phrase n="lang_presence_online" t="Çevrimiçi"/>
+	<phrase n="lang_presence_busy" t="Meşgul"/>
+	<phrase n="lang_presence_invisible" t="Görünmez"/>
+	<phrase n="lang_presence_title" t="Varlık Durumu"/>
+	<phrase n="lang_dialog_title" t="Çağrılar"/>
+	<phrase n="lang_buddies_title" t="Kişiler"/>
+	<phrase n="lang_use_backlight" t="Arka Aydınlatma"/>
+	<phrase n="lang_backlight_on_activity" t="Etkinlikte Arka Aydınlatma"/>
+	<phrase n="lang_backlight_when_idle" t="Etkin Olmadıkta Arka Aydınlatma"/>
+	<phrase n="lang_activity" t="İşlem"/>
+	<phrase n="lang_display_settings" t="Ekran"/>
+	<phrase n="lang_audio_settings" t="Ses"/>
+	<phrase n="lang_redirect_settings" t="Çağrı Yönlendirme"/>
+	<phrase n="lang_redirect_settings_typeSio" t="Çağrı Yönlendirme"/>
+	<phrase n="lang_reboot_required" t="Yeniden başlatma gerekli"/>
+	<phrase n="lang_network_restart_required" t="Network restart required"/>
+	<phrase n="lang_auto_redialing" t="Yeniden Çevirme"/>
+	<phrase n="lang_conference" t="Konferans"/>
+	<phrase n="lang_directory_search" t="Dizin Ara"/>
+	<phrase n="lang_wrong_pw" t="Yanlış şifre"/>
+	<phrase n="lang_http_password_not_set" t="HTTP Şifresi belirlenmemiş"/>
+	<phrase n="lang_start_auto_redial" t="Otomatik Tekrar Arama?"/>
+	<phrase n="lang_call_features_settings" t="Çağrı Özellikleri"/>
+	<phrase n="lang_all" t="All"/>
+	<phrase n="lang_outgoing_calls_settings" t="Giden Çağrılar"/>
+	<phrase n="lang_incoming_calls_settings" t="Gelen Çağrılar"/>
+	<phrase n="lang_ip_settings_wizzard" t="IP Ayarları"/>
+	<phrase n="lang_webserver_settings" t="Web sunucusu"/>
+	<phrase n="lang_vlan_settings" t="VLAN"/>
+	<phrase n="lang_wlan_settings" t="WLAN"/>
+	<phrase n="lang_wifi_reboot_to_connect_to" t="Bağlanmak için yeniden başlat"/>
+	<phrase n="lang_system_information_menu" t="Sistem Bilgisi"/>
+	<phrase n="lang_its_a_caller_info" t="Arayan"/>
+	<phrase n="lang_its_a_callee_info" t="Aranan"/>
+	<phrase n="lang_redirect_all" t="Hepsini Yönlendir"/>
+	<phrase n="lang_redirect_all_typeSio" t="Hepsini Yönlendir"/>
+	<phrase n="lang_redirect_busy" t="Meşgulse Yönlendir"/>
+	<phrase n="lang_redirect_busy_typeSio" t="Meşgulse Yönlendir"/>
+	<phrase n="lang_redirect_time" t="Zaman Aşımı Sonrası Yönlendir"/>
+	<phrase n="lang_redirect_time_typeSio" t="Zaman Aşımı Sonrası Yönlendir"/>
+	<phrase n="lang_do_redirect" t="Yönlendirmeyi Etkinleştir"/>
+	<phrase n="lang_do_redirect_typeSio" t="Yönlendirmeyi Etkinleştir"/>
+	<phrase n="lang_redirect_target" t="Yönlendirme Hedefi"/>
+	<phrase n="lang_redirect_target_typeSio" t="Yönlendirme Hedefi"/>
+	<phrase n="lang_help_label" t="Yardım"/>
+	<phrase n="lang_sysinfo_mem1" t="RAM:"/>
+	<phrase n="lang_sysinfo_mem2" t="-ın"/>
+	<phrase n="lang_sysinfo_mem3" t="serbest"/>
+	<phrase n="lang_goto_phonepage_msg" t="Telefonunuzu ayarlamak için, lütfen web tarayıcınızda şu sayfaya gidin:"/>
+	<phrase n="lang_goto_phonepage_msg_typeSio" t="Telefonunuzu ayarlamak için, lütfen web tarayıcınızda şu sayfaya gidin:"/>
+	<phrase n="lang_goto_help_msg" t="Daha fazla yardım için:"/>
+	<phrase n="lang_linestate_connected" t="bağlı"/>
+	<phrase n="lang_linestate_on_hold" t="beklemede"/>
+	<phrase n="lang_linestate_ringing" t="çalıyor"/>
+	<phrase n="lang_linename_message" t="Mesaj"/>
+	<phrase n="lang_linename_redial" t="Tekrar Ara"/>
+	<phrase n="lang_linename_transfer" t="Aktar"/>
+	<phrase n="lang_linename_rec_on" t="Kayda Başla"/>
+	<phrase n="lang_linename_rec_off" t="Kaydı Durdur"/>
+	<phrase n="lang_linetype_auto_answer" t="Otomatik Cevap"/>
+	<phrase n="lang_linetype_blf" t="BLF"/>
+	<phrase n="lang_connecting" t="Bağlanıyor"/>
+	<phrase n="lang_fkey_add_contact_typeSio" t="Kişi Ekle"/>
+	<phrase n="lang_cancelconference" t="Konferansı iptal et"/>
+	<phrase n="lang_confirm_cancelconference" t="Konferanstan çıkmak?"/>
+	<phrase n="lang_xmlgui_dialnumber" t="Numara Çevir"/>
+	<phrase n="lang_xmlgui_contactlist" t="Kişi listesi"/>
+	<phrase n="lang_xmlgui_dial" t="Çevir"/>
+	<phrase n="lang_menu_equalizer" t="Ekolayzer"/>
+	<phrase n="lang_equalizer_soft" t="Yumuşak ses"/>
+	<phrase n="lang_equalizer_normal" t="Normal ses"/>
+	<phrase n="lang_equalizer_bright" t="Parlak ses"/>
+	<phrase n="lang_contactpool" t="Havuz"/>
+	<phrase n="lang_tb_nickname" t="Takma Ad"/>
+	<phrase n="lang_tb_number" t="Telefon Numarası"/>
+	<phrase n="lang_tb_contact" t="Kişi Türü"/>
+	<phrase n="lang_tb_outgoing_id" t="Giden Kimlik"/>
+	<phrase n="lang_tb_firstname" t="Ad"/>
+	<phrase n="lang_tb_lastname" t="Soyad"/>
+	<phrase n="lang_tb_group" t="Grup"/>
+	<phrase n="lang_day" t="Gün"/>
+	<phrase n="lang_month" t="Ay"/>
+	<phrase n="lang_year" t="Yıl"/>
+	<phrase n="lang_tb_title" t="Ünvan"/>
+	<phrase n="lang_tb_organization" t="Şirket"/>
+	<phrase n="lang_tb_email" t="E-posta"/>
+	<phrase n="lang_tb_note" t="Not"/>
+	<phrase n="lang_tb_photo" t="Resim"/>
+	<phrase n="lang_tb_favorite" t="Favori"/>
+	<phrase n="lang_linename_transfer_short" t="Trsfr"/>
+	<phrase n="lang_linetype_key_event_short" t="Tuş"/>
+	<phrase n="lang_linetype_url_short" t="URL"/>
+	<phrase n="lang_grouptype_family" t="Aile"/>
+	<phrase n="lang_grouptype_friend" t="Arkadaş"/>
+	<phrase n="lang_grouptype_collegue" t="İş arkadaşı"/>
+	<phrase n="lang_grouptype_work" t="İş"/>
+	<phrase n="lang_title_sort" t="Sıralama türü"/>
+	<phrase n="lang_title_select_entry" t="Kayıt Seç"/>
+	<phrase n="lang_entry_general" t="Genel Detaylar"/>
+	<phrase n="lang_title_entry_general" t="Genel Detaylar"/>
+	<phrase n="lang_fav_add_from_tbook" t="Telefon Rehberinden Ekle"/>
+	<phrase n="lang_redirect_on_timeout" t="zaman aşımında yönlendir:"/>
+	<phrase n="lang_redirect_on_timeout_typeSio" t="zaman aşımında yönlendir:"/>
+	<phrase n="lang_redirect_when_busy" t="meşgul olduğunda yönlendir:"/>
+	<phrase n="lang_redirect_when_busy_typeSio" t="meşgul olduğunda yönlendir:"/>
+	<phrase n="lang_sip_disabled" t="SIP devre dışı"/>
+	<phrase n="lang_low_memory" t="Yetersiz Bellek"/>
+	<phrase n="lang_title_error" t="Hata"/>
+	<phrase n="lang_error_code" t="hata kodu:"/>
+	<phrase n="lang_bad_server_response" t="hatalı sunucu yanıtı"/>
+	<phrase n="lang_bad_xml_response" t="hatalı XML yanıtı..."/>
+	<phrase n="lang_title_loading" t="Yükleniyor"/>
+	<phrase n="lang_active_id" t="Etkin Kimlik"/>
+	<phrase n="lang_1st_id" t="1. kimlik"/>
+	<phrase n="lang_2nd_id" t="2. kimlik"/>
+	<phrase n="lang_3rd_id" t="3. kimlik"/>
+	<phrase n="lang_4th_id" t="4. kimlik"/>
+	<phrase n="lang_5th_id" t="5. kimlik"/>
+	<phrase n="lang_6th_id" t="6. kimlik"/>
+	<phrase n="lang_7th_id" t="7. kimlik"/>
+	<phrase n="lang_8th_id" t="8. kimlik"/>
+	<phrase n="lang_9th_id" t="9. kimlik"/>
+	<phrase n="lang_10th_id" t="10. kimlik"/>
+	<phrase n="lang_11th_id" t="11. kimlik"/>
+	<phrase n="lang_12th_id" t="12. kimlik"/>
+	<phrase n="lang_contacttype_vip" t="VIP"/>
+	<phrase n="lang_contacttype_deny" t="blok"/>
+	<phrase n="lang_unknown" t="Bilinmeyen"/>
+	<phrase n="lang_month_01" t="Ocak"/>
+	<phrase n="lang_month_02" t="Şubat"/>
+	<phrase n="lang_month_03" t="Mart"/>
+	<phrase n="lang_month_04" t="Nisan"/>
+	<phrase n="lang_month_05" t="Mayıs"/>
+	<phrase n="lang_month_06" t="Haziran"/>
+	<phrase n="lang_month_07" t="Temmuz"/>
+	<phrase n="lang_month_08" t="Ağustos"/>
+	<phrase n="lang_month_09" t="Eylül"/>
+	<phrase n="lang_month_10" t="Ekim"/>
+	<phrase n="lang_month_11" t="Kasım"/>
+	<phrase n="lang_month_12" t="Aralık"/>
+	<phrase n="lang_tb_name_label" t="Ad"/>
+	<phrase n="lang_tb_number_label" t="Telefon"/>
+	<phrase n="lang_title_transfer" t="Aktarma Tarafı"/>
+	<phrase n="lang_linestate_label" t="Durum"/>
+	<phrase n="lang_reboot_uploads" t="Yüklemeleri etkinleştirmek için yeniden başlatılıyor."/>
+	<phrase n="lang_cc_dial_now" t="Şimdi ara?"/>
+	<phrase n="lang_cc_complete_now" t="Aramanızı tamamlayabilirsiniz"/>
+	<phrase n="lang_cc_waiting_for" t="Aramayı tamamlamak için bekleniyor"/>
+	<phrase n="lang_cc_set_warning" t="şu anda arama tamamlama zaten ayarlanmış, ancak üzerine yazabilirsiniz."/>
+	<phrase n="lang_cc_change_title" t="Çağrı Tamamlama Hedefini Değiştir?"/>
+	<phrase n="lang_cc_change_message" t="Mevcut CC Hedefinin değiştiriyor"/>
+	<phrase n="lang_cc_status_waiting_on" t="%dst hazır olması bekleniyor."/>
+	<phrase n="lang_cc_activate" t="aramayı tamamlamak için bekleniyor."/>
+	<phrase n="lang_cc_activated" t="hala aramayı tamamlamak için bekleniyor."/>
+	<phrase n="lang_call_contact" t="Kişiyi Ara"/>
+	<phrase n="lang_call_work" t="İşi Ara"/>
+	<phrase n="lang_call_work_typeSio" t="İşi Ara"/>
+	<phrase n="lang_call_mobile" t="Cepi Ara"/>
+	<phrase n="lang_call_home" t="Evi Ara"/>
+	<phrase n="lang_call_home_typeSio" t="Evi Ara"/>
+	<phrase n="lang_call_other" t="Diğerleri Ara"/>
+	<phrase n="lang_call_voicemail" t="Sesli Mesaj Ara"/>
+	<phrase n="lang_xfer_to_contact" t="Kişiye Aktar"/>
+	<phrase n="lang_xfer_to_work" t="İşe Aktar"/>
+	<phrase n="lang_xfer_to_work_typeSio" t="İşe Aktar"/>
+	<phrase n="lang_xfer_to_mobile" t="Cep Telefonuna Aktar"/>
+	<phrase n="lang_xfer_to_home" t="Eve Aktar"/>
+	<phrase n="lang_xfer_to_home_typeSio" t="Eve Aktar"/>
+	<phrase n="lang_xfer_to_other" t="Diğerine Aktar"/>
+	<phrase n="lang_xfer_to_voicemail" t="Sesli Postaya Aktar"/>
+	<phrase n="lang_cfw_to_contact" t="Kişiye Yönlendir"/>
+	<phrase n="lang_cfw_to_contact_typeSio" t="Kişiye Yönlendir"/>
+	<phrase n="lang_cfw_to_voicemail_typeSio" t="Sesli Mesaja Yönlendir"/>
+	<phrase n="lang_cfw_to_work" t="İşe Yönlendir"/>
+	<phrase n="lang_cfw_to_work_typeSio" t="İşe Yönlendir"/>
+	<phrase n="lang_cfw_to_mobile" t="Cep Telefonuna Yönlendir"/>
+	<phrase n="lang_cfw_to_mobile_typeSio" t="Cep Telefonuna Yönlendir"/>
+	<phrase n="lang_cfw_to_home" t="Eve Yönlendir"/>
+	<phrase n="lang_cfw_to_home_typeSio" t="Eve Yönlendir"/>
+	<phrase n="lang_cfw_to_other" t="Diğerine Yönlendir"/>
+	<phrase n="lang_cfw_to_other_typeSio" t="Diğerine Yönlendir"/>
+	<phrase n="lang_cfw_to_voicemail" t="Sesli Mesaja Yönlendir"/>
+	<phrase n="lang_assign_to_key" t="Tuşa Ata"/>
+	<phrase n="lang_contact_state_unknown" t="Bilinmeyen"/>
+	<phrase n="lang_contact_state_available" t="Mevcut"/>
+	<phrase n="lang_contact_state_available_on_mobile" t="Mevcut (Mobil)"/>
+	<phrase n="lang_contact_state_available_at_desk" t="Mevcut (Masa)"/>
+	<phrase n="lang_contact_state_inactive" t="Etkin Değil"/>
+	<phrase n="lang_contact_state_busy" t="Meşgul"/>
+	<phrase n="lang_contact_state_urgent_interruptions_only" t="Sadece acil kesintiler"/>
+	<phrase n="lang_contact_state_in_a_call" t="Görüşüyor"/>
+	<phrase n="lang_contact_state_in_a_meeting" t="Toplantıda"/>
+	<phrase n="lang_contact_state_meeting" t="Toplantı"/>
+	<phrase n="lang_contact_state_holding" t="Bekletiliyor"/>
+	<phrase n="lang_contact_state_dnd" t="Rahatsız Etmeyin"/>
+	<phrase n="lang_contact_state_dnd_all" t="Rahatsız Etmeyin (Tümü)"/>
+	<phrase n="lang_contact_state_dnd_self" t="Rahatsız Etmeyin (Öz)"/>
+	<phrase n="lang_contact_state_be_right_back" t="Hemen Dönecek"/>
+	<phrase n="lang_contact_state_away" t="Dışarıda"/>
+	<phrase n="lang_contact_state_offline" t="Çevrimdışı"/>
+	<phrase n="lang_contact_state_reset" t="Durumu Sıfırla"/>
+	<phrase n="lang_remote_book_name_ldap" t="LDAP Dizini"/>
+	<phrase n="lang_remote_book_choose_title" t="Adres defterini seç"/>
+	<phrase n="lang_title_add_to_favorites" t="Favorilere Ekle"/>
+	<phrase n="lang_title_add_to_favorites_typeSio" t="Favorilere Ekle"/>
+	<phrase n="lang_title_favorites" t="Favoriler"/>
+	<phrase n="lang_unknown_partner" t="Bilinmeyen"/>
+	<phrase n="lang_nrtype_sip" t="SIP"/>
+	<phrase n="lang_nrtype_business" t="İş"/>
+	<phrase n="lang_nrtype_fixed" t="Sabit hat"/>
+	<phrase n="lang_nrtype_extension" t="Dahili Numara"/>
+	<phrase n="lang_tb_number_type" t="Numara Türü"/>
+	<phrase n="lang_tb_number_type_label" t="Tür"/>
+	<phrase n="lang_title_no_permission" t="İzin yok"/>
+	<phrase n="lang_target_office" t="Ofis"/>
+	<phrase n="lang_target_replyto" t="CevapVer"/>
+	<phrase n="lang_target_unqualified" t="Nitelenmemiş"/>
+	<phrase n="lang_target_work" t="İş"/>
+	<phrase n="lang_target_work_typeSio" t="İş"/>
+	<phrase n="lang_target_mobile" t="Mobil"/>
+	<phrase n="lang_target_home" t="Ev"/>
+	<phrase n="lang_target_home_typeSio" t="Ev"/>
+	<phrase n="lang_target_other" t="Diğer"/>
+	<phrase n="lang_target_voicemail" t="Sesli Mesaj"/>
+	<phrase n="lang_target_new_number" t="Yeni Numara"/>
+	<phrase n="lang_target_contact" t="Kişi"/>
+	<phrase n="lang_directory_too_big_to_import__long" t="Uzak Dizin çok büyük"/>
+	<phrase n="lang_target_cancel" t="Çağrıları Yönlendirme"/>
+	<phrase n="lang_target_cancel_typeSio" t="Çağrıları Yönlendirme"/>
+	<phrase n="lang_target_forward" t="Çağrıları Yönlendir"/>
+	<phrase n="lang_target_forward_typeSio" t="Çağrıları Yönlendir"/>
+	<phrase n="lang_tls_unknown_certificate_alert" t="Bilinmeyen sertifika sunan güvenli bağlantı reddedildi. Sertifikalar bölümündeki Web Arayüzü üzerinden bu bağlantıya güvenmek için açıkça izin verebilirsiniz."/>
+	<phrase n="lang_tls_unknown_certificate_alert_title" t="Güvenli Bağlantı Başarısız"/>
+	<phrase n="lang_tls_properties_changed" t="Lütfen yeniden başlatın. Değişen güvenlik özellikleri devam eden oturumlara uygulanamaz."/>
+	<phrase n="lang_call_completed_by_part1" t="tarafından arama tamamlandı"/>
+	<phrase n="lang_call_completed_by_part2" t="başka terminalden."/>
+	<phrase n="lang_call_completed_by_part2_typeSio" t="başka terminalden."/>
+	<phrase n="lang_challenge_sip_pw" t="SIP Şifre"/>
+	<phrase n="lang_line_ocs_wz_user" t="Alan\Kullanıcı"/>
+	<phrase n="lang_line_ocs_wz_pwd" t="Şifre"/>
+	<phrase n="lang_unregistered_ids_title" t="kayıtlı değil:"/>
+	<phrase n="lang_message_label" t="Bilgi"/>
+	<phrase n="lang_status_messages" t="Durum Bilgisi"/>
+	<phrase n="lang_information_settings" t="Bilgi"/>
+	<phrase n="lang_user_realname" t="Görüntü birimi adı"/>
+	<phrase n="lang_user_idle_number" t="Görüntü numarası"/>
+	<phrase n="lang_user_name" t="Hesap"/>
+	<phrase n="lang_user_pass" t="Şifre"/>
+	<phrase n="lang_user_host" t="Alan Adı Yazmanı"/>
+	<phrase n="lang_user_outbound" t="Giden Proxy"/>
+	<phrase n="lang_user_pname" t="Kullanıcı Adı Kimlik Doğrulama"/>
+	<phrase n="lang_user_mailbox" t="Posta Kutusu"/>
+	<phrase n="lang_user_mailbox_retrieve" t="Posta Kutusu Çevirme"/>
+	<phrase n="lang_hotdesking" t="Ortak Çalışma Masası"/>
+	<phrase n="lang_keyb_enter_current_pin" t="Mevcut PIN girin"/>
+	<phrase n="lang_keyb_enter_new_pin" t="Yeni PIN girin"/>
+	<phrase n="lang_keyb_reenter_new_pin" t="Yeni PIN tekrar girin"/>
+	<phrase n="lang_keyb_enter_password" t="PIN sıfırlamak için şifreyi girin"/>
+	<phrase n="lang_keyb_locked" t="Kilidi açmak için * tuşunu basılı tutun."/>
+	<phrase n="lang_keyb_permanently_locked" t="PIN sıfırlamak için * tuşunu basılı tutun."/>
+	<phrase n="lang_title_unlock" t="Klavye kilitli"/>
+	<phrase n="lang_confirm_unlock" t="Kilidi açmak için OK tuşuna bas."/>
+	<phrase n="lang_transfer_failed_msg" t="Aktarma başarısız oldu"/>
+	<phrase n="lang_action_failed_msg" t="Eylem başarısız oldu"/>
+	<phrase n="lang_vpn_fetch" t="VPN tarball'ı şu kaynaktan alınıyor:"/>
+	<phrase n="lang_vpn_fetch_failed" t="VPN tarball alınması başarısız oldu"/>
+	<phrase n="lang_vpn_flash" t="VPN dosyaları ayıklanıyor..."/>
+	<phrase n="lang_vpn_reboot" t="VPN'i etkinleştirmek için sistemi yeniden başlatılıyor ..."/>
+	<phrase n="lang_l2tp_fetch" t="L2TP tarball'ı şu kaynaktan alınıyor:"/>
+	<phrase n="lang_l2tp_fetch_failed" t="L2TP tarball alınması başarısız oldu"/>
+	<phrase n="lang_l2tp_flash" t="L2TP dosyaları ayıklanıyor..."/>
+	<phrase n="lang_l2tp_reboot" t="L2TP'i etkinleştirmek için sistemi yeniden başlatıyor ..."/>
+	<phrase n="lang_sbc_fetch" t="Fetching sbc config file from:"/>
+	<phrase n="lang_sbc_fetch_failed" t="Fetching sbc config file failed"/>
+	<phrase n="lang_sbc_flash" t="Copy sbc config file..."/>
+	<phrase n="lang_sbc_reboot" t="Rebooting System to activate sbc..."/>
+	<phrase n="lang_sbc_active" t="SBC is active"/>
+	<phrase n="lang_keyb_min_digits" t="(min. # basamak)"/>
+	<phrase n="lang_empty_dir_search_list" t="İsim giriniz! Boşluk için * kullanın."/>
+	<phrase n="lang_key_unassigned" t="Atanmamış Anahtar"/>
+	<phrase n="lang_key_unassigned_typeSio" t="Atanmamış Anahtar"/>
+	<phrase n="lang_label_conference_partner" t="Katılımcı"/>
+	<phrase n="lang_incoming_call_title_while_connected" t="Çağrı Bekletme"/>
+	<phrase n="lang_active" t="Etkin"/>
+	<phrase n="lang_emergency_call" t="acil çağrı"/>
+	<phrase n="lang_ntp_pending" t="NTP sunucusuyla bağlantı kuruyor"/>
+	<phrase n="lang_ntp_unreachable" t="NTP sunucusuna erişilemiyor"/>
+	<phrase n="lang_download_server_unreachable" t="Server unreachable"/>
+	<phrase n="lang_network_busy" t="Ağ meşgul"/>
+	<phrase n="lang_pstn_reroute_attempt" t="Bu aramanın tamamlanması daha uzun sürebilir. Şebeke meşgul."/>
+	<phrase n="lang_menu_location" t="Konum"/>
+	<phrase n="lang_linestate_holding_upper_case" t="Bekletiliyor"/>
+	<phrase n="lang_linestate_on_hold_upper_case" t="Beklemede"/>
+	<phrase n="lang_location_retrieval_failed" t="Konum alınamadı"/>
+	<phrase n="lang_route_private_line" t="Özel Hat"/>
+	<phrase n="lang_route_forwarded" t="Yönlendirildi"/>
+	<phrase n="lang_route_forwarded_typeSio" t="Yönlendirildi"/>
+	<phrase n="lang_route_delegated" t="Devredildi"/>
+	<phrase n="lang_route_team_call" t="Takım Çağrısı"/>
+	<phrase n="lang_route_acd" t="Grup Çağrısı"/>
+	<phrase n="lang_route_cccp_conference" t="Konferans Çağrısı"/>
+	<phrase n="lang_route_cccp_conference_typeSio" t="Konferans Çağrısı"/>
+	<phrase n="lang_dfks_failed" t="Özellik senkronizasyonu başarısız oldu"/>
+	<phrase n="lang_no_shared_key" t="Paylaşılan hat anahtarı yok"/>
+	<phrase n="lang_shared_seize_active" t="Hat yakalama hala etkin"/>
+	<phrase n="lang_not_a_shared_key" t="Seçilen anahtar paylaşılan hat anahtarı değil"/>
+	<phrase n="lang_active_key_not_a_shared_key" t='Paylaşılan hat anahtarı "etkin" içerik atamasıyla çalışmıyor.'/>
+	<phrase n="lang_ipv4_conflict" t="IPv4: çakışma"/>
+	<phrase n="lang_contact_saved" t="Kişi kaydedildi"/>
+	<phrase n="lang_query_pending" t="Arıyor..."/>
+	<phrase n="lang_no_conference" t="CPU yükü nedeniyle %A konferansa izin verilmiyor"/>
+	<phrase n="lang_no_conference_with_codec" t="CPU yükü nedeniyle, bir taraf %B codec kullanıyorsa,%A konferansa izin verilmiyor"/>
+	<phrase n="lang_no_conference_with_encrypted_codec" t="CPU yükü nedeniyle bir taraf şifrelemeyle %B kodek kullanıyorsa, %A konferansına izin verilmiyor"/>
+	<phrase n="lang_no_conference_without_unencrypted_codec" t="CPU yükü nedeniyle, bir taraf şifrelemesiz %B kodek kullanmıyorsa, %A konferansına izin verilmiyor"/>
+	<phrase n="lang_setup_language" t="Kurulum dili"/>
+	<phrase n="lang_please_wait" t="Lütfen bekleyin..."/>
+	<phrase n="lang_download_failed" t="Yükleme başarısız"/>
+	<phrase n="lang_function_blocked" t="Engellendi"/>
+	<phrase n="lang_activating_uploads" t="Yüklemeler etkinleştiriliyor"/>
+	<phrase n="lang_provisioning" t="Provizyon"/>
+	<phrase n="lang_provisioning_failed" t="Provizyon başarısız oldu"/>
+	<phrase n="lang_tr69_provisioning" t="TR-069 Prov. devam ediyor"/>
+	<phrase n="lang_start_provisioning" t="Provizyon devam ediyor"/>
+	<phrase n="lang_waitTime" t="Bekleme Süresi"/>
+	<phrase n="lang_ccUserId" t="Kullanıcı kimliği"/>
+	<phrase n="lang_callCenterName" t="Ad"/>
+	<phrase n="lang_numCallsInQueue" t="Sıradaki çağrılar"/>
+	<phrase n="lang_acd_ready" t="Mevcut"/>
+	<phrase n="lang_acd_not_ready" t="Mevcut değil"/>
+	<phrase n="lang_acd_working_after_call" t="Toparla"/>
+	<phrase n="lang_acd_log_on" t="Oturum Aç"/>
+	<phrase n="lang_acd_log_off" t="Oturumu Kapat"/>
+	<phrase n="lang_acd_unkown_state" t="Bilinmeyen Durum"/>
+	<phrase n="lang_change_state_to" t="Durumu Değiştir"/>
+	<phrase n="lang_call_parked" t="Çağrı park edildi"/>
+	<phrase n="lang_call_unparked" t="Çağrı parktan alındı"/>
+	<phrase n="lang_firmware_update_failed" t="Yazılım Güncellemesi Başarısız Oldu"/>
+	<phrase n="lang_firmware_update_restart" t="Yazılım Güncellemesi Yeniden Başlatılsın mı?"/>
+	<phrase n="lang_temp_unavail" t="Geçici olarak kullanım dışı"/>
+	<phrase n="lang_limited_func" t="Kesinti nedeniyle sınırlı işlevsellik"/>
+	<phrase n="lang_limited_func_exp" t="Ağ sorunu geçici olarak Durum veya CF gibi özellikleri sınırlıyor"/>
+	<phrase n="lang_limited_func_exp_typeSio" t="Ağ sorunu geçici olarak Durum veya CF gibi özellikleri sınırlıyor"/>
+	<phrase n="lang_call_park_failed" t="Park başarısız oldu"/>
+	<phrase n="lang_park_failed_reason" t="Park alanı yok"/>
+	<phrase n="lang_list_parked" t="Park edildi"/>
+	<phrase n="lang_vision" t="Vision"/>
+	<phrase n="lang_unpair_vision" t="Vision eşleştirmesini sonlandır"/>
+	<phrase n="lang_scan_for_visions" t="Visionlar aranıyor"/>
+	<phrase n="lang_paired_with_vision" t="Vision ile eşleştirildi:"/>
+	<phrase n="lang_vision_connection_lost" t="Vision bağlantısı kesildi"/>
+	<phrase n="lang_unpair_vision_question" t="Vision ile Eşleştirmesini Sonlandır?"/>
+	<phrase n="lang_isconnected" t="bağlı"/>
+	<phrase n="lang_isdisconnected" t="bağlantı kesildi"/>
+	<phrase n="lang_isdisconnected_typeSio" t="bağlantı kesildi"/>
+	<phrase n="lang_hotdesking_ntlm" t="Hesap Bilgileri"/>
+	<phrase n="lang_hotdesking_pin" t="PIN"/>
+	<phrase n="lang_prompt_phone_num" t="Dahili Numaranız"/>
+	<phrase n="lang_prompt_pin" t="PIN'iniz"/>
+	<phrase n="lang_pin_signin_active" t="giriş yapılıyor..."/>
+	<phrase n="lang_pin_signin_failure" t="Telefon numarası ve PIN ile giriş mümkün değil"/>
+	<phrase n="lang_firmware_update_in" t="Yazılım güncellemesi"/>
+	<phrase n="lang_firmware_update_available" t="Yazılım güncellemesi mevcut"/>
+	<phrase n="lang_call_for" t="Çağrı"/>
+	<phrase n="lang_linetype_bossadmin" t="Patron/Yönetici"/>
+	<phrase n="lang_linetype_bossadmin_short" t="P/Y"/>
+	<phrase n="lang_success_msg_transferred_to" t="%A %B 'ye aktarıldı"/>
+	<phrase n="lang_pickup_call" t="Çağrı Alma"/>
+	<phrase n="lang_call_on_behalf_of" t="Adına Çağrı"/>
+	<phrase n="lang_boss_group" t="Çağrıları Yönetdiğim Kişiler"/>
+	<phrase n="lang_delegate_group" t="Temsilciler"/>
+	<phrase n="lang_all_delegates" t="Tüm Temsilcileri A Tuşuna Atama"/>
+	<phrase n="lang_call_failed_network_issue" t="Şebeke sorunları nedeniyle çağrı yapılamadı"/>
+	<phrase n="lang_call_failed_network_issue_typeSio" t="Şebeke sorunları nedeniyle çağrı yapılamadı"/>
+	<phrase n="lang_ethernet_detection" t="Ethernet algılama"/>
+	<phrase n="lang_firmware_update_not_available" t="Yazılım güncellemesi mevcut değil"/>
+	<phrase n="lang_check_sw_update" t="Yazılım Güncellemesini Kontrol Et"/>
+	<phrase n="lang_continuous_text_label" t="Etiket"/>
+	<phrase n="lang_short_text" t="Kısa Metin"/>
+	<phrase n="lang_headline_admins" t="Yöneticiler"/>
+	<phrase n="lang_always_delegate_forward" t="Yönlendirmeyi Her Zaman Devret"/>
+	<phrase n="lang_always_deleg_sim" t="Her Zaman Aynı Anda Çaldır"/>
+	<phrase n="lang_always_deleg_forw" t="Daima Yönlendir"/>
+	<phrase n="lang_always_deleg_forw_typeSio" t="Daima Yönlendir"/>
+	<phrase n="lang_tb_action_url" t="işlem url'i"/>
+	<phrase n="lang_clear_call_history" t="Çağrı Geçmişini Temizle"/>
+	<phrase n="lang_headset_volume_only" t="USB kulaklık sesini değiştirmek yalnızca kulaklığın üzerinde mümkündür."/>
+	<phrase n="lang_hold_error" t="Hold failure, call has been muted. Press hold again to retry."/>
+	<phrase n="lang_retr_by" t="Tarafından"/>
+	<phrase n="lang_ipv4" t="IPv4"/>
+	<phrase n="lang_ipv6" t="IPv6"/>
+	<phrase n="lang_ipv6_autoconf" t="SLAAC"/>
+	<phrase n="lang_refresh" t="Yenile"/>
+	<phrase n="lang_may_take_some_time" t="Yenileme biraz zaman alabilir. Devam et?"/>
+	<phrase n="lang_ip_address_not_available" t="Mevcut Değil"/>
+	<phrase n="lang_menu_unlock" t="Kilidi aç"/>
+	<phrase n="lang_menu_security" t="Güvenlik"/>
+	<phrase n="lang_route_team_call_for" t="Ekip Çağrısı"/>
+	<phrase n="lang_route_acd_for" t="Grup Çağrısı"/>
+	<phrase n="lang_route_anonymous_acd" t="Anonim Grup Çağrısı"/>
+	<phrase n="lang_route_anonymous_acd_for" t="Anonim Grup Çağrısı"/>
+	<phrase n="lang_anonymous" t="Anonim"/>
+	<phrase n="lang_wish_barge_in" t="Araya girmek istermisiniz?"/>
+	<phrase n="lang_location" t="Konum:"/>
+	<phrase n="lang_subject" t="Konu"/>
+	<phrase n="lang_dates" t="Randevular"/>
+	<phrase n="lang_menu_dates_today" t="Günün Randevuları"/>
+	<phrase n="lang_label_conference_organizer" t="Organizatör:"/>
+	<phrase n="lang_date_ongoing" t="ŞİMDİ:"/>
+	<phrase n="lang_date_remind_me_later" t="Bana daha sonra hatırlat"/>
+	<phrase n="lang_date_remind_later" t="Sonra"/>
+	<phrase n="lang_date_set_reminder_to" t="Kime"/>
+	<phrase n="lang_minutes" t="Dakika"/>
+	<phrase n="lang_date_reset_reminder" t="Hatırlatıcıyı Sıfırla"/>
+	<phrase n="lang_cannot_access_exchange" t="Exchange Sunucusuna erişilemiyor."/>
+	<phrase n="lang_no_dates_today" t="Bugün için planlanmış bir şey yok"/>
+	<phrase n="lang_participants" t="Katılımcılar:"/>
+	<phrase n="lang_expansion_modules" t="Genişletme modülleri"/>
+	<phrase n="lang_wiz_vlan" t="VLAN kullanıyor musunuz?"/>
+	<phrase n="lang_wiz_ip4" t="IPv4 ayarlamak ister misiniz?"/>
+	<phrase n="lang_wiz_ip6" t="IPv6 ayarla"/>
+	<phrase n="lang_sxm_connected" t="Seri genişletme modülü bağlı"/>
+	<phrase n="lang_uxm_connected" t="USB genişletme modülü bağlı"/>
+	<phrase n="lang_uxm_cabeling_broken" t="Yanlış genişletme modülü kablolaması"/>
+	<phrase n="lang_uxm_limit_exceeded" t="Çok fazla USB genişletme modülü bağlı"/>
+	<phrase n="lang_vpn_active" t="VPN etkin"/>
+	<phrase n="lang_wlan_active" t="Wlan etkin"/>
+	<phrase n="lang_list_no_devices" t="(Kullanılabilir cihaz yok)"/>
+	<phrase n="lang_bluetooth" t="Bluetooth"/>
+	<phrase n="lang_bluetooth_connected_title" t="Bağlı cihaz"/>
+	<phrase n="lang_bluetooth_paired_list_title" t="Eşleştirilmiş Aygıtların Listesi"/>
+	<phrase n="lang_bluetooth_active_connection" t="Bluetooth Bağlantısı Etkin"/>
+	<phrase n="lang_bluetooth_discovered_list_title" t="Bulunan cihazların listesi"/>
+	<phrase n="lang_bluetooth_discovering" t="Arıyor"/>
+	<phrase n="lang_bluetooth_unpairing" t="Eşleştirme kapatılıyor"/>
+	<phrase n="lang_bluetooth_pairing" t="Eşleştirme"/>
+	<phrase n="lang_bluetooth_connecting" t="Bağlanıyor"/>
+	<phrase n="lang_bluetooth_disconnecting" t="Bağlantı kesiliyor"/>
+	<phrase n="lang_callback_on_busy" t="Meşgulse Geri Arama"/>
+	<phrase n="lang_auto_busy_redial" t="Meşgulse Otomatik Yeniden Ara"/>
+	<phrase n="lang_decision_cob" t="şu anda meşgul. Mevcut olduğunda bildirim için 'Onayla'ya basın. Mesaj bırakmak için 'X' tuşuna basın."/>
+	<phrase n="lang_decision_cob_withoutvm" t="şu anda meşgul. Mevcut olduğunda bildirim için 'Onayla'ya basın."/>
+	<phrase n="lang_callback" t="Geri ara"/>
+	<phrase n="lang_callback_available" t="Geri arama yapılabilir"/>
+	<phrase n="lang_linetype_callback" t="Geri ara"/>
+	<phrase n="lang_linetype_callback_short" t="GeAr"/>
+	<phrase n="lang_ringback_callpark_service" t="Çağrı Parklama Hizmeti tarafından yerine getirildi"/>
+	<phrase n="lang_callpark_service" t="Çağrı Parklama Hizmeti"/>
+	<phrase n="lang_storage_mounted" t="USB Disk Bağlandı"/>
+	<phrase n="lang_storage_mounted_typeSio" t="USB Disk Bağlandı"/>
+	<phrase n="lang_storage_tomany" t="Sadece bir USB disk bağlayabilirsiniz"/>
+	<phrase n="lang_storage_umount" t="USB diskini çıkart"/>
+	<phrase n="lang_no_participants_detected" t="katılımcı algılanmadı"/>
+	<phrase n="lang_ieee8021_method" t="Mod"/>
+	<phrase n="lang_menu_fkey_functions" t="Fonksiyon"/>
+	<phrase n="lang_uxm_appearance" t="Görünüm"/>
+	<phrase n="lang_put_through_by" t="Tarafından bağlandı"/>
+	<phrase n="lang_contact_not_in_list" t="kişi listesinde bulunamadı"/>
+	<phrase n="lang_msg_speaker_active" t="Eller serbest etkin"/>
+	<phrase n="lang_msg_headset_active" t="Kulaklık modu etkin"/>
+	<phrase n="lang_msg_handset_active" t="Ahize modu etkin"/>
+	<phrase n="lang_msg_ringing_disabled" t="Zil devre dışı bırakıldı"/>
+	<phrase n="lang_msg_mute_active" t="Telefon sessizde"/>
+	<phrase n="lang_wiz_aborted" t="Sihirbaz iptal edildi."/>
+	<phrase n="lang_menu_set_kbd_lock_pin" t="Klavye kilidi PIN'ini ayarla"/>
+	<phrase n="lang_menu_change_kbd_lock_pin" t="Klavye kilidi PIN'ini değişdir"/>
+	<phrase n="lang_no_valid_dsearch_config" t="Geçerli bir dizin arama yapılandırması yok"/>
+	<phrase n="lang_title_conferences" t="Konferanslar"/>
+	<phrase n="lang_no_conferences_found" t="Konferans bulunamadı"/>
+	<phrase n="lang_conference_type" t="Türü"/>
+	<phrase n="lang_conference_status" t="Durum"/>
+	<phrase n="lang_join_conference_long" t="Konferansa katıl"/>
+	<phrase n="lang_join_conference_as_moderator" t="Moderatör olarak katıl"/>
+	<phrase n="lang_choose_menu" t="Menü seç"/>
+	<phrase n="lang_menu_shortcut" t="Menü kısayolu"/>
+	<phrase n="lang_using_time" t="kullanılan zaman"/>
+	<phrase n="lang_waiting_for_pnp" t="PHP'yi bekliyor"/>
+	<phrase n="lang_fkey_contact_list_buddy" t="BLF (Sunucu)"/>
+	<phrase n="lang_fkey_xmpp_presence" t="İletişim Durumu (XMPP)"/>
+	<phrase n="lang_csta_prompt_title" t="Şimdi çevir?"/>
+	<phrase n="lang_contact_is_favorite" t="Bu kişi favorilerinizden biri mi?"/>
+	<phrase n="lang_currently_set_to" t="Şu an için:"/>
+	<phrase n="lang_vol_label_contrast" t="İkincil Ekran Kontrastı"/>
+	<phrase n="lang_menu_fkeys_phone" t="Hat Tuşları"/>
+	<phrase n="lang_menu_dkeys_phone" t="Adanmış Tuşlar"/>
+	<phrase n="lang_menu_context_sensitive_keys_phone" t="İçeriğe Duyarlı Tuşlar"/>
+	<phrase n="lang_menu_smartlabel_fkeys" t="AkıllıEtiket Tuşları"/>
+	<phrase n="lang_menu_smartlabel_page" t="Sayfa"/>
+	<phrase n="lang_menu_fkeys_page" t="Hat Tuşları Sayfası"/>
+	<phrase n="lang_menu_fkeys_sxm" t="SXM Tuşları"/>
+	<phrase n="lang_menu_fkeys_uxm" t="Genişletme Tuşları"/>
+	<phrase n="lang_server_directory_search" t="Sunucu Dizini Araması"/>
+	<phrase n="lang_menu_fontsize" t="Yazı Boyutu"/>
+	<phrase n="lang_uxm_fontsize_lines" t="Yazı Boyutu (Satır Düzeni)"/>
+	<phrase n="lang_uxm_fontsize_tiles" t="Yazı Boyutu (Döşeme Düzeni)"/>
+	<phrase n="lang_menu_text_alignment" t="Metin Hizalama"/>
+	<phrase n="lang_left" t="Sol"/>
+	<phrase n="lang_right" t="Sağ"/>
+	<phrase n="lang_center" t="Merkez"/>
+	<phrase n="lang_alternate" t="Alternatif"/>
+	<phrase n="lang_menu_return_to_first_page" t="İlk Sayfaya Dön"/>
+	<phrase n="lang_automatic_return" t="Otomatik Dönüş"/>
+	<phrase n="lang_warning" t="Uyarı"/>
+	<phrase n="lang_public_address" t="Açık Adres"/>
+	<phrase n="lang_menu_volume" t="Ses Ayarları   "/>
+	<phrase n="lang_vol_ringer_text" t="Zil Sesi Ayarı"/>
+	<phrase n="lang_vol_headset_text" t="Kulaklık Ses Ayarı"/>
+	<phrase n="lang_vol_handset_text" t="Ahize Ses Ayarı"/>
+	<phrase n="lang_vol_speaker_text" t="Hoparlör Ses Ayarı"/>
+	<phrase n="lang_list_rejected" t="Reddedilen"/>
+	<phrase n="lang_enum_disp_func_key_conference" t="Konferans"/>
+	<phrase n="lang_enum_disp_func_key_ivr" t="IVR"/>
+	<phrase n="lang_enum_disp_func_key_callback_on_busy" t="Geri ara"/>
+	<phrase n="lang_fkeys_ssi_context" t="İçerik"/>
+	<phrase n="lang_fkeys_ssi_type" t="Türü"/>
+	<phrase n="lang_fkeys_ssi_active" t="Etkin"/>
+	<phrase n="lang_fkeys_ssi_icon" t="Simge"/>
+	<phrase n="lang_default_icon" t="Varsayılan Simge"/>
+	<phrase n="lang_custom_icon" t="Özel Simge"/>
+	<phrase n="lang_FirstName" t="Ad"/>
+	<phrase n="lang_LastName" t="Soyad"/>
+	<phrase n="lang_Home" t="Ev Telefon Numarası"/>
+	<phrase n="lang_Office" t="İş Telefon Numarası"/>
+	<phrase n="lang_Mobile" t="Mobil Telefon Numarası"/>
+	<phrase n="lang_Unqualified" t="Nitelenmemiş Numara"/>
+	<phrase n="lang_edit_contact" t="Kişiyi Düzenle"/>
+	<phrase n="lang_msw_query" t="Kişi Verilerini Sunucuya Gönderme başarısız oldu:"/>
+	<phrase n="lang_indicator" t="Gösterge"/>
+	<phrase n="lang_protocol" t="Protokol"/>
+	<phrase n="lang_target_forward_busy" t="Meşgul Olduğunda Aramaları Yönlendir"/>
+	<phrase n="lang_target_forward_timeout" t="Çağrıları Sonra Yönlendir"/>
+	<phrase n="lang_target_forward_timeout_typeSio" t="Çağrıları Sonra Yönlendir"/>
+	<phrase n="lang_WIFI_SSID" t="Ağ Adı"/>
+	<phrase n="lang_WIFI_auth_mode" t="Şifreleme"/>
+	<phrase n="lang_WIFI_WPA_Encryption" t="WPA Şifreleme"/>
+	<phrase n="lang_WIFI_WPA" t="WPA"/>
+	<phrase n="lang_WIFI_WPA2PSK" t="WPA2"/>
+	<phrase n="lang_WIFI_WEP" t="WEP"/>
+	<phrase n="lang_WIFI_OPEN" t="Açık"/>
+	<phrase n="lang_WIFI_AES" t="AES"/>
+	<phrase n="lang_WIFI_TKIP" t="TKIP"/>
+	<phrase n="lang_WIFI_SCAN_NETWORKS" t="WLAN Tara"/>
+	<phrase n="lang_WIFI_MANUAL_SETUP" t="Elle Kurulum"/>
+	<phrase n="lang_contact_details" t="İletişim detayları"/>
+	<phrase n="lang_WIFI_CONNECTED_TO" t="Bağlı"/>
+	<phrase n="lang_WIFI_NOT_CONNECTED" t="Bağlı Değil"/>
+	<phrase n="lang_unhold" t="Geri al"/>
+	<phrase n="lang_empty" t="boş"/>
+	<phrase n="lang_F_SNOM" t="snom/Bulut"/>
+	<phrase n="lang_prefs_ssi_date_us_format" t="Tarih formatı"/>
+	<phrase n="lang_prefs_ssi_time_24_format" t="24 Saatlik Zaman Biçimi"/>
+	<phrase n="lang_time_symbol_second" t="sn"/>
+	<phrase n="lang_all_accounts" t="Tüm Kimlikler"/>
+	<phrase n="lang_reboot_to_apply_new_settings" t="Yeni ayarların etkili olması için şimdi yeniden başlat?"/>
+	<phrase n="lang_TLS" t="TLS"/>
+	<phrase n="lang_MD5" t="MD5"/>
+	<phrase n="lang_WIFI_SWITCH_OFF_WLAN" t="WLAN'ı Kapat"/>
+	<phrase n="lang_ErrorNotSupportedByManager" t="Desteklenmiyor"/>
+	<phrase n="lang_ErrorContactNotFound" t="Kişi Bulunamadı"/>
+	<phrase n="lang_ErrorInvalidCredentials" t="Geçersiz Kimlik Bilgileri"/>
+	<phrase n="lang_ErrorInvalidArgument" t="Geçersiz Değişken"/>
+	<phrase n="lang_ErrorRequestPending" t="İstek Bekliyor"/>
+	<phrase n="lang_ErrorNotInitialized" t="Başlatılmadı"/>
+	<phrase n="lang_ErrorInComplete" t="Eksik"/>
+	<phrase n="lang_ErrorOutOfMemory" t="Bellek yetersiz"/>
+	<phrase n="lang_Contact_pool" t="İletişim Havuzu"/>
+	<phrase n="lang_advanced_autoneg" t="Otomatik Anlaşma"/>
+	<phrase n="lang_advanced_10full" t="10 Mbit Tam Dupleks"/>
+	<phrase n="lang_advanced_10half" t="10 Mbit Yarım Dupleks"/>
+	<phrase n="lang_advanced_100full" t="100 Mbit Tam Dupleks"/>
+	<phrase n="lang_advanced_100half" t="100 Mbit Yarım Dupleks"/>
+	<phrase n="lang_advanced_1000full" t="1000 Mbit Tam Dupleks"/>
+	<phrase n="lang_Hardware" t="Donanım"/>
+	<phrase n="lang_NET_port_speed" t="Ağ Port Hızı/Dupleks"/>
+	<phrase n="lang_PC_port_speed" t="PC Port Hızı/Dupleks"/>
+	<phrase n="lang_Action_on_eth_replug" t="Ethernet Kablosu Yeniden Takma İşlemi"/>
+	<phrase n="lang_advanced_donothing" t="Yoksay"/>
+	<phrase n="lang_line_reregister" t="Yeniden Kaydet"/>
+	<phrase n="lang_NTP" t="NTP"/>
+	<phrase n="lang_DNS" t="DNS"/>
+	<phrase n="lang_LLDP" t="LLDP"/>
+	<phrase n="lang_NTP_refresh_timer" t="NTP Yenileme Zamanlayıcısı"/>
+	<phrase n="lang_8021x" t="802.1X"/>
+	<phrase n="lang_Expansion" t="Genişletme"/>
+	<phrase n="lang_expansion_layout" t="Genişletme Düzeni"/>
+	<phrase n="lang_Expansion_module" t="Genişletme Modülü"/>
+	<phrase n="lang_Please_reboot" t="Lütfen yeniden başlatın!"/>
+	<phrase n="lang_All_settings_saved" t="Tüm ayarlar kaydedildi"/>
+	<phrase n="lang_WIFI_SCAN_RUNNING" t="Taranıyor..."/>
+	<phrase n="lang_WIFI_CONNECTING" t="Bağlanıyor..."/>
+	<phrase n="lang_wifi_connect_success_reboot_to_continue_msg1" t="Reboot to continue"/>
+	<phrase n="lang_wifi_connect_success_password_ok_msg2" t="Password OK"/>
+	<phrase n="lang_wifi_connect_fail_invalid_settings_msg1" t="Invalid Settings"/>
+	<phrase n="lang_wifi_connect_fail_please_retry_msg2" t="Please Retry"/>
+	<phrase n="lang_usb_wifi_unavailable" t="USB WiFi not available"/>
+	<phrase n="lang_usb_wifi_connected" t="USB WiFi connected"/>
+	<phrase n="lang_usb_wifi_disconnected" t="USB WiFi disconnected"/>
+	<phrase n="lang_is_a_favorite" t="favori"/>
+	<phrase n="lang_Lines" t="Satır Düzeni"/>
+	<phrase n="lang_Tiles" t="Döşeme Düzeni"/>
+	<phrase n="lang_tbook_emtpy" t="&lt;Boş&gt;"/>
+	<phrase n="lang_enter_starting_uppercase" t="Gir"/>
+	<phrase n="lang_characters_starting_lowercase" t="karakterler"/>
+	<phrase n="lang_user_server_type" t="Desteklenen Sunucu Türü"/>
+	<phrase n="lang_broadsoft_features" t="Broadsoft Özellikleri"/>
+	<phrase n="lang_xsi_server" t="XSI Sunucusu"/>
+	<phrase n="lang_xsi_user" t="XSI Kullanıcısı"/>
+	<phrase n="lang_xsi_password" t="XSI Sifresi"/>
+	<phrase n="lang_xsi_retry_timer" t="XSI Yeniden Deneme Zamanlayıcısı"/>
+	<phrase n="lang_xsi_events" t="XSI Olayları"/>
+	<phrase n="lang_xmpp_jid" t="XMPP ID"/>
+	<phrase n="lang_xmpp_password" t="XMPP Şifresi"/>
+	<phrase n="lang_no_headset_present" t="Kulaklık Yok"/>
+	<phrase n="lang_headset_detection" t="Kulaklık Algılama"/>
+	<phrase n="lang_msw_services" t="Metaswitch Hizmetleri"/>
+	<phrase n="lang_msw_directory_number" t="Metaswitch Dizin Numarası"/>
+	<phrase n="lang_msw_password" t="Metaswitch Şifresi"/>
+	<phrase n="lang_msw_web_url" t="Metaswitch Sunucusu URL'i"/>
+	<phrase n="lang_xsi_dir_enterprise" t="Kurumsal Dizin"/>
+	<phrase n="lang_xsi_dir_enterprise_common" t="Kurumsal Ortak Telefon Listesi"/>
+	<phrase n="lang_xsi_dir_group" t="Grup Dizini"/>
+	<phrase n="lang_xsi_dir_group_common" t="Grup Ortak Telefon Listesi"/>
+	<phrase n="lang_xsi_dir_personal" t="Kişisel Telefon Listesi"/>
+	<phrase n="lang_xsi_anywhere" t="Her Yerde"/>
+	<phrase n="lang_xsi_location_new_entry" t="&lt;Yeni Giriş&gt;"/>
+	<phrase n="lang_xsi_location_edit_description" t="Konum Açıklaması Düzenle"/>
+	<phrase n="lang_xsi_location_description" t="Açıklama"/>
+	<phrase n="lang_xsi_location_edit_number" t="Konum Numarasını Düzenle"/>
+	<phrase n="lang_number_str" t="Numara "/>
+	<phrase n="lang_xsi_location_status_creating" t="oluşturuyor"/>
+	<phrase n="lang_xsi_location_status_modifying" t="değiştiriyor"/>
+	<phrase n="lang_xsi_location_status_deleting" t="siliyor"/>
+	<phrase n="lang_xsi_location_error_empty_number" t="Telefon numarası boş olmamalıdır"/>
+	<phrase n="lang_xsi_location_error_number_exists" t="Telefon numarası zaten mevcut"/>
+	<phrase n="lang_xsi_location_error_empty_description" t="Açıklama boş olmamalıdır"/>
+	<phrase n="lang_visual_voicemail" t="Görsel Sesli Posta"/>
+	<phrase n="lang_feature_works" t="Özellik İşleri"/>
+	<phrase n="lang_voicemail_name" t="Ad"/>
+	<phrase n="lang_voicemail_call_number" t="Çağrı Numarası"/>
+	<phrase n="lang_voicemail_date_time" t="Tarih ve Saat"/>
+	<phrase n="lang_voicemail_duration" t="Süre"/>
+	<phrase n="lang_xsi_anywhere_clicktodial" t="Aramak İçin Tıkla"/>
+	<phrase n="lang_xsi_anywhere_grouppaging" t="Grup Çağrı"/>
+	<phrase n="lang_xsi_anywhere_settings" t="Ayarlar"/>
+	<phrase n="lang_remote_office" t="Uzak Ofis"/>
+	<phrase n="lang_xsi_anywhereportal" t="Her Yerde Portalı"/>
+	<phrase n="lang_xsi_anywhereportal_number" t="Telefon numarası"/>
+	<phrase n="lang_menu_primary_display" t="Birincil Ekran"/>
+	<phrase n="lang_menu_secondary_display" t="İkincil Ekran"/>
+	<phrase n="lang_enable_remote_office" t="Uzak Ofisi Etkinleştir"/>
+	<phrase n="lang_call_center_list" t="Çağrı Merkezi Listesi"/>
+	<phrase n="lang_call_center_status" t="Çağrı Merkezi Durumu"/>
+	<phrase n="lang_call_center_joined" t="Katıldı"/>
+	<phrase n="lang_call_center_unable_to_join" t="Çağrı Merkezine katılamıyor"/>
+	<phrase n="lang_call_center_join_not_allowed" t="Katılma izni yok"/>
+	<phrase n="lang_call_center_unjoin_not_allowed" t="Ayrılmaya izni yok"/>
+	<phrase n="lang_call_center_joining" t="Katılıyor"/>
+	<phrase n="lang_call_recording_control" t="Çağrı Kayıt Kontrolü"/>
+	<phrase n="lang_pause_recording" t="Kaydı Duraklat"/>
+	<phrase n="lang_resume_recording" t="Kayda Devam Et"/>
+	<phrase n="lang_xsi_simul_ring" t="Eşzamanlı Zil Çaldırma"/>
+	<phrase n="lang_xsi_simul_ring_on_call" t="Görüşme sırasında çalma"/>
+	<phrase n="lang_xsi_simul_ring_edit_phone_number" t="Telefon Numarası"/>
+	<phrase n="lang_xsi_simul_ring_enter_phone_number" t="Telefon Numarasını Gir"/>
+	<phrase n="lang_xsi_simul_ring_edit" t="Düzenle"/>
+	<phrase n="lang_xsi_simul_ring_number" t="Telefon numarası"/>
+	<phrase n="lang_xsi_simul_ring_add_entry" t="Yeni Giriş Ekle"/>
+	<phrase n="lang_xsi_simul_ring_ans_confirm" t="Cevap Onayı"/>
+	<phrase n="lang_xsi_simul_ring_number_exists_error" t="Telefon numarası zaten mevcut"/>
+	<phrase n="lang_xsi_simul_ring_number_empty_error" t="Telefon numarası boş."/>
+	<phrase n="lang_xsi_executive" t="Yönetici"/>
+	<phrase n="lang_xsi_executive_assistant" t="Yönetici Asistanı"/>
+	<phrase n="lang_xsi_call_filtering" t="Çağrı Süzgeçleme"/>
+	<phrase n="lang_xsi_call_filtering_enable" t="Çağrı Süzgeçleme"/>
+	<phrase n="lang_xsi_call_filtering_mode" t="Süzgeç Modu"/>
+	<phrase n="lang_xsi_call_filtering_type" t="Süzgeçleme Türü"/>
+	<phrase n="lang_xsi_call_filtering_simple" t="Basit"/>
+	<phrase n="lang_xsi_call_filtering_advanced" t="Gelişmiş"/>
+	<phrase n="lang_xsi_call_filtering_all" t="Tüm Çağrılar"/>
+	<phrase n="lang_xsi_call_filtering_internal" t="Tüm Dahili Çağrılar"/>
+	<phrase n="lang_xsi_call_filtering_external" t="Tüm Dış Çağrılar"/>
+	<phrase n="lang_xsi_call_screening" t="Çağrı Tarama"/>
+	<phrase n="lang_xsi_call_screening_type" t="Uyarı Tipi"/>
+	<phrase n="lang_xsi_call_screening_alert_mobile" t="Mobil Konumları Uyar"/>
+	<phrase n="lang_xsi_call_screening_alert_anywhere" t="Her Yerde Konumları Uyar"/>
+	<phrase n="lang_xsi_call_screening_alert_sca" t="SCA Konumları Uyar"/>
+	<phrase n="lang_xsi_call_screening_silent" t="Sessiz"/>
+	<phrase n="lang_xsi_call_screening_ringsplash" t="Ring Splash"/>
+	<phrase n="lang_xsi_executive_view_assistants" t="Asistanları Görüntüle"/>
+	<phrase n="lang_xsi_executive_allow_optin" t="Asistanlara Katılmaya/Çıkmaya İzin Ver"/>
+	<phrase n="lang_xsi_opt_in_out_to_executive" t="Katılma/Vazgeçme Yöneticisi"/>
+	<phrase n="lang_xsi_opt_in_to_executive" t="Katılma"/>
+	<phrase n="lang_xsi_opt_out_to_executive" t="Vazgeçmek"/>
+	<phrase n="lang_xsi_assistant_call_divert" t="Yönlendirme"/>
+	<phrase n="lang_xsi_assistant_call_divert_number" t="Yönlendirme Numarası"/>
+	<phrase n="lang_xsi_call_alerting" t="Çağrı Uyarısı"/>
+	<phrase n="lang_xsi_call_alerting_mode" t="Uyarı Modu"/>
+	<phrase n="lang_xsi_call_alerting_mode_simu" t="Eşzamanlı"/>
+	<phrase n="lang_xsi_call_alerting_mode_seq" t="Ardışık"/>
+	<phrase n="lang_xsi_call_alerting_id_name" t="Arayan Hat Kimliği Adı"/>
+	<phrase n="lang_xsi_call_alerting_id_exec_name" t="Yönetici Adı"/>
+	<phrase n="lang_xsi_call_alerting_id_origin_name" t="Kaynakçı Adı"/>
+	<phrase n="lang_xsi_call_alerting_id_exec_origin_name" t="Yönetici-Kaynakçı Adları"/>
+	<phrase n="lang_xsi_call_alerting_id_origin_exec_name" t="Kaynakçı-Yönetici Adları"/>
+	<phrase n="lang_xsi_call_custom_name" t="Özel"/>
+	<phrase n="lang_xsi_call_alerting_custom_id_name" t="Özel Arama Hattı Kimliği Adı"/>
+	<phrase n="lang_xsi_call_alerting_id_number" t="Arayan Hat Kimlik Numarası"/>
+	<phrase n="lang_xsi_call_alerting_id_exec_number" t="Yönetici Numarası"/>
+	<phrase n="lang_xsi_call_alerting_id_origin_number" t="Kaynak Numarası"/>
+	<phrase n="lang_xsi_call_alerting_custom_id_number" t="Özel Arama Hattı Kimlik Numarası"/>
+	<phrase n="lang_xsi_call_alerting_recall_after" t="Çağrı Sonrası Tekrar Ara"/>
+	<phrase n="lang_xsi_call_alerting_recall_after_range" t="Çalma Sayısı Girin (2-20)"/>
+	<phrase n="lang_xsi_call_alerting_next_assistant" t="Sonra Bir Sonraki Asistana Git"/>
+	<phrase n="lang_xsi_call_alerting_next_assistant_range" t="Çalma Sayısı Girin (1-20)"/>
+	<phrase n="lang_xsi_call_alerting_rollover_after" t="Beklemeden Sonra Rollover"/>
+	<phrase n="lang_xsi_call_alerting_rollover_after_time" t="Rollover Bekleme Süresi"/>
+	<phrase n="lang_xsi_call_alerting_rollover_after_time_range" t="Saniye Olarak Süre Gir (0-60)"/>
+	<phrase n="lang_xsi_call_alerting_rollover_action" t="Rollover Eylemi"/>
+	<phrase n="lang_xsi_call_alerting_rollover_action_vm" t="Sesli Mesajlaşma"/>
+	<phrase n="lang_xsi_call_alerting_rollover_action_fwd" t="Yönlendir"/>
+	<phrase n="lang_xsi_call_alerting_rollover_action_na" t="Yanıt İşleme Yok"/>
+	<phrase n="lang_xsi_call_alerting_rollover_fwd_number" t="Rollover Yönlendirme Numarası"/>
+	<phrase n="lang_value_out_of_range" t="Aralık Dışında Girilen Değer"/>
+	<phrase n="lang_xsi_callon_behalfof_select_executive" t="Yönetici Seç"/>
+	<phrase n="lang_collaborate_room_details" t="Ortak oda detayları"/>
+	<phrase n="lang_collaborate_room_name" t="Oda ismi"/>
+	<phrase n="lang_collaborate_room_type" t="Oda tipi"/>
+	<phrase n="lang_collaborate_join_room" t="Odaya katıl"/>
+	<phrase n="lang_unavailable_state" t="Kullanılamaz Kod"/>
+	<phrase n="lang_enter_unavailable_code" t="Kullanılamaz Kod"/>
+	<phrase n="lang_ringer_is_off" t="Zil Kapalı"/>
+	<phrase n="lang_uxm_update" t="Genişletme Modülü Güncellemesi"/>
+	<phrase n="lang_uxm_update_infotext_progress" t="Güncelleme sürüyor. Güncelleme sırasında telefonu veya genişletme modülünü çıkarmayın."/>
+	<phrase n="lang_uxm_update_infotext_prepare" t="Güncelleme için hazırlanıyor. Güncelleme sırasında telefonu veya genişletme modülünü çıkarmayın."/>
+	<phrase n="lang_F_DELETE_MSG" t="M Sil"/>
+	<phrase n="lang_F_DELETE_MSG_typeSio" t="Mesajı Sil"/>
+	<phrase n="lang_F_DELETE_MSG_smartlabel" t="Msj Sil"/>
+	<phrase n="lang_F_DELETE_MSG_full" t="Mesajı Sil"/>
+	<phrase n="lang_F_NEXT_ID" t="ID↓"/>
+	<phrase n="lang_F_NEXT_ID_typeSio" t="Sonraki Kimlik"/>
+	<phrase n="lang_F_NEXT_ID_smartlabel" t="Sonraki Kimlik"/>
+	<phrase n="lang_F_PREV_ID" t="ID↑"/>
+	<phrase n="lang_F_PREV_ID_typeSio" t="Önceki Kimlik"/>
+	<phrase n="lang_F_PREV_ID_smartlabel" t="Önceki Kimlik"/>
+	<phrase n="lang_F_OCIP" t="OCI-P"/>
+	<phrase n="lang_F_SAB" t="S Diz"/>
+	<phrase n="lang_F_SAB_typeSio" t="S Dizini"/>
+	<phrase n="lang_F_SAB_smartlabel" t="Dizin"/>
+	<phrase n="lang_F_ABS" t="ABS"/>
+	<phrase n="lang_F_ABS_typeSio" t="AB Arama"/>
+	<phrase n="lang_addressbook_menu" t="Adres Defterini Seç"/>
+	<phrase n="lang_addressbook_menu_local" t="Yerel"/>
+	<phrase n="lang_multicast_zones_title" t="Çoklu Yayın Bölgeleri"/>
+	<phrase n="lang_no_multicast_zones" t="Çoklu yayın bölgeleri yok"/>
+	<phrase n="lang_acd_state" t="ACD Durumu"/>
+	<phrase n="lang_please_sign_into_set_acd_state" t="ACD Durumunu ayarlamak için lütfen oturum açın"/>
+	<phrase n="lang_fkey_longpress_support" t="UB-Özelliği"/>
+	<phrase n="lang_important" t="Önemli"/>
+	<phrase n="lang_SmartTransferEditDescription" t="AkıllıAktarma Hedefini Girin"/>
+	<phrase n="lang_SmartTransfer" t="AkıllıAktarma"/>
+	<phrase n="lang_SmartTransfer_ready" t="Çağrıları aktarmaya hazır seçenek tuşu."/>
+	<phrase n="lang_department" t="Bölüm"/>
+	<phrase n="lang_extensions" t="Dahili Numaralar"/>
+	<phrase n="lang_menu_title_text_options" t="Metin Seçenekleri"/>
+	<phrase n="lang_F_ADD_LOCATION" t="Konum Ekle"/>
+	<phrase n="lang_gk_mode_none" t="Hiçbiri"/>
+	<phrase n="lang_demo_mode" t="Demo Modu"/>
+	<phrase n="lang_transfer_or" t="Transfer veya"/>
+	<phrase n="lang_call_pickup" t="Çağrı Alma?"/>
+	<phrase n="lang_choose_an_action" t="İşlem Seç"/>
+	<phrase n="lang_Conference_Setup" t="Konferans Kur"/>
+	<phrase n="lang_Conference_First_Participant" t="Konferans katılımcısı bir"/>
+	<phrase n="lang_Conference_Second_Participant" t="Konferans katılımcısı iki"/>
+	<phrase n="lang_menu_smart_label" t="AkıllıEtiket Seçenekleri"/>
+	<phrase n="lang_menu_idle_screen" t="Boşta Ekran Davranışı"/>
+	<phrase n="lang_menu_call_screen" t="Çağrı Ekranları Davranışı"/>
+	<phrase n="lang_menu_other_screen" t="Diğer Ekranlar Davranışı"/>
+	<phrase n="lang_menu_label_default_mode" t="Varsayılan Görüntüleme Modu"/>
+	<phrase n="lang_menu_label_expanded_mode" t="Alternatif Görüntüleme Modu"/>
+	<phrase n="lang_menu_label_expansion_triggers" t="Alternatif Görüntüleme Tetikleyicisi"/>
+	<phrase n="lang_menu_short_label" t="Kısa Etiket"/>
+	<phrase n="lang_menu_full_label" t="Tam Etiket"/>
+	<phrase n="lang_menu_short_label_mode" t="Kısa Etiket Modu"/>
+	<phrase n="lang_menu_short_press" t="Kısa Basma Sayfa Tuşu"/>
+	<phrase n="lang_menu_long_press" t="Uzun Basma Sayfa Tuşu"/>
+	<phrase n="lang_menu_proximity_sensor" t="Yakınlık Sensörü"/>
+	<phrase n="lang_menu_P2_short_press" t="Short Press P2"/>
+	<phrase n="lang_menu_P2_long_press" t="Uzun Basma P2"/>
+	<phrase n="lang_menu_P3_short_press" t="Kısa Basma P3"/>
+	<phrase n="lang_menu_P3_long_press" t="Uzun Basma P3"/>
+	<phrase n="lang_menu_P4_short_press" t="Kısa Basma P4"/>
+	<phrase n="lang_menu_P4_long_press" t="Uzun Basma P4"/>
+	<phrase n="lang_menu_P8_short_press" t="Kısa Basma P8"/>
+	<phrase n="lang_menu_P8_long_press" t="Uzun Basma P8"/>
+	<phrase n="lang_menu_P10_short_press" t="Short Press P10"/>
+	<phrase n="lang_menu_P10_long_press" t="Long Press P10"/>
+	<phrase n="lang_short_press" t="Kısa Basma"/>
+	<phrase n="lang_fkey_press" t="F Tuşuna Basın"/>
+	<phrase n="lang_long_press" t="Uzun Basma"/>
+	<phrase n="lang_short_label_mode_icon" t="Sadece Simge"/>
+	<phrase n="lang_smartlabel_mode_text" t="Sadece Yazı"/>
+	<phrase n="lang_smartlabel_mode_icon_text" t="Simge ve Metin"/>
+	<phrase n="lang_status_msg_uxm_update_required" t=" Güncelleme ihtiyacı var"/>
+	<phrase n="lang_status_detail_uxm_update_required" t="Genişletme Modülünü etkinleştirmek için en son sürüme güncelleyin."/>
+	<phrase n="lang_status_detail_uxm_update_required2" t="Lütfen telefona bağlı yalnızca bir genişletme modülü olduğundan ve genişletmenin ayrı bir güç kaynağına bağlı olmadığından emin olun."/>
+	<phrase n="lang_unhandled_item" t="İşlenmemiş madde:"/>
+	<phrase n="lang_preferences_general" t="Genel"/>
+	<phrase n="lang_quick_dial_contacts" t="Hızlı Arama Rehberi"/>
+	<phrase n="lang_start_tbook_download" t="Dizin indirmeyi başlat?"/>
+	<phrase n="lang_tbook_download" t="Dizin İndirme"/>
+	<phrase n="lang_tbook_download_started" t="Kimlik için dizin indirme işlemi başladı"/>
+	<phrase n="lang_tbook_download_finished" t="Kimlik için dizin indirme işlemi tamamlandı"/>
+	<phrase n="lang_tbook_download_failed" t="Kimlik için dizin indirme işlemi başarısız oldu"/>
+	<phrase n="lang_tbook_download_not_possible" t="Kimlik için dizin indirme işlemi mümkün değil"/>
+	<phrase n="lang_tbook_download_overflowed" t="Dizin indirme işlemi tamamlanmadı (dahili limit aşıldı)."/>
+	<phrase n="lang_tbook_is_full" t="Adres defteri dolu"/>
+	<phrase n="lang_F_HOTELING" t="Hotel"/>
+	<phrase n="lang_F_HOTELING_typeSio" t="Hoteling"/>
+	<phrase n="lang_F_HOTELING_smartlabel" t="Hoteling"/>
+	<phrase n="lang_F_GUEST_LOGIN" t="Misafir Girişi"/>
+	<phrase n="lang_F_GUEST_LOGOUT" t="Misafir Çıkış"/>
+	<phrase n="lang_F_GUEST_LOGIN_smartlabel" t="Misafir Giriş Yapmış"/>
+	<phrase n="lang_F_GUEST_LOGOUT_smartlabel" t="Misafir Çıkış Yapmış"/>
+	<phrase n="lang_F_LOGIN" t="Oturum Aç"/>
+	<phrase n="lang_F_LOGOUT" t="Çıkış"/>
+	<phrase n="lang_smartlabel_id" t="ID"/>
+	<phrase n="lang_title_guest_logout" t="Misafir Çıkış"/>
+	<phrase n="lang_confirm_guest_logout" t="Çıkış yapmak istediğinize emin misiniz?"/>
+	<phrase n="lang_no_contacts" t="Kişi Yok"/>
+	<phrase n="lang_hoteling_guest" t="Hoteling Müsafiri"/>
+	<phrase n="lang_logging_out" t="Çıkış yapılıyor..."/>
+	<phrase n="lang_logging_in" t="Giriş..."/>
+	<phrase n="lang_login_failed" t="Giriş Başarısız"/>
+	<phrase n="lang_acd_signout_message" t="ACD'den çıkış yapacaksınız. Misafir girişi ile devam etmek ister misiniz?"/>
+	<phrase n="lang_title_guest_login" t="Misafir Girişi"/>
+	<phrase n="lang_F_MARK_READ" t="Okundu Olarak İşaretle"/>
+	<phrase n="lang_F_MARK_UNREAD" t="Okunmamış Olarak İşaretle"/>
+	<phrase n="lang_call_recording_mode_never" t="Asla"/>
+	<phrase n="lang_call_recording_mode_always" t="Her zaman"/>
+	<phrase n="lang_call_recording_mode_always_pause_resume" t="Her zaman Duraklat/Sürdür ile"/>
+	<phrase n="lang_call_recording_mode_on_demand" t="Talep üzerine"/>
+	<phrase n="lang_call_recording_mode_on_demand_user_start" t="İstek üzerine kullanıcı başlatıldığında"/>
+	<phrase n="lang_smartlabel_dismiss_timeout" t="Varsayılan Moda Dön"/>
+	<phrase n="lang_call_recording_mode" t="Çağrı Kayıt Modu"/>
+	<phrase n="lang_menu_full_label_mode" t="Tam Etiket Modu"/>
+	<phrase n="lang_menu_label_mode" t="Etiket Modu"/>
+	<phrase n="lang_guest_pin" t="Müsafir PIN'i"/>
+	<phrase n="lang_incorrect_pin" t="Yanlış PIN"/>
+	<phrase n="lang_voicemail_info" t="Sesli Mesaj Bilgisi"/>
+	<phrase n="lang_confirm_del_deny_list_item_title" t="Blok Listesi Öğesini Sil"/>
+	<phrase n="lang_confirm_del_number_from_deny_list" t="Blok listesinden kaldırılsın mı?"/>
+	<phrase n="lang_confirm_del_menu_configuration" t="Tuş Konfigürasyonu Ayarlarını Kaldır"/>
+	<phrase n="lang_confirm_message" t="Gerçekten bunu yapmak istiyor musunuz?"/>
+	<phrase n="lang_caller_id_blocking" t="Arayan Kimliği Engelleme"/>
+	<phrase n="lang_screen_items_color_and_opacity_title" t="Renk ve Opaklık"/>
+	<phrase n="lang_ui_themes" t="Temalar"/>
+	<phrase n="lang_theme_light" t="Açık"/>
+	<phrase n="lang_theme_dark" t="Koyu"/>
+	<phrase n="lang_theme_colorful" t="Renkli"/>
+	<phrase n="lang_theme_industrial" t="Endüstriyel"/>
+	<phrase n="lang_theme_contrast" t="Contrast"/>
+	<phrase n="lang_screen_items_color_title" t="Renk"/>
+	<phrase n="lang_screen_items_opacity_title" t="Opaklık"/>
+	<phrase n="lang_screen_items_enter_custom_color_title" t="Özel Değerler Girin"/>
+	<phrase n="lang_screen_item_titlebar_text" t="Başlık Çubuğu Metni"/>
+	<phrase n="lang_screen_item_text" t="Metin"/>
+	<phrase n="lang_screen_item_subtext" t="Alt Metin"/>
+	<phrase n="lang_screen_item_extratext" t="Ekstra Metin"/>
+	<phrase n="lang_screen_item_extratext2" t="Ekstra Metin 2"/>
+	<phrase n="lang_screen_item_titlebar_background" t="Başlık Çubuğu Arka Planı"/>
+	<phrase n="lang_screen_item_background" t="Arka Fon"/>
+	<phrase n="lang_screen_item_fkey_background" t="F Tuşu Arka Planı"/>
+	<phrase n="lang_screen_item_fkey_pressed_background" t="F Tuşuna Basıldığında Arkaplan"/>
+	<phrase n="lang_screen_item_fkey_separator" t="F Tuşu Ayırıcı"/>
+	<phrase n="lang_screen_item_fkey_label" t="F Tuşu Etiketi"/>
+	<phrase n="lang_screen_item_fkey_pressed_label" t="F Tuşuna Basıldığında Etiket"/>
+	<phrase n="lang_screen_item_line_background" t="Hat Arkaplanı"/>
+	<phrase n="lang_screen_item_selected_line_background" t="Seçilen Hat Arkaplanı"/>
+	<phrase n="lang_screen_item_selected_line_indicator" t="Seçilen Hat Göstergesi"/>
+	<phrase n="lang_screen_item_selected_line_text" t="Seçilen Hat Metni"/>
+	<phrase n="lang_screen_item_line_separator" t="Satır Ayırıcı"/>
+	<phrase n="lang_screen_item_scrollbar" t="Kaydırma Çubuğu"/>
+	<phrase n="lang_screen_item_cursor" t="Kürsör"/>
+	<phrase n="lang_screen_item_status_msgs_background" t="Durum Mesajları Arkaplan"/>
+	<phrase n="lang_screen_item_status_msgs_border" t="Durum Mesajları Kenarlığı"/>
+	<phrase n="lang_screen_item_smartlabel_background" t="Akıllı Etiket Arkaplan"/>
+	<phrase n="lang_screen_item_smartlabel_pressed_background" t="Akıllı Etiket Basıldığında Arkaplan"/>
+	<phrase n="lang_screen_item_smartlabel_separator" t="Akıllı Etiket Ayırıcı"/>
+	<phrase n="lang_screen_item_smartlabel_label" t="Akıllı Etiket Etiketi"/>
+	<phrase n="lang_screen_item_smartlabel_pressed_label" t="Akıllı Etiket Basıldığında Etiket"/>
+	<phrase n="lang_screen_item_expansion_module_background" t="Genişletme Modülü Arka Planı"/>
+	<phrase n="lang_screen_item_expansion_module_pressed_background" t="Genişletme Modülü Basılı Arka Plan"/>
+	<phrase n="lang_screen_item_expansion_module_separator" t="Genişletme Modülü Ayırıcı"/>
+	<phrase n="lang_screen_item_expansion_module_maintext" t="Genişletme Modülü Ana Metni"/>
+	<phrase n="lang_screen_item_expansion_module_pressed_maintext" t="Genişletme Modülü Basılı Ana Metni"/>
+	<phrase n="lang_screen_item_expansion_module_subtext" t="Genişletme Modülü Alt Metni"/>
+	<phrase n="lang_screen_item_expansion_module_pressed_subtext" t="Genişletme Modülü Basılı Alt Metni"/>
+	<phrase n="lang_screen_item_expansion_module_page_indicator" t="Genişletme Modülü Sayfa Göstergesi"/>
+	<phrase n="lang_screen_items_color_name_onyx_black" t="Oniks Siyah"/>
+	<phrase n="lang_screen_items_color_name_midnight_black" t="Gece Siyahı"/>
+	<phrase n="lang_screen_items_color_name_obsidian_black" t="Obsidyen Siyahı"/>
+	<phrase n="lang_screen_items_color_name_dark_grey" t="Koyu Gri"/>
+	<phrase n="lang_screen_items_color_name_grey" t="Gri"/>
+	<phrase n="lang_screen_items_color_name_light_grey" t="Açık Gri"/>
+	<phrase n="lang_screen_items_color_name_grey_white" t="Gri Beyaz"/>
+	<phrase n="lang_screen_items_color_name_white" t="Beyaz"/>
+	<phrase n="lang_screen_items_color_name_light_yellow" t="Açık Sarı"/>
+	<phrase n="lang_screen_items_color_name_yellow" t="Sarı"/>
+	<phrase n="lang_screen_items_color_name_light_red" t="Açık Kırmızı"/>
+	<phrase n="lang_screen_items_color_name_red" t="Kırmızı"/>
+	<phrase n="lang_screen_items_color_name_light_blue" t="Açık Mavi"/>
+	<phrase n="lang_screen_items_color_name_blue" t="Mavi"/>
+	<phrase n="lang_screen_items_color_name_light_green" t="Açık Yeşil"/>
+	<phrase n="lang_screen_items_color_name_green" t="Yeşil"/>
+	<phrase n="lang_screen_items_color_name_black" t="Black"/>
+	<phrase n="lang_screen_items_color_name_carbon" t="Carbon"/>
+	<phrase n="lang_screen_items_color_name_dim_grey" t="Dim Grey"/>
+	<phrase n="lang_screen_items_color_name_silver" t="Silver"/>
+	<phrase n="lang_screen_items_color_name_gainsboro" t="Gainsboro"/>
+	<phrase n="lang_screen_items_color_name_snowflake" t="Snowflake"/>
+	<phrase n="lang_screen_items_color_name_white_smoke" t="White Smoke"/>
+	<phrase n="lang_screen_items_color_name_custom" t="Özel Renk"/>
+	<phrase n="lang_monitored_extensions" t="İzlenen Dahili Numaralar"/>
+	<phrase n="lang_ALS" t="Ortam Işığı Sensörü"/>
+	<phrase n="lang_all_available_calls" t="Tüm Mevcut Çağrılar"/>
+	<phrase n="lang_new_call" t="Yeni Çağrı"/>
+	<phrase n="lang_select_conf_participant" t="Konferans Katılımcısı Seçin"/>
+	<phrase n="lang_consult_conference" t="Danışmanlık Konferansı"/>
+	<phrase n="lang_guess_max_hits" t="Maksimum Sonuç"/>
+	<phrase n="lang_guess_results" t="Sonuçlar"/>
+	<phrase n="lang_new_network_policy" t="Yeni Ağ Politikası"/>
+	<phrase n="lang_wrong_lldp_policy" t="Yanlış LLDP Politikası"/>
+	<phrase n="lang_F_MODERATE" t="Moderatör Ol"/>
+	<phrase n="lang_sip_warning" t="SIP Uyarısı"/>
+	<phrase n="lang_sync_settings" t="Ayarları Senkronize Et"/>
+	<phrase n="lang_confirm_sync_settings" t="Sunucu yapılandırması ile ayarları senkronize et?"/>
+	<phrase n="lang_no_configured_extensions" t="Yapılandırılmış dahili numara yok"/>
+	<phrase n="lang_no_active_calls_on_extensions" t="Dahili numaralarda etkin arama yok"/>
+	<phrase n="lang_sip_response_code_400" t="Geçersiz İstek"/>
+	<phrase n="lang_sip_response_code_402" t="Ödeme Gerekiyor"/>
+	<phrase n="lang_sip_response_code_403" t="Yasak"/>
+	<phrase n="lang_sip_response_code_404" t="Bulunamadı"/>
+	<phrase n="lang_sip_response_code_405" t="İzinsiz Metod"/>
+	<phrase n="lang_sip_response_code_406" t="Kabul Edilemez"/>
+	<phrase n="lang_sip_response_code_407" t="Proxy Kimlik Doğrulaması Gerekiyor"/>
+	<phrase n="lang_sip_response_code_408" t="İstek Zaman Aşımına Uğradı"/>
+	<phrase n="lang_sip_response_code_410" t="Gitmiş"/>
+	<phrase n="lang_sip_response_code_413" t="Girilen Veri Çok Fazla"/>
+	<phrase n="lang_sip_response_code_414" t="İstek URI'sı Çok Uzun"/>
+	<phrase n="lang_sip_response_code_415" t="Desteklenmeyen Ortam Türü"/>
+	<phrase n="lang_sip_response_code_416" t="Desteklenmeyen URI Şeması"/>
+	<phrase n="lang_sip_response_code_420" t="Bozuk Dahili Numara"/>
+	<phrase n="lang_sip_response_code_421" t="Dahili Numara Gerekli"/>
+	<phrase n="lang_sip_response_code_422" t="Oturum Aralığı Çok Küçük"/>
+	<phrase n="lang_sip_response_code_423" t="Aralık Çok Kısa"/>
+	<phrase n="lang_sip_response_code_480" t="Geçici Olarak Kullanım Dışı"/>
+	<phrase n="lang_sip_response_code_481" t="Çağrı/İşlem Mevcut Değil"/>
+	<phrase n="lang_sip_response_code_482" t="Döngü Algılandı"/>
+	<phrase n="lang_sip_response_code_483" t="Çok Fazla Atlama"/>
+	<phrase n="lang_sip_response_code_484" t="Adres Eksik"/>
+	<phrase n="lang_sip_response_code_485" t="Belirsiz"/>
+	<phrase n="lang_sip_response_code_486" t="Burası Meşgul"/>
+	<phrase n="lang_sip_response_code_487" t="İstek Sonlandırıldı"/>
+	<phrase n="lang_sip_response_code_488" t="Burada Kabul Edilemez"/>
+	<phrase n="lang_sip_response_code_491" t="İstek Beklemede"/>
+	<phrase n="lang_sip_response_code_493" t="Okunamayan"/>
+	<phrase n="lang_sip_response_code_500" t="Sunucu Dahili Hatası"/>
+	<phrase n="lang_sip_response_code_501" t="Uygulanmadı"/>
+	<phrase n="lang_sip_response_code_502" t="Hatalı Ağ Geçidi"/>
+	<phrase n="lang_sip_response_code_503" t="Hizmet Kullanılamıyor"/>
+	<phrase n="lang_sip_response_code_504" t="Sunucu Zaman Aşımı"/>
+	<phrase n="lang_sip_response_code_505" t="Sürüm Desteklenmiyor"/>
+	<phrase n="lang_sip_response_code_513" t="Mesaj Çok Büyük"/>
+	<phrase n="lang_sip_response_code_599" t="Ağ Bağlantısı Zaman Aşımı Hatası"/>
+	<phrase n="lang_sip_response_code_600" t="Her Yerde Meşgul"/>
+	<phrase n="lang_sip_response_code_603" t="Reddedildi"/>
+	<phrase n="lang_sip_response_code_604" t="Hiçbir Yerde Yok"/>
+	<phrase n="lang_sip_response_code_606" t="Kabul Edilemez"/>
+	<phrase n="lang_sort_order" t="Sıralama Düzeni"/>
+	<phrase n="lang_directory_display_order" t="Görüntüleme Sırası"/>
+	<phrase n="lang_display_order_first_name_last_name" t="İsim, Soyad"/>
+	<phrase n="lang_display_order_last_name_first_name" t="Soyad, İsim"/>
+	<phrase n="lang_visual_options" t="Görsel Seçenekler"/>
+	<phrase n="lang_call_screen_photo_size" t="Çağrı Ekranlarında Fotoğraf Boyutu"/>
+	<phrase n="lang_size_XS" t="XS"/>
+	<phrase n="lang_size_S" t="S"/>
+	<phrase n="lang_size_M" t="M"/>
+	<phrase n="lang_size_L" t="L"/>
+	<phrase n="lang_size_XL" t="XL"/>
+	<phrase n="lang_size_XXL" t="XXL"/>
+	<phrase n="lang_size_XXXL" t="XXXL"/>
+	<phrase n="lang_prefer_saved_over_received_photo" t="Yerel Fotoğrafları Tercih Et"/>
+	<phrase n="lang_display_method" t="Numara Gösterme Stili"/>
+	<phrase n="lang_display_method_full_contact" t="Tam İletişim Bilgileri"/>
+	<phrase n="lang_display_method_display_name" t="Ad"/>
+	<phrase n="lang_display_method_display_number" t="Numara"/>
+	<phrase n="lang_display_method_display_name_number" t="Ad + Numara"/>
+	<phrase n="lang_display_method_display_number_name" t="Numara + Ad"/>
+	<phrase n="lang_no_calls_for_transfer" t="Aktarma için uygun çağrı yok"/>
+	<phrase n="lang_brand_variant_select_title" t="Marka Varyantı Seç"/>
+	<phrase n="lang_brand_variant_default" t="Varsayılan"/>
+	<phrase n="lang_brand_variant_updated_title" t="Varyant Güncellenmiştir"/>
+	<phrase n="lang_brand_variant_selected" t="Seçilen Varyant"/>
+	<phrase n="lang_system_reboot_now" t="Sistem şimdi yeniden başlatılacak"/>
+	<phrase n="lang_select_identity" t="Kimlik Seç"/>
+	<phrase n="lang_F_CALL_CENTER_STATUS" t="Çağrı Merkezi Durumu"/>
+	<phrase n="lang_F_ATTENDED_TRANSFER" t="Katılımlı"/>
+	<phrase n="lang_disposition_code_sent" t="gönderildi"/>
+	<phrase n="lang_disposition_code_selection" t="Yer Değiş. Kodunu Seç"/>
+	<phrase n="lang_disposition_code_entry" t="Yer Değiş. Kodunu Gir"/>
+	<phrase n="lang_F_DISP_CODE" t="Y D Kodu"/>
+	<phrase n="lang_F_DISP_CODE_typeSio" t="Yer Değiştirme Kodu"/>
+	<phrase n="lang_F_DISP_CODE_smartlabel" t="Y D Kodu"/>
+	<phrase n="lang_disposition_code_display_text_list" t="Liste"/>
+	<phrase n="lang_parked_calls_settings" t="Park Edilen Aramalar"/>
+	<phrase n="lang_call_parked_on" t="Park edildi"/>
+	<phrase n="lang_no_parked_call" t="Park Edilmiş Çağrı Yok."/>
+	<phrase n="lang_F_CALL_PARK_IDLE" t="Park Boşta"/>
+	<phrase n="lang_F_CALL_PARK_typeSio" t="Çağrı Parkı"/>
+	<phrase n="lang_menu_any_smartlabel_key_short_press" t="Kısa Basma AkıllıEtiket"/>
+	<phrase n="lang_monitored_extension_is_ringing" t="İzlenen dahili numara çalıyor"/>
+	<phrase n="lang_disposition_code_not_sent" t="Kod gönderilmedi."/>
+	<phrase n="lang_disposition_code_identity_mismatch" t="Kimlik uyuşmazlığı."/>
+	<phrase n="lang_F_EXEC_ASSIST_CALL_PUSH" t="Push Arama"/>
+	<phrase n="lang_usb_mass_storage_plug" t="USB sürücüsü algılandı"/>
+	<phrase n="lang_usb_mass_storage_unplug" t="USB sürücüsü çıkarıldı"/>
+	<phrase n="lang_information_menu_usb_info" t="USB Bilgisi"/>
+	<phrase n="lang_usb_mass_storage_title" t="USB Yığın Depolama"/>
+	<phrase n="lang_F_USB_EJECT" t="USB'yi çıkar"/>
+	<phrase n="lang_usb_mass_storage_safe_to_remove" t="USB sürücüsünü çıkarmak artık güvenli"/>
+	<phrase n="lang_F_USBREC_START" t="USB Kaydını Baş."/>
+	<phrase n="lang_F_USBREC_START_typeSio" t="USB Kaydını Başlat"/>
+	<phrase n="lang_F_USBREC_START_smartlabel" t="USB Kaydını&lt;br&gt;Baş."/>
+	<phrase n="lang_F_USBREC_STOP" t="USB Kaydını Dur."/>
+	<phrase n="lang_F_USBREC_STOP_typeSio" t="USB Kaydını Durdur"/>
+	<phrase n="lang_F_USBREC_STOP_smartlabel" t="USB Kaydını&lt;br&gt;Dur."/>
+	<phrase n="lang_F_USBREC_PAUSE" t="USB Kaydını Durak."/>
+	<phrase n="lang_F_USBREC_PAUSE_typeSio" t="USB Kaydını Duraklat"/>
+	<phrase n="lang_F_USBREC_PAUSE_smartlabel" t="USB Kaydını&lt;br&gt;Durak."/>
+	<phrase n="lang_F_USBREC_RESUME" t="USB Kaydına Dev."/>
+	<phrase n="lang_F_USBREC_RESUME_typeSio" t="USB Kaydına Devam Et"/>
+	<phrase n="lang_F_USBREC_RESUME_smartlabel" t="USB Kaydına&lt;br&gt;Dev."/>
+	<phrase n="lang_F_PAUSE" t="Duraklat"/>
+	<phrase n="lang_F_RESUME" t="Devam Et"/>
+	<phrase n="lang_usb_recording_processing_wait" t="Lütfen kayıt işleminin tamamlanmasını bekleyin!"/>
+	<phrase n="lang_usb_recording_processing_completed" t="Kayıt işlemi tamamlandı!"/>
+	<phrase n="lang_usb_recording_call_terminated" t="Çağrı kaydı sona erdi"/>
+	<phrase n="lang_usb_recording_terminated_drive_full" t="Kayıt sonlandırıldı, USB sürücüsü dolu"/>
+	<phrase n="lang_usb_recording_terminated_max_file_size" t="Kayıt sonlandırıldı, Maksimum kayıt uzunluğu"/>
+	<phrase n="lang_usb_recording_no_usb_drive_detected" t="USB sürücüsü algılanmadı"/>
+	<phrase n="lang_usb_recording_terminated_errno" t="Kayıt sonlandırıldı, errno: "/>
+	<phrase n="lang_usb_playback_browse_recordings" t="Kayıtlara Göz At"/>
+	<phrase n="lang_usb_playback_browse_recordings_title" t="Çağrı Kayıtları"/>
+	<phrase n="lang_usb_playback_play_recording_title" t="Kayıt Oynatma"/>
+	<phrase n="lang_usb_playback_invalid_header_or_encrypted_file" t="Geçersiz wav başlığı veya şifreli dosya:"/>
+	<phrase n="lang_usb_playback_recording_information_title" t="Kayıt Bilgileri"/>
+	<phrase n="lang_usb_playback_delete_recording_title" t="Kaydı Sil"/>
+	<phrase n="lang_label_rewind" t="Geri sar"/>
+	<phrase n="lang_label_fast_forward" t="İleri sar"/>
+	<phrase n="lang_text_size" t="Boyut"/>
+	<phrase n="lang_usb_playback_no_recordings" t="Kayıt Yok"/>
+	<phrase n="lang_usb_recording_aborted_by_conference" t="Konferans tarafından USB kaydı iptal edildi"/>
+	<phrase n="lang_usb_recording_cannot_record_conference" t="Konferans USB'ye kaydedilemiyor"/>
+	<phrase n="lang_date_and_time" t="Tarih ve Saat"/>
+	<phrase n="lang_label_context_key_page_left" t="Sol Sayfa"/>
+	<phrase n="lang_label_context_key_page_right" t="Sağ Sayfa"/>
+	<phrase n="lang_expansion_module_text_alignment" t="Metin Hizalama"/>
+	<phrase n="lang_expansion_module_color_font_sizes_XXL_XS" t="Anametin XXL ve Altmetin XS"/>
+	<phrase n="lang_expansion_module_color_font_sizes_XL_XS" t="Anametin XL ve Altmetin XS"/>
+	<phrase n="lang_expansion_module_color_font_sizes_XL_S" t="Anametin XL ve Altmetin S"/>
+	<phrase n="lang_expansion_module_color_font_sizes_L_XS" t="Anametin L ve Altmetin XS"/>
+	<phrase n="lang_expansion_module_color_font_sizes_L_S" t="Anametin L ve Altmetin S"/>
+	<phrase n="lang_expansion_module_color_font_sizes_L_M" t="Anametin L ve Altmetin M"/>
+	<phrase n="lang_expansion_module_color_font_sizes_M_XS" t="Anametin M ve Altmetin XS"/>
+	<phrase n="lang_expansion_module_color_font_sizes_M_S" t="Anametin M ve Altmetin S"/>
+	<phrase n="lang_expansion_module_color_font_sizes_M_M" t="Anametin M ve Altmetin M"/>
+	<phrase n="lang_expansion_module_color_font_sizes_S_XS" t="Anametin S ve Altmetin XS"/>
+	<phrase n="lang_expansion_module_color_font_sizes_S_S" t="Anametin S ve Altmetin S"/>
+	<phrase n="lang_expansion_module_color_font_sizes_XS_XS" t="Anametin XS ve Altmetin XS"/>
+	<phrase n="lang_edit_mode_upper_case" t="ABCÇ"/>
+	<phrase n="lang_edit_mode_lower_case" t="abcç"/>
+	<phrase n="lang_edit_mode_numbers" t="123"/>
+	<phrase n="lang_F_IDLE_CONTEXT_PAGE_LEFT" t="Sol"/>
+	<phrase n="lang_F_IDLE_CONTEXT_PAGE_LEFT_typeSio" t="Sol Sayfa"/>
+	<phrase n="lang_F_IDLE_CONTEXT_PAGE_RIGHT" t="Sağ"/>
+	<phrase n="lang_F_IDLE_CONTEXT_PAGE_RIGHT_typeSio" t="Sağ Sayfa"/>
+	<phrase n="lang_F_NONE" t=""/>
+	<phrase n="lang_branding_name" t="Branding:"/>
+	<phrase n="lang_hardware_version" t="Hardware Version:"/>
+	<phrase n="lang_branding_version" t="Branding Version:"/>
+	<phrase n="lang_NickName" t="Nickname"/>
+	<phrase n="lang_FirstShortCode" t="First Code"/>
+	<phrase n="lang_LastShortCode" t="Last Code"/>
+	<phrase n="lang_FirstExternalDirectoryNumber" t="First Number"/>
+	<phrase n="lang_LastExternalDirectoryNumber" t="Last Number"/>
+	<phrase n="lang_DialingPlanCode" t="Plan"/>
+	<phrase n="lang_DialingPlanCodeDetail" t="Dialing Plan Code"/>
+	<phrase n="lang_FirstShortCodeDetail" t="First Short Code"/>
+	<phrase n="lang_FirstExternalDirectoryDetail" t="First External Directory"/>
+	<phrase n="lang_LastExternalDirectoryDetail" t="Last External Directory"/>
+	<phrase n="lang_Department" t="Department"/>
+	<phrase n="lang_shortcodes" t="Short Codes"/>
+	<phrase n="lang_emergency_call_number_is_misconfigured" t="Emergency numbers misconfigured"/>
+	<phrase n="lang_tb_alias" t="Alias"/>
+	<phrase n="lang_web_user_credentials_not_set" t="No credentials set for the web user"/>
+	<phrase n="lang_web_admin_credentials_not_set" t="No credentials set for the web admin"/>
+	<phrase n="lang_not_registered" t=" not registered"/>
+	<phrase n="lang_fake_number" t="Fake Number"/>
+	<phrase n="lang_BLF_DND_on" t="DND on"/>
+	<phrase n="lang_BLF_On_a_call" t="On a call"/>
+	<phrase n="lang_BLF_Idle" t="Idle"/>
+	<phrase n="lang_MediaStack_restarting_All_lines_will_be_closed" t="MediaStack restarting. All lines will be closed."/>
+	<phrase n="lang_Firmware_update_starting" t="Firmware update: starting"/>
+	<phrase n="lang_Firmware_update_sent_install_request" t="Firmware update: waiting for file server response"/>
+	<phrase n="lang_Firmware_update_download" t="Firmware update: downloading"/>
+	<phrase n="lang_Firmware_update_transfer_to_swupdate" t="Firmware update: processing"/>
+	<phrase n="lang_Firmware_update_verification_and_install" t="Firmware update: installing"/>
+	<phrase n="lang_File_server_response" t="Server response: "/>
+	<phrase n="lang_File_server_unreachable" t="File server unreachable."/>
+	<phrase n="lang_File_not_found" t="File not found."/>
+	<phrase n="lang_Firmware_invalid" t="Firmware invalid."/>
+	<phrase n="lang_firmware_update" t="Firmware Update"/>
+	<phrase n="lang_menu_ringer_once" t="Only once"/>
+	<phrase n="lang_voicemail_no_access_code" t="Number or feature access code is not programmed"/>
+	<phrase n="lang_F_WIFI" t="Wi-Fi"/>
+	<phrase n="lang_parties" t="parties"/>
+	<phrase n="lang_fwd_by" t="Fwd by:"/>
+	<phrase n="lang_firmware_update_completed_pending_reboot" t="Phone is about to reboot to complete the firmware update. Rebooting in %d seconds..."/>
+	<phrase n="lang_F_CLOSE" t="Kapalı"/>
+	<phrase n="lang_ip_assigment" t="IP Assignment"/>
+	<phrase n="lang_disable" t="Disable"/>
+	<phrase n="lang_enable" t="Enable"/>
+	<phrase n="lang_reregister" t="Re-register"/>
+	<phrase n="lang_phonemanager" t="Phone Manager (Web UI)"/>
+	<phrase n="lang_locale" t="Date &amp; Time format"/>
+	<phrase n="lang_webserver_admin_name" t="Admin name"/>
+	<phrase n="lang_webserver_admin_password" t="Admin password"/>
+	<phrase n="lang_webserver_user_name" t="User name"/>
+	<phrase n="lang_webserver_user_password" t="User password"/>
+	<phrase n="lang_startup_wizard" t="Startup Wizard"/>
+	<phrase n="lang_no_voicemail" t="No voicemail"/>
+	<phrase n="lang_new_voicemail" t="New voicemail"/>
+	<phrase n="lang_old_voicemail" t="Old voicemail"/>
+	<phrase n="lang_phonemanager_credentials" t="Phone Manager (Web UI) login credentials"/>
+	<phrase n="lang_static_ip" t="Static IP"/>
+	<phrase n="lang_dhcp_or_static_ip" t="DHCP or Static IP"/>
+	<phrase n="lang_locale_ar_AE" t="Arabic (United Arab Emirates)"/>
+	<phrase n="lang_locale_az_AZ" t="Azərbaycanca (Azerbaijan)"/>
+	<phrase n="lang_locale_bs_BA" t="Bosanki (Bosnia)"/>
+	<phrase n="lang_locale_ca_ES" t="Català (Spain)"/>
+	<phrase n="lang_locale_cs_CZ" t="Čeština (Czech Republic)"/>
+	<phrase n="lang_locale_da_DK" t="Dansk (Denmark)"/>
+	<phrase n="lang_locale_de_DE" t="Deutsch (Germany)"/>
+	<phrase n="lang_locale_el_GR" t="Ελληνικά (Greece)"/>
+	<phrase n="lang_locale_en_DE" t="English (Germany)"/>
+	<phrase n="lang_locale_en_GB" t="English (UK)"/>
+	<phrase n="lang_locale_en_US" t="English (US)"/>
+	<phrase n="lang_locale_es_ES" t="Español (Spain)"/>
+	<phrase n="lang_locale_et_EE" t="Eesti (Estonia)"/>
+	<phrase n="lang_locale_eu_ES" t="Euskara (Spain)"/>
+	<phrase n="lang_locale_fi_FI" t="Suomi (Finland)"/>
+	<phrase n="lang_locale_fr_FR" t="Français (France)"/>
+	<phrase n="lang_locale_he_IL" t="Hebrew (Israel)"/>
+	<phrase n="lang_locale_hr_HR" t="Hrvatski (Croatia)"/>
+	<phrase n="lang_locale_hu_HU" t="Magyar (Hungary)"/>
+	<phrase n="lang_locale_it_IT" t="Italiano (Italy)"/>
+	<phrase n="lang_locale_ja_JP" t="Japanese (Japan)"/>
+	<phrase n="lang_locale_kk_KZ" t="қазақша (Kazakhstan)"/>
+	<phrase n="lang_locale_lt_LT" t="Lietuvių (Lithuania)"/>
+	<phrase n="lang_locale_lv_LV" t="Latviešu (Latvia)"/>
+	<phrase n="lang_locale_nl_NL" t="Nederlands (Netherlands)"/>
+	<phrase n="lang_locale_nb_NO" t="Norsk (Norway)"/>
+	<phrase n="lang_locale_pl_PL" t="Polski (Poland)"/>
+	<phrase n="lang_locale_pt_PT" t="Português (Portugal)"/>
+	<phrase n="lang_locale_ro_RO" t="Română (Romania)"/>
+	<phrase n="lang_locale_ru_RU" t="Русский (Russia)"/>
+	<phrase n="lang_locale_sl_SI" t="Slovenščina (Slovenia)"/>
+	<phrase n="lang_locale_sv_SE" t="Svenska (Sweden)"/>
+	<phrase n="lang_locale_tr_TR" t="Türkçe (Turkey)"/>
+	<phrase n="lang_locale_uk_UA" t="Українська (Ukraine)"/>
+	<phrase n="lang_locale_zh_CN" t="Simplified Chinese (China)"/>
+	<phrase n="lang_locale_zh_TW" t="Traditional Chinese (Taiwan)"/>
+	<phrase n="lang_no_error" t="no error"/>
+	<phrase n="lang_unknown_command" t="unknown command"/>
+	<phrase n="lang_invalid_missing_params" t="invalid or missing parameter(s)"/>
+	<phrase n="lang_not_implemented" t="not implemented"/>
+	<phrase n="lang_failed" t="failed"/>
+	<phrase n="lang_refer_to_logs" t="Refer to the system logs for details"/>
+	<phrase n="lang_software_update_confirmation" t="The software update takes a few minutes and will reboot your phone. If you are on call(s), the update will start when all calls are terminated. Do not turn off your phone during the update. Update now?"/>
+	<phrase n="lang_firmware_field_is_empty" t="Firmware field is empty."/>
+	<phrase n="lang_software_update_in_progress" t="Software update in progress. Please wait for your phone to reboot. Once it restarts, refresh your browser to regain access to the WUI."/>
+	<phrase n="lang_edit_mode" t="Edit Mode"/>
+	<phrase n="lang_vlan_pc_qos" t="VLAN Priority on LAN port (0-7)"/>
+	<phrase n="lang_bluetooth_devices" t="Devices"/>
+	<phrase n="lang_bluetooth_not_ready" t="Bluetooth is not ready"/>
+	<phrase n="lang_F_ACCEPT_CALL_ext_ui" t="Answer"/>
+	<phrase n="lang_F_DEFLECT_ext_ui" t="Forward"/>
+	<phrase n="lang_F_DENY_ext_ui" t="Reject"/>
+	<phrase n="lang_F_END_ext_ui" t="End call"/>
+	<phrase n="lang_F_CALL_PARK_DIAL" t="Call Park Dial"/>
+	<phrase n="lang_F_NEW_CALL" t="New Call"/>
+	<phrase n="lang_device_management_service" t="Device Management Service"/>
+	<phrase n="lang_manage_dms" t="Manage DMS"/>
+	<phrase n="lang_3_days" t="3 Days"/>
+	<phrase n="lang_dms_enabled" t="DMS is enabled until"/>
+	<phrase n="lang_dms" t="DMS"/>
+</phrases>

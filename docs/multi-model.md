@@ -5,15 +5,15 @@ are still per model.
 
 ## What exists now
 
-- `cfw/panel/`: panel, CGIs and `boot.sh`, shared by both models.
-- `cfw/models/<model>.conf`: name, default password, feature list.
-- `tools/cfw-sync.sh <model> <rootfs>`: installs the above and the one `rcS` hook.
+- `src/cfw/panel/`: panel, CGIs and `boot.sh`, shared by both models.
+- `src/cfw/models/<model>.conf`: name, default password, feature list.
+- `tools/fw/cfw-sync.sh <model> <rootfs>`: installs the above and the one `rcS` hook.
   Both firmware build scripts call it.
 - The panel page is generated, so unsupported features are not shown.
 
 Tested on both VMs: login, status, logs, settings backup, screenshot at 24 and 32
 bpp. Remote control and reboot work on the D375; see `docs/cfw-settings.md` for
-the D815 limits. Next: move `custom-rootfs` to stock + changes (step 1 below).
+the D815 limits. Next: move `rootfs/d375` to stock + changes (step 1 below).
 
 Yes, this works. Almost all of the CFW is shell, CGI and configuration, which do
 not depend on the model. Only a small part touches hardware. The firmware images
@@ -70,7 +70,7 @@ through `case $PHONE_TYPE`, and still contains the `snomD375` branch.
 ## Layout
 
 ```
-cfw/
+src/cfw/
   common/            files for every phone: panel, CGI, sshd setup
   models/d375/       model.conf, overlay files, rcS patch
   models/d815/       model.conf, overlay files, rcS patch
@@ -89,9 +89,9 @@ audio backend, default password, packaging step.
 3. Apply the `rcS` patch.
 4. Build the apps for that architecture.
 5. Package and sign with the model's format.
-6. Run `tools/vm-update.sh <model>`.
+6. Run `tools/qemu/vm-update.sh <model>`.
 
-Step 1 removes the need for `custom-rootfs/` and `custom-rootfs-d815/`. Those trees
+Step 1 removes the need for `rootfs/d375/` and `rootfs/d815/`. Those trees
 hold the whole stock firmware, which is why they are not in git and were lost once.
 Only the changes would be tracked, and the rootfs becomes a build product.
 
@@ -108,7 +108,7 @@ can serve both. A small `lib/` layer covers the differences:
 
 ## Migration order
 
-1. Move the D815's six changed files and the D375's overlay into `cfw/`, and make
+1. Move the D815's six changed files and the D375's overlay into `src/cfw/`, and make
    the output match today's images.
 2. Move the shared panel into `common/`, with a model check where needed.
 3. Add the screen and input layer, and port one app (Doom) to the D815.

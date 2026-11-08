@@ -2,11 +2,11 @@
 
 ## Workflow goal: stock + overlay
 
-Today the whole modified rootfs (`custom-rootfs/`) lives only on disk, and it
+Today the whole modified rootfs (`rootfs/d375/`) lives only on disk, and it
 has been lost once already. The plan is to make every image reproducible from
 two inputs:
 
-1. a stock snom image (`original_firmware/`, downloadable, not committed), and
+1. a stock snom image (`firmware/stock/`, downloadable, not committed), and
 2. an `overlay/` directory **in git** with our added/changed files, plus a
    small manifest for modes, owners and deletions.
 
@@ -120,7 +120,7 @@ auth" needs no new code. It's one config file plus `-c`/`-r` flags.
 
 **Proposed design**
 
-1. `custom-rootfs/etc/cfw-httpd.conf`: `/:root:*`. rcS starts the panel as
+1. `rootfs/d375/etc/cfw-httpd.conf`: `/:root:*`. rcS starts the panel as
    `busybox httpd -p 8080 -h /snom/cfw -c /etc/cfw-httpd.conf -r "snom CFW"`.
    Changing the password with `passwd` over SSH, or with the panel's
    reset-pw button, changes both logins at once.

@@ -15,7 +15,7 @@ UI keeps running** (no takeover, no reboot, calls still work).
 |---|---|
 | Web panel (`http://<phone>:8080/`) | card *Intercom / baby monitor*: pick a gain, **Start**, the `<audio>` player plays the stream. **Stop** turns the mic off. |
 | On the phone | *Settings -> CFW Tools -> Intercom*: *Start intercom* / *Stop intercom*, current level. |
-| PC | `tools/intercom-listen.sh [PHONE_IP]` (starts it if needed, plays via ffplay/aplay/paplay). `-r file.wav -t 60` records a minute, `-s` stops the intercom on exit, `-u user:pass` for the panel login. |
+| PC | `tools/device/intercom-listen.sh [PHONE_IP]` (starts it if needed, plays via ffplay/aplay/paplay). `-r file.wav -t 60` records a minute, `-s` stops the intercom on exit, `-u user:pass` for the panel login. |
 | Anything that plays HTTP audio | `http://<phone>:8090/stream.wav?k=<token>` (VLC, ffplay, mpv, a browser). Raw S16LE without header: `/raw?k=<token>`. |
 | Shell on the phone | `/snom/cfw/intercom/intercom.sh start [GAIN] | stop | status` |
 
@@ -35,13 +35,13 @@ use 4-5 to hear a quiet room from far away (more hiss).
 
 | File | Purpose |
 |---|---|
-| `intercom-src/micstream.c` | the capture + HTTP server (static musl, integer only) |
-| `tools/build-intercom.sh` | docker cross-build -> `tools/out/micstream` + `custom-rootfs/snom/cfw/intercom/micstream` |
-| `custom-rootfs/snom/cfw/intercom/intercom.sh` | start/stop/status: insmod, token, start-stop-daemon, cleanup |
-| `custom-rootfs/snom/cfw/cgi-bin/intercom` | CGI for the panel (json), PC tool (txt), phone menu (minibrowser XML), HTML fallback |
-| `custom-rootfs/snom/cfw/panel.d/90-intercom.html` | panel card with the `<audio>` element |
-| `custom-rootfs/snom/cfw/phone-menu.d/30-intercom` | CFW Tools menu entry |
-| `tools/intercom-listen.sh` | PC side |
+| `src/audio/intercom/micstream.c` | the capture + HTTP server (static musl, integer only) |
+| `tools/build/build-intercom.sh` | docker cross-build -> `out/micstream` + `rootfs/d375/snom/cfw/intercom/micstream` |
+| `rootfs/d375/snom/cfw/intercom/intercom.sh` | start/stop/status: insmod, token, start-stop-daemon, cleanup |
+| `rootfs/d375/snom/cfw/cgi-bin/intercom` | CGI for the panel (json), PC tool (txt), phone menu (minibrowser XML), HTML fallback |
+| `rootfs/d375/snom/cfw/panel.d/90-intercom.html` | panel card with the `<audio>` element |
+| `rootfs/d375/snom/cfw/phone-menu.d/30-intercom` | CFW Tools menu entry |
+| `tools/device/intercom-listen.sh` | PC side |
 | `tests/intercom.sh` | end-to-end test |
 
 ## How it works

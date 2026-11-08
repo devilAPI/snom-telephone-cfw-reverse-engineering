@@ -14,7 +14,7 @@ downloads it to `/tmp`, unpacks it, finds the game file and runs it.
 `sid` and the file number come from the browser/phone. `lib/zip.sh:zip_pick` accepts only digits (and `-` in the sid), requires the sid to equal the stored `/tmp/zip-<sys>/sid`, requires `1 <= n <= lines(list)`, and takes the path from its own list file by line number. The client never supplies a path; nothing is eval'ed. `busybox unzip` also refuses `../` and absolute entry names (tested in `tests/zip.sh`).
 
 ## The unzip tool
-The phone's busybox has no `unzip` applet (`busybox --list`). `tools/build-unzip.sh` builds busybox 1.36.1 with only the unzip applet, static musl armv6 (150 KB), shipped as `/snom/cfw/bin/unzip` (`-l` listing, `-qo ... -d dir -x pattern`; it has no usage text, `unzip -h` just says "unrecognized option"). Only deflate/stored are supported (no bzip2/lzma/xz, no encryption).
+The phone's busybox has no `unzip` applet (`busybox --list`). `tools/build/build-unzip.sh` builds busybox 1.36.1 with only the unzip applet, static musl armv6 (150 KB), shipped as `/snom/cfw/bin/unzip` (`-l` listing, `-qo ... -d dir -x pattern`; it has no usage text, `unzip -h` just says "unrecognized option"). Only deflate/stored are supported (no bzip2/lzma/xz, no encryption).
 
 ## RAM
 `/tmp` is a 40 MB RAM disk. `zip_extract` reads the unpacked total from `unzip -l`, refuses with a clear message if it exceeds free space, and deletes the zip as soon as it is unpacked. A 32 MB GBA ROM zipped to 20 MB therefore cannot be unpacked in place; link the bare ROM then.

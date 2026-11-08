@@ -1,10 +1,10 @@
 # CFW Settings web panel
 
-> **Update:** the panel source now lives in `cfw/panel/` and is shared between
+> **Update:** the panel source now lives in `src/cfw/panel/` and is shared between
 > models. It requires a login: user `root` with the system password. The sections
 > below that describe an unauthenticated panel, `index.html` or an inline `rcS`
-> entry are history. Files in `custom-rootfs/snom/cfw/` are overwritten by
-> `tools/cfw-sync.sh`, so edit `cfw/panel/`.
+> entry are history. Files in `rootfs/d375/snom/cfw/` are overwritten by
+> `tools/fw/cfw-sync.sh`, so edit `src/cfw/panel/`.
 
 ## Panel features
 
@@ -49,7 +49,7 @@ What does work:
 So the panel is a `busybox httpd` instance on **port 8080** serving
 `/snom/cfw`, and the menu just links to it.
 
-## Pieces (all in `custom-rootfs/`)
+## Pieces (all in `rootfs/d375/`)
 
 | Path | What |
 |---|---|
@@ -111,7 +111,7 @@ phone as `state_settings.xml.orig`.
 and `file://` images are ignored there; tested). The Games entry uses
 `kIconTypeDect`, which is unused on the D375 (it has no DECT radio). Its
 `icontype_icons/24x24/dect.png` / `dect_active.png` in all four themes are
-overwritten with a gamepad drawn by `tools/make-games-icon.py`.
+overwritten with a gamepad drawn by `tools/media/make-games-icon.py`.
 
 The launchers record every URL that downloaded and validated in
 `/snom/cfw/<game>/history` (newest first, max 8). Links used from the web panel

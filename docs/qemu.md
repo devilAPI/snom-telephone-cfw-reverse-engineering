@@ -22,20 +22,20 @@ Neither model has audio or calls.
 ## virt-manager
 
 ```sh
-tools/build-qemu.sh     # once: downloads QEMU 11.1.2 and builds it
-tools/vm-define.sh      # once: registers snom-d375 and snom-d815
+tools/qemu/build-qemu.sh     # once: downloads QEMU 11.1.2 and builds it
+tools/qemu/vm-define.sh      # once: registers snom-d375 and snom-d815
 ```
 
 In virt-manager, use File > Add Connection > "QEMU/KVM user session". The VMs are
 listed there; they are not on the default system connection.
 
-Both firmware build scripts finish by running `tools/vm-update.sh`, so the next
+Both firmware build scripts finish by running `tools/qemu/vm-update.sh`, so the next
 VM boot runs the newest build. The VM definitions point at fixed paths in
 `emu/vm/<model>/` and never need editing. To load a different image by hand:
 
 ```sh
-tools/vm-update.sh d375 path/to/image.bin
-tools/vm-update.sh d815 path/to/rootfs.ubifs
+tools/qemu/vm-update.sh d375 path/to/image.bin
+tools/qemu/vm-update.sh d815 path/to/rootfs.ubifs
 ```
 
 An update replaces the flash, so changes made inside the guest are lost. A VM that
@@ -52,8 +52,8 @@ networking have no libvirt device type, so they are passed as raw QEMU arguments
 ## Without libvirt
 
 ```sh
-tools/qemu-run.sh d375               # GTK window, serial on stdout
-tools/qemu-run.sh --headless d815    # LCD on VNC 127.0.0.1:5975
+tools/qemu/qemu-run.sh d375               # GTK window, serial on stdout
+tools/qemu/qemu-run.sh --headless d815    # LCD on VNC 127.0.0.1:5975
 ```
 
 Do not run this and the VM for the same model at once: they share ports and flash.
@@ -106,7 +106,7 @@ access to each address is logged.
 
 ## D375: what differs from a real phone
 
-`tools/qemu-mkflash.py` changes two things in the flash image. The `.bin` file
+`tools/qemu/qemu-mkflash.py` changes two things in the flash image. The `.bin` file
 itself is not modified.
 
 1. **`/snom/media_daemon` is replaced by a stub.** The real one needs the voice
@@ -144,12 +144,12 @@ function names; the device tree gave the address map.
 | LCD | 480x272, 24-bit |
 | Everything else | The same register stub as the D375 |
 
-`tools/vm-update.sh d815` patches a copy of the device tree to turn off the Vivante
+`tools/qemu/vm-update.sh d815` patches a copy of the device tree to turn off the Vivante
 GPU, the `dvf9a` analog chip and the DSA switch, and to set a MAC address.
 
 ## D815: what differs from a real phone
 
-`tools/qemu-mkubi.py` does the job of `ubinize`. It adds a prebuilt `overlay`
+`tools/qemu/qemu-mkubi.py` does the job of `ubinize`. It adds a prebuilt `overlay`
 volume from `emu/d815-overlay/`, and the firmware's own `unionfs` mount places those
 files over `/snom`. The rootfs itself is not modified. The overlay holds:
 
@@ -167,11 +167,11 @@ Consequences:
 
 The first-run wizard has not been tested on the D815.
 
-### Permissions in custom-rootfs-d815
+### Permissions in rootfs/d815
 
-`custom-rootfs-d815/` has no execute bits at all. A UBIFS built straight from it
+`rootfs/d815/` has no execute bits at all. A UBIFS built straight from it
 cannot boot: the kernel gets `EACCES` on `/sbin/init` and panics with "No init
-found". `tools/build-d815-ubifs.sh` avoids this by extracting the stock image as
+found". `tools/fw/build-d815-ubifs.sh` avoids this by extracting the stock image as
 root in Docker and copying in only the files that differ. New CFW files added to
 that tree are copied too, and keep the non-executable mode of the tree, so set
 their mode in that script.
@@ -179,7 +179,7 @@ their mode in that script.
 ## Troubleshooting
 
 - **Port already in use**: QEMU refuses to start if a forwarded port is taken.
-  Change `PORT_*` in `tools/qemu-args.sh`, then run `tools/vm-define.sh` again.
+  Change `PORT_*` in `tools/qemu/qemu-args.sh`, then run `tools/qemu/vm-define.sh` again.
 - **Silent after "Uncompressing Linux"**: the log is still in RAM until the UART
   driver probes. `pmemsave` the RAM and search for `<5>Linux version`.
 - **D815 console**: with libvirt it is in `emu/run/d815/console.log`.

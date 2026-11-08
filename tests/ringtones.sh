@@ -5,13 +5,13 @@
 #     :8080 and over the loopback :8081 URL the phone itself uses
 #  3. hostile names / bad files / oversize are rejected, nothing escapes the data dir
 #  4. (lock) assign it to line 1, play the ringer with ringer volume 1, capture the audio
-#     output digitally with tools/rtcap and correlate it with the uploaded file
+#     output digitally with out/rtcap and correlate it with the uploaded file
 #  5. (lock) phone app stopped (as during a game) -> clean error, no hang
 #  6. (lock) read-only ringtone dir -> readable error
 # Every phone setting touched is saved first and restored at the end.
 set -u
 . "$(dirname "$0")/lib.sh"
-C=$REPO/custom-rootfs/snom/cfw
+C=$REPO/rootfs/d375/snom/cfw
 TMPD=$(mktemp -d); trap 'rm -rf "$TMPD"; rm -f "$_askpass"' EXIT
 PH="http://$PHONE_IP"
 
@@ -21,7 +21,7 @@ deploy() {
     ph_put "$C/panel.d/85-ringtones.html" /snom/cfw/panel.d/85-ringtones.html
     ph 'mkdir -p /snom/cfw-data/ringtones; [ -L /snom/cfw/ringtones ] || ln -s /snom/cfw-data/ringtones /snom/cfw/ringtones
         mkdir -p /snom/cfw/tools'
-    ph_put "$REPO/tools/out/rtcap" /tmp/rtcap
+    ph_put "$REPO/out/rtcap" /tmp/rtcap
     # the loopback httpd (Task 0 rcS) - start it if this phone still runs an older image
     ph 'netstat -ltn | grep -q "127.0.0.1:8081 " || busybox httpd -p 127.0.0.1:8081 -h /snom/cfw'
 }

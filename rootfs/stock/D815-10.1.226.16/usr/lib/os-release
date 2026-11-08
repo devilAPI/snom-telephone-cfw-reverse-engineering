@@ -1,0 +1,5 @@
+NAME=Buildroot
+VERSION=2015.11-rc2-50440-gb95a624b23
+ID=buildroot
+VERSION_ID=2025.02
+PRETTY_NAME="Buildroot 2025.02"

@@ -1,15 +1,15 @@
 # Dev images from GitHub Actions
 
 `.github/workflows/dev-image.yml` builds a signed D375 image from the tracked
-`custom-rootfs/` with `tools/build-custom-firmware.sh` and publishes it as a
+`rootfs/d375/` with `tools/fw/build-custom-firmware.sh` and publishes it as a
 **pre-release** on GitHub.
 
-- **When:** on every push to `main` or `cfw-features` that touches `custom-rootfs/`,
+- **When:** on every push to `main` or `cfw-features` that touches `rootfs/d375/`,
   the build script or the workflow, and by hand (Actions → *D375 dev image* → *Run workflow*).
 - **Where:** one rolling pre-release per branch, tag `dev-<branch>` (e.g. `dev-cfw-features`).
   Each run deletes the old one and uploads `snomD375-10.1.64.17-SIP-r.bin` plus a `.sha256`.
 - **What it does not do:** rebuild the game/intercom binaries. Those are committed inside
-  `custom-rootfs/` (build them locally with `tools/build-*.sh`).
+  `rootfs/d375/` (build them locally with `tools/build/build-*.sh`).
 
 ## One-time setup: the signing key
 
@@ -17,11 +17,11 @@ The phone only installs an image signed with the key whose public half is in
 the image it runs (`/firmware1.pub`, see [signing-keys.md](signing-keys.md)).
 CI needs that private key as the repository secret `FIRMWARE_PRIV_PEM`:
 
-    gh secret set FIRMWARE_PRIV_PEM < custom-key/firmware.priv.pem
+    gh secret set FIRMWARE_PRIV_PEM < keys/custom-d375/firmware.priv.pem
 
 (or GitHub → Settings → Secrets and variables → Actions → New repository secret).
 The job fails without the secret, and it also fails if the key does not match
-`custom-rootfs/firmware1.pub`. Otherwise the build script would write a
+`rootfs/d375/firmware1.pub`. Otherwise the build script would write a
 different key into the image and lock the phone out of later updates.
 
 Anyone with write access to the repo can read the secret through a workflow.
@@ -30,7 +30,7 @@ never get it, and the workflow does not run on PRs.
 
 ## Why the CI image matches a local build
 
-Locally the rootfs tarball is packed under `fakeroot -i custom-rootfs/.fakeroot`.
+Locally the rootfs tarball is packed under `fakeroot -i rootfs/d375/.fakeroot`.
 That database is keyed by the inode numbers of *your* checkout, so CI deletes it.
 Without it the build script packs with `--owner=0 --group=0`. That is exact for this
 tree: every entry is root:root with mode 644/755 (or a symlink), and there are no

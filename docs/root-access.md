@@ -10,13 +10,13 @@ This follows [Remote root shell on a snom D785 using OpenVPN configuration files
 In short: the phone's VPN feature takes an uploaded OpenVPN configuration
 bundle, and OpenVPN runs as root. A config with script hooks (`up` and
 similar, plus `script-security`) therefore runs commands as root on the phone.
-The hook is used to start sshd. The VPN server config lives in `vpn-server/`
-(gitignored: it holds keys and config).
+The hook is used to start sshd. The VPN server config lives in `vpn/server/`
+(tracked in this repo, keys included).
 
 Steps:
-1. Generate VPN PKI: `./tools/setup-ovpn.sh`
-2. Start the OpenVPN server: `cd vpn-server && sudo openvpn --config server.conf`
-3. Serve the client tarball: `cd vpn-server && python3 -m http.server 8080`
+1. Generate VPN PKI: `./tools/device/setup-ovpn.sh`
+2. Start the OpenVPN server: `cd vpn/server && sudo openvpn --config server.conf`
+3. Serve the client tarball: `cd vpn/server && python3 -m http.server 8080`
 4. On the phone web UI: **Advanced → VPN → OpenVPN** → set provisioning URL
    to `http://<your-ip>:8080/vpnclient.tar`
 5. The phone connects to the VPN and the `up` hook starts sshd
@@ -38,10 +38,10 @@ The D375 custom firmware modifies:
 
 Build and flash:
 ```sh
-./tools/fw-pull-from-device.sh <phone-ip> --raw --extract
-./tools/prepare-pulled-rootfs.sh decrypted/snomD375-10.1.64.17-SIP-r/rootfs
-# edit custom-rootfs/ as needed
-./tools/build-custom-firmware.sh
+./tools/fw/fw-pull-from-device.sh <phone-ip> --raw --extract
+./tools/fw/prepare-pulled-rootfs.sh rootfs/stock/snomD375-10.1.64.17-SIP-r/rootfs
+# edit rootfs/d375/ as needed
+./tools/fw/build-custom-firmware.sh
 # install custom key on phone, then flash via web UI
 ```
 
@@ -52,7 +52,7 @@ Build and flash:
 ### 1. First root shell: OpenVPN + development mode
 
 The D8xx line uses the same OpenVPN method for first root access. The VPN
-client tarball (`vpn-server/vpnclient.tar`) works the same way — the `up`
+client tarball (`vpn/server/vpnclient.tar`) works the same way — the `up`
 hook starts sshd.
 
 The D815W additionally ships with `development=yes` in U-Boot env, which
@@ -142,7 +142,7 @@ to log in through the browser. With SSH access you can reset it:
 
 ```sh
 # Deploy the script once (persistent on the overlay)
-scp tools/snom-webpass.sh root@<phone-ip>:/snom/snom-webpass.sh
+scp tools/device/snom-webpass.sh root@<phone-ip>:/snom/snom-webpass.sh
 
 # Change the password
 ssh root@<phone-ip> /snom/snom-webpass.sh <new-password>
@@ -168,12 +168,12 @@ Three key files were dumped from the D815W:
 | `/firmware1.aes` | AES-256 key + IV | Rootfs decryption (`swupdate -K`) |
 | `/firmwareUXM.pub` | RSA-1024 public key | Legacy/UXM compatibility |
 
-These are saved in `keys/snomD815-*`. The AES key format is:
+These are saved in `keys/stock/snomD815-*`. The AES key format is:
 `<64-char hex key> <32-char hex IV>` on a single line.
 
 Decrypt a stock D815 firmware:
 ```sh
-./tools/swu-unpack.sh original_firmware/snomD815-10.1.226.16-SIP-r.swu keys/snomD815-firmware1.aes decrypted/D815-10.1.226.16
+./tools/fw/swu-unpack.sh firmware/stock/snomD815-10.1.226.16-SIP-r.swu keys/stock/snomD815-firmware1.aes rootfs/stock/D815-10.1.226.16
 ```
 
 ## SSH client notes

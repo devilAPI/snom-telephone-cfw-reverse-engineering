@@ -1,0 +1,268 @@
+#!/bin/sh
+# CFW: Navidrome / Subsonic player (docs/navidrome.md).
+# Phone menu (minibrowser, loopback :8081):
+#   ?a=phone[&v=VIEW][&id=ID][&o=OFFSET][&t=TYPE][&q=TEXT][&do=ACTION][&src=SRC&i=N]
+#   views: home artists artist album list playlists playlist search results
+#   do:    play pause resume next prev stop volup voldn  (then the home view)
+#          out&out=speaker|handset  (loudspeaker or handset earpiece, speaker.sh out)
+# Panel (JSON, :8080 behind the login):
+#   ?a=status | save (url user pass bitrate vol) | test | ctl&do=ACTION (vol: &vol=0..100)
+#     | search&q=TEXT | play&src=album|playlist|random|search|artist&id=ID&q=TEXT&i=N
+# Every parameter is checked: ids against nd_id, numbers and names against fixed lists;
+# the search text only reaches the server URL-encoded. The request is parsed once
+# (nd_params) and a menu is rendered by one awk call (nd_menu): forks are slow here.
+. /snom/cfw/lib/cfw.sh
+. /snom/cfw/navidrome/nd-lib.sh
+P=/snom/cfw/navidrome/player.sh
+B="http://127.0.0.1:8081/cgi-bin/navidrome?a=phone"
+PAGE=20
+
+A=; V=; ID=; O=; T=; Q=; DO=; SRC=; I=; VOLN=; F_URL=; F_USER=; F_PASS=; F_BR=; OUTP=
+while IFS='	' read -r k v; do
+    case "$k" in
+        a) A=$v ;; v) V=$v ;; id) ID=$v ;; o) O=$v ;; t) T=$v ;; q) Q=$v ;; do) DO=$v ;;
+        src) SRC=$v ;; i) I=$v ;; vol) VOLN=$v ;; url) F_URL=$v ;; user) F_USER=$v ;;
+        pass) F_PASS=$v ;; bitrate) F_BR=$v ;; out) OUTP=$v ;;
+    esac
+done <<EOT
+$(printf '%s&%s' "${CFW_BODY:-}" "${QUERY_STRING:-}" | nd_params a v id o t q do src i vol url user pass bitrate out)
+EOT
+case "$A" in phone|status|save|test|ctl|search|play) ;; *) A=status ;; esac
+case "$O" in ''|*[!0-9]*) O=0 ;; esac
+case "$I" in ''|*[!0-9]*) I=0 ;; esac
+case "$T" in newest|random|recent|frequent|alphabeticalByName|starred) ;; *) T=newest ;; esac
+case "$DO" in play|pause|resume|toggle|next|prev|stop|volup|voldn|vol|out) ;; *) DO= ;; esac
+case "$SRC" in album|playlist|random|search|artist) ;; *) SRC= ;; esac
+case "$VOLN" in [0-9]|[1-9][0-9]|100) ;; *) VOLN= ;; esac
+nd_id "$ID" || ID=
+[ ${#Q} -gt 80 ] && Q=$(printf '%.80s' "$Q")
+
+# ---- building a queue ----
+# make_queue SRC ID Q: writes $ND_RUN/queue (id title artist duration album)
+make_queue() {
+    _f="$ND_RUN/queue.new"
+    case "$1" in
+        album)    nd_api getAlbum "id=$2" | nd_list song id title artist duration album > "$_f" ;;
+        playlist) nd_api getPlaylist "id=$2" | nd_list entry id title artist duration album > "$_f" ;;
+        random)   nd_api getRandomSongs "size=50" | nd_list song id title artist duration album > "$_f" ;;
+        search)   nd_api search3 "query=$(printf '%s' "$3" | nd_urlenc)&songCount=50&albumCount=0&artistCount=0" |
+                      nd_list song id title artist duration album > "$_f" ;;
+        artist)   nd_api getArtist "id=$2" | nd_list album id | head -n 15 | while read -r _a; do
+                      nd_id "$_a" && nd_api getAlbum "id=$_a" | nd_list song id title artist duration album
+                  done > "$_f" ;;
+        *) return 1 ;;
+    esac
+    [ -s "$_f" ] || { rm -f "$_f"; return 1; }
+    mv "$_f" "$ND_RUN/queue"
+}
+
+# do_action ACTION: run it; prints "error=..." on failure
+do_action() {
+    case "$1" in
+        play)
+            [ "$SRC" = random ] || [ "$SRC" = search ] || [ -n "$ID" ] || { echo "error=nothing chosen"; return; }
+            make_queue "$SRC" "$ID" "$Q" || { echo "error=nothing to play (or the server does not answer)"; return; }
+            "$P" start "$I" | grep '^error=' ;;
+        vol) if [ -n "$VOLN" ]; then "$P" vol "$VOLN" | grep '^error='; else echo "error=volume must be 0..100"; fi ;;
+        volup) "$P" vol up | grep '^error=' ;;
+        voldn) "$P" vol down | grep '^error=' ;;
+        out) case "$OUTP" in speaker|handset) /snom/cfw/intercom/speaker.sh out "$OUTP" | grep '^error=' ;;
+             *) echo "error=output must be speaker or handset" ;; esac ;;
+        *) "$P" "$1" | grep '^error=' ;;
+    esac
+}
+
+fmt_time() { _s=${1:-0}; case "$_s" in ''|*[!0-9]*) _s=0 ;; esac; printf '%d:%02d' $((_s / 60)) $((_s % 60)); }
+
+# ================= phone menu =================
+ITEMS="$ND_RUN/menu.$$"
+trap 'rm -f "$ITEMS"' EXIT
+add() { printf '%s\t%s\n' "$1" "$2" >> "$ITEMS"; }   # add NAME URL (builtins only)
+
+phone_home() {
+    nd_status
+    : > "$ITEMS"
+    [ -n "$MSG" ] && add "$MSG" "$B"
+    case "$NS_STATE" in
+        playing|paused)
+            if [ "$NS_STATE" = paused ]; then add "Paused: $NS_TITLE - $NS_ARTIST" "$B"
+            else add "Playing: $NS_TITLE - $NS_ARTIST" "$B"; fi
+            add "$(fmt_time "$NS_POS") / $(fmt_time "$NS_DURATION"), track $((NS_IDX + 1)) of $NS_COUNT (refresh)" "$B"
+            if [ "$NS_STATE" = paused ]; then add "Resume" "$B&do=resume"; else add "Pause" "$B&do=pause"; fi
+            add "Next track" "$B&do=next"
+            add "Previous track" "$B&do=prev"
+            add "Stop" "$B&do=stop" ;;
+        error) add "Error: $NS_ERROR" "$B" ;;
+    esac
+    add "Random songs" "$B&do=play&src=random"
+    add "Artists" "$B&v=artists"
+    add "Albums: newest" "$B&v=list&t=newest"
+    add "Albums: random" "$B&v=list&t=random"
+    add "Albums: recently played" "$B&v=list&t=recent"
+    add "Albums: most played" "$B&v=list&t=frequent"
+    add "Playlists" "$B&v=playlists"
+    add "Search" "$B&v=search"
+    if [ "$(cat /snom/cfw-data/speaker/out 2>/dev/null)" = handset ]; then add "Output: handset - switch to speaker" "$B&do=out&out=speaker"
+    else add "Output: speaker - switch to handset" "$B&do=out&out=handset"; fi
+    add "Volume $ND_VOL: up" "$B&do=volup"
+    add "Volume $ND_VOL: down" "$B&do=voldn"
+    nd_menu "Navidrome" < "$ITEMS"
+}
+
+# rows AWKPROG: TSV rows on stdin -> menu items appended (one awk call)
+rows() { awk -F '\t' -v B="$B" -v o="$O" -v page="$PAGE" "$1" >> "$ITEMS"; }
+
+phone() {
+    if ! nd_load; then
+        cfw_phone_text "Navidrome" "Not set up yet. In the web panel, tab Phone, card Navidrome: enter the server address, user and password."
+        return
+    fi
+    MSG=
+    if [ -n "$DO" ]; then
+        MSG=$(do_action "$DO" | sed -n 's/^error=//p' | head -n 1)
+        [ -n "$MSG" ] && MSG="Error: $MSG"
+        nd_load; phone_home; return
+    fi
+    : > "$ITEMS"
+    case "$V" in
+    artists)
+        nd_api getArtists | nd_list artist id name albumCount |
+            rows 'NR > o && NR <= o + page { print $2 " (" $3 ")\t" B "&v=artist&id=" $1 }
+                  END { if (NR > o + page) print "More...\t" B "&v=artists&o=" o + page }'
+        nd_menu "Artists" < "$ITEMS" ;;
+    artist)
+        [ -n "$ID" ] || { phone_home; return; }
+        add "Play all" "$B&do=play&src=artist&id=$ID"
+        nd_api getArtist "id=$ID" | nd_list album id name year |
+            rows '{ print $2 ($3 != "" ? " (" $3 ")" : "") "\t" B "&v=album&id=" $1 }'
+        nd_menu "Albums" < "$ITEMS" ;;
+    album|playlist)
+        [ -n "$ID" ] || { phone_home; return; }
+        add "Play all" "$B&do=play&src=$V&id=$ID&i=0"
+        if [ "$V" = album ]; then nd_api getAlbum "id=$ID" | nd_list song id title duration
+        else nd_api getPlaylist "id=$ID" | nd_list entry id title duration; fi |
+            awk -F '\t' -v B="$B" -v src="$V" -v id="$ID" \
+                '{ printf "%d. %s (%d:%02d)\t%s&do=play&src=%s&id=%s&i=%d\n", NR, $2, $3 / 60, $3 % 60, B, src, id, NR - 1 }' >> "$ITEMS"
+        if [ "$V" = album ]; then nd_menu "Album" < "$ITEMS"; else nd_menu "Playlist" < "$ITEMS"; fi ;;
+    list)
+        nd_api getAlbumList2 "type=$T&size=$PAGE&offset=$O" | nd_list album id name artist |
+            rows '{ print $2 " - " $3 "\t" B "&v=album&id=" $1 } END { if (NR >= page) print "More...\t" B "&v=list&t='"$T"'&o=" o + page }'
+        nd_menu "Albums" < "$ITEMS" ;;
+    playlists)
+        nd_api getPlaylists | nd_list playlist id name songCount |
+            rows '{ print $2 " (" $3 ")\t" B "&v=playlist&id=" $1 }'
+        nd_menu "Playlists" < "$ITEMS" ;;
+    search)
+        printf 'Content-type: text/xml\r\n\r\n'
+        cat <<EOT
+<?xml version="1.0" encoding="UTF-8"?>
+<IPPhoneInput dtmf="off">
+  <Title>Search Navidrome</Title>
+  <Url input_required="yes">http://127.0.0.1:8081/cgi-bin/navidrome?a=phone&amp;v=results&amp;q=__Q__</Url>
+  <CancelUrl>phone://mb_nop#go_back</CancelUrl>
+  <InputItem>
+    <DisplayName>Artist, album or song</DisplayName>
+    <InputToken>__Q__</InputToken>
+    <InputFlags>a</InputFlags>
+    <DefaultValue></DefaultValue>
+  </InputItem>
+</IPPhoneInput>
+EOT
+        ;;
+    results)
+        [ -n "$Q" ] || { phone_home; return; }
+        qe=$(printf '%s' "$Q" | nd_urlenc)
+        x=$(nd_api search3 "query=$qe&songCount=20&albumCount=10&artistCount=5")
+        printf '%s' "$x" | nd_list artist id name | rows '{ print "Artist: " $2 "\t" B "&v=artist&id=" $1 }'
+        printf '%s' "$x" | nd_list album id name artist | rows '{ print "Album: " $2 " - " $3 "\t" B "&v=album&id=" $1 }'
+        printf '%s' "$x" | nd_list song id title artist |
+            rows '{ print $2 " - " $3 "\t" B "&do=play&src=search&q='"$qe"'&i=" NR - 1 }'
+        nd_menu "Search: $Q" < "$ITEMS" ;;
+    *) phone_home ;;
+    esac
+}
+
+# ================= panel (JSON) =================
+jesc() { sed 's/\\/\\\\/g; s/"/\\"/g' | tr -d '\000-\037'; }
+json_head() { printf 'Content-type: application/json\r\nCache-Control: no-store\r\n\r\n'; }
+# tsv_json KEY...: TSV lines on stdin -> a JSON array of objects
+tsv_json() {
+    awk -F '\t' -v keys="$*" 'BEGIN { n = split(keys, K, " "); printf "[" }
+    function esc(s) { gsub(/\\/, "\\\\", s); gsub(/"/, "\\\"", s); gsub(/[\001-\037]/, "", s); return s }
+    { c = NR > 1 ? "," : ""; printf "%s{", c
+      for (i = 1; i <= n; i++) { c = i > 1 ? "," : ""; printf "%s\"%s\":\"%s\"", c, K[i], esc($i) }
+      printf "}" }
+    END { printf "]" }'
+}
+# status_json [EXTRA]: one JSON object; the text fields go through one jesc call
+status_json() {
+    nd_status; nd_load; c=$?
+    txt=$(printf '%s\n%s\n%s\n%s\n%s\n%s\n' "$ND_URL" "$ND_USER" "$NS_ERROR" "$NS_TITLE" "$NS_ARTIST" "$NS_ALBUM" | jesc_lines)
+    { read -r ju; read -r jus; read -r je; read -r jt; read -r ja; read -r jal; } <<EOT
+$txt
+EOT
+    printf '{"configured":%s,"url":"%s","user":"%s","bitrate":%s,"vol":%s,"state":"%s","error":"%s","title":"%s","artist":"%s","album":"%s","pos":%s,"duration":%s,"idx":%s,"count":%s%s}\n' \
+        "$([ $c = 0 ] && echo true || echo false)" "$ju" "$jus" "$ND_BITRATE" "$ND_VOL" "$NS_STATE" "$je" \
+        "$jt" "$ja" "$jal" "$NS_POS" "$NS_DURATION" "$NS_IDX" "${NS_COUNT:-0}" "${1:+,$1}"
+}
+# jesc_lines: like jesc, line by line (keeps the newlines)
+jesc_lines() { sed 's/\\/\\\\/g; s/"/\\"/g; s/[[:cntrl:]]//g'; }
+
+save() {
+    url=$(printf '%s' "$F_URL" | tr -d ' '); user=$F_USER; pass=$F_PASS; br=$F_BR; vol=$VOLN
+    url=${url%/}
+    case "$url" in
+        http://?*) ;;
+        https://*) echo "https is not supported (the phone's wget has no TLS); use the http:// address in your LAN"; return ;;
+        *) echo "the address must start with http://"; return ;;
+    esac
+    case "$url" in *[!A-Za-z0-9.:/_~%-]*) echo "the address has characters that are not allowed"; return ;; esac
+    [ -n "$user" ] || { echo "enter the user name"; return; }
+    case "$br" in 32|48|64|96|128|160|192) ;; *) br=96 ;; esac
+    case "$vol" in [0-9]|[1-9][0-9]|100) ;; *) vol=30 ;; esac
+    old_user=$(nd_get USER); salt=$(nd_get SALT); tok=$(nd_get TOKEN)
+    if [ -n "$pass" ]; then
+        salt=$(head -c 16 /dev/urandom | md5sum | cut -c1-12)
+        tok=$(printf '%s%s' "$pass" "$salt" | md5sum | cut -c1-32)
+    elif [ -z "$tok" ] || [ "$user" != "$old_user" ]; then
+        echo "enter the password"; return
+    fi
+    d=$(cfw_data_dir navidrome) || { echo "cannot write the config"; return; }
+    umask 077
+    printf 'URL=%s\nUSER=%s\nSALT=%s\nTOKEN=%s\nBITRATE=%s\nVOL=%s\n' "$url" "$user" "$salt" "$tok" "$br" "$vol" > "$d/conf.new" &&
+        mv "$d/conf.new" "$d/conf" || { echo "cannot write the config"; return; }
+    nd_load
+    nd_err "$(nd_api ping)"
+}
+
+case "$A" in
+phone) phone ;;
+status) json_head; status_json ;;
+save)
+    json_head
+    e=$(save)
+    if [ -n "$e" ]; then status_json "\"msg\":\"$(printf '%s' "$e" | jesc)\",\"ok\":false"
+    else status_json '"msg":"saved, the server answers","ok":true'; fi ;;
+test)
+    json_head
+    if nd_load; then e=$(nd_err "$(nd_api ping)"); else e="not set up"; fi
+    if [ -n "$e" ]; then status_json "\"msg\":\"$(printf '%s' "$e" | jesc)\",\"ok\":false"
+    else status_json '"msg":"the server answers","ok":true'; fi ;;
+ctl|play)
+    json_head
+    [ "$A" = play ] && DO=play
+    if [ -z "$DO" ]; then status_json '"msg":"unknown action","ok":false'; exit 0; fi
+    nd_load || { status_json '"msg":"not set up","ok":false'; exit 0; }
+    e=$(do_action "$DO" | sed -n 's/^error=//p' | head -n 1)
+    if [ -n "$e" ]; then status_json "\"msg\":\"$(printf '%s' "$e" | jesc)\",\"ok\":false"
+    else status_json '"ok":true'; fi ;;
+search)
+    json_head
+    nd_load || { echo '{"albums":[],"songs":[],"msg":"not set up"}'; exit 0; }
+    [ -n "$Q" ] || { echo '{"albums":[],"songs":[]}'; exit 0; }
+    x=$(nd_api search3 "query=$(printf '%s' "$Q" | nd_urlenc)&songCount=30&albumCount=15&artistCount=0")
+    printf '{"albums":%s,"songs":%s,"msg":"%s"}\n' \
+        "$(printf '%s' "$x" | nd_list album id name artist year | tsv_json id name artist year)" \
+        "$(printf '%s' "$x" | nd_list song id title artist album duration | tsv_json id title artist album duration)" \
+        "$(nd_err "$x" | jesc)" ;;
+esac

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<IPPhoneBatch xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../schemas/minibrowser.xsd">
+  <IPPhoneMenu dtmf="off" speedselect="true" id="list" state="others_except_mb" document_id="location_list">
+    <Title>$(lang:xsi_anywhere)</Title>
+    <MenuItem name="$(lang:xsi_anywhere_settings)" id="anywhere">
+      <ExtraIconType>$(icon_type_enum:kIconTypeMenuArrowRight)</ExtraIconType>
+      <Url>file:///xml/gui/locations_settings.xml#action_ifc:identity.$(set:active_line).server_settings_xsi=initialize_broadworks_anywhere</Url>
+      <SoftKeyItem>
+        <Name>F1</Name>
+        <Label>KEY_F_ADD_LOCATION</Label>
+        <Url>file:///xml/gui/locations.xml#sub=*[@id="description"]&amp;var:mid=identity.$(set:active_line).locations.-1</Url>
+      </SoftKeyItem>
+    </MenuItem>
+    <Repeat var_ifc="identity.$(set:active_line).locations.*" token="|__DESCRIPTION__|__NUMBER__|__URL__|__ACTIVE__|">
+      <!--implicit: __MID__==current Module id -->
+      <!--implicit: __IDX__==current index 0..? -->
+      <MenuItem name="__DESCRIPTION__" id="__MID__">
+        <If condition="__ACTIVE__==1">
+          <ExtraIconType>$(icon_type_enum:kIconTypeMenuCheckboxOn)</ExtraIconType>
+        </If>
+        <Else>
+          <ExtraIconType>$(icon_type_enum:kIconTypeMenuCheckboxOff)</ExtraIconType>
+        </Else>
+        <Url track="no">file:///xml/gui/locations.xml#var:request_var=pending&amp;action_ifc:identity.$(set:active_line).locations=modify,module=__MID__,active=$(bool_eval:!__ACTIVE__)--request_var</Url>
+        <DetailUrl>file:///xml/gui/locations.xml#sub=*[@id="description"]&amp;var:mid=__MID__</DetailUrl>
+        <SoftKeyItem>
+          <Name>F1</Name>
+          <Label>KEY_F_ADD_LOCATION</Label>
+          <Url>file:///xml/gui/locations.xml#sub=*[@id="description"]&amp;var:mid=identity.$(set:active_line).locations.-1</Url>
+        </SoftKeyItem>
+        <SoftKeyItem>
+          <Name>F2</Name>
+          <Label>F_EDIT</Label>
+          <Url>file:///xml/gui/locations.xml#sub=*[@id="description"]&amp;var:mid=$[sel]</Url>
+        </SoftKeyItem>
+        <SoftKeyItem>
+          <Name>F3</Name>
+          <Label>F_DELETE</Label>
+          <Url>file:///xml/gui/locations.xml#var:request_var=pending&amp;action_ifc:identity.$(set:active_line).locations=remove,module=$[sel]--request_var</Url>
+        </SoftKeyItem>
+      </MenuItem>
+    </Repeat>
+  </IPPhoneMenu>
+  <IPPhoneInput id="description" state="others_except_mb">
+    <Title>$(lang:xsi_location_edit_description)</Title>
+    <Url>file:///xml/gui/locations.xml#sub=*[@id="phoneNumber"]&amp;var:description=__X__</Url>
+    <InputItem>
+      <DisplayName>$(lang:xsi_location_description)</DisplayName>
+      <InputToken>__X__</InputToken>
+      <InputFlags>a</InputFlags>
+      <DefaultValue>$(var_ifc:$(var:mid)::description)</DefaultValue>
+      <ContactPoolInEdit>0</ContactPoolInEdit>
+    </InputItem>
+  </IPPhoneInput>
+  <IPPhoneInput id="phoneNumber" state="others_except_mb">
+    <Title>$(lang:xsi_location_edit_number)</Title>
+    <Url>file:///xml/gui/locations.xml#sub=*[@id="list"]&amp;var:request_var=pending&amp;action_ifc:identity.$(set:active_line).locations=modify,module=$(var:mid),description=$(var:description),phoneNumber=__Y__--request_var</Url>
+    <InputItem>
+      <DisplayName>$(lang:number_str)</DisplayName>
+      <InputToken>__Y__</InputToken>
+      <InputFlags>t</InputFlags>
+      <DefaultValue>$(var_ifc:$(var:mid)::phoneNumber)</DefaultValue>
+      <ContactPoolInEdit>1</ContactPoolInEdit>
+    </InputItem>
+  </IPPhoneInput>
+</IPPhoneBatch>

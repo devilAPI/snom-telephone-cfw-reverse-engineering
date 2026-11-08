@@ -1,7 +1,7 @@
 #!/bin/bash
 # Task 0 test: panel assembles panel.d cards, phone-tools renders phone-menu.d, cfw_param decodes safely.
 . "$(dirname "$0")/lib.sh"
-SRC=$REPO/custom-rootfs/snom/cfw
+SRC=$REPO/rootfs/d375/snom/cfw
 
 deploy() {
     for f in lib/cfw.sh cgi-bin/panel cgi-bin/phone-tools cgi-bin/phone-games cgi-bin/phone-url index.html; do

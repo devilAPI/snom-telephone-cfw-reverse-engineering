@@ -1,7 +1,7 @@
 #!/bin/bash
 # Task I test: deploys the sysinfo CGIs to the phone and checks them.
 . "$(dirname "$0")/lib.sh"
-C=$REPO/custom-rootfs/snom/cfw
+C=$REPO/rootfs/d375/snom/cfw
 deploy() {
     ph_put $C/cgi-bin/sysinfo /snom/cfw/cgi-bin/sysinfo
     ph_put $C/cgi-bin/sysinfo.json /snom/cfw/cgi-bin/sysinfo.json

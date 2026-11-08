@@ -38,27 +38,27 @@ driver (`hwthread`, `hausioctl`, `Cadence`, `EPTing_0`, `EPTing_2`, parent
 those in the load. The CPU is 87% idle. The `EPTing` threads get new PIDs each time
 the app starts, so the app's audio endpoints create them.
 
-The `.bin` was installed on the real phone on 2026-11-02. `tools/d815-try-flash.sh`
+The `.bin` was installed on the real phone on 2026-11-02. `tools/device/d815-try-flash.sh`
 remains the fast way to test app changes.
 
 ## Build and test
 
-`custom-rootfs` holds the full D375 CFW, so the D375 build does not use
-`tools/cfw-sync.sh`: it would replace the panel with the smaller `cfw/panel`.
-Packing uses `custom-rootfs.manifest`, not a fakeroot database.
+`rootfs/d375` holds the full D375 CFW, so the D375 build does not use
+`tools/fw/cfw-sync.sh`: it would replace the panel with the smaller `src/cfw/panel`.
+Packing uses `rootfs/d375.manifest`, not a fakeroot database.
 
 ```sh
-tools/build-custom-firmware.sh      # FINAL=1 for the smallest image
-tools/d815-try-flash.sh [phone-ip]  # try it on a phone, without a firmware update
+tools/fw/build-custom-firmware.sh      # FINAL=1 for the smallest image
+tools/device/d815-try-flash.sh [phone-ip]  # try it on a phone, without a firmware update
 ```
 
-`tools/build-custom-firmware.sh` runs `tools/backport/stage.py`, adds the result to
+`tools/fw/build-custom-firmware.sh` runs `tools/backport/stage.py`, adds the result to
 the image, and updates the VM. To change the file selection, delete
 `emu/backport/d8.tar` first so that `pack.py` runs again. After changing
-`tools/fb24shim.c`, run `tools/build-fb24shim.sh`.
+`src/native/fb24shim.c`, run `tools/build/build-fb24shim.sh`.
 
-`tools/d815-try-flash.sh` is the fast way to test: it copies the staged files to the
-phone and reboots once into them. It also copies `custom-rootfs/snom/cfw/lib`,
+`tools/device/d815-try-flash.sh` is the fast way to test: it copies the staged files to the
+phone and reboots once into them. It also copies `rootfs/d375/snom/cfw/lib`,
 `cgi-bin` and the game binaries over the installed ones. It takes about 4 minutes,
 and the phone is registered about a minute after that. The next reboot runs the
 installed firmware's `start.sh` again. The copied files stay on flash and take about 26 MB.
@@ -115,7 +115,7 @@ that folder and reboot.
 
 ### Testing from RAM
 
-`tools/d815-on-d375.sh` is the older method. It runs the app from a RAM disk and
+`tools/device/d815-on-d375.sh` is the older method. It runs the app from a RAM disk and
 writes less to flash, but uses 49 MB of RAM and its web login is fixed. Use it only
 for a change to the file selection on a phone with little free flash.
 
@@ -125,9 +125,9 @@ for a change to the file selection on a phone with little free flash.
 |---|---|---|
 | File selection | `tools/backport/pack.py` | Picks the app and its libraries, writes `d8.tar` |
 | Staging | `tools/backport/stage.py` | Lays out `/snom/d815` and the extra icons |
-| Boot | `cfw/app/start-d815.sh` | Sets up the chroot and config, starts `lid` |
-| Hook | `tools/cfw-sync.sh` | Makes `start.sh` run the boot script |
-| Runtime shim | `tools/fb24shim.c` | Loaded with `/etc/ld.so.preload`; adapts the hardware differences |
+| Boot | `src/cfw/app/start-d815.sh` | Sets up the chroot and config, starts `lid` |
+| Hook | `tools/fw/cfw-sync.sh` | Makes `start.sh` run the boot script |
+| Runtime shim | `src/native/fb24shim.c` | Loaded with `/etc/ld.so.preload`; adapts the hardware differences |
 | Key table | `tools/backport/keymap.py` | Generates `keymap.h` from both `lid` binaries |
 | Key helper | `/snom/d815/bin/phone-key` | Presses a key through `command.htm` with the current login |
 
@@ -150,7 +150,7 @@ Each row cost real time to find. Check all of them on any new port.
 | Handset reversed: dial tone on the cradle | Hook bit has opposite sense | Invert key 102 in events and `EVIOCGKEY` | shim |
 | Settings key does nothing | No D815 equivalent, and `command.htm` needs a login | Run `phone-key SETTINGS` | shim, `stage.py` |
 | Backlight setting does nothing | `dvf9a-bl` is absent; the app runs `stat` first, then writes 0 to 64 | Redirect `stat` and `open`; scale to 0 to 32 | shim |
-| Web panel keys fail | Same login | Use `phone-key` | `cfw/panel/cgi-bin/key` |
+| Web panel keys fail | Same login | Use `phone-key` | `src/cfw/panel/cgi-bin/key` |
 | Two apps on screen after quitting a game | Games and `phone-restore.sh` only knew `lcsD375` | Stop both names; stop and unmount the chroot; `start.sh` starts it again | game sources, `lib/phone-restore.sh` |
 | Ringtone page cannot save | Web login | `rt_curl` reads the login from the app's settings | `lib/ringtones.sh` |
 | Stuck on "Neuen HTTP-Benutzernamen eingeben" | No web credentials set | Add them to the app's config | `start-d815.sh` |
@@ -165,7 +165,7 @@ Each row cost real time to find. Check all of them on any new port.
 | Settings pages answer 403 | The app leaves Administrator mode by itself | `phone_admin` logs in first | `lib/phone-web.sh` |
 | Script keys labelled `key-script?run` | The panels show the short label | Set `fkey_short_label` too | `lib/key-scripts.sh` |
 | Help and download keys do nothing | The stock app gives them no function, and `HELP`/`SNOM` do nothing here | Open Informationen and CFW Tools with `minibrowser.htm` | shim, `phone-key` |
-| `htop` missing | It was only built on `main` | Add it to the tree | `custom-rootfs/usr/bin/htop` |
+| `htop` missing | It was only built on `main` | Add it to the tree | `rootfs/d375/usr/bin/htop` |
 | High idle CPU | See Performance | | |
 | Reboot after about a minute | Softdog needs feeding, and killing `lid` makes `rcS` reboot | Keep `lid` running | Keep in mind |
 
@@ -266,7 +266,7 @@ nothing. Its last output is in `/tmp/key-script.log`. The code is in
 
 Work through these in order. Steps 2 to 6 need nothing from the phone.
 
-1. **Get the firmware.** `tools/fw-unpack.sh` works only with keys that are already
+1. **Get the firmware.** `tools/fw/fw-unpack.sh` works only with keys that are already
    in `keys/`. Do not try to recover a signing key. There is no D385 key, so the
    D385 is out of scope.
 2. **Compare the CPU.** Run `readelf -A` on the app. The target CPU must run it:
@@ -302,7 +302,7 @@ Work through these in order. Steps 2 to 6 need nothing from the phone.
 - A `dns-proxy` process that survives `kill -9` is a zombie, not a running server.
 - `mount --bind` works on folders but not on single files here. Use
   `/snom/cfw/bin/bindmount`.
-- `tools/d815-try-flash.sh` needs a way to get the SSH password. Without a terminal, set
+- `tools/device/d815-try-flash.sh` needs a way to get the SSH password. Without a terminal, set
   `SSH_ASKPASS` and `SSH_ASKPASS_REQUIRE=force`, or it exits with 255 and no message.
 - `busybox httpd` reads an `httpd.conf` it finds in its web root. Keep the panel login
   in `/etc/cfw-httpd.conf`, or the loopback server on 8081 asks for a login too.

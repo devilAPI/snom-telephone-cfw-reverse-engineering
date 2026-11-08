@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<IPPhoneBatch id="listing" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../schemas/minibrowser.xsd">
+  <IPPhoneMenu track="no" icon_xoffset="$(math_eval:$(gui_display_xsize)/20-5)" text_xoffset="$(math_eval:$(gui_display_xsize)/20-7)" line_separator="yes" line_yoffset="$(math_eval:$(gui_display_ysize)/6)" dtmf="off" speedselect="off" id="voicemail_inbox_lists_list" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../schemas/minibrowser.xsd" state="only_mb">
+    <If condition="$(show_feature:FEATURE_PUI_STYLE_SIO)">
+      <Title>$(lang:visual_voicemail)</Title>
+    </If>
+    <Else>
+      <Title>$(lang:$(var:voicemail_title))</Title>
+    </Else>
+    <Fetch mil="120000">phone://mb_exit</Fetch>
+      <ListIndicator count="$(var_ifc:identity.$(set:active_line).visual_voicemail::MaxType)" active_page="$(var_ifc:identity.$(set:active_line).visual_voicemail::$(var:voicemail_type))">$(lang:$(var:voicemail_title))</ListIndicator>
+      <Repeat values="$(var_ifc:identity.$(set:active_line).visual_voicemail::get_records_$(var:voicemail_type))" token="|__DATE__|__TIME__|__NAME__|__NUMBER__|__DURATION__|__DISPLAYNAME__|__READ__|\r\n">
+        <If condition="!$(empty:__NAME__)">
+          <MenuItem name="__DISPLAYNAME__" id="__IDX__">
+            <If condition="$(show_feature:FEATURE_PUI_STYLE_SIO)">
+              <SubText>__NUMBER__</SubText>
+              <ExtraText>__TIME__</ExtraText>
+              <ExtraText2>__DATE__</ExtraText2>
+              <IconType>$(icon_type_enum:kIconTypeStatusMessageMail)</IconType>
+            </If>
+            <Url track="yes">file:///xml/gui/voicemail_inbox_lists_list.xml#sub=*[@id="details"]&amp;var:rid=__IDX__&amp;var:voicemail_type="$(var:voicemail_type)"&amp;var:date=__DATE__&amp;var:name=__NAME__&amp;var:time=__TIME__&amp;var:number=__NUMBER__&amp;var:duration=__DURATION__&amp;var:read=__READ__</Url>
+            <SoftKeyItem>
+              <Name>F1</Name>
+              <If condition="$(var_ifc:identity.$(set:active_line).visual_voicemail::playing_voicemail)==false">
+                <Label>F_PLAY</Label>
+                <Url>phone://mb_nop#action_ifc:identity.$(set:active_line).visual_voicemail=play_by_index,rid=__IDX__,voicemail_type="$(var:voicemail_type)"</Url>
+              </If>
+              <Else>
+                <Label>F_STOP</Label>
+                <Url>phone://mb_nop#action_ifc:identity.$(set:active_line).visual_voicemail=stop_playing</Url>
+              </Else>
+            </SoftKeyItem>
+            <SoftKeyItem>
+              <Name>F2</Name>
+              <Label>F_DETAILS</Label>
+              <Url track="yes">file:///xml/gui/voicemail_inbox_lists_list.xml#sub=*[@id="details"]&amp;var:rid=__IDX__&amp;var:voicemail_type="$(var:voicemail_type)"&amp;var:date=__DATE__&amp;var:name=__NAME__&amp;var:time=__TIME__&amp;var:number=__NUMBER__&amp;var:duration=__DURATION__&amp;var:read=__READ__</Url>
+            </SoftKeyItem>
+            <SoftKeyItem>
+              <Name>F3</Name>
+              <Label>F_DELETE</Label>
+              <Url>file:///xml/gui/voicemail_inbox_lists_list.xml#action_ifc:identity.$(set:active_line).visual_voicemail=delete_by_index,rid=__IDX__,voicemail_type="$(var:voicemail_type)"</Url>
+            </SoftKeyItem>
+            <SoftKeyItem>
+              <Name>F4</Name>
+              <Label>F_CLEAR</Label>
+              <Url>file:///xml/gui/voicemail_inbox_lists_list.xml#action_ifc:identity.$(set:active_line).visual_voicemail=delete_all</Url>
+            </SoftKeyItem>
+            <SoftKeyItem>
+              <Name>CANCEL</Name>
+              <Url>phone://mb_nop#action_ifc:identity.$(set:active_line).visual_voicemail=stop_playing&amp;go_back</Url>
+            </SoftKeyItem>
+            <If condition="$(display_type)!=character">
+              <SoftKeyItem>
+                <Name>RIGHT</Name>
+                <If condition="$(var:voicemail_type)==All">
+                  <Url>file:///xml/gui/voicemail_inbox_lists_list.xml#var:voicemail_type=Read&amp;var:voicemail_title=list_old</Url>
+                </If>
+                <ElIf condition="$(var:voicemail_type)==Read">
+                  <Url>file:///xml/gui/voicemail_inbox_lists_list.xml#var:voicemail_type=Unread&amp;var:voicemail_title=list_new</Url>
+                </ElIf>
+                <Else>
+                  <Url>file:///xml/gui/voicemail_inbox_lists_list.xml#var:voicemail_type=All&amp;var:voicemail_title=list_all</Url>
+                </Else>
+              </SoftKeyItem>
+              <SoftKeyItem>
+                <Name>LEFT</Name>
+                <If condition="$(var:voicemail_type)==All">
+                  <Url>file:///xml/gui/voicemail_inbox_lists_list.xml#var:voicemail_type=Unread&amp;var:voicemail_title=list_new</Url>
+                </If>
+                <ElIf condition="$(var:voicemail_type)==Unread">
+                  <Url>file:///xml/gui/voicemail_inbox_lists_list.xml#var:voicemail_type=Read&amp;var:voicemail_title=list_old</Url>
+                </ElIf>
+                <Else>
+                  <Url>file:///xml/gui/voicemail_inbox_lists_list.xml#var:voicemail_type=All&amp;var:voicemail_title=list_all</Url>
+                </Else>
+              </SoftKeyItem>
+            </If>
+            <If condition="$(set:xsi_visual_voicemail_dial_offhook)==on">
+              <SoftKeyItem>
+                <Name>SPEAKER</Name>
+                <Url>phone://mb_nop#contact_transfer_or_dial=-1;__NUMBER__;SPEAKER</Url>
+              </SoftKeyItem>
+              <SoftKeyItem>
+                <Name>OFFHOOK</Name>
+                <Url>phone://mb_nop#contact_transfer_or_dial=-1;__NUMBER__;OFFHOOK</Url>
+              </SoftKeyItem>
+              <SoftKeyItem>
+                <Name>HEADSET_OFFHOOK</Name>
+                <Url>phone://mb_nop#contact_transfer_or_dial=-1;__NUMBER__;HEADSET_OFFHOOK</Url>
+              </SoftKeyItem>
+              <SoftKeyItem>
+                <Name>HEADSET</Name>
+                <Url>phone://mb_nop#contact_transfer_or_dial=-1;__NUMBER__;HEADSET</Url>
+              </SoftKeyItem>
+            </If>
+            <Else>
+              <SoftKeyItem>
+                <Name>SPEAKER</Name>
+                <Url>phone://mb_nop#action_ifc:identity.$(set:active_line).visual_voicemail=play_by_index,rid=__IDX__,voicemail_type="$(var:voicemail_type)",key_pressed=SPEAKER</Url>
+              </SoftKeyItem>
+              <SoftKeyItem>
+                <Name>OFFHOOK</Name>
+                <Url>phone://mb_nop#action_ifc:identity.$(set:active_line).visual_voicemail=play_by_index,rid=__IDX__,voicemail_type="$(var:voicemail_type)",key_pressed=OFFHOOK</Url>
+              </SoftKeyItem>
+              <SoftKeyItem>
+                <Name>ONHOOK</Name>
+                <Url>phone://mb_nop#action_ifc:identity.$(set:active_line).visual_voicemail=stop_playing,key_pressed=ONHOOK</Url>
+              </SoftKeyItem>
+              <SoftKeyItem>
+                <Name>HEADSET_OFFHOOK</Name>
+                <Url>phone://mb_nop#action_ifc:identity.$(set:active_line).visual_voicemail=play_by_index,rid=__IDX__,voicemail_type="$(var:voicemail_type)",key_pressed=HEADSET_OFFHOOK</Url>
+              </SoftKeyItem>
+              <SoftKeyItem>
+                <Name>HEADSET</Name>
+                <Url>phone://mb_nop#action_ifc:identity.$(set:active_line).visual_voicemail=play_by_index,rid=__IDX__,voicemail_type="$(var:voicemail_type)",key_pressed=HEADSET</Url>
+              </SoftKeyItem>
+            </Else>
+          </MenuItem>
+        </If>
+        <Else>
+          <MenuItem name="$(lang:tbook_emtpy)" id="__IDX__"></MenuItem>
+          <If condition="$(display_type)!=character">
+            <SoftKeyItem>
+              <Name>RIGHT</Name>
+              <If condition="$(var:voicemail_type)==All">
+                <Url>file:///xml/gui/voicemail_inbox_lists_list.xml#var:voicemail_type=Read&amp;var:voicemail_title=list_old</Url>
+              </If>
+              <ElIf condition="$(var:voicemail_type)==Read">
+                <Url>file:///xml/gui/voicemail_inbox_lists_list.xml#var:voicemail_type=Unread&amp;var:voicemail_title=list_new</Url>
+              </ElIf>
+              <Else>
+                <Url>file:///xml/gui/voicemail_inbox_lists_list.xml#var:voicemail_type=All&amp;var:voicemail_title=list_all</Url>
+              </Else>
+            </SoftKeyItem>
+            <SoftKeyItem>
+              <Name>LEFT</Name>
+              <If condition="$(var:voicemail_type)==All">
+                <Url>file:///xml/gui/voicemail_inbox_lists_list.xml#var:voicemail_type=Unread&amp;var:voicemail_title=list_new</Url>
+              </If>
+              <ElIf condition="$(var:voicemail_type)==Unread">
+                <Url>file:///xml/gui/voicemail_inbox_lists_list.xml#var:voicemail_type=Read&amp;var:voicemail_title=list_old</Url>
+              </ElIf>
+              <Else>
+                <Url>file:///xml/gui/voicemail_inbox_lists_list.xml#var:voicemail_type=All&amp;var:voicemail_title=list_all</Url>
+              </Else>
+            </SoftKeyItem>
+          </If>
+        </Else>
+      </Repeat>
+  </IPPhoneMenu>
+  <IPPhoneMenu track="no" id="details" speedselect="off" state="only_mb">
+    <Title>$(lang:voicemail) $(lang:list_details)</Title>
+    <If condition="$(show_feature:FEATURE_PUI_STYLE_SIO)">
+      <MenuItem name="$(lang:voicemail_name)" id="name">
+        <SubText>$(var:name)</SubText>
+        <ExtraIconType>$(icon_type_enum:kIconTypeCallHistoryIdentity)</ExtraIconType>
+        <Url>phone://mb_nop</Url>
+      </MenuItem>
+      <MenuItem name="$(lang:voicemail_call_number)" id="number">
+        <SubText>$(var:number)</SubText>
+        <ExtraIconType>$(icon_type_enum:kIconTypeCallHistoryNumber)</ExtraIconType>
+        <Url>phone://mb_nop</Url>
+      </MenuItem>
+      <MenuItem name="$(lang:voicemail_date_time)" id="date">
+        <SubText>$(var:date) $(var:time)</SubText>
+        <ExtraIconType>$(icon_type_enum:kIconTypeCallHistoryTime)</ExtraIconType>
+        <Url>phone://mb_nop</Url>
+      </MenuItem>
+      <MenuItem name="$(lang:voicemail_duration)" id="duration">
+        <SubText>$(var:duration)</SubText>
+        <ExtraIconType>$(icon_type_enum:kIconTypeCallHistoryDuration)</ExtraIconType>
+        <Url>phone://mb_nop</Url>
+      </MenuItem>
+    </If>
+    <Else>
+      <MenuItem name="$(lang:voicemail_name): $(var:name)" id="name">
+        <Url>phone://mb_nop</Url>
+      </MenuItem>
+      <MenuItem name="$(lang:voicemail_call_number): $(var:number)" id="number">
+        <Url>phone://mb_nop</Url>
+      </MenuItem>
+      <MenuItem name="$(lang:voicemail_date_time): $(var:date) $(var:time)" id="date">
+        <Url>phone://mb_nop</Url>
+      </MenuItem>
+      <MenuItem name="$(lang:voicemail_duration): $(var:duration)" id="duration">
+        <Url>phone://mb_nop</Url>
+      </MenuItem>
+    </Else>
+    <SoftKeyItem>
+      <Name>F1</Name>
+      <If condition="$(var_ifc:identity.$(set:active_line).visual_voicemail::playing_voicemail)==false">
+        <Label>F_PLAY</Label>
+        <Url>phone://mb_nop#action_ifc:identity.$(set:active_line).visual_voicemail=play_by_index,rid="$(var:rid)",voicemail_type="$(var:voicemail_type)"</Url>
+      </If>
+      <Else>
+        <Label>F_STOP</Label>
+        <Url>phone://mb_nop#action_ifc:identity.$(set:active_line).visual_voicemail=stop_playing</Url>
+      </Else>
+    </SoftKeyItem>
+    <If condition="$(is_set:$(var:number))">
+      <SoftKeyItem>
+        <Name>F2</Name>
+        <Label>F_DIAL</Label>
+        <Url>phone://mb_nop#contact_transfer_or_dial=-1;"$(var:number)";F_DIAL</Url>
+      </SoftKeyItem>
+    </If>
+    <SoftKeyItem>
+      <Name>F3</Name>
+      <Label>F_DELETE</Label>
+      <Url>phone://mb_nop#action_ifc:identity.$(set:active_line).visual_voicemail=delete_by_index,rid="$(var:rid)",voicemail_type="$(var:voicemail_type)"&amp;go_back</Url>
+    </SoftKeyItem>
+    <SoftKeyItem>
+      <Name>F4</Name>
+      <If condition="$(var:read)==true">
+        <Label>F_MARK_UNREAD</Label>
+        <Url>file:///xml/gui/voicemail_inbox_lists_list.xml#action_ifc:identity.$(set:active_line).visual_voicemail=mark_unread,rid="$(var:rid)",voicemail_type="$(var:voicemail_type)"&amp;go_back</Url>
+      </If>
+      <Else>
+        <Label>F_MARK_READ</Label>
+        <Url>file:///xml/gui/voicemail_inbox_lists_list.xml#action_ifc:identity.$(set:active_line).visual_voicemail=mark_read,rid="$(var:rid)",voicemail_type="$(var:voicemail_type)"&amp;go_back</Url>
+      </Else>
+    </SoftKeyItem>
+    <SoftKeyItem>
+      <Name>CANCEL</Name>
+      <Url>phone://mb_nop#action_ifc:identity.$(set:active_line).visual_voicemail=stop_playing&amp;go_back</Url>
+    </SoftKeyItem>
+    <If condition="$(set:xsi_visual_voicemail_dial_offhook)==on">
+      <SoftKeyItem>
+        <Name>SPEAKER</Name>
+        <Url>phone://mb_nop#contact_transfer_or_dial=-1;"$(var:number)";SPEAKER</Url>
+      </SoftKeyItem>
+      <SoftKeyItem>
+        <Name>OFFHOOK</Name>
+        <Url>phone://mb_nop#contact_transfer_or_dial=-1;"$(var:number)";OFFHOOK</Url>
+      </SoftKeyItem>
+      <SoftKeyItem>
+        <Name>HEADSET_OFFHOOK</Name>
+        <Url>phone://mb_nop#contact_transfer_or_dial=-1;"$(var:number)";HEADSET_OFFHOOK</Url>
+      </SoftKeyItem>
+      <SoftKeyItem>
+        <Name>HEADSET</Name>
+        <Url>phone://mb_nop#contact_transfer_or_dial=-1;"$(var:number)";HEADSET</Url>
+      </SoftKeyItem>
+    </If>
+    <Else>
+      <SoftKeyItem>
+        <Name>SPEAKER</Name>
+        <Url>phone://mb_nop#action_ifc:identity.$(set:active_line).visual_voicemail=play_by_index,rid="$(var:rid)",voicemail_type="$(var:voicemail_type)",key_pressed=SPEAKER</Url>
+      </SoftKeyItem>
+      <SoftKeyItem>
+        <Name>OFFHOOK</Name>
+        <Url>phone://mb_nop#action_ifc:identity.$(set:active_line).visual_voicemail=play_by_index,rid="$(var:rid)",voicemail_type="$(var:voicemail_type)",key_pressed=OFFHOOK</Url>
+      </SoftKeyItem>
+      <SoftKeyItem>
+        <Name>ONHOOK</Name>
+        <Url>phone://mb_nop#action_ifc:identity.$(set:active_line).visual_voicemail=stop_playing,key_pressed=ONHOOK</Url>
+      </SoftKeyItem>
+      <SoftKeyItem>
+        <Name>HEADSET_OFFHOOK</Name>
+        <Url>phone://mb_nop#action_ifc:identity.$(set:active_line).visual_voicemail=play_by_index,rid="$(var:rid)",voicemail_type="$(var:voicemail_type)",key_pressed=HEADSET_OFFHOOK</Url>
+      </SoftKeyItem>
+      <SoftKeyItem>
+        <Name>HEADSET</Name>
+        <Url>phone://mb_nop#action_ifc:identity.$(set:active_line).visual_voicemail=play_by_index,rid="$(var:rid)",voicemail_type="$(var:voicemail_type)",key_pressed=HEADSET</Url>
+      </SoftKeyItem>
+    </Else>
+  </IPPhoneMenu>
+  <IPPhoneMenu id="menulisting" speedselect="on" state="only_mb">
+    <Title>$(lang:visual_voicemail)</Title>
+    <Fetch mil="120000">phone://mb_exit</Fetch>
+    <MenuItem name="$(lang:list_all)" id="name">
+      <Url>file:///xml/gui/voicemail_inbox_lists_list.xml#sub=*[@id="listing"]&amp;var:voicemail_type=All&amp;var:voicemail_title=list_all</Url>
+    </MenuItem>
+    <MenuItem name="$(lang:list_old)" id="read">
+      <Url>file:///xml/gui/voicemail_inbox_lists_list.xml#sub=*[@id="listing"]&amp;var:voicemail_type=Read&amp;var:voicemail_title=list_old</Url>
+    </MenuItem>
+    <MenuItem name="$(lang:list_new)" id="unread">
+      <Url>file:///xml/gui/voicemail_inbox_lists_list.xml#sub=*[@id="listing"]&amp;var:voicemail_type=Unread&amp;var:voicemail_title=list_new</Url>
+    </MenuItem>
+  </IPPhoneMenu>
+</IPPhoneBatch>

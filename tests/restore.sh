@@ -10,7 +10,7 @@
 #   - does a second launch + quit (Review Focus 5: relaunch must work).
 # Everything disruptive runs under the shared phone lock. Game audio at 5 %.
 . "$(dirname "$0")/lib.sh"
-C=$REPO/custom-rootfs/snom/cfw
+C=$REPO/rootfs/d375/snom/cfw
 TMPD=$(mktemp -d)
 trap 'rm -rf "$TMPD" "$_askpass"' EXIT
 

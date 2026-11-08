@@ -76,11 +76,11 @@ Every step and error goes to `/tmp/doom.log`, which the CFW page shows at
 
 ## Building the engine
 
-`tools/build-doom.sh` cross-builds it in a container (needs `docker`):
+`tools/build/build-doom.sh` cross-builds it in a container (needs `docker`):
 doomgeneric sources + `doomgeneric/doomgeneric_snom.c` (the fb/evdev/keymap
 layer), `-DDOOMGENERIC_RESX=320 -DDOOMGENERIC_RESY=200`, static musl
-`-march=armv4t`. Output `tools/out/doom` → copy to
-`custom-rootfs/snom/cfw/doom/doom` (root:0755). It is under `/snom`, so the
+`-march=armv4t`. Output `out/doom` → copy to
+`rootfs/d375/snom/cfw/doom/doom` (root:0755). It is under `/snom`, so the
 first-boot `cleanUpRootfs` pass does not touch it (unlike `/usr/bin/nano`).
 
 ## Known limitations

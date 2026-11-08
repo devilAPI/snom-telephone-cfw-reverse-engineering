@@ -46,7 +46,7 @@ mic it works; what is left is how it sounds.
 - [ ] Panel, tab Phone, card "Speaker / reverse intercom": Start, pick a music file,
       Play file. It plays on the phone's loudspeaker, clean and at a sensible volume
       (start with volume 30).
-- [ ] On the PC, `tools/snom-speaker.sh` (asks for the panel password). Pick "snom
+- [ ] On the PC, `tools/device/snom-speaker.sh` (asks for the panel password). Pick "snom
       D375" as the output and play something. Is the delay OK (about 0.2 s)?
 - [ ] Speaker and intercom at the same time: talk through the phone from the PC and
       listen to the phone in the panel.
@@ -74,7 +74,7 @@ music are left.
 - [ ] Pause / Resume continues at the same place; Next and Previous; Stop.
 - [ ] Search with the keypad finds an artist.
 - [ ] The menus feel fast enough (0.5 to 4 s per press on the test).
-- [ ] With `tools/snom-speaker.sh` running, the Navidrome music still plays (both are
+- [ ] With `tools/device/snom-speaker.sh` running, the Navidrome music still plays (both are
       mixed).
 
 ## Speed

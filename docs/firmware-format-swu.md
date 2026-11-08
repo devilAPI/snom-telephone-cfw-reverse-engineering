@@ -40,7 +40,7 @@ snomD815-10.1.226.16-SIP-r.swu  (cpio archive, SVR4 with CRC)
 mkdir swu-contents && cd swu-contents
 cpio -id < ../snomD815-10.1.226.16-SIP-r.swu
 
-# Read key+IV from the device (or from keys/snomD815-firmware1.aes)
+# Read key+IV from the device (or from keys/stock/snomD815-firmware1.aes)
 read -r KEY IV < /path/to/firmware1.aes
 
 # Decrypt rootfs

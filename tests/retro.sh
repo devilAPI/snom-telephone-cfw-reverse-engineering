@@ -12,7 +12,7 @@
 #
 # Test ROMs: tests/roms (hand-made, see tests/roms/build.sh).
 . "$(dirname "$0")/lib.sh"
-SRC=$REPO/custom-rootfs/snom/cfw
+SRC=$REPO/rootfs/d375/snom/cfw
 ROMS=$REPO/tests/roms
 OUTD=${RETRO_OUT:-$(mktemp -d "${TMPDIR:-/tmp}/retro-test.XXXXXX")}
 mkdir -p "$OUTD"
@@ -24,7 +24,7 @@ hget() { curl -s -m 40 -u "root:$PHONE_PW" "http://$PHONE_IP:8080$1"; }
 deploy() {
     for f in gba/gpsp gb/gambatte; do
         ph "rm -f /snom/cfw/$f.new"
-        ph_put "$REPO/tools/out/${f#*/}" "/snom/cfw/$f.new"
+        ph_put "$REPO/out/${f#*/}" "/snom/cfw/$f.new"
         ph "mv /snom/cfw/$f.new /snom/cfw/$f"
     done
     for f in lib/retro-boot.sh gba/boot-gba.sh gb/boot-gb.sh cgi-bin/boot-gba cgi-bin/boot-gb \

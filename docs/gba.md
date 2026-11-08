@@ -21,9 +21,9 @@ Measured on the device with the test ROM: a steady 59.6–59.7 fps (the GBA's
 ## How it fits together
 
 ```
-retro-src/snom_retro.c  -- the whole "RetroArch": fb / evdev / snd_hal / pacing
+src/games/retro/snom_retro.c  -- the whole "RetroArch": fb / evdev / snd_hal / pacing
         + libcore.a     -- gpSP built with platform=unix CPU_ARCH=arm HAVE_DYNAREC=1
-        + snd/snd_hal.c -- halaudio loudspeaker output (docs/sound.md)
+        + src/audio/snd/snd_hal.c -- halaudio loudspeaker output (docs/sound.md)
   = /snom/cfw/gba/gpsp  (static musl, armv6, soft-float)
 ```
 
@@ -106,11 +106,11 @@ under `/snom/cfw-data/saves/` is Task K.
 
 ## Building
 
-`tools/build-retro.sh` (docker; `CORES="gpsp gambatte"` by default) clones
+`tools/build/build-retro.sh` (docker; `CORES="gpsp gambatte"` by default) clones
 gpSP at a pinned commit, builds `libcore.a` with
 `CFLAGS="-march=armv6 -marm -DROM_BUFFER_SIZE=8 -DSMALL_TRANSLATION_CACHE"`,
 compiles the frontend with `-DCORE_GPSP` and links everything statically.
-Copy `tools/out/gpsp` to `custom-rootfs/snom/cfw/gba/gpsp`.
+Copy `out/gpsp` to `rootfs/d375/snom/cfw/gba/gpsp`.
 
 - `ROM_BUFFER_SIZE=8`: gpSP keeps up to 8 MB of ROM resident and pages the
   rest from the file in `/tmp`, which keeps the RSS around 14 MB.

@@ -7,7 +7,7 @@
 #   NODEPLOY=1 tests/intercom.sh   skips the deploy step
 set -u
 . "$(dirname "$0")/lib.sh"
-R=$REPO/custom-rootfs/snom/cfw
+R=$REPO/rootfs/d375/snom/cfw
 TMP=$(mktemp -d); trap 'rm -rf "$TMP" "$_askpass"' EXIT
 
 deploy() {

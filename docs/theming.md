@@ -34,16 +34,16 @@ A reboot is needed to see a change: nothing repaints the splash at runtime.
 2. **rcS splash**: the `display()` hook above.
 3. **Phone app start**: lcsD375 paints the image named `splash_screen` from
    `/snom/bmp/colored/`. `startUpApplication` in rcS bind-mounts the user file over
-   `splash_screen.png` (`/snom/cfw/bin/bindmount`, `cfw-src/bindmount.c`, because busybox
+   `splash_screen.png` (`/snom/cfw/bin/bindmount`, `src/native/bindmount.c`, because busybox
    `mount` cannot bind: "can't setup loop device"). The mount is RAM-only; after
    "Restore stock" the stock file is back on the next boot.
 
 ### Making an image
 ```sh
-tools/make-splash.py photo.jpg out.png                  # crop to fill (default)
-tools/make-splash.py logo.png out.png --fit contain --bg 101830
+tools/media/make-splash.py photo.jpg out.png                  # crop to fill (default)
+tools/media/make-splash.py logo.png out.png --fit contain --bg 101830
 ```
-Output is always 480x272 mode P (256 colours, Floyd-Steinberg). Options: `--fit cover|contain|stretch`, `--colors N`, `--bg RRGGBB` (letterbox and transparency background). To bake it into the image instead, overwrite `custom-rootfs/snom/bmp/colored/splash_screen.png`.
+Output is always 480x272 mode P (256 colours, Floyd-Steinberg). Options: `--fit cover|contain|stretch`, `--colors N`, `--bg RRGGBB` (letterbox and transparency background). To bake it into the image instead, overwrite `rootfs/d375/snom/bmp/colored/splash_screen.png`.
 
 ### Web panel upload
 Panel card "Boot splash" (`panel.d/80-splash.html`, CGI `cgi-bin/splash`). The browser scales/crops the chosen image on a canvas and POSTs a 480x272 PNG as the raw body. Multipart parsing in busybox sh is not worth it, so the browser does the conversion. The CGI:
@@ -63,10 +63,10 @@ The busybox `od` on the phone only has `-b` (octal bytes), no `-t x1`; the CGI p
 lcsD375 menus only take built-in icon enums, so a custom icon means overwriting the PNG of an enum you do not use. The Games entry uses `kIconTypeDect` (no DECT radio on the D375) and its art is `icontype_icons/24x24/dect.png` plus `dect_active.png` (the selected state) in all four themes: the base dir and `theme_colorful/`, `theme_dark/`, `theme_industrial/`.
 
 ```sh
-tools/theme-icons.py ENUM SRC [--active SRC2] [--keep-colors]
-tools/theme-icons.py dect my-icon.png          # recolours the shape per theme
+tools/media/theme-icons.py ENUM SRC [--active SRC2] [--keep-colors]
+tools/media/theme-icons.py dect my-icon.png          # recolours the shape per theme
 ```
-`ENUM` is the file stem in `icontype_icons/24x24/` (`dect`, `messages`, `network`, ...; the tool refuses unknown ones). The source is resized to 24x24; its alpha channel is the shape (an opaque image is read as dark-on-light). The shape is recoloured per theme like the stock icons: `#333` on the light theme, `#f2f2f2` on dark themes, accent `#3d85c6` for `_active`. `--keep-colors` only resizes (for full-colour icons). `tools/make-games-icon.py` is the original, hand-drawn variant of the same idea.
+`ENUM` is the file stem in `icontype_icons/24x24/` (`dect`, `messages`, `network`, ...; the tool refuses unknown ones). The source is resized to 24x24; its alpha channel is the shape (an opaque image is read as dark-on-light). The shape is recoloured per theme like the stock icons: `#333` on the light theme, `#f2f2f2` on dark themes, accent `#3d85c6` for `_active`. `--keep-colors` only resizes (for full-colour icons). `tools/media/make-games-icon.py` is the original, hand-drawn variant of the same idea.
 
 The icons are part of the signed image, so a change needs a firmware rebuild.
 

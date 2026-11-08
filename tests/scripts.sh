@@ -2,7 +2,7 @@
 # Task A test: Scripts menu. Run from repo root. Needs tests/lib.sh (Task 0).
 cd "$(dirname "$0")/.." || exit 1
 . tests/lib.sh
-R=custom-rootfs/snom/cfw
+R=rootfs/d375/snom/cfw
 L() { ph "curl -s 'http://127.0.0.1:8081$1'"; }
 deploy() {
   local f

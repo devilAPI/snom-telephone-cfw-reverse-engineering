@@ -1,7 +1,7 @@
 # snom v10 .bin firmware format (D1xx / D3xx / D7xx)
 
-This applies to the snom v10 D1xx/D3xx/D7xx line. Both `tools/fw-unpack.sh`
-and `tools/build-custom-firmware.sh` implement it. It mirrors what the phone's
+This applies to the snom v10 D1xx/D3xx/D7xx line. Both `tools/fw/fw-unpack.sh`
+and `tools/fw/build-custom-firmware.sh` implement it. It mirrors what the phone's
 `verifySoftwareUpdateFile()` does.
 
 > For the D8xx `.swu` format (SWUpdate), see
@@ -49,7 +49,7 @@ without `-pbkdf2`. You can ignore it: the phone expects exactly that KDF.
 - gzip-compressed tar, with paths relative to `/` and no leading `./`. The
   build script writes it with `find | sed 's|^\./||'`.
 - Ownership and device nodes matter. Unpack and repack under `fakeroot` with
-  a saved state file (`custom-rootfs/.fakeroot`), or files end up owned by
+  a saved state file (`rootfs/d375/.fakeroot`), or files end up owned by
   your user and `/dev` nodes go missing.
 - `/etc/checksum.md5` lists md5 sums of ~9250 rootfs files, including
   `firmware1.pub`. `md5Check` in `/etc/init.d/rcS` runs `md5sum -c` and drops
@@ -93,7 +93,7 @@ The payload is the **complete** root filesystem, including:
 
 So a **running** rootfs is the image contents minus `update/`, `boot/*` and
 `clean.rootfs`, plus runtime state (settings in `snom/snomconfig`, `/dev`
-nodes from `mdev -s`, `etc/random-seed`). `tools/prepare-pulled-rootfs.sh`
+nodes from `mdev -s`, `etc/random-seed`). `tools/fw/prepare-pulled-rootfs.sh`
 puts that right.
 
 > When adding binaries to `bin lib sbin usr`, also add them to

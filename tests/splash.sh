@@ -11,16 +11,16 @@ repo, t = sys.argv[1:3]
 sys.path.insert(0, repo + "/tools")
 Image.new("RGB", (100, 300), (200, 30, 30)).save(t + "/in.png")
 import subprocess
-subprocess.check_call([repo + "/tools/make-splash.py", t + "/in.png", t + "/out.png"], stdout=subprocess.DEVNULL)
-a = Image.open(t + "/out.png"); s = Image.open(repo + "/custom-rootfs/snom/bmp/colored/splash_screen.png")
+subprocess.check_call([repo + "/tools/media/make-splash.py", t + "/in.png", t + "/out.png"], stdout=subprocess.DEVNULL)
+a = Image.open(t + "/out.png"); s = Image.open(repo + "/rootfs/d375/snom/bmp/colored/splash_screen.png")
 assert (a.size, a.mode) == (s.size, s.mode), (a.size, a.mode, s.size, s.mode)
 PY
 pass "make-splash.py output is 480x272 mode P like the stock splash"
 
 # --- deploy CGI + rcS-independent pieces under the lock
 deploy() {
-    ph_put "$REPO/custom-rootfs/snom/cfw/cgi-bin/splash" /snom/cfw/cgi-bin/splash
-    ph_put "$REPO/custom-rootfs/snom/cfw/panel.d/80-splash.html" /snom/cfw/panel.d/80-splash.html
+    ph_put "$REPO/rootfs/d375/snom/cfw/cgi-bin/splash" /snom/cfw/cgi-bin/splash
+    ph_put "$REPO/rootfs/d375/snom/cfw/panel.d/80-splash.html" /snom/cfw/panel.d/80-splash.html
     ph 'rm -f /snom/cfw-data/splash.png'
 }
 with_phone_lock deploy

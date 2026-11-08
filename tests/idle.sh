@@ -1,7 +1,7 @@
 #!/bin/bash
 # Task B test: idle widgets. Deploys CGIs, applies clock+stats+picture, screenshots, restores stock.
 . "$(dirname "$0")/lib.sh"
-C=$REPO/custom-rootfs/snom
+C=$REPO/rootfs/d375/snom
 OUT=${OUT:-/tmp/idle-test}; mkdir -p $OUT
 shot() { curl -s -m 10 http://$PHONE_IP:8080/cgi-bin/screenshot > $OUT/$1.bmp
          python3 -c "from PIL import Image; Image.open('$OUT/$1.bmp').save('$OUT/$1.png')"; }

@@ -3,7 +3,7 @@
 # under the phone lock, then checks the page, frames, frame rate, the key whitelist
 # and that a key press visibly changes the screen.
 . "$(dirname "$0")/lib.sh"
-C=$REPO/custom-rootfs/snom/cfw
+C=$REPO/rootfs/d375/snom/cfw
 TMP=$(mktemp -d); trap 'rm -rf "$TMP"; rm -f "$_askpass"' EXIT
 
 deploy() {

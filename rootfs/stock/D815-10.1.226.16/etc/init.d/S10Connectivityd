@@ -1,0 +1,111 @@
+#!/bin/sh
+#
+PATH=/bin:/usr/bin:/sbin:/usr/sbin
+LOGFILE=/tmp/hciattach.log
+PIDFILE=/var/run/connectivityd.pid
+BTSTACK_DEVICE_DIR=/snom/snomconfig/btstack/
+
+# Create a directory where btstack can save the pairing information which will survive a reboot
+if [ ! -d $BTSTACK_DEVICE_DIR ]; then
+  echo "Create $BTSTACK_DEVICE_DIR"
+  mkdir -p $BTSTACK_DEVICE_DIR
+fi
+
+if [[ $PHONE_TYPE == "snomD865" || $PHONE_TYPE == "snomD892" || $PHONE_TYPE == "snomD895" ]]; then
+  hw_config_combo_bt_wifi_value=$(fw_printenv hw_config_combo_bt_wifi| awk -F "=" '{print $2}')
+  if [ -z "$hw_config_combo_bt_wifi_value" ] || [ "$hw_config_combo_bt_wifi_value" == "COMBO_BT_WIFI_RTL8822CS" ]; then
+    DAEMON=/snom/connectivityd_posix-h5
+  else
+    DAEMON=/snom/connectivityd_posix-h4
+  fi
+else
+  DAEMON=/snom/connectivityd
+fi
+
+
+# Check whether connectivity daemon is available
+if [ ! -f $DAEMON ]; then
+  echo "Can't start $DAEMON, file not found"
+  exit 1
+fi
+
+is_connectivityd_running() {
+  # Check whether connectivity daemon is running
+  pgrep $DAEMON >/dev/null
+  return $?
+}
+
+is_hciattach_complete() {
+  # Check whether hciattach has finished the bluetooth device setup by parsing the log file
+  grep -q -s "Device setup complete" $LOGFILE
+  return $?
+}
+
+start() {
+  phoneType=`grep "Hardware" /proc/cpuinfo`
+  phoneType=${phoneType##Hardware*: }
+
+  btInterface="ttyS0"
+  if [ "$phoneType" == "snomD895" ]; then
+    btInterface="ttyS1"
+  fi
+
+  if is_connectivityd_running; then
+    # Exit if connectivity daemon is already running
+    echo "The connectivity daemon is already running"
+    exit 1
+  fi
+
+  # Start the bluetooth device setup with a timeout of 5 seconds
+  echo "Setup bluetooth device"
+  if [ -z "$hw_config_combo_bt_wifi_value" ] || [ "$hw_config_combo_bt_wifi_value" == "COMBO_BT_WIFI_RTL8822CS" ]; then
+    rtk_hciattach -n -x -t 5 -s 115200 $btInterface rtk_h5 > $LOGFILE 2>&1
+    if !(is_hciattach_complete); then
+      echo "Failed to setup bluetooth device"
+    fi
+  else
+    brcm_patchram_plus -d --patchram /system/etc/firmware/Vtech_4362a2_8kResample_0920.hcd /dev/$btInterface --no2bytes --baudrate 3000000 --use_baudrate_for_download --tosleep=400 --bd_addr $(cat /protected/bdaddr) > $LOGFILE 2>&1
+  fi
+
+  # Now the connectivity daemon can be started
+  echo "Start connectivity daemon"
+
+  loglevel=0
+  result=$(grep "connectivityd_log_level" /snom/snomconfig/config.xml 2>/dev/null)
+  if [ $? -eq 0 ]; then
+    level=$(echo $result|awk -F">" '{printf $2}'|awk -F"<" '{print $1}')
+    if [ $? -eq 0 ]; then
+      loglevel=$level
+    fi
+  fi
+
+  if [ $loglevel -gt 0 ]; then
+    echo "Enable debug: $loglevel"
+    start-stop-daemon -S -m -p "$PIDFILE" -x $DAEMON -- --log $loglevel > /tmp/connectivityd.log 2>&1 &
+  else
+    start-stop-daemon -S -m -p "$PIDFILE" -x $DAEMON &
+  fi
+}
+
+stop() {
+  echo "Stop connectivity daemon"
+  # Try to stop the connectivity daemon with SIGINT so that the signal handler of the connectivity daemon
+  # could take care of the deinitialisation steps
+  start-stop-daemon -K -p "$PIDFILE"
+  sleep 2
+  if is_connectivityd_running; then
+    # If this isn't working make a hard kill
+    killall -SIGKILL $DAEMON
+  fi
+  rm -f $PIDFILE
+}
+
+case "$1" in
+   start|stop)
+     "$1";;
+   *)
+     echo "Usage: $0 {start|stop}"
+     exit 1
+esac
+
+exit 0

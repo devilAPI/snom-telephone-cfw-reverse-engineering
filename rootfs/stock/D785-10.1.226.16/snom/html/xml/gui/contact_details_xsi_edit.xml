@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<IPPhoneBatch xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../schemas/minibrowser.xsd">
+  <!-- show the contact details with the possiblity to edit afterwards -->
+  <IPPhoneMenu id="contact_details_broadsoft_edit" speedselect="on" state="others_except_mb">
+    <Title>$(lang:edit_contact)</Title>
+    <MenuItem id="contact_name">
+      <If condition="$(show_feature:FEATURE_PUI_STYLE_SIO)">
+        <Name>$(lang:tb_name_label)</Name>
+        <ExtraIconType>$(icon_type_enum:kIconTypeMenuArrowRight)</ExtraIconType>
+        <SubText>$(var:contact_name)</SubText>
+      </If>
+      <Else>
+        <Name>$(lang:tb_name_label): $(var:contact_name)</Name>
+      </Else>
+      <Url>file:///xml/gui/templates.xml#sub=*[@id="input_template"]&amp;var:input_pool_key=0&amp;var:input_displayname=$(lang:tb_name_label)&amp;var:input_token=__Y__&amp;var:input_flags=a&amp;var:input_default=$(var:contact_name)&amp;var:input_mask=&amp;var:input_url=$(urlencode:"phone://mb_nop_ignore_prev_frags%23go_back%26var:contact_name=__Y__")</Url>
+      <SoftKeyItem>
+        <Name>F1</Name>
+        <Label>F_SAVE_XSI_CONTACT</Label>
+        <Url track="no">phone://mb_nop#action_ifc:identity.$(set:active_line).contact_add_xsi=add_contact,name=$(var:contact_name),number=$(var:contact_number)&amp;go_back&amp;go_back&amp;go_back</Url>
+      </SoftKeyItem>
+      <SoftKeyItem>
+        <Name>F2</Name>
+        <Label>F_EDIT</Label>
+        <Url>file:///xml/gui/templates.xml#sub=*[@id="input_template"]&amp;var:input_pool_key=0&amp;var:input_displayname=$(lang:tb_name_label)&amp;var:input_token=__Y__&amp;var:input_flags=a&amp;var:input_default=$(var:contact_name)&amp;var:input_mask=&amp;var:input_url=$(urlencode:"phone://mb_nop_ignore_prev_frags%23go_back%26var:contact_name=__Y__")</Url>
+      </SoftKeyItem>
+    </MenuItem>
+    <MenuItem id="contact_number">
+      <If condition="$(show_feature:FEATURE_PUI_STYLE_SIO)">
+        <Name>$(lang:tb_number)</Name>
+        <SubText>$(var:contact_number)</SubText>
+        <ExtraIconType>$(icon_type_enum:kIconTypeMenuArrowRight)</ExtraIconType>
+        <Url>file:///xml/gui/templates.xml#sub=*[@id="input_template"]&amp;var:input_pool_key=1&amp;var:input_displayname=$(lang:tb_number)&amp;var:input_token=__Y__&amp;var:input_flags=e&amp;var:input_default=$(var:contact_number)&amp;var:input_mask=&amp;var:input_url=$(urlencode:"phone://mb_nop_ignore_prev_frags%23go_back%26var:contact_number=__Y__")</Url>
+        <SoftKeyItem>
+          <Name>F2</Name>
+          <Label>F_EDIT</Label>
+          <Url>file:///xml/gui/templates.xml#sub=*[@id="input_template"]&amp;var:input_pool_key=1&amp;var:input_displayname=$(lang:tb_number)&amp;var:input_token=__Y__&amp;var:input_flags=e&amp;var:input_default=$(var:contact_number)&amp;var:input_mask=&amp;var:input_url=$(urlencode:"phone://mb_nop_ignore_prev_frags%23go_back%26var:contact_number=__Y__")</Url>
+        </SoftKeyItem>
+      </If>
+      <Else>
+        <Name>$(lang:tb_number_label): $(var:contact_number)</Name>
+        <Url>file:///xml/gui/templates.xml#sub=*[@id="input_template"]&amp;var:input_pool_key=1&amp;var:input_displayname=$(lang:tb_number_label)&amp;var:input_token=__Y__&amp;var:input_flags=e&amp;var:input_default=$(var:contact_number)&amp;var:input_mask=&amp;var:input_url=$(urlencode:"phone://mb_nop_ignore_prev_frags%23go_back%26var:contact_number=__Y__")</Url>
+        <SoftKeyItem>
+          <Name>F2</Name>
+          <Label>F_EDIT</Label>
+          <Url>file:///xml/gui/templates.xml#sub=*[@id="input_template"]&amp;var:input_pool_key=1&amp;var:input_displayname=$(lang:tb_number_label)&amp;var:input_token=__Y__&amp;var:input_flags=e&amp;var:input_default=$(var:contact_number)&amp;var:input_mask=&amp;var:input_url=$(urlencode:"phone://mb_nop_ignore_prev_frags%23go_back%26var:contact_number=__Y__")</Url>
+        </SoftKeyItem>
+      </Else>
+      <SoftKeyItem>
+        <Name>F1</Name>
+        <Label>F_SAVE_XSI_CONTACT</Label>
+        <Url track="no">phone://mb_nop#action_ifc:identity.$(set:active_line).contact_add_xsi=add_contact,name=$(var:contact_name),number=$(var:contact_number)&amp;go_back&amp;go_back&amp;go_back</Url>
+      </SoftKeyItem>
+    </MenuItem>
+  </IPPhoneMenu>
+</IPPhoneBatch>

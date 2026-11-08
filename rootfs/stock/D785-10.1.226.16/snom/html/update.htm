@@ -1,0 +1,248 @@
+<?ssi title update_ssi_title?>
+<?ssi file common1.htm?>
+<TR><TD vAlign="top" height="16"><IMG height="16" src="img/clr.gif" width="16"></TD></TR>
+<TR>
+  <TD>
+    <?ssi skipon VTECH?>
+    <TABLE class="bubbleTable" cellSpacing="0" cellPadding="0" width="100%" border="0">
+    <?ssi skipoff VTECH?>
+    <?ssi skipon SNOM?>
+    <TABLE cellSpacing="4" cellPadding="0" width="100%" border="0">
+    <?ssi skipoff SNOM?>
+    <TBODY>
+      <TR>
+        <TD class="background"><SPAN class=pageInfoText>
+          <?lng update_info?>
+          <br><br>
+        </SPAN>
+        </TD>
+      </TR>
+    </TBODY>
+    </TABLE>
+  </TD>
+</TR>
+<TR><TD vAlign=top height=5><IMG height=5 src="img/clr.gif" width=12></TD></TR>
+<TR>
+  <TD vAlign="top">
+    <FORM method="post">
+      <?ssi hidden_tag?>
+      <?ssi firmware_update_in_progress?>
+      <?ssi skipon VTECH?>
+      <TABLE class="bubbleTable" cellSpacing="0" cellPadding="0" width="100%" border="0">
+      <?ssi skipoff VTECH?>
+      <?ssi skipon SNOM?>
+      <TABLE cellSpacing="4" cellPadding="0" width="100%" border="0">
+      <?ssi skipoff SNOM?>
+      <TBODY>
+        <TR>
+          <TD class="background" width="12" height="5">
+            <?ssi skipon VTECH?>
+            <IMG height="12" src=<?ssi img-corner-gif ul?> width="12">
+            <?ssi skipoff VTECH?>
+          </TD>
+          <TD></TD>
+          <TD></TD>
+          <TD class="background" width="12" height="5">
+            <?ssi skipon VTECH?>
+            <IMG height="12" src=<?ssi img-corner-gif ur?> width="12">
+            <?ssi skipoff VTECH?>
+          </TD>
+        </TR>
+        <TR>
+          <TD></TD>
+          <?ssi skipon VTECH?>
+          <TD><B>
+          <?ssi skipoff VTECH?>
+          <?ssi skipon SNOM?>
+          <TD class="titleText">
+          <?ssi skipoff SNOM?>
+          <?lng update_manualsoftup?></B>
+          </TD>
+        </TR>
+        <TR>
+          <TD></TD>
+          <TD><?ssi input update_ssi_firmware firmware?></TD>
+        </TR>
+        <TR><TD></TD><TD></TD></TR>
+        <TR>
+          <TD></TD>
+          <TD><input type="submit" value="<?lng update_loadbutton?>" name="swload" <?ssi tabindex?>
+                     onclick="return onSubmit()" ></TD>
+        </TR>
+        <TR>
+          <TD class="background" vAlign="bottom" align="left" width="12" height="5">
+            <?ssi skipon VTECH?>
+            <IMG height="12" src=<?ssi img-corner-gif ll?> width="12">
+            <?ssi skipoff VTECH?>
+          </TD>
+            <TD></TD>
+            <TD></TD>
+          <TD class="background" vAlign="bottom" align="right" width="12" height="5">
+            <?ssi skipon VTECH?>
+            <IMG height="12" src=<?ssi img-corner-gif lr?> width="12">
+            <?ssi skipoff VTECH?>
+          </TD>
+        </TR>
+        <?ssi skipon NOT_ANY_UXM ?>
+        <?ssi skipon NOT_UXM_UPDATE?>
+        <TR>
+          <TD class="background"><br><br></TD>
+          <TD class="background"><br><br></TD>
+          <TD class="background"><br><br></TD>
+          <TD class="background"><br><br></TD>
+        </TR>
+        <TR>
+          <TD class="background" width="12" height="5">
+          <?ssi skipon VTECH?>
+          <IMG height="12" src=<?ssi img-corner-gif ul?> width="12">
+          <?ssi skipoff VTECH?>
+          </TD>
+          <TD></TD>
+          <TD></TD>
+          <TD class="background" width="12" height="5">
+          <?ssi skipon VTECH?>
+          <IMG height="12" src=<?ssi img-corner-gif ur?> width="12">
+          <?ssi skipoff VTECH?>
+          </TD>
+        </TR>
+        <TR>
+          <TD></TD>
+          <?ssi skipon VTECH?>
+          <TD><B>
+          <?ssi skipoff VTECH?>
+          <?ssi skipon SNOM?>
+          <TD class="titleText">
+          <?ssi skipoff SNOM?>
+          <?lng update_manualsoftup_uxm?></B>
+          </TD>
+        </TR>
+        <?ssi skipon NOT_1_UXM_OR_UXMC ?>
+        <TR>
+          <TD></TD>
+          <TD><?ssi input update_ssi_firmware firmware_uxm?></TD>
+        </TR>
+        <TR>
+          <TD></TD><TD></TD>
+        </TR>
+        <TR>
+          <TD></TD>
+          <TD><input type="submit" value="<?lng update_loadbutton?>" name="uxmswload" <?ssi tabindex?> ></TD>
+        </TR>
+        <TR>
+          <?ssi skipoff NOT_1_UXM_OR_UXMC ?>
+          <?ssi skipon 1_UXM_OR_UXMC ?>
+          <TR><TD><br><br></TD>
+            <TD width="40%"><?lng update_info_uxm?></TD>
+          </TR>
+          <?ssi skipoff 1_UXM_OR_UXMC ?>
+          <TD class="background" vAlign="bottom" align="left" width="12" height="5">
+          <?ssi skipon VTECH?>
+          <IMG height="12" src=<?ssi img-corner-gif ll?> width="12">
+          <?ssi skipoff VTECH?>
+          </TD>
+          <TD></TD>
+          <TD></TD>
+          <TD class="background" vAlign="bottom" align="right" width="12" height="5">
+          <?ssi skipon VTECH?>
+          <IMG height="12" src=<?ssi img-corner-gif lr?> width="12">
+          <?ssi skipoff VTECH?>
+          </TD>
+        </TR>
+        <?ssi skipoff NOT_UXM_UPDATE?>
+        <?ssi skipoff NOT_ANY_UXM ?>
+      </TBODY>
+      </TABLE>
+    </FORM>
+    <TR>
+      <TD>
+        <TABLE cellSpacing=0 cellPadding=0 width="100%" border=0 ID="Table1">
+        <TBODY>
+          <TR>
+            <TD><SPAN class=pageInfoText><?lng license_info?><br><br></SPAN></TD>
+          </TR>
+        </TBODY>
+        </TABLE>
+      </TD>
+    </TR>
+    <FORM enctype="multipart/form-data" method="post">
+      <?ssi hidden_tag?>
+      <?ssi skipon VTECH?>
+      <TABLE class="bubbleTable" cellSpacing="0" cellPadding="0" width="100%" border="0">
+      <?ssi skipoff VTECH?>
+      <?ssi skipon SNOM?>
+      <TABLE cellSpacing="4" cellPadding="0" width="100%" border="0">
+      <?ssi skipoff SNOM?>
+      <TBODY>
+        <TR>
+          <TD class="background" width="12" height="5">
+            <?ssi skipon VTECH?>
+            <IMG height="12" src=<?ssi img-corner-gif ul?> width="12">
+            <?ssi skipoff VTECH?>
+          </TD>
+          <TD></TD>
+          <TD></TD>
+          <TD class="background" width="12" height="5">
+            <?ssi skipon VTECH?>
+            <IMG height="12" src=<?ssi img-corner-gif ur?> width="12">
+            <?ssi skipoff VTECH?>
+          </TD>
+        </TR>
+        <TR><TD></TD>
+          <?ssi skipon VTECH?>
+          <TD><B>
+          <?ssi skipoff VTECH?>
+          <?ssi skipon SNOM?>
+          <TD class="titleText">
+          <?ssi skipoff SNOM?>
+          <?lng update_manuallicense?></B>
+          </TD>
+        </TR>
+        <TR>
+          <TD></TD>
+          <TD><?lng update_licensefile?></TD>
+          <TD>
+            <noscript><div class="linespace"><input type="file" id="license_file" name="license_file"></div></noscript>
+            <div class="regularline linespace"><input type="file" class="inputfile" id="license_file" name="license_file">
+            <label for="license_file"><span><?lng choose_file?></span></label></div>
+          </TD>
+        </TR>
+        <TR>
+          <TD></TD>
+          <TD colspan="2"><input type="submit" value="<?lng update_loadbutton?>" name="load_license" <?ssi tabindex?> ></TD>
+        </TR>
+        <TR>
+          <TD class="background" vAlign="bottom" align="left" width="12" height="5">
+            <?ssi skipon VTECH?>
+            <IMG height="12" src=<?ssi img-corner-gif ll?> width="12">
+            <?ssi skipoff VTECH?>
+          </TD>
+            <TD></TD>
+            <TD></TD>
+          <TD class="background" vAlign="bottom" align="right" width="12" height="5">
+            <?ssi skipon VTECH?>
+            <IMG height="12" src=<?ssi img-corner-gif lr?> width="12">
+            <?ssi skipoff VTECH?>
+          </TD>
+        </TR>
+      </TBODY>
+      </TABLE>
+    </FORM>
+  </TD>
+</TR>
+<?ssi file common9.htm?>
+<script type="text/javascript">
+  const update_in_progress = document.getElementById("firmware_update_in_progress");
+  if (update_in_progress != null && update_in_progress.value == "1"){
+    alert("<?lng software_update_in_progress?>");
+  }
+  function onSubmit() {
+    const firmware_input = document.getElementById('firmware');
+    // check if the field is not empty
+    if (firmware_input == null || firmware_input.value.length == 0) {
+      alert("<?lng firmware_field_is_empty?>");
+      return false;
+    }
+    return confirm("<?lng software_update_confirmation?>");
+  }
+</script>
+</HTML>

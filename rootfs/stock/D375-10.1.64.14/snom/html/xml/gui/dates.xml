@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<IPPhoneBatch xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../schemas/minibrowser.xsd">
+  <IPPhoneText state="others_except_mb">
+    <Title>$(lang:menu_dates_today)</Title>
+    <If condition="$(var_ifc:identity.$(set:active_line).appointments::count)>0">
+      <Fetch mil="1">file:///xml/gui/dates.xml#sub=*[@id="list"]</Fetch>
+    </If>
+    <Elif condition="$(var_ifc:identity.$(set:active_line)::is_exchange_accessible)==true">
+      <Fetch mil="1">file:///xml/gui/dates.xml#sub=*[@id="no_dates_scheduled_for_today"]</Fetch>
+    </Elif>
+    <Else>
+      <Fetch mil="1">file:///xml/gui/dates.xml#sub=*[@id="cannot_access_exchange"]</Fetch>
+    </Else>
+  </IPPhoneText>
+  <IPPhoneMenu track="yes" dtmf="off" speedselect="select" sort="yes" id="list" state="others_except_mb">
+    <Title>$(lang:menu_dates_today)</Title>
+    <Repeat var_ifc="identity.$(set:active_line).appointments.*"
+            token="|__EVENT_TIME__|__SENSITIVITY_SUBJECT__|__TYPE__|__STATE__|__PARTICIPANTS__|__PARTICIPANTS_OPTIONAL__|__LOCATION__|__ORGANIZER__|__LINK2DIAL__|">
+      <!--implicit: __MID__==current Module id -->
+      <!--implicit: __IDX__==current index 0..? -->
+      <MenuItem sel="$(bool_eval:$(condition:$(var_ifc:__MID__::state)==ongoing)|$(condition:$(var_ifc:__MID__::state)==reminding))" name="$(local_time:get_HM;$(period:get_start_point;__EVENT_TIME__)) __SENSITIVITY_SUBJECT__" id="__MID__" sort_key="$(period:get_start_point;__EVENT_TIME__)">
+        <Url>file:///xml/gui/dates.xml#sub=*[@id="details"]&amp;var:mid="__MID__"&amp;var:subject="__SENSITIVITY_SUBJECT__"&amp;var:type="__TYPE__"&amp;var:start="$(local_time:get_HM;$(period:get_start_point;__EVENT_TIME__))"&amp;var:duration="$(period:get_duration;__EVENT_TIME__;hour;min)"&amp;var:participants="__PARTICIPANTS__"&amp;var:participants_optional="__PARTICIPANTS_OPTIONAL__"&amp;var:location="__LOCATION__"&amp;var:organizer="__ORGANIZER__"&amp;var:link2dial="__LINK2DIAL__"</Url>
+        <If condition="$(var_ifc:__MID__::state)==pending">
+          <If condition="$(display_type)!=color">
+            <Icon>$(presence_icon:4)</Icon>
+          </If>
+          <Else> <!-- graphical display -->
+            <Icon>file:///bmp/colored/snom820_icon_contact_state_available.png</Icon>
+          </Else> <!-- graphical display -->
+        </If>
+        <Elif condition="$(var_ifc:__MID__::state)==reminding">
+          <If condition="$(display_type)!=color">
+            <Icon>$(presence_icon:3)</Icon>
+          </If>
+          <Else> <!-- graphical display -->
+            <Icon>file:///bmp/colored/snom820_icon_contact_state_busy.png</Icon>
+          </Else> <!-- graphical display -->
+        </Elif>
+        <Elif condition="$(var_ifc:__MID__::state)==ongoing">
+          <If condition="$(display_type)!=color">
+            <Icon>$(presence_icon:6)</Icon>
+          </If>
+          <Else> <!-- graphical display -->
+            <Icon>file:///bmp/colored/snom820_icon_contact_state_dnd.png</Icon>
+          </Else> <!-- graphical display -->
+        </Elif>
+        <Elif condition="$(var_ifc:__MID__::state)==exceeded">
+          <If condition="$(display_type)!=color">
+            <Icon>$(presence_icon:12)</Icon>
+          </If>
+          <Else> <!-- graphical display -->
+            <Icon>file:///bmp/colored/snom820_icon_contact_state_offline.png</Icon>
+          </Else> <!-- graphical display -->
+        </Elif>
+      </MenuItem>
+    </Repeat>
+  </IPPhoneMenu>
+  <IPPhoneText id="details" state="others_except_mb">
+    <Title>$(lang:list_details)</Title>
+    <If condition="$(var:type)==conference">
+      <SoftKeyItem>
+        <Name>ENTER</Name>
+        <Label></Label>
+        <Url>phone://mb_exit#action_ifc:CallInterface=join_conference,identity=$(set:active_line),subject=$(urlencode:$(var:subject)),conf_uri=$(urlencode:$(var:link2dial))--request_var</Url>
+      </SoftKeyItem>
+      <SoftKeyItem>
+        <Name>F1</Name>
+        <Label>$(lang:F_JOIN)</Label>
+        <Url>phone://mb_exit#action_ifc:CallInterface=join_conference,identity=$(set:active_line),subject=$(urlencode:$(var:subject)),conf_uri=$(urlencode:$(var:link2dial))--request_var</Url>
+      </SoftKeyItem>
+      <SoftKeyItem>
+        <Name>OFFHOOK</Name>
+        <Url>phone://mb_exit#action_ifc:CallInterface=join_conference,identity=$(set:active_line),subject=$(urlencode:$(var:subject)),conf_uri=$(urlencode:$(var:link2dial))--request_var</Url>
+      </SoftKeyItem>
+    </If>
+    <If condition="$(var_ifc:$(var:mid)::state)==reminding">
+      <SoftKeyItem>
+        <Name>F2</Name>
+        <Label>$(lang:date_remind_later)</Label>
+        <Url>file:///xml/gui/dates.xml#sub=*[@id="delay"]&amp;var:mid=$(var:mid)</Url>
+      </SoftKeyItem>
+    </If>
+    <If condition="!$(empty:$(var:location))">
+      <Text>
+        $(lang:subject):$(var:subject)
+        <br />
+        $(lang:list_details_time)$(var:start)
+        <br />
+        $(lang:list_details_duration)$(var:duration)
+        <br />
+        $(lang:participants)$(var:participants)
+        $(var:participants_optional)
+        <br />
+        $(lang:location)$(var:location)
+        <br />
+        $(lang:label_conference_organizer)$(var:organizer)
+      </Text>
+    </If>
+    <Else>
+      <Text>
+        $(lang:subject):$(var:subject)
+        <br />
+        $(lang:list_details_time)$(var:start)
+        <br />
+        $(lang:list_details_duration)$(var:duration)
+        <br />
+        $(lang:participants)$(var:participants)
+        $(var:participants_optional)
+        <br />
+        $(lang:label_conference_organizer)$(var:organizer)
+      </Text>
+    </Else>
+  </IPPhoneText>
+  <IPPhoneMenu track="yes" dtmf="off" speedselect="select" id="delay" state="others_except_mb">
+    <Title>$(lang:date_reset_reminder)</Title>
+    <MenuItem name="$(lang:date_remind_me_later)" id="$(var:mid)">
+      <Url>phone://mb_exit#action_ifc:$(var:mid)=reschedule_reminder,delay=0--request_var</Url>
+    </MenuItem>
+    <Repeat values="|5|PT5M|10|PT10M|30|PT30M|60|PT1H|" token="|__TEXT__|__VALUE__|">
+      <MenuItem name="$(lang:date_set_reminder_to) __TEXT__ $(lang:minutes)" id="__VALUE__">
+        <Url>phone://mb_exit#action_ifc:$(var:mid)=reschedule_reminder,delay=__VALUE__--request_var</Url>
+      </MenuItem>
+    </Repeat>
+  </IPPhoneMenu>
+  <IPPhoneText id="cannot_access_exchange" state="others_except_mb">
+    <Title>$(lang:menu_dates_today)</Title>
+    <SoftKeyItem>
+      <Name>ENTER</Name>
+      <Label></Label>
+      <Url>phone://mb_exit</Url>
+    </SoftKeyItem>
+    <Text>$(lang:cannot_access_exchange)</Text>
+  </IPPhoneText>
+  <IPPhoneText id="no_dates_scheduled_for_today" state="others_except_mb">
+    <Title>$(lang:menu_dates_today)</Title>
+    <SoftKeyItem>
+      <Name>ENTER</Name>
+      <Label></Label>
+      <Url>phone://mb_exit</Url>
+    </SoftKeyItem>
+    <Text>$(lang:no_dates_today)</Text>
+  </IPPhoneText>
+</IPPhoneBatch>

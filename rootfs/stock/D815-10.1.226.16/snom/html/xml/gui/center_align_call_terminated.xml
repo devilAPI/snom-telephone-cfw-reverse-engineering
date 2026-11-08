@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<IPPhoneBatch  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../schemas/minibrowser.xsd">
+  <IPPhoneMenu has_phone_state="on" selectable="no" line_separator="no" track="no" icon_xoffset="$(msg_icon_x_offset)" line_yoffset="$(msg_line_y_offset)" dtmf="off" speedselect="off" id="call_state" state="relevant" center_text="true" document_id="Call_Terminated">
+    <fetch mil="$(msg_timeout)">phone://mb_exit</fetch>
+    <Title>$(msg_title)</Title>
+    <IconSize>M</IconSize>
+    <FontSize>L</FontSize>
+    <FontSize2>M</FontSize2>
+    <MenuItem name="$(msg_pretext)" custom_line_height="$(math_eval:26)" id="disconnected">
+    </MenuItem>
+    <MenuItem name="$(msg_aoc)" custom_font_size="XS" custom_line_height="$(math_eval:35-$(gui_display_ysize)/16)" id="disconnected_aoc">
+    </MenuItem>
+    <MenuItem name="" custom_line_height="$(math_eval:$(gui_display_ysize)*7/8-160)" id="disconnected">
+      <If condition="$(msg_show_busy_icon)==yes">
+        <IconType>$(icon_type_enum:kIconTypeSymbolBusy)</IconType>
+      </If>
+      <Else>
+        <IconType>$(icon_type_enum:kIconTypeSymbolDisconnected)</IconType>
+      </Else>
+    </MenuItem>
+    <MenuItem name="$(msg_text)" custom_line_height="$(math_eval:212-$(gui_display_ysize)*5/8)" id="disconnected">
+      <If condition="$(msg_subtext)">
+        <SubText>$(msg_subtext)</SubText>
+      </If>
+      <Else>
+        <SubText> </SubText> <!-- set a subtext but display nothing to maintain the y position of main text -->
+      </Else>
+    </MenuItem>
+    <SoftKeyItem><Name>F1</Name><SoftKey>F_CANCEL</SoftKey></SoftKeyItem>
+    <SoftKeyItem>
+      <Name>ONHOOK</Name>
+      <Url>phone://mb_exit</Url>
+    </SoftKeyItem>
+    <SoftKeyItem>
+      <Name>SPEAKER</Name>
+      <Url>phone://mb_exit</Url>
+    </SoftKeyItem>
+  </IPPhoneMenu>
+</IPPhoneBatch>

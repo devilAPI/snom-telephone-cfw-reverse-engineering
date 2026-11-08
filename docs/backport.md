@@ -53,12 +53,12 @@ headroom than the VM suggests.
 
 ## Pixel format shim
 
-`lcsD815` draws 24-bit pixels, while the D375 panel is 32-bit. `tools/fb24shim.c`
+`lcsD815` draws 24-bit pixels, while the D375 panel is 32-bit. `src/native/fb24shim.c`
 intercepts `open`, `ioctl` and `mmap` on `/dev/fb0`: the app gets a 24 bpp shadow
 buffer, and a thread copies changed lines to the real framebuffer 20 times a
 second. The app writes red first and the panel wants blue first, so it swaps them.
 
-Build it with `tools/build-fb24shim.sh`. Load it through `/etc/ld.so.preload`
+Build it with `tools/build/build-fb24shim.sh`. Load it through `/etc/ld.so.preload`
 inside the chroot, because `lid` clears the environment and `LD_PRELOAD` never
 reaches the app.
 
@@ -96,7 +96,7 @@ Three things cost the most time:
 
 | Part | Difficulty | Work |
 |---|---|---|
-| Screen | Done in the VM | `tools/fb24shim.c`, see below |
+| Screen | Done in the VM | `src/native/fb24shim.c`, see below |
 | Update path | Medium | The image is about 90 MB, but the update lands in a 40 MB `/tmp`. Needs a larger `/tmp` first, or a two-step update |
 | Model identity | Medium | The app believes it is a D815: name, settings, provisioning |
 | Keys and LEDs | Medium | Remap D375 key codes to what `lcsD815` expects; check `/dev/snomled` |

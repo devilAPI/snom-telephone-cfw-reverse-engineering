@@ -1,0 +1,160 @@
+<?ssi title index_ssi_title?>
+<?ssi file common1.htm?>
+<?ssi skipon WITHOUT_ADVERTISEMENT?>
+<IFRAME SRC="<?ssi advertisement_url?>" WIDTH="100%" HEIGHT="110" marginheight="0" marginwidth="0" frameborder="0">
+If you can see this, your browser doesn't understand IFRAME. But we <A HREF="<?ssi advertisement_url?>">link</A> you to the file.
+</IFRAME>
+<?ssi skipoff WITHOUT_ADVERTISEMENT?>
+<TR><TD vAlign="top" height="16"><IMG height="16" src="img/clr.gif" width="16"></TD></TR>
+<?ssi skipon NO_DIALING?>
+<TR>
+  <TD>
+    <TABLE cellSpacing=0 cellPadding=0 width="100%" border=0 ID="Table1">
+      <TBODY>
+            <TR><TD><SPAN class=pageInfoText><?lng index_infotext?><br>
+</SPAN></TD></TR></TBODY></TABLE></TD></TR>
+<TR><TD vAlign=top height=5><IMG height=5 src="img/clr.gif" width=12></TD></TR>
+
+	<TR>
+		<TD vAlign="top">
+			<FORM method="post">
+				<?ssi skipon VTECH?>
+				<TABLE class="bubbleTable" cellSpacing="0" cellPadding="0" width="100%" border="0">
+				<?ssi skipoff VTECH?>
+				<?ssi skipon SNOM?>
+				<TABLE cellSpacing="0" cellPadding="0" width="100%" border="0">
+				<?ssi skipoff SNOM?>
+					<TBODY>
+	<TR>
+		<TD class="background" width="12" height="5">
+			<?ssi skipon VTECH?>
+			<IMG height="12" src=<?ssi img-corner-gif ul?> width="12">
+			<?ssi skipoff VTECH?>
+		</TD>
+		<TD></TD>
+		<TD></TD>
+		<TD class="background" width="12" height="5">
+			<?ssi skipon VTECH?>
+			<IMG height="12" src=<?ssi img-corner-gif ur?> width="12">
+			<?ssi skipoff VTECH?>
+		</TD>
+	</TR>
+<?ssi hidden_tag?>
+<TR><TD></TD><TD><B><?lng index_dialnumber?></B></TD></TR>
+<TR><TD></TD><TD><input type="text" name="NUMBER">
+<input type="submit" hidefocus value="<?lng index_dialnumberbutton?>" name="DIAL"  >
+<input type="submit" hidefocus value="<?lng index_hangupbutton?>" name="HANGUP"  ></td>
+</TR>
+<TR><TD></TD><TD>&nbsp;</TD></TR>
+<TR><TD></TD><TD><B><?lng index_outgoingident?></B></TD></TR>
+<tr><TD></TD>
+<td width="100%">
+<select name="active_line" size="1">
+<?ssi skiponv user_name1 user_host1?><option value="1"<?ssi selected active_line 1?>><?ssi local_identity_label 1?></option><?ssi skipoffv user_name1 user_host1?>
+<?ssi skiponv user_name2 user_host2?><option value="2"<?ssi selected active_line 2?>><?ssi local_identity_label 2?></option><?ssi skipoffv user_name2 user_host2?>
+<?ssi skipon TWO_IDENTITIES?>
+<?ssi skiponv user_name3 user_host3?><option value="3"<?ssi selected active_line 3?>><?ssi local_identity_label 3?></option><?ssi skipoffv user_name3 user_host3?>
+<?ssi skiponv user_name4 user_host4?><option value="4"<?ssi selected active_line 4?>><?ssi local_identity_label 4?></option><?ssi skipoffv user_name4 user_host4?>
+<?ssi skipon FOUR_IDENTITIES?>
+<?ssi skiponv user_name5 user_host5?><option value="5"<?ssi selected active_line 5?>><?ssi local_identity_label 5?></option><?ssi skipoffv user_name5 user_host5?>
+<?ssi skiponv user_name6 user_host6?><option value="6"<?ssi selected active_line 6?>><?ssi local_identity_label 6?></option><?ssi skipoffv user_name6 user_host6?>
+<?ssi skipon SIX_IDENTITIES?>
+<?ssi skiponv user_name7 user_host7?><option value="7"<?ssi selected active_line 7?>><?ssi local_identity_label 7?></option><?ssi skipoffv user_name7 user_host7?>
+<?ssi skiponv user_name8 user_host8?><option value="8"<?ssi selected active_line 8?>><?ssi local_identity_label 8?></option><?ssi skipoffv user_name8 user_host8?>
+<?ssi skiponv user_name9 user_host9?><option value="9"<?ssi selected active_line 9?>><?ssi local_identity_label 9?></option><?ssi skipoffv user_name9 user_host9?>
+<?ssi skiponv user_name10 user_host10?><option value="10"<?ssi selected active_line 10?>><?ssi local_identity_label 10?></option><?ssi skipoffv user_name10 user_host10?>
+<?ssi skiponv user_name11 user_host11?><option value="11"<?ssi selected active_line 11?>><?ssi local_identity_label 11?></option><?ssi skipoffv user_name11 user_host11?>
+<?ssi skiponv user_name12 user_host12?><option value="12"<?ssi selected active_line 12?>><?ssi local_identity_label 12?></option><?ssi skipoffv user_name12 user_host12?>
+<?ssi skipoff SIX_IDENTITIES?>
+<?ssi skipoff FOUR_IDENTITIES?>
+<?ssi skipoff TWO_IDENTITIES?>
+</select>&nbsp;
+<input type="submit" hidefocus value="<?lng index_setbutton?>" name="SETTINGS"  >
+</td>
+</tr>
+
+<TR>
+	<TD class="background" vAlign="bottom" align="left" width="12" height="5">
+		<?ssi skipon VTECH?>
+		<IMG height="12" src=<?ssi img-corner-gif ll?> width="12">
+		<?ssi skipoff VTECH?>
+	</TD>
+	<TD width="12" height="5"><IMG height="5" src="img/clr.gif" width="12"></TD>
+	<TD width="12" height="5"><IMG height="5" src="img/clr.gif" width="12"></TD>
+	<TD class="background" vAlign="bottom" align="right" width="12" height="5">
+		<?ssi skipon VTECH?>
+		<IMG height="12" src=<?ssi img-corner-gif lr?> width="12">
+		<?ssi skipoff VTECH?>
+	</TD>
+</TR>
+					</TBODY></TABLE>
+			</FORM>
+		</TD>
+	</TR>
+<?ssi skipoff NO_DIALING?>
+
+<tr>
+<td>
+<table border="0" cellpadding="1" cellspacing="1" width="100%">
+<tr><td colspan="4"><span class="normaltextbold"><?lng index_dialednumbers?></span>
+<a href="index.htm?dialeddel=clear<?ssi hidden_tag_qs?>"><div class="delete"></div></a>
+</td></tr>
+<tr>
+<td width="100"><?lng index_date?></td>
+<TD><?lng index_time?></td>
+<TD><?lng index_duration?></td>
+<TD><?lng index_costs?></td>
+<TD><?lng index_local_identity?></td>
+<TD><?lng index_number?></td>
+</tr>
+<?ssi listinclude lastcalls?>
+</table>
+<br>
+<br>
+<table border="0" cellpadding="1" cellspacing="1" width="100%">
+<tr><td colspan="4"><span class="normaltextbold"><?lng index_missedcalls?></span>
+<a href="index.htm?misseddel=clear<?ssi hidden_tag_qs?>"><div class="delete"></div>
+</td></tr>
+<tr>
+<td width="100"><?lng index_date?></td>
+<TD><?lng index_time?></td>
+<TD><?lng index_missed?></td>
+<TD><?lng index_local_identity?></td>
+<TD><?lng index_number?></td>
+</tr>
+<?ssi listinclude missedcalls?>
+</table>
+<br>
+<br>
+<table border="0" cellpadding="1" cellspacing="1" width="100%">
+<tr><td colspan="4"><span class="normaltextbold"><?lng index_rejectedcalls?></span>
+<a href="index.htm?rejecteddel=clear<?ssi hidden_tag_qs?>"><div class="delete"></div>
+</td></tr>
+<tr>
+<td width="100"><?lng index_date?></td>
+<TD><?lng index_time?></td>
+<TD><?lng index_rejected?></td>
+<TD><?lng index_local_identity?></td>
+<TD><?lng index_number?></td>
+</tr>
+<?ssi listinclude rejectedcalls?>
+</table>
+<br>
+<br>
+<table border="0" cellpadding="1" cellspacing="1" width="100%">
+<tr><td colspan="4"><span class="normaltextbold"><?lng index_receivedcalls?></span>
+<a href="index.htm?receiveddel=clear<?ssi hidden_tag_qs?>"><div class="delete"></div></a>
+</td></tr>
+<tr>
+<td width="100"><?lng index_date?></td>
+<TD><?lng index_time?></td>
+<TD><?lng index_duration?></td>
+<TD><?lng index_costs?></td>
+<TD><?lng index_local_identity?></td>
+<TD><?lng index_number?></td>
+</tr>
+<?ssi listinclude takencalls?>
+</table>
+</td>
+</tr>
+<?ssi file common9.htm?></HTML>

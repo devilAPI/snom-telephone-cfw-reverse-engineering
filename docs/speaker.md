@@ -21,13 +21,13 @@ still on [to-test.md](../to-test.md).
 **Phone**, Menu, CFW Tools, "Speaker (play from PC)": start, stop, and see whether
 something is playing.
 
-**Linux PC**: `tools/snom-speaker.sh` adds a sound output called "snom D375":
+**Linux PC**: `tools/device/snom-speaker.sh` adds a sound output called "snom D375":
 
 ```sh
-tools/snom-speaker.sh 192.168.178.72          # asks for the panel password
-tools/snom-speaker.sh -d 192.168.178.72       # also make it the default output
-tools/snom-speaker.sh -v 50 -f song.mp3       # play one file (needs ffmpeg)
-CFW_AUTH=root:PASSWORD tools/snom-speaker.sh  # no password prompt
+tools/device/snom-speaker.sh 192.168.178.72          # asks for the panel password
+tools/device/snom-speaker.sh -d 192.168.178.72       # also make it the default output
+tools/device/snom-speaker.sh -v 50 -f song.mp3       # play one file (needs ffmpeg)
+CFW_AUTH=root:PASSWORD tools/device/snom-speaker.sh  # no password prompt
 ```
 
 The script starts the receiver on the phone through the panel if it is off. Then pick
@@ -82,13 +82,13 @@ Files:
 
 | File | Role |
 |---|---|
-| `intercom-src/spkstream.c` | The receiver: HTTP, decoding, ring buffer, frame pump, gain control. Built by `tools/build-intercom.sh` |
-| `custom-rootfs/snom/cfw/intercom/speaker.sh` | `start [VOL]`, `stop`, `status` |
-| `custom-rootfs/snom/cfw/intercom/amxr-mod.sh` | Loads and unloads `amxr_user_hook.ko`, shared with the intercom |
-| `custom-rootfs/snom/cfw/cgi-bin/speaker` | Panel and phone menu CGI |
-| `custom-rootfs/snom/cfw/panel.d/91-speaker.html` | Panel card |
-| `custom-rootfs/snom/cfw/phone-menu.d/31-speaker` | Phone menu entry |
-| `tools/snom-speaker.sh` | The PC side |
+| `src/audio/intercom/spkstream.c` | The receiver: HTTP, decoding, ring buffer, frame pump, gain control. Built by `tools/build/build-intercom.sh` |
+| `rootfs/d375/snom/cfw/intercom/speaker.sh` | `start [VOL]`, `stop`, `status` |
+| `rootfs/d375/snom/cfw/intercom/amxr-mod.sh` | Loads and unloads `amxr_user_hook.ko`, shared with the intercom |
+| `rootfs/d375/snom/cfw/cgi-bin/speaker` | Panel and phone menu CGI |
+| `rootfs/d375/snom/cfw/panel.d/91-speaker.html` | Panel card |
+| `rootfs/d375/snom/cfw/phone-menu.d/31-speaker` | Phone menu entry |
+| `tools/device/snom-speaker.sh` | The PC side |
 
 ### The path to the loudspeaker
 
@@ -140,7 +140,7 @@ speakerphone, mixed with the call. The caller does not hear it.
 ### Output: loudspeaker or handset (experimental)
 
 `speaker.sh out speaker|handset`, the panel card's "Output" choice, the phone menus
-(Speaker and Navidrome) and `tools/snom-speaker.sh -o handset` choose where the sound
+(Speaker and Navidrome) and `tools/device/snom-speaker.sh -o handset` choose where the sound
 goes. The choice is saved in `/snom/cfw-data/speaker/out` and used by later starts too.
 spkstream switches between two frames (`GET /out?o=...`): it mutes the old output,
 moves both amxr connections and unmutes the new one when sound comes.

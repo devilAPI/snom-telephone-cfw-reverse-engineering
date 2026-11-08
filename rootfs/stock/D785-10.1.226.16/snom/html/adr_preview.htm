@@ -1,0 +1,106 @@
+<?ssi title adr_ssi_title?>
+<?ssi file common1.htm?>
+<TR><TD vAlign="top" height="16"><IMG width="16"height="16" src="img/clr.gif"></TD></TR>
+<TR>
+  <TD vAlign="top">
+    <?ssi skipon VTECH?>
+    <TABLE cellSpacing="0" cellPadding="0" width="100%" border="0">
+    <?ssi skipoff VTECH?>
+    <?ssi skipon SNOM?>
+    <TABLE cellSpacing="4" cellPadding="0" width="100%" border="0">
+    <?ssi skipoff SNOM?>
+      <TBODY>
+      <TR>
+        <?ssi skipon VTECH?>
+        <TD><B>
+        <?ssi skipoff VTECH?>
+        <?ssi skipon SNOM?>
+        <TD class="titleText">
+        <?ssi skipoff SNOM?>
+        <?lng adr_prev_ssi_title?></B>
+        </TD>
+      </TR>
+      <TR>
+        <TD class="background">
+          <SPAN class="pageInfoText"><?lng adr_prev_description?></SPAN>
+        </TD>
+      </TR>
+      <TR><TD>&nbsp;</TD></TR>
+      </TBODY>
+    </TABLE>
+  </TD>
+</TR>
+<TR>
+  <TD vAlign="top">
+    <FORM method="post">
+      <?ssi skipon VTECH?>
+      <TABLE class="bubbleTable" cellSpacing="0" cellPadding="0" width="100%" border="0">
+      <?ssi skipoff VTECH?>
+      <?ssi skipon SNOM?>
+      <TABLE cellSpacing="4" cellPadding="0" width="100%" border="0">
+      <?ssi skipoff SNOM?>
+        <TBODY>
+          <TR>
+            <TD class="background" width="12" height="5">
+              <?ssi skipon VTECH?>
+              <IMG width="12" height="12" src=<?ssi img-corner-gif ul?>>
+              <?ssi skipoff VTECH?>
+            </TD>
+            <TD width="16" height="5"><IMG width="12" height="5" src="img/clr.gif"></TD>
+            <TD width="16" height="5"><IMG width="12" height="5" src="img/clr.gif"></TD>
+            <TD class="background" width="12" height="5">
+              <?ssi skipon VTECH?>
+              <IMG width="12" height="12" src=<?ssi img-corner-gif ur?> >
+              <?ssi skipoff VTECH?>
+            </TD>
+          </TR>
+          <TR>
+          <?ssi hidden_tag?>
+            <TD></TD>
+            <TD>
+              <input type="submit" value="<?lng adr_prev_apply?>" name="SaveAP">
+            </TD>
+            <TD></TD>
+            <TD></TD>
+          </TR>
+          <TR><TD colspan="4">&nbsp;</TD></TR>
+          <TR>
+            <TD></TD>
+            <TD>
+              <?lng adr_prev_del_before?>
+              <input type="radio" value="on" name="delete"><?lng advanced_on?>
+              <input type="radio" value="off" name="delete" checked><?lng advanced_off?>
+            </TD>
+            <TD></TD>
+            <TD></TD>
+          </TR>
+          <TR><TD colspan="4">&nbsp;</TD></TR>
+          <TR>
+            <TD></TD>
+            <TD colspan="2">
+              <TABLE>
+              <?ssi adrpreview?>
+              </TABLE>
+            </TD>
+            <TD></TD>
+          </TR>
+          <TR>
+            <TD class="background" width="12" height="5">
+              <?ssi skipon VTECH?>
+              <IMG width="12" height="12" src=<?ssi img-corner-gif ll?>>
+              <?ssi skipoff VTECH?>
+            </TD>
+            <TD width="12" height="5"><IMG width="12" height="5" src="img/clr.gif"></TD>
+            <TD width="12" height="5"><IMG width="12" height="5" src="img/clr.gif"></TD>
+            <TD class="background" width="12" height="5">
+              <?ssi skipon VTECH?>
+              <IMG width="12" height="12" src=<?ssi img-corner-gif lr?>>
+              <?ssi skipoff VTECH?>
+            </TD>
+          </TR>
+        </TBODY>
+      </TABLE>
+    </FORM>
+  </TD>
+</TR>
+<?ssi file common9.htm?></HTML>

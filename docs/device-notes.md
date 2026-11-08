@@ -9,7 +9,7 @@ anything else as unconfirmed.
 
 | | |
 |---|---|
-| Firmware version (base of custom image) | 10.1.64.17 SIP (`snom/version`), per `original_firmware/`. Check against the phone |
+| Firmware version (base of custom image) | 10.1.64.17 SIP (`snom/version`), per `firmware/stock/`. Check against the phone |
 | Kernel | Linux 2.6.27.47, ARM, legacy uImage, load/entry 0x0D000000 (from `boot/uImage` in the stock image) |
 | CPU / SoC (`/proc/cpuinfo`) | _TODO_ |
 | Userland | _TODO (busybox version?)_ |

@@ -3,7 +3,7 @@
 The **Boot NES** button in the [CFW Settings](cfw-settings.md) panel runs a NES
 emulator on the phone's screen and keypad. Engine:
 [InfoNES](https://github.com/jay-kumogata/InfoNES) with a snom port
-(`nes-src/InfoNES_System_snom.cpp`), built static against musl. Same screen/input
+(`src/games/nes/InfoNES_System_snom.cpp`), built static against musl. Same screen/input
 takeover as [Doom](doom.md).
 
 ## Reuses the Doom harness
@@ -42,9 +42,9 @@ MIT-licensed `bbbradsmith/NES-ca65-example` demo.
 
 ## Building
 
-`tools/build-nes.sh` (needs docker) clones InfoNES, drops in
-`nes-src/InfoNES_System_snom.cpp`, and cross-builds a static musl armv6 binary to
-`tools/out/infones`. Copy it to `custom-rootfs/snom/cfw/nes/infones` (root:0755).
+`tools/build/build-nes.sh` (needs docker) clones InfoNES, drops in
+`src/games/nes/InfoNES_System_snom.cpp`, and cross-builds a static musl armv6 binary to
+`out/infones`. Copy it to `rootfs/d375/snom/cfw/nes/infones` (root:0755).
 Under `/snom`, so the first-boot `cleanUpRootfs` pass leaves it alone.
 
 ## Known limitations
@@ -60,7 +60,7 @@ port mixes them with the 2A03's relative weights (integer, Q4), removes the DC
 offset with a one-pole high-pass, and `snd_hal_push_rate()` box-filters the
 result down to the codec's 16 kHz (see [sound.md](sound.md)).
 
-- **APU at 22050 Hz** (`tools/build-nes.sh` patches `pAPU_QUALITY` 3 -> 2):
+- **APU at 22050 Hz** (`tools/build/build-nes.sh` patches `pAPU_QUALITY` 3 -> 2):
   half the per-sample APU work of 44.1 kHz, still above the 16 kHz output.
 - **The audio queue is the clock.** `paceFrame()` runs once per emulated frame
   from `InfoNES_SoundOutput()` (InfoNES calls it every frame, while

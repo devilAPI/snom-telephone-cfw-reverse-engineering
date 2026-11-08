@@ -1,0 +1,80 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+<?ssi skipon VTECH?>
+<TITLE><?ssi snom_type?></TITLE>
+<?ssi skipoff VTECH?>
+<META http-equiv=Content-Type content="text/html; charset=utf-8">
+<META http-equiv=Pragma content=no-cache>
+<LINK href="fox_body.css" type=text/css rel=stylesheet>
+<LINK href="fox.css" type=text/css rel=stylesheet>
+<?ssi skipon VTECH?>
+<LINK href="/favicon.ico" rel="shortcut icon" />
+<?ssi skipoff VTECH?>
+</HEAD>
+<BODY style="background-image:url(img/head.png); background-repeat:no-repeat; background-color:#ffffff; margin:0">
+
+<TABLE cellSpacing=0 cellPadding=0 width="100%" border=0 <?ssi text_direction?>>
+  <TBODY>
+  <TR>
+    <?ssi skipon VTECH?>
+    <td height="120" valign="bottom">
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td width="95"><img src="img/clr.gif" width="16" height="16"></td>
+          <td class="headerText" width="705"><?ssi readtitle?></td>
+        </tr>
+        <tr>
+          <td height="60" width="16"><img src="img/clr.gif" width="16" height="16"></td>
+          <td height="60" width="600"><img src="img/clr.gif" width="16" height="16"></td>
+          <td height="60">&nbsp;</td>
+        </tr>
+      </table>
+    </td>
+    <?ssi skipoff VTECH?>
+    <?ssi skipon SNOM?>
+    <TD height="120" valign="center">
+      <TABLE width="100%" border="0" cellspacing="0" cellpadding="0">
+        <TR>
+          <TD width="5"><img src="img/clr.gif" width="16" height="16"></TD>
+          <TD class="headerText" width="705"><?ssi readtitle?></TD>
+        </TR>
+      </TABLE>
+    </TD>
+    <?ssi skipoff SNOM?>
+  </TR>
+  <TR>
+    <TD>
+      <TABLE cellSpacing=0 cellPadding=0 border=0><!-- main -->
+        <TBODY>
+        <TR vAlign=top>
+          <TD vAlign=top width=175 bgColor=#ffffff>
+            <TABLE cellSpacing=0 cellPadding=0 width=175 border=0>
+              <TBODY>
+              <TR>
+                <TD vAlign=top>
+                  <TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+                    <TBODY>
+                    <TR>
+                      <TD vAlign=top><?ssi file leftnav.htm?>
+                      </TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></TD>
+                      <?ssi skipon VTECH?>
+                      <TD width="1"><IMG src="img/separater.png"></TD>
+                      <?ssi skipoff VTECH?>
+          <TD class=background width="100%" height="1000">
+            <TABLE cellSpacing=0 cellPadding=0 width=588 border=0>
+              <TBODY>
+              <TR>
+                <TD width=16><IMG height=16 src="img/clr.gif" width=16></TD>
+                <TD>
+                  <TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+                    <TBODY>
+<?ssi skipon NO_REBOOT_DESIRED?>
+<FORM method="post">
+<?ssi hidden_tag?>
+<TR><TD>&nbsp;</TD></TR>
+<TR><TD><img src="img/warning.png" width="22" height="18"> <B><?lng web_confirm_apply_set_change?></B>
+<input type="submit" value="<?lng advanced_rebootbutton?>" name="CONFIRM_REBOOT"></td>
+</TR>
+</FORM>
+<?ssi skipoff NO_REBOOT_DESIRED?>

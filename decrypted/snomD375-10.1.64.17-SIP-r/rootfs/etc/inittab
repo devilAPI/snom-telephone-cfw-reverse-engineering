@@ -1,3 +1,0 @@
-::once:/etc/init.d/rcS
-::shutdown:/bin/umount /
-/dev/console::restart:/sbin/init

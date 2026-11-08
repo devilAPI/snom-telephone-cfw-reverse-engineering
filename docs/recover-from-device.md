@@ -1,7 +1,7 @@
 # Rebuilding the project from a running phone
 
 Use this when the phone runs a custom image but the build inputs
-(`custom-rootfs/`, `custom-key/`, the `.bin`) are gone.
+(`rootfs/d375/`, `keys/custom-d375/`, the `.bin`) are gone.
 
 What you can and can't get back:
 
@@ -18,7 +18,7 @@ What you can and can't get back:
 ### 1. Pull everything
 
 ```sh
-./tools/fw-pull-from-device.sh <phone-ip> --raw --extract
+./tools/fw/fw-pull-from-device.sh <phone-ip> --raw --extract
 ```
 
 This creates `backups/<ip>-<timestamp>/`:
@@ -30,8 +30,8 @@ This creates `backups/<ip>-<timestamp>/`:
 - `raw/`: partition dumps (with `--raw`)
 - `SHA256SUMS`
 
-With `--extract`, it also unpacks the rootfs into `custom-rootfs/` under
-`fakeroot` (state saved to `custom-rootfs/.fakeroot`). That's the layout
+With `--extract`, it also unpacks the rootfs into `rootfs/d375/` under
+`fakeroot` (state saved to `rootfs/d375/.fakeroot`). That's the layout
 `build-custom-firmware.sh` expects.
 
 #### How the rootfs is captured
@@ -67,9 +67,9 @@ of the same version, and swap your personal `snom/snomconfig` (SIP accounts!)
 for the stock defaults:
 
 ```sh
-./tools/fw-unpack.sh original_firmware/snomD375-10.1.64.17-SIP-r.bin keys/snomD3xx-firmware1.pub \
-    decrypted/snomD375-10.1.64.17-SIP-r/rootfs
-./tools/prepare-pulled-rootfs.sh decrypted/snomD375-10.1.64.17-SIP-r/rootfs
+./tools/fw/fw-unpack.sh firmware/stock/snomD375-10.1.64.17-SIP-r.bin keys/stock/snomD375-firmware1.pub \
+    rootfs/stock/snomD375-10.1.64.17-SIP-r/rootfs
+./tools/fw/prepare-pulled-rootfs.sh rootfs/stock/snomD375-10.1.64.17-SIP-r/rootfs
 ```
 
 The script also runs `md5sum -c etc/checksum.md5`, which the phone enforces at boot.
@@ -85,10 +85,10 @@ lost private key, if one ever turns up again.
 
 ### 4. Work out what the old session changed
 
-The base version is in `custom-rootfs/snom/version`. Diff against that stock rootfs:
+The base version is in `rootfs/d375/snom/version`. Diff against that stock rootfs:
 
 ```sh
-./tools/rootfs-diff.sh decrypted/snomD375-10.1.64.17-SIP-r/rootfs custom-rootfs
+./tools/fw/rootfs-diff.sh rootfs/stock/snomD375-10.1.64.17-SIP-r/rootfs rootfs/d375
 ```
 
 Expect noise from runtime state (`dev/`, `etc/random-seed`, `etc/cron.d`).
@@ -99,10 +99,10 @@ Expect noise from runtime state (`dev/`, `etc/random-seed`, `etc/cron.d`).
 ### 5. Rekey and rebuild
 
 The private key is gone, so generate a new one. The build script also writes it
-into `custom-rootfs/firmware1.pub`:
+into `rootfs/d375/firmware1.pub`:
 
 ```sh
-./tools/build-custom-firmware.sh
+./tools/fw/build-custom-firmware.sh
 ```
 
 Install the new public key on the phone and check it
@@ -112,9 +112,9 @@ whole pipeline is confirmed end to end.
 
 ### 6. Back up the new private key
 
-Copy `custom-key/` somewhere safe outside the repo **now**.
+Copy `keys/custom-d375/` somewhere safe outside the repo **now**.
 
-## Don't commit backups
+## Backups hold secrets
 
-`backups/` is gitignored. It holds SSH host keys, root credentials, and with
+`backups/` is tracked in this repo, so a push publishes it. It holds SSH host keys, root credentials, and with
 `--raw` the settings partition (SIP account passwords, provisioning URLs).

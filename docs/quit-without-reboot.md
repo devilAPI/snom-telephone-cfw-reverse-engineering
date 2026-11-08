@@ -25,7 +25,7 @@ Env knobs: `RESTORE_TIMEOUT` (s, default 60), `RESTORE_LOG` (default
 
 ## What the takeover leaves behind
 
-`snd_hal_init()` (snd/snd_hal.c) arms the codec, injects the speaker key, then
+`snd_hal_init()` (src/audio/snd/snd_hal.c) arms the codec, injects the speaker key, then
 `kill -9 lid media_daemon` with `/tmp/ssh_fast_update` held. The process tree
 before and after (from `/proc/<pid>/stat`, stock 10.1.64.17):
 

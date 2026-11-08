@@ -9,7 +9,7 @@
 #   restarts lid/media_daemon; /snom/cfw-data is jffs2 flash, see docs/saves.md).
 set -u
 . "$(dirname "$0")/lib.sh"
-C=$REPO/custom-rootfs/snom/cfw
+C=$REPO/rootfs/d375/snom/cfw
 ROMS=$REPO/tests/roms
 PORT=${SAVES_PORT:-18766}
 trap 'rm -f "$_askpass"' EXIT
@@ -17,7 +17,7 @@ trap 'rm -f "$_askpass"' EXIT
 deploy() {
     for f in nes/infones gba/gpsp gb/gambatte; do
         ph "rm -f /snom/cfw/$f.new"
-        ph_put "$REPO/tools/out/${f#*/}" "/snom/cfw/$f.new"
+        ph_put "$REPO/out/${f#*/}" "/snom/cfw/$f.new"
         ph "mv /snom/cfw/$f.new /snom/cfw/$f"
     done
     for f in lib/saves.sh lib/retro-boot.sh nes/boot-nes.sh doom/boot-doom.sh cgi-bin/saves panel.d/48-saves.html; do

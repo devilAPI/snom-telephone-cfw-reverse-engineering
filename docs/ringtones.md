@@ -113,13 +113,13 @@ Deploys the files, uploads 16 kHz and 8 kHz test WAVs (5 % amplitude), checks th
 on :8080 and on the loopback URL, rejects hostile names (`../x.wav`, `a;b.wav`,
 `$(id).wav`, spaces, quotes, `.hidden.wav`, `x.sh`), non-WAV, stereo, 44.1 kHz, oversize and a
 hostile `delete`/`line`. Under the phone lock: saves `vol_ringer`/`user_ringer1`/
-`user_custom1`, sets ringer volume 1, assigns the ringtone, plays it while `tools/rtcap`
+`user_custom1`, sets ringer volume 1, assigns the ringtone, plays it while `out/rtcap`
 records the microphones, compares spectrograms (`tests/ringtone_corr.py`: right file ~0.37,
 other tone pattern ~0.09, noise ~0.03; threshold 0.25), and restores the settings via an EXIT
 trap. Then: lcsD375 SIGSTOPped -> clean error within 4 s; a read-only tmpfs over the
 ringtone dir -> readable error.
 
-`tools/rtcap.c` (`tools/build-rtcap.sh`): fans any two amxr source ports out to
+`src/native/rtcap.c` (`tools/build/build-rtcap.sh`): fans any two amxr source ports out to
 `amxruser.bind0/1` next to the stock routes, records N seconds, and removes only its own
 edges. amxrDisconnect is `_IOR('M',54,8)` = `0x80084d36` (plain `_IO` returns -1 and leaves
 the edge in place - the earlier docs/sound.md note was wrong about that).

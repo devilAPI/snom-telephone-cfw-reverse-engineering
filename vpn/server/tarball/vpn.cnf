@@ -1,0 +1,17 @@
+client
+dev tun
+proto udp
+remote 192.168.2.196 1194
+resolv-retry infinite
+nobind
+persist-key
+persist-tun
+cipher AES-256-GCM
+verb 3
+key-direction 1
+script-security 2
+up /usr/local/bin/startsshd
+ca /openvpn/ca.crt
+cert /openvpn/client.crt
+key /openvpn/client.key
+tls-auth /openvpn/ta.key 1

@@ -1,0 +1,3 @@
+#!/bin/sh
+# CFW panel: boot nes from a URL (same code as boot-gba).
+CFW_RETRO_SYS=nes exec /snom/cfw/cgi-bin/boot-gba

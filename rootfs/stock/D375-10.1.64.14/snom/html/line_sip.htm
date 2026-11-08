@@ -1,0 +1,160 @@
+<?ssi title line$l_ssi_title?>
+<?ssi file common1.htm?>
+  <TR><TD vAlign="top" height="16"><IMG height="16" src="img/clr.gif" width="16"></TD></TR>
+  <TR>
+    <TD vAlign="top">
+      <FORM method="post" name="linesip" onsubmit="return validate()">
+        <?ssi hidden_tag?>
+        <?ssi skipon VTECH?>
+        <TABLE class="bubbleTable" cellSpacing="0" cellPadding="0" width="100%" border="0">
+        <?ssi skipoff VTECH?>
+        <?ssi skipon SNOM?>
+        <TABLE cellSpacing="4" cellPadding="0" width="100%" border="0">
+        <?ssi skipoff SNOM?>
+        <TBODY>
+<?ssi file tab_line.htm?>
+<TR>
+  <TD width="12" height="5"><IMG height="12" src="img/clr.gif" width="12"></TD>
+  <TD width="12" height="5"><IMG height="5" src="img/clr.gif" width="12"></TD>
+  <TD width="12" height="5"><IMG height="5" src="img/clr.gif" width="12"></TD>
+  <TD class="background" width="12" height="5">
+    <?ssi skipon VTECH?>
+    <IMG height="12" src=<?ssi img-corner-gif ur?> width="12">
+    <?ssi skipoff VTECH?>
+  </TD>
+</TR>
+<TR><TD></TD><TD></TD></TR>
+<TR><TD></TD>
+  <?ssi skipon VTECH?>
+  <TD width="50%"><B>
+  <?ssi skipoff VTECH?>
+  <?ssi skipon SNOM?>
+  <TD class="titleText" width="50%">
+  <?ssi skipoff SNOM?>
+  <?lng line_sipsettings?></B>
+  </TD>
+  <TD width="50%"></TD>
+</TR>
+<TR><TD></TD><TD><?ssi input advanced_vq_report_collector vq_report_collector$l?></TD></TR>
+<TR><TD></TD><TD><?ssi input advanced_ssi_musiconholdserver user_moh$l?></TD></TR>
+<TR><TD><?ssi radio line_ssi_hold_inactive user_hold_inactive$l advanced_ssi_on advanced_ssi_off?></TD></TR>
+<TR><TD></TD><TD><?ssi input line_ssi_alert_info user_alert_info$l?></TD></TR>
+<TR><TD></TD><TD><?ssi input advanced_ssi_user_pic user_pic$l?></TD></TR>
+<TR><TD></TD><TD></TD><TD>
+<?ssi hidden_tag?>
+<?ssi button get_photo_uri?>
+</TD></TR>
+<TR><TD></TD><TD><?ssi input line_ssi_dialplan user_dp_str$l?></TD></TR>
+<TR><TD></TD><?ssi radio dialplan_count_failed_match_groups dialplan_count_failed_match_groups advanced_ssi_on advanced_ssi_off?></TR>
+<TR><TD></TD><?ssi radio advanced_ssi_enum user_dp_exp$l multiple_setting 0 advanced_ssi_on advanced_ssi_off?></TR>
+<TR><TD></TD><TD><?ssi input_field line_ssi_country user_dp_exp$l 1?></TD></TR>
+<TR><TD></TD><TD><?ssi input_field line_ssi_area user_dp_exp$l 2?></TD></TR>
+<TR><TD></TD><TD><?ssi input line_ssi_proxyrequire user_proxy_require$l?></TD></TR>
+<TR><TD></TD><TD><?ssi input line_ssi_additional_supported_headers user_additional_supported_header$l?></TD></TR>
+<TR><TD></TD><TD><?ssi input user_contact_src_sip_prio contact_source_sip_priority$l?></TD></TR>
+<TR><TD></TD><TD><?lng line_qvalue?></TD><TD><select <?ssi disabled user_q$l?>name="user_q<?ssi line?>" size="1" <?ssi tabindex?>><?ssi qvalue user_q$l?></select><?ssi help user_q?></TD></TR>
+<TR><TD></TD><TD><?ssi input line_expire user_expiry$l?></TD></TR>
+<TR><TD></TD><?ssi radio prefs_ssi_aaautoanswer user_auto_connect$l advanced_ssi_on advanced_ssi_off?></TR>
+<TR><TD><?ssi radio line_ssi_descr_contact user_descr_contact$l advanced_ssi_on advanced_ssi_off?></TD></TR>
+<TR><TD><?ssi radio line_ssi_sipusername_as_line user_sipusername_as_line$l advanced_ssi_on advanced_ssi_off?></TD></TR>
+<TR><TD><?ssi radio line_ssi_shared_line user_shared_line$l advanced_ssi_on advanced_ssi_off?></TD></TR>
+<TR><TD><?ssi radio line_ssi_publish_presence_bootup user_publish_presence_bootup$l advanced_ssi_on advanced_ssi_off?></TD></TR>
+<TR><TD></TD><TD><?lng line_ssi_dtmf_info?></TD><TD><select <?ssi disabled user_dtmf_info$l?>name="user_dtmf_info<?ssi line?>" size="1" <?ssi tabindex?>>
+ <option value="on"<?ssi selected user_dtmf_info$l on?>><?lng advanced_on?></option>
+ <option value="sip_info_only"<?ssi selected user_dtmf_info$l sip_info_only?>><?lng line_ssi_dtmf_info_sip_info_only?></option>
+ <option value="off"<?ssi selected user_dtmf_info$l off?>><?lng advanced_off?></option>
+</select><?ssi help user_dtmf_info?></TD></TR>
+<TR><TD></TD><TD><?ssi input_field line_ssi_event_list_uri user_event_list_uri$l?></TD></TR>
+<TR><TD></TD><?ssi radio line_ssi_presence_subscription user_presence_subscription$l advanced_ssi_on advanced_ssi_off?></TR>
+<TR><TD><?ssi radio advanced_ssi_publishpresence publish_presence$l advanced_ssi_on advanced_ssi_off?></TD></TR>
+<TR><TD></TD><TD><?ssi input_field line_ssi_presence_buddy_list_uri user_presence_buddy_list_uri$l?></TD></TR>
+<TR><TD><?ssi radio sip_force_sendrecv_no_sdp sip_force_sendrecv_on_invite_wo_sdp$l advanced_ssi_on advanced_ssi_off?></TD></TR>
+<TR><TD><?ssi radio line_ssi_remove_all_bindings user_remove_all_bindings$l advanced_ssi_on advanced_ssi_off?></TD></TR>
+<TR><TD><?ssi radio line_ssi_include_listeners include_listeners_in_register$l advanced_ssi_on advanced_ssi_off?></TD></TR>
+<TR><TD></TD><TD><?ssi input line_ssi_subscription_expiry user_subscription_expiry$l?></TD></TR>
+<TR><TD></TD><TD><?ssi input line_ssi_subscription_expiry_after_failed retry_after_failed_subscribe$l?></TD></TR>
+<TR><TD><?ssi radio line_ssi_enable_hookflash user_enable_hookflash$l advanced_ssi_on advanced_ssi_off?></TD></TR>
+<TR><TD></TD><TD><?lng line_default_contact_uri?></TD>
+<TD><select name="user_default_contact_uri<?ssi line?>"  <?ssi disabled user_default_contact_uri$l?>size="1" <?ssi tabindex?>>
+ <option value="none"<?ssi selected user_default_contact_uri$l none?>><?lng contact_none?></option>
+ <option value="main"<?ssi selected user_default_contact_uri$l main?>><?lng contact_main?></option>
+</select><?ssi help user_default_contact_uri?>
+<TR><TD><?ssi radio line_ssi_is_voice_identity is_voice_identity$l advanced_ssi_on advanced_ssi_off?></TD></TR>
+<TR><TD><?ssi radio line_ssi_allow_inc_dialog_subscribe user_allow_inc_dialog_subscribe$l advanced_ssi_on advanced_ssi_off?></TD></TR>
+<TR><TD></TD><TD><?ssi input line_ssi_extension_monitoring_group extension_monitoring_group$l?></TD></TR>
+<TR><TD></TD><TD><?lng user_default_blf_direction?></TD>
+<TD><select name="user_default_blf_direction<?ssi line?>"  <?ssi disabled user_default_blf_direction$l?> size="1" <?ssi tabindex?>>
+ <option value=""<?ssi selected user_default_blf_direction$l ?>><?lng user_direction_none?></option>
+ <option value="recipient"<?ssi selected user_default_blf_direction$l recipient?>>recipient</option>
+ <option value="initiator"<?ssi selected user_default_blf_direction$l initiator?>>initiator</option>
+</select><?ssi help user_default_blf_direction?></TD></TR>
+<TR><TD><?ssi radio reciprocal_hold reciprocal_hold$l advanced_ssi_on advanced_ssi_off?></TD></TR>
+<TR><TD><?ssi radio advanced_dfks dfks$l advanced_ssi_on advanced_ssi_off?></TD></TR>
+<TR><TD><?ssi radio advanced_ssi_refertobrackets refer_brackets$l advanced_ssi_on advanced_ssi_off?></TD></TR>
+<TR><TD><?ssi radio use_contact_in_refer_to_hdr use_contact_in_refer_to_hdr$l advanced_ssi_on advanced_ssi_off?></TD></TR>
+<TR><TD><?ssi radio line_ssi_user_send_diversion_header user_send_diversion_header$l advanced_ssi_on advanced_ssi_off?></TD></TR>
+<TR><TD><?ssi radio advanced_ssi_check_sdp_version user_sdp_version_check$l advanced_ssi_on advanced_ssi_off?></TD></TR>
+<TR><TD><?ssi radio check_cseq_dlginfo_notify user_check_cseq_dlginfo_notify$l advanced_ssi_on advanced_ssi_off?></TD></TR>
+<TR><TD><?ssi radio number_sign_encoding number_sign_encoding$l advanced_ssi_on advanced_ssi_off?></TD></TR>
+<TR><TD><?ssi radio monitor_notify_for_subscription_refresh monitor_notify_for_subscription_refresh$l advanced_ssi_on advanced_ssi_off?></TD></TR>
+<TR><TD><?ssi radio accept_event_talk_without_sdp accept_event_talk_without_sdp$l advanced_ssi_on advanced_ssi_off?></TD></TR>
+<TR><TD><?ssi radio ack_before_reinvite_when_holding ack_before_reinvite_when_holding$l advanced_ssi_on advanced_ssi_off?></TD></TR>
+<TR><TD><?ssi radio use_outbound_proxy_for_callback use_outbound_proxy_for_callback$l advanced_ssi_on advanced_ssi_off?></TD></TR>
+<TR><TD></TD>
+<TD><?lng advanced_ssi_callwaitingindi?></TD>
+<TD>
+<select <?ssi disabled call_waiting$l?>    name="call_waiting<?ssi line?>" size="1"     <?ssi tabindex?> >
+ <option value="on"<?ssi selected call_waiting$l on?>><?lng advanced_on?></option>
+ <option value="visual"<?ssi selected call_waiting$l visual?>><?lng advanced_call_waiting_visual?></option>
+ <option value="ringer"<?ssi selected call_waiting$l ringer?>><?lng advanced_call_waiting_ringer?></option>
+ <option value="off"<?ssi selected call_waiting$l off?>><?lng advanced_off?></option>
+</select><?ssi help call_waiting?>
+</TD>
+<TR><TD></TD><TD><?lng line_ssi_server_type?></TD>
+<TD><select <?ssi disabled user_server_type$l?>name="user_server_type<?ssi line?>" size="1" <?ssi tabindex?>>
+ <option value="default"<?ssi selected user_server_type$l default?>><?lng line_default?></option>
+ <option value="asterisk"<?ssi selected user_server_type$l asterisk?>><?lng line_asterisk?></option>
+ <option value="bria"<?ssi selected user_server_type$l bria?>>bria</option>
+ <option value="broadsoft"<?ssi selected user_server_type$l broadsoft?>><?lng line_broadsoft?></option>
+ <option value="ccm"<?ssi selected user_server_type$l ccm?>><?lng line_ccm?></option>
+ <option value="metaswitch"<?ssi selected user_server_type$l metaswitch?>><?lng line_metaswitch?></option>
+ <option value="nortel"<?ssi selected user_server_type$l nortel?>><?lng line_nortel?></option>
+ <option value="pbxnsip"<?ssi selected user_server_type$l pbxnsip?>><?lng line_pbxnsip?></option>
+ <option value="snomone"<?ssi selected user_server_type$l snomone?>><?lng line_snomone?></option>
+ <option value="sutus"<?ssi selected user_server_type$l sutus?>><?lng line_sutus?></option>
+ <option value="sylantro"<?ssi selected user_server_type$l sylantro?>><?lng line_sylantro?></option>
+ <option value="telepo"<?ssi selected user_server_type$l telepo?>><?lng line_telepo?></option>
+ <option value="teles"<?ssi selected user_server_type$l teles?>><?lng line_teles?></option>
+ </select><?ssi help user_server_type?></TD></TR>
+</TR>
+
+<TR><TD></TD><TD>&nbsp;</TD></TR>
+<TR><TD></TD><TD></TD></TR>
+<TR>
+  <TD></TD>
+  <TD>
+    <input type="hidden" value="<?lng apply_button?>" name="Settings">
+    <!--Hidden input is used to allow onchange event to apply settings automatically-->
+    <input type="submit" value="<?lng apply_button?>" name="Settings" <?ssi tabindex?> >
+  </TD>
+</TR>
+<TR>
+  <TD class="background" vAlign="bottom" align="left" width="12" height="5">
+    <?ssi skipon VTECH?>
+    <IMG height="12" src=<?ssi img-corner-gif ll?> width="12">
+    <?ssi skipoff VTECH?>
+  </TD>
+  <TD width="12" height="5"><IMG height="5" src="img/clr.gif" width="12"></TD>
+  <TD width="12" height="5"><IMG height="5" src="img/clr.gif" width="12"></TD>
+  <TD class="background" vAlign="bottom" align="right" width="12" height="5">
+    <?ssi skipon VTECH?>
+    <IMG height="12" src=<?ssi img-corner-gif lr?> width="12">
+    <?ssi skipoff VTECH?>
+  </TD>
+</TR>
+          </TBODY></TABLE>
+      </FORM>
+    </TD>
+  </TR>
+<script type="text/javascript" src="fox.js" charset="utf-8"></script>
+<?ssi file common9.htm?></HTML>

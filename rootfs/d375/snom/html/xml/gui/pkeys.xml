@@ -1,0 +1,1610 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  var:unit      is a relative index starting from 1 which identifies a unit of keys. These are: block of dkeys, block of pkeys on the phone,
+                label page (where applicable), and extension unit. Note that when the phone is not in admin mode the dkeys unit may not be
+                available to the user in which case unit 1 is the pkey block.
+
+  var:key       is a relative index starting from 1 which identifies a key within a given unit.
+
+  var:cur_pkey  is an absolute index starting from 0 which identifies the pkey (not dkey!) which is currently being configured. It can be
+                used to index fkey related settings.
+-->
+<IPPhoneBatch  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../schemas/minibrowser.xsd">
+  <IPPhoneMenu dtmf="off" icon_xoffset="$(math_eval:$(gui_display_xsize)/20-5)" text_xoffset="$(math_eval:$(gui_display_xsize)/20-7)" speedselect="enter" id="units" state="others_except_mb">
+    <Title>$(lang:menu_function_key)</Title>
+    <IconSize>XXS</IconSize>
+    <Repeat values="$(enum:$(max_pkey_units))" token="|__UNIT__|">
+    <If condition="$(bool_eval:$(starts_with:$(pkey_unit_name:__UNIT__):$(lang:menu_fkeys_uxm)) &amp;
+                   $(condition:$(uxm_color_count)&gt;=1))">
+      <If condition="$(pkey_unit_name:__UNIT__)==$(lang:menu_fkeys_uxm) 1 $(lang:menu_smartlabel_page) 1">
+        <MenuItem name="$(lang:menu_fkeys_uxm)">
+          <If condition="$(show_feature:FEATURE_PUI_STYLE_SIO)">
+            <IconType>$(icon_type_enum:kIconTypeDkeyFkeyMenu__UNIT__)</IconType>
+          </If>
+          <ExtraIconType>$(icon_type_enum:kIconTypeMenuArrowRight)</ExtraIconType>
+          <Url>file:///xml/gui/pkeys.xml#sub=*[@id="uxmc_display_units"]&amp;var:unit=__UNIT__&amp;var:cur_pkey=</Url>
+        </MenuItem>
+      </If>
+    </If>
+    <Else>
+      <If condition="$(show_feature:FEATURE_LABEL_DISPLAY)">
+        <If condition="$(bool_eval:$(condition:$(pkey_unit_name:__UNIT__)==$(lang:menu_dkeys_phone)) |
+                                   $(condition:$(pkey_unit_name:__UNIT__)==$(lang:menu_fkeys_uxm) 1) |
+                                   $(condition:$(pkey_unit_name:__UNIT__)==$(lang:menu_fkeys_uxm) 2) |
+                                   $(condition:$(pkey_unit_name:__UNIT__)==$(lang:menu_fkeys_uxm) 3) |
+                                   $(condition:$(pkey_unit_name:__UNIT__)==$(lang:lang_menu_context_sensitive_keys_phone)))">
+          <MenuItem name="$(pkey_unit_name:__UNIT__)">
+            <If condition="$(show_feature:FEATURE_PUI_STYLE_SIO)">
+              <IconType>$(icon_type_enum:kIconTypeDkeyFkeyMenu__UNIT__)</IconType>
+            </If>
+            <ExtraIconType>$(icon_type_enum:kIconTypeMenuArrowRight)</ExtraIconType>
+            <Url>file:///xml/gui/pkeys.xml#sub=*[@id="keys"]&amp;var:unit=__UNIT__&amp;var:cur_pkey=</Url>
+          </MenuItem>
+        </If>
+        <If condition="$(show_feature:FEATURE_SECOND_DISPLAY)">
+          <If condition="$(pkey_unit_name:__UNIT__)==$(lang:menu_fkeys_page) 1">
+            <MenuItem name="$(lang:menu_fkeys_phone)">
+              <If condition="$(show_feature:FEATURE_PUI_STYLE_SIO)">
+                <IconType>$(icon_type_enum:kIconTypeDkeyFkeyMenu__UNIT__)</IconType>
+              </If>
+              <ExtraIconType>$(icon_type_enum:kIconTypeMenuArrowRight)</ExtraIconType>
+              <Url>file:///xml/gui/pkeys.xml#sub=*[@id="second_display_units"]&amp;var:unit=__UNIT__&amp;var:cur_pkey=</Url>
+            </MenuItem>
+          </If>
+        </If>
+        <If condition="$(show_feature:FEATURE_SMART_LABEL)">
+          <If condition="$(pkey_unit_name:__UNIT__)==$(lang:menu_smartlabel_page) 1">
+            <MenuItem name="$(lang:menu_smartlabel_fkeys)">
+              <If condition="$(show_feature:FEATURE_PUI_STYLE_SIO)">
+                <IconType>$(icon_type_enum:kIconTypeSmartLabelKey)</IconType>
+              </If>
+              <ExtraIconType>$(icon_type_enum:kIconTypeMenuArrowRight)</ExtraIconType>
+              <If condition="$(pkey_unit_name:$(math_eval:__UNIT__+1))==$(lang:menu_smartlabel_page) 2">
+                <Url>file:///xml/gui/pkeys.xml#sub=*[@id="pages"]&amp;var:unit=__UNIT__&amp;var:cur_pkey=</Url>
+              </If>
+              <Else>
+                <Url>file:///xml/gui/pkeys.xml#sub=*[@id="keys"]&amp;var:unit=__UNIT__&amp;var:cur_pkey=</Url>
+              </Else>
+            </MenuItem>
+          </If>
+          <ElIf condition="!$(bool_eval:$(condition:$(pkey_unit_name:__UNIT__)==$(lang:menu_dkeys_phone)) |
+                                        $(condition:$(pkey_unit_name:__UNIT__)==$(lang:lang_menu_context_sensitive_keys_phone)) |
+                                        $(condition:$(pkey_unit_name:__UNIT__)==$(lang:lang_unknown)) |
+                                        $(starts_with:$(pkey_unit_name:__UNIT__):$(lang:menu_fkeys_uxm)) |
+                                        $(starts_with:$(pkey_unit_name:__UNIT__):$(lang:menu_fkeys_page)) |
+                                        $(starts_with:$(pkey_unit_name:__UNIT__):$(lang:menu_smartlabel_page)))">
+            <MenuItem name="$(pkey_unit_name:__UNIT__)">
+              <If condition="$(show_feature:FEATURE_PUI_STYLE_SIO)">
+                <IconType>$(icon_type_enum:kIconTypeDkeyFkeyMenu__UNIT__)</IconType>
+              </If>
+              <ExtraIconType>$(icon_type_enum:kIconTypeMenuArrowRight)</ExtraIconType>
+              <Url>file:///xml/gui/pkeys.xml#sub=*[@id="keys"]&amp;var:unit=__UNIT__&amp;var:cur_pkey=</Url>
+            </MenuItem>
+          </ElIf>
+        </If>
+      </If>
+      <Else>
+        <MenuItem name="$(pkey_unit_name:__UNIT__)">
+          <If condition="$(show_feature:FEATURE_PUI_STYLE_SIO)">
+            <IconType>$(icon_type_enum:kIconTypeDkeyFkeyMenu__UNIT__)</IconType>
+          </If>
+          <ExtraIconType>$(icon_type_enum:kIconTypeMenuArrowRight)</ExtraIconType>
+          <Url>file:///xml/gui/pkeys.xml#sub=*[@id="keys"]&amp;var:unit=__UNIT__&amp;var:cur_pkey=</Url>
+        </MenuItem>
+      </Else>
+    </Else>
+    </Repeat>
+  </IPPhoneMenu>
+  <IPPhoneMenu dtmf="off" icon_xoffset="$(math_eval:$(gui_display_xsize)/20-5)" text_xoffset="$(math_eval:$(gui_display_xsize)/20-7)" speedselect="enter" id="pages" state="others_except_mb">
+    <If condition="$(show_feature:FEATURE_SMART_LABEL)">
+      <Title>$(lang:menu_smartlabel_fkeys)</Title>
+      <IconSize>XXS</IconSize>
+      <Repeat values="$(enum:$(max_pkey_units))" token="|__UNIT__|">
+        <If condition="$(bool_eval:$(condition:$(pkey_unit_name:__UNIT__)==$(lang:menu_smartlabel_page) 1) | $(condition:$(pkey_unit_name:__UNIT__)==$(lang:menu_smartlabel_page) 2) | $(condition:$(pkey_unit_name:__UNIT__)==$(lang:menu_smartlabel_page) 3) | $(condition:$(pkey_unit_name:__UNIT__)==$(lang:menu_smartlabel_page) 4))">
+          <MenuItem name="$(pkey_unit_name:__UNIT__)">
+            <IconType>$(icon_type_enum:kIconTypeSmartLabelKey)</IconType>
+            <ExtraIconType>$(icon_type_enum:kIconTypeMenuArrowRight)</ExtraIconType>
+            <Url>file:///xml/gui/pkeys.xml#sub=*[@id="keys"]&amp;var:unit=__UNIT__&amp;var:cur_pkey=</Url>
+          </MenuItem>
+        </If>
+      </Repeat>
+    </If>
+  </IPPhoneMenu>
+  <!-- Second display - Line Keys Page (1-4) will be shown under Line Keys Menu -->
+  <IPPhoneMenu dtmf="off" icon_xoffset="$(math_eval:$(gui_display_xsize)/20-5)" text_xoffset="$(math_eval:$(gui_display_xsize)/20-7)" speedselect="enter" id="second_display_units" state="others_except_mb">
+    <If condition="$(show_feature:FEATURE_SECOND_DISPLAY)">
+      <Title>$(lang:menu_fkeys_page)</Title>
+      <IconSize>XXS</IconSize>
+      <Repeat values="$(enum:$(max_pkey_units))" token="|__UNIT__|">
+        <If condition="$(bool_eval:$(condition:$(pkey_unit_name:__UNIT__)==$(lang:menu_fkeys_page) 1) | $(condition:$(pkey_unit_name:__UNIT__)==$(lang:menu_fkeys_page) 2) | $(condition:$(pkey_unit_name:__UNIT__)==$(lang:menu_fkeys_page) 3) | $(condition:$(pkey_unit_name:__UNIT__)==$(lang:menu_fkeys_page) 4))">
+          <MenuItem name="$(pkey_unit_name:__UNIT__)">
+            <If condition="$(show_feature:FEATURE_PUI_STYLE_SIO)">
+              <IconType>$(icon_type_enum:kIconTypeDkeyFkeyMenu__UNIT__)</IconType>
+            </If>
+            <ExtraIconType>$(icon_type_enum:kIconTypeMenuArrowRight)</ExtraIconType>
+            <Url>file:///xml/gui/pkeys.xml#sub=*[@id="keys"]&amp;var:unit=__UNIT__&amp;var:cur_pkey=</Url>
+          </MenuItem>
+        </If>
+      </Repeat>
+    </If>
+  </IPPhoneMenu>
+  <IPPhoneMenu dtmf="off" icon_xoffset="$(math_eval:$(gui_display_xsize)/20-5)" text_xoffset="$(math_eval:$(gui_display_xsize)/20-7)" speedselect="enter" id="keys" state="others_except_mb">
+    <!-- Menu to determine the fkey-index -->
+    <If condition="$(var:exit_when_key_is_defined)">
+      <Fetch mil="1">phone://mb_exit</Fetch>
+    </If>
+    <Title>$(pkey_unit_name:$(var:unit))</Title>
+    <IconSize>XXS</IconSize>
+    <Repeat values="$(enum:$(max_pkeys:$(var:unit)))" token="|__KEY__|">
+      <If condition="$(is_context_sensitive_key:$(var:unit))">
+        <MenuItem name="$(lang:$(get_langfile_entry_of_cmd:$(get_cmd:$(set:$(key_setting:$(var:unit):__KEY__)))))" id="fdp__KEY__">
+          <If condition="$(show_feature:FEATURE_PUI_STYLE_SIO)">
+            <If condition="$(get_cmd:$(set:$(key_setting:$(var:unit):__KEY__)))==keyevent">
+              <SubText>$(translate_keyevent:$(remove_cmd:$(set:$(key_setting:$(var:unit):__KEY__))))</SubText>
+            </If>
+            <Else>
+              <SubText>$(remove_cmd:$(set:$(key_setting:$(var:unit):__KEY__)))</SubText>
+            </Else>
+          </If>
+          <ExtraIconType>$(icon_type_enum:kIconTypeMenuArrowRight)</ExtraIconType>
+          <IconType>$(key_icon_type:$(var:unit):__KEY__)</IconType>
+          <If condition="$(is_prompt_needed_by_remove_menu_key:$(var:unit):__KEY__)">
+            <Url>file:///xml/gui/decision.xml#sub=*[@id="dsc_url"]&amp;var:dsc_title=$(lang:lang_confirm_del_menu_configuration)&amp;var:dsc_text=$(lang:lang_confirm_message)&amp;var:dsc_yes=1&amp;var:dsc_no=1&amp;var:dsc_yes_url=file:///xml/gui/pkeys.xml#sub=*[@id="fdp_key_settings"]&amp;var:keyname=$(key_name:$(var:unit):__KEY__)&amp;var:keysetting=$(key_setting:$(var:unit):__KEY__)&amp;var:KeyIconSetting=$(key_icon_setting:$(var:unit):__KEY__)&amp;var:key=__KEY__&amp;var:dsc_no_url=phone://mb_nop%23go_back&amp;var:xml_yes_fkey=F2&amp;var:xml_no_fkey=F1&amp;var:xml_abort_fkey=F3</Url>
+          </If>
+          <Else>
+            <Url>file:///xml/gui/pkeys.xml#sub=*[@id="fdp_key_settings"]&amp;var:keyname=$(key_name:$(var:unit):__KEY__)&amp;var:keysetting=$(key_setting:$(var:unit):__KEY__)&amp;var:KeyIconSetting=$(key_icon_setting:$(var:unit):__KEY__)</Url>
+          </Else>
+        </MenuItem>
+      </If>
+      <Elif condition="$(is_dkey:$(var:unit))">
+        <MenuItem name="$(lang:$(key_name:$(var:unit):__KEY__))" id="fdp__KEY__">
+          <If condition="$(show_feature:FEATURE_PUI_STYLE_SIO)">
+            <If condition="$(get_cmd:$(set:$(key_setting:$(var:unit):__KEY__)))==keyevent">
+              <SubText>$(lang:$(get_langfile_entry_of_cmd:$(get_cmd:$(set:$(key_setting:$(var:unit):__KEY__))))) $(translate_keyevent:$(remove_cmd:$(set:$(key_setting:$(var:unit):__KEY__))))</SubText>
+            </If>
+            <Else>
+              <SubText>$(lang:$(get_langfile_entry_of_cmd:$(get_cmd:$(set:$(key_setting:$(var:unit):__KEY__))))) $(remove_cmd:$(set:$(key_setting:$(var:unit):__KEY__)))</SubText>
+            </Else>
+          </If>
+          <ExtraIconType>$(icon_type_enum:kIconTypeMenuArrowRight)</ExtraIconType>
+          <IconType>$(key_icon_type:$(var:unit):__KEY__)</IconType>
+          <Url>file:///xml/gui/pkeys.xml#sub=*[@id="fdp_key_settings"]&amp;var:keyname=$(key_name:$(var:unit):__KEY__)&amp;var:keysetting=$(key_setting:$(var:unit):__KEY__)&amp;var:key=__KEY__</Url>
+        </MenuItem>
+      </Elif>
+      <Elif condition="$(bool_eval: $(is_set:$(set:fkey_label[$(pkey_idx:$(var:unit):__KEY__)])))">
+        <MenuItem name="$(set:fkey_label[$(pkey_idx:$(var:unit):__KEY__)])" id="pl__KEY__">
+          <If condition="$(show_feature:FEATURE_PUI_STYLE_SIO)">
+            <IconType>$(key_icon_type:$(var:unit):__KEY__)</IconType>
+            <If condition="$(get_cmd:$(set:$(key_setting:$(var:unit):__KEY__)))==keyevent">
+              <SubText>$(lang:$(get_langfile_entry_of_cmd:$(get_cmd:$(set:$(key_setting:$(var:unit):__KEY__))))) $(translate_keyevent:$(remove_cmd:$(set:$(key_setting:$(var:unit):__KEY__))),$(pkey_idx:$(var:unit):__KEY__))</SubText>
+            </If>
+            <Else>
+              <SubText>$(lang:$(get_langfile_entry_of_cmd:$(get_cmd:$(set:$(key_setting:$(var:unit):__KEY__))))) $(remove_cmd:$(set:$(key_setting:$(var:unit):__KEY__)))</SubText>
+            </Else>
+          </If>
+          <ExtraIconType>$(icon_type_enum:kIconTypeMenuArrowRight)</ExtraIconType>
+          <If condition="$(bool_eval: $(bool_eval: $(is_set:$(var:linekey_context)) | $(var:ignore_linekey_context) | $(var:clear_linekey_context) )
+                                    &amp; $(bool_eval: $(is_set:$(var:linekey_type))    | $(var:ignore_linekey_type)    | $(var:clear_linekey_type) )
+                                    &amp; $(bool_eval: $(is_set:$(var:linekey_number))  | $(var:ignore_linekey_number)  | $(var:clear_linekey_number) )
+                                    &amp; $(bool_eval: $(is_set:$(var:linekey_label))   | $(var:ignore_linekey_label)   | $(var:clear_linekey_label) ) )">
+            <!-- short way out: everything but the index was already provided: so set it now -->
+            <!-- the provided paramters (var:linekey_..) match those that can be entered via WUI, those parameters passed
+                  as ignore_linkey_.. will leave the setting associated to it unchanged -->
+            <Url>phone://mb_exit#change_linekey="$(pkey_idx:$(var:unit):__KEY__),
+                   MB_LK_CONTEXT=(ignore=$(var:ignore_linekey_context),clear=$(var:clear_linekey_context))
+                                 :$(var:linekey_context),
+                   MB_LK_TYPE=(ignore=$(var:ignore_linekey_type),clear=$(var:clear_linekey_type))
+                              :$(var:linekey_type),
+                   MB_LK_LABEL=(ignore=$(var:ignore_linekey_label),clear=$(var:clear_linekey_label))
+                               :$(var:linekey_label),
+                   MB_LK_NUMBER=(ignore=$(var:ignore_linekey_number),clear=$(var:clear_linekey_number))
+                                :$(var:linekey_number)"</Url>
+          </If>
+          <Elif condition="$(bool_eval:$(empty:$(var:pre_selected_uri))|$(empty:$(var:preselected_function)))">
+            <!-- enter line_key_settings1 -->
+            <Url>file:///xml/gui/pkeys.xml#sub=*[@id="line_key_settings"]&amp;var:key=__KEY__&amp;var:cur_pkey=$(pkey_idx:$(var:unit):__KEY__)&amp;var:KeyIconSetting=$(key_icon_setting:$(var:unit):__KEY__)</Url>
+          </Elif>
+        </MenuItem>
+      </Elif>
+      <Elif condition="$(bool_eval: !$(is_set:$(set:fkey_label[$(pkey_idx:$(var:unit):__KEY__)])))">
+        <MenuItem name="$(lang:$(get_langfile_entry_of_cmd:$(get_cmd:$(set:$(key_setting:$(var:unit):__KEY__)))))" id="pl__KEY__">
+          <If condition="$(show_feature:FEATURE_PUI_STYLE_SIO)">
+            <IconType>$(key_icon_type:$(var:unit):__KEY__)</IconType>
+            <If condition="$(get_cmd:$(set:$(key_setting:$(var:unit):__KEY__)))==keyevent">
+              <SubText>$(translate_keyevent:$(remove_cmd:$(set:$(key_setting:$(var:unit):__KEY__))),$(pkey_idx:$(var:unit):__KEY__))</SubText>
+            </If>
+            <Else>
+              <SubText>$(remove_cmd:$(set:$(key_setting:$(var:unit):__KEY__)))</SubText>
+            </Else>
+          </If>
+          <ExtraIconType>$(icon_type_enum:kIconTypeMenuArrowRight)</ExtraIconType>
+          <If condition="$(bool_eval: $(bool_eval: $(is_set:$(var:linekey_context)) | $(var:ignore_linekey_context) | $(var:clear_linekey_context) )
+                                    &amp; $(bool_eval: $(is_set:$(var:linekey_type))    | $(var:ignore_linekey_type)    | $(var:clear_linekey_type) )
+                                    &amp; $(bool_eval: $(is_set:$(var:linekey_number))  | $(var:ignore_linekey_number)  | $(var:clear_linekey_number) )
+                                    &amp; $(bool_eval: $(is_set:$(var:linekey_label))   | $(var:ignore_linekey_label)   | $(var:clear_linekey_label) ) )">
+            <!-- short way out: everything but the index was already provided: so set it now -->
+            <!-- the provided paramters (var:linekey_..) match those that can be entered via WUI, those parameters passed
+                  as ignore_linkey_.. will leave the setting associated to it unchanged -->
+            <Url>phone://mb_exit#change_linekey="$(pkey_idx:$(var:unit):__KEY__),
+                   MB_LK_CONTEXT=(ignore=$(var:ignore_linekey_context),clear=$(var:clear_linekey_context))
+                                 :$(var:linekey_context),
+                   MB_LK_TYPE=(ignore=$(var:ignore_linekey_type),clear=$(var:clear_linekey_type))
+                              :$(var:linekey_type),
+                   MB_LK_LABEL=(ignore=$(var:ignore_linekey_label),clear=$(var:clear_linekey_label))
+                               :$(var:linekey_label),
+                   MB_LK_NUMBER=(ignore=$(var:ignore_linekey_number),clear=$(var:clear_linekey_number))
+                                :$(var:linekey_number)"</Url>
+          </If>
+          <Elif condition="$(bool_eval:$(empty:$(var:pre_selected_uri))|$(empty:$(var:preselected_function)))">
+            <!-- enter line_key_settings2 -->
+            <Url>file:///xml/gui/pkeys.xml#sub=*[@id="line_key_settings"]&amp;var:key=__KEY__&amp;var:cur_pkey=$(pkey_idx:$(var:unit):__KEY__)&amp;var:KeyIconSetting=$(key_icon_setting:$(var:unit):__KEY__)</Url>
+          </Elif>
+        </MenuItem>
+      </Elif>
+      <Elif condition="!$(is_set:$(remove_cmd:$(set:fkey[$(pkey_idx:$(var:unit):__KEY__)])))">
+        <MenuItem name="$(lang:$(get_langfile_entry_of_cmd:$(get_cmd:$(set:fkey[$(pkey_idx:$(var:unit):__KEY__)]))))" id="pl__KEY__">
+          <If condition="$(bool_eval: $(bool_eval: $(is_set:$(var:linekey_context)) | $(var:ignore_linekey_context) | $(var:clear_linekey_context) )
+                                    &amp; $(bool_eval: $(is_set:$(var:linekey_type))    | $(var:ignore_linekey_type)    | $(var:clear_linekey_type) )
+                                    &amp; $(bool_eval: $(is_set:$(var:linekey_number))  | $(var:ignore_linekey_number)  | $(var:clear_linekey_number) )
+                                    &amp; $(bool_eval: $(is_set:$(var:linekey_label))   | $(var:ignore_linekey_label)   | $(var:clear_linekey_label) ) )">
+            <!-- short way out: everything but the index was already provided: so set it now -->
+            <!-- the provided paramters (var:linekey_..) match those that can be entered via WUI, those parameters passed
+                  as ignore_linkey_.. will leave the setting associated to it unchanged -->
+            <Url>phone://mb_exit#change_linekey="$(pkey_idx:$(var:unit):__KEY__),
+                   MB_LK_CONTEXT=(ignore=$(var:ignore_linekey_context),clear=$(var:clear_linekey_context))
+                                 :$(var:linekey_context),
+                   MB_LK_TYPE=(ignore=$(var:ignore_linekey_type),clear=$(var:clear_linekey_type))
+                              :$(var:linekey_type),
+                   MB_LK_LABEL=(ignore=$(var:ignore_linekey_label),clear=$(var:clear_linekey_label))
+                               :$(var:linekey_label),
+                   MB_LK_NUMBER=(ignore=$(var:ignore_linekey_number),clear=$(var:clear_linekey_number))
+                                :$(var:linekey_number)"</Url>
+          </If>
+          <Elif condition="$(bool_eval:$(empty:$(var:pre_selected_uri))|$(empty:$(var:preselected_function)))">
+            <Url>file:///xml/gui/pkeys.xml#sub=*[@id="functions"]&amp;var:cur_pkey=$(pkey_idx:$(var:unit):__KEY__)</Url>
+          </Elif>
+        </MenuItem>
+      </Elif>
+      <Elif condition="$(get_cmd:$(set:fkey[$(pkey_idx:$(var:unit):__KEY__)]))==keyevent">
+        <MenuItem name="$(lang:$(get_langfile_entry_of_cmd:$(get_cmd:$(set:fkey[$(pkey_idx:$(var:unit):__KEY__)])))): $(translate_keyevent:$(remove_cmd:$(set:fkey[$(pkey_idx:$(var:unit):__KEY__)])),$(pkey_idx:$(var:unit):__KEY__))" id="pl__KEY__">
+          <If condition="$(bool_eval: $(bool_eval: $(is_set:$(var:linekey_context)) | $(var:ignore_linekey_context) | $(var:clear_linekey_context) )
+                                    &amp; $(bool_eval: $(is_set:$(var:linekey_type))    | $(var:ignore_linekey_type)    | $(var:clear_linekey_type) )
+                                    &amp; $(bool_eval: $(is_set:$(var:linekey_number))  | $(var:ignore_linekey_number)  | $(var:clear_linekey_number) )
+                                    &amp; $(bool_eval: $(is_set:$(var:linekey_label))   | $(var:ignore_linekey_label)   | $(var:clear_linekey_label) ) )">
+            <!-- short way out: everything but the index was already provided: so set it now -->
+            <!-- the provided paramters (var:linekey_..) match those that can be entered via WUI, those parameters passed
+                  as ignore_linkey_.. will leave the setting associated to it unchanged -->
+            <Url>phone://mb_exit#change_linekey="$(pkey_idx:$(var:unit):__KEY__),
+                   MB_LK_CONTEXT=(ignore=$(var:ignore_linekey_context),clear=$(var:clear_linekey_context))
+                                 :$(var:linekey_context),
+                   MB_LK_TYPE=(ignore=$(var:ignore_linekey_type),clear=$(var:clear_linekey_type))
+                              :$(var:linekey_type),
+                   MB_LK_LABEL=(ignore=$(var:ignore_linekey_label),clear=$(var:clear_linekey_label))
+                               :$(var:linekey_label),
+                   MB_LK_NUMBER=(ignore=$(var:ignore_linekey_number),clear=$(var:clear_linekey_number))
+                                :$(var:linekey_number)"</Url>
+          </If>
+          <Elif condition="$(bool_eval:$(empty:$(var:pre_selected_uri))|$(empty:$(var:preselected_function)))">
+            <Url>file:///xml/gui/pkeys.xml#sub=*[@id="functions"]&amp;var:cur_pkey=$(pkey_idx:$(var:unit):__KEY__)</Url>
+          </Elif>
+        </MenuItem>
+      </Elif>
+      <Else>
+        <MenuItem name="$(lang:$(get_langfile_entry_of_cmd:$(get_cmd:$(set:fkey[$(pkey_idx:$(var:unit):__KEY__)])))): $(remove_cmd:$(set:fkey[$(pkey_idx:$(var:unit):__KEY__)]))" id="pl__KEY__">
+          <If condition="$(bool_eval: $(bool_eval: $(is_set:$(var:linekey_context)) | $(var:ignore_linekey_context) | $(var:clear_linekey_context) )
+                                    &amp; $(bool_eval: $(is_set:$(var:linekey_type))    | $(var:ignore_linekey_type)    | $(var:clear_linekey_type) )
+                                    &amp; $(bool_eval: $(is_set:$(var:linekey_number))  | $(var:ignore_linekey_number)  | $(var:clear_linekey_number) )
+                                    &amp; $(bool_eval: $(is_set:$(var:linekey_label))   | $(var:ignore_linekey_label)   | $(var:clear_linekey_label) ) )">
+            <!-- short way out: everything but the index was already provided: so set it now -->
+            <!-- the provided paramters (var:linekey_..) match those that can be entered via WUI, those parameters passed
+                  as ignore_linkey_.. will leave the setting associated to it unchanged -->
+            <Url>phone://mb_exit#change_linekey="$(pkey_idx:$(var:unit):__KEY__),
+                   MB_LK_CONTEXT=(ignore=$(var:ignore_linekey_context),clear=$(var:clear_linekey_context))
+                                 :$(var:linekey_context),
+                   MB_LK_TYPE=(ignore=$(var:ignore_linekey_type),clear=$(var:clear_linekey_type))
+                              :$(var:linekey_type),
+                   MB_LK_LABEL=(ignore=$(var:ignore_linekey_label),clear=$(var:clear_linekey_label))
+                               :$(var:linekey_label),
+                   MB_LK_NUMBER=(ignore=$(var:ignore_linekey_number),clear=$(var:clear_linekey_number))
+                                :$(var:linekey_number)"</Url>
+          </If>
+          <Elif condition="$(bool_eval:$(empty:$(var:pre_selected_uri))|$(empty:$(var:preselected_function)))">
+            <Url>file:///xml/gui/pkeys.xml#sub=*[@id="functions"]&amp;var:cur_pkey=$(pkey_idx:$(var:unit):__KEY__)</Url>
+          </Elif>
+        </MenuItem>
+      </Else>
+    </Repeat>
+  </IPPhoneMenu>
+  <IPPhoneMenu icon_xoffset="11" text_xoffset="9" dtmf="off" id="context_sensitive_key_icons" speedselect="off" state="others_except_mb" sort="yes">
+    <Title>$(lang:enum_disp_func_key) $(var:keyname) $(lang:fkeys_ssi_icon)</Title>
+    <IconSize>XXS</IconSize>
+    <MenuItem name="$(lang:default_icon)" sel="$(condition:$(set:$(var:KeyIconSetting))==)" sort_key="$(lang:default_icon)">
+      <If condition="$(show_feature:FEATURE_PUI_STYLE_SIO)">
+        <Image>$(context_sensitive_key_default_icon:$(var:keyname))</Image>
+      </If>
+      <Else>
+        <Icon>$(context_sensitive_key_default_icon:$(var:keyname))</Icon>
+      </Else>
+      <If condition="$(set:$(var:KeyIconSetting))==">
+        <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOn)</ExtraIconType>
+      </If>
+      <Else>
+        <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOff)</ExtraIconType>
+      </Else>
+      <Url>phone://mb_nop#go_back&amp;set:$(var:KeyIconSetting)=</Url>
+    </MenuItem>
+    <MenuItem name="$(lang:custom_icon)" sel="$(is_custom_icon:$(set:$(var:KeyIconSetting)))" sort_key="$(lang:custom_icon)">
+      <If condition="$(is_custom_icon:$(set:$(var:KeyIconSetting)))">
+        <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOn)</ExtraIconType>
+      </If>
+      <Else>
+        <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOff)</ExtraIconType>
+      </Else>
+    </MenuItem>
+    <Repeat values="$(enum:$(max_icon_type_enum))" token="|__INDEX__|">
+      <If condition="$(is_icon_valid_for_this_id:__INDEX__)">
+        <MenuItem name="$(get_icon_type_enum_string_by_index:__INDEX__)" sel="$(condition:$(set:$(var:KeyIconSetting))==$(get_icon_type_enum_string_by_index:__INDEX__))" sort_key="$(get_icon_type_enum_string_by_index:__INDEX__)">
+          <If condition="$(show_feature:FEATURE_PUI_STYLE_SIO)">
+            <Image>$(context_sensitive_key_icon:__INDEX__)</Image>
+          </If>
+          <Else>
+            <Icon>$(context_sensitive_key_icon:__INDEX__)</Icon>
+          </Else>
+          <If condition="$(set:$(var:KeyIconSetting))==$(get_icon_type_enum_string_by_index:__INDEX__)">
+            <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOn)</ExtraIconType>
+          </If>
+          <Else>
+            <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOff)</ExtraIconType>
+          </Else>
+          <Url>phone://mb_nop#go_back&amp;set:$(var:KeyIconSetting)=$(get_icon_type_enum_string_by_index:__INDEX__)</Url>
+        </MenuItem>
+      </If>
+    </Repeat>
+  </IPPhoneMenu>
+  <IPPhoneMenu dtmf="off" id="context_sensitive_keys" state="others_except_mb" sort="yes">
+    <Title>$(lang:enum_disp_func_key) $(var:keyname) $(lang:fkeys_ssi_type)</Title>
+    <IconSize>XXS</IconSize>
+    <MenuItem name="$(lang:F_ACD)" sel="$(condition:$(get_cmd:$(set:$(var:keysetting)))==!!§[::]!!§[replacement-key:BW-ACD,ui_argument=,ui_label=])" sort_key="$(lang:F_ACD)">
+      <If condition="$(get_cmd:$(set:$(var:keysetting)))==F_ACD">
+        <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOn)</ExtraIconType>
+      </If>
+      <Else>
+        <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOff)</ExtraIconType>
+      </Else>
+      <Url>phone://mb_nop#go_back&amp;set:$(var:keysetting)=!!§[::]!!§[replacement-key:BW-ACD,ui_argument=,ui_label=]</Url>
+    </MenuItem>
+    <MenuItem name="$(lang:enum_disp_func_key_keyevent)" sel="$(condition:$(get_cmd:$(set:$(var:keysetting)))==keyevent)" sort_key="$(lang:enum_disp_func_key_keyevent)">
+      <If condition="$(get_cmd:$(set:$(var:keysetting)))==keyevent">
+        <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOn)</ExtraIconType>
+      </If>
+      <Else>
+        <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOff)</ExtraIconType>
+      </Else>
+      <Url>phone://mb_nop#go_back&amp;set:$(var:keysetting)=keyevent%20F_NONE</Url>
+    </MenuItem>
+    <MenuItem name="$(lang:F_SPEED_DIAL_typeSio)" sel="$(condition:$(get_cmd:$(set:$(var:keysetting)))==speed)" sort_key="$(lang:F_SPEED_DIAL_typeSio)">
+      <If condition="$(get_cmd:$(set:$(var:keysetting)))==speed">
+        <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOn)</ExtraIconType>
+      </If>
+      <Else>
+        <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOff)</ExtraIconType>
+      </Else>
+      <Url>phone://mb_nop#go_back&amp;set:$(var:keysetting)=speed%20</Url>
+    </MenuItem>
+    <MenuItem name="$(lang:F_XML)" sel="$(condition:$(get_cmd:$(set:$(var:keysetting)))==xml)" sort_key="$(lang:F_XML)">
+      <If condition="$(get_cmd:$(set:$(var:keysetting)))==xml">
+        <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOn)</ExtraIconType>
+      </If>
+      <Else>
+        <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOff)</ExtraIconType>
+      </Else>
+      <Url>phone://mb_nop#go_back&amp;set:$(var:keysetting)=xml%20</Url>
+    </MenuItem>
+    <MenuItem name="$(lang:F_TRANSFER_typeSio)" sel="$(condition:$(get_cmd:$(set:$(var:keysetting)))==transfer)" sort_key="$(lang:F_TRANSFER_typeSio)">
+      <If condition="$(get_cmd:$(set:$(var:keysetting)))==transfer">
+        <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOn)</ExtraIconType>
+      </If>
+      <Else>
+        <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOff)</ExtraIconType>
+      </Else>
+      <Url>phone://mb_nop#go_back&amp;set:$(var:keysetting)=transfer%20</Url>
+    </MenuItem>
+    <MenuItem name="$(lang:F_REDIRECT_typeSio)" sel="$(condition:$(get_cmd:$(set:$(var:keysetting)))==redirect)" sort_key="$(lang:F_REDIRECT_typeSio)">
+      <If condition="$(get_cmd:$(set:$(var:keysetting)))==redirect">
+        <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOn)</ExtraIconType>
+      </If>
+      <Else>
+        <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOff)</ExtraIconType>
+      </Else>
+      <Url>phone://mb_nop#go_back&amp;set:$(var:keysetting)=redirect%20</Url>
+    </MenuItem>
+    <MenuItem name="$(lang:F_AUTO_ANSWER_typeSio)" sel="$(condition:$(get_cmd:$(set:$(var:keysetting)))==auto_answer)" sort_key="$(lang:F_AUTO_ANSWER_typeSio)">
+      <If condition="$(get_cmd:$(set:$(var:keysetting)))==auto_answer">
+        <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOn)</ExtraIconType>
+      </If>
+      <Else>
+        <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOff)</ExtraIconType>
+      </Else>
+      <Url>phone://mb_nop#go_back&amp;set:$(var:keysetting)=auto_answer%20</Url>
+    </MenuItem>
+    <MenuItem name="$(lang:F_INTERCOM_typeSio)" sel="$(condition:$(get_cmd:$(set:$(var:keysetting)))==icom)" sort_key="$(lang:F_INTERCOM_typeSio)">
+      <If condition="$(get_cmd:$(set:$(var:keysetting)))==icom">
+        <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOn)</ExtraIconType>
+      </If>
+      <Else>
+        <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOff)</ExtraIconType>
+      </Else>
+      <Url>phone://mb_nop#go_back&amp;set:$(var:keysetting)=icom%20</Url>
+    </MenuItem>
+  </IPPhoneMenu>
+  <IPPhoneMenu dtmf="off" id="dkeys" state="others_except_mb" sort="yes">
+    <Title>$(lang:enum_disp_func_key) $(lang:$(var:keyname)) $(lang:fkeys_ssi_type)</Title>
+    <IconSize>XXS</IconSize>
+    <MenuItem name="$(lang:F_ACTION_URL_typeSio)" sel="$(condition:$(get_cmd:$(set:$(var:keysetting)))==url)" sort_key="$(lang:F_ACTION_URL_typeSio)">
+      <If condition="$(get_cmd:$(set:$(var:keysetting)))==url">
+        <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOn)</ExtraIconType>
+      </If>
+      <Else>
+        <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOff)</ExtraIconType>
+      </Else>
+      <Url>phone://mb_nop#go_back&amp;set:$(var:keysetting)=url%20</Url>
+    </MenuItem>
+    <MenuItem name="$(lang:F_AUTO_ANSWER_typeSio)" sel="$(condition:$(get_cmd:$(set:$(var:keysetting)))==auto_answer)" sort_key="$(lang:F_AUTO_ANSWER_typeSio)">
+      <If condition="$(get_cmd:$(set:$(var:keysetting)))==auto_answer">
+        <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOn)</ExtraIconType>
+      </If>
+      <Else>
+        <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOff)</ExtraIconType>
+      </Else>
+      <Url>phone://mb_nop#go_back&amp;set:$(var:keysetting)=auto_answer%20</Url>
+    </MenuItem>
+    <MenuItem name="$(lang:F_BUTTON)" sel="$(condition:$(get_cmd:$(set:$(var:keysetting)))==button)" sort_key="$(lang:F_BUTTON)">
+      <If condition="$(get_cmd:$(set:$(var:keysetting)))==button">
+        <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOn)</ExtraIconType>
+      </If>
+      <Else>
+        <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOff)</ExtraIconType>
+      </Else>
+      <Url>phone://mb_nop#go_back&amp;set:$(var:keysetting)=button%20</Url>
+    </MenuItem>
+    <MenuItem name="$(lang:F_CONFERENCE_typeSio)" sel="$(condition:$(get_cmd:$(set:$(var:keysetting)))==conference)" sort_key="$(lang:F_CONFERENCE_typeSio)">
+      <If condition="$(get_cmd:$(set:$(var:keysetting)))==conference">
+        <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOn)</ExtraIconType>
+      </If>
+      <Else>
+        <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOff)</ExtraIconType>
+      </Else>
+      <Url>phone://mb_nop#go_back&amp;set:$(var:keysetting)=conference%20</Url>
+    </MenuItem>
+    <MenuItem name="$(lang:F_DTMF)" sel="$(condition:$(get_cmd:$(set:$(var:keysetting)))==dtmf)" sort_key="$(lang:F_DTMF)">
+      <If condition="$(get_cmd:$(set:$(var:keysetting)))==dtmf">
+        <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOn)</ExtraIconType>
+      </If>
+      <Else>
+        <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOff)</ExtraIconType>
+      </Else>
+      <Url>phone://mb_nop#go_back&amp;set:$(var:keysetting)=dtmf%20</Url>
+    </MenuItem>
+    <MenuItem name="$(lang:F_REDIRECT_typeSio)" sel="$(condition:$(get_cmd:$(set:$(var:keysetting)))==redirect)" sort_key="$(lang:F_REDIRECT_typeSio)">
+      <If condition="$(get_cmd:$(set:$(var:keysetting)))==redirect">
+        <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOn)</ExtraIconType>
+      </If>
+      <Else>
+        <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOff)</ExtraIconType>
+      </Else>
+      <Url>phone://mb_nop#go_back&amp;set:$(var:keysetting)=redirect%20</Url>
+    </MenuItem>
+    <MenuItem name="$(lang:F_INTERCOM_typeSio)" sel="$(condition:$(get_cmd:$(set:$(var:keysetting)))==icom)" sort_key="$(lang:F_INTERCOM_typeSio)">
+      <If condition="$(get_cmd:$(set:$(var:keysetting)))==icom">
+        <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOn)</ExtraIconType>
+      </If>
+      <Else>
+        <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOff)</ExtraIconType>
+      </Else>
+      <Url>phone://mb_nop#go_back&amp;set:$(var:keysetting)=icom%20</Url>
+    </MenuItem>
+    <MenuItem name="$(lang:F_IVR)" sel="$(condition:$(get_cmd:$(set:$(var:keysetting)))==ivr)" sort_key="$(lang:F_IVR)">
+      <If condition="$(get_cmd:$(set:$(var:keysetting)))==ivr">
+        <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOn)</ExtraIconType>
+      </If>
+      <Else>
+        <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOff)</ExtraIconType>
+      </Else>
+      <Url>phone://mb_nop#go_back&amp;set:$(var:keysetting)=ivr%20</Url>
+    </MenuItem>
+    <MenuItem name="$(lang:enum_disp_func_key_keyevent)" sel="$(condition:$(get_cmd:$(set:$(var:keysetting)))==keyevent)" sort_key="$(lang:enum_disp_func_key_keyevent)">
+      <If condition="$(get_cmd:$(set:$(var:keysetting)))==keyevent">
+        <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOn)</ExtraIconType>
+      </If>
+      <Else>
+        <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOff)</ExtraIconType>
+      </Else>
+      <Url>phone://mb_nop#go_back&amp;set:$(var:keysetting)=keyevent%20F_NONE</Url>
+    </MenuItem>
+    <MenuItem name="$(lang:F_PUSH_TO_TALK)" sel="$(condition:$(get_cmd:$(set:$(var:keysetting)))==p2t)" sort_key="$(lang:F_PUSH_TO_TALK)">
+      <If condition="$(get_cmd:$(set:$(var:keysetting)))==p2t">
+        <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOn)</ExtraIconType>
+      </If>
+      <Else>
+        <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOff)</ExtraIconType>
+      </Else>
+      <Url>phone://mb_nop#go_back&amp;set:$(var:keysetting)=p2t%20</Url>
+    </MenuItem>
+    <MenuItem name="$(lang:F_SPEED_DIAL_typeSio)" sel="$(condition:$(get_cmd:$(set:$(var:keysetting)))==speed)" sort_key="$(lang:F_SPEED_DIAL_typeSio)">
+      <If condition="$(get_cmd:$(set:$(var:keysetting)))==speed">
+        <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOn)</ExtraIconType>
+      </If>
+      <Else>
+        <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOff)</ExtraIconType>
+      </Else>
+      <Url>phone://mb_nop#go_back&amp;set:$(var:keysetting)=speed%20</Url>
+    </MenuItem>
+    <MenuItem name="$(lang:F_STARCODE)" sel="$(condition:$(get_cmd:$(set:$(var:keysetting)))==!!§[::]!!§[replacement-key:Starcode,ui_argument=,ui_label=])" sort_key="$(lang:F_STARCODE)">
+      <If condition="$(get_cmd:$(set:$(var:keysetting)))==!!§[::]!!§[replacement-key:Starcode,ui_argument=,ui_label=]">
+        <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOn)</ExtraIconType>
+      </If>
+      <Else>
+        <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOff)</ExtraIconType>
+      </Else>
+      <Url>phone://mb_nop#go_back&amp;set:$(var:keysetting)=!!§[::]!!§[replacement-key:Starcode,ui_argument=,ui_label=]</Url>
+    </MenuItem>
+    <MenuItem name="$(lang:F_TRANSFER_typeSio)" sel="$(condition:$(get_cmd:$(set:$(var:keysetting)))==transfer)" sort_key="$(lang:F_TRANSFER_typeSio)">
+      <If condition="$(get_cmd:$(set:$(var:keysetting)))==transfer">
+        <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOn)</ExtraIconType>
+      </If>
+      <Else>
+        <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOff)</ExtraIconType>
+      </Else>
+      <Url>phone://mb_nop#go_back&amp;set:$(var:keysetting)=transfer%20</Url>
+    </MenuItem>
+    <MenuItem name="$(lang:F_RECORDER_START)" sel="$(condition:$(get_cmd:$(set:$(var:keysetting)))==recorder)" sort_key="$(lang:F_RECORDER_START)">
+      <If condition="$(get_cmd:$(set:$(var:keysetting)))==recorder">
+        <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOn)</ExtraIconType>
+      </If>
+      <Else>
+        <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOff)</ExtraIconType>
+      </Else>
+      <Url>phone://mb_nop#go_back&amp;set:$(var:keysetting)=recorder%20</Url>
+    </MenuItem>
+    <MenuItem name="$(lang:F_XML)" sel="$(condition:$(get_cmd:$(set:$(var:keysetting)))==xml)" sort_key="$(lang:F_XML)">
+      <If condition="$(get_cmd:$(set:$(var:keysetting)))==xml">
+        <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOn)</ExtraIconType>
+      </If>
+      <Else>
+        <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOff)</ExtraIconType>
+      </Else>
+      <Url>phone://mb_nop#go_back&amp;set:$(var:keysetting)=xml%20</Url>
+    </MenuItem>
+    <MenuItem name="$(lang:enum_disp_func_key_none)" sel="$(condition:$(get_cmd:$(set:$(var:keysetting)))==none)" sort_key="$(lang:enum_disp_func_key_none)">
+      <If condition="$(get_cmd:$(set:$(var:keysetting)))==none">
+        <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOn)</ExtraIconType>
+      </If>
+      <Else>
+        <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOff)</ExtraIconType>
+      </Else>
+      <Url>phone://mb_nop#go_back&amp;set:$(var:keysetting)=none</Url>
+    </MenuItem>
+  </IPPhoneMenu>
+  <IPPhoneMenu dtmf="off" id="key_events" state="others_except_mb" sort="yes">
+    <IconSize>XXS</IconSize>
+    <If condition="$(is_context_sensitive_key:$(var:unit))">
+      <Title>$(lang:enum_disp_func_key) $(var:keyname) $(lang:enum_disp_func_key_keyevent)</Title>
+    </If>
+    <Else>
+      <Title>$(lang:$(var:keyname)) $(lang:enum_disp_func_key_keyevent)</Title>
+    </Else>
+    <Repeat values="$(key_evt_options)" token="|__OPTID__|__OPTNAME__|">
+      <!-- __OPTNAME__ is translated using web_language so it should not be used in pui-->
+      <MenuItem name="$(translate_keyevent:$(remove_cmd:__OPTID__))" sel="$(condition:__OPTID__==$(set:$(var:keysetting)))" sort_key="$(translate_keyevent:$(remove_cmd:__OPTID__))">
+        <Url>phone://mb_nop#go_back&amp;set:$(var:keysetting)=__OPTID__</Url>
+        <If condition="__OPTID__==$(set:$(var:keysetting))">
+          <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOn)</ExtraIconType>
+        </If>
+        <Else>
+          <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOff)</ExtraIconType>
+        </Else>
+      </MenuItem>
+    </Repeat>
+  </IPPhoneMenu>
+  <IPPhoneMenu dtmf="off" id="key_events_line_keys" state="others_except_mb" sort="yes">
+    <Title>$(lang:enum_disp_func_key) $(math_eval:1+$(pkey_idx:$(var:unit):$(var:key))) $(lang:enum_disp_func_key_keyevent)</Title>
+    <IconSize>XXS</IconSize>
+    <Repeat values="$(key_evt_options)" token="|__OPTID__|__OPTNAME__|">
+      <!-- __OPTNAME__ is translated using web_language so it should not be used in pui-->
+      <MenuItem name="$(translate_keyevent:$(remove_cmd:__OPTID__),$(var:cur_pkey))" sel="$(condition:__OPTID__==$(set:$(key_setting:$(var:unit):$(var:key))))" sort_key="$(translate_keyevent:$(remove_cmd:__OPTID__),$(var:cur_pkey))">
+        <Url>phone://mb_nop#go_back&amp;set:$(key_setting:$(var:unit):$(var:key))=__OPTID__</Url>
+        <If condition="__OPTID__==$(set:$(key_setting:$(var:unit):$(var:key)))">
+          <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOn)</ExtraIconType>
+        </If>
+        <Else>
+          <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOff)</ExtraIconType>
+        </Else>
+      </MenuItem>
+    </Repeat>
+  </IPPhoneMenu>
+  <IPPhoneMenu dtmf="off" id="functions" state="others_except_mb" sort="yes">
+    <Title>$(lang:enum_disp_func_key) $(math_eval:$(var:cur_pkey)+1) $(lang:fkeys_ssi_type)</Title>
+    <IconSize>XXS</IconSize>
+    <If condition="$(empty:$(var:pre_selected_uri))">
+      <MenuItem name="$(lang:F_MENUS_USERINPUT_SENDSIPINFO)" sel="$(condition:$(get_cmd:$(set:$(var:keysetting)))==!!§[::]!!§[replacement-key:UserInputAndSendSipInfo,ui_argument=,ui_label=])" sort_key="$(lang:F_MENUS_USERINPUT_SENDSIPINFO)">
+        <If condition="$(get_cmd:$(set:$(key_setting:$(var:unit):$(var:key))))==!!§[::]!!§[replacement-key:UserInputAndSendSipInfo,ui_argument=,ui_label=]">
+          <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOn)</ExtraIconType>
+        </If>
+        <Else>
+          <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOff)</ExtraIconType>
+        </Else>
+        <Url>phone://mb_nop#go_back&amp;set:fkey[$(var:cur_pkey)]=!!§[::]!!§[replacement-key:UserInputAndSendSipInfo,ui_argument=,ui_label=]</Url>
+      </MenuItem>
+      <MenuItem name="$(lang:F_MENUS_SENDSIPINFO)" sel="$(condition:$(get_cmd:$(set:$(var:keysetting)))==!!§[::]!!§[replacement-key:SendSipInfo,ui_argument=,ui_label=])" sort_key="$(lang:F_MENUS_SENDSIPINFO)">
+        <If condition="$(get_cmd:$(set:$(key_setting:$(var:unit):$(var:key))))==!!§[::]!!§[replacement-key:SendSipInfo,ui_argument=,ui_label=]">
+          <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOn)</ExtraIconType>
+        </If>
+        <Else>
+          <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOff)</ExtraIconType>
+        </Else>
+        <Url>phone://mb_nop#go_back&amp;set:fkey[$(var:cur_pkey)]=!!§[::]!!§[replacement-key:SendSipInfo,ui_argument=,ui_label=]</Url>
+      </MenuItem>
+      <MenuItem name="$(lang:F_LINE)" sel="$(condition:$(get_cmd:$(set:$(key_setting:$(var:unit):$(var:key))))==line)" sort_key="$(lang:F_LINE)">
+        <If condition="$(get_cmd:$(set:$(key_setting:$(var:unit):$(var:key))))==line">
+          <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOn)</ExtraIconType>
+        </If>
+        <Else>
+          <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOff)</ExtraIconType>
+        </Else>
+        <Url>phone://mb_nop#go_back&amp;set:fkey[$(var:cur_pkey)]=line&amp;set:fkey_label[$(var:cur_pkey)]=&amp;set:fkey_icon_type[$(var:cur_pkey)]=</Url>
+      </MenuItem>
+      <MenuItem name="$(lang:F_SPEED_DIAL_typeSio)" sel="$(condition:$(get_cmd:$(set:$(key_setting:$(var:unit):$(var:key))))==speed)" sort_key="$(lang:F_SPEED_DIAL_typeSio)">
+        <If condition="$(get_cmd:$(set:$(key_setting:$(var:unit):$(var:key))))==speed">
+          <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOn)</ExtraIconType>
+        </If>
+        <Else>
+          <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOff)</ExtraIconType>
+        </Else>
+        <Url>phone://mb_nop#go_back&amp;set:fkey[$(var:cur_pkey)]=speed%20</Url>
+      </MenuItem>
+      <MenuItem name="$(lang:F_PARK_typeSio)" sel="$(condition:$(get_cmd:$(set:$(key_setting:$(var:unit):$(var:key))))==orbit)" sort_key="$(lang:F_PARK_typeSio)">
+        <If condition="$(get_cmd:$(set:$(key_setting:$(var:unit):$(var:key))))==orbit">
+          <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOn)</ExtraIconType>
+        </If>
+        <Else>
+          <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOff)</ExtraIconType>
+        </Else>
+        <Url>phone://mb_nop#go_back&amp;set:fkey[$(var:cur_pkey)]=orbit%20</Url>
+      </MenuItem>
+      <MenuItem name="$(lang:F_CALL_PARK_typeSio)" sel="$(condition:$(get_cmd:$(set:$(key_setting:$(var:unit):$(var:key))))==F_CALLPARK)" sort_key="$(lang:F_CALL_PARK_typeSio)">
+        <If condition="$(get_cmd:$(set:$(key_setting:$(var:unit):$(var:key))))==F_CALLPARK">
+          <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOn)</ExtraIconType>
+        </If>
+        <Else>
+          <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOff)</ExtraIconType>
+        </Else>
+        <Url>phone://mb_nop#go_back&amp;set:fkey[$(var:cur_pkey)]=F_CALLPARK%20</Url>
+      </MenuItem>
+      <MenuItem name="$(lang:F_DISP_CODE_typeSio)" sel="$(condition:$(get_cmd:$(set:$(key_setting:$(var:unit):$(var:key))))==F_DISP_CODE)" sort_key="$(lang:F_DISP_CODE_typeSio)">
+        <If condition="$(get_cmd:$(set:$(key_setting:$(var:unit):$(var:key))))==F_DISP_CODE">
+          <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOn)</ExtraIconType>
+        </If>
+        <Else>
+          <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOff)</ExtraIconType>
+        </Else>
+        <Url>phone://mb_nop#go_back&amp;set:fkey[$(var:cur_pkey)]=F_DISP_CODE%20</Url>
+      </MenuItem>
+      <If condition="$(show_feature:FEATURE_USB_RECORD_PLAYBACK)">
+        <MenuItem name="$(lang:F_USBREC_START_typeSio)" sel="$(condition:$(get_cmd:$(set:$(key_setting:$(var:unit):$(var:key))))==usbrec)" sort_key="$(lang:F_USBREC_START_typeSio)">
+          <If condition="$(get_cmd:$(set:$(key_setting:$(var:unit):$(var:key))))==usbrec">
+            <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOn)</ExtraIconType>
+          </If>
+          <Else>
+            <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOff)</ExtraIconType>
+          </Else>
+          <Url>phone://mb_nop#go_back&amp;set:fkey[$(var:cur_pkey)]=usbrec%20</Url>
+        </MenuItem>
+        <MenuItem name="$(lang:F_USBREC_PAUSE_typeSio)" sel="$(condition:$(get_cmd:$(set:$(key_setting:$(var:unit):$(var:key))))==usbpause)" sort_key="$(lang:F_USBREC_PAUSE_typeSio)">
+          <If condition="$(get_cmd:$(set:$(key_setting:$(var:unit):$(var:key))))==usbpause">
+            <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOn)</ExtraIconType>
+          </If>
+          <Else>
+            <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOff)</ExtraIconType>
+          </Else>
+          <Url>phone://mb_nop#go_back&amp;set:fkey[$(var:cur_pkey)]=usbpause%20</Url>
+        </MenuItem>
+      </If>
+      <MenuItem name="$(lang:F_EXTENSION_typeSio)" sel="$(condition:$(get_cmd:$(set:$(key_setting:$(var:unit):$(var:key))))==dest)" sort_key="$(lang:F_EXTENSION_typeSio)">
+        <If condition="$(get_cmd:$(set:$(key_setting:$(var:unit):$(var:key))))==dest">
+          <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOn)</ExtraIconType>
+        </If>
+        <Else>
+          <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOff)</ExtraIconType>
+        </Else>
+        <Url>phone://mb_nop#go_back&amp;set:fkey[$(var:cur_pkey)]=dest%20</Url>
+      </MenuItem>
+      <MenuItem name="$(lang:F_BLF_short)" sel="$(condition:$(get_cmd:$(set:$(key_setting:$(var:unit):$(var:key))))==blf)" sort_key="$(lang:F_BLF_short)">
+        <If condition="$(get_cmd:$(set:$(key_setting:$(var:unit):$(var:key))))==blf">
+          <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOn)</ExtraIconType>
+        </If>
+        <Else>
+          <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOff)</ExtraIconType>
+        </Else>
+        <Url>phone://mb_nop#go_back&amp;set:fkey[$(var:cur_pkey)]=blf%20</Url>
+      </MenuItem>
+      <MenuItem name="$(lang:F_TRANSFER_typeSio)" sel="$(condition:$(get_cmd:$(set:$(key_setting:$(var:unit):$(var:key))))==transfer)" sort_key="$(lang:F_TRANSFER_typeSio)">
+        <If condition="$(get_cmd:$(set:$(key_setting:$(var:unit):$(var:key))))==transfer">
+          <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOn)</ExtraIconType>
+        </If>
+        <Else>
+          <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOff)</ExtraIconType>
+        </Else>
+        <Url>phone://mb_nop#go_back&amp;set:fkey[$(var:cur_pkey)]=transfer%20</Url>
+      </MenuItem>
+      <MenuItem name="$(lang:F_STARCODE)" sel="$(condition:$(get_cmd:$(set:$(key_setting:$(var:unit):$(var:key))))==!!§[::]!!§[replacement-key:Starcode,ui_argument=,ui_label=])" sort_key="$(lang:F_STARCODE)">
+        <!-- the ui_label part of the starcode replacement special case is no longer used unless the fkey_label is not set.
+        It is currently set when editing the label for a starcode in the web interface (in addition to the regular label)
+        but that is already supposed to change and should in the worst case be mildly confusing if the ui_label is displayed
+        at some location while the fkey_label is empty -->
+        <If condition="$(get_cmd:$(set:$(key_setting:$(var:unit):$(var:key))))==!!§[::]!!§[replacement-key:Starcode,ui_argument=,ui_label=]">
+          <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOn)</ExtraIconType>
+        </If>
+        <Else>
+          <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOff)</ExtraIconType>
+        </Else>
+        <Url>phone://mb_nop#go_back&amp;set:fkey[$(var:cur_pkey)]=!!§[::]!!§[replacement-key:Starcode,ui_argument=,ui_label=]</Url>
+      </MenuItem>
+      <MenuItem name="$(lang:F_RECORDER_START)" sel="$(condition:$(get_cmd:$(set:$(key_setting:$(var:unit):$(var:key))))==recorder)" sort_key="$(lang:F_RECORDER_START)">
+        <If condition="$(get_cmd:$(set:$(key_setting:$(var:unit):$(var:key))))==recorder">
+          <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOn)</ExtraIconType>
+        </If>
+        <Else>
+          <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOff)</ExtraIconType>
+        </Else>
+        <Url>phone://mb_nop#go_back&amp;set:fkey[$(var:cur_pkey)]=recorder%20</Url>
+      </MenuItem>
+      <MenuItem name="$(lang:F_PUSH_TO_TALK)" sel="$(condition:$(get_cmd:$(set:$(key_setting:$(var:unit):$(var:key))))==p2t)" sort_key="$(lang:F_PUSH_TO_TALK)">
+        <If condition="$(get_cmd:$(set:$(key_setting:$(var:unit):$(var:key))))==p2t">
+          <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOn)</ExtraIconType>
+        </If>
+        <Else>
+          <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOff)</ExtraIconType>
+        </Else>
+        <Url>phone://mb_nop#go_back&amp;set:fkey[$(var:cur_pkey)]=p2t%20</Url>
+      </MenuItem>
+      <MenuItem name="$(lang:F_INTERCOM_typeSio)" sel="$(condition:$(get_cmd:$(set:$(key_setting:$(var:unit):$(var:key))))==icom)" sort_key="$(lang:F_INTERCOM_typeSio)">
+        <If condition="$(get_cmd:$(set:$(key_setting:$(var:unit):$(var:key))))==icom">
+          <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOn)</ExtraIconType>
+        </If>
+        <Else>
+          <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOff)</ExtraIconType>
+        </Else>
+        <Url>phone://mb_nop#go_back&amp;set:fkey[$(var:cur_pkey)]=icom%20</Url>
+      </MenuItem>
+      <MenuItem name="$(lang:F_ACTION_URL_typeSio)" sel="$(condition:$(get_cmd:$(set:$(key_setting:$(var:unit):$(var:key))))==url)" sort_key="$(lang:F_ACTION_URL_typeSio)">
+        <If condition="$(get_cmd:$(set:$(key_setting:$(var:unit):$(var:key))))==url">
+          <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOn)</ExtraIconType>
+        </If>
+        <Else>
+          <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOff)</ExtraIconType>
+        </Else>
+        <Url>phone://mb_nop#go_back&amp;set:fkey[$(var:cur_pkey)]=url%20</Url>
+      </MenuItem>
+      <MenuItem name="$(lang:F_BUTTON)" sel="$(condition:$(get_cmd:$(set:$(key_setting:$(var:unit):$(var:key))))==button)" sort_key="$(lang:F_BUTTON)">
+        <If condition="$(get_cmd:$(set:$(key_setting:$(var:unit):$(var:key))))==button">
+          <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOn)</ExtraIconType>
+        </If>
+        <Else>
+          <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOff)</ExtraIconType>
+        </Else>
+        <Url>phone://mb_nop#go_back&amp;set:fkey[$(var:cur_pkey)]=button%20</Url>
+      </MenuItem>
+      <MenuItem name="$(lang:F_CONFERENCE_typeSio)" sel="$(condition:$(get_cmd:$(set:$(key_setting:$(var:unit):$(var:key))))==conference)" sort_key="$(lang:F_CONFERENCE_typeSio)">
+        <If condition="$(get_cmd:$(set:$(key_setting:$(var:unit):$(var:key))))==conference">
+          <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOn)</ExtraIconType>
+        </If>
+        <Else>
+          <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOff)</ExtraIconType>
+        </Else>
+        <Url>phone://mb_nop#go_back&amp;set:fkey[$(var:cur_pkey)]=conference%20</Url>
+      </MenuItem>
+      <MenuItem name="$(lang:F_DTMF)" sel="$(condition:$(get_cmd:$(set:$(key_setting:$(var:unit):$(var:key))))==dtmf)" sort_key="$(lang:F_DTMF)">
+        <If condition="$(get_cmd:$(set:$(key_setting:$(var:unit):$(var:key))))==dtmf">
+          <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOn)</ExtraIconType>
+        </If>
+        <Else>
+          <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOff)</ExtraIconType>
+        </Else>
+        <Url>phone://mb_nop#go_back&amp;set:fkey[$(var:cur_pkey)]=dtmf%20</Url>
+      </MenuItem>
+      <MenuItem name="$(lang:F_IVR)" sel="$(condition:$(get_cmd:$(set:$(key_setting:$(var:unit):$(var:key))))==ivr)" sort_key="$(lang:F_IVR)">
+        <If condition="$(get_cmd:$(set:$(key_setting:$(var:unit):$(var:key))))==ivr">
+          <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOn)</ExtraIconType>
+        </If>
+        <Else>
+          <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOff)</ExtraIconType>
+        </Else>
+        <Url>phone://mb_nop#go_back&amp;set:fkey[$(var:cur_pkey)]=ivr%20</Url>
+      </MenuItem>
+      <MenuItem name="$(lang:F_REDIRECT_typeSio)" sel="$(condition:$(get_cmd:$(set:$(key_setting:$(var:unit):$(var:key))))==redirect)" sort_key="$(lang:F_REDIRECT_typeSio)">
+        <If condition="$(get_cmd:$(set:$(key_setting:$(var:unit):$(var:key))))==redirect">
+          <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOn)</ExtraIconType>
+        </If>
+        <Else>
+          <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOff)</ExtraIconType>
+        </Else>
+        <Url>phone://mb_nop#go_back&amp;set:fkey[$(var:cur_pkey)]=redirect%20</Url>
+      </MenuItem>
+      <MenuItem name="$(lang:F_AUTO_ANSWER)" sel="$(condition:$(get_cmd:$(set:$(key_setting:$(var:unit):$(var:key))))==auto_answer)" sort_key="$(lang:F_AUTO_ANSWER)">
+        <If condition="$(get_cmd:$(set:$(key_setting:$(var:unit):$(var:key))))==auto_answer">
+          <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOn)</ExtraIconType>
+        </If>
+        <Else>
+          <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOff)</ExtraIconType>
+        </Else>
+        <Url>phone://mb_nop#go_back&amp;set:fkey[$(var:cur_pkey)]=auto_answer%20</Url>
+      </MenuItem>
+       <MenuItem name="$(lang:F_CALL_CENTER_STATUS)" sel="$(condition:$(get_cmd:$(set:$(key_setting:$(var:unit):$(var:key))))==call_center_status)" sort_key="$(lang:F_CALL_CENTER_STATUS)">
+        <If condition="$(get_cmd:$(set:$(key_setting:$(var:unit):$(var:key))))==call_center_status">
+          <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOn)</ExtraIconType>
+        </If>
+        <Else>
+          <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOff)</ExtraIconType>
+        </Else>
+        <Url>phone://mb_nop#go_back&amp;set:fkey[$(var:cur_pkey)]=call_center_status%20</Url>
+      </MenuItem>
+      <MenuItem name="$(lang:F_SMART_TRANSFER)" sel="$(condition:$(get_cmd:$(set:$(key_setting:$(var:unit):$(var:key))))==smart_transfer)" sort_key="$(lang:F_SMART_TRANSFER)">
+        <If condition="$(get_cmd:$(set:$(key_setting:$(var:unit):$(var:key))))==smart_transfer">
+          <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOn)</ExtraIconType>
+        </If>
+        <Else>
+          <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOff)</ExtraIconType>
+        </Else>
+        <Url>phone://mb_nop#go_back&amp;set:fkey[$(var:cur_pkey)]=smart_transfer%20</Url>
+      </MenuItem>
+      <If condition="$(set:fkey_context[$(var:cur_pkey)])==active">
+        <If condition="$(set:user_server_type[$(current_line)])!=broadsoft">
+          <MenuItem name="$(lang:F_PRESENCE_typeSio)" sel="$(condition:$(get_cmd:$(set:$(key_setting:$(var:unit):$(var:key))))==presence)" sort_key="$(lang:F_PRESENCE_typeSio)">
+            <If condition="$(get_cmd:$(set:$(key_setting:$(var:unit):$(var:key))))==presence">
+              <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOn)</ExtraIconType>
+            </If>
+            <Else>
+              <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOff)</ExtraIconType>
+            </Else>
+            <Url>phone://mb_nop#go_back&amp;set:fkey[$(var:cur_pkey)]=presence%20</Url>
+          </MenuItem>
+        </If>
+      </If>
+      <Else>
+        <If condition="$(set:user_server_type[$(set:fkey_context[$(var:cur_pkey)])])!=broadsoft">
+          <MenuItem name="$(lang:F_PRESENCE_typeSio)" sel="$(condition:$(get_cmd:$(set:$(key_setting:$(var:unit):$(var:key))))==presence)" sort_key="$(lang:F_PRESENCE_typeSio)">
+            <If condition="$(get_cmd:$(set:$(key_setting:$(var:unit):$(var:key))))==presence">
+              <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOn)</ExtraIconType>
+            </If>
+            <Else>
+              <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOff)</ExtraIconType>
+            </Else>
+            <Url>phone://mb_nop#go_back&amp;set:fkey[$(var:cur_pkey)]=presence%20</Url>
+          </MenuItem>
+        </If>
+      </Else>
+      <MenuItem name="$(lang:F_MULTICAST_typeSio)" sel="$(condition:$(get_cmd:$(set:$(key_setting:$(var:unit):$(var:key))))==multicast)" sort_key="$(lang:F_MULTICAST_typeSio)">
+        <If condition="$(get_cmd:$(set:$(key_setting:$(var:unit):$(var:key))))==multicast">
+          <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOn)</ExtraIconType>
+        </If>
+        <Else>
+          <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOff)</ExtraIconType>
+        </Else>
+        <Url>phone://mb_nop#go_back&amp;set:fkey[$(var:cur_pkey)]=multicast%20</Url>
+      </MenuItem>
+      <MenuItem name="$(lang:enum_disp_func_key_keyevent)" sel="$(condition:$(get_cmd:$(set:$(key_setting:$(var:unit):$(var:key))))==keyevent)" sort_key="$(lang:enum_disp_func_key_keyevent)">
+        <If condition="$(get_cmd:$(set:$(key_setting:$(var:unit):$(var:key))))==keyevent">
+          <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOn)</ExtraIconType>
+        </If>
+        <Else>
+          <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOff)</ExtraIconType>
+        </Else>
+        <Url>phone://mb_nop#go_back&amp;set:fkey[$(var:cur_pkey)]=keyevent%20F_NONE</Url>
+      </MenuItem>
+    </If>
+    <MenuItem name="$(lang:menu_shortcut)" sel="$(condition:$(get_cmd:$(set:$(key_setting:$(var:unit):$(var:key))))==menu_shortcut)" sort_key="$(lang:menu_shortcut)">
+      <If condition="$(get_cmd:$(set:$(key_setting:$(var:unit):$(var:key))))==menu_shortcut">
+        <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOn)</ExtraIconType>
+      </If>
+      <Else>
+        <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOff)</ExtraIconType>
+      </Else>
+      <Url>file:///xml/gui/pkeys.xml#sub=*[@id="shortcuts"]</Url>
+    </MenuItem>
+    <MenuItem name="$(lang:F_XML)" sel="$(condition:$(get_cmd:$(set:$(var:keysetting)))==xml)" sort_key="$(lang:F_XML)">
+      <If condition="$(get_cmd:$(set:$(key_setting:$(var:unit):$(var:key))))==xml">
+        <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOn)</ExtraIconType>
+      </If>
+      <Else>
+        <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOff)</ExtraIconType>
+      </Else>
+      <Url>phone://mb_nop#go_back&amp;set:fkey[$(var:cur_pkey)]=xml%20</Url>
+    </MenuItem>
+    <MenuItem name="$(lang:F_OK)" sel="$(condition:$(get_cmd:$(set:$(key_setting:$(var:unit):$(var:key))))==ok)" sort_key="$(lang:F_OK)">
+      <If condition="$(get_cmd:$(set:$(key_setting:$(var:unit):$(var:key))))==ok">
+        <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOn)</ExtraIconType>
+      </If>
+      <Else>
+        <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOff)</ExtraIconType>
+      </Else>
+      <Url>phone://mb_nop#go_back&amp;set:fkey[$(var:cur_pkey)]=ok%20</Url>
+    </MenuItem>
+    <MenuItem name="$(lang:F_CANCEL)" sel="$(condition:$(get_cmd:$(set:$(key_setting:$(var:unit):$(var:key))))==cancel)" sort_key="$(lang:F_CANCEL)">
+      <If condition="$(get_cmd:$(set:$(key_setting:$(var:unit):$(var:key))))==cancel">
+        <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOn)</ExtraIconType>
+      </If>
+      <Else>
+        <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOff)</ExtraIconType>
+      </Else>
+      <Url>phone://mb_nop#go_back&amp;set:fkey[$(var:cur_pkey)]=cancel%20</Url>
+    </MenuItem>
+    <MenuItem name="$(lang:enum_disp_func_key_none)" sel="$(condition:$(get_cmd:$(set:$(key_setting:$(var:unit):$(var:key))))==none)" sort_key="$(lang:enum_disp_func_key_none)">
+      <If condition="$(get_cmd:$(set:$(key_setting:$(var:unit):$(var:key))))==none">
+        <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOn)</ExtraIconType>
+      </If>
+      <Else>
+        <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOff)</ExtraIconType>
+      </Else>
+      <Url>phone://mb_nop#go_back&amp;set:fkey[$(var:cur_pkey)]=none</Url>
+    </MenuItem>
+    <If condition="$(set:fkey_context[$(var:cur_pkey)])==active">
+      <If condition="$(set:user_server_type[$(current_line)])==broadsoft">
+        <MenuItem name="$(lang:fkey_contact_list_buddy)" sel="$(condition:$(get_cmd:$(set:$(key_setting:$(var:unit):$(var:key))))==!!§[::]!!§[replacement-key:BW-ServerBLF,ui_argument=,ui_label=])" sort_key="$(lang:fkey_contact_list_buddy)">
+          <If condition="$(get_cmd:$(set:$(key_setting:$(var:unit):$(var:key))))==!!§[::]!!§[replacement-key:BW-ServerBLF,ui_argument=,ui_label=]">
+            <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOn)</ExtraIconType>
+          </If>
+          <Else>
+            <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOff)</ExtraIconType>
+          </Else>
+          <Url>phone://mb_nop#go_back&amp;set:fkey[$(var:cur_pkey)]=!!§[::]!!§[replacement-key:BW-ServerBLF,ui_argument=,ui_label=]</Url>
+        </MenuItem>
+        <If condition="$(show_feature:FEATURE_XMPP)">
+          <MenuItem name="$(lang:fkey_xmpp_presence)" sel="$(condition:$(get_cmd:$(set:$(key_setting:$(var:unit):$(var:key))))==!!§[::]!!§[replacement-key:XMPP-ContactPresence,ui_argument=,ui_label=])" sort_key="$(lang:fkey_xmpp_presence)">
+            <If condition="$(get_cmd:$(set:$(key_setting:$(var:unit):$(var:key))))==!!§[::]!!§[replacement-key:XMPP-ContactPresence,ui_argument=,ui_label=]">
+              <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOn)</ExtraIconType>
+            </If>
+            <Else>
+              <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOff)</ExtraIconType>
+            </Else>
+            <Url>phone://mb_nop#go_back&amp;set:fkey[$(var:cur_pkey)]=!!§[::]!!§[replacement-key:XMPP-ContactPresence,ui_argument=,ui_label=]</Url>
+          </MenuItem>
+        </If>
+        <MenuItem name="$(lang:F_ACD)" sel="$(condition:$(get_cmd:$(set:$(key_setting:$(var:unit):$(var:key))))==!!§[::]!!§[replacement-key:BW-ACD,ui_argument=,ui_label=])" sort_key="$(lang:F_ACD)">
+          <If condition="$(get_cmd:$(set:$(key_setting:$(var:unit):$(var:key))))==!!§[::]!!§[replacement-key:BW-ACD,ui_argument=,ui_label=]">
+            <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOn)</ExtraIconType>
+          </If>
+          <Else>
+            <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOff)</ExtraIconType>
+          </Else>
+          <Url>phone://mb_nop#go_back&amp;set:fkey[$(var:cur_pkey)]=!!§[::]!!§[replacement-key:BW-ACD,ui_argument=,ui_label=]</Url>
+        </MenuItem>
+        <MenuItem name="$(lang:xsi_anywhere)" sel="$(condition:$(get_cmd:$(set:$(key_setting:$(var:unit):$(var:key))))==!!§[::]!!§[replacement-key:BW-Anywhere,ui_argument=,ui_label=])" sort_key="$(lang:xsi_anywhere)">
+          <If condition="$(get_cmd:$(set:$(key_setting:$(var:unit):$(var:key))))==!!§[::]!!§[replacement-key:BW-Anywhere,ui_argument=,ui_label=]">
+            <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOn)</ExtraIconType>
+          </If>
+          <Else>
+            <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOff)</ExtraIconType>
+          </Else>
+          <Url>phone://mb_nop#go_back&amp;set:fkey[$(var:cur_pkey)]=!!§[::]!!§[replacement-key:BW-Anywhere,ui_argument=,ui_label=]</Url>
+        </MenuItem>
+        <If condition="$(set:xsi_remote_office[$(current_line)])==on">
+          <MenuItem name="$(lang:F_REMOTE_OFFICE_typeSio)" sel="$(condition:$(get_cmd:$(set:$(key_setting:$(var:unit):$(var:key))))==!!§[::]!!§[replacement-key:BW-RemoteOffice,ui_argument=,ui_label=$(lang:F_REMOTE_OFFICE_typeSio)])" sort_key="$(lang:F_REMOTE_OFFICE_typeSio)">
+            <If condition="$(get_cmd:$(set:$(key_setting:$(var:unit):$(var:key))))==!!§[::]!!§[replacement-key:BW-RemoteOffice,ui_argument=,ui_label=$(lang:F_REMOTE_OFFICE_typeSio)]">
+              <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOn)</ExtraIconType>
+            </If>
+            <Else>
+              <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOff)</ExtraIconType>
+            </Else>
+            <Url>phone://mb_nop#go_back&amp;set:fkey[$(var:cur_pkey)]=!!§[::]!!§[replacement-key:BW-RemoteOffice,ui_argument=,ui_label=$(lang:F_REMOTE_OFFICE_typeSio)]</Url>
+          </MenuItem>
+        </If>
+      </If>
+    </If>
+    <Else>
+      <If condition="$(set:user_server_type[$(set:fkey_context[$(var:cur_pkey)])])==broadsoft">
+        <MenuItem name="$(lang:fkey_contact_list_buddy)" sel="$(condition:$(get_cmd:$(set:$(key_setting:$(var:unit):$(var:key))))==!!§[::]!!§[replacement-key:BW-ServerBLF,ui_argument=,ui_label=])" sort_key="$(lang:fkey_contact_list_buddy)">
+          <If condition="$(get_cmd:$(set:$(key_setting:$(var:unit):$(var:key))))==!!§[::]!!§[replacement-key:BW-ServerBLF,ui_argument=,ui_label=]">
+            <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOn)</ExtraIconType>
+          </If>
+          <Else>
+            <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOff)</ExtraIconType>
+          </Else>
+          <Url>phone://mb_nop#go_back&amp;set:fkey[$(var:cur_pkey)]=!!§[::]!!§[replacement-key:BW-ServerBLF,ui_argument=,ui_label=]</Url>
+        </MenuItem>
+        <If condition="$(show_feature:FEATURE_XMPP)">
+          <MenuItem name="$(lang:fkey_xmpp_presence)" sel="$(condition:$(get_cmd:$(set:$(key_setting:$(var:unit):$(var:key))))==!!§[::]!!§[replacement-key:XMPP-ContactPresence,ui_argument=,ui_label=])" sort_key="$(lang:fkey_xmpp_presence)">
+            <If condition="$(get_cmd:$(set:$(key_setting:$(var:unit):$(var:key))))==!!§[::]!!§[replacement-key:XMPP-ContactPresence,ui_argument=,ui_label=]">
+              <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOn)</ExtraIconType>
+            </If>
+            <Else>
+              <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOff)</ExtraIconType>
+            </Else>
+            <Url>phone://mb_nop#go_back&amp;set:fkey[$(var:cur_pkey)]=!!§[::]!!§[replacement-key:XMPP-ContactPresence,ui_argument=,ui_label=]</Url>
+          </MenuItem>
+        </If>
+        <MenuItem name="$(lang:F_ACD)" sel="$(condition:$(get_cmd:$(set:$(key_setting:$(var:unit):$(var:key))))==!!§[::]!!§[replacement-key:BW-ACD,ui_argument=,ui_label=])" sort_key="$(lang:F_ACD)">
+          <If condition="$(get_cmd:$(set:$(key_setting:$(var:unit):$(var:key))))==!!§[::]!!§[replacement-key:BW-ACD,ui_argument=,ui_label=]">
+            <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOn)</ExtraIconType>
+          </If>
+          <Else>
+            <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOff)</ExtraIconType>
+          </Else>
+          <Url>phone://mb_nop#go_back&amp;set:fkey[$(var:cur_pkey)]=!!§[::]!!§[replacement-key:BW-ACD,ui_argument=,ui_label=]</Url>
+        </MenuItem>
+        <MenuItem name="$(lang:xsi_anywhere)" sel="$(condition:$(get_cmd:$(set:$(key_setting:$(var:unit):$(var:key))))==!!§[::]!!§[replacement-key:BW-Anywhere,ui_argument=,ui_label=])" sort_key="$(lang:xsi_anywhere)">
+          <If condition="$(get_cmd:$(set:$(key_setting:$(var:unit):$(var:key))))==!!§[::]!!§[replacement-key:BW-Anywhere,ui_argument=,ui_label=]">
+            <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOn)</ExtraIconType>
+          </If>
+          <Else>
+            <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOff)</ExtraIconType>
+          </Else>
+          <Url>phone://mb_nop#go_back&amp;set:fkey[$(var:cur_pkey)]=!!§[::]!!§[replacement-key:BW-Anywhere,ui_argument=,ui_label=]</Url>
+        </MenuItem>
+        <If condition="$(set:xsi_remote_office[$(set:fkey_context[$(var:cur_pkey)])])==on">
+          <MenuItem name="$(lang:F_REMOTE_OFFICE_typeSio)" sel="$(condition:$(get_cmd:$(set:$(key_setting:$(var:unit):$(var:key))))==!!§[::]!!§[replacement-key:BW-RemoteOffice,ui_argument=,ui_label=$(lang:F_REMOTE_OFFICE_typeSio)])" sort_key="$(lang:F_REMOTE_OFFICE_typeSio)">
+            <If condition="$(get_cmd:$(set:$(key_setting:$(var:unit):$(var:key))))==!!§[::]!!§[replacement-key:BW-RemoteOffice,ui_argument=,ui_label=$(lang:F_REMOTE_OFFICE_typeSio)]">
+              <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOn)</ExtraIconType>
+            </If>
+            <Else>
+              <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOff)</ExtraIconType>
+            </Else>
+            <Url>phone://mb_nop#go_back&amp;set:fkey[$(var:cur_pkey)]=!!§[::]!!§[replacement-key:BW-RemoteOffice,ui_argument=,ui_label=$(lang:F_REMOTE_OFFICE_typeSio)]</Url>
+          </MenuItem>
+        </If>
+      </If>
+    </Else>
+  </IPPhoneMenu>
+  <IPPhoneMenu dtmf="off" id="shortcuts" state="others_except_mb" sort="yes">
+    <Title>$(lang:choose_menu)</Title>
+    <IconSize>XXS</IconSize>
+    <Repeat value_key="$(settings_submenus)" token="|__NAME__|__URL__|">
+      <MenuItem name="__NAME__" sort_key="__NAME__">
+        <Url>file:///xml/gui/templates.xml#sub=*[@id="input_template"]&amp;var:input_pool_key=0&amp;var:input_displayname=$(lang:continuous_text_label)&amp;var:input_token=__Y__&amp;var:input_flags=AU&amp;var:input_default=__NAME__&amp;var:input_url=$(urlencode:phone://mb_nop%23go_back%26go_back%26go_back%26set:fkey_label[$(var:cur_pkey)]=__Y__)&amp;set:fkey[$(var:cur_pkey)]=menu_shortcut%20$(urlencode:$(urlencode:$(remove_callback_replacement:__URL__)))</Url>
+      </MenuItem>
+    </Repeat>
+  </IPPhoneMenu>
+  <IPPhoneMenu dtmf="off" id="line_key_settings" state="others_except_mb">
+    <Title>$(lang:enum_disp_func_key) $(math_eval:1+$(var:cur_pkey)) $(lang:menu_fkey_functions)</Title>
+    <IconSize>XXS</IconSize>
+    <If condition="$(bool_eval: $(bool_eval:$(show_feature:FEATURE_LABEL_DISPLAY) |
+                   $(condition:$(pkey_unit_name:$(var:unit))==$(lang:menu_fkeys_uxm) 1) |
+                   $(condition:$(pkey_unit_name:$(var:unit))==$(lang:menu_fkeys_uxm) 2) |
+                   $(condition:$(pkey_unit_name:$(var:unit))==$(lang:menu_fkeys_uxm) 3)) &amp;
+                   $(bool_eval: $(condition:$(get_cmd:$(set:$(key_setting:$(var:unit):$(var:key))))!=line)))">
+      <MenuItem name="$(lang:fkeys_ssi_icon)">
+        <If condition="$(set:$(var:KeyIconSetting))==">
+          <SubText>$(lang:default_icon)</SubText>
+        </If>
+        <ElIf condition="$(is_custom_icon:$(set:$(var:KeyIconSetting)))">
+          <SubText>$(lang:custom_icon)</SubText>
+        </ElIf>
+        <Else>
+          <SubText>$(set:$(var:KeyIconSetting))</SubText>
+        </Else>
+        <Url>file:///xml/gui/pkeys.xml#sub=*[@id="line_key_icons"]</Url>
+        <ExtraIconType>$(icon_type_enum:kIconTypeMenuArrowRight)</ExtraIconType>
+      </MenuItem>
+    </If>
+    <Menu name="$(lang:fkeys_ssi_context)" dtmf="off" id="context" state="others_except_mb">
+      <Title>$(lang:enum_disp_func_key) $(math_eval:1+$(var:cur_pkey)) $(lang:fkeys_ssi_context)</Title>
+      <If condition="$(set:fkey_context[$(var:cur_pkey)])==active">
+        <SubText>$(lang:fkeys_ssi_active)</SubText>
+      </If>
+      <Else>
+        <SubText>$(user_displayname:$(set:fkey_context[$(var:cur_pkey)]))</SubText>
+      </Else>
+      <MenuItem name="$(lang:fkeys_ssi_active)">
+        <Url>phone://mb_nop#go_back&amp;set:fkey_context[$(var:cur_pkey)]=active</Url>
+      </MenuItem>
+      <Repeat values="$(enum:$(max_registrations))" token="|__REG__|">
+        <If condition="$(is_set:$(user_displayname:__REG__))">
+          <MenuItem name="$(user_displayname:__REG__)" sel="$(condition:$(set:fkey_context[$(var:cur_pkey)])==__REG__)">
+            <Url>phone://mb_nop#go_back&amp;set:fkey_context[$(var:cur_pkey)]=__REG__</Url>
+          </MenuItem>
+        </If>
+      </Repeat>
+    </Menu>
+    <MenuItem name="$(lang:fkeys_ssi_type)">
+      <SubText>$(lang:$(get_langfile_entry_of_cmd:$(get_cmd:$(set:$(key_setting:$(var:unit):$(var:key))))))</SubText>
+      <Url>file:///xml/gui/pkeys.xml#sub=*[@id="functions"]</Url>
+      <ExtraIconType>$(icon_type_enum:kIconTypeMenuArrowRight)</ExtraIconType>
+    </MenuItem>
+    <If condition="$(bool_eval:$(condition:$(get_cmd:$(set:$(key_setting:$(var:unit):$(var:key))))!=line) &amp;
+                   $(condition:$(get_cmd:$(set:$(key_setting:$(var:unit):$(var:key))))!=auto_answer) &amp;
+                   $(condition:$(get_cmd:$(set:$(key_setting:$(var:unit):$(var:key))))!=mult) &amp;
+                   $(condition:$(get_cmd:$(set:$(key_setting:$(var:unit):$(var:key))))!=fkey_contact_list_buddy) &amp;
+                   $(condition:$(get_cmd:$(set:$(key_setting:$(var:unit):$(var:key))))!=F_ACD) &amp;
+                   $(condition:$(get_cmd:$(set:$(key_setting:$(var:unit):$(var:key))))!=xsi_anywhere) &amp;
+                   $(condition:$(get_cmd:$(set:$(key_setting:$(var:unit):$(var:key))))!=remote_office) &amp;
+                   $(condition:$(get_cmd:$(set:$(key_setting:$(var:unit):$(var:key))))!=xml) &amp;
+                   $(condition:$(get_cmd:$(set:$(key_setting:$(var:unit):$(var:key))))!=usbrec) &amp;
+                   $(condition:$(get_cmd:$(set:$(key_setting:$(var:unit):$(var:key))))!=none) &amp;
+                   $(condition:$(get_cmd:$(set:$(key_setting:$(var:unit):$(var:key))))!=call_center_status) &amp;
+                   $(condition:$(get_cmd:$(set:$(key_setting:$(var:unit):$(var:key))))!=smart_transfer))">
+      <MenuItem>
+        <If condition="$(get_cmd:$(set:$(key_setting:$(var:unit):$(var:key))))==keyevent">
+          <SubText>$(translate_keyevent:$(remove_cmd:$(set:$(key_setting:$(var:unit):$(var:key)))),$(var:cur_pkey))</SubText>
+        </If>
+        <Else>
+          <SubText>$(remove_cmd:$(set:$(key_setting:$(var:unit):$(var:key))))</SubText>
+        </Else>
+        <If Condition="$(get_cmd:$(set:$(key_setting:$(var:unit):$(var:key))))==speed">
+          <Name>$(lang:number_str)</Name>
+          <ExtraIconType>$(icon_type_enum:kIconTypeMenuArrowRight)</ExtraIconType>
+          <Url>file:///xml/gui/templates.xml#sub=*[@id="input_template"]&amp;var:input_pool_key=1&amp;var:input_displayname=$(lang:enum_disp_func_key)%20$(math_eval:1+$(var:cur_pkey))%20$(lang:F_SPEED_DIAL_typeSio)%20$(lang:number_str)&amp;var:input_token=__Y__&amp;var:input_flags=AN&amp;var:input_default=$(remove_cmd:$(set_fkey_replace:fkey[$(var:cur_pkey)]))&amp;var:input_url=$(urlencode:phone://mb_nop%23go_back%26set:fkey[$(var:cur_pkey)]=speed%20__Y__)</Url>
+        </If>
+        <ElIf Condition="$(get_cmd:$(set:$(key_setting:$(var:unit):$(var:key))))==orbit">
+          <Name>$(lang:menu_red_target)</Name>
+          <ExtraIconType>$(icon_type_enum:kIconTypeMenuArrowRight)</ExtraIconType>
+          <Url>file:///xml/gui/templates.xml#sub=*[@id="input_template"]&amp;var:input_pool_key=0&amp;var:input_displayname=$(lang:enum_disp_func_key)%20$(math_eval:1+$(var:cur_pkey))%20$(lang:F_PARK_typeSio)%20$(lang:menu_red_target)&amp;var:input_token=__Y__&amp;var:input_flags=AN&amp;var:input_default=$(remove_cmd:$(set_fkey_replace:fkey[$(var:cur_pkey)]))&amp;var:input_url=$(urlencode:phone://mb_nop%23go_back%26set:fkey[$(var:cur_pkey)]=orbit%20%24%5Bcreate_url:__Y__%5D%)</Url>
+        </ElIf>
+        <ElIf Condition="$(get_cmd:$(set:$(key_setting:$(var:unit):$(var:key))))==F_CALLPARK">
+          <Name>$(lang:menu_red_target)</Name>
+          <ExtraIconType>$(icon_type_enum:kIconTypeMenuArrowRight)</ExtraIconType>
+          <Url>file:///xml/gui/templates.xml#sub=*[@id="input_template"]&amp;var:input_pool_key=0&amp;var:input_displayname=$(lang:enum_disp_func_key)%20$(math_eval:1+$(var:cur_pkey))%20$(lang:F_CALL_PARK_typeSio)%20$(lang:menu_red_target)&amp;var:input_token=__Y__&amp;var:input_flags=AN&amp;var:input_default=$(remove_cmd:$(set_fkey_replace:fkey[$(var:cur_pkey)]))&amp;var:input_url=$(urlencode:phone://mb_nop%23go_back%26set:fkey[$(var:cur_pkey)]=F_CALLPARK%20%24%5Bcreate_url:__Y__%5D%)</Url>
+        </ElIf>
+        <ElIf Condition="$(get_cmd:$(set:$(key_setting:$(var:unit):$(var:key))))==F_DISP_CODE">
+          <Name>$(lang:menu_red_target)</Name>
+          <ExtraIconType>$(icon_type_enum:kIconTypeMenuArrowRight)</ExtraIconType>
+          <Url>file:///xml/gui/templates.xml#sub=*[@id="input_template"]&amp;var:input_pool_key=1&amp;var:input_displayname=$(lang:enum_disp_func_key)%20$(math_eval:1+$(var:cur_pkey))%20$(lang:F_DISP_CODE_typeSio)%20$(lang:menu_red_target)&amp;var:input_token=__Y__&amp;var:input_flags=AN&amp;var:input_default=$(remove_cmd:$(set_fkey_replace:fkey[$(var:cur_pkey)]))&amp;var:input_url=$(urlencode:phone://mb_nop%23go_back%26set:fkey[$(var:cur_pkey)]=F_DISP_CODE%20__Y__)</Url>
+        </ElIf>
+        <ElIf Condition="$(get_cmd:$(set:$(key_setting:$(var:unit):$(var:key))))==dest">
+          <Name>$(lang:number_str)</Name>
+          <ExtraIconType>$(icon_type_enum:kIconTypeMenuArrowRight)</ExtraIconType>
+          <Url>file:///xml/gui/templates.xml#sub=*[@id="input_template"]&amp;var:input_pool_key=1&amp;var:input_displayname=$(lang:enum_disp_func_key)%20$(math_eval:1+$(var:cur_pkey))%20$(lang:F_EXTENSION_typeSio)%20$(lang:number_str)&amp;var:input_token=__Y__&amp;var:input_flags=AN&amp;var:input_default=$(remove_cmd:$(set_fkey_replace:fkey[$(var:cur_pkey)]))&amp;var:input_url=$(urlencode:phone://mb_nop%23go_back%26set:fkey[$(var:cur_pkey)]=dest%20%24%5Bcreate_url:__Y__%5D)</Url>
+        </ElIf>
+        <ElIf Condition="$(get_cmd:$(set:$(key_setting:$(var:unit):$(var:key))))==blf">
+          <Name>$(lang:number_str)</Name>
+          <ExtraIconType>$(icon_type_enum:kIconTypeMenuArrowRight)</ExtraIconType>
+          <Url>file:///xml/gui/templates.xml#sub=*[@id="input_template"]&amp;var:input_pool_key=1&amp;var:input_displayname=$(lang:enum_disp_func_key)%20$(math_eval:1+$(var:cur_pkey))%20$(lang:F_BLF_short)%20$(lang:number_str)&amp;var:input_token=__Y__&amp;var:input_flags=AN&amp;var:input_default=$(remove_cmd:$(set_fkey_replace:fkey[$(var:cur_pkey)]))&amp;var:input_url=$(urlencode:phone://mb_nop%23go_back%26set:fkey[$(var:cur_pkey)]=blf%20%24%5Bcreate_url:__Y__%5D)</Url>
+        </ElIf>
+        <ElIf Condition="$(get_cmd:$(set:$(key_setting:$(var:unit):$(var:key))))==transfer">
+          <Name>$(lang:menu_red_target)</Name>
+          <ExtraIconType>$(icon_type_enum:kIconTypeMenuArrowRight)</ExtraIconType>
+          <Url>file:///xml/gui/templates.xml#sub=*[@id="input_template"]&amp;var:input_pool_key=1&amp;var:input_displayname=$(lang:enum_disp_func_key)%20$(math_eval:1+$(var:cur_pkey))%20$(lang:F_TRANSFER_typeSio)%20$(lang:menu_red_target)&amp;var:input_token=__Y__&amp;var:input_flags=AN&amp;var:input_default=$(remove_cmd:$(set_fkey_replace:fkey[$(var:cur_pkey)]))&amp;var:input_url=$(urlencode:phone://mb_nop%23go_back%26set:fkey[$(var:cur_pkey)]=transfer%20__Y__)</Url>
+        </ElIf>
+        <ElIf Condition="$(get_cmd:$(set:$(key_setting:$(var:unit):$(var:key))))==F_STARCODE">
+          <Name>$(lang:F_STARCODE)</Name>
+          <ExtraIconType>$(icon_type_enum:kIconTypeMenuArrowRight)</ExtraIconType>
+          <Url>file:///xml/gui/templates.xml#sub=*[@id="input_template"]&amp;var:input_pool_key=0&amp;var:input_displayname=$(lang:enum_disp_func_key)%20$(math_eval:1+$(var:cur_pkey))%20$(lang:F_STARCODE)&amp;var:input_token=__Y__&amp;var:input_flags=AN&amp;var:input_default=$(remove_cmd:$(set_fkey_replace:fkey[$(var:cur_pkey)]))&amp;var:input_url=$(urlencode:phone://mb_nop%23go_back%26set:fkey[$(var:cur_pkey)]=!!§[::]!!§[replacement-key:Starcode,ui_argument=__Y__,ui_label=])</Url>
+        </ElIf>
+        <ElIf Condition="$(get_cmd:$(set:$(key_setting:$(var:unit):$(var:key))))==recorder">
+          <Name>$(lang:linetype_url_short)</Name>
+          <ExtraIconType>$(icon_type_enum:kIconTypeMenuArrowRight)</ExtraIconType>
+          <Url>file:///xml/gui/templates.xml#sub=*[@id="input_template"]&amp;var:input_pool_key=0&amp;var:input_displayname=$(lang:enum_disp_func_key)%20$(math_eval:1+$(var:cur_pkey))%20$(lang:F_RECORDER_START)%20$(lang:linetype_url_short)&amp;var:input_token=__Y__&amp;var:input_flags=AN&amp;var:input_default=$(remove_cmd:$(set_fkey_replace:fkey[$(var:cur_pkey)]))&amp;var:input_url=$(urlencode:phone://mb_nop%23go_back%26set:fkey[$(var:cur_pkey)]=recorder%20%24%5Bcreate_url:__Y__%5D)</Url>
+        </ElIf>
+        <ElIf Condition="$(get_cmd:$(set:$(key_setting:$(var:unit):$(var:key))))==p2t">
+          <Name>$(lang:number_str)</Name>
+          <ExtraIconType>$(icon_type_enum:kIconTypeMenuArrowRight)</ExtraIconType>
+          <Url>file:///xml/gui/templates.xml#sub=*[@id="input_template"]&amp;var:input_pool_key=1&amp;var:input_displayname=$(lang:enum_disp_func_key)%20$(math_eval:1+$(var:cur_pkey))%20$(lang:F_PUSH_TO_TALK)%20$(lang:number_str)&amp;var:input_token=__Y__&amp;var:input_flags=AN&amp;var:input_default=$(remove_cmd:$(set_fkey_replace:fkey[$(var:cur_pkey)]))&amp;var:input_url=$(urlencode:phone://mb_nop%23go_back%26set:fkey[$(var:cur_pkey)]=p2t%20__Y__)</Url>
+        </ElIf>
+        <ElIf Condition="$(get_cmd:$(set:$(key_setting:$(var:unit):$(var:key))))==icom">
+          <Name>$(lang:number_str)</Name>
+          <ExtraIconType>$(icon_type_enum:kIconTypeMenuArrowRight)</ExtraIconType>
+          <Url>file:///xml/gui/templates.xml#sub=*[@id="input_template"]&amp;var:input_pool_key=1&amp;var:input_displayname=$(lang:enum_disp_func_key)%20$(math_eval:1+$(var:cur_pkey))%20$(lang:F_INTERCOM_typeSio)%20$(lang:number_str)&amp;var:input_token=__Y__&amp;var:input_flags=AN&amp;var:input_default=$(remove_cmd:$(set_fkey_replace:fkey[$(var:cur_pkey)]))&amp;var:input_url=$(urlencode:phone://mb_nop%23go_back%26set:fkey[$(var:cur_pkey)]=icom%20__Y__)</Url>
+        </ElIf>
+        <ElIf Condition="$(get_cmd:$(set:$(key_setting:$(var:unit):$(var:key))))==url">
+          <Name>$(lang:linetype_url_short)</Name>
+          <ExtraIconType>$(icon_type_enum:kIconTypeMenuArrowRight)</ExtraIconType>
+          <Url>file:///xml/gui/templates.xml#sub=*[@id="input_template"]&amp;var:input_pool_key=0&amp;var:input_displayname=$(lang:enum_disp_func_key)%20$(math_eval:1+$(var:cur_pkey))%20$(lang:linetype_url_short)&amp;var:input_token=__Y__&amp;var:input_flags=A&amp;var:input_default=$(remove_cmd:$(set_fkey_replace:fkey[$(var:cur_pkey)]))&amp;var:input_url=$(urlencode:phone://mb_nop%23go_back%26set:fkey[$(var:cur_pkey)]=url%20__Y__)</Url>
+        </ElIf>
+        <ElIf Condition="$(get_cmd:$(set:$(key_setting:$(var:unit):$(var:key))))==menu_shortcut">
+          <Name>$(lang:linetype_url_short)</Name>
+          <ExtraIconType>$(icon_type_enum:kIconTypeMenuArrowRight)</ExtraIconType>
+          <Url>file:///xml/gui/templates.xml#sub=*[@id="input_template"]&amp;var:input_pool_key=0&amp;var:input_displayname=$(lang:enum_disp_func_key)%20$(math_eval:1+$(var:cur_pkey))%20$(lang:linetype_url_short)&amp;var:input_token=__Y__&amp;var:input_flags=A&amp;var:input_default=$(remove_cmd:$(set_fkey_replace:fkey[$(var:cur_pkey)]))&amp;var:input_url=$(urlencode:phone://mb_nop%23go_back%26set:fkey[$(var:cur_pkey)]=menu_shortcut%20__Y__)</Url>
+        </ElIf>
+        <ElIf Condition="$(get_cmd:$(set:$(key_setting:$(var:unit):$(var:key))))==button">
+          <Name>$(lang:menu_red_target)</Name>
+          <ExtraIconType>$(icon_type_enum:kIconTypeMenuArrowRight)</ExtraIconType>
+          <Url>file:///xml/gui/templates.xml#sub=*[@id="input_template"]&amp;var:input_pool_key=0&amp;var:input_displayname=$(lang:enum_disp_func_key)%20$(math_eval:1+$(var:cur_pkey))%20$(lang:F_BUTTON)%20$(lang:menu_red_target)&amp;var:input_token=__Y__&amp;var:input_flags=AN&amp;var:input_default=$(remove_cmd:$(set_fkey_replace:fkey[$(var:cur_pkey)]))&amp;var:input_url=$(urlencode:phone://mb_nop%23go_back%26set:fkey[$(var:cur_pkey)]=button%20__Y__)</Url>
+        </ElIf>
+        <ElIf Condition="$(get_cmd:$(set:$(key_setting:$(var:unit):$(var:key))))==fkey_xmpp_presence">
+          <Name>$(lang:target_contact)</Name>
+          <ExtraIconType>$(icon_type_enum:kIconTypeMenuArrowRight)</ExtraIconType>
+          <Url>phone://mb_nop#var:linekey=$(var:cur_pkey)&amp;key=F_CONTACTS</Url>
+        </ElIf>
+        <ElIf Condition="$(get_cmd:$(set:$(key_setting:$(var:unit):$(var:key))))==conference">
+          <Name>$(lang:number_str)</Name>
+          <ExtraIconType>$(icon_type_enum:kIconTypeMenuArrowRight)</ExtraIconType>
+          <Url>file:///xml/gui/templates.xml#sub=*[@id="input_template"]&amp;var:input_pool_key=1&amp;var:input_displayname=$(lang:enum_disp_func_key)%20$(math_eval:1+$(var:cur_pkey))%20$(lang:F_CONFERENCE_typeSio)%20$(lang:number_str)&amp;var:input_token=__Y__&amp;var:input_flags=AN&amp;var:input_default=$(remove_cmd:$(set_fkey_replace:fkey[$(var:cur_pkey)]))&amp;var:input_url=$(urlencode:phone://mb_nop%23go_back%26set:fkey[$(var:cur_pkey)]=conference%20__Y__)</Url>
+        </ElIf>
+        <ElIf Condition="$(get_cmd:$(set:$(key_setting:$(var:unit):$(var:key))))==dtmf">
+          <Name>$(lang:number_str)</Name>
+          <ExtraIconType>$(icon_type_enum:kIconTypeMenuArrowRight)</ExtraIconType>
+          <Url>file:///xml/gui/templates.xml#sub=*[@id="input_template"]&amp;var:input_pool_key=0&amp;var:input_displayname=$(lang:enum_disp_func_key)%20$(math_eval:1+$(var:cur_pkey))%20$(lang:F_DTMF)%20$(lang:number_str)&amp;var:input_token=__Y__&amp;var:input_flags=AN&amp;var:input_default=$(remove_cmd:$(set_fkey_replace:fkey[$(var:cur_pkey)]))&amp;var:input_url=$(urlencode:phone://mb_nop%23go_back%26set:fkey[$(var:cur_pkey)]=dtmf%20__Y__)</Url>
+        </ElIf>
+        <ElIf Condition="$(get_cmd:$(set:$(key_setting:$(var:unit):$(var:key))))==ivr">
+          <Name>$(lang:number_str)</Name>
+          <ExtraIconType>$(icon_type_enum:kIconTypeMenuArrowRight)</ExtraIconType>
+          <Url>file:///xml/gui/templates.xml#sub=*[@id="input_template"]&amp;var:input_pool_key=0&amp;var:input_displayname=$(lang:enum_disp_func_key)%20$(math_eval:1+$(var:cur_pkey))%20$(lang:F_IVR)%20$(lang:number_str)&amp;var:input_token=__Y__&amp;var:input_flags=AN&amp;var:input_default=$(remove_cmd:$(set_fkey_replace:fkey[$(var:cur_pkey)]))&amp;var:input_url=$(urlencode:phone://mb_nop%23go_back%26set:fkey[$(var:cur_pkey)]=ivr%20__Y__)</Url>
+        </ElIf>
+        <ElIf Condition="$(get_cmd:$(set:$(key_setting:$(var:unit):$(var:key))))==redirect">
+          <Name>$(lang:number_str)</Name>
+          <ExtraIconType>$(icon_type_enum:kIconTypeMenuArrowRight)</ExtraIconType>
+          <Url>file:///xml/gui/templates.xml#sub=*[@id="input_template"]&amp;var:input_pool_key=1&amp;var:input_displayname=$(lang:enum_disp_func_key)%20$(math_eval:1+$(var:cur_pkey))%20$(lang:F_REDIRECT_typeSio)%20$(lang:number_str)&amp;var:input_token=__Y__&amp;var:input_flags=AN&amp;var:input_default=$(remove_cmd:$(set_fkey_replace:fkey[$(var:cur_pkey)]))&amp;var:input_url=$(urlencode:phone://mb_nop%23go_back%26set:fkey[$(var:cur_pkey)]=redirect%20__Y__)</Url>
+        </ElIf>
+        <ElIf Condition="$(get_cmd:$(set:$(key_setting:$(var:unit):$(var:key))))==presence">
+          <Name>$(lang:menu_red_target)</Name>
+          <ExtraIconType>$(icon_type_enum:kIconTypeMenuArrowRight)</ExtraIconType>
+          <Url>file:///xml/gui/templates.xml#sub=*[@id="input_template"]&amp;var:input_pool_key=1&amp;var:input_displayname=$(lang:enum_disp_func_key)%20$(math_eval:1+$(var:cur_pkey))%20$(lang:F_PRESENCE_typeSio)%20$(lang:menu_red_targett)&amp;var:input_token=__Y__&amp;var:input_flags=AN&amp;var:input_default=$(remove_cmd:$(set_fkey_replace:fkey[$(var:cur_pkey)]))&amp;var:input_url=$(urlencode:phone://mb_nop%23go_back%26set:fkey[$(var:cur_pkey)]=presence%20__Y__)</Url>
+        </ElIf>
+        <ElIf Condition="$(get_cmd:$(set:$(key_setting:$(var:unit):$(var:key))))==multicast">
+          <Name>$(lang:linetype_url_short)</Name>
+          <ExtraIconType>$(icon_type_enum:kIconTypeMenuArrowRight)</ExtraIconType>
+          <Url>file:///xml/gui/templates.xml#sub=*[@id="input_template"]&amp;var:input_pool_key=0&amp;var:input_displayname=$(lang:enum_disp_func_key)%20$(math_eval:1+$(var:cur_pkey))%20$(lang:F_MULTICAST_typeSio)%20$(lang:linetype_url_short)&amp;var:input_token=__Y__&amp;var:input_flags=AN&amp;var:input_default=$(remove_cmd:$(set_fkey_replace:fkey[$(var:cur_pkey)]))&amp;var:input_url=$(urlencode:phone://mb_nop%23go_back%26set:fkey[$(var:cur_pkey)]=multicast%20__Y__)</Url>
+        </ElIf>
+        <ElIf Condition="$(get_cmd:$(set:$(key_setting:$(var:unit):$(var:key))))==keyevent">
+          <Name>$(lang:enum_disp_func_key)</Name>
+          <ExtraIconType>$(icon_type_enum:kIconTypeMenuArrowRight)</ExtraIconType>
+          <Url>file:///xml/gui/pkeys.xml#sub=*[@id="key_events_line_keys"]</Url>
+        </ElIf>
+        <Else>
+          <Name>$(lang:unhandled_item)$(get_cmd:$(set:$(key_setting:$(var:unit):$(var:key))))</Name>
+          <Url>phone://mb_nop</Url>
+        </Else>
+      </MenuItem>
+    </If>
+    <If condition="$(condition:$(get_cmd:$(set:$(key_setting:$(var:unit):$(var:key))))!=xml)">
+    <If condition="$(bool_eval:$(condition:$(var:cur_pkey) &gt;= $(p_end)) | !$(show_feature:FEATURE_SMART_LABEL))">
+      <MenuItem name="$(lang:continuous_text_label)">
+        <SubText>$(set:fkey_label[$(var:cur_pkey)])</SubText>
+        <ExtraIconType>$(icon_type_enum:kIconTypeMenuArrowRight)</ExtraIconType>
+        <Url>file:///xml/gui/templates.xml#sub=*[@id="input_template"]&amp;var:input_pool_key=0&amp;var:input_displayname=$(lang:enum_disp_func_key)%20$(math_eval:1+$(var:cur_pkey))%20$(lang:continuous_text_label)&amp;var:input_token=__Y__&amp;var:input_flags=AU&amp;var:input_default=$(set:fkey_label[$(var:cur_pkey)])&amp;var:input_url=$(urlencode:"phone://mb_nop%23go_back%26set:fkey_label[$(var:cur_pkey)]=__Y__")</Url>
+      </MenuItem>
+    </If>
+    <Else>
+      <If condition="$(show_feature:FEATURE_STANDARD_SMART_LABEL)">
+        <MenuItem name="$(lang:continuous_text_label)">
+          <SubText>$(set:fkey_label[$(var:cur_pkey)])</SubText>
+          <ExtraIconType>$(icon_type_enum:kIconTypeMenuArrowRight)</ExtraIconType>
+          <Url>file:///xml/gui/templates.xml#sub=*[@id="input_template"]&amp;var:input_displayname=$(lang:enum_disp_func_key)%20$(math_eval:1+$(var:cur_pkey))%20$(lang:continuous_text_label)&amp;var:input_token=__Y__&amp;var:input_flags=AU&amp;var:input_default=$(set:fkey_label[$(var:cur_pkey)])&amp;var:input_url=$(urlencode:"phone://mb_nop%23go_back%26set:fkey_label[$(var:cur_pkey)]=__Y__")</Url>
+        </MenuItem>
+        <Menu name="$(lang:menu_label_mode)">
+          <If condition="$(show_feature:FEATURE_PUI_STYLE_SIO)">
+            <If condition="$(set:fkey_full_label_mode[$(var:cur_pkey)])==text">
+              <SubText>$(lang:smartlabel_mode_text)</SubText>
+            </If>
+            <Elif condition="$(set:fkey_full_label_mode[$(var:cur_pkey)])==icon_text">
+              <SubText>$(lang:smartlabel_mode_icon_text)</SubText>
+            </Elif>
+          </If>
+          <MenuItem name="$(lang:smartlabel_mode_text)"  sel="$(condition:$(set:fkey_full_label_mode[$(var:cur_pkey)])==text)">
+            <If condition="$(condition:$(set:fkey_full_label_mode[$(var:cur_pkey)])==text)">
+              <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOn)</ExtraIconType>
+            </If>
+            <Else>
+              <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOff)</ExtraIconType>
+            </Else>
+            <Url>phone://mb_nop#go_back&amp;set:fkey_full_label_mode[$(var:cur_pkey)]=text</Url>
+          </MenuItem>
+          <MenuItem name="$(lang:smartlabel_mode_icon_text)"  sel="$(condition:$(set:fkey_full_label_mode[$(var:cur_pkey)])==icon_text)">
+            <If condition="$(condition:$(set:fkey_full_label_mode[$(var:cur_pkey)])==icon_text)">
+              <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOn)</ExtraIconType>
+            </If>
+            <Else>
+              <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOff)</ExtraIconType>
+            </Else>
+            <Url>phone://mb_nop#go_back&amp;set:fkey_full_label_mode[$(var:cur_pkey)]=icon_text</Url>
+          </MenuItem>
+        </Menu>
+      </If>
+      <Else>
+        <MenuItem name="$(lang:menu_short_label)">
+          <SubText>$(set:fkey_short_label[$(var:cur_pkey)])</SubText>
+          <ExtraIconType>$(icon_type_enum:kIconTypeMenuArrowRight)</ExtraIconType>
+          <Url>file:///xml/gui/templates.xml#sub=*[@id="input_template"]&amp;var:input_displayname=$(lang:enum_disp_func_key)%20$(math_eval:1+$(var:cur_pkey))%20$(lang:menu_short_label)&amp;var:input_token=__Y__&amp;var:input_flags=AU&amp;var:input_default=$(set:fkey_short_label[$(var:cur_pkey)])&amp;var:input_url=$(urlencode:"phone://mb_nop%23go_back%26set:fkey_short_label[$(var:cur_pkey)]=__Y__")</Url>
+        </MenuItem>
+        <Menu name="$(lang:menu_short_label_mode)">
+          <If condition="$(show_feature:FEATURE_PUI_STYLE_SIO)">
+            <If condition="$(set:fkey_short_label_mode[$(var:cur_pkey)])==icon">
+              <SubText>$(lang:short_label_mode_icon)</SubText>
+            </If>
+            <Elif condition="$(set:fkey_short_label_mode[$(var:cur_pkey)])==text">
+              <SubText>$(lang:smartlabel_mode_text)</SubText>
+            </Elif>
+            <Elif condition="$(set:fkey_short_label_mode[$(var:cur_pkey)])==icon_text">
+              <SubText>$(lang:smartlabel_mode_icon_text)</SubText>
+            </Elif>
+          </If>
+          <MenuItem name="$(lang:short_label_mode_icon)">
+            <If condition="$(condition:$(set:fkey_short_label_mode[$(var:cur_pkey)])==icon)">
+              <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOn)</ExtraIconType>
+            </If>
+            <Else>
+              <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOff)</ExtraIconType>
+            </Else>
+            <Url>phone://mb_nop#go_back&amp;set:fkey_short_label_mode[$(var:cur_pkey)]=icon</Url>
+          </MenuItem>
+          <MenuItem name="$(lang:smartlabel_mode_text)"  sel="$(condition:$(set:fkey_short_label_mode[$(var:cur_pkey)])==text)">
+            <If condition="$(condition:$(set:fkey_short_label_mode[$(var:cur_pkey)])==text)">
+              <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOn)</ExtraIconType>
+            </If>
+            <Else>
+              <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOff)</ExtraIconType>
+            </Else>
+            <Url>phone://mb_nop#go_back&amp;set:fkey_short_label_mode[$(var:cur_pkey)]=text</Url>
+          </MenuItem>
+          <MenuItem name="$(lang:smartlabel_mode_icon_text)"  sel="$(condition:$(set:fkey_short_label_mode[$(var:cur_pkey)])==icon_text)">
+            <If condition="$(condition:$(set:fkey_short_label_mode[$(var:cur_pkey)])==icon_text)">
+              <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOn)</ExtraIconType>
+            </If>
+            <Else>
+              <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOff)</ExtraIconType>
+            </Else>
+            <Url>phone://mb_nop#go_back&amp;set:fkey_short_label_mode[$(var:cur_pkey)]=icon_text</Url>
+          </MenuItem>
+        </Menu>
+        <MenuItem name="$(lang:menu_full_label)">
+          <SubText>$(set:fkey_label[$(var:cur_pkey)])</SubText>
+          <ExtraIconType>$(icon_type_enum:kIconTypeMenuArrowRight)</ExtraIconType>
+          <Url>file:///xml/gui/templates.xml#sub=*[@id="input_template"]&amp;var:input_displayname=$(lang:enum_disp_func_key)%20$(math_eval:1+$(var:cur_pkey))%20$(lang:menu_full_label)&amp;var:input_token=__Y__&amp;var:input_flags=AU&amp;var:input_default=$(set:fkey_label[$(var:cur_pkey)])&amp;var:input_url=$(urlencode:"phone://mb_nop%23go_back%26set:fkey_label[$(var:cur_pkey)]=__Y__")</Url>
+        </MenuItem>
+        <Menu name="$(lang:menu_full_label_mode)">
+          <If condition="$(show_feature:FEATURE_PUI_STYLE_SIO)">
+            <If condition="$(set:fkey_full_label_mode[$(var:cur_pkey)])==text">
+              <SubText>$(lang:smartlabel_mode_text)</SubText>
+            </If>
+            <Elif condition="$(set:fkey_full_label_mode[$(var:cur_pkey)])==icon_text">
+              <SubText>$(lang:smartlabel_mode_icon_text)</SubText>
+            </Elif>
+          </If>
+          <MenuItem name="$(lang:smartlabel_mode_text)"  sel="$(condition:$(set:fkey_full_label_mode[$(var:cur_pkey)])==text)">
+            <If condition="$(condition:$(set:fkey_full_label_mode[$(var:cur_pkey)])==text)">
+              <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOn)</ExtraIconType>
+            </If>
+            <Else>
+              <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOff)</ExtraIconType>
+            </Else>
+            <Url>phone://mb_nop#go_back&amp;set:fkey_full_label_mode[$(var:cur_pkey)]=text</Url>
+          </MenuItem>
+          <MenuItem name="$(lang:smartlabel_mode_icon_text)"  sel="$(condition:$(set:fkey_full_label_mode[$(var:cur_pkey)])==icon_text)">
+            <If condition="$(condition:$(set:fkey_full_label_mode[$(var:cur_pkey)])==icon_text)">
+              <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOn)</ExtraIconType>
+            </If>
+            <Else>
+              <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOff)</ExtraIconType>
+            </Else>
+            <Url>phone://mb_nop#go_back&amp;set:fkey_full_label_mode[$(var:cur_pkey)]=icon_text</Url>
+          </MenuItem>
+        </Menu>
+      </Else>
+    </Else>
+    </If>
+    <MenuItem name="$(lang:fkey_longpress_support)" id="fkey_longpress_support">
+      <If condition="$(bool_eval:$(set:fkey_longpress[$(var:cur_pkey)]))">
+        <ExtraIconType>$(icon_type_enum:kIconTypeMenuSliderOn)</ExtraIconType>
+      </If>
+      <Else>
+        <ExtraIconType>$(icon_type_enum:kIconTypeMenuSliderOff)</ExtraIconType>
+      </Else>
+      <If condition="$(show_feature:FEATURE_PUI_STYLE_SIO)">
+        <SubText>$(lang:$(set:fkey_longpress[$(var:cur_pkey)]))</SubText>
+      </If>
+      <Url>phone://mb_nop#toggleset:fkey_longpress[$(var:cur_pkey)]</Url>
+    </MenuItem>
+  </IPPhoneMenu>
+  <IPPhoneMenu icon_xoffset="11" text_xoffset="9" dtmf="off" id="line_key_icons" speedselect="off" state="others_except_mb" sort="yes">
+    <Title>$(lang:enum_disp_func_key) $(var:keyname) $(lang:fkeys_ssi_icon)</Title>
+    <IconSize>XXS</IconSize>
+    <MenuItem name="$(lang:default_icon)" sel="$(condition:$(set:$(var:KeyIconSetting))==)" sort_key="$(lang:default_icon)">
+      <If condition="$(show_feature:FEATURE_PUI_STYLE_SIO)">
+        <Image>$(context_sensitive_key_default_icon:$(var:keyname))</Image>
+      </If>
+      <Else>
+        <Icon>$(context_sensitive_key_default_icon:$(var:keyname))</Icon>
+      </Else>
+      <If condition="$(set:$(var:KeyIconSetting))==">
+        <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOn)</ExtraIconType>
+      </If>
+      <Else>
+        <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOff)</ExtraIconType>
+      </Else>
+      <Url>phone://mb_nop#go_back&amp;set:$(var:KeyIconSetting)=</Url>
+    </MenuItem>
+    <MenuItem name="$(lang:custom_icon)" sel="$(is_custom_icon:$(set:$(var:KeyIconSetting)))" sort_key="$(lang:custom_icon)">
+      <If condition="$(is_custom_icon:$(set:$(var:KeyIconSetting)))">
+        <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOn)</ExtraIconType>
+      </If>
+      <Else>
+        <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOff)</ExtraIconType>
+      </Else>
+    </MenuItem>
+    <Repeat values="$(enum:$(max_icon_type_enum))" token="|__INDEX__|">
+      <If condition="$(is_icon_valid_for_this_fkey_id:__INDEX__)">
+        <MenuItem name="$(get_icon_type_enum_string_by_index:__INDEX__)" sel="$(condition:$(set:$(var:KeyIconSetting))==$(get_icon_type_enum_string_by_index:__INDEX__))" sort_key="$(get_icon_type_enum_string_by_index:__INDEX__)">
+          <If condition="$(show_feature:FEATURE_PUI_STYLE_SIO)">
+            <Image>$(context_sensitive_key_icon:__INDEX__)</Image>
+          </If>
+          <Else>
+            <Icon>$(context_sensitive_key_icon:__INDEX__)</Icon>
+          </Else>
+          <If condition="$(set:$(var:KeyIconSetting))==$(get_icon_type_enum_string_by_index:__INDEX__)">
+            <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOn)</ExtraIconType>
+          </If>
+          <Else>
+            <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOff)</ExtraIconType>
+          </Else>
+          <Url>phone://mb_nop#go_back&amp;set:$(var:KeyIconSetting)=$(get_icon_type_enum_string_by_index:__INDEX__)</Url>
+        </MenuItem>
+      </If>
+    </Repeat>
+  </IPPhoneMenu>
+  <IPPhoneMenu dtmf="off" id="fdp_key_settings" state="others_except_mb">
+    <IconSize>XXS</IconSize>
+    <If condition="$(is_context_sensitive_key:$(var:unit))">
+      <Title>$(lang:enum_disp_func_key) $(var:keyname) $(lang:menu_fkey_functions)</Title>
+    </If>
+    <Else>
+      <Title>$(lang:menu_fkey_functions) $(lang:$(var:keyname))</Title>
+    </Else>
+    <If condition="$(is_context_sensitive_key:$(var:unit))">
+      <MenuItem name="$(lang:fkeys_ssi_icon)">
+        <If condition="$(set:$(var:KeyIconSetting))==">
+          <SubText>$(lang:default_icon)</SubText>
+        </If>
+        <ElIf condition="$(is_custom_icon:$(set:$(var:KeyIconSetting)))">
+          <SubText>$(lang:custom_icon)</SubText>
+        </ElIf>
+        <Else>
+          <SubText>$(set:$(var:KeyIconSetting))</SubText>
+        </Else>
+        <Url>file:///xml/gui/pkeys.xml#sub=*[@id="context_sensitive_key_icons"]</Url>
+        <ExtraIconType>$(icon_type_enum:kIconTypeMenuArrowRight)</ExtraIconType>
+      </MenuItem>
+    </If>
+    <MenuItem name="$(lang:fkeys_ssi_type)">
+      <SubText>$(lang:$(get_langfile_entry_of_cmd:$(get_cmd:$(set:$(var:keysetting)))))</SubText>
+      <If condition="$(is_context_sensitive_key:$(var:unit))">
+        <Url>file:///xml/gui/pkeys.xml#sub=*[@id="context_sensitive_keys"]</Url>
+      </If>
+      <Else>
+        <Url>file:///xml/gui/pkeys.xml#sub=*[@id="dkeys"]</Url>
+      </Else>
+      <ExtraIconType>$(icon_type_enum:kIconTypeMenuArrowRight)</ExtraIconType>
+    </MenuItem>
+    <If Condition="$(bool_eval:$(condition:$(get_cmd:$(set:$(var:keysetting)))!=line) &amp;
+                   $(condition:$(get_cmd:$(set:$(var:keysetting)))!=auto_answer) &amp;
+                   $(condition:$(get_cmd:$(set:$(var:keysetting)))!=mult) &amp;
+                   $(condition:$(get_cmd:$(set:$(var:keysetting)))!=fkey_contact_list_buddy) &amp;
+                   $(condition:$(get_cmd:$(set:$(var:keysetting)))!=fkey_xmpp_presence) &amp;
+                   $(condition:$(get_cmd:$(set:$(var:keysetting)))!=xsi_anywhere) &amp;
+                   $(condition:$(get_cmd:$(set:$(var:keysetting)))!=xml) &amp;
+                   $(condition:$(get_cmd:$(set:$(var:keysetting)))!=remote_office))">
+      <MenuItem>
+        <If condition="$(get_cmd:$(set:$(var:keysetting)))==keyevent">
+          <SubText>$(translate_keyevent:$(remove_cmd:$(set:$(var:keysetting))))</SubText>
+        </If>
+        <Else>
+          <SubText>$(remove_cmd:$(set:$(var:keysetting)))</SubText>
+        </Else>
+        <If condition="!$(is_context_sensitive_key:$(var:unit))">
+          <IconType>$(key_icon_type:$(var:unit):$(var:key))</IconType>
+        </If>
+        <If Condition="$(get_cmd:$(set:$(var:keysetting)))==F_ACD">
+          <Name>$(lang:number_str)</Name>
+          <ExtraIconType>$(icon_type_enum:kIconTypeMenuArrowRight)</ExtraIconType>
+          <Url>file:///xml/gui/templates.xml#sub=*[@id="input_template"]&amp;var:input_pool_key=1&amp;var:input_displayname=$(lang:enum_disp_func_key)%20$(var:keyname)%20$(lang:F_ACD)%20$(lang:number_str)&amp;var:input_token=__Y__&amp;var:input_flags=AN&amp;var:input_default=$(remove_cmd:$(set:$(var:keysetting)))&amp;var:input_url=$(urlencode:phone://mb_nop%23go_back%26set:$(var:keysetting)=!!§[::]!!§[replacement-key:BW-ACD,ui_argument=__Y__,ui_label=])</Url>
+        </If>
+        <If Condition="$(get_cmd:$(set:$(var:keysetting)))==speed">
+          <Name>$(lang:number_str)</Name>
+          <ExtraIconType>$(icon_type_enum:kIconTypeMenuArrowRight)</ExtraIconType>
+          <If condition="$(is_context_sensitive_key:$(var:unit))">
+            <Url>file:///xml/gui/templates.xml#sub=*[@id="input_template"]&amp;var:input_pool_key=1&amp;var:input_displayname=$(lang:enum_disp_func_key)%20$(var:keyname)%20$(lang:F_SPEED_DIAL_typeSio)%20$(lang:number_str)&amp;var:input_token=__Y__&amp;var:input_flags=AN&amp;var:input_default=$(remove_cmd:$(set:$(var:keysetting)))&amp;var:input_url=$(urlencode:phone://mb_nop%23go_back%26set:$(var:keysetting)=speed%20__Y__)</Url>
+          </If>
+          <Else>
+            <Url>file:///xml/gui/templates.xml#sub=*[@id="input_template"]&amp;var:input_pool_key=1&amp;var:input_displayname=$(lang:$(var:keyname))%20$(lang:F_SPEED_DIAL_typeSio)%20$(lang:number_str)&amp;var:input_token=__Y__&amp;var:input_flags=AN&amp;var:input_default=$(remove_cmd:$(set:$(var:keysetting)))&amp;var:input_url=$(urlencode:phone://mb_nop%23go_back%26set:$(var:keysetting)=speed%20__Y__)</Url>
+          </Else>
+        </If>
+        <ElIf Condition="$(get_cmd:$(set:$(var:keysetting)))==orbit">
+          <Name>$(lang:menu_red_target)</Name>
+          <ExtraIconType>$(icon_type_enum:kIconTypeMenuArrowRight)</ExtraIconType>
+          <Url>file:///xml/gui/templates.xml#sub=*[@id="input_template"]&amp;var:input_pool_key=0&amp;var:input_displayname=$(lang:$(var:keyname))%20$(lang:F_PARK_typeSio)%20$(lang:menu_red_target)&amp;var:input_token=__Y__&amp;var:input_flags=AN&amp;var:input_default=$(remove_cmd:$(set:$(var:keysetting)))&amp;var:input_url=$(urlencode:phone://mb_nop%23go_back%26set:$(var:keysetting)=orbit%20%24%5Bcreate_url:__Y__%5D%)</Url>
+        </ElIf>
+        <ElIf Condition="$(get_cmd:$(set:$(var:keysetting)))==F_CALLPARK">
+          <Name>$(lang:call_parked_on)</Name>
+          <ExtraIconType>$(icon_type_enum:kIconTypeMenuArrowRight)</ExtraIconType>
+          <Url>file:///xml/gui/templates.xml#sub=*[@id="input_template"]&amp;var:input_pool_key=0&amp;var:input_displayname=$(lang:$(var:keyname))%20$(lang:F_CALL_PARK_typeSio)%20$(lang:call_parked_on)&amp;var:input_token=__Y__&amp;var:input_flags=AN&amp;var:input_default=$(remove_cmd:$(set:$(var:keysetting)))&amp;var:input_url=$(urlencode:phone://mb_nop%23go_back%26set:$(var:keysetting)=F_CALLPARK%20%24%5Bcreate_url:__Y__%5D%)</Url>
+        </ElIf>
+        <ElIf Condition="$(get_cmd:$(set:$(var:keysetting)))==F_DISP_CODE">
+          <Name>$(lang:menu_red_target)</Name>
+          <ExtraIconType>$(icon_type_enum:kIconTypeMenuArrowRight)</ExtraIconType>
+          <Url>file:///xml/gui/templates.xml#sub=*[@id="input_template"]&amp;var:input_pool_key=1&amp;var:input_displayname=$(lang:$(var:keyname))%20$(lang:F_DISP_CODE_typeSio)%20$(lang:menu_red_target)&amp;var:input_token=__Y__&amp;var:input_flags=AN&amp;var:input_default=$(remove_cmd:$(set:$(var:keysetting)))&amp;var:input_url=$(urlencode:phone://mb_nop%23go_back%26set:$(var:keysetting)=F_DISP_CODE%20__Y__)</Url>
+        </ElIf>
+        <ElIf Condition="$(get_cmd:$(set:$(var:keysetting)))==dest">
+          <Name>$(lang:number_str)</Name>
+          <ExtraIconType>$(icon_type_enum:kIconTypeMenuArrowRight)</ExtraIconType>
+          <Url>file:///xml/gui/templates.xml#sub=*[@id="input_template"]&amp;var:input_pool_key=1&amp;var:input_displayname=$(lang:$(var:keyname))%20$(lang:F_EXTENSION_typeSio)%20$(lang:number_str)&amp;var:input_token=__Y__&amp;var:input_flags=AN&amp;var:input_default=$(remove_cmd:$(set:$(var:keysetting)))&amp;var:input_url=$(urlencode:phone://mb_nop%23go_back%26set:$(var:keysetting)=dest%20%24%5Bcreate_url:__Y__%5D)</Url>
+        </ElIf>
+        <ElIf Condition="$(get_cmd:$(set:$(var:keysetting)))==blf">
+          <Name>$(lang:number_str)</Name>
+          <ExtraIconType>$(icon_type_enum:kIconTypeMenuArrowRight)</ExtraIconType>
+          <Url>file:///xml/gui/templates.xml#sub=*[@id="input_template"]&amp;var:input_pool_key=1&amp;var:input_displayname=$(lang:$(var:keyname))%20$(lang:F_BLF_short)%20$(lang:number_str)&amp;var:input_token=__Y__&amp;var:input_flags=AN&amp;var:input_default=$(remove_cmd:$(set:$(var:keysetting)))&amp;var:input_url=$(urlencode:phone://mb_nop%23go_back%26set:$(var:keysetting)=blf%20%24%5Bcreate_url:__Y__%5D)</Url>
+        </ElIf>
+        <ElIf Condition="$(get_cmd:$(set:$(var:keysetting)))==transfer">
+          <Name>$(lang:menu_red_target)</Name>
+          <ExtraIconType>$(icon_type_enum:kIconTypeMenuArrowRight)</ExtraIconType>
+          <Url>file:///xml/gui/templates.xml#sub=*[@id="input_template"]&amp;var:input_pool_key=1&amp;var:input_displayname=$(lang:$(var:keyname))%20$(lang:F_TRANSFER_typeSio)%20$(lang:menu_red_target)&amp;var:input_token=__Y__&amp;var:input_flags=AN&amp;var:input_default=$(remove_cmd:$(set:$(var:keysetting)))&amp;var:input_url=$(urlencode:phone://mb_nop%23go_back%26set:$(var:keysetting)=transfer%20__Y__)</Url>
+        </ElIf>
+        <ElIf Condition="$(get_cmd:$(set:$(var:keysetting)))==F_STARCODE">
+          <Name>$(lang:F_STARCODE)</Name>
+          <ExtraIconType>$(icon_type_enum:kIconTypeMenuArrowRight)</ExtraIconType>
+          <Url>file:///xml/gui/templates.xml#sub=*[@id="input_template"]&amp;var:input_pool_key=0&amp;var:input_displayname=$(lang:$(var:keyname))%20$(lang:F_STARCODE)&amp;var:input_token=__Y__&amp;var:input_flags=AN&amp;var:input_default=$(remove_cmd:$(set:$(var:keysetting)))&amp;var:input_url=$(urlencode:phone://mb_nop%23go_back%26set:$(var:keysetting)=!!§[::]!!§[replacement-key:Starcode,ui_argument=__Y__,ui_label=])</Url>
+        </ElIf>
+        <ElIf Condition="$(get_cmd:$(set:$(var:keysetting)))==recorder">
+          <Name>$(lang:linetype_url_short)</Name>
+          <ExtraIconType>$(icon_type_enum:kIconTypeMenuArrowRight)</ExtraIconType>
+          <Url>file:///xml/gui/templates.xml#sub=*[@id="input_template"]&amp;var:input_pool_key=0&amp;var:input_displayname=$(lang:$(var:keyname))%20$(lang:F_RECORDER_START)%20$(lang:linetype_url_short)&amp;var:input_token=__Y__&amp;var:input_flags=AN&amp;var:input_default=$(remove_cmd:$(set:$(var:keysetting)))&amp;var:input_url=$(urlencode:phone://mb_nop%23go_back%26set:$(var:keysetting)=recorder%20%24%5Bcreate_url:__Y__%5D)</Url>
+        </ElIf>
+        <ElIf Condition="$(get_cmd:$(set:$(var:keysetting)))==p2t">
+          <Name>$(lang:number_str)</Name>
+          <ExtraIconType>$(icon_type_enum:kIconTypeMenuArrowRight)</ExtraIconType>
+          <Url>file:///xml/gui/templates.xml#sub=*[@id="input_template"]&amp;var:input_pool_key=1&amp;var:input_displayname=$(lang:$(var:keyname))%20$(lang:F_PUSH_TO_TALK)%20$(lang:number_str)&amp;var:input_token=__Y__&amp;var:input_flags=AN&amp;var:input_default=$(remove_cmd:$(set:$(var:keysetting)))&amp;var:input_url=$(urlencode:phone://mb_nop%23go_back%26set:$(var:keysetting)=p2t%20__Y__)</Url>
+        </ElIf>
+        <ElIf Condition="$(get_cmd:$(set:$(var:keysetting)))==icom">
+          <Name>$(lang:number_str)</Name>
+          <ExtraIconType>$(icon_type_enum:kIconTypeMenuArrowRight)</ExtraIconType>
+          <Url>file:///xml/gui/templates.xml#sub=*[@id="input_template"]&amp;var:input_pool_key=1&amp;var:input_displayname=$(lang:$(var:keyname))%20$(lang:F_INTERCOM_typeSio)%20$(lang:number_str)&amp;var:input_token=__Y__&amp;var:input_flags=AN&amp;var:input_default=$(remove_cmd:$(set:$(var:keysetting)))&amp;var:input_url=$(urlencode:phone://mb_nop%23go_back%26set:$(var:keysetting)=icom%20__Y__)</Url>
+        </ElIf>
+        <ElIf Condition="$(get_cmd:$(set:$(var:keysetting)))==url">
+          <Name>$(lang:linetype_url_short)</Name>
+          <ExtraIconType>$(icon_type_enum:kIconTypeMenuArrowRight)</ExtraIconType>
+          <Url>file:///xml/gui/templates.xml#sub=*[@id="input_template"]&amp;var:input_pool_key=0&amp;var:input_displayname=$(lang:$(var:keyname))%20$(lang:F_ACTION_URL_smartlabel)&amp;var:input_token=__Y__&amp;var:input_flags=A&amp;var:input_default=$(remove_cmd:$(set:$(var:keysetting)))&amp;var:input_url=$(urlencode:phone://mb_nop%23go_back%26set:$(var:keysetting)=url%20__Y__)</Url>
+        </ElIf>
+        <ElIf Condition="$(get_cmd:$(set:$(var:keysetting)))==button">
+          <Name>$(lang:menu_red_target)</Name>
+          <ExtraIconType>$(icon_type_enum:kIconTypeMenuArrowRight)</ExtraIconType>
+          <Url>file:///xml/gui/templates.xml#sub=*[@id="input_template"]&amp;var:input_pool_key=0&amp;var:input_displayname=$(lang:$(var:keyname))%20$(lang:F_BUTTON)%20$(lang:menu_red_target)&amp;var:input_token=__Y__&amp;var:input_flags=AN&amp;var:input_default=$(remove_cmd:$(set:$(var:keysetting)))&amp;var:input_url=$(urlencode:phone://mb_nop%23go_back%26set:$(var:keysetting)=button%20__Y__)</Url>
+        </ElIf>
+        <ElIf Condition="$(get_cmd:$(set:$(var:keysetting)))==conference">
+          <Name>$(lang:number_str)</Name>
+          <ExtraIconType>$(icon_type_enum:kIconTypeMenuArrowRight)</ExtraIconType>
+          <Url>file:///xml/gui/templates.xml#sub=*[@id="input_template"]&amp;var:input_pool_key=1&amp;var:input_displayname=$(lang:$(var:keyname))%20$(lang:F_CONFERENCE_typeSio)%20$(lang:number_str)&amp;var:input_token=__Y__&amp;var:input_flags=AN&amp;var:input_default=$(remove_cmd:$(set:$(var:keysetting)))&amp;var:input_url=$(urlencode:phone://mb_nop%23go_back%26set:$(var:keysetting)=conference%20__Y__)</Url>
+        </ElIf>
+        <ElIf Condition="$(get_cmd:$(set:$(var:keysetting)))==keyevent">
+          <Name>$(lang:enum_disp_func_key)</Name>
+          <ExtraIconType>$(icon_type_enum:kIconTypeMenuArrowRight)</ExtraIconType>
+          <Url>file:///xml/gui/pkeys.xml#sub=*[@id="key_events"]</Url>
+        </ElIf>
+        <ElIf Condition="$(get_cmd:$(set:$(var:keysetting)))==dtmf">
+          <Name>$(lang:number_str)</Name>
+          <ExtraIconType>$(icon_type_enum:kIconTypeMenuArrowRight)</ExtraIconType>
+          <Url>file:///xml/gui/templates.xml#sub=*[@id="input_template"]&amp;var:input_pool_key=0&amp;var:input_displayname=$(lang:$(var:keyname))%20$(lang:F_DTMF)%20$(lang:number_str)&amp;var:input_token=__Y__&amp;var:input_flags=AN&amp;var:input_default=$(remove_cmd:$(set:$(var:keysetting)))&amp;var:input_url=$(urlencode:phone://mb_nop%23go_back%26set:$(var:keysetting)=dtmf%20__Y__)</Url>
+        </ElIf>
+        <ElIf Condition="$(get_cmd:$(set:$(var:keysetting)))==ivr">
+          <Name>$(lang:number_str)</Name>
+          <ExtraIconType>$(icon_type_enum:kIconTypeMenuArrowRight)</ExtraIconType>
+          <Url>file:///xml/gui/templates.xml#sub=*[@id="input_template"]&amp;var:input_pool_key=0&amp;var:input_displayname=$(lang:$(var:keyname))%20$(lang:F_IVR)%20$(lang:number_str)&amp;var:input_token=__Y__&amp;var:input_flags=AN&amp;var:input_default=$(remove_cmd:$(set:$(var:keysetting)))&amp;var:input_url=$(urlencode:phone://mb_nop%23go_back%26set:$(var:keysetting)=ivr%20__Y__)</Url>
+        </ElIf>
+        <ElIf Condition="$(get_cmd:$(set:$(var:keysetting)))==redirect">
+          <Name>$(lang:number_str)</Name>
+          <ExtraIconType>$(icon_type_enum:kIconTypeMenuArrowRight)</ExtraIconType>
+          <Url>file:///xml/gui/templates.xml#sub=*[@id="input_template"]&amp;var:input_pool_key=1&amp;var:input_displayname=$(lang:$(var:keyname))%20$(lang:F_REDIRECT_typeSio)%20$(lang:number_str)&amp;var:input_token=__Y__&amp;var:input_flags=AN&amp;var:input_default=$(remove_cmd:$(set:$(var:keysetting)))&amp;var:input_url=$(urlencode:phone://mb_nop%23go_back%26set:$(var:keysetting)=redirect%20__Y__)</Url>
+        </ElIf>
+        <ElIf Condition="$(get_cmd:$(set:$(var:keysetting)))==presence">
+          <ExtraIconType>$(icon_type_enum:kIconTypeMenuArrowRight)</ExtraIconType>
+          <Url>file:///xml/gui/templates.xml#sub=*[@id="input_template"]&amp;var:input_pool_key=1&amp;var:input_displayname=$(lang:$(var:keyname))%20$(lang:F_PRESENCE_typeSio)&amp;var:input_token=__Y__&amp;var:input_flags=AN&amp;var:input_default=$(remove_cmd:$(set:$(var:keysetting)))&amp;var:input_url=$(urlencode:phone://mb_nop%23go_back%26set:$(var:keysetting)=presence%20__Y__)</Url>
+        </ElIf>
+        <Else>
+          <Name>$(lang:unhandled_item)$(get_cmd:$(set:$(var:keysetting)))</Name>
+          <Url>phone://mb_nop</Url>
+        </Else>
+      </MenuItem>
+    </If>
+  </IPPhoneMenu>
+    <!-- Expansion display color: will show a menu with all the pages for all connected expansion display colors -->
+  <IPPhoneMenu dtmf="off" icon_xoffset="$(math_eval:$(gui_display_xsize)/20-5)" text_xoffset="$(math_eval:$(gui_display_xsize)/20-7)" speedselect="enter" id="uxmc_display_units" state="others_except_mb">
+    <Title>$(lang:menu_fkeys_page)</Title>
+    <IconSize>XXS</IconSize>
+    <Repeat values="$(enum:$(max_pkey_units))" token="|__UNIT__|">
+      <If condition="$(starts_with:$(pkey_unit_name:__UNIT__):$(lang:menu_fkeys_uxm))">
+        <MenuItem name="$(pkey_unit_name:__UNIT__)">
+          <If condition="$(show_feature:FEATURE_PUI_STYLE_SIO)">
+            <IconType>$(icon_type_enum:kIconTypeDkeyFkeyMenu__UNIT__)</IconType>
+          </If>
+          <ExtraIconType>$(icon_type_enum:kIconTypeMenuArrowRight)</ExtraIconType>
+          <Url>file:///xml/gui/pkeys.xml#sub=*[@id="keys"]&amp;var:unit=__UNIT__&amp;var:cur_pkey=</Url>
+        </MenuItem>
+      </If>
+    </Repeat>
+  </IPPhoneMenu>
+</IPPhoneBatch>

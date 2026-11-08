@@ -1,0 +1,347 @@
+<?xml version='1.0' encoding='utf-8'?>
+<ReplacementPlan>
+  <key id="BW-ServerBLF">
+    <general type='BW-ServerBLF' translation_key="fkey_contact_list_buddy">
+      <replaces id="ResourceListBuddy" type="ResourceListBuddy"/>
+    </general>
+    <initialization>
+      <variable name='label' value='fkey_contact_list_buddy' translate="true"/>
+      <variable name='ui_argument' value=''/>
+      <variable name='ui_label' value=''/>
+      <variable name='label_type' value='BLF'/>
+      <state value='initial'/>
+    </initialization>
+    <action>
+      <dial target='$(pick_up_tel)' when='on press' state='ringing'/>
+      <dial target='$(park_pick_up_tel)' when='on press' state='parked'/>
+      <assign when='on press'>
+        <source context="setting" id="use_ext_for_contact_dial[$(identity)]"/>
+        <destination context="this entity" id="use_ext"/>
+      </assign>
+      <assign when='on press'>
+        <source value=""/>
+        <destination context="this entity" id="actual_call_me_uri"/>
+      </assign>
+      <assign when='on press'>
+        <source context="this entity" id="call_me_uri" value_match=".*ext=(.*)" value_replace="$1"/>
+        <destination context="this entity" id="actual_call_me_uri" require1="$(use_ext)"/>
+      </assign>
+      <assign when='on press'>
+        <source context="this entity" id="call_me_uri"/>
+        <destination context="this entity" id="actual_call_me_uri"  require1="$(actual_call_me_uri)=="/>
+      </assign>
+      <dial target='$(actual_call_me_uri)' when='on press'/>
+    </action>
+  </key>
+  <key id="BW-Anywhere">
+    <general type='BW-Anywhere' translation_key="xsi_anywhere">
+      <replaces id="Locations" type="Locations"/>
+    </general>
+    <initialization>
+      <variable name='label' value='xsi_anywhere' translate="true"/>
+    </initialization>
+    <action>
+      <url target='file:///xml/gui/locations_via_function_key.xml' when='on press'/>
+    </action>
+  </key>
+  <key id="BW-RemoteOffice">
+    <general type='BW-RemoteOffice' translation_key="F_REMOTE_OFFICE"/>
+    <action>
+      <url target='file:///xml/gui/remote_office_xsi.xml' when='on press'/>
+    </action>
+  </key>
+  <key id="Starcode">
+    <general type='Starcode' translation_key="F_STARCODE"/>
+    <initialization>
+      <variable name='ui_argument' value=''/>
+      <variable name='ui_label' value=''/>
+      <variable name='label' value='$(ui_label)'/>
+    </initialization>
+    <action>
+      <invite target='$(ui_argument)' when='on press' hide='true'/>
+    </action>
+  </key>
+  <key id="BW-ACD">
+    <general type='BW-ACD' translation_key="F_ACD">
+      <replaces id="ACD" type="ACD"/>
+    </general>
+    <initialization>
+      <variable name='ui_argument' value=''/>
+      <variable name='ui_label' value=''/>
+      <variable name='label_state' value='initial'/>
+      <state value='initial'/>
+    </initialization>
+    <NotifyParsingRules type='applies'>
+      <level1 translates_to="I-Am-Ready">/AgentReadyEvent</level1>
+      <level2 translates_to="Sign-In">/AgentLoggedOnEvent</level2>
+      <level3 translates_to="I-Am-Almost-Ready">/AgentWorkingAfterCallEvent</level3>
+      <level4 translates_to="Sign-Out">/AgentLoggedOffEvent</level4>
+      <level5 translates_to="I-Am-Busy">/AgentNotReadyEvent</level5>
+    </NotifyParsingRules>
+    <NotifyParsingRules type='state'>
+      <level1 translates_to="I-Am-Ready">/AgentReadyEvent</level1>
+      <level2 translates_to="Sign-In">/AgentLoggedOnEvent</level2>
+      <level3 translates_to="I-Am-Almost-Ready">/AgentWorkingAfterCallEvent</level3>
+      <level4 translates_to="Sign-Out">/AgentLoggedOffEvent</level4>
+      <level5 translates_to="I-Am-Busy">/AgentNotReadyEvent</level5>
+    </NotifyParsingRules>
+    <action>
+      <assign when='on notify'>
+        <source context='lang.pui.*' id='acd_unkown_state' require="${state}==active"/>
+        <destination context='local' id='label_state'/>
+      </assign>
+      <assign when='on notify'>
+        <source context='lang.pui.*' id='acd_unkown_state' require="${state}==active"/>
+        <destination context='local' id='context_key_label'/>
+      </assign>
+      <assign when='on notify' state='I-Am-Ready'>
+        <source  context='lang.pui.*' id='acd_ready' require="${state}==active"/>
+        <destination context='local' id='label_state'/>
+      </assign>
+      <assign when='on notify' state='I-Am-Ready'>
+        <source  context='lang.pui.*' id='acd_ready' require="${state}==active"/>
+        <destination context='local' id='context_key_label'/>
+      </assign>
+      <assign when='on notify' state='Sign-In'>
+        <source  context='lang.pui.*' id='acd_log_on' require="${state}==active"/>
+        <destination context='local' id='label_state'/>
+      </assign>
+      <assign when='on notify' state='Sign-In'>
+        <source  context='lang.pui.*' id='acd_log_on' require="${state}==active"/>
+        <destination context='local' id='context_key_label'/>
+      </assign>
+      <assign when='on notify' state='I-Am-Almost-Ready'>
+        <source  context='lang.pui.*' id='acd_working_after_call' require="${state}==active"/>
+        <destination context='local' id='label_state'/>
+      </assign>
+      <assign when='on notify' state='I-Am-Almost-Ready'>
+        <source  context='lang.pui.*' id='acd_working_after_call' require="${state}==active"/>
+        <destination context='local' id='context_key_label'/>
+      </assign>
+      <assign when='on notify' state='Sign-Out'>
+        <source  context='lang.pui.*' id='acd_log_off' require="${state}==active"/>
+        <destination context='local' id='label_state'/>
+      </assign>
+      <assign when='on notify' state='Sign-Out'>
+        <source  context='lang.pui.*' id='acd_log_off' require="${state}==active"/>
+        <destination context='local' id='context_key_label'/>
+      </assign>
+      <assign when='on notify' state='I-Am-Busy'>
+        <source  context='lang.pui.*' id='acd_not_ready' require="${state}==active"/>
+        <destination context='local' id='label_state'/>
+      </assign>
+      <assign when='on notify' state='I-Am-Busy'>
+        <source  context='lang.pui.*' id='acd_not_ready' require="${state}==active"/>
+        <destination context='local' id='context_key_label'/>
+      </assign>
+      <url target='file:///xml/gui/broadsoft_acd_state_chooser.xml#var:current_state=$(label_state)&amp;var:id_idx=$(identity)' when='on press'/>
+    </action>
+  </key>
+  <key id="XMPP-ContactPresence">
+    <general type='XMPP-ContactPresence' translation_key="fkey_xmpp_presence">
+      <replaces id="XMPP Presence" type="XMPP Presence"/>
+    </general>
+    <initialization>
+      <variable name='ui_label' value='fkey_xmpp_presence' translate="true"/>
+      <variable name='ui_argument' value=''/>
+      <identity value=''/>
+    </initialization>
+    <action>
+      <assign type="update on change" when="after initialization">
+        <source context="Identity.*.Presence.*" id="state" require1="${identifier}==$(ui_argument)"/>
+        <destination context="this entity" id="state"/>
+      </assign>
+      <assign type="update on change" when="after initialization">
+        <source context="Identity.*.Presence.*" id="name" require1="${identifier}==$(ui_argument)"/>
+        <destination context="this entity" id="ui_label"/>
+      </assign>
+      <assign when="on press">
+        <source context="Identity.*.Presence.*" id="module_id" require1="${identifier}==$(ui_argument)"/>
+        <destination context="this entity" id="presence_module_id"/>
+      </assign>
+      <url when="on press" target="file:///xml/gui/vcard.xml#var:support_photo=true&var:identity=$(identity)&var:presence_module_id=$(presence_module_id)"/>
+    </action>
+  </key>
+  <key id="UserInputAndSendSipInfo">
+    <general type='UserInputAndSendSipInfo'/>
+    <initialization>
+      <variable name='title' value='generic_value'/>
+      <variable name='header' value='generic_value'/>
+      <variable name='value_prefix' value='generic_value'/>
+    </initialization>
+    <action>
+      <assign when='on press'>
+        <source context='call' id='id' require='${state}==connected'/>
+        <destination context='local' id='gui_id'/>
+      </assign>
+      <url when="on press" target="file:///xml/gui/templates.xml#sub=*[@id=&quot;input_template&quot;]&amp;var:input_pool_key=0&amp;var:input_displayname=$(title)&amp;var:input_token=__Y__&amp;var:input_flags=n&amp;var:input_default=&amp;var:input_url=snom://mb_exit%23action_ifc:Sip=SendInfo,gui_id=$(gui_id),header=$(header),value=$(value_prefix)__Y__"/>
+    </action>
+  </key>
+  <key id="SendSipInfo">
+    <general type='SendSipInfo'/>
+    <initialization>
+      <variable name='header' value='generic_value'/>
+      <variable name='value_prefix' value='generic_value'/>
+    </initialization>
+    <action>
+      <assign when='on press'>
+        <source context='call' id='id' require='${state}==connected'/>
+        <destination context='local' id='gui_id'/>
+      </assign>
+      <request when="on press" function="SendInfo" module="Sip">
+        <parameter name="gui_id" value="$(gui_id)"/>
+        <parameter name="header" value="$(header)"/>
+        <parameter name="value" value="$(value_prefix)"/>
+      </request>
+    </action>
+  </key>
+  <setting_replacement id="user_event_list_uri">
+    <general type='ResourceListSubscription'/>
+    <initialization>
+      <variable name="setting_value"/>
+      <variable name="setting_index"/>
+      <identity value='$(setting_index)'/>
+      <variable name='subscr_uri' value='$(setting_value)'/>
+      <state value='initial'/>
+    </initialization>
+    <subscription type='dialog-list' to='$(subscr_uri)' for='$(subscr_uri)'/>
+    <NotifyParsingRules type='applies'>
+      <level1 translates_to='OK'>/list[@uri='$(subscr_uri)']</level1>
+      <!-- match the URI with the port number too -->
+      <level2 translates_to="OK">/list[@uri="$(subscr_uri):5060"]</level2>
+      <level3 translates_to="OK">Header:Content-Type==application/dialog-info+xml</level3>
+    </NotifyParsingRules>
+    <NotifyParsingRules type='state'>
+      <level1 translates_to='full'>/list[@fullState='true']</level1>
+      <level2 translates_to='partial'>/list</level2>
+      <level3 translates_to='buddy_local'>/dialog-info/dialog/local/identity</level3>
+      <level4 translates_to='buddy' />
+    </NotifyParsingRules>
+    <!-- parse data from list-overview document -->
+    <NotifyParsingRules type='array' id='cids' states="full,partial">
+      <level1 fetch_attribute='cid'>/list/resource/instance</level1>
+    </NotifyParsingRules>
+    <NotifyParsingRules type='array' id='uris' states="full,partial">
+      <level1 fetch_attribute='uri'>/list/resource</level1>
+    </NotifyParsingRules>
+    <!-- parse data from buddy document -->
+    <NotifyParsingRules type="variable" id="buddy_cid" states="buddy,buddy_local">
+      <level1 fetch_content="true">Header:Content-ID</level1>
+    </NotifyParsingRules>
+    <NotifyParsingRules type="variable" id="buddy_state" states="buddy,buddy_local">
+      <level1 translates_to="ringing">/dialog-info/dialog/state[.="early"]</level1>
+      <level1-1 translates_to="calling">/dialog-info/dialog[@direction="initiator"]</level1-1>
+      <level2 translates_to="ringing">/dialog-info/dialog/state[.="proceeding"]</level2>
+      <level2-1 translates_to="calling">/dialog-info/dialog[@direction="initiator"]</level2-1>
+      <level3 translates_to="ringing">/dialog-info/dialog[2]/state[.="proceeding"]</level3>
+      <level4 translates_to='parked'>/dialog-info/dialog/bw:callpark/bw:parked</level4>
+      <level5 translates_to='parked'>/dialog-info/dialog[2]/bw:callpark/bw:parked</level5>
+      <level6 translates_to="in_a_call">/dialog-info/dialog/state[.="confirmed"]</level6>
+      <level7 translates_to="offhook">/dialog-info/dialog/state[.="trying"]</level7>
+      <level8 translates_to="idle">/dialog-info/dialog/state[.="terminated"]</level8>
+      <level9 translates_to="undefined"/>
+    </NotifyParsingRules>
+    <NotifyParsingRules type="array" id="buddy_local_uris" states="buddy,buddy_local">
+      <level1 fetch_attribute="uri">/dialog-info/dialog/local/target[@uri]</level1>
+      <level2 fetch_content="true">/dialog-info/dialog/local/identity</level2>
+    </NotifyParsingRules>
+    <NotifyParsingRules type="variable" id="buddy_label" states="buddy,buddy_local">
+      <level1 fetch_attribute="display">/dialog-info/dialog/local/identity[@display]</level1>
+    </NotifyParsingRules>
+    <action>
+      <!-- initialze uri to cid mapping -->
+      <assign states='full'>
+        <source context='local' id='cids[]'/>
+        <destination context='local' id='full_cids[]'/>
+      </assign>
+      <assign states='full'>
+        <source context='local' id='uris[]'/>
+        <destination context='local' id='full_uris[]'/>
+      </assign>
+      <!-- set new cids on partial update -->
+      <assign when="on notify" states='partial'>
+        <source id='uris[]'/>
+        <source id='full_uris[]'/>
+        <function name='find_index'/>
+        <destination context='local' id='full_idx[]'/>
+      </assign>
+      <assign when="on notify" states='partial'>
+        <source context='local' id='cids[]'/>
+        <destination context='local' id='full_cids[$(full_idx[$(index)])]'/>
+      </assign>
+      <!-- clean up and extract needed buddy variables -->
+      <assign when="on notify" states='buddy,buddy_local'>
+        <source id="buddy_cid" value_match='&lt;(.*)&gt;' value_replace='$1'/>
+        <destination context="this entity" id="buddy_cid"/>
+      </assign>
+      <assign when="on notify" states='buddy,buddy_local'>
+        <source value=''/>
+        <destination context="this entity" id="buddy_call_me_uri"/>
+      </assign>
+      <assign when="on notify" states='buddy_local'>
+        <source context="this entity" id="buddy_local_uris"/>
+        <destination context="this entity" id="buddy_call_me_uri" require1="$(buddy_local_uris[$(index)])&gt;=tel:" require2="$(buddy_local_uris[$(index)])&lt;tel;"/>
+      </assign>
+      <assign when="on notify" states='buddy_local'>
+        <source context="this entity" id="buddy_local_uris"/>
+        <destination context="this entity" id="buddy_call_me_uri" require1="$(buddy_call_me_uri)=="/>
+      </assign>
+       <assign when='on notify' states='buddy_local'>
+         <source context="this entity" id="buddy_call_me_uri" value_match=".*ext=(.*)" value_replace="park_pick_up_val$1"/>
+         <destination context="this entity" id="buddy_park_pick_up_tel"/>
+      </assign>
+      <assign when="on notify" states='buddy_local'>
+        <source context="this entity" id="buddy_call_me_uri" value_match=".*ext=(.*)" value_replace="directed_pick_up_val$1"/>
+        <destination context="this entity" id="buddy_pick_up_tel"/>
+      </assign>
+      <!-- update buddy-details -->
+      <assign when="on notify" states='buddy,buddy_local'>
+        <source id='buddy_cid'/>
+        <source id='full_cids[]'/>
+        <function name='find_index'/>
+        <destination context='local' id='buddy_idx'/>
+      </assign>
+      <assign when="on notify" states='buddy_local'>
+        <source context='local' id='buddy_label' require="buddy_idx!="/>
+        <destination context='local' id='buddy_labels[$(buddy_idx)]'/>
+      </assign>
+      <assign when="on notify" states='buddy,buddy_local'>
+        <source context='local' id='buddy_state' require="buddy_idx!="/>
+        <destination context='local' id='buddy_states[$(buddy_idx)]'/>
+      </assign>
+      <assign when="on notify" states='buddy_local'>
+        <source context='local' id='buddy_call_me_uri' require="buddy_idx!="/>
+        <destination context='local' id='buddy_call_me_uris[$(buddy_idx)]'/>
+      </assign>
+      <assign when="on notify" states='buddy_local'>
+        <source context='local' id='buddy_park_pick_up_tel' require="buddy_idx!="/>
+        <destination context='local' id='buddy_park_pick_up_tels[$(buddy_idx)]'/>
+      </assign>
+      <assign when="on notify" states='buddy_local'>
+        <source context='local' id='buddy_pick_up_tel' require="buddy_idx!="/>
+        <destination context='local' id='buddy_pick_up_tels[$(buddy_idx)]'/>
+      </assign>
+      <!-- keep keys up tp date -->
+      <assign type="update on change" when="after initialization" default="">
+        <source context='local' id='buddy_labels[]'/>
+        <destination context='XmlEntity.LineKey.*' id='label' require1='${type}==BW-ServerBLF'/>
+      </assign>
+      <assign type="update on change" when="after initialization" default="no buddy">
+        <source context='local' id='buddy_states[]'/>
+        <destination context='XmlEntity.LineKey.*' id='state' require1='${type}==BW-ServerBLF'/>
+      </assign>
+      <assign type="update on change" when="after initialization" default="">
+        <source context='local' id='buddy_pick_up_tels[]'/>
+        <destination context='XmlEntity.LineKey.*' id='pick_up_tel' require1='${type}==BW-ServerBLF'/>
+      </assign>
+      <assign type="update on change" when="after initialization" default="">
+        <source context='local' id='buddy_park_pick_up_tels[]'/>
+        <destination context='XmlEntity.LineKey.*' id='park_pick_up_tel' require1='${type}==BW-ServerBLF'/>
+      </assign>
+      <assign type="update on change" when="after initialization" default="">
+        <source context='local' id='buddy_call_me_uris[]'/>
+        <destination context='XmlEntity.LineKey.*' id='call_me_uri' require1='${type}==BW-ServerBLF'/>
+      </assign>
+    </action>
+  </setting_replacement>
+</ReplacementPlan>

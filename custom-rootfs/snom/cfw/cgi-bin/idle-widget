@@ -1,8 +1,0 @@
-#!/bin/sh
-# Prints the stats widget text (one line): uptime, load, free memory. Plain text.
-up=$(cut -d. -f1 /proc/uptime)
-d=$((up/86400)); h=$((up%86400/3600)); m=$((up%3600/60))
-load=$(cut -d' ' -f1 /proc/loadavg)
-free=$(awk '/^MemFree/{f=$2}/^Cached/{c=$2}END{print int((f+c)/1024)}' /proc/meminfo)
-[ "$1" != -q ] && [ -n "$GATEWAY_INTERFACE" ] && printf 'Content-type: text/plain\r\n\r\n'
-printf 'up %sd %02dh%02dm  load %s  free %s MB\n' "$d" "$h" "$m" "$load" "$free"

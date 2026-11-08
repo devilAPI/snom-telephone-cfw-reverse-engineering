@@ -1,0 +1,143 @@
+#!/usr/bin/env bash
+# Build a custom D375 firmware image from the modified rootfs.
+# Run from the project root:  ./tools/fw/build-custom-firmware.sh
+set -euo pipefail
+
+ROOTFS="rootfs/d375"
+KEYDIR="keys/custom-d375"
+# Same basename as the stock image so the phone's update URL looks normal.
+OUT="firmware/custom/snomD375-10.1.64.17-SIP-r.bin"
+
+echo "=== Step 1: Generate signing keypair (if not already done) ==="
+mkdir -p "$KEYDIR"
+if [ ! -f "$KEYDIR/firmware.priv.pem" ]; then
+    openssl genrsa -out "$KEYDIR/firmware.priv.pem" 1024 2>/dev/null
+    openssl rsa -in "$KEYDIR/firmware.priv.pem" -pubout -out "$KEYDIR/firmware.pub" 2>/dev/null
+    echo "  Generated new keypair in $KEYDIR/"
+else
+    echo "  Using existing keypair in $KEYDIR/"
+fi
+
+echo "=== Step 1b: Embed our public key as the rootfs /firmware1.pub ==="
+# The phone verifies the NEXT update with the /firmware1.pub of the image it is
+# running. If the image we build carried any other key, we could never flash a
+# follow-up image signed with $KEYDIR. Write in place (cat >) so fakeroot keeps
+# the recorded ownership of the existing inode.
+[ -d "$ROOTFS" ] || { echo "FAIL: $ROOTFS/ missing (see docs/recover-from-device.md)"; exit 1; }
+# The D375 tree holds the full CFW, so cfw-sync would replace it with src/cfw/panel.
+python3 tools/fw/update-checksums.py "$ROOTFS"
+if ! cmp -s "$KEYDIR/firmware.pub" "$ROOTFS/firmware1.pub"; then
+    cat "$KEYDIR/firmware.pub" > "$ROOTFS/firmware1.pub"
+    echo "  updated $ROOTFS/firmware1.pub"
+fi
+if [ -f "$ROOTFS/etc/checksum.md5" ]; then
+    NEWHASH=$(md5sum "$ROOTFS/firmware1.pub" | cut -d' ' -f1)
+    awk -v h="$NEWHASH" '{ if ($2=="firmware1.pub") print h"  firmware1.pub"; else print }' \
+        "$ROOTFS/etc/checksum.md5" > "$KEYDIR/checksum.md5.tmp"
+    cat "$KEYDIR/checksum.md5.tmp" > "$ROOTFS/etc/checksum.md5"
+    rm -f "$KEYDIR/checksum.md5.tmp"
+    echo "  /etc/checksum.md5 firmware1.pub entry: $NEWHASH"
+fi
+
+echo "=== Step 1c: Sanity checks ==="
+# Without this flag the phone unpacks the image into /snom instead of / (rcS doSoftwareUpdate).
+[ -f "$ROOTFS/update/systemUpdate" ] || {
+    echo "FAIL: $ROOTFS/update/systemUpdate missing. The phone deletes /update at boot;"
+    echo "      run ./tools/fw/prepare-pulled-rootfs.sh on a pulled rootfs."; exit 1; }
+# rcS md5Check (factory filesystem-test mode) halts on any mismatch.
+if [ -f "$ROOTFS/etc/checksum.md5" ]; then
+    (cd "$ROOTFS" && md5sum -c --quiet etc/checksum.md5) \
+        || { echo "FAIL: etc/checksum.md5 mismatch"; exit 1; }
+    echo "  checksum.md5 OK"
+fi
+
+echo "=== Step 2: Create rootfs tarball ==="
+tmp=$(mktemp -d); trap 'rm -rf "$tmp"' EXIT
+
+# Owners, modes and device nodes come from a path-based manifest; see the tool.
+# The phone app is the D815's; see docs/backport-guide.md.
+STAGE=emu/backport/stage
+[ -f emu/backport/d8.tar ] || python3 tools/backport/pack.py rootfs/stock/D815-10.1.226.16 emu/backport/d8.tar
+[ -f out/fb24shim.so ] || tools/build/build-fb24shim.sh
+python3 tools/backport/stage.py emu/backport/d8.tar out/fb24shim.so "$ROOTFS" "$STAGE"
+python3 tools/fw/rootfs-tar.py build "$ROOTFS" rootfs/d375.manifest "$tmp/rootfs.tar.gz" \
+    src/cfw/models/d375.exclude "$STAGE/snom/d815=snom/d815" "$STAGE/snom/bmp=snom/bmp"
+# FINAL=1: recompress with zopfli. Slower by minutes, about 4% smaller, and still
+# plain gzip for the phone.
+if [ "${FINAL:-}" = 1 ]; then
+    docker run --rm -v "$tmp":/w debian:bookworm-slim bash -c \
+        "apt-get update -qq >/dev/null; apt-get install -y -qq pigz >/dev/null 2>&1
+         gzip -dc /w/rootfs.tar.gz | pigz -11 -p \$(nproc) > /w/z.gz
+         chown $(id -u):$(id -g) /w/z.gz"
+    mv "$tmp/z.gz" "$tmp/rootfs.tar.gz"
+fi
+echo "  rootfs.tar.gz: $(stat -c%s "$tmp/rootfs.tar.gz") bytes"
+# The phone extracts with `tar ... update/` to decide system vs application
+# update. A "./" or "/" prefix makes that filter miss, and the image would be
+# unpacked into /snom (application update), breaking the phone.
+tar -tzf "$tmp/rootfs.tar.gz" > "$tmp/names"
+if grep -qE '^(\./|/)' "$tmp/names"; then
+    echo "FAIL: tarball paths start with ./ or /"; exit 1; fi
+grep -qx 'update/systemUpdate' "$tmp/names" \
+    || { echo "FAIL: update/systemUpdate not in tarball (would be an application update)"; exit 1; }
+echo "  paths OK (no ./ prefix), update/systemUpdate present -> system update"
+
+echo "=== Step 3: Encrypt (AES-128-CBC, MD5 KDF, salted) ==="
+# Random passphrase — no trailing newline
+openssl rand -base64 32 | tr -d '\n' > "$tmp/pass"
+openssl enc -aes-128-cbc -e -md md5 -kfile "$tmp/pass" \
+    -in "$tmp/rootfs.tar.gz" -out "$tmp/enc"
+echo "  encrypted payload: $(stat -c%s "$tmp/enc") bytes"
+
+echo "=== Step 4: RSA-sign the passphrase (key block) ==="
+openssl pkeyutl -sign -inkey "$KEYDIR/firmware.priv.pem" \
+    -in "$tmp/pass" -out "$tmp/keyblk"
+
+echo "=== Step 5: Build body and sign it ==="
+cat "$tmp/keyblk" "$tmp/enc" > "$tmp/body"
+openssl dgst -sha1 -sign "$KEYDIR/firmware.priv.pem" \
+    -out "$tmp/sig" "$tmp/body"
+
+# Sanity check: both RSA blocks must be 128 bytes for 1024-bit key
+[ "$(wc -c < "$tmp/keyblk")" -eq 128 ] || { echo "FAIL: keyblk not 128 bytes"; exit 1; }
+[ "$(wc -c < "$tmp/sig")" -eq 128 ]    || { echo "FAIL: sig not 128 bytes"; exit 1; }
+
+echo "=== Step 6: Assemble final image ==="
+mkdir -p "$(dirname "$OUT")"
+cat "$tmp/sig" "$tmp/body" > "$OUT"
+echo "  wrote $OUT ($(stat -c%s "$OUT") bytes)"
+
+echo ""
+echo "=== Step 7: Verify the image decrypts correctly ==="
+tmp2=$(mktemp -d)
+dd if="$OUT" bs=128 skip=1 count=1 2>/dev/null \
+    | openssl pkeyutl -verifyrecover -pubin -inkey "$KEYDIR/firmware.pub" -out "$tmp2/key" 2>/dev/null
+dd if="$OUT" bs=128 skip=2 2>/dev/null \
+    | openssl enc -aes-128-cbc -d -md md5 -kfile "$tmp2/key" 2>/dev/null \
+    | gzip -t && echo "  VERIFIED: image decrypts to valid gzip ✓" \
+    || echo "  WARNING: verification failed"
+rm -rf "$tmp2"
+
+echo ""
+echo "========================================="
+echo " DONE. Custom firmware: $OUT"
+echo ""
+echo " Before flashing, install the custom public key on the phone:"
+echo " (skip if the phone already runs an image built with this key)"
+echo "   ssh root@<phone-ip> 'cat > /tmp/firmware1.pub.new' < $KEYDIR/firmware.pub"
+echo "   ssh root@<phone-ip>"
+echo "   mount -o remount,rw /"
+echo "   cp /tmp/firmware1.pub.new /firmware1.pub"
+echo "   # Update checksum:"
+echo "   NEWHASH=\$(md5sum /firmware1.pub | cut -d' ' -f1)"
+echo "   awk -v h=\"\$NEWHASH\" '{ if (\$2==\"firmware1.pub\") print h\"  firmware1.pub\"; else print }' /etc/checksum.md5 > /tmp/checksum.md5.new"
+echo "   cp /tmp/checksum.md5.new /etc/checksum.md5"
+echo "   sync"
+echo "   mount -o remount,ro /"
+echo ""
+echo " Then flash via the phone web UI: Software Update → URL → $OUT"
+echo " Or serve it over HTTP and point the phone to it."
+echo "========================================="
+
+# Keep the emulator on the newest build (docs/qemu.md).
+tools/qemu/vm-update.sh d375 || echo "warning: emulator image not updated" >&2

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<IPPhoneBatch xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../schemas/minibrowser.xsd">
+  <IPPhoneMenu track="yes" dtmf="off" id="conference_potential_attendees" speedselect="off" state="others_except_mb">
+    <Title>$(lang:select_conf_participant)</Title>
+    <MenuItem name="$(lang:new_call)">
+      <Url>phone://mb_nop#sub=*[@id="new_call"]</Url>
+    </MenuItem>
+    <Repeat values="$(var:conf_list)" token="|__NAME__|__CALLID__|">
+      <MenuItem name="__NAME__">
+        <Url>phone://mb_exit#action_ifc:CallInterface=make_conference,ids=|$(var:first_participant)|__CALLID__|</Url>
+      </MenuItem>
+    </Repeat>
+    <If condition="!$(empty:$(var:all_ids))">
+      <MenuItem name="$(lang:all_available_calls)">
+        <Url>phone://mb_exit#action_ifc:CallInterface=make_conference,ids=$(var:all_ids)</Url>
+      </MenuItem>
+    </If>
+    <SoftKeyItem>
+      <NAME>CANCEL</NAME>
+      <Url>phone://mb_exit</Url>
+    </SoftKeyItem>
+  </IPPhoneMenu>
+  <IPPhoneInput id="new_call">
+    <Url input_required="yes">phone://mb_nop#contact_transfer_or_dial=-1;__Y__;F_DIAL</Url>
+    <CancelUrl>phone://mb_nop#go_back</CancelUrl>
+    <InputItem>
+      <DisplayName>$(lang:enter_number)</DisplayName>
+      <InputToken>__Y__</InputToken>
+      <InputFlags>AN</InputFlags>
+      <InputModeFixed>$(set:block_url_dialing)</InputModeFixed>
+      <DefaultValue></DefaultValue>
+      <ContactPoolInEdit>1</ContactPoolInEdit>
+    </InputItem>
+    <SoftKeyItem>
+      <Name>F4</Name>
+      <SoftKey>F_REDIAL</SoftKey>
+    </SoftKeyItem>
+  </IPPhoneInput>
+</IPPhoneBatch>

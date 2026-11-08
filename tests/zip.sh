@@ -12,7 +12,7 @@
 #                      3. plain (non-zip) NES ROM still runs
 #   Which ROM actually ran is read from the save file hash in the launcher log.
 . "$(dirname "$0")/lib.sh"
-SRC=$REPO/custom-rootfs/snom/cfw
+SRC=$REPO/rootfs/d375/snom/cfw
 ROMS=$REPO/tests/roms
 HOSTIP=${ZIP_HOSTIP:-192.168.178.49}
 PORT=${ZIP_PORT:-8000}   # the host firewall only lets the phone reach 8000 and 8080

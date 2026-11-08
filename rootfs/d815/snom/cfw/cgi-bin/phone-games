@@ -1,0 +1,64 @@
+#!/bin/sh
+# CFW: the "Games" menu shown on the phone's own screen (Settings -> Games).
+# lcsD375's minibrowser fetches this from 127.0.0.1:8081 and renders the
+# IPPhoneMenu XML. ?game=doom|nes shows that game's sources: recently used
+# URLs (saved by the launchers), presets, and "Enter URL...".
+echo "Content-type: text/xml"
+echo ""
+B=http://127.0.0.1:8081/cgi-bin
+GAME=$(echo "$QUERY_STRING" | sed -n 's/.*game=\([a-z]*\).*/\1/p')
+
+xmlesc() { sed 's/&/\&amp;/g; s/</\&lt;/g; s/>/\&gt;/g; s/"/\&quot;/g'; }
+# Escape what would break the query string; phone-boot decodes any %XX.
+urlenc() { printf '%s' "$1" | sed 's/%/%25/g; s/&/%26/g; s/ /%20/g; s/?/%3F/g; s/=/%3D/g; s/#/%23/g; s/+/%2B/g'; }
+item() {  # $1 = label, $2 = url
+    printf '  <MenuItem name="%s">\n    <Url>%s</Url>\n  </MenuItem>\n' \
+        "$(printf '%s' "$1" | xmlesc)" "$(printf '%s' "$2" | xmlesc)"
+}
+
+echo '<?xml version="1.0" encoding="UTF-8"?>'
+echo '<IPPhoneMenu state="others_except_mb" dtmf="off">'
+case "$GAME" in
+doom|nes)
+    if [ "$GAME" = doom ]; then echo '  <Title>DOOM</Title>'; else echo '  <Title>NES</Title>'; fi
+    HIST=/snom/cfw/$GAME/history
+    if [ -s "$HIST" ]; then
+        while read -r u; do
+            [ -n "$u" ] || continue
+            name=$(basename "$(echo "${u%%\?*}" | sed 's|%2[fF]|/|g')" | sed 's/%20/ /g; s/%2[bB]/+/g')
+            item "$name" "$B/phone-boot?game=$GAME&url=$(urlenc "$u")"
+        done < "$HIST"
+    fi
+    if [ "$GAME" = doom ]; then
+        # Freely distributable IWADs: Doom shareware (v1.9) and Freedoom 0.13
+        # (members of archive.org zips, extracted server-side).
+        F=https://archive.org/download/freedoom-0.13.0
+        item "Freedoom: Phase 1" "$B/phone-boot?game=doom&url=$(urlenc $F/freedoom-0.13.0.zip/freedoom-0.13.0%2Ffreedoom1.wad)"
+        item "Freedoom: Phase 2" "$B/phone-boot?game=doom&url=$(urlenc $F/freedoom-0.13.0.zip/freedoom-0.13.0%2Ffreedoom2.wad)"
+        item "FreeDM (deathmatch)" "$B/phone-boot?game=doom&url=$(urlenc $F/freedm-0.13.0.zip/freedm-0.13.0%2Ffreedm.wad)"
+        item "DOOM Shareware" "$B/phone-boot?game=doom&url=$(urlenc https://archive.org/download/doom-shareware-custom/DOOM1.WAD)"
+    fi
+    item "Enter URL..." "$B/phone-url?game=$GAME"
+    ;;
+info)
+    echo '  <Title>Phone info</Title>'
+    H=$B/phone-games?game=info
+    item "Address: $(ifconfig eth0 2>/dev/null | sed -n 's/.*inet addr:\([0-9.]*\).*/\1/p')" "$H"
+    item "Firmware: $(cat /snom/version 2>/dev/null)" "$H"
+    item "Up: $(uptime | sed 's/.*up *//; s/, *load.*//; s/, *[0-9]* users*//')" "$H"
+    item "Free RAM: $(free | awk '/Mem:/{print int($4/1024)}') MB" "$H"
+    ;;
+*)
+    echo '  <Title>Games</Title>'
+    item "DOOM" "$B/phone-games?game=doom"
+    item "NES" "$B/phone-games?game=nes"
+    item "Phone info" "$B/phone-games?game=info"
+    ;;
+esac
+cat <<'EOF2'
+  <SoftKeyItem>
+    <Name>CANCEL</Name>
+    <Url track="no">phone://mb_nop#go_back</Url>
+  </SoftKeyItem>
+</IPPhoneMenu>
+EOF2

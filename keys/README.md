@@ -15,7 +15,7 @@ passphrase.
 
 Usage:
 ```sh
-tools/fw-unpack.sh original_firmware/snomD375-10.1.64.17-SIP-r.bin keys/snomD3xx-firmware1.pub out_d375
+tools/fw/fw-unpack.sh firmware/stock/snomD375-10.1.64.17-SIP-r.bin keys/stock/snomD375-firmware1.pub out_d375
 ```
 
 ## D8xx (.swu format) — RSA-2048 + AES-256
@@ -32,5 +32,5 @@ stored on the device at `/firmware1.aes`.
 
 Usage:
 ```sh
-tools/swu-unpack.sh original_firmware/snomD815-10.1.226.16-SIP-r.swu keys/snomD815-firmware1.aes out_d815
+tools/fw/swu-unpack.sh firmware/stock/snomD815-10.1.226.16-SIP-r.swu keys/stock/snomD815-firmware1.aes out_d815
 ```

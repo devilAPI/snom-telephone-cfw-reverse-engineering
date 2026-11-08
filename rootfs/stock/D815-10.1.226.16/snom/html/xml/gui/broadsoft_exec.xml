@@ -1,0 +1,443 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<IPPhoneBatch xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../schemas/minibrowser.xsd">
+  <!-- Main Screen -->
+  <IPPhoneMenu track="yes" id="executive_menu" state="only_mb">
+    <Title>$(lang:xsi_executive)</Title>
+    <MenuItem name="$(lang:xsi_executive_allow_optin)" state="only_mb">
+      <If condition="$(show_feature:FEATURE_PUI_STYLE_SIO)">
+        <SubText>$(on_off:$(condition:$(var_ifc:identity.$(set:exec_assistant_identity).exec_assist::exec_allow_optin_enable)==enabled))</SubText>
+      </If>
+      <Url>phone://mb_nop_ignore_prev_frags#action_ifc:identity.$(set:exec_assistant_identity).exec_assist=exec_allow_optin_toggle</Url>
+      <If condition="$(bool_eval:$(condition:$(var_ifc:identity.$(set:exec_assistant_identity).exec_assist::exec_allow_optin_enable)==enabled))">
+        <ExtraIconType>$(icon_type_enum:kIconTypeMenuSliderOn)</ExtraIconType>
+      </If>
+      <Else>
+        <ExtraIconType>$(icon_type_enum:kIconTypeMenuSliderOff)</ExtraIconType>
+      </Else>
+    </MenuItem>
+    <MenuItem name="$(lang:xsi_call_filtering_enable)" id="call_filtering">
+      <ExtraIconType>$(icon_type_enum:kIconTypeMenuArrowRight)</ExtraIconType>
+      <Url>file:///xml/gui/broadsoft_exec.xml#sub=*[@id="call_filtering"]</Url>
+    </MenuItem>
+    <MenuItem name="$(lang:xsi_call_screening)" id="call_screening">
+      <ExtraIconType>$(icon_type_enum:kIconTypeMenuArrowRight)</ExtraIconType>
+      <Url>file:///xml/gui/broadsoft_exec.xml#sub=*[@id="call_screening"]</Url>
+    </MenuItem>
+    <MenuItem name="$(lang:xsi_call_alerting)" id="call_alerting">
+      <ExtraIconType>$(icon_type_enum:kIconTypeMenuArrowRight)</ExtraIconType>
+      <Url>file:///xml/gui/broadsoft_exec.xml#sub=*[@id="call_alerting"]</Url>
+    </MenuItem>
+    <MenuItem name="$(lang:xsi_executive_view_assistants)" state="only_mb">
+      <ExtraIconType>$(icon_type_enum:kIconTypeMenuArrowRight)</ExtraIconType>
+      <Url>file:///xml/gui/broadsoft_exec.xml#sub=*[@id="view_assistants"]&amp;action_ifc:identity.$(set:exec_assistant_identity).exec_assist=get_assistants</Url>
+    </MenuItem>
+  </IPPhoneMenu>
+  <!-- EO Main Screen -->
+  <!-- Call Filtering -->
+  <IPPhoneMenu track="yes" id="call_filtering" state="only_mb">
+    <Title>$(lang:xsi_call_filtering)</Title>
+    <MenuItem name="$(lang:xsi_call_filtering_enable)" id="call_filtering_enable">
+      <If condition="$(show_feature:FEATURE_PUI_STYLE_SIO)">
+        <SubText>$(yes_no:$(condition:$(var_ifc:identity.$(set:exec_assistant_identity).exec_assist::exec_call_filter_enable)==enabled))</SubText>
+      </If>
+      <Url>phone://mb_nop#action_ifc:identity.$(set:exec_assistant_identity).exec_assist=exec_call_filter_toggle</Url>
+      <If condition="$(bool_eval:$(condition:$(var_ifc:identity.$(set:exec_assistant_identity).exec_assist::exec_call_filter_enable)==enabled))">
+        <ExtraIconType>$(icon_type_enum:kIconTypeMenuSliderOn)</ExtraIconType>
+      </If>
+      <Else>
+        <ExtraIconType>$(icon_type_enum:kIconTypeMenuSliderOff)</ExtraIconType>
+      </Else>
+    </MenuItem>
+    <MenuItem name="$(lang:xsi_call_filtering_mode)" id="filtering_mode" state="only_mb">
+      <ExtraIconType>$(icon_type_enum:kIconTypeMenuArrowRight)</ExtraIconType>
+      <Url>file:///xml/gui/broadsoft_exec.xml#sub=*[@id="filtering_mode_menu"]</Url>
+      <SubText>$(var_ifc:identity.$(set:exec_assistant_identity).exec_assist::exec_call_filter_mode)</SubText>
+    </MenuItem>
+    <If condition="$(bool_eval:$(condition:$(var_ifc:identity.$(set:exec_assistant_identity).exec_assist::exec_call_filter_mode)==Simple))">
+      <MenuItem name="$(lang:xsi_call_filtering_type)" id="filtering_type" state="only_mb">
+        <ExtraIconType>$(icon_type_enum:kIconTypeMenuArrowRight)</ExtraIconType>
+        <Url>file://xml/gui/broadsoft_exec.xml#sub=*[@id="filtering_type_menu"]</Url>
+        <SubText>$(var_ifc:identity.$(set:exec_assistant_identity).exec_assist::exec_call_filter_type)</SubText>
+      </MenuItem>
+    </If>
+  </IPPhoneMenu>
+  <!-- EO Call Filtering -->
+  <!-- Call Filtering Mode -->
+  <IPPhoneMenu track="yes" id="filtering_mode_menu" state="only_mb">
+    <Title>$(lang:xsi_call_filtering_mode)</Title>
+    <MenuItem name="$(lang:xsi_call_filtering_simple)" id="filter_mode_simple">
+      <Url>phone://mb_nop#var_ifc:identity.$(set:exec_assistant_identity).exec_assist="exec_call_filter_mode=Simple"</Url>
+      <If condition="$(bool_eval:$(condition:$(var_ifc:identity.$(set:exec_assistant_identity).exec_assist::exec_call_filter_mode)==Simple))">
+        <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOn)</ExtraIconType>
+      </If>
+      <Else>
+        <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOff)</ExtraIconType>
+      </Else>
+    </MenuItem>
+    <MenuItem name="$(lang:xsi_call_filtering_advanced)" id="filter_mode_advanced">
+      <Url>phone://mb_nop#var_ifc:identity.$(set:exec_assistant_identity).exec_assist="exec_call_filter_mode=Advanced"</Url>
+      <If condition="$(bool_eval:$(condition:$(var_ifc:identity.$(set:exec_assistant_identity).exec_assist::exec_call_filter_mode)==Advanced))">
+        <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOn)</ExtraIconType>
+      </If>
+      <Else>
+        <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOff)</ExtraIconType>
+      </Else>
+    </MenuItem>
+  </IPPhoneMenu>
+  <!-- EO Call Filtering Mode -->
+  <!-- Call Filtering Type -->
+  <IPPhoneMenu track="yes" id="filtering_type_menu" state="only_mb">
+    <Title>$(lang:xsi_call_filtering_type)</Title>
+    <MenuItem name="$(lang:xsi_call_filtering_all)" id="filter_type_all">
+      <Url>phone://mb_nop#var_ifc:identity.$(set:exec_assistant_identity).exec_assist="exec_call_filter_type=all"</Url>
+      <If condition="$(bool_eval:$(condition:$(var_ifc:identity.$(set:exec_assistant_identity).exec_assist::exec_call_filter_type)==All Calls))">
+        <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOn)</ExtraIconType>
+      </If>
+      <Else>
+        <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOff)</ExtraIconType>
+      </Else>
+    </MenuItem>
+    <MenuItem name="$(lang:xsi_call_filtering_internal)" id="filter_type_internal">
+      <Url>phone://mb_nop#var_ifc:identity.$(set:exec_assistant_identity).exec_assist="exec_call_filter_type=internal"</Url>
+      <If condition="$(bool_eval:$(condition:$(var_ifc:identity.$(set:exec_assistant_identity).exec_assist::exec_call_filter_type)==All Internal Calls))">
+        <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOn)</ExtraIconType>
+      </If>
+      <Else>
+        <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOff)</ExtraIconType>
+      </Else>
+    </MenuItem>
+    <MenuItem name="$(lang:xsi_call_filtering_external)" id="filter_type_external">
+      <Url>phone://mb_nop#var_ifc:identity.$(set:exec_assistant_identity).exec_assist="exec_call_filter_type=external"</Url>
+      <If condition="$(bool_eval:$(condition:$(var_ifc:identity.$(set:exec_assistant_identity).exec_assist::exec_call_filter_type)==All External Calls))">
+        <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOn)</ExtraIconType>
+      </If>
+      <Else>
+        <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOff)</ExtraIconType>
+      </Else>
+    </MenuItem>
+  </IPPhoneMenu>
+  <!-- EO Call Filtering Type -->
+  <!-- Call Screening -->
+  <IPPhoneMenu track="yes" id="call_screening" state="only_mb">
+    <Title>$(lang:xsi_call_screening)</Title>
+    <MenuItem name="$(lang:xsi_call_screening)" id="call_screening_enable">
+      <If condition="$(show_feature:FEATURE_PUI_STYLE_SIO)">
+        <SubText>$(yes_no:$(condition:$(var_ifc:identity.$(set:exec_assistant_identity).exec_assist::exec_call_screening_enable)==enabled))</SubText>
+      </If>
+      <Url>phone://mb_nop#action_ifc:identity.$(set:exec_assistant_identity).exec_assist=exec_call_screening_toggle</Url>
+      <If condition="$(bool_eval:$(condition:$(var_ifc:identity.$(set:exec_assistant_identity).exec_assist::exec_call_screening_enable)==enabled))">
+        <ExtraIconType>$(icon_type_enum:kIconTypeMenuSliderOn)</ExtraIconType>
+      </If>
+      <Else>
+        <ExtraIconType>$(icon_type_enum:kIconTypeMenuSliderOff)</ExtraIconType>
+      </Else>
+    </MenuItem>
+    <MenuItem name="$(lang:xsi_call_screening_type)" id="alert_type" state="only_mb">
+      <ExtraIconType>$(icon_type_enum:kIconTypeMenuArrowRight)</ExtraIconType>
+      <Url>file:///xml/gui/broadsoft_exec.xml#sub=*[@id="alert_type_menu"]</Url>
+      <SubText>$(var_ifc:identity.$(set:exec_assistant_identity).exec_assist::exec_call_screening_alert_type)</SubText>
+    </MenuItem>
+    <MenuItem name="$(lang:xsi_call_screening_alert_mobile)" id="alert_mobile_locations" state="only_mb">
+      <If condition="$(show_feature:FEATURE_PUI_STYLE_SIO)">
+        <SubText>$(yes_no:$(condition:$(var_ifc:identity.$(set:exec_assistant_identity).exec_assist::exec_call_screening_mobile_enable)==enabled))</SubText>
+      </If>
+      <Url>phone://mb_nop#action_ifc:identity.$(set:exec_assistant_identity).exec_assist=exec_call_screening_mobile_toggle</Url>
+      <If condition="$(bool_eval:$(condition:$(var_ifc:identity.$(set:exec_assistant_identity).exec_assist::exec_call_screening_mobile_enable)==enabled))">
+        <ExtraIconType>$(icon_type_enum:kIconTypeMenuSliderOn)</ExtraIconType>
+      </If>
+      <Else>
+        <ExtraIconType>$(icon_type_enum:kIconTypeMenuSliderOff)</ExtraIconType>
+      </Else>
+    </MenuItem>
+    <MenuItem name="$(lang:xsi_call_screening_alert_anywhere)" id="alert_anywhere_locataions" state="only_mb">
+      <If condition="$(show_feature:FEATURE_PUI_STYLE_SIO)">
+        <SubText>$(yes_no:$(condition:$(var_ifc:identity.$(set:exec_assistant_identity).exec_assist::exec_call_screening_anywhere_enable)==enabled))</SubText>
+      </If>
+      <Url>phone://mb_nop#action_ifc:identity.$(set:exec_assistant_identity).exec_assist=exec_call_screening_anywhere_toggle</Url>
+      <If condition="$(bool_eval:$(condition:$(var_ifc:identity.$(set:exec_assistant_identity).exec_assist::exec_call_screening_anywhere_enable)==enabled))">
+        <ExtraIconType>$(icon_type_enum:kIconTypeMenuSliderOn)</ExtraIconType>
+      </If>
+      <Else>
+        <ExtraIconType>$(icon_type_enum:kIconTypeMenuSliderOff)</ExtraIconType>
+      </Else>
+    </MenuItem>
+    <MenuItem name="$(lang:xsi_call_screening_alert_sca)" id="alert_sca_locataions" state="only_mb">
+      <If condition="$(show_feature:FEATURE_PUI_STYLE_SIO)">
+        <SubText>$(yes_no:$(condition:$(var_ifc:identity.$(set:exec_assistant_identity).exec_assist::exec_call_screening_sca_enable)==enabled))</SubText>
+      </If>
+      <Url>phone://mb_nop#action_ifc:identity.$(set:exec_assistant_identity).exec_assist=exec_call_screening_sca_toggle</Url>
+      <If condition="$(bool_eval:$(condition:$(var_ifc:identity.$(set:exec_assistant_identity).exec_assist::exec_call_screening_sca_enable)==enabled))">
+        <ExtraIconType>$(icon_type_enum:kIconTypeMenuSliderOn)</ExtraIconType>
+      </If>
+      <Else>
+        <ExtraIconType>$(icon_type_enum:kIconTypeMenuSliderOff)</ExtraIconType>
+      </Else>
+    </MenuItem>
+  </IPPhoneMenu>
+  <IPPhoneMenu track="yes" id="alert_type_menu" state="only_mb">
+    <Title>$(lang:xsi_call_screening_type)</Title>
+    <MenuItem name="$(lang:xsi_call_screening_silent)" id="alert_type_silent" state="only_mb">
+      <Url>phone://mb_nop#var_ifc:identity.$(set:exec_assistant_identity).exec_assist="exec_call_screening_alert_type=silent"</Url>
+      <If condition="$(bool_eval:$(condition:$(var_ifc:identity.$(set:exec_assistant_identity).exec_assist::exec_call_screening_alert_type)==Silent))">
+        <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOn)</ExtraIconType>
+      </If>
+      <Else>
+        <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOff)</ExtraIconType>
+      </Else>
+    </MenuItem>
+    <MenuItem name="$(lang:xsi_call_screening_ringsplash)" id="alert_type_ringsplash" state="only_mb">
+      <Url>phone://mb_nop#var_ifc:identity.$(set:exec_assistant_identity).exec_assist="exec_call_screening_alert_type=ring"</Url>
+      <If condition="$(bool_eval:$(condition:$(var_ifc:identity.$(set:exec_assistant_identity).exec_assist::exec_call_screening_alert_type)==Ring Splash))">
+        <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOn)</ExtraIconType>
+      </If>
+      <Else>
+        <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOff)</ExtraIconType>
+      </Else>
+    </MenuItem>
+  </IPPhoneMenu>
+  <!-- EO Call Screening -->
+  <!-- Call Alerting -->
+  <IPPhoneMenu track="yes" id="call_alerting" state="only_mb">
+    <Title>$(lang:xsi_call_alerting)</Title>
+    <MenuItem name="$(lang:xsi_call_alerting_mode)">
+      <Url>file:///xml/gui/broadsoft_exec.xml#sub=*[@id="alerting_mode"]</Url>
+      <If condition="$(show_feature:FEATURE_PUI_STYLE_SIO)">
+        <SubText>$(var_ifc:identity.$(set:active_line).exec_assist::exec_call_alert_mode)</SubText>
+      </If>
+      <ExtraIconType>$(icon_type_enum:kIconTypeMenuArrowRight)</ExtraIconType>
+    </MenuItem>
+    <MenuItem name="$(lang:xsi_call_alerting_id_name)">
+      <Url>file:///xml/gui/broadsoft_exec.xml#sub=*[@id="call_line_id_name"]</Url>
+      <If condition="$(show_feature:FEATURE_PUI_STYLE_SIO)">
+        <SubText>$(var_ifc:identity.$(set:active_line).exec_assist::exec_call_alert_name)</SubText>
+      </If>
+      <ExtraIconType>$(icon_type_enum:kIconTypeMenuArrowRight)</ExtraIconType>
+    </MenuItem>
+    <If condition="$(bool_eval:$(condition:$(var_ifc:identity.$(set:active_line).exec_assist::exec_call_alert_name)==Custom))">
+      <MenuItem name="$(lang:xsi_call_alerting_custom_id_name)">
+        <If condition="$(show_feature:FEATURE_PUI_STYLE_SIO)">
+          <SubText>$(var_ifc:identity.$(set:active_line).exec_assist::exec_call_alert_custom_name)</SubText>
+        </If>
+        <Url>file:///xml/gui/templates.xml#sub=*[@id="input_template"]&amp;var:input_displayname=$(lang:xsi_call_alerting_custom_id_name)&amp;var:input_token=__Y__&amp;var:input_flags=A&amp;var:custom_name=__Y__&amp;var:input_default=$(var_ifc:identity.$(set:active_line).exec_assist::exec_call_alert_custom_name)&amp;var:input_mask=&amp;var:input_range=&amp;var:input_url=$(urlencode:"mb_nop#go_back%26action_ifc:identity.$(set:active_line).exec_assist=exec_call_alert_save_custom_name,custom_name=__Y__")</Url>
+        <ExtraIconType>$(icon_type_enum:kIconTypeMenuArrowRight)</ExtraIconType>
+      </MenuItem>
+    </If>
+    <MenuItem name="$(lang:xsi_call_alerting_id_number)">
+      <Url>file:///xml/gui/broadsoft_exec.xml#sub=*[@id="call_line_id_number"]</Url>
+      <If condition="$(show_feature:FEATURE_PUI_STYLE_SIO)">
+        <SubText>$(var_ifc:identity.$(set:active_line).exec_assist::exec_call_alert_number)</SubText>
+      </If>
+      <ExtraIconType>$(icon_type_enum:kIconTypeMenuArrowRight)</ExtraIconType>
+    </MenuItem>
+     <If condition="$(bool_eval:$(condition:$(var_ifc:identity.$(set:active_line).exec_assist::exec_call_alert_number)==Custom))">
+      <MenuItem name="$(lang:xsi_call_alerting_custom_id_number)">
+        <If condition="$(show_feature:FEATURE_PUI_STYLE_SIO)">
+          <SubText>$(var_ifc:identity.$(set:active_line).exec_assist::exec_call_alert_custom_number)</SubText>
+        </If>
+        <Url>file:///xml/gui/templates.xml#sub=*[@id="input_template"]&amp;var:input_displayname=$(lang:xsi_call_alerting_custom_id_number)&amp;var:input_token=__Y__&amp;var:input_flags=N&amp;var:custom_number=__Y__&amp;var:input_default=$(var_ifc:identity.$(set:active_line).exec_assist::exec_call_alert_custom_number)&amp;var:input_mask=&amp;var:input_range=&amp;var:input_url=$(urlencode:"mb_nop#go_back%26action_ifc:identity.$(set:active_line).exec_assist=exec_call_alert_save_custom_number,custom_number=__Y__")</Url>
+        <ExtraIconType>$(icon_type_enum:kIconTypeMenuArrowRight)</ExtraIconType>
+      </MenuItem>
+     </If>
+    <MenuItem name="$(lang:xsi_call_alerting_recall_after)">
+      <If condition="$(show_feature:FEATURE_PUI_STYLE_SIO)">
+        <SubText>$(var_ifc:identity.$(set:active_line).exec_assist::exec_call_alert_call_push_recall) rings</SubText>
+      </If>
+      <Url>file:///xml/gui/templates.xml#sub=*[@id="input_template"]&amp;var:input_displayname=$(lang:xsi_call_alerting_recall_after_range)&amp;var:input_token=__Y__&amp;var:input_flags=N&amp;var:push_rings=__Y__&amp;var:input_default=$(var_ifc:identity.$(set:active_line).exec_assist::exec_call_alert_call_push_recall)&amp;var:input_mask=&amp;var:input_range=2-20&amp;var:input_url=$(urlencode:"mb_nop#go_back%26action_ifc:identity.$(set:active_line).exec_assist=exec_call_alert_save_push_rings,push_rings=__Y__")</Url>
+      <ExtraIconType>$(icon_type_enum:kIconTypeMenuArrowRight)</ExtraIconType>
+    </MenuItem>
+    <If condition="$(bool_eval:$(condition:$(var_ifc:identity.$(set:active_line).exec_assist::exec_call_alert_mode)==Sequential))">
+      <MenuItem name="$(lang:xsi_call_alerting_next_assistant)">
+        <If condition="$(show_feature:FEATURE_PUI_STYLE_SIO)">
+          <SubText>$(var_ifc:identity.$(set:active_line).exec_assist::exec_call_alert_call_next_assistant) rings</SubText>
+        </If>
+        <Url>file:///xml/gui/templates.xml#sub=*[@id="input_template"]&amp;var:input_displayname=$(lang:xsi_call_alerting_next_assistant_range)&amp;var:input_token=__Y__&amp;var:input_flags=N&amp;var:next_rings=__Y__&amp;var:input_default=$(var_ifc:identity.$(set:active_line).exec_assist::exec_call_alert_call_next_assistant)&amp;var:input_mask=&amp;var:input_range=1-20&amp;var:input_url=$(urlencode:"mb_nop#go_back%26action_ifc:identity.$(set:active_line).exec_assist=exec_call_alert_save_next_rings,next_rings=__Y__")</Url>
+        <ExtraIconType>$(icon_type_enum:kIconTypeMenuArrowRight)</ExtraIconType>
+      </MenuItem>
+    </If>
+    <MenuItem name="$(lang:xsi_call_alerting_rollover_after)">
+      <Url>phone://mb_nop_ignore_prev_frags#action_ifc:identity.$(set:active_line).exec_assist=exec_call_alert_rollover_toggle</Url>
+      <If condition="$(show_feature:FEATURE_PUI_STYLE_SIO)">
+        <SubText>$(on_off:$(condition:$(var_ifc:identity.$(set:active_line).exec_assist::exec_call_alert_rollover_enable)==true))</SubText>
+      </If>
+      <If condition="$(bool_eval:$(condition:$(var_ifc:identity.$(set:active_line).exec_assist::exec_call_alert_rollover_enable)==true))">
+        <ExtraIconType>$(icon_type_enum:kIconTypeMenuSliderOn)</ExtraIconType>
+      </If>
+      <Else>
+        <ExtraIconType>$(icon_type_enum:kIconTypeMenuSliderOff)</ExtraIconType>
+      </Else>
+    </MenuItem>
+    <If condition="$(bool_eval:$(condition:$(var_ifc:identity.$(set:active_line).exec_assist::exec_call_alert_rollover_enable)==true))">
+      <MenuItem name="$(lang:xsi_call_alerting_rollover_after_time)">
+        <If condition="$(show_feature:FEATURE_PUI_STYLE_SIO)">
+          <SubText>$(var_ifc:identity.$(set:active_line).exec_assist::exec_call_alert_rollover_time)s</SubText>
+        </If>
+        <Url>file:///xml/gui/templates.xml#sub=*[@id="input_template"]&amp;var:input_displayname=$(lang:xsi_call_alerting_rollover_after_time_range)&amp;var:input_token=__Y__&amp;var:input_flags=N&amp;var:rollovertime=__Y__&amp;var:input_default=$(var_ifc:identity.$(set:active_line).exec_assist::exec_call_alert_rollover_time)&amp;var:input_mask=&amp;var:input_range=0-60&amp;var:input_url=$(urlencode:"mb_nop#go_back%26action_ifc:identity.$(set:active_line).exec_assist=exec_call_alert_save_rollover_time,rollovertime=__Y__")</Url>
+        <ExtraIconType>$(icon_type_enum:kIconTypeMenuArrowRight)</ExtraIconType>
+      </MenuItem>
+    </If>
+    <MenuItem name="$(lang:xsi_call_alerting_rollover_action)">
+      <Url>file:///xml/gui/broadsoft_exec.xml#sub=*[@id="rollover_action"]</Url>
+      <If condition="$(show_feature:FEATURE_PUI_STYLE_SIO)">
+        <SubText>$(var_ifc:identity.$(set:active_line).exec_assist::exec_call_alert_rollover_action)</SubText>
+      </If>
+      <ExtraIconType>$(icon_type_enum:kIconTypeMenuArrowRight)</ExtraIconType>
+    </MenuItem>
+    <If condition="$(bool_eval:$(condition:$(var_ifc:identity.$(set:active_line).exec_assist::exec_call_alert_rollover_action)==Forward))">
+      <MenuItem name="$(lang:xsi_call_alerting_rollover_fwd_number)">
+        <If condition="$(show_feature:FEATURE_PUI_STYLE_SIO)">
+          <SubText>$(var_ifc:identity.$(set:active_line).exec_assist::exec_call_alert_rollover_number)</SubText>
+        </If>
+        <Url>file:///xml/gui/templates.xml#sub=*[@id="input_template"]&amp;var:input_displayname=$(lang:xsi_call_alerting_rollover_fwd_number)&amp;var:input_token=__Y__&amp;var:input_flags=N&amp;var:forward_number=__Y__&amp;var:input_default=$(var_ifc:identity.$(set:active_line).exec_assist::exec_call_alert_rollover_number)&amp;var:input_mask=&amp;var:input_range=&amp;var:input_url=$(urlencode:"mb_nop#go_back%26action_ifc:identity.$(set:active_line).exec_assist=exec_call_alert_save_fwd_number,forward_number=__Y__")</Url>
+        <ExtraIconType>$(icon_type_enum:kIconTypeMenuArrowRight)</ExtraIconType>
+      </MenuItem>
+    </If>
+  </IPPhoneMenu>
+  <IPPhoneMenu track="yes" id="alerting_mode" state="only_mb">
+    <Title>$(lang:xsi_call_alerting_mode)</Title>
+    <MenuItem name="$(lang:xsi_call_alerting_mode_simu)" id="alert_mode_simu" state="only_mb">
+      <Url>phone://mb_nop#var_ifc:identity.$(set:active_line).exec_assist="exec_call_alert_mode=Simultaneous"</Url>
+      <If condition="$(bool_eval:$(condition:$(var_ifc:identity.$(set:active_line).exec_assist::exec_call_alert_mode)==Simultaneous))">
+        <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOn)</ExtraIconType>
+      </If>
+      <Else>
+        <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOff)</ExtraIconType>
+      </Else>
+      <SubText>$(var_ifc:identity.$(set:active_line).exec_assist="exec_call_alert_mode)</SubText>
+    </MenuItem>
+    <MenuItem name="$(lang:xsi_call_alerting_mode_seq)" id="alert_mode_seq" state="only_mb">
+      <Url>phone://mb_nop#var_ifc:identity.$(set:active_line).exec_assist="exec_call_alert_mode=Sequential"</Url>
+      <If condition="$(bool_eval:$(condition:$(var_ifc:identity.$(set:active_line).exec_assist::exec_call_alert_mode)==Sequential))">
+        <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOn)</ExtraIconType>
+      </If>
+      <Else>
+        <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOff)</ExtraIconType>
+      </Else>
+      <SubText>$(var_ifc:identity.$(set:active_line).exec_assist="exec_call_alert_mode)</SubText>
+    </MenuItem>
+  </IPPhoneMenu>
+  <IPPhoneMenu track="yes" id="call_line_id_name" state="only_mb">
+    <Title>$(lang:xsi_call_alerting_id_name)</Title>
+    <MenuItem name="$(lang:xsi_call_alerting_id_exec_name)">
+       <Url>phone://mb_nop#var_ifc:identity.$(set:active_line).exec_assist="exec_call_alert_name=Executive"</Url>
+      <If condition="$(bool_eval:$(condition:$(var_ifc:identity.$(set:active_line).exec_assist::exec_call_alert_name)==Executive))">
+        <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOn)</ExtraIconType>
+      </If>
+      <Else>
+        <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOff)</ExtraIconType>
+      </Else>
+    </MenuItem>
+    <MenuItem name="$(lang:xsi_call_alerting_id_origin_name)">
+      <Url>phone://mb_nop#var_ifc:identity.$(set:active_line).exec_assist="exec_call_alert_name=Originator"</Url>
+      <If condition="$(bool_eval:$(condition:$(var_ifc:identity.$(set:active_line).exec_assist::exec_call_alert_name)==Originator))">
+        <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOn)</ExtraIconType>
+      </If>
+      <Else>
+        <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOff)</ExtraIconType>
+      </Else>
+    </MenuItem>
+    <MenuItem name="$(lang:xsi_call_alerting_id_exec_origin_name)">
+      <Url>phone://mb_nop#var_ifc:identity.$(set:active_line).exec_assist="exec_call_alert_name=Executive-Originator"</Url>
+      <If condition="$(bool_eval:$(condition:$(var_ifc:identity.$(set:active_line).exec_assist::exec_call_alert_name)==Executive-Originator))">
+        <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOn)</ExtraIconType>
+      </If>
+      <Else>
+        <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOff)</ExtraIconType>
+      </Else>
+    </MenuItem>
+    <MenuItem name="$(lang:xsi_call_alerting_id_origin_exec_name)">
+      <Url>phone://mb_nop#var_ifc:identity.$(set:active_line).exec_assist="exec_call_alert_name=Originator-Executive"</Url>
+      <If condition="$(bool_eval:$(condition:$(var_ifc:identity.$(set:active_line).exec_assist::exec_call_alert_name)==Originator-Executive))">
+        <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOn)</ExtraIconType>
+      </If>
+      <Else>
+        <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOff)</ExtraIconType>
+      </Else>
+    </MenuItem>
+    <MenuItem name="$(lang:xsi_call_custom_name)">
+      <Url>phone://mb_nop#var_ifc:identity.$(set:active_line).exec_assist="exec_call_alert_name=Custom"</Url>
+      <If condition="$(bool_eval:$(condition:$(var_ifc:identity.$(set:active_line).exec_assist::exec_call_alert_name)==Custom))">
+        <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOn)</ExtraIconType>
+      </If>
+      <Else>
+        <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOff)</ExtraIconType>
+      </Else>
+    </MenuItem>
+  </IPPhoneMenu>
+  <IPPhoneMenu track="yes" id="call_line_id_number" state="only_mb">
+    <Title>$(lang:xsi_call_alerting_id_number)</Title>
+    <MenuItem name="$(lang:xsi_call_alerting_id_exec_number)">
+      <Url>phone://mb_nop#var_ifc:identity.$(set:active_line).exec_assist="exec_call_alert_number=Executive"</Url>
+      <If condition="$(bool_eval:$(condition:$(var_ifc:identity.$(set:active_line).exec_assist::exec_call_alert_number)==Executive))">
+        <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOn)</ExtraIconType>
+      </If>
+      <Else>
+        <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOff)</ExtraIconType>
+      </Else>
+      <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOn)</ExtraIconType>
+    </MenuItem>
+    <MenuItem name="$(lang:xsi_call_alerting_id_origin_number)">
+      <Url>phone://mb_nop#var_ifc:identity.$(set:active_line).exec_assist="exec_call_alert_number=Originator"</Url>
+      <If condition="$(bool_eval:$(condition:$(var_ifc:identity.$(set:active_line).exec_assist::exec_call_alert_number)==Originator))">
+        <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOn)</ExtraIconType>
+      </If>
+      <Else>
+        <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOff)</ExtraIconType>
+      </Else>
+    </MenuItem>
+    <MenuItem name="$(lang:xsi_call_custom_name)">
+      <Url>phone://mb_nop#var_ifc:identity.$(set:active_line).exec_assist="exec_call_alert_number=Custom"</Url>
+      <If condition="$(bool_eval:$(condition:$(var_ifc:identity.$(set:active_line).exec_assist::exec_call_alert_number)==Custom))">
+        <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOn)</ExtraIconType>
+      </If>
+      <Else>
+        <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOff)</ExtraIconType>
+      </Else>
+    </MenuItem>
+  </IPPhoneMenu>
+  <IPPhoneMenu track="yes" id="rollover_action" state="only_mb">
+    <Title>$(lang:xsi_call_alerting_rollover_action)</Title>
+    <MenuItem name="$(lang:xsi_call_alerting_rollover_action_vm)">
+      <Url>phone://mb_nop#var_ifc:identity.$(set:active_line).exec_assist="exec_call_alert_rollover_action=Voice Messaging"</Url>
+      <If condition="$(bool_eval:$(condition:$(var_ifc:identity.$(set:active_line).exec_assist::exec_call_alert_rollover_action)==Voice Messaging))">
+        <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOn)</ExtraIconType>
+      </If>
+      <Else>
+        <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOff)</ExtraIconType>
+      </Else>
+    </MenuItem>
+    <MenuItem name="$(lang:xsi_call_alerting_rollover_action_fwd)">
+      <Url>phone://mb_nop#var_ifc:identity.$(set:active_line).exec_assist="exec_call_alert_rollover_action=Forward"</Url>
+      <If condition="$(bool_eval:$(condition:$(var_ifc:identity.$(set:active_line).exec_assist::exec_call_alert_rollover_action)==Forward))">
+        <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOn)</ExtraIconType>
+      </If>
+      <Else>
+        <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOff)</ExtraIconType>
+      </Else>
+    </MenuItem>
+    <MenuItem name="$(lang:xsi_call_alerting_rollover_action_na)">
+      <Url>phone://mb_nop#var_ifc:identity.$(set:active_line).exec_assist="exec_call_alert_rollover_action=No Answer Processing"</Url>
+      <If condition="$(bool_eval:$(condition:$(var_ifc:identity.$(set:active_line).exec_assist::exec_call_alert_rollover_action)==No Answer Processing))">
+        <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOn)</ExtraIconType>
+      </If>
+      <Else>
+        <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOff)</ExtraIconType>
+      </Else>
+    </MenuItem>
+  </IPPhoneMenu>
+  <!-- EO Call Alerting -->
+  <!-- View Assistants -->
+  <IPPhoneMenu track="yes" id="view_assistants" state="only_mb" speedselect="off">
+    <Title>$(lang:xsi_executive_view_assistants)</Title>
+    <Repeat values="$(var_ifc:identity.$(set:exec_assistant_identity).exec_assist::get_assistants)" token="|__FULLNAME__|__OPTIN__|">
+      <If condition="$(show_feature:FEATURE_PUI_STYLE_SIO)">
+        <MenuItem name="__FULLNAME__">
+          <ExtraText>__OPTIN__</ExtraText>
+        </MenuItem>
+      </If>
+      <Else>
+        <MenuItem name="__FULLNAME__: __OPTIN__"></MenuItem>
+      </Else>
+    </Repeat>
+  </IPPhoneMenu>
+  <!-- EO View Assistants -->
+</IPPhoneBatch>

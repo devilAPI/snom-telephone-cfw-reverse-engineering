@@ -1,0 +1,70 @@
+<?ssi title prefs_ssi_title?>
+<?ssi file common1.htm?>
+<TR><TD></TD><TD>&nbsp;</TD></TR>
+<TR><TD vAlign="top" height="16"><IMG height="16" src="img/clr.gif" width="16"></TD></TR>
+<TR>
+  <TD vAlign="top">
+    <FORM enctype="multipart/form-data" id="image_upload" method="post">
+      <?ssi skipon VTECH?>
+      <TABLE class="bubbleTable" cellSpacing="0" cellPadding="0" width="100%" border="0" ID="Table1">
+      <?ssi skipoff VTECH?>
+      <?ssi skipon SNOM?>
+      <TABLE cellSpacing="4" cellPadding="0" width="100%" border="0" ID="Table1">
+      <?ssi skipoff SNOM?>
+        <TBODY>
+          <TR>
+            <TD class="background" width="12" height="5">
+              <?ssi skipon VTECH?>
+              <IMG height="12" src=<?ssi img-corner-gif ul?> width="12">
+              <?ssi skipoff VTECH?>
+            </TD>
+            <TD></TD>
+            <TD></TD>
+            <TD class="background" width="12" height="5">
+              <?ssi skipon VTECH?>
+              <IMG height="12" src=<?ssi img-corner-gif ur?> width="12">
+              <?ssi skipoff VTECH?>
+            </TD>
+          </TR>
+
+          <TR>
+            <td></td>
+            <TD>
+              <?ssi skipon VTECH?>
+              <TABLE rules="rows" class="bubbleTable" cellSpacing="10" cellPadding="10" width="100%" border="0" ID="Table2">
+              <?ssi skipoff VTECH?>
+              <?ssi skipon SNOM?>
+              <TABLE rules="rows" cellSpacing="10" cellPadding="10" width="100%" border="0" ID="Table2">
+              <?ssi skipoff SNOM?>
+                <tr>
+                  <td width="100"><b><?lng prefs_original?></b></td>
+                  <td width="100"><b><?lng prefs_new?></b></td>
+                  <td width="150"><b><?lng prefs_dimension?></b></td>
+                  <td width="50"></td>
+                  <td width="50"></td>
+                  <td width="50"></td>
+                </tr>
+                <?ssi images_info?>
+              </table>
+            </td>
+          </TR>
+
+          <TR>
+            <TD class="background" width="12" height="5">
+              <?ssi skipon VTECH?>
+              <IMG height="12" src=<?ssi img-corner-gif ll?> width="12">
+              <?ssi skipoff VTECH?>
+            </TD>
+            <TD></TD>
+            <TD></TD>
+            <TD class="background" width="12" height="5">
+              <?ssi skipon VTECH?>
+              <IMG height="12" src=<?ssi img-corner-gif lr?> width="12">
+              <?ssi skipoff VTECH?>
+            </TD>
+          </TR>
+        </TBODY>
+      </TABLE>
+    </FORM>
+<?ssi file common9.htm?>
+</HTML>

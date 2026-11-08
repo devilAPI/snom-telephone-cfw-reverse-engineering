@@ -1,11 +1,11 @@
-# Build a signed D375 dev image from custom-rootfs/ and publish it as a
+# Build a signed D375 dev image from rootfs/d375/ and publish it as a
 # rolling GitHub pre-release (tag dev-<branch>). See docs/ci-releases.md.
 name: D375 dev image
 
 on:
   push:
     branches: [main, cfw-features]
-    paths: [custom-rootfs/**, tools/build-custom-firmware.sh, .github/workflows/dev-image.yml]
+    paths: [rootfs/d375/**, tools/fw/build-custom-firmware.sh, .github/workflows/dev-image.yml]
   workflow_dispatch:
 
 permissions:
@@ -26,23 +26,23 @@ jobs:
           FIRMWARE_PRIV_PEM: ${{ secrets.FIRMWARE_PRIV_PEM }}
         run: |
           [ -n "$FIRMWARE_PRIV_PEM" ] || { echo "::error::secret FIRMWARE_PRIV_PEM is not set (docs/ci-releases.md)"; exit 1; }
-          mkdir -p custom-key
-          printf '%s\n' "$FIRMWARE_PRIV_PEM" > custom-key/firmware.priv.pem
-          chmod 600 custom-key/firmware.priv.pem
-          openssl rsa -in custom-key/firmware.priv.pem -pubout -out custom-key/firmware.pub 2>/dev/null
+          mkdir -p keys/custom-d375
+          printf '%s\n' "$FIRMWARE_PRIV_PEM" > keys/custom-d375/firmware.priv.pem
+          chmod 600 keys/custom-d375/firmware.priv.pem
+          openssl rsa -in keys/custom-d375/firmware.priv.pem -pubout -out keys/custom-d375/firmware.pub 2>/dev/null
           # The phone only accepts an image signed by the key in the image it runs.
           # A different key would be written into firmware1.pub and lock out updates.
-          cmp -s custom-key/firmware.pub custom-rootfs/firmware1.pub \
-            || { echo "::error::FIRMWARE_PRIV_PEM does not match custom-rootfs/firmware1.pub"; exit 1; }
+          cmp -s keys/custom-d375/firmware.pub rootfs/d375/firmware1.pub \
+            || { echo "::error::FIRMWARE_PRIV_PEM does not match rootfs/d375/firmware1.pub"; exit 1; }
 
       - name: Build image
         run: |
           # The fakeroot db is keyed by local inode numbers and means nothing here;
           # without it the build packs everything as root:root (exact for this tree).
-          rm -f custom-rootfs/.fakeroot
-          ./tools/build-custom-firmware.sh
-          rm -rf custom-key
-          cd custom-firmware
+          rm -f rootfs/d375/.fakeroot
+          ./tools/fw/build-custom-firmware.sh
+          rm -rf keys/custom-d375
+          cd firmware/custom
           sha256sum snomD375-10.1.64.17-SIP-r.bin > snomD375-10.1.64.17-SIP-r.bin.sha256
           cat snomD375-10.1.64.17-SIP-r.bin.sha256
 
@@ -55,8 +55,8 @@ jobs:
           notes="Untested dev build of \`${{ github.ref_name }}\` at ${short} ($(date -u +%F' '%H:%M) UTC).
 
           Only flash it on a D375 that already runs this CFW (same signing key). Back up first: docs/recover-from-device.md.
-          sha256: \`$(cut -d' ' -f1 custom-firmware/*.sha256)\`"
+          sha256: \`$(cut -d' ' -f1 firmware/custom/*.sha256)\`"
           gh release delete "$TAG" --yes --cleanup-tag 2>/dev/null || true
           gh release create "$TAG" --prerelease --target "$GITHUB_SHA" \
             --title "D375 dev image (${{ github.ref_name }} ${short})" --notes "$notes" \
-            custom-firmware/snomD375-10.1.64.17-SIP-r.bin custom-firmware/snomD375-10.1.64.17-SIP-r.bin.sha256
+            firmware/custom/snomD375-10.1.64.17-SIP-r.bin firmware/custom/snomD375-10.1.64.17-SIP-r.bin.sha256

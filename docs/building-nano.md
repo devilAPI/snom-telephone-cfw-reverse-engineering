@@ -14,8 +14,8 @@ linking sidesteps the phone's ancient libc entirely.
 
 ## Build
 
-`tools/build-nano.sh` runs the whole thing in a Debian container (needs
-`docker`). Output: `tools/out/nano`, an ARM EABI5 static binary that runs on the
+`tools/build/build-nano.sh` runs the whole thing in a Debian container (needs
+`docker`). Output: `out/nano`, an ARM EABI5 static binary that runs on the
 phone (verified: full curses UI, clean exit).
 
 Key choices, if you build it by hand:
@@ -30,7 +30,7 @@ Key choices, if you build it by hand:
 
 ## Installing into the image
 
-Copy to `custom-rootfs/usr/bin/nano`, record root ownership in the fakeroot db
+Copy to `rootfs/d375/usr/bin/nano`, record root ownership in the fakeroot db
 (`fakeroot -i .fakeroot -s .fakeroot sh -c 'chown 0:0 usr/bin/nano && chmod 755 usr/bin/nano'`),
 and **add `usr/bin/nano` to `etc/rootfs_files.lst`** or the first-boot
 `cleanUpRootfs` pass deletes it (see [cfw-settings.md](cfw-settings.md)).

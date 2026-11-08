@@ -72,7 +72,7 @@ images you sign. See [docs/firmware-format.md](docs/firmware-format.md) and
 [docs/signing-keys.md](docs/signing-keys.md).
 
 ```
- stock .bin ──fw-unpack.sh──▶ rootfs ──(your changes)──▶ custom-rootfs ──build-custom-firmware.sh──▶ custom .bin
+ stock .bin ──fw-unpack.sh──▶ rootfs ──(your changes)──▶ rootfs/d375 ──build-custom-firmware.sh──▶ custom .bin
                                                               ▲
  running phone ───────────fw-pull-from-device.sh──────────────┘   (recovery path)
 ```
@@ -90,35 +90,46 @@ verification uses RSA-2048 (`/firmware1.pub`). See
 
 ## Repository layout
 
-| Path | Tracked | What |
-|---|---|---|
-| `tools/fw-unpack.sh` | yes | Verify, decrypt and extract a D3xx/D7xx `.bin` image |
-| `tools/swu-unpack.sh` | yes | Decrypt and extract a D8xx `.swu` image |
-| `tools/build-custom-firmware.sh` | yes | Pack, encrypt and sign `custom-rootfs/` into a `.bin` (D3xx) |
-| `tools/fw-pull-from-device.sh` | yes | Back up a running phone over SSH (rootfs, key, raw flash) |
-| `tools/prepare-pulled-rootfs.sh` | yes | Make a pulled rootfs buildable again |
-| `tools/qemu-run.sh` | yes | Boot a model in QEMU (see docs/qemu.md) |
-| `tools/vm-define.sh` | yes | Register both phones in virt-manager |
-| `tools/vm-update.sh` | yes | Put a firmware build into the emulator |
-| `tools/build-qemu.sh` | yes | Build QEMU with both phone machines |
-| `tools/build-d815-ubifs.sh` | yes | Build a D815 rootfs with correct permissions |
-| `tools/qemu-mkflash.py`, `tools/qemu-mkubi.py` | yes | Turn a rootfs into a raw NAND image |
-| `emu/board/`, `emu/d815-overlay/` | yes | The QEMU machine models and D815 emulator overlay |
-| `tools/rootfs-diff.sh` | yes | Show what a custom rootfs changes compared with stock |
-| `tools/snom-webpass.sh` | yes | Change the web UI password via SSH (works after Webex provisioning) |
-| `tools/setup-ovpn.sh` | yes | Generate OpenVPN PKI + client tarball for initial root |
-| `tools/build-*.sh` | yes | Cross-build the phone binaries (Doom, NES, GB/GBA, intercom, nano, ...) with docker + musl |
-| `doom-src/`, `nes-src/`, `retro-src/`, `intercom-src/`, `navidrome-src/`, `remote-src/`, `snd/` | yes | Ports, the shared audio/keymap layer and helpers built by the scripts above |
-| `keys/` | yes | **Public** firmware keys and AES key files (see [keys/README.md](keys/README.md)) |
-| `docs/` | yes | Documentation (start here) |
-| `original_firmware/` | no | Stock firmware images from snom |
-| `decrypted/` | no | Stock rootfs unpacked by the unpack tools |
-| `custom-rootfs/` | no | The rootfs that becomes the custom image (D375) |
-| `custom-key/` | no | **Private** signing key: back it up outside git |
-| `.github/workflows/dev-image.yml` | yes | Builds and publishes signed D375 dev images as GitHub pre-releases |
-| `custom-firmware/` | no | Built images |
-| `backups/` | no | Dumps pulled from phones |
-| `vpn-server/` | no | OpenVPN server for initial root |
+Everything is tracked in git, including the signing keys (they are public on
+purpose, so anyone can build images for a phone running this CFW).
+
+```
+src/                 our code
+  cfw/               shared panel, CGIs, boot hook and per-model config (synced into rootfs/d815)
+  games/             doom/, nes/, gba/, retro/ (GB/GBC + GBA frontend)
+  audio/             snd/ (shared halaudio + keymap layer), intercom/, navidrome/
+  remote/            screen capture and key injection
+  native/            small C helpers: bindmount, fb24shim (+ keymap.h), rtcap
+  host/              linux-tel-wrapper (tel: links on a Linux PC)
+tools/
+  fw/                unpack, build, sign and diff firmware images (start: build-custom-firmware.sh)
+  build/             docker + musl cross-builds of the phone binaries, output in out/
+  qemu/              QEMU machines, NAND images, virt-manager VMs
+  device/            scripts that talk to a phone: speaker, intercom, D815 app trials, web password, VPN
+  backport/          staging the D815 phone app for the D375
+  media/             splash, icons, theme images
+  analysis/          one-off reverse-engineering helpers
+tests/               on-phone feature tests (tests/lib.sh)
+out/                 cross-built binaries
+rootfs/
+  d375/              the D375 CFW rootfs; its snom/cfw/ holds the D375 CFW code
+  d375.manifest      owners, modes and device nodes for d375/
+  d815/              the D815 CFW rootfs
+  stock/             stock rootfs trees unpacked by the unpack tools
+firmware/
+  stock/             stock images from snom
+  custom/            built images; custom/previous/ keeps older builds
+keys/
+  stock/             snom's public keys and the D815 AES key (see keys/README.md)
+  custom-d375/       our D375 signing key (CI gets it from a repository secret)
+  custom-d815/       our D815 signing and AES keys
+emu/                 QEMU board models (board/), D815 overlay, VM disks
+backups/             dumps pulled from phones
+vpn/                 OpenVPN server and phone tarball for the first root
+third_party/gpl/     snom's GPL source tarball
+docs/                documentation (start here)
+.github/workflows/   CI: signed D375 dev images as GitHub pre-releases
+```
 
 ## Documentation
 
@@ -153,15 +164,15 @@ verification uses RSA-2048 (`/firmware1.pub`). See
 ### D3xx (phone already runs custom firmware with SSH)
 
 ```sh
-./tools/fw-pull-from-device.sh <phone-ip> --raw --extract   # backup + custom-rootfs/
-./tools/prepare-pulled-rootfs.sh decrypted/snomD375-10.1.64.17-SIP-r/rootfs
-./tools/build-custom-firmware.sh                            # new key, new image
+./tools/fw/fw-pull-from-device.sh <phone-ip> --raw --extract   # backup + rootfs/d375/
+./tools/fw/prepare-pulled-rootfs.sh rootfs/stock/snomD375-10.1.64.17-SIP-r/rootfs
+./tools/fw/build-custom-firmware.sh                            # new key, new image
 ```
 
 ### D8xx (decrypt stock firmware with keys from device)
 
 ```sh
-ssh root@<phone-ip> 'cat /firmware1.pub' > keys/snomD815-firmware1.pub
-ssh root@<phone-ip> 'cat /firmware1.aes' > keys/snomD815-firmware1.aes
-./tools/swu-unpack.sh original_firmware/snomD815-10.1.226.16-SIP-r.swu keys/snomD815-firmware1.aes decrypted/D815-10.1.226.16
+ssh root@<phone-ip> 'cat /firmware1.pub' > keys/stock/snomD815-firmware1.pub
+ssh root@<phone-ip> 'cat /firmware1.aes' > keys/stock/snomD815-firmware1.aes
+./tools/fw/swu-unpack.sh firmware/stock/snomD815-10.1.226.16-SIP-r.swu keys/stock/snomD815-firmware1.aes rootfs/stock/D815-10.1.226.16
 ```

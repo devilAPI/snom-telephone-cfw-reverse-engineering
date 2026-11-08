@@ -1,0 +1,1882 @@
+<?xml version="1.0" encoding="utf-8"?>
+<phrases>
+	<language t="Nederlands"/>
+	<phrase n="lang_none" t=""/>
+	<phrase n="lang_language_name" t="Nederlands"/>
+	<phrase n="lang_cntry_CHN" t="China"/>
+	<phrase n="lang_cntry_FIN" t="Finland"/>
+	<phrase n="lang_cntry_GER" t="Duitsland"/>
+	<phrase n="lang_cntry_IND" t="India"/>
+	<phrase n="lang_cntry_IDN" t="Indonesië"/>
+	<phrase n="lang_cntry_MYS" t="Maleisië"/>
+	<phrase n="lang_cntry_MEX" t="Mexico"/>
+	<phrase n="lang_cntry_NLD" t="Nederland"/>
+	<phrase n="lang_cntry_PRT" t="Portugal"/>
+	<phrase n="lang_cntry_ZAF" t="Zuid-Afrika"/>
+	<phrase n="lang_cntry_GBR" t="Verenigd Koninkrijk"/>
+	<phrase n="lang_cntry_USA" t="Verenigde Staten"/>
+	<phrase n="lang_cntry_CAM" t="Centraal-America"/>
+	<phrase n="lang_cntry_CAN" t="Canada"/>
+	<phrase n="lang_cntry_CHL" t="Chili"/>
+	<phrase n="lang_cntry_BHS" t="Bahama's"/>
+	<phrase n="lang_cntry_CUB" t="Cuba"/>
+	<phrase n="lang_cntry_PRY" t="Paraguay"/>
+	<phrase n="lang_cntry_BMU" t="Bermuda"/>
+	<phrase n="lang_cntry_FLK" t="Falklandeilanden"/>
+	<phrase n="lang_cntry_GRL" t="Groenland"/>
+	<phrase n="lang_cntry_FRO" t="Faeröer"/>
+	<phrase n="lang_cntry_IRL" t="Ierland"/>
+	<phrase n="lang_cntry_ESP" t="Spanje"/>
+	<phrase n="lang_cntry_ALB" t="Albanië"/>
+	<phrase n="lang_cntry_AUT" t="Oostenrijk"/>
+	<phrase n="lang_cntry_BEL" t="België"/>
+	<phrase n="lang_cntry_BRA" t="Brazilië"/>
+	<phrase n="lang_cntry_CAI" t="Turks- en Caicoseilanden"/>
+	<phrase n="lang_cntry_CHA" t="Chathameilanden"/>
+	<phrase n="lang_cntry_HRV" t="Kroatië"/>
+	<phrase n="lang_cntry_CZE" t="Tsjechië"/>
+	<phrase n="lang_cntry_DNK" t="Denemarken"/>
+	<phrase n="lang_cntry_FRA" t="Frankrijk"/>
+	<phrase n="lang_cntry_HUN" t="Hongarije"/>
+	<phrase n="lang_cntry_ITA" t="Italië"/>
+	<phrase n="lang_cntry_LUX" t="Luxemburg"/>
+	<phrase n="lang_cntry_MAK" t="Macedonië"/>
+	<phrase n="lang_cntry_NAM" t="Namibië"/>
+	<phrase n="lang_cntry_NOR" t="Noorwegen"/>
+	<phrase n="lang_cntry_POL" t="Polen"/>
+	<phrase n="lang_cntry_SVK" t="Slowakije"/>
+	<phrase n="lang_cntry_SWD" t="Zweden"/>
+	<phrase n="lang_cntry_CHE" t="Zwitserland"/>
+	<phrase n="lang_cntry_GIB" t="Gibraltar"/>
+	<phrase n="lang_cntry_YUG" t="Servië"/>
+	<phrase n="lang_cntry_BLR" t="Wit-Rusland"/>
+	<phrase n="lang_cntry_BGR" t="Bulgarije"/>
+	<phrase n="lang_cntry_CYP" t="Cyprus"/>
+	<phrase n="lang_cntry_EGY" t="Egypte"/>
+	<phrase n="lang_cntry_EST" t="Estland"/>
+	<phrase n="lang_cntry_GAZ" t="Gaza"/>
+	<phrase n="lang_cntry_GRC" t="Griekenland"/>
+	<phrase n="lang_cntry_ISR" t="Israël"/>
+	<phrase n="lang_cntry_JOR" t="Jordanië"/>
+	<phrase n="lang_cntry_LVA" t="Letland"/>
+	<phrase n="lang_cntry_LTU" t="Litouwen"/>
+	<phrase n="lang_cntry_LBN" t="Libanon"/>
+	<phrase n="lang_cntry_MDA" t="Moldavië"/>
+	<phrase n="lang_cntry_RUS" t="Rusland"/>
+	<phrase n="lang_cntry_ROU" t="Roemenië"/>
+	<phrase n="lang_cntry_SYR" t="Syrië"/>
+	<phrase n="lang_cntry_TUR" t="Turkije"/>
+	<phrase n="lang_cntry_UKR" t="Oekraïne"/>
+	<phrase n="lang_cntry_IRQ" t="Irak"/>
+	<phrase n="lang_cntry_IRN" t="Iran"/>
+	<phrase n="lang_cntry_ARM" t="Armenië"/>
+	<phrase n="lang_cntry_AZE" t="Azerbeidzjan"/>
+	<phrase n="lang_cntry_GEO" t="Georgië"/>
+	<phrase n="lang_cntry_KAZ" t="Kazachstan"/>
+	<phrase n="lang_cntry_KGZ" t="Kirgizië"/>
+	<phrase n="lang_cntry_PAK" t="Pakistan"/>
+	<phrase n="lang_cntry_SGP" t="Singapore"/>
+	<phrase n="lang_cntry_KOR" t="Korea"/>
+	<phrase n="lang_cntry_JPN" t="Japan"/>
+	<phrase n="lang_cntry_AUS" t="Australië"/>
+	<phrase n="lang_cntry_NZL" t="Nieuw-Zeeland"/>
+	<phrase n="lang_cntry_TON" t="Tonga"/>
+	<phrase n="lang_cntry_COL" t="Colombia"/>
+	<phrase n="lang_cntry_ECU" t="Ecuador"/>
+	<phrase n="lang_cntry_TTB" t="Trinidad en Tobago"/>
+	<phrase n="lang_cntry_ARG" t="Argentinië"/>
+	<phrase n="lang_cntry_WAT" t="West-Afrika"/>
+	<phrase n="lang_cntry_CAT" t="Centraal-Afrika"/>
+	<phrase n="lang_cntry_EAT" t="Oost-Afrika"/>
+	<phrase n="lang_cntry_VEN" t="Venezuela"/>
+	<phrase n="lang_cntry_NCL" t="Nieuw-Caledonië"/>
+	<phrase n="lang_cntry_UAE" t="Verenigde Arabische Emiraten"/>
+	<phrase n="lang_cntry_THA" t="Thailand"/>
+	<phrase n="lang_F_SEARCH" t="Zoeken"/>
+	<phrase n="lang_F_SEARCH_typeSio" t="Zoeken"/>
+	<phrase n="lang_F_REBOOT" t="Herstart"/>
+	<phrase n="lang_F_REBOOT_typeSio" t="Herstart"/>
+	<phrase n="lang_F_REBOOT_smartlabel" t="Herstart"/>
+	<phrase n="lang_F_PAIR" t="Koppelen"/>
+	<phrase n="lang_F_UNPAIR" t="Ontkoppelen"/>
+	<phrase n="lang_F_JOIN" t="Deeln"/>
+	<phrase n="lang_F_JOIN_typeSio" t="Deeln."/>
+	<phrase n="lang_F_JOIN_WITH" t="Deelnemen met"/>
+	<phrase n="lang_F_LEAVE" t="Verlaten"/>
+	<phrase n="lang_F_LEAVE_typeSio" t="Verl."/>
+	<phrase n="lang_F_OK" t="OK"/>
+	<phrase n="lang_F_ACCEPT_CALL" t="Accepteer"/>
+	<phrase n="lang_F_ACCEPT_CALL_typeSio" t="Accepteer"/>
+	<phrase n="lang_F_CANCEL" t="Annul."/>
+	<phrase n="lang_F_CANCEL_typeSio" t="Annuleren"/>
+	<phrase n="lang_F_YES" t="Ja"/>
+	<phrase n="lang_F_NO" t="Nee"/>
+	<phrase n="lang_F_ADD_SPEAKER" t="+Spkr"/>
+	<phrase n="lang_F_ADD_SPEAKER_typeSio" t="+Luidspreker"/>
+	<phrase n="lang_F_REMOVE_SPEAKER" t="-Spkr"/>
+	<phrase n="lang_F_REMOVE_SPEAKER_typeSio" t="-Luidspreker"/>
+	<phrase n="lang_F_ADD_HANDSET" t="+Hoorn"/>
+	<phrase n="lang_F_ADD_HANDSET_typeSio" t="+Hoorn"/>
+	<phrase n="lang_F_REMOVE_HANDSET" t="-Hoorn"/>
+	<phrase n="lang_F_REMOVE_HANDSET_typeSio" t="-Hoorn"/>
+	<phrase n="lang_F_DELETE" t="Verw."/>
+	<phrase n="lang_F_DELETE_typeSio" t="Verwijder"/>
+	<phrase n="lang_F_ADR_BOOK" t="Telb."/>
+	<phrase n="lang_F_ADR_BOOK_typeSio" t="Adresboek"/>
+	<phrase n="lang_F_ADR_BOOK_smartlabel" t="Telefoonboek"/>
+	<phrase n="lang_F_DENYALL" t="Weiger"/>
+	<phrase n="lang_F_DENYALL_typeSio" t="Beller blokkeren"/>
+	<phrase n="lang_F_DENYALL_smartlabel" t="Weiger"/>
+	<phrase n="lang_F_CALL_LIST" t="Hist."/>
+	<phrase n="lang_F_CALL_LIST_typeSio" t="Gesprekshistorie"/>
+	<phrase n="lang_F_CALL_LIST_smartlabel" t="Bel Hist"/>
+	<phrase n="lang_F_PLAY" t="Afspelen"/>
+	<phrase n="lang_F_STOP" t="Stop"/>
+	<phrase n="lang_F_RESCAN" t="Zoeken"/>
+	<phrase n="lang_F_INCREASE" t="Hoger"/>
+	<phrase n="lang_F_DECREASE" t="Lager"/>
+	<phrase n="lang_F_BACK" t="⌫"/>
+	<phrase n="lang_F_BACK_typeSio" t="Backspace"/>
+	<phrase n="lang_F_REDIAL" t="Herh."/>
+	<phrase n="lang_F_REDIAL_typeSio" t="Nummerherhaling"/>
+	<phrase n="lang_F_REDIAL_smartlabel" t="Opnieuw kiezen"/>
+	<phrase n="lang_F_INSTANT_REDIAL" t="Opnieuw kiezen"/>
+	<phrase n="lang_F_INSTANT_REDIAL_typeSio" t="Direct opnieuw kiezen"/>
+	<phrase n="lang_F_INSTANT_REDIAL_smartlabel" t="Opnieuw kiezen"/>
+	<phrase n="lang_F_ADD_NUMBER" t="Nieuw"/>
+	<phrase n="lang_F_ADD_NUMBER_typeSio" t="Nummer toev."/>
+	<phrase n="lang_F_CONTACTS" t="Contacten"/>
+	<phrase n="lang_F_PRESENCE" t="Status"/>
+	<phrase n="lang_F_PRESENCE_typeSio" t="Presentie"/>
+	<phrase n="lang_F_PRESENCE_smartlabel" t="Aanwezigheid"/>
+	<phrase n="lang_F_SPEED_DIAL" t="Snelk."/>
+	<phrase n="lang_F_SPEED_DIAL_typeSio" t="Snelkeuze"/>
+	<phrase n="lang_F_SPEED_DIAL_smartlabel" t="Snelheid"/>
+	<phrase n="lang_F_SAFE_TRANSFER" t="V.DVB"/>
+	<phrase n="lang_F_SAFE_TRANSFER_typeSio" t="Veilig doorverb."/>
+	<phrase n="lang_F_MENUS_USERINPUT_SENDSIPINFO" t="UserInputAndSendSipInfo"/>
+	<phrase n="lang_F_MENUS_SENDSIPINFO" t="SendSipInfo"/>
+	<phrase n="lang_F_USERINPUT_SENDSIPINFO" t="SIP"/>
+	<phrase n="lang_F_SENDSIPINFO" t="SIP"/>
+	<phrase n="lang_F_SENDSIPINFO_typeSio" t="SIP INFO"/>
+	<phrase n="lang_F_SENDSIPINFO_smartlabel" t="SIP&lt;br&gt;INFO"/>
+	<phrase n="lang_F_REC_START" t="Opname starten"/>
+	<phrase n="lang_F_REC_STOP" t="Stop R"/>
+	<phrase n="lang_F_RECORDER_START" t="Opnemen start"/>
+	<phrase n="lang_F_RECORDER_STOP" t="Stop Rec"/>
+	<phrase n="lang_F_RECORD_ON" t="Record"/>
+	<phrase n="lang_F_RECORD_OFF" t="Stop record"/>
+	<phrase n="lang_F_RECORDING" t="Gesprek opnemen"/>
+	<phrase n="lang_F_LOGOFF_ALL" t="Afmelden"/>
+	<phrase n="lang_F_LOGOFF_ALL_typeSio" t="Alles afmelden"/>
+	<phrase n="lang_F_LOGOFF_ALL_smartlabel" t="Afmelden"/>
+	<phrase n="lang_F_STARCODE_short" t="S-code"/>
+	<phrase n="lang_F_STARCODE" t="Ster Code"/>
+	<phrase n="lang_F_RELOAD_SERVER_AB" t="Herladen"/>
+	<phrase n="lang_F_SERVER_AB" t="Server Dir"/>
+	<phrase n="lang_F_ANONYMOUS" t="Anon.ID"/>
+	<phrase n="lang_F_ANONYMOUS_long" t="Anoniem bellen"/>
+	<phrase n="lang_F_ANONYMOUS_smartlabel" t="Anon ID"/>
+	<phrase n="lang_F_VOICEMAIL_INFO_NEW_MSG" t="Voicemail info"/>
+	<phrase n="lang_F_VOICEMAIL_INFO_short" t="VMail"/>
+	<phrase n="lang_F_VOICEMAIL_INFO" t="Voicemail info"/>
+	<phrase n="lang_F_NO_NEW_MESSAGE" t="Geen nieuw bericht"/>
+	<phrase n="lang_F_NEW_MESSAGE" t="Nieuwe berichten"/>
+	<phrase n="lang_F_GUEST_LOCK" t="Slot"/>
+	<phrase n="lang_F_GUEST_UNLOCK" t="Ontgrendel"/>
+	<phrase n="lang_F_IVR" t="IVR"/>
+	<phrase n="lang_F_DTMF" t="DTMF"/>
+	<phrase n="lang_F_ACTION_URL" t="URL"/>
+	<phrase n="lang_F_ACTION_URL_typeSio" t="Actie URL"/>
+	<phrase n="lang_F_ACTION_URL_smartlabel" t="URL"/>
+	<phrase n="lang_F_AUTO_ANSWER" t="AutoA"/>
+	<phrase n="lang_F_AUTO_ANSWER_typeSio" t="Automatisch antwoord"/>
+	<phrase n="lang_F_AUTO_ANSWER_smartlabel" t="Auto Ans"/>
+	<phrase n="lang_F_AUTO_ANSWER_ON" t="Automatisch beantwoorden"/>
+	<phrase n="lang_F_BLF_short" t="BLF"/>
+	<phrase n="lang_F_BLF" t="Bezet indicator"/>
+	<phrase n="lang_F_LINE" t="Lijn"/>
+	<phrase n="lang_F_LINE_short" t="Lijn"/>
+	<phrase n="lang_F_LINE_RINGING" t="Bellen"/>
+	<phrase n="lang_F_LINE_OUTGOING" t="Bellen"/>
+	<phrase n="lang_F_LINE_OFFHOOK" t="Niet beschikbaar"/>
+	<phrase n="lang_F_LINE_IDLE" t="Vrij"/>
+	<phrase n="lang_F_LINE_HOLD" t="Wachtstand"/>
+	<phrase n="lang_F_LINE_FAILED" t="Niet verbonden"/>
+	<phrase n="lang_F_LINE_DISCONNECTED" t="Verbroken"/>
+	<phrase n="lang_F_LINE_DISCONNECTED_typeSio" t="Verbr."/>
+	<phrase n="lang_F_LINE_CONNECTED" t="Bezet"/>
+	<phrase n="lang_F_LINE_BUSY" t="Bezet"/>
+	<phrase n="lang_F_LINE_HELD" t="Wachtstand"/>
+	<phrase n="lang_F_LINE_CALLING" t="In gesprek"/>
+	<phrase n="lang_F_LINE_RINGBACK" t="Terugbellen"/>
+	<phrase n="lang_F_LINE_HOLDING" t="Wachtend"/>
+	<phrase n="lang_F_LINE_UNREGISTERED" t="Niet geregistreerd"/>
+	<phrase n="lang_F_LINE_IN_USE" t="In gebruik"/>
+	<phrase n="lang_F_LINE_FREE" t="Beschikbaar"/>
+	<phrase n="lang_F_LINE_UNKNOWN" t="Onbekend"/>
+	<phrase n="lang_F_LINE_TALKING" t="In gesprek"/>
+	<phrase n="lang_F_LINE_SEIZED" t="Vastgelegd"/>
+	<phrase n="lang_F_LINE_UNVAILABLE" t="Niet beschikbaar"/>
+	<phrase n="lang_F_LINE_ACTIVE" t="In gesprek"/>
+	<phrase n="lang_F_LINE_AVAILABLE" t="Beschikbaar"/>
+	<phrase n="lang_F_LINE_CLOSED" t="Afgesloten"/>
+	<phrase n="lang_F_LINE_AUTO_REDIAL" t="Nummerherhaling"/>
+	<phrase n="lang_F_LINE_AUTO_REDIAL_typeSio" t="Nummerherhaling"/>
+	<phrase n="lang_F_LINE_CONFERENCING" t="In conferentie"/>
+	<phrase n="lang_F_LINE_PARKED" t="Geparkeerd"/>
+	<phrase n="lang_F_LINE_NO_BUDDY" t="Niet toegewezen"/>
+	<phrase n="lang_F_LINE_DISABLED" t="Uitgeschakeld"/>
+	<phrase n="lang_F_LINE_MSG_WAITING" t="Nieuw Bericht"/>
+	<phrase n="lang_F_SHARED_LINE" t="S Lijn"/>
+	<phrase n="lang_F_SHARED_LINE_typeSio" t="Gedeelde lijn"/>
+	<phrase n="lang_F_SHARED_LINE_smartlabel" t="S Lijn"/>
+	<phrase n="lang_F_SHARED_LINE_REMOTE_SEIZED" t="Gedeelde lijn"/>
+	<phrase n="lang_F_SHARED_LINE_REMOTE_HOLD" t="Gedeelde lijn"/>
+	<phrase n="lang_F_SHARED_LINE_REMOTE_ALERT" t="Gedeelde lijn"/>
+	<phrase n="lang_F_SHARED_LINE_REMOTE_ACTIVE" t="Gedeelde lijn"/>
+	<phrase n="lang_F_SHARED_LINE_BRIDGE_ACTIVE" t="Gedeelde lijn"/>
+	<phrase n="lang_F_SHARED_LINE_BRIDGE_HOLD" t="Gedeelde lijn"/>
+	<phrase n="lang_F_SHARED_LINE_LOCAL_SEIZED" t="Gedeelde lijn"/>
+	<phrase n="lang_F_SHARED_LINE_LOCAL_HOLD" t="Gedeelde lijn"/>
+	<phrase n="lang_F_SHARED_LINE_LOCAL_ALERT" t="Gedeelde lijn"/>
+	<phrase n="lang_F_SHARED_LINE_LOCAL_ACTIVE" t="Gedeelde lijn"/>
+	<phrase n="lang_F_MULTICAST" t="MCast"/>
+	<phrase n="lang_F_MULTICAST_typeSio" t="Multicast"/>
+	<phrase n="lang_F_MULTICAST_smartlabel" t="MC Pagina"/>
+	<phrase n="lang_F_MULTICAST_ON" t="Multicast"/>
+	<phrase n="lang_F_MULTICAST_ZONE" t="MZone"/>
+	<phrase n="lang_F_MULTICAST_ZONE_typeSio" t="Multicast-zone"/>
+	<phrase n="lang_F_MULTICAST_ZONE_smartlabel" t="MC-zone"/>
+	<phrase n="lang_F_BUTTON_typeSio" t="Programmeer toets"/>
+	<phrase n="lang_F_BUTTON" t="Functietoets"/>
+	<phrase n="lang_F_BUTTON_smartlabel" t="Functietoets"/>
+	<phrase n="lang_F_PUSH_TO_TALK" t="PTT"/>
+	<phrase n="lang_F_PUSH_TO_TALK_typeSio" t="Push-to-Talk"/>
+	<phrase n="lang_F_PUSH_TO_TALK_smartlabel" t="PTT"/>
+	<phrase n="lang_F_INTERCOM_ON" t="Intercom"/>
+	<phrase n="lang_F_INTERCOM" t="Icom"/>
+	<phrase n="lang_F_INTERCOM_typeSio" t="Intercom"/>
+	<phrase n="lang_F_INTERCOM_smartlabel" t="Icom"/>
+	<phrase n="lang_F_PICKUP" t="Overnemen"/>
+	<phrase n="lang_F_CALL_CENTER_LIST" t="Lijst met callcenters"/>
+	<phrase n="lang_F_REMOTE_OFFICE" t="Kantoor"/>
+	<phrase n="lang_F_REMOTE_OFFICE_typeSio" t="Kantoor op afstand"/>
+	<phrase n="lang_F_REMOTE_OFFICE_smartlabel" t="R Kantoor"/>
+	<phrase n="lang_F_REMOTE_OFFICE_ON" t="Aan"/>
+	<phrase n="lang_F_REMOTE_OFFICE_OFF" t="Uit"/>
+	<phrase n="lang_F_ACD" t="ACD"/>
+	<phrase n="lang_F_ACD_WRAPUP" t="Wrap-Up"/>
+	<phrase n="lang_F_ACD_UNAVAILABLE" t="Niet beschikbaar"/>
+	<phrase n="lang_F_ACD_AVAILABLE" t="Beschikbaar"/>
+	<phrase n="lang_F_ACD_SIGN_OUT" t="Afmelden"/>
+	<phrase n="lang_F_ACD_SIGN_IN" t="Aanmelden"/>
+	<phrase n="lang_F_ACD_LOGOUT" t="Afmelden"/>
+	<phrase n="lang_F_ACD_LOGIN" t="Aanmelden"/>
+	<phrase n="lang_F_ZONES" t="M-Page"/>
+	<phrase n="lang_F_SMART_TRANSFER" t="SmartTransfer"/>
+	<phrase n="lang_F_SMART_TRANSFER_short" t="SmartTr"/>
+	<phrase n="lang_F_ALTERNATE_MODE" t="Alternatief"/>
+	<phrase n="lang_F_LABEL_PAGE_NEXT_typeSio" t="Volgende"/>
+	<phrase n="lang_F_LABEL_PAGE_NEXT" t="Volgende"/>
+	<phrase n="lang_F_LABEL_PAGE_NEXT_SMART_long" t="Volgende pagina"/>
+	<phrase n="lang_F_LABEL_PAGE_NEXT_SMART_short" t="Pag.&gt;"/>
+	<phrase n="lang_F_LABEL_PAGE_PREV_typeSio" t="Prev"/>
+	<phrase n="lang_F_LABEL_PAGE_PREV" t="Prev"/>
+	<phrase n="lang_F_LABEL_PAGE_PREV_SMART_long" t="Vorige pagina"/>
+	<phrase n="lang_F_LABEL_PAGE_PREV_SMART_short" t="&lt;Pag."/>
+	<phrase n="lang_F_ADD_REJECTED_CONTACT" t="Toevoegen"/>
+	<phrase n="lang_F_SAVE_XSI_CONTACT" t="Opsln"/>
+	<phrase n="lang_F_REFRESH" t="Ververs"/>
+	<phrase n="lang_F_ADD_CONTACT" t="Toevoegen"/>
+	<phrase n="lang_F_ADD_CONTACT_typeSio" t="Contact toevoegen"/>
+	<phrase n="lang_F_SAVE_DIRECTORY_EDIT" t="Opsln"/>
+	<phrase n="lang_F_GO_NEXT" t="Volgende"/>
+	<phrase n="lang_F_GO_BACK" t="Vorige"/>
+	<phrase n="lang_F_MENU_BACK" t="Terug"/>
+	<phrase n="lang_F_SAVE" t="Opsln"/>
+	<phrase n="lang_F_SAVE_CONTACT" t="Opsln"/>
+	<phrase n="lang_F_SAFE_TRANSFER_OFF" t="Dvb"/>
+	<phrase n="lang_F_SAFE_TRANSFER_OFF_typeSio" t="Doorverbinden"/>
+	<phrase n="lang_F_PARK" t="Parkeren"/>
+	<phrase n="lang_F_CALL_PARK_GROUP_DIAL" t="Parkeren voor groepen"/>
+	<phrase n="lang_F_PARK_typeSio" t="Park"/>
+	<phrase n="lang_F_PARK_smartlabel" t="Park"/>
+	<phrase n="lang_F_CALLRECORD_PAUSE" t="Opname pauzeren"/>
+	<phrase n="lang_F_CALLRECORD_RESUME" t="Opname hervatten"/>
+	<phrase n="lang_F_CALLRECORD_CONTROL_ON" t="Gesprek opnemen"/>
+	<phrase n="lang_F_CALLRECORD_CONTROL_OFF" t="Gesprek opnemen"/>
+	<phrase n="lang_F_STATUS_UNREAD" t="Info"/>
+	<phrase n="lang_F_STATUS" t="Info"/>
+	<phrase n="lang_F_STATUS_long" t="Info Bericht"/>
+	<phrase n="lang_F_STATUS_NOTIFICATIONS" t="Meldingen"/>
+	<phrase n="lang_F_FAVORITES" t="Fav."/>
+	<phrase n="lang_F_FAVORITES_typeSio" t="Favorieten"/>
+	<phrase n="lang_F_FAVORITES_smartlabel" t="Favorieten"/>
+	<phrase n="lang_F_SORT" t="Kies"/>
+	<phrase n="lang_F_SORT_typeSio" t="Kies"/>
+	<phrase n="lang_F_CONTACTPOOL" t="Lijst"/>
+	<phrase n="lang_F_CONTACTPOOL_typeSio" t="Adresboek"/>
+	<phrase n="lang_F_CONTACTPOOL_smartlabel" t="Lijst"/>
+	<phrase n="lang_F_NEXT" t="Volgende"/>
+	<phrase n="lang_F_DIRECTORY_SEARCH" t="LDAP"/>
+	<phrase n="lang_F_MISSED_LIST" t="M Gesprekken"/>
+	<phrase n="lang_F_MISSED_LIST_typeSio" t="Gemiste oproepen"/>
+	<phrase n="lang_F_MISSED_LIST_smartlabel" t="Gemist"/>
+	<phrase n="lang_F_DIALED_LIST" t="Gekozen"/>
+	<phrase n="lang_F_DIALED_LIST_typeSio" t="Gekozen gesprekken"/>
+	<phrase n="lang_F_DIALED_LIST_smartlabel" t="Gekozen"/>
+	<phrase n="lang_F_ACCEPTED_LIST" t="A Gesprekken"/>
+	<phrase n="lang_F_ACCEPTED_LIST_typeSio" t="Aangenomen oproepen"/>
+	<phrase n="lang_F_ACCEPTED_LIST_smartlabel" t="Geaccepteerd"/>
+	<phrase n="lang_F_DIALED" t="Gebeld"/>
+	<phrase n="lang_F_RETRIEVE" t="Voicemail"/>
+	<phrase n="lang_F_RETRIEVE_smartlabel" t="Voicem"/>
+	<phrase n="lang_F_RETRIEVE_typeSio" t="Voicemail"/>
+	<phrase n="lang_F_RETRIEVE_ON" t="Voicemail"/>
+	<phrase n="lang_F_REDIRECT_OFF" t="Geen doorschakeling"/>
+	<phrase n="lang_F_REDIRECT_OFF_smartlabel" t="noFwd"/>
+	<phrase n="lang_F_REDIRECT_OFF_typeSio" t="Vooruit Uit"/>
+	<phrase n="lang_F_REDIRECT_ON" t="Doorsch."/>
+	<phrase n="lang_F_REDIRECT_ON_typeSio" t="Doorschakelen"/>
+	<phrase n="lang_F_REDIRECT_smartlabel" t="CFwd"/>
+	<phrase n="lang_F_RINGER_SILENT" t="Stille"/>
+	<phrase n="lang_F_RINGER_SILENT_typeSio" t="Stille modus"/>
+	<phrase n="lang_F_RINGER_SILENT_smartlabel" t="Stil"/>
+	<phrase n="lang_F_ABORT" t="Einde"/>
+	<phrase n="lang_F_ABORT_typeSio" t="Einde"/>
+	<phrase n="lang_F_SUPPORT" t="Help"/>
+	<phrase n="lang_F_JUMP_BACK" t="&gt;&gt;"/>
+	<phrase n="lang_F_JUMP" t="&gt;&gt;"/>
+	<phrase n="lang_F_REDUCED" t="Minder"/>
+	<phrase n="lang_F_ALL" t="Meer"/>
+	<phrase n="lang_F_DIALOG" t="Oproepen"/>
+	<phrase n="lang_F_DIALOG_typeSio" t="Oproepen monitoren"/>
+	<phrase n="lang_F_DIALOG_smartlabel" t="Oproepen"/>
+	<phrase n="lang_F_HEADSET" t="HS"/>
+	<phrase n="lang_F_HEADSET_typeSio" t="Volume headset"/>
+	<phrase n="lang_F_HEADSET_smartlabel" t="Koptelefoon"/>
+	<phrase n="lang_F_HEADSET_ON" t="HS"/>
+	<phrase n="lang_F_HEADSET_ON_typeSio" t="Volume headset"/>
+	<phrase n="lang_F_HEADSET_ON_smartlabel" t="Koptelefoon"/>
+	<phrase n="lang_F_SOFTWARE_UPDATE" t="SW Update"/>
+	<phrase n="lang_F_UPDATE" t="Aanpassen"/>
+	<phrase n="lang_F_SMS" t="SMS"/>
+	<phrase n="lang_F_CMC" t="CMC"/>
+	<phrase n="lang_F_CALL_COMPLETION" t="CC"/>
+	<phrase n="lang_F_UNMUTE" t="Mic aan"/>
+	<phrase n="lang_F_UNMUTE_typeSio" t="Unmute"/>
+	<phrase n="lang_F_UNMUTE_smartlabel" t="Unmute"/>
+	<phrase n="lang_F_MUTE" t="Mic uit"/>
+	<phrase n="lang_F_MUTE_typeSio" t="Mute"/>
+	<phrase n="lang_F_MUTE_smartlabel" t="Mute"/>
+	<phrase n="lang_F_REG_ACTIVATE" t="Reg. activeren"/>
+	<phrase n="lang_F_ADD_PHONEBOOK" t="Toev."/>
+	<phrase n="lang_F_ADD_PHONEBOOK_typeSio" t="Contact toevoegen"/>
+	<phrase n="lang_F_LIST_MISSED" t="Gemist"/>
+	<phrase n="lang_F_LIST_TAKEN" t="Ontvangen"/>
+	<phrase n="lang_F_LIST_TAKEN_typeSio" t="Ontv. Oproep"/>
+	<phrase n="lang_F_LIST_TAKEN_smartlabel" t="Ontvangen"/>
+	<phrase n="lang_F_DETAILS" t="Details"/>
+	<phrase n="lang_F_DND_OFF" t="N/S"/>
+	<phrase n="lang_F_DND_OFF_typeSio" t="Niet storen"/>
+	<phrase n="lang_F_DND_OFF_smartlabel" t="DND"/>
+	<phrase n="lang_F_DND" t="N/S"/>
+	<phrase n="lang_F_DND_typeSio" t="Niet storen"/>
+	<phrase n="lang_F_DND_smartlabel" t="DND"/>
+	<phrase n="lang_F_DEF_ON" t="*Aan"/>
+	<phrase n="lang_F_DEF_OFF" t="*Uit"/>
+	<phrase n="lang_F_ON" t="Aan"/>
+	<phrase n="lang_F_OFF" t="Uit"/>
+	<phrase n="lang_F_START" t="Start"/>
+	<phrase n="lang_F_END" t="Einde"/>
+	<phrase n="lang_F_IDENTITY" t="Identiteiten"/>
+	<phrase n="lang_F_SETTINGS_typeSio" t="Instellingen"/>
+	<phrase n="lang_F_SETTINGS" t="Instellingen"/>
+	<phrase n="lang_F_EXECUTIVE_ASSISTANT_CONFIG" t="Uitvoerend-Assistent Config"/>
+	<phrase n="lang_F_EXECUTIVE_CONFIG" t="Exec.&lt;br&gt;Configuratie"/>
+	<phrase n="lang_F_EXECUTIVE_CONFIG_typeSio" t="Configuratie"/>
+	<phrase n="lang_F_ASSISTANT_CONFIG" t="Assist.&lt;br&gt;Configuratie"/>
+	<phrase n="lang_F_ASSISTANT_CONFIG_typeSio" t="Assistent Config"/>
+	<phrase n="lang_F_EXEC_ASSIST_BEHALF_PUI_LISTING" t="Executive-Assistant Namens"/>
+	<phrase n="lang_F_EXEC_ASSIST_BEHALF" t="Namens"/>
+	<phrase n="lang_F_NEW" t="Nieuw"/>
+	<phrase n="lang_F_URLU" t='a"A'/>
+	<phrase n="lang_F_URLU_typeSio" t="Modus Bewerken"/>
+	<phrase n="lang_F_URLL" t='1"a'/>
+	<phrase n="lang_F_URLL_typeSio" t="Modus Bewerken"/>
+	<phrase n="lang_F_123" t='A"1'/>
+	<phrase n="lang_F_123_typeSio" t="Modus Bewerken"/>
+	<phrase n="lang_F_REDIRECT" t="Doorschakelen"/>
+	<phrase n="lang_F_REDIRECT_typeSio" t="Doorschakelen"/>
+	<phrase n="lang_F_HOLD_typeSio" t="Wachtstand"/>
+	<phrase n="lang_F_HOLD" t="Wachtstand"/>
+	<phrase n="lang_F_CONSULTCONF_ADD" t="Toevoegen"/>
+	<phrase n="lang_F_CONSULTCONF_ADD_typeSio" t="Conferentie Toevoegen"/>
+	<phrase n="lang_F_CONSULTCONF_ADD_smartlabel" t="Toevoegen"/>
+	<phrase n="lang_F_CONSULTCONF_JOIN" t="Word lid van"/>
+	<phrase n="lang_F_CONSULTCONF_JOIN_typeSio" t="Conferentie Doe mee"/>
+	<phrase n="lang_F_CONSULTCONF_JOIN_smartlabel" t="Aanm."/>
+	<phrase n="lang_F_CONSULTCONF" t="Conferentie"/>
+	<phrase n="lang_F_CONFERENCE" t="Conf"/>
+	<phrase n="lang_F_CONFERENCE_smartlabel" t="Conf"/>
+	<phrase n="lang_F_CONFERENCE_typeSio" t="Conferentie"/>
+	<phrase n="lang_F_CONFERENCE_ON" t="Conferentie wacht"/>
+	<phrase n="lang_F_NO_CONFERENCE" t="Geen conferentie"/>
+	<phrase n="lang_F_DEFLECT" t="Negeren inkomend gesprek"/>
+	<phrase n="lang_F_BLIND_TRANSFER" t="Blinde"/>
+	<phrase n="lang_F_BLIND_TRANSFER_typeSio" t="Blind"/>
+	<phrase n="lang_F_TRANSFER" t="Dvb"/>
+	<phrase n="lang_F_TRANSFER_typeSio" t="Doorverbinden"/>
+	<phrase n="lang_F_TRANSFER_smartlabel" t="Overdracht"/>
+	<phrase n="lang_F_TRANSFER_CALL" t="Gesprek doorverbinden"/>
+	<phrase n="lang_F_TRANSFER_SELECTED" t="Doorverbinden uitgevoerd"/>
+	<phrase n="lang_F_DENY" t="Afw."/>
+	<phrase n="lang_F_DIAL" t="Kiezen"/>
+	<phrase n="lang_F_EDIT" t="Bewerk"/>
+	<phrase n="lang_F_CLEAR" t="Wis"/>
+	<phrase n="lang_F_DOWN" t="Neer"/>
+	<phrase n="lang_F_UP" t="Op"/>
+	<phrase n="lang_F_LEFT" t="Links"/>
+	<phrase n="lang_F_RIGHT" t="Rechts"/>
+	<phrase n="lang_F_EXTENSION" t="Ext"/>
+	<phrase n="lang_F_EXTENSION_typeSio" t="Bestemming"/>
+	<phrase n="lang_F_EXTENSION_smartlabel" t="Ext"/>
+	<phrase n="lang_F_MESSAGE" t="Bericht"/>
+	<phrase n="lang_F_CONTACT_STATE_UNKNOWN" t="Onbekend"/>
+	<phrase n="lang_F_CONTACT_STATE_AVAILABLE" t="Beschikbaar"/>
+	<phrase n="lang_F_CONTACT_STATE_AVAILABLE_ON_MOBILE" t="Beschikb. Mobiel"/>
+	<phrase n="lang_F_CONTACT_STATE_AVAILABLE_AT_DESK" t="Beschikb. Kantoor"/>
+	<phrase n="lang_F_CONTACT_STATE_INACTIVE" t="Niet beschikbaar"/>
+	<phrase n="lang_F_CONTACT_STATE_BUSY" t="Bezet"/>
+	<phrase n="lang_F_CONTACT_STATE_URGENT_INTERRUPTIONS_ONLY" t="Alleen dringende onderbrekingen"/>
+	<phrase n="lang_F_CONTACT_STATE_IN_A_CALL" t="In gesprek"/>
+	<phrase n="lang_F_CONTACT_STATE_IN_A_CONFERENCE" t="In een conferentie"/>
+	<phrase n="lang_F_CONTACT_STATE_IN_A_MEETING" t="In vergadering"/>
+	<phrase n="lang_F_CONTACT_STATE_MEETING" t="Vergadering"/>
+	<phrase n="lang_F_CONTACT_STATE_HOLDING" t="In wachtstand"/>
+	<phrase n="lang_F_CONTACT_STATE_DND" t="Niet storen"/>
+	<phrase n="lang_F_CONTACT_STATE_DND_ALL" t="Niet storen Alle"/>
+	<phrase n="lang_F_CONTACT_STATE_DND_SELF" t="Niet storen"/>
+	<phrase n="lang_F_CONTACT_STATE_BE_RIGHT_BACK" t="Ben zo terug"/>
+	<phrase n="lang_F_CONTACT_STATE_AWAY" t="Weg"/>
+	<phrase n="lang_F_CONTACT_STATE_OFFLINE" t="Uitgelogd"/>
+	<phrase n="lang_F_CONTACT_STATE_INVISIBLE" t="Onzichtbaar"/>
+	<phrase n="lang_F_CONTACT_STATE_GROUP" t="Groep"/>
+	<phrase n="lang_F_KEYEVENT" t="Key"/>
+	<phrase n="lang_F_KEYEVENT_typeSio" t="Belangrijkste gebeurtenis"/>
+	<phrase n="lang_F_KEYEVENT_short" t="Toets"/>
+	<phrase n="lang_F_XML" t="XML"/>
+	<phrase n="lang_continuous_text_speed_dial" t="Snelkiezen"/>
+	<phrase n="lang_continuous_text_reboot" t="Herstarten"/>
+	<phrase n="lang_continuous_text_network_restart" t="Netwerk herstart"/>
+	<phrase n="lang_continuous_text_search" t="Zoeken"/>
+	<phrase n="lang_continuous_text_cancel" t="Annuleren"/>
+	<phrase n="lang_continuous_text_yes" t="Ja"/>
+	<phrase n="lang_continuous_text_no" t="Afwijzen"/>
+	<phrase n="lang_confirm_reboot" t="Herstart?"/>
+	<phrase n="lang_on" t="Aan"/>
+	<phrase n="lang_off" t="Uit"/>
+	<phrase n="lang_busy" t="Bezet"/>
+	<phrase n="lang_short" t="Kort"/>
+	<phrase n="lang_full" t="Lang"/>
+	<phrase n="lang_half" t="Half"/>
+	<phrase n="lang_F_HOLD_PRIVATE" t="P Vasthouden"/>
+	<phrase n="lang_F_HOLD_PRIVATE_typeSio" t="Privé in wacht"/>
+	<phrase n="lang_F_HOLD_PRIVATE_smartlabel" t="Privé vasthouden"/>
+	<phrase n="lang_conference_off" t="Conferentie uit"/>
+	<phrase n="lang_conference_off_typeSio" t="Conferentie uit"/>
+	<phrase n="lang_edit_cmc" t="Klant onderwerpcode:"/>
+	<phrase n="lang_dnd" t="N/S"/>
+	<phrase n="lang_red" t="Doorsch."/>
+	<phrase n="lang_red_typeSio" t="Doorschakelen"/>
+	<phrase n="lang_missed" t="Gemist: "/>
+	<phrase n="lang_missed_typeSio" t="Gemist: "/>
+	<phrase n="lang_edit" t="Bewerk"/>
+	<phrase n="lang_F_EDIT_AND_DIAL" t="Bewerk"/>
+	<phrase n="lang_F_EDIT_AND_DIAL_typeSio" t="Bewerk &amp; Kies"/>
+	<phrase n="lang_edit_dial" t="Bewerk &amp; Kies"/>
+	<phrase n="lang_dhcp" t="DHCP"/>
+	<phrase n="lang_enum" t="ENUM"/>
+	<phrase n="lang_mwi_mailbox1" t="Bericht van:"/>
+	<phrase n="lang_mwi_mailbox2" t="Totaal"/>
+	<phrase n="lang_mwi_mailbox3" t="U heeft berichten."/>
+	<phrase n="lang_mwi_urgent" t="Dringend"/>
+	<phrase n="lang_mwi_goto_mailbox" t="Ga naar voicemail"/>
+	<phrase n="lang_challenge_user" t="Gebruikersnaam"/>
+	<phrase n="lang_challenge_pw" t="Wachtwoord"/>
+	<phrase n="lang_use_enum" t="ENUM activeren?"/>
+	<phrase n="lang_wiz_dhcp" t="DHCP?"/>
+	<phrase n="lang_wiz_l2tp_ip_adr" t="L2TP IP Adr:"/>
+	<phrase n="lang_wiz_ip_adr" t="IP-adres:"/>
+	<phrase n="lang_wiz_mac" t="MAC:"/>
+	<phrase n="lang_wiz_wifi_mac" t="Wi-Fi MAC:"/>
+	<phrase n="lang_wiz_version" t="Versie:"/>
+	<phrase n="lang_wiz_netmask" t="Netmasker:"/>
+	<phrase n="lang_wiz_gateway" t="IP-gateway:"/>
+	<phrase n="lang_wiz_dns_server" t="DNS-server:"/>
+	<phrase n="lang_wiz_welcome" t="Welkom! Druk een toets om in te loggen."/>
+	<phrase n="lang_wiz_http_user" t="Voer nieuwe HTTP gebruikersnaam in"/>
+	<phrase n="lang_wiz_http_pass" t="Voer nieuw HTTP wachtwoord in"/>
+	<phrase n="lang_wiz_short_pass" t="Wachtwoord te kort"/>
+	<phrase n="lang_terminated_finished" t="Verbinding verbroken"/>
+	<phrase n="lang_try_parking" t="Gesprek parkeren"/>
+	<phrase n="lang_try_parking_typeSio" t="Gesprek parkeren"/>
+	<phrase n="lang_holding" t="Gesprekken in wacht: "/>
+	<phrase n="lang_select_list" t="Gesprekshistorie"/>
+	<phrase n="lang_list_all" t="Alle"/>
+	<phrase n="lang_list_new" t="Nieuw"/>
+	<phrase n="lang_list_old" t="Oud"/>
+	<phrase n="lang_list_missed" t="Gemist"/>
+	<phrase n="lang_list_taken" t="Ontvangen"/>
+	<phrase n="lang_list_dialed" t="Gebeld"/>
+	<phrase n="lang_list_no_data" t="Geen gegevens"/>
+	<phrase n="lang_list_details" t="Details"/>
+	<phrase n="lang_list_details_time" t="Tijd:"/>
+	<phrase n="lang_list_details_duration" t="Duur:"/>
+	<phrase n="lang_list_details_costs" t="Details kosten:"/>
+	<phrase n="lang_list_details_missed" t="Details gemiste opr.:"/>
+	<phrase n="lang_list_details_to" t="Voor:"/>
+	<phrase n="lang_list_details_from" t="Van:"/>
+	<phrase n="lang_reg_activate" t="Reg. activeren"/>
+	<phrase n="lang_reg_account" t="Gebruikersnaam:"/>
+	<phrase n="lang_reg_registrar" t="Registratieserver:"/>
+	<phrase n="lang_reg_explanation_failed" t="Registratie mislukt"/>
+	<phrase n="lang_reg_explanation_registering" t="Wordt geregistreerd"/>
+	<phrase n="lang_reg_explanation_registered" t="Geregistreerd"/>
+	<phrase n="lang_menu_info_320" t="Informatie"/>
+	<phrase n="lang_menu_conf_reset" t="Herstel"/>
+	<phrase n="lang_menu_gen_contrast" t="Contrast"/>
+	<phrase n="lang_menu_gen_ringtone" t="Belsignaal"/>
+	<phrase n="lang_menu_web_webserver_type" t="Server"/>
+	<phrase n="lang_menu_function_key" t="Functietoetsen"/>
+	<phrase n="lang_menu_tser_timer" t="Wekker"/>
+	<phrase n="lang_menu_red_target" t="Bestemming"/>
+	<phrase n="lang_menu_ringer1" t="Beltoon 1"/>
+	<phrase n="lang_menu_ringer2" t="Beltoon 2"/>
+	<phrase n="lang_menu_ringer3" t="Beltoon 3"/>
+	<phrase n="lang_menu_ringer4" t="Beltoon 4"/>
+	<phrase n="lang_menu_ringer5" t="Beltoon 5"/>
+	<phrase n="lang_menu_ringer6" t="Beltoon 6"/>
+	<phrase n="lang_menu_ringer7" t="Beltoon 7"/>
+	<phrase n="lang_menu_ringer8" t="Beltoon 8"/>
+	<phrase n="lang_menu_ringer9" t="Beltoon 9"/>
+	<phrase n="lang_menu_ringer10" t="Beltoon 10"/>
+	<phrase n="lang_vol_headset" t="Headset volume"/>
+	<phrase n="lang_vol_handset" t="Hoorn volume"/>
+	<phrase n="lang_vol_speaker" t="Luidspreker volume"/>
+	<phrase n="lang_audio_speaker" t="Luidsp."/>
+	<phrase n="lang_audio_handset" t="Volume handset"/>
+	<phrase n="lang_audio_headset" t="Volume headset"/>
+	<phrase n="lang_vol_contrast" t="Display contrast"/>
+	<phrase n="lang_confirm_factory" t="Fabrieksinstellingen?"/>
+	<phrase n="lang_confirm_logoff_all" t="Alle gebruikers afmelden?"/>
+	<phrase n="lang_calling" t="Bellen"/>
+	<phrase n="lang_connected" t="Verbonden"/>
+	<phrase n="lang_connected_typeSio" t="Verbonden"/>
+	<phrase n="lang_ringing" t="Gaat over"/>
+	<phrase n="lang_enter_number" t="Nummer invoeren"/>
+	<phrase n="lang_held_by" t="In Wachtstand door: "/>
+	<phrase n="lang_ok" t="[OK?]"/>
+	<phrase n="lang_menu100_phone_book" t="Telefoonboek"/>
+	<phrase n="lang_menu100_ldap_book" t="Centraal telefoonboek"/>
+	<phrase n="lang_menu100_call_lists" t="Gesprekshistorie"/>
+	<phrase n="lang_menu100_settings" t="Instellingen"/>
+	<phrase n="lang_sel100_logoff_all" t="Afmelden alles"/>
+	<phrase n="lang_sel100_logoff_one" t="Afmelden"/>
+	<phrase n="lang_sel100_activeline" t="Actieve identiteit"/>
+	<phrase n="lang_sel100_admin_mode" t="Naar beheerdersmodus"/>
+	<phrase n="lang_sel100_user_mode" t="Naar gebruikers modus"/>
+	<phrase n="lang_sel100_net_info" t="Info"/>
+	<phrase n="lang_sel100_mem_info" t="Mem Info"/>
+	<phrase n="lang_menu_ringtone" t="Beltoon"/>
+	<phrase n="lang_dnd_active" t="Niet storen aan"/>
+	<phrase n="lang_update" t="Software update"/>
+	<phrase n="lang_update_a" t="SW update? beschikbaar?"/>
+	<phrase n="lang_update_reboot" t="Herstart ivm SW update"/>
+	<phrase n="lang_unplugged" t="Uitgetrokken"/>
+	<phrase n="lang_ethernet_cable" t="Netwerkkabel niet aangesloten"/>
+	<phrase n="lang_hid_plug" t="HID Apparaat Verbinden"/>
+	<phrase n="lang_hid_connected" t="HID Apparaat Verbonden"/>
+	<phrase n="lang_hid_disconnected" t="HID Apparaat Ontkoppeld"/>
+	<phrase n="lang_temperature" t="Temperatuur"/>
+	<phrase n="lang_temperature_connected" t="Temperatuursensor aangesloten"/>
+	<phrase n="lang_language" t="Taal"/>
+	<phrase n="lang_current_date" t="Datum"/>
+	<phrase n="lang_current_time" t="Tijd"/>
+	<phrase n="lang_network_settings" t="Netwerk"/>
+	<phrase n="lang_dns_domain" t="DNS Domein"/>
+	<phrase n="lang_dns_server1" t="DNS-server1"/>
+	<phrase n="lang_dns_server2" t="DNS-server2"/>
+	<phrase n="lang_ntp_server" t="NTP-server"/>
+	<phrase n="lang_no_ip_adr" t="Ongeldig IP-adres"/>
+	<phrase n="lang_password" t="Wachtwoord"/>
+	<phrase n="lang_username" t="Gebruikersnaam"/>
+	<phrase n="lang_reset_settings" t="Reset instellingen"/>
+	<phrase n="lang_networkadvanced_settings" t="Geavanceerd"/>
+	<phrase n="lang_admin_mode_password" t="Wachtwoord"/>
+	<phrase n="lang_guess_number" t="Snelzoeken"/>
+	<phrase n="lang_guess_number_len" t="Snelzkn lengte"/>
+	<phrase n="lang_admin_mode_pwd" t="Admin Modus Wachtwoord"/>
+	<phrase n="lang_call_waiting" t="Aankloppen"/>
+	<phrase n="lang_menu100_red_time" t="Doorschakeltijd"/>
+	<phrase n="lang_menu100_red_time_typeSio" t="Doorschakeltijd"/>
+	<phrase n="lang_menu100_timezone" t="Tijdzone"/>
+	<phrase n="lang_menu100_dialtone" t="Toonschema"/>
+	<phrase n="lang_menu100_call_completion" t="Gesprek beëindigen"/>
+	<phrase n="lang_menu100_cc_waiting" t="Wachten op: "/>
+	<phrase n="lang_menu100_cc_dial" t="Kiezen: "/>
+	<phrase n="lang_menu100_netmask" t="Netmasker"/>
+	<phrase n="lang_menu100_gateway" t="IP gateway"/>
+	<phrase n="lang_menu100_webserver_type" t="Webserver type"/>
+	<phrase n="lang_enum100_disp_always" t="Altijd"/>
+	<phrase n="lang_enum100_disp_on" t="Aan"/>
+	<phrase n="lang_enum100_disp_off" t="Uit"/>
+	<phrase n="lang_enum_disp_webserver_off" t="Uit"/>
+	<phrase n="lang_enum_disp_webserver_http" t="Alleen HTTP"/>
+	<phrase n="lang_enum_disp_webserver_https" t="Alleen HTTPS"/>
+	<phrase n="lang_enum_disp_webserver_http_https" t="HTTP &amp; HTTPS"/>
+	<phrase n="lang_enum_disp_func_key_destination" t="Extensie"/>
+	<phrase n="lang_enum_disp_func_key" t="Toets"/>
+	<phrase n="lang_xsi_silent_alert" t="Stille waarschuwing"/>
+	<phrase n="lang_privacy_out" t="Verberg identiteit"/>
+	<phrase n="lang_quick_transfer" t="Blind doorverbinden"/>
+	<phrase n="lang_quick_transfer_newcall" t="Nieuwe Oproep"/>
+	<phrase n="lang_quick_transfer_blind" t="Onaangekondigd doorverbinden"/>
+	<phrase n="lang_quick_transfer_attended" t="Aangekondigd doorverbinden"/>
+	<phrase n="lang_privacy_in" t="Weiger anoniem"/>
+	<phrase n="lang_privacy_in_typeSio" t="Weiger anonieme oproepen"/>
+	<phrase n="lang_auto_dial" t="Automatisch kiezen"/>
+	<phrase n="lang_call_completion" t="Terugbellen bij bezet"/>
+	<phrase n="lang_vlan_id" t="VLAN ID (1-4094)"/>
+	<phrase n="lang_vlan_qos" t="VLAN Prioriteit (0-7)"/>
+	<phrase n="lang_vlan_reset" t="VLAN resetten"/>
+	<phrase n="lang_vlan_port_tagging" t="VLAN tagging op LAN"/>
+	<phrase n="lang_vlan_pc_id" t="VLAN ID op LAN port"/>
+	<phrase n="lang_identity_settings" t="Identiteiten"/>
+	<phrase n="lang_preferences_settings" t="Algemene voorkeuren"/>
+	<phrase n="lang_maintenance_settings" t="Onderhoud"/>
+	<phrase n="lang_auto_connect_indication" t="Auto-answer toon"/>
+	<phrase n="lang_sel100_reregister_line" t="Aanmelden (opnieuw)"/>
+	<phrase n="lang_sel100_edit_line" t="Bewerk identiteit"/>
+	<phrase n="lang_enum_disp_cw_visual" t="Visueel"/>
+	<phrase n="lang_enum_disp_cw_visual_short" t="Visueel"/>
+	<phrase n="lang_enum_disp_cw_ringer" t="Belsignaal"/>
+	<phrase n="lang_confirm_del_adr_item" t="Wissen bevestigen?"/>
+	<phrase n="lang_confirm_del_adr_item_title" t="Verwijder telefoonboekitem"/>
+	<phrase n="lang_confirm_del_adr_item_title_typeSio" t="Wissen item"/>
+	<phrase n="lang_confirm_del_adr_title" t="Wissen item"/>
+	<phrase n="lang_confirm_del_adr_item_title_short" t="Verw. telefoonboek item"/>
+	<phrase n="lang_vol_ringer" t="Belvolume"/>
+	<phrase n="lang_keybd_unlock_PIN" t="Toetsenbord PIN"/>
+	<phrase n="lang_enum_disp_func_key_mult" t="Gedeelde lijn"/>
+	<phrase n="lang_enum_disp_func_key_keyevent" t="Toets gebeurtenis"/>
+	<phrase n="lang_menu_ringer_silent" t="Stil"/>
+	<phrase n="lang_menu_ringer_custom" t="Persoonlijke instellingen"/>
+	<phrase n="lang_enum_disp_func_key_none" t="Geen"/>
+	<phrase n="lang_presence_online" t="Verbonden"/>
+	<phrase n="lang_presence_busy" t="Bezet"/>
+	<phrase n="lang_presence_invisible" t="Niet bekend"/>
+	<phrase n="lang_presence_title" t="Aanwezigheidstatus"/>
+	<phrase n="lang_dialog_title" t="Oproepen"/>
+	<phrase n="lang_buddies_title" t="Contactpersonen"/>
+	<phrase n="lang_use_backlight" t="Schermverlichting"/>
+	<phrase n="lang_backlight_on_activity" t="Schermverlichting op activiteit"/>
+	<phrase n="lang_backlight_when_idle" t="Schermverlichting sluimer"/>
+	<phrase n="lang_activity" t="Activiteit"/>
+	<phrase n="lang_display_settings" t="Beeldscherm"/>
+	<phrase n="lang_audio_settings" t="Audio"/>
+	<phrase n="lang_redirect_settings" t="Doorschakelingen"/>
+	<phrase n="lang_redirect_settings_typeSio" t="Doorschakelingen"/>
+	<phrase n="lang_reboot_required" t="Herstart vereist"/>
+	<phrase n="lang_network_restart_required" t="Netwerk herstart vereist"/>
+	<phrase n="lang_auto_redialing" t="Opnieuw kiezen:"/>
+	<phrase n="lang_conference" t="Conferentie"/>
+	<phrase n="lang_directory_search" t="Centraal telefoonboek"/>
+	<phrase n="lang_wrong_pw" t="Foutief wachtwoord"/>
+	<phrase n="lang_http_password_not_set" t="HTTP Password niet opgeslagen"/>
+	<phrase n="lang_start_auto_redial" t="Terugbellen activeren"/>
+	<phrase n="lang_call_features_settings" t="Gespreksfuncties"/>
+	<phrase n="lang_all" t="Alle"/>
+	<phrase n="lang_outgoing_calls_settings" t="Uitgaande gesprekken"/>
+	<phrase n="lang_incoming_calls_settings" t="Inkomende gesprekken"/>
+	<phrase n="lang_ip_settings_wizzard" t="IP instellingen"/>
+	<phrase n="lang_webserver_settings" t="Webserver"/>
+	<phrase n="lang_vlan_settings" t="VLAN"/>
+	<phrase n="lang_wlan_settings" t="WLAN"/>
+	<phrase n="lang_wifi_reboot_to_connect_to" t="Opnieuw opstarten om verbinding te maken met"/>
+	<phrase n="lang_system_information_menu" t="Systeeminformatie"/>
+	<phrase n="lang_its_a_caller_info" t="Beller info"/>
+	<phrase n="lang_its_a_callee_info" t="Gebelde info"/>
+	<phrase n="lang_redirect_all" t="Alle"/>
+	<phrase n="lang_redirect_all_typeSio" t="Alle"/>
+	<phrase n="lang_redirect_busy" t="Bij bezet"/>
+	<phrase n="lang_redirect_busy_typeSio" t="Bij bezet"/>
+	<phrase n="lang_redirect_time" t="Bij geen antwoord"/>
+	<phrase n="lang_redirect_time_typeSio" t="Bij geen antwoord"/>
+	<phrase n="lang_do_redirect" t="Actief?"/>
+	<phrase n="lang_do_redirect_typeSio" t="Actief?"/>
+	<phrase n="lang_redirect_target" t="Bestemming"/>
+	<phrase n="lang_redirect_target_typeSio" t="Bestemming"/>
+	<phrase n="lang_help_label" t="Help"/>
+	<phrase n="lang_sysinfo_mem1" t="RAM:"/>
+	<phrase n="lang_sysinfo_mem2" t="van"/>
+	<phrase n="lang_sysinfo_mem3" t="beschikbaar"/>
+	<phrase n="lang_goto_phonepage_msg" t="Voor instellen van uw toestel ga in uw webbrowser naar:"/>
+	<phrase n="lang_goto_phonepage_msg_typeSio" t="Voor instellen van uw toestel ga in uw webbrowser naar:"/>
+	<phrase n="lang_goto_help_msg" t="Voor meer hulp ga naar:"/>
+	<phrase n="lang_linestate_connected" t="Bezet"/>
+	<phrase n="lang_linestate_on_hold" t="Wachtstand"/>
+	<phrase n="lang_linestate_ringing" t="Bellen"/>
+	<phrase n="lang_linename_message" t="Bericht"/>
+	<phrase n="lang_linename_redial" t="Nummerherhaling"/>
+	<phrase n="lang_linename_transfer" t="Doorverbinden"/>
+	<phrase n="lang_linename_rec_on" t="Opname starten"/>
+	<phrase n="lang_linename_rec_off" t="Opname stoppen"/>
+	<phrase n="lang_linetype_auto_answer" t="Automatisch opnemen"/>
+	<phrase n="lang_linetype_blf" t="BLF"/>
+	<phrase n="lang_connecting" t="Verbinden"/>
+	<phrase n="lang_fkey_add_contact_typeSio" t="Contact toevoegen"/>
+	<phrase n="lang_cancelconference" t="Beëindigen conference"/>
+	<phrase n="lang_confirm_cancelconference" t="Bevestigen "/>
+	<phrase n="lang_xmlgui_dialnumber" t="Kies een nummer"/>
+	<phrase n="lang_xmlgui_contactlist" t="Contactlijst"/>
+	<phrase n="lang_xmlgui_dial" t="Bellen"/>
+	<phrase n="lang_menu_equalizer" t="Equalizer"/>
+	<phrase n="lang_equalizer_soft" t="Zacht geluid"/>
+	<phrase n="lang_equalizer_normal" t="Normaal geluid"/>
+	<phrase n="lang_equalizer_bright" t="Hard geluid"/>
+	<phrase n="lang_contactpool" t="Lijst"/>
+	<phrase n="lang_tb_nickname" t="Roepnaam"/>
+	<phrase n="lang_tb_number" t="Telefoonnummer"/>
+	<phrase n="lang_tb_contact" t="Type contactpersoon"/>
+	<phrase n="lang_tb_outgoing_id" t="Uitgaande identiteit"/>
+	<phrase n="lang_tb_firstname" t="Voornaam"/>
+	<phrase n="lang_tb_lastname" t="Achternaam"/>
+	<phrase n="lang_tb_group" t="Groep"/>
+	<phrase n="lang_day" t="Dag"/>
+	<phrase n="lang_month" t="Maand"/>
+	<phrase n="lang_year" t="Jaar"/>
+	<phrase n="lang_tb_title" t="Titel"/>
+	<phrase n="lang_tb_organization" t="Org."/>
+	<phrase n="lang_tb_email" t="E-mail"/>
+	<phrase n="lang_tb_note" t="Notitie"/>
+	<phrase n="lang_tb_photo" t="Foto"/>
+	<phrase n="lang_tb_favorite" t="Favoriet?"/>
+	<phrase n="lang_linename_transfer_short" t="doorv"/>
+	<phrase n="lang_linetype_key_event_short" t="toets"/>
+	<phrase n="lang_linetype_url_short" t="URL"/>
+	<phrase n="lang_grouptype_family" t="Familie"/>
+	<phrase n="lang_grouptype_friend" t="Vriend"/>
+	<phrase n="lang_grouptype_collegue" t="Collega"/>
+	<phrase n="lang_grouptype_work" t="Werk"/>
+	<phrase n="lang_title_sort" t="Keuzemenu"/>
+	<phrase n="lang_title_select_entry" t="Keuze maken"/>
+	<phrase n="lang_entry_general" t="Algemene gegevens"/>
+	<phrase n="lang_title_entry_general" t="Algemene gegevens van"/>
+	<phrase n="lang_fav_add_from_tbook" t="Toevoegen vanuit telefoonboek"/>
+	<phrase n="lang_redirect_on_timeout" t="Doorschakelen na timeout:"/>
+	<phrase n="lang_redirect_on_timeout_typeSio" t="Doorschakelen na timeout:"/>
+	<phrase n="lang_redirect_when_busy" t="Doorschakelen bij bezet:"/>
+	<phrase n="lang_redirect_when_busy_typeSio" t="Doorschakelen bij bezet:"/>
+	<phrase n="lang_sip_disabled" t="SIP uitgeschakeld"/>
+	<phrase n="lang_low_memory" t="Te weinig geheugen"/>
+	<phrase n="lang_title_error" t="Foutmelding"/>
+	<phrase n="lang_error_code" t="Foutcode:"/>
+	<phrase n="lang_bad_server_response" t="Foutmelding server "/>
+	<phrase n="lang_bad_xml_response" t="XML Fout"/>
+	<phrase n="lang_title_loading" t="Laden"/>
+	<phrase n="lang_active_id" t="Actieve Id"/>
+	<phrase n="lang_1st_id" t="Identiteit 1"/>
+	<phrase n="lang_2nd_id" t="Identiteit 2"/>
+	<phrase n="lang_3rd_id" t="Identiteit 3"/>
+	<phrase n="lang_4th_id" t="Identiteit 4"/>
+	<phrase n="lang_5th_id" t="Identiteit 5"/>
+	<phrase n="lang_6th_id" t="Identiteit 6"/>
+	<phrase n="lang_7th_id" t="Identiteit 7"/>
+	<phrase n="lang_8th_id" t="Identiteit 8"/>
+	<phrase n="lang_9th_id" t="Identiteit 9"/>
+	<phrase n="lang_10th_id" t="Identiteit 10"/>
+	<phrase n="lang_11th_id" t="Identiteit 11"/>
+	<phrase n="lang_12th_id" t="Identiteit 12"/>
+	<phrase n="lang_contacttype_vip" t="VIP"/>
+	<phrase n="lang_contacttype_deny" t="Blokkeren"/>
+	<phrase n="lang_unknown" t="Onbekend"/>
+	<phrase n="lang_month_01" t="Januari"/>
+	<phrase n="lang_month_02" t="Februari"/>
+	<phrase n="lang_month_03" t="Maart"/>
+	<phrase n="lang_month_04" t="April"/>
+	<phrase n="lang_month_05" t="Mei"/>
+	<phrase n="lang_month_06" t="Juni"/>
+	<phrase n="lang_month_07" t="Juli"/>
+	<phrase n="lang_month_08" t="Augustus"/>
+	<phrase n="lang_month_09" t="September"/>
+	<phrase n="lang_month_10" t="Oktober"/>
+	<phrase n="lang_month_11" t="November"/>
+	<phrase n="lang_month_12" t="December"/>
+	<phrase n="lang_tb_name_label" t="Naam"/>
+	<phrase n="lang_tb_number_label" t="Telefoon"/>
+	<phrase n="lang_title_transfer" t="Doorverbinden"/>
+	<phrase n="lang_linestate_label" t="Status"/>
+	<phrase n="lang_reboot_uploads" t="Herstart om nieuwe uploads te activeren"/>
+	<phrase n="lang_cc_dial_now" t="Bellen?"/>
+	<phrase n="lang_cc_complete_now" t="Bellen naar "/>
+	<phrase n="lang_cc_waiting_for" t="Wachten op "/>
+	<phrase n="lang_cc_set_warning" t="..het gesprek is tot stand gebracht, wilt u het gesprek afbreken"/>
+	<phrase n="lang_cc_change_title" t="Wijzig CC-bestemming?"/>
+	<phrase n="lang_cc_change_message" t="Vervang huidige CC-bestemming met"/>
+	<phrase n="lang_cc_status_waiting_on" t="Wachten op het beschikbaar worden van %dst."/>
+	<phrase n="lang_cc_activate" t="zal wachten om de oproep te voltooien."/>
+	<phrase n="lang_cc_activated" t="nog steeds aan het wachten om het gesprek af te ronden."/>
+	<phrase n="lang_call_contact" t="Bel contact"/>
+	<phrase n="lang_call_work" t="Bel werk"/>
+	<phrase n="lang_call_work_typeSio" t="Bel werk"/>
+	<phrase n="lang_call_mobile" t="Bel mobiel"/>
+	<phrase n="lang_call_home" t="Bel thuis"/>
+	<phrase n="lang_call_home_typeSio" t="Bel thuis"/>
+	<phrase n="lang_call_other" t="Bel andere"/>
+	<phrase n="lang_call_voicemail" t="Bel voicemail"/>
+	<phrase n="lang_xfer_to_contact" t="DVB naar contact"/>
+	<phrase n="lang_xfer_to_work" t="DVB naar werk"/>
+	<phrase n="lang_xfer_to_work_typeSio" t="DVB naar werk"/>
+	<phrase n="lang_xfer_to_mobile" t="DVB naar mobiel"/>
+	<phrase n="lang_xfer_to_home" t="DVB naar Huis"/>
+	<phrase n="lang_xfer_to_home_typeSio" t="DVB naar Huis"/>
+	<phrase n="lang_xfer_to_other" t="DVB naar anders"/>
+	<phrase n="lang_xfer_to_voicemail" t="DVB naar Voicemail"/>
+	<phrase n="lang_cfw_to_contact" t="Doorsch. naar contact"/>
+	<phrase n="lang_cfw_to_contact_typeSio" t="Doorsch. naar contact"/>
+	<phrase n="lang_cfw_to_voicemail_typeSio" t="Doorsch. naar Voicemail"/>
+	<phrase n="lang_cfw_to_work" t="Doorsch. naar werk"/>
+	<phrase n="lang_cfw_to_work_typeSio" t="Doorsch. naar werk"/>
+	<phrase n="lang_cfw_to_mobile" t="Doorsch. naar mobiel"/>
+	<phrase n="lang_cfw_to_mobile_typeSio" t="Doorsch. naar mobiel"/>
+	<phrase n="lang_cfw_to_home" t="Doorsch. naar Huis"/>
+	<phrase n="lang_cfw_to_home_typeSio" t="Doorsch. naar Huis"/>
+	<phrase n="lang_cfw_to_other" t="Doorsch. naar Anders"/>
+	<phrase n="lang_cfw_to_other_typeSio" t="Doorsch. naar Anders"/>
+	<phrase n="lang_cfw_to_voicemail" t="Doorsch. naar Voicemail"/>
+	<phrase n="lang_assign_to_key" t="Toets toewijzen"/>
+	<phrase n="lang_contact_state_unknown" t="onbekend"/>
+	<phrase n="lang_contact_state_available" t="beschikbaar"/>
+	<phrase n="lang_contact_state_available_on_mobile" t="Beschikbaar (mobiel)"/>
+	<phrase n="lang_contact_state_available_at_desk" t="Beschikbaar (kantoor)"/>
+	<phrase n="lang_contact_state_inactive" t="Niet beschikbaar"/>
+	<phrase n="lang_contact_state_busy" t="Bezet"/>
+	<phrase n="lang_contact_state_urgent_interruptions_only" t="Alleen belangrijke onderbreking "/>
+	<phrase n="lang_contact_state_in_a_call" t="In gesprek"/>
+	<phrase n="lang_contact_state_in_a_meeting" t="In vergadering"/>
+	<phrase n="lang_contact_state_meeting" t="Vergadering"/>
+	<phrase n="lang_contact_state_holding" t="In wachtstand"/>
+	<phrase n="lang_contact_state_dnd" t="Niet storen"/>
+	<phrase n="lang_contact_state_dnd_all" t="Niet storen (alle)"/>
+	<phrase n="lang_contact_state_dnd_self" t="Niet storen (eigen)"/>
+	<phrase n="lang_contact_state_be_right_back" t="Ben zo terug"/>
+	<phrase n="lang_contact_state_away" t="Weg"/>
+	<phrase n="lang_contact_state_offline" t="Uitgelogd"/>
+	<phrase n="lang_contact_state_reset" t="Status resetten"/>
+	<phrase n="lang_remote_book_name_ldap" t="LDAP Telefoonboek"/>
+	<phrase n="lang_remote_book_choose_title" t="Selecteer adresboek"/>
+	<phrase n="lang_title_add_to_favorites" t="toevoegen aan favorieten"/>
+	<phrase n="lang_title_add_to_favorites_typeSio" t="toevoegen aan favorieten"/>
+	<phrase n="lang_title_favorites" t="Favorieten"/>
+	<phrase n="lang_unknown_partner" t="onbekend"/>
+	<phrase n="lang_nrtype_sip" t="SIP"/>
+	<phrase n="lang_nrtype_business" t="Zakelijk"/>
+	<phrase n="lang_nrtype_fixed" t="Vaste lijn"/>
+	<phrase n="lang_nrtype_extension" t="Bestemming"/>
+	<phrase n="lang_tb_number_type" t="Type nummer"/>
+	<phrase n="lang_tb_number_type_label" t="Type"/>
+	<phrase n="lang_title_no_permission" t="Geen toegang"/>
+	<phrase n="lang_target_office" t="Kantoor"/>
+	<phrase n="lang_target_replyto" t="Antwoord naar"/>
+	<phrase n="lang_target_unqualified" t="Ongekwalificeerd"/>
+	<phrase n="lang_target_work" t="Werk"/>
+	<phrase n="lang_target_work_typeSio" t="Werk"/>
+	<phrase n="lang_target_mobile" t="Mobiel"/>
+	<phrase n="lang_target_home" t="Home"/>
+	<phrase n="lang_target_home_typeSio" t="Home"/>
+	<phrase n="lang_target_other" t="Overig"/>
+	<phrase n="lang_target_voicemail" t="Voicemail"/>
+	<phrase n="lang_target_new_number" t="Nieuw nummer"/>
+	<phrase n="lang_target_contact" t="Neem contact op met"/>
+	<phrase n="lang_directory_too_big_to_import__long" t="De map is te groot"/>
+	<phrase n="lang_target_cancel" t="Deactiveren doorschakelen"/>
+	<phrase n="lang_target_cancel_typeSio" t="Deactiveren doorschakelen"/>
+	<phrase n="lang_target_forward" t="Gesprekken doorschakelen naar"/>
+	<phrase n="lang_target_forward_typeSio" t="Gesprekken doorschakelen naar"/>
+	<phrase n="lang_tls_unknown_certificate_alert" t="Een beveiligde verbinding is geweigerd in verband met een onbekend certificaat. U kunt toestemming geven voor deze verbinding via het certifcaat gedeelte in de webinterface in"/>
+	<phrase n="lang_tls_unknown_certificate_alert_title" t="Beveiligde verbinding mislukt"/>
+	<phrase n="lang_tls_properties_changed" t="Start opnieuw op. Gewijzigde beveiligingseigenschappen kunnen niet worden toegepast op lopende sessies."/>
+	<phrase n="lang_call_completed_by_part1" t="Oproep beantwoord door"/>
+	<phrase n="lang_call_completed_by_part2" t="op een ander toestel"/>
+	<phrase n="lang_call_completed_by_part2_typeSio" t="op een ander toestel"/>
+	<phrase n="lang_challenge_sip_pw" t="Wachtwoord"/>
+	<phrase n="lang_line_ocs_wz_user" t="Domein"/>
+	<phrase n="lang_line_ocs_wz_pwd" t="Wachtwoord"/>
+	<phrase n="lang_unregistered_ids_title" t="Niet geregistreerd:"/>
+	<phrase n="lang_message_label" t="Info"/>
+	<phrase n="lang_status_messages" t="Statusinformatie"/>
+	<phrase n="lang_information_settings" t="Informatie"/>
+	<phrase n="lang_user_realname" t="Naam weergeven"/>
+	<phrase n="lang_user_idle_number" t="Eigen nummer"/>
+	<phrase n="lang_user_name" t="Account"/>
+	<phrase n="lang_user_pass" t="Wachtwoord"/>
+	<phrase n="lang_user_host" t="Registrator"/>
+	<phrase n="lang_user_outbound" t="Uitgaande proxy"/>
+	<phrase n="lang_user_pname" t="Authenticatie Gebruiker"/>
+	<phrase n="lang_user_mailbox" t="Brievenbus"/>
+	<phrase n="lang_user_mailbox_retrieve" t="Mailbox inbellen"/>
+	<phrase n="lang_hotdesking" t="Hotdesking"/>
+	<phrase n="lang_keyb_enter_current_pin" t="Voer huidige PIN in"/>
+	<phrase n="lang_keyb_enter_new_pin" t="Voer nieuwe PIN in"/>
+	<phrase n="lang_keyb_reenter_new_pin" t="Voer nieuwe PIN opnieuw in"/>
+	<phrase n="lang_keyb_enter_password" t="Wachtwoord voor PIN reset"/>
+	<phrase n="lang_keyb_locked" t="* Indrukken en vasthouden voor reset"/>
+	<phrase n="lang_keyb_permanently_locked" t="Houd * ingedrukt om de PIN opnieuw in te stellen."/>
+	<phrase n="lang_title_unlock" t="Toetsen geblokkeerd"/>
+	<phrase n="lang_confirm_unlock" t="Ontgrendel? Kies OK."/>
+	<phrase n="lang_transfer_failed_msg" t="Doorverbinden mislukt"/>
+	<phrase n="lang_action_failed_msg" t="Actie mislukt"/>
+	<phrase n="lang_vpn_fetch" t="VPN tarball ophalen van:"/>
+	<phrase n="lang_vpn_fetch_failed" t="Afhalen van VPN tarball mislukt"/>
+	<phrase n="lang_vpn_flash" t="VPN-bestanden uitpakken..."/>
+	<phrase n="lang_vpn_reboot" t="Systeem herstarten om VPN te activeren..."/>
+	<phrase n="lang_l2tp_fetch" t="L2TP tarball ophalen van:"/>
+	<phrase n="lang_l2tp_fetch_failed" t="Afhalen L2TP tarball mislukt"/>
+	<phrase n="lang_l2tp_flash" t="L2TP-bestanden uitpakken..."/>
+	<phrase n="lang_l2tp_reboot" t="Systeem herstarten om L2TP te activeren..."/>
+	<phrase n="lang_sbc_fetch" t="Sbc-configuratiebestand ophalen van:"/>
+	<phrase n="lang_sbc_fetch_failed" t="Ophalen sbc config bestand mislukt"/>
+	<phrase n="lang_sbc_flash" t="Kopieer sbc config bestand..."/>
+	<phrase n="lang_sbc_reboot" t="Systeem herstarten om sbc te activeren..."/>
+	<phrase n="lang_sbc_active" t="SBC is actief"/>
+	<phrase n="lang_keyb_min_digits" t="(min. # cijfers)"/>
+	<phrase n="lang_empty_dir_search_list" t="Kies naam. Toets * voor spatie"/>
+	<phrase n="lang_key_unassigned" t="Toets niet toegewezen"/>
+	<phrase n="lang_key_unassigned_typeSio" t="Toets niet toegewezen"/>
+	<phrase n="lang_label_conference_partner" t="Deelnemer"/>
+	<phrase n="lang_incoming_call_title_while_connected" t="Wisselgesprek"/>
+	<phrase n="lang_active" t="Actief"/>
+	<phrase n="lang_emergency_call" t="Noodoproep"/>
+	<phrase n="lang_ntp_pending" t="Contact maken met NTP-server"/>
+	<phrase n="lang_ntp_unreachable" t="NTP-server onbereikbaar"/>
+	<phrase n="lang_download_server_unreachable" t="Server onbereikbaar"/>
+	<phrase n="lang_network_busy" t="Netwerk bezet"/>
+	<phrase n="lang_pstn_reroute_attempt" t="Dit gesprek kan langer duren. Het netwerk is mogelijk bezet."/>
+	<phrase n="lang_menu_location" t="Lokatie"/>
+	<phrase n="lang_linestate_holding_upper_case" t="Wachtend"/>
+	<phrase n="lang_linestate_on_hold_upper_case" t="Wachtstand"/>
+	<phrase n="lang_location_retrieval_failed" t="Lokatie niet gevonden"/>
+	<phrase n="lang_route_private_line" t="Privé lijn"/>
+	<phrase n="lang_route_forwarded" t="Doorgeschakeld"/>
+	<phrase n="lang_route_forwarded_typeSio" t="Doorgeschakeld"/>
+	<phrase n="lang_route_delegated" t="Gedelegeerd"/>
+	<phrase n="lang_route_team_call" t="Doorgeschakeld naar groep"/>
+	<phrase n="lang_route_acd" t="Groepsgesprek"/>
+	<phrase n="lang_route_cccp_conference" t="Conferentie"/>
+	<phrase n="lang_route_cccp_conference_typeSio" t="Conferentie"/>
+	<phrase n="lang_dfks_failed" t="Sync mislukt"/>
+	<phrase n="lang_no_shared_key" t="Geen gedeelde lijnsleutel beschikbaar"/>
+	<phrase n="lang_shared_seize_active" t="Lijnblokkering is nog steeds actief"/>
+	<phrase n="lang_not_a_shared_key" t="De geselecteerde toets is geen gedeelde lijntoets"/>
+	<phrase n="lang_active_key_not_a_shared_key" t='Gedeelde lijntoets werkt niet met "actieve" contexttoewijzing.'/>
+	<phrase n="lang_ipv4_conflict" t="IPv4: conflict"/>
+	<phrase n="lang_contact_saved" t="Contact opgeslagen"/>
+	<phrase n="lang_query_pending" t="Zoeken…"/>
+	<phrase n="lang_no_conference" t="Vanwege CPU-belasting is een %Aconference niet toegestaan"/>
+	<phrase n="lang_no_conference_with_codec" t="Vanwege CPU-belasting is een %Aconferentie niet toegestaan als één partij codec %B gebruikt"/>
+	<phrase n="lang_no_conference_with_encrypted_codec" t="Vanwege CPU-belasting is een %Aconferentie niet toegestaan als één partij codec %B met versleuteling gebruikt"/>
+	<phrase n="lang_no_conference_without_unencrypted_codec" t="Vanwege CPU-belasting is een %Aconferentie niet toegestaan als één partij geen codec %B zonder codering gebruikt"/>
+	<phrase n="lang_setup_language" t="Setup Taal"/>
+	<phrase n="lang_please_wait" t="Even geduld a.u.b."/>
+	<phrase n="lang_download_failed" t="Download mislukt"/>
+	<phrase n="lang_function_blocked" t="Geblokkeerd"/>
+	<phrase n="lang_activating_uploads" t="Uploads geactiveerd"/>
+	<phrase n="lang_provisioning" t="Bevoorrading"/>
+	<phrase n="lang_provisioning_failed" t="Provisioning mislukt"/>
+	<phrase n="lang_tr69_provisioning" t="TR-069 Prov. in uitvoering"/>
+	<phrase n="lang_start_provisioning" t="Bevoorrading aan de gang"/>
+	<phrase n="lang_waitTime" t="Wachttijd"/>
+	<phrase n="lang_ccUserId" t="Gebruikers ID"/>
+	<phrase n="lang_callCenterName" t="Naam"/>
+	<phrase n="lang_numCallsInQueue" t="Oproepen in wachtrij"/>
+	<phrase n="lang_acd_ready" t="Beschikbaar"/>
+	<phrase n="lang_acd_not_ready" t="Niet beschikbaar"/>
+	<phrase n="lang_acd_working_after_call" t="Afronden"/>
+	<phrase n="lang_acd_log_on" t="Aanmelden"/>
+	<phrase n="lang_acd_log_off" t="Afmelden"/>
+	<phrase n="lang_acd_unkown_state" t="Status onbekend"/>
+	<phrase n="lang_change_state_to" t="Verander status"/>
+	<phrase n="lang_call_parked" t="Geparkeerd"/>
+	<phrase n="lang_call_unparked" t="Parkeren opheffen"/>
+	<phrase n="lang_firmware_update_failed" t="SW Update mislukt"/>
+	<phrase n="lang_firmware_update_restart" t="Herstart SW-update?"/>
+	<phrase n="lang_temp_unavail" t="Tijdelijk niet beschikbaar"/>
+	<phrase n="lang_limited_func" t="Beperkte functionaliteit door uitval"/>
+	<phrase n="lang_limited_func_exp" t="Een netwerkprobleem beperkt tijdelijk functies zoals Presence of CF"/>
+	<phrase n="lang_limited_func_exp_typeSio" t="Een netwerkprobleem beperkt tijdelijk functies zoals Presence of CF"/>
+	<phrase n="lang_call_park_failed" t="Parkeren mislukt"/>
+	<phrase n="lang_park_failed_reason" t="Geen baan beschikbaar"/>
+	<phrase n="lang_list_parked" t="Geparkeerd"/>
+	<phrase n="lang_vision" t="Visie"/>
+	<phrase n="lang_unpair_vision" t="Ongepaarde visie"/>
+	<phrase n="lang_scan_for_visions" t="Scannen naar visies"/>
+	<phrase n="lang_paired_with_vision" t="In combinatie met Vision:"/>
+	<phrase n="lang_vision_connection_lost" t="Vision-verbinding verbroken"/>
+	<phrase n="lang_unpair_vision_question" t="Unpair Vision?"/>
+	<phrase n="lang_isconnected" t="Verbonden"/>
+	<phrase n="lang_isdisconnected" t="Verbroken"/>
+	<phrase n="lang_isdisconnected_typeSio" t="Verbroken"/>
+	<phrase n="lang_hotdesking_ntlm" t="Gebruikersgegevens"/>
+	<phrase n="lang_hotdesking_pin" t="PIN"/>
+	<phrase n="lang_prompt_phone_num" t="Uw uitbreiding"/>
+	<phrase n="lang_prompt_pin" t="Uw PIN"/>
+	<phrase n="lang_pin_signin_active" t="Inloggen…"/>
+	<phrase n="lang_pin_signin_failure" t="Login met nummer en PIN niet mogelijk"/>
+	<phrase n="lang_firmware_update_in" t="SW-Update in "/>
+	<phrase n="lang_firmware_update_available" t="SW-Update beschikbaar"/>
+	<phrase n="lang_call_for" t="Oproep voor"/>
+	<phrase n="lang_linetype_bossadmin" t="Baas/Admin"/>
+	<phrase n="lang_linetype_bossadmin_short" t="B/A"/>
+	<phrase n="lang_success_msg_transferred_to" t="%A doorverbonden naar %B"/>
+	<phrase n="lang_pickup_call" t="Oproep ophalen"/>
+	<phrase n="lang_call_on_behalf_of" t="Oproep namens"/>
+	<phrase n="lang_boss_group" t="Mensen voor wie ik gesprekken beheer"/>
+	<phrase n="lang_delegate_group" t="Afgevaardigden"/>
+	<phrase n="lang_all_delegates" t="Alle delegaties aan een sleutel toewijzen"/>
+	<phrase n="lang_call_failed_network_issue" t="Oproep mislukt: Netwerk"/>
+	<phrase n="lang_call_failed_network_issue_typeSio" t="Oproep mislukt: Netwerk"/>
+	<phrase n="lang_ethernet_detection" t="Detecteer ethernet"/>
+	<phrase n="lang_firmware_update_not_available" t="Geen SW-update beschikbaar"/>
+	<phrase n="lang_check_sw_update" t="Controleer SW-update"/>
+	<phrase n="lang_continuous_text_label" t="Label"/>
+	<phrase n="lang_short_text" t="Korte tekst"/>
+	<phrase n="lang_headline_admins" t="Admins"/>
+	<phrase n="lang_always_delegate_forward" t="Delegeer altijd vooruit"/>
+	<phrase n="lang_always_deleg_sim" t="Altijd tegelijk bellen"/>
+	<phrase n="lang_always_deleg_forw" t="Altijd vooruit"/>
+	<phrase n="lang_always_deleg_forw_typeSio" t="Altijd vooruit"/>
+	<phrase n="lang_tb_action_url" t="actie url"/>
+	<phrase n="lang_clear_call_history" t="Oproep historie wissen"/>
+	<phrase n="lang_headset_volume_only" t="Wijzigen volume van USB headset enkel mogelijk op headset zelf."/>
+	<phrase n="lang_hold_error" t="In de wacht zetten mislukt, Oproep is gemute. Druk in de wacht nogmaals om opnieuw te proberen."/>
+	<phrase n="lang_retr_by" t="Door"/>
+	<phrase n="lang_ipv4" t="IPv4"/>
+	<phrase n="lang_ipv6" t="IPv6"/>
+	<phrase n="lang_ipv6_autoconf" t="SLAAC"/>
+	<phrase n="lang_refresh" t="Ververs"/>
+	<phrase n="lang_may_take_some_time" t="Het verversen kan even duren. Toch doorgaan?"/>
+	<phrase n="lang_ip_address_not_available" t="Niet beschikbaar"/>
+	<phrase n="lang_menu_unlock" t="Ontgrendel"/>
+	<phrase n="lang_menu_security" t="Beveiliging"/>
+	<phrase n="lang_route_team_call_for" t="Team oproep voor"/>
+	<phrase n="lang_route_acd_for" t="Groep oproep voor"/>
+	<phrase n="lang_route_anonymous_acd" t="Anonieme groep oproep"/>
+	<phrase n="lang_route_anonymous_acd_for" t="Anonieme groep oproep voor"/>
+	<phrase n="lang_anonymous" t="Anoniem"/>
+	<phrase n="lang_wish_barge_in" t="Inbreken?"/>
+	<phrase n="lang_location" t="Locatie:"/>
+	<phrase n="lang_subject" t="Onderwerp"/>
+	<phrase n="lang_dates" t="Afspraken"/>
+	<phrase n="lang_menu_dates_today" t="Afspraken vandaag"/>
+	<phrase n="lang_label_conference_organizer" t="Initiator"/>
+	<phrase n="lang_date_ongoing" t="NU:"/>
+	<phrase n="lang_date_remind_me_later" t="Herinner mij later"/>
+	<phrase n="lang_date_remind_later" t="Later"/>
+	<phrase n="lang_date_set_reminder_to" t="Aan"/>
+	<phrase n="lang_minutes" t="minuten"/>
+	<phrase n="lang_date_reset_reminder" t="Reset herinnering"/>
+	<phrase n="lang_cannot_access_exchange" t="Geen verbinding met Exchange mogelijk"/>
+	<phrase n="lang_no_dates_today" t="Geen afspraken vandaag"/>
+	<phrase n="lang_participants" t="Deelnemers:"/>
+	<phrase n="lang_expansion_modules" t="Uitbreidingsmodule"/>
+	<phrase n="lang_wiz_vlan" t="Gebruikt u VLAN?"/>
+	<phrase n="lang_wiz_ip4" t="Wilt u IPv4 instellen?"/>
+	<phrase n="lang_wiz_ip6" t="Instellen IPv6"/>
+	<phrase n="lang_sxm_connected" t="Uitbreidingsmodule (Serieel) verbonden"/>
+	<phrase n="lang_uxm_connected" t="Uitbreidingsmodule (USB) verbonden"/>
+	<phrase n="lang_uxm_cabeling_broken" t="Verkeerde kabel uitbreidingsmodule"/>
+	<phrase n="lang_uxm_limit_exceeded" t="Teveel uitbreidingsmodules verbonden"/>
+	<phrase n="lang_vpn_active" t="VPN actief"/>
+	<phrase n="lang_wlan_active" t="WLAN actief"/>
+	<phrase n="lang_list_no_devices" t="(geen apparaten beschikbaar)"/>
+	<phrase n="lang_bluetooth" t="Bluetooth"/>
+	<phrase n="lang_bluetooth_connected_title" t="Verbonden apparaat"/>
+	<phrase n="lang_bluetooth_paired_list_title" t="Lijst gekoppelde apparaten"/>
+	<phrase n="lang_bluetooth_active_connection" t="Bluetooth verbinding actief"/>
+	<phrase n="lang_bluetooth_discovered_list_title" t="Lijst ontdekte apparaten"/>
+	<phrase n="lang_bluetooth_discovering" t="Ontdekken"/>
+	<phrase n="lang_bluetooth_unpairing" t="Ontkoppelen"/>
+	<phrase n="lang_bluetooth_pairing" t="Koppelen"/>
+	<phrase n="lang_bluetooth_connecting" t="Verbinden"/>
+	<phrase n="lang_bluetooth_disconnecting" t="Verbreken"/>
+	<phrase n="lang_callback_on_busy" t="Terugbellen bij bezet"/>
+	<phrase n="lang_auto_busy_redial" t="Automatisch opnieuw kiezen"/>
+	<phrase n="lang_decision_cob" t="is momenteel bezet. Druk op 'Bevestigen' voor een melding als u beschikbaar bent. Als u een bericht wilt achterlaten, drukt u op 'X'."/>
+	<phrase n="lang_decision_cob_withoutvm" t="is momenteel bezet. Druk op 'Bevestigen' om een melding te ontvangen wanneer deze beschikbaar is."/>
+	<phrase n="lang_callback" t="Terugbellen"/>
+	<phrase n="lang_callback_available" t="Terugbellen beschikbaar"/>
+	<phrase n="lang_linetype_callback" t="Terugbellen"/>
+	<phrase n="lang_linetype_callback_short" t="CoB"/>
+	<phrase n="lang_ringback_callpark_service" t="Doorgegeven door Call Park Service"/>
+	<phrase n="lang_callpark_service" t="Bel Park Service"/>
+	<phrase n="lang_storage_mounted" t="USB Opslag verbonden"/>
+	<phrase n="lang_storage_mounted_typeSio" t="USB Opslag verbonden"/>
+	<phrase n="lang_storage_tomany" t="Eén USB opslag mogelijk"/>
+	<phrase n="lang_storage_umount" t="USB Opslag verwijderen"/>
+	<phrase n="lang_no_participants_detected" t="Geen deelnemers gevonden"/>
+	<phrase n="lang_ieee8021_method" t="Modus"/>
+	<phrase n="lang_menu_fkey_functions" t="Functie"/>
+	<phrase n="lang_uxm_appearance" t="Weergave"/>
+	<phrase n="lang_put_through_by" t="Doorgezet door"/>
+	<phrase n="lang_contact_not_in_list" t="Niet gevonden in contacten"/>
+	<phrase n="lang_msg_speaker_active" t="Handsfree geactiveerd"/>
+	<phrase n="lang_msg_headset_active" t="Headset geactiveerd"/>
+	<phrase n="lang_msg_handset_active" t="Hoorn geactiveerd"/>
+	<phrase n="lang_msg_ringing_disabled" t="Beltoon uit"/>
+	<phrase n="lang_msg_mute_active" t="MUTE"/>
+	<phrase n="lang_wiz_aborted" t="Wizard afgebroken"/>
+	<phrase n="lang_menu_set_kbd_lock_pin" t="Stel toetsblokkade PIN in"/>
+	<phrase n="lang_menu_change_kbd_lock_pin" t="Verander PIN toetsblokkade"/>
+	<phrase n="lang_no_valid_dsearch_config" t="Geen geldige mapzoekconfiguratie"/>
+	<phrase n="lang_title_conferences" t="Conferenties"/>
+	<phrase n="lang_no_conferences_found" t="Geen Conferentie gevonden"/>
+	<phrase n="lang_conference_type" t="Type"/>
+	<phrase n="lang_conference_status" t="Status"/>
+	<phrase n="lang_join_conference_long" t="Deelnemen aan conferentie"/>
+	<phrase n="lang_join_conference_as_moderator" t="Deelnemen als Moderator"/>
+	<phrase n="lang_choose_menu" t="Kies als Menu"/>
+	<phrase n="lang_menu_shortcut" t="Menu Snelkoppeling"/>
+	<phrase n="lang_using_time" t="tijd gebruiken"/>
+	<phrase n="lang_waiting_for_pnp" t="Wachten op PnP"/>
+	<phrase n="lang_fkey_contact_list_buddy" t="BLF (Server)"/>
+	<phrase n="lang_fkey_xmpp_presence" t="Aanwezigheid contact (XMPP)"/>
+	<phrase n="lang_csta_prompt_title" t="Nu bellen?"/>
+	<phrase n="lang_contact_is_favorite" t="Is dit contact één van uw favorieten?"/>
+	<phrase n="lang_currently_set_to" t="Momenteel ingesteld op:"/>
+	<phrase n="lang_vol_label_contrast" t="Contrast secundaire display"/>
+	<phrase n="lang_menu_fkeys_phone" t="Lijn toetsen"/>
+	<phrase n="lang_menu_dkeys_phone" t="Toegewezen toetsen"/>
+	<phrase n="lang_menu_context_sensitive_keys_phone" t="Contextgevoelige toetsen"/>
+	<phrase n="lang_menu_smartlabel_fkeys" t="SmartLabel toetsen"/>
+	<phrase n="lang_menu_smartlabel_page" t="Pagina"/>
+	<phrase n="lang_menu_fkeys_page" t="Lijn toetsen pagina"/>
+	<phrase n="lang_menu_fkeys_sxm" t="Sleutels op SXM"/>
+	<phrase n="lang_menu_fkeys_uxm" t="Uitbreidingstoetsen"/>
+	<phrase n="lang_server_directory_search" t="Zoeken in serverlijst"/>
+	<phrase n="lang_menu_fontsize" t="Grootte lettertype"/>
+	<phrase n="lang_uxm_fontsize_lines" t="Lettergrootte (regelopmaak)"/>
+	<phrase n="lang_uxm_fontsize_tiles" t="Lettergrootte (Tegelindeling)"/>
+	<phrase n="lang_menu_text_alignment" t="Tekst positie"/>
+	<phrase n="lang_left" t="Links"/>
+	<phrase n="lang_right" t="Rechts"/>
+	<phrase n="lang_center" t="Midden"/>
+	<phrase n="lang_alternate" t="Alternatief"/>
+	<phrase n="lang_menu_return_to_first_page" t="Terug naar pagina 1"/>
+	<phrase n="lang_automatic_return" t="Automatisch terugkeren"/>
+	<phrase n="lang_warning" t="waarschuwing"/>
+	<phrase n="lang_public_address" t="Publiek adres"/>
+	<phrase n="lang_menu_volume" t="Volume          "/>
+	<phrase n="lang_vol_ringer_text" t="Beltoonvolume"/>
+	<phrase n="lang_vol_headset_text" t="Headsetvolume"/>
+	<phrase n="lang_vol_handset_text" t="Handsetvolume"/>
+	<phrase n="lang_vol_speaker_text" t="Speakervolume"/>
+	<phrase n="lang_list_rejected" t="Afgewezen"/>
+	<phrase n="lang_enum_disp_func_key_conference" t="Conferentie"/>
+	<phrase n="lang_enum_disp_func_key_ivr" t="IVR"/>
+	<phrase n="lang_enum_disp_func_key_callback_on_busy" t="Terugbellen"/>
+	<phrase n="lang_fkeys_ssi_context" t="Context"/>
+	<phrase n="lang_fkeys_ssi_type" t="Type"/>
+	<phrase n="lang_fkeys_ssi_active" t="Actief"/>
+	<phrase n="lang_fkeys_ssi_icon" t="Icoon"/>
+	<phrase n="lang_default_icon" t="Standaard icoon"/>
+	<phrase n="lang_custom_icon" t="Aangepast icoon"/>
+	<phrase n="lang_FirstName" t="Voornaam"/>
+	<phrase n="lang_LastName" t="Achternaam"/>
+	<phrase n="lang_Home" t="Nummer Thuis"/>
+	<phrase n="lang_Office" t="Nummer Werk"/>
+	<phrase n="lang_Mobile" t="Nummer mobiel"/>
+	<phrase n="lang_Unqualified" t="Onbevoegd Aantal"/>
+	<phrase n="lang_edit_contact" t="Wijzig contact"/>
+	<phrase n="lang_msw_query" t="Het verzenden van contactgegevens naar de server is mislukt:"/>
+	<phrase n="lang_indicator" t="Indicator"/>
+	<phrase n="lang_protocol" t="Protocol"/>
+	<phrase n="lang_target_forward_busy" t="Doorschakelen (in gesprek) naar"/>
+	<phrase n="lang_target_forward_timeout" t="Doorschakelen na (sec)"/>
+	<phrase n="lang_target_forward_timeout_typeSio" t="Doorschakelen na (sec)"/>
+	<phrase n="lang_WIFI_SSID" t="Netwerk naam"/>
+	<phrase n="lang_WIFI_auth_mode" t="Encryptie"/>
+	<phrase n="lang_WIFI_WPA_Encryption" t="WPA Encryptie"/>
+	<phrase n="lang_WIFI_WPA" t="WPA"/>
+	<phrase n="lang_WIFI_WPA2PSK" t="WPA2"/>
+	<phrase n="lang_WIFI_WEP" t="WEP"/>
+	<phrase n="lang_WIFI_OPEN" t="Open"/>
+	<phrase n="lang_WIFI_AES" t="AES"/>
+	<phrase n="lang_WIFI_TKIP" t="TKIP"/>
+	<phrase n="lang_WIFI_SCAN_NETWORKS" t="WLAN scannen"/>
+	<phrase n="lang_WIFI_MANUAL_SETUP" t="Handmatig instellen"/>
+	<phrase n="lang_contact_details" t="Contactgegevens"/>
+	<phrase n="lang_WIFI_CONNECTED_TO" t="Verbonden met"/>
+	<phrase n="lang_WIFI_NOT_CONNECTED" t="Niet aangesloten"/>
+	<phrase n="lang_unhold" t="Hervat"/>
+	<phrase n="lang_empty" t="leeg"/>
+	<phrase n="lang_F_SNOM" t="snom/Cloud"/>
+	<phrase n="lang_prefs_ssi_date_us_format" t="Datumnotatie"/>
+	<phrase n="lang_prefs_ssi_time_24_format" t="24-uursnotatie"/>
+	<phrase n="lang_time_symbol_second" t="s"/>
+	<phrase n="lang_all_accounts" t="Alle Identiteiten"/>
+	<phrase n="lang_reboot_to_apply_new_settings" t="Opnieuw opstarten om instellingen te voltooien?"/>
+	<phrase n="lang_TLS" t="TLS"/>
+	<phrase n="lang_MD5" t="MD5"/>
+	<phrase n="lang_WIFI_SWITCH_OFF_WLAN" t="WIFI uit"/>
+	<phrase n="lang_ErrorNotSupportedByManager" t="Niet ondersteund"/>
+	<phrase n="lang_ErrorContactNotFound" t="Contact niet gevonden"/>
+	<phrase n="lang_ErrorInvalidCredentials" t="Verkeerde inloggegevens"/>
+	<phrase n="lang_ErrorInvalidArgument" t="Ongeldig argument"/>
+	<phrase n="lang_ErrorRequestPending" t="Verzoek in behandeling"/>
+	<phrase n="lang_ErrorNotInitialized" t="Niet geïnitialiseerd"/>
+	<phrase n="lang_ErrorInComplete" t="Incompleet"/>
+	<phrase n="lang_ErrorOutOfMemory" t="Geheugen vol"/>
+	<phrase n="lang_Contact_pool" t="Adresboek"/>
+	<phrase n="lang_advanced_autoneg" t="Autonegotiation"/>
+	<phrase n="lang_advanced_10full" t="10 Mbit Full Duplex"/>
+	<phrase n="lang_advanced_10half" t="10 Mbit Half Duplex"/>
+	<phrase n="lang_advanced_100full" t="100 Mbit Full Duplex"/>
+	<phrase n="lang_advanced_100half" t="100 Mbit Half Duplex"/>
+	<phrase n="lang_advanced_1000full" t="1000 Mbit Full Duplex"/>
+	<phrase n="lang_Hardware" t="Hardware"/>
+	<phrase n="lang_NET_port_speed" t="Netto Havensnelheid/Duplex"/>
+	<phrase n="lang_PC_port_speed" t="PC-poort Snelheid/Duplex"/>
+	<phrase n="lang_Action_on_eth_replug" t="Actie voor ethernetkabel vervangen"/>
+	<phrase n="lang_advanced_donothing" t="Negeren"/>
+	<phrase n="lang_line_reregister" t="Her-registeren"/>
+	<phrase n="lang_NTP" t="NTP"/>
+	<phrase n="lang_DNS" t="DNS"/>
+	<phrase n="lang_LLDP" t="LLDP"/>
+	<phrase n="lang_NTP_refresh_timer" t="NTP Verversingstimer"/>
+	<phrase n="lang_8021x" t="802.1X"/>
+	<phrase n="lang_Expansion" t="Uitbreiding"/>
+	<phrase n="lang_expansion_layout" t="Uitbreiding opmaak"/>
+	<phrase n="lang_Expansion_module" t="Uitbreidingsmodule"/>
+	<phrase n="lang_Please_reboot" t="Herstarten!"/>
+	<phrase n="lang_All_settings_saved" t="Instellingen opgeslagen"/>
+	<phrase n="lang_WIFI_SCAN_RUNNING" t="Scannen..."/>
+	<phrase n="lang_WIFI_CONNECTING" t="Aansluiten..."/>
+	<phrase n="lang_wifi_connect_success_reboot_to_continue_msg1" t="Opnieuw opstarten om door te gaan"/>
+	<phrase n="lang_wifi_connect_success_password_ok_msg2" t="Wachtwoord OK"/>
+	<phrase n="lang_wifi_connect_fail_invalid_settings_msg1" t="Ongeldige instellingen"/>
+	<phrase n="lang_wifi_connect_fail_please_retry_msg2" t="Opnieuw proberen"/>
+	<phrase n="lang_usb_wifi_unavailable" t="USB WiFi niet beschikbaar"/>
+	<phrase n="lang_usb_wifi_connected" t="USB WiFi aangesloten"/>
+	<phrase n="lang_usb_wifi_disconnected" t="USB WiFi losgekoppeld"/>
+	<phrase n="lang_is_a_favorite" t="is een favoriet"/>
+	<phrase n="lang_Lines" t="Lijnopmaak"/>
+	<phrase n="lang_Tiles" t="Tegelopmaak"/>
+	<phrase n="lang_tbook_emtpy" t="&lt;Leeg&gt;"/>
+	<phrase n="lang_enter_starting_uppercase" t="Ga naar"/>
+	<phrase n="lang_characters_starting_lowercase" t="tekens"/>
+	<phrase n="lang_user_server_type" t="Ondersteund servertype"/>
+	<phrase n="lang_broadsoft_features" t="Broadsoft functies"/>
+	<phrase n="lang_xsi_server" t="XSI-server"/>
+	<phrase n="lang_xsi_user" t="XSI gebruiker"/>
+	<phrase n="lang_xsi_password" t="XSI-wachtwoord"/>
+	<phrase n="lang_xsi_retry_timer" t="XSI Opnieuw proberen Timer"/>
+	<phrase n="lang_xsi_events" t="XSI Gebeurtenissen"/>
+	<phrase n="lang_xmpp_jid" t="XMPP-ID"/>
+	<phrase n="lang_xmpp_password" t="XMPP-wachtwoord"/>
+	<phrase n="lang_no_headset_present" t="Geen headset aanwezig"/>
+	<phrase n="lang_headset_detection" t="Headset detecteren"/>
+	<phrase n="lang_msw_services" t="Metaswitch Diensten"/>
+	<phrase n="lang_msw_directory_number" t="Metaswitch telefoonnummer"/>
+	<phrase n="lang_msw_password" t="Metaswitch Wachtwoord"/>
+	<phrase n="lang_msw_web_url" t="Metaswitch server URL"/>
+	<phrase n="lang_xsi_dir_enterprise" t="Bedrijvengids"/>
+	<phrase n="lang_xsi_dir_enterprise_common" t="Gemeenschappelijke telefoonlijst voor ondernemingen"/>
+	<phrase n="lang_xsi_dir_group" t="Groep Directory"/>
+	<phrase n="lang_xsi_dir_group_common" t="Gemeenschappelijke telefoonlijst groep"/>
+	<phrase n="lang_xsi_dir_personal" t="Persoonlijke telefoonlijst"/>
+	<phrase n="lang_xsi_anywhere" t="Anywhere"/>
+	<phrase n="lang_xsi_location_new_entry" t="&lt;Nieuwe Invoer&gt;"/>
+	<phrase n="lang_xsi_location_edit_description" t="Locatiebeschrijving bewerken"/>
+	<phrase n="lang_xsi_location_description" t="Omschrijving"/>
+	<phrase n="lang_xsi_location_edit_number" t="Locatie nummer bewerken"/>
+	<phrase n="lang_number_str" t="Nummer "/>
+	<phrase n="lang_xsi_location_status_creating" t="aanmaken"/>
+	<phrase n="lang_xsi_location_status_modifying" t="aanpassen"/>
+	<phrase n="lang_xsi_location_status_deleting" t="verwijderen"/>
+	<phrase n="lang_xsi_location_error_empty_number" t="Nummer mag niet leeg zijn"/>
+	<phrase n="lang_xsi_location_error_number_exists" t="Nummer bestaat al"/>
+	<phrase n="lang_xsi_location_error_empty_description" t="Omschrijving mag niet leeg zijn"/>
+	<phrase n="lang_visual_voicemail" t="Visuele voicemail"/>
+	<phrase n="lang_feature_works" t="Functie Werken"/>
+	<phrase n="lang_voicemail_name" t="Naam"/>
+	<phrase n="lang_voicemail_call_number" t="Nummer bellen"/>
+	<phrase n="lang_voicemail_date_time" t="Datum &amp; Tijd"/>
+	<phrase n="lang_voicemail_duration" t="Duur"/>
+	<phrase n="lang_xsi_anywhere_clicktodial" t="Klikken om te kiezen"/>
+	<phrase n="lang_xsi_anywhere_grouppaging" t="Groep Paging"/>
+	<phrase n="lang_xsi_anywhere_settings" t="Instellingen"/>
+	<phrase n="lang_remote_office" t="Kantoor op afstand"/>
+	<phrase n="lang_xsi_anywhereportal" t="Overal Portaal"/>
+	<phrase n="lang_xsi_anywhereportal_number" t="Telefoonnummer"/>
+	<phrase n="lang_menu_primary_display" t="Eerste scherm"/>
+	<phrase n="lang_menu_secondary_display" t="Tweede scherm"/>
+	<phrase n="lang_enable_remote_office" t="Kantoor op afstand inschakelen"/>
+	<phrase n="lang_call_center_list" t="Lijst met callcenters"/>
+	<phrase n="lang_call_center_status" t="Status callcenter"/>
+	<phrase n="lang_call_center_joined" t="Aangesloten bij"/>
+	<phrase n="lang_call_center_unable_to_join" t="Kan geen lid worden van Call Center"/>
+	<phrase n="lang_call_center_join_not_allowed" t="Niet toegestaan"/>
+	<phrase n="lang_call_center_unjoin_not_allowed" t="Niet toegestaan om af te melden"/>
+	<phrase n="lang_call_center_joining" t="Aansluiten bij"/>
+	<phrase n="lang_call_recording_control" t="Controle gespreksopname"/>
+	<phrase n="lang_pause_recording" t="Pauzeer opname"/>
+	<phrase n="lang_resume_recording" t="Hervat opname"/>
+	<phrase n="lang_xsi_simul_ring" t="Simultaan bellen"/>
+	<phrase n="lang_xsi_simul_ring_on_call" t="Niet rinkelen tijdens een gesprek"/>
+	<phrase n="lang_xsi_simul_ring_edit_phone_number" t="Telefoonnummer"/>
+	<phrase n="lang_xsi_simul_ring_enter_phone_number" t="Nummer invoeren"/>
+	<phrase n="lang_xsi_simul_ring_edit" t="Wijzigen"/>
+	<phrase n="lang_xsi_simul_ring_number" t="Telefoonnummer"/>
+	<phrase n="lang_xsi_simul_ring_add_entry" t="Nieuwe ingave invoeren"/>
+	<phrase n="lang_xsi_simul_ring_ans_confirm" t="Antwoord bevestigen"/>
+	<phrase n="lang_xsi_simul_ring_number_exists_error" t="Nummer bestaat reeds"/>
+	<phrase n="lang_xsi_simul_ring_number_empty_error" t="Nummer is leeg."/>
+	<phrase n="lang_xsi_executive" t="Uitvoerend"/>
+	<phrase n="lang_xsi_executive_assistant" t="Executive Assistent"/>
+	<phrase n="lang_xsi_call_filtering" t="Oproepen filteren"/>
+	<phrase n="lang_xsi_call_filtering_enable" t="Oproepen filteren"/>
+	<phrase n="lang_xsi_call_filtering_mode" t="Filtermodus"/>
+	<phrase n="lang_xsi_call_filtering_type" t="Type filter"/>
+	<phrase n="lang_xsi_call_filtering_simple" t="Eenvoudig"/>
+	<phrase n="lang_xsi_call_filtering_advanced" t="Geavanceerd"/>
+	<phrase n="lang_xsi_call_filtering_all" t="Alle oproepen"/>
+	<phrase n="lang_xsi_call_filtering_internal" t="Alle interne gesprekken"/>
+	<phrase n="lang_xsi_call_filtering_external" t="Alle externe gesprekken"/>
+	<phrase n="lang_xsi_call_screening" t="Oproepen screenen"/>
+	<phrase n="lang_xsi_call_screening_type" t="Type waarschuwing"/>
+	<phrase n="lang_xsi_call_screening_alert_mobile" t="Alert Mobiele Locaties"/>
+	<phrase n="lang_xsi_call_screening_alert_anywhere" t="Alert Anywhere Locaties"/>
+	<phrase n="lang_xsi_call_screening_alert_sca" t="Waarschuw SCA-locaties"/>
+	<phrase n="lang_xsi_call_screening_silent" t="Stille"/>
+	<phrase n="lang_xsi_call_screening_ringsplash" t="Ring Splash"/>
+	<phrase n="lang_xsi_executive_view_assistants" t="Bekijk assistenten"/>
+	<phrase n="lang_xsi_executive_allow_optin" t="Assistenten toestaan in/uit te schakelen"/>
+	<phrase n="lang_xsi_opt_in_out_to_executive" t="Opt-In/Out Executive"/>
+	<phrase n="lang_xsi_opt_in_to_executive" t="Opt-In"/>
+	<phrase n="lang_xsi_opt_out_to_executive" t="Opt-Out"/>
+	<phrase n="lang_xsi_assistant_call_divert" t="Omleiden"/>
+	<phrase n="lang_xsi_assistant_call_divert_number" t="Doorschakel Nummer"/>
+	<phrase n="lang_xsi_call_alerting" t="Waarschuwing"/>
+	<phrase n="lang_xsi_call_alerting_mode" t="Waarschuwingsmodus"/>
+	<phrase n="lang_xsi_call_alerting_mode_simu" t="Gelijktijdig"/>
+	<phrase n="lang_xsi_call_alerting_mode_seq" t="Volgorde"/>
+	<phrase n="lang_xsi_call_alerting_id_name" t="Bellen Lijn-ID Naam"/>
+	<phrase n="lang_xsi_call_alerting_id_exec_name" t="Uitvoerende naam"/>
+	<phrase n="lang_xsi_call_alerting_id_origin_name" t="Naam afzender"/>
+	<phrase n="lang_xsi_call_alerting_id_exec_origin_name" t="Executive-Originator Namen"/>
+	<phrase n="lang_xsi_call_alerting_id_origin_exec_name" t="Originator-uitvoerende namen"/>
+	<phrase n="lang_xsi_call_custom_name" t="Aangepaste"/>
+	<phrase n="lang_xsi_call_alerting_custom_id_name" t="Naam aangepaste bellijn-ID"/>
+	<phrase n="lang_xsi_call_alerting_id_number" t="Nummer van de oproepende lijn"/>
+	<phrase n="lang_xsi_call_alerting_id_exec_number" t="Uitvoerend nummer"/>
+	<phrase n="lang_xsi_call_alerting_id_origin_number" t="Originator Nummer"/>
+	<phrase n="lang_xsi_call_alerting_custom_id_number" t="Aangepast ID-nummer van bellijn"/>
+	<phrase n="lang_xsi_call_alerting_recall_after" t="Oproep Push Terugroepen Na"/>
+	<phrase n="lang_xsi_call_alerting_recall_after_range" t="Aantal ringen invoeren (2-20)"/>
+	<phrase n="lang_xsi_call_alerting_next_assistant" t="Gevorderd tot volgende assistent na"/>
+	<phrase n="lang_xsi_call_alerting_next_assistant_range" t="Aantal ringen invoeren (1-20)"/>
+	<phrase n="lang_xsi_call_alerting_rollover_after" t="Doorrollen na wachten"/>
+	<phrase n="lang_xsi_call_alerting_rollover_after_time" t="Rollover wachttijd"/>
+	<phrase n="lang_xsi_call_alerting_rollover_after_time_range" t="Tijd in seconden invoeren (0-60)"/>
+	<phrase n="lang_xsi_call_alerting_rollover_action" t="Rollover Actie"/>
+	<phrase n="lang_xsi_call_alerting_rollover_action_vm" t="Gesproken berichten"/>
+	<phrase n="lang_xsi_call_alerting_rollover_action_fwd" t="Vooruit"/>
+	<phrase n="lang_xsi_call_alerting_rollover_action_na" t="Geen antwoord Verwerking"/>
+	<phrase n="lang_xsi_call_alerting_rollover_fwd_number" t="Rollover Voorwaarts Nummer"/>
+	<phrase n="lang_value_out_of_range" t="Ingevoerde waarde buiten bereik"/>
+	<phrase n="lang_xsi_callon_behalfof_select_executive" t="Selecteer uitvoerende macht"/>
+	<phrase n="lang_collaborate_room_details" t="Kamerdetails samenwerken"/>
+	<phrase n="lang_collaborate_room_name" t="Naam kamer"/>
+	<phrase n="lang_collaborate_room_type" t="Type kamer"/>
+	<phrase n="lang_collaborate_join_room" t="Kamer"/>
+	<phrase n="lang_unavailable_state" t="Onbeschikbaar invoeren Code"/>
+	<phrase n="lang_enter_unavailable_code" t="Onbeschikbaar invoeren Code"/>
+	<phrase n="lang_ringer_is_off" t="Belsignaal staat uit"/>
+	<phrase n="lang_uxm_update" t="Uitbreidingsmodule update"/>
+	<phrase n="lang_uxm_update_infotext_progress" t="Update in uitvoering. Ontkoppel het toestel of uitbreidingsmodule niet tijdens update!"/>
+	<phrase n="lang_uxm_update_infotext_prepare" t="Update in voorbereiding. Ontkoppel het toestel of uitbreidingsmodule niet tijdens update!"/>
+	<phrase n="lang_F_DELETE_MSG" t="Del M"/>
+	<phrase n="lang_F_DELETE_MSG_typeSio" t="Del Bericht"/>
+	<phrase n="lang_F_DELETE_MSG_smartlabel" t="Del Msg"/>
+	<phrase n="lang_F_DELETE_MSG_full" t="Bericht verwijderen"/>
+	<phrase n="lang_F_NEXT_ID" t="ID↓"/>
+	<phrase n="lang_F_NEXT_ID_typeSio" t="Volgende identiteit"/>
+	<phrase n="lang_F_NEXT_ID_smartlabel" t="Volgende ID"/>
+	<phrase n="lang_F_PREV_ID" t="ID↑"/>
+	<phrase n="lang_F_PREV_ID_typeSio" t="Vorige identiteit"/>
+	<phrase n="lang_F_PREV_ID_smartlabel" t="Prev ID"/>
+	<phrase n="lang_F_OCIP" t="OCI-P"/>
+	<phrase n="lang_F_SAB" t="S Dir"/>
+	<phrase n="lang_F_SAB_typeSio" t="S Directory"/>
+	<phrase n="lang_F_SAB_smartlabel" t="Directory"/>
+	<phrase n="lang_F_ABS" t="Tel.B"/>
+	<phrase n="lang_F_ABS_typeSio" t="Telefoonboek doorzoeken"/>
+	<phrase n="lang_addressbook_menu" t="Selecteer telefoonboek"/>
+	<phrase n="lang_addressbook_menu_local" t="Lokaal"/>
+	<phrase n="lang_multicast_zones_title" t="Multicast-gebieden"/>
+	<phrase n="lang_no_multicast_zones" t="Geen multicast-zones beschikbaar"/>
+	<phrase n="lang_acd_state" t="ACD-staat"/>
+	<phrase n="lang_please_sign_into_set_acd_state" t="Meld u aan om ACD-status in te stellen"/>
+	<phrase n="lang_fkey_longpress_support" t="LP-functie"/>
+	<phrase n="lang_important" t="Belangrijk"/>
+	<phrase n="lang_SmartTransferEditDescription" t="Voer SmartTransfer doel in"/>
+	<phrase n="lang_SmartTransfer" t="SmartTransfer"/>
+	<phrase n="lang_SmartTransfer_ready" t="Toets klaar voor SmartTransfer"/>
+	<phrase n="lang_department" t="Afdeling"/>
+	<phrase n="lang_extensions" t="Extensies"/>
+	<phrase n="lang_menu_title_text_options" t="Tekst opties"/>
+	<phrase n="lang_F_ADD_LOCATION" t="Voeg locatie toe"/>
+	<phrase n="lang_gk_mode_none" t="Geen"/>
+	<phrase n="lang_demo_mode" t="Demomodus"/>
+	<phrase n="lang_transfer_or" t="Doorverbinden of "/>
+	<phrase n="lang_call_pickup" t="Oproep ophalen?"/>
+	<phrase n="lang_choose_an_action" t="Kies een actie"/>
+	<phrase n="lang_Conference_Setup" t="Conferentie instellingen"/>
+	<phrase n="lang_Conference_First_Participant" t="Conferentie deelnemer 1"/>
+	<phrase n="lang_Conference_Second_Participant" t="Conferentie deelnemer 2"/>
+	<phrase n="lang_menu_smart_label" t="SmartLabel opties"/>
+	<phrase n="lang_menu_idle_screen" t="Sluimerstand scherm instellingen"/>
+	<phrase n="lang_menu_call_screen" t="Oproep scherm instellingen"/>
+	<phrase n="lang_menu_other_screen" t="Andere schermen instellingen"/>
+	<phrase n="lang_menu_label_default_mode" t="Standaard scherm modus"/>
+	<phrase n="lang_menu_label_expanded_mode" t="Alternatieve scherm modus"/>
+	<phrase n="lang_menu_label_expansion_triggers" t="Alternatieve scherm activatie"/>
+	<phrase n="lang_menu_short_label" t="Kort label"/>
+	<phrase n="lang_menu_full_label" t="Volledig label"/>
+	<phrase n="lang_menu_short_label_mode" t="Korte label modus"/>
+	<phrase n="lang_menu_short_press" t="Druk kort Pagina Toets"/>
+	<phrase n="lang_menu_long_press" t="Druk lang Pagina Toets"/>
+	<phrase n="lang_menu_proximity_sensor" t="Bewegingssensor"/>
+	<phrase n="lang_menu_P2_short_press" t="Korte pers P2"/>
+	<phrase n="lang_menu_P2_long_press" t="Druk lang P2"/>
+	<phrase n="lang_menu_P3_short_press" t="Druk kort P3"/>
+	<phrase n="lang_menu_P3_long_press" t="Druk lang P3"/>
+	<phrase n="lang_menu_P4_short_press" t="Druk kort P4"/>
+	<phrase n="lang_menu_P4_long_press" t="Druk lang P4"/>
+	<phrase n="lang_menu_P8_short_press" t="Druk kort P8"/>
+	<phrase n="lang_menu_P8_long_press" t="Druk lang P8"/>
+	<phrase n="lang_menu_P10_short_press" t="Korte pers P10"/>
+	<phrase n="lang_menu_P10_long_press" t="Lang indrukken P10"/>
+	<phrase n="lang_short_press" t="Druk kort"/>
+	<phrase n="lang_fkey_press" t="Kies functietoets"/>
+	<phrase n="lang_long_press" t="Druk lang"/>
+	<phrase n="lang_short_label_mode_icon" t="Alleen icoon"/>
+	<phrase n="lang_smartlabel_mode_text" t="Alleen tekst"/>
+	<phrase n="lang_smartlabel_mode_icon_text" t="Icoon en tekst"/>
+	<phrase n="lang_status_msg_uxm_update_required" t="Update noodzakelijk"/>
+	<phrase n="lang_status_detail_uxm_update_required" t="Update uitbreidingsset naar laatste versie"/>
+	<phrase n="lang_status_detail_uxm_update_required2" t="Controleer of er 1 uitbreidingsmodule is aangesloten en dat de module niet is aangesloten op netvoeding"/>
+	<phrase n="lang_unhandled_item" t="Onverwerkt artikel:"/>
+	<phrase n="lang_preferences_general" t="Algemeen"/>
+	<phrase n="lang_quick_dial_contacts" t="Snelkeuze contacten"/>
+	<phrase n="lang_start_tbook_download" t="Start download telefoonboek?"/>
+	<phrase n="lang_tbook_download" t="Telefoonboek downloaden"/>
+	<phrase n="lang_tbook_download_started" t="Telefoonboek downloaden begonnen"/>
+	<phrase n="lang_tbook_download_finished" t="Telefoonboek downloaden compleet"/>
+	<phrase n="lang_tbook_download_failed" t="Telefoonboek downloaden mislukt"/>
+	<phrase n="lang_tbook_download_not_possible" t="Telefoonboek downloaden niet mogelijk"/>
+	<phrase n="lang_tbook_download_overflowed" t="Telefoonboek downloaden niet compleet (interne limiet overschreden)"/>
+	<phrase n="lang_tbook_is_full" t="Telefoonboek vol"/>
+	<phrase n="lang_F_HOTELING" t="Hotel"/>
+	<phrase n="lang_F_HOTELING_typeSio" t="Hoteling"/>
+	<phrase n="lang_F_HOTELING_smartlabel" t="Hoteling"/>
+	<phrase n="lang_F_GUEST_LOGIN" t="Gast login"/>
+	<phrase n="lang_F_GUEST_LOGOUT" t="Gast loguit"/>
+	<phrase n="lang_F_GUEST_LOGIN_smartlabel" t="Gast in"/>
+	<phrase n="lang_F_GUEST_LOGOUT_smartlabel" t="Gast uit"/>
+	<phrase n="lang_F_LOGIN" t="Inloggen"/>
+	<phrase n="lang_F_LOGOUT" t="Afmelden"/>
+	<phrase n="lang_smartlabel_id" t="ID"/>
+	<phrase n="lang_title_guest_logout" t="Gast loguit"/>
+	<phrase n="lang_confirm_guest_logout" t="Weet u zeker dat u wilt uitloggen?"/>
+	<phrase n="lang_no_contacts" t="Geen contacten"/>
+	<phrase n="lang_hoteling_guest" t="Hotelgast"/>
+	<phrase n="lang_logging_out" t="Uitloggen…"/>
+	<phrase n="lang_logging_in" t="Inloggen…"/>
+	<phrase n="lang_login_failed" t="Inloggen mislukt"/>
+	<phrase n="lang_acd_signout_message" t="Je wordt afgemeld bij ACD. Doorgaan met gastlogin?"/>
+	<phrase n="lang_title_guest_login" t="Gast login"/>
+	<phrase n="lang_F_MARK_READ" t="Markeer als gelezen"/>
+	<phrase n="lang_F_MARK_UNREAD" t="Markeer als ongelezen"/>
+	<phrase n="lang_call_recording_mode_never" t="Nooit"/>
+	<phrase n="lang_call_recording_mode_always" t="Altijd"/>
+	<phrase n="lang_call_recording_mode_always_pause_resume" t="Altijd…"/>
+	<phrase n="lang_call_recording_mode_on_demand" t="Op afroep"/>
+	<phrase n="lang_call_recording_mode_on_demand_user_start" t="Aan-vraag-gebruiker-start"/>
+	<phrase n="lang_smartlabel_dismiss_timeout" t="Terug naar standaard instellingen"/>
+	<phrase n="lang_call_recording_mode" t="Gespreksopname modus"/>
+	<phrase n="lang_menu_full_label_mode" t="Volledig label modus"/>
+	<phrase n="lang_menu_label_mode" t="Label modus"/>
+	<phrase n="lang_guest_pin" t="Gast PIN"/>
+	<phrase n="lang_incorrect_pin" t="PIN incorrect"/>
+	<phrase n="lang_voicemail_info" t="Voicemail info"/>
+	<phrase n="lang_confirm_del_deny_list_item_title" t="Item uit bloklijst verwijderen"/>
+	<phrase n="lang_confirm_del_number_from_deny_list" t="Verwijderen uit de blokkadelijst?"/>
+	<phrase n="lang_confirm_del_menu_configuration" t="Instellingen verwijderen Sleutelconfiguratie"/>
+	<phrase n="lang_confirm_message" t="Weet u het zeker?"/>
+	<phrase n="lang_caller_id_blocking" t="Nummer herkenning blokkeren"/>
+	<phrase n="lang_screen_items_color_and_opacity_title" t="Kleur en transparantie"/>
+	<phrase n="lang_ui_themes" t="Thema's"/>
+	<phrase n="lang_theme_light" t="Licht"/>
+	<phrase n="lang_theme_dark" t="Donker"/>
+	<phrase n="lang_theme_colorful" t="Kleurrijk"/>
+	<phrase n="lang_theme_industrial" t="Industrieel"/>
+	<phrase n="lang_theme_contrast" t="Contrast"/>
+	<phrase n="lang_screen_items_color_title" t="Kleur"/>
+	<phrase n="lang_screen_items_opacity_title" t="Transparantie"/>
+	<phrase n="lang_screen_items_enter_custom_color_title" t="Voer handmatige waarden in"/>
+	<phrase n="lang_screen_item_titlebar_text" t="Titelbalk tekst"/>
+	<phrase n="lang_screen_item_text" t="Tekst"/>
+	<phrase n="lang_screen_item_subtext" t="Subschrift"/>
+	<phrase n="lang_screen_item_extratext" t="Extra tekst"/>
+	<phrase n="lang_screen_item_extratext2" t="Extra tekst 2"/>
+	<phrase n="lang_screen_item_titlebar_background" t="Titelbalk tekst"/>
+	<phrase n="lang_screen_item_background" t="Achtergrond"/>
+	<phrase n="lang_screen_item_fkey_background" t="Functietoets achtergrond"/>
+	<phrase n="lang_screen_item_fkey_pressed_background" t="Functietoets ingedrukt achtergrond titel"/>
+	<phrase n="lang_screen_item_fkey_separator" t="Functietoets splitser"/>
+	<phrase n="lang_screen_item_fkey_label" t="Functietoets label"/>
+	<phrase n="lang_screen_item_fkey_pressed_label" t="Functietoets label ingedrukt"/>
+	<phrase n="lang_screen_item_line_background" t="Lijn achtergrond"/>
+	<phrase n="lang_screen_item_selected_line_background" t="Gekozen lijn achtergrond"/>
+	<phrase n="lang_screen_item_selected_line_indicator" t="Gekozen lijn indicator"/>
+	<phrase n="lang_screen_item_selected_line_text" t="Gekozen lijn tekst"/>
+	<phrase n="lang_screen_item_line_separator" t="Lijn splitser"/>
+	<phrase n="lang_screen_item_scrollbar" t="Schuifbalk"/>
+	<phrase n="lang_screen_item_cursor" t="Cursor"/>
+	<phrase n="lang_screen_item_status_msgs_background" t="Status bericht achtergrond"/>
+	<phrase n="lang_screen_item_status_msgs_border" t="Status bericht rand"/>
+	<phrase n="lang_screen_item_smartlabel_background" t="SmartLabel achtergrond"/>
+	<phrase n="lang_screen_item_smartlabel_pressed_background" t="SmartLabel ingedrukt achtergrond"/>
+	<phrase n="lang_screen_item_smartlabel_separator" t="SmartLabel splitser"/>
+	<phrase n="lang_screen_item_smartlabel_label" t="SmartLabel label"/>
+	<phrase n="lang_screen_item_smartlabel_pressed_label" t="SmartLabel label ingedrukt"/>
+	<phrase n="lang_screen_item_expansion_module_background" t="Achtergrond uitbreidingsmodule"/>
+	<phrase n="lang_screen_item_expansion_module_pressed_background" t="Uitbreidingsmodule ingedrukte achtergrond"/>
+	<phrase n="lang_screen_item_expansion_module_separator" t="Uitbreidingsmodule Scheider"/>
+	<phrase n="lang_screen_item_expansion_module_maintext" t="Uitbreidingsmodule Hoofdtekst"/>
+	<phrase n="lang_screen_item_expansion_module_pressed_maintext" t="Uitbreidingsmodule ingedrukt Hoofdtekst"/>
+	<phrase n="lang_screen_item_expansion_module_subtext" t="Uitbreidingsmodule Subtekst"/>
+	<phrase n="lang_screen_item_expansion_module_pressed_subtext" t="Uitbreidingsmodule ingedrukte subtekst"/>
+	<phrase n="lang_screen_item_expansion_module_page_indicator" t="Pagina-indicator uitbreidingsmodule"/>
+	<phrase n="lang_screen_items_color_name_onyx_black" t="Onyx zwart"/>
+	<phrase n="lang_screen_items_color_name_midnight_black" t="Middernacht zwart"/>
+	<phrase n="lang_screen_items_color_name_obsidian_black" t="Obsidiaanzwart"/>
+	<phrase n="lang_screen_items_color_name_dark_grey" t="Donkergrijs"/>
+	<phrase n="lang_screen_items_color_name_grey" t="Grijs"/>
+	<phrase n="lang_screen_items_color_name_light_grey" t="Lichtgrijs"/>
+	<phrase n="lang_screen_items_color_name_grey_white" t="Grijs Wit"/>
+	<phrase n="lang_screen_items_color_name_white" t="Wit"/>
+	<phrase n="lang_screen_items_color_name_light_yellow" t="Lichtgeel"/>
+	<phrase n="lang_screen_items_color_name_yellow" t="Geel"/>
+	<phrase n="lang_screen_items_color_name_light_red" t="Licht Rood"/>
+	<phrase n="lang_screen_items_color_name_red" t="Red"/>
+	<phrase n="lang_screen_items_color_name_light_blue" t="Lichtblauw"/>
+	<phrase n="lang_screen_items_color_name_blue" t="Blauw"/>
+	<phrase n="lang_screen_items_color_name_light_green" t="Lichtgroen"/>
+	<phrase n="lang_screen_items_color_name_green" t="Groen"/>
+	<phrase n="lang_screen_items_color_name_black" t="Zwart"/>
+	<phrase n="lang_screen_items_color_name_carbon" t="Koolstof"/>
+	<phrase n="lang_screen_items_color_name_dim_grey" t="Dim grijs"/>
+	<phrase n="lang_screen_items_color_name_silver" t="Zilver"/>
+	<phrase n="lang_screen_items_color_name_gainsboro" t="Gainsboro"/>
+	<phrase n="lang_screen_items_color_name_snowflake" t="Sneeuwvlok"/>
+	<phrase n="lang_screen_items_color_name_white_smoke" t="Witte rook"/>
+	<phrase n="lang_screen_items_color_name_custom" t="Handmatige kleur"/>
+	<phrase n="lang_monitored_extensions" t="Gemonitorde Extensie"/>
+	<phrase n="lang_ALS" t="Omgevingslicht Sensor"/>
+	<phrase n="lang_all_available_calls" t="Alle beschikbare oproepen"/>
+	<phrase n="lang_new_call" t="Nieuwe oproep"/>
+	<phrase n="lang_select_conf_participant" t="Selecteer conferentie deelnemer"/>
+	<phrase n="lang_consult_conference" t="Consulteer conferentie"/>
+	<phrase n="lang_guess_max_hits" t="Maximale hits"/>
+	<phrase n="lang_guess_results" t="Resultaten"/>
+	<phrase n="lang_new_network_policy" t="Nieuw netwerkbeleid"/>
+	<phrase n="lang_wrong_lldp_policy" t="Verkeerd LLDP-beleid"/>
+	<phrase n="lang_F_MODERATE" t="Matig"/>
+	<phrase n="lang_sip_warning" t="SIP-waarschuwing"/>
+	<phrase n="lang_sync_settings" t="Synchroniseer instellingen"/>
+	<phrase n="lang_confirm_sync_settings" t="Synchroniseer instellingen met server?"/>
+	<phrase n="lang_no_configured_extensions" t="Geen geconfigureerde extensies"/>
+	<phrase n="lang_no_active_calls_on_extensions" t="Geen actieve oproepen op extensies"/>
+	<phrase n="lang_sip_response_code_400" t="Slecht verzoek"/>
+	<phrase n="lang_sip_response_code_402" t="Betaling vereist"/>
+	<phrase n="lang_sip_response_code_403" t="Verboden"/>
+	<phrase n="lang_sip_response_code_404" t="Niet gevonden"/>
+	<phrase n="lang_sip_response_code_405" t="Methode Niet toegestaan"/>
+	<phrase n="lang_sip_response_code_406" t="Niet acceptabel"/>
+	<phrase n="lang_sip_response_code_407" t="Proxy-verificatie vereist"/>
+	<phrase n="lang_sip_response_code_408" t="Time-out verzoek"/>
+	<phrase n="lang_sip_response_code_410" t="Weg"/>
+	<phrase n="lang_sip_response_code_413" t="Aanvraag entiteit te groot"/>
+	<phrase n="lang_sip_response_code_414" t="Request-URI te lang"/>
+	<phrase n="lang_sip_response_code_415" t="Niet-ondersteund mediatype"/>
+	<phrase n="lang_sip_response_code_416" t="Niet-ondersteund URI-schema"/>
+	<phrase n="lang_sip_response_code_420" t="Slechte uitbreiding"/>
+	<phrase n="lang_sip_response_code_421" t="Verlenging vereist"/>
+	<phrase n="lang_sip_response_code_422" t="Sessie-interval te klein"/>
+	<phrase n="lang_sip_response_code_423" t="Interval te kort"/>
+	<phrase n="lang_sip_response_code_480" t="Tijdelijk niet beschikbaar"/>
+	<phrase n="lang_sip_response_code_481" t="Oproep/transactie bestaat niet"/>
+	<phrase n="lang_sip_response_code_482" t="Lus gedetecteerd"/>
+	<phrase n="lang_sip_response_code_483" t="Te veel hop"/>
+	<phrase n="lang_sip_response_code_484" t="Adres Onvolledig"/>
+	<phrase n="lang_sip_response_code_485" t="Dubbelzinnig"/>
+	<phrase n="lang_sip_response_code_486" t="Druk hier"/>
+	<phrase n="lang_sip_response_code_487" t="Aanvraag Beëindigd"/>
+	<phrase n="lang_sip_response_code_488" t="Niet acceptabel hier"/>
+	<phrase n="lang_sip_response_code_491" t="Aanvraag in behandeling"/>
+	<phrase n="lang_sip_response_code_493" t="Onleesbaar"/>
+	<phrase n="lang_sip_response_code_500" t="Interne fout server"/>
+	<phrase n="lang_sip_response_code_501" t="Niet geïmplementeerd"/>
+	<phrase n="lang_sip_response_code_502" t="Slechte gateway"/>
+	<phrase n="lang_sip_response_code_503" t="Service niet beschikbaar"/>
+	<phrase n="lang_sip_response_code_504" t="Time-out server"/>
+	<phrase n="lang_sip_response_code_505" t="Versie niet ondersteund"/>
+	<phrase n="lang_sip_response_code_513" t="Bericht te groot"/>
+	<phrase n="lang_sip_response_code_599" t="Time-outfout netwerkverbinding"/>
+	<phrase n="lang_sip_response_code_600" t="Overal druk"/>
+	<phrase n="lang_sip_response_code_603" t="Niet beschikbaar"/>
+	<phrase n="lang_sip_response_code_604" t="Bestaat nergens"/>
+	<phrase n="lang_sip_response_code_606" t="Niet acceptabel"/>
+	<phrase n="lang_sort_order" t="Sorteer volgorde"/>
+	<phrase n="lang_directory_display_order" t="Volgorde weergeven"/>
+	<phrase n="lang_display_order_first_name_last_name" t="Voornaam, Achternaam"/>
+	<phrase n="lang_display_order_last_name_first_name" t="Voornaam, Achternaam"/>
+	<phrase n="lang_visual_options" t="Visuele opties"/>
+	<phrase n="lang_call_screen_photo_size" t="Foto grootte in gesprekscherm"/>
+	<phrase n="lang_size_XS" t="XS"/>
+	<phrase n="lang_size_S" t="S"/>
+	<phrase n="lang_size_M" t="M"/>
+	<phrase n="lang_size_L" t="L"/>
+	<phrase n="lang_size_XL" t="XL"/>
+	<phrase n="lang_size_XXL" t="XXL"/>
+	<phrase n="lang_size_XXXL" t="XXXL"/>
+	<phrase n="lang_prefer_saved_over_received_photo" t="Geef de voorkeur aan lokale foto's"/>
+	<phrase n="lang_display_method" t="Stijl nummerweergave"/>
+	<phrase n="lang_display_method_full_contact" t="Volledig contact"/>
+	<phrase n="lang_display_method_display_name" t="Naam"/>
+	<phrase n="lang_display_method_display_number" t="Nummer"/>
+	<phrase n="lang_display_method_display_name_number" t="Naam + nummer"/>
+	<phrase n="lang_display_method_display_number_name" t="Nummer + naam"/>
+	<phrase n="lang_no_calls_for_transfer" t="Geen gesprekken beschikbaar voor doorverbinden"/>
+	<phrase n="lang_brand_variant_select_title" t="Selecteer merkvariant"/>
+	<phrase n="lang_brand_variant_default" t="Standaard"/>
+	<phrase n="lang_brand_variant_updated_title" t="Variant bijgewerkt"/>
+	<phrase n="lang_brand_variant_selected" t="Variant geselecteerd"/>
+	<phrase n="lang_system_reboot_now" t="Het systeem start nu opnieuw op"/>
+	<phrase n="lang_select_identity" t="Selecteer identiteit"/>
+	<phrase n="lang_F_CALL_CENTER_STATUS" t="Status callcenter"/>
+	<phrase n="lang_F_ATTENDED_TRANSFER" t="Aangekondigd"/>
+	<phrase n="lang_disposition_code_sent" t="verzonden"/>
+	<phrase n="lang_disposition_code_selection" t="Selecteer Disp. Code"/>
+	<phrase n="lang_disposition_code_entry" t="Disp. invoeren Code"/>
+	<phrase n="lang_F_DISP_CODE" t="D-code"/>
+	<phrase n="lang_F_DISP_CODE_typeSio" t="Beschikkingscode"/>
+	<phrase n="lang_F_DISP_CODE_smartlabel" t="D-code"/>
+	<phrase n="lang_disposition_code_display_text_list" t="Lijst"/>
+	<phrase n="lang_parked_calls_settings" t="Geparkeerde gesprekken"/>
+	<phrase n="lang_call_parked_on" t="Geparkeerd op"/>
+	<phrase n="lang_no_parked_call" t="Geen geparkeerde oproep beschikbaar."/>
+	<phrase n="lang_F_CALL_PARK_IDLE" t="Park stationair"/>
+	<phrase n="lang_F_CALL_PARK_typeSio" t="Bel Park"/>
+	<phrase n="lang_menu_any_smartlabel_key_short_press" t="Kort pers SmartLabel"/>
+	<phrase n="lang_monitored_extension_is_ringing" t="Bewaakte extensie gaat over"/>
+	<phrase n="lang_disposition_code_not_sent" t="Code niet verzonden."/>
+	<phrase n="lang_disposition_code_identity_mismatch" t="Identiteitsfout."/>
+	<phrase n="lang_F_EXEC_ASSIST_CALL_PUSH" t="Oproep Push"/>
+	<phrase n="lang_usb_mass_storage_plug" t="USB-station gedetecteerd"/>
+	<phrase n="lang_usb_mass_storage_unplug" t="USB-station verwijderd"/>
+	<phrase n="lang_information_menu_usb_info" t="USB-informatie"/>
+	<phrase n="lang_usb_mass_storage_title" t="USB-massaopslag"/>
+	<phrase n="lang_F_USB_EJECT" t="USB uitwerpen"/>
+	<phrase n="lang_usb_mass_storage_safe_to_remove" t="Het is nu veilig om het USB-station te verwijderen"/>
+	<phrase n="lang_F_USBREC_START" t="Start USB-opname."/>
+	<phrase n="lang_F_USBREC_START_typeSio" t="USB-opname starten"/>
+	<phrase n="lang_F_USBREC_START_smartlabel" t="Start USB opname"/>
+	<phrase n="lang_F_USBREC_STOP" t="Stop USB-opname."/>
+	<phrase n="lang_F_USBREC_STOP_typeSio" t="USB-opname stoppen"/>
+	<phrase n="lang_F_USBREC_STOP_smartlabel" t="Opname stoppen"/>
+	<phrase n="lang_F_USBREC_PAUSE" t="Pauzeer USB-opname."/>
+	<phrase n="lang_F_USBREC_PAUSE_typeSio" t="USB-opname onderbreken"/>
+	<phrase n="lang_F_USBREC_PAUSE_smartlabel" t="Opname pauzeren"/>
+	<phrase n="lang_F_USBREC_RESUME" t="Hervat USB-opname."/>
+	<phrase n="lang_F_USBREC_RESUME_typeSio" t="USB-opname hervatten"/>
+	<phrase n="lang_F_USBREC_RESUME_smartlabel" t="Opname hervatten"/>
+	<phrase n="lang_F_PAUSE" t="Pauzeer"/>
+	<phrase n="lang_F_RESUME" t="CV"/>
+	<phrase n="lang_usb_recording_processing_wait" t="Wacht tot het opnameproces is voltooid!"/>
+	<phrase n="lang_usb_recording_processing_completed" t="Opnameproces voltooid!"/>
+	<phrase n="lang_usb_recording_call_terminated" t="Gespreksopname beëindigd"/>
+	<phrase n="lang_usb_recording_terminated_drive_full" t="Opname beëindigd, USB-stick is vol"/>
+	<phrase n="lang_usb_recording_terminated_max_file_size" t="Opname beëindigd, Maximale opnameduur"/>
+	<phrase n="lang_usb_recording_no_usb_drive_detected" t="Geen USB-station gedetecteerd"/>
+	<phrase n="lang_usb_recording_terminated_errno" t="Opname beëindigd, errno: "/>
+	<phrase n="lang_usb_playback_browse_recordings" t="Bladeren door opnames"/>
+	<phrase n="lang_usb_playback_browse_recordings_title" t="Gespreksopnamen"/>
+	<phrase n="lang_usb_playback_play_recording_title" t="Opnemen Afspelen"/>
+	<phrase n="lang_usb_playback_invalid_header_or_encrypted_file" t="Ongeldige wav-header of gecodeerd bestand:"/>
+	<phrase n="lang_usb_playback_recording_information_title" t="Opname-informatie"/>
+	<phrase n="lang_usb_playback_delete_recording_title" t="Opname verwijderen"/>
+	<phrase n="lang_label_rewind" t="Terugspoelen"/>
+	<phrase n="lang_label_fast_forward" t="Snel vooruit"/>
+	<phrase n="lang_text_size" t="Maat"/>
+	<phrase n="lang_usb_playback_no_recordings" t="Geen opnames"/>
+	<phrase n="lang_usb_recording_aborted_by_conference" t="USB-opname afgebroken door conferentie"/>
+	<phrase n="lang_usb_recording_cannot_record_conference" t="Kan conferentie niet opnemen op USB"/>
+	<phrase n="lang_date_and_time" t="Datum &amp; Tijd"/>
+	<phrase n="lang_label_context_key_page_left" t="Pagina links"/>
+	<phrase n="lang_label_context_key_page_right" t="Pagina rechts"/>
+	<phrase n="lang_expansion_module_text_alignment" t="Tekst uitlijnen"/>
+	<phrase n="lang_expansion_module_color_font_sizes_XXL_XS" t="Hoofdtekst XXL &amp; Subtekst XS"/>
+	<phrase n="lang_expansion_module_color_font_sizes_XL_XS" t="Hoofdtekst XL &amp; Subtekst XS"/>
+	<phrase n="lang_expansion_module_color_font_sizes_XL_S" t="Hoofdtekst XL &amp; Subtekst S"/>
+	<phrase n="lang_expansion_module_color_font_sizes_L_XS" t="Hoofdtekst L &amp; Subtekst XS"/>
+	<phrase n="lang_expansion_module_color_font_sizes_L_S" t="Hoofdtekst L &amp; Subtekst S"/>
+	<phrase n="lang_expansion_module_color_font_sizes_L_M" t="Hoofdtekst L &amp; Subtekst M"/>
+	<phrase n="lang_expansion_module_color_font_sizes_M_XS" t="Hoofdtekst M &amp; Subtekst XS"/>
+	<phrase n="lang_expansion_module_color_font_sizes_M_S" t="Hoofdtekst M &amp; Subtekst S"/>
+	<phrase n="lang_expansion_module_color_font_sizes_M_M" t="Hoofdtekst M &amp; Subtekst M"/>
+	<phrase n="lang_expansion_module_color_font_sizes_S_XS" t="Hoofdtekst S &amp; Subtekst XS"/>
+	<phrase n="lang_expansion_module_color_font_sizes_S_S" t="Hoofdtekst S &amp; Subtekst S"/>
+	<phrase n="lang_expansion_module_color_font_sizes_XS_XS" t="Hoofdtekst XS &amp; Subtekst XS"/>
+	<phrase n="lang_edit_mode_upper_case" t="ABC"/>
+	<phrase n="lang_edit_mode_lower_case" t="abc"/>
+	<phrase n="lang_edit_mode_numbers" t="123"/>
+	<phrase n="lang_F_IDLE_CONTEXT_PAGE_LEFT" t="Links"/>
+	<phrase n="lang_F_IDLE_CONTEXT_PAGE_LEFT_typeSio" t="Pagina links"/>
+	<phrase n="lang_F_IDLE_CONTEXT_PAGE_RIGHT" t="Rechts"/>
+	<phrase n="lang_F_IDLE_CONTEXT_PAGE_RIGHT_typeSio" t="Pagina rechts"/>
+	<phrase n="lang_F_NONE" t=""/>
+	<phrase n="lang_branding_name" t="Branding:"/>
+	<phrase n="lang_hardware_version" t="Hardwareversie:"/>
+	<phrase n="lang_branding_version" t="Brandingversie:"/>
+	<phrase n="lang_NickName" t="Bijnaam"/>
+	<phrase n="lang_FirstShortCode" t="Eerste code"/>
+	<phrase n="lang_LastShortCode" t="Laatste code"/>
+	<phrase n="lang_FirstExternalDirectoryNumber" t="Eerste nummer"/>
+	<phrase n="lang_LastExternalDirectoryNumber" t="Laatste nummer"/>
+	<phrase n="lang_DialingPlanCode" t="Plan"/>
+	<phrase n="lang_DialingPlanCodeDetail" t="Code kiesplan"/>
+	<phrase n="lang_FirstShortCodeDetail" t="Eerste korte code"/>
+	<phrase n="lang_FirstExternalDirectoryDetail" t="Eerste externe directory"/>
+	<phrase n="lang_LastExternalDirectoryDetail" t="Laatste externe directory"/>
+	<phrase n="lang_Department" t="Afdeling"/>
+	<phrase n="lang_shortcodes" t="Korte codes"/>
+	<phrase n="lang_emergency_call_number_is_misconfigured" t="Alarmnummers verkeerd geconfigureerd"/>
+	<phrase n="lang_tb_alias" t="Alias"/>
+	<phrase n="lang_web_user_credentials_not_set" t="Geen referenties ingesteld voor de webgebruiker"/>
+	<phrase n="lang_web_admin_credentials_not_set" t="Geen referenties ingesteld voor de webbeheerder"/>
+	<phrase n="lang_not_registered" t=" niet geregistreerd"/>
+	<phrase n="lang_fake_number" t="Vals nummer"/>
+	<phrase n="lang_BLF_DND_on" t="DND aan"/>
+	<phrase n="lang_BLF_On_a_call" t="In gesprek"/>
+	<phrase n="lang_BLF_Idle" t="Inactief"/>
+	<phrase n="lang_MediaStack_restarting_All_lines_will_be_closed" t="MediaStack wordt opnieuw opgestart. Alle lijnen worden gesloten."/>
+	<phrase n="lang_Firmware_update_starting" t="Firmware-update: start"/>
+	<phrase n="lang_Firmware_update_sent_install_request" t="Firmware-update: wacht op antwoord van bestandsserver"/>
+	<phrase n="lang_Firmware_update_download" t="Firmware-update: downloaden"/>
+	<phrase n="lang_Firmware_update_transfer_to_swupdate" t="Firmware-update: verwerking"/>
+	<phrase n="lang_Firmware_update_verification_and_install" t="Firmware-update: installeren"/>
+	<phrase n="lang_File_server_response" t="Antwoord server: "/>
+	<phrase n="lang_File_server_unreachable" t="Bestandsserver onbereikbaar."/>
+	<phrase n="lang_File_not_found" t="Bestand niet gevonden."/>
+	<phrase n="lang_Firmware_invalid" t="Firmware ongeldig."/>
+	<phrase n="lang_firmware_update" t="Firmware bijwerken"/>
+	<phrase n="lang_menu_ringer_once" t="Slechts één keer"/>
+	<phrase n="lang_voicemail_no_access_code" t="Voicemail pincode is niet geprogrammeerd"/>
+	<phrase n="lang_F_WIFI" t="WiFi"/>
+	<phrase n="lang_parties" t="Aantal Deelnemers"/>
+	<phrase n="lang_fwd_by" t="Doorverbonden door:"/>
+	<phrase n="lang_firmware_update_completed_pending_reboot" t="Toestel gaat zal zo herstarten voor firmware update. Herstart in %d seconden.."/>
+	<phrase n="lang_F_CLOSE" t="Sluiten"/>
+	<phrase n="lang_ip_assigment" t="IP Toewijzing"/>
+	<phrase n="lang_disable" t="Uitschakelen"/>
+	<phrase n="lang_enable" t="Inschakelen"/>
+	<phrase n="lang_reregister" t="Opnieuw registreren"/>
+	<phrase n="lang_phonemanager" t="Phone Manager (Web UI)"/>
+	<phrase n="lang_locale" t="Datum &amp; Tijd formaat"/>
+	<phrase n="lang_webserver_admin_name" t="Admin Naam"/>
+	<phrase n="lang_webserver_admin_password" t="Admin Wachtwoord"/>
+	<phrase n="lang_webserver_user_name" t="Gebruikersnaam"/>
+	<phrase n="lang_webserver_user_password" t="Gebruikers wachtwoord"/>
+	<phrase n="lang_startup_wizard" t="Startup Wizard"/>
+	<phrase n="lang_no_voicemail" t="Geen voicemail"/>
+	<phrase n="lang_new_voicemail" t="Nieuwe Voicemail"/>
+	<phrase n="lang_old_voicemail" t="Oude voicemail"/>
+	<phrase n="lang_phonemanager_credentials" t="Phone Manager (Web UI) Inloggegevens"/>
+	<phrase n="lang_static_ip" t="Statisch IP"/>
+	<phrase n="lang_dhcp_or_static_ip" t="DHCP of Statisch IP"/>
+	<phrase n="lang_locale_ar_AE" t="Arabisch (Verenigde Arabische Emiraten)"/>
+	<phrase n="lang_locale_az_AZ" t="Azərbaycanca (Azerbeidzjan)"/>
+	<phrase n="lang_locale_bs_BA" t="Bosanki (Bosnië)"/>
+	<phrase n="lang_locale_ca_ES" t="Català (Spanje)"/>
+	<phrase n="lang_locale_cs_CZ" t="Čeština (Tsjechië)"/>
+	<phrase n="lang_locale_da_DK" t="Dansk (Denemarken)"/>
+	<phrase n="lang_locale_de_DE" t="Deutsch (Duitsland)"/>
+	<phrase n="lang_locale_el_GR" t="Ελληνικά (Griekenland)"/>
+	<phrase n="lang_locale_en_DE" t="English (Duitsland)"/>
+	<phrase n="lang_locale_en_GB" t="English (VK)"/>
+	<phrase n="lang_locale_en_US" t="English (VS)"/>
+	<phrase n="lang_locale_es_ES" t="Español (Spanje)"/>
+	<phrase n="lang_locale_et_EE" t="Eesti (Estland)"/>
+	<phrase n="lang_locale_eu_ES" t="Euskara (Spanje)"/>
+	<phrase n="lang_locale_fi_FI" t="Suomi (Finland)"/>
+	<phrase n="lang_locale_fr_FR" t="Français (Frankrijk)"/>
+	<phrase n="lang_locale_he_IL" t="Hebrew (Israël)"/>
+	<phrase n="lang_locale_hr_HR" t="Hrvatski (Kroatië)"/>
+	<phrase n="lang_locale_hu_HU" t="Magyar (Hongarije)"/>
+	<phrase n="lang_locale_it_IT" t="Italiano (Italië)"/>
+	<phrase n="lang_locale_ja_JP" t="日本語 (Japan)"/>
+	<phrase n="lang_locale_kk_KZ" t="қазақша (Kazachstan)"/>
+	<phrase n="lang_locale_lt_LT" t="Lietuvių (Litouwen)"/>
+	<phrase n="lang_locale_lv_LV" t="Latviešu (Letland)"/>
+	<phrase n="lang_locale_nl_NL" t="Nederlands (Nederland)"/>
+	<phrase n="lang_locale_nb_NO" t="Norsk (Noorwegen)"/>
+	<phrase n="lang_locale_pl_PL" t="Polski (Polen)"/>
+	<phrase n="lang_locale_pt_PT" t="Portugees (Portugal)"/>
+	<phrase n="lang_locale_ro_RO" t="Română (Roemenië)"/>
+	<phrase n="lang_locale_ru_RU" t="Русский (Rusland)"/>
+	<phrase n="lang_locale_sl_SI" t="Slovenščina (Slovenië)"/>
+	<phrase n="lang_locale_sv_SE" t="Svenska (Zweden)"/>
+	<phrase n="lang_locale_tr_TR" t="Türkçe (Turkije)"/>
+	<phrase n="lang_locale_uk_UA" t="Українська (Oekraïne)"/>
+	<phrase n="lang_locale_zh_CN" t="Simpel Chinees (China)"/>
+	<phrase n="lang_locale_zh_TW" t="Traditioneel Chinees (Taiwan)"/>
+	<phrase n="lang_no_error" t="Geen foutmelding"/>
+	<phrase n="lang_unknown_command" t="Onbekend commando"/>
+	<phrase n="lang_invalid_missing_params" t="Incorrecte of missende parameter(s)"/>
+	<phrase n="lang_not_implemented" t="niet geïmplementeerd"/>
+	<phrase n="lang_failed" t="mislukt"/>
+	<phrase n="lang_refer_to_logs" t="Raadpleeg de systeem logs voor details"/>
+	<phrase n="lang_software_update_confirmation" t="De software update neemt enkele minuten inbeslag en zorgt voor een herstart van uw toestel. Als u ingesprek bent, zorgt de update en herstart voor het verbreken van het gesprek. Laat uw toestel aan gedurende de update. Nu updaten?"/>
+	<phrase n="lang_firmware_field_is_empty" t="Firmware veld is leeg."/>
+	<phrase n="lang_software_update_in_progress" t="Software update in uitvoering. Wacht op het herstarten van uw toestel. Na de herstart, vernieuw uw browser om opnieuw in te loggen in de webinterface."/>
+	<phrase n="lang_edit_mode" t="Bewerkenmodus"/>
+	<phrase n="lang_vlan_pc_qos" t="VLAN Prioriteit (0-7)"/>
+	<phrase n="lang_bluetooth_devices" t="Apparaten"/>
+	<phrase n="lang_bluetooth_not_ready" t="Bluetooth is niet beschikbaar"/>
+	<phrase n="lang_F_ACCEPT_CALL_ext_ui" t="Beantwoorden"/>
+	<phrase n="lang_F_DEFLECT_ext_ui" t="Doorverbinden"/>
+	<phrase n="lang_F_DENY_ext_ui" t="Weigeren"/>
+	<phrase n="lang_F_END_ext_ui" t="Beëindigen"/>
+	<phrase n="lang_F_CALL_PARK_DIAL" t="Oproep parkeren"/>
+	<phrase n="lang_F_NEW_CALL" t="Nieuwe oproep"/>
+	<phrase n="lang_device_management_service" t="Device Management Service"/>
+	<phrase n="lang_manage_dms" t="Manage DMS"/>
+	<phrase n="lang_3_days" t="3 Days"/>
+	<phrase n="lang_dms_enabled" t="DMS is enabled until"/>
+	<phrase n="lang_dms" t="DMS"/>
+</phrases>

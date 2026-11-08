@@ -126,7 +126,7 @@ EPT devices/ports seen: `ept_handset`, `ept_headset`, `ept_spkrphone`,
 
 The keypad (`/dev/input/event0`) is held with an exclusive `EVIOCGRAB` by
 `media_daemon`, and the hands-free route/amp is also managed by `media_daemon`.
-The working sequence (implemented in `snd/snd_hal.c`), done **while
+The working sequence (implemented in `src/audio/snd/snd_hal.c`), done **while
 `media_daemon` is still alive**:
 
 1. `open("/dev/halaudio")`, `SetSuperUser(1)`, `SetPower(2=FULL)`,
@@ -168,7 +168,7 @@ load base `0xc0008000`) and disassembled `halaudio_write`. It looks at the
 `snd_hal` sent little-endian samples with `fmt = 0`, so every sample was
 byte-swapped. A byte swap is a fixed nonlinear map: a periodic tone stays
 periodic (harsh but pitched), broadband audio turns into full-scale noise. The
-fix is one constant: `fmt = 1` (`HAL_FMT_S16LE` in `snd/snd_hal.c`). No
+fix is one constant: `fmt = 1` (`HAL_FMT_S16LE` in `src/audio/snd/snd_hal.c`). No
 media_daemon patch, no EC tuning, no serial console needed. The stock
 `media_daemon` is used unchanged.
 
@@ -194,7 +194,7 @@ and fitted a 96-tap linear FIR from source to capture on the PC:
 
 (fraction of captured energy explained by a linear filter of the source). With
 `fmt = 1` the path is linear, and the user confirmed by ear that game sound is
-clean. Test tool source: `tools/halloop.c` (see its header for usage).
+clean. Test tool source: `tools/analysis/halloop.c` (see its header for usage).
 
 The old EC/pxcon notes below are kept for reference only; they are **not**
 needed for game audio.
@@ -276,15 +276,15 @@ Needs a readiness check or retry.
 
 ## Current status / what works
 
-- **Implemented** (`snd/snd_hal.{c,h}`): codec arming, hands-free bring-up via
+- **Implemented** (`src/audio/snd/snd_hal.{c,h}`): codec arming, hands-free bring-up via
   injected speaker key, `media_daemon` takeover, a pthread pump + SPSC ring, and
   a linear resampler. Shared by both games (plain C, `extern "C"` for the NES
   C++ build). `SND_DUMP=1` dumps the exact PCM sent to `/tmp/snd_dump.raw`.
-- **Doom** (`doom-src/doomgeneric/i_snom_sound.c`): a full SFX `I_*`
+- **Doom** (`src/games/doom/doomgeneric/i_snom_sound.c`): a full SFX `I_*`
   implementation replacing doomgeneric's stub `i_sound.o` — DMX lump decode
   (8-bit → 16-bit at half scale), per-tic software mixing of up to 16 channels
   to 16 kHz mono, pushed to `snd_hal`. Music (MUS/MIDI) is stubbed.
-- **NES** (`nes-src/InfoNES_System_snom.cpp`): `InfoNES_SoundOutput` mixes the 5
+- **NES** (`src/games/nes/InfoNES_System_snom.cpp`): `InfoNES_SoundOutput` mixes the 5
   APU channels, DC-blocks and gains them, and pushes at the APU rate (44100 Hz)
   through `snd_hal`'s resampler.
 - Both engines call `snd_hal_init()` first in `main()` (before fb/keypad), and

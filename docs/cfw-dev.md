@@ -2,7 +2,7 @@
 
 How the CFW web panel and the on-phone menus are assembled, and the helpers every feature uses.
 
-## Layout (all under `custom-rootfs/snom/cfw/`, on the phone `/snom/cfw/`)
+## Layout (all under `rootfs/d375/snom/cfw/`, on the phone `/snom/cfw/`)
 
 | Path | Purpose |
 |---|---|
@@ -41,7 +41,7 @@ Adding a feature never needs an edit of `index.html`, `state_settings.xml` or `p
 * The minibrowser only takes built-in icon enums for menus; CFW Tools reuses `kIconSettingsInformation`.
 
 ## Zip support
-`lib/zip.sh` + `/snom/cfw/bin/unzip` (built by `tools/build-unzip.sh`), see [zip.md](zip.md). `cgi-bin/boot-gba` serves all four systems (`CFW_RETRO_SYS`).
+`lib/zip.sh` + `/snom/cfw/bin/unzip` (built by `tools/build/build-unzip.sh`), see [zip.md](zip.md). `cgi-bin/boot-gba` serves all four systems (`CFW_RETRO_SYS`).
 
 ## Tests
 

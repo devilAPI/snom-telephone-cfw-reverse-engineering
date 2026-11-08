@@ -1,0 +1,69 @@
+<?ssi title line$l_ssi_title?>
+<?ssi file common1.htm?>
+	<TR><TD vAlign="top" height="16"><IMG height="16" src="img/clr.gif" width="16"></TD></TR>
+	<TR>
+		<TD vAlign="top">
+			<FORM method="post">
+				<?ssi hidden_tag?>
+				<?ssi skipon VTECH?>
+				<TABLE class="bubbleTable" cellSpacing="0" cellPadding="0" width="100%" border="0">
+				<?ssi skipoff VTECH?>
+				<?ssi skipon SNOM?>
+				<TABLE cellSpacing="4" cellPadding="0" width="100%" border="0">
+				<?ssi skipoff SNOM?>
+				<TBODY>
+<?ssi file tab_line.htm?>
+<TR>
+	<TD width="12" height="5"><IMG height="12" src="img/clr.gif" width="12"></TD>
+	<TD width="12" height="5"><IMG height="5" src="img/clr.gif" width="12"></TD>
+	<TD width="12" height="5"><IMG height="5" src="img/clr.gif" width="12"></TD>
+	<TD class="background" width="12" height="5">
+		<?ssi skipon VTECH?>
+		<IMG height="12" src=<?ssi img-corner-gif ur?> width="12">
+		<?ssi skipoff VTECH?>
+	</TD>
+</TR>
+<TR><TD></TD><TD></TD></TR>
+<TR><TD></TD>
+	<?ssi skipon VTECH?>
+	<TD width="50%"><B>
+	<?ssi skipoff VTECH?>
+	<?ssi skipon SNOM?>
+	<TD class="titleText" width="50%">
+	<?ssi skipoff SNOM?>
+	<?lng line_natsettings?></B>
+	</TD>
+	<TD width="50%"></TD>
+</TR>
+<TR><TD></TD><TD><?ssi input line_ssi_stunserver stun_server$l?></td></TR>
+<TR><TD></TD><TD><?ssi input line_ssi_stunbindint stun_binding_interval$l?></td></TR>
+<TR><TD></TD><TD><?ssi input line_ssi_keepaliveint keepalive_interval$l?></td></TR>
+<TR><TD></TD><TD><?ssi input line_ssi_initial_rtp_keep_alives initial_rtp_keep_alives$l?></TD></TR>
+<TR><TD></TD><TD>&nbsp;</TD></TR>
+<TR><TD></TD><TD></TD></TR>
+<TR>
+  <TD></TD>
+  <TD>
+    <input type="hidden" value="<?lng apply_button?>" name="Settings">
+    <!--Hidden input is used to allow onchange event to apply settings automatically-->
+    <input type="submit" value="<?lng apply_button?>" name="Settings" <?ssi tabindex?> ></TD></TR>
+<TR>
+	<TD class="background" vAlign="bottom" align="left" width="12" height="5">
+	<?ssi skipon VTECH?>
+		<IMG height="12" src=<?ssi img-corner-gif ll?> width="12">
+	<?ssi skipoff VTECH?>
+	</TD>
+	<TD width="12" height="5"><IMG height="5" src="img/clr.gif" width="12"></TD>
+	<TD width="12" height="5"><IMG height="5" src="img/clr.gif" width="12"></TD>
+	<TD class="background" vAlign="bottom" align="right" width="12" height="5">
+	<?ssi skipon VTECH?>
+		<IMG height="12" src=<?ssi img-corner-gif lr?> width="12">
+	<?ssi skipoff VTECH?>
+	</TD>
+</TR>
+					</TBODY></TABLE>
+			</FORM>
+		</TD>
+	</TR>
+<script type="text/javascript" src="fox.js" charset="utf-8"></script>
+<?ssi file common9.htm?></HTML>

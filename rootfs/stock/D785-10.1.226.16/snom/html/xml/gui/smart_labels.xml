@@ -1,0 +1,809 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<IPPhoneBatch xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../schemas/minibrowser.xsd">
+  <IPPhoneMenu id="smart_menu" state="others_except_mb" dtmf="off">
+    <Menu name="$(lang:menu_idle_screen)">
+      <ExtraIconType>$(icon_type_enum:kIconTypeMenuArrowRight)</ExtraIconType>
+      <Menu name="$(lang:menu_label_default_mode)">
+        <If condition="$(set:smartlabel_idle_default)==off">
+          <SubText>$(lang:off)</SubText>
+        </If>
+        <Elif condition="$(set:smartlabel_idle_default)==on">
+          <SubText>$(lang:on)</SubText>
+        </Elif>
+        <Elif condition="$(set:smartlabel_idle_default)==short">
+          <SubText>$(lang:short)</SubText>
+        </Elif>
+        <Elif condition="$(set:smartlabel_idle_default)==half">
+          <SubText>$(lang:half)</SubText>
+        </Elif>
+        <Elif condition="$(set:smartlabel_idle_default)==full">
+          <SubText>$(lang:full)</SubText>
+        </Elif>
+        <MenuItem name="$(lang:off)" sel="$(condition:$(set:smartlabel_idle_default)==off)">
+          <Url>phone://mb_nop#go_back&amp;set:smartlabel_idle_default=off</Url>
+        </MenuItem>
+        <If condition="$(show_feature:FEATURE_STANDARD_SMART_LABEL)">
+          <MenuItem name="$(lang:on)" sel="$(condition:$(set:smartlabel_idle_default)==on)">
+            <Url>phone://mb_nop#go_back&amp;set:smartlabel_idle_default=on</Url>
+          </MenuItem>
+        </If>
+        <Else>
+          <MenuItem name="$(lang:short)" sel="$(condition:$(set:smartlabel_idle_default)==short)">
+            <Url>phone://mb_nop#go_back&amp;set:smartlabel_idle_default=short</Url>
+          </MenuItem>
+          <If condition="$(show_feature:FEATURE_SMART_LABEL_MONO)">
+            <MenuItem name="$(lang:half)" sel="$(condition:$(set:smartlabel_idle_default)==half)">
+              <Url>phone://mb_nop#go_back&amp;set:smartlabel_idle_default=half</Url>
+            </MenuItem>
+          </If>
+          <MenuItem name="$(lang:full)" sel="$(condition:$(set:smartlabel_idle_default)==full)">
+            <Url>phone://mb_nop#go_back&amp;set:smartlabel_idle_default=full</Url>
+          </MenuItem>
+        </Else>
+      </Menu>
+      <If condition="!$(show_feature:FEATURE_STANDARD_SMART_LABEL)">
+        <Menu name="$(lang:menu_label_expanded_mode)">
+          <If condition="$(set:smartlabel_idle_expanded)==short">
+            <SubText>$(lang:short)</SubText>
+          </If>
+          <Elif condition="$(set:smartlabel_idle_expanded)==half">
+            <SubText>$(lang:half)</SubText>
+          </Elif>
+          <Elif condition="$(set:smartlabel_idle_expanded)==full">
+            <SubText>$(lang:full)</SubText>
+          </Elif>
+          <MenuItem name="$(lang:short)" sel="$(condition:$(set:smartlabel_idle_expanded)==short)">
+            <Url>phone://mb_nop#go_back&amp;set:smartlabel_idle_expanded=short</Url>
+          </MenuItem>
+          <If condition="$(show_feature:FEATURE_SMART_LABEL_MONO)">
+            <MenuItem name="$(lang:half)" sel="$(condition:$(set:smartlabel_idle_expanded)==half)">
+              <Url>phone://mb_nop#go_back&amp;set:smartlabel_idle_expanded=half</Url>
+            </MenuItem>
+          </If>
+          <MenuItem name="$(lang:full)" sel="$(condition:$(set:smartlabel_idle_expanded)==full)">
+            <Url>phone://mb_nop#go_back&amp;set:smartlabel_idle_expanded=full</Url>
+          </MenuItem>
+        </Menu>
+        <If condition="!$(show_feature:SMART_LABEL_WITHOUT_KEYS)">
+          <Menu name="$(lang:menu_label_expansion_triggers)">
+            <SubText>$(get_smartlabel_trigger_value:smartlabel_idle_trigger)</SubText>
+            <MenuItem name="$(lang:off)" sel="$(condition:$(empty:$(set:smartlabel_idle_trigger)))">
+              <If condition="$(empty:$(set:smartlabel_idle_trigger))">
+                <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOn)</ExtraIconType>
+              </If>
+              <Else>
+                <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOff)</ExtraIconType>
+              </Else>
+              <Url>phone://mb_nop#go_back&amp;set:smartlabel_idle_trigger=</Url>
+            </MenuItem>
+            <If condition="$(show_feature:P2_TRIGGER_SMART_LABEL)">
+              <MenuItem name="$(lang:menu_P2_short_press)" sel="$(condition:$(set:smartlabel_idle_trigger)==P2_short_press)">
+                <If condition="$(set:smartlabel_idle_trigger)==P2_short_press">
+                  <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOn)</ExtraIconType>
+                </If>
+                <Else>
+                  <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOff)</ExtraIconType>
+                </Else>
+                <Url>phone://mb_nop#go_back&amp;set:smartlabel_idle_trigger=P2_short_press</Url>
+              </MenuItem>
+              <MenuItem name="$(lang:menu_P2_long_press)" sel="$(condition:$(set:smartlabel_idle_trigger)==P2_long_press)">
+                <If condition="$(set:smartlabel_idle_trigger)==P2_long_press">
+                  <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOn)</ExtraIconType>
+                </If>
+                <Else>
+                  <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOff)</ExtraIconType>
+                </Else>
+                <Url>phone://mb_nop#go_back&amp;set:smartlabel_idle_trigger=P2_long_press</Url>
+              </MenuItem>
+              <MenuItem name="$(lang:menu_any_smartlabel_key_short_press)" sel="$(condition:$(set:smartlabel_idle_trigger)==any_smartlabel_key_short_press)">
+                <If condition="$(set:smartlabel_idle_trigger)==any_smartlabel_key_short_press">
+                  <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOn)</ExtraIconType>
+                </If>
+                <Else>
+                  <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOff)</ExtraIconType>
+                </Else>
+                <Url>phone://mb_nop#go_back&amp;set:smartlabel_idle_trigger=any_smartlabel_key_short_press</Url>
+              </MenuItem>
+            </If>
+            <Elif condition="$(set:phone_type)==snomD717">
+              <MenuItem name="$(lang:menu_P3_short_press)" sel="$(condition:$(set:smartlabel_idle_trigger)==P3_short_press)">
+                <If condition="$(set:smartlabel_idle_trigger)==P3_short_press">
+                  <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOn)</ExtraIconType>
+                </If>
+                <Else>
+                  <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOff)</ExtraIconType>
+                </Else>
+                <Url>phone://mb_nop#go_back&amp;set:smartlabel_idle_trigger=P3_short_press</Url>
+              </MenuItem>
+              <MenuItem name="$(lang:menu_P3_long_press)" sel="$(condition:$(set:smartlabel_idle_trigger)==P3_long_press)">
+                <If condition="$(set:smartlabel_idle_trigger)==P3_long_press">
+                  <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOn)</ExtraIconType>
+                </If>
+                <Else>
+                  <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOff)</ExtraIconType>
+                </Else>
+                <Url>phone://mb_nop#go_back&amp;set:smartlabel_idle_trigger=P3_long_press</Url>
+              </MenuItem>
+              <MenuItem name="$(lang:menu_any_smartlabel_key_short_press)" sel="$(condition:$(set:smartlabel_idle_trigger)==any_smartlabel_key_short_press)">
+                <If condition="$(set:smartlabel_idle_trigger)==any_smartlabel_key_short_press">
+                  <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOn)</ExtraIconType>
+                </If>
+                <Else>
+                  <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOff)</ExtraIconType>
+                </Else>
+                <Url>phone://mb_nop#go_back&amp;set:smartlabel_idle_trigger=any_smartlabel_key_short_press</Url>
+              </MenuItem>
+            </Elif>
+            <Elif condition="$(show_feature:P4_TRIGGER_SMART_LABEL)">
+              <MenuItem name="$(lang:menu_P4_short_press)" sel="$(condition:$(set:smartlabel_idle_trigger)==P4_short_press)">
+                <If condition="$(set:smartlabel_idle_trigger)==P4_short_press">
+                  <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOn)</ExtraIconType>
+                </If>
+                <Else>
+                  <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOff)</ExtraIconType>
+                </Else>
+                <Url>phone://mb_nop#go_back&amp;set:smartlabel_idle_trigger=P4_short_press</Url>
+              </MenuItem>
+              <MenuItem name="$(lang:menu_P4_long_press)" sel="$(condition:$(set:smartlabel_idle_trigger)==P4_long_press)">
+                <If condition="$(set:smartlabel_idle_trigger)==P4_long_press">
+                  <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOn)</ExtraIconType>
+                </If>
+                <Else>
+                  <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOff)</ExtraIconType>
+                </Else>
+                <Url>phone://mb_nop#go_back&amp;set:smartlabel_idle_trigger=P4_long_press</Url>
+              </MenuItem>
+              <MenuItem name="$(lang:menu_any_smartlabel_key_short_press)" sel="$(condition:$(set:smartlabel_idle_trigger)==any_smartlabel_key_short_press)">
+                <If condition="$(set:smartlabel_idle_trigger)==any_smartlabel_key_short_press">
+                  <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOn)</ExtraIconType>
+                </If>
+                <Else>
+                  <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOff)</ExtraIconType>
+                </Else>
+                <Url>phone://mb_nop#go_back&amp;set:smartlabel_idle_trigger=any_smartlabel_key_short_press</Url>
+              </MenuItem>
+            </Elif>
+            <Elif condition="$(bool_eval:$(condition:$(set:phone_type)==snomD812) | $(condition:$(set:phone_type)==GigasetP82x))">
+              <MenuItem name="$(lang:menu_P8_short_press)" sel="$(condition:$(set:smartlabel_idle_trigger)==P8_short_press)">
+                <If condition="$(set:smartlabel_idle_trigger)==P8_short_press">
+                  <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOn)</ExtraIconType>
+                </If>
+                <Else>
+                  <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOff)</ExtraIconType>
+                </Else>
+                <Url>phone://mb_nop#go_back&amp;set:smartlabel_idle_trigger=P8_short_press</Url>
+              </MenuItem>
+              <MenuItem name="$(lang:menu_P8_long_press)" sel="$(condition:$(set:smartlabel_idle_trigger)==P8_long_press)">
+                <If condition="$(set:smartlabel_idle_trigger)==P8_long_press">
+                  <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOn)</ExtraIconType>
+                </If>
+                <Else>
+                  <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOff)</ExtraIconType>
+                </Else>
+                <Url>phone://mb_nop#go_back&amp;set:smartlabel_idle_trigger=P8_long_press</Url>
+              </MenuItem>
+              <MenuItem name="$(lang:menu_any_smartlabel_key_short_press)" sel="$(condition:$(set:smartlabel_idle_trigger)==any_smartlabel_key_short_press)">
+                <If condition="$(set:smartlabel_idle_trigger)==any_smartlabel_key_short_press">
+                  <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOn)</ExtraIconType>
+                </If>
+                <Else>
+                  <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOff)</ExtraIconType>
+                </Else>
+                <Url>phone://mb_nop#go_back&amp;set:smartlabel_idle_trigger=any_smartlabel_key_short_press</Url>
+              </MenuItem>
+            </Elif>
+            <Elif condition="$(bool_eval:$(condition:$(set:phone_type)==snomD815) | $(condition:$(set:phone_type)==GigasetP85x))">
+              <MenuItem name="$(lang:menu_P10_short_press)" sel="$(condition:$(set:smartlabel_idle_trigger)==P10_short_press)">
+                <If condition="$(set:smartlabel_idle_trigger)==P10_short_press">
+                  <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOn)</ExtraIconType>
+                </If>
+                <Else>
+                  <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOff)</ExtraIconType>
+                </Else>
+                <Url>phone://mb_nop#go_back&amp;set:smartlabel_idle_trigger=P10_short_press</Url>
+              </MenuItem>
+              <MenuItem name="$(lang:menu_P10_long_press)" sel="$(condition:$(set:smartlabel_idle_trigger)==P10_long_press)">
+                <If condition="$(set:smartlabel_idle_trigger)==P10_long_press">
+                  <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOn)</ExtraIconType>
+                </If>
+                <Else>
+                  <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOff)</ExtraIconType>
+                </Else>
+                <Url>phone://mb_nop#go_back&amp;set:smartlabel_idle_trigger=P10_long_press</Url>
+              </MenuItem>
+              <MenuItem name="$(lang:menu_any_smartlabel_key_short_press)" sel="$(condition:$(set:smartlabel_idle_trigger)==any_smartlabel_key_short_press)">
+                <If condition="$(set:smartlabel_idle_trigger)==any_smartlabel_key_short_press">
+                  <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOn)</ExtraIconType>
+                </If>
+                <Else>
+                  <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOff)</ExtraIconType>
+                </Else>
+                <Url>phone://mb_nop#go_back&amp;set:smartlabel_idle_trigger=any_smartlabel_key_short_press</Url>
+              </MenuItem>
+            </Elif>
+            <Else>
+              <MenuItem name="$(lang:menu_short_press)">
+                <If condition="$(set:smartlabel_idle_trigger)==page_short_press">
+                  <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOn)</ExtraIconType>
+                </If>
+                <Else>
+                  <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOff)</ExtraIconType>
+                </Else>
+                <Url>phone://mb_nop#go_back&amp;set:smartlabel_idle_trigger=page_short_press</Url>
+              </MenuItem>
+              <MenuItem name="$(lang:menu_long_press)">
+                <If condition="$(set:smartlabel_idle_trigger)==page_long_press">
+                  <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOn)</ExtraIconType>
+                </If>
+                <Else>
+                  <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOff)</ExtraIconType>
+                </Else>
+                <Url>phone://mb_nop#go_back&amp;set:smartlabel_idle_trigger=page_long_press</Url>
+              </MenuItem>
+              <If condition="!$(set:phone_type)==VTechET635">
+                <MenuItem name="$(lang:menu_P8_short_press)" sel="$(condition:$(set:smartlabel_idle_trigger)==P8_short_press)">
+                  <If condition="$(set:smartlabel_idle_trigger)==P8_short_press">
+                    <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOn)</ExtraIconType>
+                  </If>
+                  <Else>
+                    <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOff)</ExtraIconType>
+                  </Else>
+                  <Url>phone://mb_nop#go_back&amp;set:smartlabel_idle_trigger=P8_short_press</Url>
+                </MenuItem>
+                <MenuItem name="$(lang:menu_P8_long_press)" sel="$(condition:$(set:smartlabel_idle_trigger)==P8_long_press)">
+                  <If condition="$(set:smartlabel_idle_trigger)==P8_long_press">
+                    <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOn)</ExtraIconType>
+                  </If>
+                  <Else>
+                    <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOff)</ExtraIconType>
+                  </Else>
+                  <Url>phone://mb_nop#go_back&amp;set:smartlabel_idle_trigger=P8_long_press</Url>
+                </MenuItem>
+              </If>
+              <MenuItem name="$(lang:menu_proximity_sensor)">
+              <If condition="$(set:smartlabel_idle_trigger)==proximity">
+                <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOn)</ExtraIconType>
+              </If>
+              <Else>
+                <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOff)</ExtraIconType>
+              </Else>
+                <Url>phone://mb_nop#go_back&amp;set:smartlabel_idle_trigger=proximity</Url>
+              </MenuItem>
+            </Else>
+          </Menu>
+        </If>
+      </If>
+    </Menu>
+    <Menu name="$(lang:menu_call_screen)">
+      <ExtraIconType>$(icon_type_enum:kIconTypeMenuArrowRight)</ExtraIconType>
+      <Menu name="$(lang:menu_label_default_mode)">
+        <If condition="$(set:smartlabel_call_default)==off">
+          <SubText>$(lang:off)</SubText>
+        </If>
+        <Elif condition="$(set:smartlabel_call_default)==on">
+          <SubText>$(lang:on)</SubText>
+        </Elif>
+        <Elif condition="$(set:smartlabel_call_default)==half">
+          <SubText>$(lang:half)</SubText>
+        </Elif>
+        <Elif condition="$(set:smartlabel_call_default)==short">
+          <SubText>$(lang:short)</SubText>
+        </Elif>
+        <Elif condition="$(set:smartlabel_call_default)==full">
+          <If condition="$(bool_eval:$(condition:$(set:phone_type)==snomD717) | $(show_feature:TRIGGER_OVERLAY_SMART_LABEL))">
+            <SubText>$(lang:full)</SubText>
+          </If>
+        </Elif>
+        <MenuItem name="$(lang:off)" sel="$(condition:$(set:smartlabel_call_default)==off)">
+          <Url>phone://mb_nop#go_back&amp;set:smartlabel_call_default=off</Url>
+        </MenuItem>
+        <If condition="$(show_feature:FEATURE_STANDARD_SMART_LABEL)">
+          <MenuItem name="$(lang:on)" sel="$(condition:$(set:smartlabel_call_default)==on)">
+            <Url>phone://mb_nop#go_back&amp;set:smartlabel_call_default=on</Url>
+          </MenuItem>
+        </If>
+        <Else>
+          <MenuItem name="$(lang:short)" sel="$(condition:$(set:smartlabel_call_default)==short)">
+            <Url>phone://mb_nop#go_back&amp;set:smartlabel_call_default=short</Url>
+          </MenuItem>
+          <If condition="$(show_feature:FEATURE_SMART_LABEL_MONO)">
+            <MenuItem name="$(lang:half)" sel="$(condition:$(set:smartlabel_call_default)==half)">
+              <Url>phone://mb_nop#go_back&amp;set:smartlabel_call_default=half</Url>
+            </MenuItem>
+          </If>
+          <Elif condition="$(bool_eval:$(condition:$(set:phone_type)==snomD717) | $(show_feature:TRIGGER_OVERLAY_SMART_LABEL))">
+            <MenuItem name="$(lang:full)" sel="$(condition:$(set:smartlabel_call_default)==full)">
+              <Url>phone://mb_nop#go_back&amp;set:smartlabel_call_default=full</Url>
+            </MenuItem>
+          </Elif>
+        </Else>
+      </Menu>
+      <If condition="!$(show_feature:FEATURE_STANDARD_SMART_LABEL)">
+        <Menu name="$(lang:menu_label_expanded_mode)">
+          <If condition="$(set:smartlabel_call_expanded)==short">
+            <SubText>$(lang:short)</SubText>
+          </If>
+          <Elif condition="$(set:smartlabel_call_expanded)==full">
+            <SubText>$(lang:full)</SubText>
+          </Elif>
+          <MenuItem name="$(lang:short)" sel="$(condition:$(set:smartlabel_call_expanded)==short)">
+            <Url>phone://mb_nop#go_back&amp;set:smartlabel_call_expanded=short</Url>
+          </MenuItem>
+          <If condition="$(show_feature:FEATURE_SMART_LABEL_MONO)">
+            <MenuItem name="$(lang:half)" sel="$(condition:$(set:smartlabel_call_expanded)==half)">
+              <Url>phone://mb_nop#go_back&amp;set:smartlabel_call_expanded=half</Url>
+            </MenuItem>
+          </If>
+          <MenuItem name="$(lang:full)" sel="$(condition:$(set:smartlabel_call_expanded)==full)">
+            <Url>phone://mb_nop#go_back&amp;set:smartlabel_call_expanded=full</Url>
+          </MenuItem>
+        </Menu>
+        <If condition="!$(show_feature:SMART_LABEL_WITHOUT_KEYS)">
+          <Menu name="$(lang:menu_label_expansion_triggers)">
+            <SubText>$(get_smartlabel_trigger_value:smartlabel_call_trigger)</SubText>
+            <MenuItem name="$(lang:off)" sel="$(condition:$(empty:$(set:smartlabel_call_trigger)))">
+              <If condition="$(empty:$(set:smartlabel_call_trigger))">
+                <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOn)</ExtraIconType>
+              </If>
+              <Else>
+                <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOff)</ExtraIconType>
+              </Else>
+              <Url>phone://mb_nop#go_back&amp;set:smartlabel_call_trigger=</Url>
+            </MenuItem>
+            <If condition="$(set:phone_type)==snomD717">
+              <MenuItem name="$(lang:menu_P3_short_press)" sel="$(condition:$(set:smartlabel_call_trigger)==P3_short_press)">
+                <If condition="$(set:smartlabel_call_trigger)==P3_short_press">
+                  <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOn)</ExtraIconType>
+                </If>
+                <Else>
+                  <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOff)</ExtraIconType>
+                </Else>
+                <Url>phone://mb_nop#go_back&amp;set:smartlabel_call_trigger=P3_short_press</Url>
+              </MenuItem>
+              <MenuItem name="$(lang:menu_P3_long_press)" sel="$(condition:$(set:smartlabel_call_trigger)==P3_long_press)">
+                <If condition="$(set:smartlabel_call_trigger)==P3_long_press">
+                  <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOn)</ExtraIconType>
+                </If>
+                <Else>
+                  <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOff)</ExtraIconType>
+                </Else>
+                <Url>phone://mb_nop#go_back&amp;set:smartlabel_call_trigger=P3_long_press</Url>
+              </MenuItem>
+              <MenuItem name="$(lang:menu_any_smartlabel_key_short_press)" sel="$(condition:$(set:smartlabel_call_trigger)==any_smartlabel_key_short_press)">
+                <If condition="$(set:smartlabel_call_trigger)==any_smartlabel_key_short_press">
+                  <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOn)</ExtraIconType>
+                </If>
+                <Else>
+                  <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOff)</ExtraIconType>
+                </Else>
+                <Url>phone://mb_nop#go_back&amp;set:smartlabel_call_trigger=any_smartlabel_key_short_press</Url>
+              </MenuItem>
+            </If>
+            <Elif condition="$(show_feature:P4_TRIGGER_SMART_LABEL)">
+              <MenuItem name="$(lang:menu_P4_short_press)" sel="$(condition:$(set:smartlabel_call_trigger)==P4_short_press)">
+                <If condition="$(set:smartlabel_call_trigger)==P4_short_press">
+                  <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOn)</ExtraIconType>
+                </If>
+                <Else>
+                  <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOff)</ExtraIconType>
+                </Else>
+                <Url>phone://mb_nop#go_back&amp;set:smartlabel_call_trigger=P4_short_press</Url>
+              </MenuItem>
+              <MenuItem name="$(lang:menu_P4_long_press)" sel="$(condition:$(set:smartlabel_call_trigger)==P4_long_press)">
+                <If condition="$(set:smartlabel_call_trigger)==P4_long_press">
+                  <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOn)</ExtraIconType>
+                </If>
+                <Else>
+                  <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOff)</ExtraIconType>
+                </Else>
+                <Url>phone://mb_nop#go_back&amp;set:smartlabel_call_trigger=P4_long_press</Url>
+              </MenuItem>
+              <MenuItem name="$(lang:menu_any_smartlabel_key_short_press)" sel="$(condition:$(set:smartlabel_call_trigger)==any_smartlabel_key_short_press)">
+                <If condition="$(set:smartlabel_call_trigger)==any_smartlabel_key_short_press">
+                  <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOn)</ExtraIconType>
+                </If>
+                <Else>
+                  <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOff)</ExtraIconType>
+                </Else>
+                <Url>phone://mb_nop#go_back&amp;set:smartlabel_call_trigger=any_smartlabel_key_short_press</Url>
+              </MenuItem>
+            </Elif>
+            <Elif condition="$(bool_eval:$(condition:$(set:phone_type)==snomD812) | $(condition:$(set:phone_type)==GigasetP82x))">
+              <MenuItem name="$(lang:menu_P8_short_press)" sel="$(condition:$(set:smartlabel_call_trigger)==P8_short_press)">
+                <If condition="$(set:smartlabel_call_trigger)==P8_short_press">
+                  <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOn)</ExtraIconType>
+                </If>
+                <Else>
+                  <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOff)</ExtraIconType>
+                </Else>
+                <Url>phone://mb_nop#go_back&amp;set:smartlabel_call_trigger=P8_short_press</Url>
+              </MenuItem>
+              <MenuItem name="$(lang:menu_P8_long_press)" sel="$(condition:$(set:smartlabel_call_trigger)==P8_long_press)">
+                <If condition="$(set:smartlabel_call_trigger)==P8_long_press">
+                  <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOn)</ExtraIconType>
+                </If>
+                <Else>
+                  <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOff)</ExtraIconType>
+                </Else>
+                <Url>phone://mb_nop#go_back&amp;set:smartlabel_call_trigger=P8_long_press</Url>
+              </MenuItem>
+              <MenuItem name="$(lang:menu_any_smartlabel_key_short_press)" sel="$(condition:$(set:smartlabel_call_trigger)==any_smartlabel_key_short_press)">
+                <If condition="$(set:smartlabel_call_trigger)==any_smartlabel_key_short_press">
+                  <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOn)</ExtraIconType>
+                </If>
+                <Else>
+                  <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOff)</ExtraIconType>
+                </Else>
+                <Url>phone://mb_nop#go_back&amp;set:smartlabel_call_trigger=any_smartlabel_key_short_press</Url>
+              </MenuItem>
+            </Elif>
+            <Elif condition="$(bool_eval:$(condition:$(set:phone_type)==snomD815) | $(condition:$(set:phone_type)==GigasetP85x))">
+              <MenuItem name="$(lang:menu_P10_short_press)" sel="$(condition:$(set:smartlabel_call_trigger)==P10_short_press)">
+                <If condition="$(set:smartlabel_call_trigger)==P10_short_press">
+                  <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOn)</ExtraIconType>
+                </If>
+                <Else>
+                  <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOff)</ExtraIconType>
+                </Else>
+                <Url>phone://mb_nop#go_back&amp;set:smartlabel_call_trigger=P10_short_press</Url>
+              </MenuItem>
+              <MenuItem name="$(lang:menu_P10_long_press)" sel="$(condition:$(set:smartlabel_call_trigger)==P10_long_press)">
+                <If condition="$(set:smartlabel_call_trigger)==P10_long_press">
+                  <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOn)</ExtraIconType>
+                </If>
+                <Else>
+                  <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOff)</ExtraIconType>
+                </Else>
+                <Url>phone://mb_nop#go_back&amp;set:smartlabel_call_trigger=P10_long_press</Url>
+              </MenuItem>
+              <MenuItem name="$(lang:menu_any_smartlabel_key_short_press)" sel="$(condition:$(set:smartlabel_call_trigger)==any_smartlabel_key_short_press)">
+                <If condition="$(set:smartlabel_call_trigger)==any_smartlabel_key_short_press">
+                  <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOn)</ExtraIconType>
+                </If>
+                <Else>
+                  <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOff)</ExtraIconType>
+                </Else>
+                <Url>phone://mb_nop#go_back&amp;set:smartlabel_call_trigger=any_smartlabel_key_short_press</Url>
+              </MenuItem>
+            </Elif>
+            <Elif condition="$(show_feature:P2_TRIGGER_SMART_LABEL)">
+              <MenuItem name="$(lang:menu_P2_short_press)" sel="$(condition:$(set:smartlabel_call_trigger)==P2_short_press)">
+                <If condition="$(set:smartlabel_call_trigger)==P2_short_press">
+                  <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOn)</ExtraIconType>
+                </If>
+                <Else>
+                  <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOff)</ExtraIconType>
+                </Else>
+                <Url>phone://mb_nop#go_back&amp;set:smartlabel_call_trigger=P2_short_press</Url>
+              </MenuItem>
+              <MenuItem name="$(lang:menu_P2_long_press)" sel="$(condition:$(set:smartlabel_call_trigger)==P2_long_press)">
+                <If condition="$(set:smartlabel_call_trigger)==P2_long_press">
+                  <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOn)</ExtraIconType>
+                </If>
+                <Else>
+                  <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOff)</ExtraIconType>
+                </Else>
+                <Url>phone://mb_nop#go_back&amp;set:smartlabel_call_trigger=P2_long_press</Url>
+              </MenuItem>
+              <MenuItem name="$(lang:menu_any_smartlabel_key_short_press)" sel="$(condition:$(set:smartlabel_call_trigger)==any_smartlabel_key_short_press)">
+                <If condition="$(set:smartlabel_call_trigger)==any_smartlabel_key_short_press">
+                  <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOn)</ExtraIconType>
+                </If>
+                <Else>
+                  <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOff)</ExtraIconType>
+                </Else>
+                <Url>phone://mb_nop#go_back&amp;set:smartlabel_call_trigger=any_smartlabel_key_short_press</Url>
+              </MenuItem>
+            </Elif>
+            <Else>
+              <MenuItem name="$(lang:menu_short_press)" sel="$(condition:$(set:smartlabel_call_trigger)==page_short_press)">
+                <If condition="$(set:smartlabel_call_trigger)==page_short_press">
+                  <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOn)</ExtraIconType>
+                </If>
+                <Else>
+                  <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOff)</ExtraIconType>
+                </Else>
+                <Url>phone://mb_nop#go_back&amp;set:smartlabel_call_trigger=page_short_press</Url>
+              </MenuItem>
+              <MenuItem name="$(lang:menu_long_press)" sel="$(condition:$(set:smartlabel_call_trigger)==page_long_press)">
+                <If condition="$(set:smartlabel_call_trigger)==page_long_press">
+                  <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOn)</ExtraIconType>
+                </If>
+                <Else>
+                  <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOff)</ExtraIconType>
+                </Else>
+                <Url>phone://mb_nop#go_back&amp;set:smartlabel_call_trigger=page_long_press</Url>
+              </MenuItem>
+              <If condition="!$(set:phone_type)==VTechET635">
+                <MenuItem name="$(lang:menu_P8_short_press)" sel="$(condition:$(set:smartlabel_call_trigger)==P8_short_press)">
+                  <If condition="$(set:smartlabel_call_trigger)==P8_short_press">
+                    <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOn)</ExtraIconType>
+                  </If>
+                  <Else>
+                    <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOff)</ExtraIconType>
+                  </Else>
+                  <Url>phone://mb_nop#go_back&amp;set:smartlabel_call_trigger=P8_short_press</Url>
+                </MenuItem>
+                <MenuItem name="$(lang:menu_P8_long_press)" sel="$(condition:$(set:smartlabel_call_trigger)==P8_long_press)">
+                  <If condition="$(set:smartlabel_call_trigger)==P8_long_press">
+                    <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOn)</ExtraIconType>
+                  </If>
+                  <Else>
+                    <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOff)</ExtraIconType>
+                  </Else>
+                  <Url>phone://mb_nop#go_back&amp;set:smartlabel_call_trigger=P8_long_press</Url>
+                </MenuItem>
+              </If>
+              <MenuItem name="$(lang:menu_proximity_sensor)" sel="$(condition:$(set:smartlabel_call_trigger)==proximity)">
+                <If condition="$(set:smartlabel_call_trigger)==proximity">
+                  <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOn)</ExtraIconType>
+                </If>
+                <Else>
+                  <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOff)</ExtraIconType>
+                </Else>
+                <Url>phone://mb_nop#go_back&amp;set:smartlabel_call_trigger=proximity</Url>
+              </MenuItem>
+            </Else>
+          </Menu>
+        </If>
+      </If>
+    </Menu>
+    <If condition="!$(show_feature:FEATURE_STANDARD_SMART_LABEL)">
+      <If condition="!$(show_feature:SMART_LABEL_WITHOUT_KEYS)">
+        <Menu name="$(lang:menu_other_screen)">
+          <ExtraIconType>$(icon_type_enum:kIconTypeMenuArrowRight)</ExtraIconType>
+          <Menu name="$(lang:menu_label_expansion_triggers)">
+            <SubText>$(get_smartlabel_trigger_value:smartlabel_other_trigger)</SubText>
+            <MenuItem name="$(lang:off)" sel="$(condition:$(empty:$(set:smartlabel_other_trigger)))">
+              <If condition="$(empty:$(set:smartlabel_other_trigger))">
+                <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOn)</ExtraIconType>
+              </If>
+              <Else>
+                <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOff)</ExtraIconType>
+              </Else>
+              <Url>phone://mb_nop#go_back&amp;set:smartlabel_other_trigger=</Url>
+            </MenuItem>
+            <If condition="$(set:phone_type)==snomD717">
+              <MenuItem name="$(lang:menu_P3_short_press)" sel="$(condition:$(set:smartlabel_other_trigger)==P3_short_press)">
+                <If condition="$(set:smartlabel_other_trigger)==P3_short_press">
+                  <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOn)</ExtraIconType>
+                </If>
+                <Else>
+                  <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOff)</ExtraIconType>
+                </Else>
+                <Url>phone://mb_nop#go_back&amp;set:smartlabel_other_trigger=P3_short_press</Url>
+              </MenuItem>
+              <MenuItem name="$(lang:menu_P3_long_press)" sel="$(condition:$(set:smartlabel_other_trigger)==P3_long_press)">
+                <If condition="$(set:smartlabel_other_trigger)==P3_long_press">
+                  <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOn)</ExtraIconType>
+                </If>
+                <Else>
+                  <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOff)</ExtraIconType>
+                </Else>
+                <Url>phone://mb_nop#go_back&amp;set:smartlabel_other_trigger=P3_long_press</Url>
+              </MenuItem>
+              <MenuItem name="$(lang:menu_any_smartlabel_key_short_press)" sel="$(condition:$(set:smartlabel_other_trigger)==any_smartlabel_key_short_press)">
+                <If condition="$(set:smartlabel_other_trigger)==any_smartlabel_key_short_press">
+                  <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOn)</ExtraIconType>
+                </If>
+                <Else>
+                  <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOff)</ExtraIconType>
+                </Else>
+                <Url>phone://mb_nop#go_back&amp;set:smartlabel_other_trigger=any_smartlabel_key_short_press</Url>
+              </MenuItem>
+            </If>
+            <Elif condition="$(show_feature:P4_TRIGGER_SMART_LABEL)">
+              <MenuItem name="$(lang:menu_P4_short_press)" sel="$(condition:$(set:smartlabel_other_trigger)==P4_short_press)">
+                <If condition="$(set:smartlabel_other_trigger)==P4_short_press">
+                  <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOn)</ExtraIconType>
+                </If>
+                <Else>
+                  <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOff)</ExtraIconType>
+                </Else>
+                <Url>phone://mb_nop#go_back&amp;set:smartlabel_other_trigger=P4_short_press</Url>
+              </MenuItem>
+              <MenuItem name="$(lang:menu_P4_long_press)" sel="$(condition:$(set:smartlabel_other_trigger)==P4_long_press)">
+                <If condition="$(set:smartlabel_other_trigger)==P4_long_press">
+                  <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOn)</ExtraIconType>
+                </If>
+                <Else>
+                  <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOff)</ExtraIconType>
+                </Else>
+                <Url>phone://mb_nop#go_back&amp;set:smartlabel_other_trigger=P4_long_press</Url>
+              </MenuItem>
+              <MenuItem name="$(lang:menu_any_smartlabel_key_short_press)" sel="$(condition:$(set:smartlabel_other_trigger)==any_smartlabel_key_short_press)">
+                <If condition="$(set:smartlabel_other_trigger)==any_smartlabel_key_short_press">
+                  <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOn)</ExtraIconType>
+                </If>
+                <Else>
+                  <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOff)</ExtraIconType>
+                </Else>
+                <Url>phone://mb_nop#go_back&amp;set:smartlabel_other_trigger=any_smartlabel_key_short_press</Url>
+              </MenuItem>
+            </Elif>
+            <Elif condition="$(bool_eval:$(condition:$(set:phone_type)==snomD812) | $(condition:$(set:phone_type)==GigasetP82x))">
+              <MenuItem name="$(lang:menu_P8_short_press)" sel="$(condition:$(set:smartlabel_other_trigger)==P8_short_press)">
+                <If condition="$(set:smartlabel_other_trigger)==P8_short_press">
+                  <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOn)</ExtraIconType>
+                </If>
+                <Else>
+                  <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOff)</ExtraIconType>
+                </Else>
+                <Url>phone://mb_nop#go_back&amp;set:smartlabel_other_trigger=P8_short_press</Url>
+              </MenuItem>
+              <MenuItem name="$(lang:menu_P8_long_press)" sel="$(condition:$(set:smartlabel_other_trigger)==P8_long_press)">
+                <If condition="$(set:smartlabel_other_trigger)==P8_long_press">
+                  <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOn)</ExtraIconType>
+                </If>
+                <Else>
+                  <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOff)</ExtraIconType>
+                </Else>
+                <Url>phone://mb_nop#go_back&amp;set:smartlabel_other_trigger=P8_long_press</Url>
+              </MenuItem>
+              <MenuItem name="$(lang:menu_any_smartlabel_key_short_press)" sel="$(condition:$(set:smartlabel_other_trigger)==any_smartlabel_key_short_press)">
+                <If condition="$(set:smartlabel_other_trigger)==any_smartlabel_key_short_press">
+                  <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOn)</ExtraIconType>
+                </If>
+                <Else>
+                  <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOff)</ExtraIconType>
+                </Else>
+                <Url>phone://mb_nop#go_back&amp;set:smartlabel_other_trigger=any_smartlabel_key_short_press</Url>
+              </MenuItem>
+            </Elif>
+            <Elif condition="$(bool_eval:$(condition:$(set:phone_type)==snomD815) | $(condition:$(set:phone_type)==GigasetP85x))">
+              <MenuItem name="$(lang:menu_P10_short_press)" sel="$(condition:$(set:smartlabel_other_trigger)==P10_short_press)">
+                <If condition="$(set:smartlabel_other_trigger)==P10_short_press">
+                  <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOn)</ExtraIconType>
+                </If>
+                <Else>
+                  <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOff)</ExtraIconType>
+                </Else>
+                <Url>phone://mb_nop#go_back&amp;set:smartlabel_other_trigger=P10_short_press</Url>
+              </MenuItem>
+              <MenuItem name="$(lang:menu_P10_long_press)" sel="$(condition:$(set:smartlabel_other_trigger)==P10_long_press)">
+                <If condition="$(set:smartlabel_other_trigger)==P10_long_press">
+                  <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOn)</ExtraIconType>
+                </If>
+                <Else>
+                  <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOff)</ExtraIconType>
+                </Else>
+                <Url>phone://mb_nop#go_back&amp;set:smartlabel_other_trigger=P10_long_press</Url>
+              </MenuItem>
+              <MenuItem name="$(lang:menu_any_smartlabel_key_short_press)" sel="$(condition:$(set:smartlabel_other_trigger)==any_smartlabel_key_short_press)">
+                <If condition="$(set:smartlabel_other_trigger)==any_smartlabel_key_short_press">
+                  <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOn)</ExtraIconType>
+                </If>
+                <Else>
+                  <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOff)</ExtraIconType>
+                </Else>
+                <Url>phone://mb_nop#go_back&amp;set:smartlabel_other_trigger=any_smartlabel_key_short_press</Url>
+              </MenuItem>
+            </Elif>
+            <Elif condition="$(show_feature:P2_TRIGGER_SMART_LABEL)">
+              <MenuItem name="$(lang:menu_P2_short_press)" sel="$(condition:$(set:smartlabel_other_trigger)==P2_short_press)">
+                <If condition="$(set:smartlabel_other_trigger)==P2_short_press">
+                  <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOn)</ExtraIconType>
+                </If>
+                <Else>
+                  <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOff)</ExtraIconType>
+                </Else>
+                <Url>phone://mb_nop#go_back&amp;set:smartlabel_other_trigger=P2_short_press</Url>
+              </MenuItem>
+              <MenuItem name="$(lang:menu_P2_long_press)" sel="$(condition:$(set:smartlabel_other_trigger)==P2_long_press)">
+                <If condition="$(set:smartlabel_other_trigger)==P2_long_press">
+                  <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOn)</ExtraIconType>
+                </If>
+                <Else>
+                  <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOff)</ExtraIconType>
+                </Else>
+                <Url>phone://mb_nop#go_back&amp;set:smartlabel_other_trigger=P2_long_press</Url>
+              </MenuItem>
+              <MenuItem name="$(lang:menu_any_smartlabel_key_short_press)" sel="$(condition:$(set:smartlabel_other_trigger)==any_smartlabel_key_short_press)">
+                <If condition="$(set:smartlabel_other_trigger)==any_smartlabel_key_short_press">
+                  <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOn)</ExtraIconType>
+                </If>
+                <Else>
+                  <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOff)</ExtraIconType>
+                </Else>
+                <Url>phone://mb_nop#go_back&amp;set:smartlabel_other_trigger=any_smartlabel_key_short_press</Url>
+              </MenuItem>
+            </Elif>
+            <Else>
+              <MenuItem name="$(lang:menu_short_press)" sel="$(condition:$(set:smartlabel_other_trigger)==page_short_press)">
+                <If condition="$(set:smartlabel_other_trigger)==page_short_press">
+                  <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOn)</ExtraIconType>
+                </If>
+                <Else>
+                  <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOff)</ExtraIconType>
+                </Else>
+                <Url>phone://mb_nop#go_back&amp;set:smartlabel_other_trigger=page_short_press</Url>
+              </MenuItem>
+              <MenuItem name="$(lang:menu_long_press)">
+                <If condition="$(set:smartlabel_other_trigger)==page_long_press" sel="$(condition:$(set:smartlabel_other_trigger)==page_long_press)">
+                  <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOn)</ExtraIconType>
+                </If>
+                <Else>
+                  <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOff)</ExtraIconType>
+                </Else>
+                <Url>phone://mb_nop#go_back&amp;set:smartlabel_other_trigger=page_long_press</Url>
+              </MenuItem>
+              <If condition="!$(set:phone_type)==VTechET635">
+                <MenuItem name="$(lang:menu_P8_short_press)" sel="$(condition:$(set:smartlabel_other_trigger)==P8_short_press)">
+                  <If condition="$(set:smartlabel_other_trigger)==P8_short_press">
+                    <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOn)</ExtraIconType>
+                  </If>
+                  <Else>
+                    <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOff)</ExtraIconType>
+                  </Else>
+                  <Url>phone://mb_nop#go_back&amp;set:smartlabel_other_trigger=P8_short_press</Url>
+                </MenuItem>
+                <MenuItem name="$(lang:menu_P8_long_press)" sel="$(condition:$(set:smartlabel_other_trigger)==P8_long_press)">
+                  <If condition="$(set:smartlabel_other_trigger)==P8_long_press">
+                    <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOn)</ExtraIconType>
+                  </If>
+                  <Else>
+                    <ExtraIconType>$(icon_type_enum:kIconTypeMenuRadioOff)</ExtraIconType>
+                  </Else>
+                  <Url>phone://mb_nop#go_back&amp;set:smartlabel_other_trigger=P8_long_press</Url>
+                </MenuItem>
+              </If>
+            </Else>
+          </Menu>
+        </Menu>
+      </If>
+    </If>
+    <MenuItem name="$(lang:smartlabel_dismiss_timeout)">
+      <Url>file:///xml/gui/templates.xml#sub=*[@id="input_template"]&amp;var:input_pool_key=0&amp;var:input_displayname=$(lang:smartlabel_dismiss_timeout)&amp;var:input_token=__Y__&amp;var:input_flags=N&amp;var:input_default=$(set:smartlabel_dismiss_timeout)&amp;var:input_mask=&amp;var:input_url=$(urlencode:"phone://mb_nop#go_back&amp;set:smartlabel_dismiss_timeout=__Y__")</Url>
+      <If condition="$(set:smartlabel_dismiss_timeout)=0">
+        <SubText>$(lang:off)</SubText>
+      </If>
+      <Else>
+        <SubText>$(set:smartlabel_dismiss_timeout)$(lang:time_symbol_second)</SubText>
+      </Else>
+      <ExtraIconType>$(icon_type_enum:kIconTypeMenuArrowRight)</ExtraIconType>
+    </MenuItem>
+    <If condition="!$(show_feature:SMART_LABEL_WITHOUT_KEYS)">
+      <If condition="$(show_feature:MULTIPLE_SMART_LABEL_PAGES)">
+        <Menu name="$(lang:menu_return_to_first_page)">
+          <If condition="$(set:label_scroll_timeout)=0">
+            <SubText>$(lang:off)</SubText>
+          </If>
+          <Else>
+            <SubText>$(set:label_scroll_timeout)$(lang:time_symbol_second)</SubText>
+          </Else>
+          <MenuItem>
+            <Name>$(lang:automatic_return)</Name>
+            <If condition="$(bool_eval:$(condition:$(set:label_scroll_timeout)>0))">
+              <ExtraIconType>$(icon_type_enum:kIconTypeMenuSliderOn)</ExtraIconType>
+            </If>
+            <Else>
+              <ExtraIconType>$(icon_type_enum:kIconTypeMenuSliderOff)</ExtraIconType>
+            </Else>
+            <SubText>$(on_off:$(condition:$(set:label_scroll_timeout)>0))</SubText>
+            <!-- If label_scroll_timeout == 0, toggle it to set a value-->
+            <!-- Else. toggle it to set the value to 0 -->
+            <If condition="$(set:label_scroll_timeout) > 0">
+              <Url>phone://mb_nop#var:previous_label_scroll_timeout=$(set:label_scroll_timeout)&amp;set:label_scroll_timeout=0</Url>
+            </If>
+            <Else>
+              <If condition="$(var:previous_label_scroll_timeout) > 0">
+                <Url>phone://mb_nop#set:label_scroll_timeout=$(var:previous_label_scroll_timeout)</Url>
+              </If>
+              <Else>
+                <Url>file:///xml/gui/templates.xml#sub=*[@id="input_template"]&amp;var:input_pool_key=0&amp;var:input_displayname=$(lang:menu_tser_timer)&amp;var:input_token=__Y__&amp;var:input_flags=t&amp;var:input_default=60&amp;var:input_mask=&amp;var:input_url=$(urlencode:"mb_nop#go_back&amp;set:label_scroll_timeout=__Y__")</Url>
+              </Else>
+            </Else>
+          </MenuItem>
+          <!-- MenuItem to change the timeout-->
+          <If condition="$(set:label_scroll_timeout) > 0">
+            <MenuItem name="$(lang:menu_tser_timer)">
+              <SubText>$(set:label_scroll_timeout)$(lang:time_symbol_second)</SubText>
+              <ExtraIconType>$(icon_type_enum:kIconTypeMenuArrowRight)</ExtraIconType>
+              <Url>file:///xml/gui/templates.xml#sub=*[@id="input_template"]&amp;var:input_pool_key=0&amp;var:input_displayname=$(lang:menu_tser_timer)&amp;var:input_token=__Y__&amp;var:input_flags=t&amp;var:input_default=$(set:label_scroll_timeout)&amp;var:input_mask=&amp;var:input_url=$(urlencode:"mb_nop#go_back&amp;set:label_scroll_timeout=__Y__")</Url>
+            </MenuItem>
+          </If>
+        </Menu>
+      </If>
+    </If>
+  </IPPhoneMenu>
+</IPPhoneBatch>

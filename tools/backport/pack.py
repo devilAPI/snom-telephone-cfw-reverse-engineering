@@ -73,7 +73,7 @@ subprocess.run(['tar', 'cf', OUT, '-C', R, '--no-recursion', '-T', '-'],
 
 # Icons the D375 flash lacks. run-d8.sh merges them over the flash tree. The
 # Contrast theme is skipped: run-d8.sh selects Dark, and it would cost 9 MB.
-D375 = os.path.join(os.path.dirname(__file__), '../../custom-rootfs/snom/bmp')
+D375 = os.path.join(os.path.dirname(__file__), '../../rootfs/d375/snom/bmp')
 extra = []
 for base, _, fs in os.walk(os.path.join(R, 'snom/bmp/colored')):
     rel = os.path.relpath(base, os.path.join(R, 'snom/bmp'))
